@@ -503,10 +503,10 @@ pos2frames(Root,Sense,Pos,Cat,Attr,Frames) :-
     (  var(Root)   -> Sense = Root ; true ),
     root_mismatch_heuristics(Frames0,Frames1,Root,Sense,Pos,Attr,Cat),
     unknown_root_heuristics(Frames1,Frames2,Root,Sense,Pos,Attr,Cat),
-    last_resort_heuristics(Frames2,Frames3,Root,Sense,Pos,Cat,Attr),
-    tag_mismatch_heuristics(Frames0,Frames3,Frames4,Root,Sense,Pos,Attr),
-    prefer_best_words_in_frames(Root,Frames4,Frames5),
-    added_paraphrase_heuristics(Frames5,Frames6,Root,Sense,Pos,Attr),
+    added_paraphrase_heuristics(Frames2,Frames3,Root,Sense,Pos,Attr),
+    last_resort_heuristics(Frames2,Frames3,Frames4,Root,Sense,Pos,Cat,Attr),
+    tag_mismatch_heuristics(Frames0,Frames4,Frames5,Root,Sense,Pos,Attr),
+    prefer_best_words_in_frames(Root,Frames5,Frames6),
     remove_redundant_frames(Frames6,Frames).				% add later, so are not removed
 
 remove_redundant_frames(Frames0,Frames):-
@@ -590,6 +590,10 @@ check_attributes1([Att=Val|T],Attrs0,Attrs,Frame,Root) :-
     (   Att == postag,
 	Val == 'NA()'
     ->  Attrs0 = Attrs1
+    ;   Att == infl,
+	Val == psp
+    ->  \+ lists:member(tense=_,Attrs0),
+	Attrs0 = Attrs1
     ;   select(Att=Val1,Attrs0,Attrs1)
     ->  Val = Val1
     ;   ignore_current_att(Root,Att,Val,Frame),
@@ -805,8 +809,11 @@ condition_infl(X, SC, not_plural_su) :-
     \+ short_sbar_subj(SC).
 
 condition_infl(pl,passive,real_su).
+condition_infl(pl,passive,not_past).
 condition_infl(sg1,passive,real_su).
+condition_infl(sg1,passive,not_past).
 condition_infl(sg_hebt,passive,real_su).
+condition_infl(sg_hebt,passive,not_past).
 %condition_infl(Infl,Subcat,su_not_het) :-
 %    pl_infl(Infl),
 %    Subcat \= cleft_np,
@@ -832,37 +839,52 @@ condition_infl(X,( cat(smain)
 
 condition_infl(X, not_sg_su) :-
     pl_infl(X).
-
+condition_infl(pl,not_past).
 condition_infl(X, not_first_person) :-
+    third_infl(X).
+condition_infl(X, not_past) :-
     third_infl(X).
 
 condition_infl(X, not_third_person) :-
+    not_third_infl(X).
+condition_infl(X, not_past) :-
     not_third_infl(X).
 
 condition_infl(sg_bent,not_first_person).
 condition_infl(sg_bent,not_third_person).
 condition_infl(sg_bent,not_plural_su).
+condition_infl(sg_bent,not_past).
 
 condition_infl(sg_heeft,not_first_person).
 condition_infl(sg_heeft,not_second_person).
 condition_infl(sg_heeft,not_plural_su).
+condition_infl(sg_heeft,not_past).
 
 condition_infl(sg_is,not_first_person).
 condition_infl(sg_is,not_second_person).
 condition_infl(sg_is,not_plural_su).
+condition_infl(sg_is,not_past).
 
 condition_infl(sg1,not_u_person).
+condition_infl(sg1,not_past).
 
 condition_infl(sg_hebt,not_third_person).
+condition_infl(sg_hebt,not_past).
 
 condition_infl(modal_inv,not_third_person).
 condition_infl(modal_inv,not_first_person).
+condition_infl(modal_inv,not_past).
 
 condition_infl(imp(_),not_su).
+condition_infl(imp(_),not_past).
 
 condition_infl(imp(_),imp).
+condition_infl(imp(_),not_past).
 
 condition_infl(modal_inv,not_first_person).
+condition_infl(modal_inv,not_past).
+
+condition_infl(past(_),not_present).
 
 not_third_infl(sg1).
 not_third_infl(imp(sg1)).
@@ -1037,6 +1059,14 @@ apply_check(obcomp,DT,_) :-
     !,
     fail.
 apply_check(obcomp,_,_).
+
+apply_check(not_past,DT,_) :-
+    DT:attrs <=> Attrs,
+    \+ lists:member(tense=past,Attrs).
+
+apply_check(not_present,DT,_) :-
+    DT:attrs <=> Attrs,
+    \+ lists:member(tense=present,Attrs).
 
 apply_check(imp,DT,_) :-
     DT:attrs <=> Attrs,
@@ -1759,48 +1789,7 @@ unknown_root_heuristic(fixed,Root,Root,[],fixed_part(op_een_v),_,FinalSurf) :-
     member(Surf,Surfs),
     concat_all([op,een,Surf], FinalSurf,' ').
 */
-/*
-unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Surf) :-
-    atom_concat(Pref,eren,Iseren),
-    atom_concat(Pref,eerd,Surf0),
-    atom_concat(ge,Surf0,Surf),
-    Frame = verb(hebben,psp,SC),
-    last_resort_sc(SC).
 
-unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Surf) :-
-    atom_concat(Pref,eren,Iseren),
-    atom_concat(Pref,eer,Surf),
-    Frame = verb(hebben,sg1,SC),
-    last_resort_sc(SC).
-
-unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Surf) :-
-    atom_concat(Pref,eren,Iseren),
-    atom_concat(Pref,eert,Surf),
-    Frame = verb(hebben,sg3,SC),
-    last_resort_sc(SC).
-
-unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Surf) :-
-    atom_concat(Pref,eren,Iseren),
-    atom_concat(Pref,eerde,Surf),
-    Frame = verb(hebben,past(sg),SC),
-    last_resort_sc(SC).
-
-unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Surf) :-
-    atom_concat(Pref,eren,Iseren),
-    atom_concat(Pref,eerden,Surf),
-    Frame = verb(hebben,past(pl),SC),
-    last_resort_sc(SC).
-
-unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Iseren) :-
-    atom_concat(_,eren,Iseren),
-    Frame = verb(hebben,inf,SC),
-    last_resort_sc(SC).
-
-unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Iseren) :-
-    atom_concat(_,eren,Iseren),
-    Frame = verb(hebben,pl,SC),
-    last_resort_sc(SC).
-*/
 unknown_root_heuristic(Pos,Root,_,Attr,Frame,_,Surf) :-
     dict_entry(Root,Frame,Surf),
     exc_postag_of_frame(Frame,Pos,CheckAttr),
@@ -1858,13 +1847,18 @@ add_prefix(Affaire,Toeslag,ToeslagenAffaire,'_') :-
     inflected_compound_part(Toeslag,Toeslagen),
     atom_concat(Toeslagen,Affaire,ToeslagenAffaire).
 
-last_resort_heuristics([Fr0|Fr],[Fr0|Fr],_,_,_,_,_).
-last_resort_heuristics([],Frames,Root,Sense,Pos,Cat,Attr) :-
+%%% het risicodragend kapitaal => het risicodragende kapitaal
+last_resort_heuristics([_|_],Frs,Frs,_,_,_,_,_).
+last_resort_heuristics([],Frames0,Frames,Root,Sense,Pos,Cat,Attr) :-
+    last_resort_heuristics(Frames0,Frames,Root,Sense,Pos,Cat,Attr).
+
+last_resort_heuristics(Frames0,Frames,Root,Sense,Pos,Cat,Attr) :-
     (   Root == 'een of'
     ->  Frames = []
-    ;   findall(Frame-Surf,last_resort_heuristic(Pos,Cat,Root,Sense,Attr,Frame,Surf),Frames0),
-	sort(Frames0,Frames1),
-	filter_specific(Frames1,Frames)
+    ;   findall(Frame-Surf,last_resort_heuristic(Pos,Cat,Root,Sense,Attr,Frame,Surf),Frames1),
+	lists:append(Frames1,Frames0,Frames2),
+	sort(Frames2,Frames3),
+	filter_specific(Frames3,Frames)
     ).
 
 filter_specific(Frames0,Frames) :-
@@ -2028,7 +2022,7 @@ add_morphology(adjective(ende(_)),Root,Surf) :-
     atom_concat(Pref,end,Root),
     !,
     atom_concat(Pref,ende,Surf).
-      
+
 
 add_morphology(_,R,R).
 
