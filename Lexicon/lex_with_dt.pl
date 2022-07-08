@@ -1626,7 +1626,6 @@ with_dt_all(ere,[ere,kom_toe,toe,wie]).
 with_dt_all(ere,[ere,kom_toe,wie]).
 with_dt_all(erg,[veel,zonder]).
 with_dt_all(erg,[zonder]).
-with_dt_all(even,[maar]).
 with_dt_all(fiets,[te]).
 with_dt_all(ga,[moeilijk,ook]).
 with_dt_all(ga,[slaap]).
@@ -2130,7 +2129,6 @@ with_dt_all(op,[vandaag]).
 with_dt_all(op,[zich]).
 with_dt_all(oudsher,[van]).
 with_dt_all(oud,[stijl]).
-with_dt_all(overal,[werkelijk]).
 with_dt_all(overheidswege,[van]).
 with_dt_all(over,[vroeger]).
 with_dt_all(paard,[te]).
@@ -2683,7 +2681,6 @@ with_dt_root(enorm).
 with_dt_root(eraan).
 with_dt_root(ere).
 with_dt_root(erg).
-with_dt_root(even).
 with_dt_root(fabriek).
 with_dt_root(fiets).
 with_dt_root(flink).

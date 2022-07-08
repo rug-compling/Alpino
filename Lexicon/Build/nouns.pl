@@ -13573,7 +13573,8 @@ n([pl(gozers),sg(gozer)],de,[]).
 n([sg(gps)],de,[]).
 
 %% zes graden is koud; singular?
-n([meas(graad),meas(graden)],de,[meas_mod,measure],[dim(graadje)]).
+%% hij behaalde zijn graad/*graden medicijnen
+n([meas(graad),pl(graden)],de,[meas_mod,measure],[dim(graadje)]).
 
 n([sg(graad),pl(graden),
    ignore_stem(graad)],de,[],
