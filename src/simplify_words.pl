@@ -309,7 +309,7 @@ stree(Lem,adt_lex(_,Lem,Lem,_,[]),[]) :-
     atomic(Lem),
     !.
 
-stree(STree,Cat,Ds):-
+stree(STree,p(Cat),Ds):-
     STree =.. [Cat|StreeDs],
     stree_ds(StreeDs,Ds).
 
@@ -641,6 +641,8 @@ np(dt(conj,[cnj=NP|_])):-
 np0(dt(np,_)).
 np0(l(_,noun,_)).
 
+eq_pronoun([die,dat],Atts) :-
+    lists:member(rnum=sg,Atts).    
 eq_pronoun([ik,me,mij],_).
 eq_pronoun([je,jij,jou],_).
 eq_pronoun([hij,hem],_).
@@ -659,6 +661,8 @@ eq_pronoun([wijzelf,onszelf],_).
 eq_pronoun([zijzelf,hunzelf],Atts) :-
     lists:member(rnum=pl,Atts).
 
+eq_pronoun(wat,[die,wat],Atts) :-
+    lists:member(rnum=sg,Atts).    
 eq_pronoun(ze,[zij,haar],Atts) :-
     lists:member(rnum=sg,Atts).
 eq_pronoun(hen,[zij,ze,hun],Atts) :-

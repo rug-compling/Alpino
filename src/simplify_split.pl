@@ -683,6 +683,7 @@ smain(p(conj),List) :-
     lists:member(tree(r(cnj,Cat),List2),List),
     smain(Cat,List2).
 
+short_du_part(tree(r(sat,p(pp)),_),nucl).
 short_du_part(tree(r(tag,_),_),nucl).
 short_du_part(tree(r(dlink,_),_),nucl).
 short_du_part(tree(r(dp,p(Cat)),Ds),dp) :-
