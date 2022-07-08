@@ -72,6 +72,7 @@ times: *.log
 	@cat *.log | grep '^paraphrase cputime' | tr -d '[()]' | awk '{ P=P+$$4; N=N+$$6; L=L+1} END {printf "%12d %12d %7d %7.0f %7.0f\n",P,N,L,P/L,N/L}'
 
 nops: $(suites:%.sents=%.nop) $(suites:%.sents.gz=%.nop)
+
 %.nop: %.para %.sents
 	@paste $*.para $*.sents | grep noparaphrase | cut -f2
 

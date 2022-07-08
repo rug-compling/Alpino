@@ -605,6 +605,7 @@ ignore_modifier_stem(opeens,_,_,_,_).
 ignore_modifier_stem(opnieuw,_,_,_,_).
 ignore_modifier_stem(overigens,_,_,_,_).
 ignore_modifier_stem(ook,_,_,_,_).
+ignore_modifier_stem(pas,_,_,_,_).
 ignore_modifier_stem(precies,_,_,_,_).
 ignore_modifier_stem(reeds,_,_,_,_).
 ignore_modifier_stem(ronduit,_,_,_,_).
@@ -613,6 +614,7 @@ ignore_modifier_stem(specifiek,_,_,np,_).
 ignore_modifier_stem(steeds,_,_,_,_).
 ignore_modifier_stem(tenslotte,_,_,_,_).
 ignore_modifier_stem(terdege,_,_,_,_).
+ignore_modifier_stem(terecht,_,_,_,_).
 ignore_modifier_stem(tevens,_,_,_,_).
 ignore_modifier_stem(toch,_,_,_,_).
 ignore_modifier_stem(toen,_,_,_,_).
@@ -625,6 +627,7 @@ ignore_modifier_stem(veel,_,_,_,_).
 %% ignore_modifier_stem(ver,adj,Atts,_) :-  % verder willen met; verder brengen
 %%   lists:member(aform=compar,Atts).
 ignore_modifier_stem(verdommen,_,_,_,_).
+ignore_modifier_stem(verschillend,_,_,_,_).
 ignore_modifier_stem(volkomen,_,_,_,_).
 ignore_modifier_stem(volledig,_,_,_,_).
 ignore_modifier_stem(volstrekt,_,_,_,_).
@@ -675,6 +678,8 @@ important_modifier(tree(r(mod,p(rel)),_),ADTLEX,[],_,_) :-
 important_modifier(tree(r(mod,p(conj)),Ds),C0,C1,C2,C3) :-
     lists:member(tree(r(cnj,p(rel)),XX),Ds),
     important_modifier(tree(r(mod,p(rel)),XX),C0,C1,C2,C3).
+important_modifier(tree(r(mod,ModCat),ModDs),adt_lex(_,_,Sense,_,_),_,_,_):-
+    sense_requires_mod(Sense,ModCat,ModDs).
 important_modifier(tree(r(mod,adt_lex(VanCat,Van,_,VanPos,_)),[]),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_,_) :-
     (   check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat)
     ->  true
@@ -854,3 +859,9 @@ er_adverb_prep(van,ervan).
 er_adverb_prep(vanaf,ervanaf).
 er_adverb_prep(vanuit,ervanuit).
 er_adverb_prep(voor,ervoor).
+
+sense_requires_mod('wil-in',p(pp),Ds) :-
+    Bij = tree(r(hd,adt_lex(pp,bij,bij,prep,_)),[]),
+    lists:member(Bij,Ds).
+sense_requires_mod(manier,_,_).
+sense_requires_mod('te-werk-ga',_,_).
