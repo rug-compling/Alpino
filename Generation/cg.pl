@@ -1293,6 +1293,8 @@ filter_local_tree(Rule,PDtrs):-
     hdrug_util:hdrug_flag(filter_local_trees,OnOff),
     filter_local_tree(OnOff,Rule,PDtrs).
 
+filter_local_tree(none,_,_).   % no manual filter either
+
 filter_local_tree(off,Rule,PDtrs) :-
     unpack_rules(Rule,PDtrs,tree(Rule,Ds0)),
     \+ rule_out(Rule,Ds0),
@@ -1401,8 +1403,10 @@ rule_out(n_n_mod_a,[_,tree(a_pred_a,_)]).
 rule_out(n_n_mod_a,[_,tree(a_a_np_comp,_)]).
 rule_out(n_n_mod_a,[_,tree(a_np_comp_a,_)]).
 
-rule_out(n_n_mod_adv(komma),[_,_,tree(adv_a,_),_]).
-
+/*
+rule_out(n_n_mod_adv(komma),[_,_,tree(adv_a,DS),_]) :-
+    \+ exceptional_adj_after_n(DS).
+*/
 rule_out(n_n_modnp(komma),[tree(np_n,[l(_)]),_,tree(np_n,[tree(n_pn,_)]),_]).
 
 rule_out(n_n_modnp(komma),[tree(np_det_n,[_,l(_)]),_,tree(np_n,[tree(n_pn,_)]),_]).
@@ -1791,5 +1795,17 @@ adapt_h(lex(Tag),lex(Class)) :-
     !,
     tr_tag(Tag,Class).
 adapt_h(X,X).
+
+/*
+exceptional_adj_after_n([tree(a_a_compp,[L,_])]):-
+    meer(L).
+
+meer(l(ref(adjective(meer),adjective(meer),meer,meer,_,_,_,_,_,_,_))).
+meer(tree(_,Ds)):-
+    member(El,Ds),
+    meer(El).
+
+
+*/
 
 
