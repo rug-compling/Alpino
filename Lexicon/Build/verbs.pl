@@ -13112,7 +13112,7 @@ v(leg,legt,leggen,gelegd,legde,legden,
 	part_vp(vast),
 	part_vp(voor),
 	refl_ld_pp,
-	fixed([{[pc(op),[beslag]]}],imp_passive),
+	fixed([{[pc(op),acc(beslag)]}],imp_passive), % geen beslag
         fixed([[aan,banden],acc],norm_passive),
 	fixed([[aan,de,dag],acc],norm_passive),
 	fixed([[aan,den,dag],acc],norm_passive),
@@ -28346,7 +28346,7 @@ v(zeg,zegt,zeggen,gezegd,zei,zeiden,zegge,
 	part_transitive(voor),
 	part_np_np(voor),
 	np_pc_pp(voor),  % er valt veel voor te zeggen
-	np_er_pp_vp(voor),  % er valt veel voor te zeggen
+	np_er_pp_vp(voor),  % er valt veel voor te zeggen om ..
 	part_np_np(aan),
         part_np_sbar(aan),  % we hebben hem aangezegd dat ze uiterlijk..
 	part_transitive(aan),

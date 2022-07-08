@@ -5241,64 +5241,64 @@ with_dt([vanwaar,toch,altijd],
 
 with_dt([waarom,dan],
         waar_adverb(om),
-        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
-                 mod=l(dan,tmp_adverb,advp,1,2)
-                ])).
+        dt(pp,[hd=l(waarom,waar_adverb(om),0,1),
+	       mod=l(dan,tmp_adverb,advp,1,2)
+	      ])).
 
 with_dt([waarom,dan,toch],
         waar_adverb(om),
-        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
-                 mod=l(dan,tmp_adverb,advp,1,2),
-                 mod=l(toch,adverb,advp,2,3)
-                ])).
+        dt(pp,[hd=l(waarom,waar_adverb(om),0,1),
+	       mod=l(dan,tmp_adverb,advp,1,2),
+	       mod=l(toch,adverb,advp,2,3)
+	      ])).
 
 with_dt([waarom,eigenlijk,niet],
         waar_adverb(om),
-        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
-                 mod=l(eigenlijk,adjective(no_e(adv)),ap,1,2),
-                 mod=l(niet,adverb,advp,2,3)
-                ])).
+        dt(pp,[hd=l(waarom,waar_adverb(om),0,1),
+	       mod=l(eigenlijk,adjective(no_e(adv)),ap,1,2),
+	       mod=l(niet,adverb,advp,2,3)
+	      ])).
 
 with_dt([waarom,dan,toch,altijd],
         waar_adverb(om),
-        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
-                 mod=l(dan,tmp_adverb,advp,1,2),
-                 mod=l(toch,adverb,advp,2,3),
-                 mod=l(altijd,sentence_adverb,advp,3,4)
-                ])).
+        dt(pp,[hd=l(waarom,waar_adverb(om),0,1),
+	       mod=l(dan,tmp_adverb,advp,1,2),
+	       mod=l(toch,adverb,advp,2,3),
+	       mod=l(altijd,sentence_adverb,advp,3,4)
+	      ])).
 
 with_dt([waarom,niet],
         waar_adverb(om),
-        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
-                 mod=l(niet,adverb,advp,1,2)
-                ])).
+        dt(pp,[hd=l(waarom,waar_adverb(om),0,1),
+	       mod=l(niet,adverb,advp,1,2)
+	      ])).
 
 with_dt([waarom,toch],
         waar_adverb(om),
-        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
-                 mod=l(toch,adverb,advp,1,2)
-                ])).
+        dt(pp,[hd=l(waarom,waar_adverb(om),0,1),
+	       mod=l(toch,adverb,advp,1,2)
+	      ])).
 
 with_dt([waarom,toch,altijd],
         waar_adverb(om),
-        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
-                 mod=l(toch,adverb,advp,1,2),
-                 mod=l(altijd,sentence_adverb,advp,2,3)
-                ])).
+        dt(pp,[hd=l(waarom,waar_adverb(om),0,1),
+	       mod=l(toch,adverb,advp,1,2),
+	       mod=l(altijd,sentence_adverb,advp,2,3)
+	      ])).
 
 with_dt([waarom,nu,weer],
         waar_adverb(om),
-        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
-                 mod=l(nu,tmp_adverb,advp,1,2),
-                 mod=l(weer,adverb,advp,2,3)
-                ])).
+        dt(pp,[hd=l(waarom,waar_adverb(om),0,1),
+	       mod=l(nu,tmp_adverb,advp,1,2),
+	       mod=l(weer,adverb,advp,2,3)
+	      ])).
 
 with_dt([waarom,steeds,weer],
         waar_adverb(om),
-        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
-                 mod=l(steeds,adverb,advp,1,2),
-                 mod=l(weer,adverb,advp,2,3)
-                ])).
+        dt(pp,[hd=l(waarom,waar_adverb(om),0,1),
+	       mod=l(steeds,adverb,advp,1,2),
+	       mod=l(weer,adverb,advp,2,3)
+	      ])).
 
 m('wat nou',        wh_adverb,[wat,nou]).  % wat nou vormcrisis?
 
@@ -6224,9 +6224,9 @@ tmp_adverb(['\'s',zaterdagsmiddags]).
 
 with_dt([Later,Vandaag],
 	tmp_adverb,
-	dt(advp,[hd=l(Later,adjective(er(tmpadv)),0,1),
-		 mod=l(Vandaag,tmp_adverb,advp,1,2)
-		])) :-
+	dt(ap,[hd=l(Later,adjective(er(tmpadv)),ap,0,1),
+	       mod=l(Vandaag,tmp_adverb,advp,1,2)
+	      ])) :-
     later(Later),
     vandaag(Vandaag).
 
@@ -6500,8 +6500,8 @@ mod_hd_adverb(werkelijk,      niet, adjective(no_e(adv)),       ap).
 mod_hd_adverb(zeker,          niet, adjective(no_e(adv)),       ap).
 
 %% hd < mod
-hd_mod_adverb(alleen,   maar, alleen, maar).
-hd_mod_adverb(even,     maar, even,   maar).
+% hd_mod_adverb(alleen,   maar, alleen, maar).  % can be built with rules
+% hd_mod_adverb(even,     maar, even,   maar).  % ,,
 
 hd_mod_adverb(niet,     eens, niet,   eens).
 
@@ -6512,7 +6512,7 @@ hd_mod_adverb(dan,      ineens, dan, ineens).
 
 hd_mod_adverb(eens,     temeer, eens, temeer).
 
-hd_mod_adverb(werkelijk,overal,werkelijk,overal).
+% hd_mod_adverb(werkelijk,overal,werkelijk,overal). % wrong
 
 hd_mod_adverb(niet,     langer,    niet,lang,adjective(er(tmpadv)),          ap).
 hd_mod_adverb(niet,     bepaald,   niet,bepaald,adjective(ge_no_e(adv)),        ap).
