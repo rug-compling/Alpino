@@ -5119,7 +5119,10 @@ n_adj_structure(N,AP) :-
     AP:deverbal => no,
     AP:sc => [],
     AP:wh => nwh,
-    AP:cj => ncj,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	AP:cj => ncj
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     hd_structure(AP,N,np).
 
 %% de groene
@@ -5661,7 +5664,7 @@ grammar_rule(n_n_mod_a, NP, [ N, MOD ]) :-
     MOD:can_postn => yes.
 
 %% required for generation:
-%% De gemiddelde kosten van een octrooi bedragen ongeveer 30.0 euro , veel meer dan in de Verenigde Staten .
+%% De kosten bedragen 30 euro , veel meer dan in de Verenigde Staten .
 grammar_rule(n_n_mod_adv(komma), N, [ N0, Cl, MOD, OPTCr ]) :-
 %    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optcomma(OPTCr),
@@ -10007,6 +10010,7 @@ grammar_rule(mid_coord(Name,conj),Blist,[OPTCOMMA, Conj, A, Clist]) :-
     when((nonvar(CFORM)),
 	 (   CFORM == om -> lists:member(Name,[num,np,pred])
 	 ;   CFORM == à  -> lists:member(Name,[num,np,pred])
+	 ;   CFORM == tot-> lists:member(Name,[num,np,pred,a,n,det])
 	 ;   true
 	 )
 	),
@@ -10046,6 +10050,7 @@ end_coord_conj_structure(Name,Blist,Conj,A,ModList) :-
     when((nonvar(CFORM)),
 	 (   CFORM == om -> lists:member(Name,[num,np,pred])
 	 ;   CFORM == à  -> lists:member(Name,[num,np,pred])
+	 ;   CFORM == tot-> lists:member(Name,[num,np,pred,a,n,det])
 	 ;   true
 	 )
 	),
@@ -10494,7 +10499,8 @@ conjunction_cat(max,M,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => one_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     M => max,
     M:max_type => t_part.
@@ -10519,7 +10525,8 @@ conjunction_cat(imp,M,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => one_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     max_imp(M).
 
@@ -10528,7 +10535,8 @@ conjunction_cat(prep,M,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     M => p,
     M:pp_role /=> pp_pobj1.  % 2nd phase: "Zelf heb ik er problemen mee , maar aan [ commentaren te lezen ]
@@ -10537,7 +10545,8 @@ conjunction_cat(part,M,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     M => part.
 
@@ -10576,7 +10585,8 @@ conjunction_cat(adv,M,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     M => adv,
     M:wk => no,
@@ -10585,7 +10595,8 @@ conjunction_cat(adv,M,Crd,ETC) :-
 conjunction_cat(root,M,Crd,_) :-
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => one_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     max_root(M0),
     unify_except(M0,M,mods),
@@ -10596,7 +10607,8 @@ conjunction_cat(a,M,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     M => a,
     M:aform => ~only_n. % problems in case of etc, due to ccat0=/=ccat
@@ -10605,7 +10617,8 @@ conjunction_cat(pp,M,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     M => pp,
     M:slash => [],
@@ -10620,7 +10633,8 @@ conjunction_cat(rel,Rel,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => one_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     Rel => rel.
 
@@ -10632,14 +10646,16 @@ conjunction_cat(pn,N,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => one_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     N => pn.
 
 conjunction_cat(n,N,Crd,_) :-
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => (one_crd;swapped_two_crd)
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     N => n,
     %% * de [ Nederlandse Antillen en Aruba ]
@@ -10661,7 +10677,8 @@ conjunction_cat(n,N,Crd,_) :-
 conjunction_cat(sbar,S,Crd,_) :-
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     S => sbar,
     S:tags => [].
@@ -10675,7 +10692,8 @@ conjunction_cat(det,S,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     S:wkpro => ~weakpro,
     S:neclass ==> none,
@@ -10709,7 +10727,8 @@ conjunction_cat(comp,V,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => one_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ),
     V => comp.
 
@@ -10720,7 +10739,8 @@ conjunction_cat(modifier,V,Crd,_) :-
     V:mcat => ~mcat_bracket,  % also to prevent "vandaag en vooral (in Assen)"
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ).
 
 conjunction_cat(enumeration,V,Crd,ETC) :-
@@ -10728,7 +10748,8 @@ conjunction_cat(enumeration,V,Crd,ETC) :-
     V => enumeration,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => one_crd
-    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Crd => ~ncj
     ).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
