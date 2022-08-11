@@ -2161,7 +2161,7 @@ m('Rood',      name_determiner(pron,'PER'),['Roods']).
 %% also with other possessives of course...
 with_dt([Mijn,Vaders],
 	determiner(pron),
-	dt(detp,[hd=l(Vader,noun(de,count,sg),1,2),
+	dt(detp,[hd=l(Vader,determiner(pron),1,2),
 		 det=l(MijnL,determiner(pron),detp,0,1)
 		])) :-
     mijn_vaders_mijn(Mijn,MijnL),
@@ -2197,7 +2197,6 @@ mijn_vaders_vaders(opa,'opa\'s').
 mijn_vaders_vaders(oma,'oma\'s').
 mijn_vaders_vaders(man,mans).
 mijn_vaders_vaders(minnaar,minnaars).
-mijn_vaders_vaders(jongeling,jongeling).
 
 m(welk,          determiner(welke,rwh,nmod,pro,yparg),   welke).
 %% m(welk,          determiner(welke,rwh,nmod,pro,yparg),   [de,welke]). % VL; now parse_only
