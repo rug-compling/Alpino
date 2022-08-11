@@ -1343,7 +1343,6 @@ with_dt_all(de,[honderd,paar]).
 with_dt_all(de,[huize]).
 with_dt_all(de,[ik]).
 with_dt_all(de,[in,laatst,niet,plaats]).
-with_dt_all(de,[jongeling]).
 with_dt_all(de,[keizer]).
 with_dt_all(de,[klok,rond]).
 with_dt_all(de,[koning]).
@@ -1692,7 +1691,6 @@ with_dt_all(gunste,[haren,te]).
 with_dt_all(gunste,[mijnen,te]).
 with_dt_all(gunste,[te,uwen]).
 with_dt_all(gunste,[te,zijnen]).
-with_dt_all(haar,[jongeling]).
 with_dt_all(haar,[majesteit]).
 with_dt_all(haar,[man]).
 with_dt_all(haar,[minnaar]).
@@ -1764,7 +1762,6 @@ with_dt_all(hoor,[voor,wat,wat]).
 with_dt_all(huize,[mijnen,te]).
 with_dt_all(huize,[te,uwen]).
 with_dt_all(huize,[te,zijnen]).
-with_dt_all(hun,[jongeling]).
 with_dt_all(hun,[man]).
 with_dt_all(hun,[met,negen]).
 with_dt_all(hun,[met,tien]).
@@ -1828,7 +1825,6 @@ with_dt_all(in,[tijden,vroeger]).
 with_dt_all(in,[totaal]).
 with_dt_all(inzoverre,[zelfs]).
 with_dt_all(ja,[nee,of]).
-with_dt_all(je,[jongeling]).
 with_dt_all(je,[man]).
 with_dt_all(je,[minnaar]).
 with_dt_all(je,[moeder]).
@@ -1843,11 +1839,6 @@ with_dt_all(je,[vriend]).
 with_dt_all(je,[vriendin]).
 with_dt_all(je,[weet]).
 with_dt_all(je,[zuster]).
-with_dt_all(jongeling,[jou]).
-with_dt_all(jongeling,[jullie]).
-with_dt_all(jongeling,[mijn]).
-with_dt_all(jongeling,[u]).
-with_dt_all(jongeling,[zijn]).
 with_dt_all(jongsaf,[sinds]).
 with_dt_all(jongsaf,[van]).
 with_dt_all(jou,[man]).
@@ -2776,7 +2767,6 @@ with_dt_root(jammer).
 with_dt_root(je).
 with_dt_root(jij).
 with_dt_root(jong).
-with_dt_root(jongeling).
 with_dt_root(jongs).
 with_dt_root(jongsaf).
 with_dt_root(jou).
