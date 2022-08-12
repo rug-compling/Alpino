@@ -65,6 +65,7 @@ survives_bigram(lang,lange,adjective(e),termijn,termijn,tmp_noun(de,count,sg)).
 %% temp
 survives_bigram(op,_,preposition(op,_),bezoek,_,tmp_noun(het,count,sg)).
 survives_bigram(op,_,preposition(op,_),bezoek,_,tmp_noun(het,count,sg,pred_pp(op))).
+survives_bigram(alleen,_,_,maar,_,postadv_adverb).
 %% temp
 survives_bigram(het,_,determiner(het,nwh,nmod,pro,nparg,wkpro),laatste,_,number(rang)).
 %% dat soort is mwu too
@@ -78,6 +79,8 @@ survives_trigram(_,zou,verb(hebben,past(sg),aux(inf)),_,ik,pronoun(nwh,fir,sg,de
 
 %% because alles of niets is also adjective
 survives_trigram(alles,_,noun(het,mass,sg),of,_,conj(of),niets,_,meas_mod_noun(het,mass,sg)).
+
+
 
 surviving_word('collega \' s').
 
