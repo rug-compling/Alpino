@@ -11,7 +11,7 @@ LASSYSMALL=/net/corpora/LassyDevelop
 all: dtchecks novel prepare_enhanced_all enhanced_all poslemma mwu trees_doc sents sentspl conllu pair dact
 
 ## slow, because it retries all timed-out sentences
-best:
+bestrun:
 	( cd best; make -j i_suite.log extra.log eans.log )
 
 novel:
