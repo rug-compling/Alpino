@@ -1852,7 +1852,7 @@ cgn_postag_c(verb(_,inf(no_e),_),             'WW(inf,vrij,zonder)').
 cgn_postag_c(verb(_,inf(e),_),                'WW(inf,prenom,met-e)').
 cgn_postag_c(verb(_,past(sg),_),              'WW(pv,verl,ev)').
 cgn_postag_c(verb(_,past(pl),_),              'WW(pv,verl,mv)').
-cgn_postag_c(verb(_,both(pl),_),              'WW(pv,pvtijd,mv)').
+cgn_postag_c(verb(_,both(pl),_),              'WW(pv,tgw,mv)').  % tgw is more frequent than verl
 cgn_postag_c(verb(_,modal_inv,_),             'WW(pv,tgw,ev)').
 cgn_postag_c(verb(_,sg_hebt,_),               'WW(pv,tgw,met-t)').
 cgn_postag_c(verb(_,sg_heeft,_),              'WW(pv,tgw,met-t)').
@@ -2608,6 +2608,8 @@ subtree_path(tree(_,Rule,List,_),Q0,Q,Path0,Path) :-
     lists:nth(N,List,Tree),
     subtree_path(Tree,Q0,Q,[Rule/N|Path0],Path).
 
+
+
 mwu_postag(Frame,Stem,Surf,Q0,Q,_Result) -->
     { mwu_postag_frame_stem_surf(Frame,Stem,Surf,Tags) },
     mwu_tags(Tags,Stem,1,Q0,Q).
@@ -2745,7 +2747,6 @@ mwu_postag_frame_surf(score_cat,Surf,[ATag,'LET()',BTag]) :-
 mwu_postag_frame_surf(fixed_part(op_een_v),_,
        ['VZ(init)','LID(onbep,stan,agr)','WW(inf,nom,zonder,zonder-n)']).
 
-
 mwu_postag_frame_stem_surf(adjective(het_st(_)),Stem,Surf,['LID(bep,stan,evon)',TweedePos]) :-
     atom_concat('het ',_,Stem),
     atom_concat(_,Gek,Surf),
@@ -2807,10 +2808,6 @@ mwu_postag_frame_stem(adjective(pred_er(_)),Stem,['ADJ(vrij,comp,zonder)','VZ(fi
     atom(Stem),
     alpino_util:split_atom(Stem," ",[AdjEr,aan]),
     alpino_lex:lexicon(adjective(er(_)),Kalm,[AdjEr],[],_).
-
-mwu_postag_frame_stem(with_dt(adverb,dt(advp,[mod=l(lang,adjective(er(tmpadv)),ap,1,2),
-					      hd=l(niet,adverb,0,1)])),
-		      'lang niet',['BW()','ADJ(vrij,comp,zonder)'],[niet,lang]).
 
 mwu_postag_frame_stem(pre_np_adverb,Stem,['N(soort,ev,basis,onz,stan)','TW(hoofd,vrij)']):-
     atom(Stem),
@@ -2912,6 +2909,9 @@ num_postag(_A,'SPEC(symb)').
 %    alpino_lex:num_dot_num(_,A).
 
 %% mwu_postag(lemma,surf,tags,newlemma)
+mwu_postag('lang niet','lang niet',['ADJ(vrij,basis,zonder)','BW()'],[lang,niet]).
+mwu_postag('lang niet','niet lang',['BW()','ADJ(vrij,basis,zonder)'],[niet,lang]).
+mwu_postag('lang niet','niet langer',['BW()','ADJ(vrij,comp,zonder)'],[niet,lang]).
 mwu_postag(voorzover,'voor zover',
 	   ['VZ(init)','BW()'],
 	   [voor,zover]).

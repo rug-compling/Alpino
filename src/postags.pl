@@ -41,7 +41,7 @@ postag_of_frame(none,none,none,[],_):-
 postag_of_frame(read_from_treebank(PosTag0),none,PosTag,[],_) :-
     !,
     functor(PosTag0,PosTag,_).
-postag_of_frame(read_from_treebank(PosTag,Frame,_Lemma,CgnTag),Frame,PosTag,
+postag_of_frame(read_from_treebank(_,Frame,_Lemma,CgnTag),Frame,PosTag,
                 [postag=CgnTag|AttVal],_) :-
     !,
     lassy_postag_atts(CgnTag,AttVal,Atts),
@@ -251,7 +251,7 @@ p_of_f(mod_noun(A,B,C,D),Pos,[special=mod|Atts]) :-
 
 p_of_f(comp_noun(Gen,_,Num,Dan),noun,[gen=Gen,num=Num,special=comp,
 				      comparative=Dan]).
-p_of_f(cleft_het_noun,noun,[special=cleft_het]).
+p_of_f(cleft_het_noun,det,[special=cleft_het]).
 p_of_f(wh_cleft_het_noun,noun,[special=cleft_het,wh=ywh]).
 p_of_f(het_noun,noun,[special=het]).
 p_of_f(iets_noun,noun,[sc=iets]).
