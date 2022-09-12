@@ -10,7 +10,7 @@ freqframes=$(LOGS:%.log.gz=%.freqframes)
       | $(ALPINO_HOME)/Disambiguation/Triples/uniq-c \
       > $@
 
-frames.pl: $(freqframes)
+frames.pl: $(freqframes) ./cnt-frames
 	echo ':- module(alpino_frames, [ z_f2/3 ]).' > frames.pl
 	echo >> frames.pl
 	LANG=POSIX LC_ALL=POSIX sort -m -t\| -k2,2 $(freqframes) \

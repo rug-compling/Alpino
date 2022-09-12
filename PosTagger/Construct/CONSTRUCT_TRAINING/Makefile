@@ -50,7 +50,7 @@ include $(ALPINO_HOME)/Makefile.errormining
 
 TTS=tt_part00001 tt_part00002 tt_part00003 tt_part00004 tt_part00005 tt_part00006 tt_part00007 tt_part00008 tt_part00009 tt_part00010 tt_part00011 tt_part00012 tt_part00013 tt_part00014 tt_part00015 tt_part00016 tt_part00017 tt_part00018 
 
-TUS=tu_part00001 tu_part00002 tu_part00003 tu_part00004 tu_part00005 tu_part00006 tu_part00007 tu_part00008 tu_part00009 
+TUS=tu_part00001 tu_part00002 tu_part00003 tu_part00004 tu_part00005 tu_part00006 tu_part00007 tu_part00008 tu_part00009 tu_part00010 
 
 PS=p_part00001 p_part00002 p_part00003 p_part00004 p_part00005 p_part00006 p_part00007 p_part00008 p_part00009 p_part00010 p_part00011 p_part00012 p_part00013 p_part00014 p_part00015 p_part00016 p_part00017 p_part00018 p_part00019 p_part00020
 

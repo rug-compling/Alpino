@@ -49,8 +49,11 @@ logs: $(TESTSUITE).frames.testing $(TESTSUITE).la.testing
 	@make evals | grep '^#S' >>log
 
 install:
-	cp context3.tpl  prefix2.tpl  prefix3.tpl  tag2.tpl  tag3.tpl  tag4.tpl  tagWord.tpl  wordTag.tpl\
-           context.fsa  tags.fsa  words.fsa usedContext $(TARGETDIR)
+	for t in context3.tpl  prefix2.tpl  prefix3.tpl  tag2.tpl\
+                 tag3.tpl  tag4.tpl  tagWord.tpl  wordTag.tpl\
+                 context.fsa  tags.fsa  words.fsa usedContext;\
+           do if cmp -s $$t $(TARGETDIR)/$$t; then true ; else cp -f $$t $(TARGETDIR)/$$t; fi; done
+	if cmp -s TRAINING/frames.pl ../../Grammar/frames.pl; then true ; else cp -f TRAINING/frames.pl ../../Grammar/frames.pl; fi
 
 include Makefile.patterns
 

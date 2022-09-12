@@ -17,18 +17,13 @@
 %.log: %.log.gz
 	gunzip $<
 
-%.fr : %.log.gz $(ALPINO_HOME)/PosTagger/Construct/transform_mwu
+%.fr : %.log.gz $(ALPINO_HOME)/PosTagger/Construct/transform_mwu $(ALPINO_HOME)/PosTagger/Construct/correct.py
 	zcat $< \
         | grep '^FRAME#' \
         | sed -e 's/^FRAME#//'\
         | sed -e 's/v_root(\([^,]*\),[^)]*)/\1/g'\
+        | $(ALPINO_HOME)/PosTagger/Construct/correct.py \
         | $(ALPINO_HOME)/PosTagger/Construct/transform_mwu | gzip >$@
-
-# %.fr : %.frames $(ALPINO_HOME)/PosTagger/Construct/transform_mwu
-# 	zcat $< \
-#         | grep '^FRAME#' \
-#         | sed -e 's/^FRAME#//'\
-#         | $(ALPINO_HOME)/PosTagger/Construct/transform_mwu | gzip >$@
 
 %.sfr : %.fr %.tm $(ALPINO_HOME)/PosTagger/Construct/stags \
                   $(ALPINO_HOME)/PosTagger/Construct/rewriteNgramData

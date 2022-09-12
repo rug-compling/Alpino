@@ -31,6 +31,6 @@ evaluate([WordStr,TagStr,LogStr]) :-
     charsio:read_from_chars(TagStr1,Tag),
     hdrug_util:prettyvars(Tag),
     number_codes(Log,LogStr),
-    format("z_f2(~q,~q,~5f).~n",[Word,Tag,Log]).
+    format("z_f2(~q,~q,~2f).~n",[Word,Tag,Log]).
 
 :- frames2pl.

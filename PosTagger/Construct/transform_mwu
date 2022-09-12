@@ -2,7 +2,6 @@
 
 # dit script transformeert multi-word-units
 
-
 while (<>) {
   next if !/\|/;
   chomp;
