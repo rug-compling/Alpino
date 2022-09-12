@@ -168,7 +168,7 @@ all_dtchecks:
 	mv .dtchecks2 .dtchecks
 
 sqldir=/net/aps/haytabo/opt/alpinotools
-prepare_enhanced_all:
+prepare_enhanced_all: 
 	for corpus in $(DIRECTORIES); do make sql/$$corpus.sqlite corpus=$$corpus; done
 
 sql/$(corpus).sqlite: best/$(corpus)/*.xml fast/$(corpus)/*.xml
