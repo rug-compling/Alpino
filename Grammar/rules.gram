@@ -1777,6 +1777,7 @@ grammar_rule(vp_mod_v, VP, [ Mod, COMMA, V ] ) :-
 
 grammar_rule(vp_c_mod_c_v, VP, [ CommaL, Mod, CommaR, V ] ) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
+    Mod:sel => ~to_topic, % otherwise we cannot generate the same thing
     comma(CommaL),
     optcomma(CommaR),
     vp_mod_v_structure(VP,Mod,V).

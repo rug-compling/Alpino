@@ -272,6 +272,24 @@ triples_to_feature(Triples,appos_person(TYPE,Noun)) :-
 triples_to_feature(Triples,q(Feature)) :-
     tf(Triples,q(Feature)).
 
+%% op .. wijze,
+%% in ... mate
+%% op .. termijn
+%% binnen .. tijd
+%% op .. schaal
+%% uit angst [..]
+%% in .. hevigheid
+%% are typically verbal modifiers; but this is not really picked up well by the model :-(
+%% these could be treated like z_dep...
+
+triples_to_feature(Triples,depprep(HdPos,Rel,Prep,Wijze)) :-
+    triple_member(Triples,deprel(HdPos:_,Rel,prep:Prep/Pos)),
+    triple_member(Triples,deprel(prep:Prep/Pos,hd/obj1,_:Wijze/_)).
+
+triples_to_feature(Triples,Feature) :-
+    hdrug_flag(dep_with_pos,Boolean),
+    hd_pp_feature(Boolean,Triples,Feature).
+
 tf(Triples,q(Feature)) :-
     member(deprel(WH,whd/body,Body),Triples),
     find_wh_trace(Body,WH,Arg,Rel,Triples,[Body]),
@@ -300,24 +318,6 @@ tf(Triples,q(Feature)) :-
 	;  Feature=wat_jan
 	)
     ).
-
-%% op .. wijze,
-%% in ... mate
-%% op .. termijn
-%% binnen .. tijd
-%% op .. schaal
-%% uit angst [..]
-%% in .. hevigheid
-%% are typically verbal modifiers; but this is not really picked up by the model :-(
-
-triples_to_feature(Triples,depprep(HdPos,Rel,Prep,Wijze)) :-
-    triple_member(Triples,deprel(HdPos:_,Rel,prep:Prep/Pos)),
-    triple_member(Triples,deprel(prep:Prep/Pos,hd/obj1,_:Wijze/_)).
-
-%% same as depprep2, but with more info so that we can do norm.mut.inf.
-triples_to_feature(Triples,Feature) :-
-    hdrug_flag(dep_with_pos,Boolean),
-    hd_pp_feature(Boolean,Triples,Feature).
 
 hd_pp_feature(off,Triples,hdpp(Hd,HdPos,Rel,Prep,Noun,NounPos)) :-
     triple_member(Triples,deprel(HdPos:Hd/_,Rel,prep:Prep/Positions)),
@@ -387,8 +387,7 @@ integrate_corpus_freq(dep35(S1,_P1,Rel,P2,S2),w2v(P2,Rel)-Count) :-
 
 score_corpus_feature(dep35(A,B,C,D,E),z_dep35(D,C),Val) :-
     decompound(dep35(A,B,C,D,E),Feature),
-    corpus_frequency_lookup(Feature,Val0),
-    Val is Val0/10000,
+    corpus_frequency_lookup(Feature,Val),
     !,			       % if z_dep35, then do not use w2v
     debug_message(3,"~w ~w~n",[Feature,Val]).
 
@@ -398,20 +397,6 @@ score_corpus_feature(dep35(S1,_,Rel,P2,S2),w2v(P2,Rel),Count) :-
     debug_message(3,"~w ~w ~w ~w ~n",[S2,w2v(P2,Rel),S1,Count]).
 */
 
-/* old method of backoff, try decompounding
-score_corpus_feature(dep35(A,B,C,D,E),z_dep35(D,C),Val) :-
-    decompound(dep35(A,B,C,D,E),Feature),
-    corpus_frequency_lookup(Feature,Val0),
-    !,			       % first solution of decompound suffices
-    Val is Val0/10000,
-    (   dep35(A,B,C,D,E) == Feature
-    ->  true
-    ;   debug_message(4,"decompound_zdep|~w|~w~n",[dep35(A,B,C,D,E),Feature])
-    ),
-    debug_message(3,"~w ~w~n",[dep35(A,B,C,D,E),Val]).
-*/
-
-
 score_corpus_feature(hdpp(A,B,C,D,E,F),z_hdpp(B,C),Val) :-	
     corpus_frequency_lookup(hdpp(A,B,C,D,E,F),Val),
     debug_message(3,"~w ~w~n",[hdpp(A,B,C,D,E,F),Val]).
@@ -419,6 +404,10 @@ score_corpus_feature(hdpp(A,B,C,D,E,F),z_hdpp(B,C),Val) :-
 score_corpus_feature(appos_person(TYPE,Word),z_appos_person(TYPE),Val) :-
     corpus_frequency_lookup(appos_person(TYPE,Word),Val),
     debug_message(3,"~w ~w~n",[appos_person(TYPE,Word),Val]).
+
+score_corpus_feature(depprep(HdPos,Rel,Prep,Wijze),z_depprep(HdPos,Rel),Val) :-
+    corpus_frequency_lookup(depprep(HdPos,Rel,Prep,Wijze),Val),
+    debug_message(3,"~w ~w~n",[depprep(HdPos,Rel),Val]).
 
 decompound(dep35(R1,P1,Rel,P2,R2),dep35(S1,P1,Rel,P2,S2)) :-
     decompound_atom(P1,R1,S1),
@@ -1001,6 +990,7 @@ lexical_penalty_frame(skip(_,_,[H|T],_),_,_,_,_,_,skip(W)) :-
 
 generate_i(_).
 generate_i(Len) :-
+    nonvar(Len),
     Len > 1,
     Len1 is Len - 1,
     generate_i(Len1).
@@ -1132,19 +1122,9 @@ nonvar_member_([Head|Tail], _, Element) :-
 %%     dep34(Arg,ArgPos,Rel,HeadPos) ==>
 %%         dep23(ArgPos,Rel,HeadPos)
 %%
-%% depprep2(Hd,Rel,Prep,NounHd) ==>
-%%     depprep(HdPos,Rel,Prep,NounHd)
-%%
 %% h1(form_of_suffix(Heur)) ==> h1(form_of_suffix)
 %%
 %% f2(Stem,Frame) ==> f1(Frame)
-
-%feature_term_to_codes(dep35(A,B,C1/C2,D,E),Codes) :-
-%    format_to_chars('dep35(~q,~q,~q/~q,~q,~q)',[A,B,C1,C2,D,E],Codes).
-%
-%feature_term_to_codes(depprep2(A,B,C,D),Codes) :-
-%    format_to_chars('depprep2(~q,~q,~q,~q)',[A,B,C,D],Codes).
-
 
 feature_term_to_codes(Feature,Codes) :-
     format_to_chars('~q',[Feature],Codes).
@@ -1152,9 +1132,10 @@ feature_term_to_codes(Feature,Codes) :-
 corpus_frequency_lookup(TripleTerm,Score) :-
     time(1,initialize_corpus_frequency(DictNo)),
     feature_term_to_codes(TripleTerm,Triple),
-    pro_fadd:associate_word_integer(Triple,DictNo,Score),
-    Score > 0.  % associate_word_integer always succeeds, with Score=0
-                % if the word is not in the dictionary
+    pro_fadd:associate_word_integer(Triple,DictNo,Score0),
+    Score0 > 0,  % associate_word_integer always succeeds, with Score=0
+				% if the word is not in the dictionary
+    Score is Score0/10000.
 
 initialize_corpus_frequency(No) :-
     hdrug_flag(initialized_corpus_frequency,Init),
