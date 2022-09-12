@@ -1426,8 +1426,11 @@ xml_term_to_dt_atts_rest(leaf,Atts0,adt_lex(Cat,Root,Sense,PosTag,LexAtts),adt) 
 xml_term_to_dt_atts_rest(leaf,Atts0,l(Pos,Cat,Root/[P0,P]),dt) :-
     xml_term_to_dt_atts_rest_frame(Atts0,Atts1,Pos),
     !,
-    (   member(lemma=RootCodes,Atts0)
+    (   member(root=RootCodes,Atts0)
     ->  atom_codes(Root,RootCodes)
+    ;   member(lemma=RootCodes,Atts0)
+    ->  atom_codes(Root,RootCodes),
+	debug_message(2,"no root available, lemma used~n",[Root])
     ;   Root = 'NA'
     ),    
     select(begin=P0Codes,Atts1,Atts3),
