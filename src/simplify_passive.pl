@@ -234,6 +234,8 @@ passive_transformation(r(Rel,Cat),Ds0,
 
     verb_allows_passive(L,word,not_person,Door),
 
+%%    format("~w ~w ~n",[Door,Context]),
+
     NewSu = tree(r(su,Obj1Cat),Obj1Ds),
 
     Ds = [NewSu,NewHd|REST],
@@ -490,6 +492,8 @@ inf_context_without_su([_/body/p(ti)|Tail]) :-
     inf_context_without_su(Tail).
 inf_context_without_su([_/vc/p(oti)|Tail]) :-
     inf_context_without_su(Tail).
+inf_context_without_su([_/NoVc/p(oti)|_]):-
+    \+ NoVc = vc.
 
 %% verb_allows_passive(Verb,word/ben,person/not_person,door/not_door)
 
@@ -522,6 +526,7 @@ verb_disallows_passive(overtuig,ben,_,not_door).
 verb_disallows_passive(rechtvaardig,ben,_,not_door).
 verb_disallows_passive(relateer,ben,_,not_door).
 verb_disallows_passive(sluit,ben,_,not_door).
+verb_disallows_passive(span,ben,_,not_door).
 verb_disallows_passive(sta_toe,ben,_,not_door).
 verb_disallows_passive(vestig,ben,_,not_door).
 verb_disallows_passive(verbind,ben,_,not_door).

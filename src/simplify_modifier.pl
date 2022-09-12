@@ -409,11 +409,17 @@ ignore_modifier_pattern(mod=dt(pp,
 				       [mod=ander,
 					hd=woord])]),_,_).
 
-ignore_modifier_pattern(mod=dt(pp,
+ignore_modifier_pattern(Rel=dt(pp,
 			      [hd=in,
 			       obj1=dt(np,
 				       [mod=_,
-					hd=opzicht])]),_,_).
+					hd=opzicht])]),_,_) :- lists:member(Rel,[mod,ld]).
+
+ignore_modifier_pattern(Rel=dt(pp,
+			      [hd=op,
+			       obj1=dt(np,
+				       [mod=_,
+					hd=wijze])]),_,_) :- lists:member(Rel,[mod,ld]).
 
 ignore_modifier_pattern(mod=dt(pp,
 			      [hd=in,
@@ -558,6 +564,7 @@ ignore_modifier_stem(daarentegen,_,_,_,_).
 ignore_modifier_stem(daarnaast,_,_,_,_).
 ignore_modifier_stem(daarna,_,_,_,_).
 ignore_modifier_stem(daarnet,_,_,_,_).
+ignore_modifier_stem(deels,_,_,_,_).
 ignore_modifier_stem(derhalve,_,_,_,_).
 ignore_modifier_stem(destijds,_,_,_,_).
 ignore_modifier_stem(duidelijk,_,_,_,_).
@@ -586,6 +593,7 @@ ignore_modifier_stem(inderdaad,_,_,_,_).
 ignore_modifier_stem(inmiddels,_,_,_,_).
 ignore_modifier_stem(langzamerhand,_,_,_,_).
 ignore_modifier_stem(maar,_,_,_,_).
+ignore_modifier_stem(meer,_,_,_,_).
 ignore_modifier_stem(meestal,_,_,_,_).
 ignore_modifier_stem(misschien,_,_,_,_).
 ignore_modifier_stem(namelijk,_,_,_,_).
@@ -609,6 +617,7 @@ ignore_modifier_stem(pas,_,_,_,_).
 ignore_modifier_stem(precies,_,_,_,_).
 ignore_modifier_stem(reeds,_,_,_,_).
 ignore_modifier_stem(ronduit,_,_,_,_).
+ignore_modifier_stem(slechts,_,_,_,_).
 ignore_modifier_stem(sowieso,_,_,_,_).
 ignore_modifier_stem(specifiek,_,_,np,_).
 ignore_modifier_stem(steeds,_,_,_,_).
