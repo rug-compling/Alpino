@@ -1,6 +1,6 @@
 %.sorted: %
 	dtlist --recursive $< \
-             | Alpino -notk batch_command=treebank_dep_features_stdin\
+             | Alpino -notk batch_command=treebank_dep_features_stdin 2> $*.tripleslog\
              |  LANG=POSIX LC_ALL=POSIX sort \
              |  $(ALPINO_HOME)/Disambiguation/Triples/uniq-c\
              |  LANG=POSIX LC_ALL=POSIX sort\
