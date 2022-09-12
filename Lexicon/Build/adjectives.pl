@@ -5504,7 +5504,7 @@ a([e(beursgenoteerde),
 a([e(beurtelingse),
    no_e(beurtelings)],adv,[],[]).
 
-a([no_e(bevaarbaar),
+a([postn_no_e(bevaarbaar),
    e(bevaarbare)],padv,[],[]).
 
 a([ge_both(bevallen)],adv,[],[]).

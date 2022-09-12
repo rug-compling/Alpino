@@ -4842,6 +4842,7 @@ m(onverschillig,    pre_wh_adverb,onverschillig).
 m(willekeurig,      pre_wh_adverb,willekeurig).
 m('om het even',    pre_wh_adverb,[om,Het,even]) :- het(Het).
 
+%%%% TODO: AP/ADVP ADJ/ADV
 %% adverbs left of XP:
 %% noun comp prep adv verb
 %% for np, sbar, pp, advp, om-vp
@@ -4885,9 +4886,9 @@ with_dt([te,meer,niet],
 
 with_dt([Ook,Al],
 	modal_adverb,
-	dt(advp,[mod=l(Ook,adverb,advp,0,1),
-		 hd=l(Al,adverb,1,2)])) :-
-    modified_modal_mod_hd(Ook,Al).
+	dt(Cat,[mod=l(Ook,adverb,advp,0,1),
+		 hd=l(Al,Pos,1,2)])) :-
+    modified_modal_mod_hd(Ook,Al,Cat,Pos).
 
 modified_modal_hd_mod(ook,al).
 modified_modal_hd_mod(zo,ongeveer).
@@ -4897,10 +4898,10 @@ modified_modal_hd_mod(vooral,ook).
 modified_modal_hd_mod_noun_prep(misschien,wel).
 
 %% maybe have a rule modal_adv --> mod:modal_adv hd:modal_adv
-modified_modal_mod_hd(bijna,uitsluitend).
-modified_modal_mod_hd(haast,uitsluitend).
-modified_modal_mod_hd(vrijwel,uitsluitend).
-modified_modal_mod_hd(alleen,maar).
+modified_modal_mod_hd(bijna,uitsluitend,ap,adjective(no_e(adv))).
+modified_modal_mod_hd(haast,uitsluitend,ap,adjective(no_e(adv))).
+modified_modal_mod_hd(vrijwel,uitsluitend,ap,adjective(no_e(adv))).
+modified_modal_mod_hd(alleen,maar,advp,adverb).
 
 modified_modal_hd_mod_mod(vooral,ook,weer).
 
@@ -5071,6 +5072,7 @@ m(waarschijnlijk,   modal_adverb(noun_prep),waarschijnlijk).
 m('zo\'n beetje',   modal_adverb(noun_prep),['zo\'n',beetje]).
 
 m(kort,             modal_adverb(adv_comp_prep),kort).
+m(lang,             modal_adverb(adv_comp_prep),lang).
 %% helemaal als een verrassing kwam het niet
 m(helemaal,         modal_adverb(adv_comp_prep), helemaal).
 
@@ -5110,22 +5112,23 @@ m(vlak,             modal_adverb(comp_prep),vlak). % vlak voor(dat)..
 
 with_dt([Ook,Al],
 	modal_adverb(comp_prep),
-	dt(advp,[mod=l(Ook,adverb,advp,0,1),
-		 hd=l(Al,adverb,1,2)])) :-
-    modified_modal_mod_hd_comp_prep(Ook,Al).
+	dt(Cat,[mod=l(Ook,adverb,advp,0,1),
+		 hd=l(Al,Pos,1,2)])) :-
+    modified_modal_mod_hd_comp_prep(Ook,Al,Cat,Pos).
 
-modified_modal_mod_hd_comp_prep(vrijwel,direct).
-modified_modal_mod_hd_comp_prep(vrijwel,direck).
-modified_modal_mod_hd_comp_prep(vrijwel,meteen).
-modified_modal_mod_hd_comp_prep(vrijwel,onmiddellijk).
-modified_modal_mod_hd_comp_prep(bijna,direct).
-modified_modal_mod_hd_comp_prep(bijna,direck).
-modified_modal_mod_hd_comp_prep(bijna,meteen).
-modified_modal_mod_hd_comp_prep(bijna,onmiddellijk).
-modified_modal_mod_hd_comp_prep(haast,direct).
-modified_modal_mod_hd_comp_prep(haast,direck).
-modified_modal_mod_hd_comp_prep(haast,meteen).
-modified_modal_mod_hd_comp_prep(haast,onmiddellijk).
+modified_modal_mod_hd_comp_prep(vrijwel,direct,ap,adjective(no_e(adv))).
+modified_modal_mod_hd_comp_prep(vrijwel,direkt,ap,adjective(no_e(adv))).
+modified_modal_mod_hd_comp_prep(vrijwel,meteen,advp,adverb).
+modified_modal_mod_hd_comp_prep(vrijwel,onmiddellijk,ap,adjective(no_e(adv))).
+modified_modal_mod_hd_comp_prep(bijna,direct,ap,adjective(no_e(adv))).
+modified_modal_mod_hd_comp_prep(bijna,direkt,ap,adjective(no_e(adv))).
+modified_modal_mod_hd_comp_prep(bijna,meteen,advp,adverb).
+modified_modal_mod_hd_comp_prep(bijna,onmiddellijk,ap,adjective(no_e(adv))).
+modified_modal_mod_hd_comp_prep(haast,direct,ap,adjective(no_e(adv))).
+modified_modal_mod_hd_comp_prep(haast,direkt,ap,adjective(no_e(adv))).
+modified_modal_mod_hd_comp_prep(haast,meteen,advp,adverb).
+modified_modal_mod_hd_comp_prep(haast,onmiddellijk,ap,adjective(no_e(adv))).
+modified_modal_mod_hd_comp_prep(niet,lang,ap,adjective(no_e(adv))).
 
 
 m(altijd,           modal_adverb(comp), altijd).  % wanneer als 
@@ -6756,8 +6759,8 @@ m(deze,         pronoun(nwh,thi,both,both,gen,def),dezes).
 m(deze,         pronoun(nwh,thi,pl,de,both,def,strpro),dezen).
 m(diegene,      pronoun(nwh,thi,sg,de,both,def,strpro),diegene).
 m(diegene,      pronoun(nwh,thi,pl,de,both,def,strpro),diegenen).
-m(één,          pronoun(nwh,thi,sg,both,both,indef,strpro),een).
-m(één,          pronoun(nwh,thi,sg,both,both,indef,strpro),één).
+m(één,          pronoun(nwh,thi,sg,de,both,indef,strpro),een).  %% both => de
+m(één,          pronoun(nwh,thi,sg,de,both,indef,strpro),één).  %% both => de
 m(eenieder,     pronoun(nwh,thi,sg,de,both,def,strpro),[Een,ieder]) :- een(Een).
 m(eenieder,     pronoun(nwh,thi,sg,de,both,def,strpro),eenieder).
 m(één,          pronoun(nwh,thi,sg,de,both,indef,strpro),eentje).
@@ -7156,13 +7159,13 @@ m('\'s jaar',            pronoun(nwh,thi,sg,de,gen,def),['\'s',jaars]).
 
 with_dt([de,één],
 	pronoun(nwh,thi,sg,de,both,def),
-	dt(np,[hd=l(één,pronoun(nwh,thi,sg,both,both,indef),1,2),
+	dt(np,[hd=l(één,pronoun(nwh,thi,sg,de,both,indef),1,2),
 	       det=l(de,determiner(de),detp,0,1)
 	      ])).
 
 with_dt([Het,één],
 	pronoun(nwh,thi,sg,het,both,def),
-	dt(np,[hd=l(één,pronoun(nwh,thi,sg,both,both,indef),1,2),
+	dt(np,[hd=l(één,pronoun(nwh,thi,sg,de,both,indef),1,2),
 	       det=l(het,determiner(het,nwh,nmod,pro,nparg,wkpro),detp,0,1)
 	      ])) :- het(Het).
 
@@ -7996,7 +7999,7 @@ with_dt([dit,maal],
 %% VL, kort voor 'een dezer dagen'
 with_dt([een,dezer],
 	tmp_np,
-	dt(np,[hd=l(één,pronoun(nwh,thi,sg,both,both,indef,strpro),np,0,1),
+	dt(np,[hd=l(één,pronoun(nwh,thi,sg,de,both,indef,strpro),np,0,1),
 	       mod=l(deze,determiner(der),detp,1,2)
 	      ])).
 

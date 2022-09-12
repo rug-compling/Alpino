@@ -21930,8 +21930,8 @@ v(stel,stelt,stellen,gesteld,stelde,stelden,
 		   norm_passive),
 	part_fixed(in,[{[acc(onderzoek),er_pp(naar,C)]},extra_sbar(C)],
 		   norm_passive),
-	fixed([{[dat,acc(vraag)]}],norm_passive),
-	fixed([{[dat_pp(aan),acc(vraag)]}],norm_passive),
+%	fixed([{[dat,acc(vraag)]}],norm_passive),   subsumed by np_np
+%	fixed([{[dat_pp(aan),acc(vraag)]}],norm_passive), subsumed by so_pp_np
 	fixed([{[pc(over),acc(vraag)]}],norm_passive),
         
        	fixed([pc(over),acc(vraag),dat],norm_passive),

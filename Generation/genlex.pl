@@ -91,7 +91,6 @@ check_parse_only(List,Frame) :-
     lists:member(Root,List),
     check_parse_only_root(Root,Frame).
 
-check_parse_only_root(eentje,_). % use één; dim should be in adt somehow...
 check_parse_only_root(wezen,verb(zijn,inf,_)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1693,13 +1692,20 @@ score_words(Root,[W|Ws],[F-W|Ws1]) :-
     ->  true
     ;   F0 = 0
     ),
-    subtract_if_para(Root,W,F0,F),
+    add_if_para(Root,W,F0,F),
     score_words(Root,Ws,Ws1).
 
-subtract_if_para(Root,W,F0,F) :-
-    alpino_paraphrase:add_lex(Root,W,_),!,
-    F is F0 + 1.
-subtract_if_para(_,_,F,F).
+add_if_para(Root,W,F0,F) :-
+    alpino_paraphrase:add_lex(Root,W,_),
+    !,
+    (   add_value(Root,W,F1)
+    ->  true
+    ;   F1 = 1
+    ),
+    F is F0 + F1.
+add_if_para(_,_,F,F).
+
+add_value(één,één,100000).  %% otherwise, een is better than één, .... :-(
 
 unknown_root_heuristic(Pos,{RootList},Root,Atts,Pos,Cat,Surfs) :-
     !,
