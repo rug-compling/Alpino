@@ -16,60 +16,65 @@ LL=/net/corpora/LassyLarge
 LLE=/net/corpora/LassyLargeExtra
 LLR=/net/shared/vannoord/LassyLargeRestricted
 
+S_FSA_PREFIX=/net/aps/haytabo/src/s_fsa-0.51/fsa_prefix 
+
+ls:
+	ls -lhS $(sorted)
+
 ## all except NLWIKI20110804 and EUROPARL, for which there are extended
 ## versions in $(LLE)
-LLSORTED=$(LL)/EINDHOVEN.sorted \
- $(LL)/EMEA.sorted \
- $(LL)/SENSEVAL.sorted \
- $(LL)/TROONREDE.sorted \
- $(LL)/WR-P-E-A.sorted \
- $(LL)/WR-P-E-C.sorted \
- $(LL)/WR-P-E-E.sorted \
- $(LL)/WR-P-E-F.sorted \
- $(LL)/WR-P-E-G.sorted \
- $(LL)/WR-P-E-H.sorted \
- $(LL)/WR-P-E-I.sorted \
- $(LL)/WR-P-E-J.sorted \
- $(LL)/WR-P-E-K.sorted \
- $(LL)/WR-P-E-L.sorted \
- $(LL)/WR-P-P-B.sorted \
- $(LL)/WR-P-P-C.sorted \
- $(LL)/WR-P-P-D.sorted \
- $(LL)/WR-P-P-E.sorted \
- $(LL)/WR-P-P-F.sorted \
- $(LL)/WR-P-P-G.sorted \
- $(LL)/WR-P-P-H.sorted \
- $(LL)/WR-P-P-I.sorted \
- $(LL)/WR-P-P-J.sorted \
- $(LL)/WR-P-P-K.sorted \
- $(LL)/WR-U-E-A.sorted \
- $(LL)/WR-U-E-D.sorted \
- $(LL)/WR-U-E-E.sorted \
- $(LL)/WS-U-E-A.sorted \
- $(LL)/WS-U-T-B.sorted
+LLSORTED=$(LL)/EINDHOVEN/COMPACT.sorted \
+ $(LL)/EMEA/COMPACT.sorted \
+ $(LL)/SENSEVAL/COMPACT.sorted \
+ $(LL)/TROONREDE/COMPACT.sorted \
+ $(LL)/WR-P-E-A/COMPACT.sorted \
+ $(LL)/WR-P-E-C/COMPACT.sorted \
+ $(LL)/WR-P-E-E/COMPACT.sorted \
+ $(LL)/WR-P-E-F/COMPACT.sorted \
+ $(LL)/WR-P-E-G/COMPACT.sorted \
+ $(LL)/WR-P-E-H/COMPACT.sorted \
+ $(LL)/WR-P-E-I/COMPACT.sorted \
+ $(LL)/WR-P-E-J/COMPACT.sorted \
+ $(LL)/WR-P-E-K/COMPACT.sorted \
+ $(LL)/WR-P-E-L/COMPACT.sorted \
+ $(LL)/WR-P-P-B/COMPACT.sorted \
+ $(LL)/WR-P-P-C/COMPACT.sorted \
+ $(LL)/WR-P-P-D/COMPACT.sorted \
+ $(LL)/WR-P-P-E/COMPACT.sorted \
+ $(LL)/WR-P-P-F/COMPACT.sorted \
+ $(LL)/WR-P-P-G/COMPACT.sorted \
+ $(LL)/WR-P-P-H/COMPACT.sorted \
+ $(LL)/WR-P-P-I/COMPACT.sorted \
+ $(LL)/WR-P-P-J/COMPACT.sorted \
+ $(LL)/WR-P-P-K/COMPACT.sorted \
+ $(LL)/WR-U-E-A/COMPACT.sorted \
+ $(LL)/WR-U-E-D/COMPACT.sorted \
+ $(LL)/WR-U-E-E/COMPACT.sorted \
+ $(LL)/WS-U-E-A/COMPACT.sorted \
+ $(LL)/WS-U-T-B/COMPACT.sorted
 
 
-LLESORTED=$(LLE)/Books.sorted \
- $(LLE)/CHILDES.sorted \
- $(LLE)/CLEF.sorted \
- $(LLE)/DGT.sorted \
- $(LLE)/DutchWebCorpus.sorted \
- $(LLE)/europarl7.sorted \
- $(LLE)/GELOOFDERKAMERADEN.sorted \
- $(LLE)/GlobalVoices.sorted \
- $(LLE)/JRC-Acquis.sorted \
- $(LLE)/News-Commentary11.sorted \
- $(LLE)/ParaCrawl.sorted \
- $(LLE)/Tatoeba.sorted \
- $(LLE)/TED2013.sorted \
- $(LLE)/wiki2017.sorted \
- $(LLE)/OpenSubtitles2018.sorted \
+LLESORTED=$(LLE)/Books/COMPACT.sorted \
+ $(LLE)/CHILDES/COMPACT.sorted \
+ $(LLE)/CLEF/COMPACT.sorted \
+ $(LLE)/DGT/COMPACT.sorted \
+ $(LLE)/DutchWebCorpus/COMPACT.sorted \
+ $(LLE)/europarl7/COMPACT.sorted \
+ $(LLE)/GELOOFDERKAMERADEN/COMPACT.sorted \
+ $(LLE)/GlobalVoices/COMPACT.sorted \
+ $(LLE)/JRC-Acquis/COMPACT.sorted \
+ $(LLE)/News-Commentary11/COMPACT.sorted \
+ $(LLE)/ParaCrawl/COMPACT.sorted \
+ $(LLE)/Tatoeba/COMPACT.sorted \
+ $(LLE)/TED2013/COMPACT.sorted \
+ $(LLE)/wiki2017/COMPACT.sorted \
+ $(LLE)/OpenSubtitles2018/COMPACT.sorted \
 
-LLRSORTED=$(LLR)/CGN.sorted \
- $(LLR)/VK1997.sorted \
- $(LLR)/TWNC.sorted \
- $(LLR)/MEDIARGUS.sorted \
- $(LLR)/NLCOW.sorted
+LLRSORTED=$(LLR)/CGN/COMPACT.sorted \
+ $(LLR)/VK1997/COMPACT.sorted \
+ $(LLR)/TWNC/COMPACT.sorted \
+ $(LLR)/MEDIARGUS/COMPACT.sorted \
+ $(LLR)/NLCOW/COMPACT.sorted
 
 ## remember you might want to use 
 ## export TMPDIR=/dev/shm
@@ -87,7 +92,6 @@ all-sorted: $(sorted)
         | LANG=POSIX LC_ALL=POSIX sort \
         | $(ALPINO_HOME)/SuffixArrays/merge_ngrams \
         > $*.marginals
-
 
 temp1.fsa: marginals
 	zcat marginals \
@@ -111,7 +115,7 @@ marginals: $(sorted:%.sorted=%.marginals)
         > marginals
 
 dep.pl: temp2.fsa
-	fsa_prefix -d temp2.fsa -a\
+	$(S_FSA_PREFIX) -d temp2.fsa -a\
         | sed -e 's/^ //' \
         | awk -F+ '{ if (NF==3 && $$3 > $(TH)) { printf "%s.\n",$$1}}' | gzip > dep.pl
 

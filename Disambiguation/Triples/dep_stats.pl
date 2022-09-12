@@ -16,6 +16,12 @@ marginal(appos_person(TYPE,Word),
 	 rappos(Word)
 	).
 
+marginal(depprep(HeadPos,Rel,Prep,Noun),
+	 tdepprep,
+	 ldepprep(HeadPos,Rel),
+	 rdepprep(Prep,Noun)
+	).
+
 score_corpus_feature(Feature,Val) :-
     corpus_frequency_lookup2(Feature,Pair),
     marginal(Feature,Total,Left,Right),

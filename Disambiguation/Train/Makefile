@@ -146,7 +146,7 @@ tenfold:
 	$(MAKE) -j $(MPARTS:%=%.tcounts) 
 	$(MAKE) -j $(MPARTS:%=%.features) 
 	$(MAKE) -j $(MPARTS:%=%.zest) 
-	$(MAKE) $(MPARTS:%=%.weights) 
+	$(MAKE) -j 2 $(MPARTS:%=%.weights) 
 
 pw_PARTS=cdipuxle
 pp_PARTS=cdiuwxle
