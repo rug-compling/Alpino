@@ -557,6 +557,7 @@ Alpino supports brackets in the input to indicate:
  * @posflt
  * @alt (@add_lex in older versions)
  * @mwu
+ * @mwu_alt (since version git815)
  * @folia
 - requirement to skip words
  * @skip
@@ -653,7 +654,7 @@ of the word 'goed'.
 
 In older versions, we used (for historical reasons) the label
 "add_lex" instead of alt. Furthermore, add_lex would also support
-treating more than a single word as a unit. This can be accomplished
+treating more than a single word as a unit. This can now be accomplished
 using "alt" in combination with skips. For example:
 
 old:
@@ -668,6 +669,15 @@ new:
 ik wil [ @alt daarom daar ] [ @skip om ] naar huis
 --------------------------------------
 
+Update, since version git815, you can use the new meta-label
+@mwu_alt for this:
+
+--------------------------------------
+ik wil [ @mwu_alt daarom daar om ] naar huis
+--------------------------------------
+
+[ @mwu_alt Alt w1 w2 .. ] indicates that the words w1, w2, .. should be
+treated as a multi-word unit with the same categories as word Alt.
 
 A further meta-label for lexical assignment is the @mwu label. This
 indicates that the bracketed sequence of words should be regarded as a
