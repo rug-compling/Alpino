@@ -251,6 +251,8 @@ partitive(Ds0) :-
         AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
     ;   Hd = tree(r(hd,adt_lex(_,veel,_,_,_)),[]),
         AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
+    ;   Hd = tree(r(hd,adt_lex(_,wat,_,_,_)),[]),
+        AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
     ).
 
 pre_wh(p(np),Ds,Mod) :-
@@ -580,9 +582,10 @@ ignore_modifier_stem(evenwel,_,_,_,_).
 ignore_modifier_stem(detailleren,adj,_,np,_).
 ignore_modifier_stem(globaal,_,_,_,_).
 ignore_modifier_stem(grondig,_,_,_,_).
-ignore_modifier_stem(heel,_,_,np,_).
+ignore_modifier_stem(heel,_,_,np,NotWat) :-
+    \+ NotWat = wat.		% heel wat => *wat.
 ignore_modifier_stem(heel,_,_,ap,_).
-ignore_modifier_stem(heel,_,_,advp,_).   % heel wat => *wat  todo: heel weinig, heel veel -> weinig, veel
+ignore_modifier_stem(heel,_,_,advp,_).  
 ignore_modifier_stem(heel,_,_,detp,weinig).
 ignore_modifier_stem(heel,_,_,detp,veel).
 ignore_modifier_stem(helaas,_,_,_,_).
@@ -621,6 +624,7 @@ ignore_modifier_stem(slechts,_,_,_,_).
 ignore_modifier_stem(sowieso,_,_,_,_).
 ignore_modifier_stem(specifiek,_,_,np,_).
 ignore_modifier_stem(steeds,_,_,_,_).
+ignore_modifier_stem(successievelijk,_,_,_,_).
 ignore_modifier_stem(tenslotte,_,_,_,_).
 ignore_modifier_stem(terdege,_,_,_,_).
 ignore_modifier_stem(terecht,_,_,_,_).
@@ -651,6 +655,8 @@ ignore_modifier_stem(zeer,_,_,_,_).
 ignore_modifier_stem(zelfs,_,_,_,_).
 ignore_modifier_stem(zojuist,_,_,_,_).
 
+
+important_modifier_pattern(mod=dt(advp,[hd=zo,obcomp=mogelijk])).
 important_modifier_pattern(mod=dt(mwu(_,_),[mwp=dan,mwp=ook])).
 
 important_modifier(_,adt_lex(smain,_,_,_,_),[],_,[]). % final dependent of main verb in smain should stay
@@ -706,7 +712,7 @@ important_modifier(tree(r(mod,p(_)),PPDS),adt_lex(GebruikCat,Gebruik,_,GebruikPo
 	fail
     ).
 
-:- hdrug_util:initialize_flag(pmi_modifier_threshold,2000).
+:- hdrug_util:initialize_flag(pmi_modifier_threshold,0.2).
 
 check_pmi(Gebruik0,GebruikPos0,GebruikCat,Van0,VanPos0,VanCat) :-
     hdrug_util:hdrug_flag(pmi_modifier_threshold,THRESHOLD),
@@ -714,7 +720,7 @@ check_pmi(Gebruik0,GebruikPos0,GebruikCat,Van0,VanPos0,VanCat) :-
     adapt_psp(VanCat,Van0,Van),
     adapt_pos(GebruikPos0,GebruikPos),
     adapt_pos(VanPos0,VanPos),
-    hdrug_util:debug_message(2,"checking modifier ~w ~w ~w ~w... ~n",[Gebruik,GebruikPos,Van,VanPos]),
+    hdrug_util:debug_message(3,"checking modifier ~w ~w ~w ~w... ~n",[Gebruik,GebruikPos,Van,VanPos]),
     alpino_penalties:corpus_frequency_lookup(dep35(Van,VanPos,hd/mod,GebruikPos,Gebruik),Val),
     hdrug_util:debug_message(2,"checking modifier ~w ~w ~w ~w: ~w ~n",[Gebruik,GebruikPos,Van,VanPos,Val]),
     Val > THRESHOLD,
