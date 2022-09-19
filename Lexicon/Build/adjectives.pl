@@ -39662,6 +39662,8 @@ a([e(weerzinwekkende),
    st(weerzinwekkendst),
    ste(weerzinwekkendste)],adv,[],[]).
 
+a([pred(weg)],locadv,[],[]).
+
 a([ge_e(wegbezuinigde),
    ge_no_e(wegbezuinigd)],padv,[],[]).
 

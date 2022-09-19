@@ -5934,7 +5934,6 @@ loc_adverb(langszij).
 loc_adverb(mee).   % hij ging toen mee de boerderij in
                    % hij zou toen mee naar huis gaan
                    % hij zou toen mee op de motor gaan (?)
-loc_adverb(weg).      %  not pp compl
 loc_adverb(scheep).
 
 loc_adverb(overboord).  % er is een man overboord
@@ -7864,7 +7863,7 @@ with_dt([heel,wat],
 %% er speelt zich heel wat af dat beter verborgen blijft
 with_dt([heel,wat],
         pronoun(nwh,thi,sg,het,both,indef,strpro),
-        dt(detp,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg,ntopicpro),1,2),
+        dt(np,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg,ntopicpro),1,2),
                  mod=l(heel,intensifier,advp,0,1)])).
 
 
@@ -7928,12 +7927,6 @@ m('waar the fock',  er_wh_loc_adverb,          [waar,the,fock] ).
 m('waar the fuck',  er_wh_loc_adverb,          [waar,the,fuck] ).
 m('waar the fuk',   er_wh_loc_adverb,          [waar,the,fuk]  ).
 m('waar the hell',  er_wh_loc_adverb,          [waar,the,hell] ).
-
-with_dt([ver,weg],
-	adjective(pred(locadv)),
-	dt(advp,[hd=l(weg,loc_adverb,1,2),
-		 mod=l(ver,adjective(no_e(locadv)),ap,0,1)
-		])).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

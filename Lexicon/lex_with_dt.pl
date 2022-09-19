@@ -2185,7 +2185,6 @@ with_dt_all(vandaar,[wellicht]).
 with_dt_all('van dien aard',[zelfs]).
 with_dt_all(van,[weggeweest]).
 with_dt_all(van,[zulk]).
-with_dt_all(ver,[weg]).
 with_dt_all(vier_DIM,[wij]).
 with_dt_all(vier_DIM,[zij]).
 with_dt_all(vier,[wij]).
@@ -3090,7 +3089,6 @@ with_dt_root(water).
 with_dt_root(we).
 with_dt_root(weer).
 with_dt_root(weet).
-with_dt_root(weg).
 with_dt_root(weggeweest).
 with_dt_root(wel).
 with_dt_root(welaan).

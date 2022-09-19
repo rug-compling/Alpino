@@ -115,6 +115,9 @@ surviving_word_tag(bezoek,tmp_noun(het,count,sg)).
 surviving_word_tag(bezoek,tmp_noun(het,count,sg,pred_pp(op))).
 surviving_word_tag(voorbij,adjective(both(adv))).
 
+%% temp
+surviving_word_tag(weg,adjective(pred(locadv))).
+
 %surviving_word_tag(_,_):-
 %    fail.
 
