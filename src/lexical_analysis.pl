@@ -1555,6 +1555,23 @@ remove_alternatives_to_mwu(P0,P) :-
         assert_tag(P0,P,R0,R,Used,Used,mwu,proper_name(both))
     ).
 
+remove_alternatives_to_mwu_alt(P0,P,Alt) :-
+    (   clause(tag(Q0,Q,_,_,_,_,_,Tag),true,Ref), % remove alternatives
+        overlap(P0,P,Q0,Q),
+        erase_tag(Ref),
+        fail
+    ;   true
+    ),
+    find_symbolic_begin(P0,R0),
+    R is R0 + (P-P0),
+    thread_flag(current_input_sentence,Input),
+    surface_form(Input,P0,P,Used),
+    (   in_lexicon(Tag,Label,[Alt],[],His,[]),
+	assert_tag(P0,P,R0,R,Label,Used,mwu_alt(His),Tag),
+	fail
+    ;   true
+    ).
+
 add_user_skip(skip(P0,P)) :-
     !,
     find_symbolic_begin(P0,R0),
@@ -1609,6 +1626,10 @@ add_user_skip(posflt(P0,P,Tag)) :-
 add_user_skip(mwu(P0,P)) :-
     !,
     remove_alternatives_to_mwu(P0,P).
+
+add_user_skip(mwu_alt(P0,P,Alt)) :-
+    !,
+    remove_alternatives_to_mwu_alt(P0,P,Alt).
 
 add_user_skip(_).
 
@@ -2308,7 +2329,8 @@ extract_skip_positions([H|T],Rest0,Rest,P0,[skip(P0,P)|SkipIntervals]) :-
     find_end_skip(Input0,Input,Rest0,Rest1,P0,P),
     extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
 extract_skip_positions([H|T],Rest0,Rest,P0,[phantom_skip(P0)|SkipIntervals]) :-
-    phantom_skip([H|T],Input0),!,
+    phantom_skip([H|T],Input0),
+    !,
     find_end_skip(Input0,Input,Rest0,Rest1,P0,P),
     (   P is P0 + 1
     ->  true
@@ -2317,7 +2339,8 @@ extract_skip_positions([H|T],Rest0,Rest,P0,[phantom_skip(P0)|SkipIntervals]) :-
     ),
     extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
 extract_skip_positions([H|T],Rest0,Rest,P0,[postag(P0,P,Tag,Surf)|SkipIntervals]) :-
-    start_postag_skip([H|T],Input0,Tag),!,
+    start_postag_skip([H|T],Input0,Tag),
+    !,
     find_end_skip(Input0,Input,Rest0,Rest1,P0,P),
     (   P0 =:= P
     ->  format(user_error,"error: postag skip without token: ~w!~n",
@@ -2329,7 +2352,8 @@ extract_skip_positions([H|T],Rest0,Rest,P0,[postag(P0,P,Tag,Surf)|SkipIntervals]
     append(Surf,[_],Surf0),
     extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
 extract_skip_positions([H|T],Rest0,Rest,P0,[alt(P0,Lex,Surf)|SkipIntervals]) :-
-    start_alt_skip([H|T],Input0,Lex),!,
+    start_alt_skip([H|T],Input0,Lex),
+    !,
     find_end_skip(Input0,Input,Rest0,Rest1,P0,P),
     (   P0 =:= P
     ->  format(user_error,"error: alt skip without word: ~w!~n",
@@ -2343,7 +2367,8 @@ extract_skip_positions([H|T],Rest0,Rest,P0,[alt(P0,Lex,Surf)|SkipIntervals]) :-
     append([Surf,_],Input,Input0), 
     extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
 extract_skip_positions([H|T],[Word|Rest0],Rest,P0,[folia(P0,P,Lemma,Tag)|SkipIntervals]) :-
-    start_folia_skip([H|T]),!,
+    start_folia_skip([H|T]),
+    !,
     (   folia_skip([H|T],Input,Lemma,Tag,Word)
     ->  true
     ;   format(user_error,"error in folia metatag!~n",[]),
@@ -2379,7 +2404,8 @@ extract_skip_positions([H|T],Rest0,Rest,P0,
     extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
 */
 extract_skip_positions([H|T],Rest0,Rest,P0,[posflt(P0,P,Tag)|SkipIntervals]) :-
-    start_posflt_skip([H|T],Input0,Tag),!,
+    start_posflt_skip([H|T],Input0,Tag),
+    !,
     find_end_skip(Input0,Input,Rest0,Rest1,P0,P),
     (   P0 =:= P
     ->  format(user_error,"error: posflt skip without token: ~w!~n",
@@ -2389,7 +2415,19 @@ extract_skip_positions([H|T],Rest0,Rest,P0,[posflt(P0,P,Tag)|SkipIntervals]) :-
     ),
     extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
 extract_skip_positions([H|T],Rest0,Rest,P0,[mwu(P0,P)|SkipIntervals]) :-
-    start_mwu_skip([H|T],Input0),!,
+    start_mwu_skip([H|T],Input0),
+    !,
+    find_end_skip(Input0,Input,Rest0,Rest1,P0,P),
+    (   P0 =:= P
+    ->  format(user_error,"error: mwu skip without token!~n",
+               []),
+        raise_exception(alpino_error(unbalanced_brackets))
+    ;   true
+    ),
+    extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
+extract_skip_positions([H|T],Rest0,Rest,P0,[mwu_alt(P0,P,Alt)|SkipIntervals]) :-
+    start_mwu_alt_skip([H|T],Input0,Alt),
+    !,
     find_end_skip(Input0,Input,Rest0,Rest1,P0,P),
     (   P0 =:= P
     ->  format(user_error,"error: mwu skip without token!~n",
@@ -2399,7 +2437,8 @@ extract_skip_positions([H|T],Rest0,Rest,P0,[mwu(P0,P)|SkipIntervals]) :-
     ),
     extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
 extract_skip_positions([H|T],[H1|Rest0],Rest,P0,SkipIntervals) :-
-    escaped_input(H,H1),!,
+    escaped_input(H,H1),
+    !,
     P1 is P0 + 1,
     extract_skip_positions(T,Rest0,Rest,P1,SkipIntervals).
 extract_skip_positions([H|T],[H1|Rest0],Rest,P0,SkipIntervals) :-
@@ -2439,6 +2478,8 @@ start_alt_skip(['[','@add_lex',Tag|L],L,Tag).
 
 start_posflt_skip(['[','@posflt',Tag0|L],L,Tag) :-
     atom_term(Tag0,Tag).
+
+start_mwu_alt_skip(['[','@mwu_alt',Word|L],L,Word).
 
 start_mwu_skip(['[','@mwu'|L],L).
 
