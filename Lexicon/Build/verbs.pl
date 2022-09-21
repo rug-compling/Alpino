@@ -6076,7 +6076,10 @@ v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
 	part_transitive(om),
 	part_transitive(onder),
 	part_transitive(op),
-	part_fixed(op,[{[acc(ervaring),pc(met)]}],norm_passive),
+%%%	part_fixed(op,[{[acc(ervaring),pc(met)]}],norm_passive),
+%%%  you should not use acc(STEM) if instead of STEM a pronoun can
+%%%  be used. "We hebben veel ervaring. Die hebben we opgedaan tijdens ..."
+	part_np_pc_pp(op,met),
 	part_transitive(open),
 	part_transitive(over),
 	part_transitive(teniet),
