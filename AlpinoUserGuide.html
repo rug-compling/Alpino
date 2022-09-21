@@ -1596,6 +1596,16 @@ using "alt" in combination with skips. For example:</p></div>
 </div></div>
 <div class="paragraph"><p>[ @mwu_alt Alt w1 w2 .. ] indicates that the words w1, w2, .. should be
 treated as a multi-word unit with the same categories as word Alt.</p></div>
+<div class="paragraph"><p>The meta-label @alt has a further option: you can indicate ambiguity
+by including multiple candidate alternative words. For instance, to
+indicate that the word /den/ (used for instance in older spellings
+of Dutch) should be treated as /de/, although of course it could in
+infrequent cases also be the word /den/. Each of the candidate words
+is prefixed by the tilde, as follows:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Karel liet [ @alt ~de~den den ] blik over dit tafereel gaan</code></pre>
+</div></div>
 <div class="paragraph"><p>A further meta-label for lexical assignment is the @mwu label. This
 indicates that the bracketed sequence of words should be regarded as a
 single lexical category. The effect is, that lexical assignments that
@@ -1950,7 +1960,7 @@ such keys correctly.</p></div>
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2022-09-19 11:08:12 CEST
+ 2022-09-21 10:22:43 CEST
 </div>
 </div>
 </body>

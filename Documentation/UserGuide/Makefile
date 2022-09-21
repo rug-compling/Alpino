@@ -4,7 +4,7 @@ AlpinoUserGuide.html: AlpinoUserGuide.txt
 	asciidoc AlpinoUserGuide.txt
 
 AlpinoUserGuide.pdf: AlpinoUserGuide.txt
-	a2x -fpdf -dbook AlpinoUserGuide.txt
+	a2x --fop -fpdf -dbook AlpinoUserGuide.txt
 
 install:
 	cp AlpinoUserGuide.html AlpinoUserGuide.pdf ../../

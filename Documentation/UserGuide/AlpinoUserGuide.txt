@@ -679,6 +679,17 @@ ik wil [ @mwu_alt daarom daar om ] naar huis
 [ @mwu_alt Alt w1 w2 .. ] indicates that the words w1, w2, .. should be
 treated as a multi-word unit with the same categories as word Alt.
 
+The meta-label @alt has a further option: you can indicate ambiguity
+by including multiple candidate alternative words. For instance, to
+indicate that the word /den/ (used for instance in older spellings
+of Dutch) should be treated as /de/, although of course it could in
+infrequent cases also be the word /den/. Each of the candidate words
+is prefixed by the tilde, as follows:
+
+--------------------------------------
+Karel liet [ @alt ~de~den den ] blik over dit tafereel gaan
+--------------------------------------
+
 A further meta-label for lexical assignment is the @mwu label. This
 indicates that the bracketed sequence of words should be regarded as a
 single lexical category. The effect is, that lexical assignments that
