@@ -9757,8 +9757,8 @@ grammar_rule(start_coord(root_modifier,en),M,[XP,ModList]) :-
     max_modifier(Mod),
     Mod:mcat => (mcat_vp;mcat_adv;mcat_pp;mcat_sbar),
     Mod:wh => nwh,
-    Mod:cj => one_crd, % !!
-
+    Mod:cj => one_crd,		% !!
+    Mod:sel => ~to_topic,
     ModList:last => last,
     ModList:last:ccat0 <=> ModList:last:ccat,
     
@@ -9795,8 +9795,8 @@ grammar_rule(start_coord(quest_short,en),M,[XP,ShortList]) :-
 %    Root:question => yes,   % hij komt niet , maar waarom niet ?
     ShortList:cat <=> Short,
     ShortList:last => last,
-%    ShortList:last:ccat0 <=> ShortList:last:ccat,
-    ShortList:last:ccat <=> XP:ccat,  % cf "dat weet ik , maar welk onderdeel ofzo ."
+   ShortList:last:ccat0 <=> ShortList:last:ccat, % ??? was eerst de volgende regel
+%%    ShortList:last:ccat <=> XP:ccat,  % cf "dat weet ik , maar welk onderdeel ofzo ."
     Short => sbar,
     Short:mods => [],
     Short:apps => [],
@@ -10109,6 +10109,7 @@ end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A) :-
     MOD:dt <=> MODdt,
     MOD:mcat => ~mcat_imp,
     MOD:wh => nwh,
+    MOD:sel => ~to_topic,
     end_coord_conj_structure(Name,Blist,Conj,A,[MODdt]),   
     A /=> vpx, A /=> sv1, A /=> v, 
     %%% A /=> vb,  A /=> vc,   % gives rise to cyclic terms (in generation)!!!
@@ -10375,6 +10376,7 @@ coord_daughter_paths(L,M) :-
     Paths = [vform,aform,nform,wh,app,tpart,amount,exs,cleft,
              compar_form,vslash,relform,ld_pc,me_adj,adj_can_postv,
              modifies_a,slash,sc,parts,pro_deps,e_deps,pred,has_app2,
+	     sel,
              % question,
 	     % pp_er, %% in de schaatswereld en daarbuiten werd fel gespeculeerd
              allows_root_imp,
