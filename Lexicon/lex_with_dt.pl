@@ -1915,6 +1915,7 @@ with_dt_all(later,[vanmorgen]).
 with_dt_all(later,[vannacht]).
 with_dt_all(later,[vanochtend]).
 with_dt_all(leider,[politiek]).
+with_dt_all(lief,[niet]).
 with_dt_all(lijf,[te]).
 with_dt_all(lijk,[me]).
 with_dt_all(lijk,[mij]).

@@ -4153,19 +4153,19 @@ etc([en,'that\'s',it]).
 with_dt([en,niet,anders],
 	complex_etc,
 	dt(conj,[crd=l(en,conj(en),vg,0,1),
-		 cnj=dt(advp,[mod=l(niet,adverb,advp,1,2),
-			      hd=l(ander,adjective(anders),2,3)])])).
+		 cnj=dt(ap,[mod=l(niet,adverb,advp,1,2),
+			    hd=l(ander,adjective(anders),2,3)])])).
 
 with_dt([en,niet,andersom],
 	complex_etc,
 	dt(conj,[crd=l(en,conj(en),vg,0,1),
-		 cnj=dt(advp,[mod=l(niet,adverb,advp,1,2),
-			      hd=l(andersom,adjective(pred(adv)),2,3)])])).
+		 cnj=dt(ap,[mod=l(niet,adverb,advp,1,2),
+			    hd=l(andersom,adjective(pred(adv)),2,3)])])).
 
 with_dt([en,andersom],
 	complex_etc,
 	dt(conj,[crd=l(en,conj(en),vg,0,1),
-		 cnj=l(andersom,adjective(pred(adv)),advp,1,2)])).
+		 cnj=l(andersom,adjective(pred(adv)),ap,1,2)])).
 
 with_dt([en,daarmee,uit],
 	complex_etc,
@@ -6408,6 +6408,10 @@ with_dt([M,H],adverb,dt(advp,[mod=l(M,Tag,Cat,0,1),
 			      hd=l(H,adverb,1,2)])) :-
     mod_hd_adverb(M,H,Tag,Cat).
 
+with_dt([M,H],adverb,dt(advp,[mod=l(L,Tag,Cat,0,1),
+			      hd=l(H,adverb,1,2)])) :-
+    mod_hd_adverb(M,L,H,Tag,Cat).
+
 with_dt([wellicht,ten,overvloede],  
         adverb,dt(advp,[mod=l(wellicht,sentence_adverb,advp,0,1),
                         hd=l('ten overvloede',adverb,1,3)])).
@@ -6499,6 +6503,9 @@ mod_hd_adverb(waarachtig,     niet, adjective(no_e(adv)),       ap).
 mod_hd_adverb(waarschijnlijk, niet, adjective(no_e(adv)),       ap).
 mod_hd_adverb(werkelijk,      niet, adjective(no_e(adv)),       ap).
 mod_hd_adverb(zeker,          niet, adjective(no_e(adv)),       ap).
+
+mod_hd_adverb(liever,lief,    niet, adjective(er(adv)),         ap).
+
 
 %% hd < mod
 % hd_mod_adverb(alleen,   maar, alleen, maar).  % can be built with rules
