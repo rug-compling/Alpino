@@ -85,6 +85,7 @@ flatten(i(Id,Cat0),Ds0,i(Id,Cat),Ds) :-
     flatten(Cat0,Ds0,Cat,Ds).
 flatten(adt_lex(A,B,C,D,E),[],adt_lex(A,B,C,D,E),[]).
 flatten(p(_),[tree(r(hd,HdCat),Ds)],HdCat,Ds).
+flatten(p(du),[tree(r(dp,Cat),Ds)],Cat,Ds).
 flatten(p(VAR),Ds,p(VAR),Ds) :-
     Ds = [_,_|_].
 
@@ -204,7 +205,5 @@ maar mod is hier verplicht. Echter, er is al een pc (er in)...
 
 DONE ADT:
 DONE ten aanzien ervan/daarvan/hiervan get same lemma...
-
-
 
 */

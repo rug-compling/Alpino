@@ -113,6 +113,8 @@ simple_split_transformation(r(Rel,p(MAIN)),Ds0,r(Rel,p(conj)),[CRD,N1,N2]) :-
     CRD = tree(r(crd,_),_),
     lists:select(CRD,VCDS0,[CNJ1,CNJ2]),
     CNJ1 = tree(r(cnj,CNJCAT1),CNJDS1),
+    %%    \+ contains_negatief_element(CNJDS1),   if included, we don't get a wrong simplification
+    %%                                            instead, we get no result at all
     CNJ2 = tree(r(cnj,CNJCAT2),CNJDS2),
     CNJDS2 = [_|_],  % should at least contain subject, and not be "VP en omgekeerd"
     Su1 = tree(r(su,i(Ix,SuCat)),SuDs),
@@ -329,6 +331,36 @@ split_transformation(tree(r('--',p(conj)),Ds0),[A1,A2]) :-
     A2 = tree(r(top,p(top)),[tree(r('--',p(du)),[DLINK,BODY])]),
     DLINK = tree(r(dlink,adt_lex(_,Maar,_,_,[])),[]),
     BODY  = tree(r(nucl,P),L).
+
+%% wat moet ik doen en kan ik doen?
+%% =>
+%% wat moet ik doen. En wat kan ik doen.
+split_transformation(tree(r('--',p(whq)),[WH,BODY]),[A1,A2]) :-
+    WH = tree(r(whd,_WhCat),[]),
+    BODY = tree(r(body,p(conj)),BODYDS),
+    D1 = tree(r(crd,adt_lex(_,Maar,_,_,_)),[]),
+    D2 = tree(r(cnj,p(P1)),L1),
+    D3 = tree(r(cnj,P2),L2),
+    lists:select(D1,BODYDS,[D2,D3]),
+    lists:member(Maar,[en,of,maar,dus,want]),
+    A1 = tree(r(top,p(top)),[tree(r('--',p(whq)),[WH,tree(r(body,p(P1)),L1)])]),
+    A2 = tree(r(top,p(top)),[tree(r('--',p(du)),[tree(r(dlink,adt_lex(_,Maar,_,_,[])),[]),
+						 tree(r(nucl,p(whq)),[WH,tree(r(body,P2),L2)])])]).
+
+%% wie heeft dat gedaan en de rommel niet opgeruimd ?
+split_transformation(tree(r('--',p(whq)),[WH,BODY]),[A1,A2]) :-
+    WH = tree(r(whd,_WhCat),[]),
+    BODY = tree(r(body,p(sv1)),BODYDS),
+    VC = tree(r(vc,p(conj)),VCDS),
+    lists:select(VC,BODYDS,BODYDSREST),
+    D1 = tree(r(crd,adt_lex(_,Maar,_,_,_)),[]),
+    D2 = tree(r(cnj,P1),L1),
+    D3 = tree(r(cnj,P2),L2),
+    lists:select(D1,VCDS,[D2,D3]),
+    lists:member(Maar,[en,of,maar,dus,want]),
+    A1 = tree(r(top,p(top)),[tree(r('--',p(whq)),[WH,tree(r(body,p(sv1)),[tree(r(vc,P1),L1)|BODYDSREST])])]),
+    A2 = tree(r(top,p(top)),[tree(r('--',p(du)),[tree(r(dlink,adt_lex(_,Maar,_,_,[])),[]),
+						 tree(r(nucl,p(whq)),[WH,tree(r(body,p(sv1)),[tree(r(vc,P2),L2)|BODYDSREST])])])]).
 
 %% a of b en c -> a. Of b. En c.
 split_transformation(tree(r('--',p(conj)),Ds0),[A1,A2,A3]) :-
@@ -616,9 +648,6 @@ contains_negatief_element(List) :-
     alpino_simplify_modifier:negatief_element(L).
 
 
-%     
-
-
 conj_list_split([Conj|List],NewList) :-
     conj_split0(Conj,P1,NewList,NextList),
     conj_list_split(List,P1,NextList).
@@ -652,6 +681,7 @@ correct_conjunct(_,P2,P,L2,L):-
 correct_conjunct(_,P,P,L,L) :-
     \+ do_not_split_conj(P,L).
 
+/*
 correct_conjunct(p(cp),p(du),L2,[DP1,DP2]) :-
     lists:select(tree(r(mod,MOD),MODDS),L2,L3),
     DP1 = tree(r(dp,MOD),MODDS),
@@ -660,6 +690,16 @@ correct_conjunct(p(pp),p(du),L2,[DP1,DP2]) :-
     lists:select(tree(r(mod,MOD),MODDS),L2,L3),
     DP1 = tree(r(dp,MOD),MODDS),
     DP2 = tree(r(dp,p(pp)),L3).
+*/
+correct_conjunct(p(CP),p(du),L2,[DP1,DP2]) :-
+    correct_conjunct_cat(CP,DP1,DP2),
+    lists:append(L3,[tree(r(mod,MOD),MODDS)],L2),
+    DP1 = tree(r(dp,MOD),MODDS),
+    DP2 = tree(r(dp,p(CP)),L3).
+%correct_conjunct(p(pp),p(du),L2,[DP1,DP2]) :-
+%    lists:append(L3,[tree(r(mod,MOD),MODDS)],L2),
+%    DP1 = tree(r(dp,MOD),MODDS),
+%    DP2 = tree(r(dp,p(pp)),L3).
 correct_conjunct(p(Smain),p(Cat),L2,L) :-
     lists:member(Smain,[smain,whq]),
     replace(tree(r(hd,adt_lex(Smain,Prep,Prep2,Pos,Atts)),[]),
@@ -671,6 +711,14 @@ correct_conjunct(adt_lex(Smain,Prep,Prep2,Pos,Atts),adt_lex(Cat,Prep,Prep2,Pos,[
     lists:member(Smain,[smain,whq]),
     lists:member(stype=whquestion,Atts),
     correct_wh_cat(Cat,Pos).
+
+correct_conjunct_cat(cp,_,_).
+correct_conjunct_cat(oti,_,_).
+correct_conjunct_cat(pp,_,_).
+correct_conjunct_cat(advp,D1,D2) :-
+    \+ (D1,D2) = (   tree(r(hd,adt_lex(advp,niet,niet,adv,[])),[]),
+		     tree(r(mod,adt_lex(advp,veel,veel,adv,[])),[])
+		 ).
 
 imparative_hd(tree(r(tag,p(sv1)),Ds)) :-
     Hd = tree(r(hd,adt_lex(_,_,_,_,Atts)),[]),

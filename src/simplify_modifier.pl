@@ -345,6 +345,10 @@ important_mod(adt_lex(_,Stem,_,Pos,_),adt_lex(_,Stem2,_,Pos2,_),_):-
     lemma(Stem2,Stem2A),
     important_mod_stem(StemA,Pos,Stem2A,Pos2).
 
+ignore_modifier(tree(r(dp,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,p(MCat))/_|_],Hd) :-
+    ignore_dp_stem(W,Pos,Atts,MCat,Hd).
+    
+
 ignore_modifier(tree(r(Rel,i(_,Cat)),Ds),Ctxt,Hd) :-
     ignore_modifier(tree(r(Rel,Cat),Ds),Ctxt,Hd).
 
@@ -635,7 +639,8 @@ ignore_modifier_stem(trouwens,_,_,_,_).
 ignore_modifier_stem(uiteindelijk,_,_,_,_).
 ignore_modifier_stem(uiteraard,_,_,_,_).
 ignore_modifier_stem(vaak,_,_,_,_).
-ignore_modifier_stem(veel,_,_,_,_).
+ignore_modifier_stem(veel,_,_,_,NoNiet) :-
+    \+ NoNiet = niet.
 %ignore_modifier_stem(veel,adv,_,_,_).  % meer, veel is adj  TODO:  veel meer -> meer
 %% ignore_modifier_stem(ver,adj,Atts,_) :-  % verder willen met; verder brengen
 %%   lists:member(aform=compar,Atts).
@@ -654,6 +659,8 @@ ignore_modifier_stem(wellicht,_,_,_,_).
 ignore_modifier_stem(zeer,_,_,_,_).
 ignore_modifier_stem(zelfs,_,_,_,_).
 ignore_modifier_stem(zojuist,_,_,_,_).
+
+ignore_dp_stem(tenslotte,_,_,_,_).
 
 
 important_modifier_pattern(mod=dt(advp,[hd=zo,obcomp=mogelijk])).

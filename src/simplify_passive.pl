@@ -531,6 +531,7 @@ verb_disallows_passive(sta_toe,ben,_,not_door).
 verb_disallows_passive(vestig,ben,_,not_door).
 verb_disallows_passive(verbind,ben,_,not_door).
 verb_disallows_passive(verhinder,ben,_,_).   % ik ben verhinderd =/= men verhindert mij
+verb_disallows_passive(verkoop_uit,ben,_,_).
 verb_disallows_passive(verwikkel,_,_,_).
 verb_disallows_passive(vertegenwoordig,ben,_,not_door).
 verb_disallows_passive(voorzien,ben,_,not_door).
