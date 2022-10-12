@@ -301,6 +301,13 @@ guess_tag(Stem,skip,Q0,Q) -->
     !,
     [cgn_postag(Q0,Q,Stem,'TSW()')].
 
+guess_tag(Stem,skip,Q0,Q) -->
+    { gcnd(Stem),
+      Q is Q0 + 1
+    },
+    !,
+    [cgn_postag(Q0,Q,Stem,'TSW()')].
+
 guess_tag(Stem0,_,Q0,Q) -->
     [cgn_postag(Q0,Q,Stem,Tag)],
     { Q is Q0 + 1,
@@ -4963,4 +4970,64 @@ frequent_tag(Atom,Result) :-
 ft(noun(_,_,_)).
 ft(number(_)).
 
-    
+%%% gcnd(Word) tussenwerpsels
+%%% lijst van The spoken corpus of Southern-Dutch dialects
+%%% van Anne-Sophie Ghyselen
+%%% als deze worden geskipd, krijgen ze TSW() als postag
+gcnd('ah').
+gcnd('aha').
+gcnd('awel').
+gcnd('allez').
+gcnd('ai').
+gcnd('au').
+gcnd('bah').
+gcnd('boe').
+gcnd('bwa').
+gcnd('bè').
+gcnd('dè').
+gcnd('ei').
+gcnd('eikes').
+gcnd('eni').
+gcnd('ewaar').
+gcnd('goh').
+gcnd('ha').
+gcnd('haha').
+gcnd('hé').
+gcnd('hei').
+gcnd('ho').
+gcnd('hu').
+gcnd('hum').
+gcnd('jee').
+gcnd('mm-hu').
+gcnd('mmm').
+gcnd('moh').
+gcnd('neeë').
+gcnd('nou').
+gcnd('oeh').
+gcnd('oei').
+gcnd('oesje').
+gcnd('o').
+gcnd('oh').
+gcnd('oho').
+gcnd('poeh').
+gcnd('pst').
+gcnd('sjt').
+gcnd('sst').
+gcnd('tut').
+gcnd('uh').
+gcnd('uhm').
+gcnd('uhu').
+gcnd('wauw').
+gcnd('who').
+gcnd('wi').
+gcnd('zi').
+gcnd('zé').
+gcnd('zuh').
+gcnd('zulle').
+gcnd('zunne').
+gcnd('zun').
+gcnd('goddomme').
+gcnd('verdikke').
+gcnd('verdorie').
+gcnd('godverdomme').
+gcnd('goddikke').

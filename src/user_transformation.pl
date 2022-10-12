@@ -60,7 +60,17 @@ user_transformation(r(REL,p(mwu)),B,Ds0,
     correct_tags(Surfs,Lemmas,Tags),
     assign_tags(Lemmas,Tags,Ds0,Ds),
     \+ Ds0 = Ds.
+/*
+user_transformation(r(obj1,p(ap)),B,Ds,
+		    r(obj1,p(np)),B,Ds,_,_) :-
+    Hd = tree(r(hd,l(read_from_treebank(_,veel,_),_,W)),_,[]),
+    lists:member(Hd,Ds).
 
+user_transformation(r(obj1,p(ap)),B,Ds,
+		    r(obj1,p(np)),B,Ds,_,_) :-
+    Hd = tree(r(hd,l(read_from_treebank(_,weinig,_),_,W)),_,[]),
+    lists:member(Hd,Ds).
+*/
 surf_lemma(Word,'N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)',L,L) :-
     eigen(Word).
 surf_lemma(Word,'N(soort,mv,basis)','N(eigen,mv,basis)',L,L) :-
