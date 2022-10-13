@@ -11,9 +11,22 @@ start_server:
             assume_input_is_tokenized=off\
             debug=1\
 	    -init_dict_p\
-            batch_command=alpino_server\
-                    2> $(TMPDIR)/alpino_server.log &
+            batch_command=alpino_server &
 
+## this is now done using systemd
+## cf. ~/.config/systemd/user/alpino.service
+##
+## one time command:
+## systemctl --user enable alpino
+##
+## start/check/stop service with
+##
+## systemctl --user start alpino
+## systemctl --user status alpino
+## systemctl --user stop alpino
+##
+## all error output:
+## journalctl --user-unit=alpino
 
 start_simplify:
 	PROLOGMAXSIZE=$(MEMLIMIT) Alpino -notk -veryfast user_max=$(TIMEOUT)\
