@@ -27976,6 +27976,7 @@ v([win,gewin],[wint,gewint],[winnen,gewinnen],gewonnen,[won,gewon],wonnen,
 	part_transitive(in),
 	part_transitive(terug),
 	pc_pp(aan),
+	fixed([{[mod_pp(door),pc(aan)]}],no_passive),  % het verslag zou er aan geloofwaardigheid door winnen
 	pc_pp(op),
 	pc_pp(van),
 	part_np_ld_pp(in)])]).

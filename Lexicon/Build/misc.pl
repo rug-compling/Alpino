@@ -5685,7 +5685,8 @@ sentence_adverb(namelijk).
 sentence_adverb(niettemin). 
 sentence_adverb(nochtans). 
 sentence_adverb(noodzakelijkerwijs). 
-sentence_adverb(noodzakelijkerwijze). 
+sentence_adverb(noodzakelijkerwijze).
+sentence_adverb([om,mijnentwille]).
 sentence_adverb(omtrent).	% ouderwets
 sentence_adverb(onderhand). 
 sentence_adverb(ondertussen). 
@@ -6656,6 +6657,16 @@ wij_allebei(viertjes, vier_DIM,  noun(het,count,pl), np).
 wij_allebei(vijfjes,  vijf_DIM,  noun(het,count,pl), np).
 wij_allebei(zesjes,   zes_DIM,   noun(het,count,pl), np).
 
+wij_allebei(elven,       elf,        noun(de,count,pl),  np).
+wij_allebei(twaalven,    twaalf,     noun(de,count,pl),  np).
+wij_allebei(dertienen,   dertien,    noun(de,count,pl),  np).
+wij_allebei(viertienen,  veertien,   noun(de,count,pl),  np).
+wij_allebei(vijftienen,  vijftien,   noun(de,count,pl),  np).
+wij_allebei(zestienen,   zestien,    noun(de,count,pl),  np).
+wij_allebei(zeventienen, zeventien,  noun(de,count,pl),  np).
+wij_allebei(achttienen,  achttien,   noun(de,count,pl),  np).
+wij_allebei(negentienen, negentien,  noun(de,count,pl),  np).
+wij_allebei(twintigen,   twintig,    noun(de,count,pl),  np).
 
 
 m(eenmaal,eenmaal_adverb,eenmaal).

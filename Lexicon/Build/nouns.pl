@@ -3580,6 +3580,8 @@ n([pl(bastaarden),pl(bastaards),sg(bastaard)],de,[]).
 
 n([sg(bastion),pl(bastions)],het,[]).
 
+n([sg('BAT'),pl('BAT\'s')],de,[]).
+
 n([sg(batakker),pl(batakkers),sg('Batakker'),pl('Batakkers')],de,[]).
 
 n([pl(bataljons),sg(bataljon)],het,[measure]).
@@ -13260,6 +13262,8 @@ n([pl(gezwellen),sg(gezwel)],het,[],[dim(gezwelletje)]).
 
 n([mass(gezucht)],het,[]).
 
+n([sg('GGO'),pl('GGO\'s')],de,[]).
+
 n([pl(gibbons),sg(gibbon)],de,[]).
 
 n([pl(gidsen),sg(gids)],de,[],
@@ -13380,6 +13384,8 @@ n([mass(glucose)],de,[]).
 n([mass(glycerine)],de,[]).
 
 n([mass(glycogeen)],both,[]).
+
+n([sg('GMO'),pl('GMO\'s')],de,[]).
 
 n([sg(gniffel),pl(gniffels)],de,[]).
 
@@ -23397,6 +23403,8 @@ n([pl(niveaus),sg(niveau)],het,[],
 
 n([pl(nivelleringen),sg(nivellering)],de,[]).
 
+n([sg('NGO'),pl('NGO\'s')],de,[]).
+
 n([mass([no,claim])],de,[]).
 
 n([sg('no-nonsense')],de,[]).
@@ -23565,6 +23573,10 @@ n([sg(november)],de,[temp_mod,sbar]).
 n([pl(nova),sg(novum)],het,[]).
 
 n([sg(noviteit),pl(noviteiten)],de,[]).
+
+n([sg('NRA'),pl('NRA\'s')],de,[]).
+
+n([sg('NRI'),pl('NRI\'s')],de,[]).
 
 n([pl(nuancen),pl(nuances),sg(nuance)],de,[sbar,vp]).
 
@@ -28249,7 +28261,7 @@ n([sg(putto),pl(putti)],de,[]).
 n([pl(puzzels),sg(puzzel),
    pl(puzzles),sg(puzzle)],de,[sbar,vp],[dim(puzzeltje)]).
 
-n([mass(pvc)],both,[]).
+n([mass(pvc),mass('PVC'),pl('PVC\'s')],both,[]).
 
 n([pl('pyjama\'s'),sg(pyjama)],de,[],[dim(pyjamaatje)]).
 
