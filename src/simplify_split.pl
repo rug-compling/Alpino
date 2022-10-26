@@ -146,30 +146,33 @@ expand_all(tree(r(split,p(split)),Ds0),tree(r(split,p(split)),Ds), Params, _Ms) 
     !,
     expand_split_ds(Ds0,Ds,Params).
 expand_all(tree(r(Rel,Cat0),Ds0), tree(r(Rel,Cat),Ds), All, Locals) :-
-    expand_one(Cat0,Ds0,Cat,Ds1,All,Locals),
+    expand_one(Cat0,Ds0,Rel,Cat,Ds1,All,Locals),
     expand_ds(Ds1,Ds,All,Locals).
 
-expand_one(i(Ix,Cat),Ds,i(Ix,Cat),Ds,_All,Locals) :-
+expand_one(i(Ix,Cat),Ds,_,i(Ix,Cat),Ds,_All,Locals) :-
     !,
     nonvar(Ds),
     nonvar(Cat),  % fail for cases in which antecedent "too far" above
     %  Zo : het gaat om wat de mensen denken dat de werkelijkheid is of wordt .
     lists:memberchk(Ix=s(Cat,Ds),Locals).
-expand_one(i(Ix),[],i(Ix),[],_,Locals) :-
+expand_one(i(Ix),[],_,i(Ix),[],_,Locals) :-
     lists:memberchk(Ix=Var,Locals),
     nonvar(Var),
     !.
-expand_one(i(Ix),[],i(Ix,Cat),Ds,All,Locals) :-
+expand_one(i(Ix),[],Rel,i(Ix,Cat),Ds,All,Locals) :-
     lists:memberchk(Ix=s(Cat,Ds),Locals),
     lists:memberchk(Ix=s(Prev,PrevDs),All), nonvar(Prev),
-    (   generate_pronoun(Prev,PrevDs,Cat,Ds)
+    (   \+ Rel = mod,
+	%%% don't generate a pronoun for a modifier NP
+	%%% para En al die tijd werden de dieren zwaarder en kwamen zij boven hun optimale slachtgewicht .
+	generate_pronoun(Prev,PrevDs,Cat,Ds)
     ->  true
     ;   Prev=Cat,
 	PrevDs=Ds
     ).
 
-expand_one(p(Cat),Ds,p(Cat),Ds,_,_).
-expand_one(adt_lex(A,B,C,D,E),[],adt_lex(A,B,C,D,E),[],_,_).
+expand_one(p(Cat),Ds,_,p(Cat),Ds,_,_).
+expand_one(adt_lex(A,B,C,D,E),[],_,adt_lex(A,B,C,D,E),[],_,_).
 
 generate_rel_pronoun(adt_lex(_,B,B,_,Atts0),[],Die,RelAtts,Atts,Pronoun) :-
     lists:append(RelAtts,Atts0,Atts1),

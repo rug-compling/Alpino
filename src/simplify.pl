@@ -206,4 +206,38 @@ maar mod is hier verplicht. Echter, er is al een pc (er in)...
 DONE ADT:
 DONE ten aanzien ervan/daarvan/hiervan get same lemma...
 
+
+
+impersonal passive -> men subject.
+Dat gaat heel vaak fout, natuurlijk:
+
+Als waarschuwing wordt eerst flink gesist -->
+Men sist
+
+
+Modifiers
+
+als men die uitsluitend vanuit een *continentaal* standpunt bekijkt ?
+
+Pronouns
+
+Net als in 1975 werd gevreesd voor het leven van Sheene , maar ( evenals Middelburg ) kwam hij er met veel wilskracht weer bovenop .
+Men vreesde voor het leven . Maar hij kwam er met veel wilskracht bovenop .
+
+Polarity
+
+hij hoefde enkel een schop in de grond te stoppen
+Hij hoefde een schop in de grond te stoppen .
+
+Zo Graag
+
+Geen enkel ander boek van Goethe werd zo graag door zijn tijdgenoten gelezen
+Graag las men geen enkel ander boek van Goethe .
+
+Contrast verdwijnt
+
+Voor dat doeleinde is de Proton echter nooit ingezet , maar wel voor het lanceren van kunstmanen en ruimtestations .
+Men heeft de Proton nooit ingezet . Maar wel voor het lanceren van kunstmanen en ruimtestations .
+
+
 */

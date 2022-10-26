@@ -161,6 +161,19 @@ pattern_rule([sup=l(het,_,_),
 			  ])
 	     ]).
 
+%% ik zou willen X => ik X
+%% vooral voor Europarl
+pattern_rule([su=i(IK,ik),
+	      hd=l(zal,verb,[stype=declarative,tense=past]),
+	      vc=dt(inf,[su=i(IK),
+			 hd=wil,
+			 vc=dt(inf,[su=i(IK),
+				    hd=l(VERB=not([weet]),verb,_)|ARGS])])
+	     ],
+	     [su=i(IK,l(ik,pron,[])),
+	      hd=l(VERB,verb,[stype=declarative,tense=present])|ARGS]).
+		   
+
 %% X ben van oordeel => X vind
 pattern_rule([hd=l(ben,Pos,Atts),
 	      svp=mwu([van,oordeel])
@@ -190,9 +203,20 @@ pattern_rule([hd=l(kom,Pos,Atts),
 
 %% in het vooruitzicht stellen => aankondigen
 pattern_rule([hd=l(stel,Pos,Atts),
-	      ld=dt(pp,[hd=l(in,_,_),
-			obj1=dt(np,[hd=l(vooruitzicht,_,_),
-				    det=l(het,_,_)
+	      mod=dt(pp,[hd=in,
+			 obj1=dt(np,[hd=vooruitzicht,
+				     det=het
+				    ])])
+	     ],
+	     [hd=l(kondig_aan,Pos,Atts)
+	     ]
+	    ).
+
+%% in het vooruitzicht stellen => aankondigen
+pattern_rule([hd=l(stel,Pos,Atts),
+	      ld=dt(pp,[hd=in,
+			obj1=dt(np,[hd=vooruitzicht,
+				    det=het
 				   ])])
 	     ],
 	     [hd=l(kondig_aan,Pos,Atts)
@@ -201,9 +225,9 @@ pattern_rule([hd=l(stel,Pos,Atts),
 
 %% aan de orde stellen => bespreken
 pattern_rule([hd=l(stel,Pos,Atts),
-	      predc=dt(pp,[hd=l(aan,_,_),
-			   obj1=dt(np,[hd=l(orde,_,_),
-				       det=l(de,_,_)
+	      predc=dt(pp,[hd=aan,
+			   obj1=dt(np,[hd=orde,
+				       det=de
 				      ])])
 	     ],
 	     [hd=l(bespreek,Pos,Atts)
@@ -215,7 +239,7 @@ pattern_rule([hd=l(stel,Pos,Atts),
 %% ik sta op het punt naar buiten te gaan
 %% ==> ik ga naar buiten gaan
 pattern_rule([hd=l(sta,Pos,Atts),
-	      vc=dt(ti,[cmp=l(te,_,_),
+	      vc=dt(ti,[cmp=te,
 			body=VC]),
 	      svp=mwu([op,het,punt])
 	     ],
@@ -225,8 +249,8 @@ pattern_rule([hd=l(sta,Pos,Atts),
 
 %% op het punt staan om te => gaan
 pattern_rule([hd=l(sta,Pos,Atts),
-	      vc=dt(oti,[cmp=l(om,_,_),
-			 body=dt(ti,[cmp=l(te,_,_),
+	      vc=dt(oti,[cmp=om,
+			 body=dt(ti,[cmp=te,
 				     body=VC])]),
 	      svp=mwu([op,het,punt])
 	     ],
@@ -243,18 +267,32 @@ match_left_pattern_tree(Rel=Node,Ds0,Ds) :-
     lists:select(tree(r(Rel,NodeCat),NodeDs),Ds0,Ds),
     match_left_pattern_node(Node,NodeCat,NodeDs).
 
+
 match_left_pattern_node(Var,Cat,Ds):-
     var(Var),
     !,
     Var = Cat/Ds.
+match_left_pattern_node(i(Ix,Pat),i(Ix,Cat),Ds) :-
+    match_left_pattern_node(Pat,Cat,Ds).
+match_left_pattern_node(i(Ix),i(Ix),[]).
 match_left_pattern_node(Cat/Ds,p(Cat),Ds).
 match_left_pattern_node(dt(Cat,Pattern),p(Cat),Ds) :-
     match_left_pattern(Pattern,Ds,[]).
     
-match_left_pattern_node(l(Lem,Pos,Atts0),adt_lex(_,Lem,_,Pos,Atts),[]):-
+match_left_pattern_node(l(Lem0,Pos,Atts0),adt_lex(_,Lem,_,Pos,Atts),[]):-
+    match_lem(Lem0,Lem),
     match_atts(Atts0,Atts).
 match_left_pattern_node(mwu(List),p(mwu(_,_)),Ds) :-
     mwu(Ds,List).
+match_left_pattern_node(Lem0,adt_lex(_,Lem,_,_,_),[]) :-
+    match_lem(Lem0,Lem).
+
+match_lem(L,L) :- atom(L).
+match_lem([H|T],L) :- lists:member(L,[H|T]).
+match_lem(not(List),L) :- \+ lists:member(L,List).
+match_lem(L=L,L) :- atom(L).
+match_lem(L=[H|T],L) :- lists:member(L,[H|T]).
+match_lem(L=not(List),L) :- \+ lists:member(L,List).
 
 match_atts(Var,Var2) :-
     var(Var), !,
@@ -272,6 +310,9 @@ add_right_pattern([H|T],Ds0,Ds) :-
 add_right_pattern_tree(Rel=Node,[tree(r(Rel,NewNode),NewDs)|Ds],Ds) :-
     add_right_pattern_node(Node,NewNode,NewDs).
 
+add_right_pattern_node(i(X),i(X),[]).
+add_right_pattern_node(i(X,Y),i(X,Z),Ds) :-
+    add_right_pattern_node(Y,Z,Ds).
 add_right_pattern_node(Cat/Ds,Cat,Ds).
 add_right_pattern_node(dt(Cat,Ds0),p(Cat),Ds) :-
     add_right_pattern(Ds0,Ds,[]).

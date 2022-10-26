@@ -234,7 +234,7 @@ nominalization_with_van(Ds) :-
     lists:select(Ad,Ds1,_),
     lists:select(AdHd,AdDs,_).
 
-%% Ã©Ã©n van de aanwezigen =/= Ã©Ã©n
+%% één van de aanwezigen =/= één
 %% drie van de mannen =/= drie
 partitive(Ds0) :-
     Hd = tree(r(hd,_),[]),
@@ -357,9 +357,11 @@ ignore_modifier(Tree,Ctxt,Hd) :-
     match_pattern(Pattern,Tree).
 
 ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,p(MCat))/_|_],Hd) :-
+    \+ lists:member(iets=true,Atts),
     ignore_modifier_stem(W,Pos,Atts,MCat,Hd).
 
 ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,i(_,p(MCat)))/_|_],Hd) :-
+    \+ lists:member(iets=true,Atts),
     ignore_modifier_stem(W,Pos,Atts,MCat,Hd).
 
 ignore_modifier(tree(r(mod,adt_lex(_,dan,_,_,_)),[]),Ctxt,_) :-
@@ -438,6 +440,10 @@ ignore_modifier_pattern(mod=dt(pp,
 			       obj1=dt(np,
 				       [det=l(_,_,_),
 					hd=context])]),_,_).
+
+ignore_modifier_pattern(mod=dt(pp,
+			      [hd=in,
+			       obj1=totaal]),_,_).
 
 ignore_modifier_pattern(mod=dt(pp,
 			      [hd=naar,
@@ -575,6 +581,7 @@ ignore_modifier_stem(derhalve,_,_,_,_).
 ignore_modifier_stem(destijds,_,_,_,_).
 ignore_modifier_stem(duidelijk,_,_,_,_).
 ignore_modifier_stem(dus,_,_,_,_).
+ignore_modifier_stem(eigenlijk,_,_,_,_).
 ignore_modifier_stem(echt,_,_,_,_).
 ignore_modifier_stem(echter,_,_,_,_).
 ignore_modifier_stem(eens,_,_,_,_).
@@ -585,6 +592,8 @@ ignore_modifier_stem(even,_,_,_,_).
 ignore_modifier_stem(evenwel,_,_,_,_).
 ignore_modifier_stem(detailleren,adj,_,np,_).
 ignore_modifier_stem(globaal,_,_,_,_).
+%% ignore_modifier_stem(graag,_,_,_,_).   % but  "ik was hier graag aanwezig geweest" -> "ik was hier aanwezig geweest" ??
+                                          %      "ik had graag vernomen of ..."
 ignore_modifier_stem(grondig,_,_,_,_).
 ignore_modifier_stem(heel,_,_,np,NotWat) :-
     \+ NotWat = wat.		% heel wat => *wat.
@@ -628,6 +637,7 @@ ignore_modifier_stem(slechts,_,_,_,_).
 ignore_modifier_stem(sowieso,_,_,_,_).
 ignore_modifier_stem(specifiek,_,_,np,_).
 ignore_modifier_stem(steeds,_,_,_,_).
+ignore_modifier_stem(strikt,_,_,_,_).
 ignore_modifier_stem(successievelijk,_,_,_,_).
 ignore_modifier_stem(tenslotte,_,_,_,_).
 ignore_modifier_stem(terdege,_,_,_,_).
@@ -638,6 +648,7 @@ ignore_modifier_stem(toen,_,_,_,_).
 ignore_modifier_stem(trouwens,_,_,_,_).
 ignore_modifier_stem(uiteindelijk,_,_,_,_).
 ignore_modifier_stem(uiteraard,_,_,_,_).
+ignore_modifier_stem(uitermate,_,_,_,_).
 ignore_modifier_stem(vaak,_,_,_,_).
 ignore_modifier_stem(veel,_,_,_,NoNiet) :-
     \+ NoNiet = niet.
@@ -658,11 +669,17 @@ ignore_modifier_stem(weliswaar,_,_,_,_).
 ignore_modifier_stem(wellicht,_,_,_,_).
 ignore_modifier_stem(zeer,_,_,_,_).
 ignore_modifier_stem(zelfs,_,_,_,_).
+ignore_modifier_stem(zo,_,_,SMAIN,Lem) :-
+    \+ lists:member(Lem,[geschied]),
+    \+ SMAIN == smain.  % "zo" often allows for dip, without it, no tag sentence can be created
 ignore_modifier_stem(zojuist,_,_,_,_).
 
 ignore_dp_stem(tenslotte,_,_,_,_).
 
-
+important_modifier_pattern(mod=dt(np,[det=l(_,num,_),hd=maal])).
+important_modifier_pattern(mod=dt(np,[det=l(_,num,_),hd=keer])).
+important_modifier_pattern(mod=dt(cp,[cmp=als,body=dt(ssub,_)])).
+important_modifier_pattern(mod=dt(cp,[cmp=indien,body=dt(ssub,_)])).
 important_modifier_pattern(mod=dt(advp,[hd=zo,obcomp=mogelijk])).
 important_modifier_pattern(mod=dt(mwu(_,_),[mwp=dan,mwp=ook])).
 
@@ -676,7 +693,13 @@ important_modifier(_,p(mwu('\'s','\'s')),_,_,_).
 important_modifier(tree(r(mod,p(Cat)),_),adt_lex(np,_,_,_,_),_,_,DsRest) :-
     lists:member(Cat,[rel,pp]),
     alpino_simplify_split:contains_negatief_element(DsRest).
-important_modifier(tree(r(mod,adt_lex(_,zo,_,_,_)),[]),_,_,[r(tag,p(smain))/_|_],_).  % introduces dip. "root, zo begin hij zijn verhaal"
+important_modifier(tree(r(mod,adt_lex(_,zo,_,_,_)),[]),_,_,[r(tag,p(smain))/_|_],_). % introduces dip. "root, zo begin hij zijn verhaal"
+important_modifier(tree(r(mod,_),Ds),_,_,_,_) :-
+    Hd = tree(r(hd,adt_lex(_,_,_,_,Atts)),[]),
+    lists:member(Hd,Ds),
+    lists:member(iets=true,Atts).
+important_modifier(tree(r(mod,adt_lex(_,_,_,_,Atts)),[]),_,_,_,_) :-
+    lists:member(iets=true,Atts).
 important_modifier(_,adt_lex(_,Die,_,_,_),[],[r(obj1,p(np))/_,r(_,p(pp))/_|_],[]) :-
     lemma_in(Die,[die,dat]).
 important_modifier(Tree,_,_,_,_) :-
@@ -700,8 +723,8 @@ important_modifier(tree(r(mod,p(rel)),_),ADTLEX,[],_,_) :-
 important_modifier(tree(r(mod,p(conj)),Ds),C0,C1,C2,C3) :-
     lists:member(tree(r(cnj,p(rel)),XX),Ds),
     important_modifier(tree(r(mod,p(rel)),XX),C0,C1,C2,C3).
-important_modifier(tree(r(mod,ModCat),ModDs),adt_lex(_,_,Sense,_,_),_,_,_):-
-    sense_requires_mod(Sense,ModCat,ModDs).
+important_modifier(tree(r(mod,ModCat),ModDs),adt_lex(_,_,Sense,_,_),_,_,Rest):-
+    sense_requires_mod(Sense,ModCat,ModDs,Rest).
 important_modifier(tree(r(mod,adt_lex(VanCat,Van,_,VanPos,_)),[]),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_,_) :-
     (   check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat)
     ->  true
@@ -882,8 +905,31 @@ er_adverb_prep(vanaf,ervanaf).
 er_adverb_prep(vanuit,ervanuit).
 er_adverb_prep(voor,ervoor).
 
-sense_requires_mod('wil-in',p(pp),Ds) :-
+sense_requires_mod('wil-in',p(pp),Ds,_) :-
     Bij = tree(r(hd,adt_lex(pp,bij,bij,prep,_)),[]),
     lists:member(Bij,Ds).
-sense_requires_mod(manier,_,_).
-sense_requires_mod('te-werk-ga',_,_).
+sense_requires_mod(Lemma,_,_,Others) :-
+    sense_requires_at_least_one_mod(Lemma,Others),
+    no_more_mods(Others).
+
+sense_requires_at_least_one_mod(manier,_).
+sense_requires_at_least_one_mod('te-werk-ga',_).
+sense_requires_at_least_one_mod(ontsta,Others) :-
+    \+ lists:member(tree(r(pc,_),_),Others).
+sense_requires_at_least_one_mod('vind-plaats',Others) :-
+    \+ lists:member(tree(r(ld,_),_),Others).
+sense_requires_at_least_one_mod(blijk,Others) :-
+    \+ lists:member(tree(r(pc,_),_),Others),
+    \+ lists:member(tree(r(predc,_),_),Others),
+    \+ lists:member(tree(r(vc,_),_),Others),
+    \+ lists:member(tree(r(svp,_),_),Others).
+sense_requires_at_least_one_mod(kom,Others) :-
+    \+ lists:member(tree(r(pc,_),_),Others),
+    \+ lists:member(tree(r(predc,_),_),Others),
+    \+ lists:member(tree(r(vc,_),_),Others),
+    \+ lists:member(tree(r(svp,_),_),Others).
+
+
+no_more_mods(Others) :-
+    Mod = tree(r(mod,_),_),
+    \+ lists:member(Mod,Others).
