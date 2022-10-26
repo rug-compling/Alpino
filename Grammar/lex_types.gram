@@ -1492,6 +1492,7 @@ compp(Sign) :-
     Sign:wh => nwh,
     Sign:slash => [],
     Sign:tags => [],
+    hstem(Sign),
     initialize_dt([],Sign).
 
 compp_mod(Sign) :-
@@ -1765,6 +1766,7 @@ inf_complementizer(C) :-
 %% `om' can introduce both vp-complement or te-infinitival adjunct
 om_complementizer(C) :-
     inf_vpx_comp(C,oti),
+    hstem(C),
     C:ctype => c_om.
 
 %% want wie denk je dat ik zag?
@@ -1936,29 +1938,19 @@ uit_comp(V) :-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 adverb(ADV) :-
-    adverb0(ADV),
-    hstem(ADV).
-%%% Niet is gebleken dat ...
-%%% Niet valt in te zien dat ...
-    % ADV:hstem <=> STEM,
-    % (   STEM = niet,
-    %     ADV:sel => ~to_topic
-    % ;   dif(STEM,niet)
-    % ).
-
-adverb0(ADV) :-   
     ADV => adv,
     initialize_dt([],ADV),
+    sign(ADV,advp),
+    hstem(ADV),
     ADV:adj_can_postv => no,
     ADV:can_postv => no,
     ADV:subadv => subadv_adv,
-    sign(ADV,advp),
     ADV:tmploc => ntmploc,
     ADV:redrel => no,
     ADV:wh => nwh.
 
 sentence_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     overwrite(ADV0,ADV,tmploc,sent),
     not_topic_adverb(ADV).
 
@@ -2030,17 +2022,17 @@ als_me_intensifier(ADV) :-
     add_als_to_exs(ADV0,ADV).
 
 comp_adverb(Sub,ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     unify_except(ADV0,ADV1,adj_can_postv),
     ADV1:adj_can_postv => yes,  % ik heb gelezen zo geconcentreerd [als] ik kon
     add_comparative_to_exs(ADV1,ADV,Sub).
 
 vp_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     add_omte_to_exs(ADV0,ADV).
 
 vp_om_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     add_om_to_exs(ADV0,ADV).
 
 dip_sbar_adverb(ADV) :-
@@ -2063,22 +2055,22 @@ zo_van_adverb(ADV) :-
 %% is analysed as cp modifier
 
 tmp_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     overwrite(ADV0,ADV,tmploc,tmp).
 
 wk_tmp_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     overwrite(ADV0,ADV,tmploc,tmp),
     ADV:sel => ~to_topic,
     ADV:wk => yes.
 
 loc_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     overwrite(ADV0,ADV1,tmploc,loc),
     add_rel(ADV1,ADV).
 
 er_loc_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     ADV0:pron => yes,  % even if it is used as loc, we want to be able
                        % to know if it is +R "*ik reken op daar"
     overwrite(ADV0,ADV1,tmploc,loc),
@@ -2086,7 +2078,7 @@ er_loc_adverb(ADV) :-
 
 %% if er, no rel: "*daar waar ik slapen reken ik op"
 er_loc_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     ADV0:pron => yes,
     overwrite(ADV0,ADV,tmploc,str_er).
 
@@ -2107,7 +2099,7 @@ add_rel(N0,N) :-
         ).
 
 dir_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     overwrite(ADV0,ADV,tmploc,ld_dir).
 
 %er_adverb(ADV) :-
@@ -2116,7 +2108,7 @@ dir_adverb(ADV) :-
 
 %% this was rywh...
 wh_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     overwrite(ADV0,ADV,wh,ywh),
     ADV:modifies_a => no,
     ADV:tmploc => ~non_adv & ~hoe_hoe & ~wk_er & ~str_er & ~postp,
@@ -2144,7 +2136,7 @@ wh_tmp_adverb(ADV) :-
 
 %% waar ergens
 wh_loc_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     overwrite(ADV0,ADV1,tmploc,loc),
     overwrite(ADV1,ADV,wh,rywh),
     ADV:modifies_a => no,
@@ -2152,7 +2144,7 @@ wh_loc_adverb(ADV) :-
 
 %% waar
 er_wh_loc_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     overwrite(ADV0,ADV1,tmploc,(str_er;loc)),
     overwrite(ADV1,ADV,wh,rywh),
     ADV:modifies_a => no,
@@ -2166,7 +2158,7 @@ rwh_loc_adverb(ADV) :-
 
 %% er
 er_vp_adverb(ADV) :-
-    adverb0(ADV0),
+    adverb(ADV0),
     overwrite(ADV0,ADV,tmploc,wk_er).
 
 postadv_adverb(ADV) :-
@@ -7781,9 +7773,10 @@ first_att(Path,First) :-
 
 construct_dt_cat_without_hwrd(Pat,DT,Orig) :-
     construct_dt_cat(Pat,DT,Orig,Val),
-    (   lists:member(Val,[du,whq,rel,whrel,whsub,ahi,cp,conj,ti,oti])
-    ->  DT:hwrd => []
-    ;   true
+    (   lists:member(Val,[du,whq,rel,whrel,whsub,ahi,cp,conj,ti,oti]),
+        DT:hwrd => [],
+	!
+    ;   true   % fall back for other relations, but also for "als volgt", "dat het kraakt"
     ).
     
 

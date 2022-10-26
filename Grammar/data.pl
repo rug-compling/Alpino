@@ -347,6 +347,8 @@ syntactic_penalty_cat_d(Cat,er_def) :-
     Slash:hstem ==> er, 
     Cat:subj <=> Subj,
     Subj => np,
+    Subj:dt => dt,		% a real subj!
+    Subj:nform => ~none,        % a real subj!
     Subj:agr => def.
 
 syntactic_penalty_cat_d(Cat,topic_mod(Hstem)):-

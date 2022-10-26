@@ -1281,7 +1281,7 @@ grammar_rule(mod_om_vpx,VP,[Comp,V]):-
 %% niemand om mee te spelen
 %%
 %% todo: mf value?
-grammar_rule(rel_om_vpx,REL,[Comp,V]):-
+grammar_rule(rel_om_vpx,REL,[Comp1,V]):-
     REL => rel,
     REL:relform => relform_inf,
     REL:tmploc => non_adv,
@@ -1294,6 +1294,7 @@ grammar_rule(rel_om_vpx,REL,[Comp,V]):-
     no_vslash(V),
     unify_except(V0,V,slash),
     cmp_body_structure(Comp,V0,REL),
+    unify_except(Comp,Comp1,hstem),   % hstem is used to percolate info of noun head to relative
     V:e_deps => [],
     V:slash <=> [NP],
     NP => np,
@@ -1608,13 +1609,21 @@ grammar_rule(v_v_pspgap,VP,[V]) :-
 %% "omdat ik hem iets te eten voorzet"
 %% remove V:vslash => [] for
 %% "ik zet hem iets te eten voor"
+%% 
 grammar_rule(v_v_pspgap,VP,[V]) :-
     VP => vc, V => vb, Inf => vc,
     VP:eps1 <=> V:eps1,
     VP:eps2 <=> V:eps2,
     Inf:vslash => [],
     Inf:vform => (psp;aan_het;uit;pass_te;op),
-%    V:vslash => [],
+%%%    V:vslash => [],
+    V:vslash <=> VSLASH,
+    VSLASHWITHPART => vslash,
+    VSLASHWITHPART:vslashparts <=> [_|_],
+    when(?=(VSLASH,[]),
+	 (VSLASH=[]
+	 ;VSLASH=VSLASHWITHPART
+	 )),
     V:inv => no,
     Inf:exs => [],
     Inf:mexs => [],
@@ -2214,6 +2223,7 @@ grammar_rule(vgap,V,[call(get_val(IDENTIFIER,VSLASH))]) :-
     V:vslash:vslashfwrd <=> VSLASH:dt:fwrd,
     V:vslash:vslashcrd <=> VSLASH:dt:crd,
     V:vslash:vslashcnj <=> VSLASH:dt:cnj,
+    V:vslash:vslashparts <=> VSLASH:parts,
 %    V:vslash:vslashsvp <=> VSLASH:dt:svp,
 %    V:vslash:vslashsubj <=> VSLASH:subj,
 
@@ -2557,7 +2567,7 @@ grammar_rule(non_wh_topicalization_dip_pred,ROOT,[ZO,Q]) :-
     ZO:dt <=> SLASH:dt,
     projected_hd_filler_structure(Q,SLASH,ROOT,smain).
 
-%% zo begon hij
+%% zo begon hij, allows dip (in contrast to normal modifier in topic)
 grammar_rule(non_wh_topicalization_dip_mod,ROOT,[ZO,Q]) :-
     ROOT => root,
     ROOT:allows_root_imp => no,
@@ -2570,6 +2580,7 @@ grammar_rule(non_wh_topicalization_dip_mod,ROOT,[ZO,Q]) :-
     Q:iexs => [],
     Q:imexs => [],
     SLASH => modifier,
+    SLASH:hstem ==> dip_adv,  % so not "er", for er_def 
     SLASH:exs =?> [],
     SLASH:mexs =?> [],
     ZO:dt <=> SLASH:dt,

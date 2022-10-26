@@ -871,7 +871,7 @@ a_lex(number(hoofd(Det)),Sign) :-
 
 a_lex(adj_number(Det),Sign) :-
     adj_number(Sign),
-    determiner_features(Det,Sign).
+    adj_number_features(Det,Sign).
 
 %% de drie tweede plaatsen
 a_lex(number(rang),Sign) :-
@@ -1025,7 +1025,7 @@ a_lex(denk_ik_dip,Sign) :-
 
 hstem(Sign) :-
     Sign:dt => dt,
-    Sign:dt:fwrd:lexical <=> Lexical,
+    Sign:dt:hwrd:lexical <=> Lexical,
     Lexical <?=?> Sign:hstem.
 
 noun_features(De,MC,Num,Sign) :-
@@ -1471,28 +1471,17 @@ determiner_features(welk,Sign) :-
 determiner_features(welke,Sign) :-
     Sign:agr => ( pl & indef ; sg & de & indef),
     Sign:case =?> ~gen.
-%determiner_features(sg,Sign) :-
-%    Sign:agr => pl,
-%    Sign:case =?> ~gen.
 determiner_features(pl,Sign) :-
     Sign:agr => pl,
-    Sign:case =?> ~gen.
-determiner_features(enkel,Sign)  :-
-    Sign:agr => sg & indef & het, % combines with een/geen
-    Sign:n_meas =?> no,  % * enkel miljoen, * enkel jaar
     Sign:case =?> ~gen.
 determiner_features(sg_num,Sign) :-
     Sign:agr => sg,
     Sign:case =?> ~gen.
 determiner_features(pl_num,Sign) :-
     Sign:n_meas =?> no,
-    Sign:agr => pl,
+    Sign:agr => pl & indef,
     Sign:case =?> ~gen.
 determiner_features(both,_).
-determiner_features(enkele,Sign) :-
-    Sign:n_meas =?> no,
-    Sign:agr => ~(sg & het & indef),
-    Sign:case =?> ~gen.
 %% zulke goede informatie
 %% zulk  goed water
 %% zulke goede boeken
@@ -1803,3 +1792,17 @@ combine_infl_adv(st,        ADV, st(ADV)                ).
 combine_infl_adv(aller_st,  ADV, aller_st(ADV)          ).
 combine_infl_adv(ende,      ADV, ende(ADV)              ).
 combine_infl_adv(end,       ADV, end(ADV)               ).
+
+adj_number_features(pl_num, Sign) :-
+    Sign:n_meas =?> no,
+    Sign:agr => pl,  % not indef, combines with de
+    Sign:case =?> ~gen.
+adj_number_features(both, _).
+adj_number_features(enkel,Sign) :-
+    Sign:agr => sg & indef & het, % combines with een/geen
+    Sign:n_meas =?> no,  
+    Sign:case =?> ~gen.
+adj_number_features(enkele,Sign) :-
+    Sign:n_meas =?> no,
+    Sign:agr => ~(sg & het & indef),
+    Sign:case =?> ~gen.

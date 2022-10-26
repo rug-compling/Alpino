@@ -778,7 +778,9 @@ mf_pos(np,Cat,Type) :-
     nonvar(PosTagValTerm),
     alpino_dt:somewhat_simplify_frame(PosTagValTerm,Pos0),
     simplify_name(Pos0,Pos),
-    add_men(np(Case,Pos),Type,Cat).
+    add_men(np(Case,Pos),Type0,Cat),
+    add_bare(Type0,Type1),
+    add_def(Type1,Type,Cat).
 mf_pos(modifier,Cat,Type) :-
     !,
     alpino_data:modifier(Cat,DtrCat),
@@ -814,11 +816,18 @@ add_men(np(nom,pron(nwh)),men,Cat) :-
     alpino_data:dt(DT,Hwrd,_,_,_),
     alpino_data:label(Hwrd,Men,_,_,_,_),
     Men == men.
-add_men(np(A,B),np(A,B,def),Cat) :-
+add_men(X,X,_).
+
+add_def(np(A,B),np(A,B,def),Cat) :-
     \+ alpino_data:indef(Cat).
-add_men(np(A,B),np(A,B,indef),Cat) :-
+add_def(np(A,B),np(A,B,indef),Cat) :-
     \+ alpino_data:def(Cat).
-add_men(Type,Type,_).
+add_def(X,X,_).
+
+add_bare(np(A,Term),np(A,Fun)) :-
+    functor(Term,Fun,Ar),
+    Ar > 0.
+add_bare(Type,Type).
 
 simplify_name(name(_),X) :-
     !,
