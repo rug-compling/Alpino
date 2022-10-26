@@ -3799,6 +3799,7 @@ add_number(proper_name,proper_name(Agr),TYPE,Stem) :-
     add_number(TYPE,Agr,Stem).
 add_number(name_determiner(Pron), name_determiner(Pron),_,_).
 
+%% or should this use guess_number from lex.pl
 add_number('PER',Agr,Stem) :-
     Agr = sg,
     atom(Stem),
@@ -3809,8 +3810,7 @@ add_number(_,both,_).
 
 add_features(History,Names,Cat0,Cat,P0,P,All,TYPE,Stem) :-
     guess_name_type(P0,P,All,TYPE),
-    His = classifier
-    ,
+    His = classifier,
     add_number(Cat0,Cat1,TYPE,Stem),
     (   TYPE == 'MISC'
     ->  Cat1=Cat

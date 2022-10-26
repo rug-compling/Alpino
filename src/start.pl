@@ -1087,7 +1087,6 @@ end_hook(parse,_,_,String) :-
     ;   Status = Status0
     ),
 
-    ignore_brackets(String,StringNoBrackets),
     (	Th==best_score
     ->	best_score_end_parse(No)
     ;	Th==best_score_check_tags
@@ -1110,7 +1109,7 @@ end_hook(parse,_,_,String) :-
 	retractall(alpino_gen_suite:lf(Key,_)),
 	assertz(alpino_gen_suite:lf(Key,Adt))
     ;   Th==joost
-    ->  hook(user:vraag_joost(StringNoBrackets)) % external
+    ->  hook(user:vraag_joost(String)) % external
     ;	true	
     ),
     (   Demo==on,
@@ -2879,31 +2878,8 @@ dt_extract_attributes(Dt,Attributes,Rel) :-
     ;   findall(Att,dt_extract_attribute(Dt,Att),Attributes)
     ).
 
-dt_extract_attribute(Dt,rnum=pl) :-
-    alpino_data:dt(Dt,_,Frame,_,_),
-    lists:member(Frame,[noun(_,_,pl),noun(_,_,pl,_)]).
-
-%% if it cannot be singular, it must be plural
-dt_extract_attribute(Dt,rnum=pl) :-
-    alpino_data:dt_num(Dt,Num), 
-    \+ alpino_data:sg(Num).
-%% exceptions to the default below: for these
-%% lemma's, plural is much more probable
-dt_extract_attribute(Dt,rnum=pl) :-
-    alpino_data:dt_num(Dt,Num),
-    nonvar(Num),
-    \+ \+ alpino_data:pl(Num),
-    \+ \+ alpino_data:sg(Num),
-    alpino_data:dt(Dt,Hword,_,_,_),
-    alpino_data:label(Hword,_,Lemma,_,_,_),
-    lists:member(Lemma,[ze,miljoen,miljard]),  % more to come?
-    !.    
-%% if it can be singular, it will be singular
-%% i.e., default is singular
-dt_extract_attribute(Dt,rnum=sg) :-
-    alpino_data:dt_num(Dt,Num),
-    nonvar(Num),
-    \+ \+ alpino_data:sg(Num).
+dt_extract_attribute(Dt,AttVal) :-
+    dt_extract_rnum(Dt,AttVal).
 
 dt_extract_attribute(Dt,stype=ynquestion) :-
     \+ alpino_data:not_ynquestion(Dt).
@@ -2931,6 +2907,49 @@ dt_extract_attribute(Dt,dropped_agr=sg) :-
 dt_extract_attribute(Dt,dropped_agr=pl) :-
     \+ alpino_data:not_topic_drop(Dt),
     \+ alpino_data:not_dropped_pl(Dt).
+
+%% should succeeed only once
+dt_extract_rnum(Dt,rnum=pl) :-
+    alpino_data:dt(Dt,_,Frame,_,_),
+    lists:member(Frame,[noun(_,_,pl),noun(_,_,pl,_)]),
+    !.
+
+%% if it cannot be singular, it must be plural
+dt_extract_rnum(Dt,rnum=pl) :-
+    alpino_data:dt_num(Dt,Num), 
+    \+ alpino_data:sg(Num),
+    !.
+%% if it cannot be plurar, it must be singular
+dt_extract_rnum(Dt,rnum=sg) :-
+    alpino_data:dt_num(Dt,Num), 
+    \+ alpino_data:pl(Num),
+    !.
+%% exceptions to the default below: for these
+%% lemma's, plural is much more probable
+dt_extract_rnum(Dt,rnum=pl) :-
+    alpino_data:dt_num(Dt,Num),
+    nonvar(Num),
+    \+ \+ alpino_data:pl(Num),
+    \+ \+ alpino_data:sg(Num),
+    alpino_data:dt(Dt,Hword,_,_,_),
+    alpino_data:label(Hword,_,Lemma,_,_,_),
+    lists:member(Lemma,[ze,miljoen,miljard]),  % more to come?
+    !.    
+%% if it can be singular, it will be singular
+%% i.e., default is singular
+%% unless it is marked "both" in its proper name tag (? but via unknowns most are both...)
+dt_extract_rnum(Dt,rnum=sg) :-
+    alpino_data:dt(Dt,_,Frame,_,_),
+    \+ Frame = proper_name(both,_),
+    \+ Frame = proper_name(both),
+    alpino_data:dt_num(Dt,Num),
+    nonvar(Num),
+    \+ \+ alpino_data:sg(Num).
+
+
+
+
+
 
 %%% from adt.pl
 %%% before generation, instantiate Dt on the basis of attribute-values of Adt

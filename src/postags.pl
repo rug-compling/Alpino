@@ -254,10 +254,10 @@ p_of_f(comp_noun(Gen,_,Num,Dan),noun,[gen=Gen,num=Num,special=comp,
 p_of_f(cleft_het_noun,det,[special=cleft_het]).
 p_of_f(wh_cleft_het_noun,noun,[special=cleft_het,wh=ywh]).
 p_of_f(het_noun,noun,[special=het]).
-p_of_f(iets_noun,noun,[sc=iets]).
-p_of_f(wh_iets_noun,noun,[wh=ywh,sc=iets]).
-p_of_f(iets_anders_noun,noun,[sc=iets_anders_noun]).
-p_of_f(wh_iets_anders_noun,noun,[sc=iets_anders_noun,wh=ywh]).
+p_of_f(iets_noun,pron,[sc=iets]).
+p_of_f(wh_iets_noun,pron,[wh=ywh,sc=iets]).
+p_of_f(iets_anders_noun,pron,[sc=iets_anders_noun]).
+p_of_f(wh_iets_anders_noun,pron,[sc=iets_anders_noun,wh=ywh]).
 p_of_f(er_noun,noun,[special=er]).
 p_of_f(wh_er_noun,noun,[special=er,wh=ywh]).
 p_of_f(tmp_app_noun,adv,[special=tmp_app]).

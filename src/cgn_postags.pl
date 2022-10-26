@@ -846,6 +846,16 @@ exceptional_stem_tag(twintig, noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', t
 exceptional_stem_tag(dertig,  noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', dertig).
 exceptional_stem_tag(vijftig, noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', vijftig).
 
+exceptional_stem_tag(elf,       noun(de,count,pl), 'TW(hoofd,nom,mv-n,basis)', elf).
+exceptional_stem_tag(twaalf,    noun(de,count,pl), 'TW(hoofd,nom,mv-n,basis)', twaalf).
+exceptional_stem_tag(dertien,   noun(de,count,pl), 'TW(hoofd,nom,mv-n,basis)', dertien).
+exceptional_stem_tag(veertien,  noun(de,count,pl), 'TW(hoofd,nom,mv-n,basis)', veertien).
+exceptional_stem_tag(vijftien,  noun(de,count,pl), 'TW(hoofd,nom,mv-n,basis)', vijftien).
+exceptional_stem_tag(zestien,   noun(de,count,pl), 'TW(hoofd,nom,mv-n,basis)', zestien).
+exceptional_stem_tag(zeventien, noun(de,count,pl), 'TW(hoofd,nom,mv-n,basis)', zeventien).
+exceptional_stem_tag(achttien,  noun(de,count,pl), 'TW(hoofd,nom,mv-n,basis)', achttien).
+exceptional_stem_tag(negentien, noun(de,count,pl), 'TW(hoofd,nom,mv-n,basis)', negentien).
+
 exceptional_stem_tag(twee_DIM,noun(het,count,pl),  'TW(hoofd,nom,mv-n,dim)',   twee).
 exceptional_stem_tag(drie_DIM,noun(het,count,pl),  'TW(hoofd,nom,mv-n,dim)',   drie).
 exceptional_stem_tag(vier_DIM,noun(het,count,pl),  'TW(hoofd,nom,mv-n,dim)',   vier).
