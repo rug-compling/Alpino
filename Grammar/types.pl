@@ -316,6 +316,7 @@ type(dt,
       lix,                      % for co-indexed head-parts of nodes
       attrs,                    % input/output attributes for generation
       num,                      % number input/output for generation
+      prs,
       stype,                    % type of sentence for generation
       dropped_agr,              % number of dropped topic
       dropped_prs,              % person of dropped topic

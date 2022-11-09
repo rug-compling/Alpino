@@ -1673,7 +1673,8 @@ features_verb_infl(imp(_),Sign) :-
     Sign:vform => fin,
     Sign:ccat0 ==> ssub,
     Sign:imper => yes,
-    Sign:inv => yes.
+    Sign:inv => yes,
+    subject_verb_agreement(Sign,agr).
 
 %% wees jij maar niet bang
 %% weest u maar niet bang
@@ -1690,7 +1691,8 @@ features_verb_infl(subjunctive,Sign) :-
     Sign:tense => subjunctive,
     Sign:ccat0 ==> ssub,
     Sign:vform => fin,  % no constraints on number?
-    Sign:subj => np.
+    Sign:subj => np,
+    subject_verb_agreement(Sign,agr).
 %%%    Sign:subj:prs => ~fir.   % "ik ga" is not ambiguous...
                         % cf "men ga dit na"
     %%% wrong: Ik moge erop wijzen dat ...
@@ -1717,6 +1719,7 @@ features_verb_infl(inf_ipp, Sign) :-
 %% adds agreement
 subject_verb_agreement(Sign,Agr) :-
     Sign:subj => np,
+    Sign:subj:prs <=> Sign:dt:prs,
     Sign:subj:e_agr => Agr.
 
 %% adds agreement

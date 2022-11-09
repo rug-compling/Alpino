@@ -103,6 +103,10 @@ dt_if_defined(Cat,DT) ::-
 dt_num(DT,Num) ::-
     DT:num <=> Num.
 
+dt_prs(DT,Prs) ::-
+    Prs => per,
+    DT:prs <=> Prs.
+
 dt_with_hwrd(DT,Hwrd,Frame,Cat,Ix) ::-
     DT => dt,
     DT:hwrd <=> Hwrd,

@@ -1129,7 +1129,7 @@ end_hook(parse,_,_,String) :-
     ),
     (   Q==on,
 	NumberOfSolutions < 1
-    ->  concat_all(StringNoBrackets,StringAtom,' '),
+    ->  concat_all(String,StringAtom,' '),
 	alpino_format_syntax:escape_b(StringAtom,StringString),
 	format(user_error,"Q#~w|~s|~w|-1|-1~n",[Key,StringString,Status])
     ;   true
@@ -1138,16 +1138,16 @@ end_hook(parse,_,_,String) :-
         Th == xml,
         hdrug_flag(xml_format_failed_parse,on)
     ->  format_to_chars("~w",[Status],StatusChars),
-        ignore_current_ref(Key,StringNoBrackets,[StatusChars])
+        ignore_current_ref(Key,String,[StatusChars])
     ;   true
     ),
     (   NumberOfSolutions < 1,
         ( Th == xml_dump ; Th == dump_xml )
     ->  format_to_chars("~w",[Status],StatusChars),
-        ignore_current_ref_dump(Key,StringNoBrackets,[StatusChars])
+        ignore_current_ref_dump(Key,String,[StatusChars])
     ;   true
     ),
-    try_hook(alpino_end_hook(Key,StringNoBrackets,Status,NumberOfSolutions)),
+    try_hook(alpino_end_hook(Key,String,Status,NumberOfSolutions)),
     % used by Gosse a.o.
     if_gui(update_buttons),
     flush_output.    
@@ -2907,6 +2907,11 @@ dt_extract_attribute(Dt,dropped_agr=sg) :-
 dt_extract_attribute(Dt,dropped_agr=pl) :-
     \+ alpino_data:not_topic_drop(Dt),
     \+ alpino_data:not_dropped_pl(Dt).
+
+dt_extract_attribute(Dt,v_per=Val) :-
+    alpino_data:dt_prs(Dt,Val0),
+    hdrug_feature:give_boolean_type(Val0,Val),
+    Val \== per.
 
 %% should succeeed only once
 dt_extract_rnum(Dt,rnum=pl) :-
