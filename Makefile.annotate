@@ -8,6 +8,7 @@ annotate:
           display_main_parts=off\
           display_quality=off\
           parse_unannotated_only=uncorrected\
+	  alpino_ds_version=1.3\
           -flag suite Suites/$(suite)\
           -flag treebank Treebank/$(suite)/uncorrected\
           demo=off\
