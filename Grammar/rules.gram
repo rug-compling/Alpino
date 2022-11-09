@@ -3973,11 +3973,12 @@ grammar_rule(modifier_p(2), Mod1,[P1, Mod, OptQm, P2 ]):-
 %% predm_adv --> predm_adv_num number
 %% ze gingen alle zes naar huis
 grammar_rule(alle_zes, ADV, [ ALLE, ZES ]) :-
-    ADV => predm_adv,
+    ADV0 => predm_adv,
     ALLE => predm_adv_num,
     ZES => num, 
     ZES:app => yes,
-    hd_det_structure(ALLE,ZES,ADV).
+    hd_det_structure(ALLE,ZES,ADV0),
+    overwrite(ADV0,ADV,ccat0,np).
 
 %% predm_adv --> predm_adv_num number
 %% alle zes de aanwezigen
