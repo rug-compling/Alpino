@@ -18850,13 +18850,13 @@ n([mass(kruip)],both,[]).
 
 n([sg(kruiper),pl(kruipers)],de,[]).
 
-n([pl(kruisen),pl(kruizen),sg(kruis)],het,[]).
+n([pl(kruisen),pl(kruizen),sg(kruis)],het,[],[dim(kruisje)]).
 
 n([pl(kruisers),sg(kruiser)],de,[]).
 
 n([pl(kruisigingen),sg(kruisiging)],de,[]).
 
-n([pl(kruisingen),sg(kruising)],de,[],[h(t),i(t,'T-'),dim(kruisje)]).
+n([pl(kruisingen),sg(kruising)],de,[],[h(t),i(t,'T-')]).
 
 n([mass(kruisleger)],het,[]).
 
@@ -36245,7 +36245,7 @@ n([pl(uitsteeksels),sg(uitsteeksel)],het,[],[dim(uitsteekseltje)]).
 
 n([pl(uitstekken),sg(uitstek)],het,[]).
 
-n([mass(uitstel)],het,[]).
+n([mass(uitstel)],both,[]).
 
 n([pl(uitstoten),sg(uitstoot)],de,[],
   [h('CO2')]).

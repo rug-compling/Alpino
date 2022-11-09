@@ -9521,6 +9521,7 @@ v(herinner,herinnert,herinneren,herinnerd,herinnerde,herinnerden,
 	np_refl_pc_pp(van),  % daar herinner ik me niets/nog enkele details/weinig van
 	sbar,
 	transitive,       % hij wordt herinnerd vanwege/door/als ...
+	er_pp_sbar(aan),
 	np_er_pp_sbar(aan),
 	er_pp_sbar(aan),
 	np_pc_pp(aan),
@@ -27523,7 +27524,10 @@ v(wed,wedt,wedden,gewed,wedde,wedden,
     [h([intransitive,
 	sbar,
 	pc_pp(om),
-	pc_pp(op)])]).
+	pc_pp(op),
+	er_pp_sbar(om),
+	er_pp_sbar(op)
+       ])]).
 
 v(wedervaar,wedervaart,wedervaren,wedervaren,wedervoer,wedervoeren,
     [unacc([so_np])]).
