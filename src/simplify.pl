@@ -239,5 +239,11 @@ Contrast verdwijnt
 Voor dat doeleinde is de Proton echter nooit ingezet , maar wel voor het lanceren van kunstmanen en ruimtestations .
 Men heeft de Proton nooit ingezet . Maar wel voor het lanceren van kunstmanen en ruimtestations .
 
+Split
+
+Wij mogen nu echter niet op onze lauweren rusten en het verdere beleid overlaten aan de Europese Centrale Bank . =>
+We mogen niet op onze lauweren rusten . We mogen het beleid overlaten aan de Europese Centrale Bank .
+
+
 
 */

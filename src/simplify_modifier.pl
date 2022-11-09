@@ -247,6 +247,8 @@ partitive(Ds0) :-
     ;   Hd = tree(r(hd,adt_lex(_,één,_,_,_)),[])
     ;   Hd = tree(r(hd,adt_lex(_,deel,_,_,_)),[]),
         AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
+    ;   Hd = tree(r(hd,adt_lex(_,aantal,_,_,_)),[]),
+        AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
     ;   Hd = tree(r(hd,adt_lex(_,elk,_,_,_)),[]),
         AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
     ;   Hd = tree(r(hd,adt_lex(_,veel,_,_,_)),[]),
