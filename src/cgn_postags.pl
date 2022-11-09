@@ -2810,6 +2810,8 @@ mwu_postag_frame_stem_surf(waar_adverb([_In,_Ruil,_Voor,_Van]),Stem,Surf,[Atag,B
     alpino_util:split_atom(Surf," ",[_,_,_,Dstem]),
     hdrug_util:concat_all([Astem,Bstem,Cstem,Dstem],Stems,' ').
 
+mwu_postag_frame_stem_surf(complementizer(alsof),alsof,'als of',['VG(onder)','VG(onder)'],'als of').
+
 st(eerst,'TW(rang,nom,zonder-n)').
 st(eerste,'TW(rang,nom,zonder-n)').
 st(meest,'VNW(onbep,grad,stan,vrij,zonder,sup)').
