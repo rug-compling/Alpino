@@ -80,6 +80,15 @@ nops: $(suites:%.sents=%.nop) $(suites:%.sents.gz=%.nop)
 	@paste $*.para <(zcat $*.sents.gz | sed -e 's/^[^|]*[|]//') | grep noparaphrase | cut -f2
 
 
+nopas: $(suites:%.sents=%.nopa) $(suites:%.sents.gz=%.nopa)
+
+%.nopa: %.para %.sents
+	@paste $*.para $*.sents | grep noparse | cut -f2
+
+%.nopa: %.para %.sents.gz
+	@paste $*.para <(zcat $*.sents.gz | sed -e 's/^[^|]*[|]//') | grep noparse | cut -f2
+
+
 %.v: %.para %.sents.gz
 	@paste -d @ $*.para <(zcat $*.sents.gz  | sed -e 's/^[^|]*[|]//') | grep -v -e noparse -e noparaphrase | cut -d@ -f2 |wc | awk '{ print "normal",$$2, $$1, $$2/$$1}'
 	@paste -d @ $*.para <(zcat $*.sents.gz  | sed -e 's/^[^|]*[|]//') | grep -v -e noparse -e noparaphrase | cut -d@ -f1 | $(ALPINO_HOME)/Tokenization/tokenize.sh | wc | awk '{ print "simplified",$$2, $$1, $$2/$$1}'
