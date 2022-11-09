@@ -3,6 +3,8 @@
 <!-- Alpino Dependency Structures DTD -->
 
 <!--
+Versie 1.15 v_per person information of finite verb
+
 Versie 1.14 dropped_prs, dropped_agr
 
 Versie 1.13 mwu_sense and mwu_root are gone, no longer used
@@ -290,6 +292,7 @@ recursion_limit CDATA			#IMPLIED
 	  stype		CDATA	#IMPLIED
 	  dropped_prs   CDATA	#IMPLIED
 	  dropped_agr	CDATA	#IMPLIED
+	  v_per         CDATA   #IMPLIED
 
 	  pb
 	  (Arg0|Arg1|Arg2|Arg3|Arg4|Arg5|ArgM-ADV|ArgM-CAU|ArgM-DIR|ArgM-DIS|
