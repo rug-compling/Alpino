@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="16" id="2" rel="--">
+      <node begin="0" cat="smain" end="5" id="3" rel="cnj">
+        <node begin="0" cat="np" end="2" id="4" rel="su">
+          <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="prullenmand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="prullenmand" word="prullemand"/>
+        </node>
+        <node begin="2" end="3" id="7" lemma="staan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="sta" word="stond" wvorm="pv"/>
+        <node begin="3" cat="pp" end="5" id="8" rel="ld">
+          <node begin="3" end="4" id="9" lemma="achter" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="achter" vztype="init" word="achter"/>
+          <node begin="4" end="5" genus="masc" getal="ev" id="10" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,red,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="red" vwtype="pers" word="&apos;m"/>
+        </node>
+      </node>
+      <node begin="5" conjtype="neven" end="6" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="6" cat="smain" end="16" id="12" rel="cnj">
+        <node begin="6" end="7" id="13" lemma="daarin" pos="pp" postag="BW()" pt="bw" rel="ld" root="daarin" word="daarin"/>
+        <node begin="7" end="8" id="14" lemma="liggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lig" word="lag" wvorm="pv"/>
+        <node begin="8" cat="np" end="16" id="15" rel="su">
+          <node begin="8" cat="detp" end="10" id="16" rel="det">
+            <node begin="8" buiging="zonder" end="9" id="17" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" vwtype="onbep" word="al"/>
+            <node begin="9" buiging="zonder" end="10" getal="ev" id="18" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)" pt="vnw" rel="hd" root="zijn" status="red" vwtype="bez" word="z&apos;n"/>
+          </node>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="post" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="post" word="post"/>
+          <node begin="11" cat="pp" end="14" id="20" rel="mod">
+            <node begin="11" end="12" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="12" cat="np" end="14" id="22" rel="obj1">
+              <node begin="12" end="13" id="23" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
+              <node begin="13" end="14" getal="mv" graad="basis" id="24" lemma="dag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dag" word="dagen"/>
+            </node>
+          </node>
+          <node begin="15" buiging="zonder" end="16" id="25" lemma="on_openen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="mod" root="on_openen" word="ongeopend" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De prullemand stond achter &apos;m en daarin lag al z&apos;n post van drie dagen , ongeopend .</sentence>
+</alpino_ds>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="5" end="6" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="7" end="8" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="du" end="20" id="5" rel="--">
+      <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="6" lemma="Koekebakker" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="tag" root="Koekebakker" word="Koekebakker"/>
+      <node begin="1" cat="du" end="20" id="7" rel="nucl">
+        <node begin="1" cat="smain" end="5" id="8" rel="dp">
+          <node begin="1" end="2" genus="onz" getal="ev" id="9" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+          <node begin="2" end="3" id="10" lemma="maken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="maakt" wvorm="pv"/>
+          <node begin="3" cat="np" end="5" id="11" rel="obj1">
+            <node begin="3" buiging="zonder" end="4" id="12" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="13" lemma="verschil" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verschil" word="verschil"/>
+          </node>
+        </node>
+        <node begin="8" cat="smain" end="20" id="14" rel="dp">
+          <node begin="8" cat="cp" end="12" id="15" rel="mod">
+            <node begin="8" conjtype="onder" end="9" id="16" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="9" cat="ssub" end="12" id="17" rel="body">
+              <node begin="9" end="10" getal="ev" id="18" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+              <node begin="10" buiging="zonder" end="11" graad="basis" id="19" lemma="nuchter" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nuchter" word="nuchter"/>
+              <node begin="11" end="12" id="20" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="ben" wvorm="pv"/>
+            </node>
+          </node>
+          <node begin="13" end="14" id="21" lemma="begrijpen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="begrijp" word="begrijp" wvorm="pv"/>
+          <node begin="14" end="15" getal="ev" id="22" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="16" end="17" id="23" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+          <node begin="17" end="18" id="24" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+          <node begin="18" end="19" getal="ev" id="25" lemma="niks" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="niks" status="vol" vwtype="onbep" word="niks"/>
+          <node begin="15" cat="pp" end="20" id="26" rel="pc">
+            <node begin="15" end="16" getal="getal" id="27" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="19" end="20" id="28" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="21" end="22" id="30" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>&quot; Het maakt geen verschil , Koekebakker , als ik nuchter ben , begrijp ik er toch ook niks van . &quot;</sentence>
+</alpino_ds>

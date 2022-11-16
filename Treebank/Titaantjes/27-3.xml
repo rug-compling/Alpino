@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="conj" end="8" id="1" rel="--">
+      <node begin="0" cat="smain" end="4" id="2" rel="cnj">
+        <node begin="0" end="1" getal="getal" id="3" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" root="die" status="vol" vwtype="aanw" word="Die"/>
+        <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+        <node begin="2" cat="ap" end="4" id="5" rel="predc">
+          <node begin="2" end="3" id="6" lemma="zoveel" numtype="hoofd" pos="adj" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="zoveel" word="zooveel"/>
+          <node begin="3" buiging="zonder" end="4" graad="comp" id="7" lemma="net" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="net" word="netter"/>
+        </node>
+      </node>
+      <node begin="4" conjtype="neven" end="5" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="smain" end="8" id="9" rel="cnj">
+        <node begin="0" end="1" id="10" index="1" rel="su"/>
+        <node begin="5" end="6" id="11" lemma="praten" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="praat" word="praatten" wvorm="pv"/>
+        <node begin="6" cat="ap" end="8" id="12" rel="mod">
+          <node begin="6" end="7" id="13" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zoo"/>
+          <node begin="7" buiging="zonder" end="8" graad="basis" id="14" lemma="aardig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="aardig" word="aardig"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Die waren zooveel netter en praatten zoo aardig .</sentence>
+</alpino_ds>

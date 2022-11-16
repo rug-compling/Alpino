@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="14" id="2" rel="--">
+      <node begin="0" cat="smain" end="6" id="3" rel="dp">
+        <node begin="0" cat="np" end="2" id="4" rel="obj1">
+          <node begin="0" buiging="zonder" end="1" id="5" lemma="zo&apos;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&apos;n" vwtype="aanw" word="Zoo&apos;n"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="vent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vent" word="vent"/>
+        </node>
+        <node begin="2" end="3" id="7" lemma="laten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="laat" word="laat" wvorm="pv"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="God" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="God" word="God"/>
+        <node begin="4" cat="pp" end="6" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="vrede" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="vrede" word="vrede"/>
+        </node>
+      </node>
+      <node begin="7" cat="smain" end="14" id="12" rel="dp">
+        <node begin="7" end="8" getal="getal" id="13" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" root="die" status="vol" vwtype="aanw" word="die"/>
+        <node begin="8" end="9" id="14" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="9" end="10" genus="masc" getal="ev" id="15" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,red,3,ev,masc)" pt="vnw" rel="obj2" root="hem" status="red" vwtype="pers" word="&apos;m"/>
+        <node begin="10" cat="ap" end="14" id="16" rel="predc">
+          <node begin="10" cat="np" end="12" id="17" rel="obj1">
+            <node begin="10" end="11" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="moeite" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="moeite" word="moeite"/>
+          </node>
+          <node begin="12" end="13" id="20" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="13" buiging="zonder" end="14" graad="basis" id="21" lemma="waard" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="waard" word="waard"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="15" end="16" id="23" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>Zoo&apos;n vent laat God met vrede , die is &apos;m de moeite niet waard . &quot;</sentence>
+</alpino_ds>

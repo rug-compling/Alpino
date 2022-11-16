@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="13" end="14" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="23" end="24" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="26" id="4" rel="--">
+      <node begin="0" cat="smain" end="5" id="5" rel="cnj">
+        <node begin="0" cat="np" end="2" id="6" rel="su">
+          <node begin="0" buiging="zonder" end="1" getal="ev" id="7" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="Zijn"/>
+          <node begin="1" end="2" getal="mv" graad="basis" id="8" lemma="veld" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="veld" word="velden"/>
+        </node>
+        <node begin="2" end="3" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="3" end="4" getal="getal" id="10" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="11" lemma="onmetelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="onmetelijk" word="onmetelijk"/>
+      </node>
+      <node begin="6" cat="smain" end="17" id="12" rel="cnj">
+        <node begin="6" cat="np" end="8" id="13" rel="su">
+          <node begin="6" buiging="zonder" end="7" getal="ev" id="14" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+          <node begin="7" end="8" getal="mv" graad="basis" id="15" lemma="tuin" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="tuin" word="tuinen"/>
+        </node>
+        <node begin="8" end="9" id="16" lemma="staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" word="staan" wvorm="pv"/>
+        <node begin="9" end="10" getal="getal" id="17" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="10" cat="pp" end="17" id="18" rel="predc">
+          <node begin="10" buiging="zonder" end="11" graad="basis" id="19" lemma="vol" pos="prep" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="vol" word="vol"/>
+          <node begin="11" cat="np" end="17" id="20" rel="obj1">
+            <node begin="11" buiging="met-e" end="12" graad="basis" id="21" lemma="schoon" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="schoon" word="schoone"/>
+            <node begin="12" end="13" getal="mv" graad="basis" id="22" lemma="bloem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bloem" word="bloemen"/>
+            <node begin="14" cat="rel" end="17" id="23" rel="mod">
+              <node begin="14" end="15" getal="getal" id="24" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+              <node begin="14" cat="ssub" end="17" id="25" rel="body">
+                <node begin="14" end="15" id="26" index="1" rel="su"/>
+                <node begin="15" end="16" id="27" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+                <node begin="16" end="17" id="28" lemma="sterven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sterf" word="sterven" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="17" conjtype="neven" end="18" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="18" cat="du" end="26" id="30" rel="cnj">
+        <node begin="18" cat="smain" end="23" id="31" rel="nucl">
+          <node begin="18" cat="np" end="20" id="32" rel="su">
+            <node begin="18" buiging="met-e" end="19" graad="basis" id="33" lemma="statig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="statig" word="statige"/>
+            <node begin="19" end="20" getal="mv" graad="basis" id="34" lemma="vrouw" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vrouw" word="vrouwen"/>
+          </node>
+          <node begin="20" end="21" id="35" lemma="wandelen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wandel" word="wandelen" wvorm="pv"/>
+          <node begin="21" end="22" getal="getal" id="36" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="22" buiging="zonder" end="23" graad="basis" id="37" lemma="naakt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predm" root="naakt" word="naakt"/>
+        </node>
+        <node begin="24" cat="np" end="26" id="38" rel="sat">
+          <node begin="24" buiging="met-e" end="25" graad="basis" id="39" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,agr,basis)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="vele"/>
+          <node begin="25" end="26" getal-n="mv-n" graad="basis" id="40" lemma="duizend" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,mv-n,basis)" pt="tw" rel="hd" root="duizend" word="duizenden"/>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zijn velden zijn er onmetelijk , zijn tuinen staan er vol schoone bloemen , die niet sterven en statige vrouwen wandelen er naakt , vele duizenden .</sentence>
+</alpino_ds>

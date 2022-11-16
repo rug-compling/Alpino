@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="du" end="12" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="12" id="3" rel="nucl">
+        <node begin="4" end="5" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="5" end="6" genus="onz" getal="ev" id="5" index="1" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="1" cat="ppart" end="12" id="6" rel="vc">
+          <node begin="1" cat="pp" end="4" id="7" rel="pc">
+            <node begin="1" end="2" id="8" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="2" cat="np" end="4" id="9" rel="obj1">
+              <node begin="2" buiging="zonder" end="3" id="10" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="11" lemma="mens" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mens" word="mensch"/>
+            </node>
+          </node>
+          <node begin="5" end="6" id="12" index="1" rel="obj1"/>
+          <node begin="6" buiging="zonder" end="7" id="13" lemma="weg_leggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leg_weg" word="weggelegd" wvorm="vd"/>
+          <node begin="7" cat="ti" end="12" id="14" rel="vc">
+            <node begin="10" end="11" id="15" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="7" cat="inf" end="12" id="16" rel="body">
+              <node begin="7" end="8" getal="ev" id="17" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dit" status="vol" vwtype="aanw" word="dit"/>
+              <node begin="8" cat="pp" end="10" id="18" rel="mod">
+                <node begin="8" end="9" id="19" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="20" lemma="voortduring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="voortduring" word="voortduring"/>
+              </node>
+              <node begin="11" buiging="zonder" end="12" id="21" lemma="beseffen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="besef" word="beseffen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Maar voor geen mensch is het weggelegd dit bij voortduring te beseffen .</sentence>
+</alpino_ds>

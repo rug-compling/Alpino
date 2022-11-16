@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="smain" end="14" id="2" rel="--">
+      <node begin="1" end="2" getal="ev" id="3" index="1" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="Je"/>
+      <node begin="2" end="3" id="4" lemma="moeten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="moet" word="moest" wvorm="pv"/>
+      <node begin="1" cat="inf" end="14" id="5" rel="vc">
+        <node begin="1" end="2" id="6" index="1" rel="su"/>
+        <node begin="6" buiging="zonder" end="7" id="7" lemma="blijven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="blijf" word="blijven" wvorm="inf"/>
+        <node begin="1" cat="inf" end="14" id="8" rel="vc">
+          <node begin="1" end="2" id="9" index="1" rel="su"/>
+          <node begin="3" end="4" id="10" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zoo"/>
+          <node begin="4" end="5" id="11" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+          <node begin="5" buiging="zonder" end="6" graad="dim" id="12" lemma="stil" pos="adj" positie="vrij" postag="ADJ(vrij,dim,zonder)" pt="adj" rel="mod" root="stilletjes" word="stilletjes"/>
+          <node begin="7" buiging="zonder" end="8" id="13" lemma="zitten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zit" word="zitten" wvorm="inf"/>
+          <node begin="1" cat="ti" end="10" id="14" rel="vc">
+            <node begin="8" end="9" id="15" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="1" cat="inf" end="10" id="16" rel="body">
+              <node begin="1" end="2" id="17" index="1" rel="su"/>
+              <node begin="9" buiging="zonder" end="10" id="18" lemma="verlangen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verlang" word="verlangen" wvorm="inf"/>
+            </node>
+          </node>
+          <node begin="10" cat="cp" end="14" id="19" rel="mod">
+            <node begin="10" end="11" id="20" lemma="zonder" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="zonder" vztype="init" word="zonder"/>
+            <node begin="11" cat="ti" end="14" id="21" rel="body">
+              <node begin="11" end="12" id="22" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+              <node begin="12" cat="inf" end="14" id="23" rel="body">
+                <node begin="12" buiging="zonder" end="13" id="24" lemma="weten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="weet" word="weten" wvorm="inf"/>
+                <node begin="13" end="14" id="25" lemma="waarnaar" pos="pp" postag="BW()" pt="bw" rel="vc" root="waarnaar" word="waarnaar"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="15" end="16" id="27" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>&quot; Je moest zoo maar stilletjes blijven zitten te verlangen zonder te weten waarnaar . &quot;</sentence>
+</alpino_ds>

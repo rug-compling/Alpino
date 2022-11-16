@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="17" end="18" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="23" id="2" rel="--">
+      <node begin="0" cat="smain" end="17" id="3" rel="nucl">
+        <node begin="0" end="1" getal="mv" id="4" index="1" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="Ze"/>
+        <node begin="1" end="2" id="5" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
+        <node begin="0" cat="conj" end="17" id="6" rel="vc">
+          <node begin="0" cat="ppart" end="10" id="7" rel="cnj">
+            <node begin="0" end="1" id="8" index="1" rel="su"/>
+            <node begin="2" buiging="zonder" end="3" graad="basis" id="9" lemma="goedkoop" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="goedkoop" word="goedkoop"/>
+            <node begin="3" cat="np" end="9" id="10" rel="obj2">
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="11" lemma="bloemetjesbehangsel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bloemetjesbehangsel" word="bloemetjesbehangsel"/>
+              <node begin="4" cat="pp" end="9" id="12" rel="mod">
+                <node begin="4" end="5" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="5" cat="np" end="9" id="14" rel="obj1">
+                  <node begin="5" end="6" id="15" lemma="3" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="3" word="3"/>
+                  <node begin="6" end="7" getal="mv" graad="basis" id="16" lemma="cent" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="cent" word="centen"/>
+                  <node begin="7" cat="np" end="9" id="17" rel="mod">
+                    <node begin="7" end="8" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="19" lemma="rol" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rol" word="rol"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="9" buiging="zonder" end="10" id="20" lemma="kopen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="koop" word="gekocht" wvorm="vd"/>
+          </node>
+          <node begin="10" conjtype="neven" end="11" id="21" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="0" cat="ppart" end="17" id="22" rel="cnj">
+            <node begin="0" end="1" id="23" index="1" rel="su"/>
+            <node begin="11" end="12" getal="ev" id="24" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
+            <node begin="12" end="13" id="25" lemma="achterstevoren" pos="adj" postag="BW()" pt="bw" rel="mod" root="achterstevoren" word="achterstevoren"/>
+            <node begin="13" cat="pp" end="16" id="26" rel="ld">
+              <node begin="13" end="14" id="27" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+              <node begin="14" cat="np" end="16" id="28" rel="obj1">
+                <node begin="14" end="15" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="den"/>
+                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="30" lemma="muur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="muur" word="muur"/>
+              </node>
+            </node>
+            <node begin="16" buiging="zonder" end="17" id="31" lemma="plakken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="plak" word="geplakt" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+      <node begin="18" cat="du" end="23" id="32" rel="sat">
+        <node begin="18" cat="np" end="22" id="33" rel="dp">
+          <node begin="18" end="19" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="19" buiging="zonder" end="20" graad="basis" id="35" lemma="effen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="effen" word="effe"/>
+          <node begin="20" buiging="met-e" end="21" graad="basis" id="36" lemma="groen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groen" word="groene"/>
+          <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="37" lemma="achterkant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="achterkant" word="achterkant"/>
+        </node>
+        <node begin="22" end="23" id="38" lemma="buiten" pos="adv" postag="VZ(fin)" pt="vz" rel="dp" root="buiten" vztype="fin" word="buiten"/>
+      </node>
+    </node>
+    <node begin="23" end="24" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ze hadden goedkoop bloemetjesbehangsel van 3 centen de rol gekocht en dat achterstevoren tegen den muur geplakt , de effe groene achterkant buiten .</sentence>
+</alpino_ds>

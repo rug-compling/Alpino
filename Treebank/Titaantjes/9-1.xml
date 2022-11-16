@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="6" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="nee" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="nee" word="Neen"/>
+      <node begin="2" cat="smain" end="6" id="4" rel="nucl">
+        <node begin="2" end="3" getal="mv" id="5" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+        <node begin="3" end="4" id="6" lemma="doen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="doe" word="deden" wvorm="pv"/>
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="7" lemma="eigenlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="eigenlijk" word="eigenlijk"/>
+        <node begin="5" end="6" getal="ev" id="8" lemma="niets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="niets" status="vol" vwtype="onbep" word="niets"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Neen , we deden eigenlijk niets .</sentence>
+</alpino_ds>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="0" cat="du" end="16" id="2" rel="--">
+      <node begin="0" cat="smain" end="8" id="3" rel="nucl">
+        <node begin="0" end="1" genus="masc" getal="ev" id="4" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+        <node begin="1" end="2" id="5" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" word="weet" wvorm="pv"/>
+        <node begin="2" end="3" id="6" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="3" cat="whsub" end="8" id="7" rel="vc">
+          <node begin="3" end="4" id="8" index="1" lemma="waarom" pos="pp" postag="BW()" pt="bw" rel="whd" root="waarom" word="waarom"/>
+          <node begin="3" cat="ssub" end="8" id="9" rel="body">
+            <node begin="3" end="4" id="10" index="1" rel="mod"/>
+            <node begin="4" end="5" genus="masc" getal="ev" id="11" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+            <node begin="5" cat="advp" end="7" id="12" rel="mod">
+              <node begin="5" end="6" id="13" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
+              <node begin="6" buiging="zonder" end="7" graad="comp" id="14" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="meer"/>
+            </node>
+            <node begin="7" end="8" id="15" lemma="schilderen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="schilder" word="schildert" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" cat="smain" end="16" id="16" rel="sat">
+        <node begin="9" end="10" getal="mv" id="17" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+        <node begin="10" end="11" id="18" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="11" cat="pp" end="16" id="19" rel="mod">
+          <node begin="11" end="12" id="20" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="12" cat="np" end="16" id="21" rel="obj1">
+            <node begin="12" end="13" id="22" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
+            <node begin="14" cat="pp" end="16" id="24" rel="mod">
+              <node begin="14" end="15" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="26" lemma="verval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="verval" word="verval"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij weet ook waarom hij niet meer schildert : wij zijn in een tijd van verval .</sentence>
+</alpino_ds>

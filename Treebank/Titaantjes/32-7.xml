@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="7" id="3" rel="nucl">
+        <node begin="1" end="2" getal="ev" id="4" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+        <node begin="3" cat="du" end="7" id="6" rel="predc">
+          <node begin="3" cat="ap" end="5" id="7" rel="dp">
+            <node begin="3" end="4" id="8" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="mod" root="hoe" word="hoe"/>
+            <node begin="4" buiging="zonder" end="5" graad="comp" id="9" lemma="lang" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="lang" word="langer"/>
+          </node>
+          <node begin="5" cat="ap" end="7" id="10" rel="dp">
+            <node begin="5" end="6" id="11" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="mod" root="hoe" word="hoe"/>
+            <node begin="6" buiging="zonder" end="7" graad="comp" id="12" lemma="koud" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="koud" word="kouder"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Maar ik werd hoe langer hoe kouder .</sentence>
+</alpino_ds>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" index="1" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="4" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="obj1"/>
+        <node begin="2" end="3" id="6" lemma="mirakel" pos="noun" postag="BW()" pt="bw" rel="mod" root="mirakel" word="mirakel"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="leren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leer" word="geleerd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het was mirakel geleerd .</sentence>
+</alpino_ds>

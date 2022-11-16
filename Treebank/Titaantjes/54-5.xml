@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="14" id="2" rel="--">
+      <node begin="0" cat="smain" end="5" id="3" rel="dp">
+        <node begin="0" cat="np" end="3" id="4" index="1" rel="su">
+          <node begin="0" end="1" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+          <node begin="1" buiging="met-e" end="2" graad="basis" id="6" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
+        </node>
+        <node begin="3" end="4" id="8" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+        <node begin="0" cat="inf" end="5" id="9" rel="vc">
+          <node begin="0" end="3" id="10" index="1" rel="su"/>
+          <node begin="4" buiging="zonder" end="5" id="11" lemma="aan_breken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breek_aan" word="aanbreken" wvorm="inf"/>
+        </node>
+      </node>
+      <node begin="6" cat="smain" end="14" id="12" rel="dp">
+        <node begin="7" end="8" id="13" lemma="kunnen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kan" word="konden" wvorm="pv"/>
+        <node begin="8" end="9" getal="mv" id="14" index="2" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+        <node begin="6" cat="inf" end="14" id="15" rel="vc">
+          <node begin="6" end="7" id="16" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+          <node begin="8" end="9" id="17" index="2" rel="su"/>
+          <node begin="9" cat="np" end="11" id="18" rel="obj1">
+            <node begin="9" buiging="met-e" end="10" graad="basis" id="19" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="groote"/>
+            <node begin="10" end="11" getal="mv" graad="basis" id="20" lemma="ding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ding" word="dingen"/>
+          </node>
+          <node begin="11" cat="mwu" end="13" id="21" rel="svp">
+            <node begin="11" end="12" id="22" lemma="tot" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="tot" vztype="init" word="tot"/>
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="stand" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="stand" word="stand"/>
+          </node>
+          <node begin="13" buiging="zonder" end="14" id="24" lemma="brengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breng" word="brengen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een nieuwe tijd zou aanbreken , nog konden wij groote dingen tot stand brengen .</sentence>
+</alpino_ds>

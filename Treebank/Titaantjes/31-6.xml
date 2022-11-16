@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="26" id="2" rel="--">
+      <node begin="0" cat="smain" end="18" id="3" rel="cnj">
+        <node begin="0" cat="conj" end="5" id="4" index="1" rel="su">
+          <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="5" lemma="Bavink" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Bavink" word="Bavink"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="Hoyer" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Hoyer" word="Hoyer"/>
+          <node begin="3" conjtype="neven" end="4" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="Bekker" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Bekker" word="Bekker"/>
+        </node>
+        <node begin="5" end="6" id="9" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
+        <node begin="6" cat="np" end="8" id="10" rel="predm">
+          <node begin="6" buiging="met-e" end="7" id="11" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="al" vwtype="onbep" word="alle"/>
+          <node begin="7" end="8" id="12" lemma="drie" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="drie" word="drie"/>
+        </node>
+        <node begin="0" cat="ppart" end="18" id="13" rel="vc">
+          <node begin="0" end="5" id="14" index="1" rel="su"/>
+          <node begin="8" end="9" id="15" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+          <node begin="9" cat="ap" end="11" id="16" rel="mod">
+            <node begin="9" end="10" id="17" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zoo"/>
+            <node begin="10" buiging="zonder" end="11" graad="basis" id="18" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="vaak" word="vaak"/>
+          </node>
+          <node begin="11" cat="pp" end="17" id="19" rel="ld">
+            <node begin="11" end="12" id="20" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="12" cat="np" end="17" id="21" rel="obj1">
+              <node begin="12" end="13" id="22" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="&apos;t"/>
+              <node begin="13" buiging="zonder" end="14" graad="basis" id="23" lemma="oudheid_kundig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="oudheid_kundig" word="oudheidkundig"/>
+              <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="24" lemma="museum" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="museum" word="museum"/>
+              <node begin="15" cat="pp" end="17" id="25" rel="mod">
+                <node begin="15" end="16" id="26" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="27" lemma="Leiden" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Leiden" word="Leiden"/>
+              </node>
+            </node>
+          </node>
+          <node begin="17" buiging="zonder" end="18" id="28" lemma="willen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wil" word="gewild" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="18" conjtype="neven" end="19" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="19" cat="smain" end="26" id="30" rel="cnj">
+        <node begin="20" end="21" id="31" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+        <node begin="21" end="22" genus="onz" getal="ev" id="32" index="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="&apos;t"/>
+        <node begin="19" cat="inf" end="26" id="33" rel="vc">
+          <node begin="19" end="20" id="34" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+          <node begin="21" end="22" id="35" index="2" rel="su"/>
+          <node begin="23" end="24" id="36" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+          <node begin="22" cat="pp" end="25" id="37" rel="pc">
+            <node begin="22" end="23" getal="getal" id="38" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="24" end="25" id="39" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
+          </node>
+          <node begin="25" buiging="zonder" end="26" id="40" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="komen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Bavink , Hoyer en Bekker hadden alle drie al zoo vaak naar &apos;t oudheidkundig museum in Leiden gewild en nu zou &apos;t er dan van komen .</sentence>
+</alpino_ds>

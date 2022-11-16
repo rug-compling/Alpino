@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="4" end="5" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="9" end="10" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="du" end="17" id="4" rel="--">
+      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="5" lemma="mijnheer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="tag" root="mijnheer" word="mijnheer"/>
+      <node begin="1" cat="smain" end="17" id="6" rel="nucl">
+        <node begin="1" end="2" getal="ev" id="7" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+        <node begin="2" end="3" id="8" lemma="geloven" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="geloof" word="geloof" wvorm="pv"/>
+        <node begin="5" cat="cp" end="17" id="9" rel="vc">
+          <node begin="5" conjtype="onder" end="6" id="10" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="6" cat="ssub" end="17" id="11" rel="body">
+            <node begin="6" end="7" getal="getal" id="12" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
+            <node begin="7" buiging="zonder" end="8" graad="comp" id="13" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="predc" root="goed" word="beter"/>
+            <node begin="8" end="9" id="14" lemma="doen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="doe" word="doet" wvorm="pv"/>
+            <node begin="10" cat="cp" end="17" id="15" rel="mod">
+              <node begin="10" conjtype="onder" end="11" id="16" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+              <node begin="11" cat="ssub" end="17" id="17" rel="body">
+                <node begin="11" end="12" getal="getal" id="18" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
+                <node begin="12" cat="np" end="14" id="19" rel="obj1">
+                  <node begin="12" buiging="met-e" end="13" id="20" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="dezen"/>
+                  <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="21" lemma="heer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heer" word="heer"/>
+                </node>
+                <node begin="14" cat="pp" end="16" id="22" rel="ld">
+                  <node begin="14" end="15" id="23" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+                  <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="24" lemma="huis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="huis" word="huis"/>
+                </node>
+                <node begin="16" end="17" id="25" lemma="brengen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="breng" word="brengt" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="18" end="19" id="27" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>&quot; Ik geloof mijnheer , dat u beter doet , als u dezen heer naar huis brengt . &quot;</sentence>
+</alpino_ds>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="conj" end="3" id="2" rel="predc">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="rijk" pos="name" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="Rijk" word="Rijk"/>
+        <node begin="1" conjtype="neven" end="2" id="4" lemma="en" pos="name" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="2" buiging="zonder" end="3" id="5" lemma="wel_verzorgen" pos="name" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="cnj" root="welverzorgd" word="welverzorgd" wvorm="vd"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="uit_zien" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zie_uit" word="zag" wvorm="pv"/>
+      <node begin="4" end="5" genus="masc" getal="ev" id="7" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="5" end="6" getal="getal" id="8" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="svp" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="6" end="7" id="9" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+    </node>
+    <node begin="7" end="8" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Rijk en welverzorgd zag hij er uit .</sentence>
+</alpino_ds>

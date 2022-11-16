@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="21" end="22" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="28" id="3" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="4" lemma="Bavink" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Bavink" word="Bavink"/>
+      <node begin="1" end="2" id="5" lemma="begrijpen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="begrijp" word="begreep" wvorm="pv"/>
+      <node begin="2" end="3" id="6" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="4" cat="whsub" end="28" id="7" rel="vc">
+        <node begin="4" end="5" id="8" index="1" lemma="waarom" pos="pp" postag="BW()" pt="bw" rel="whd" root="waarom" word="waarom"/>
+        <node begin="4" cat="conj" end="28" id="9" rel="body">
+          <node begin="4" cat="ssub" end="13" id="10" rel="cnj">
+            <node begin="5" cat="np" end="7" id="11" index="2" rel="su">
+              <node begin="5" buiging="zonder" end="6" id="12" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+              <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="kerel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kerel" word="kerels"/>
+            </node>
+            <node begin="11" end="12" id="14" lemma="mogen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="mag" word="mochten" wvorm="pv"/>
+            <node begin="4" cat="inf" end="13" id="15" rel="vc">
+              <node begin="4" end="5" id="16" index="1" rel="mod"/>
+              <node begin="5" end="7" id="17" index="2" rel="su"/>
+              <node begin="7" end="8" id="18" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zoo"/>
+              <node begin="8" end="9" id="19" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+              <node begin="9" cat="pp" end="11" id="20" rel="mod">
+                <node begin="9" end="10" id="21" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="10" end="11" getal="mv" graad="basis" id="22" lemma="rijtuig" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="rijtuig" word="rijtuigen"/>
+              </node>
+              <node begin="12" buiging="zonder" end="13" id="23" lemma="rijden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="rijd" word="rijden" wvorm="inf"/>
+            </node>
+          </node>
+          <node begin="13" conjtype="neven" end="14" id="24" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="4" cat="ssub" end="17" id="25" rel="cnj">
+            <node begin="4" end="5" id="26" index="1" rel="mod"/>
+            <node begin="5" end="7" id="27" index="2" rel="su"/>
+            <node begin="14" cat="np" end="16" id="28" rel="obj1">
+              <node begin="14" buiging="met-e" end="15" graad="basis" id="29" lemma="duur" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="duur" word="dure"/>
+              <node begin="15" end="16" getal="mv" graad="basis" id="30" lemma="jas" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jas" word="jassen"/>
+            </node>
+            <node begin="16" end="17" id="31" lemma="aan_hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb_aan" word="aanhebben" wvorm="pv"/>
+          </node>
+          <node begin="17" conjtype="neven" end="18" id="32" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="4" cat="ssub" end="28" id="33" rel="cnj">
+            <node begin="4" end="5" id="34" index="1" rel="mod"/>
+            <node begin="5" end="7" id="35" index="2" rel="su"/>
+            <node begin="20" end="21" id="36" lemma="commanderen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="commandeer" word="commandeeren" wvorm="pv"/>
+            <node begin="18" cat="np" end="28" id="37" rel="obj1">
+              <node begin="18" buiging="met-e" end="19" graad="basis" id="38" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
+              <node begin="19" end="20" getal="mv" graad="basis" id="39" lemma="lieden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="lieden" word="lui"/>
+              <node begin="22" cat="rel" end="28" id="40" rel="mod">
+                <node begin="22" end="23" getal="getal" id="41" index="3" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                <node begin="22" cat="ssub" end="28" id="42" rel="body">
+                  <node begin="22" end="23" id="43" index="3" rel="su"/>
+                  <node begin="23" end="24" id="44" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+                  <node begin="25" end="26" id="45" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+                  <node begin="24" cat="ap" end="28" id="46" rel="predc">
+                    <node begin="24" buiging="zonder" end="25" graad="comp" id="47" lemma="stom" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="stom" word="stommer"/>
+                    <node begin="26" cat="cp" end="28" id="48" rel="obcomp">
+                      <node begin="26" conjtype="onder" end="27" id="49" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+                      <node begin="27" end="28" getal="mv" id="50" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="body" root="zij" status="vol" vwtype="pers" word="zij"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" id="51" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Bavink begreep niet , waarom die kerels zoo maar in rijtuigen mochten rijden en dure jassen aanhebben en andere lui commandeeren , die niet stommer waren dan zij .</sentence>
+</alpino_ds>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+      <node begin="4" end="5" getal="mv" id="3" index="1" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+      <node begin="0" cat="inf" end="8" id="4" rel="vc">
+        <node begin="4" end="5" id="5" index="1" rel="su"/>
+        <node begin="0" cat="ahi" end="6" id="6" rel="vc">
+          <node begin="0" cat="mwu" end="2" id="7" rel="cmp">
+            <node begin="0" end="1" id="8" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="Aan" vztype="init" word="Aan"/>
+            <node begin="1" end="2" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="&apos;t" word="&apos;t"/>
+          </node>
+          <node begin="2" cat="inf" end="6" id="10" rel="body">
+            <node begin="2" buiging="zonder" end="3" id="11" lemma="praten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="praat" word="praten" wvorm="inf"/>
+            <node begin="5" end="6" genus="masc" getal="ev" id="12" index="2" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,red,3,ev,masc)" pt="vnw" rel="su" root="hem" status="red" vwtype="pers" word="&apos;m"/>
+          </node>
+        </node>
+        <node begin="5" end="6" id="13" index="2" rel="obj1"/>
+        <node begin="6" end="7" id="14" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="7" buiging="zonder" end="8" id="15" lemma="krijgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="krijg" word="krijgen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Aan &apos;t praten kunnen ze &apos;m niet krijgen .</sentence>
+</alpino_ds>

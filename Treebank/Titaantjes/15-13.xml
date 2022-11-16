@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="mwu" end="3" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="af" pos="adv" postag="VZ(fin)" pt="vz" rel="mwp" root="af" vztype="fin" word="Af"/>
+        <node begin="1" conjtype="neven" end="2" id="4" lemma="en" pos="adv" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+        <node begin="2" end="3" id="5" lemma="toe" pos="adv" postag="VZ(fin)" pt="vz" rel="mwp" root="toe" vztype="fin" word="toe"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+      <node begin="4" end="5" getal="ev" id="7" lemma="iemand" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="su" root="iemand" status="vol" vwtype="onbep" word="iemand"/>
+      <node begin="5" end="6" id="8" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" word="eens"/>
+      <node begin="6" end="7" getal="ev" id="9" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="wat" status="vol" vwtype="onbep" word="wat"/>
+    </node>
+    <node begin="7" end="8" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Af en toe zei iemand eens wat .</sentence>
+</alpino_ds>

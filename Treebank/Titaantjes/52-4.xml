@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="7" id="2" rel="--">
+      <node begin="0" cat="smain" end="4" id="3" rel="dp">
+        <node begin="0" end="1" id="4" lemma="daarin" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarin" word="Daarin"/>
+        <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="God" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="God" word="God"/>
+        <node begin="3" end="4" id="7" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+      </node>
+      <node begin="5" cat="smain" end="7" id="8" rel="dp">
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="God" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="God" word="God"/>
+        <node begin="6" end="7" id="10" lemma="roepen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="roep" word="roept" wvorm="pv"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daarin is God ook , God roept .</sentence>
+</alpino_ds>

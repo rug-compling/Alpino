@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="13" end="14" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="21" end="22" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="25" id="4" rel="--">
+      <node begin="0" cat="du" end="13" id="5" rel="dp">
+        <node begin="0" cat="cp" end="6" id="6" rel="sat">
+          <node begin="0" conjtype="onder" end="1" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+          <node begin="1" cat="ssub" end="6" id="8" rel="body">
+            <node begin="1" end="2" getal="ev" id="9" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+            <node begin="3" end="4" id="10" lemma="even" pos="adj" postag="BW()" pt="bw" rel="mod" root="even" word="even"/>
+            <node begin="2" cat="pp" end="5" id="11" rel="pc">
+              <node begin="2" end="3" getal="getal" id="12" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+              <node begin="4" end="5" id="13" lemma="over" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="over" vztype="fin" word="over"/>
+            </node>
+            <node begin="5" end="6" id="14" lemma="na_denken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="denk_na" word="nadenk" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="7" cat="smain" end="13" id="15" rel="nucl">
+          <node begin="8" end="9" id="16" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+          <node begin="9" cat="np" end="11" id="17" index="1" rel="su">
+            <node begin="9" buiging="zonder" end="10" id="18" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
+          </node>
+          <node begin="7" cat="inf" end="13" id="20" rel="vc">
+            <node begin="7" end="8" id="21" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+            <node begin="9" end="11" id="22" index="1" rel="su"/>
+            <node begin="11" end="12" id="23" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+            <node begin="12" buiging="zonder" end="13" id="24" lemma="voort_duren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="duur_voort" word="voortduren" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="14" cat="smain" end="25" id="25" rel="dp">
+        <node begin="14" end="15" getal="getal" id="26" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" root="die" status="vol" vwtype="aanw" word="die"/>
+        <node begin="15" end="16" id="27" lemma="duren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="duur" word="duurt" wvorm="pv"/>
+        <node begin="16" cat="cp" end="25" id="28" rel="mod">
+          <node begin="16" conjtype="onder" end="17" id="29" lemma="zolang" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zolang" word="zoolang"/>
+          <node begin="17" cat="ssub" end="25" id="30" rel="body">
+            <node begin="17" end="18" getal="getal" id="31" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="18" cat="np" end="24" id="32" rel="su">
+              <node begin="18" end="19" getal="mv" graad="basis" id="33" lemma="jongen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jongen" word="jongens"/>
+              <node begin="19" cat="pp" end="24" id="34" rel="mod">
+                <node begin="19" end="20" id="35" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="20" cat="np" end="24" id="36" rel="obj1">
+                  <node begin="20" cat="conj" end="23" id="37" rel="det">
+                    <node begin="20" end="21" id="38" lemma="negentien" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="cnj" root="negentien" word="negentien"/>
+                    <node begin="22" end="23" id="39" lemma="twintig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="cnj" root="twintig" word="twintig"/>
+                  </node>
+                  <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="40" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+                </node>
+              </node>
+            </node>
+            <node begin="24" end="25" id="41" lemma="rond_lopen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="loop_rond" word="rondloopen" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als ik er even over nadenk , dan moet die tijd nog voortduren , die duurt zoolang er jongens van negentien , twintig jaar rondloopen .</sentence>
+</alpino_ds>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="26" id="4" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="5" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+      <node begin="1" cat="conj" end="26" id="6" rel="nucl">
+        <node begin="1" cat="smain" end="19" id="7" rel="cnj">
+          <node begin="1" end="2" id="8" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+          <node begin="2" end="3" id="9" lemma="in_zenden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zend_in" word="zenden" wvorm="pv"/>
+          <node begin="3" end="4" getal="mv" id="10" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+          <node begin="4" end="5" genus="onz" getal="ev" id="11" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="&apos;t"/>
+          <node begin="5" end="6" id="12" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
+          <node begin="6" cat="pp" end="19" id="13" rel="ld">
+            <node begin="6" end="7" id="14" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="7" cat="np" end="19" id="15" rel="obj1">
+              <node begin="7" buiging="zonder" end="8" getal="ev" id="16" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="naam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="naam" word="naam"/>
+              <node begin="10" cat="du" end="19" id="18" rel="app">
+                <node begin="10" cat="mwu" end="12" id="19" rel="dp">
+                  <node begin="10" end="11" id="20" lemma="Johannes" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Johannes" spectype="deeleigen" word="Johannes"/>
+                  <node begin="11" end="12" id="21" lemma="Bavink" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bavink" spectype="deeleigen" word="Bavink"/>
+                </node>
+                <node begin="13" cat="mwu" end="16" id="22" rel="dp">
+                  <node begin="13" end="14" id="23" lemma="2" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mwp" root="2" word="2de"/>
+                  <node begin="14" end="15" id="24" lemma="Jan" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jan" spectype="deeleigen" word="Jan"/>
+                  <node begin="15" end="16" id="25" lemma="Steenstraat" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Steenstraat" spectype="deeleigen" word="Steenstraat"/>
+                </node>
+                <node begin="17" cat="np" end="19" id="26" rel="dp">
+                  <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="27" lemma="nummer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="nummer" word="nummer"/>
+                  <node begin="18" end="19" id="28" lemma="zoveel" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="zoveel" word="zooveel"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="19" conjtype="neven" end="20" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="20" cat="smain" end="26" id="30" rel="cnj">
+          <node begin="20" end="21" getal="mv" id="31" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+          <node begin="21" end="22" id="32" lemma="prijzen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="prijs" word="prijzen" wvorm="pv"/>
+          <node begin="22" end="23" genus="onz" getal="ev" id="33" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="&apos;t"/>
+          <node begin="23" cat="pp" end="26" id="34" rel="mod">
+            <node begin="23" end="24" id="35" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="24" cat="mwu" end="26" id="36" rel="obj1">
+              <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="37" lemma="f" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="f" word="f"/>
+              <node begin="25" end="26" id="38" lemma="800" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="800" word="800"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>En dan zenden we &apos;t in op mijn naam : Johannes Bavink , 2de Jan Steenstraat , nummer zooveel en we prijzen &apos;t voor f 800 .</sentence>
+</alpino_ds>
