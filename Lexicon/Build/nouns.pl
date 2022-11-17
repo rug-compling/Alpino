@@ -37,6 +37,8 @@ more_general(meas_mod_noun(De,Count,Sg,Sc),  noun(De,Count,Sg,Sc)).
 more_general(mod_noun(De,Count,Sg,Sc),       meas_mod_noun(De,Count,Sg,Sc)).
 more_general(mod_noun(De,Count,Sg,Sc),       tmp_noun(De,Count,Sg,Sc)).
 
+%%% TODO (?): choose stem with same number of parts
+%%% so, 'pop up' does not get stem 'pop-up' but rather 'pop up'?
 n0(Stem,Tag,Surf,Forms,Gender,Subcat,Suffixes) :-    
     candidate_stem(Stem0,Forms),
     (	atom(Stem0)

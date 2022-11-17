@@ -7174,7 +7174,7 @@ v(erf,erft,erven,geërfd,erfde,erfden,
 v(erger,ergert,ergeren,geërgerd,ergerde,ergerden,
     [h([refl,
 	sbar_subj_so_np,
-	transitive,
+	transitive, %% ? of obj2?
 	vp_subj_so_np,
 	np_pc_pp(door),
 	refl_pc_pp(aan),
@@ -12094,7 +12094,8 @@ v(koop,koopt,kopen,gekocht,kocht,kochten,
     [h([intransitive,
 	transitive,
 	np_pc_pp(met),
-	np_pc_pp(van),  % hij heeft er een buitenhuis van gekocht
+	np_pc_pp(van),	     % hij heeft er een buitenhuis van gekocht
+	np_mod_pp(voor),     % ik koop er een boek voor
         np_np,
 	part_intransitive(bij),
 	part_intransitive(in),

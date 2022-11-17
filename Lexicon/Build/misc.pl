@@ -1979,7 +1979,7 @@ m(een,           determiner(een),                Een) :- een(Een).
 %m(een,           determiner(een),                ne).     % vlaams
 %m(een,           determiner(een),                ene).
 %m(één,           determiner(een),                enen).
-m('een weing',   determiner(wat),                 [een,weinig]).
+m('een weinig',   determiner(wat),                 [een,weinig]).
 m(eenieder,      determiner(pron),eenieders).
 m(eenzelfde,     determiner(een,nwh,mod,pro,yparg),  eenzelfde).
 m(elk,           determiner(het,nwh,mod,pro,yparg),      elk).
