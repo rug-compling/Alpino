@@ -18,7 +18,7 @@ novel:
 	( cd fast; make -j i_suite.log extra.log eans.log )
 
 DIRECTORIES=cgn_exs eans extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 \
-             ntv-suite qa wpspel novelsample_corrected cdb
+             ntv-suite qa wpspel novelsample_corrected cdb Titaantjes
 
 trees_doc: 
 	for dir in $(DIRECTORIES); do\
@@ -218,3 +218,4 @@ update:
 	$(MAKE) ../SENTS/$(suite).sents sentspl
 	$(MAKE) ../CONLLU/$(suite).conllu
 	$(MAKE) Enhanced/$(suite).dact
+
