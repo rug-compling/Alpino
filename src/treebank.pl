@@ -1730,10 +1730,12 @@ best_score_end_parse_sub(Sub) :-
     ).
 
 format_of_result(dump_xml,Result,_Key) :-
-    alpino_data:result_term(_,String,_,_,_,_,Result),
+    alpino_data:result_term(_,String0,_,_,_,_,Result),
+    user:ignore_brackets(String0,String),
     xml_save(Result,String,[],stream(user_output),normal).
 format_of_result(xml,Result,Key) :-
-    alpino_data:result_term(_,String,_,_,_,_,Result),
+    alpino_data:result_term(_,String0,_,_,_,_,Result),
+    user:ignore_brackets(String0,String),
     format_to_chars("~w.xml",[Key],Codes), % note: always local! because flag(treebank) is used
                                            % for looking up the gold standard already
     atom_codes(File,Codes),
