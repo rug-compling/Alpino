@@ -332,6 +332,7 @@ mwu_postag('Eerste Wereldoorlogde',['TW(rang,prenom,stan)','N(soort,ev,basis,zij
 mwu_postag('Eigen Verklaring',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,zijd,stan)'],[eigen,verklaring]).
 mwu_postag('El Greco-figuur',['SPEC(deeleigen)','N(soort,ev,basis,onz,stan)'],['El','Greco_figuur']).
 mwu_postag('Emancipatie Proclamatie',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)'],[emancipatie,proclamatie]).
+mwu_postag('een weinig',['LID(onbep,stan,agr)','VNW(onbep,grad,stan,vrij,zonder,basis)'],[een,weinig]).
 mwu_postag('en dergelijke',['VG(neven)','ADJ(nom,basis,met-e,zonder-n,stan)'],[en,dergelijk]).
 mwu_postag('en jong oud',['ADJ(vrij,basis,zonder)','VG(neven)','ADJ(vrij,basis,zonder)'],[jong,en,oud]).
 mwu_postag('Energie Onderzoekscentrum Nederland',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,onz,stan)'],[energie,onderzoekscentrum,'Nederland']).
