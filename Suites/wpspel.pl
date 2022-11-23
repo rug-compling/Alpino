@@ -6,11 +6,7 @@
 :- use_module(library(charsio)).
 
 sentence(Key,Sent) :-
-    alpino_treebank:treebank_directory(Dir),
-    wpspel_sentence(Key,Sent),
-    format_to_chars("~w/~w.xml",[Dir,Key],Chars),
-    atom_codes(File,Chars),
-    file_exists(File).
+    wpspel_sentence(Key,Sent).
 
 
 wpspel_sentence(1,['Aan',welk,orgaan,krijg,je,psoriasis,?]).
@@ -1013,6 +1009,7 @@ wpspel_sentence(997,['Van',wie,had,'Maradona',hulp,gekregen,met,zijn,roemruchte,
 wpspel_sentence(998,['Welke',gebeurtenis,wordt,wel,aangeduid,als,'\'','Zwarte','Vrijdag','\'',?]).
 wpspel_sentence(999,['Welke',componist,was,net,als,zijn,zusje,'Fanny',een,getalenteerd,schilder,?]).
 wpspel_sentence(1000,['Welke',dikke,vloeistof,fossiliseert,tot,barnsteen,?]).
+/*
 wpspel_sentence(1001,['Hoe',werden,in,het,antieke,'Rome',de,wraakgodinnen,genoemd,?]).
 wpspel_sentence(1002,['Hoe',noemt,men,de,algehele,temperatuurstijging,',',veroorzaakt,door,grote,hoeveelheden,kooldioxide,in,de,dampkring,?]).
 wpspel_sentence(1003,['Met',welke,'kinder-',en,debuutfilm,won,'Esmé','Lammers',in,'1996',een,'Gouden','Kalf',?]).
@@ -3013,3 +3010,4 @@ wpspel_sentence(2998,['Hoe',wordt,de,in,'1968',in,'Tsjechoslowakije',optredende,
 wpspel_sentence(2999,['Wie',heeft,de,film,`,'Kiss',of,a,'Spiderwoman','\'',geregisseerd,?]).
 wpspel_sentence(3000,['Welke',cobra,is,het,langst,?]).
 
+*/
