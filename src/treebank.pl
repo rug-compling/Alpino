@@ -273,6 +273,7 @@ lassy_relation(deprel(Dep,Rel,Head),deprel(DepLem,DepPos,Rel,HeadPos,HeadLem)) :
 lassy_lem_pos(none:none/[0,0],none,none).
 lassy_lem_pos(top:top/top,top,top).
 lassy_lem_pos(read_from_treebank(_,Lem,Pos):_/_,Lem,Pos).
+lassy_lem_pos(read_from_treebank(_,_,Lem,Pos):_/_,Lem,Pos).
 
 treebank_pl_triples_list([]).
 treebank_pl_triples_list([H|T]) :-
