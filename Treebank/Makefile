@@ -8,7 +8,7 @@ XSL=$(ALPINO_HOME)/TreebankTools/stylesheets
 
 LASSYSMALL=/net/corpora/LassyDevelop
 
-all: dtchecks novel prepare_enhanced_all enhanced_all poslemma mwu trees_doc sents sentspl conllu pair dact
+all: dtchecks novel prepare_enhanced_all enhanced_all poslemma freq trees_doc sents sentspl conllu pair dact
 
 ## slow, because it retries all timed-out sentences
 bestrun:
@@ -54,7 +54,10 @@ Enhanced/%.dact: Enhanced/%/*.xml
 	chmod 644 Enhanced/$*.dact.new
 	mv Enhanced/$*.dact.new Enhanced/$*.dact
 
-mwu: $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq
+freq: lp $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq
+	mkdir -p FREQ LP TRIPLES
+	$(MAKE) -j 10 FREQ/POS.freq FREQ/WORD-POS.freq FREQ/WORD-LEMMA-POS.freq FREQ/WORD-AMB.freq FREQ/TAG-AMB.freq \
+                   FREQ/mwu-tagged.freq FREQ/deps.freq FREQ/heads.freq FREQ/triples.freq
 
 ## removes the .mwu file, because if it is empty it would otherwise
 ## be rebuilt over and over again!
@@ -62,7 +65,7 @@ MWU/%.mwu: Enhanced/%/*.xml $(XSL)/mwu_tags.xsl
 	rm -f MWU/$*.mwu
 	ls -v Enhanced/$*/*.xml | dtxslt --stdin -q '//node[@cat="mwu"]' -s $(XSL)/mwu_tags.xsl > MWU/$*.mwu
 
-pair: $(DIRECTORIES:%=PAIR/%.pair) $(DIRECTORIES:%=PAIR/%.triple)
+pair: $(DIRECTORIES:%=PAIR/%.pair) $(DIRECTORIES:%=PAIR/%.triple) 
 	$(MAKE) inconsistent-pairs inconsistent-triples
 
 ## the odd sed commands for XX[0-9]XX are there to fool awk into treating
@@ -137,10 +140,6 @@ FREQ/mwu-tagged.freq: $(DIRECTORIES:%=MWU/%.mwu) $(LASSYSMALL)/MWU/*.mwu
 poslemma: $(DIRECTORIES:%=POSLEMMA/%.poslemma)
 	rm inconsistent-words
 	$(MAKE) inconsistent-words
-
-POSLEMMA/%.poslemma: Enhanced/%/*.xml
-	dtxslt -s $(XSL)/plat.xsl Enhanced/$* > POSLEMMA/$*.poslemma
-
 
 gitversion=$(shell git log --oneline | wc -l)
 
@@ -218,4 +217,77 @@ update:
 	$(MAKE) ../SENTS/$(suite).sents sentspl
 	$(MAKE) ../CONLLU/$(suite).conllu
 	$(MAKE) Enhanced/$(suite).dact
+
+TMPDATA=$(DIRECTORIES:%=LP/%.lp) $(LASSYSMALL)/LP/*.lp
+
+LP/%.lp: Enhanced/%/*.xml $(XSL)/dt2lemma-postags.xsl
+	ls -v Enhanced/$*/*.xml | dtxslt --stdin -s $(XSL)/dt2lemma-postags.xsl > LP/$*.lp
+
+FREQ/triples.freq: $(DIRECTORIES:%=TRIPLES/%.triples)
+	sort -m $(DIRECTORIES:%=TRIPLES/%.triples) $(LASSYSMALL/TRIPLES/*.triples) \
+           | uniq -c \
+           | sort -nr \
+           > FREQ/triples.freq
+
+FREQ/deps.freq: $(DIRECTORIES:%=TRIPLES/%.triples)
+	awk -F\| '{ printf "%s|%s|%s\n",$$3,$$4,$$5}' $(DIRECTORIES:%=TRIPLES/%.triples) $(LASSYSMALL/TRIPLES/*.triples)\
+	   | sort \
+           | uniq -c \
+           | sort -nr \
+           > FREQ/deps.freq
+
+FREQ/heads.freq: $(DIRECTORIES:%=TRIPLES/%.triples)
+	awk -F\| '{ printf "%s|%s|%s\n",$$1,$$2,$$3}' $(DIRECTORIES:%=TRIPLES/%.triples) $(LASSYSMALL/TRIPLES/*.triples)\
+	   | sort \
+           | uniq -c \
+           | sort -nr \
+           > FREQ/heads.freq
+
+
+TRIPLES/%.triples: ./%
+	dtlist --recursive $< \
+             | xargs Alpino -treebank_lassy_triples \
+             | awk -F\| '{ printf "%s|%s|%s|%s|%s\n",$$1,$$2,$$3,$$4,$$5}' \
+             | sort \
+             >  $@
+
+
+FREQ/WORD-POS.freq: $(TMPDATA)
+	cut -f1,3  $(TMPDATA) | sort | uniq -c | sort -nr > FREQ/WORD-POS.freq 
+
+FREQ/WORD-LEMMA-POS.freq: $(TMPDATA)
+	cut -f1,2,3 $(TMPDATA) | sort | uniq -c | sort -nr > FREQ/WORD-LEMMA-POS.freq 
+
+FREQ/WORD-AMB.freq:FREQ/WORD-LEMMA-POS.freq
+	sort -k2,2 -k1,1nr FREQ/WORD-LEMMA-POS.freq\
+        | awk '{ if ($$2 == P && $$3 == Q) printf("%s\n%s\n\n",N,$$0); P=$$2; Q=$$3; N=$$0}' > FREQ/WORD-AMB.freq
+
+FREQ/TAG-AMB.freq: FREQ/WORD-LEMMA-POS.freq
+	sort -k2,2 -k4,4 -k1,1nr FREQ/WORD-LEMMA-POS.freq\
+        | awk '{ if ($$2 == P) printf("%s\t%s\n",Q,$$4); P=$$2; Q=$$4 }' \
+	| sort |uniq -c | sort -nr > FREQ/TAG-AMB.freq
+
+FREQ/POS.freq: $(TMPDATA)
+	cat $(TMPDATA) | cut -f3 \
+        | sort | uniq -c | sort -nr > FREQ/POS.freq 
+
+POSLEMMA/%.poslemma: Enhanced/%/*.xml
+	ls -v Enhanced/$*/*.xml | dtxslt --stdin -s $(XSL)/plat.xsl > POSLEMMA/$*.poslemma
+
+mwu: $(DIRECTORIES:%=MWU/%.mwu)
+
+lp: $(DIRECTORIES:%=LP/%.lp)
+
+## removes the .mwu file, because if it is empty it would otherwise
+## be rebuilt over and over again!
+MWU/%.mwu: Enhanced/%/*.xml $(XSL)/mwu_tags.xsl
+	rm -f MWU/$*.mwu
+	ls -v Enhanced/$*/*.xml | dtxslt --stdin -q '//node[@cat="mwu"]' -s $(XSL)/mwu_tags.xsl > MWU/$*.mwu
+
+FREQ/lp-tagged.freq: $(DIRECTORIES:%=LP/%.lp)
+	cat $(DIRECTORIES:%=LP/%.lp) $(LASSYSMALL/LP/*.triples)\
+        | awk '{ printf "%s\t%s %s\n", $$1,$$3,$$2 }'\
+        | sort\
+        | uniq -c\
+        | sort -nr > FREQ/lp-tagged.freq
 
