@@ -57,7 +57,7 @@ Enhanced/%.dact: Enhanced/%/*.xml
 freq: lp $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq
 	mkdir -p FREQ LP TRIPLES
 	$(MAKE) -j 10 FREQ/POS.freq FREQ/WORD-POS.freq FREQ/WORD-LEMMA-POS.freq FREQ/WORD-AMB.freq FREQ/TAG-AMB.freq \
-                   FREQ/mwu-tagged.freq FREQ/deps.freq FREQ/heads.freq FREQ/triples.freq
+                   FREQ/mwu-tagged.freq FREQ/deps.freq FREQ/heads.freq FREQ/triples.freq FREQ/POS-WORD-LEMMA.freq
 
 ## removes the .mwu file, because if it is empty it would otherwise
 ## be rebuilt over and over again!
@@ -291,3 +291,8 @@ FREQ/lp-tagged.freq: $(DIRECTORIES:%=LP/%.lp)
         | uniq -c\
         | sort -nr > FREQ/lp-tagged.freq
 
+FREQ/POS-WORD-LEMMA.freq: FREQ/POS.freq FREQ/WORD-LEMMA-POS.freq
+	for tag in `awk '{ print $$2 }' FREQ/POS.freq|sort`;\
+        do echo "--------- $$tag ---------------" ;\
+           grep -F $$tag FREQ/WORD-LEMMA-POS.freq;\
+        done > FREQ/POS-WORD-LEMMA.freq
