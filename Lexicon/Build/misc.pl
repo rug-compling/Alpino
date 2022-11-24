@@ -3327,6 +3327,8 @@ pp('tot-nu-toe').
 pp([tot,voor,kort]).
 pp(uitelkaar,uit).
 pp(vantevoren).
+%% todo: if required, these should be with_dt
+%% 
 pp([van,dag,tot,dag]).
 pp([van,jaar,tot,jaar]).
 pp([van,week,tot,week]).
