@@ -944,6 +944,8 @@ exceptional_stem_tag(hare,  noun(both,count,both),            'VNW(bez,det,stan,
 exceptional_stem_tag(hunne, noun(both,count,sg),              'VNW(bez,det,stan,vol,3p,mv,nom,met-e,zonder-n)',   hun).
 exceptional_stem_tag(hunne, noun(both,count,pl),              'VNW(bez,det,stan,vol,3p,mv,nom,met-e,mv-n)',       hun).
 
+exceptional_stem_tag(ge, _, 'VNW(pers,pron,nomin,red,2,getal)',ge).
+exceptional_stem_tag(gij,_, 'VNW(pers,pron,nomin,vol,2,getal)',gij).
 
 exceptional_stem_tag(Var,_,_) :-
     var(Var),
@@ -1189,7 +1191,7 @@ exceptional_stem_tag(u,determiner(pron),                            'VNW(bez,det
 exceptional_stem_tag(uisluitend,modal_adverb,                       'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(uit_voeren,nominalized_adjective,              'WW(od,nom,met-e,mv-n)').
 exceptional_stem_tag(uw,determiner(pron),                           'VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)').
-exceptional_stem_tag(jezelf,_,                                      'VNW(pr,pron,obl,nadr,2,getal)').
+exceptional_stem_tag(jijzelf,_,                                     'VNW(pers,pron,nomin,nadr,2v,ev)').
 exceptional_stem_tag(vader,determiner(pron),                        'N(soort,ev,basis,gen)').
 exceptional_stem_tag(vallen,nominalized_adjective,                  'WW(vd,nom,met-e,mv-n)').
 exceptional_stem_tag(vallen,nominalized_adjective_sg,               'WW(vd,nom,met-e,zonder-n)').

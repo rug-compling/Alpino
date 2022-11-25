@@ -254,6 +254,8 @@ mwu_postag('De vrije',['LID(bep,stan,rest)','ADJ(prenom,basis,met-e,stan)'],[de,
 mwu_postag('De Zevende Dag',['LID(bep,stan,rest)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[de,zeven,dag]).
 mwu_postag('De Zevende Hemel',['LID(bep,stan,rest)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[de,zeven,hemel]).
 mwu_postag(dichtbij,['ADJ(vrij,basis,zonder)','VZ(init)'],[dicht,bij]).
+mwu_postag('die van',['VZ(init)','VNW(aanw,det,stan,prenom,zonder,rest)'],[van,die]).
+mwu_postag('die paar',['VNW(aanw,det,stan,prenom,zonder,rest)','N(soort,ev,basis,onz,stan)'],[die,paar]).
 mwu_postag('Dienst Grondstoffen en Verwerkte Producten',['N(soort,ev,basis,zijd,stan)','N(soort,mv,basis)','VG(neven)','WW(vd,prenom,met-e)','N(soort,mv,basis)'],[dienst,grondstof,en,verwerken,product]).
 mwu_postag('Dienst gynaecologie en verloskunde',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[dienst,gynaecologie,en,verlos_kunde]).
 mwu_postag('Dienst Informatie Vorming en Afstemming',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[dienst,informatie,vorming,en,afstemming]).
