@@ -4,22 +4,22 @@
     <node begin="0" cat="whq" end="7" id="1" rel="--">
       <node begin="0" cat="pp" end="2" id="2" index="1" rel="whd">
         <node begin="0" end="1" id="3" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="Voor"/>
-        <node begin="1" case="dat_acc" def="def" end="2" gen="de" getal="getal" id="4" lemma="wie" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="obj1" rnum="sg" root="wie" status="vol" vwtype="vb" wh="ywh" word="wien"/>
+        <node begin="1" end="2" getal="getal" id="4" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="obj1" root="wie" status="vol" vwtype="vb" word="wien"/>
       </node>
       <node begin="0" cat="sv1" end="7" id="5" rel="body">
         <node begin="0" end="2" id="6" index="1" rel="mod"/>
-        <node begin="2" end="3" id="7" infl="sg_hebt" lemma="zijn" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="whquestion" tense="present" word="zijt" wvorm="pv"/>
-        <node begin="3" case="both" def="def" end="4" gen="de" getal="getal" id="8" lemma="ge" naamval="nomin" num="sg" pdtype="pron" per="u" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" rnum="sg" root="ge" status="vol" vwtype="pers" wh="nwh" word="ge"/>
+        <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ben" word="zijt" wvorm="pv"/>
+        <node begin="3" end="4" getal="getal" id="8" lemma="ge" naamval="nomin" pdtype="pron" persoon="2" pos="pron" postag="VNW(pers,pron,nomin,red,2,getal)" pt="vnw" rel="su" root="ge" status="red" vwtype="pers" word="ge"/>
         <node begin="4" cat="pp" end="7" id="9" rel="predc">
           <node begin="4" end="5" id="10" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
           <node begin="5" cat="np" end="7" id="11" rel="obj1">
-            <node begin="5" end="6" id="12" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-            <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="13" lemma="werk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="werk" sc="pred_pp(aan)" word="werk"/>
+            <node begin="5" end="6" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="werk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werk" word="werk"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="7" end="8" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Voor wien zijt ge aan het werk ?</sentence>
 </alpino_ds>
