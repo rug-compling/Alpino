@@ -5,8 +5,8 @@
       <node begin="0" cat="np" end="5" id="2" index="1" rel="whd">
         <node begin="0" cat="mwu" end="3" id="3" rel="det">
           <node begin="0" end="1" getal="ev" id="4" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mwp" root="wat" status="vol" vwtype="vb" word="Wat"/>
-          <node begin="1" end="2" getal="ev" id="5" lemma="voor" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mwp" root="voor" status="vol" vwtype="vb" word="voor"/>
-          <node begin="2" end="3" getal="ev" id="6" lemma="een" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mwp" root="een" status="vol" vwtype="vb" word="een"/>
+          <node begin="1" end="2" id="5" lemma="voor" pos="det" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
+          <node begin="2" end="3" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="mwp" root="een" word="een"/>
         </node>
         <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="7" lemma="soort" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,genus,stan)" pt="n" rel="hd" root="soort" word="soort"/>
         <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="keuken" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="app" root="keuken" word="keuken"/>

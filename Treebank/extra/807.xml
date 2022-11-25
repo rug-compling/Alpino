@@ -5,8 +5,8 @@
       <node begin="0" cat="np" end="4" id="2" index="1" rel="whd">
         <node begin="0" cat="mwu" end="3" id="3" rel="det">
           <node begin="0" end="1" getal="ev" id="4" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mwp" root="wat" status="vol" vwtype="vb" word="Wat"/>
-          <node begin="1" end="2" getal="ev" id="5" lemma="voor" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mwp" root="voor" status="vol" vwtype="vb" word="voor"/>
-          <node begin="2" end="3" getal="ev" id="6" lemma="een" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mwp" root="een" status="vol" vwtype="vb" word="een"/>
+          <node begin="1" end="2" id="5" lemma="voor" pos="det" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
+          <node begin="2" end="3" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="mwp" root="een" word="een"/>
         </node>
         <node begin="3" buiging="met-e" end="4" getal-n="zonder-n" graad="basis" id="7" lemma="katachtig" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" root="katachtig" word="katachtige"/>
       </node>

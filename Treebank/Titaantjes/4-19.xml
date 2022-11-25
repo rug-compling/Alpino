@@ -23,7 +23,7 @@
         <node begin="9" cat="smain" end="13" id="17" rel="cnj">
           <node begin="9" end="10" getal="mv" id="18" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
           <node begin="10" end="11" id="19" lemma="aan_kijken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kijk_aan" word="kijken" wvorm="pv"/>
-          <node begin="11" end="12" getal="mv" id="20" lemma="mekaar" naamval="obl" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj1" root="mekaar" status="vol" vwtype="pers" word="mekaar"/>
+          <node begin="11" end="12" getal="mv" id="20" lemma="mekaar" naamval="obl" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="mekaar" status="vol" vwtype="recip" word="mekaar"/>
           <node begin="12" end="13" id="21" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
         </node>
         <node begin="13" conjtype="neven" end="14" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
