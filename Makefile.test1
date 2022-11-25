@@ -53,6 +53,10 @@ cdb_part_test1_options= -flag treebank ../Treebank/cdb\
 extra_test1_options=-flag syntax_features cdb/px_weights
 ovistest_test1_options=-flag treebank ../Treebank/ovis
 
+Titaantjes-silver_test1_options=-flag treebank ../Treebank/Titaantjes
+Titaantjes-orig_test1_options=-flag treebank ../Treebank/Titaantjes
+
+
 ## ensure it enters Treebank/PPH through the official route, so the
 ## links will work on HPC... :-(
 PPH_test1_options=-flag treebank $(ALPINO_HOME)/Treebank/PPH -flag syntax_features cdb/pp_weights
