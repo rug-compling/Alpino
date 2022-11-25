@@ -34787,6 +34787,7 @@ n([sg(tgv)],de,[]).
 
 n([pl(theaters),sg(theater)],het,[np_app_measure],
   [amfi,
+   dans, %% niet dan_theater
    muziek,
    straat]).
 
