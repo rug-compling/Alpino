@@ -12,7 +12,7 @@
         <node begin="2" end="3" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="3" cat="np" end="24" id="9" rel="predc">
           <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="4" buiging="met-e" end="5" getal-n="zonder-n" graad="basis" id="11" lemma="enig" naamval="stan" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" root="enige" word="enige"/>
+          <node begin="4" buiging="met-e" end="5" getal-n="zonder-n" id="11" lemma="enig" naamval="stan" pdtype="det" pos="noun" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" root="enige" vwtype="onbep" word="enige"/>
           <node begin="5" cat="rel" end="24" id="12" rel="mod">
             <node begin="5" end="6" getal="getal" id="13" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="5" cat="ssub" end="24" id="14" rel="body">

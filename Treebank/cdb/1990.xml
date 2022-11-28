@@ -45,7 +45,7 @@
         <node begin="22" cat="conj" end="33" id="35" rel="predc">
           <node begin="22" cat="np" end="33" id="36" rel="cnj">
             <node begin="22" end="23" id="37" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="23" buiging="met-e" end="24" getal-n="zonder-n" graad="basis" id="38" lemma="enig" naamval="stan" pos="det" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" root="enige" word="enige"/>
+            <node begin="23" buiging="met-e" end="24" getal-n="zonder-n" id="38" lemma="enig" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" root="enige" vwtype="onbep" word="enige"/>
             <node begin="28" cat="rel" end="33" id="39" index="2" rel="mod">
               <node begin="28" end="29" getal="getal" id="40" index="3" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
               <node begin="28" cat="ssub" end="33" id="41" rel="body">
@@ -55,7 +55,7 @@
                 </node>
                 <node begin="28" cat="pp" end="32" id="45" rel="pc">
                   <node begin="28" end="29" id="46" index="3" rel="obj1"/>
-                  <node begin="31" end="32" id="47" lcat="p(pp)" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="op" vztype="fin" word="op"/>
+                  <node begin="31" end="32" id="47" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="op" vztype="fin" word="op"/>
                 </node>
                 <node begin="32" end="33" id="48" lemma="letten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="let" word="letten" wvorm="pv"/>
               </node>
@@ -64,7 +64,7 @@
           <node begin="25" cat="np" end="33" id="49" rel="cnj">
             <node begin="25" buiging="zonder" end="26" graad="basis" id="50" lemma="letterlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="letterlijk" word="letterlijk"/>
             <node begin="26" end="27" id="51" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="27" buiging="met-e" end="28" getal-n="zonder-n" graad="basis" id="52" lemma="enig" naamval="stan" pos="det" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" root="enige" word="enige"/>
+            <node begin="27" buiging="met-e" end="28" getal-n="zonder-n" id="52" lemma="enig" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" root="enige" vwtype="onbep" word="enige"/>
             <node begin="28" end="33" id="53" index="2" rel="mod"/>
           </node>
         </node>

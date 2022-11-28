@@ -54,7 +54,7 @@ Enhanced/%.dact: Enhanced/%/*.xml
 	chmod 644 Enhanced/$*.dact.new
 	mv Enhanced/$*.dact.new Enhanced/$*.dact
 
-freq: lp $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq
+freq: $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq $(TMPDATA)
 	mkdir -p FREQ LP TRIPLES
 	$(MAKE) -j 10 FREQ/POS.freq FREQ/WORD-POS.freq FREQ/WORD-LEMMA-POS.freq FREQ/WORD-AMB.freq FREQ/TAG-AMB.freq \
                    FREQ/mwu-tagged.freq FREQ/deps.freq FREQ/heads.freq FREQ/triples.freq FREQ/POS-WORD-LEMMA.freq

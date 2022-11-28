@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="13" id="0" rel="top">
-    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="conj" end="12" id="2" rel="--">
       <node begin="0" cat="smain" end="3" id="3" rel="cnj">
-        <node aform="base" begin="0" buiging="met-e" end="1" getal-n="mv-n" graad="basis" id="4" index="1" lemma="enkel" num="pl" personalized="true" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="su" rnum="pl" root="enkel" special="a_noun" word="Enkelen"/>
-        <node begin="1" end="2" id="5" infl="pl" lemma="blijven" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="blijf" sc="aux(inf)" stype="declarative" tense="past" word="bleven" wvorm="pv"/>
+        <node begin="0" buiging="met-e" end="1" getal-n="mv-n" id="4" index="1" lemma="enkel" naamval="stan" pdtype="det" pos="adj" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,mv-n)" pt="vnw" rel="su" root="enkel" vwtype="onbep" word="Enkelen"/>
+        <node begin="1" end="2" id="5" lemma="blijven" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="blijf" word="bleven" wvorm="pv"/>
         <node begin="0" cat="inf" end="3" id="6" rel="vc">
           <node begin="0" end="1" id="7" index="1" rel="su"/>
-          <node begin="2" buiging="zonder" end="3" id="8" infl="inf" lemma="vol_houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd_vol" sc="part_intransitive(vol)" word="volhouden" wvorm="inf"/>
+          <node begin="2" buiging="zonder" end="3" id="8" lemma="vol_houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd_vol" word="volhouden" wvorm="inf"/>
         </node>
       </node>
       <node begin="4" conjtype="neven" end="5" id="9" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
       <node begin="5" cat="smain" end="12" id="10" rel="cnj">
         <node begin="5" cat="np" end="7" id="11" rel="su">
-          <node begin="5" end="6" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node aform="base" begin="6" buiging="met-e" end="7" getal-n="mv-n" graad="sup" id="13" lemma="veel" naamval="stan" num="pl" pdtype="grad" personalized="true" pos="adj" positie="nom" postag="VNW(onbep,grad,stan,nom,met-e,mv-n,sup)" pt="vnw" rel="hd" rnum="pl" root="meest" special="a_noun" vwtype="onbep" word="meesten"/>
+          <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" buiging="met-e" end="7" getal-n="mv-n" graad="sup" id="13" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="nom" postag="VNW(onbep,grad,stan,nom,met-e,mv-n,sup)" pt="vnw" rel="hd" root="meest" vwtype="onbep" word="meesten"/>
         </node>
-        <node begin="7" end="8" id="14" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" sc="fixed([pc(van),[genoeg]],no_passive)" stype="declarative" tense="past" word="hadden" wvorm="pv"/>
-        <node aform="base" begin="9" buiging="zonder" end="10" graad="basis" id="15" infl="no_e" lemma="gauw" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="gauw" vform="adj" word="gauw"/>
+        <node begin="7" end="8" id="14" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
+        <node begin="9" buiging="zonder" end="10" graad="basis" id="15" lemma="gauw" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="gauw" word="gauw"/>
         <node begin="10" end="11" id="16" lemma="genoeg" pos="fixed" postag="BW()" pt="bw" rel="svp" root="genoeg" word="genoeg"/>
         <node begin="8" cat="pp" end="12" id="17" rel="pc">
-          <node begin="8" end="9" getal="getal" id="18" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="8" end="9" getal="getal" id="18" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
           <node begin="11" end="12" id="19" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
         </node>
       </node>
     </node>
-    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Enkelen bleven volhouden , maar de meesten hadden er gauw genoeg van .</sentence>
 </alpino_ds>

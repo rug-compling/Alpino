@@ -8,7 +8,7 @@
       <node begin="3" end="4" id="5" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
       <node begin="4" cat="np" end="6" id="6" rel="predc">
         <node begin="4" end="5" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-        <node begin="5" buiging="met-e" end="6" getal-n="zonder-n" graad="basis" id="8" lemma="enig" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" root="enig" word="enige"/>
+        <node begin="5" buiging="met-e" end="6" getal-n="zonder-n" id="8" lemma="enig" naamval="stan" pdtype="det" pos="adj" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" root="enig" vwtype="onbep" word="enige"/>
       </node>
     </node>
     <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

@@ -10,7 +10,7 @@
         <node begin="4" end="5" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="5" cat="np" end="11" id="8" rel="predc">
           <node begin="5" end="6" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="6" buiging="met-e" end="7" getal-n="zonder-n" graad="basis" id="10" lemma="enig" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" root="enig" word="enige"/>
+          <node begin="6" buiging="met-e" end="7" getal-n="zonder-n" id="10" lemma="enig" naamval="stan" pdtype="det" pos="adj" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" root="enig" vwtype="onbep" word="enige"/>
           <node begin="7" cat="rel" end="11" id="11" rel="mod">
             <node begin="7" end="8" getal="ev" id="12" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
             <node begin="7" cat="ssub" end="11" id="13" rel="body">

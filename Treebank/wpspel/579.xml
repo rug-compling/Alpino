@@ -8,7 +8,7 @@
         <node begin="1" end="2" id="5" lemma="heten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heet" word="heette" wvorm="pv"/>
         <node begin="2" cat="np" end="13" id="6" rel="su">
           <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="3" buiging="met-e" end="4" graad="basis" id="8" lemma="enig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="enig" word="enige"/>
+          <node begin="3" buiging="met-e" end="4" id="8" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="adj" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="mod" root="enig" vwtype="onbep" word="enige"/>
           <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="vrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vrouw" word="vrouw"/>
           <node begin="5" cat="rel" end="13" id="10" rel="mod">
             <node begin="5" end="6" getal="getal" id="11" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
