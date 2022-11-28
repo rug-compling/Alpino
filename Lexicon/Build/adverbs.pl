@@ -19,6 +19,8 @@ m('mijn in_zien',adverb,[mijns,ondanks]).
 m('ons in_zien',adverb,[ons,inziens]).
 m('ons in_zien',adverb,[onzes,inziens]).
 
+m('aller_eerst',adverb,allereerst).
+
 adverb([geen,bal]).
 adverb([geen,barst]).
 adverb([geen,biet]).
@@ -69,7 +71,6 @@ adverb([all,out]).  % cricket ?
 adverb([all,over,the,world]).
 adverb(allang).
 adverb(allengs).
-adverb(allereerst).
 adverb(allerliefst).  % ze lachte allerliefst =/= het allerliefste
 adverb(allerminst).
 adverb(allerwege).

@@ -1782,12 +1782,10 @@ m('niet minder dan',  pre_num_adv(both), [niet,minder,dan]).
 %% + tal van?
 m(al,          pre_det_quant(al),       al).
 m(allebei,     pre_det_quant(allebei),  allebei).
+m(alletwee,    pre_det_quant(allebei),  alletwee).
 m(alledrie,    pre_det_quant(allebei),  alledrie).
 m(allevier,    pre_det_quant(allebei),  allevier).
 m(allevijf,    pre_det_quant(allebei),  allevijf).
-%% these attach to the head-noun, but in CGN they attach to the
-%% determiner.  Maybe adapt this too? Indeed the determiner appears
-%% to be obligatory.
 
 with_dt([niet,al],
 	pre_det_quant(al),
@@ -2076,7 +2074,7 @@ m('zo\'n',       determiner(pl),'zo\'n'). % VL
 m('een zo\'n',   determiner(een),[een,'zo\'n']).
 m('een zo\'n',   determiner(een),[één,'zo\'n']).
 m(zulk,          determiner(zulk),zulk).
-m(zulk,          determiner(een),[zulk,Een]) :- een(Een).
+m('zulk een',          determiner(een),[zulk,Een]) :- een(Een).
 m(zulk,          determiner(zulke,nwh,nmod,pro,yparg),zulke).
 
 m(paar,          determiner(pl_num), paar ).   % paar jaar geleden heeft hij een analyse gemaakt
