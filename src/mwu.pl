@@ -320,6 +320,7 @@ mwu_postag('een paar',['LID(onbep,stan,agr)','N(soort,ev,basis,onz,stan)'],[een,
 mwu_postag('een slordige',['LID(onbep,stan,agr)','ADJ(prenom,basis,met-e,stan)'],[een,slordig]).
 mwu_postag('een soort',['LID(onbep,stan,agr)','N(soort,ev,basis,onz,stan)'],[een,soort]).
 mwu_postag('een weinig',['LID(onbep,stan,agr)','VNW(onbep,grad,stan,vrij,zonder,basis)'],[een,weinig]).
+mwu_postag('een zulk',['LID(onbep,stan,agr)','VNW(aanw,det,stan,vrij,zonder)'],[zulk,een]).
 mwu_postag('eens niet',['BW()','BW()'],[niet,eens]).
 mwu_postag('Eerste Batallion',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)'],[één,batallion]).
 mwu_postag('Eerste en Tweede Kamer',['TW(rang,prenom,stan)','VG(neven)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[één,en,twee,kamer]).

@@ -947,6 +947,8 @@ exceptional_stem_tag(hunne, noun(both,count,pl),              'VNW(bez,det,stan,
 exceptional_stem_tag(ge, _, 'VNW(pers,pron,nomin,red,2,getal)',ge).
 exceptional_stem_tag(gij,_, 'VNW(pers,pron,nomin,vol,2,getal)',gij).
 
+exceptional_stem_tag(mekaar,_,'VNW(recip,pron,obl,vol,persoon,mv)',mekaar).
+
 exceptional_stem_tag(Var,_,_) :-
     var(Var),
     !,
@@ -1357,15 +1359,31 @@ exceptional_word_tag('{',_,                                          'LET()').
 
 exceptional_word_tag('\'m', pronoun(nwh,thi,sg,de,dat_acc,def,wkpro),'VNW(pers,pron,obl,red,3,ev,masc)').
 exceptional_word_tag('z\'n',_,                                       'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)').
+exceptional_word_tag('Z\'n',_,                                       'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)').
 exceptional_word_tag('m\'n',determiner(pron),                        'VNW(bez,det,stan,red,1,ev,prenom,zonder,agr)').
+exceptional_word_tag('M\'n',determiner(pron),                        'VNW(bez,det,stan,red,1,ev,prenom,zonder,agr)').
 exceptional_word_tag('d\'r',determiner(pron),                        'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)').
+exceptional_word_tag('D\'r',determiner(pron),                        'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)').
 exceptional_word_tag(graden,noun(de,count,meas),                     'N(soort,mv,basis)').
 exceptional_word_tag('-ie',pronoun(nwh,thi,sg,de,nom,def),           'VNW(pers,pron,nomin,red,3,ev,masc)').
 exceptional_word_tag(beide,pronoun(nwh,thi,pl,de,both,indef),        'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)').
 exceptional_word_tag(beide,predm_adverb,                             'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)').
 exceptional_word_tag(beiden,predm_adverb,                            'VNW(onbep,grad,stan,nom,met-e,mv-n,basis)').
+exceptional_word_tag('Beide',pronoun(nwh,thi,pl,de,both,indef),        'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)').
+exceptional_word_tag('Beide',predm_adverb,                             'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)').
+exceptional_word_tag('Beiden',predm_adverb,                            'VNW(onbep,grad,stan,nom,met-e,mv-n,basis)').
 exceptional_word_tag(gevangenen,_,                                   'WW(vd,nom,met-e,mv-n)').
 exceptional_word_tag('\'k',pronoun(nwh,fir,sg,de,nom,def),           'VNW(pers,pron,nomin,red,1,ev)').
+
+exceptional_word_tag('\'r',pronoun(nwh,thi,sg,de,dat_acc,def,wkpro),  'VNW(pers,pron,obl,red,3v,getal,fem)').
+exceptional_word_tag('\'r',determiner(pron),                          'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)').
+exceptional_word_tag('d\'r',pronoun(nwh,thi,sg,de,dat_acc,def,wkpro), 'VNW(pers,pron,obl,red,3v,getal,fem)').
+exceptional_word_tag('d\'r',determiner(pron),                         'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)').
+
+exceptional_word_tag(mij,reflexive(fir,sg),                  'VNW(pr,pron,obl,vol,1,ev)').
+exceptional_word_tag(mij,pronoun(nwh,fir,sg,de,dat_acc,def), 'VNW(pr,pron,obl,vol,1,ev)').
+exceptional_word_tag('Mij',reflexive(fir,sg),                  'VNW(pr,pron,obl,vol,1,ev)').
+exceptional_word_tag('Mij',pronoun(nwh,fir,sg,de,dat_acc,def), 'VNW(pr,pron,obl,vol,1,ev)').
 
 %% kom de gij mee
 exceptional_word_tag(de,    pronoun(nwh,inv,sg,both,both,def),       'VNW(pers,pron,dial)').
@@ -1424,6 +1442,8 @@ genus_genus(keer).
 genus_genus(koolmonoxide).
 genus_genus(soort).
 
+stem_dependent_tag(cleft_het_noun,het,'VNW(pers,pron,stan,red,3,ev,onz)').
+stem_dependent_tag(cleft_het_noun,dat,'VNW(aanw,pron,stan,vol,3,ev)').
 stem_dependent_tag(modal_adverb,enkel,'BW()').
 stem_dependent_tag(adjective(no_e(_)),enkel,'BW()').
 stem_dependent_tag(noun(both,_,sg),Stem,'N(soort,ev,basis,genus,stan)') :-
@@ -1717,7 +1737,6 @@ cgn_postag_c(wh_iets_anders_noun,             'VNW(vb,pron,stan,vol,3p,getal)').
 cgn_postag_c(iets_anders_noun,                'VNW(onbep,pron,stan,vol,3p,ev)').
 
 cgn_postag_c(het_noun,                        'VNW(pers,pron,stan,red,3,ev,onz)').
-cgn_postag_c(cleft_het_noun,                  'VNW(pers,pron,stan,red,3,ev,onz)').
 
 cgn_postag_c(proper_name(_),                  'SPEC(deeleigen)').
 cgn_postag_c(proper_name(_,_),                'SPEC(deeleigen)').
@@ -1979,7 +1998,7 @@ det_pron(weinig,      'VNW(onbep,grad,stan,prenom,zonder,agr,basis)',   'VNW(onb
 det_pron(welk,        'VNW(vb,det,stan,prenom,zonder,evon)',            'VNW(vb,det,stan,nom,met-e,zonder-n)').   % want "zonder,basis" oid bestaat niet in tag-set!!
 det_pron(welke,       'VNW(vb,det,stan,prenom,met-e,rest)',             'VNW(vb,det,stan,nom,met-e,zonder-n)').
 det_pron(zoveel,      'TW(hoofd,prenom,stan)',                          'TW(hoofd,vrij)').
-det_pron(zulke,       'VNW(aanw,det,stan,prenom,met-e,rest)',           'VNW(aanw,det,stan,nom,met-e,zonder-n)'). % want "rest" oid ipv "zonder-n" bestaat niet in tag-set!!
+det_pron(zulk,       'VNW(aanw,det,stan,prenom,met-e,rest)',           'VNW(aanw,det,stan,nom,met-e,zonder-n)'). % want "rest" oid ipv "zonder-n" bestaat niet in tag-set!!
 det_pron(zulk,        'VNW(aanw,det,stan,prenom,zonder,evon)',          'VNW(aanw,det,stan,vrij,zonder)').
 
 cgn_postag_proper(Postag,Stem0,Stem,Q0,Q,Result,SUB) :-
@@ -2912,6 +2931,7 @@ zijn_tag('haar','VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)', haar).
 zijn_tag('d\'r','VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)', haar).
 zijn_tag(mijn,'VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)', mijn).
 zijn_tag('m\'n','VNW(bez,det,stan,red,1,ev,prenom,zonder,agr)',mijn).
+zijn_tag('M\'n','VNW(bez,det,stan,red,1,ev,prenom,zonder,agr)',mijn).
 zijn_tag(hun,'VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)',hum).
 zijn_tag(je,'VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)',je).
 
