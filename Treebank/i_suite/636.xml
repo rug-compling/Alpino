@@ -2,18 +2,18 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-      <node begin="1" end="2" id="3" infl="sg1" lemma="doen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="doe" sc="fixed([ap_pred,het_obj1],no_passive)" stype="declarative" tense="present" word="doe" wvorm="pv"/>
-      <node begin="2" end="3" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" special="het" status="red" vwtype="pers" word="het"/>
-      <node begin="3" end="4" id="5" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" special="tmp" word="nu"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="doen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="doe" word="doe" wvorm="pv"/>
+      <node begin="2" end="3" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="3" end="4" id="5" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
       <node begin="4" cat="ap" end="8" id="6" rel="predc">
         <node begin="4" cat="mwu" end="6" id="7" rel="hd">
-          <node aform="compar" begin="4" buiging="zonder" end="5" graad="basis" id="8" infl="pred" lemma="kalmer" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="kalmer" vform="adj" word="kalmer"/>
-          <node aform="compar" begin="5" end="6" id="9" infl="pred" lemma="aan" pos="adj" postag="VZ(fin)" pt="vz" rel="mwp" root="aan" vform="adj" vztype="fin" word="aan"/>
+          <node begin="4" buiging="zonder" end="5" graad="comp" id="8" lemma="kalm" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mwp" root="kalmer" word="kalmer"/>
+          <node begin="5" end="6" id="9" lemma="aan" pos="adj" postag="VZ(fin)" pt="vz" rel="mwp" root="aan" vztype="fin" word="aan"/>
         </node>
         <node begin="6" cat="cp" end="8" id="10" rel="obcomp">
           <node begin="6" conjtype="onder" end="7" id="11" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
-          <node aform="compar" begin="7" buiging="zonder" end="8" graad="comp" id="12" infl="no_e" lemma="vroeg" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="body" root="vroeg" vform="adj" word="vroeger"/>
+          <node begin="7" buiging="zonder" end="8" graad="comp" id="12" lemma="vroeg" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="body" root="vroeg" word="vroeger"/>
         </node>
       </node>
     </node>
