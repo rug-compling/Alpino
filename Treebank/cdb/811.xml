@@ -31,8 +31,8 @@
             <node begin="14" end="15" id="24" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
             <node begin="15" cat="conj" end="22" id="25" rel="obj1">
               <node begin="15" cat="mwu" end="17" id="26" rel="cnj">
-                <node begin="15" buiging="met-e" end="16" graad="basis" id="27" lemma="sociaal" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Sociale" word="Sociale"/>
-                <node begin="16" end="17" getal="mv" graad="basis" id="28" lemma="zaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Zaken" word="Zaken"/>
+                <node begin="15" end="16" id="27" lemma="Sociale" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sociale" spectype="deeleigen" word="Sociale"/>
+                <node begin="16" end="17" id="28" lemma="Zaken" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Zaken" spectype="deeleigen" word="Zaken"/>
               </node>
               <node begin="18" end="19" genus="genus" getal="ev" graad="basis" id="29" lemma="financiën" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Financien" word="Financien"/>
               <node begin="19" conjtype="neven" end="20" id="30" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>

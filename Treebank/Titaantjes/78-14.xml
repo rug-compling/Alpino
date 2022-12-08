@@ -74,9 +74,9 @@
       </node>
       <node begin="32" conjtype="neven" end="33" id="53" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="33" cat="smain" end="47" id="54" rel="cnj">
-        <node begin="33" cat="mwu" end="35" id="55" rel="mod">
-          <node begin="33" end="34" getal="getal" id="56" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="pp" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mwp" root="daar" status="vol" vwtype="aanw" word="daar"/>
-          <node begin="34" end="35" id="57" lemma="doorheen" pos="pp" postag="BW()" pt="bw" rel="mwp" root="doorheen" word="doorheen"/>
+        <node begin="33" cat="pp" end="35" id="55" rel="mod">
+          <node begin="33" end="34" getal="getal" id="56" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="pp" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+          <node begin="34" end="35" id="57" lemma="doorheen" pos="pp" postag="VZ(fin)" pt="vz" rel="hd" root="doorheen" vztype="fin" word="doorheen"/>
         </node>
         <node begin="35" end="36" id="58" lemma="zien" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zie" word="zag" wvorm="pv"/>
         <node begin="36" end="37" getal="ev" id="59" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>

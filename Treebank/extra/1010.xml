@@ -2,27 +2,27 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="12" id="0" rel="top">
     <node begin="0" cat="smain" end="11" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="willen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wil" sc="modifier(tr_sbar)" stype="declarative" tense="past" word="wilde" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="willen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wil" word="wilde" wvorm="pv"/>
       <node begin="2" cat="cp" end="11" id="4" rel="vc">
-        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="3" cat="ssub" end="11" id="6" rel="body">
-          <node begin="3" case="both" def="def" end="4" gen="de" getal="mv" id="7" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+          <node begin="3" end="4" getal="mv" id="7" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
           <node begin="4" end="5" id="8" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
           <node begin="5" end="6" id="9" lemma="tenonder" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="tenonder" vztype="fin" word="tenonder"/>
-          <node begin="6" end="7" id="10" infl="pl" lemma="tenonder_gaan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ga_tenonder" sc="part_intransitive(tenonder)" tense="past" word="gingen" wvorm="pv"/>
+          <node begin="6" end="7" id="10" lemma="ten_onder_gaan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ga_tenonder" word="gingen" wvorm="pv"/>
           <node begin="7" cat="cp" end="11" id="11" rel="mod">
-            <node begin="7" conjtype="onder" end="8" id="12" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
+            <node begin="7" conjtype="onder" end="8" id="12" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
             <node begin="8" cat="ssub" end="11" id="13" rel="body">
-              <node begin="8" end="9" gen="de" getal="mv" graad="basis" id="14" lemma="man" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" rnum="pl" root="man" word="mannen"/>
-              <node begin="9" case="dat_acc" def="def" end="10" gen="de" getal="mv" id="15" lemma="hen" naamval="obl" num="pl" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj1" rnum="pl" root="hen" status="vol" vwtype="pers" wh="nwh" word="hen"/>
-              <node begin="10" end="11" id="16" infl="pl" lemma="dumpen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="dump" sc="transitive" tense="past" word="dumpten" wvorm="pv"/>
+              <node begin="8" end="9" getal="mv" graad="basis" id="14" lemma="man" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="man" word="mannen"/>
+              <node begin="9" end="10" getal="mv" id="15" lemma="hen" naamval="obl" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj1" root="hen" status="vol" vwtype="pers" word="hen"/>
+              <node begin="10" end="11" id="16" lemma="dumpen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="dump" word="dumpten" wvorm="pv"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ik wilde dat ze niet tenonder gingen als mannen hen dumpten .</sentence>
 </alpino_ds>

@@ -18,3 +18,5 @@ wpspel/./976.xml	//node[ @cat and @rel="su" and not(@cat="np") and not(@cat="con
 wpspel/./492.xml	//node[node[@rel="hd" and (@root="word" or @root="ben" or @root="zal" or @root="lijk" or @root="blijk" or @root="schijn" or @root="blijf" or @root="dunk")] and node[@rel="obj1"]]	unexpected obj1 with copula
 wpspel_annot/./86.xml	//node[@cat="np" and node[@rel="hd" and @genus="onz" and not(@root="jaar" or @root="paar" or @root="miljoen" or @root="uur" or @root="procent" or @root="miljard" or @root="nummer")] and node[@rel="det" and (@root="de" or @root="die" or @root="deze")]]	de-determiner combines with onz noun?
 wpspel/./492.xml	//node[node[@rel="hd" and @pt and not(@pt="ww")] and node[@rel="su"]]	subject without a verb?
+wpspel/./86.xml	//node[@cat="np" and node[@rel="hd" and @genus="onz"] and node[@lemma="de" or @lemma="die" or @lemma="deze"]]	onz noun combines with de
+wpspel/./611.xml	//node[@cat="np" and node[@rel="hd" and @genus="zijd"] and node[@lemma="het" or @lemma="dit" or @lemma="dat"]]	zijd noun combines with het

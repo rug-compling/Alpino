@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
-    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="7" id="2" rel="--">
       <node begin="0" cat="conj" end="5" id="3" rel="su">
-        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="4" lemma="Staelens" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="Staelens" word="Staelens"/>
-        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="Lamaire" naamval="stan" neclass="ORG" ntype="eigen" num="both" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="Lamaire" word="Lamaire"/>
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="4" lemma="Staelens" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Staelens" word="Staelens"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="Lamaire" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Lamaire" word="Lamaire"/>
         <node begin="3" conjtype="neven" end="4" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="Vanbelleghem" naamval="stan" neclass="LOC" ntype="eigen" num="both" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" rnum="sg" root="Vanbelleghem" word="Vanbelleghem"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="Vanbelleghem" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Vanbelleghem" word="Vanbelleghem"/>
       </node>
-      <node begin="5" end="6" id="8" infl="pl" lemma="wederop_treden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="treed_wederop" sc="part_intransitive(wederop)" stype="declarative" tense="past" word="traden" wvorm="pv"/>
+      <node begin="5" end="6" id="8" lemma="weder_optreden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="treed_wederop" word="traden" wvorm="pv"/>
       <node begin="6" end="7" id="9" lemma="wederop" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="wederop" vztype="fin" word="wederop"/>
     </node>
-    <node begin="7" end="8" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Staelens , Lamaire en Vanbelleghem traden wederop .</sentence>
 </alpino_ds>

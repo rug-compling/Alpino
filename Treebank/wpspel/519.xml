@@ -8,7 +8,7 @@
       </node>
       <node begin="0" cat="sv1" end="21" id="5" rel="body">
         <node begin="0" end="2" id="6" index="1" rel="su"/>
-        <node begin="2" end="3" id="7" lcat="p(sv1)" lemma="af_dwingen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dwing_af" word="dwong" wvorm="pv"/>
+        <node begin="2" end="3" id="7" lemma="af_dwingen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dwing_af" word="dwong" wvorm="pv"/>
         <node begin="3" cat="pp" end="7" id="8" rel="mod">
           <node begin="3" end="4" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="4" cat="np" end="7" id="10" rel="obj1">
@@ -23,7 +23,7 @@
             <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="koning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="koning" word="koning"/>
             <node begin="9" cat="mwu" end="11" id="18" rel="app">
               <node begin="9" end="10" id="19" lemma="Frans" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Frans" spectype="deeleigen" word="Frans"/>
-              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="20" lemma="i" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="I" word="I"/>
+              <node begin="10" end="11" id="20" lemma="I" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="I" spectype="deeleigen" word="I"/>
             </node>
           </node>
         </node>

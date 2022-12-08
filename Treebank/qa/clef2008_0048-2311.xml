@@ -15,7 +15,7 @@
           <node begin="5" cat="np" end="8" id="11" rel="obj1">
             <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="6" cat="mwu" end="8" id="13" rel="hd">
-              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="straat" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Straat" word="Straat"/>
+              <node begin="6" end="7" id="14" lemma="Straat" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Straat" spectype="deeleigen" word="Straat"/>
               <node begin="7" end="8" id="15" lemma="Drake" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Drake" spectype="deeleigen" word="Drake"/>
             </node>
           </node>
