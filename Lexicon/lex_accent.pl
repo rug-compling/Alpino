@@ -220,6 +220,7 @@ accent('comite\'s','comité\'s').
 accent(comites,comités).
 accent(commerciele,commerciële).
 accent(commercieler,commerciëler).
+accent(communicatietechnologieen,communicatietechnologieën).
 accent(communien,communiën).
 accent(communique,communiqué).
 accent('communique\'s','communiqué\'s').
@@ -976,6 +977,7 @@ accent(naievere,naïevere).
 accent(naiever,naïever).
 accent(naiviteiten,naïviteiten).
 accent(naiviteit,naïviteit).
+accent(nanotechnologieen,nanotechnologieën).
 accent(natien,natiën).
 accent('Navo-actien','Navo-actiën').
 accent('Navoactien','Navoactiën').
@@ -1274,6 +1276,7 @@ accent(studien,studiën).
 accent(subsidieren,subsidiëren).
 accent(subsidiering,subsidiëring).
 accent(substantiele,substantiële).
+accent(substitutietherapieen,substitutietherapieën).
 accent(suede,suède).
 accent(surseance,surséance).
 accent(symfonieen,symfonieën).

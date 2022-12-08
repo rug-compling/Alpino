@@ -44075,7 +44075,6 @@ stem(opgewaardeerd,v_root(waardeer_op,op_waarderen)).
 stem(opgewacht,v_root(wacht_op,op_wachten)).
 stem(opgewarmd,v_root(warm_op,op_warmen)).
 stem(opgewassen,v_root(opgewassen,opgewassen)).
-stem(opgewekt,v_root(wek_op,op_wekken)).
 stem(opgeweld,v_root(wel_op,op_wellen)).
 stem(opgewerkt,v_root(werk_op,op_werken)).
 stem(opgewogen,v_root(weeg_op,op_wegen)).

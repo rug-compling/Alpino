@@ -103,6 +103,7 @@ mwu_postag('bij lange',['VZ(init)','ADJ(prenom,basis,met-e,stan)'],[bij,lang]).
 mwu_postag('bij machte',['VZ(init)','N(soort,ev,basis,dat)'],[bij,macht]).
 mwu_postag('bij monde van',['VZ(init)','N(soort,ev,basis,dat)','VZ(init)'],[bij,mond,van]).
 mwu_postag('bij tijd en wijle',['VZ(init)','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[bij,tijd,en,wijle]).
+mwu_postag('bij verre',['VZ(init)','BW()'],[bij,verre]).
 mwu_postag('Binnenlandse Zaken en Koninkrijksrelaties',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)','VG(neven)','N(soort,mv,basis)'],[binnenlands,zaak,en,koninkrijksrelatie]).
 mwu_postag('Binnenlandse zaken',['SPEC(deeleigen)','SPEC(deeleigen)'],['Binnenlandse','Zaken']).
 mwu_postag('binnenlandse zaken',['SPEC(deeleigen)','SPEC(deeleigen)'],['Binnenlandse','Zaken']).
@@ -191,7 +192,7 @@ mwu_postag('Dag van de Geliefden',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID
 mwu_postag('Dag van de Student',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[dag,van,de,student]).
 mwu_postag('Dag voor Internet-veiligheid',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)'],[dag,voor,internet_veiligheid]).
 mwu_postag(dankzij,['N(soort,ev,basis,zijd,stan)','WW(pv,conj,ev)'],[dank,zijn]).
-mwu_postag('dan wel',['VG(neven)','BW()'],[dan,wel]).
+mwu_postag('dan wel',['BW()','BW()'],[dan,wel]).
 mwu_postag('dat wil zeggen',['VNW(aanw,pron,stan,vol,3o,ev)','WW(pv,tgw,ev)','WW(inf,vrij,zonder)'],[dat,willen,zeggen]).
 mwu_postag('Davis Cup-team',['SPEC(deeleigen)','N(eigen,ev,basis,onz,stan)'],['Davis','Cup_team']).
 mwu_postag('degelijk wel',['BW()','ADJ(vrij,basis,zonder)'],[wel,degelijk]).
@@ -1109,6 +1110,9 @@ mwu_postag('\'s wereld',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,wereld
 mwu_postag('\'s werelds',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,wereld]).
 mwu_postag('\'s winters',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,winter]).
 mwu_postag('\'s zaterdags',['LID(bep,gen,evmo)','N(eigen,ev,basis,gen)'],[de,zaterdag]).
+mwu_postag('\'s maandags',['LID(bep,gen,evmo)','N(eigen,ev,basis,gen)'],[de,maandag]).
+mwu_postag('\'s woendags',['LID(bep,gen,evmo)','N(eigen,ev,basis,gen)'],[de,woensdag]).
+mwu_postag('\'s zondags',['LID(bep,gen,evmo)','N(eigen,ev,basis,gen)'],[de,zondag]).
 mwu_postag('\'s zomers',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,zomer]).
 mwu_postag('Tante Sidonia',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)'],[tante,'Sidonia']).
 mwu_postag('te allen tijde',['VZ(init)','VNW(onbep,det,dat,prenom,met-e,evmo)','N(soort,ev,basis,dat)'],[te,al,tijd]).
@@ -1265,7 +1269,7 @@ mwu_postag('van dien',['VZ(init)','VNW(aanw,det,dat,prenom,met-e,evmo)'],[van,di
 mwu_postag('van een leien dakje',['VZ(init)','LID(onbep,stan,agr)','ADJ(prenom,basis,zonder)','N(soort,ev,dim,onz,stan)'],[van,een,leien,dak]).
 mwu_postag('van gedachten',['VZ(init)','N(soort,mv,basis)'],[van,gedacht]).
 mwu_postag('van harte',['VZ(init)','N(soort,ev,basis,dat)'],[van,hart]).
-mwu_postag('van heinde en verre',['VZ(init)','BW()','VG(neven)','ADJ(prenom,basis,met-e,stan)'],[van,heinde,en,ver]).
+mwu_postag('van heinde en verre',['VZ(init)','BW()','VG(neven)','BW()'],[van,heinde,en,verre]).
 mwu_postag('van jewelste',['VZ(init)','BW()'],[van,jewelste]).
 mwu_postag('van je welste',['VZ(init)','VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)','BW()'],[van,je,welste]).
 		
@@ -1286,6 +1290,7 @@ mwu_postag('Verkeer en Waterstat',['N(soort,ev,basis,onz,stan)','VG(neven)','SPE
 mwu_postag('Verklaring van Laken',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[verklaring,van,'Laken']).
 mwu_postag('Verklaring van Londen',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[verklaring,van,'Londen']).
 mwu_postag('Verklaring van München',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[verklaring,van,'München']).
+mwu_postag('verre van',['BW()','VZ(init)'],[verre,van]).
 mwu_postag('Vlaams Agentschap voor Ondernemen',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)','VZ(init)','WW(inf,vrij,zonder)'],['Vlaams',agentschap,voor,ondernemen]).
 mwu_postag('Vlaams Audiovisueel Fonds',['ADJ(prenom,basis,zonder)','ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['Vlaams',audiovisueel,fonds]).
 mwu_postag('Vlaams Blok-meeting',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,zijd,stan)'],['Vlaams',blok_meeting]).
@@ -1344,7 +1349,7 @@ mwu_postag('voor gezien',['VZ(init)','WW(vd,vrij,zonder)'],[voor,zien]).
 mwu_postag('voor het eerst',['VZ(init)','LID(bep,stan,evon)','TW(rang,nom,zonder-n)'],[voor,het,één]).
 mwu_postag('voor het geval',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[voor,het,geval]).
 mwu_postag('voor het éérst',['VZ(init)','LID(bep,stan,evon)','TW(rang,nom,zonder-n)'],[voor,het,één]).
-mwu_postag('voor het laatst',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,sup,zonder,zonder-n)'],[voor,het,laat]).
+mwu_postag('voor het laatst',['VZ(init)','LID(bep,stan,evon)','ADJ(vrij,sup,zonder)'],[voor,het,laat]).
 mwu_postag('voor het lapje',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,dim,onz,stan)'],[voor,het,lap]).
 mwu_postag('voor ogen',['VZ(init)','N(soort,mv,basis)'],[voor,oog]).
 mwu_postag('voor en tegen',['N(soort,mv,basis)','VG(neven)','N(soort,mv,basis)'],[voor,en,tegen]).

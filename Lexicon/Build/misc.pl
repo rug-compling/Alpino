@@ -738,6 +738,29 @@ m(v_root(zeg,zeggen),tag,zeg).
 m(v_root(kijk,kijken),tag,kijk).
 m(v_root(kom,komen),tag,kom).
 
+m(goedenavond,  tag,goedeavond).
+m(goedenavond,  tag,goedenavond).
+m(goedendag,    tag,goededag).
+m(goedendag,    tag,goedendag).
+m(goedenmiddag, tag,goedemiddag).
+m(goedenmiddag, tag,goedenmiddag).
+m(goedenmorgen, tag,goedemorgen).
+m(goedenmorgen, tag,goedenmorgen).
+m(goedennacht,  tag,goedenacht).
+m(goedennacht,  tag,goedennacht).
+
+m(goedenavond,  tag,goeieavond).
+m(goedenavond,  tag,goeienavond).
+m(goedendag,    tag,goeiedag).
+m(goedendag,    tag,goeiendag).
+m(goedenmiddag, tag,goeiemiddag).
+m(goedenmiddag, tag,goeienmiddag).
+m(goedenmorgen, tag,goeiemorgen).
+m(goedenmorgen, tag,goeienmorgen).
+m(goedennacht,  tag,goeienacht).
+m(goedennacht,  tag,goeiennacht).
+
+
 tag('√').
 tag('♪').  % in subtitles, to indicate that the rest of sentence is sung
 
@@ -884,15 +907,6 @@ tag([god,oh,'God']).
 tag([god,',',o,'God']).
 tag([god,',',oh,'God']).
 tag(godsallemachtig).
-tag(goedenavond).
-tag(goededag).
-tag(goedendag).
-tag(goedemiddag).
-tag(goedenmiddag).
-tag(goedemorgen).
-tag(goedenmorgen).
-tag(goedenacht).
-tag(goedennacht).
 tag([goeden,avond]).
 tag([goeden,dag]).
 tag([goeden,middag]).

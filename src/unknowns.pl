@@ -2737,8 +2737,12 @@ open_class_stem_tag_pair(Final,W,Stem,Cat) :-
     ;   alpino_lex:simple_convert_number(W,_),
         Cat0 = number(hoofd(pl_num)),
         Stem=W
-    ;   alpino_lex:xl(W,Cat0,Stem,[],[]),
-	Cat0 = verb(_,_,_)
+    ;   alpino_lex:xl(W,Cat0,Stem0,[],[]),
+	Cat0 = verb(_,_,_),
+	(   Final == non_final,
+	    Stem0 = v_root(Stem,_)
+	;   Stem0 = Stem
+	)
     ),
     open_class_tag_or_name(Final,Cat0,Cat).
 
