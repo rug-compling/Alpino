@@ -6,8 +6,8 @@
       <node begin="1" end="2" id="3" lemma="vragen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vraag" word="vroeg" wvorm="pv"/>
       <node begin="2" cat="cp" end="6" id="4" rel="vc">
         <node begin="2" cat="mwu" end="4" id="5" rel="cmp">
-          <node begin="2" conjtype="neven" end="3" id="6" lemma="of" pos="comp" postag="VG(neven)" pt="vg" rel="mwp" root="of" word="of"/>
-          <node begin="3" end="4" getal="ev" id="7" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="comp" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="mwp" root="dat" status="vol" vwtype="aanw" word="dat"/>
+          <node begin="2" conjtype="onder" end="3" id="6" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="mwp" root="of" word="of"/>
+          <node begin="3" conjtype="onder" end="4" id="7" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="mwp" root="dat" word="dat"/>
         </node>
         <node begin="4" cat="ssub" end="6" id="8" rel="body">
           <node begin="4" end="5" genus="masc" getal="ev" id="9" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
