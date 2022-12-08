@@ -17,8 +17,8 @@
             <node begin="15" end="16" id="14" lemma="gaan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ga" word="gingen" wvorm="pv"/>
             <node begin="4" cat="inf" end="17" id="15" rel="vc">
               <node begin="4" end="5" id="16" index="1" rel="su"/>
-              <node begin="5" cat="cp" end="10" id="17" rel="mod">
-                <node begin="5" cat="mwu" end="7" id="18" index="2" rel="rhd">
+              <node begin="5" cat="whrel" end="10" id="17" rel="mod">
+                <node begin="5" cat="ap" end="7" id="18" index="2" rel="rhd">
                   <node begin="5" end="6" id="19" lemma="hoe" pos="comp" postag="BW()" pt="bw" rel="mod" root="hoe" word="hoe"/>
                   <node begin="6" buiging="zonder" end="7" graad="comp" id="20" lemma="veel" naamval="stan" pdtype="grad" pos="comp" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="meer" vwtype="onbep" word="meer"/>
                 </node>
