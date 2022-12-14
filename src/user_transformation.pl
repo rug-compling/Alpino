@@ -60,6 +60,8 @@ user_transformation(r(REL,p(mwu)),B,Ds0,
     correct_tags(Surfs,Lemmas,Tags),
     assign_tags(Lemmas,Tags,Ds0,Ds),
     \+ Ds0 = Ds.
+
+
 /*
 user_transformation(r(obj1,p(ap)),B,Ds,
 		    r(obj1,p(np)),B,Ds,_,_) :-
@@ -70,7 +72,7 @@ user_transformation(r(obj1,p(ap)),B,Ds,
 		    r(obj1,p(np)),B,Ds,_,_) :-
     Hd = tree(r(hd,l(read_from_treebank(_,weinig,_),_,W)),_,[]),
     lists:member(Hd,Ds).
-*/
+
 surf_lemma(Word,'N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)',L,L) :-
     eigen(Word).
 surf_lemma(Word,'N(soort,mv,basis)','N(eigen,mv,basis)',L,L) :-
@@ -123,6 +125,7 @@ surf_lemma(Word,Rel,Pos0,Pos,Lem,Lem) :-
     \+ Rel = mwp,
     surf(Word,Pos),
     \+ Pos0 = Pos.
+*/
 
 user:query:-
     findall(L,lemma(L,_),Ls),
@@ -238,6 +241,10 @@ correct_tags(_,_) :-
 
 root_lemma(_,_,_) :- fail.
 
+surf_lemma(_,_,_,_,_,_) :- fail.
+
+surf_lemma(_,_,_,_,_) :- fail.
+
 surf_lemma(_,_,_,_) :- fail.
 
 surf_lemma(_,_,_) :- fail.
@@ -293,5 +300,7 @@ org(_):-fail.
 de(_) :- fail.
 het(_):-fail.
 adj(_):-fail.
+
+%%% mee/met toe/tot
 
 

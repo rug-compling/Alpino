@@ -4085,7 +4085,6 @@ conj(om,               om).  % dat is lood om oud ijzer
 conj(ofwel,            ofwel).
 conj(oftewel,          oftewel).
 conj(onderscheidenlijk,onderscheidenlijk).
-conj(plus,             plus).
 conj(respectievelijk,  respectievelijk).
 conj(tegen,            tegen).
 conj(tegenover,        tegenover).

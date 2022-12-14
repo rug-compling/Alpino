@@ -915,6 +915,8 @@ exceptional_stem_tag(kortweg,_,                               'BW()',kortweg).
 exceptional_stem_tag(leven_lang,noun(_,_,_),                  'ADJ(vrij,basis,zonder)',leven_lang).
 exceptional_stem_tag(man,postn_adverb,                        'N(soort,mv,basis)',man).
 exceptional_stem_tag(mee,loc_adverb,                          'VZ(fin)',mee).
+exceptional_stem_tag(mee,particle(mee),                       'VZ(fin)',mee).
+exceptional_stem_tag(mee,preposition(met,[mee],extracted_np), 'VZ(fin)',met).
 exceptional_stem_tag(natuurkundige,noun(de,count,pl),         'ADJ(nom,basis,met-e,mv-n)',natuurkundig).
 exceptional_stem_tag(natuurkundige,noun(de,count,sg),         'ADJ(nom,basis,met-e,zonder-n,stan)',natuurkundig).
 exceptional_stem_tag(ons,noun(both,count,sg),                 'VNW(bez,det,stan,vol,1,mv,nom,met-e,zonder-n)',ons).
@@ -924,7 +926,9 @@ exceptional_stem_tag(sprake,_,                                'N(soort,ev,basis,
 exceptional_stem_tag(stel,tag,                                'WW(pv,tgw,ev)',stellen).
 exceptional_stem_tag(streven,noun(het,mass,sg),               'WW(inf,nom,zonder,zonder-n)',streven).
 exceptional_stem_tag(tegen,adjective(_),                      'VZ(fin)',tegen).
-exceptional_stem_tag(toe,_,                                   'VZ(fin)',toe).
+exceptional_stem_tag(toe,preposition(tot,[],extracted_np),    'VZ(fin)',tot).
+exceptional_stem_tag(toe,tag,                                 'VZ(fin)',toe).
+exceptional_stem_tag(toe,particle(toe)                        'VZ(fin)',toe).
 exceptional_stem_tag(uitgerekend,modal_adverb,                'WW(vd,vrij,zonder)',uit_rekenen).
 exceptional_stem_tag(verder,particle(verder),                 'ADJ(vrij,comp,zonder)',ver).
 exceptional_stem_tag(verdenken,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',verdenken).
@@ -981,6 +985,7 @@ exceptional_stem_tag('#',tag,                                       'SPEC(symb)'
 exceptional_stem_tag(aan,complementizer(aan_het),                   'VZ(init)').
 exceptional_stem_tag(achter,loc_adverb,                             'VZ(fin)').
 exceptional_stem_tag(achter,pred_np_me_adjective(_),                'VZ(fin)').
+exceptional_stem_tag(achteraan,loc_adverb,                          'VZ(fin)').
 exceptional_stem_tag(af,adjective(pred(_)),                         'VZ(fin)').
 exceptional_stem_tag(af_studeren,nominalized_adjective,             'WW(vd,nom,met-e,mv-n)').
 exceptional_stem_tag(af_vaardigen,nominalized_adjective,            'WW(vd,nom,met-e,mv-n)').
@@ -4181,7 +4186,7 @@ lassy('¤','SPEC(symb)').
 %% adverb wat??
 
 particle_tag(aaneen,'BW()').
-particle_tag(achterna,'BW()').
+particle_tag(achterna,'VZ(fin)').
 particle_tag(achterover,'BW()').
 particle_tag(achteruit,'BW()').
 particle_tag(actie,'N(soort,ev,basis,zijd,stan)').
