@@ -20,16 +20,18 @@
       <node begin="7" conjtype="neven" end="8" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="8" cat="sv1" end="14" id="14" rel="cnj">
         <node begin="8" end="9" id="15" lemma="leggen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="leg" word="leg" wvorm="pv"/>
-        <node begin="9" end="10" getal="getal" id="16" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" status="vol" vwtype="aanw" word="daar"/>
-        <node begin="10" cat="np" end="13" id="17" rel="obj1">
-          <node begin="10" end="11" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="19" lemma="bal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bal" word="bal"/>
-          <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="20" lemma="mokkaijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="mokkaijs" word="mokkaijs"/>
+        <node begin="10" cat="np" end="13" id="16" rel="obj1">
+          <node begin="10" end="11" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="18" lemma="bal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bal" word="bal"/>
+          <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="19" lemma="mokkaijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="mokkaijs" word="mokkaijs"/>
         </node>
-        <node begin="13" end="14" id="21" lemma="bovenop" pos="adv" postag="BW()" pt="bw" rel="mod" root="bovenop" word="bovenop"/>
+        <node begin="9" cat="pp" end="14" id="20" rel="ld">
+          <node begin="9" end="10" getal="getal" id="21" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+          <node begin="13" end="14" id="22" lemma="bovenop" pos="adv" postag="VZ(fin)" pt="vz" rel="hd" root="bovenop" vztype="fin" word="bovenop"/>
+        </node>
       </node>
     </node>
-    <node begin="14" end="15" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="14" end="15" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Schep hiervan een eetlepel in een ijscoupe en leg daar een bal mokkaijs bovenop .</sentence>
 </alpino_ds>

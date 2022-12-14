@@ -12,15 +12,13 @@
         <node begin="2" end="4" id="8" index="1" rel="su"/>
         <node begin="4" cat="np" end="7" id="9" rel="mod">
           <node begin="4" end="5" id="10" lemma="circa" pos="adv" postag="BW()" pt="bw" rel="mod" root="circa" word="circa"/>
-          <node begin="5" cat="mwu" end="7" id="11" rel="hd">
-            <node begin="5" end="6" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="noun" postag="LID(onbep,stan,agr)" pt="lid" rel="mwp" root="een" word="een"/>
-            <node begin="6" end="7" getal-n="zonder-n" id="13" lemma="vijf" numtype="rang" pos="noun" positie="nom" postag="TW(rang,nom,zonder-n)" pt="tw" rel="mwp" root="vijfde" word="vijfde"/>
-          </node>
+          <node begin="5" end="6" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="noun" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="6" end="7" getal-n="zonder-n" id="12" lemma="vijf" numtype="rang" pos="noun" positie="nom" postag="TW(rang,nom,zonder-n)" pt="tw" rel="hd" root="vijfde" word="vijfde"/>
         </node>
-        <node begin="7" buiging="zonder" end="8" id="14" lemma="toe_nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem_toe" word="toenemen" wvorm="inf"/>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="toe_nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem_toe" word="toenemen" wvorm="inf"/>
       </node>
     </node>
-    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Beide zagen de verkopen circa een vijfde toenemen .</sentence>
 </alpino_ds>

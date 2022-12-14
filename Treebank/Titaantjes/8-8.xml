@@ -4,8 +4,8 @@
     <node begin="0" cat="smain" end="9" id="1" rel="--">
       <node begin="3" end="4" id="2" lemma="beginnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="begin" word="begon" wvorm="pv"/>
       <node begin="4" cat="np" end="6" id="3" index="1" rel="su">
-        <node begin="4" end="5" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="hd" root="er" status="red" vwtype="aanw" word="er"/>
-        <node begin="5" end="6" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="4" end="5" getal="getal" id="4" lemma="er" naamval="gen" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(onbep,adv-pron,gen,red,3,getal)" pt="vnw" rel="hd" root="er" status="red" vwtype="onbep" word="er"/>
+        <node begin="5" end="6" id="5" lemma="één" numtype="hoofd" pos="det" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="det" root="een" word="een"/>
       </node>
       <node begin="0" cat="ti" end="9" id="6" rel="vc">
         <node begin="7" end="8" id="7" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>

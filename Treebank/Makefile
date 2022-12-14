@@ -8,17 +8,16 @@ XSL=$(ALPINO_HOME)/TreebankTools/stylesheets
 
 LASSYSMALL=/net/corpora/LassyDevelop
 
-all: dtchecks novel prepare_enhanced_all enhanced_all poslemma freq trees_doc sents sentspl conllu pair dact
-
-## slow, because it retries all timed-out sentences
-bestrun:
-	( cd best; make -j i_suite.log extra.log eans.log )
+all:
+	$(MAKE) -j dtchecks novel
+	$(MAKE) -j prepare_enhanced_all enhanced_all poslemma
+	$(MAKE) -j freq trees_doc sents sentspl conllu pair dact
 
 novel:
-	( cd fast; make -j i_suite.log extra.log eans.log )
+	( cd fast; make -j i_suite/i_suite.log extra/extra.log )
 
-DIRECTORIES=cgn_exs eans extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 \
-             ntv-suite qa wpspel novelsample_corrected cdb Titaantjes
+DIRECTORIES=cdb cgn_exs eans extra g_suite h_suite i_suite lassy leuven_yellow_pages lot_test_suite1 \
+             novelsample_corrected ntv-suite qa Titaantjes wpspel
 
 trees_doc: 
 	for dir in $(DIRECTORIES); do\
@@ -56,8 +55,9 @@ Enhanced/%.dact: Enhanced/%/*.xml
 
 freq: $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq $(TMPDATA)
 	mkdir -p FREQ LP TRIPLES
-	$(MAKE) -j 10 FREQ/POS.freq FREQ/WORD-POS.freq FREQ/WORD-LEMMA-POS.freq FREQ/WORD-AMB.freq FREQ/TAG-AMB.freq \
-                   FREQ/mwu-tagged.freq FREQ/deps.freq FREQ/heads.freq FREQ/triples.freq FREQ/POS-WORD-LEMMA.freq
+	$(MAKE) FREQ/POS.freq FREQ/LEMMA.freq FREQ/WORD.freq \
+                FREQ/WORD-POS.freq FREQ/WORD-LEMMA-POS.freq FREQ/WORD-AMB.freq FREQ/TAG-AMB.freq \
+                FREQ/mwu-tagged.freq FREQ/deps.freq FREQ/heads.freq FREQ/triples.freq FREQ/POS-WORD-LEMMA.freq
 
 ## removes the .mwu file, because if it is empty it would otherwise
 ## be rebuilt over and over again!
@@ -66,11 +66,11 @@ MWU/%.mwu: Enhanced/%/*.xml $(XSL)/mwu_tags.xsl
 	ls -v Enhanced/$*/*.xml | dtxslt --stdin -q '//node[@cat="mwu"]' -s $(XSL)/mwu_tags.xsl > MWU/$*.mwu
 
 pair: $(DIRECTORIES:%=PAIR/%.pair) $(DIRECTORIES:%=PAIR/%.triple) 
-	$(MAKE) inconsistent-pairs inconsistent-triples
+	$(MAKE) FREQ/inconsistent-pairs FREQ/inconsistent-triples
 
 ## the odd sed commands for XX[0-9]XX are there to fool awk into treating
 ## numbers as strings, otherwise 3.00 = 3.0 = 3 etc
-inconsistent-words: # POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma
+FREQ/inconsistent-words: # POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma
 	cat POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma \
         | grep -v '<sent id=' \
         | grep -v 'SPEC(deeleigen)'\
@@ -101,24 +101,26 @@ inconsistent-words: # POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma
         | sed -e 's/[0-9]/XX&XX/g'\
         | awk '{ if ($$2 == P) printf("%s\n%s\n\n",N,$$0); P=$$2; N=$$0}' \
         | sed -e 's/XX\([0-9]\)XX/\1/g'\
-        > inconsistent-words
-	wc -l inconsistent-words
+        > FREQ/inconsistent-words
+	wc -l FREQ/inconsistent-words
 
-inconsistent-pairs: PAIR/*.pair $(LASSYSMALL)/PAIR/*.pair
+FREQ/inconsistent-pairs: PAIR/*.pair $(LASSYSMALL)/PAIR/*.pair
 	cat PAIR/*.pair $(LASSYSMALL)/PAIR/*.pair \
         | sort \
         | uniq -c \
         | awk '{ if ($$2 == P && $$3 == Q) printf("%s\n%s\n\n",N,$$0); P=$$2; Q=$$3; N=$$0}' \
-        > inconsistent-pairs
-	wc -l inconsistent-pairs
+        > FREQ/inconsistent-pairs
+	wc -l FREQ/inconsistent-pairs
 
-inconsistent-triples: PAIR/*.triple $(LASSYSMALL)/PAIR/*.triple
+FREQ/inconsistent-triples: PAIR/*.triple $(LASSYSMALL)/PAIR/*.triple
 	cat PAIR/*.triple $(LASSYSMALL)/PAIR/*.triple \
+        | sed -e 's/TW(hoofd,prenom,stan)/TW/g'\
+	| sed -e 's/TW(hoofd,vrij)/TW/g'\
         | sort \
         | uniq -c \
         | awk '{ if ($$2 == P && $$3 == Q && $$4 == R) printf("%s\n%s\n\n",N,$$0); P=$$2; Q=$$3; R=$$4; N=$$0}' \
-        > inconsistent-triples
-	wc -l inconsistent-triples
+        > FREQ/inconsistent-triples
+	wc -l FREQ/inconsistent-triples
 
 PAIR/%.pair: Enhanced/%/*.xml $(XSL)/dt2pair.xsl
 	rm -f PAIR/$*.pair
@@ -138,8 +140,7 @@ FREQ/mwu-tagged.freq: $(DIRECTORIES:%=MWU/%.mwu) $(LASSYSMALL)/MWU/*.mwu
 	cat FREQ/mwu-tagged.freq | python3 $(ALPINO_HOME)/TreebankTools/find-inconsistent m > FREQ/mwu-inconsistent
 
 poslemma: $(DIRECTORIES:%=POSLEMMA/%.poslemma)
-	rm inconsistent-words
-	$(MAKE) inconsistent-words
+	$(MAKE) FREQ/inconsistent-words
 
 gitversion=$(shell git log --oneline | wc -l)
 
@@ -158,28 +159,26 @@ tar-install:
 
 dtchecks:
 	touch .dtchecks2
-	dtchecks $(shell find $(DIRECTORIES) -name '*.xml' -newer .dtchecks | awk -F/ '{ printf "%s\n",$$1 }' | sort -u)
+	dtchecks $(shell find -L $(DIRECTORIES) -name '*.xml' -newer .dtchecks | awk -F/ '{ printf "%s\n",$$1 }' | sort -u)
 	mv .dtchecks2 .dtchecks
 
 all_dtchecks:
 	touch .dtchecks2
-	dtchecks $(shell find $(DIRECTORIES) -name '*.xml' | awk -F/ '{ printf "%s\n",$$1 }' | sort -u)
+	dtchecks $(shell find -L $(DIRECTORIES) -name '*.xml' | awk -F/ '{ printf "%s\n",$$1 }' | sort -u)
 	mv .dtchecks2 .dtchecks
 
 sqldir=/net/aps/haytabo/opt/alpinotools
-prepare_enhanced_all: 
-	for corpus in $(DIRECTORIES); do make sql/$$corpus.sqlite corpus=$$corpus; done
+prepare_enhanced_all: $(DIRECTORIES:%=sql/%.sqlite)
 
-sql/$(corpus).sqlite: best/$(corpus)/*.xml fast/$(corpus)/*.xml
-	rm -f sql/$(corpus).sqlite
-	$(sqldir)/auto2sql sql/$(corpus).sqlite best/$(corpus) fast/$(corpus)
+sql/%.sqlite: best/%/*.xml fast/%/*.xml
+	rm -f sql/$*.sqlite
+	$(sqldir)/auto2sql sql/$*.sqlite best/$* fast/$*
 
-enhanced_all:
-	for corpus in $(DIRECTORIES); do make enhanced corpus=$$corpus; done 
+enhanced_all: $(DIRECTORIES:%=%.enhanced)
 
-enhanced: 
-	$(sqldir)/alpinomod -p $(corpus)  sql/$(corpus).sqlite $(corpus) Inter/$(corpus)
-	ls Inter/$(corpus)/*.xml | sed -e 's/Inter/Enhanced/' | xargs make corpus=$(corpus)
+%.enhanced: 
+	$(sqldir)/alpinomod -p $*  sql/$*.sqlite $* Inter/$*
+	ls Inter/$*/*.xml | sed -e 's/Inter/Enhanced/' | xargs make -s corpus=$*
 
 ALUD=~/bin/alud
 ALUD_OPTIONS=-t -d
@@ -218,7 +217,7 @@ update:
 	$(MAKE) ../CONLLU/$(suite).conllu
 	$(MAKE) Enhanced/$(suite).dact
 
-TMPDATA=$(DIRECTORIES:%=LP/%.lp) $(LASSYSMALL)/LP/*.lp
+TMPDATA:=$(DIRECTORIES:%=LP/%.lp) $(LASSYSMALL)/LP/*.lp
 
 LP/%.lp: Enhanced/%/*.xml $(XSL)/dt2lemma-postags.xsl
 	ls -v Enhanced/$*/*.xml | dtxslt --stdin -s $(XSL)/dt2lemma-postags.xsl > LP/$*.lp
@@ -251,6 +250,11 @@ TRIPLES/%.triples: ./%
              | sort \
              >  $@
 
+FREQ/WORD.freq: $(TMPDATA)
+	cut -f1  $(TMPDATA) | sort | uniq -c | sort -nr > FREQ/WORD.freq 
+
+FREQ/LEMMA.freq: $(TMPDATA)
+	cut -f2  $(TMPDATA) | sort | uniq -c | sort -nr > FREQ/LEMMA.freq 
 
 FREQ/WORD-POS.freq: $(TMPDATA)
 	cut -f1,3  $(TMPDATA) | sort | uniq -c | sort -nr > FREQ/WORD-POS.freq 
