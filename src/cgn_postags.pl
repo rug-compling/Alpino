@@ -928,7 +928,7 @@ exceptional_stem_tag(streven,noun(het,mass,sg),               'WW(inf,nom,zonder
 exceptional_stem_tag(tegen,adjective(_),                      'VZ(fin)',tegen).
 exceptional_stem_tag(toe,preposition(tot,[],extracted_np),    'VZ(fin)',tot).
 exceptional_stem_tag(toe,tag,                                 'VZ(fin)',toe).
-exceptional_stem_tag(toe,particle(toe)                        'VZ(fin)',toe).
+exceptional_stem_tag(toe,particle(toe),                       'VZ(fin)',toe).
 exceptional_stem_tag(uitgerekend,modal_adverb,                'WW(vd,vrij,zonder)',uit_rekenen).
 exceptional_stem_tag(verder,particle(verder),                 'ADJ(vrij,comp,zonder)',ver).
 exceptional_stem_tag(verdenken,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',verdenken).
