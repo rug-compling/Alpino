@@ -1175,73 +1175,73 @@ m(v_root(Stem,Inf),
     stem(F2,Inf),
     lists:member(b(Sc),List).
 
-m(v_root(Inf,Inf),verb(Inf,hebben,inf,[intransitive])) :-
-    inf_only_sport(Inf),
+m(v_root(Lem,Lem),verb(Inf,hebben,inf,[intransitive])) :-
+    inf_only_sport(Inf,Lem),
     atomic(Inf).
 
 % het skispringen
 % ik wil weer gaan skispringen
+:- discontiguous inf_only_sport/1, inf_only_sport/2.
 
-inf_only_sport(allroundschaatsen).
+inf_only_sport(allroundschaatsen,allround_schaatsen).
 inf_only_sport(allrounden).
-inf_only_sport(alpineskiën).
-inf_only_sport(baanwielrennen).
+inf_only_sport(alpineskiën,alpine_skiën).
+inf_only_sport(baanwielrennen,baan_wielrennen).
 inf_only_sport(backpacken).
-inf_only_sport(ballonvaren).
+inf_only_sport(ballonvaren,ballon_varen).
 inf_only_sport(berglopen).
 inf_only_sport(boekhouden).
 inf_only_sport(bloemschikken).
 inf_only_sport(boogschieten).
-inf_only_sport(campagnevoeren).
+inf_only_sport(campagnevoeren,campagne_voeren).
 inf_only_sport(carpoolen).
 inf_only_sport(crowdsurfen).
-inf_only_sport(deeltijdwerken).
-inf_only_sport(diepzeeduiken).
+inf_only_sport(deeltijdwerken,deeltijd_werken).
+inf_only_sport(diepzeeduiken,diepzee_duiken).
 inf_only_sport(discuswerpen).
 inf_only_sport(doodslaan).	% want tussen droom en daad
 inf_only_sport(downhillen).
 inf_only_sport(driebanden).
-inf_only_sport(dwergwerpen).
+inf_only_sport(dwergwerpen,dwerg_werpen).
 inf_only_sport(echtbreken).
-inf_only_sport(geitgooien).
+inf_only_sport(geitgooien,geit_gooien).
 inf_only_sport(handwerken).
 inf_only_sport(hardlopen).
 inf_only_sport(haringkaken).
 inf_only_sport(hongerstaken).
 inf_only_sport(hoofdrekenen).
 inf_only_sport(hoogspringen).
-inf_only_sport(inlineskaten).
-inf_only_sport(inline-skaten).
-inf_only_sport('in-lineskaten').
-inf_only_sport('in-line-skaten').
-inf_only_sport('internet-bankieren').
-inf_only_sport(internetbankieren).
+inf_only_sport(inlineskaten,inline_skaten).
+inf_only_sport('inline-skaten',inline_skaten).
+inf_only_sport('in-lineskaten',inline_skaten).
+inf_only_sport('in-line-skaten',inline_skaten).
+inf_only_sport('internet-bankieren',internet_bankieren).
+inf_only_sport(internetbankieren,internet_bankieren).
 inf_only_sport(kantklossen).
 inf_only_sport(kickboksen).
 inf_only_sport(kogelstoten).
-inf_only_sport(klootzakken).
-inf_only_sport(koffiedrinken).
+inf_only_sport(koffiedrinken,koffie_drinken).
 inf_only_sport(koorddansen).
 inf_only_sport(koppensnellen).
 inf_only_sport(kunstrijden).
 inf_only_sport(kunstschaatsen).
-inf_only_sport(langebaanschaatsen).
+inf_only_sport(langebaanschaatsen,langebaan_schaatsen).
 inf_only_sport(linedancen).
 inf_only_sport(machineschrijven).
-inf_only_sport(marathonschaatsen).
+inf_only_sport(marathonschaatsen,marathon_schaatsen).
 inf_only_sport(maren).		% niets te maren
 inf_only_sport(mierenneuken).
 inf_only_sport(modderworstelen).
 inf_only_sport(motorcrossen).
 inf_only_sport(motorrijden).
 inf_only_sport(nachtvliegen).
-inf_only_sport(oppositievoeren).
+inf_only_sport(oppositievoeren,oppositie_voeren).
 inf_only_sport(paalzitten).
 inf_only_sport(parachutespringen).
 inf_only_sport(pleasen).
 inf_only_sport(polsstokhoogspringen).
 inf_only_sport(prijsschieten).
-inf_only_sport(profwielrennen).
+inf_only_sport(profwielrennen,prof_wielrennen).
 inf_only_sport(rekeningrijden).
 inf_only_sport(ruziemaken).
 inf_only_sport(schoolverlaten).
@@ -1251,8 +1251,8 @@ inf_only_sport(skivliegen).
 inf_only_sport(skydiven).
 inf_only_sport(snowboarden).
 inf_only_sport(speerwerpen).
-inf_only_sport(sportvissen).
-inf_only_sport(striptekenen).
+inf_only_sport(sportvissen,sport_vissen).
+inf_only_sport(striptekenen,strip_tekenen).
 inf_only_sport(stoepranden).
 inf_only_sport(tandenpoetsen).
 inf_only_sport(teleleren).
@@ -1261,17 +1261,17 @@ inf_only_sport(thaiboksen).
 inf_only_sport(thuiswerken).
 inf_only_sport(tijdrekken).
 inf_only_sport(tijdrijden).
-inf_only_sport(treinreizen).
+inf_only_sport(treinreizen,trein_reizen).
 inf_only_sport('tv-kijken').
 inf_only_sport(veldlopen).
 inf_only_sport(veldrijden).
-inf_only_sport(verdachtmaken).
-inf_only_sport(vrouwenwielrennen).
+inf_only_sport(verdachtmaken,verdacht_maken).
+inf_only_sport(vrouwenwielrennen,vrouw_wielrennen).
 inf_only_sport(zakenbankieren).
 inf_only_sport(zakkenrollen).
-inf_only_sport(zandsurfen).
-inf_only_sport(zeezeilen).
-inf_only_sport(zwanendriften).
+inf_only_sport(zandsurfen,zand_surfen).
+inf_only_sport(zeezeilen,zee_zeilen).
+inf_only_sport(zwanendriften,zwaan_driften).
 inf_only_sport(zwartepieten).
 inf_only_sport(zwartrijden).
 inf_only_sport(zwartwerken).

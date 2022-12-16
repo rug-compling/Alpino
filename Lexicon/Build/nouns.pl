@@ -1560,6 +1560,10 @@ n([sg(account),pl(accounts)],both,[]).
 
 n([pl(accountants),sg(accountant)],de,[]).
 
+n([sg(accreditatie),pl(accreditaties)],de,[]).
+
+n([sg(accreditering),pl(accrediteringen)],de,[]).
+
 n([pl('accu\'s'),sg(accu)],de,[],[dim(accuutje)]).
 
 n([pl(accumulaties),sg(accumulatie)],de,[]).
@@ -1709,6 +1713,8 @@ n([pl(activiteiten),sg(activiteit),
   ]).
 
 n([pl(activa),sg(activum)],het,[]).
+
+n([sg(activatie),pl(activaties)],de,[]).
 
 n([sg(actor),pl(actoren)],de,[]).
 
@@ -3094,8 +3100,6 @@ n([sg(avond),pl(avonden)],de,[measure,temp_mod,sbar],
    dim(avondje)]).
 
 n([mass(avondeten)],het,[]).
-
-n([pl(avondjurken),sg(avondjurk)],de,[]).
 
 n([pl(avondklokken),sg(avondklok)],de,[]).
 
@@ -14483,7 +14487,7 @@ n([pl(heerschappen),sg(heerschap)],het,[]).
 
 n([pl(heerschappijen),sg(heerschappij)],de,[]).
 
-n([pl(heersers),sg(heerser)],de,[]).
+n([pl(heersers),sg(heerser)],de,[],[alleen]).
 
 n([mass(heerszucht)],de,[]).
 
@@ -16781,7 +16785,8 @@ n([pl(juristen),sg(jurist)],de,[],
 n([pl(juristes),sg(juriste)],de,[]).
 
 n([pl(jurken),sg(jurk)],de,[],
-  [doop,
+  [avond,
+   doop,
    feest,
    trouw,
    dim(jurkje)]).
