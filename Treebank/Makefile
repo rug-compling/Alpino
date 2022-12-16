@@ -39,10 +39,6 @@ install:
 
 realclean: clean trees_realclean
 
-HDRUGDIR=$(ALPINO_HOME)/Hdrug/Tcl
-
-PWD:=${shell pwd}
-
 transform:
 	find $(DIRECTORIES) -name '*.xml' | xargs Alpino -u -xml_converse
 
@@ -70,7 +66,7 @@ pair: $(DIRECTORIES:%=PAIR/%.pair) $(DIRECTORIES:%=PAIR/%.triple)
 
 ## the odd sed commands for XX[0-9]XX are there to fool awk into treating
 ## numbers as strings, otherwise 3.00 = 3.0 = 3 etc
-FREQ/inconsistent-words: # POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma
+FREQ/inconsistent-words: POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma
 	cat POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma \
         | grep -v '<sent id=' \
         | grep -v 'SPEC(deeleigen)'\
@@ -243,8 +239,8 @@ FREQ/heads.freq: $(DIRECTORIES:%=TRIPLES/%.triples)
            > FREQ/heads.freq
 
 
-TRIPLES/%.triples: ./%
-	dtlist --recursive $< \
+TRIPLES/%.triples: %/*.xml
+	dtlist --recursive $(dir $<) \
              | xargs Alpino -treebank_lassy_triples \
              | awk -F\| '{ printf "%s|%s|%s|%s|%s\n",$$1,$$2,$$3,$$4,$$5}' \
              | sort \
@@ -287,13 +283,6 @@ lp: $(DIRECTORIES:%=LP/%.lp)
 MWU/%.mwu: Enhanced/%/*.xml $(XSL)/mwu_tags.xsl
 	rm -f MWU/$*.mwu
 	ls -v Enhanced/$*/*.xml | dtxslt --stdin -q '//node[@cat="mwu"]' -s $(XSL)/mwu_tags.xsl > MWU/$*.mwu
-
-FREQ/lp-tagged.freq: $(DIRECTORIES:%=LP/%.lp)
-	cat $(DIRECTORIES:%=LP/%.lp) $(LASSYSMALL/LP/*.triples)\
-        | awk '{ printf "%s\t%s %s\n", $$1,$$3,$$2 }'\
-        | sort\
-        | uniq -c\
-        | sort -nr > FREQ/lp-tagged.freq
 
 FREQ/POS-WORD-LEMMA.freq: FREQ/POS.freq FREQ/WORD-LEMMA-POS.freq
 	for tag in `awk '{ print $$2 }' FREQ/POS.freq|sort`;\
