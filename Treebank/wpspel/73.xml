@@ -8,11 +8,11 @@
         <node begin="1" end="2" id="5" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
         <node begin="2" cat="np" end="13" id="6" rel="su">
           <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="edelsmeedtechniek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="techniek" word="edelsmeedtechniek"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="edelsmeed_techniek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="techniek" word="edelsmeedtechniek"/>
           <node begin="4" cat="rel" end="13" id="9" rel="mod">
             <node begin="4" end="5" getal="getal" id="10" index="2" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
             <node begin="4" cat="ssub" end="13" id="11" rel="body">
-              <node begin="5" end="6" getal="mv" graad="basis" id="12" index="3" lemma="email" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="email" word="emails"/>
+              <node begin="5" end="6" getal="mv" graad="basis" id="12" index="3" lemma="e-mail" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="email" word="emails"/>
               <node begin="7" end="8" id="13" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
               <node begin="4" cat="ppart" end="13" id="14" rel="vc">
                 <node begin="4" end="5" id="15" index="2" rel="mod"/>

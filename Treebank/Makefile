@@ -51,7 +51,7 @@ Enhanced/%.dact: Enhanced/%/*.xml
 
 freq: $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq $(TMPDATA)
 	mkdir -p FREQ LP TRIPLES
-	$(MAKE) FREQ/POS.freq FREQ/LEMMA.freq FREQ/WORD.freq \
+	$(MAKE) FREQ/POS.freq FREQ/LEMMA.freq FREQ/RLEMMA.freq FREQ/WORD.freq \
                 FREQ/WORD-POS.freq FREQ/WORD-LEMMA-POS.freq FREQ/WORD-AMB.freq FREQ/TAG-AMB.freq \
                 FREQ/mwu-tagged.freq FREQ/deps.freq FREQ/heads.freq FREQ/triples.freq FREQ/POS-WORD-LEMMA.freq
 
@@ -251,6 +251,9 @@ FREQ/WORD.freq: $(TMPDATA)
 
 FREQ/LEMMA.freq: $(TMPDATA)
 	cut -f2  $(TMPDATA) | sort | uniq -c | sort -nr > FREQ/LEMMA.freq 
+
+FREQ/RLEMMA.freq: $(TMPDATA)
+	grep -v -e 'SPEC(vreemd)' -e 'SPEC(deeleigen)'  $(TMPDATA) | cut -f2 | sort | uniq > FREQ/RLEMMA.freq 
 
 FREQ/WORD-POS.freq: $(TMPDATA)
 	cut -f1,3  $(TMPDATA) | sort | uniq -c | sort -nr > FREQ/WORD-POS.freq 

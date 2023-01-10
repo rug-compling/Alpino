@@ -13,8 +13,8 @@
             <node begin="5" cat="pp" end="8" id="10" rel="mod">
               <node begin="5" end="6" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="6" cat="mwu" end="8" id="12" rel="obj1">
-                <node begin="6" buiging="zonder" end="7" graad="basis" id="13" lemma="nieuw" pos="noun" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="Nieuw" word="Nieuw"/>
-                <node begin="7" end="8" id="14" lemma="Links_actie" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Links-acties" spectype="deeleigen" word="Links-acties"/>
+                <node begin="6" end="7" id="13" lemma="Nieuw" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nieuw" spectype="deeleigen" word="Nieuw"/>
+                <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="Links_actie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Links-acties" word="Links-acties"/>
               </node>
             </node>
           </node>
