@@ -437,6 +437,7 @@ mwu_postag('Gebroeders van Eyck',['N(soort,mv,basis)','SPEC(deeleigen)','SPEC(de
 mwu_postag('geen doekjes',['VNW(onbep,det,stan,prenom,zonder,agr)','N(soort,mv,dim)'],[geen,doek]).
 mwu_postag('geen een',['VNW(onbep,det,stan,prenom,zonder,agr)','TW(hoofd,nom,zonder-n,basis)'],[geen,één]).
 mwu_postag('geen van allen',['VNW(onbep,det,stan,prenom,zonder,agr)','VZ(init)','VNW(onbep,det,stan,nom,met-e,mv-n)'],[geen,van,al]).
+mwu_postag('geen van beiden',['VNW(onbep,det,stan,prenom,zonder,agr)','VZ(init)','VNW(onbep,grad,stan,nom,met-e,mv-n,basis)'],[geen,van,beide]).
 mwu_postag('geheime dienst',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[geheim,dienst]).
 mwu_postag('Geheime Raad',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[geheim,raad]).
 mwu_postag('Gemeenschappelijke Gemeenschapscommissie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Gemeenschappelijk',gemeenschapscommissie]).

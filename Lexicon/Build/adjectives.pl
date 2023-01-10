@@ -4163,7 +4163,7 @@ a([e(begaanbare),
    no_e(begaanbaar)],nonadv,[],[on]).
 
 a([ge_e(begeerde),
-   ge_no_e(begeerd)],adv,[],[]).
+   ge_no_e(begeerd)],adv,[],[fel]).
 
 a([e(begeerlijke),
    er(begeerlijker),
@@ -6045,9 +6045,6 @@ a([pred([bij,machte])],padv,
 
 a([pred([bij,toverslag])],adv,[],[]).
 
-a([e(bikkelharde),
-   no_e(bikkelhard)],adv,[],[]).
-
 a([e(bilaterale),
    no_e(bilateraal)],adv,[],[]).
 
@@ -6239,9 +6236,6 @@ a([e(blijmoedige),
 
 a([stof(blikken)],nonadv,[],[]).
 
-a([e(bliksemsnelle),
-   no_e(bliksemsnel)],adv,[],[]).
-
 a([e(blinde),
    er(blinder),
    ere(blindere),
@@ -6290,9 +6284,6 @@ a([e(bloedrode),
    no_e(bloedrood),
    st(bloedroodst),
    ste(bloedroodste)],adv,[],[]).
-
-a([e(bloedserieuze),
-   no_e(bloedserieus)],adv,[],[]).
 
 a([stem(bloed_stollen),
    ende(bloedstollende),
@@ -9200,7 +9191,9 @@ a([e(dunne),
    ere(dunnere),
    no_e(dun),
    st(dunst),
-   ste(dunste)],adv,[],[rag]).
+   ste(dunste)],adv,[],
+  [flinter,
+   rag]).
 
 a([e(dusdanige),
    no_e(dusdanig)],adv,
@@ -10273,12 +10266,6 @@ a([e(felle),
    er_pp_vp(tegen),
    pp(tegen)],[]).
 
-a([ge_no_e(felbegeerd),
-   ge_e(felbegeerde)],nonadv,[],[]).
-
-a([ge_no_e(felgekleurd),
-   ge_e(felgekleurde)],nonadv,[],[]).
-
 a([e(feminiene),
    no_e(feminien)],nonadv,[],[]).
 
@@ -10489,9 +10476,6 @@ a([e(flinke),
    no_e(flink),
    st(flinkst),
    ste(flinkste)],adv,[],[]).
-
-a([e(flinterdunne),
-   no_e(flinterdun)],nonadv,[],[]).
 
 a([e(florissante),
    no_e(florissant)],adv,[],[]).
@@ -12955,7 +12939,7 @@ a([ge_e(gekleurde),
    ere(gekleurdere),
    ge_no_e(gekleurd),
    st(gekleurdst),
-   ste(gekleurdste)],adv,[ap_pred],[]).
+   ste(gekleurdste)],adv,[ap_pred],[fel]).
 
 a([ge_e(gekliefde),
    ge_no_e(gekliefd)],adv,[],[]).
@@ -18090,7 +18074,9 @@ a([e(harde),
    no_e(hard),
    st(hardst),
    ste(hardste)],adv,[],
-  [knoeper,
+  [bikkel,
+   kei,
+   knoeper,
    knoert,
    snoei]).
 
@@ -20636,13 +20622,6 @@ a([prefix(kaolo)],nonadv,[],[]).
 
 a([e(keigoede),
    no_e(keigoed)],adv,[],[]).
-
-a([e(keiharde),
-   er(keiharder),
-   ere(keihardere),
-   no_e(keihard),
-   st(keihardst),
-   ste(keihardste)],adv,[],[]).
 
 a([e(keizerlijke),
    er(keizerlijker),
@@ -29783,9 +29762,6 @@ a([e(pientere),
 a([e(piepkleine),
    no_e(piepklein)],nonadv,[],[]).
 
-a([e(pijlsnelle),
-   no_e(pijlsnel)],adv,[],[]).
-
 a([e(pijnlijke),
    er(pijnlijker),
    ere(pijnlijkere),
@@ -30797,9 +30773,6 @@ a([e(razende),
   [er_pp_sbar(over),
    pp(op),
    pp(over)],[]).
-
-a([e(razendsnelle),
-   no_e(razendsnel)],adv,[],[]).
 
 a([e(reactieve),
    e(reaktieve),
@@ -32361,7 +32334,7 @@ a([e(serieuze),
    ere(serieuzere),
    no_e(serieus),
    st(serieust),
-   ste(serieuste)],adv,[],[]).
+   ste(serieuste)],adv,[],[bloed]).
 
 a([both(sexy),
    er(sexyer),er(sexier),
@@ -32675,7 +32648,11 @@ a([e(snelle),
    ere(snellere),
    no_e(snel),
    st(snelst),
-   ste(snelste)],adv,[],[super]).
+   ste(snelste)],adv,[],
+  [bliksem,
+   pijl,
+   razend,
+   super]).
 
 a([e(sneue),
    no_e(sneu)],nonadv,
