@@ -2663,32 +2663,36 @@ compare_treebank_cgn_continue(File,SysTags,Ident) :-
     collect_treebank_cgn(File,GoldTags),
     format(user_error,"~w~t~40+~w~t~40+~w~t~40+ T    ~w~n",[word,treebank,parser,key]),
     length(GoldTags,Len),
-    compare_cgn(GoldTags,SysTags,0,Words,0,Correct,Ident),
-    format(user_error,"~w / ~w correct~n",[Correct,Len]),
-    add_cgn_numbers(Correct,Len).
+    compare_cgn(GoldTags,SysTags,0,Words,0,Correct,0,CorrectL,Ident),
+    format(user_error,"postag ~w / ~w correct~n",[Correct, Len]),
+    format(user_error," lemma ~w / ~w correct~n",[CorrectL,Len]),
+    add_cgn_numbers(Correct,CorrectL,Len).
 
-add_cgn_numbers(C1,L1) :-
+add_cgn_numbers(C1,D1,L1) :-
     hdrug_flag(cgn_numbers,Val),
-    (   Val=c(C0,L0)
+    (   Val=c(C0,D0,L0)
     ->  true
-    ;   C0=0, L0=0
+    ;   C0=0, D0=0, L0=0
     ),
     C is C0 + C1,
+    D is D0 + D1,
     L is L0 + L1,
     P is 100*C/L,
-    format(user_error,"PT#~w / ~w correct (~2f%)~n",[C,L,P]),
-    set_flag(cgn_numbers,c(C,L)).
+    R is 100*D/L,
+    format(user_error,"#PT#~w / ~w correct (~2f%)~n",[C,L,P]),
+    format(user_error,"#LM#~w / ~w correct (~2f%)~n",[D,L,R]),
+    set_flag(cgn_numbers,c(C,D,L)).
 
 reset_cgn_numbers :-
-    set_flag(cgn_numbers,c(0,0)).
+    set_flag(cgn_numbers,c(0,0,0)).
     
 
 %% sorted, so in order
 %% complete
 %% todo: compare lemma too?
-compare_cgn([],[],_,[],C,C,_).
+compare_cgn([],[],_,[],C,C,L,L,_).
 compare_cgn([cgn_postag(P0,P,LemmaA,H)|T],
-	    [cgn_postag(P0,P,LemmaB0,H2)|T2],P0,[W|Words],C0,C,Ident) :-
+	    [cgn_postag(P0,P,LemmaB0,H2)|T2],P0,[W|Words],C0,C,L0,L,Ident) :-
     alpino_treebank:get_lemma_or_word(LemmaB0,LemmaB,W),
     (   H == H2
     ->  C1 is C0 + 1
@@ -2696,10 +2700,11 @@ compare_cgn([cgn_postag(P0,P,LemmaA,H)|T],
 	C1 = C0
     ),
     (   LemmaA == LemmaB
-    ->  true
-    ;   format(user_error,"~w~t~40+~w~t~40+~w~t~40+ #LM# ~w~n",[W,LemmaA,LemmaB,Ident])
+    ->  L1 is L0 + 1
+    ;   format(user_error,"~w~t~40+~w~t~40+~w~t~40+ #LM# ~w~n",[W,LemmaA,LemmaB,Ident]),
+	L1 = L0
     ),
-    compare_cgn(T,T2,P,Words,C1,C,Ident).
+    compare_cgn(T,T2,P,Words,C1,C,L1,L,Ident).
 
     
 

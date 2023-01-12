@@ -94,7 +94,7 @@ test1rest:
                         >> $(suite)$(part)/$(job)/scores
 	cat $(suite)$(part)/$(job)/scores >> $(suite)$(part)/scores
 	cat $(suite)$(part)/$(job)/scores >> $(suite)$(part)/$(job)/score
-	grep -e '#LM' -e '#PT' -e 'Lexical analysis: ' $(suite)$(part)/$(job)/log1 > $(suite)$(part)/$(job)/poslemma
+	grep -e 'LM#' -e 'PT#' -e 'Lexical analysis: ' $(suite)$(part)/$(job)/log1 > $(suite)$(part)/$(job)/poslemma
 	$(MAKE) report
 	-$(MAKE) compare_score suite=$(prefix)$(suite)
 
@@ -256,6 +256,31 @@ tf0:
 tf:
 	@echo "     OLD      NEW   SUITE"
 	@$(MAKE) -s tf0 | awk '{ printf "%8d %8d   %s\n",$$2,$$3,$$1}'
+
+
+ptf:
+	@echo "  OLD    NEW        SUITE"
+	@$(MAKE) -s ptf0 | tr -d '()' | awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f %s %s\n",$$1,$$2,XX,$$3}'
+
+ptf0:
+	for file in `echo $(shell ls $(ORDERED) */*/poslemma 2>/dev/null)`; do \
+        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
+	poslemma=$$suite/poslemma;\
+	echo `grep '^#PT#' $$poslemma| tail -n1 | awk '{ print $$5 }'` `grep '^#PT#' $$file| tail -n1| awk '{ print $$5 }'` $$suite;\
+	done
+
+
+lmf:
+	@echo "  OLD    NEW        SUITE"
+	@$(MAKE) -s lmf0 | tr -d '()' | awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
+
+lmf0:
+	for file in `echo $(shell ls $(ORDERED) */*/poslemma 2>/dev/null)`; do \
+        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
+	poslemma=$$suite/poslemma;\
+	echo `grep '^#LM#' $$poslemma| tail -n1 | awk '{ print $$5 }'` `grep '^#LM#' $$file| tail -n1| awk '{ print $$5 }'` $$suite;\
+	done
+
 
 cf0:
 	for file in `echo $(shell ls $(ORDERED) */*/scores 2>/dev/null)`; do \
@@ -596,31 +621,20 @@ cgn42:
 cgn43:
 	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv801195 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv801195"
 
+#### compare postag and lemma
+####
+### make ptf: compare all finished tests wrt postag accuracy
+### make lmf: compare all finished tests wrt lemma  accuracy
+###
+### find new/different mistakes  in lemma / postag
+###
 
-analyse:
-	@$(MAKE) analyse0 analyse1 files=*/job*/log1
+SHELL=/bin/bash
 
-lsuites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite eans lot_test_suite1 wpspel extra cdb_part?
+lm_diff:
+	diff <(grep ' #LM' $$suite/poslemma) <(grep ' #LM' $$suite/job*/poslemma) | grep '^[>]'
 
-sota:
-	@$(MAKE) analyse0 analyse1 files="$(lsuites:%=%/poslemma)"
-
-an:
-	@for j in $(jobsuites); do $(MAKE) -s analyse1 files=$$j/job*/log*; done
+pt_diff:
+	diff <(grep ' #PT' $$suite/poslemma) <(grep ' #PT' $$suite/job*/poslemma) | grep '^[>]'
 
 
-analyse0:
-	@echo "        WORD                                    TREEBANK                                PARSER" > pos
-	@echo "        WORD                                    TREEBANK                                PARSER" > lem
-	@cat  $(files) | grep "#PT" | cut -c1-120 |sort | uniq -c | sort -nr				       >>pos
-	@cat  $(files) | grep "#LM" | cut -c1-120 |sort | uniq -c | sort -nr				       >>lem
-	@echo "        WORD                                    TREEBANK                                PARSER" >>pos
-	@echo "        WORD                                    TREEBANK                                PARSER" >>lem
-
-analyse1:
-	@echo -n "lemma   : "
-	@mistakes=`cat $(files) | grep -c "#LM"` ; \
-         cat $(files) | grep 'Lexical analysis: ' | awk "{ N=N+\$$3 } END { print 100*(1 - $$mistakes/N)  }"
-	@echo -n "postag  : "
-	@mistakes=`cat $(files) | grep -c "#PT"` ; \
-         cat $(files) | grep 'Lexical analysis: ' | awk "{ N=N+\$$3 } END { print 100*(1 - $$mistakes/N) }"
