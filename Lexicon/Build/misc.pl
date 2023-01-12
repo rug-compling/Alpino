@@ -7604,6 +7604,7 @@ nominalized_adjective(alleenstaand,alleenstaanden).
 nominalized_adjective(anders_denken,andersdenkenden).
 nominalized_adjective(arbeidsongeschikt,arbeidsongeschikten).
 nominalized_adjective(arm,armen).
+nominalized_adjective(arresteren,gearresteerden).
 nominalized_adjective(bedelen,bedeelden).
 nominalized_adjective(bedreigen,bedreigden).
 nominalized_adjective(bedroefven,bedroefden).

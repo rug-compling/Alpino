@@ -7749,9 +7749,6 @@ v(fungeer,fungeert,fungeren,gefungeerd,fungeerde,fungeerden,
     [h([intransitive,
         als_copula])]).
 
-v(funktioneer,funktioneert,funktioneren,gefunktioneerd,funktioneerde,funktioneerden,
-    [h([intransitive])]).
-
 v(fuseer,fuseert,fuseren,gefuseerd,fuseerde,fuseerden,
     [z([intransitive,
 	pc_pp(met)])]).

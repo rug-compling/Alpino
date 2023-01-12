@@ -17,6 +17,11 @@ add_compound(Prefix,Stem0,Surf0,Stem,Surf) :-
     atom_concat(Prefix,Surf0,Surf),
     atom_concat(Prefix,'_',PrefixStem1),
     atom_concat(PrefixStem1,Stem0,Stem).
+%% on+deskundig => ondeskundig
+add_compound(x(Prefix),Stem0,Surf0,Stem,Surf) :-    
+    atom(Prefix),!,
+    atom_concat(Prefix,Surf0,Surf),
+    atom_concat(Prefix,Stem0,Stem).
 %% mond- en klauwzeercrisis => mond- en klauwzeer_crisis
 add_compound([H|T],Stem2,Surf1,Stem,Surf) :-     % mond- en klauwzeercrisis
     concat_all([H|T],Stem0,' '),

@@ -3553,7 +3553,6 @@ lemma_root(door_fuiven,fuif_door) .
 lemma_root(door_fulmineren,fulmineer_door) .
 lemma_root(door_functioneren,functioneer_door) .
 lemma_root(door_fungeren,fungeer_door) .
-lemma_root(door_funktioneren,funktioneer_door) .
 lemma_root(door_fuseren,fuseer_door) .
 lemma_root(door_gaan,ga_door) .
 lemma_root(door_galmen,galm_door) .
@@ -5745,7 +5744,6 @@ lemma_root(fulmineren,fulmineer) .
 lemma_root(functioneren,functioneer) .
 lemma_root(funderen,fundeer) .
 lemma_root(fungeren,fungeer) .
-lemma_root(funktioneren,funktioneer) .
 lemma_root(fuseren,fuseer) .
 lemma_root(fusilleren,fusilleer) .
 lemma_root(gaan,ga) .
@@ -11055,7 +11053,6 @@ lemma_root(raak_fuiven,fuif_raak) .
 lemma_root(raak_fulmineren,fulmineer_raak) .
 lemma_root(raak_functioneren,functioneer_raak) .
 lemma_root(raak_fungeren,fungeer_raak) .
-lemma_root(raak_funktioneren,funktioneer_raak) .
 lemma_root(raak_fuseren,fuseer_raak) .
 lemma_root(raak_gaan,ga_raak) .
 lemma_root(raak_galmen,galm_raak) .
@@ -16144,7 +16141,6 @@ lemma_root(uit_fuiven,fuif_uit) .
 lemma_root(uit_fulmineren,fulmineer_uit) .
 lemma_root(uit_functioneren,functioneer_uit) .
 lemma_root(uit_fungeren,fungeer_uit) .
-lemma_root(uit_funktioneren,funktioneer_uit) .
 lemma_root(uit_gaan,ga_uit) .
 lemma_root(uit_galmen,galm_uit) .
 lemma_root(uit_galopperen,galoppeer_uit) .
@@ -20932,7 +20928,6 @@ lemma_root(voort_fuiven,fuif_voort) .
 lemma_root(voort_fulmineren,fulmineer_voort) .
 lemma_root(voort_functioneren,functioneer_voort) .
 lemma_root(voort_fungeren,fungeer_voort) .
-lemma_root(voort_funktioneren,funktioneer_voort) .
 lemma_root(voort_fuseren,fuseer_voort) .
 lemma_root(voort_gaan,ga_voort) .
 lemma_root(voort_galmen,galm_voort) .

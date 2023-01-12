@@ -2064,7 +2064,7 @@ a([e(aantrekkelijke),
    subject_vp,
    pp(door),
    pp(voor),
-   pp(wegens)],[]).
+   pp(wegens)],[on]).
 
 a([ge_e(aanvaarde),
    ge_no_e(aanvaard)],adv,[subject_sbar % het is algemeen aanvaard dat...
@@ -24201,7 +24201,10 @@ a([e(neutrale),
    ere(neutralere),
    no_e(neutraal),
    st(neutraalst),
-   ste(neutraalste)],padv,[],[s(begroting)]).
+   ste(neutraalste)],padv,[],
+  [s(begroting),
+   gender
+  ]).
 
 a([e(nevelige),
    er(neveliger),
@@ -24898,14 +24901,6 @@ a([e(onaantastbare),
    st(onaantastbaarst),
    ste(onaantastbaarste)],nonadv,[],[]).
 
-a([e(onaantrekkelijke),
-   er(onaantrekkelijker),
-   ere(onaantrekkelijkere),
-   no_e(onaantrekkelijk),
-   st(onaantrekkelijkst),
-   ste(onaantrekkelijkste)],adv,
-  [pp(voor)],[]).
-
 a([e(onaanvaardbare),
    er(onaanvaardbaarder),
    ere(onaanvaardbaardere),
@@ -24913,7 +24908,7 @@ a([e(onaanvaardbare),
    st(onaanvaardbaarst),
    ste(onaanvaardbaarste)],nonadv,
   [subject_sbar,
-   subject_vp],[]).
+   subject_vp],[on]).
 
 a([e(onaanzienlijke),
    er(onaanzienlijker),
@@ -30526,11 +30521,6 @@ a([e(psychosociale),
 a([e(psychosomatische),
    no_e(psychosomatisch)],adv,[],[]).
 
-a([e(psychoterapeutische),
-   e(psychotherapeutische),
-   no_e(psychoterapeutisch),
-   no_e(psychotherapeutisch)],adv,[],[]).
-
 a([e(psychotische),
    er(psychotischer),
    ere(psychotischere),
@@ -31128,9 +31118,6 @@ a([e(respectabele),
 a([e(respectloze),
    no_e(respectloos)],adv,[],[]).
 
-a([e(respectvolle),
-   no_e(respectvol)],adv,[],[]).
-
 a([e(respectieve),
    e(respektieve),
    no_e(respectief),
@@ -31283,9 +31270,6 @@ a([e(rinse),
    no_e(rins),
    st(rinst),
    ste(rinste)],nonadv,[],[]).
-
-a([e(risicovolle),
-   no_e(risicovol)],adv,[],[]).
 
 a([e(riskante),
    e(risquante),
@@ -33731,26 +33715,6 @@ a([e(tactische),
    ste(tactischte),
    ste(taktischte)],adv,[],[]).
 
-a([e(tactvolle),
-   e(taktvolle),
-   er(tactvoller),
-   er(taktvoller),
-   ere(tactvollere),
-   ere(taktvollere),
-   no_e(tactvol),
-   no_e(taktvol),
-   st(tactvolst),
-   st(taktvolst),
-   ste(tactvolste),
-   ste(taktvolste)],adv,[],[]).
-
-a([e(talentvolle),
-   er(talentvoller),
-   ere(talentvollere),
-   no_e(talentvol),
-   st(talentvolst),
-   ste(talentvolste)],adv,[],[]).
-
 a([e(talige),
    no_e(talig)],nonadv,[],
   [anders,
@@ -34217,7 +34181,10 @@ a([e(theoretische),
 a([e(terapeutische),
    e(therapeutische),
    no_e(terapeutisch),
-   no_e(therapeutisch)],adv,[],[]).
+   no_e(therapeutisch)],adv,[],
+  [fysio,
+   psycho
+  ]).
 
 a([e(thermische),no_e(thermisch)],nonadv,[],[]).
 
@@ -38542,8 +38509,15 @@ a([e(volle),
 a([e(volle),
    no_e(vol)],both,
   [],
-  [s(begrip),
-   belofte]).
+  [belofte,
+   s(begrip),
+   fantasie,
+   gezag,
+   respect,
+   risico,
+   tact,
+   talent
+  ]).
 
 a([both(volbloed)],nonadv,[],[]).
 
