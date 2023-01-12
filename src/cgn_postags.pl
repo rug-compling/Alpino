@@ -2923,6 +2923,8 @@ tmp_np1("v.C.",'SPEC(afk)').
 tmp_np1("Chr.",'SPEC(afk)').
 tmp_np1("Chr",'SPEC(afk)').
 tmp_np1("Christus",'N(eigen,ev,basis,zijd,stan)').
+tmp_np1("een",'LID(onbep,stan,agr)').
+tmp_np1("of",'VG(neven)').
 tmp_np1(_,'TW(hoofd,vrij)').
 
 
@@ -3070,6 +3072,8 @@ number_nom_path([n_num/1,n_n_pps/1|_]).
 number_nom_path([n_num/1,np_n/1,rel_pp_np_dp/2|_]).
 number_nom_path([pron_pron_pps/1|_]).
 
+noun_path([a_num_na_a/2|Path]) :-
+    noun_path(Path).
 noun_path([n_adj/1|_]).
 noun_path([n_rang/1|_]).
 noun_path([a_adv_a/2|Path]) :-
@@ -3090,6 +3094,8 @@ adv_path([a_detadv_a/2|Path]) :-
 adv_path([a_me_comp_a/2|Path]) :-
     adv_path(Path).
 
+pronoun_path([a_num_na_a/2|Path]) :-
+    pronoun_path(Path).
 pronoun_path([pred_a/1|_]).
 pronoun_path([pron_det/1|_]).
 pronoun_path([a_a_compp/1|Path]) :-

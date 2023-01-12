@@ -2746,6 +2746,9 @@ open_class_stem_tag_pair(Final,W,Stem,Cat) :-
     ),
     open_class_tag_or_name(Final,Cat0,Cat).
 
+exc_stem(_,StemDim,Stem):-
+    atom(StemDim),
+    atom_concat(Stem,'_DIM',StemDim).
 exc_stem(vol,volume,vol).
 exc_stem(media,medium,media).
 exc_stem(data,datum,data).
@@ -2975,6 +2978,7 @@ never_compound_part_sc('r\'s').
 never_compound_part_sc(ra).
 never_compound_part_sc(re).
 never_compound_part_sc(rk).
+never_compound_part_sc(ro).
 never_compound_part_sc(sch).
 never_compound_part_sc(sec).
 never_compound_part_sc(sen).
