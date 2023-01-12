@@ -62,10 +62,10 @@
             <node begin="25" cat="cp" end="31" id="47" rel="predc">
               <node begin="25" conjtype="onder" end="26" id="48" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
               <node begin="27" cat="mwu" end="31" id="49" rel="body">
-                <node begin="27" end="28" id="50" lemma="uit" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="uit" vztype="init" word="uit"/>
-                <node begin="28" end="29" id="51" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
-                <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="52" lemma="lug" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="lug" word="lug"/>
-                <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="53" lemma="gegrypen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="gegryp" word="gegryp"/>
+                <node begin="27" end="28" id="50" lemma="uit" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="uit" spectype="vreemd" word="uit"/>
+                <node begin="28" end="29" id="51" lemma="de" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="de" spectype="vreemd" word="de"/>
+                <node begin="29" end="30" id="52" lemma="lug" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="lug" spectype="vreemd" word="lug"/>
+                <node begin="30" end="31" id="53" lemma="gegryp" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="gegryp" spectype="vreemd" word="gegryp"/>
               </node>
             </node>
             <node begin="33" buiging="zonder" end="34" id="54" lemma="beschouwen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="beschouw" word="beschouwd" wvorm="vd"/>

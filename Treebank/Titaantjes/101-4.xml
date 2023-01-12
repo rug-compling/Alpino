@@ -47,8 +47,8 @@
         <node begin="21" cat="advp" end="24" id="35" rel="mod">
           <node begin="21" end="22" id="36" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="mod" root="alleen" word="alleen"/>
           <node begin="22" cat="mwu" end="24" id="37" rel="hd">
-            <node begin="22" end="23" id="38" lemma="&apos;s" pos="adv" postag="BW()" pt="bw" rel="mwp" root="&apos;s" word="&apos;s"/>
-            <node begin="23" end="24" id="39" lemma="zaterdagsavonds" pos="adv" postag="BW()" pt="bw" rel="mwp" root="zaterdagsavonds" word="Zaterdagsavonds"/>
+            <node begin="22" end="23" id="38" lemma="de" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&apos;s" word="&apos;s"/>
+            <node begin="23" end="24" getal="ev" graad="basis" id="39" lemma="zaterdag_avond" naamval="gen" ntype="soort" pos="adv" postag="N(soort,ev,basis,gen)" pt="n" rel="mwp" root="zaterdagsavonds" word="Zaterdagsavonds"/>
           </node>
         </node>
         <node begin="24" end="25" getal="mv" graad="basis" id="40" lemma="sigaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="sigaar" word="sigaren"/>

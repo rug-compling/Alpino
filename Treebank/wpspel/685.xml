@@ -10,9 +10,9 @@
         <node begin="3" cat="np" end="11" id="7" rel="obj1">
           <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="4" buiging="met-e" end="5" graad="sup" id="9" lemma="zwaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="zwaar" word="zwaarste"/>
-          <node begin="5" cat="ap" end="7" id="10" rel="mod">
+          <node begin="5" cat="ppart" end="7" id="10" rel="mod">
             <node begin="5" end="6" id="11" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-            <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="geladen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="hd" root="geladen" word="geladen"/>
+            <node begin="6" buiging="zonder" end="7" id="12" lemma="laden" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="hd" root="geladen" word="geladen" wvorm="vd"/>
           </node>
           <node begin="7" end="8" getal="mv" graad="dim" id="13" lemma="deel" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="deeltje" word="deeltjes"/>
           <node begin="8" cat="pp" end="11" id="14" rel="mod">

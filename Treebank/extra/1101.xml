@@ -2,24 +2,24 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="11" id="0" rel="top">
     <node begin="0" cat="smain" end="11" id="1" rel="--">
-      <node begin="0" end="1" genus="onz" getal="ev" id="2" index="1" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" special="het" status="red" vwtype="pers" word="Het"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="present" word="moet" wvorm="pv"/>
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" index="1" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
       <node begin="0" cat="inf" end="11" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="sup"/>
-        <node aform="base" begin="2" buiging="zonder" end="3" id="6" infl="no_e" lemma="gedaan" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="predc" root="gedaan" sc="subject_vp" vform="psp" word="gedaan" wvorm="vd"/>
-        <node begin="3" buiging="zonder" end="4" id="7" infl="inf" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="copula_vp" word="zijn" wvorm="inf"/>
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="doen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="predc" root="gedaan" word="gedaan" wvorm="vd"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
         <node begin="4" cat="ti" end="11" id="8" rel="su">
-          <node begin="7" end="8" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+          <node begin="7" end="8" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
           <node begin="4" cat="inf" end="11" id="10" rel="body">
             <node begin="4" cat="ap" end="6" id="11" rel="mod">
               <node begin="4" end="5" id="12" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
-              <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="13" infl="no_e" lemma="onzorgvuldig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="onzorgvuldig" vform="adj" word="onzorgvuldig"/>
+              <node begin="5" buiging="zonder" end="6" graad="basis" id="13" lemma="onzorgvuldig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="onzorgvuldig" word="onzorgvuldig"/>
             </node>
             <node begin="6" end="7" id="14" lemma="om" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="om" vztype="fin" word="om"/>
-            <node begin="8" buiging="zonder" end="9" id="15" infl="inf" lemma="om_springen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spring_om" sc="part_pc_pp(om,met)" word="springen" wvorm="inf"/>
+            <node begin="8" buiging="zonder" end="9" id="15" lemma="om_springen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spring_om" word="springen" wvorm="inf"/>
             <node begin="9" cat="pp" end="11" id="16" rel="pc">
               <node begin="9" end="10" id="17" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
-              <node begin="10" end="11" gen="het" genus="onz" getal="ev" graad="basis" id="18" lemma="gemeenschap_geld" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="gemeenschap_geld" word="gemeenschapsgeld"/>
+              <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="18" lemma="gemeenschap_geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="gemeenschap_geld" word="gemeenschapsgeld"/>
             </node>
           </node>
         </node>
