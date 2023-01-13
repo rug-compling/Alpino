@@ -7589,11 +7589,11 @@ m(lief,  nominalized_super_adjective,liefsten).
 %% treated in syntax:
 %% we only need to list words that are otherwise in the lexicon too,
 %% eg as a past tense verb. Other cases are treated in unknowns.pl
-nominalized_adjective('Duitstalig','Duitstaligen').
-nominalized_adjective('Engelstalig','Engelstaligen').
-nominalized_adjective('Franstalig','Franstaligen').
-nominalized_adjective('Nederlandstalig','Nederlandstaligen').
-nominalized_adjective('Spaanstalig','Spaanstaligen').
+nominalized_adjective('Duits_talig','Duitstaligen').
+nominalized_adjective('Engel_stalig','Engelstaligen').
+nominalized_adjective('Frans_talig','Franstaligen').
+nominalized_adjective('Nederlands_talig','Nederlandstaligen').
+nominalized_adjective('Spaans_talig','Spaanstaligen').
 nominalized_adjective(aanstaand,aanstaanden).
 nominalized_adjective(aanwezig,aanwezigen).
 nominalized_adjective(achterlijk,achterlijken).

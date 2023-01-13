@@ -2453,7 +2453,7 @@ n([sg(ander)],both,[]).
 
 n([mass(andijvie)],de,[]).
 
-n([stem(anecdote),
+n([stem(anekdote),
    pl(anekdoten),pl(anekdotes),sg(anekdote),
    pl(anecdoten),pl(anecdotes),sg(anecdote)],de,[sbar]).
 
@@ -3714,8 +3714,8 @@ n([pl(bedrijven),sg(bedrijf)],het,[],
    diamant,
    distributie,
    dochter,
-   s(electriciteit),s(elektriciteit),
-   elektronica,electronica,
+   s(elektriciteit),i(elektriciteit,electriciteits),
+   i(elektronica,electronica),elektronica,
    energie,
    familie,
    fusie,
@@ -6918,7 +6918,8 @@ n([meas(cent),
 
 n([pl(centrales),sg(centrale)],de,[],
   [alarm,
-   electriciteit,s(electriciteit),
+   i(elektriciteit,electriciteit),
+   i(elektriciteit,electriciteits),
    elektriciteit,s(elektriciteit),
    kern,
    i(kool,kolen),
@@ -7340,8 +7341,6 @@ n([mass(coaching)],de,[]).
 
 n([pl(coalities),sg(coalitie)],de,[],[s(regering)]).
 
-n([pl(coalitiepartners),sg(coalitiepartner)],de,[]).
-
 n([mass(coca)],de,[]).
 
 n([mass(cocaïne)],de,[]).
@@ -7705,7 +7704,8 @@ n([pl(concerns),sg(concern)],het,[],
    chemie,
    computer,
    s(detailhandel),
-   electronica,elektronica,
+   i(elektronika,electronica),
+   elektronica,
    energie,
    farmacie,
    frisdrank,i(frisdrank,frisdranken),
@@ -10446,36 +10446,32 @@ n([pl('eldorado\'s'),sg(eldorado)],het,[],[dim(eldoradootje)]).
 
 n([mass(electoraat)],het,[]).
 
-n([pl(electriciens),sg(electricien)],de,[]).
+n([stem(elektricien),
+   pl(elektriciens),sg(elektricien),
+   pl(electriciens),sg(electricien)],de,[]).
 
-n([pl(electriciteiten),sg(electriciteit)],de,[]).
-
-n([pl(electroden),pl(electrodes),sg(electrode)],de,[]).
-
-n([pl(electronen),sg(electron)],het,[]).
-
-n([mass(electronica)],de,[],
-  [i(consument,consumenten),
-   i(consument,'consumenten-')]).
-
-n([mass(elegantie)],de,[]).
-
-n([pl(elektriciens),sg(elektricien)],de,[]).
-
-n([stem(electriciteit),
+n([stem(elektriciteit),
+   pl(electriciteiten),sg(electriciteit),
    pl(elektriciteiten),sg(elektriciteit)],de,[]).
 
-n([stem(electrode),
+n([stem(elektrode),
+   pl(electroden),pl(electrodes),sg(electrode),
    pl(elektroden),pl(elektrodes),sg(elektrode)],de,[]).
 
-n([stem(electroon),
+n([stem(elektron),
+   pl(electronen),sg(electron),
    pl(elektronen),sg(elektron)],het,[]).
 
-n([stem(electronica),
+n([stem(elektronica),
+   mass(electronica),
    mass(elektronica),
    mass(elektronika)],de,[],
   [i(consument,consumenten),
-   h(micro)]).
+   i(consument,'consumenten-'),
+   h(micro)
+  ]).
+
+n([mass(elegantie)],de,[]).
 
 n([pl(elementen),sg(element)],het,
   [app_measure,
@@ -11713,7 +11709,7 @@ n([sg(fractie),pl(fracties),
    h('CDA'),
    coalitie,
    i('D66','D\'66-'),h('D66'),
-   i(een_man,eenmans),
+   i(één_man,eenmans),
    h('GroenLinks'),
    kamer,
    i(kamer,'Kamer'),
@@ -12826,6 +12822,9 @@ n([sg([gereformeerde,kerk,vrijgemaakt]),
 n([mass(gerichtheid)],de,[]).
 
 n([mass(gerief)],het,[]).
+
+n([mass(gerinkel)],het,[],
+  [glas]).
 
 n([mass(geroffel)],het,[],
   [trom]).
@@ -16835,7 +16834,8 @@ n([mass(kabaal)],het,[]).
 
 n([pl(kabels),sg(kabel)],de,[],
   [dim(kabeltje),
-   s(electriciteit),
+   s(elektriciteit),
+   i(elektriciteit,electriciteits),
    internet,
    netwerk,
    s(toelevering)
@@ -17059,10 +17059,12 @@ n([pl(kampioenes),sg(kampioene)],de,
   ]).
 
 n([pl(kampioenschappen),sg(kampioenschap)],het,[app_measure],
-  [s(land)]).
+  [s(land),
+   wereld]).
 
 n([pl(kampioenschappen),sg(kampioenschap)],het,[],
   [dam,
+   tennis,
    voetbal
   ]).
 
@@ -18641,7 +18643,6 @@ n([sg(kracht),pl(krachten)],de,
 n([pl(krachten),sg(kracht)],de, [],
   [s(arbeid),
    s(beroep),
-   leer,
    productie,i(productie,produktie),
    uitzend,
    werk ]).
@@ -19592,7 +19593,8 @@ n([pl(leidingen),sg(leiding)],de,[],
 
 n([pl(leidingen),sg(leiding)],de,[],
   [gas,
-   s(electriciteit),
+   s(elektriciteit),
+   l(elektriciteit,electriciteits),
    s(hoogspanning),
    olie,
    pijp,
@@ -21279,7 +21281,6 @@ n([pl(markten),sg(markt)],de,[],
    rommel,
    staal,
    stroom,
-   super,
    taxi,
    telecom,
    termijn,
@@ -22502,7 +22503,10 @@ n([pl(monsters),sg(monster)],het,[measure],
 
 n([pl(montages),sg(montage)],de,[]).
 
-n([pl(monteurs),sg(monteur)],de,[]).
+n([pl(monteurs),sg(monteur)],de,[],
+  [elektro,
+   i(elektro,electro)
+  ]).
 
 n([pl(monturen),sg(montuur)],het,[]).
 
@@ -23147,7 +23151,8 @@ n([pl(netten),sg(net)],het,[],
    dealer,
    distributie,
    drijf,
-   s(electriciteit),
+   s(elektriciteit),
+   i(elektriciteit,electriciteits),
    energie,
    ether,
    familie,
@@ -27341,7 +27346,8 @@ n([mass(praal)],de,[],[zege]).
 
 n([mass(praat)],de,[]).
 
-n([pl(praatjes),sg(praatje)],het,[sbar]).
+n([stem(praat_DIM),
+   pl(praatjes),sg(praatje)],het,[sbar]).
 
 n([mass([praat,voor,de,vaak])],de,[]).
 
@@ -30355,7 +30361,12 @@ n([pl('scenario\'s'),sg(scenario)],het,[sbar,vp],
 
 n([sg(scenarist),pl(scenaristen)],de,[]).
 
-n([mass(scene)],de,[]).
+%% deel van toneelstuk/film; scène schoppen
+n([mass(scène)],de,[]).
+
+%% "sien", sociale omgeving
+n([mass(scene)],de,[],
+  [muziek]).
 
 n([mass(scepsis)],de,[sbar]).
 
@@ -32249,7 +32260,7 @@ n([pl(speelsters),sg(speelster)],de,[],
   [badminton,
    cirkel,
    hoek,
-   hoofdrol,
+   i(hoofd_rol,hoofdrol),
    jeugd,
    mede,
    ster,
@@ -32760,11 +32771,14 @@ n([pl(staatshoofden),sg(staatshoofd)],het,[]).
 
 n([pl(staatslieden),pl(staatslui),pl(staatsmannen),sg(staatsman)],de,[]).
 
-n([pl(staatssecretarissen),sg(staatssecretaris)],de,[app_measure],
+n([pl(staatssecretarissen),sg(staatssecretaris),
+   pl(staatsecretarissen),sg(staatsecretaris)],de,[app_measure],
   [h(oud)]).
 
 n([sg(staatssecretariaat),
-   pl(staatssecretariaten)],het,[app_measure]).
+   pl(staatssecretariaten),
+   sg(staatsecretariaat),
+   pl(staatsecretariaten)],het,[app_measure]).
 
 n([pl(staatsvormen),sg(staatsvorm)],de,[]).
 
@@ -33928,6 +33942,8 @@ n([mass(superioriteit)],de,[]).
 
 n([sg(superlatief),pl(superlatieven)],both,[]).
 
+n([sg(supermarkt),pl(supermarkten)],de,[]).
+
 n([mass(supervisie)],de,[]).
 
 % geen super_vis_oren
@@ -34610,8 +34626,6 @@ n([sg(tenniselleboog),pl(tennisellebogen)],de,[]).
 n([pl(tennisbanen),sg(tennisbaan)],de,[]).
 
 n([pl(tenniscourts),sg(tenniscourt)],het,[]).
-
-n([pl(tenniskampioenschappen),sg(tenniskampioenschap)],het,[]).
 
 n([pl(tennissers),sg(tennisser)],de,[]).
 
@@ -35370,7 +35384,7 @@ n([pl(topconferenties),sg(topconferentie)],de,[]).
 
 n([sg(topic),pl(topics)],both,[]).
 
-n([pl(topmannen),sg(topman)],de,[]).
+n([pl(topmannen),sg(topman),pl(toplui)],de,[]).
 
 n([pl(toppers),sg(topper)],de,[],[sub]).
 
@@ -38423,7 +38437,8 @@ n([pl(vluchtelingen),sg(vluchteling)],de,[],
   [boot,
    h('Hutu')]).
 
-n([sg('VN-secretaris-generaal'),pl('VN-secretarissen-generaal')],de,[]).
+n([stem('VN-secretaris_generaal'),
+   sg('VN-secretaris-generaal'),pl('VN-secretarissen-generaal')],de,[]).
 
 n([sg('VN-militair'),pl('VN-militairen')],de,[]).
 
@@ -40066,17 +40081,6 @@ n([pl(werelddelen),sg(werelddeel)],het,[]).
 
 n([mass(wereldgebeuren)],het,[]).
 
-n([pl(wereldkampioenen),
-   sg(wereldkampioen)],de,[app_measure],
-  [h(ex),
-   h(oud),oud]).
-
-n([sg(wereldkampioene)],de,[app_measure],
-  [h(ex),
-   h(oud),oud]).
-
-n([pl(wereldkampioenschappen),sg(wereldkampioenschap)],het,[app_measure]).
-
 n([mass(wereldliteratuur)],de,[]).
 
 n([mass(wereldluchtvaart)],de,[]).
@@ -40976,7 +40980,8 @@ n([pl(zaken),sg(zaak)],de,
   [i(bloem,bloemen),
    i(broodje,broodjes),
    'doe-het-zelf',
-   electronica,
+   elektronika,
+   i(elektronika,electronica),
    i(fiets,fietsen),
    fotozaak,
    geld,
@@ -41402,6 +41407,8 @@ n([pl(zijkanten),sg(zijkant)],de,[]).
 n([pl(zijnen),pl(zijne),sg(zijne)],both,[]).
 
 n([pl(zijramen),sg(zijraam)],het,[]).
+
+n([sg(zijspan),pl(zijspannen)],de,[]).
 
 n([pl(zijsporen),sg(zijspoor)],het,[]).
 

@@ -33718,11 +33718,11 @@ a([e(tactische),
 a([e(talige),
    no_e(talig)],nonadv,[],
   [anders,
-   'Nederlands',h('Nederlands'),nederlands,
-   'Engels',h('Engels'),engels,
-   'Spaans',h('Spaans'),spaans,
-   'Duits',h('Duits'),duits,
-   'Frans',h('Frans'),frans]).
+   'Nederlands',h('Nederlands'),i('Nederlands',nederlands),
+   'Engels',h('Engels'),i('Engels',engels),
+   'Spaans',h('Spaans'),i('Spaans',spaans),
+   'Duits',h('Duits'),i('Duits',duits),
+   'Frans',h('Frans'),i('Frans',frans)]).
 
 a([e(talloze),
    no_e(talloos)],adv,[],[]).
