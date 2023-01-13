@@ -366,6 +366,8 @@ hpctests:
 
 tests: ts ds cgns t24 t28
 
+ltests: ts ds t24
+
 ts: cdbt t15 t16 t17 t18 t19 t20 t21 t22 t23 t25 t26 t27 
 
 cdbt: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 
@@ -626,15 +628,28 @@ cgn43:
 ### make ptf: compare all finished tests wrt postag accuracy
 ### make lmf: compare all finished tests wrt lemma  accuracy
 ###
-### find new/different mistakes  in lemma / postag
-###
+### make lm_diffs: find all new lemma mistakes in current tests
+### make pt_diffs: find all new postag mistakes in current tests
 
 SHELL=/bin/bash
 
 lm_diff:
-	diff <(grep ' #LM' $$suite/poslemma) <(grep ' #LM' $$suite/job*/poslemma) | grep '^[>]'
+	-diff <(grep ' #LM' $$suite/poslemma) <(grep ' #LM' $$suite/job*/log1) | grep '^[>]'
 
 pt_diff:
-	diff <(grep ' #PT' $$suite/poslemma) <(grep ' #PT' $$suite/job*/poslemma) | grep '^[>]'
+	-diff <(grep ' #PT' $$suite/poslemma) <(grep ' #PT' $$suite/job*/log1) | grep '^[>]'
 
+lm_diffs:
+	@for file in `echo $(shell ls $(ORDERED) */job*/log1 | grep -v -e fn -e fv -e ovis 2>/dev/null)`; do \
+        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
+	echo $$suite;\
+	$(MAKE) -s lm_diff suite=$$suite;\
+	done
+
+pt_diffs:
+	@for file in `echo $(shell ls $(ORDERED) */job*/log1 | grep -v -e fn -e fv -e ovis 2>/dev/null)`; do \
+        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
+	echo $$suite;\
+	$(MAKE) -s pt_diff suite=$$suite;\
+	done
 
