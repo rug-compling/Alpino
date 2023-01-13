@@ -11,7 +11,7 @@
           <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="orde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="orde" word="orde"/>
           <node begin="4" cat="pp" end="6" id="9" rel="mod">
             <node begin="4" end="5" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-            <node begin="5" buiging="met-e" end="6" getal-n="mv-n" graad="basis" id="11" lemma="geestelijk" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="obj1" root="geestelijke" word="geestelijken"/>
+            <node begin="5" end="6" getal="mv" graad="basis" id="11" lemma="geestelijke" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="geestelijke" word="geestelijken"/>
           </node>
           <node begin="6" cat="rel" end="13" id="12" rel="mod">
             <node begin="6" end="7" getal="getal" id="13" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
