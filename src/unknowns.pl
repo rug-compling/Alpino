@@ -6461,7 +6461,14 @@ construct_root(verb(_,Inf,_),Suffix,Eer/Eren,W,v_root(Prefeer,Preferen)) :-
 construct_root(_,Suffix,RootSuffix,W,Root) :-
     atom_concat(Pref,Suffix,W),
     atom_concat(Pref,RootSuffix,Root0),
-    decap(Root0,Root).
+    (   only_capitals(Pref,_)
+    ->  Root0 = Root
+    ;   alpino_lex:in_names_dictionary(_,Pref,_,[],[],_)
+    ->  Root0 = Root
+    ;   decap_first(Root0,Root)
+    ->  true
+    ;   Root0 = Root
+    ).
 
 remove_ge_if_psp(psp,Stem0,Stem) :-
     atom(Stem0),
