@@ -902,8 +902,6 @@ exceptional_stem_tag(dode,noun(de,count,sg),                  'ADJ(nom,basis,met
 exceptional_stem_tag(detineren,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',detineren).
 exceptional_stem_tag(detineren,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',detineren).
 exceptional_stem_tag(diens,determiner(pron),                  'VNW(aanw,pron,gen,vol,3m,ev)',die).
-exceptional_stem_tag(geestelijke,noun(de,count,pl),           'ADJ(nom,basis,met-e,mv-n)',geestelijk).
-exceptional_stem_tag(geestelijke,noun(de,count,sg),           'ADJ(nom,basis,met-e,zonder-n,stan)',geestelijk).
 exceptional_stem_tag(gevangen,particle(_),                    'WW(vd,vrij,zonder)',vangen).
 exceptional_stem_tag(gezien,complementizer,                   'WW(vd,vrij,zonder)',zien).
 exceptional_stem_tag(gezien,preposition(_,_),                 'WW(vd,vrij,zonder)',zien).
@@ -2787,9 +2785,6 @@ mwu_postag_frame_surf(score_cat,Surf,[ATag,'LET()',BTag]) :-
     num_postag(A,ATag),
     num_postag(B,BTag).
 
-mwu_postag_frame_surf(fixed_part(op_een_v),_,
-       ['VZ(init)','LID(onbep,stan,agr)','WW(inf,nom,zonder,zonder-n)']).
-
 mwu_postag_frame_stem_surf(adjective(het_st(_)),Stem,Surf,['LID(bep,stan,evon)',TweedePos]) :-
     atom_concat('het ',_,Stem),
     atom_concat(_,Gek,Surf),
@@ -2809,6 +2804,9 @@ mwu_postag_frame_stem_surf(adjective(het_st(_)),_,Surf,['VZ(init)',Pron,'ADJ(nom
     alpino_util:codes_to_words(Codes,[Op,Zijn,_Vroegst]),
     op(Op),
     zijn_tag(Zijn,Pron,_).
+
+mwu_postag_frame_stem_surf(fixed_part(op_een_v),v_root(_,Stem),_,
+       ['VZ(init)','LID(onbep,stan,agr)','WW(inf,nom,zonder,zonder-n)'],Stem).
 
 mwu_postag_frame_stem_surf(particle(tekort),tekort,'te kort',['BW()','ADJ(vrij,basis,zonder)'],'te kort').
 
@@ -2838,6 +2836,15 @@ mwu_postag_frame_stem_surf(waar_adverb([_In,_Ruil,_Voor,_Van]),Stem,Surf,[Atag,B
 
 mwu_postag_frame_stem_surf(complementizer(alsof),alsof,'als of',['VG(onder)','VG(onder)'],'als of').
 
+%mwu_postag_frame_stem_surf(verb(zijn,inf(no_e),ninv(intransitive,part_intransitive('ten onder'))),
+%			   v_root(ga_ten_onder,ten_onder_gaan),'ten ondergaan',['VZ(versm)','WW(inf,vrij,zonder)'],'te onder_gaan').
+
+mwu_postag_frame_stem_surf(verb(zijn,INFL,ninv(intransitive,part_intransitive('ten onder'))),
+			   v_root(ga_ten_onder,ten_onder_gaan),SURF,['VZ(versm)',POS],'te onder_gaan'):-
+    atom(SURF),
+    alpino_util:split_atom(SURF," ",[ten,_]),
+    cgn_postag_c(verb(_,INFL,intransitive),POS).
+
 st(eerst,'TW(rang,nom,zonder-n)').
 st(eerste,'TW(rang,nom,zonder-n)').
 st(meest,'VNW(onbep,grad,stan,vrij,zonder,sup)').
@@ -2853,6 +2860,16 @@ mwu_postag_frame_stem(adjective(pred_er(_)),Stem,['ADJ(vrij,comp,zonder)','VZ(fi
     atom(Stem),
     alpino_util:split_atom(Stem," ",[AdjEr,aan]),
     alpino_lex:lexicon(adjective(er(_)),Kalm,[AdjEr],[],_).
+mwu_postag_frame_stem(np(year),Stem,PosTags,Stems) :-
+    atom(Stem),
+    atom_codes(Stem,Codes),
+    alpino_util:split_string(Codes," ",Words),
+    tmp_np(Words,PosTags,Stems).
+mwu_postag_frame_stem(tmp_np,Stem,PosTags,Stems) :-
+    atom(Stem),
+    atom_codes(Stem,Codes),
+    alpino_util:split_string(Codes," ",Words),
+    tmp_np(Words,PosTags,Stems).
 
 mwu_postag_frame_stem(pre_np_adverb,Stem,['N(soort,ev,basis,onz,stan)','TW(hoofd,vrij)']):-
     atom(Stem),
@@ -2876,23 +2893,19 @@ mwu_postag_frame_stem(er_adverb(_),Stem,['VNW(aanw,adv-pron,stan,red,3,getal)','
 mwu_postag_frame_stem(waar_adverb(_),Stem,['VNW(vb,adv-pron,obl,vol,3o,getal)','BW()']) :-
     atom(Stem),
     atom_concat('waar ',_,Stem).
-mwu_postag_frame_stem(tmp_np,Stem,PosTags) :-
-    atom(Stem),
-    atom_codes(Stem,Codes),
-    alpino_util:split_string(Codes," ",Words),
-    tmp_np(Words,PosTags).
-mwu_postag_frame_stem(np(year),Stem,PosTags) :-
-    atom(Stem),
-    atom_codes(Stem,Codes),
-    alpino_util:split_string(Codes," ",Words),
-    tmp_np(Words,PosTags).
 mwu_postag_frame_stem(noun(het,count,pl),gelijkspel,['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)']).
 
 
-tmp_np([],[]).
-tmp_np([W|Ws],[P|Ps]) :-
+tmp_np([],[],[]).
+tmp_np([W|Ws],[P|Ps],[S|Ss]) :-
+    tmp_np1(W,Ws,P,S),
+    tmp_np(Ws,Ps,Ss).
+
+tmp_np1("een",[_,"of"|_],'LID(onbep,stan,agr)',een).
+tmp_np1("een",_,'TW(hoofd,vrij)',één).
+tmp_np1(W,_Ctxt,P,S) :-
     tmp_np1(W,P),
-    tmp_np(Ws,Ps).
+    atom_codes(S,W).
 
 tmp_np1("+",'SPEC(symb)').
 tmp_np1(String,'N(eigen,ev,basis,zijd,stan)') :-
@@ -2923,7 +2936,6 @@ tmp_np1("v.C.",'SPEC(afk)').
 tmp_np1("Chr.",'SPEC(afk)').
 tmp_np1("Chr",'SPEC(afk)').
 tmp_np1("Christus",'N(eigen,ev,basis,zijd,stan)').
-tmp_np1("een",'LID(onbep,stan,agr)').
 tmp_np1("of",'VG(neven)').
 tmp_np1(_,'TW(hoofd,vrij)').
 
