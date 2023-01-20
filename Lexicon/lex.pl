@@ -623,6 +623,7 @@ lexicon_(Word,proper_name(X,'PER'),Name,Ws1,Ws,His,_LC) :-
 %% one word genetive names
 lexicon_(Word,Cat,Stem,Ws,Ws,gen(His),_LC) :-
     Word \== 'Wiens',
+    Word \== 'Ons',
     genitive_s(Word,Name),
     in_names_dictionary(Cat0,Name,Stem,[],[],His),
     determiner_from_name(Cat0,Cat).

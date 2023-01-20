@@ -437,7 +437,9 @@ a([e('Amerikaanse'),
    ste('Amerikaanste')],adv,[],
   [h(anti),
    h(niet),
-   h(pro)]).
+   h(pro),
+   h('Latijns'),
+   s('Latijn')]).
 
 a([e('Amersfoortse'),
    no_e('Amersfoorts')],nonadv,[],[]).
@@ -570,7 +572,8 @@ a([e('Boheemse'),
 a([e('Bossche'),
    no_e('Bossch')],nonadv,[],[]).
 
-a([e('Boergondische'),
+a([stem('Bourgondisch'),
+   e('Boergondische'),
    e('Bourgondische'),
    no_e('Boergondisch'),
    no_e('Bourgondisch')],adv,[],[]).
@@ -580,9 +583,6 @@ a([e('Boliviaanse'),
 
 a([e('Bosnische'),
    no_e('Bosnisch')],adv,[],[]).
-
-a([e('Bosnisch-Servische'),
-   no_e('Bosnisch-Servisch')],adv,[],[]).
 
 a([e('Brabantse'),
    no_e('Brabants')],nonadv,[],[]).
@@ -695,7 +695,8 @@ a([e('Drentse'),
 a([both('Dubliner')],nonadv,[],[]).
 
 a([e('Duitse'),
-   no_e('Duits')],adv,[],[]).
+   no_e('Duits')],adv,[],
+  [h('Frans')]).
 
 a([e('Egyptische'),
    no_e('Egyptisch')],nonadv,[],[]).
@@ -742,9 +743,6 @@ a([e('Frankische'),
 
 a([e('Franse'),
    no_e('Frans')],nonadv,[],[h('Zuid')]).
-
-a([e('Frans-Duitse'),
-   no_e('Frans-Duits')],nonadv,[],[]).
 
 a([e('Friese'),
    no_e('Fries')],nonadv,[],[]).
@@ -800,6 +798,8 @@ a([both('Haarlemmer')],nonadv,[],[]).
 
 a([e('Haarlemse'),
    no_e('Haarlems')],nonadv,[],[]).
+
+a([e('Hasselstse'),no_e('Hasselts')],nonadv,[],[]).
 
 a([e('Hawaiiaanse'),
    no_e('Hawaiiaans')],nonadv,[],[]).
@@ -937,11 +937,6 @@ a([e('Latijnse'),
    no_e('Latijns'),
    st('Latijnst'),
    ste('Latijnste')],nonadv,[],[]).
-
-a([e('Latijns-Amerikaanse'),
-   no_e('Latijns-Amerikaans'),
-   e('Latijnsamerikaanse'),
-   no_e('Latijnsamerikaans')],nonadv,[],[]).
 
 a([both('Leeuwarder')],nonadv,[],[]).
 
@@ -1122,6 +1117,9 @@ a([e('Oostduitse'),
    no_e('Oostduits'),
    e('Oost-Duitse')],nonadv,[],[]).
 
+a([e('Oostendse'),
+   no_e('Oostends')],nonadv,[],[]).
+
 a([e('Oostenrijkse'),
    no_e('Oostenrijks')],nonadv,[],[]).
 
@@ -1236,7 +1234,11 @@ a([e('Schotse'),
 a([e('Senegalese'),no_e('Senegalees')],nonadv,[],[]).
 
 a([e('Servische'),
-   no_e('Servisch')],nonadv,[],[h(pro)]).
+   no_e('Servisch'),
+   e('servische'),
+   no_e('servisch')],nonadv,[],
+  [h('Bosnisch'),
+   h(pro)]).
 
 a([e('Siamese'),
    no_e('Siamees')],nonadv,[],[]).
@@ -2401,7 +2403,8 @@ a([pred(af)],nonadv,[],[]).
 a([ge_e(afbetaalde),
    ge_no_e(afbetaald)],adv,[],[]).
 
-a([both(afdoende),
+a([stem(afdoende),
+   both(afdoende),
    no_e(afdoend)],adv,
   [subject_sbar,
    subject_vp],[]).
@@ -3437,7 +3440,8 @@ a([e(arbeidsintensieve),
    st(arbeidsintensiefst),
    ste(arbeidsintensiefste)],nonadv,[],[]).
 
-a([e(arbeidsongeschikte),
+a([stem(arbeid_ongeschikt),
+   e(arbeidsongeschikte),
    no_e(arbeidsongeschikt)],nonadv,[],[]).
 
 a([e(arbitraire),
@@ -5751,13 +5755,17 @@ a([e(bewuste),
    er_pp_sbar(van),
    er_pp_vp(van),
    pp(van)
-  ],[wel]).
+  ],
+  [wel]).
 
 a([e(bewuste),
    er(bewuster),
    ere(bewustere),
    no_e(bewust)],both,
-  [],[milieu]).
+  [],
+  [zelf,
+   h(zelf),
+   milieu]).
 
 a([e(bewusteloze),
    no_e(bewusteloos)],padv,[],[]).
@@ -6878,12 +6886,6 @@ a([e(centralistische),
    st(centralistischt),
    ste(centralistischte)],adv,[],[]).
 
-a([e('centrum-linkse'),
-   no_e('centrum-links')],adv,[],[]).
-
-a([e('centrum-rechtse'),
-   no_e('centrum-rechts')],adv,[],[]).
-
 a([e(cerebrale),
    no_e(cerebraal)],nonadv,[],[]).
 
@@ -6965,11 +6967,6 @@ a([e(christelijke),
    ste(kristelijkste)],adv,[],
   [h(joods),
    h(protestants)]).
-
-a([e('christen-democratische'),
-   no_e('christen-democratisch'),
-   e([christen,democratische]),
-   no_e([christen,democratisch])],adv,[],[]).
 
 a([stof(chromen)],nonadv,[],[]).
 
@@ -7397,11 +7394,6 @@ a([e(contractuele),
 a([no_e(contraproductief),
    e(contraproductieve)],adv,[],[]).
 
-a([e('contra-revolutionaire'),
-   e(contrarevolutionaire),
-   no_e('contra-revolutionair'),
-   no_e(contrarevolutionair)],adv,[],[]).
-
 a([e(controleerbare),
    e(kontroleerbare),
    er(controleerbaarder),
@@ -7598,7 +7590,10 @@ a([e(culturele),
    ere(culturelere),
    no_e(cultureel),
    st(cultureelst),
-   ste(cultureelste)],adv,[],[inter]).
+   ste(cultureelste)],adv,[],
+  [inter,
+   multi,h(multi),
+   h(sociaal)]).
 
 a([e(cumulatieve),
    er(cumulatiever),
@@ -7875,7 +7870,9 @@ a([e(democratische),
    ste(democratischte),
    ste(demokratischte)],adv,
   [subject_vp,
-   subject_sbar],[]).
+   subject_sbar],
+  [h(christen), f([christen]),
+   h(sociaal)]).
 
 a([e(demografische),
    no_e(demografisch)],adv,[],[]).
@@ -9281,7 +9278,8 @@ a([e(economische),
   [h(macro),
    h(micro),
    h(financieel),
-   sociaal]).
+   sociaal,
+   h(sociaal)]).
 
 a([e(edele),
    er(edeler),
@@ -10102,9 +10100,6 @@ a([e(extreme),
    st(extreemst),
    ste(extreemste)],adv,[],[]).
 
-a([e('extreem-rechtse'),
-   no_e('extreem-rechts')],adv,[],[]).
-
 a([e(extremistische),
    no_e(extremistisch)],adv,[],
   [h(links),
@@ -10665,7 +10660,8 @@ a([e(functionele),
    st(functioneelst),
    st(funktioneelst),
    ste(functioneelste),
-   ste(funktioneelste)],adv,[],[]).
+   ste(funktioneelste)],adv,[],
+  [multi,h(multi)]).
 
 a([e(fundamentalistische),
    no_e(fundamentalistisch)],adv,[],[h(moslim)]).
@@ -11178,7 +11174,9 @@ a([ge_e(gebombardeerde),
    ge_no_e(gebombardeerd)],adv,[],[]).
 
 a([ge_both(gebonden)],adv,
-  [pp(aan)],[tijd]).
+  [pp(aan)],
+  [niet,h(niet),
+   tijd]).
 
 a([ge_both(gebonkt)],adv,[],[]).
 
@@ -17550,6 +17548,10 @@ a([e(goedaardige),
 a([e(goedbedoelde),
    no_e(goedbedoeld)],adv,[],[]).
 
+a([stem(goed_bedoelen),
+   end(goedbedoelend),
+   ende(goedbedoelende)],padv,[],[]).
+
 a([ge_e(goedgekeurde),
    ge_no_e(goedgekeurd)],adv,[],[]).
 
@@ -20843,7 +20845,8 @@ a([e(klassieke),
    st(klassiekst),
    ste(klassiekste)],adv,
   [subject_vp,
-   subject_sbar],[]).
+   subject_sbar],
+  [neo,h(neo)]).
 
 a([e(klassikale),
    no_e(klassikaal)],adv,[],[]).
@@ -21346,7 +21349,9 @@ a([e(kritische),
    ere(kritischere),
    no_e(kritisch),
    st(kritischt),
-   ste(kritischte)],adv,[],[]).
+   ste(kritischte)],adv,[],
+  [maatschappij,h(maatschappij)
+  ]).
 
 a([e(krolse),
    er(krolser),
@@ -22028,6 +22033,7 @@ a([e(liberale),
    st(liberaalst),
    ste(liberaalste)],adv,[],
   [h(sociaal),
+   h(links),
    neo]).
 
 a([e(libertijnse),
@@ -22213,7 +22219,10 @@ a([e(linkse),
    ere(linksere),
    postn_no_e(links),
    st(linkst),
-   ste(linkste)],dir_locadv,[],[h(ultra),ultra]).
+   ste(linkste)],dir_locadv,[],
+  [h(centrum),
+   extreem,h(extreem),
+   h(ultra),ultra]).
 
 a([stof(linnen)],nonadv,[],[]).
 
@@ -22535,7 +22544,8 @@ a([e(luttele),
    st(luttelst),
    ste(luttelste)],adv,[],[]).
 
-a([both(luxe),
+a([stem(luxe),
+   both(luxe),
    no_e(lux),
    er(luxer),
    ere(luxere)],adv,[],[super,
@@ -22581,19 +22591,6 @@ a([stem(maat_geven),
 
 a([e(maatschappelijke),
    no_e(maatschappelijk)],adv,[],[]).
-
-a([e('maatschappij-kritische'),
-   e(maatschappijkritische),
-   er('maatschappij-kritischer'),
-   er(maatschappijkritischer),
-   ere('maatschappij-kritischere'),
-   ere(maatschappijkritischere),
-   no_e('maatschappij-kritisch'),
-   no_e(maatschappijkritisch),
-   st('maatschappij-kritischt'),
-   st(maatschappijkritischt),
-   ste('maatschappij-kritischte'),
-   ste(maatschappijkritischte)],nonadv,[],[]).
 
 a([e(macabere),
    er(macaberder),
@@ -22827,7 +22824,8 @@ a([e(materiële),
 
 a([stof(matglazen)],nonadv,[],[]).
 
-a([e(matematische),
+a([stem(mathematisch),
+   e(matematische),
    e(mathematische),
    no_e(matematisch),
    no_e(mathematisch)],adv,[],[]).
@@ -22975,7 +22973,8 @@ a([e(meelijwekkende),
    st(meelijwekkendst),
    ste(meelijwekkendste)],adv,[],[]).
 
-a([e(meerdere),
+a([stem(meerdere),
+   e(meerdere),
    no_e(meerder)],nonadv,[],[]).
 
 a([e(meerderjarige),
@@ -23705,18 +23704,8 @@ a([e(mulle),
    st(mulst),
    ste(mulste)],nonadv,[],[]).
 
-a([e(multiculturele),
-   no_e(multicultureel),
-   e('multi-culturele'),
-   no_e('multi-cultureel')],adv,[],[]).
-
 a([e(multidisciplinaire),
    no_e(multidisciplinair)],nonadv,[],[]).
-
-a([e(multifunctionele),
-   no_e(multifunctioneel),
-   e('multi-functionele'),
-   no_e('multi-functioneel')],adv,[],[]).
 
 a([e(multilaterale),
    no_e(multilateraal)],adv,[],[]).
@@ -23966,9 +23955,6 @@ a([er(nationaler),
    e(nationale),
    no_e(nationaal)],adv,[],[trans]).
 
-a([e('nationaal-socialistische'),
-   no_e('nationaal-socialistisch')],nonadv,[],[]).
-
 a([e(nationalistische),
    er(nationalistischer),
    ere(nationalistischere),
@@ -24145,11 +24131,6 @@ a([both(negentiger)],nonadv,[],[]).
 a([both([nek,aan,nek]),
    both('nek-aan-nek')],nonadv,[],[]).
 
-a([e('neo-klassieke'),
-   e(neoklassieke),
-   no_e('neo-klassiek'),
-   no_e(neoklassiek)],nonadv,[],[]).
-
 a([both(nep),
    e(neppe)],adv,[],[]).
 
@@ -24217,8 +24198,6 @@ a([e(nevenstaande),
    no_e(nevenstaand)],nonadv,[],[]).
 
 a([both(nice)],nonadv,[],[]).
-
-a([both('niet-gebonden')],nonadv,[],[]).
 
 a([e(nietige),
    er(nietiger),
@@ -24337,9 +24316,6 @@ a([e(nominale),
 
 a([both('non-stop'),
    both([non,stop])],adv,[],[]).
-
-a([e('non-verbale'),
-   no_e('non-verbaal')],adv,[],[]).
 
 a([e(nonchalante),
    er(nonchalanter),
@@ -29553,11 +29529,6 @@ a([e(partijdige),
    st(partijdigst),
    ste(partijdigste)],adv,[],[]).
 
-a([e('partij-politieke'),
-   e(partijpolitieke),
-   no_e('partij-politiek'),
-   no_e(partijpolitiek)],adv,[],[]).
-
 a([both(parttime)],adv,[],[]).
 
 a([no_e(passeerbaar),
@@ -30012,7 +29983,9 @@ a([e(politieke),
    ere(politiekere),
    no_e(politiek),
    st(politiekst),
-   ste(politiekste)],adv,[],[geo]).
+   ste(politiekste)],adv,[],
+  [geo,
+   partij,h(partij)]).
 
 a([e(politionele),
    no_e(politioneel)],adv,[],[]).
@@ -30882,8 +30855,10 @@ a([e(rechtse),
    er(rechtser),
    ere(rechtsere)
   ],dir_locadv,[],
-  [ultra,h(ultra),
-   extreem]).
+  [h(centrum),
+   h(extreem),extreem,
+   h(links),
+   ultra,h(ultra)]).
 
 a([both(rechtschapen),
    er(rechtschapener),
@@ -31166,7 +31141,9 @@ a([e(revolutionaire),
    st(revolutionairst),
    ste(revolutionairste)],adv,
   [subject_vp,
-   subject_sbar],[]).
+   subject_sbar],
+  [contra,h(contra)
+  ]).
 
 a([e(riante),
    er(rianter),
@@ -31439,9 +31416,6 @@ a([e(rode),
    ste(roodste)],adv,[],
   [donker,
    licht]).
-
-a([e('rood-groene'),
-   no_e('rood-groen')],nonadv,[],[]).
 
 a([e(roodachtige),
    er(roodachtiger),
@@ -32392,7 +32366,8 @@ a([e(sippe),
 a([e(sjieke),
    no_e(sjiek)],adv,[],[]).
 
-a([e('sji\'itische'),
+a([stem(sjiitisch),
+   e('sji\'itische'),
    no_e('sji\'itisch'),
    e('sji\'ietische'),
    no_e('sji\'ietisch'),
@@ -32677,45 +32652,13 @@ a([e(sociale),
    st(sociaalst),
    ste(sociaalste)],adv,[],[]).
 
-a([e('sociaal-culturele'),
-   er('sociaal-cultureler'),
-   ere('sociaal-culturelere'),
-   no_e('sociaal-cultureel'),
-   st('sociaal-cultureelst'),
-   ste('sociaal-cultureelste')],adv,[],[]).
-
-a([e('sociaal-democratische'),
-   e('sociaal-demokratische'),
-   er('sociaal-democratischer'),
-   er('sociaal-demokratischer'),
-   ere('sociaal-democratischere'),
-   ere('sociaal-demokratischere'),
-   no_e('sociaal-democratisch'),
-   no_e('sociaal-demokratisch'),
-   st('sociaal-democratischt'),
-   st('sociaal-demokratischt'),
-   ste('sociaal-democratischte'),
-   ste('sociaal-demokratischte')],nonadv,[],[]).
-
-a([e('sociaal-economische'),
-   e('sociaal-ekonomische'),
-   er('sociaal-economischer'),
-   er('sociaal-ekonomischer'),
-   ere('sociaal-economischere'),
-   ere('sociaal-ekonomischere'),
-   no_e('sociaal-economisch'),
-   no_e('sociaal-ekonomisch'),
-   st('sociaal-economischt'),
-   st('sociaal-ekonomischt'),
-   ste('sociaal-economischte'),
-   ste('sociaal-ekonomischte')],adv,[],[]).
-
 a([e(socialistische),
    er(socialistischer),
    ere(socialistischere),
    no_e(socialistisch),
    st(socialistischt),
-   ste(socialistischte)],adv,[],[]).
+   ste(socialistischte)],adv,[],
+  [h(nationaal),nationaal]).
 
 a([e(sociologische),
    no_e(sociologisch)],adv,[],[]).
@@ -35997,7 +35940,7 @@ a([ge_e(verarmde),
    ge_no_e(verarmd)],adv,[],[]).
 
 a([e(verbale),
-   no_e(verbaal)],adv,[],[]).
+   no_e(verbaal)],adv,[],[h(non)]).
 
 a([ge_e(verbaasde),
    er(verbaasder),
@@ -36234,8 +36177,9 @@ a([e(verderfelijke),
    st(verderfelijkst),
    ste(verderfelijkste)],nonadv,[],[]).
 
-a([e(verdergaande),
-   no_e(verdergaand)],nonadv,[],[]).
+a([stem(verder_gaan),
+   ende(verdergaande),
+   end(verdergaand)],nonadv,[],[]).
 
 a([ge_e(verdichte),
    ge_no_e(verdicht)],adv,[],[]).
@@ -39210,7 +39154,8 @@ a([e(vrijzinnige),
    ere(vrijzinnigere),
    no_e(vrijzinnig),
    st(vrijzinnigst),
-   ste(vrijzinnigste)],adv,[],[]).
+   ste(vrijzinnigste)],adv,[],
+  [h(links)]).
 
 a([e(vroege),
    er(vroeger),
@@ -40455,15 +40400,6 @@ a([e(zeldzame),
    no_e(zeldzaam),
    st(zeldzaamst),
    ste(zeldzaamste)],adv,[],[]).
-
-a([no_e(zelfbewust),
-   e('zelf-bewuste'),
-   e(zelfbewuste),
-   er('zelf-bewuster'),
-   er(zelfbewuster),
-   ere('zelf-bewustere'),
-   ere(zelfbewustere),
-   no_e('zelf-bewust')],padv,[],[]).
 
 a([stof(zelfde)],nonadv,[],[]).
 

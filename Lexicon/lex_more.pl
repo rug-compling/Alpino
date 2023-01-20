@@ -5,12 +5,13 @@
 %%% amounts
 %%%
 %%% badly needs documentation
+%%% badly needs good lemmatization
 
 :- expects_dialect(sicstus).
 
 :- discontiguous
-    phrasal_entry/4.
-%    phrasal_entry/5.
+    phrasal_entry/4,
+    phrasal_entry/5.
 
 :- use_module(alpino('src/latin1')).
 
@@ -749,11 +750,14 @@ phrasal_entry(adjective(no_e(nonadv)),numberjarig) -->
     n_word(Jarig),
     { jarig(Jarig) }.
 
-phrasal_entry(adjective(e),numberjarig) -->
-    { hdrug_util:debug_message(4,"16 jarige~n",[]) },
-    number_expression_word,
-    n_word(Jarige),
-    { jarige(Jarige,_) }.  % todo correct stem
+phrasal_entry(adjective(e),Stem,numberjarig,P0,P) :-
+    hdrug_util:debug_message(4,"16 jarige~n",[]),
+    number_expression_word(P0,P1),
+    lists:append(Pref,P1,P0),
+    n_word(Jarige,P1,P),
+    jarige(Jarige,Jarig),
+    lists:append(Pref,[Jarig],Stems),
+    hdrug_util:concat_all(Stems,Stem,' ').
 
 phrasal_entry(adjective(both(nonadv)),numberpersoons) -->
     { hdrug_util:debug_message(4,"numberpersoons~n",[]) },

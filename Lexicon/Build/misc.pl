@@ -4062,10 +4062,10 @@ conj(alsook,           alsook,    maar).
 conj(alswel,           [als,wel], maar).
 conj(alswel,           alswel,    maar).
 conj(annex,            annex).
-conj(cq,               cq).
-conj(cq,               'cq.').
-conj(cq,               'c.q.').
-conj('dan wel',           [dan,wel], maar).
+conj('c.q.',           cq).
+conj('c.q.',           'cq.').
+conj('c.q.',           'c.q.').
+conj('dan wel',        [dan,wel], maar).
 conj(danwel,           danwel,    maar).
 conj(doch,             doch).
 conj(dus,              dus).
@@ -7668,7 +7668,7 @@ nominalized_adjective(duperen,gedupeerden).
 nominalized_adjective(gijzelen,gegijzelden).
 nominalized_adjective(gehandicapt,gehandicapten).
 nominalized_adjective(huwen,gehuwden).
-nominalized_adjective(interesseen,geïnteresseerden).
+nominalized_adjective(interesseren,geïnteresseerden).
 nominalized_adjective(kwetsten,gekwetsten).
 nominalized_adjective(geleerd,geleerden).
 nominalized_adjective(geliefd,geliefden).
@@ -8815,6 +8815,7 @@ term([point,of,no,return]).
 term([policy,mix]).
 term(postscript).
 term([primus,inter,pares]).
+term([private,banker],[private,bankers]).
 term([quality,time]).
 term([quick,fix]).
 term([quid,pro,quo]).  % Clarice!
