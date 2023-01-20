@@ -54,7 +54,7 @@ mwu_postag('Al Qaida-man',['SPEC(deeleigen)','N(soort,ev,basis,zijd,stan)'],['Al
 mwu_postag('als gevolg van',['VG(onder)','N(soort,ev,basis,onz,stan)','VZ(init)'],[als,gevolg,van]).
 mwu_postag('als het ware',['VG(onder)','VNW(pers,pron,stan,red,3,ev,onz)','WW(pv,conj,ev)'],[als,het,zijn]).
 mwu_postag('al te',['BW()','BW()'],[al,te]).
-mwu_postag('Amerikaanse Burgeroorlog',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Amerikaans',burgeroorlog]).
+mwu_postag('Amerikaanse Burgeroorlog',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Amerikaans',burger_oorlog]).
 mwu_postag('Amstel , Gooi en vechtstreek',['SPEC(deeleigen)','LET()','SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)'],['Amstel',',','Gooi',en,'Vechtstreek']).
 mwu_postag('Amsterdamse Hogeschool voor de Kunsten',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],['Amsterdams',hogeschool,voor,de,kunst]).
 mwu_postag('Amsterdamse School',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Amsterdams',school]).
@@ -868,6 +868,7 @@ mwu_postag('Nationale Raad voor Duurzame Ontwikkeling',['ADJ(prenom,basis,met-e,
 mwu_postag('Nationale Strategie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[nationaal,strategie]).
 mwu_postag('Nationale Veiligheidsraad',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[nationaal,veiligheidsraad]).
 mwu_postag('Nationale Voorleesdagen',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[nationaal,voorleesdag]).
+mwu_postag('nature van',['VZ(init)','N(soort,ev,basis,dat)'],[van,natuur]).
 mwu_postag('nederland 3',['N(eigen,ev,basis,onz,stan)','TW(hoofd,vrij)'],['Nederland','3']).
 mwu_postag('Nederlandse Bibliotheek Dienst',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)'],['Nederlands',bibliotheek,dienst]).
 mwu_postag('Nederlandse Investeringsbank voor Ontwikkelingslanden',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,mv,basis)'],['Nederlands',investeringsbank,voor,ontwikkelingsland]).
@@ -1055,14 +1056,30 @@ mwu_postag('Slag bij Gettysburg',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(ei
 mwu_postag('Slag bij Shiloh',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,zijd,stan)'],[slag,bij,'Shiloh']).
 mwu_postag('Slag in de Wildernis',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[slag,in,de,wildernis]).
 mwu_postag('Slag op het Lechveld',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[slag,op,het,'Lechveld']).
-mwu_postag('\'s lands',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,land]).
-mwu_postag('\'s Lands',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,land]).
+mwu_postag('\'s land',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,land]).
+mwu_postag('\'s Land',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,land]).
 mwu_postag('\'s middags',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,middag]).
 mwu_postag('\'s morgens',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,morgen]).
 mwu_postag('\'s nachts',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,nacht]).
 mwu_postag('s nachts',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,nacht]).
 mwu_postag('\'s Nachts',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,nacht]).
 mwu_postag('\'s ochtends',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,ochtend]).
+mwu_postag('\'s rijk',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,rijk]).
+mwu_postag('\'s rijk',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,rijk]).
+mwu_postag('\'s koning',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,koning]).
+mwu_postag('\'s koning',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,koning]).
+mwu_postag('\'s keizer',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,keizer]).
+mwu_postag('\'s keizer',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,keizer]).
+mwu_postag('\'s lezer',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,lezer]).
+mwu_postag('\'s lezer',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,lezer]).
+mwu_postag('\'s liefde',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,liefde]).
+mwu_postag('\'s liefde',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,liefde]).
+mwu_postag('\'s man',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,man]).
+mwu_postag('\'s man',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,man]).
+mwu_postag('\'s mens',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,mens]).
+mwu_postag('\'s mens',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,mens]).
+mwu_postag('\'s wereld',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,wereld]).
+mwu_postag('\'s wereld',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,wereld]).
 mwu_postag('Sociaal Economische Raad',['ADJ(prenom,basis,zonder)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[sociaal,economisch,raad]).
 mwu_postag('Sociaal-Economische Raad Vlaanderen',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,onz,stan)'],['sociaal-economisch',raad,'Vlaanderen']).
 mwu_postag('Sociaal-Economisch Rapport',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['sociaal-economisch',rapport]).
@@ -1105,9 +1122,10 @@ mwu_postag('Stichting Wiegendood',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,bas
 mwu_postag('Stichting Yoesuf',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)'],[stichting,'Yoesuf']).
 mwu_postag('stukje bij beetje',['N(soort,ev,dim,onz,stan)','VZ(init)','N(soort,ev,dim,onz,stan)'],[stuk,bij,beetje]).
 mwu_postag('Surinaamse Centrale Bank',['ADJ(prenom,basis,met-e,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Surinaams',centraal,bank]).
-mwu_postag('Suske en Wiske-avonturen',['SPEC(deeleigen)','SPEC(deeleigen)','N(soort,mv,basis)'],['Suske',en,'Wiske_avontuur']).
-mwu_postag('Suske en Wiske-strip',['SPEC(deeleigen)','SPEC(deeleigen)','N(soort,ev,basis,zijd,stan)'],['Suske',en,'Wiske_strip']).
-mwu_postag('Suske en Wiskeverhalen',['SPEC(deeleigen)','SPEC(deeleigen)','N(soort,mv,basis)'],['Suske',en,'Wiskeverhaal']).
+mwu_postag('Suske en Wiske',['N(eigen,ev,basis,zijd,stan)','VG(neven)','N(eigen,ev,basis,zijd,stan)'],['Suske',en,'Wiske']).
+mwu_postag('Suske en Wiske-avonturen',['N(eigen,ev,basis,zijd,stan)','VG(neven)','N(soort,mv,basis)'],['Suske',en,'Wiske_avontuur']).
+mwu_postag('Suske en Wiske-strip',['N(eigen,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],['Suske',en,'Wiske_strip']).
+mwu_postag('Suske en Wiskeverhalen',['N(eigen,ev,basis,zijd,stan)','VG(neven)','N(soort,mv,basis)'],['Suske',en,'Wiskeverhaal']).
 mwu_postag('\'s wereld',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,wereld]).
 mwu_postag('\'s werelds',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,wereld]).
 mwu_postag('\'s winters',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,winter]).
@@ -1520,6 +1538,8 @@ vreemd('prime time').
 vreemd('Prime time').
 vreemd('Private Bankers').
 vreemd('Private Banking').
+vreemd('private banker').
+vreemd('private bankers').
 vreemd('promotor fidei').
 vreemd('Purple Rain').
 vreemd('Purple Rain Tour').

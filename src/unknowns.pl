@@ -473,6 +473,13 @@ unknown_word_heuristic(P1,R1,W,Ws,"cap|~p|~p|~p~n",[W,Wmin,[Th|Tt]],_,none) :-
 	alternative([Wmin|Ws],P1,_,R1,_,cap,Tag,_),
 	[Th|Tt]).
 
+unknown_word_heuristic(P1,R1,W,Ws,"cap|~p|~p|~p~n",[W,Wmin,[Th|Tt]],_,none) :-
+    debug_message(3,"trying heuristic cap_all~n",[]),
+    cap_all(W,Wmin),
+    findall(Tag,
+	alternative([Wmin|Ws],P1,_,R1,_,cap_all,Tag,_),
+	[Th|Tt]).
+
 %% DONE? spurious analyses for different capitalized prefixes where
 %% such prefixes are not used at all
 %% DONE? this is extremely slow for long capitalized sequences too
@@ -2540,18 +2547,26 @@ guess_compound(W,Results0) :-
     Results0=Results.
 
 %% man/vrouw compounds
-guess_compoundXX(W,WLast,[Wfirst],slash) :-
+guess_compoundXX(W,WLast,[WfirstStem],slash) :-
     atom(W),
     once(atom_split(W,'/',Wfirst,WLast)),
     \+ never_compound_part(Wfirst),
-    \+ never_compound_part(WLast).
+    \+ never_compound_part(WLast),
+    (   compound_part(first,Wfirst,WfirstStem)
+    ->  true
+    ;   Wfirst = WfirstStem
+    ).
 
 %% Word-Word compounds
-guess_compoundXX(W,WLast,[Wfirst],hyphen) :-
+guess_compoundXX(W,WLast,[WfirstStem],hyphen) :-
     atom(W),
     once(atom_split(W,'-',Wfirst,WLast)),
     \+ never_compound_part(Wfirst),
-    \+ never_compound_part(WLast).
+    \+ never_compound_part(WLast),
+    (   compound_part(first,Wfirst,WfirstStem)
+    ->  true
+    ;   Wfirst = WfirstStem
+    ).
 
 %% WordWordWordWord compounds
 guess_compoundXX(W,Wmin,Parts,Len) :-
@@ -3376,10 +3391,22 @@ cap_first(Word0,Word) :-
     toupper(C0,C),
     atom_codes(Word,[C|Codes]).
 
+%% gpv => GPV
+cap_all(Word0,Word) :-
+    atom(Word0),
+    atom_codes(Word0,[C0,C1,C2|Codes0]),
+    cap_chars([C0,C1,C2|Codes0],Codes),
+    atom_codes(Word,Codes).
+
 decap_chars([],[]).
 decap_chars([C0|Cs0],[C|Cs]):-
     tolower(C0,C),
     decap_chars(Cs0,Cs).
+
+cap_chars([],[]).
+cap_chars([C0|Cs0],[C|Cs]):-
+    toupper(C0,C),
+    cap_chars(Cs0,Cs).
 
 %% replace all isupper with islower variant
 %% must at least contain 1 isupper

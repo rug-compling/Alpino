@@ -213,11 +213,6 @@ reportcurrentscore:
           echo "----- expected:";\
           grep ca-score $(suite)$(part)/score | head -n1; fi
 
-score:
-	@tail -n4 $(suite)/score
-	@$(MAKE) analyse1 files=$(suite)/poslemma
-
-
 suites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite m_suite lot_test_suite1 wpspel extra PPH PPH PPI WIKI WSU
 
 clean:
@@ -260,7 +255,7 @@ tf:
 
 ptf:
 	@echo "  OLD    NEW        SUITE"
-	@$(MAKE) -s ptf0 | tr -d '()' | awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f %s %s\n",$$1,$$2,XX,$$3}'
+	@$(MAKE) -s ptf0 | tr -d '()' | awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
 
 ptf0:
 	for file in `echo $(shell ls $(ORDERED) */*/poslemma 2>/dev/null)`; do \
@@ -445,58 +440,6 @@ cg:
            $(MAKE) -s compare_cpu cpu1=$$file cpu2=`dirname $$file`/../time;\
         done | grep '^AV '
 
-SCORES=cdb_part?/score
-TIMES=cdb_part?/time
-
-overview:
-	$(MAKE) -s overviewc overviewa overviewd overviewp overviewu overvieww overviewi overviewcgn
-
-
-overviewcgn:
-	@echo CGN:
-	@$(MAKE) -s overview0 SCORES="f[nv]??????/score" TIMES="f[nv]??????/time"
-	@echo NL CGN:
-	@$(MAKE) -s overview0 SCORES="f[n]??????/score" TIMES="f[n]??????/time"
-	@echo VL CGN:
-	@$(MAKE) -s overview0 SCORES="f[v]??????/score" TIMES="f[v]??????/time"
-
-overviewc:
-	@echo "cdb"
-	@$(MAKE) -s overview0 SCORES="cdb_part?/score"\
-                              TIMES="cdb_part?/time"
-
-overviewa:
-	@echo "cdb + pph + dpc-ind"
-	@$(MAKE) -s overview0 SCORES="cdb_part?/score dpc-ind/score PPH/score"\
-                              TIMES="cdb_part?/time dpc-ind/time PPH/time"
-
-overviewd:
-	@echo "dpc-ind"
-	@$(MAKE) -s overview0 SCORES="dpc-ind/score " TIMES="dpc-ind/time"
-
-overviewp:
-	@echo "PPH"
-	@$(MAKE) -s overview0 SCORES="PPH/score " TIMES="PPH/time"
-
-overviewu:
-	@echo "WSU"
-	@$(MAKE) -s overview0 SCORES="WSU/score " TIMES="WSU/time"
-
-overvieww:
-	@echo "wiki"
-	@$(MAKE) -s overview0 SCORES="WIKI/score " TIMES="WIKI/time"
-
-overviewi:
-	@echo "PPI"
-	@$(MAKE) -s overview0 SCORES="PPI/score " TIMES="PPI/time"
-
-overview0:
-	@$(MAKE) -s cascore | awk '{ printf "%.2f %%CA\n",$$0}'
-#	@cat $(SCORES)| grep 'BEST SCORE' | awk '{ print $$3 }' |mean|\
-                awk '{ printf "%.2f %%CA/sentence\n",$$0}'
-	@cat $(TIMES) | grep '^T#' | awk -F\| '{ print $$4 }' |\
-                mean | awk '{ printf "%.0f msec/sentence\n",$$0}'
-
 fscore:
 	@awk '/^BEST SCORE/ { OV=OV+$$5; CORR=CORR+$$7; SYS=SYS+$$9}\
              END {P=OV/SYS; R=OV/CORR; F=(2*P*R)/(P+R);\
@@ -652,4 +595,31 @@ pt_diffs:
 	echo $$suite;\
 	$(MAKE) -s pt_diff suite=$$suite;\
 	done
+
+f: cf ptf lmf
+
+d: cs pt_diffs lm_diffs
+
+PATTERNS=cdb dpc extra fn fv f[nv] PPH PPI WIKI WSU
+
+SUITESDIR=.Suites/
+
+overview:
+	@printf "%10s%8s%8s%8s%10s%8s%9s%9s\n" "PART" "CA %" "msec/s" "#s" "#w" "mean l" "lemma %" "postag %"
+	@for P in $(PATTERNS);\
+         do $(MAKE) -s overview0 PATTERN=$$P | xargs |\
+             awk '{printf "%10s%8.2f%8.0f%8s%10s%8.1f%9.2f%9.2f\n" ,$$1,$$2,$$3,$$4,$$5,$$5/$$4,$$6,$$7}';\
+         done
+	@$(MAKE) -s overview0 PATTERN= | xargs |\
+             awk '{printf "%10s%8.2f%8.0f%8s%10s%8.1f%9.2f%9.2f\n" ,"total",$$1,$$2,$$3,$$4,$$4/$$3,$$5,$$6}'
+
+overview0:
+	@echo $(PATTERN)
+	@$(MAKE) -s cascore SCORES=$(PATTERN)*/score 
+	@cat $(PATTERN)*/time | grep '^T#' | awk -F\| '{ print $$4 }' |\
+                mean 
+	@cat $(SUITESDIR)/$(PATTERN)*.sents | wc -l
+	@cat $(SUITESDIR)/$(PATTERN)*.sents | wc -w
+	@for file in `ls $(PATTERN)*/poslemma`; do cat $$file | grep '^#LM#' | tail -n1 | sed -e 's/#LM#//'; done  | awk 'END {printf "%.2f\n",100*C/T} {C = C+$$1;T=T+$$3}'
+	@for file in `ls $(PATTERN)*/poslemma`; do cat $$file | grep '^#PT#' | tail -n1 | sed -e 's/#PT#//'; done  | awk 'END {printf "%.2f\n",100*C/T} {C = C+$$1;T=T+$$3}'
 

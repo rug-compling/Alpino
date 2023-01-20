@@ -833,6 +833,8 @@ exceptional_stem_tag(weinig,adjective(st(_)),                       'VNW(onbep,g
 exceptional_stem_tag(weinig,adjective(aller_st(_)),                       'VNW(onbep,grad,stan,vrij,zonder,sup)',   weinig).  % allerminst
 exceptional_stem_tag('z\'n',determiner(pron),                       'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)',zijn).
 
+exceptional_stem_tag(één,pronoun(nwh,thi,sg,de,both,indef,strpro),  'TW(hoofd,nom,zonder-n,basis)',één).
+
 exceptional_stem_tag(twee,    noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', twee).
 exceptional_stem_tag(drie,    noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', drie).
 exceptional_stem_tag(vier,    noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', vier).
@@ -1035,8 +1037,8 @@ exceptional_stem_tag(deels,adverb,                                  'ADJ(vrij,ba
 exceptional_stem_tag(degeen,pronoun(nwh,thi,sg,de,both,def,strpro), 'VNW(aanw,det,stan,nom,met-e,zonder-n)').
 exceptional_stem_tag(degeen,pronoun(nwh,thi,pl,de,both,def,strpro), 'VNW(aanw,det,stan,nom,met-e,mv-n)').
 exceptional_stem_tag(denk, denk_ik,                                 'WW(pv,tgw,ev)').
-exceptional_stem_tag(deskundige,noun(de,count,pl),                  'ADJ(nom,basis,met-e,mv-n)').
-exceptional_stem_tag(deskundige,noun(de,count,sg),                  'ADJ(nom,basis,met-e,zonder-n,stan)').
+exceptional_stem_tag(deskundig,noun(de,count,pl),                  'ADJ(nom,basis,met-e,mv-n)').
+exceptional_stem_tag(deskundig,noun(de,count,sg),                  'ADJ(nom,basis,met-e,zonder-n,stan)').
 exceptional_stem_tag(destijds,_,                                    'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(deze,determiner(der),                          'VNW(aanw,det,gen,prenom,met-e,rest3)').
 exceptional_stem_tag(deze,determiner(de,nwh,nmod,pro,yparg),        'VNW(aanw,det,stan,prenom,met-e,rest)').
@@ -1058,7 +1060,6 @@ exceptional_stem_tag(elk,predm_adverb,                              'VNW(onbep,d
 exceptional_stem_tag(elkaar,pronoun(nwh,thi,pl,de,dat_acc,def),     'VNW(recip,pron,obl,vol,persoon,mv)').
 exceptional_stem_tag(elkaar,determiner(pron),                       'VNW(recip,pron,gen,vol,persoon,mv)').
 exceptional_stem_tag(elkander,determiner(pron),                     'VNW(recip,pron,gen,vol,persoon,mv)').
-exceptional_stem_tag(één,pronoun(nwh,thi,sg,de,both,indef,strpro),  'TW(hoofd,nom,zonder-n,dim)').
 exceptional_stem_tag(een,adjective(e),                              'VNW(onbep,det,stan,prenom,met-e,evz)').
 exceptional_stem_tag(ergens,_,                                      'VNW(onbep,adv-pron,obl,vol,3o,getal)').
 exceptional_stem_tag(even,adjective(both(tmpadv)),                  'BW()').
@@ -1375,7 +1376,14 @@ exceptional_word_tag(beiden,predm_adverb,                            'VNW(onbep,
 exceptional_word_tag('Beide',pronoun(nwh,thi,pl,de,both,indef),        'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)').
 exceptional_word_tag('Beide',predm_adverb,                             'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)').
 exceptional_word_tag('Beiden',predm_adverb,                            'VNW(onbep,grad,stan,nom,met-e,mv-n,basis)').
-exceptional_word_tag(gevangenen,_,                                   'WW(vd,nom,met-e,mv-n)').
+exceptional_word_tag(gevangene,_,                                      'WW(vd,nom,met-e,zonder-n)').
+exceptional_word_tag(gevangenen,_,                                     'WW(vd,nom,met-e,mv-n)').
+exceptional_word_tag(krijgsgevangene,_,                                'WW(vd,nom,met-e,zonder-n)').
+exceptional_word_tag(krijgsgevangenen,_,                               'WW(vd,nom,met-e,mv-n)').
+exceptional_word_tag('Gevangene',_,                                    'WW(vd,nom,met-e,zonder-n)').
+exceptional_word_tag('Gevangenen',_,                                   'WW(vd,nom,met-e,mv-n)').
+exceptional_word_tag('Krijgsgevangene',_,                              'WW(vd,nom,met-e,zonder-n)').
+exceptional_word_tag('Krijgsgevangenen',_,                             'WW(vd,nom,met-e,mv-n)').
 exceptional_word_tag('\'k',pronoun(nwh,fir,sg,de,nom,def),           'VNW(pers,pron,nomin,red,1,ev)').
 
 exceptional_word_tag('\'r',pronoun(nwh,thi,sg,de,dat_acc,def,wkpro),  'VNW(pers,pron,obl,red,3v,getal,fem)').
@@ -1390,6 +1398,12 @@ exceptional_word_tag('Mij',pronoun(nwh,fir,sg,de,dat_acc,def), 'VNW(pr,pron,obl,
 
 %% kom de gij mee
 exceptional_word_tag(de,    pronoun(nwh,inv,sg,both,both,def),       'VNW(pers,pron,dial)').
+
+exceptional_word_tag(eentje,één,één, pronoun(nwh,thi,sg,de,both,indef,strpro),  'TW(hoofd,nom,zonder-n,dim)').
+exceptional_word_tag(ééntje,één,één, pronoun(nwh,thi,sg,de,both,indef,strpro),  'TW(hoofd,nom,zonder-n,dim)').
+exceptional_word_tag('Eentje',één,één, pronoun(nwh,thi,sg,de,both,indef,strpro),  'TW(hoofd,nom,zonder-n,dim)').
+exceptional_word_tag('Eéntje',één,één, pronoun(nwh,thi,sg,de,both,indef,strpro),  'TW(hoofd,nom,zonder-n,dim)').
+
 
 exceptional_word_tag(allen,  al,al,_,                                'VNW(onbep,det,stan,nom,met-e,mv-n)').
 exceptional_word_tag('Allen',al,al,_,                                'VNW(onbep,det,stan,nom,met-e,mv-n)').
@@ -2663,6 +2677,10 @@ mwu_postag(Frame,Stem,Surf,Q0,Q,_Result) -->
     { mwu_postag_frame_surf(Frame,Surf,Tags) },
     mwu_tags(Tags,Stem,1,Q0,Q).
 
+mwu_postag(Frame,_Stem,Surf,Q0,Q,_Result) -->
+    { mwu_postag_frame_surf(Frame,Surf,Tags,Stems) },
+    mwu_tags(Tags,Stems,1,Q0,Q).
+
 mwu_postag(Frame,Stem,_Surf,Q0,Q,_Result) -->
     { mwu_postag_frame_stem(Frame,Stem,Tags,Stems) },
     mwu_tags_stems(Tags,Stems,Q0,Q).
@@ -2744,6 +2762,14 @@ mwu_tags([H|T],Stem,Pos,Q0,Q) -->
 
 %% ADJ(nom,sup,zonder,zonder-n)
 
+mwu_postag_frame_surf(with_dt(np(year),_),Surf,[ATag,'LET()',BTag],Stem) :-
+    atom(Surf),
+    atom_codes(Surf,Codes),
+    alpino_util:codes_to_words(Codes,[A,'-',B]),
+    num_postag(A,ATag),
+    num_postag(B,BTag),
+    hdrug_util:concat_all([A,'-',B],Stem,' ').
+
 %% todo: kunnen ook SPEC(symb) zijn etc.
 mwu_postag_frame_surf(number(hoofd(both)),Surf,[ATag,'LET()',BTag]) :-
     atom(Surf),
@@ -2769,13 +2795,6 @@ mwu_postag_frame_surf(number(hoofd(_)),Surf,['LET()',BTag]) :-
     atom(Surf),
     atom_codes(Surf,Codes),
     alpino_util:codes_to_words(Codes,['(',B]),
-    num_postag(B,BTag).    
-
-mwu_postag_frame_surf(with_dt(np(year),_),Surf,[ATag,'LET()',BTag]) :-
-    atom(Surf),
-    atom_codes(Surf,Codes),
-    alpino_util:codes_to_words(Codes,[A,'-',B]),
-    num_postag(A,ATag),
     num_postag(B,BTag).    
 
 mwu_postag_frame_surf(score_cat,Surf,[ATag,'LET()',BTag]) :-
@@ -2895,6 +2914,17 @@ mwu_postag_frame_stem(waar_adverb(_),Stem,['VNW(vb,adv-pron,obl,vol,3o,getal)','
     atom_concat('waar ',_,Stem).
 mwu_postag_frame_stem(noun(het,count,pl),gelijkspel,['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)']).
 
+%% 74 jarige
+mwu_postag_frame_stem(adjective(e),Stem,['TW(hoofd,prenom,stan)','ADJ(prenom,basis,met-e,stan)']) :-
+    atom(Stem),
+    atom_concat(Num,' jarig',Stem),
+    alpino_lex:parse_number(Num,_).
+
+%% 74 jarig (context dependent, really)
+mwu_postag_frame_stem(adjective(no_e(_)),Stem,['TW(hoofd,prenom,stan)','ADJ(prenom,basis,zonder)']) :-
+    atom(Stem),
+    atom_concat(Num,' jarig',Stem),
+    alpino_lex:parse_number(Num,_).
 
 tmp_np([],[],[]).
 tmp_np([W|Ws],[P|Ps],[S|Ss]) :-
