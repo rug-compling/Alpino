@@ -14,7 +14,7 @@ all:
 	$(MAKE) -j freq trees_doc sents sentspl conllu pair dact
 
 novel:
-	( cd fast; make -j i_suite/i_suite.log extra/extra.log )
+	( cd fast; make -j i_suite.log extra.log )
 
 DIRECTORIES=cdb cgn_exs eans extra g_suite h_suite i_suite lassy leuven_yellow_pages lot_test_suite1 \
              novelsample_corrected ntv-suite qa Titaantjes wpspel
@@ -292,3 +292,15 @@ FREQ/POS-WORD-LEMMA.freq: FREQ/POS.freq FREQ/WORD-LEMMA-POS.freq
         do echo "--------- $$tag ---------------" ;\
            grep -F $$tag FREQ/WORD-LEMMA-POS.freq;\
         done > FREQ/POS-WORD-LEMMA.freq
+
+suites: $(DIRECTORIES:%=Suites/%.sents)
+
+Suites/%.sents: Enhanced/%
+	( cd Enhanced/$* ;\
+             ls -v *.xml |\
+             dtxslt --stdin -s\
+             $(XSL)/dt2sent_with_key.xsl |\
+             sed -e 's/\[/\\\[/g' \
+                 -e 's/\]/\\\]/g') > $@
+
+

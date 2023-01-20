@@ -33,14 +33,16 @@
             <node begin="12" end="13" id="24" lemma="tijdens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tijdens" vztype="init" word="tijdens"/>
             <node begin="13" cat="np" end="16" id="25" rel="obj1">
               <node begin="13" end="14" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="14" buiging="met-e" end="15" graad="basis" id="27" lemma="Amerikaans" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amerikaanse" word="Amerikaanse"/>
-              <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="28" lemma="burger_oorlog" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Burgeroorlog" word="Burgeroorlog"/>
+              <node begin="14" cat="mwu" end="16" id="27" rel="hd">
+                <node begin="14" buiging="met-e" end="15" graad="basis" id="28" lemma="Amerikaans" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Amerikaanse" word="Amerikaanse"/>
+                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="29" lemma="burger_oorlog" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Burgeroorlog" word="Burgeroorlog"/>
+              </node>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="16" end="17" id="29" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+    <node begin="16" end="17" id="30" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Bij welke stad in de buurt van Missionary Ridge werd hevig gevochten tijdens de Amerikaanse Burgeroorlog ?</sentence>
 </alpino_ds>
