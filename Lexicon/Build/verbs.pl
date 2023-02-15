@@ -1211,6 +1211,7 @@ inf_only_sport(haringkaken).
 inf_only_sport(hongerstaken).
 inf_only_sport(hoofdrekenen).
 inf_only_sport(hoogspringen).
+inf_only_sport(ijszeilen).
 inf_only_sport(inlineskaten,inline_skaten).
 inf_only_sport('inline-skaten',inline_skaten).
 inf_only_sport('in-lineskaten',inline_skaten).

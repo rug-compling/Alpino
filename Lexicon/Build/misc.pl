@@ -8517,6 +8517,8 @@ with_dt([als,volgt],
 	       body=l(v_root(volg,volgen),verb(hebben/zijn,sg3,intransitive),ssub,1,2)
 	      ])).
 
+
+
 m('SP.A',proper_name(sg,'ORG'),'sp.a').
 m('SP.A',proper_name(sg,'ORG'),'Sp.a').
 
@@ -8959,23 +8961,6 @@ term(['writer\'s',block]).
 term([zero,tolerance]).
 term([zum,'Tode',betrübt]).
 
-term(havo).
-term('havo/vwo').
-term(hbo).
-term(hbs).
-term(hts).
-term(lts).
-term(mavo).
-term('mavo/havo').
-term('mavo/havo/vwo').
-term(meao).
-term(mts).
-term(roc).
-term(vmbo).
-term('vmbo-t').
-term(vwo).
-term('vwo/havo').
-
 term_pl([bad,guys]).
 term_pl([the,bad,guys]).
 term_pl(['do\'s',and,'don\'ts']).
@@ -8986,6 +8971,7 @@ term_pl([good,guys,and,bad,guys]).
 term_pl([the,good,guys,and,the,bad,guys]).
 term_pl([hard,feelings]).
 term_pl([happy,few]).
+term_pl([heat,shock,proteins]).
 term_pl([no,hard,feelings]).
 term_pl([social,media]).
 term_pl([sans]).
@@ -9009,8 +8995,8 @@ m(Stem,Cat,Surf) :-
 
 %% all others done in unknowns.pl
 %% but this one is requires for spell correction "de voor en nadelen"
-m(heen,within_word_conjunct,'heen-').
-m(voor,within_word_conjunct,'voor-').
+m('heen-',within_word_conjunct,'heen-').
+m('voor-',within_word_conjunct,'voor-').
 
 m(datti,complementizer(datti),datti).
 m(datti,complementizer(datti),'dat-i').

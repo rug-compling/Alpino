@@ -24,10 +24,10 @@ number(allerlaatste,aller_laat,rang).      % we staan allerlaatste
 number(laatste,laat,rang).		% we staan laatste
 number(voorlaatste,voor_laat,rang).	% we staan voorlaatste
 
-number(anderhalve,anderhalf,hoofd(both)).
-
 %% de letter l wordt ook vaak voor 1 gebruikt
 number(l,'1',hoofd(sg_num)).
+
+number(anderhalf,hoofd(both)).
 
 number('¼',hoofd(both)).    % 1/4
 number('½',hoofd(both)).    % 1/2

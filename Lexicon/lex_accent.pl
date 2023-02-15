@@ -762,6 +762,8 @@ accent(hindoeisme,hindoeïsme).
 accent(historien,historiën).
 accent(hitserien,hitseriën).
 accent(hoofdideeen,hoofdideeën).
+accent(hoofdpijnpatienten,hoofdpijnpatiënten).
+accent(hoofdpijnpatient,hoofdpijnpatiënt).
 accent(hostien,hostiën).
 accent(hulpactien,hulpactiën).
 accent(hulpaktien,hulpaktiën).

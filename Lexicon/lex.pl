@@ -614,6 +614,13 @@ lexicon_(Word,proper_name(X,'LOC'),Name,Ws1,Ws,His,_LC) :-
     in_names_dictionary(proper_name(X,'LOC'),Word,Name,Ws1,Ws2,His),
     loc_suffix(Ws2,Ws).
 
+lexicon_(NoordWord,proper_name(X,'LOC'),Name,Ws1,Ws,His,_LC) :-
+    atom(NoordWord),
+    loc_prefix(Noord,NoordStem),
+    atom_concat(Noord,Word,NoordWord),
+    in_names_dictionary(proper_name(X,'LOC'),Word,RestStem,Ws1,Ws,His),
+    hdrug_util:concat_all([NoordStem,RestStem],Name,'').
+
 lexicon_(Word,proper_name(X,'PER'),Name,Ws1,Ws,His,_LC) :-
     in_names_dictionary(proper_name(X,'PER'),Word,Name0,Ws1,Ws2,His),
     n_word(Next,Ws2,Ws),
@@ -2976,6 +2983,18 @@ spelling_variant('d\'rvandaan',ervandaan).
 spelling_variant('d\'rvandoor',ervandoor).
 spelling_variant('d\'rvoor',ervoor).
 
+spelling_variant('Groot-Britannië','Groot-Brittannië').
+spelling_variant('Groot-Brittanië','Groot-Brittannië').
+spelling_variant('Groot-Britanië','Groot-Brittannië').
+spelling_variant('Groot-Britannie','Groot-Brittannië').
+spelling_variant('Groot-Brittanie','Groot-Brittannië').
+spelling_variant('Groot-Britanie','Groot-Brittannië').
+spelling_variant('Groot-britannië','Groot-Brittannië').
+spelling_variant('Groot-brittanië','Groot-Brittannië').
+spelling_variant('Groot-britanië','Groot-Brittannië').
+spelling_variant('Groot-britannie','Groot-Brittannië').
+spelling_variant('Groot-brittanie','Groot-Brittannië').
+spelling_variant('Groot-britanie','Groot-Brittannië').
 
 spelling_variant41(doe,het,zelf,zaak,'doe-het-zelf-zaak').
 spelling_variant41(doe,het,zelf,zaken,'doe-het-zelf-zaken').
@@ -3548,7 +3567,6 @@ abbreviation_b(sr,       senior).
 abbreviation_b(verz,     verzorger).
 abbreviation_b(verz,     verzorging).
 abbreviation_b(gr,       gram).
-abbreviation_b(nl,       namelijk).
 abbreviation_b(ha,       hectare).
 abbreviation_b(cm,       centimeter).
 abbreviation_b(dm,       decimeter).
@@ -3661,6 +3679,8 @@ abbreviation(mss,      misschien).
 abbreviation('Ned.',   'Nederland').
 abbreviation('Ned.',   'Nederlands').
 abbreviation('Ned.',   'Nederlandse').
+abbreviation(nl,       'Nederland').
+abbreviation('nl.',    namelijk).
 abbreviation('overl.', overleden).
 abbreviation('plm.',   plusminus).
 abbreviation('plus-minus',   plusminus).
@@ -4749,3 +4769,11 @@ del_vals([],[]).
 del_vals([H-_|T0],[H|T]) :-
     del_vals(T0,T).
 
+loc_prefix('Zuid-','Zuid-').
+loc_prefix('Noord-','Noord-').
+loc_prefix('Oost-','Oost-').
+loc_prefix('West-','West-').
+loc_prefix('zuid-','Zuid-').
+loc_prefix('noord-','Noord-').
+loc_prefix('oost-','Oost-').
+loc_prefix('west-','West-').

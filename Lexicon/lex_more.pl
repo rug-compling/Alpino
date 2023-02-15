@@ -21,7 +21,8 @@ phrasal_entry(Cat,Label,His,In,Out) :-
     lists:append(Used,Out,In),
     (   Cat = with_dt(Tag,Dt)
     ->  generate_with_dt_stem(with_dt(Tag,Dt),Label)
-    ;   hdrug_util:concat_all(Used,Label,' ')
+    ;   rewrite_stem(Used,Label0),
+	hdrug_util:concat_all(Label0,Label,' ')
     ).
 
 phrasal_entry(number(rang),Stem,number_rang) -->
@@ -4298,3 +4299,19 @@ hash_tag(Atom) :-
     atom_concat('#',_A,Atom).
 
 
+rewrite_stem([],[]).
+rewrite_stem([H0|T0],[H|T]) :-
+    rewrite_stem0(H0,H),
+    !,
+    rewrite_stem(T0,T).
+
+rewrite_stem0(duizend,duizend).  % not _duizend
+rewrite_stem0(AtomDuizend,Atom_Duizend) :-
+    atom(AtomDuizend),
+    atom_concat(Atom,'-duizend',AtomDuizend),
+    atom_concat(Atom,'_duizend',Atom_Duizend).
+rewrite_stem0(AtomDuizend,Atom_Duizend) :-
+    atom(AtomDuizend),
+    atom_concat(Atom,duizend,AtomDuizend),
+    atom_concat(Atom,'_duizend',Atom_Duizend).
+rewrite_stem0(A,A).

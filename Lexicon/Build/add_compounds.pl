@@ -41,6 +41,12 @@ add_compound(h(Prefix),Stem0,Surf0,Stem,Surf) :-
     atom_concat(StemPrefix1,Stem0,Stem),
     atom_concat(Prefix,'-',SurfPrefix1),
     atom_concat(SurfPrefix1,Surf0,Surf).
+%% Zuid-Franse => Zuid-Frans
+add_compound(hh(Prefix),Stem0,Surf0,Stem,Surf) :-
+    atom_concat(Prefix,'-',StemPrefix1),
+    atom_concat(StemPrefix1,Stem0,Stem),
+    atom_concat(Prefix,'-',SurfPrefix1),
+    atom_concat(SurfPrefix1,Surf0,Surf).
 %% van der Valk-concern => van der Valk_concern
 add_compound(wh(List),Stem0,Surf0,StemAtom,SurfList) :-
     lists:append(List0,[Prefix],List),

@@ -407,15 +407,25 @@ a([e('Afrikaanse'),
    ere('Afrikaansere'),
    no_e('Afrikaans'),
    st('Afrikaanst'),
-   ste('Afrikaanste')],adv,[],[]).
+   ste('Afrikaanste')],adv,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([both('Afrikaner')],nonadv,[],[]).
 
 a([e('Albanese'),
-   no_e('Albanees')],nonadv,[],[]).
+   no_e('Albanees')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Algerijnse'),
-   no_e('Algerijns')],nonadv,[],[]).
+   no_e('Algerijns')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Alkmaarse'),
    no_e('Alkmaars')],nonadv,[],[]).
@@ -439,7 +449,11 @@ a([e('Amerikaanse'),
    h(niet),
    h(pro),
    h('Latijns'),
-   s('Latijn')]).
+   s('Latijn'),
+   hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Amersfoortse'),
    no_e('Amersfoorts')],nonadv,[],[]).
@@ -474,7 +488,10 @@ a([e('Arabische'),
    ere('Arabischere'),
    no_e('Arabisch'),
    st('Arabischt'),
-   ste('Arabischte')],nonadv,[],[]).
+   ste('Arabischte')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Aramese'),
    no_e('Aramees')],nonadv,[],[]).
@@ -484,7 +501,10 @@ a([e('Argentijnse'),
    ere('Argentijnsere'),
    no_e('Argentijns'),
    st('Argentijnst'),
-   ste('Argentijnste')],nonadv,[],[]).
+   ste('Argentijnste')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Arische'),
    er('Arischer'),
@@ -494,7 +514,10 @@ a([e('Arische'),
    ste('Arischte')],nonadv,[],[]).
 
 a([e('Armeense'),
-   no_e('Armeens')],nonadv,[],[]).
+   no_e('Armeens')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Arnhemse'),
    no_e('Arnhems')],nonadv,[],[]).
@@ -510,14 +533,20 @@ a([e('Australische'),
    ere('Australischere'),
    no_e('Australisch'),
    st('Australischt'),
-   ste('Australischte')],nonadv,[],[]).
+   ste('Australischte')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Aziatische'),
    er('Aziatischer'),
    ere('Aziatischere'),
    no_e('Aziatisch'),
    st('Aziatischt'),
-   ste('Aziatischte')],nonadv,[],[]).
+   ste('Aziatischte')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Baarnse'),no_e('Baarns')],nonadv,[],[]).
 
@@ -543,7 +572,10 @@ a([e('Belgische'),
    ere('Belgischere'),
    no_e('Belgisch'),
    st('Belgischt'),
-   ste('Belgischte')],adv,[],[]).
+   ste('Belgischte')],adv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Belgradose'),
    no_e('Belgradoos')],nonadv,[],[]).
@@ -558,7 +590,10 @@ a([e('Berberse'),
    no_e('Berbers')],nonadv,[],[]).
 
 a([e('Berlijnse'),
-   no_e('Berlijns')],nonadv,[],[]).
+   no_e('Berlijns')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Birmese'),
    no_e('Birmees')],nonadv,[],[]).
@@ -603,7 +638,11 @@ a([e('Britse'),
    st('Britst'),
    ste('Britste')],nonadv,[],
   [h('Amerikaans'),
-   h('Nederlands')]).
+   h('Nederlands'),
+   hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Brugse'),no_e('Brugs')],nonadv,[],[]).
 
@@ -626,7 +665,10 @@ a([e('Cambodjaanse'),
    no_e('Cambodjaans')],nonadv,[],[]).
 
 a([e('Canadese'),
-   no_e('Canadees')],nonadv,[],[]).
+   no_e('Canadees')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Caribische'),
    no_e('Caribisch'),
@@ -637,10 +679,16 @@ a([e('Catalaanse'),
    no_e('Catalaans')],nonadv,[],[]).
 
 a([e('Chileense'),
-   no_e('Chileens')],nonadv,[],[]).
+   no_e('Chileens')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Chinese'),
-   no_e('Chinees')],nonadv,[],[]).
+   no_e('Chinees')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Colombiaanse'),
    no_e('Colombiaans')],nonadv,[],[]).
@@ -696,7 +744,11 @@ a([both('Dubliner')],nonadv,[],[]).
 
 a([e('Duitse'),
    no_e('Duits')],adv,[],
-  [h('Frans')]).
+  [h('Frans'),
+   hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Egyptische'),
    no_e('Egyptisch')],nonadv,[],[]).
@@ -707,7 +759,10 @@ a([e('Eindhovense'),
 a([both('Emmer')],nonadv,[],[]).
 
 a([e('Engelse'),
-   no_e('Engels')],nonadv,[],[]).
+   no_e('Engels')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Enschedese'),
    no_e('Enschedees')],nonadv,[],[]).
@@ -727,7 +782,11 @@ a([e('Europese'),
    ere('Europesere')
   ],adv,[],
   [h('Arabisch'),
-   h(pan) ]).
+   h(pan),
+   hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Filipijnse'),
    no_e('Filipijns')],nonadv,[],[]).
@@ -742,10 +801,16 @@ a([e('Frankische'),
    no_e('Frankisch')],nonadv,[],[]).
 
 a([e('Franse'),
-   no_e('Frans')],nonadv,[],[h('Zuid')]).
+   no_e('Frans')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Friese'),
-   no_e('Fries')],nonadv,[],[]).
+   no_e('Fries')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Gelderse'),
    no_e('Gelders')],nonadv,[],[]).
@@ -764,7 +829,10 @@ a([e('Germaanse'),
    ere('Germaansere'),
    no_e('Germaans'),
    st('Germaanst'),
-   ste('Germaanste')],nonadv,[],[]).
+   ste('Germaanste')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Ghanese'),
    no_e('Ghanees')],nonadv,[],[]).
@@ -781,7 +849,10 @@ a([e('s-Gravendeelse'),
    no_e('s-Gravendeels')],nonadv,[],[]).
 
 a([e('Griekse'),
-   no_e('Grieks')],nonadv,[],[]).
+   no_e('Grieks')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Groenlandse'),
    no_e('Groenlands')],nonadv,[],[]).
@@ -789,7 +860,10 @@ a([e('Groenlandse'),
 a([both('Groninger')],nonadv,[],[]).
 
 a([e('Groningse'),
-   no_e('Gronings')],nonadv,[],[]).
+   no_e('Gronings')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Haagse'),
    no_e('Haags')],nonadv,[],[]).
@@ -828,7 +902,11 @@ a([e('Hilversumse'),
 a([e('Hollandse'),
    no_e('Hollands'),
    e(hollandse),
-   no_e(hollands)],nonadv,[],[h(oer)]).
+   no_e(hollands)],nonadv,[],[h(oer),
+			      hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Hongaarse'),
    no_e('Hongaars')],nonadv,[],[]).
@@ -840,7 +918,10 @@ a([e('Iberische'),
    no_e('Iberisch')],nonadv,[],[]).
 
 a([e('Ierse'),
-   no_e('Iers')],nonadv,[],[]).
+   no_e('Iers')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('IJslandse'),
    no_e('IJslands')],nonadv,[],[]).
@@ -851,22 +932,38 @@ a([e('Indiaanse'),
    no_e(indiaans)],nonadv,[],[]).
 
 a([e('Indiase'),
-   no_e('Indiaas')],nonadv,[],[]).
+   no_e('Indiaas')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Indische'),
-   no_e('Indisch')],nonadv,[],[]).
+   no_e('Indisch')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Indonesische'),
    no_e('Indonesisch')],nonadv,[],[h(pro)]).
 
 a([e('Iraakse'),
-   no_e('Iraaks')],nonadv,[],[]).
+   no_e('Iraaks')],nonadv,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Irakese'),
-   no_e('Irakees')],nonadv,[],[]).
+   no_e('Irakees')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Iraanse'),
-   no_e('Iraans')],nonadv,[],[]).
+   no_e('Iraans')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Israëlische'),
    no_e('Israëlisch'),
@@ -874,7 +971,10 @@ a([e('Israëlische'),
    no_e('Israelisch')],nonadv,[],[]).
 
 a([e('Italiaanse'),
-   no_e('Italiaans')],nonadv,[],[h('Noord')]).
+   no_e('Italiaans')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Ivoriaanse'),
    no_e('Ivoriaans')],nonadv,[],[]).
@@ -892,7 +992,10 @@ a([e('Jemenitische'),
    no_e('Jemenitisch')],nonadv,[],[]).
 
 a([e('Joegoslavische'),
-   no_e('Joegoslavisch')],nonadv,[],[]).
+   no_e('Joegoslavisch')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Joodse'),
    no_e('Joods')],adv,[],[h(niet)]).
@@ -917,13 +1020,19 @@ a([e('Keulse'),
 a([e('Koerdische'),
    no_e('Koerdisch'),
    e('Kurdische'),
-   no_e('Kurdisch')],nonadv,[],[]).
+   no_e('Kurdisch')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Kongolese'),
    no_e('Kongolees')],nonadv,[],[]).
 
 a([e('Koreaanse'),
-   no_e('Koreaans')],nonadv,[],[]).
+   no_e('Koreaans')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Kosovaarse'),
    no_e('Kosovaars')],nonadv,[],[]).
@@ -959,19 +1068,28 @@ a([e('Libanese'),
    no_e('Libanees')],nonadv,[],[]).
 
 a([e('Limburgse'),
-   no_e('Limburgs')],nonadv,[],[]).
+   no_e('Limburgs')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Litouwse'),
    no_e('Litouws')],nonadv,[],[]).
 
 a([e('Londense'),
-   no_e('Londens')],nonadv,[],[]).
+   no_e('Londens')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Luikse'),
    no_e('Luiks')],nonadv,[],[]).
 
 a([e('Luxemburgse'),
-   no_e('Luxemburgs')],nonadv,[],[]).
+   no_e('Luxemburgs')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Maastrichtse'),
    no_e('Maastrichts')],nonadv,[],[]).
@@ -988,7 +1106,10 @@ a([e('Maleisische'),
 a([both('Maltezer')],nonadv,[],[]).
 
 a([e('Marokkaanse'),
-   no_e('Marokkaans')],nonadv,[],[]).
+   no_e('Marokkaans')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Messiaanse'),
    no_e('Messiaans')],nonadv,[],[]).
@@ -1003,7 +1124,10 @@ a([e('Moldavische'),
    no_e('Moldavisch')],nonadv,[],[]).
 
 a([e('Molukse'),
-   no_e('Moluks')],nonadv,[],[]).
+   no_e('Moluks')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Mongoolse'),
    no_e('Mongools')],nonadv,[],[]).
@@ -1026,11 +1150,14 @@ a([e('Nederlandse'),
    no_e('Nederlands'),
    st('Nederlandst'),
    ste('Nederlandste')],adv,[],
-  [h('Belgisch'),
-   h('Brits'),
-   h('Duits'),
-   h('Frans'),
-   h('Vlaams')]).
+  [hh('Belgisch'),
+   hh('Brits'),
+   hh('Duits'),
+   hh('Frans'),
+   hh('Vlaams'),hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Nedersaksische'),
    no_e('Nedersaksisch')],adv,[],[]).
@@ -1049,7 +1176,10 @@ a([e('Nieuwzeelandse'),
    no_e('Nieuw-Zeelands')],nonadv,[],[]).
 
 a([e('Nigeriaanse'),
-   no_e('Nigeriaans')],nonadv,[],[]).
+   no_e('Nigeriaans')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Nijmeegse'),
    no_e('Nijmeegs')],nonadv,[],[]).
@@ -1125,6 +1255,8 @@ a([e('Oostenrijkse'),
 
 a([e('Oosteuropese'),
    no_e('Oost-Europees'),
+   no_e('oost-europees'),
+   e('oost-europese'),
    no_e('Oosteuropees'),
    e('Oost-Europese')],adv,[],[]).
 
@@ -1133,14 +1265,29 @@ a([e('Oost-Timorese'),
    e('Oosttimorese'),
    no_e('Oosttimorees')],nonadv,[],[]).
 
+a([e('Ossetische'),
+   no_e('Ossetisch')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
+
 a([e('Ottomaanse'),
-   no_e('Ottomaans')],nonadv,[],[]).
+   no_e('Ottomaans')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Overijsselse'),
-   no_e('Overijssels')],nonadv,[],[]).
+   no_e('Overijssels')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Pakistaanse'),
-   no_e('Pakistaans')],nonadv,[],[]).
+   no_e('Pakistaans')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Palestijnse'),
    no_e('Palestijns')],nonadv,[],[h('Israëlisch')]).
@@ -1152,7 +1299,10 @@ a([e('Papendrechtse'),
    no_e('Papendrechts')],nonadv,[],[]).
 
 a([e('Parijse'),
-   no_e('Parijs')],nonadv,[],[]).
+   no_e('Parijs')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Parmezaanse'),
    no_e('Parmezaans')],nonadv,[],[]).
@@ -1161,16 +1311,28 @@ a([e('Pathaanse'),
    no_e('Pathaans')],nonadv,[],[]).
 
 a([e('Peruaanse'),
-   no_e('Peruaans')],nonadv,[],[]).
+   no_e('Peruaans')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Perzische'),
-   no_e('Perzisch')],nonadv,[],[]).
+   no_e('Perzisch')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Poolse'),
-   no_e('Pools')],adv,[],[]).
+   no_e('Pools')],adv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Portugese'),
-   no_e('Portugees')],nonadv,[],[]).
+   no_e('Portugees')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Praagse'),
    no_e('Praags')],nonadv,[],[]).
@@ -1190,19 +1352,31 @@ a([e('Rijswijkse'),
    no_e('Rijswijks')],nonadv,[],[]).
 
 a([e('Roemeense'),
-   no_e('Roemeens')],adv,[],[]).
+   no_e('Roemeens')],adv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Romaanse'),
    no_e('Romaans')],nonadv,[],[]).
 
 a([e('Romeinse'),
-   no_e('Romeins')],nonadv,[],[]).
+   no_e('Romeins')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Rotterdamse'),
-   no_e('Rotterdams')],adv,[],[]).
+   no_e('Rotterdams')],adv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Russische'),
-   no_e('Russisch')],nonadv,[],[]).
+   no_e('Russisch')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Rwandese'),
    no_e('Rwandees'),
@@ -1220,7 +1394,10 @@ a([e('Saoedische'),
 a([e('Scandinavische'),
    e('Skandinavische'),
    no_e('Scandinavisch'),
-   no_e('Skandinavisch')],adv,[],[]).
+   no_e('Skandinavisch')],adv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Scheveningse'),
    no_e('Schevenings')],nonadv,[],[]).
@@ -1229,7 +1406,10 @@ a([e('Schiedamse'),
    no_e('Schiedams')],nonadv,[],[]).
 
 a([e('Schotse'),
-   no_e('Schots')],nonadv,[],[]).
+   no_e('Schots')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Senegalese'),no_e('Senegalees')],nonadv,[],[]).
 
@@ -1238,37 +1418,59 @@ a([e('Servische'),
    e('servische'),
    no_e('servisch')],nonadv,[],
   [h('Bosnisch'),
-   h(pro)]).
+   h(pro),
+   hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Siamese'),
    no_e('Siamees')],nonadv,[],[]).
 
 a([e('Siberische'),
-   no_e('Siberisch')],adv,[],[]).
+   no_e('Siberisch')],adv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Singaporese'),
    no_e('Singaporees')],nonadv,[],[]).
 
 a([e('Slavische'),
-   no_e('Slavisch')],nonadv,[],[]).
+   no_e('Slavisch')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Sliedrechtse'),
    no_e('Sliedrechts')],nonadv,[],[]).
 
 a([e('Sloveense'),
-   no_e('Sloveens')],nonadv,[],[]).
+   no_e('Sloveens')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Slowaakse'),
-   no_e('Slowaaks')],nonadv,[],[]).
+   no_e('Slowaaks')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Soedanese'),
    no_e('Soedanees')],nonadv,[],[]).
 
 a([e('Somalische'),
-   no_e('Somalisch')],nonadv,[],[]).
+   no_e('Somalisch')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Spaanse'),
-   no_e('Spaans')],adv,[],[]).
+   no_e('Spaans')],adv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Srilankaanse'),
    no_e('Srilankaans')],nonadv,[],[]).
@@ -1277,10 +1479,16 @@ a([e('Sudanese'),
    no_e('Sudanees')],nonadv,[],[]).
 
 a([e('Surinaamse'),
-   no_e('Surinaams')],nonadv,[],[]).
+   no_e('Surinaams')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Syrische'),
-   no_e('Syrisch')],nonadv,[],[]).
+   no_e('Syrisch')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Taiwanese'),
    no_e('Taiwanees')],nonadv,[],[]).
@@ -1315,13 +1523,19 @@ a([e('Tsjetsjeense'),
    no_e('Tsjetsjeens')],nonadv,[],[]).
 
 a([e('Tunesische'),
-   no_e('Tunesisch')],nonadv,[],[]).
+   no_e('Tunesisch')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Tukkerse'),
    no_e('Tukkers')],nonadv,[],[]).
 
 a([e('Turkse'),
-   no_e('Turks')],nonadv,[],[]).
+   no_e('Turks')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Turkmeense'),
    no_e('Turkmeens')],nonadv,[],[]).
@@ -1348,13 +1562,20 @@ a([e('Venezolaanse'),
    no_e('Venezolaans')],nonadv,[],[]).
 
 a([e('Vietnamese'),
-   no_e('Vietnamees')],nonadv,[],[]).
+   no_e('Vietnamees')],nonadv,[],[hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([e('Victoriaanse'),
    no_e('Victoriaans')],nonadv,[],[]).
 
 a([e('Vlaamse'),
-   no_e('Vlaams')],nonadv,[],[]).
+   no_e('Vlaams')],nonadv,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 a([both('Volendammer')],nonadv,[],[]).
 
@@ -1459,7 +1680,7 @@ a([e('Zuidkoreaanse'),
    e('Zuid-Koreaanse')],nonadv,[],[]).
 
 a([e('Zuidlimburgse'),
-   no_e('Zuid-limburgs'),
+   no_e('Zuid-Limburgs'),
    no_e('Zuidlimburgs'),
    e('Zuid-Limburgse')],nonadv,[],[]).
 
@@ -7045,7 +7266,7 @@ a([e(cognitieve),
 a([e(coherente),
    e(koherente),
    no_e(coherent),
-   no_e(koherent)],adv,[],[]).
+   no_e(koherent)],adv,[],[in]).
 
 a([e(collectieve),
    e(kollektieve),
@@ -7149,7 +7370,7 @@ a([e(competente),
    st(competentst),
    st(kompetentst),
    ste(competentste),
-   ste(kompetentste)],nonadv,[],[]).
+   ste(kompetentste)],nonadv,[],[in]).
 
 a([e(competitieve),
    no_e(competitief),
@@ -7169,7 +7390,7 @@ a([e(complete),
    st(compleetst),
    st(kompleetst),
    ste(compleetste),
-   ste(kompleetste)],adv,[],[]).
+   ste(kompleetste)],adv,[],[in]).
 
 a([e(complementaire),
    e(komplementaire),
@@ -13279,7 +13500,9 @@ a([ge_e(gekwalificeerde),
    ste(gekwalificeerdste),
    ste(gequalificeerdste)],padv,
   [pp(voor),
-   object_vp],[]).
+   object_vp],
+  [hoog,
+   laag]).
 
 a([ge_e(gekwantificeerde),
    ge_no_e(gekwantificeerd)],adv,[],[]).
@@ -14393,6 +14616,11 @@ a([ge_e(geplaatste),
    ge_no_e(geplaatst)],adv,
   [pp(bij),
    pp(voor)],[]).
+
+a([ge_e(geplaatste),
+   ge_no_e(geplaatst)],adv,
+  [],[hoog,
+      over]).
 
 a([ge_e(geplakte),
    ge_no_e(geplakt)],adv,[],[]).
@@ -16610,7 +16838,7 @@ a([ge_e(gewaarborgde),
    ge_no_e(gewaarborgd)],adv,[],[]).
 
 a([ge_e(gewaardeerde),
-   ge_no_e(gewaardeerd)],adv,[],[]).
+   ge_no_e(gewaardeerd)],adv,[],[hoog,laag]).
 
 a([ge_e(gewaarschuwde),
    ge_no_e(gewaarschuwd)],padv,[],[]).
@@ -18233,6 +18461,9 @@ a([e(hele),
 a([e(heelhuidse),
    no_e(heelhuids)],padv,[],[]).
 
+a([e(heelkundige),
+   no_e(heelkundig)],nonadv,[],[]).
+
 a([ge_both(heengebroken)],adv,
   [ld_pp(door),
    ld_pp(langs),
@@ -18779,9 +19010,6 @@ a([e(hooggeleerde),
    st(hooggeleerdst),
    ste(hooggeleerdste)],nonadv,[],[]).
 
-a([e(hooggeplaatste),
-   no_e(hooggeplaatst)],nonadv,[],[]).
-
 a([both(hooggespannen)],nonadv,[],[]).
 
 a([e(hooggestemde),
@@ -18790,9 +19018,6 @@ a([e(hooggestemde),
    no_e(hooggestemd),
    st(hooggestemdst),
    ste(hooggestemdste)],nonadv,[],[]).
-
-a([e(hooggewaardeerde),
-   no_e(hooggewaardeerd)],nonadv,[],[]).
 
 a([e(hooghartige),
    er(hooghartiger),
@@ -18878,6 +19103,9 @@ a([e(hopeloze),
    no_e(hopeloos),
    st(hopeloost),
    ste(hopelooste)],adv,[],[]).
+
+a([no_e(horendol),
+   e(horendolle)],nonadv,[],[]).
 
 a([e(horizontale),
    er(horizontaler),
@@ -21414,7 +21642,7 @@ a([e(kundige),
    st(kundigst),
    ste(kundigste)],adv,[],
   [oordeel,
-   l(on_oordeel,onoordeel)]).
+   i(on_oordeel,onoordeel)]).
 
 a([e(kunstige),
    er(kunstiger),
@@ -22868,11 +23096,6 @@ a([e(medeplichtige),
    ste(medeplichtigste)],nonadv,
   [er_pp_sbar(aan),
    pp(aan)],[]).
-
-a([e(medeverantwoordelijke),
-   postn_no_e(medeverantwoordelijk)],adv,
-  [er_pp_sbar(voor),
-   pp(voor)],[]).
 
 a([ende(medewerkende),
    end(medewerkend)],adv,[],[]).
@@ -29154,9 +29377,6 @@ a([ge_e(overgemaakte),
    ge_no_e(overgemaakt)],adv,[],[]).
 
 a([ge_both(overgenomen)],adv,[],[]).
-
-a([ge_e(overgeplaatste),
-   ge_no_e(overgeplaatst)],adv,[],[]).
 
 a([ge_both(overgeschoten)],adv,[],[]).
 
@@ -35934,7 +36154,9 @@ a([e(verantwoordelijke),
    ste(verantwoordelijkste)],both,
   [er_pp_sbar(voor),
    er_pp_vp(voor),
-   pp(voor)],[]).
+   pp(voor)],
+  [mede,
+   top]).
 
 a([ge_e(verarmde),
    ge_no_e(verarmd)],adv,[],[]).
