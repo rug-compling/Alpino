@@ -36,26 +36,26 @@
                     <node begin="17" cat="np" end="20" id="30" rel="cnj">
                       <node begin="17" end="18" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                       <node begin="18" cat="mwu" end="20" id="32" rel="hd">
-                        <node begin="18" buiging="met-e" end="19" graad="basis" id="33" lemma="Nederlands" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Nederlandse" word="Nederlandse"/>
-                        <node begin="19" end="20" id="34" lemma="Persbibliotheek" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Persbibliotheek" spectype="deeleigen" word="Persbibliotheek"/>
+                        <node begin="18" end="19" id="33" lemma="Nederlandse" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nederlandse" spectype="deeleigen" word="Nederlandse"/>
+                        <node begin="19" end="20" id="34" lemma="Persbibliotheek" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Persbibliotheek" spectype="deeleigen" word="Persbibliotheek"/>
                       </node>
                     </node>
                     <node begin="20" conjtype="neven" end="21" id="35" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                     <node begin="21" cat="np" end="23" id="36" rel="cnj">
                       <node begin="21" end="22" id="37" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                      <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="38" lemma="persmuseum" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="museum" word="Persmuseum"/>
+                      <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="38" lemma="Persmuseum" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="museum" word="Persmuseum"/>
                     </node>
                   </node>
                   <node begin="24" conjtype="neven" end="25" id="39" lemma="alsmede" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="alsmede" word="alsmede"/>
                   <node begin="25" cat="np" end="32" id="40" rel="cnj">
                     <node begin="25" end="26" id="41" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                     <node begin="26" cat="mwu" end="32" id="42" rel="hd">
-                      <node begin="26" end="27" id="43" lemma="Seminarium" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Seminarium" spectype="deeleigen" word="Seminarium"/>
-                      <node begin="27" end="28" id="44" lemma="voor" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
-                      <node begin="28" end="29" id="45" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
-                      <node begin="29" end="30" id="46" lemma="leren" pos="noun" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="mwp" root="Leer" word="Leer" wvorm="pv"/>
-                      <node begin="30" end="31" id="47" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="noun" postag="LID(bep,gen,rest3)" pt="lid" rel="mwp" root="der" word="der"/>
-                      <node begin="31" end="32" getal="mv" graad="basis" id="48" lemma="communicatie_middel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Communicatiemiddelen" word="Communicatiemiddelen"/>
+                      <node begin="26" end="27" id="43" lemma="Seminarium" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Seminarium" spectype="deeleigen" word="Seminarium"/>
+                      <node begin="27" end="28" id="44" lemma="voor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="voor" spectype="deeleigen" word="voor"/>
+                      <node begin="28" end="29" id="45" lemma="de" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+                      <node begin="29" end="30" id="46" lemma="Leer" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Leer" spectype="deeleigen" word="Leer"/>
+                      <node begin="30" end="31" id="47" lemma="der" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+                      <node begin="31" end="32" id="48" lemma="Communicatiemiddelen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Communicatiemiddelen" spectype="deeleigen" word="Communicatiemiddelen"/>
                     </node>
                   </node>
                 </node>

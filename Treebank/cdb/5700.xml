@@ -55,9 +55,9 @@
                         <node begin="26" cat="np" end="36" id="46" rel="obj1">
                           <node begin="26" end="27" id="47" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                           <node begin="27" cat="mwu" end="30" id="48" rel="hd">
-                            <node begin="27" end="28" genus="onz" getal="ev" graad="basis" id="49" lemma="instituut" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Instituut" word="Instituut"/>
-                            <node begin="28" end="29" id="50" lemma="voor" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
-                            <node begin="29" end="30" getal="mv" graad="basis" id="51" lemma="arbeid_vraagstuk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Arbeidsvraagstukken" word="Arbeidsvraagstukken"/>
+                            <node begin="27" end="28" id="49" lemma="Instituut" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Instituut" spectype="deeleigen" word="Instituut"/>
+                            <node begin="28" end="29" id="50" lemma="voor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="voor" spectype="deeleigen" word="voor"/>
+                            <node begin="29" end="30" id="51" lemma="Arbeidsvraagstukken" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Arbeidsvraagstukken" spectype="deeleigen" word="Arbeidsvraagstukken"/>
                           </node>
                           <node begin="30" cat="pp" end="36" id="52" rel="mod">
                             <node begin="30" end="31" id="53" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>

@@ -12,16 +12,16 @@
         </node>
         <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="financieel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="financieel" word="financiële"/>
         <node begin="5" cat="mwu" end="15" id="10" rel="hd">
-          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="verp" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="verp" word="verp"/>
-          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="l" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="l" word="l"/>
+          <node begin="5" end="6" id="11" lemma="verp" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="verp" spectype="symb" word="verp"/>
+          <node begin="6" end="7" id="12" lemma="l" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="l" spectype="symb" word="l"/>
           <node begin="7" end="8" id="13" lemma="i" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="i" spectype="symb" word="i"/>
-          <node begin="8" buiging="zonder" end="9" graad="basis" id="14" lemma="ch" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="ch" word="ch"/>
-          <node begin="9" end="10" id="15" lemma="t" pos="noun" postag="SPEC(afk)" pt="spec" rel="mwp" root="t" spectype="afk" word="t"/>
+          <node begin="8" end="9" id="14" lemma="ch" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="ch" spectype="symb" word="ch"/>
+          <node begin="9" end="10" id="15" lemma="t" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="t" spectype="symb" word="t"/>
           <node begin="10" end="11" id="16" lemma="i" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="i" spectype="symb" word="i"/>
-          <node begin="11" end="12" id="17" lemma="n" pos="noun" postag="BW()" pt="bw" rel="mwp" root="n" word="n"/>
+          <node begin="11" end="12" id="17" lemma="n" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="n" spectype="symb" word="n"/>
           <node begin="12" end="13" id="18" lemma="g" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="g" spectype="symb" word="g"/>
-          <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="19" lemma="e" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="e" word="e"/>
-          <node begin="14" end="15" id="20" lemma="n" pos="noun" postag="BW()" pt="bw" rel="mwp" root="n" word="n"/>
+          <node begin="13" end="14" id="19" lemma="e" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="e" spectype="symb" word="e"/>
+          <node begin="14" end="15" id="20" lemma="n" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="n" spectype="symb" word="n"/>
         </node>
       </node>
       <node begin="16" cat="whrel" end="21" id="21" rel="mod">

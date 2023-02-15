@@ -32,8 +32,8 @@
                       <node begin="14" buiging="zonder" end="15" id="28" lemma="beginnen" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="hd" root="begonnen" word="begonnen" wvorm="vd"/>
                     </node>
                     <node begin="15" cat="mwu" end="17" id="29" rel="hd">
-                      <node begin="15" buiging="met-e" end="16" graad="basis" id="30" lemma="algemeen" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Algemene" word="Algemene"/>
-                      <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="31" lemma="vergadering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Vergadering" word="Vergadering"/>
+                      <node begin="15" end="16" id="30" lemma="Algemene" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Algemene" spectype="deeleigen" word="Algemene"/>
+                      <node begin="16" end="17" id="31" lemma="Vergadering" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vergadering" spectype="deeleigen" word="Vergadering"/>
                     </node>
                   </node>
                 </node>

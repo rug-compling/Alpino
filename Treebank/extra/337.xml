@@ -3,9 +3,9 @@
   <node begin="0" cat="top" end="18" id="0" rel="top">
     <node begin="0" cat="smain" end="18" id="1" rel="--">
       <node begin="1" end="2" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
-      <node begin="2" cat="mwu" end="4" id="3" index="1" rel="su">
-        <node begin="2" end="3" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
-        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="5" lemma="raad" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Raad" word="Raad"/>
+      <node begin="2" cat="np" end="4" id="3" index="1" rel="su">
+        <node begin="2" end="3" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="5" lemma="raad" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Raad" word="Raad"/>
       </node>
       <node begin="0" cat="ppart" end="18" id="6" rel="vc">
         <node begin="0" end="1" id="7" lemma="overigens" pos="adv" postag="BW()" pt="bw" rel="mod" root="overigens" word="Overigens"/>

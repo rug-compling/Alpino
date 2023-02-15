@@ -7,8 +7,8 @@
         <node begin="1" cat="smain" end="5" id="4" rel="cnj">
           <node begin="1" end="2" id="5" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
           <node begin="2" end="3" id="6" lemma="moeten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="moet" word="moest" wvorm="pv"/>
-          <node begin="3" end="4" genus="masc" getal="ev" id="7" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="-ie"/>
-          <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="weg" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="ld" root="weg" word="weg"/>
+          <node begin="3" end="4" genus="masc" getal="ev" id="7" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,red,3,ev,masc)" pt="vnw" rel="su" root="hij" status="red" vwtype="pers" word="-ie"/>
+          <node begin="4" end="5" id="8" lemma="weg" pos="adj" postag="BW()" pt="bw" rel="ld" root="weg" word="weg"/>
         </node>
         <node begin="5" conjtype="neven" end="6" id="9" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="3" cat="smain" end="12" id="10" rel="cnj">

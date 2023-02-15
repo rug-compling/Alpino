@@ -11,10 +11,10 @@
             <node begin="4" cat="np" end="9" id="8" rel="obj1">
               <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="5" cat="mwu" end="9" id="10" rel="hd">
-                <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="stichting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Stichting" word="Stichting"/>
-                <node begin="6" end="7" id="12" lemma="van" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
-                <node begin="7" end="8" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
-                <node begin="8" end="9" id="14" lemma="Arbeid" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Arbeid" spectype="deeleigen" word="Arbeid"/>
+                <node begin="5" end="6" id="11" lemma="Stichting" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stichting" spectype="deeleigen" word="Stichting"/>
+                <node begin="6" end="7" id="12" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+                <node begin="7" end="8" id="13" lemma="de" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+                <node begin="8" end="9" id="14" lemma="Arbeid" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Arbeid" spectype="deeleigen" word="Arbeid"/>
               </node>
             </node>
           </node>

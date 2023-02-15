@@ -9,8 +9,8 @@
         <node begin="0" end="1" id="6" index="1" rel="mod"/>
         <node begin="1" end="2" id="7" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
         <node begin="3" cat="mwu" end="5" id="8" rel="su">
-          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="a" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="A" word="A"/>
-          <node begin="4" end="5" id="10" lemma="Portuguesa" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Portuguesa" spectype="deeleigen" word="Portuguesa"/>
+          <node begin="3" end="4" id="9" lemma="A" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="A" spectype="vreemd" word="A"/>
+          <node begin="4" end="5" id="10" lemma="Portuguesa" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Portuguesa" spectype="vreemd" word="Portuguesa"/>
         </node>
         <node begin="6" cat="np" end="8" id="11" rel="predc">
           <node begin="6" end="7" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>

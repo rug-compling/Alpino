@@ -15,7 +15,7 @@
         <node begin="5" end="6" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="6" cat="np" end="8" id="11" rel="predc">
           <node begin="6" end="7" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="hoofdschuldige" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoofdschuldige" word="hoofdschuldige"/>
+          <node begin="7" buiging="met-e" end="8" getal-n="zonder-n" graad="basis" id="13" lemma="hoofd_schuldig" naamval="stan" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" root="hoofdschuldige" word="hoofdschuldige"/>
         </node>
       </node>
       <node begin="8" conjtype="neven" end="9" id="14" lemma="want" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="want" word="want"/>

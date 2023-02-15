@@ -25,10 +25,10 @@
             <node begin="11" cat="np" end="16" id="19" rel="obj1">
               <node begin="11" end="12" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="12" cat="mwu" end="16" id="21" rel="hd">
-                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="beweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Beweging" word="Beweging"/>
-                <node begin="13" end="14" id="23" lemma="voor" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
-                <node begin="14" end="15" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
-                <node begin="15" end="16" getal="mv" graad="basis" id="25" lemma="burger_recht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Burgerrechten" word="Burgerrechten"/>
+                <node begin="12" end="13" id="22" lemma="Beweging" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Beweging" spectype="deeleigen" word="Beweging"/>
+                <node begin="13" end="14" id="23" lemma="voor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="voor" spectype="deeleigen" word="voor"/>
+                <node begin="14" end="15" id="24" lemma="de" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+                <node begin="15" end="16" id="25" lemma="Burgerrechten" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Burgerrechten" spectype="deeleigen" word="Burgerrechten"/>
               </node>
             </node>
           </node>

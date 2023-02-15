@@ -8,16 +8,16 @@
       </node>
       <node begin="0" cat="sv1" end="9" id="5" rel="body">
         <node begin="0" end="2" id="6" index="1" rel="su"/>
-        <node begin="2" end="3" id="7" lcat="p(sv1)" lemma="deel_nemen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="neem_deel" word="nemen" wvorm="pv"/>
+        <node begin="2" end="3" id="7" lemma="deel_nemen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="neem_deel" word="nemen" wvorm="pv"/>
         <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="deel" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="svp" root="deel" word="deel"/>
         <node begin="4" cat="pp" end="9" id="9" rel="pc">
           <node begin="4" end="5" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="5" cat="np" end="9" id="11" rel="obj1">
             <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="6" cat="mwu" end="9" id="13" rel="hd">
-              <node begin="6" buiging="met-e" end="7" graad="basis" id="14" lemma="Europees" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Europese" word="Europese"/>
-              <node begin="7" buiging="met-e" end="8" graad="basis" id="15" lemma="economisch" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Economische" word="Economische"/>
-              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="ruimte" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Ruimte" word="Ruimte"/>
+              <node begin="6" end="7" id="14" lemma="Europese" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europese" spectype="deeleigen" word="Europese"/>
+              <node begin="7" end="8" id="15" lemma="Economische" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Economische" spectype="deeleigen" word="Economische"/>
+              <node begin="8" end="9" id="16" lemma="Ruimte" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ruimte" spectype="deeleigen" word="Ruimte"/>
             </node>
           </node>
         </node>

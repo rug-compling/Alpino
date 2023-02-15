@@ -30,9 +30,9 @@
           <node begin="12" cat="np" end="16" id="22" rel="obj1">
             <node begin="12" end="13" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="13" cat="mwu" end="16" id="24" rel="hd">
-              <node begin="13" buiging="met-e" end="14" graad="basis" id="25" lemma="landelijk" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Landelijke" word="Landelijke"/>
-              <node begin="14" end="15" getal="mv" graad="basis" id="26" lemma="huis_arts" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Huisartsen" word="Huisartsen"/>
-              <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="27" lemma="vereniging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Vereniging" word="Vereniging"/>
+              <node begin="13" end="14" id="25" lemma="Landelijke" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Landelijke" spectype="deeleigen" word="Landelijke"/>
+              <node begin="14" end="15" id="26" lemma="Huisartsen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Huisartsen" spectype="deeleigen" word="Huisartsen"/>
+              <node begin="15" end="16" id="27" lemma="Vereniging" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vereniging" spectype="deeleigen" word="Vereniging"/>
             </node>
           </node>
         </node>

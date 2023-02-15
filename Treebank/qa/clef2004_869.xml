@@ -14,9 +14,9 @@
             <node begin="5" cat="np" end="9" id="11" rel="obj1">
               <node begin="5" end="6" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
               <node begin="6" cat="mwu" end="9" id="13" rel="hd">
-                <node begin="6" buiging="zonder" end="7" graad="basis" id="14" lemma="Europees" pos="name" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="Europees" word="Europees"/>
-                <node begin="7" buiging="zonder" end="8" graad="basis" id="15" lemma="monetair" pos="name" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="Monetair" word="Monetair"/>
-                <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="16" lemma="instituut" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Instituut" word="Instituut"/>
+                <node begin="6" end="7" id="14" lemma="Europees" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europees" spectype="deeleigen" word="Europees"/>
+                <node begin="7" end="8" id="15" lemma="Monetair" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Monetair" spectype="deeleigen" word="Monetair"/>
+                <node begin="8" end="9" id="16" lemma="Instituut" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Instituut" spectype="deeleigen" word="Instituut"/>
               </node>
             </node>
           </node>

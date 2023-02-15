@@ -4,7 +4,7 @@
     <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="22" id="2" rel="--">
       <node begin="5" end="6" id="3" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
-      <node begin="6" end="7" genus="masc" getal="ev" id="4" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="-ie"/>
+      <node begin="6" end="7" genus="masc" getal="ev" id="4" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,red,3,ev,masc)" pt="vnw" rel="su" root="hij" status="red" vwtype="pers" word="-ie"/>
       <node begin="0" cat="inf" end="22" id="5" rel="vc">
         <node begin="0" cat="pp" end="5" id="6" rel="mod">
           <node begin="0" cat="np" end="2" id="7" rel="mod">
@@ -27,7 +27,7 @@
         <node begin="12" cat="cp" end="22" id="20" rel="vc">
           <node begin="12" conjtype="onder" end="13" id="21" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="13" cat="ssub" end="22" id="22" rel="body">
-            <node begin="13" end="14" genus="masc" getal="ev" id="23" index="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="-ie"/>
+            <node begin="13" end="14" genus="masc" getal="ev" id="23" index="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,red,3,ev,masc)" pt="vnw" rel="su" root="hij" status="red" vwtype="pers" word="-ie"/>
             <node begin="20" end="21" id="24" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
             <node begin="13" cat="ppart" end="22" id="25" rel="vc">
               <node begin="13" end="14" id="26" index="2" rel="su"/>

@@ -7,9 +7,9 @@
       <node begin="0" cat="np" end="4" id="4" rel="su">
         <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" cat="mwu" end="4" id="6" rel="hd">
-          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="vereniging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Vereniging" word="Vereniging"/>
-          <node begin="2" end="3" id="8" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
-          <node begin="3" end="4" getal="mv" graad="basis" id="9" lemma="Boddaert_tehuis" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Boddaert-tehuizen" word="Boddaert-tehuizen"/>
+          <node begin="1" end="2" id="7" lemma="Vereniging" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vereniging" spectype="deeleigen" word="Vereniging"/>
+          <node begin="2" end="3" id="8" lemma="De" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+          <node begin="3" end="4" id="9" lemma="Boddaert-tehuizen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Boddaert-tehuizen" spectype="deeleigen" word="Boddaert-tehuizen"/>
         </node>
       </node>
       <node begin="4" end="5" id="10" lemma="bieden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="bied" word="biedt" wvorm="pv"/>

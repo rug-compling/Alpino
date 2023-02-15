@@ -5,7 +5,7 @@
     <node begin="0" cat="du" end="11" id="2" rel="--">
       <node begin="0" cat="smain" end="5" id="3" rel="dp">
         <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
-        <node begin="2" end="3" genus="masc" getal="ev" id="5" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="-ie"/>
+        <node begin="2" end="3" genus="masc" getal="ev" id="5" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,red,3,ev,masc)" pt="vnw" rel="su" root="hij" status="red" vwtype="pers" word="-ie"/>
         <node begin="0" cat="ppart" end="5" id="6" rel="vc">
           <node begin="0" buiging="zonder" end="1" graad="basis" id="7" lemma="ziek" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="ziek" word="Ziek"/>
           <node begin="2" end="3" id="8" index="1" rel="su"/>
@@ -15,7 +15,7 @@
       </node>
       <node begin="6" cat="smain" end="11" id="11" rel="dp">
         <node begin="7" end="8" id="12" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
-        <node begin="8" end="9" genus="masc" getal="ev" id="13" index="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="-ie"/>
+        <node begin="8" end="9" genus="masc" getal="ev" id="13" index="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,red,3,ev,masc)" pt="vnw" rel="su" root="hij" status="red" vwtype="pers" word="-ie"/>
         <node begin="6" cat="ppart" end="11" id="14" rel="vc">
           <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="15" lemma="heimwee" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="heimwee" word="heimwee"/>
           <node begin="8" end="9" id="16" index="2" rel="su"/>

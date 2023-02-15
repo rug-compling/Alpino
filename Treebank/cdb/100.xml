@@ -22,8 +22,8 @@
                 <node begin="10" cat="np" end="13" id="18" rel="obj1">
                   <node begin="10" end="11" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                   <node begin="11" cat="mwu" end="13" id="20" rel="hd">
-                    <node begin="11" buiging="met-e" end="12" graad="basis" id="21" lemma="sociaal_economisch" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="SociaalEconomische" word="SociaalEconomische"/>
-                    <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Raad" word="Raad"/>
+                    <node begin="11" end="12" id="21" lemma="SociaalEconomische" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="SociaalEconomische" spectype="deeleigen" word="SociaalEconomische"/>
+                    <node begin="12" end="13" id="22" lemma="Raad" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Raad" spectype="deeleigen" word="Raad"/>
                   </node>
                 </node>
               </node>

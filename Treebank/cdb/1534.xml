@@ -14,8 +14,8 @@
         <node begin="11" end="12" id="11" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="vc" root="zo" word="zo"/>
         <node begin="12" end="13" id="12" lemma="zeggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zeg" word="zegt" wvorm="pv"/>
         <node begin="13" cat="mwu" end="15" id="13" rel="su">
-          <node begin="13" end="14" id="14" lemma="The" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="The" spectype="deeleigen" word="The"/>
-          <node begin="14" end="15" id="15" lemma="Sun" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sun" spectype="deeleigen" word="Sun"/>
+          <node begin="13" end="14" id="14" lemma="The" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="The" spectype="vreemd" word="The"/>
+          <node begin="14" end="15" id="15" lemma="Sun" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Sun" spectype="vreemd" word="Sun"/>
         </node>
         <node begin="15" cat="pp" end="17" id="16" rel="mod">
           <node begin="15" end="16" id="17" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
@@ -28,11 +28,11 @@
             <node begin="19" buiging="met-e" end="20" graad="basis" id="23" lemma="Engels" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Engels" word="Engelse"/>
             <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="24" lemma="zondag_blad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="blad" word="zondagsblad"/>
             <node begin="22" cat="mwu" end="27" id="25" rel="app">
-              <node begin="22" end="23" id="26" lemma="The" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="The" spectype="deeleigen" word="The"/>
-              <node begin="23" end="24" id="27" lemma="News" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="News" spectype="deeleigen" word="News"/>
-              <node begin="24" end="25" id="28" lemma="of" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="of" spectype="deeleigen" word="of"/>
-              <node begin="25" end="26" id="29" lemma="the" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="the" spectype="deeleigen" word="the"/>
-              <node begin="26" end="27" id="30" lemma="World" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="World" spectype="deeleigen" word="World"/>
+              <node begin="22" end="23" id="26" lemma="The" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="The" spectype="vreemd" word="The"/>
+              <node begin="23" end="24" id="27" lemma="News" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="News" spectype="vreemd" word="News"/>
+              <node begin="24" end="25" id="28" lemma="of" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="of" spectype="vreemd" word="of"/>
+              <node begin="25" end="26" id="29" lemma="the" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="the" spectype="vreemd" word="the"/>
+              <node begin="26" end="27" id="30" lemma="World" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="World" spectype="vreemd" word="World"/>
             </node>
           </node>
         </node>

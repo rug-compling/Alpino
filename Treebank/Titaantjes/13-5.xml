@@ -49,7 +49,7 @@
               <node begin="24" cat="cp" end="39" id="40" rel="vc">
                 <node begin="24" conjtype="onder" end="25" id="41" lemma="dat" pos="det" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
                 <node begin="25" cat="ssub" end="39" id="42" rel="body">
-                  <node begin="25" end="26" genus="masc" getal="ev" id="43" index="4" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="-ie"/>
+                  <node begin="25" end="26" genus="masc" getal="ev" id="43" index="4" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,red,3,ev,masc)" pt="vnw" rel="su" root="hij" status="red" vwtype="pers" word="-ie"/>
                   <node begin="30" end="31" id="44" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
                   <node begin="25" cat="inf" end="39" id="45" rel="vc">
                     <node begin="25" end="26" id="46" index="4" rel="su"/>
@@ -89,7 +89,7 @@
       <node begin="40" cat="smain" end="47" id="67" rel="cnj">
         <node begin="40" end="41" id="68" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
         <node begin="41" end="42" id="69" lemma="hoeven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="hoef" word="hoefde" wvorm="pv"/>
-        <node begin="42" end="43" genus="masc" getal="ev" id="70" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="-ie"/>
+        <node begin="42" end="43" genus="masc" getal="ev" id="70" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,red,3,ev,masc)" pt="vnw" rel="su" root="hij" status="red" vwtype="pers" word="-ie"/>
         <node begin="43" cat="advp" end="45" id="71" rel="mod">
           <node begin="43" end="44" id="72" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
           <node begin="44" buiging="zonder" end="45" graad="comp" id="73" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="meer"/>

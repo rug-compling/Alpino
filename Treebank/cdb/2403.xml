@@ -30,8 +30,8 @@
             <node begin="12" cat="np" end="15" id="24" rel="obj1">
               <node begin="12" end="13" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="13" cat="mwu" end="15" id="26" rel="hd">
-                <node begin="13" buiging="met-e" end="14" graad="basis" id="27" lemma="sociaal_economisch" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Sociaal-Economische" word="Sociaal-Economische"/>
-                <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="28" lemma="raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Raad" word="Raad"/>
+                <node begin="13" end="14" id="27" lemma="Sociaal-Economische" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sociaal-Economische" spectype="deeleigen" word="Sociaal-Economische"/>
+                <node begin="14" end="15" id="28" lemma="Raad" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Raad" spectype="deeleigen" word="Raad"/>
               </node>
             </node>
           </node>

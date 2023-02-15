@@ -2,17 +2,17 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" end="1" getal="ev" id="2" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="Dat"/>
-      <node begin="1" end="2" id="3" infl="sg3" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" sc="ld_pp" stype="declarative" tense="present" word="staat" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+      <node begin="1" end="2" id="3" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
       <node begin="2" cat="pp" end="5" id="4" rel="ld">
         <node begin="2" end="3" id="5" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
         <node begin="3" cat="np" end="5" id="6" rel="obj1">
-          <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lemma="bladzij" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="bladzij" special="meas_mod" word="bladzij"/>
-          <node begin="4" end="5" id="8" infl="pl_num" lemma="23" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="23" special="hoofd" word="23"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="bladzijde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bladzij" word="bladzij"/>
+          <node begin="4" end="5" id="8" lemma="23" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="23" word="23"/>
         </node>
       </node>
     </node>
-    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Dat staat op bladzij 23 .</sentence>
 </alpino_ds>

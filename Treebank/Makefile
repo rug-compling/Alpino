@@ -253,7 +253,7 @@ FREQ/LEMMA.freq: $(TMPDATA)
 	cut -f2  $(TMPDATA) | sort | uniq -c | sort -nr > FREQ/LEMMA.freq 
 
 FREQ/RLEMMA.freq: $(TMPDATA)
-	grep -v -e 'SPEC(vreemd)' -e 'SPEC(deeleigen)'  $(TMPDATA) | cut -f2 | sort | uniq > FREQ/RLEMMA.freq 
+	grep -v -e 'SPEC(vreemd)' -e 'SPEC(deeleigen)' -e 'SPEC(afgebr)' $(TMPDATA) | cut -f2 | sort | uniq > FREQ/RLEMMA.freq 
 
 FREQ/WORD-POS.freq: $(TMPDATA)
 	cut -f1,3  $(TMPDATA) | sort | uniq -c | sort -nr > FREQ/WORD-POS.freq 
