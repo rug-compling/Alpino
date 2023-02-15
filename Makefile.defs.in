@@ -38,4 +38,4 @@
 
 #these goals should be Prolog goals and are executed right before
 #a saved state is constructed (SICStus only)
-#EXTRA_SICSTUS_GOAL=set_flag(suite,'../Suites/LassySmall'),load_suite,
+#EXTRA_SICSTUS_GOAL=set_suite('LassySmall'),
