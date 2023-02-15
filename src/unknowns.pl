@@ -2708,6 +2708,8 @@ compound_part(ex).
 compound_part(half).
 compound_part(her).
 compound_part(hyper).
+compound_part(inter).
+compound_part(intra).
 compound_part(kei).
 compound_part(macro).
 compound_part(mega).
