@@ -16709,10 +16709,6 @@ n([pl(jeugdherbergen),sg(jeugdherberg)],de,[]).
 
 n([pl(jeugdherinneringen),sg(jeugdherinnering)],de,[]).
 
-n([mass(jeugdliteratuur)],de,[]).
-
-n([pl(jeugdvrienden),sg(jeugdvriend)],de,[]).
-
 n([mass(jeuk)],de,[]).
 
 n([pl(jezuïeten),sg(jezuïet)],de,[]).
@@ -20485,7 +20481,7 @@ n([meas(liter),pl(liters),
 
 n([pl(literatoren),sg(literator)],de,[]).
 
-n([pl(literaturen),sg(literatuur)],de,[]).
+n([pl(literaturen),sg(literatuur)],de,[],[jeugd]).
 
 n([mass(literatuurwetenschap)],de,[]).
 
@@ -39024,7 +39020,7 @@ n([pl(voorstellen),sg(voorstel)],het,
    app_measure],
   [commissie,
    compromis,
-   i(intiatief_wet,initiatiefwets),
+   i(initiatief_wet,initiatiefwets),
    s(kabinet),
    i(kind,kinder),
    s(regering),
@@ -39396,6 +39392,7 @@ n([pl(vrienden),sg(vriend)],de,
   [np_app_measure],
   [boezem,
    h(ex),
+   jeugd,
    dim(vriendje)]).
 
 n([pl(vriendelijkheden),sg(vriendelijkheid)],de,[]).
@@ -40249,7 +40246,8 @@ n([pl(werelden),sg(wereld)],de,[],
    zwem,
    dim(wereldje)]).
 
-n([pl(wereldbekers),sg(wereldbeker)],de,[app_measure]).
+n([stem(wereld_beker),
+   pl(wereldbekers),sg(wereldbeker)],de,[app_measure]).
 
 n([pl(wereldbeschouwingen),sg(wereldbeschouwing)],de,[sbar,vp]).
 
@@ -40265,11 +40263,14 @@ n([mass(wereldliteratuur)],de,[]).
 
 n([mass(wereldluchtvaart)],de,[]).
 
-n([sg(wereldrecordhouder),pl(wereldrecordhouders)],de,[app_measure]).
+n([stem(wereld_record_houder),
+   sg(wereldrecordhouder),pl(wereldrecordhouders)],de,[app_measure]).
 
-n([pl(wereldtitels),sg(wereldtitel)],de,[app_measure]).
+n([lemma(wereld_titel),
+   pl(wereldtitels),sg(wereldtitel)],de,[app_measure]).
 
-n([sg(wereldtitelstrijd),pl(wereldtitelstrijden)],de,[app_measure]).
+n([lemma(wereld_titel_wedstrijd),
+   sg(wereldtitelstrijd),pl(wereldtitelstrijden)],de,[app_measure]).
 
 n([mass(wereldvrede)],de,[]).
 
