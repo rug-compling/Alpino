@@ -582,15 +582,17 @@ lm_diff:
 pt_diff:
 	-diff <(grep ' #PT' $$suite/poslemma) <(grep ' #PT' $$suite/job*/log1) | grep '^[>]'
 
+GREP=grep -v -e fn -e fv -e ovis -e Titaantjes[-]
+
 lm_diffs:
-	@for file in `echo $(shell ls $(ORDERED) */job*/log1 | grep -v -e fn -e fv -e ovis 2>/dev/null)`; do \
+	@for file in `echo $(shell ls $(ORDERED) */job*/log1 | $(GREP) 2>/dev/null)`; do \
         suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
 	echo $$suite;\
 	$(MAKE) -s lm_diff suite=$$suite;\
 	done
 
 pt_diffs:
-	@for file in `echo $(shell ls $(ORDERED) */job*/log1 | grep -v -e fn -e fv -e ovis 2>/dev/null)`; do \
+	@for file in `echo $(shell ls $(ORDERED) */job*/log1 | $(GREP)  2>/dev/null)`; do \
         suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
 	echo $$suite;\
 	$(MAKE) -s pt_diff suite=$$suite;\
@@ -623,3 +625,8 @@ overview0:
 	@for file in `ls $(PATTERN)*/poslemma`; do cat $$file | grep '^#LM#' | tail -n1 | sed -e 's/#LM#//'; done  | awk 'END {printf "%.2f\n",100*C/T} {C = C+$$1;T=T+$$3}'
 	@for file in `ls $(PATTERN)*/poslemma`; do cat $$file | grep '^#PT#' | tail -n1 | sed -e 's/#PT#//'; done  | awk 'END {printf "%.2f\n",100*C/T} {C = C+$$1;T=T+$$3}'
 
+lemmas:
+	ls */poslemma |$(GREP)| xargs cat |grep ' #LM' | awk '{ print $$1,$$2,$$3 }' |sort | uniq -c |sort -n
+
+postags:
+	ls */poslemma |$(GREP)| xargs cat |grep ' #PT' | awk '{ print $$1,$$2,$$3 }' |sort | uniq -c |sort -n
