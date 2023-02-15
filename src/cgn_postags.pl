@@ -98,8 +98,12 @@ cgn_postag_c(skip,Stem,_,Q0,Q,_,_) -->
     guess_tags(Q0,Q,skip,Stem).
 
 cgn_postag_c(fixed_part(P),Stem,_,Q0,Q,_,_) -->
-    !,
-    guess_tags(Q0,Q,fixed_part(P),Stem).
+    {  atom(Stem),
+       alpino_util:split_atom(Stem," ",Stems),
+       length(Stems,Len),
+       Q is Len + Q0
+    },
+    guess_tags(Q0,Q,fixed_part(P),Stems).
 
 cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_) -->
     {  format(user_error,"error: no cgn tag for ~w ~w ~w~n",[Surf,Stem,Frame]) },
@@ -330,7 +334,7 @@ guess_stags(Q0,Q,Tag,St,L0,L) :-
 	->  guess_tag(H,H,Q0,Q1,L0,L1),
 	    guess_stags(Q1,Q,fixed_part(T),_Stems,L1,L)
 	;   St = [Stem|Stems],
-	    guess_lex(Stem,POSTAG)
+	    guess_lex(Q0,Q1,Stem,POSTAG)
 	->  L0 = [cgn_postag(Q0,Q1,Stem,POSTAG)|L1],
 	    guess_stags(Q1,Q,Tag,Stems,L1,L)
 	;   St = [Stem|Stems]
@@ -341,6 +345,15 @@ guess_stags(Q0,Q,Tag,St,L0,L) :-
 	)
     ;   L0 = L
     ).
+
+guess_lex(Q0,Q,Stem,Tag) :-
+    var(Stem),
+    !,
+    alpino_lexical_analysis:thread_flag(current_input_sentence,Input),
+    alpino_lexical_analysis:surface_form(Input,Q0,Q,Stem),
+    guess_lex(Stem,Tag).
+guess_lex(_,_,Stem,Tag) :-
+    guess_lex(Stem,Tag).
 
 guess_lex(Stem,Tag) :-
     lassy(Stem,Tag),!.
@@ -603,6 +616,11 @@ context_dependent_tag(determiner(_,nwh,nmod,pro,nparg),PosTag,Stem,Q0,Q,Result):
     ;   det_pron(Stem,PosTag,_)
     ).
 
+context_dependent_tag(adjective(e),'VNW(onbep,det,stan,nom,met-e,zonder-n)',een,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    noun_path(Path).
+context_dependent_tag(adjective(e),'VNW(onbep,det,stan,prenom,met-e,evz)',een,_Q0,_Q,_Result).
+
 context_dependent_tag(adjective(no_e(odet_adv)),PosTag,Stem,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
     (   pronoun_path(Path)
@@ -667,11 +685,6 @@ context_dependent_tag(adj_number(enkele),'VNW(onbep,det,stan,nom,met-e,zonder-n)
 context_dependent_tag(adj_number(pl_num),'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)',_,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
     number_vrij_path(Path).
-
-context_dependent_tag(adjective(e),'VNW(onbep,det,stan,nom,met-e,zonder-n)',ene,Q0,Q,Result) :-
-    find_path(Q0,Q,Result,Path),
-    noun_path(Path).
-context_dependent_tag(adjective(e),'VNW(onbep,det,stan,prenom,met-e,evz)',ene,_Q0,_Q,_Result).
 
 context_dependent_tag(adjective(e),'ADJ(nom,basis,met-e,zonder-n,stan)',_Stem,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
@@ -912,7 +925,6 @@ exceptional_stem_tag(in,adjective(_),                         'VZ(fin)',in).
 exceptional_stem_tag(jouwe,noun(both,count,both),             'VNW(bez,det,stan,vol,2v,ev,nom,met-e,zonder-n)',jou).
 exceptional_stem_tag(jouwe,noun(both,count,pl),               'VNW(bez,det,stan,vol,2v,ev,nom,met-e,mv-n)',jou).
 exceptional_stem_tag(kortweg,_,                               'BW()',kortweg).
-exceptional_stem_tag(leven_lang,noun(_,_,_),                  'ADJ(vrij,basis,zonder)',leven_lang).
 exceptional_stem_tag(man,postn_adverb,                        'N(soort,mv,basis)',man).
 exceptional_stem_tag(mee,loc_adverb,                          'VZ(fin)',mee).
 exceptional_stem_tag(mee,particle(mee),                       'VZ(fin)',mee).
@@ -933,7 +945,13 @@ exceptional_stem_tag(uitgerekend,modal_adverb,                'WW(vd,vrij,zonder
 exceptional_stem_tag(verder,particle(verder),                 'ADJ(vrij,comp,zonder)',ver).
 exceptional_stem_tag(verdenken,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',verdenken).
 exceptional_stem_tag(verdenken,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',verdenken).
+exceptional_stem_tag(Verdenken,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',Verdenken) :-
+    atom_concat(_,'_verdenken',Verdenken).
+exceptional_stem_tag(Verdenken,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',Verdenken):- 
+    atom_concat(_,'_verdenken',Verdenken).
 exceptional_stem_tag(vrouw,postn_adverb,                      'N(soort,mv,basis)',vrouw).
+exceptional_stem_tag(weg,adjective(_),                        'BW()',weg).
+exceptional_stem_tag(weg,particle(weg),                       'BW()',weg).
 
 exceptional_stem_tag(mijne, noun(both,count,both),            'VNW(bez,det,stan,vol,1,ev,nom,met-e,zonder-n)',    mijn).
 exceptional_stem_tag(onze,  noun(both,count,sg),              'VNW(bez,det,stan,vol,1,mv,nom,met-e,zonder-n)',    ons).
@@ -1009,6 +1027,7 @@ exceptional_stem_tag(ander,post_adjective(er),                      'ADJ(postnom
 exceptional_stem_tag(ander,nominalized_compar_adjective_sg,         'ADJ(nom,basis,zonder,zonder-n)').
 exceptional_stem_tag(ander,nominalized_compar_adjective,            'ADJ(nom,basis,met-e,mv-n)').
 exceptional_stem_tag(andere,determiner(de,nwh,nmod,pro,yparg),      'ADJ(prenom,basis,met-e,stan)').
+exceptional_stem_tag(anderhalf,number(hoofd(both)),                 'ADJ(prenom,basis,zonder)').
 exceptional_stem_tag(andermans,determiner(pron),                    'VNW(onbep,pron,gen,vol,3p,ev)').
 exceptional_stem_tag(annex,conj(annex),                             'VZ(init)').
 exceptional_stem_tag(beetje,noun(het,count,sg),                     'N(soort,ev,dim,onz,stan)').
@@ -1060,7 +1079,6 @@ exceptional_stem_tag(elk,predm_adverb,                              'VNW(onbep,d
 exceptional_stem_tag(elkaar,pronoun(nwh,thi,pl,de,dat_acc,def),     'VNW(recip,pron,obl,vol,persoon,mv)').
 exceptional_stem_tag(elkaar,determiner(pron),                       'VNW(recip,pron,gen,vol,persoon,mv)').
 exceptional_stem_tag(elkander,determiner(pron),                     'VNW(recip,pron,gen,vol,persoon,mv)').
-exceptional_stem_tag(een,adjective(e),                              'VNW(onbep,det,stan,prenom,met-e,evz)').
 exceptional_stem_tag(ergens,_,                                      'VNW(onbep,adv-pron,obl,vol,3o,getal)').
 exceptional_stem_tag(even,adjective(both(tmpadv)),                  'BW()').
 exceptional_stem_tag(eventjes,_,                                    'BW()').
@@ -1120,7 +1138,6 @@ exceptional_stem_tag(liefst,modal_adverb(_),                        'BW()').
 exceptional_stem_tag(man,determiner(pron),                          'N(soort,ev,basis,gen)').
 exceptional_stem_tag(maximum,adjective(_),                          'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(veel,postadv_adverb,                           'VNW(onbep,grad,stan,vrij,zonder,comp)').
-exceptional_stem_tag('v.j.',_,                                      'SPEC(afk)').
 exceptional_stem_tag(meerdere,determiner(pl_num,nwh,nmod,pro,yparg),'VNW(onbep,det,stan,prenom,met-e,mv)').
 exceptional_stem_tag(meisje,noun(het,count,sg),                     'N(soort,ev,dim,onz,stan)').
 exceptional_stem_tag(meisje,noun(het,count,pl),                     'N(soort,mv,dim)').
@@ -1189,7 +1206,7 @@ exceptional_stem_tag(tenminste,tag,                                 'BW()').
 exceptional_stem_tag(thuis,_,                                       'BW()').
 exceptional_stem_tag(tien_duizend,noun(de,count,pl),                'TW(hoofd,nom,mv-n,basis)').
 exceptional_stem_tag(toedoen,_,                                     'WW(inf,nom,zonder,zonder-n)').
-exceptional_stem_tag(tot,conj(tot),                                 'VZ(init)').
+exceptional_stem_tag(tot,conj(tot),                                 'VG(neven)').
 exceptional_stem_tag(tot,complementizer,                            'VZ(init)').
 exceptional_stem_tag(trouwens,_,                                    'BW()').
 exceptional_stem_tag(tweemaal,noun(both,count,bare_meas),           'BW()').
@@ -1204,8 +1221,6 @@ exceptional_stem_tag(vallen,nominalized_adjective_sg,               'WW(vd,nom,m
 exceptional_stem_tag(veel,adjective(e),                             'VNW(onbep,grad,stan,prenom,met-e,agr,basis)').
 exceptional_stem_tag(veel,nominalized_adjective,                    'VNW(onbep,grad,stan,nom,met-e,mv-n,basis)').
 exceptional_stem_tag(veevoer,noun(both,mass,sg),                    'N(soort,ev,basis,onz,stan)').
-exceptional_stem_tag(verdachte,noun(de,count,sg),                   'WW(vd,nom,met-e,zonder-n)').
-exceptional_stem_tag(verdachte,noun(de,count,pl),                   'WW(vd,nom,met-e,mv-n)').
 exceptional_stem_tag(veroordelen,nominalized_adjective(_),          'WW(vd,nom,met-e,mv-n)').
 exceptional_stem_tag(veroordelen,nominalized_adjective,             'WW(vd,nom,met-e,mv-n)').
 exceptional_stem_tag(versus,_,                                      'VZ(init)').
@@ -1307,44 +1322,6 @@ exceptional_word_tag(Word,_,'SPEC(afgebr)') :-
     atom(Word),
     atom_concat(_,'*a',Word).
 
-exceptional_word_tag('o.a.',_,                                       'SPEC(afk)').
-exceptional_word_tag('O.a.',_,                                       'SPEC(afk)').
-exceptional_word_tag('ca.',_,                                        'SPEC(afk)').
-exceptional_word_tag('Ca.',_,                                        'SPEC(afk)').
-exceptional_word_tag('o.m.',_,                                       'SPEC(afk)').
-exceptional_word_tag('O.m.',_,                                       'SPEC(afk)').
-exceptional_word_tag('Chr.',_,                                       'SPEC(afk)').
-exceptional_word_tag('v.',_,                                         'SPEC(afk)').
-exceptional_word_tag('c.q.',_,                                       'SPEC(afk)').
-exceptional_word_tag('t/m',_,                                        'SPEC(afk)').
-exceptional_word_tag('nr.',_,                                        'SPEC(afk)').
-exceptional_word_tag('n.a.g.',_,                                     'SPEC(afk)').
-exceptional_word_tag('b.v.',_,                                       'SPEC(afk)').
-exceptional_word_tag('e.d.',_,                                       'SPEC(afk)').
-exceptional_word_tag('d.w.z.',_,                                     'SPEC(afk)').
-exceptional_word_tag('dwz.',_,                                       'SPEC(afk)').
-exceptional_word_tag('t.o.v.',_,                                     'SPEC(afk)').
-exceptional_word_tag('n.a.v.',_,                                     'SPEC(afk)').
-exceptional_word_tag('t.a.v.',_,                                     'SPEC(afk)').
-exceptional_word_tag('i.v.m.',_,                                     'SPEC(afk)').
-exceptional_word_tag('i.p.v.',_,                                     'SPEC(afk)').
-exceptional_word_tag('e.a.',_,                                       'SPEC(afk)').
-exceptional_word_tag('incl.',_,                                      'SPEC(afk)').
-exceptional_word_tag('t.z.t.',_,                                     'SPEC(afk)').
-exceptional_word_tag('N.v.t.',_,                                     'SPEC(afk)').
-exceptional_word_tag('n.v.t.',_,                                     'SPEC(afk)').
-exceptional_word_tag('Nr.',_,                                        'SPEC(afk)').
-exceptional_word_tag('c.s.',_,                                       'SPEC(afk)').
-exceptional_word_tag('blz.',_,                                       'SPEC(afk)').
-exceptional_word_tag('Blz.',_,                                       'SPEC(afk)').
-exceptional_word_tag('blz',_,                                        'SPEC(afk)').
-exceptional_word_tag('Blz',_,                                        'SPEC(afk)').
-exceptional_word_tag('m.n.',_,                                       'SPEC(afk)').
-exceptional_word_tag('resp.',_,                                      'SPEC(afk)').
-exceptional_word_tag('d.d.',_,                                       'SPEC(afk)').
-exceptional_word_tag('i.s.m.',_,                                     'SPEC(afk)').
-exceptional_word_tag('vs.',_,                                        'SPEC(afk)').
-exceptional_word_tag('mln.',_,                                       'SPEC(afk)').
 exceptional_word_tag('mg/dag',_,                                     'SPEC(symb)').
 exceptional_word_tag(©,_,                                            'SPEC(symb)').
 exceptional_word_tag('°C',_,                                         'SPEC(symb)').
@@ -1407,12 +1384,84 @@ exceptional_word_tag('Eéntje',één,één, pronoun(nwh,thi,sg,de,both,indef,str
 
 exceptional_word_tag(allen,  al,al,_,                                'VNW(onbep,det,stan,nom,met-e,mv-n)').
 exceptional_word_tag('Allen',al,al,_,                                'VNW(onbep,det,stan,nom,met-e,mv-n)').
-
 exceptional_word_tag(Surf,_,Surf,Tag,Pos) :-
     symb(Surf,Tag,Pos).
 
+exceptional_word_tag('COMPLEET',_,compleet,robust_skip,'ADJ(vrij,basis,zonder)').
+exceptional_word_tag('BETA',_,'BETA',robust_skip,'SPEC(vreemd)').
+exceptional_word_tag('MISSING',_,'MISSING',robust_skip,'SPEC(vreemd)').
+exceptional_word_tag('TABLE',_,'TABLE',robust_skip,'SPEC(vreemd)').
+exceptional_word_tag('INDEX',_,index,robust_skip,'N(soort,ev,basis,zijd,stan)').
+exceptional_word_tag('PARA',_,'PARA',robust_skip,'SPEC(vreemd)').
+
+exceptional_word_tag(nl,_,'Nederland',noun(_,_,_),'SPEC(afk)').
+exceptional_word_tag(nl,_,namelijk,setnence_adverb,'SPEC(afk)').
+exceptional_word_tag(Word,_,Stem,_,'SPEC(afk)') :-
+    afk(Word,Stem).
+
+afk('plm','plus minus').
+afk('B.B.','Bescherming Bevolking').
+afk('e.d.','en dergelijke').
+afk('b.d.','buiten dienst').
+afk('d.i.','dit is').
+afk('o.a.','onder ander').
+afk('O.a.','onder ander').
+afk('ca.',circa).
+afk('Ca.',circa).
+afk('o.m.','onder meer').
+afk('O.m.','onder meer').
+afk('Chr.','Christus').
+afk('v.',voor).
+afk('c.q.','casu quo').
+afk('cq','casu quo').
+afk('t/m','tot en met').
+afk('nr.',nummer).
+afk('n.a.g.','niet afzonderlijk genoemd').
+afk('b.v.',bijvoorbeeld).
+afk('e.d.','en dergelijke').
+afk('d.w.z.','dat wil zeggen').
+afk('dwz.','dat wil zeggen').
+afk('t.o.v.','ten opzichte van').
+afk('n.a.v.','naar aanleiding van').
+afk('t.a.v.','ten aanzien van').
+afk('i.v.m.','in verband met').
+afk('i.p.v.','in plaats van').
+afk('e.a.','en andere').
+afk('incl.',inclusief).
+afk('t.z.t.','te zijner tijd').
+afk('N.v.t.','niet van toepassing').
+afk('n.v.t.','niet van toepassing').
+afk('Nr.',nummer).
+afk('c.s.','cum suis').
+afk('blz.',bladzijde).
+afk('Blz.',bladzijde).
+afk('blz',bladzijde).
+afk('Blz',bladzijde).
+afk('m.n.','met name').
+afk('resp.',respectievelijk).
+afk('d.d.','de dato').
+afk('i.s.m.','in samenwerking met').
+afk('vs.',versus).
+afk('mln.',miljoen).
+afk('plm.','plus minus').
+afk('v.j.','vorig jaar').
+afk('r.k.','rooms-katholiek').
+afk('b.d.','buiten dienst').
+afk('v.Chr.','voor Christus').
+afk('v.C.','voor Christus').
+afk('a.k.a','also known as').
+afk(nvdr,'noot van de redactie').
+afk(brt,'bruto register ton').
+afk('z.i.','zijn inzien').
+afk('N.B.','nota bene').
+afk(cfr,confer).
+afk('cf.',confer).
+afk('mln.',miljoen).
+afk('t.w.','te weten').
+afk('i.h.b.','in het bijzonder').
+
 symb('ha.', noun(de,count,meas), 'SPEC(symb)').
-symb(ha,    noun(de,count,meas), 'SPEC(symb)').
+symb(ha, noun(de,count,meas), 'SPEC(symb)').
 symb('¤',_,   'SPEC(symb)').
 symb(mm,_,    'SPEC(symb)').
 symb(m,_,     'SPEC(symb)').
@@ -1460,7 +1509,7 @@ genus_genus(koolmonoxide).
 genus_genus(soort).
 
 stem_dependent_tag(cleft_het_noun,het,'VNW(pers,pron,stan,red,3,ev,onz)').
-stem_dependent_tag(cleft_het_noun,dat,'VNW(aanw,pron,stan,vol,3,ev)').
+stem_dependent_tag(cleft_het_noun,dat,'VNW(aanw,pron,stan,vol,3o,ev)').
 stem_dependent_tag(modal_adverb,enkel,'BW()').
 stem_dependent_tag(adjective(no_e(_)),enkel,'BW()').
 stem_dependent_tag(noun(both,_,sg),Stem,'N(soort,ev,basis,genus,stan)') :-
@@ -1522,6 +1571,15 @@ stem_dependent_tag(complementizer(np),Stem,Tag) :-
     ->  Tag = 'ADJ(vrij,basis,zonder)'
     ;   Tag = 'VG(onder)'
     ).
+
+stem_dependent_tag(noun(both,_,sg),Stem,'N(eigen,ev,basis,genus,stan)') :-
+    eigen_noun(Stem).
+stem_dependent_tag(noun(de,_,sg),Stem,'N(eigen,ev,basis,zijd,stan)') :-
+    eigen_noun(Stem).
+stem_dependent_tag(noun(het,_,sg),Stem,'N(eigen,ev,basis,onz,stan)') :-
+    eigen_noun(Stem).
+stem_dependent_tag(noun(_,_,pl),Stem,'N(eigen,mv,basis)') :-
+    eigen_noun(Stem).
 
 stem_dependent_tag(noun(de,count,sg),Stem,'N(eigen,ev,basis,zijd,stan)') :-
     (   alpino_lex:date_month(Stem)
@@ -2186,8 +2244,6 @@ genus_naam('ABN-AMRO').
 genus_naam('Adecco').
 genus_naam('Agusta').
 genus_naam('Ahold').
-genus_naam('Al-Qaida').
-genus_naam('al-Qaida').
 genus_naam('ARJOS').
 genus_naam('Beernink').
 genus_naam('Belga').
@@ -2209,7 +2265,6 @@ genus_naam('EWI').
 genus_naam('EZ').
 genus_naam('Fortis').
 genus_naam('Google').
-genus_naam('Heineken').
 genus_naam('IGE').
 genus_naam('Interbrew').
 genus_naam('Interpay').
@@ -2229,7 +2284,7 @@ genus_naam('Parmalat').
 genus_naam('Prego').
 genus_naam('Rituals').
 genus_naam('Ryanair').
-genus_naam('Sabena').
+genus_naam('S&P').
 genus_naam('SAR').
 genus_naam('SEM').
 genus_naam('Smead').
@@ -2251,6 +2306,8 @@ genus_naam('Yukos').
 
 de_naam('Allerheiligen').
 de_naam('Alzheimer').
+de_naam('Al-Qaida').
+de_naam('al-Qaida').
 de_naam('Antenna').
 de_naam('Aquarius').
 de_naam('AR').
@@ -2301,8 +2358,11 @@ de_naam('G.R.I.').
 de_naam('Gore').
 de_naam('Grant').
 de_naam('Grigorenko').
+de_naam('HAVO').
+de_naam('HBS').
 de_naam('HP').
 de_naam('HR-beglazing').
+de_naam('HTS').
 de_naam('Hamilton').
 de_naam('Hanekop').
 de_naam('Hector').
@@ -2318,18 +2378,24 @@ de_naam('JFK').
 de_naam('JeanJacques').
 de_naam('Jiska').
 de_naam('KLM').
+de_naam('KNSM').
+de_naam('K.N.S.M.').
 de_naam('Kapp').
 de_naam('Kolme').
 de_naam('Kongo').
 de_naam('Koninginnedag').
 de_naam('KVP').
+de_naam('LTS').
 de_naam('Langefjord').
 de_naam('Lay').
 de_naam('Ligterink').
 de_naam('Lila').
 de_naam('Lincoln').
 de_naam('Longstreet').
+de_naam('MAVO').
+de_naam('MEAO').
 de_naam('MRI').
+de_naam('MTS').
 de_naam('Maas').
 de_naam('Mangé').
 de_naam('Mars').
@@ -2508,9 +2574,11 @@ het_naam('GVAV').
 het_naam('Georgia').
 het_naam('Greenpeace').         
 het_naam('Griffoendor').
-het_naam('GroenLinks').         
+het_naam('GroenLinks').
 het_naam('Harvard').
+het_naam('HBO').
 het_naam('Heeswijk').
+het_naam('Heineken').
 het_naam('Herkenrode').
 het_naam('HFC').
 het_naam('Hoogkerk').
@@ -2523,6 +2591,7 @@ het_naam('ISS').
 het_naam('ISSN').
 het_naam('IST').
 het_naam('Inter').
+het_naam('Internet').
 het_naam('Israël').
 het_naam('Jamathi').
 het_naam('Jantje').
@@ -2575,9 +2644,11 @@ het_naam('Rennes').
 het_naam('Ridderkerk').
 het_naam('RIZIV').
 het_naam('Rijswijk').
+het_naam('Sabena').
 het_naam('SHO').
 het_naam('Siemens').
 het_naam('Spaans').
+het_naam('Staatsblad').
 het_naam('SVV').
 het_naam('Sørøy').
 het_naam('TNO').
@@ -2592,6 +2663,8 @@ het_naam('Unilever').
 het_naam('Verolme').
 het_naam('VK').
 het_naam('VLAO').
+het_naam('VMBO').
+het_naam('VWO').
 het_naam('Washington').
 het_naam('West-Berlijn').
 het_naam('Winterswijk').
@@ -2933,9 +3006,12 @@ tmp_np([W|Ws],[P|Ps],[S|Ss]) :-
 
 tmp_np1("een",[_,"of"|_],'LID(onbep,stan,agr)',een).
 tmp_np1("een",_,'TW(hoofd,vrij)',één).
+tmp_np1(Str,_,'SPEC(afk)',Stem) :-
+    afkorting(Str,Stem).
 tmp_np1(W,_Ctxt,P,S) :-
     tmp_np1(W,P),
     atom_codes(S,W).
+
 
 tmp_np1("+",'SPEC(symb)').
 tmp_np1(String,'N(eigen,ev,basis,zijd,stan)') :-
@@ -2960,14 +3036,16 @@ tmp_np1("tot",'VZ(init)').
 tmp_np1("met",'VZ(init)').
 tmp_np1("en",'VG(neven)').
 tmp_np1("over",'VZ(init)').
-tmp_np1("v.",'SPEC(afk)').
-tmp_np1("v.Chr.",'SPEC(afk)').
-tmp_np1("v.C.",'SPEC(afk)').
-tmp_np1("Chr.",'SPEC(afk)').
-tmp_np1("Chr",'SPEC(afk)').
 tmp_np1("Christus",'N(eigen,ev,basis,zijd,stan)').
 tmp_np1("of",'VG(neven)').
 tmp_np1(_,'TW(hoofd,vrij)').
+
+afkorting("v.",voor).
+afkorting("v.Chr.",'voor Christus').
+afkorting("v.C.",'voor Christus').
+afkorting("Chr.",'Christus').
+afkorting("Chr",'Christus').
+
 
 
 op(op).
@@ -3216,6 +3294,7 @@ frame_map(meas_mod_noun(both,count,meas),procent,noun(het,count,meas)).
 frame_map(meas_mod_noun(A,B,C),_,             noun(A,B,C)).
 frame_map(meas_mod_noun(A,B,C,_),_,           noun(A,B,C)).
 
+vreemd_lemma(bèta).
 vreemd_lemma(consolatio).
 vreemd_lemma(fancy).
 vreemd_lemma(fatwa).
@@ -3228,8 +3307,6 @@ vreemd_lemma(warlord).
 vreemd_lemma(warlords).
 
 
-lassy('MISSING','SPEC(vreemd)').
-lassy('PARA','SPEC(vreemd)').
 
 
 lassy(de, 'LID(bep,stan,rest)').
@@ -4537,7 +4614,6 @@ exc_lemma('Koninklijke',koninklijk).
 exc_lemma('Museum',museum).
 exc_lemma('Olympische','Olympisch').
 exc_lemma('Stichting',stichting).
-exc_lemma('Strafwetboek',strafwetboek).
 exc_lemma('Universiteit',universiteit).
 exc_lemma('Verbond',verbond).
 exc_lemma('Vereniging',vereniging).
@@ -4604,7 +4680,7 @@ lassy_lemma(bleef,blijven).
 lassy_lemma(bleek,blijken).
 lassy_lemma(blijft,blijven).
 lassy_lemma(blijkt,blijken).
-lassy_lemma('Blz.',bladzij).
+lassy_lemma('Blz.',bladzijde).
 lassy_lemma(boeken,boek).
 lassy_lemma(boeren,boer).
 lassy_lemma('Bovendien',bovendien).
@@ -5118,3 +5194,6 @@ gcnd('verdikke').
 gcnd('verdorie').
 gcnd('godverdomme').
 gcnd('goddikke').
+
+eigen_noun('Holocaust').
+
