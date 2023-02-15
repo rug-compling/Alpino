@@ -3,6 +3,10 @@
 <!-- Alpino Dependency Structures DTD -->
 
 <!--
+Versie 1.16 per februari 2023
+ - is_np
+ - is_vorfeld, is_nachfeld
+
 Versie 1.15 v_per person information of finite verb
 
 Versie 1.14 dropped_prs, dropped_agr
@@ -243,6 +247,9 @@ recursion_limit CDATA			#IMPLIED
 	for modified particles in conjunction, "hij ademde in en hard uit" -->
 
 
+<!-- MWU_ROOT and MWU_SENSE are obsolete as of 1.13 -->
+
+
 <!ATTLIST node
 	  rel	(hdf|hd|cmp|sup|su|obj1|pobj1|obj2|se|pc|vc|svp|predc|ld|me|
 		 predm|obcomp|mod|body|det|app|whd|rhd|cnj|crd|nucl|sat|tag|
@@ -264,6 +271,9 @@ recursion_limit CDATA			#IMPLIED
 	  id		CDATA	#IMPLIED
 
 	  %nodeattr;
+
+	  mwu_root	CDATA	#IMPLIED
+	  mwu_sense	CDATA	#IMPLIED
 
 	  sense		CDATA	#IMPLIED
 	  lcat		CDATA	#IMPLIED
@@ -339,6 +349,10 @@ recursion_limit CDATA			#IMPLIED
           sonar_ne_begin CDATA #IMPLIED
           sonar_ne_end   CDATA #IMPLIED
           sonar_ne       CDATA #IMPLIED
+
+	  is_np          (true) #IMPLIED
+	  is_vorfeld     (true) #IMPLIED
+	  is_nachfeld    (true) #IMPLIED
 
 >
 
