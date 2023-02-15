@@ -423,6 +423,7 @@ unknown_word_heuristic(P0,R0,W0,[W1|Ts],"dashed_additional_space|~p|~p|~p|~p~n",
 		       [W0,W1,W,[Th|Tt]],_,HIS) :-
     debug_message(3,"trying heuristic dashed_additional_space~n",[]),
     atom(W0),atom(W1),
+    \+ W1=en,    % op- en aanmerkingen
     atom_concat(Left,'-',W0),
     atom_concat(Left,W1,W),
     findall(Tag,lexical_analysis_add_space([W|Ts],P0,R0,add_space,Tag,HIS),
@@ -448,11 +449,11 @@ unknown_word_heuristic(P0,R0,W0,[W1|Ts],"bracketed_additional_space|~p|~p|~p|~p~
     findall(Tag,lexical_analysis_add_space([W|Ts],P0,R0,add_space,Tag,HIS),
 	    [Th|Tt]).
 
-unknown_word_heuristic(P0,R0,W,Ws,"within_word_conjunct|~p|~p~n",
-                       [W,Stem],_,len(1)) :-
+unknown_word_heuristic(P0,R0,W,Ws,"within_word_conjunct|~p~n",
+                       [W],_,len(1)) :-
     debug_message(3,"trying heuristic within_word_conjunct~n",[]),
     atom(W),
-    atom_concat(Stem,'-',W),
+    atom_concat(_,'-',W),
     P is P0 + 1,
     R is R0 + 1,
 
@@ -464,7 +465,7 @@ unknown_word_heuristic(P0,R0,W,Ws,"within_word_conjunct|~p|~p~n",
     
     \+ end_sentence(Ws),
     !,
-    assert_tag(P0,P,R0,R,Stem,within_word_conjunct,within_word_conjunct).
+    assert_tag(P0,P,R0,R,W,within_word_conjunct,within_word_conjunct).
 
 unknown_word_heuristic(P1,R1,W,Ws,"cap|~p|~p|~p~n",[W,Wmin,[Th|Tt]],_,none) :-
     debug_message(3,"trying heuristic cap~n",[]),
@@ -2697,6 +2698,9 @@ compound_part(final,W,Stem) :-
 compound_part(W,W) :-
     compound_part(W).
 compound_part(kinder,kind).
+compound_part(hersen,hersen).
+compound_part(hoender,hoen).
+compound_part(huishoud,huishoud).
 
 compound_part(achteraf).
 compound_part(anti).
@@ -3804,9 +3808,18 @@ allow_verb_only_if_particle(v_noun(X),v_noun(X),Parts,Stem,NewStem) :-
     Parts = [_],
     lists:append(Parts,[Stem],PartsStem),
     alpino_lex:concat_stems(PartsStem,NewStem).
+allow_verb_only_if_particle(Tag,Tag,[Noord],Stem0,Stem) :-
+    noord(Noord),
+    !,
+    atom_concat(Noord,Stem0,Stem).
 allow_verb_only_if_particle(Tag,Tag,Parts,Stem,NewStem) :-
     lists:append(Parts,[Stem],PartsStem),
     alpino_lex:concat_stems(PartsStem,NewStem).
+
+noord('Noord-').
+noord('Zuid-').
+noord('Oost-').
+noord('West-').
 
 %adjective_tag(adjective(no_e(_))).
 %adjective_tag(adjective(e)).
@@ -4008,7 +4021,6 @@ subsumed_by_dict(_,_,[Surf],_) :-
     alpino_lex:xl(Brits,adjective(no_e(_)),_,[],[]),
     alpino_lex:xl(Nederlands,adjective(_),_,[],[]).
 
-%% forbid: Noord-Cyprus (will be added by prefix_name)
 subsumed_by_dict(_,_,[Surf],_) :-
     guess_prefix_compound(Surf,_,Wmin),
     alpino_lex:lexicon(Tag,_,[Wmin],[],_),
