@@ -35,3 +35,7 @@
 #for fast start-up. Of course, the resulting saved state may no longer
 #be accessible from other machines, or (virtual disk) after reboot.
 #DISK=/dev/shm
+
+#these goals should be Prolog goals and are executed right before
+#a saved state is constructed (SICStus only)
+#EXTRA_SICSTUS_GOAL=set_flag(suite,'../Suites/LassySmall'),load_suite,

@@ -63,6 +63,7 @@ state:
 	-echo "use_module('../Hdrug/Prolog/hdrug_main'),\
                use_module(start),\
    version('Alpino (development), `cat ../version` $(shell date "+%Y-%m-%dT%H:%M%z")'),\
+               $(EXTRA_SICSTUS_GOAL)\
                save_program('$(DISK)/Alpino.sav',hdrug_main)." |\
         sicstus  -f
 
