@@ -14,7 +14,7 @@ suites=$(sents:%.sents=%) $(named_sents:%.named_sents=%)
 all: $(suites:%=%.pl) tt tu
 
 %.po : %.pl
-	echo "compile('$*'), save_files('$*','$*')." | $(HDRUG) -notk
+	echo "overrule_module('$*'), save_files('$*','$*')." | Alpino -notk cmdint=off 
 
 install:
 
@@ -30,6 +30,7 @@ keyprefix=""
 	echo ":- module(alpino_suite,[ sentence/2 ])." > $*.pl
 	echo >> $*.pl
 	cat $*.sents |\
+        tr -d '' |\
         sed -e "s/  *$$//" \
             -e "s/\\\\/\\\\\\\\/g" \
             -e "s/'/\\\\'/g" \
@@ -50,8 +51,10 @@ qa_application_type_text=":- hdrug_util:set_flag(application_type,qa)."
 	echo $($*_application_type_text) >> $*.pl
 	echo >> $*.pl
 	cat $< |\
+        tr -d '' |\
 	sed -e "s/| /|/" \
             -e "s/  *$$//" \
+        | awk -F\| '{ if (NF>1 && $$2 ~ /./) print $$0 }' \
         | $(HDRUG) -notk -l $(ALPINO_HOME)/src/utils -l $(ALPINO_HOME)/Suites/create_pl_suite \
                  -cmd "to_suite(key)" >>$*.pl
 	(echo; echo "expand_sentences."; echo) >>$*.pl
