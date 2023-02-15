@@ -173,15 +173,7 @@ sql/%.sqlite: best/%/*.xml fast/%/*.xml
 enhanced_all: $(DIRECTORIES:%=%.enhanced)
 
 %.enhanced: 
-	$(sqldir)/alpinomod -p $*  sql/$*.sqlite $* Inter/$*
-	ls Inter/$*/*.xml | sed -e 's/Inter/Enhanced/' | xargs make -s corpus=$*
-
-ALUD=~/bin/alud
-ALUD_OPTIONS=-t -d
-
-Enhanced/$(corpus)/%.xml: Inter/$(corpus)/%.xml $(ALUD)
-	$(ALUD) -a $< > $@
-
+	$(sqldir)/alpinomod -u -p $*  sql/$*.sqlite $* Enhanced/$*
 
 sents: $(DIRECTORIES:%=../SENTS/%.sents)
 ../SENTS/%.sents: Enhanced/%/*.xml $(XSL)/dt2sent_with_sentid.xsl
