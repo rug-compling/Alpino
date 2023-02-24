@@ -177,23 +177,31 @@ reconsult_test_suite(File) :-
     reconsult(File).
 
 %% used in suites
+%% done in a very complicated way so that it still works if you create .po files for suites
 :- multifile user:term_expansion/2.
 user:term_expansion(expand_sentences,List) :-
-    hdrug_util:hdrug_flag(suite_shortest_first,YesNo),
-    expand_sentences(YesNo,List).
+    expand_sentences_orig(List,List1),
+    expand_sentences_sort(List1,List2),
+    meta_pred(List2,[]).
 
-expand_sentences(undefined,List) :-
-    findall(sentence(Key,Sent),alpino_suite:my_sentence(Key,Sent),List).
+expand_sentences_orig(List0,List) :-
+    findall(orig_sent(Key,Sent),alpino_suite:my_sentence(Key,Sent),List0,List).
 
-expand_sentences(off,List) :-
-    findall(sentence(Key,Sent),alpino_suite:my_sentence(Key,Sent),List).
-
-expand_sentences(on,List) :-
+expand_sentences_sort(Total0,Total) :-
     findall(L-sentence(Key,Sent),(alpino_suite:my_sentence(Key,Sent),
 				  length(Sent,L)
 				 ), List0),
     keysort(List0,List1),
-    findall(sentence(Key,Sent),lists:member(_-sentence(Key,Sent),List1),List).
+    findall(sort_sent(Key,Sent),lists:member(_-sentence(Key,Sent),List1),Total0,Total).
+
+meta_pred([ ( sentence(Key,Sent) :-
+	           hdrug_util:hdrug_flag(suite_shortest_first,YesNo),
+		(   YesNo == on
+                ->  sort_sent(Key,Sent)
+		;   orig_sent(Key,Sent)
+		)
+	    )|Tail], Tail).
+
 
 :- public load_suite/0.
 load_suite :-
@@ -2519,6 +2527,7 @@ option(init_dict_p) -->
 option(init_dict_g) -->
     { initialize_dictionaries_generation }.
 
+/*
 :- use_module('../Generation/compress').
 
 :- public generate_compression/1.  % I don't understand why this is required for the X-ref check
@@ -2554,7 +2563,7 @@ compressed_sentence([Word-keep|T],[Word|NewT]) :-
     compressed_sentence(T,NewT).
 compressed_sentence([_-remove|T],NewT) :-
     compressed_sentence(T,NewT).
-
+*/
 
 :- initialize_flag(generate_failsafe,off).
 
