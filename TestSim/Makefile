@@ -7,6 +7,7 @@ SHELL := /bin/bash
 ALPINO=Alpino batch_command=paraphrase user_max=300000 simplify_split=on simplify_words=on\
        simplify_passive=on simplify_modifier=on display_quality=off display_main_parts=off\
        generate_robustness=off\
+       -l $(ALPINO_HOME)/simplify\
        copy_input_if_paraphrase_failed=msg\(noparaphrase\)\
        copy_input_if_no_transformation=off\
        copy_input_if_no_parse=msg\(noparse\) $(EXTRA)

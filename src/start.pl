@@ -125,8 +125,8 @@ alpino_table_goal:unknown_predicate_handler(_,fail).
 		  '../Tokenization/tokenize.pl',
 		  '../Generation/adt',
 		  '../Generation/geneval',
-		  '../Generation/cg',
-		  simplify
+		  '../Generation/cg'
+%%%%		  simplify
 %%%%		  '../Derivbank/derivbank'
 		]).
 
@@ -2698,7 +2698,6 @@ reset_cgn_numbers :-
 
 %% sorted, so in order
 %% complete
-%% todo: compare lemma too?
 compare_cgn([],[],_,[],C,C,L,L,_).
 compare_cgn([cgn_postag(P0,P,LemmaA,H)|T],
 	    [cgn_postag(P0,P,LemmaB0,H2)|T2],P0,[W|Words],C0,C,L0,L,Ident) :-
