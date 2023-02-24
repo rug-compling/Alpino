@@ -5,9 +5,9 @@
       <node begin="0" cat="np" end="6" id="2" index="1" rel="su">
         <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" cat="mwu" end="4" id="4" rel="hd">
-          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="unie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Unie" word="Unie"/>
-          <node begin="2" end="3" id="6" lemma="van" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
-          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="student" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Studenten" word="Studenten"/>
+          <node begin="1" end="2" id="5" lemma="Unie" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Unie" spectype="deeleigen" word="Unie"/>
+          <node begin="2" end="3" id="6" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+          <node begin="3" end="4" id="7" lemma="Studenten" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Studenten" spectype="deeleigen" word="Studenten"/>
         </node>
         <node begin="4" cat="pp" end="6" id="8" rel="mod">
           <node begin="4" end="5" id="9" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>

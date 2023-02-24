@@ -12,9 +12,9 @@
           <node begin="3" cat="np" end="9" id="9" rel="obj1">
             <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="4" cat="mwu" end="7" id="11" rel="hd">
-              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="commissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Commissie" word="Commissie"/>
-              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="universiteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Universiteit" word="Universiteit"/>
-              <node begin="6" end="7" id="14" lemma="Rotterdam" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rotterdam" spectype="deeleigen" word="Rotterdam"/>
+              <node begin="4" end="5" id="12" lemma="Commissie" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Commissie" spectype="deeleigen" word="Commissie"/>
+              <node begin="5" end="6" id="13" lemma="Universiteit" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Universiteit" spectype="deeleigen" word="Universiteit"/>
+              <node begin="6" end="7" id="14" lemma="Rotterdam" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rotterdam" spectype="deeleigen" word="Rotterdam"/>
             </node>
             <node begin="8" end="9" id="15" lemma="c.u.r." pos="noun" postag="SPEC(afk)" pt="spec" rel="mod" root="C.U.R." spectype="afk" word="C.U.R."/>
           </node>

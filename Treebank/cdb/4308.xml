@@ -41,12 +41,12 @@
                   <node begin="20" cat="np" end="27" id="34" rel="obj1">
                     <node begin="20" end="21" id="35" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                     <node begin="21" cat="mwu" end="27" id="36" rel="hd">
-                      <node begin="21" buiging="met-e" end="22" graad="basis" id="37" lemma="Nederlands" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Nederlandse" word="Nederlandse"/>
-                      <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="38" lemma="maatschappij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Maatschappij" word="Maatschappij"/>
-                      <node begin="23" end="24" id="39" lemma="voor" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
-                      <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="40" lemma="nijverheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Nijverheid" word="Nijverheid"/>
-                      <node begin="25" conjtype="neven" end="26" id="41" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
-                      <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="42" lemma="handel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Handel" word="Handel"/>
+                      <node begin="21" end="22" id="37" lemma="Nederlandse" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nederlandse" spectype="deeleigen" word="Nederlandse"/>
+                      <node begin="22" end="23" id="38" lemma="Maatschappij" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Maatschappij" spectype="deeleigen" word="Maatschappij"/>
+                      <node begin="23" end="24" id="39" lemma="voor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="voor" spectype="deeleigen" word="voor"/>
+                      <node begin="24" end="25" id="40" lemma="Nijverheid" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nijverheid" spectype="deeleigen" word="Nijverheid"/>
+                      <node begin="25" end="26" id="41" lemma="en" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="en" spectype="deeleigen" word="en"/>
+                      <node begin="26" end="27" id="42" lemma="Handel" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Handel" spectype="deeleigen" word="Handel"/>
                     </node>
                   </node>
                 </node>

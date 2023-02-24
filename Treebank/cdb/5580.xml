@@ -9,7 +9,7 @@
       <node begin="1" end="2" id="6" lemma="leren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="leer" word="leren" wvorm="pv"/>
       <node begin="2" cat="np" end="4" id="7" rel="obj1">
         <node begin="2" end="3" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="machine_schrijven" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="schrijven" word="machineschrijven"/>
+        <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="9" lemma="machine_schrijven" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="schrijven" word="machineschrijven" wvorm="inf"/>
       </node>
       <node begin="4" cat="pp" end="19" id="10" rel="mod">
         <node begin="4" end="5" id="11" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>

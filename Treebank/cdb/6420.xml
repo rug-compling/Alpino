@@ -55,9 +55,9 @@
                         <node begin="24" cat="np" end="28" id="46" rel="obj1">
                           <node begin="24" end="25" id="47" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                           <node begin="25" cat="mwu" end="28" id="48" rel="hd">
-                            <node begin="25" buiging="met-e" end="26" graad="basis" id="49" lemma="Europees" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Europese" word="Europese"/>
-                            <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="50" lemma="markt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Markt" word="Markt"/>
-                            <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="51" lemma="gemeenschap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Gemeenschap" word="Gemeenschap"/>
+                            <node begin="25" end="26" id="49" lemma="Europese" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europese" spectype="deeleigen" word="Europese"/>
+                            <node begin="26" end="27" id="50" lemma="Markt" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Markt" spectype="deeleigen" word="Markt"/>
+                            <node begin="27" end="28" id="51" lemma="Gemeenschap" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gemeenschap" spectype="deeleigen" word="Gemeenschap"/>
                           </node>
                         </node>
                       </node>

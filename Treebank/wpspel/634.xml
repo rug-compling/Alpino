@@ -24,12 +24,12 @@
               <node begin="10" cat="np" end="17" id="19" rel="obj1">
                 <node begin="10" end="11" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="11" cat="mwu" end="17" id="21" rel="hd">
-                  <node begin="11" buiging="met-e" end="12" graad="basis" id="22" lemma="Europees" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Europese" word="Europese"/>
-                  <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="gemeenschap" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Gemeenschap" word="Gemeenschap"/>
-                  <node begin="13" end="14" id="24" lemma="voor" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
-                  <node begin="14" end="15" getal="mv" graad="basis" id="25" lemma="kolen" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Kolen" word="Kolen"/>
-                  <node begin="15" conjtype="neven" end="16" id="26" lemma="en" pos="name" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
-                  <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="27" lemma="staal" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Staal" word="Staal"/>
+                  <node begin="11" end="12" id="22" lemma="Europese" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europese" spectype="deeleigen" word="Europese"/>
+                  <node begin="12" end="13" id="23" lemma="Gemeenschap" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gemeenschap" spectype="deeleigen" word="Gemeenschap"/>
+                  <node begin="13" end="14" id="24" lemma="voor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="voor" spectype="deeleigen" word="voor"/>
+                  <node begin="14" end="15" id="25" lemma="Kolen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kolen" spectype="deeleigen" word="Kolen"/>
+                  <node begin="15" end="16" id="26" lemma="en" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="en" spectype="deeleigen" word="en"/>
+                  <node begin="16" end="17" id="27" lemma="Staal" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Staal" spectype="deeleigen" word="Staal"/>
                 </node>
               </node>
             </node>

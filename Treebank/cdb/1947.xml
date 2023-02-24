@@ -65,8 +65,8 @@
                                           <node begin="30" end="31" id="58" lemma="bijvoorbeeld" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijvoorbeeld" word="bijvoorbeeld"/>
                                           <node begin="31" end="32" id="59" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                                           <node begin="32" cat="mwu" end="34" id="60" rel="hd">
-                                            <node begin="32" buiging="met-e" end="33" graad="basis" id="61" lemma="nationaal" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Nationale" word="Nationale"/>
-                                            <node begin="33" end="34" genus="zijd" getal="ev" graad="basis" id="62" lemma="investering_bank" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Investeringsbank" word="Investeringsbank"/>
+                                            <node begin="32" end="33" id="61" lemma="Nationale" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nationale" spectype="deeleigen" word="Nationale"/>
+                                            <node begin="33" end="34" id="62" lemma="Investeringsbank" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Investeringsbank" spectype="deeleigen" word="Investeringsbank"/>
                                           </node>
                                         </node>
                                       </node>

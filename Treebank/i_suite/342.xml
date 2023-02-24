@@ -9,11 +9,11 @@
         <node begin="3" cat="np" end="9" id="6" rel="obj1">
           <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="4" cat="mwu" end="9" id="8" rel="hd">
-            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="commissie" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Commissie" word="Commissie"/>
-            <node begin="5" end="6" id="10" lemma="voor" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
+            <node begin="4" end="5" id="9" lemma="Commissie" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Commissie" spectype="deeleigen" word="Commissie"/>
+            <node begin="5" end="6" id="10" lemma="voor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="voor" spectype="deeleigen" word="voor"/>
             <node begin="6" end="7" id="11" lemma="Laster" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Laster" spectype="deeleigen" word="Laster"/>
-            <node begin="7" conjtype="neven" end="8" id="12" lemma="en" pos="name" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
-            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="13" lemma="bedrog" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Bedrog" word="Bedrog"/>
+            <node begin="7" end="8" id="12" lemma="en" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="en" spectype="deeleigen" word="en"/>
+            <node begin="8" end="9" id="13" lemma="Bedrog" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bedrog" spectype="deeleigen" word="Bedrog"/>
           </node>
         </node>
       </node>
