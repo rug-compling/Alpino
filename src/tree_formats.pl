@@ -236,10 +236,16 @@ extract_cat(Term,F) :-
     ;   functor(Term,F,_)
     ).
 
-graphic_daughter(dts,1,tree(r(_,l(_,_,Word)),_,[]),word(Word)).
-graphic_daughter(dts,1,tree(r(_,i(_,l(_,_,Word))),_,[]),word(Word)).
+graphic_daughter(dts,1,tree(r(_,l(A,B,C)),_,[]),word(Word)):-
+    lemma_or_root(A,B,C,Word).
+graphic_daughter(dts,1,tree(r(_,i(_,l(A,B,C))),_,[]),word(Word)):-
+    lemma_or_root(A,B,C,Word).
 graphic_daughter(dts,N,tree(_,_,Ds),D) :-
     nth(N,Ds,D).
+
+lemma_or_root(read_from_treebank(_,Word,_),_,_,Word/_).
+lemma_or_root(_,_,Word,Word).
+
 
 %% FORMAT DT with postag and lemma / default format for textual interface
 graphic_path(dt,Result,_) :-
