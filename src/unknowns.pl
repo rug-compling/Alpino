@@ -2999,6 +2999,7 @@ never_compound_part_sc('r\'s').
 never_compound_part_sc(ra).
 never_compound_part_sc(re).
 never_compound_part_sc(rk).
+never_compound_part_sc(rna).
 never_compound_part_sc(ro).
 never_compound_part_sc(sch).
 never_compound_part_sc(sec).
@@ -4433,6 +4434,9 @@ unlikely_name_prefix('Mistacherlicht',_).
 unlikely_name_prefix('NASCHRIFT',_).
 unlikely_name_prefix('PRAATPROGRAMMA\'S',_).
 unlikely_name_prefix('PRAKTISCH',_).
+unlikely_name_prefix('KWOOT',_).
+unlikely_name_prefix('Kwoot',_).
+unlikely_name_prefix('kwoot',_).
 unlikely_name_prefix('Radio',['Voorkeur']).
 unlikely_name_prefix('Reizen',_).
 unlikely_name_prefix('Reisadviezen',_).
