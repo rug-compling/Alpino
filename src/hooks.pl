@@ -106,6 +106,7 @@ alpino_fluency_weights:feature_weight(_,_).
 
 alpino_ngram_lm:fluency_model_initialize.
 
+alpino_data:dt_prs(_,_).
 alpino_data:precedes_embedded_subject_cat(_,_).
 alpino_data:adjective_er_plural(_,_,_).
 alpino_data:wh_relagr(_,_).
