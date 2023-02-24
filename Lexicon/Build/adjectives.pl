@@ -16955,7 +16955,7 @@ a([ge_no_e(gewerveld),
    ge_e(gewervelde)],adv,[],[]).
 
 a([e(gewestelijke),
-   no_e(gewestelijk)],adv,[],[]).
+   no_e(gewestelijk)],adv,[],[inter]).
 
 a([ge_both(geweten)],adv,[],[]).
 
@@ -17861,7 +17861,7 @@ a([e(gotische),
 a([stof(gouden)],nonadv,[],[]).
 
 a([e(gouvernementele),
-   no_e(gouvernementeel)],nonadv,[],[h(niet),h(non)]).
+   no_e(gouvernementeel)],nonadv,[],[h(niet),h(non),inter]).
 
 a([both(graag)],osentadv,[],[]).
 
@@ -20423,7 +20423,8 @@ a([e(intercontinentale),
    no_e(intercontinentaal),
    no_e(interkontinentaal)],adv,[],[]).
 
-a([e(interdepartementale),
+a([stem(inter_departementaal),
+   e(interdepartementale),
    no_e(interdepartementaal)],adv,[],[]).
 
 a([e(interdisciplinaire),
@@ -20439,9 +20440,6 @@ a([e(interessante),
    subject_vp_sbar,
    subject_vp,
    pp(voor)],[]).
-
-a([e(intergouvernementele),
-   no_e(intergouvernementeel)],nonadv,[],[]).
 
 a([e(intermediaire),
    no_e(intermediair)],nonadv,[],[]).
@@ -20576,7 +20574,11 @@ a([e(irritante),
 a([e(islamitische),
    no_e(islamitisch),
    e('Islamitische'),
-   no_e('Islamitisch')],adv,[],[]).
+   no_e('Islamitisch'),
+   e(islamietische),
+   no_e(islamietisch),
+   e('Islamietische'),
+   no_e('Islamietisch')],adv,[],[]).
 
 a([e(islamistische),
    no_e(islamistisch),

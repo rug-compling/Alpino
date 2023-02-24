@@ -1179,6 +1179,10 @@ m(v_root(Lem,Lem),verb(Inf,hebben,inf,[intransitive])) :-
     inf_only_sport(Inf,Lem),
     atomic(Inf).
 
+m(v_root(Inf,Inf),verb(Inf,hebben,inf,[intransitive])) :-
+    inf_only_sport(Inf),
+    atomic(Inf).
+
 % het skispringen
 % ik wil weer gaan skispringen
 :- discontiguous inf_only_sport/1, inf_only_sport/2.
@@ -1206,12 +1210,12 @@ inf_only_sport(dwergwerpen,dwerg_werpen).
 inf_only_sport(echtbreken).
 inf_only_sport(geitgooien,geit_gooien).
 inf_only_sport(handwerken).
-inf_only_sport(hardlopen).
+inf_only_sport(hardlopen,hard_lopen).
 inf_only_sport(haringkaken).
 inf_only_sport(hongerstaken).
-inf_only_sport(hoofdrekenen).
+inf_only_sport(hoofdrekenen,hoofd_rekenen).
 inf_only_sport(hoogspringen).
-inf_only_sport(ijszeilen).
+inf_only_sport(ijszeilen,ijs_zeilen).
 inf_only_sport(inlineskaten,inline_skaten).
 inf_only_sport('inline-skaten',inline_skaten).
 inf_only_sport('in-lineskaten',inline_skaten).
@@ -1228,7 +1232,7 @@ inf_only_sport(kunstrijden).
 inf_only_sport(kunstschaatsen).
 inf_only_sport(langebaanschaatsen,langebaan_schaatsen).
 inf_only_sport(linedancen).
-inf_only_sport(machineschrijven).
+inf_only_sport(machineschrijven,machine_schrijven).
 inf_only_sport(marathonschaatsen,marathon_schaatsen).
 inf_only_sport(maren).		% niets te maren
 inf_only_sport(mierenneuken).
@@ -1238,7 +1242,7 @@ inf_only_sport(motorrijden).
 inf_only_sport(nachtvliegen).
 inf_only_sport(oppositievoeren,oppositie_voeren).
 inf_only_sport(paalzitten).
-inf_only_sport(parachutespringen).
+inf_only_sport(parachutespringen,parachute_springen).
 inf_only_sport(pleasen).
 inf_only_sport(polsstokhoogspringen).
 inf_only_sport(prijsschieten).
@@ -1246,7 +1250,7 @@ inf_only_sport(profwielrennen,prof_wielrennen).
 inf_only_sport(rekeningrijden).
 inf_only_sport(ruziemaken).
 inf_only_sport(schoolverlaten).
-inf_only_sport(schoolzwemmen).
+inf_only_sport(schoolzwemmen,school_zwemmen).
 inf_only_sport(skispringen).
 inf_only_sport(skivliegen).
 inf_only_sport(skydiven).
@@ -1261,7 +1265,7 @@ inf_only_sport(telewerken).
 inf_only_sport(thaiboksen).
 inf_only_sport(thuiswerken).
 inf_only_sport(tijdrekken).
-inf_only_sport(tijdrijden).
+inf_only_sport(tijdrijden,tijd_rijden).
 inf_only_sport(treinreizen,trein_reizen).
 inf_only_sport('tv-kijken').
 inf_only_sport(veldlopen).
@@ -7187,7 +7191,7 @@ v(erger,ergert,ergeren,geërgerd,ergerde,ergerden,
 
 v(erken,erkent,erkennen,erkend,erkende,erkenden,
     [h([als_pred_np,
-	fixed([{[acc(meerder),pc(in)]}],no_passive),
+	fixed([{[acc(meerdere),pc(in)]}],no_passive),
 	sbar,
 	vp,
 	transitive])]).
@@ -7775,7 +7779,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	pp_copula(in,première),
 	pp_copula(in,productie),
 	pp_copula(in,staking),
-	pp_copula(in,hongerstaking),
+	pp_copula(in,honger_staking),
         pp_copula(in,vervulling),
         pp_copula(uit,kleed),  % meervoud alleen
         aan_het,
@@ -13829,6 +13833,7 @@ v(loop,loopt,lopen,gelopen,liep,liepen,
 	part_ld_pp(aan,achter),      % we hebben achter de feiten aangelopen
 	part_so_np(af),              % 
 	part_refl(dood),             % ik heb me doodgelopen
+	part_transitive(kapot),      % hij heeft zijn schoenen kapotgelopen
         part_intransitive(trap),
 	part_refl(vast),             % Robben liep zich weer vast
         part_refl(warm),

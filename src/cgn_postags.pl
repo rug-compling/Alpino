@@ -285,6 +285,13 @@ history_tags(normal(x_voor_x),P0,P,Stem,_,_,_) -->
      cgn_postag(P2,P, S,Tag)
     ].
 
+history_tags(normal(spaced_letters),P0,P,_,Surf,_,_) -->
+    {  alpino_util:split_atom(Surf," ",ListOfLetters),
+       length(ListOfLetters,Len),
+       Len is P - P0
+    },
+    symb_tags(ListOfLetters,P0,P).
+
 guess_tag_list([],Q,Q) --> [].
 guess_tag_list([H|T],Q0,Q) -->
     guess_tag(H,H,Q0,Q1),
@@ -908,6 +915,10 @@ exceptional_stem_tag('Verdrag',_,        'N(soort,ev,basis,onz,stan)', verdrag).
 exceptional_stem_tag('Vereniging',_,     'N(soort,ev,basis,zijd,stan)',vereniging).
 exceptional_stem_tag('Volksgezondheid',_,'N(soort,ev,basis,zijd,stan)',volksgezondheid).
 
+exceptional_stem_tag('Indiaan',noun(de,count,sg),'N(soort,ev,basis,zijd,stan)',indiaan).
+exceptional_stem_tag('Indiaan',noun(de,count,pl),'N(soort,mv,basis)',indiaan).
+
+
 exceptional_stem_tag(aan,adjective(_),                        'VZ(fin)',aan).
 exceptional_stem_tag(belang_stellen,nominalized_adjective,    'WW(vd,nom,met-e,mv-n)',belang_stellen).
 exceptional_stem_tag(betreffen,preposition(betreffende,[]),   'WW(od,vrij,zonder)',betreffen).
@@ -1393,6 +1404,10 @@ exceptional_word_tag('MISSING',_,'MISSING',robust_skip,'SPEC(vreemd)').
 exceptional_word_tag('TABLE',_,'TABLE',robust_skip,'SPEC(vreemd)').
 exceptional_word_tag('INDEX',_,index,robust_skip,'N(soort,ev,basis,zijd,stan)').
 exceptional_word_tag('PARA',_,'PARA',robust_skip,'SPEC(vreemd)').
+exceptional_word_tag('KWOOT',_,quote,_,'N(soort,ev,basis,zijd,stan)').
+exceptional_word_tag('Kwoot',_,quote,_,'N(soort,ev,basis,zijd,stan)').
+exceptional_word_tag(kwoot,_,quote,_,'N(soort,ev,basis,zijd,stan)').
+exceptional_word_tag(kwoots,_,quote,_,'N(soort,mv,basis)').
 
 exceptional_word_tag(nl,_,'Nederland',noun(_,_,_),'SPEC(afk)').
 exceptional_word_tag(nl,_,namelijk,setnence_adverb,'SPEC(afk)').
@@ -5197,3 +5212,8 @@ gcnd('goddikke').
 
 eigen_noun('Holocaust').
 
+symb_tags([],P,P) --> [].
+symb_tags([Sym|Syms],P0,P) -->
+    { P1 is P0 + 1 },
+    [cgn_postag(P0,P1,Sym,'SPEC(symb)')],
+    symb_tags(Syms,P1,P).

@@ -1260,6 +1260,8 @@ accent(solocarriere,solocarrière).
 accent(solocarrieres,solocarrières).
 accent('Somalier','Somaliër').
 accent('Somaliers','Somaliërs').
+accent(souffle,soufflé).
+accent(souffles,soufflés).
 accent(specificatien,specificatiën).
 accent(specifikatien,specifikatiën).
 accent(spraaktechnologieen,spraaktechnologieën).
