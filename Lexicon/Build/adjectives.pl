@@ -21546,7 +21546,8 @@ a([e(kribbige),
 
 a([pred(kriegel)],adv,[],[]).
 
-a([both(krijgsgevangen)],nonadv,[],[]).
+a([lemma(krijg_vang),
+   both(krijgsgevangen)],nonadv,[],[]).
 
 a([e(krijgshaftige),
    er(krijgshaftiger),

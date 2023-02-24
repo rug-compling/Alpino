@@ -223,7 +223,6 @@ mwu_postag('DRANK - EN HORECAWET',['N(soort,ev,basis,zijd,stan)','LET()','VG(nev
 mwu_postag('Drank- en Horecawet',['SPEC(afgebr)','VG(neven)','N(soort,ev,basis,zijd,stan)'],['Drank-',en,horeca_wet]).
 mwu_postag('dr. Henri Van der Hoeven-kliniek',['SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)'],['dr.','Henri','Van',der,'Hoeven_kliniek']).
 mwu_postag('Duitse Rijk',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,onz,stan)'],['Duits',rijk]).
-mwu_postag('Duitstalige Gemeenschap van België',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],['Duitstalig',gemeenschap,van,'België']).
 mwu_postag('Economie , Wetenschap en Innovatie ( EWI )',['N(soort,ev,basis,zijd,stan)','LET()','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)','LET()','N(eigen,ev,basis,genus,stan)','LET()'],[economie,',',wetenschap,en,innovatie,'(','EWI',')']).
 mwu_postag('Economische Partnerschap Akkoorden',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,onz,stan)','N(soort,mv,basis)'],[economisch,partnerschap,akkoord]).
 mwu_postag('Economische Partnerschapovereenkomsten',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[economisch,partnerschapovereenkomst]).
@@ -1298,6 +1297,7 @@ vreemd('in petto').
 vreemd('in residence').
 vreemd('in spe').
 vreemd('Integrated Framework for Trade-related Technical Assistance').
+vreemd('Internet Service Providers').
 vreemd('International Student Barometer').
 vreemd('In the Valley of Elah').
 vreemd('It\'s the economy , stupid').

@@ -61,7 +61,6 @@ user_transformation(r(REL,p(mwu)),B,Ds0,
     assign_tags(Lemmas,Tags,Ds0,Ds),
     \+ Ds0 = Ds.
 
-
 /*
 user_transformation(r(obj1,p(ap)),B,Ds,
 		    r(obj1,p(np)),B,Ds,_,_) :-
@@ -74,6 +73,8 @@ user_transformation(r(obj1,p(ap)),B,Ds,
     lists:member(Hd,Ds).
 
 surf_lemma(Word,'N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)',L,L) :-
+    eigen(Word).
+surf_lemma(Word,'N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,onz,stan)',L,L) :-
     eigen(Word).
 surf_lemma(Word,'N(soort,mv,basis)','N(eigen,mv,basis)',L,L) :-
     eigen(Word).
@@ -228,8 +229,6 @@ correct_tags(L,L,Deeleigen) :-
 correct_tags(L,L,Deeleigen) :-
     correct_tags(L,Deeleigen).
 
-
-
 flat(_) :-
     fail.
 
@@ -301,6 +300,10 @@ de(_) :- fail.
 het(_):-fail.
 adj(_):-fail.
 
-%%% mee/met toe/tot
+%% TODO doelgroep- doel_groep
+%% TODO genus in names
+%% '//node[@genus="genus" and @rel="hd" and ../node[@rel="det" and @lemma=("de","het","dit","dat","die","deze")]]'
+%% TODO soort genus, also compounds with soort
+%%
 
-
+%%% kruispunt

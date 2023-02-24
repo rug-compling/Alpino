@@ -16216,6 +16216,8 @@ n([sg(insnijding),pl(insnijdingen)],de,[]).  % niet in_snijd_ding
 
 n([pl(inspanningen),sg(inspanning)],de,[vp]).
 
+n([pl(inspanningen),sg(inspanning)],de,[],[s(kracht)]).
+
 n([pl(inspecteurs),sg(inspecteur),
    pl(inspekteurs),sg(inspekteur)],de,[],
   [belasting,
@@ -18743,6 +18745,8 @@ n([mass(koude)],de,[],
   [vries,
    winter]).
 
+n([sg(koukleum),pl(koukleumen)],de,[]).
+
 n([pl(kousen),sg(kous)],de,[]).
 
 n([pl(kozakken),sg(kozak)],de,[]).
@@ -18826,8 +18830,6 @@ n([sg(krachthonk),pl(krachthonken)],het,[]).
 n([mass(krachtmeting),pl(krachtmetingen),sg(krachtmeting)],de,[]).
 
 n([sg(krachtpatser),pl(krachtpatsers)],de,[]).
-
-n([mass(krachtsinspanning)],de,[]).
 
 n([pl(krakers),sg(kraker)],de,[],[dim(krakertje)]).
 
@@ -27714,6 +27716,8 @@ n([mass(pret)],de,
   [subject_vp],
   [dim(pretje),
    voor]).
+
+n([sg(pretendent),pl(pretendenten)],de,[]).
 
 n([pl(pretenties),sg(pretentie)],de,[sbar,vp]).
 
