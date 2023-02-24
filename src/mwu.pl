@@ -311,7 +311,6 @@ mwu_postag('Fonds voor Arbeidsongevallen',['N(soort,ev,basis,onz,stan)','VZ(init
 mwu_postag('Fonds voor de Podiumkunsten',['N(soort,ev,basis,onz,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[fonds,voor,de,podiumkunst]).
 mwu_postag('frank en vrij',['ADJ(vrij,basis,zonder)','VG(neven)','ADJ(vrij,basis,zonder)'],[frank,en,vrij]).
 mwu_postag('Frans-Belgische Gebarentaal',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Frans-Belgisch',gebarentaal]).
-nschap,van,'België']).
 mwu_postag('Franse Westhoek',['ADJ(prenom,basis,met-e,stan)','N(eigen,ev,basis,zijd,stan)'],['Frans','Westhoek']).
 mwu_postag('Gallo-Romeins Museum',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['Gallo-Romeins',museum]).
 mwu_postag('Gebroeders van Eyck',['N(soort,mv,basis)','SPEC(deeleigen)','SPEC(deeleigen)'],[gebroeders,van,'Eyck']).
