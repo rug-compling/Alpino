@@ -972,6 +972,12 @@ a_lex(zo_mogelijk_mogelijk(E),Sign) :-
 a_lex(nominalized_adjective,Sign) :-
     nominalized_adjective_pl(Sign).
 
+a_lex(end_nominalized_adjective,Sign) :-
+    nominalized_adjective_pl(Sign).
+
+a_lex(ge_nominalized_adjective,Sign) :-
+    nominalized_adjective_pl(Sign).
+
 a_lex(nominalized_adjective_sg,Sign) :-
     nominalized_adjective_sg(Sign).
 
@@ -987,7 +993,11 @@ a_lex(nominalized_super_adjective,Sign) :-
 a_lex(nominalized_super_adjective_sg,Sign) :-
     nominalized_super_adjective_sg(Sign).
 
-a_lex(nominalized_adjective(Sc),Sign) :-
+a_lex(end_nominalized_adjective(Sc),Sign) :-
+    adjective_sc(Sc,Sign0),
+    nominalized_adjective(Sign0,Sign).
+
+a_lex(ge_nominalized_adjective(Sc),Sign) :-
     adjective_sc(Sc,Sign0),
     nominalized_adjective(Sign0,Sign).
 
