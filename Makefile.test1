@@ -571,36 +571,24 @@ cgn43:
 ### make ptf: compare all finished tests wrt postag accuracy
 ### make lmf: compare all finished tests wrt lemma  accuracy
 ###
-### make lm_diffs: find all new lemma mistakes in current tests
-### make pt_diffs: find all new postag mistakes in current tests
+### make lm_diffs: find all new lemma and postag mistakes in current tests
 
 SHELL=/bin/bash
 
-lm_diff:
-	-diff <(grep ' #LM' $$suite/poslemma) <(grep ' #LM' $$suite/job*/log1) | grep '^[>]'
-
 pt_diff:
-	-diff <(grep ' #PT' $$suite/poslemma) <(grep ' #PT' $$suite/job*/log1) | grep '^[>]'
+	-diff <(grep -e ' #LM' -e ' #PT' $$suite/poslemma) <(grep -e ' #LM' -e ' #PT' $$suite/job*/log1) | grep '^[>]'
 
 GREP=grep -v -e fn -e fv -e ovis -e Titaantjes[-]
-
-lm_diffs:
-	@for file in `echo $(shell ls $(ORDERED) */job*/log1 | $(GREP) 2>/dev/null)`; do \
-        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
-	echo $$suite;\
-	$(MAKE) -s lm_diff suite=$$suite;\
-	done
 
 pt_diffs:
 	@for file in `echo $(shell ls $(ORDERED) */job*/log1 | $(GREP)  2>/dev/null)`; do \
         suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
-	echo $$suite;\
 	$(MAKE) -s pt_diff suite=$$suite;\
 	done
 
 f: cf ptf lmf
 
-d: cs pt_diffs lm_diffs
+d: cs pt_diffs
 
 PATTERNS=cdb dpc extra fn fv f[nv] PPH PPI WIKI WSU
 
