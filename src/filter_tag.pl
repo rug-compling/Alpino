@@ -113,7 +113,11 @@ filter_tag_rule(sbar_pred_adjective(_),[check_tag(complementizer(dat)),
 					check_vform(fin)]).
 filter_tag_rule(vp_pred_adjective(_),  [check_vform(te)]).
 filter_tag_rule(nominalized_adjective, []).
+filter_tag_rule(ge_nominalized_adjective, []).
+filter_tag_rule(end_nominalized_adjective, []).
 filter_tag_rule(nominalized_adjective(Sc), Cs) :- valid_adj_sc(Sc,Cs).
+filter_tag_rule(ge_nominalized_adjective(Sc), Cs) :- valid_adj_sc(Sc,Cs).
+filter_tag_rule(end_nominalized_adjective(Sc), Cs) :- valid_adj_sc(Sc,Cs).
 filter_tag_rule(nominalized_compar_adjective, []).
 filter_tag_rule(nominalized_compar_adjective_sg, []).
 filter_tag_rule(nominalized_super_adjective, []).
@@ -912,7 +916,10 @@ check_fixed_part(Ws,Tag,P0,P) :-
     check_tag(adjective(_,fixed(List)),Tag,P0,P),
     is_sc_member(Ws,List).
 check_fixed_part(Ws,Tag,P0,P) :-
-    check_tag(nominalized_adjective(fixed(List)),Tag,P0,P),
+    (  check_tag(nominalized_adjective(fixed(List)),Tag,P0,P)
+    ;  check_tag(end_nominalized_adjective(fixed(List)),Tag,P0,P)
+    ;  check_tag(ge_nominalized_adjective(fixed(List)),Tag,P0,P)
+    ),
     is_sc_member(Ws,List).
 
 check_fixed_word(Part,P0,P) :-

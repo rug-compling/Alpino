@@ -976,10 +976,12 @@ unknown_word_heuristic(P1,R1,W,_,"plural_nominalization|~p|~p|~p~n",
     debug_message(3,"trying heuristic nominalized_adjective~n",[]),
     atom(W),
     atom_concat(A,n,W),
-    alpino_lex:lexicon(adjective(E),Astem,[A],[],_),
-    (   E = e,    Tag = nominalized_adjective
-    ;   E = ere,  Tag = nominalized_compar_adjective
-    ;   E = ste,  Tag = nominalized_super_adjective
+    alpino_lex:lexicon(E,Astem,[A],[],_),
+    (   E = adjective(e),       Tag = nominalized_adjective
+    ;   E = adjective(ge_e),    Tag = ge_nominalized_adjective
+    ;   E = adjective(ende(_)), Tag = end_nominalized_adjective
+    ;   E = adjective(ere),     Tag = nominalized_compar_adjective
+    ;   E = adjective(ste),     Tag = nominalized_super_adjective
     ),
     lexical_analysis_tag(Tag,P1,R1,Astem,nom_adj).
  
@@ -2711,6 +2713,7 @@ compound_part(hyper).
 compound_part(inter).
 compound_part(intra).
 compound_part(kei).
+compound_part(lead).  % gitarist,zanger,...
 compound_part(macro).
 compound_part(mega).
 compound_part(micro).
@@ -2753,6 +2756,13 @@ open_class_stem_tag_pair(Final,W,Stem,Cat) :-
 	exc_stem(W,Stem0,Stem)
     ;   alpino_lex:xl(W,adjective(ADV),Stem,[],[]),
         Cat0 = adjective(ADV)
+    ;   Final == final,
+	alpino_lex:lexicon__(W,Cat,Stem,[],[],His,_),
+	lists:member(His,['V-de'(_),'V-d'(_)]) % bloeiende for laatbloeiende
+    ;   Final == final,
+	Cat = end_nominalized_adjective,
+	alpino_lex:lexicon_fallback_(W,end_nominalized_adjective,Stem,[],[],His,_),
+	lists:member(His,['V-den','part-V-den']) % zoekenden
     ;   alpino_lex:in_names_dictionary(Cat0,W,Stem,[],[],_),
         \+ Cat0 = proper_name(_,'PER')
     ;   alpino_lex:simple_convert_number(W,_),
@@ -3597,6 +3607,9 @@ open_class_tag(loc_adverb).
 open_class_tag(adjective(X)) :- \+ X = prefix, \+ X = meer.
 open_class_tag(adjective(_,_)).
 open_class_tag(nominalized_adjective).
+open_class_tag(nominalized_adjective_sg).
+open_class_tag(ge_nominalized_adjective).
+open_class_tag(end_nominalized_adjective).
 
 non_part_sc([],[]).
 non_part_sc([H0|T0],T1) :-

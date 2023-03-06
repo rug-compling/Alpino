@@ -47,7 +47,12 @@ t(het_np_adjective,         np_adjective).
 t(clause_np_adjective,      np_adjective).
 t(clause_np_adjective(_),   np_adjective).
 
-t(nominalized_adjective(_), nominalized_adjective).
+t(end_nominalized_adjective(_),  nominalized_adjective).
+t(ge_nominalized_adjective(_),  nominalized_adjective).
+t(end_nominalized_adjective, nominalized_adjective).
+t(ge_nominalized_adjective,  nominalized_adjective).
+
+
 t(post_adjective(A,_),      post_adjective(A)).
 
 t(noun(DeHet0,_,Num0),             noun(DeHet,Num,[])) :-

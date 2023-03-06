@@ -159,6 +159,19 @@ tr_tag(tmp_noun(DeHet,_,Num), Tag) :-
 tr_tag(tmp_noun(DeHet,_,Num,Sc), Tag) :-
     !,
     Tag = tmp_noun(DeHet,Num,Sc).
+tr_tag(ge_nominalized_adjective,Tag) :-
+    !,
+    Tag = nominalized_adjective.
+tr_tag(end_nominalized_adjective,Tag) :-
+    !,
+    Tag = nominalized_adjective.
+tr_tag(ge_nominalized_adjective(SC),Tag) :-
+    !,
+    Tag = nominalized_adjective(SC).
+tr_tag(end_nominalized_adjective(SC),Tag) :-
+    !,
+    Tag = nominalized_adjective(SC).
+
 
 tr_tag(Tag,Tag).
 

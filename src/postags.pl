@@ -206,7 +206,11 @@ p_of_f(me_adjective(Infl0),adj,[sc=me|Atts]) :-
     functor(Infl0,Infl,_),
     adj_form(Infl,Atts).
 p_of_f(nominalized_adjective,adj,[num=pl,personalized=true,special=a_noun,aform=base]).
+p_of_f(ge_nominalized_adjective,adj,[num=pl,personalized=true,special=a_noun,aform=base]).
+p_of_f(end_nominalized_adjective,adj,[num=pl,personalized=true,special=a_noun,aform=base]).
 p_of_f(nominalized_adjective(Sc),adj,[num=pl,personalized=true,special=a_noun,sc=Sc,aform=base]).
+p_of_f(ge_nominalized_adjective(Sc),adj,[num=pl,personalized=true,special=a_noun,sc=Sc,aform=base]).
+p_of_f(end_nominalized_adjective(Sc),adj,[num=pl,personalized=true,special=a_noun,sc=Sc,aform=base]).
 p_of_f(nominalized_compar_adjective,adj,[num=pl,personalized=true,special=a_noun,aform=compar]).
 p_of_f(nominalized_compar_adjective_sg,adj,[num=sg,personalized=true,special=a_noun,aform=compar]).
 p_of_f(nominalized_super_adjective,adj,[num=pl,personalized=true,special=a_noun,aform=super]).
