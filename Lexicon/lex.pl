@@ -99,13 +99,13 @@ lexicon_fallback(Cat,Label,Ws0,Ws,His,LC) :-
 
 %% zwemmenden
 %% W inf       --> W+den nom_adjective // \+ W
-lexicon_fallback_(Word,nominalized_adjective,Label,Ws,Ws,'V-den',_) :-
+lexicon_fallback_(Word,end_nominalized_adjective,Label,Ws,Ws,'V-den',_) :-
     atom(Word),
     atom_concat(Inf,den,Word),
     xl(Inf,verb(_,InfVal,_Frame),Label,[],[]),
     inf(InfVal).
 
-lexicon_fallback_(Word,nominalized_adjective,Label,Ws,Ws,'part-V-den',_) :-
+lexicon_fallback_(Word,end_nominalized_adjective,Label,Ws,Ws,'part-V-den',_) :-
     atom(Word),
     atom_concat(PartInf,den,Word),
     particle_form(PartInf,Part,Inf),
@@ -117,11 +117,20 @@ lexicon_fallback_(Word,nominalized_adjective,Label,Ws,Ws,'part-V-den',_) :-
     arg(1,Sc,Part),
     concat_part_to_root(Label0,Part,Label).
 
+lexicon_fallback_(Word,ge_nominalized_adjective,Label,Ws,Ws,'A-n',_) :-
+    atom(Word),
+    atom_concat(Adj,n,Word),
+    xl(Adj,adjective(ge_e),Label,[],[]).
+
 lexicon_fallback_(Word,nominalized_adjective,Label,Ws,Ws,'A-n',_) :-
     atom(Word),
     atom_concat(Adj,n,Word),
-    xl(Adj,adjective(E),Label,[],[]),
-    adj_e(E).
+    xl(Adj,adjective(e),Label,[],[]).
+
+lexicon_fallback_(Word,end_nominalized_adjective,Label,Ws,Ws,'A-n',_) :-
+    atom(Word),
+    atom_concat(Adj,n,Word),
+    xl(Adj,adjective(ende(_)),Label,[],[]).
 
 lexicon_fallback_(Word,nominalized_compar_adjective,Label,Ws,Ws,'A-n',_) :-
     atom(Word),

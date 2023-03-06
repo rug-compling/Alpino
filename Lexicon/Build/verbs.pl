@@ -1230,6 +1230,7 @@ inf_only_sport(koorddansen).
 inf_only_sport(koppensnellen).
 inf_only_sport(kunstrijden).
 inf_only_sport(kunstschaatsen).
+inf_only_sport(landschapschilderen,landschap_schilderen).
 inf_only_sport(langebaanschaatsen,langebaan_schaatsen).
 inf_only_sport(linedancen).
 inf_only_sport(machineschrijven,machine_schrijven).

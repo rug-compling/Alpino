@@ -7541,21 +7541,36 @@ m(ulder,        reflexive(thi,pl),ulder).
 
 :- discontiguous
     nominalized_adjective/2,
-    nominalized_adjective/3.
+    nominalized_adjective/3,
+    end_nominalized_adjective/2,
+    end_nominalized_adjective/3,
+    ge_nominalized_adjective/2,
+    ge_nominalized_adjective/3.
 
-m(Stem,nominalized_adjective_sg,Surf) :-
-    nominalized_adjective_both(Stem,Surf,_).
-m(Stem,nominalized_adjective,Surf) :-
-    nominalized_adjective_both(Stem,_,Surf).
 m(Stem,nominalized_adjective,Surf) :-
     nominalized_adjective(Stem,Surf).
 m(Stem,nominalized_adjective,Surf) :-
     nominalized_adjective(Stem0,Surf0,Compounds),
     add_compounds:add_compounds(Compounds,Stem0,Surf0,Stem,Surf).
+m(Stem,end_nominalized_adjective,Surf) :-
+    end_nominalized_adjective(Stem,Surf).
+m(Stem,end_nominalized_adjective,Surf) :-
+    end_nominalized_adjective(Stem0,Surf0,Compounds),
+    add_compounds:add_compounds(Compounds,Stem0,Surf0,Stem,Surf).
+m(Stem,nominalized_adjective_sg,Surf) :-
+    nominalized_adjective_both(Stem,Surf,_).
+m(Stem,ge_nominalized_adjective,Surf) :-
+    nominalized_adjective_both(Stem,_,Surf).
+m(Stem,ge_nominalized_adjective,Surf) :-
+    ge_nominalized_adjective(Stem,Surf).
+m(Stem,ge_nominalized_adjective,Surf) :-
+    ge_nominalized_adjective(Stem0,Surf0,Compounds),
+    add_compounds:add_compounds(Compounds,Stem0,Surf0,Stem,Surf).
 
-m(spreken,     nominalized_adjective(transitive),             sprekenden).
-m(veroordelen, nominalized_adjective(fixed([[ter,dood]])),    veroordeelden).
+m(spreken,     end_nominalized_adjective(transitive),             sprekenden).
+m(veroordelen, ge_nominalized_adjective(fixed([[ter,dood]])),    veroordeelden).
 
+%% always participles
 nominalized_adjective_both(aan_wijzen,aangewezene,aangewezenen).
 nominalized_adjective_both(betrekken,betrokkene,betrokkenen).
 nominalized_adjective_both(bezeten,bezetene,bezetenen).
@@ -7589,57 +7604,123 @@ m(lief,  nominalized_super_adjective,liefsten).
 %% treated in syntax:
 %% we only need to list words that are otherwise in the lexicon too,
 %% eg as a past tense verb. Other cases are treated in unknowns.pl
-nominalized_adjective('Duits_talig','Duitstaligen').
-nominalized_adjective('Engel_stalig','Engelstaligen').
-nominalized_adjective('Frans_talig','Franstaligen').
-nominalized_adjective('Nederlands_talig','Nederlandstaligen').
-nominalized_adjective('Spaans_talig','Spaanstaligen').
+end_nominalized_adjective(alleen_staan,alleenstaanden).
+end_nominalized_adjective(anders_denken,andersdenkenden).
+end_nominalized_adjective(belang_hebben,belanghebbenden).
+end_nominalized_adjective(belang_stellen,belangstellenden).
+end_nominalized_adjective(hulp_zoeken,hulpzoekenden).
+end_nominalized_adjective(leiding_geven,leidinggevenden).
+end_nominalized_adjective(werk_zoeken,werkzoekenden).
+end_nominalized_adjective(woning_zoeken,woningzoekenden).
+
+ge_nominalized_adjective(afleiden,afgeleiden).
+ge_nominalized_adjective(af_studeren,afgestudeerden).
+ge_nominalized_adjective(arresteren,gearresteerden).
+ge_nominalized_adjective(bedelen,bedeelden).
+ge_nominalized_adjective(bedreigen,bedreigden).
+ge_nominalized_adjective(bedroeven,bedroefden).
+ge_nominalized_adjective(begunstigen,begunstigden).
+ge_nominalized_adjective(behandelen,behandelden).
+ge_nominalized_adjective(bekeren,bekeerden).
+ge_nominalized_adjective(beklagen,beklaagden).
+ge_nominalized_adjective(bekronen,bekroonden).
+ge_nominalized_adjective(belasteren,belasterden).
+ge_nominalized_adjective(beledigen,beledigden).
+ge_nominalized_adjective(belegeren,belegerden).
+ge_nominalized_adjective(beminnen,beminden).
+ge_nominalized_adjective(benadelen,benadeelden).
+ge_nominalized_adjective(benoemen,benoemden).
+ge_nominalized_adjective(beperken,beperkten).
+ge_nominalized_adjective(beschuldigen,beschuldigden).
+ge_nominalized_adjective(besmetten,besmetten).
+ge_nominalized_adjective(bestraffen,bestraften).
+ge_nominalized_adjective(betalen,betaalden).
+ge_nominalized_adjective(betichten,betichten).
+ge_nominalized_adjective(betrappen,betrapten).
+ge_nominalized_adjective(betrekken,betrokkenen).
+ge_nominalized_adjective(bevoegen,bevoegden).
+ge_nominalized_adjective(bevoordelen,bevoordeelden).
+ge_nominalized_adjective(bevragen,bevraagden).
+ge_nominalized_adjective(bezoldigd,bezoldigden).
+ge_nominalized_adjective(bezwaren,bezwaarden).
+ge_nominalized_adjective(delegeren,gedelegeerden).
+ge_nominalized_adjective(deporteren,gedeporteerden).
+ge_nominalized_adjective(drug_verslaven,drugsverslaafden).
+ge_nominalized_adjective(duperen,gedupeerden).
+ge_nominalized_adjective(gedogen,gedoogden).
+ge_nominalized_adjective(gijzelen,gegijzelden).
+ge_nominalized_adjective(hoog_op_leiden,hoogopgeleiden).
+ge_nominalized_adjective(huwen,gehuwden).
+ge_nominalized_adjective(interesseren,geïnteresseerden).
+ge_nominalized_adjective(in_wijden,ingewijden).
+ge_nominalized_adjective(kies_rechtigen,kiesgerechtigden).
+ge_nominalized_adjective(kwetsten,gekwetsten).
+ge_nominalized_adjective(laag_op_leid,laagopgeleiden).
+ge_nominalized_adjective(laag_scholen,laaggeschoolden).
+ge_nominalized_adjective(machtigen,gemachtigden).
+ge_nominalized_adjective(mis_maken,mismaakten).
+ge_nominalized_adjective(mis_vormen,misvormden).
+ge_nominalized_adjective(nomineren,genomineerden).
+ge_nominalized_adjective(onderdrukken,onderdrukten).
+ge_nominalized_adjective(ondervragen,ondervraagden).
+ge_nominalized_adjective(onderzoeken,onderzochten).
+ge_nominalized_adjective(onteigend,onteigenden).
+ge_nominalized_adjective(ontsnappen,ontsnapten).
+ge_nominalized_adjective(ontvoeren,ontvoerden).
+ge_nominalized_adjective(ontwikkelen,ontwikkelden).
+ge_nominalized_adjective(ontwortelen,ontwortelden).
+ge_nominalized_adjective(op_leiden,opgeleiden).
+ge_nominalized_adjective(overtuigen,overtuigden).
+ge_nominalized_adjective(pensioneren,gepensioneerden).
+ge_nominalized_adjective(plaatsen,geplaatsten).
+ge_nominalized_adjective(slagen,geslaagden).
+ge_nominalized_adjective(stellen,gestelden).
+ge_nominalized_adjective(tekenen,getekenden).
+ge_nominalized_adjective(trouwen,getrouwden).
+ge_nominalized_adjective(veinzen,geveinsden).
+ge_nominalized_adjective(verblinden,verblinden).
+ge_nominalized_adjective(verdoemen,verdoemden).
+ge_nominalized_adjective(verdrukken,verdrukten).
+ge_nominalized_adjective(verhoren,verhoorden).
+ge_nominalized_adjective(verkiezen,verkozenen).
+ge_nominalized_adjective(verkommeren,verkommerden).
+ge_nominalized_adjective(verloederen,verloederden).
+ge_nominalized_adjective(verlossen,verlosten).
+ge_nominalized_adjective(verminken,verminkten).
+ge_nominalized_adjective(vermoeien,vermoeiden).
+ge_nominalized_adjective(vermoorden,vermoorden).
+ge_nominalized_adjective(verongelukken,verongelukten).
+ge_nominalized_adjective(verontrusten,verontrusten).
+ge_nominalized_adjective(verontwaardigen,verontwaardigden).
+ge_nominalized_adjective(veroordelen,veroordeelden).
+ge_nominalized_adjective(verpauperen,verpauperden).
+ge_nominalized_adjective(verslaven,verslaafden,
+			 [alcohol,
+			  drug,
+			  drugs,
+			  game,
+			  gok,
+			  nicotine,
+			  sex]).
+ge_nominalized_adjective(vertrappen,vertrapten).
+ge_nominalized_adjective(vertrouwen,vertrouwden).
+ge_nominalized_adjective(vervloeken,vervloekten).
+ge_nominalized_adjective(vervolgen,vervolgden).
+ge_nominalized_adjective(verzekeren,verzekerden).
+ge_nominalized_adjective(verzuren,verzuurden).
+ge_nominalized_adjective(vorderen,gevorderden).
+ge_nominalized_adjective(ziekenfonds_verzekeren,ziekenfondsverzekerden).
+
 nominalized_adjective(aanstaand,aanstaanden).
 nominalized_adjective(aanwezig,aanwezigen).
 nominalized_adjective(achterlijk,achterlijken).
-nominalized_adjective(afleiden,afgeleiden).
 nominalized_adjective(afwezig,afwezigen).
-nominalized_adjective(af_studeren,afgestudeerden).
-nominalized_adjective(alleenstaand,alleenstaanden).
-nominalized_adjective(anders_denken,andersdenkenden).
 nominalized_adjective(arbeidsongeschikt,arbeidsongeschikten).
 nominalized_adjective(arm,armen).
-nominalized_adjective(arresteren,gearresteerden).
-nominalized_adjective(bedelen,bedeelden).
-nominalized_adjective(bedreigen,bedreigden).
-nominalized_adjective(bedroefven,bedroefden).
-nominalized_adjective(begunstigen,begunstigden).
-nominalized_adjective(behandelen,behandelden).
 nominalized_adjective(bejaard,bejaarden).
 nominalized_adjective(bekend,bekenden).
-nominalized_adjective(beklagen,beklaagden).
-nominalized_adjective(bekronen,bekroonden).
-nominalized_adjective(belanghebbend,belanghebbenden).
-nominalized_adjective(belang_stellen,belangstellenden).
-nominalized_adjective(belasteren,belasterde,belasterden).
-nominalized_adjective(beledigen,beledigden).
-nominalized_adjective(belegeren,belegerden).
-nominalized_adjective(beminnen,beminden).
-nominalized_adjective(benadelen,benadeelden).
-nominalized_adjective(benoemen,benoemden).
-nominalized_adjective(beperken,beperkten).
 nominalized_adjective(beroemd,beroemden).
-nominalized_adjective(beschuldigen,beschuldigden).
-nominalized_adjective(besmetten,besmetten).
-nominalized_adjective(bestraffen,bestraften).
-nominalized_adjective(bevoordelen,bevoordeelden).
-nominalized_adjective(bevragen,bevraagden).
-nominalized_adjective(bezoldigd,bezoldigden).
-nominalized_adjective(goed,besten).
-nominalized_adjective(bekeren,bekeerden).
-nominalized_adjective(betalen,betaalden).
-nominalized_adjective(goed,beteren).
-nominalized_adjective(betichten,betichten).
-nominalized_adjective(betrappen,betrapten).
-nominalized_adjective(betrekken,betrokkenen).
-nominalized_adjective(bevoegen,bevoegden).
 nominalized_adjective(bevoorrecht,bevoorrechten).
-nominalized_adjective(bezwaren,bezwaarden).
 nominalized_adjective(blank,blanken).
 nominalized_adjective(blind,blinden).
 nominalized_adjective(blond,blonden).
@@ -7652,48 +7733,34 @@ nominalized_adjective(doopsgezind,doopsgezinden).
 nominalized_adjective(doortrapt,doortrapten).
 nominalized_adjective(driejarig,driejarigen).
 nominalized_adjective(droog,drogen).
-nominalized_adjective(drugsverslaafd,drugsverslaafden).
+nominalized_adjective('Duits_talig','Duitstaligen').
 nominalized_adjective(dun,dunnen).
 nominalized_adjective(edel,edelen).
 nominalized_adjective(eerwaard,eerwaarden).
 nominalized_adjective(ene,enen).
+nominalized_adjective('Engel_stalig','Engelstaligen').
 nominalized_adjective(enig,enigen).
 nominalized_adjective(enkel,enkelen).
 nominalized_adjective(extern,externen).
+nominalized_adjective('Frans_talig','Franstaligen').
 nominalized_adjective(geallieerd,geallieerden).
-nominalized_adjective(delegeren,gedelegeerden).
-nominalized_adjective(deporteren,gedeporteerden).
-nominalized_adjective(gedogen,gedoogden).
-nominalized_adjective(duperen,gedupeerden).
-nominalized_adjective(gijzelen,gegijzelden).
 nominalized_adjective(gehandicapt,gehandicapten).
-nominalized_adjective(huwen,gehuwden).
-nominalized_adjective(interesseren,geïnteresseerden).
-nominalized_adjective(kwetsten,gekwetsten).
 nominalized_adjective(geleerd,geleerden).
 nominalized_adjective(geliefd,geliefden).
 nominalized_adjective(gelijk,gelijken).
 nominalized_adjective(gelijkgestemd,gelijkgestemden).
 nominalized_adjective(gelovig,gelovigen).
 nominalized_adjective(gelukkig,gelukkigen).
-nominalized_adjective(machtigen,gemachtigden).
 nominalized_adjective(genodigd,genodigden).
-nominalized_adjective(nomineren,genomineerden).
-nominalized_adjective(pensioneren,gepensioneerden).
 nominalized_adjective(gereformeerd,gereformeerden).
-nominalized_adjective(plaatsen,geplaatsten).
-nominalized_adjective(slagen,geslaagden).
-nominalized_adjective(stellen,gestelden).
-nominalized_adjective(storen,gestoorden).
-nominalized_adjective(tekenen,getekenden).
-nominalized_adjective(trouwen,getrouwden).
+nominalized_adjective(gestoord,gestoorden).
 nominalized_adjective(getrouw,getrouwen).
-nominalized_adjective(veinzen,geveinsden).
-nominalized_adjective(vorderen,gevorderden).
 nominalized_adjective(geweldig,geweldigen).
 nominalized_adjective(gewetensbezwaard,gewetensbezwaarden).
 nominalized_adjective(gewond,gewonden).
 nominalized_adjective(gezond,gezonden).
+nominalized_adjective(goed,besten).
+nominalized_adjective(goed,beteren).
 nominalized_adjective(goed,goeden).
 nominalized_adjective(groen,groenen).
 nominalized_adjective(groot,groten).
@@ -7702,60 +7769,42 @@ nominalized_adjective(heilig,heiligen).
 nominalized_adjective(herkeurd,herkeurden).
 nominalized_adjective(hervormd,hervormden).
 nominalized_adjective(hoog,hogen).
-nominalized_adjective(hoog_op_leid,hoogopgeleiden).
-nominalized_adjective(hulp_zoeken,hulpzoekenden).
-nominalized_adjective(in_wijden,ingewijden).
+nominalized_adjective(invalide,invaliden).
 nominalized_adjective(ingezeten,ingezetenen).
 nominalized_adjective(intern,internen).
-nominalized_adjective(inzittend,inzittenden).
 nominalized_adjective(jarig,jarigen).
 nominalized_adjective(kansarm,kansarmen).
-nominalized_adjective(kiesgerechtigd,kiesgerechtigden).
 nominalized_adjective(klassiek,klassieken).
 nominalized_adjective(klein,kleinen).
 nominalized_adjective(krankzinnig,krankzinnigen).
 nominalized_adjective(kreupel,kreupelen).
 nominalized_adjective(krom,krommen).
-nominalized_adjective(laag_scholen,laaggeschoolden).
-nominalized_adjective(laag_op_leid,laagopgeleiden).
 nominalized_adjective(langharigen,langharigen).
-nominalized_adjective(leiding_geven,leidinggevenden).
 nominalized_adjective(licht_gewond,lichtgewonden).
 nominalized_adjective(los,lossen).
 nominalized_adjective(machtig,machtigen).
 nominalized_adjective(meest,meesten).
-nominalized_adjective(minder,minderen).
 nominalized_adjective(minderjarig,minderjarigen).
-nominalized_adjective(mis_maken,mismaakten).
-nominalized_adjective(mis_vormen,misvormden).
+nominalized_adjective(minder,minderen).
 nominalized_adjective(mobiel,mobielen).  % de opwaarts mobielen
 nominalized_adjective(moedig,moedigen).
 nominalized_adjective(naast,naasten).
+nominalized_adjective('Nederlands_talig','Nederlandstaligen').
 nominalized_adjective(nieuwsgierig,nieuwsgierigen).
-nominalized_adjective(om_wonen,omwonenden).
 nominalized_adjective(onafhankelijk,onafhankelijken).
 nominalized_adjective(onbekend,onbekenden).
-nominalized_adjective(onderdrukt,onderdrukten).
-nominalized_adjective(op_leiden,opgeleiden).
-nominalized_adjective(ondervragen,ondervraagden).
-nominalized_adjective(onderzoeken,onderzochten).
 nominalized_adjective(ongelovig,ongelovigen).
 nominalized_adjective(ongelukkig,ongelukkigen).
-nominalized_adjective(onteigend,onteigenden).
 nominalized_adjective(ontevreden,ontevredenen).
 nominalized_adjective(ontheemd,ontheemden).
-nominalized_adjective(ontsnappen,ontsnapten).
-nominalized_adjective(ontvoeren,ontvoerden).
-nominalized_adjective(ontwikkelen,ontwikkelden).
-nominalized_adjective(ontwortelen,ontwortelden).
-nominalized_adjective(on_wetend,onwetenden).
+nominalized_adjective(onwetend,onwetenden).
 nominalized_adjective(orthodox,orthodoxen).
 nominalized_adjective(oud,ouden).
 nominalized_adjective(overig,overigen).
-nominalized_adjective(overtuigen,overtuigden).
 nominalized_adjective(prominent,prominenten).
 nominalized_adjective(rampzalig,rampzaligen).
 nominalized_adjective(rap,rappen).
+nominalized_adjective(rechthebbend,rechthebbenden).
 nominalized_adjective(rechtvaardig,rechtvaardigen).
 nominalized_adjective(religieus,religieuzen).
 nominalized_adjective(rijk,rijken).
@@ -7766,6 +7815,7 @@ nominalized_adjective(schoon,schonen).
 nominalized_adjective(schuldig,schuldigen).
 nominalized_adjective(slecht,slechten).
 nominalized_adjective(sommig,sommigen).
+nominalized_adjective('Spaans_talig','Spaanstaligen').
 nominalized_adjective(staatkundig,staatkundigen).
 nominalized_adjective('Staats','Staatsen').
 nominalized_adjective(stemgerechtigd,stemgerechtigden).
@@ -7773,64 +7823,31 @@ nominalized_adjective(sterk,sterken).
 nominalized_adjective(stil,stillen).
 nominalized_adjective(stom,stommen).
 nominalized_adjective(thuisloos,thuislozen).
-nominalized_adjective(valide,validen). % met "minder"
+nominalized_adjective(valide,validen,[minder]). 
 nominalized_adjective(veel,velen).
 nominalized_adjective(verantwoordelijk,verantwoordelijken).
-nominalized_adjective(verblinden,verblinden).
-nominalized_adjective(verdoemen,verdoemden).
-nominalized_adjective(verdrukken,verdrukten).
-nominalized_adjective(verhoren,verhoorden).
 nominalized_adjective(verkeerd,verkeerden).
-nominalized_adjective(verkommeren,verkommerden).
-nominalized_adjective(verkiezen,verkozenen).
-nominalized_adjective(verloederen,verloederden).
-nominalized_adjective(verlossen,verlosten).
-nominalized_adjective(verminken,verminkten).
-nominalized_adjective(vermissen,vermisten).
-nominalized_adjective(vermoeien,vermoeiden).
-nominalized_adjective(vermoorden,vermoorden).
-nominalized_adjective(verongelukken,verongelukten).
-nominalized_adjective(verontrusten,verontrusten).
-nominalized_adjective(verontwaardigen,verontwaardigden).
-nominalized_adjective(veroordelen,veroordeelden).
-nominalized_adjective(verpauperen,verpauperden).
+nominalized_adjective(vermist,vermisten).
 nominalized_adjective(verpleegkundig,verpleegkundigen).
-nominalized_adjective(vertrappen,vertrapten).
-nominalized_adjective(vertrouwen,vertrouwden).
-nominalized_adjective(vervloeken,vervloekten).
-nominalized_adjective(vervolgen,vervolgden).
-nominalized_adjective(verzekeren,verzekerden).
-nominalized_adjective(verzuren,verzuurden).
 nominalized_adjective(vreemd,vreemden).
-nominalized_adjective(vrij,vrijen).
 nominalized_adjective(vrijgesteld,vrijgestelden).
+nominalized_adjective(vrij,vrijen).
 nominalized_adjective(vroom,vromen).
 nominalized_adjective(waanzinnig,waanzinnigen).
+nominalized_adjective(weinig,weinigen).
 nominalized_adjective(welgesteld,welgestelden).
 nominalized_adjective(werkeloos,werkelozen).
 nominalized_adjective(werkloos,werklozen).
-nominalized_adjective(weinig,weinigen).
 nominalized_adjective(wijs,wijzen).
 nominalized_adjective(wild,wilden).
 nominalized_adjective(wit,witten).
 nominalized_adjective(zalig,zaligen).
 nominalized_adjective(zelfstandig,zelfstandigen).
-nominalized_adjective(werk_zoeken,werkzoekenden).
-nominalized_adjective(woning_zoeken,woningzoekenden).
 nominalized_adjective(ziek,zieken).
-nominalized_adjective(ziekenfonds_verzekeren,ziekenfondsverzekerden).
 nominalized_adjective(zoveel,zovelen).
 nominalized_adjective(zwaar_gewond,zwaargewonden).
 nominalized_adjective(zwakzinnig,zwakzinnigen).
 nominalized_adjective(zwart,zwarten).
-
-nominalized_adjective(verslaven,verslaafden,
-		      [alcohol,
-		       drugs,
-		       game,
-		       gok,
-		       nicotine,
-		       sex]).
 
 m(Stem,iets_noun,Surf) :-
     iets_noun(Surf),

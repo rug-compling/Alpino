@@ -454,16 +454,11 @@ accent(geeffende,geëffende).
 accent(geeffend,geëffend).
 accent(geegaliseerd,geëgaliseerd).
 accent(geeigende,geëigende).
-accent(geeigendere,geëigendere).
-accent(geeigender,geëigender).
 accent(geeigend,geëigend).
-accent(geeigendste,geëigendste).
-accent(geeigendst,geëigendst).
 accent(geeindigde,geëindigde).
 accent(geeindigd,geëindigd).
 accent(geeiste,geëiste).
 accent(geeist,geëist).
-accent(geekskuseerde,geëkskuseerde).
 accent(geekskuseerd,geëkskuseerd).
 accent(geelimineerde,geëlimineerde).
 accent(geelimineerd,geëlimineerd).

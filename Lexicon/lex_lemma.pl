@@ -4066,6 +4066,7 @@ lemma_root(door_lallen,lal_door) .
 lemma_root(door_lammeren,lammer_door) .
 lemma_root(door_lanceren,lanceer_door) .
 lemma_root(door_landen,land_door) .
+lemma_root(door_landschap_schilderen,landschap_schilderen_door) .
 lemma_root(door_langebaan_schaatsen,langebaan_schaatsen_door) .
 lemma_root(door_langlaufen,langlauf_door) .
 lemma_root(door_lappen,lap_door) .
@@ -7848,6 +7849,7 @@ lemma_root(lam_leggen,leg_lam) .
 lemma_root(lammeren,lammer) .
 lemma_root(lanceren,lanceer) .
 lemma_root(landen,land) .
+lemma_root(landschap_schilderen,landschap_schilderen) .
 lemma_root(langebaan_schaatsen,langebaan_schaatsen) .
 lemma_root(langlaufen,langlauf) .
 lemma_root(langs_aaien,aai_langs) .
@@ -11633,6 +11635,7 @@ lemma_root(raak_lallen,lal_raak) .
 lemma_root(raak_lammeren,lammer_raak) .
 lemma_root(raak_lanceren,lanceer_raak) .
 lemma_root(raak_landen,land_raak) .
+lemma_root(raak_landschap_schilderen,landschap_schilderen_raak) .
 lemma_root(raak_langebaan_schaatsen,langebaan_schaatsen_raak) .
 lemma_root(raak_langlaufen,langlauf_raak) .
 lemma_root(raak_lappen,lap_raak) .
@@ -21593,6 +21596,7 @@ lemma_root(voort_lallen,lal_voort) .
 lemma_root(voort_lammeren,lammer_voort) .
 lemma_root(voort_lanceren,lanceer_voort) .
 lemma_root(voort_landen,land_voort) .
+lemma_root(voort_landschap_schilderen,landschap_schilderen_voort) .
 lemma_root(voort_langebaan_schaatsen,langebaan_schaatsen_voort) .
 lemma_root(voort_langlaufen,langlauf_voort) .
 lemma_root(voort_lappen,lap_voort) .
