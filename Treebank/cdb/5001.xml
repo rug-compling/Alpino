@@ -3,7 +3,7 @@
   <node begin="0" cat="top" end="15" id="0" rel="top">
     <node begin="0" cat="smain" end="14" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="kwikhoudend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="houdend" word="Kwikhoudende"/>
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="kwik_houden" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="houdend" word="Kwikhoudende" wvorm="od"/>
         <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="bestrijding_middel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bestrijdingsmiddel" word="bestrijdingsmiddelen"/>
       </node>
       <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>

@@ -35,19 +35,19 @@
           <node begin="14" cat="np" end="18" id="27" rel="cnj">
             <node begin="14" end="15" id="28" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
             <node begin="15" cat="mwu" end="18" id="29" rel="hd">
-              <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="30" lemma="NVV" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mwp" root="NVV" word="NVV"/>
-              <node begin="16" buiging="met-e" end="17" getal-n="mv-n" graad="comp" id="31" lemma="jong" pos="noun" positie="nom" postag="ADJ(nom,comp,met-e,mv-n)" pt="adj" rel="mwp" root="Jongeren" word="Jongeren"/>
-              <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="32" lemma="contact" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Contact" word="Contact"/>
+              <node begin="15" end="16" id="30" lemma="NVV" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="NVV" spectype="deeleigen" word="NVV"/>
+              <node begin="16" end="17" id="31" lemma="Jongeren" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jongeren" spectype="deeleigen" word="Jongeren"/>
+              <node begin="17" end="18" id="32" lemma="Contact" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Contact" spectype="deeleigen" word="Contact"/>
             </node>
           </node>
           <node begin="19" cat="mwu" end="22" id="33" rel="cnj">
-            <node begin="19" buiging="met-e" end="20" graad="basis" id="34" lemma="katholiek" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Katholieke" word="Katholieke"/>
-            <node begin="20" buiging="met-e" end="21" graad="basis" id="35" lemma="werkend" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Werkende" word="Werkende"/>
-            <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="36" lemma="jeugd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Jeugd" word="Jeugd"/>
+            <node begin="19" end="20" id="34" lemma="Katholieke" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Katholieke" spectype="deeleigen" word="Katholieke"/>
+            <node begin="20" end="21" id="35" lemma="Werkende" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Werkende" spectype="deeleigen" word="Werkende"/>
+            <node begin="21" end="22" id="36" lemma="Jeugd" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jeugd" spectype="deeleigen" word="Jeugd"/>
           </node>
           <node begin="23" cat="mwu" end="25" id="37" rel="cnj">
-            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="38" lemma="vrouwenbeweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Vrouwenbeweging" word="Vrouwenbeweging"/>
-            <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="39" lemma="NKV" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mwp" root="NKV" word="NKV"/>
+            <node begin="23" end="24" id="38" lemma="Vrouwenbeweging" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vrouwenbeweging" spectype="deeleigen" word="Vrouwenbeweging"/>
+            <node begin="24" end="25" id="39" lemma="NKV" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="NKV" spectype="deeleigen" word="NKV"/>
           </node>
           <node begin="26" cat="mwu" end="28" id="40" rel="cnj">
             <node begin="26" end="27" id="41" lemma="Oranje" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Oranje" spectype="deeleigen" word="Oranje"/>

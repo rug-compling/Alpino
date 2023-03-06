@@ -6,7 +6,7 @@
       <node begin="1" cat="smain" end="13" id="3" rel="nucl">
         <node begin="1" cat="np" end="3" id="4" rel="su">
           <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="massa" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="massa" word="massa&apos;s"/>
-          <node begin="2" buiging="met-e" end="3" getal-n="mv-n" graad="basis" id="6" lemma="alleenstaand" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="mod" root="alleenstaande" word="alleenstaanden"/>
+          <node begin="2" buiging="met-e" end="3" getal-n="mv-n" id="6" lemma="alleen_staan" pos="noun" positie="nom" postag="WW(od,nom,met-e,mv-n)" pt="ww" rel="mod" root="alleenstaande" word="alleenstaanden" wvorm="od"/>
         </node>
         <node begin="3" end="4" id="7" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
         <node begin="4" cat="np" end="13" id="8" rel="obj1">

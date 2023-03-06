@@ -3,22 +3,22 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="met-e" end="1" id="3" infl="de" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" wh="nwh" word="Deze"/>
-        <node begin="1" end="2" gen="het" getal="mv" graad="basis" id="4" lemma="artikel" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="artikel" word="artikelen"/>
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="Deze"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="artikel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="artikel" word="artikelen"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="3" cat="pp" end="7" id="6" rel="predc">
         <node begin="3" end="4" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
         <node begin="4" cat="np" end="7" id="8" rel="obj1">
           <node begin="4" cat="ap" end="6" id="9" rel="mod">
-            <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="10" infl="no_e" lemma="geheel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="geheel" vform="adj" word="geheel"/>
-            <node aform="base" begin="5" buiging="met-e" end="6" graad="basis" id="11" infl="e" lemma="verschillend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="verschillend" vform="adj" word="verschillende"/>
+            <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="geheel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="geheel" word="geheel"/>
+            <node begin="5" buiging="met-e" end="6" graad="basis" id="11" lemma="verschillend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="verschillend" word="verschillende"/>
           </node>
-          <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="kwaliteit" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="kwaliteit" sc="pred_pp(van)" word="kwaliteit"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="kwaliteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kwaliteit" word="kwaliteit"/>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Deze artikelen zijn van geheel verschillende kwaliteit .</sentence>
 </alpino_ds>

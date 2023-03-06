@@ -13,7 +13,7 @@
           <node begin="11" cat="pp" end="14" id="10" rel="mod">
             <node begin="11" end="12" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="12" cat="np" end="14" id="12" rel="obj1">
-              <node begin="12" buiging="met-e" end="13" graad="basis" id="13" lemma="kwikhoudend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="houdend" word="kwikhoudende"/>
+              <node begin="12" buiging="met-e" end="13" id="13" lemma="kwik_houden" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="houdend" word="kwikhoudende" wvorm="od"/>
               <node begin="13" end="14" getal="mv" graad="basis" id="14" lemma="bestrijding_middel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bestrijdingsmiddel" word="bestrijdingsmiddelen"/>
             </node>
           </node>

@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="13" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
         <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,agr,basis)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="Vele"/>
-        <node begin="1" buiging="met-e" end="2" getal-n="mv-n" graad="basis" id="4" lemma="verongelukt" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="verongelukt" word="verongelukten"/>
+        <node begin="1" buiging="met-e" end="2" getal-n="mv-n" id="4" lemma="verongelukken" pos="adj" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" root="verongelukt" word="verongelukten" wvorm="vd"/>
       </node>
       <node begin="2" end="3" id="5" lemma="toe_geven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="geef_toe" word="geven" wvorm="pv"/>
       <node begin="3" end="4" id="6" lemma="toe" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="toe" vztype="fin" word="toe"/>

@@ -4,7 +4,7 @@
     <node begin="0" cat="whq" end="9" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" index="1" rel="whd">
         <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
-        <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="alcoholhoudend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="houdend" word="alcoholhoudende"/>
+        <node begin="1" buiging="met-e" end="2" id="4" lemma="alcohol_houden" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="houdend" word="alcoholhoudende" wvorm="od"/>
         <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="drank" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="drank" word="drank"/>
       </node>
       <node begin="0" cat="sv1" end="9" id="6" rel="body">

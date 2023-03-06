@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="11" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="su">
         <node begin="0" buiging="zonder" end="1" id="3" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="Dit"/>
-        <node begin="1" buiging="zonder" end="2" graad="basis" id="4" lemma="persoonsgebonden" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="persoonsgebonden" word="persoonsgebonden"/>
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="persoon_binden" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="persoonsgebonden" word="persoonsgebonden" wvorm="vd"/>
         <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="voorbeeld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voorbeeld" word="voorbeeld"/>
       </node>
       <node begin="3" end="4" id="6" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>

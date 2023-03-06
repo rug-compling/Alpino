@@ -39,7 +39,7 @@
             <node begin="17" conjtype="neven" end="18" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="18" cat="np" end="20" id="30" rel="cnj">
               <node begin="18" buiging="met-e" end="19" graad="basis" id="31" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
-              <node begin="19" buiging="met-e" end="20" getal-n="mv-n" graad="basis" id="32" lemma="belanghebbend" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="belanghebbende" word="belanghebbenden"/>
+              <node begin="19" buiging="met-e" end="20" getal-n="mv-n" id="32" lemma="belang_hebben" pos="noun" positie="nom" postag="WW(od,nom,met-e,mv-n)" pt="ww" rel="hd" root="belanghebbende" word="belanghebbenden" wvorm="od"/>
             </node>
           </node>
           <node begin="24" end="25" id="33" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>

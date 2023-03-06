@@ -12,8 +12,8 @@
             <node begin="3" end="4" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="4" cat="np" end="8" id="10" rel="obj1">
               <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="5" buiging="met-e" end="6" graad="basis" id="12" lemma="Palestijns" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Palestijnse" word="Palestijnse"/>
-              <node begin="6" cat="mwu" end="8" id="13" rel="hd">
+              <node begin="5" cat="mwu" end="8" id="12" rel="hd">
+                <node begin="5" end="6" id="13" lemma="Palestijnse" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Palestijnse" spectype="deeleigen" word="Palestijnse"/>
                 <node begin="6" end="7" id="14" lemma="Nationale" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nationale" spectype="deeleigen" word="Nationale"/>
                 <node begin="7" end="8" id="15" lemma="Autoriteit" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Autoriteit" spectype="deeleigen" word="Autoriteit"/>
               </node>

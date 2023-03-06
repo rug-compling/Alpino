@@ -9,7 +9,7 @@
         <node begin="2" end="3" genus="masc" getal="ev" id="6" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
         <node begin="3" end="4" id="7" lemma="doorgaans" pos="adv" postag="BW()" pt="bw" rel="mod" root="doorgaans" word="doorgaans"/>
         <node begin="4" cat="np" end="6" id="8" rel="obj1">
-          <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="ziekteverwekkend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ziekte_verwek" word="ziekteverwekkende"/>
+          <node begin="4" buiging="met-e" end="5" id="9" lemma="ziekte_verwekken" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="ziekte_verwek" word="ziekteverwekkende" wvorm="od"/>
           <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="bacterie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bacterie" word="bacteriën"/>
         </node>
       </node>
