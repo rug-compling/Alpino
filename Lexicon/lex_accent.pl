@@ -834,8 +834,10 @@ accent(irreele,irreële).
 accent(irreelere,irreëlere).
 accent(irreeler,irreëler).
 accent('Israelier','Israeliër').
+accent('Israelier','Israëlier').
 accent('Israelier','Israëliër').
 accent('Israeliers','Israeliërs').
+accent('Israeliers','Israëliers').
 accent('Israeliers','Israëliërs').
 accent('Israeli','Israëli').
 accent('Israelische','Israëlische').

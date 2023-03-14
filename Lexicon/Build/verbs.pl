@@ -10150,6 +10150,11 @@ v(hunker,hunkert,hunkeren,gehunkerd,hunkerde,hunkerden,
     [h([intransitive,
 	pc_pp(naar)])]).
 
+v(hup,hupt,huppen,gehupt,hupte,hupten,
+    [b([intransitive,
+	ld_dir,
+	ld_pp])]).
+
 v(huppel,huppelt,huppelen,gehuppeld,huppelde,huppelden,
     [b([intransitive,
 	part_intransitive(aan),
@@ -24526,6 +24531,9 @@ v(verfomfaai,verfomfaait,verfomfaaien,verfomfaaid,verfomfaaide,verfomfaaiden,
 v(verfraai,verfraait,verfraaien,verfraaid,verfraaide,verfraaiden,
     [h([sbar_subj_so_np,
 	transitive])]).
+
+v(verfrans,verfranst,verfransen,verfranst,verfranste,verfransten,
+    [unacc([intransitive])]).
 
 v(verfris,verfrist,verfrissen,verfrist,verfriste,verfristen,
     [h([transitive])]).

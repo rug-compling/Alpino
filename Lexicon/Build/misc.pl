@@ -7581,7 +7581,7 @@ nominalized_adjective_both(treffen,getroffene,getroffenen).
 nominalized_adjective_both(overwegen,overwogene,overwogenen).
 nominalized_adjective_both(over_blijven,overgeblevene,overgeblevenen).
 nominalized_adjective_both(pasgeboren,pasgeborene,pasgeborenen).
-nominalized_adjective_both(uitverkoren,uitverkorene,uitverkorenen).
+nominalized_adjective_both(uit_verkiezen,uitverkorene,uitverkorenen).
 nominalized_adjective_both(vrij_laten,vrijgelatene,vrijgelatenen).
 nominalized_adjective_both(werkwillig,werkwillige,werkwilligen).
 
@@ -7719,6 +7719,7 @@ nominalized_adjective(arbeidsongeschikt,arbeidsongeschikten).
 nominalized_adjective(arm,armen).
 nominalized_adjective(bejaard,bejaarden).
 nominalized_adjective(bekend,bekenden).
+nominalized_adjective(belasting_plichtig,belastingplichtigen).
 nominalized_adjective(beroemd,beroemden).
 nominalized_adjective(bevoorrecht,bevoorrechten).
 nominalized_adjective(blank,blanken).
@@ -7726,8 +7727,11 @@ nominalized_adjective(blind,blinden).
 nominalized_adjective(blond,blonden).
 nominalized_adjective(boos,bozen).
 nominalized_adjective(bruin,bruinen).
+nominalized_adjective(dakloos,daklozen).
 nominalized_adjective(deskundig,deskundigen). % in order to be able to analyze "onafhankelijk deskundigen"
+nominalized_adjective(dienstplichtig,dienstplichtigen).
 nominalized_adjective(dik,dikken).
+nominalized_adjective(dood,doden).
 nominalized_adjective(doof,doven).
 nominalized_adjective(doopsgezind,doopsgezinden).
 nominalized_adjective(doortrapt,doortrapten).
@@ -7828,7 +7832,6 @@ nominalized_adjective(veel,velen).
 nominalized_adjective(verantwoordelijk,verantwoordelijken).
 nominalized_adjective(verkeerd,verkeerden).
 nominalized_adjective(vermist,vermisten).
-nominalized_adjective(verpleegkundig,verpleegkundigen).
 nominalized_adjective(vreemd,vreemden).
 nominalized_adjective(vrijgesteld,vrijgestelden).
 nominalized_adjective(vrij,vrijen).
@@ -7842,7 +7845,6 @@ nominalized_adjective(wijs,wijzen).
 nominalized_adjective(wild,wilden).
 nominalized_adjective(wit,witten).
 nominalized_adjective(zalig,zaligen).
-nominalized_adjective(zelfstandig,zelfstandigen).
 nominalized_adjective(ziek,zieken).
 nominalized_adjective(zoveel,zovelen).
 nominalized_adjective(zwaar_gewond,zwaargewonden).
@@ -8643,6 +8645,7 @@ term([chambre,de,réflexion]).
 term([chambre,'d\'hôtes']).
 term([champignons,de,'Paris']).
 term([chapelle,ardente]).
+term([checks,and,balances]).
 term([chill,out]).
 term([circumstantial,evidence]).
 term([cliff,hanger]).
@@ -8849,6 +8852,7 @@ term([reduce]).
 term([remedial,teaching]).
 term([res,publica]).
 term([rigor,mortis]).
+term([rule,of,law]).
 term([rules,of,engagement]).
 term([running,gag]).
 term([sabbatical,year]).
@@ -8975,6 +8979,7 @@ term([worst,case,scenario],[worst,case,'scenario\'s']).
 term([worst,case,scenario],[worst,'case-scenario\'s']).
 term([worst,case,scenario],[worst,'case-scenario']).
 term(['writer\'s',block]).
+term([zero,sum,game]).
 term([zero,tolerance]).
 term([zum,'Tode',betrübt]).
 

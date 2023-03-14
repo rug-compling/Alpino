@@ -272,7 +272,7 @@ class MaxEntInducer(Inducer):
         elif (lasso != 0):
             varopt = '-l1 %d ' % (lasso)
                             
-        command = '/net/aps/32/bin/estimate -monitor -events_in %s -params_out %s %s' % (self.eventfile,self.paramsfile,varopt)
+        command = 'estimate -monitor -events_in %s -params_out %s %s' % (self.eventfile,self.paramsfile,varopt)
 
         if (quiet):
             os.system(command+' >/dev/null')

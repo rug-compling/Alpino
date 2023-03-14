@@ -173,6 +173,7 @@ lemma_root(aan_huisvesten,huisvest_aan) .
 lemma_root(aan_huizen,huis_aan) .
 lemma_root(aan_hullen,hul_aan) .
 lemma_root(aan_huppelen,huppel_aan) .
+lemma_root(aan_huppen,hup_aan) .
 lemma_root(aan_husselen,hussel_aan) .
 lemma_root(aan_ijlen,ijl_aan) .
 lemma_root(aan_ijsberen,ijsbeer_aan) .
@@ -747,6 +748,7 @@ lemma_root(achterna_hoeven,hoef_achterna) .
 lemma_root(achterna_hollen,hol_achterna) .
 lemma_root(achterna_houden,houd_achterna) .
 lemma_root(achterna_huppelen,huppel_achterna) .
+lemma_root(achterna_huppen,hup_achterna) .
 lemma_root(achterna_jagen,jaag_achterna) .
 lemma_root(achterna_kachelen,kachel_achterna) .
 lemma_root(achterna_kanoën,kano_achterna) .
@@ -1169,6 +1171,7 @@ lemma_root(af_huisvesten,huisvest_af) .
 lemma_root(af_huizen,huis_af) .
 lemma_root(af_hullen,hul_af) .
 lemma_root(af_huppelen,huppel_af) .
+lemma_root(af_huppen,hup_af) .
 lemma_root(af_huren,huur_af) .
 lemma_root(af_husselen,hussel_af) .
 lemma_root(af_ijlen,ijl_af) .
@@ -2338,6 +2341,7 @@ lemma_root(binnen_hoeven,hoef_binnen) .
 lemma_root(binnen_hollen,hol_binnen) .
 lemma_root(binnen_houden,houd_binnen) .
 lemma_root(binnen_huppelen,huppel_binnen) .
+lemma_root(binnen_huppen,hup_binnen) .
 lemma_root(binnen_jagen,jaag_binnen) .
 lemma_root(binnen_kachelen,kachel_binnen) .
 lemma_root(binnen_kanoën,kano_binnen) .
@@ -3777,6 +3781,7 @@ lemma_root(door_hullen,hul_door) .
 lemma_root(door_hummen,hum_door) .
 lemma_root(door_hunkeren,hunker_door) .
 lemma_root(door_huppelen,huppel_door) .
+lemma_root(door_huppen,hup_door) .
 lemma_root(door_huren,huur_door) .
 lemma_root(door_hurken,hurk_door) .
 lemma_root(door_husselen,hussel_door) .
@@ -5172,6 +5177,7 @@ lemma_root(door_veren,veer_door) .
 lemma_root(door_verergeren,vererger_door) .
 lemma_root(door_verflauwen,verflauw_door) .
 lemma_root(door_verfomfaaien,verfomfaai_door) .
+lemma_root(door_verfransen,verfrans_door) .
 lemma_root(door_vergaan,verga_door) .
 lemma_root(door_vergaderen,vergader_door) .
 lemma_root(door_vergassen,vergas_door) .
@@ -6176,6 +6182,7 @@ lemma_root(heen_huisvesten,huisvest_heen) .
 lemma_root(heen_huizen,huis_heen) .
 lemma_root(heen_hullen,hul_heen) .
 lemma_root(heen_huppelen,huppel_heen) .
+lemma_root(heen_huppen,hup_heen) .
 lemma_root(heen_husselen,hussel_heen) .
 lemma_root(heen_ijlen,ijl_heen) .
 lemma_root(heen_ijsberen,ijsbeer_heen) .
@@ -6732,6 +6739,7 @@ lemma_root(hullen,hul) .
 lemma_root(hummen,hum) .
 lemma_root(hunkeren,hunker) .
 lemma_root(huppelen,huppel) .
+lemma_root(huppen,hup) .
 lemma_root(huren,huur) .
 lemma_root(hurken,hurk) .
 lemma_root(husselen,hussel) .
@@ -6970,6 +6978,7 @@ lemma_root(in_huizen,huis_in) .
 lemma_root(in_huldigen,huldig_in) .
 lemma_root(in_hullen,hul_in) .
 lemma_root(in_huppelen,huppel_in) .
+lemma_root(in_huppen,hup_in) .
 lemma_root(in_huren,huur_in) .
 lemma_root(in_husselen,hussel_in) .
 lemma_root(in_ijlen,ijl_in) .
@@ -8016,6 +8025,7 @@ lemma_root(langs_huisvesten,huisvest_langs) .
 lemma_root(langs_huizen,huis_langs) .
 lemma_root(langs_hullen,hul_langs) .
 lemma_root(langs_huppelen,huppel_langs) .
+lemma_root(langs_huppen,hup_langs) .
 lemma_root(langs_husselen,hussel_langs) .
 lemma_root(langs_ijlen,ijl_langs) .
 lemma_root(langs_ijsberen,ijsbeer_langs) .
@@ -9052,6 +9062,7 @@ lemma_root(omhoog_schieten,schiet_omhoog) .
 lemma_root(om_houden,houd_om) .
 lemma_root(omhullen,omhul) .
 lemma_root(om_huppelen,huppel_om) .
+lemma_root(om_huppen,hup_om) .
 lemma_root(om_jagen,jaag_om) .
 lemma_root(om_kachelen,kachel_om) .
 lemma_root(om_kanoën,kano_om) .
@@ -9630,6 +9641,7 @@ lemma_root(op_hopen,hoop_op) .
 lemma_root(op_horen,hoor_op) .
 lemma_root(op_houden,houd_op) .
 lemma_root(op_huppelen,huppel_op) .
+lemma_root(op_huppen,hup_op) .
 lemma_root(op_jagen,jaag_op) .
 lemma_root(op_jutten,jut_op) .
 lemma_root(op_kachelen,kachel_op) .
@@ -10068,6 +10080,7 @@ lemma_root(overhoop_liggen,lig_overhoop) .
 lemma_root(overhoren,overhoor) .
 lemma_root(over_houden,houd_over) .
 lemma_root(over_huppelen,huppel_over) .
+lemma_root(over_huppen,hup_over) .
 lemma_root(over_jagen,jaag_over) .
 lemma_root(over_kachelen,kachel_over) .
 lemma_root(over_kanoën,kano_over) .
@@ -11363,6 +11376,7 @@ lemma_root(raak_huizen,huis_raak) .
 lemma_root(raak_hummen,hum_raak) .
 lemma_root(raak_hunkeren,hunker_raak) .
 lemma_root(raak_huppelen,huppel_raak) .
+lemma_root(raak_huppen,hup_raak) .
 lemma_root(raak_huren,huur_raak) .
 lemma_root(raak_hurken,hurk_raak) .
 lemma_root(raak_husselen,hussel_raak) .
@@ -12670,6 +12684,7 @@ lemma_root(raak_veren,veer_raak) .
 lemma_root(raak_verergeren,vererger_raak) .
 lemma_root(raak_verflauwen,verflauw_raak) .
 lemma_root(raak_verfomfaaien,verfomfaai_raak) .
+lemma_root(raak_verfransen,verfrans_raak) .
 lemma_root(raak_vergaan,verga_raak) .
 lemma_root(raak_vergaderen,vergader_raak) .
 lemma_root(raak_vergassen,vergas_raak) .
@@ -13284,6 +13299,7 @@ lemma_root(rond_hoeven,hoef_rond) .
 lemma_root(rond_hollen,hol_rond) .
 lemma_root(rond_houden,houd_rond) .
 lemma_root(rond_huppelen,huppel_rond) .
+lemma_root(rond_huppen,hup_rond) .
 lemma_root(rond_jagen,jaag_rond) .
 lemma_root(rond_kachelen,kachel_rond) .
 lemma_root(rond_kanoën,kano_rond) .
@@ -14083,6 +14099,7 @@ lemma_root(tegemoet_hoeven,hoef_tegemoet) .
 lemma_root(tegemoet_hollen,hol_tegemoet) .
 lemma_root(tegemoet_houden,houd_tegemoet) .
 lemma_root(tegemoet_huppelen,huppel_tegemoet) .
+lemma_root(tegemoet_huppen,hup_tegemoet) .
 lemma_root(tegemoet_jagen,jaag_tegemoet) .
 lemma_root(tegemoet_kachelen,kachel_tegemoet) .
 lemma_root(tegemoet_kanoën,kano_tegemoet) .
@@ -14644,6 +14661,7 @@ lemma_root(toe_huisvesten,huisvest_toe) .
 lemma_root(toe_huizen,huis_toe) .
 lemma_root(toe_hullen,hul_toe) .
 lemma_root(toe_huppelen,huppel_toe) .
+lemma_root(toe_huppen,hup_toe) .
 lemma_root(toe_husselen,hussel_toe) .
 lemma_root(toe_ijlen,ijl_toe) .
 lemma_root(toe_ijsberen,ijsbeer_toe) .
@@ -15320,6 +15338,7 @@ lemma_root(tussen_huisvesten,huisvest_tussen) .
 lemma_root(tussen_huizen,huis_tussen) .
 lemma_root(tussen_hullen,hul_tussen) .
 lemma_root(tussen_huppelen,huppel_tussen) .
+lemma_root(tussen_huppen,hup_tussen) .
 lemma_root(tussen_husselen,hussel_tussen) .
 lemma_root(tussen_ijlen,ijl_tussen) .
 lemma_root(tussen_ijsberen,ijsbeer_tussen) .
@@ -16513,6 +16532,7 @@ lemma_root(uit_hullen,hul_uit) .
 lemma_root(uit_hummen,hum_uit) .
 lemma_root(uit_hunkeren,hunker_uit) .
 lemma_root(uit_huppelen,huppel_uit) .
+lemma_root(uit_huppen,hup_uit) .
 lemma_root(uit_huren,huur_uit) .
 lemma_root(uit_hurken,hurk_uit) .
 lemma_root(uit_husselen,hussel_uit) .
@@ -18228,6 +18248,7 @@ lemma_root(vanaf_huisvesten,huisvest_vanaf) .
 lemma_root(vanaf_huizen,huis_vanaf) .
 lemma_root(vanaf_hullen,hul_vanaf) .
 lemma_root(vanaf_huppelen,huppel_vanaf) .
+lemma_root(vanaf_huppen,hup_vanaf) .
 lemma_root(vanaf_husselen,hussel_vanaf) .
 lemma_root(vanaf_ijlen,ijl_vanaf) .
 lemma_root(vanaf_ijsberen,ijsbeer_vanaf) .
@@ -18829,6 +18850,7 @@ lemma_root(vandaan_huisvesten,huisvest_vandaan) .
 lemma_root(vandaan_huizen,huis_vandaan) .
 lemma_root(vandaan_hullen,hul_vandaan) .
 lemma_root(vandaan_huppelen,huppel_vandaan) .
+lemma_root(vandaan_huppen,hup_vandaan) .
 lemma_root(vandaan_husselen,hussel_vandaan) .
 lemma_root(vandaan_ijlen,ijl_vandaan) .
 lemma_root(vandaan_ijsberen,ijsbeer_vandaan) .
@@ -19415,6 +19437,7 @@ lemma_root(vandoor_huisvesten,huisvest_vandoor) .
 lemma_root(vandoor_huizen,huis_vandoor) .
 lemma_root(vandoor_hullen,hul_vandoor) .
 lemma_root(vandoor_huppelen,huppel_vandoor) .
+lemma_root(vandoor_huppen,hup_vandoor) .
 lemma_root(vandoor_husselen,hussel_vandoor) .
 lemma_root(vandoor_ijlen,ijl_vandoor) .
 lemma_root(vandoor_ijsberen,ijsbeer_vandoor) .
@@ -19999,6 +20022,7 @@ lemma_root(verflauwen,verflauw) .
 lemma_root(verfoeien,verfoei) .
 lemma_root(verfomfaaien,verfomfaai) .
 lemma_root(verfraaien,verfraai) .
+lemma_root(verfransen,verfrans) .
 lemma_root(verfrissen,verfris) .
 lemma_root(verfrommelen,verfrommel) .
 lemma_root(vergaan,verga) .
@@ -21325,6 +21349,7 @@ lemma_root(voort_huizen,huis_voort) .
 lemma_root(voort_hummen,hum_voort) .
 lemma_root(voort_hunkeren,hunker_voort) .
 lemma_root(voort_huppelen,huppel_voort) .
+lemma_root(voort_huppen,hup_voort) .
 lemma_root(voort_huren,huur_voort) .
 lemma_root(voort_hurken,hurk_voort) .
 lemma_root(voort_husselen,hussel_voort) .
@@ -22635,6 +22660,7 @@ lemma_root(voort_veren,veer_voort) .
 lemma_root(voort_verergeren,vererger_voort) .
 lemma_root(voort_verflauwen,verflauw_voort) .
 lemma_root(voort_verfomfaaien,verfomfaai_voort) .
+lemma_root(voort_verfransen,verfrans_voort) .
 lemma_root(voort_vergaan,verga_voort) .
 lemma_root(voort_vergaderen,vergader_voort) .
 lemma_root(voort_vergassen,vergas_voort) .

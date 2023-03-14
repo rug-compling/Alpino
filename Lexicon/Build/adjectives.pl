@@ -475,7 +475,9 @@ a([e('Angolese'),
    no_e('Angolees')],nonadv,[],[]).
 
 a([e('Antilliaanse'),
-   no_e('Antilliaans')],nonadv,[],[]).
+   no_e('Antilliaans'),
+   e('Antiliaanse'),
+   no_e('Antiliaans')],nonadv,[],[]).
 
 a([e('Antwerpse'),
    no_e('Antwerps')],nonadv,[],[]).
@@ -564,6 +566,9 @@ a([e('Baskische'),
 a([e('Bataafse'),
    no_e('Bataafs')],nonadv,[],[]).
 
+a([e('Bazelse'),
+   no_e('Bazels')],nonadv,[],[]).
+
 a([e('Beierse'),
    no_e('Beiers')],nonadv,[],[]).
 
@@ -594,6 +599,9 @@ a([e('Berlijnse'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
+
+a([e('Beverwijkse'),
+   no_e('Beverwijks')],nonadv,[],[]).
 
 a([e('Birmese'),
    no_e('Birmees')],nonadv,[],[]).
@@ -824,6 +832,9 @@ a([e('Gentse'),
 a([e('Georgische'),
    no_e('Georgisch')],nonadv,[],[]).
 
+a([e('Geraardsbergse'),
+   no_e('Geraardsbergs')],nonadv,[],[]).
+
 a([e('Germaanse'),
    er('Germaanser'),
    ere('Germaansere'),
@@ -873,7 +884,7 @@ a([both('Haarlemmer')],nonadv,[],[]).
 a([e('Haarlemse'),
    no_e('Haarlems')],nonadv,[],[]).
 
-a([e('Hasselstse'),no_e('Hasselts')],nonadv,[],[]).
+a([e('Hasseltse'),no_e('Hasselts')],nonadv,[],[]).
 
 a([e('Hawaiiaanse'),
    no_e('Hawaiiaans')],nonadv,[],[]).
@@ -1034,11 +1045,17 @@ a([e('Koreaanse'),
    hh('Oost'),
    hh('West')]).
 
+a([e('Kortrijkse'),
+   no_e('Kortrijks')],nonadv,[],[]).
+
 a([e('Kosovaarse'),
    no_e('Kosovaars')],nonadv,[],[]).
 
 a([e('Kroatische'),
    no_e('Kroatisch')],nonadv,[],[]).
+
+a([e('Latemse'),
+   no_e('Latems')],nonadv,[],[]).
 
 a([e('Latijnse'),
    er('Latijnser'),
@@ -1111,6 +1128,9 @@ a([e('Marokkaanse'),
    hh('Oost'),
    hh('West')]).
 
+a([e('Mechelse'),
+   no_e('Mechels')],nonadv,[],[]).
+
 a([e('Messiaanse'),
    no_e('Messiaans')],nonadv,[],[]).
 
@@ -1169,6 +1189,9 @@ a([e('Newyorkse'),
    no_e('Newyorks'),
    e('New-Yorkse'),
    no_e('New-Yorks')],nonadv,[],[]).
+
+a([e(['New','Yorkse']),
+   no_e(['New','Yorks'])],nonadv,[],[]).
 
 a([e('Nieuwzeelandse'),
    no_e('Nieuwzeelands'),
@@ -2081,7 +2104,8 @@ a([ge_both(aangetroffen)],adv,[],[]).
 
 a([ge_both(aangetrokken)],adv,[pp(tot)],[]).
 
-a([ge_e(aangetrouwde),
+a([stem(aan_trouwen),
+   ge_e(aangetrouwde),
    ge_no_e(aangetrouwd)],adv,
   [],[]).
 
@@ -2651,7 +2675,7 @@ a([e(affectieve),
    ste(affektiefste)],adv,[],[]).
 
 a([stem(af_bakenen),
-   ge_(afgebakende),
+   ge_e(afgebakende),
    ge_no_e(afgebakend)],adv,[],[]).
 
 a([ge_both(afgebakken)],padv,[],[]).
@@ -2824,7 +2848,7 @@ a([ge_e(afgeleerde),
 a([ge_e(afgelegde),
    ge_no_e(afgelegd)],adv,[],[]).
 
-a([ge_both(afgelegen),
+a([both(afgelegen),
    er(afgelegener),
    ere(afgelegenere),
    st(afgelegenst),
@@ -3889,7 +3913,8 @@ a([e(auditieve),
    st(auditiefst),
    ste(auditiefste)],adv,[],[]).
 
-a([e(autentieke),
+a([stem(authentiek),
+   e(autentieke),
    e(authentieke),
    er(autentieker),
    er(authentieker),
@@ -4283,10 +4308,10 @@ a([e(bedrijvige),
    st(bedrijvigst),
    ste(bedrijvigste)],padv,[],[]).
 
-a([ge_e(bedroefde),
+a([e(bedroefde),
    er(bedroefder),
    ere(bedroefdere),
-   ge_no_e(bedroefd),
+   no_e(bedroefd),
    st(bedroefdst),
    ste(bedroefdste)],both,
   [er_pp_sbar(over),
@@ -4876,6 +4901,10 @@ a([e(belastbare),
 
 a([ge_e(belasterde),
    ge_no_e(belasterd)],padv,[],[]).
+
+a([stem(belasting_plichtig),
+   e(belastingplichtige),
+   no_e(belastingplichtig)],nonadv,[],[]).
 
 a([e(belastingvrije),
    no_e(belastingvrij)],both,[],[]).
@@ -8461,8 +8490,9 @@ a([e(digitale),
    no_e(digitaal)],adv,[],[]).
 
 a([e(dimensionale),
-   no_e(dimensionaal),
-   e(dimensionele),
+   no_e(dimensionaal)],adv,[],[]).
+
+a([e(dimensionele),
    no_e(dimensioneel)],adv,[],[]).
 
 a([e(dikke),
@@ -8973,7 +9003,7 @@ a([ge_e(doorgewerkte),
    ge_no_e(doorgewerkt)],adv,[],[]).
 
 a([e(doorgewinterde),
-   ge_no_e(doorgewinterd)],nonadv,[],[]).
+   no_e(doorgewinterd)],nonadv,[],[]).
 
 a([ge_e(doorgezakte),
    ge_no_e(doorgezakt)],adv,[],[]).
@@ -10104,7 +10134,7 @@ a([e(erotische),
 a([e(erudiete),
    no_e(erudiet)],nonadv,[],[]).
 
-a([ge_both(ervaren),
+a([both(ervaren),
    er(ervarener),
    ere(ervarenere),
    st(ervarenst),
@@ -17257,8 +17287,9 @@ a([ge_e(gezigzagde),
 
 a([ge_e(gezinde),
    ge_no_e(gezind)],padv,
-  [pred_so_np],[s(behoud),
-		goed]).
+  [pred_so_np],
+  [s(behoud),
+   goed]).
 
 a([ge_e(gezochte),
    er(gezochter),
@@ -21580,7 +21611,7 @@ a([e(kribbige),
 
 a([pred(kriegel)],adv,[],[]).
 
-a([lemma(krijg_vang),
+a([stem(krijg_vangen),
    both(krijgsgevangen)],nonadv,[],[]).
 
 a([e(krijgshaftige),
@@ -23523,6 +23554,9 @@ a([e(minimale),
    ste(minimaalste)],adv,[],[]).
 
 a([both(minimum)],nonadv,[],[]).
+
+a([e(miniscule),
+   no_e(miniscuul)],nonadv,[],[]).
 
 a([e(ministeriële),
    no_e(ministerieel)],nonadv,[],[]).
@@ -25892,9 +25926,6 @@ a([ge_e(onderuitgezakte),
 a([ge_e(onderverdeelde),
    ge_no_e(onderverdeeld)],adv,[],[]).
 
-a([ge_e(ondervertegenwoordigde),
-   ge_no_e(ondervertegenwoordigd)],padv,[],[]).
-
 a([e(ondervoede),
    no_e(ondervoed)],nonadv,[],[]).
 
@@ -26487,7 +26518,7 @@ a([ge_e(ongewenste),
 a([ge_e(ongewijzigde),
    ge_no_e(ongewijzigd)],padv,[],[]).
 
-a([lemma(ongewild),
+a([stem(ongewild),
    ge_e(ongewilde),
    ge_no_e(ongewild)],adv,[],[]).
 
@@ -27233,7 +27264,7 @@ a([ge_e(ontglipte),
 
 a([ge_both(ontgonnen)],adv,[],[]).
 
-a([stem(ontgoocheld),
+a([stem(ontgoochelen),
    ge_e(ontgoochelde),
    er(ontgoochelder),
    ere(ontgoocheldere),
@@ -29629,9 +29660,6 @@ a([e(oververhitte),
 a([e(oververmoeide),
    no_e(oververmoeid)],padv,[],[]).
 
-a([ge_e(oververtegenwoordigde),
-   ge_no_e(oververtegenwoordigd)],padv,[],[]).
-
 a([ge_e(overvleugelde),
    ge_no_e(overvleugeld)],adv,[],[]).
 
@@ -30809,7 +30837,8 @@ a([e(kwartaire),
    no_e(kwartair),
    no_e(quartair)],nonadv,[],[]).
 
-a([both(kwasi),
+a([stem(quasi),
+   both(kwasi),
    both(quasi)],adv,[],[]).
 
 a([pred(quitte)],adv,[],[]).
@@ -31255,6 +31284,9 @@ a([e(rekbare),
    no_e(rekbaar),
    st(rekbaarst),
    ste(rekbaarste)],nonadv,[],[]).
+
+a([e(rekenkundige),
+   no_e(rekenkundig)],adv,[],[]).
 
 a([e(relatieve),
    er(relatiever),
@@ -33881,7 +33913,8 @@ a([e(synonieme),
 a([e(syntactische),
    no_e(syntactisch)],adv,[],[]).
 
-a([e(syntetische),
+a([stem(synthetisch),
+   e(syntetische),
    e(synthetische),
    no_e(syntetisch),
    no_e(synthetisch)],adv,[],[]).
@@ -34088,8 +34121,9 @@ a([e(tegennatuurlijke),
 a([ge_e(tegenovergestelde),
    ge_no_e(tegenovergesteld)],adv,[],[]).
 
-a([e(tegenoverliggende),
-   no_e(tegenoverliggend)],nonadv,[],[]).
+a([stem(tegenover_liggen),
+   ende(tegenoverliggende),
+   end(tegenoverliggend)],nonadv,[],[]).
 
 a([e(tegenstrijdige),
    er(tegenstrijdiger),
@@ -35005,8 +35039,9 @@ a([pred(tureluurs)],padv,[],[]).
 
 a([ge_both(tussengelegen)],nonadv,[],[]).
 
-a([e(tussenliggende),
-   no_e(tussenliggend)],nonadv,[],[]).
+a([stem(tussen_liggen),
+   ende(tussenliggende),
+   end(tussenliggend)],nonadv,[],[]).
 
 a([e(tussentijdse),
    no_e(tussentijds)],adv,[],[]).
@@ -36664,6 +36699,10 @@ a([ge_e(verfomfaaide),
 a([ge_e(verfraaide),
    ge_no_e(verfraaid)],adv,[],[]).
 
+a([stem(verfransen),
+   ge_e(verfranste),
+   ge_no_e(verfranst)],adv,[],[]).
+
 a([ende(verfrissende),
    er(verfrissender),
    ere(verfrissendere),
@@ -37101,7 +37140,7 @@ a([ge_e(verleerde),
 a([ge_e(verlegde),
    ge_no_e(verlegd)],adv,[],[]).
 
-a([ge_both(verlegen),
+a([both(verlegen),
    er(verlegener),
    ere(verlegenere),
    st(verlegenst),
@@ -37639,7 +37678,8 @@ a([ge_e(verschrompelde),
 a([e(verschuifbare),
    no_e(verschuifbaar)],nonadv,[],[]).
 
-a([ge_e(verschuldigde),
+a([stem(verschuldigen),
+   ge_e(verschuldigde),
    ge_no_e(verschuldigd)],nonadv,
   [so_pp(aan),
    np_np,
@@ -37918,7 +37958,9 @@ a([ge_e(verteerde),
    ge_no_e(verteerd)],adv,[],[]).
 
 a([ge_e(vertegenwoordigde),
-   ge_no_e(vertegenwoordigd)],adv,[],[]).
+   ge_no_e(vertegenwoordigd)],adv,[],
+  [onder,
+   over]).
 
 a([ge_e(vertekende),
    ge_no_e(vertekend)],adv,[],[]).
@@ -41443,7 +41485,6 @@ stem(afgelaten,v_root(laat_af,af_laten)).
 stem(afgeleefd,v_root(leef_af,af_leven)).
 stem(afgeleerd,v_root(leer_af,af_leren)).
 stem(afgelegd,v_root(leg_af,af_leggen)).
-stem(afgelegen,v_root(lig_af,af_liggen)).
 stem(afgeleid,v_root(leid_af,af_leiden)).
 stem(afgeleverd,v_root(lever_af,af_leveren)).
 stem(afgelezen,v_root(lees_af,af_lezen)).
@@ -41575,7 +41616,6 @@ stem(bedongen,v_root(beding,bedingen)).
 stem(bedorven,v_root(bederf,bederven)).
 stem(bedreigd,v_root(bedreig,bedreigen)).
 stem(bedreven,v_root(bedrijf,bedrijven)).
-stem(bedroefd,v_root(bedroef,bedroeven)).
 stem(bedrogen,v_root(bedrieg,bedriegen)).
 stem(bedronken,v_root(bedrink,bedrinken)).
 stem(bedrukt,v_root(bedruk,bedrukken)).
@@ -41974,7 +42014,6 @@ stem(doorgetrokken,v_root(trek_door,door_trekken)).
 stem(doorgevoerd,v_root(voer_door,door_voeren)).
 stem(doorgevroren,v_root(vries_door,door_vriezen)).
 stem(doorgewerkt,v_root(werk_door,door_werken)).
-stem(doorgewinterd,v_root(winter_door,door_winteren)).
 stem(doorgezakt,v_root(zak_door,door_zakken)).
 stem(doorgezet,v_root(zet_door,door_zetten)).
 stem(doorgroefd,v_root(doorgroef,doorgroeven)).
@@ -41999,7 +42038,6 @@ stem(doorzwommen,v_root(doorzwem,doorzwemmen)).
 stem(drooggevallen,v_root(val_droog,droog_vallen)).
 stem(eigengemaakt,v_root(maak_eigen,eigen_maken)).
 stem(erkend,v_root(erken,erkennen)).
-stem(ervaren,v_root(ervaar,ervaren)).
 stem(fijngehakt,v_root(hak_fijn,fijn_hakken)).
 stem(fijngemalen,v_root(maal_fijn,fijn_malen)).
 stem(fijngesneden,v_root(snijd_fijn,fijn_snijden)).
@@ -43533,7 +43571,6 @@ stem(gezeten,v_root(zit,zitten)).
 stem(gezet,v_root(zet,zetten)).
 stem(gezien,v_root(zie,zien)).
 stem(gezigzagd,v_root(zigzag,zigzaggen)).
-stem(gezind,v_root(zin,zinnen)).
 stem(gezocht,v_root(zoek,zoeken)).
 stem(gezoend,v_root(zoen,zoenen)).
 stem(gezoet,v_root(zoet,zoeten)).
@@ -44892,7 +44929,6 @@ stem(verlaten,v_root(verlaat,verlaten)).
 stem(verleend,v_root(verleen,verlenen)).
 stem(verleerd,v_root(verleer,verleren)).
 stem(verlegd,v_root(verleg,verleggen)).
-stem(verlegen,v_root(verlig,verliggen)).
 stem(verleid,v_root(verleid,verleiden)).
 stem(verlengd,v_root(verleng,verlengen)).
 stem(verlevendigd,v_root(verlevendig,verlevendigen)).

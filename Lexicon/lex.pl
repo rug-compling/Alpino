@@ -657,6 +657,10 @@ lexicon_(Word,Cat,Stem,Ws,Ws,plural(His),_LC) :-
     in_names_dictionary(Cat0,Name,Stem,[],[],His),
     plural_from_name(Cat0,Cat).
 
+lexicon_(Word,proper_name(pl,Type),Stem,Ws,Ws,plural(name),_LC) :-
+    atom(Word),
+    plural_name(Word,Stem,Type).
+
 in_names_dictionary(Cat,Word,Name,Ws1,Ws,His) :-
     atom(Word),
     initialize_names_dict(DictNo),
@@ -710,7 +714,34 @@ determiner_from_name(proper_name(_,TYPE),name_determiner(pron,TYPE)).
 
 plural_from_name(proper_name(_),proper_name(pl)).
 plural_from_name(proper_name(_,'PER'),proper_name(pl,'PER')).
-   
+
+
+plural_name('Alma\'s','Alma','ORG').
+plural_name('Boeings','Boeing','ORG').
+plural_name('Ferrari\'s','Ferrari','ORG').
+plural_name('Fokkers','Fokker','ORG').
+plural_name('Fords','Ford','ORG').
+plural_name('Kuifjes','Kuifje','PER').
+plural_name('Harley-Davidsons','Harley-Davidson','ORG').
+plural_name('Heinekens','Heineken','PER').
+plural_name('Hurricanes','Hurricane','ORG').
+plural_name('Japen','Jaap','PER').
+plural_name('Lee\'s','Lee','PER').
+plural_name('Mercedessen','Mercedes','ORG').
+plural_name('Obama\'s','Obama','PER').
+plural_name('Orions','Orion','ORG').
+plural_name('Oscars','Oscar','MISC').
+plural_name('Pfaffs','Pfaff','PER').
+plural_name('Picasso','Picasso\'s','PER').
+plural_name('Porsches','Porsche','ORG').
+plural_name('Rabo\'s','Rabo','ORG').
+plural_name('Santossen','Santos','PER').
+plural_name('Spitfires','Spitfire','ORG').
+plural_name('UWV\'s','UWV','ORG').
+plural_name('Vespa\'s','Vespa','ORG').
+plural_name('VVV\'s','VVV','ORG').
+plural_name('Willy\'s','Willy','PER').
+
 add_type('MISC',Tag,Tag) :-
     !.
 add_type(Label,Tag0,Tag) :-
@@ -738,6 +769,7 @@ number_both(['BW']).
 number_both(['Borg']).
 number_both(['Boston','Bruins']).
 number_both(['Boys'|_]).
+number_both(['Caraïben']).
 number_both(['Clintons']).
 number_both(['De','Borg']).
 number_both(['De','Heideroosjes']).
@@ -797,8 +829,8 @@ number_both_last(Word) :-
 
 number_both_last(Atom) :-
     atom(Atom),
-    plural_suffix(Suffix),
-    atom_concat(_,Suffix,Atom).
+    atom_concat(_,Suffix,Atom),
+    plural_suffix(Suffix).
 
 plural_suffix(admirals).
 plural_suffix(alpen).
@@ -808,6 +840,9 @@ plural_suffix(ardennen).
 plural_suffix(auteurs).
 plural_suffix(avalanches).
 plural_suffix(awards).
+plural_suffix(azoren).
+plural_suffix(balearen).
+plural_suffix('bardi\'s').
 plural_suffix(beatles).
 plural_suffix(bees).
 plural_suffix(blowfish).
@@ -853,6 +888,7 @@ plural_suffix(eagles).
 plural_suffix(eilanden).
 plural_suffix(emiraten).
 plural_suffix(eurythmics).
+plural_suffix(falklands).
 plural_suffix(feesten).
 plural_suffix(fighters).
 plural_suffix(files).
@@ -887,9 +923,11 @@ plural_suffix(lips).
 plural_suffix(llamas).
 plural_suffix(lovers).
 plural_suffix(lunatics).
+plural_suffix(magyaren).
 plural_suffix(makers).
 plural_suffix(marileens).
 plural_suffix(microphones).
+plural_suffix(midlands).
 plural_suffix(modes).
 plural_suffix(molukken).
 plural_suffix(monkees).
@@ -931,7 +969,6 @@ plural_suffix(rockers).
 plural_suffix(roots).
 plural_suffix(roses).
 plural_suffix(rousers).
-plural_suffix(samurai).
 plural_suffix(scotsman).
 plural_suffix(screws).
 plural_suffix(serenes).
@@ -956,6 +993,7 @@ plural_suffix(stripes).
 plural_suffix(strokes).
 plural_suffix(supremes).
 plural_suffix(swingers).
+plural_suffix(tartaren).
 plural_suffix(thunderbugs).
 plural_suffix(tijgers).
 plural_suffix(trammps).
@@ -1967,9 +2005,6 @@ spelling_variant21('in-en-in',triest,'in-en-in-triest').
 
 spelling_variant21(o,zoveel,      zoveel).
 spelling_variant21(oh,zoveel,     zoveel).
-
-spelling_variant21('New','Yorks', 'Newyorks').
-spelling_variant21('New','Yorkse', 'Newyorkse').
 
 /* too many spur amb, since in most contexts, the two words
 are analysed correctly if written separately
@@ -2992,6 +3027,7 @@ spelling_variant('d\'rvandaan',ervandaan).
 spelling_variant('d\'rvandoor',ervandoor).
 spelling_variant('d\'rvoor',ervoor).
 
+spelling_variant('Gaza-strook','Gazastrook').
 spelling_variant('Groot-Britannië','Groot-Brittannië').
 spelling_variant('Groot-Brittanië','Groot-Brittannië').
 spelling_variant('Groot-Britanië','Groot-Brittannië').
@@ -3096,6 +3132,7 @@ spelling_variant(followed,followt).
 spelling_variant(fotos,   'foto\'s').
 spelling_variant(gaa,     ga).
 spelling_variant(gedouched,gedoucht).
+spelling_variant('ge-eist',geëist).
 spelling_variant(gestrest,gestresst).
 spelling_variant(gezegt,  gezegd).
 spelling_variant(gha,     ga).

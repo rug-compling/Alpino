@@ -618,6 +618,7 @@ loc(piazza).
 loc(pic).
 loc(plaza).
 loc(plein).
+loc(quai).
 loc(regio).
 loc(reservaat).
 loc(restaurant).
