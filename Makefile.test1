@@ -59,12 +59,6 @@ Titaantjes-orig_test1_options=-flag treebank ../Treebank/Titaantjes
 
 ## ensure it enters Treebank/PPH through the official route, so the
 ## links will work on HPC... :-(
-PPH_test1_options=-flag treebank $(ALPINO_HOME)/Treebank/PPH -flag syntax_features cdb/pp_weights
-dpc-ind_test1_options=-flag treebank $(ALPINO_HOME)/Treebank/dpc -flag syntax_features cdb/pd_weights
-WIKI_test1_options=-flag treebank $(ALPINO_HOME)/Treebank/WIKI -flag syntax_features cdb/pw_weights
-udtest_test1_options=-flag treebank $(ALPINO_HOME)/Treebank/WIKI -flag syntax_features cdb/pw_weights
-PPI_test1_options=-flag treebank $(ALPINO_HOME)/Treebank/PPI -flag syntax_features cdb/pi_weights
-WSU_test1_options=-flag treebank $(ALPINO_HOME)/Treebank/WSU -flag syntax_features cdb/pu_weights
 
 job := job${shell echo $$$$}
 
@@ -213,7 +207,7 @@ reportcurrentscore:
           echo "----- expected:";\
           grep ca-score $(suite)$(part)/score | head -n1; fi
 
-suites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite m_suite lot_test_suite1 wpspel extra PPH PPH PPI WIKI WSU
+suites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite m_suite lot_test_suite1 wpspel extra 
 
 clean:
 	for suite in $(suites) $(CGNSUITES) ;\
@@ -343,11 +337,6 @@ hpctests:
 	make job HPCTARGET=test1 suite=cdb_part cdb_part=7
 	make job HPCTARGET=test1 suite=cdb_part cdb_part=8
 	make job HPCTARGET=test1 suite=cdb_part cdb_part=9
-	make job HPCTARGET=test1 suite=PPH
-	make job HPCTARGET=test1 suite=dpc-ind
-	make job HPCTARGET=test1 suite=WIKI
-	make job HPCTARGET=test1 suite=PPI
-	make job HPCTARGET=test1 suite=WSU
 	make shortjob HPCTARGET=test1 suite=g_suite
 	make shortjob HPCTARGET=test1 suite=h_suite
 	make shortjob HPCTARGET=test1 suite=i_suite
@@ -359,15 +348,13 @@ hpctests:
 	make shortjob HPCTARGET=test1 suite=qa
 	make shortjob HPCTARGET=test1 suite=wpspel
 
-tests: ts ds cgns t24 t28
+tests: ts cgns t24 t28 t29
 
-ltests: ts ds t24
+ltests: ts t24 t29
 
-ts: cdbt t15 t16 t17 t18 t19 t20 t21 t22 t23 t25 t26 t27 
+ts: cdbt t15 t16 t17 t18 t19 t20 t21 t22 t23 t25 t26 t27
 
 cdbt: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 
-
-ds: t10 t11 t12 t13 t14
 
 t0:
 	make test1 suite=cdb_part cdb_part=0
@@ -389,16 +376,6 @@ t8:
 	make test1 suite=cdb_part cdb_part=8
 t9:
 	make test1 suite=cdb_part cdb_part=9
-t10:
-	make test1 suite=PPH
-t11:
-	make test1 suite=PPI
-t12:
-	make test1 suite=WSU
-t13:
-	make test1 suite=WIKI
-t14:
-	make test1 suite=dpc-ind
 t15:
 	make test1 suite=g_suite
 t16:
@@ -427,6 +404,8 @@ t27:
 	make test1 suite=m_suite
 t28:
 	make test1 suite=ovistest
+t29:
+	make test1 suite=Titaantjes
 
 
 jobsuites=$(sort $(dir $(wildcard */job*)))
@@ -578,7 +557,7 @@ SHELL=/bin/bash
 pt_diff:
 	-diff <(grep -e ' #LM' -e ' #PT' $$suite/poslemma) <(grep -e ' #LM' -e ' #PT' $$suite/job*/log1) | grep '^[>]'
 
-GREP=grep -v -e fn -e fv -e ovis -e Titaantjes[-]
+GREP=grep -v -e ^fn -e ^fv -e ^ovis -e ^Titaantjes[-]
 
 pt_diffs:
 	@for file in `echo $(shell ls $(ORDERED) */job*/log1 | $(GREP)  2>/dev/null)`; do \
@@ -590,7 +569,7 @@ f: cf ptf lmf
 
 d: cs pt_diffs
 
-PATTERNS=cdb dpc extra fn fv f[nv] PPH PPI WIKI WSU
+PATTERNS=cdb extra fn fv f[nv] novel
 
 SUITESDIR=.Suites/
 
@@ -613,8 +592,9 @@ overview0:
 	@for file in `ls $(PATTERN)*/poslemma`; do cat $$file | grep '^#LM#' | tail -n1 | sed -e 's/#LM#//'; done  | awk 'END {printf "%.2f\n",100*C/T} {C = C+$$1;T=T+$$3}'
 	@for file in `ls $(PATTERN)*/poslemma`; do cat $$file | grep '^#PT#' | tail -n1 | sed -e 's/#PT#//'; done  | awk 'END {printf "%.2f\n",100*C/T} {C = C+$$1;T=T+$$3}'
 
+EXTRA=/net/corpora/LassyDevelop/Test/*/poslemma
 lemmas:
-	ls */poslemma |$(GREP)| xargs cat |grep ' #LM' | awk '{ print $$1,$$2,$$3 }' |sort | uniq -c |sort -n
+	ls $(EXTRA) */poslemma |$(GREP)| xargs cat |grep ' #LM' | awk '{ print $$1,$$2,$$3 }' |sort | uniq -c |sort -n
 
 postags:
-	ls */poslemma |$(GREP)| xargs cat |grep ' #PT' | awk '{ print $$1,$$2,$$3 }' |sort | uniq -c |sort -n
+	ls $(EXTRA) */poslemma |$(GREP)| xargs cat |grep ' #PT' | awk '{ print $$1,$$2,$$3 }' |sort | uniq -c |sort -n
