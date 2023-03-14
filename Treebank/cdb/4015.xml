@@ -19,9 +19,9 @@
         <node begin="7" end="8" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="8" end="9" getal="mv" graad="basis" id="14" lemma="aandeel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aandeel" word="aandelen"/>
         <node begin="9" cat="mwu" end="12" id="15" rel="app">
-          <node begin="9" end="10" id="16" lemma="Ass." pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="Ass." spectype="symb" word="Ass."/>
-          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="17" lemma="stad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Stad" word="Stad"/>
-          <node begin="11" end="12" id="18" lemma="Rotterdam" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rotterdam" spectype="deeleigen" word="Rotterdam"/>
+          <node begin="9" end="10" id="16" lemma="Ass." pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ass." spectype="deeleigen" word="Ass."/>
+          <node begin="10" end="11" id="17" lemma="Stad" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stad" spectype="deeleigen" word="Stad"/>
+          <node begin="11" end="12" id="18" lemma="Rotterdam" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rotterdam" spectype="deeleigen" word="Rotterdam"/>
         </node>
       </node>
     </node>

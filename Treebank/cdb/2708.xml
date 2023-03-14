@@ -32,11 +32,11 @@
                     <node begin="16" cat="np" end="22" id="27" rel="obj1">
                       <node begin="16" end="17" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                       <node begin="17" cat="mwu" end="22" id="29" rel="hd">
-                        <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="30" lemma="spaar_bank" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="spaarbank" word="spaarbank"/>
-                        <node begin="18" end="19" id="31" lemma="voor" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
-                        <node begin="19" end="20" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
-                        <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="33" lemma="stad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Stad" word="Stad"/>
-                        <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="34" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mwp" root="Amsterdam" word="Amsterdam"/>
+                        <node begin="17" end="18" id="30" lemma="spaarbank" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="spaarbank" spectype="deeleigen" word="spaarbank"/>
+                        <node begin="18" end="19" id="31" lemma="voor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="voor" spectype="deeleigen" word="voor"/>
+                        <node begin="19" end="20" id="32" lemma="de" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+                        <node begin="20" end="21" id="33" lemma="Stad" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stad" spectype="deeleigen" word="Stad"/>
+                        <node begin="21" end="22" id="34" lemma="Amsterdam" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Amsterdam" spectype="deeleigen" word="Amsterdam"/>
                       </node>
                     </node>
                   </node>

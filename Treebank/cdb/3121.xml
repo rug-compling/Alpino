@@ -7,8 +7,8 @@
       <node begin="2" cat="np" end="9" id="4" rel="su">
         <node begin="2" end="3" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
         <node begin="3" cat="mwu" end="5" id="6" rel="hd">
-          <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="wetenschappelijk" pos="noun" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="Wetenschappelijk" word="Wetenschappelijk"/>
-          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="onderwijsbureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Onderwijsbureau" word="Onderwijsbureau"/>
+          <node begin="3" end="4" id="7" lemma="Wetenschappelijk" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wetenschappelijk" spectype="deeleigen" word="Wetenschappelijk"/>
+          <node begin="4" end="5" id="8" lemma="Onderwijsbureau" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Onderwijsbureau" spectype="deeleigen" word="Onderwijsbureau"/>
         </node>
         <node begin="5" cat="pp" end="9" id="9" rel="mod">
           <node begin="5" end="6" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>

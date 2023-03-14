@@ -9,9 +9,9 @@
         <node begin="2" cat="np" end="6" id="6" rel="su">
           <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="3" cat="mwu" end="6" id="8" rel="hd">
-            <node begin="3" end="4" id="9" lemma="International" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="International" spectype="deeleigen" word="International"/>
-            <node begin="4" end="5" id="10" lemma="Air" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Air" spectype="deeleigen" word="Air"/>
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="show" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Show" word="Show"/>
+            <node begin="3" end="4" id="9" lemma="International" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="International" spectype="vreemd" word="International"/>
+            <node begin="4" end="5" id="10" lemma="Air" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Air" spectype="vreemd" word="Air"/>
+            <node begin="5" end="6" id="11" lemma="Show" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Show" spectype="vreemd" word="Show"/>
           </node>
         </node>
         <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="plaats" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="svp" root="plaats" word="plaats"/>

@@ -30,10 +30,10 @@
               <node begin="10" cat="np" end="15" id="25" rel="obj1">
                 <node begin="10" end="11" id="26" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                 <node begin="11" cat="mwu" end="15" id="27" rel="hd">
-                  <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="28" lemma="museum" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Museum" word="Museum"/>
-                  <node begin="12" end="13" id="29" lemma="voor" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
-                  <node begin="13" buiging="met-e" end="14" graad="basis" id="30" lemma="modern" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Moderne" word="Moderne"/>
-                  <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="31" lemma="kunst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Kunst" word="Kunst"/>
+                  <node begin="11" end="12" id="28" lemma="Museum" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Museum" spectype="deeleigen" word="Museum"/>
+                  <node begin="12" end="13" id="29" lemma="voor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="voor" spectype="deeleigen" word="voor"/>
+                  <node begin="13" end="14" id="30" lemma="Moderne" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Moderne" spectype="deeleigen" word="Moderne"/>
+                  <node begin="14" end="15" id="31" lemma="Kunst" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kunst" spectype="deeleigen" word="Kunst"/>
                 </node>
               </node>
             </node>

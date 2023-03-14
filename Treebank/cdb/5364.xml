@@ -66,8 +66,10 @@
                     <node begin="33" end="34" id="54" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
                     <node begin="34" cat="np" end="37" id="55" rel="obj1">
                       <node begin="34" end="35" id="56" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="35" buiging="met-e" end="36" graad="basis" id="57" lemma="bataviaans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Bataviaanse" word="Bataviaanse"/>
-                      <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="58" lemma="kunst_kring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kring" word="Kunstkring"/>
+                      <node begin="35" cat="mwu" end="37" id="57" rel="hd">
+                        <node begin="35" end="36" id="58" lemma="Bataviaanse" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bataviaanse" spectype="deeleigen" word="Bataviaanse"/>
+                        <node begin="36" end="37" id="59" lemma="Kunstkring" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kunstkring" spectype="deeleigen" word="Kunstkring"/>
+                      </node>
                     </node>
                   </node>
                 </node>
@@ -77,7 +79,7 @@
         </node>
       </node>
     </node>
-    <node begin="37" end="38" id="59" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="37" end="38" id="60" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Het was zijn prachtige , trieste &quot; Quartier de Charonne &quot; , dat hij in 1937 schilderde en in 1939 in bruikleen afstond aan collectioneur Regnault in het toenmalige Batavia voor een expositie voor de Bataviaanse Kunstkring .</sentence>
 </alpino_ds>

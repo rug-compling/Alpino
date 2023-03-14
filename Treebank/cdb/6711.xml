@@ -68,8 +68,8 @@
                               <node begin="33" cat="pp" end="36" id="58" rel="mod">
                                 <node begin="33" end="34" id="59" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                                 <node begin="34" cat="mwu" end="36" id="60" rel="obj1">
-                                  <node begin="34" end="35" id="61" lemma="Buitenlandse" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Buitenlandse" spectype="deeleigen" word="Buitenlandse"/>
-                                  <node begin="35" end="36" id="62" lemma="Zaken" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Zaken" spectype="deeleigen" word="Zaken"/>
+                                  <node begin="34" buiging="met-e" end="35" graad="basis" id="61" lemma="buitenlands" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Buitenlandse" word="Buitenlandse"/>
+                                  <node begin="35" end="36" getal="mv" graad="basis" id="62" lemma="zaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Zaken" word="Zaken"/>
                                 </node>
                               </node>
                             </node>

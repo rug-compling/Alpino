@@ -46,8 +46,8 @@
             <node begin="21" cat="np" end="25" id="36" rel="obj1">
               <node begin="21" end="22" id="37" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="22" cat="mwu" end="24" id="38" rel="hd">
-                <node begin="22" buiging="met-e" end="23" graad="basis" id="39" lemma="christelijk" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Christelijke" word="Christelijke"/>
-                <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="40" lemma="metaalbedrijfsbond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Metaalbedrijfsbond" word="Metaalbedrijfsbond"/>
+                <node begin="22" end="23" id="39" lemma="Christelijke" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Christelijke" spectype="deeleigen" word="Christelijke"/>
+                <node begin="23" end="24" id="40" lemma="Metaalbedrijfsbond" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Metaalbedrijfsbond" spectype="deeleigen" word="Metaalbedrijfsbond"/>
               </node>
               <node begin="24" end="25" genus="genus" getal="ev" graad="basis" id="41" lemma="CMB" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="CMB" word="CMB"/>
             </node>

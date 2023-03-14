@@ -17,8 +17,8 @@
           <node begin="8" cat="pp" end="11" id="13" rel="mod">
             <node begin="8" end="9" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="9" cat="mwu" end="11" id="15" rel="obj1">
-              <node begin="9" end="10" id="16" lemma="Buitenlandse" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Buitenlandse" spectype="deeleigen" word="Buitenlandse"/>
-              <node begin="10" end="11" id="17" lemma="Zaken" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Zaken" spectype="deeleigen" word="Zaken"/>
+              <node begin="9" buiging="met-e" end="10" graad="basis" id="16" lemma="buitenlands" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Buitenlandse" word="Buitenlandse"/>
+              <node begin="10" end="11" getal="mv" graad="basis" id="17" lemma="zaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Zaken" word="Zaken"/>
             </node>
           </node>
         </node>

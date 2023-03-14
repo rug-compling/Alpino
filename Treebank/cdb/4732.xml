@@ -24,7 +24,7 @@
           <node begin="0" end="1" id="18" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="Na"/>
           <node begin="1" cat="np" end="19" id="19" rel="obj1">
             <node begin="1" end="2" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="2" buiging="met-e" end="3" graad="basis" id="21" lemma="gerechtvaardigd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gerechtvaardigd" word="gerechtvaardigde"/>
+            <node begin="2" buiging="met-e" end="3" id="21" lemma="rechtvaardigen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="gerechtvaardigd" word="gerechtvaardigde" wvorm="vd"/>
             <node begin="3" end="4" getal="mv" graad="basis" id="22" lemma="klacht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="klacht" word="klachten"/>
             <node begin="5" cat="rel" end="19" id="23" rel="mod">
               <node begin="5" end="6" getal="getal" id="24" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>

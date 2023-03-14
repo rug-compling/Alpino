@@ -64,27 +64,24 @@
             <node begin="34" end="35" id="48" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
             <node begin="28" cat="ppart" end="36" id="49" rel="vc">
               <node begin="28" end="29" id="50" index="2" rel="su"/>
-              <node begin="28" cat="ppart" end="34" id="51" rel="vc">
-                <node begin="28" end="29" id="52" index="2" rel="obj1"/>
-                <node begin="29" cat="pp" end="33" id="53" rel="mod">
-                  <node begin="29" end="30" id="54" lemma="sinds" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="sinds" vztype="init" word="sinds"/>
-                  <node begin="30" cat="np" end="33" id="55" rel="obj1">
-                    <node begin="30" cat="mwu" end="32" id="56" rel="hd">
-                      <node begin="30" end="31" id="57" lemma="één" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="een" word="een"/>
-                      <node begin="31" end="32" genus="onz" getal="ev" graad="basis" id="58" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="uur" word="uur"/>
-                    </node>
-                    <node begin="32" end="33" id="59" lemma="gistermiddag" pos="noun" postag="BW()" pt="bw" rel="mod" root="gistermiddag" word="gistermiddag"/>
+              <node begin="29" cat="pp" end="33" id="51" rel="mod">
+                <node begin="29" end="30" id="52" lemma="sinds" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="sinds" vztype="init" word="sinds"/>
+                <node begin="30" cat="np" end="33" id="53" rel="obj1">
+                  <node begin="30" cat="mwu" end="32" id="54" rel="hd">
+                    <node begin="30" end="31" id="55" lemma="één" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="een" word="een"/>
+                    <node begin="31" end="32" genus="onz" getal="ev" graad="basis" id="56" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="uur" word="uur"/>
                   </node>
+                  <node begin="32" end="33" id="57" lemma="gistermiddag" pos="noun" postag="BW()" pt="bw" rel="mod" root="gistermiddag" word="gistermiddag"/>
                 </node>
-                <node begin="33" buiging="zonder" end="34" id="60" lemma="vermissen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vermis" word="vermist" wvorm="vd"/>
               </node>
-              <node begin="35" buiging="zonder" end="36" id="61" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
+              <node begin="33" buiging="zonder" end="34" graad="basis" id="58" lemma="vermist" pos="verb" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="vermis" word="vermist"/>
+              <node begin="35" buiging="zonder" end="36" id="59" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="36" end="37" id="62" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="36" end="37" id="60" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Vier Rotterdamse kinderen , leerlingen van de Goedhartschool voor kinderen met leer- en opvoedingsmoeilijkheden , zijn vannacht omstreeks een uur in een hooiberg in Helvoirt teruggevonden , nadat zij sinds een uur gistermiddag vermist waren geweest .</sentence>
 </alpino_ds>

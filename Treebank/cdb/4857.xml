@@ -59,10 +59,10 @@
                                     <node begin="29" end="30" id="53" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                                     <node begin="30" cat="np" end="34" id="54" rel="obj1">
                                       <node begin="30" end="31" id="55" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                                      <node begin="31" end="32" genus="onz" getal="ev" graad="basis" id="56" lemma="Museum" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Museum" word="Museum"/>
-                                      <node begin="32" cat="pp" end="34" id="57" rel="mod">
-                                        <node begin="32" end="33" id="58" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                                        <node begin="33" end="34" getal="mv" graad="basis" id="59" lemma="oudheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="oudheid" word="oudheden"/>
+                                      <node begin="31" cat="mwu" end="34" id="56" rel="hd">
+                                        <node begin="31" end="32" id="57" lemma="Museum" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Museum" spectype="deeleigen" word="Museum"/>
+                                        <node begin="32" end="33" id="58" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+                                        <node begin="33" end="34" id="59" lemma="oudheden" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="oudheden" spectype="deeleigen" word="oudheden"/>
                                       </node>
                                     </node>
                                   </node>

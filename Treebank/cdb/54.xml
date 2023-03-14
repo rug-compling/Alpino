@@ -89,9 +89,9 @@
       <node begin="38" end="39" id="64" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
       <node begin="39" cat="np" end="47" id="65" rel="predc">
         <node begin="39" end="40" id="66" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="40" cat="ap" end="42" id="67" rel="mod">
+        <node begin="40" cat="ppart" end="42" id="67" rel="mod">
           <node begin="40" buiging="zonder" end="41" graad="sup" id="68" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,sup)" pt="vnw" rel="mod" root="meest" vwtype="onbep" word="meest"/>
-          <node begin="41" buiging="met-e" end="42" graad="basis" id="69" lemma="teleur_stellen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="teleurgesteld" word="teleurgestelde"/>
+          <node begin="41" buiging="met-e" end="42" id="69" lemma="teleur_stellen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="teleurgesteld" word="teleurgestelde" wvorm="vd"/>
         </node>
         <node begin="42" end="43" genus="zijd" getal="ev" graad="basis" id="70" lemma="coureur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="coureur" word="coureur"/>
         <node begin="43" cat="pp" end="47" id="71" rel="mod">

@@ -13,9 +13,9 @@
           <node begin="1" cat="np" end="5" id="9" rel="obj1">
             <node begin="1" end="2" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="2" cat="mwu" end="5" id="11" rel="hd">
-              <node begin="2" end="3" id="12" lemma="New" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="New" spectype="deeleigen" word="New"/>
-              <node begin="3" end="4" id="13" lemma="York" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="York" spectype="deeleigen" word="York"/>
-              <node begin="4" end="5" id="14" lemma="Times" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Times" spectype="deeleigen" word="Times"/>
+              <node begin="2" end="3" id="12" lemma="New" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="New" spectype="vreemd" word="New"/>
+              <node begin="3" end="4" id="13" lemma="York" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="York" spectype="vreemd" word="York"/>
+              <node begin="4" end="5" id="14" lemma="Times" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Times" spectype="vreemd" word="Times"/>
             </node>
           </node>
         </node>
@@ -44,7 +44,7 @@
               <node begin="17" cat="inf" end="21" id="33" rel="body">
                 <node begin="17" end="18" getal="mv" graad="basis" id="34" index="2" lemma="extremist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="extremist" word="extremisten"/>
                 <node begin="18" end="19" id="35" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
-                <node begin="20" buiging="zonder" end="21" id="36" lcat="p(inf)" lemma="op_sporen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spoor_op" word="sporen" wvorm="inf"/>
+                <node begin="20" buiging="zonder" end="21" id="36" lemma="op_sporen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spoor_op" word="sporen" wvorm="inf"/>
               </node>
             </node>
             <node begin="21" conjtype="neven" end="22" id="37" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>

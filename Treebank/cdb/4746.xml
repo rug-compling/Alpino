@@ -36,8 +36,8 @@
                       <node begin="16" cat="np" end="19" id="30" rel="obj1">
                         <node begin="16" end="17" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                         <node begin="17" cat="mwu" end="19" id="32" rel="hd">
-                          <node begin="17" end="18" id="33" lemma="Financial" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Financial" spectype="deeleigen" word="Financial"/>
-                          <node begin="18" end="19" id="34" lemma="Times" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Times" spectype="deeleigen" word="Times"/>
+                          <node begin="17" end="18" id="33" lemma="Financial" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Financial" spectype="vreemd" word="Financial"/>
+                          <node begin="18" end="19" id="34" lemma="Times" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Times" spectype="vreemd" word="Times"/>
                         </node>
                       </node>
                     </node>
@@ -51,7 +51,7 @@
                             <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="42" lemma="ster" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ster" word="ster"/>
                             <node begin="22" cat="pp" end="24" id="43" rel="mod">
                               <node begin="22" end="23" id="44" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                              <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="45" lemma="Rolls-Royce" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Rolls-Royce" word="Rolls-Royce"/>
+                              <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="45" lemma="Rolls-Royce" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Rolls-Royce" word="Rolls-Royce"/>
                             </node>
                           </node>
                           <node begin="24" cat="pp" end="27" id="46" rel="obj2">

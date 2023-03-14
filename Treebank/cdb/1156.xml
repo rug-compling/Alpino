@@ -68,8 +68,8 @@
             <node begin="31" end="32" id="51" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
             <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="52" lemma="peloton" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="peloton" word="peloton"/>
             <node begin="33" cat="mwu" end="35" id="53" rel="mod">
-              <node begin="33" buiging="met-e" end="34" graad="basis" id="54" lemma="koninklijk" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Koninklijke" word="Koninklijke"/>
-              <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="55" lemma="marechaussee" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="marechaussee" word="marechaussee"/>
+              <node begin="33" end="34" id="54" lemma="Koninklijke" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Koninklijke" spectype="deeleigen" word="Koninklijke"/>
+              <node begin="34" end="35" id="55" lemma="marechaussee" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="marechaussee" spectype="deeleigen" word="marechaussee"/>
             </node>
           </node>
           <node begin="36" cat="np" end="38" id="56" rel="cnj">

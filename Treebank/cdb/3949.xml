@@ -31,13 +31,13 @@
                 <node begin="17" end="18" getal="mv" graad="basis" id="26" lemma="kameraad" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kameraad" word="kameraden"/>
                 <node begin="18" cat="conj" end="23" id="27" rel="app">
                   <node begin="18" cat="mwu" end="20" id="28" rel="cnj">
-                    <node begin="18" end="19" id="29" lemma="To" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="To" spectype="vreemd" word="To"/>
-                    <node begin="19" end="20" id="30" lemma="Choaem" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Choaem" spectype="vreemd" word="Choaem"/>
+                    <node begin="18" end="19" id="29" lemma="To" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="To" spectype="deeleigen" word="To"/>
+                    <node begin="19" end="20" id="30" lemma="Choaem" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Choaem" spectype="deeleigen" word="Choaem"/>
                   </node>
                   <node begin="20" conjtype="neven" end="21" id="31" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                   <node begin="21" cat="mwu" end="23" id="32" rel="cnj">
-                    <node begin="21" end="22" id="33" lemma="te" pos="noun" postag="BW()" pt="bw" rel="mwp" root="Te" word="Te"/>
-                    <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="34" lemma="chanem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Chanem" word="Chanem"/>
+                    <node begin="21" end="22" id="33" lemma="Te" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Te" spectype="deeleigen" word="Te"/>
+                    <node begin="22" end="23" id="34" lemma="Chanem" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Chanem" spectype="deeleigen" word="Chanem"/>
                   </node>
                 </node>
               </node>

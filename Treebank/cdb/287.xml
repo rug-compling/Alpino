@@ -30,8 +30,8 @@
                     <node begin="13" buiging="met-e" end="14" graad="basis" id="27" lemma="Engels" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Engels" word="Engelse"/>
                     <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="28" lemma="blad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="blad" word="blad"/>
                     <node begin="16" cat="mwu" end="18" id="29" rel="app">
-                      <node begin="16" end="17" id="30" lemma="Daily" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Daily" spectype="vreemd" word="Daily"/>
-                      <node begin="17" end="18" id="31" lemma="Mirror" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Mirror" spectype="vreemd" word="Mirror"/>
+                      <node begin="16" end="17" id="30" lemma="Daily" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Daily" spectype="deeleigen" word="Daily"/>
+                      <node begin="17" end="18" id="31" lemma="Mirror" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mirror" spectype="deeleigen" word="Mirror"/>
                     </node>
                   </node>
                 </node>

@@ -5,7 +5,7 @@
     <node begin="0" cat="smain" end="9" id="2" rel="--">
       <node begin="0" cat="mwu" end="2" id="3" rel="predc">
         <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="4" lemma="operatie" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Operatie" word="Operatie"/>
-        <node begin="1" end="2" id="5" lemma="Bulldozer" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bulldozer" spectype="deeleigen" word="Bulldozer"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="bulldozer" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Bulldozer" word="Bulldozer"/>
       </node>
       <node begin="3" end="4" id="6" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
       <node begin="4" end="5" getal="ev" id="7" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dit" status="vol" vwtype="aanw" word="dit"/>
