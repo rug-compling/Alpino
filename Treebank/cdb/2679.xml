@@ -47,8 +47,8 @@
             <node begin="20" end="21" id="35" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
             <node begin="21" end="22" id="36" lemma="nooit" pos="adv" postag="BW()" pt="bw" rel="mod" root="nooit" word="nooit"/>
             <node begin="23" end="24" id="37" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
-            <node begin="22" cat="ap" end="26" id="38" rel="predc">
-              <node begin="22" buiging="zonder" end="23" graad="basis" id="39" lemma="wennen" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="gewend" word="gewend"/>
+            <node begin="22" cat="ppart" end="26" id="38" rel="predc">
+              <node begin="22" buiging="zonder" end="23" id="39" lemma="wennen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gewend" word="gewend" wvorm="vd"/>
               <node begin="24" cat="ti" end="26" id="40" rel="vc">
                 <node begin="24" end="25" id="41" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
                 <node begin="25" buiging="zonder" end="26" id="42" lemma="freewheelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="freewheel" word="freewheelen" wvorm="inf"/>

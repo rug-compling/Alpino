@@ -21,15 +21,17 @@
             <node begin="6" end="7" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="7" cat="np" end="10" id="17" rel="obj1">
               <node begin="7" end="8" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="8" buiging="met-e" end="9" id="19" lemma="verenigen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="verenigd" word="verenigde" wvorm="vd"/>
-              <node begin="9" end="10" getal="mv" graad="basis" id="20" lemma="staat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Staten" word="Staten"/>
+              <node begin="8" cat="mwu" end="10" id="19" rel="hd">
+                <node begin="8" end="9" id="20" lemma="verenigde" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="verenigde" spectype="deeleigen" word="verenigde"/>
+                <node begin="9" end="10" id="21" lemma="Staten" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Staten" spectype="deeleigen" word="Staten"/>
+              </node>
             </node>
           </node>
-          <node begin="11" buiging="zonder" end="12" id="21" lemma="verkopen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verkoop" word="verkocht" wvorm="vd"/>
+          <node begin="11" buiging="zonder" end="12" id="22" lemma="verkopen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verkoop" word="verkocht" wvorm="vd"/>
         </node>
       </node>
     </node>
-    <node begin="12" end="13" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="12" end="13" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De Ford Capri zal nu ook in de verenigde Staten worden verkocht .</sentence>
 </alpino_ds>

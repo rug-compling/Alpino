@@ -2,7 +2,7 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="du" end="4" id="1" rel="--">
-      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" index="1" lemma="advocaat" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="dp" root="Advocaat" word="Advocaat(je)"/>
+      <node begin="0" end="1" id="2" index="1" lemma="Advocaat(je)" pos="name" postag="SPEC(enof)" pt="spec" rel="dp" root="Advocaat" spectype="enof" word="Advocaat(je)"/>
       <node begin="0" cat="cp" end="4" id="3" rel="dp">
         <node begin="1" conjtype="onder" end="2" id="4" lemma="dat" pos="pron" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="0" cat="ssub" end="4" id="5" rel="body">

@@ -12,7 +12,7 @@
             <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="zus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zus" word="zus"/>
           </node>
           <node begin="4" end="5" id="10" lemma="heten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heet" word="heette" wvorm="pv"/>
-          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="Fien" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="predc" root="Fien" word="Fien(tje)"/>
+          <node begin="5" end="6" id="11" lemma="Fien(tje)" pos="name" postag="SPEC(enof)" pt="spec" rel="predc" root="Fien" spectype="enof" word="Fien(tje)"/>
         </node>
         <node begin="7" cat="cp" end="11" id="12" rel="sat">
           <node begin="7" conjtype="neven" end="8" id="13" lemma="of" pos="comp" postag="VG(neven)" pt="vg" rel="cmp" root="of" word="of"/>

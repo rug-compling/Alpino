@@ -6,9 +6,9 @@
       <node begin="0" conjtype="neven" end="1" id="3" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
       <node begin="1" cat="smain" end="21" id="4" rel="nucl">
         <node begin="1" cat="np" end="4" id="5" rel="su">
-          <node begin="1" cat="mwu" end="3" id="6" rel="mod">
-            <node begin="1" end="2" id="7" lemma="dagen-" pos="adj" postag="SPEC(afgebr)" pt="spec" rel="mwp" root="dagen-" spectype="afgebr" word="dagen-"/>
-            <node begin="2" buiging="zonder" end="3" graad="basis" id="8" lemma="week_lang" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="wekenlang" word="wekenlang"/>
+          <node begin="1" cat="conj" end="3" id="6" rel="mod">
+            <node begin="1" end="2" id="7" lemma="dagen-" pos="adj" postag="SPEC(afgebr)" pt="spec" rel="cnj" root="dagen-" spectype="afgebr" word="dagen-"/>
+            <node begin="2" buiging="zonder" end="3" graad="basis" id="8" lemma="week_lang" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="cnj" root="wekenlang" word="wekenlang"/>
           </node>
           <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="voorpagina_nieuws" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="nieuws" word="voorpaginanieuws"/>
         </node>

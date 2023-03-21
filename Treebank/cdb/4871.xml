@@ -5,7 +5,7 @@
       <node begin="0" end="1" id="2" lemma="evenmin" pos="adv" postag="BW()" pt="bw" rel="mod" root="evenmin" word="Evenmin"/>
       <node begin="1" end="2" id="3" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
       <node begin="2" cat="mwu" end="4" id="4" rel="mod">
-        <node begin="2" end="3" id="5" lemma="zijn" pos="adv" postag="BW()" pt="bw" rel="mwp" root="zijns" word="zijns"/>
+        <node begin="2" end="3" getal="ev" id="5" lemma="zijn" naamval="gen" pdtype="pron" persoon="3m" pos="adv" postag="VNW(pers,pron,gen,vol,3m,ev)" pt="vnw" rel="mwp" root="zijns" status="vol" vwtype="pers" word="zijns"/>
         <node begin="3" end="4" getal="ev" graad="basis" id="6" lemma="in_zien" naamval="gen" ntype="soort" pos="adv" postag="N(soort,ev,basis,gen)" pt="n" rel="mwp" root="inziens" word="inziens"/>
       </node>
       <node begin="4" cat="np" end="9" id="7" rel="su">

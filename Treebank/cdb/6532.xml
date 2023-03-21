@@ -27,12 +27,12 @@
             <node begin="12" conjtype="neven" end="13" id="21" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="13" end="14" getal="mv" graad="basis" id="22" lemma="aandeelhouder" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="aandeelhouder" word="aandeelhouders"/>
           </node>
-          <node begin="14" cat="ppart" end="17" id="23" rel="predc">
+          <node begin="14" cat="ap" end="17" id="23" rel="predc">
             <node begin="14" cat="pp" end="16" id="24" rel="pc">
               <node begin="14" end="15" getal="getal" id="25" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
               <node begin="15" end="16" id="26" lemma="bij" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="bij" vztype="fin" word="bij"/>
             </node>
-            <node begin="16" buiging="zonder" end="17" id="27" lemma="baten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gebaat" word="gebaat" wvorm="vd"/>
+            <node begin="16" buiging="zonder" end="17" graad="basis" id="27" lemma="gebaat" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="gebaat" word="gebaat"/>
           </node>
           <node begin="17" end="18" id="28" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
           <node begin="18" cat="cp" end="42" id="29" rel="mod">
