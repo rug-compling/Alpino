@@ -33,6 +33,10 @@ while(<>){
 
   }
 
+  if ( $word eq "doden" && $thirdTag eq "noun(both,pl,[])" ) {
+      $thirdTag = "nominalized_adjective";
+  }
+  
   # if ( ( $word eq "onze" || $word eq "Onze" || $word eq "ONZE" )
   #      && $thirdTag eq "determiner(de)" 
   #    ) {
