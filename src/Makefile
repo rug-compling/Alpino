@@ -64,8 +64,9 @@ state:
                use_module(start),\
    version('Alpino (development), `cat ../version` $(shell date "+%Y-%m-%dT%H:%M%z")'),\
                $(EXTRA_SICSTUS_GOAL)\
-               save_program('$(DISK)/Alpino.sav',hdrug_main)." |\
+               save_program('$(DISK)/Alpino.sav.new',hdrug_main)." |\
         sicstus  -f
+	mv $(DISK)/Alpino.sav.new $(DISK)/Alpino.sav
 
 Alpino: 
 ifneq "$(wildcard Alpino)" ""
