@@ -172,7 +172,7 @@ def sanity_checks():
    check('//node[@cat="ppart" and node[@rel="hd" and @pt="ww" and not(@wvorm="vd")]]','ppart without vd?')
    check('//node[@cat="ppart" and node[@rel="hd" and @pt="adj" ]]','ppart with adjectival head?')
    check('//node[@cat="ap" and node[@rel="hd" and @pt="ww" ]]','ap with verbal head?')
-   check('//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="WW(inf,vrij,zonder)")]]','inf cat without inf hd?')
+   check('//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="WW(inf,vrij,zonder)" or @postag="WW(inf,prenom,zonder)" or @postag="WW(inf,prenom,met-e)")]]','inf cat without inf hd?')
    check('//node[@rel="hd" and @postag="WW(inf,nom,zonder,zonder-n)" and not(../@cat="np")]','nominalized infinitival head, but not np?')
    check('//node[(@cat="sv1" or @cat="smain" or @cat="ssub") and node[@rel="hd" and @pt and not(@wvorm="pv")]]','s without pv?')
    check('//node[@cat="ti" and node[@rel="body" and @cat and not(@cat="inf" or @cat="conj")]]','te-inf without inf?')
