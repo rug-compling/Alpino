@@ -5,10 +5,7 @@
 :- module(alpino_cgn_postags, [ cgn_postag/9 ]).
 
 cgn_postag(Frame0,Stem,Surf0,Q0,Q,Result,His,L0,L) :-
-    (   frame_map(Frame0,Stem,Frame)
-    ->  true
-    ;   Frame0 = Frame
-    ),
+    frame_map(Frame0,Stem,Frame),
     (   surf_map(Surf0,Surf,Q0,Q)
     ->  true
     ;   Surf0 = Surf
@@ -24,13 +21,13 @@ cgn_postag_c(with_dt(_,Tree),_Stem,_Surf,Q0,_,_,_) -->
     !,
     with_dt_tags(Tree,Q0).
 
-cgn_postag_c(Frame,Stem,Surf,Q0,Q,_Cat,_) -->
-    {  exceptional_word_tag(Surf,Frame,Tag) },
+cgn_postag_c(Frame,Stem0,Surf,Q0,Q,_Cat,_) -->
+    {  exceptional_word_tag(Surf,Stem0,Stem,Frame,Tag) },
     !,
     tags(Q0,Q,Stem,Tag).
 
-cgn_postag_c(Frame,Stem0,Surf,Q0,Q,_Cat,_) -->
-    {  exceptional_word_tag(Surf,Stem0,Stem,Frame,Tag) },
+cgn_postag_c(Frame,Stem,Surf,Q0,Q,_Cat,_) -->
+    {  exceptional_word_tag(Surf,Frame,Tag) },
     !,
     tags(Q0,Q,Stem,Tag).
 
@@ -43,6 +40,11 @@ cgn_postag_c(Proper,Stem,Surf,Q0,Q,Result,His) -->
     !,
     cgn_postag_c(Tag,Stem2,Surf,Q0,Q,Result,His).
 
+cgn_postag_c(Frame,Stem0,Surf,Q0,Q,_Cat,_) -->
+    {  exceptional_stem_tag(Stem0,Surf,Frame,Tag,Lemma) },
+    !,
+    tags(Q0,Q,Lemma,Tag).
+
 cgn_postag_c(Frame,Stem,_,Q0,Q,_Cat,_) -->
     {  exceptional_stem_tag(Stem,Frame,Tag,Lemma) },
     !,
@@ -53,20 +55,15 @@ cgn_postag_c(Frame,Stem,_,Q0,Q,_Cat,_) -->
     !,
     tags(Q0,Q,Stem,Tag).
 
-cgn_postag_c(particle(_),Stem,_,Q0,Q,_,_) -->
-    {  particle_tag(Stem,Tag) },
+cgn_postag_c(particle(_),Stem0,_,Q0,Q,_,_) -->
+    {  particle_tag(Stem0,Stem,Tag) },
     !,
     tags(Q0,Q,Stem,Tag).
 
-cgn_postag_c(robust_skip,Surf,Word,Q0,Q,_Cat,_) -->
-    {  lassy(Word,Tag) },
+cgn_postag_c(fixed_part([_]),Stem0,_,Q0,Q,_,_) -->
+    {  particle_tag(Stem0,Stem,Tag) },
     !,
-    tags(Q0,Q,guess(Surf),Tag).
-
-cgn_postag_c(robust_skip,_Stem,Word,Q0,Q,Cat,_) -->
-    {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Word,His,Frame) },
-    !,  % last resort
-    cgn_postag(Frame,Stem,Word,Q0,Q,Cat,His).
+    tags(Q0,Q,Stem,Tag).
 
 cgn_postag_c(Frame,Stem,_,Q0,Q,_Cat,_) -->
     {  stem_dependent_tag(Frame,Stem,Tag) },
@@ -83,22 +80,23 @@ cgn_postag_c(Frame,Stem,Surf,Q0,Q,Cat,_) -->
     !,
     tags(Q0,Q,Stem1,Tag).
 
+cgn_postag_c(number(hoofd(Agr)),Stem,_,Q0,Q,Cat,_) -->
+    {  context_dependent_tag(number(hoofd(Agr)),Tag,Stem,Q0,Q,Cat) },
+    !,
+    number_tags(Q0,Q,Stem,Tag).
+
 cgn_postag_c(Frame,Stem,_,Q0,Q,Cat,_) -->
     {  context_dependent_tag(Frame,Tag,Stem,Q0,Q,Cat) },
     !,
     tags(Q0,Q,Stem,Tag).
 
-cgn_postag_c(amount_meas_mod_noun(A,B,C),Stem,_,Q0,Q,_,_) -->
-    {  atom(Stem),
-       alpino_util:split_atom(Stem," ",Stems),
-       length(Stems,Len),
-       Q is Len + Q0
-    },
+cgn_postag_c(amount_meas_mod_noun(_,_,_),Stem,_,Q0,Q,_,_) -->
     !,
-    guess_tags(Q0,Q,amount_meas_mod_noun(A,B,C),Stems).
+    number_tags(Q0,Q,Stem,'TW(hoofd,vrij)').
 
 cgn_postag_c(Frame,Stem,_,Q0,Q,_Cat,_) -->
-    {  cgn_postag_c(Frame,Tag) },
+    {  Q is Q0 + 1,
+       cgn_postag_c(Frame,Tag) },
     !,
     tags(Q0,Q,Stem,Tag).
 
@@ -116,11 +114,25 @@ cgn_postag_c(fixed_part(P),Stem,_,Q0,Q,_,_) -->
        length(Stems,Len),
        Q is Len + Q0
     },
-    guess_tags(Q0,Q,fixed_part(P),Stems).
+    guess_tags(Q0,Q,fixed_part(P),Stems),
+    !.
+
+%% en/of written as 'en / of'
+cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_) -->
+    {  atom(Surf),
+       alpino_util:split_atom(Surf," ",SurfEls),
+       length(SurfEls,Len),
+       (   hdrug_util:concat_all(SurfEls,Stem,'')
+       ;   hdrug_util:concat_all(SurfEls,Stem,'-')
+       ),
+       Len is Q-Q0
+    },
+    guess_tag_list(SurfEls,Frame,Q0,Q),
+    !.
 
 cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_) -->
     {  format(user_error,"error: no cgn tag for ~w ~w ~w~n",[Surf,Stem,Frame]) },
-    guess_tags(Q0,Q,Frame,Stem).
+    guess_tags(Q0,Q,Frame,Surf).
 
 add_tags([],Q,Q,_Tag) --> [].
 add_tags([Stem|Stems],Q0,Q,Tag) -->
@@ -128,14 +140,8 @@ add_tags([Stem|Stems],Q0,Q,Tag) -->
     {  Q1 is Q0 + 1 },
     add_tags(Stems,Q1,Q,Tag).
 
-tags(Q0,Q,Stem,Tag,L0,L):-
-    hdrug_util:hdrug_flag(add_nodes_for_mwu,On),
-    tags(On,Q0,Q,Stem,Tag,L0,L).
-
-tags(off,Q0,Q,Stem0,Tag,[cgn_postag(Q0,Q,Stem,Tag)|L],L) :-
-    guess_lemma(Stem0,Stem).
-
-tags(on,Q0,Q,Stem0,Tag,L0,L) :-
+%% tags and stags and guess_lemma is still a mess
+tags(Q0,Q,Stem0,Tag,L0,L) :-
     guess_lemma(Stem0,Stem),
     (   Q is Q0 + 1
     ->  L0 = [cgn_postag(Q0,Q,Stem,Tag)|L]
@@ -164,10 +170,19 @@ m_tag(Q0,Q,Tag0,Tag) :-
 not_last_m_tag('N(eigen,ev,basis,gen)','SPEC(deeleigen)').
 not_last_m_tag('N(eigen,ev,dim,gen)',  'SPEC(deeleigen)').
 
-history_tags(normal(decap(X)),Q0,Q,Stem,Surf,Frame,Result) -->
-    history_tags(normal(X),Q0,Q,Stem,Surf,Frame,Result).
 
-history_tags(normal('op zijn Belgisch'(normal)),Q0,Q,_,Surf,pp,_) -->
+history_tags(decap(X),Q0,Q,Stem,Surf,Frame,Result) -->
+    history_tags(X,Q0,Q,Stem,Surf,Frame,Result).
+
+history_tags(normal(X),Q0,Q,Stem,Surf,Frame,Result) -->
+    history_tags(X,Q0,Q,Stem,Surf,Frame,Result).
+
+history_tags(variant(ignore_internal_brackets,normal),Q0,Q,_,Surf,_,_) -->
+    {  Q is Q0 + 1 },
+    !,
+    [cgn_postag(Q0,Q,Surf,'SPEC(enof)')].
+
+history_tags('op zijn Belgisch'(normal),Q0,Q,_,Surf,pp,_) -->
     { Q is Q0 + 3, Q1 is Q0 + 1, Q2 is Q1 + 1,
       atom(Surf),
       alpino_util:split_atom(Surf," ",[Op,Zijn,Adj]),
@@ -182,7 +197,7 @@ history_tags(normal('op zijn Belgisch'(normal)),Q0,Q,_,Surf,pp,_) -->
     ].
 
 
-history_tags(normal('in mijn eentje'),Q0,Q,_,Surf,pp,_) -->
+history_tags('in mijn eentje',Q0,Q,_,Surf,pp,_) -->
     { Q is Q0 + 3, Q1 is Q0 + 1, Q2 is Q1 + 1,
       atom(Surf),
       alpino_util:split_atom(Surf," ",[Op,Zijn,eentje]),
@@ -196,8 +211,7 @@ history_tags(normal('in mijn eentje'),Q0,Q,_,Surf,pp,_) -->
      cgn_postag(Q2,Q ,één,'TW(hoofd,nom,zonder-n,dim)')
     ].
 
-
-history_tags(normal(ten_xste),Q0,Q,Stem,_Surf,_Frame,_Result) -->
+history_tags(ten_xste,Q0,Q,Stem,_Surf,_Frame,_Result) -->
     { Q1 is Q0 + 1,
       atom(Stem),
       alpino_util:split_atom(Stem," ",[ten,Tweede]),
@@ -216,21 +230,21 @@ history_tags(double_compound,Q0,Q,Stem,_Surf,Frame,Result) -->
     [ cgn_postag(Q0,Q1,Stem1,'SPEC(deeleigen)')],
     cgn_postag_c(Frame,Stem2,Stem2,Q1,Q,Result,no).
     
-history_tags(normal(english_compound),Q0,Q,Stem,Surf,Frame,Result) -->
+history_tags(english_compound,Q0,Q,Stem,Surf,Frame,Result) -->
     { 2 is Q-Q0,
       Q1 is Q0 + 1,
       atom(Stem),
       alpino_util:split_atom(Stem," ",[Stem1,Stem2]),
       alpino_util:split_atom(Surf," ",[Surf1,Surf2])
     },
-    guess_lex(Q0,Q1,Surf1,Stem1),
+    guess_lex(Q0,Q1,none,Surf1,Stem1),
     cgn_postag_c(Frame,Stem2,Surf2,Q1,Q,Result,no).
     
-history_tags(normal(abbreviation(normal)),Q0,Q,Stem,'\'t',determiner(het,nwh,nmod,pro,nparg,wkpro),_) -->
+history_tags(abbreviation(normal),Q0,Q,Stem,'\'t',determiner(het,nwh,nmod,pro,nparg,wkpro),_) -->
     { 1 is Q-Q0 }, 
     [ cgn_postag(Q0,Q,Stem,'LID(bep,stan,evon)') ].
 
-history_tags(normal(abbreviation(normal)),Q0,Q,Stem,_,_,_) -->
+history_tags(abbreviation(normal),Q0,Q,Stem,_,_,_) -->
     { 1 is Q-Q0,
       guess_lemma(Stem,Stem1)}, 
     [ cgn_postag(Q0,Q,Stem1,'SPEC(afk)') ].
@@ -250,41 +264,53 @@ history_tags(slash(His1,His2),Q0,Q,Stem0,_Surf,Tag,Result) -->
     cgn_postag_c(Tag,Stem3,Stem3,Q2,Q ,Result,His2).
     
 
-history_tags(normal(chess),Q0,Q,Stem,_,_,_) -->
+history_tags(chess,Q0,Q,_,Surf,_,_) -->
     { 1 is Q-Q0 },
-    [ cgn_postag(Q0,Q,Stem,'SPEC(symb)') ].
+    [ cgn_postag(Q0,Q,Surf,'SPEC(symb)') ].
 
-history_tags(part_verb_conjunct,Q0,Q,Stem,_,_,_) -->
+history_tags(part_verb_conjunct,Q0,Q,_,Surf,_,_) -->
     { 1 is Q-Q0 }, 
-    [ cgn_postag(Q0,Q,Stem,'SPEC(afgebr)') ].
+    [ cgn_postag(Q0,Q,Surf,'SPEC(afgebr)') ].
 
-history_tags(normal(url),Q0,Q,Stem,_,_,_) -->
+history_tags(url,Q0,Q,_,Surf,_,_) -->
     { 1 is Q-Q0 }, 
-    [ cgn_postag(Q0,Q,Stem,'SPEC(symb)') ].
+    [ cgn_postag(Q0,Q,Surf,'SPEC(symb)') ].
 
-history_tags(quoted_name(_,_),Q0,Q,Stem,_,_,_) -->
+history_tags(quoted_name(_,_),Q0,Q,_,Surf,Frame,_) -->
+    {  atom(Surf),
+       atom_codes(Surf,Codes),
+       alpino_util:codes_to_words(Codes,Words),
+       length(Words,Len),
+       Len is Q - Q0
+    },
+    guess_tag_list(Words,Frame,Q0,Q).
+
+history_tags(enumeration,Q0,Q,Stem,_,_,_) -->
+    { 1 is Q-Q0,
+      is_a_number(Stem)
+    }, 
+    !,
+    [ cgn_postag(Q0,Q,Stem,'TW(hoofd,vrij)') ].
+
+history_tags(enumeration,Q0,Q,_,Surf,_,_) -->
+    { 1 is Q-Q0 }, 
+    !,
+    [ cgn_postag(Q0,Q,Surf,'SPEC(symb)') ].
+
+history_tags(enumeration,Q0,Q,Stem,_,Frame,_) -->
     {  atom(Stem),
        atom_codes(Stem,Codes),
        alpino_util:codes_to_words(Codes,Words),
        length(Words,Len),
        Len is Q - Q0
     },
-    guess_tag_list(Words,Q0,Q).
+    guess_tag_list(Words,Frame,Q0,Q).
 
-history_tags(normal(enumeration),Q0,Q,Stem,_,_,_) -->
-    {  atom(Stem),
-       atom_codes(Stem,Codes),
-       alpino_util:codes_to_words(Codes,Words),
-       length(Words,Len),
-       Len is Q - Q0
-    },
-    guess_tag_list(Words,Q0,Q).
-
-history_tags(normal(variant(variant21(_Lemma,L1,L2),_His)),P0,P,_Stem,_,Frame,_Result) -->
+history_tags(variant(variant21(_Lemma,L1,L2),_His),P0,P,_Stem,_,Frame,_Result) -->
     { cgn_postag_c(Frame,Tag) },
     add_tags([L1,L2],P0,P,Tag).
 
-history_tags(normal(variant(variant31(_Lemma,L1,L2,L3),_His)),P0,P,_Stem,_,Frame,_Result) -->
+history_tags(variant(variant31(_Lemma,L1,L2,L3),_His),P0,P,_Stem,_,Frame,_Result) -->
     { cgn_postag_c(Frame,Tag) },
     add_tags([L1,L2,L3],P0,P,Tag).
 
@@ -295,38 +321,108 @@ history_tags(english_compound(normal),P0,P,Stem,_Surf,Frame,_Result) -->
     },
     add_tags(Stems,P0,P,Tag).
 
-history_tags(normal(x_voor_x),P0,P,Stem,_,_,_) -->
+history_tags(x_voor_x,P0,P,Stem,_,_,_) -->
     { atom(Stem),
       alpino_util:split_atom(Stem," ",[S,Voor,S]),
-      guess_lex(S,Tag),
       P1 is P0 + 1,
       P2 is P1 + 1,
       P  is P2 + 1
     },
-    [cgn_postag(P0,P1,S,Tag),
-     cgn_postag(P1,P2,Voor,'VZ(init)'),
-     cgn_postag(P2,P, S,Tag)
-    ].
+    guess_lex(P0,P1,_,S,_),
+    guess_lex(P1,P2,_,Voor,_),
+    guess_lex(P2,P,_,S,_).
 
-history_tags(normal(spaced_letters),P0,P,_,Surf,_,_) -->
+history_tags(spaced_letters,P0,P,_,Surf,_,_) -->
     {  alpino_util:split_atom(Surf," ",ListOfLetters),
        length(ListOfLetters,Len),
        Len is P - P0
     },
     symb_tags(ListOfLetters,P0,P).
 
-guess_tag_list([],Q,Q) --> [].
-guess_tag_list([H|T],Q0,Q) -->
-    guess_tag(H,H,Q0,Q1),
-    guess_tag_list(T,Q1,Q).
+history_tags(chess,P0,P,_,Surf,_,_) -->
+    {  alpino_util:split_atom(Surf," ",ListOfLetters),
+       length(ListOfLetters,Len),
+       Len is P - P0
+    },
+    symb_tags(ListOfLetters,P0,P).
 
-guess_tags(Q0,Q,Frame,Stem1,L0,L) :-
-    (   Q is Q0 + 1, Stem1=[Stem]
-    ->  guess_tag(Stem,Frame,Q0,Q,L0,L)
-    ;   Q is Q0 + 1, atom(Stem1)
-    ->  guess_tag(Stem1,Frame,Q0,Q,L0,L)
-    ;   guess_stags(Q0,Q,Frame,Stem1,L0,L)
-    ).
+history_tags(number_tiende,Q0,Q,Stem,_,Frame,_) -->
+    {  atom(Stem),
+       atom_codes(Stem,Codes),
+       alpino_util:codes_to_words(Codes,Words),
+       length(Words,Len),
+       Len is Q - Q0,
+       lists:append(Prefix,[Tiende],Words),
+       Q1 is Q - 1,
+       alpino_lex:lexicon(number(rang),RangStem,[Tiende],[],_)
+    },
+    !,
+    guess_tag_list(Prefix,Frame,Q0,Q1),
+    [cgn_postag(Q1,Q,RangStem,'TW(rang,nom,zonder-n)')].
+
+history_tags(number_tiende,Q0,Q,Stem,_,Frame,_) -->
+    {  atom(Stem),
+       atom_codes(Stem,Codes),
+       alpino_util:codes_to_words(Codes,Words),
+       length(Words,Len),
+       Len is Q - Q0
+    },
+    guess_tag_list(Words,Frame,Q0,Q).
+
+guess_tag_list([],_,Q,Q) --> [].
+guess_tag_list([H|T],Frame,Q0,Q) -->
+    {  Q1 is Q0 + 1 },
+    guess_tag(H,Frame,Q0,Q1),
+    guess_tag_list(T,Frame,Q1,Q).
+
+guess_tags(Q0,Q,Frame,[Stem]) -->
+    {  Q is Q0 + 1 },
+    !,
+    guess_tag(Stem,Frame,Q0,Q).
+guess_tags(Q0,Q,Frame,Stem) -->
+    {  Q is Q0 + 1,
+       atom(Stem)
+    },
+    !,
+    guess_tag(Stem,Frame,Q0,Q).
+guess_tags(Q0,Q,Frame,[Stem|Stems]) -->
+    !,
+    guess_stags([Stem|Stems],Q0,Q,Frame).
+guess_tags(Q0,Q,robust_skip,Surf) -->
+    {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Surf,His,Frame) },    
+    cgn_postag(Frame,Stem,Surf,Q0,Q,no,His),
+    !.
+guess_tags(Q0,Q,skip,Surf) -->
+    {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Surf,His,Frame) },    
+    cgn_postag(Frame,Stem,Surf,Q0,Q,no,His),
+    !.
+guess_tags(Q0,Q,Frame,Stem) -->
+    {  atom(Stem),
+       alpino_util:split_atom(Stem," ",Stems)
+    },
+    guess_stags(Stems,Q0,Q,Frame).
+
+guess_stags([],Q,Q,_) --> [].
+guess_stags([_|Sts],Q0,Q,fixed_part([H|T])) -->
+    {  Q1 is Q0 + 1 },
+    guess_tag(H,fixed_part(H),Q0,Q1),
+    guess_stags(Sts,Q1,Q,fixed_part(T)).
+guess_stags([StemIn|Stems],Q0,Q,Frame) -->
+    {  Q1 is Q0 + 1 },
+    guess_lex(Q0,Q1,Frame,StemIn,_),
+    !,
+    guess_stags(Stems,Q1,Q,Frame).
+guess_stags([StemIn|Stems],Q0,Q,Frame) -->
+    {  Q1 is Q0 + 1 },
+    [ cgn_postag(Q0,Q1,StemIn,'NA()') ],
+    guess_stags(Stems,Q1,Q,Frame).
+
+guess_tag(Stem,skip,Q0,Q) -->
+    { punct(Stem),
+      Q is Q0 + 1
+    },
+    !,
+    [cgn_postag(Q0,Q,Stem,'LET()')].
 
 guess_tag(Stem,skip,Q0,Q) -->
     { alpino_lexical_analysis:hesitation(Stem),
@@ -345,71 +441,73 @@ guess_tag(Stem,skip,Q0,Q) -->
 guess_tag(Stem0,_,Q0,Q) -->
     [cgn_postag(Q0,Q,Stem,Tag)],
     { Q is Q0 + 1,
-      lassy(Stem0,Tag),
-      guess_lemma(Stem0,Stem)},
+      lassy(Stem0,Stem,Tag)
+    },
     !.
-guess_tag(StemIn,_,Q0,Q) -->
-    [cgn_postag(Q0,Q,Stem,Tag)],
-    { Q is Q0 + 1,
-      guess_lex(StemIn,Stem,Tag) },
+guess_tag(Surf,Frame,Q0,Q) -->
+    guess_lex(Q0,Q,Frame,Surf,_),
     !.
 guess_tag(Stem,_,Q0,Q) -->
     { Q is Q0 + 1 },
     [cgn_postag(Q0,Q,Stem,'NA()')].
 
-guess_stags(Q0,Q,Tag,St,L0,L) :-
-    (   Q > Q0
-    ->  Q1 is Q0 + 1,
-	(   Tag=fixed_part([H|T])
-	->  guess_tag(H,H,Q0,Q1,L0,L1),
-	    guess_stags(Q1,Q,fixed_part(T),_Stems,L1,L)
-	;   St = [Stem|Stems],
-	    guess_lex(Q0,Q1,Stem,POSTAG)
-	->  L0 = [cgn_postag(Q0,Q1,Stem,POSTAG)|L1],
-	    guess_stags(Q1,Q,Tag,Stems,L1,L)
-	;   St = [Stem|Stems]
-	->  L0 = [cgn_postag(Q0,Q1,Stem,'NA()')|L1],
-	    guess_stags(Q1,Q,Tag,Stems,L1,L)
-	;   L0 = [cgn_postag(Q0,Q1,St,'NA()')|L1],    % if St is not a list
-	    guess_stags(Q1,Q,Tag,St,L1,L)
-	)
-    ;   L0 = L
-    ).
+/*
+guess_tag(Word,robust_skip,Q0,Q) -->
+    {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Word,His,Frame) },
+    !,  
+    cgn_postag(Frame,Stem,Word,Q0,Q,no,His).
 
-guess_lex(Q0,Q,Stem,Tag) :-
-    var(Stem),
+guess_tag(Word,skip,Q0,Q) -->
+    {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Word,His,Frame) },
+    !,  
+    cgn_postag(Frame,Stem,Word,Q0,Q,no,His).
+*/
+
+guess_lex(Q0,Q,Frame,Surf,Stem) -->
+    {  var(Surf),
+       !,
+       alpino_lexical_analysis:thread_flag(current_input_sentence,Input),
+       alpino_lexical_analysis:surface_form(Input,Q0,Q,Surf)
+    },
+    guess_lex(Q0,Q,Frame,Surf,Stem).
+
+guess_lex(Q0,Q,_,Surf,Stem) -->
+    {  lassy(Surf,Stem,Tag) },
     !,
-    alpino_lexical_analysis:thread_flag(current_input_sentence,Input),
-    alpino_lexical_analysis:surface_form(Input,Q0,Q,Surf),
-    guess_lex(Surf,Stem,Tag).
-guess_lex(_,_,Stem,Tag) :-
-    guess_lex(Stem,Stem,Tag).
-
-guess_lex(Surf,Stem,Tag) :-
-    lassy(Surf,Stem,Tag), !.
-guess_lex(Surf,Surf,Tag) :-
-    guess_lex(Surf,Tag).
-
-guess_lex(Stem,Tag) :-
-    lassy(Stem,Tag),!.
-guess_lex(Stem,Tag) :-
-    frequent_tag(Stem,Frame0),
-    (   frame_map(Frame0,Stem,Frame)
-    ->  true
-    ;   Frame0 = Frame
-    ),
-    cgn_postag_c(Stem,Frame,Tag),!.
-guess_lex(Stem1,Tag) :-
-    alpino_unknowns:decap_first(Stem1,Stem),
-    frequent_tag(Stem,Frame0),
-    (   frame_map(Frame0,Stem,Frame)
-    ->  true
-    ;   Frame0 = Frame
-    ),
-    cgn_postag_c(Stem1,Frame,Tag),!.
-guess_lex(S,'N(eigen,ev,basis,zijd,stan)'):-
-    starts_with_capital(S),!.
-guess_lex(_,'N(soort,ev,basis,zijd,stan)').
+    [  cgn_postag(Q0,Q,Stem,Tag) ].
+guess_lex(Q0,Q,Frame0,Surf,Stem) -->
+    {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Surf,His,Frame1),
+       frame_map(Frame1,Stem,Frame),
+       \+ Frame = Frame0
+    },
+    cgn_postag(Frame,Stem,Surf,Q0,Q,no,His),
+    !.
+guess_lex(Q0,Q,Frame0,Surf,Stem) -->
+    {  frequent_tag(Surf,Stem,Frame1),
+       frame_map(Frame1,Stem,Frame),
+       \+ Frame = Frame0
+    },
+    cgn_postag(Frame,Stem,Surf,Q0,Q,no,no),
+    !.
+guess_lex(Q0,Q,_,Surf,Stem) -->
+    {  alpino_unknowns:decap_first(Surf,Surf1),
+       frequent_tag(Surf1,Stem,Frame)
+    },
+    cgn_postag(Frame,Stem,Surf1,Q0,Q,no,no),
+    !.
+guess_lex(Q0,Q,_,Surf,_Stem) -->
+    {  atom(Surf),
+       atom_concat(_,'-',Surf),
+       !
+    },
+    [  cgn_postag(Q0,Q,Surf,'SPEC(afgebr)') ].
+guess_lex(Q0,Q,_,S,S) -->
+    {  starts_with_capital(S),
+       !
+    },
+    [  cgn_postag(Q0,Q,S,'N(eigen,ev,basis,zijd,stan)') ].
+guess_lex(Q0,Q,_,S,S) -->
+    [  cgn_postag(Q0,Q,S,'N(soort,ev,basis,zijd,stan)') ].
 
 context_dependent_tag_lemma(adjective(er(adv)),'BW()',lief,_,liever,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
@@ -447,10 +545,6 @@ context_dependent_tag_lemma(determiner(pron,rwh),Postag,wier,_,wie,Q0,Q,Result) 
     ;   Postag = 'VNW(betr,pron,gen,vol,3o,ev)'
     ).
 
-context_dependent_tag_lemma(proper_name(_),Postag,Stem0,Surf,Stem,Q0,Q,Result) :-
-    !,
-    cgn_postag_proper(Postag,Stem0,Surf,Stem,Q0,Q,Result,'MISC').
-
 context_dependent_tag_lemma(proper_name(_,SUB),Postag,Stem0,Surf,Stem,Q0,Q,Result) :-
     !,
     cgn_postag_proper(Postag,Stem0,Surf,Stem,Q0,Q,Result,SUB).
@@ -479,6 +573,10 @@ context_dependent_tag_lemma(adjective(ge_both(_)),Tag,Stem0,_,Stem,_Q0,_Q,_Resul
     vd_is_adj(Stem0,Stem),
     !,
     Tag = 'ADJ(prenom,basis,zonder)'.
+
+context_dependent_tag_lemma(adjective(ende(_)),'ADJ(postnom,basis,zonder)',aanstaand,_,aanstaand,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    post_noun_path(Path).
 
 context_dependent_tag_lemma(adjective(ende(_)),Tag,v_root(_,Verschil),_,Stem,_Q0,_Q,_Result) :-
     od_is_adj(Verschil,Stem),
@@ -776,12 +874,6 @@ context_dependent_tag(adjective(stof),'ADJ(nom,basis,met-e,zonder-n,stan)',_Stem
     find_path(Q0,Q,Result,Path),
     noun_path(Path).
 
-context_dependent_tag(number(hoofd(_)),'SPEC(symb)',Stem,_,_,_) :-
-    atom(Stem),
-    atom_codes(Stem,[N1,45,N2]),
-    N1 > 47, N2 < 58,
-    N2 > 47, N2 < 58.
-
 context_dependent_tag(number(hoofd(_)),'TW(hoofd,nom,zonder-n,basis)',_Stem,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
     number_nom_path(Path).
@@ -789,6 +881,11 @@ context_dependent_tag(number(hoofd(_)),'TW(hoofd,nom,zonder-n,basis)',_Stem,Q0,Q
 context_dependent_tag(number(hoofd(_)),'TW(hoofd,vrij)',_Stem,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
     number_vrij_path(Path).
+
+context_dependent_tag(number(hoofd(_)),'TW(hoofd,prenom,stan)',_Stem,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    \+ number_nom_path(Path),
+    \+ number_vrij_path(Path).
 
 context_dependent_tag(pronoun(nwh,thi,sg,both,both,indef,strpro),'TW(hoofd,nom,zonder-n,basis)',_Stem,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
@@ -880,12 +977,19 @@ is_simple_name(W) :-
     alpino_latin1:isupper(F),
     alpino_latin1:islower(G).
 
+exceptional_stem_tag(Stem,Surf,_,'SPEC(vreemd)',Surf) :-
+    vreemd_lemma(Stem).
+
+exceptional_stem_tag(Stem,Surf,_,'SPEC(enof)',Surf) :-
+    enof_lemma(Stem).
+
+% this should not happen
 exceptional_stem_tag(Var,_,_,_) :-
     var(Var),
     !,
+    format(user_error,"Huh? error: Variable stem...~n",[]),
     fail.
 
-exceptional_stem_tag('EUR',_,'SPEC(symb)',euro).
 exceptional_stem_tag(zogezegd,adjective(no_e(adv)),                 'BW()',zogezegd).
 
 exceptional_stem_tag(meest,nominalized_adjective,                   'VNW(onbep,grad,stan,nom,met-e,mv-n,sup)',veel).
@@ -939,6 +1043,7 @@ exceptional_stem_tag('Indiaan',noun(de,count,pl),'N(soort,mv,basis)',indiaan).
 
 
 exceptional_stem_tag(aan,adjective(_),                        'VZ(fin)',aan).
+exceptional_stem_tag(apart,postn_adverb,                      'ADJ(vrij,basis,zonder)',apart).
 exceptional_stem_tag(betreffen,preposition(betreffende,[]),   'WW(od,vrij,zonder)',betreffen).
 exceptional_stem_tag(derden,noun(both,count,pl),              'TW(rang,nom,mv-n)',drie).
 exceptional_stem_tag(dode,noun(de,count,pl),                  'ADJ(nom,basis,met-e,mv-n)',dood).
@@ -947,10 +1052,12 @@ exceptional_stem_tag(detineren,noun(de,count,sg),             'WW(vd,nom,met-e,z
 exceptional_stem_tag(detineren,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',detineren).
 exceptional_stem_tag(diens,determiner(pron),                  'VNW(aanw,pron,gen,vol,3m,ev)',die).
 exceptional_stem_tag(gevangen,particle(_),                    'WW(vd,vrij,zonder)',vangen).
+exceptional_stem_tag(wennen,np_adjective,                     'WW(vd,vrij,zonder)',wennen).
 exceptional_stem_tag(gezien,complementizer,                   'WW(vd,vrij,zonder)',zien).
 exceptional_stem_tag(gezien,preposition(_,_),                 'WW(vd,vrij,zonder)',zien).
 exceptional_stem_tag(hoeveelste, wh_number(rang),             'TW(rang,prenom,stan)',hoeveel).
 exceptional_stem_tag(in,adjective(_),                         'VZ(fin)',in).
+exceptional_stem_tag(jammer,tag,                              'ADJ(vrij,basis,zonder)',jammer).
 exceptional_stem_tag(jouwe,noun(both,count,both),             'VNW(bez,det,stan,vol,2v,ev,nom,met-e,zonder-n)',jou).
 exceptional_stem_tag(jouwe,noun(both,count,pl),               'VNW(bez,det,stan,vol,2v,ev,nom,met-e,mv-n)',jou).
 exceptional_stem_tag(kortweg,_,                               'BW()',kortweg).
@@ -998,6 +1105,11 @@ exceptional_stem_tag(gij,_, 'VNW(pers,pron,nomin,vol,2,getal)',gij).
 
 exceptional_stem_tag(mekaar,_,'VNW(recip,pron,obl,vol,persoon,mv)',mekaar).
 
+exceptional_stem_tag(red,      tag,                                    'SPEC(afk)',redactie).
+exceptional_stem_tag('red.',   tag,                                    'SPEC(afk)',redactie).
+exceptional_stem_tag('Red.',   tag,                                    'SPEC(afk)',redactie).
+
+
 exceptional_stem_tag(Var,_,_) :-
     var(Var),
     !,
@@ -1016,12 +1128,10 @@ exceptional_stem_tag(v_root(_,Lem),Pos,Tag) :-
 exceptional_stem_tag(Stem,noun(both,both,both),'N(soort,ev,dim,onz,stan)') :-
     atom(Stem),
     atom_concat(_,je,Stem).
-exceptional_stem_tag(Stem,_,'SPEC(vreemd)') :-
-    vreemd_lemma(Stem).
-exceptional_stem_tag('AEX-index',proper_name(sg),                   'N(soort,ev,basis,zijd,stan)').
-exceptional_stem_tag('AOW',proper_name(sg),                         'N(soort,ev,basis,zijd,stan)').
-exceptional_stem_tag('BTW',proper_name(sg),                         'N(soort,ev,basis,zijd,stan)').
-exceptional_stem_tag('ICT',proper_name(sg),                         'N(soort,ev,basis,zijd,stan)').
+exceptional_stem_tag('AEX-index',proper_name(sg,_),                 'N(soort,ev,basis,zijd,stan)').
+exceptional_stem_tag('AOW',proper_name(sg,_),                       'N(soort,ev,basis,zijd,stan)').
+exceptional_stem_tag('BTW',proper_name(sg,_),                       'N(soort,ev,basis,zijd,stan)').
+exceptional_stem_tag('ICT',proper_name(sg,_),                       'N(soort,ev,basis,zijd,stan)').
 exceptional_stem_tag('Oranje',proper_name(both,'ORG'),              'N(eigen,ev,basis,onz,stan)').
 exceptional_stem_tag('Oranje',proper_name(sg,'ORG'),                'N(eigen,ev,basis,onz,stan)').
 exceptional_stem_tag('SRG',meas_mod_noun(_,_,_),                    'N(eigen,ev,basis,zijd,stan)').
@@ -1030,16 +1140,11 @@ exceptional_stem_tag('VS',proper_name(both,'LOC'),                  'N(eigen,mv,
 exceptional_stem_tag('\'s',determiner(pron),                        'LID(bep,gen,evmo)').
 exceptional_stem_tag('zo\'n',determiner(een),                       'VNW(aanw,det,stan,prenom,zonder,agr)').
 exceptional_stem_tag(*,_,                                           'LET()').
-exceptional_stem_tag(^,_,                                           'SPEC(symb)').
-exceptional_stem_tag(©,_,                                           'SPEC(symb)').
-exceptional_stem_tag('CA',_,                                        'SPEC(symb)').
-exceptional_stem_tag('DLS',_,                                       'SPEC(symb)').
-exceptional_stem_tag('#',tag,                                       'SPEC(symb)').
-exceptional_stem_tag('§',_,                                         'SPEC(symb)').
 exceptional_stem_tag(aan,complementizer(aan_het),                   'VZ(init)').
 exceptional_stem_tag(achter,loc_adverb,                             'VZ(fin)').
 exceptional_stem_tag(achter,pred_np_me_adjective(_),                'VZ(fin)').
 exceptional_stem_tag(achteraan,loc_adverb,                          'VZ(fin)').
+exceptional_stem_tag(achtereenvolgens,_,                            'BW()').
 exceptional_stem_tag(af,adjective(pred(_)),                         'VZ(fin)').
 exceptional_stem_tag(al,noun(both,both,pl),                         'VNW(onbep,det,stan,nom,met-e,mv-n)'). % in with_dt
 exceptional_stem_tag(al,determiner(der),                            'VNW(onbep,det,gen,prenom,met-e,mv)').
@@ -1101,6 +1206,7 @@ exceptional_stem_tag(duizend,noun(de,count,pl),                     'TW(hoofd,no
 exceptional_stem_tag(dus,_,                                         'BW()').
 exceptional_stem_tag(echt,adverb,                                   'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(eenmaal,noun(_,_,_),                           'BW()').
+exceptional_stem_tag(eender,pre_wh_adverb,                          'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(eens,_,                                        'BW()').
 exceptional_stem_tag(eerder,tmp_app_noun,                           'ADJ(vrij,comp,zonder)').
 exceptional_stem_tag(één,noun(both,count,pl),                   'TW(rang,nom,mv-n)').
@@ -1114,7 +1220,7 @@ exceptional_stem_tag(elkander,determiner(pron),                     'VNW(recip,p
 exceptional_stem_tag(ergens,_,                                      'VNW(onbep,adv-pron,obl,vol,3o,getal)').
 exceptional_stem_tag(even,adjective(both(tmpadv)),                  'BW()').
 exceptional_stem_tag(eventjes,_,                                    'BW()').
-exceptional_stem_tag(fosfor,noun(_,_,_),                            'N(soort,ev,basis,genus,stan)').
+exceptional_stem_tag(exclusief,preposition(_,_),                    'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(gaandeweg,_,                                   'BW()').
 exceptional_stem_tag(gene,pronoun(nwh,thi,pl,de,both,def,strpro),   'VNW(aanw,det,stan,nom,met-e,mv-n)').
 exceptional_stem_tag(genoeg, _,                                     'BW()').
@@ -1122,7 +1228,9 @@ exceptional_stem_tag(ggg,_,                                         'SPEC(onvers
 exceptional_stem_tag(geleden,_,                                     'BW()').
 exceptional_stem_tag(gelukkig,tag,                                  'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(god,determiner(pron),                          'N(soort,ev,basis,gen)').
+exceptional_stem_tag('God',determiner(pron),                        'N(soort,ev,basis,gen)').
 exceptional_stem_tag(god,pronoun(nwh,thi,sg,de,gen,def),            'N(soort,ev,basis,gen)').
+exceptional_stem_tag('God',pronoun(nwh,thi,sg,de,gen,def),          'N(soort,ev,basis,gen)').
 exceptional_stem_tag(goed,tag,                                      'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(groen, noun(het,mass,sg),                      'ADJ(nom,basis,zonder,zonder-n)').
 exceptional_stem_tag(grootmoeder,determiner(pron),                  'N(soort,ev,basis,gen)').
@@ -1130,7 +1238,6 @@ exceptional_stem_tag(grootvader,determiner(pron),                   'N(soort,ev,
 exceptional_stem_tag(haar,determiner(pron),                         'VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)').
 exceptional_stem_tag(haar,pronoun(nwh,thi,sg,de,dat_acc,def,wkpro), 'VNW(pers,pron,obl,vol,3,getal,fem)').
 exceptional_stem_tag(haarzelf,_,                                    'VNW(pers,pron,obl,nadr,3v,getal,fem)').
-exceptional_stem_tag(hars,noun(both,count,sg),                      'N(soort,ev,basis,genus,stan)').
 exceptional_stem_tag(heel,intensifier,                              'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(hem,pronoun(nwh,thi,sg,de,dat_acc,def,wkpro),  'VNW(pers,pron,obl,vol,3,ev,masc)').
 exceptional_stem_tag(hemzelf,_,                                     'VNW(pers,pron,obl,nadr,3m,ev,masc)').
@@ -1157,8 +1264,6 @@ exceptional_stem_tag(jong,noun(de,count,sg),                        'ADJ(nom,com
 exceptional_stem_tag(jou,determiner(pron),                          'VNW(bez,det,stan,vol,2v,ev,prenom,zonder,agr)').
 exceptional_stem_tag(juist,modal_adverb,                            'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(jullie,determiner(pron),                       'VNW(bez,det,stan,nadr,2v,mv,prenom,zonder,agr)').
-exceptional_stem_tag(katoen,noun(both,count,sg),                    'N(soort,ev,basis,genus,stan)').
-exceptional_stem_tag(keer,noun(de,count,meas),                      'N(soort,ev,basis,genus,stan)').
 exceptional_stem_tag(keizer,determiner(pron),                       'N(soort,ev,basis,gen)').
 exceptional_stem_tag(kerke,noun(_,_,_),                             'N(soort,ev,basis,dat)').
 exceptional_stem_tag(kortom,tag,                                    'BW()').
@@ -1193,10 +1298,10 @@ exceptional_stem_tag(niemands,determiner(pron),                     'VNW(onbep,p
 exceptional_stem_tag(niets,_,                                       'VNW(onbep,pron,stan,vol,3o,ev)').
 exceptional_stem_tag(niks,_,                                        'VNW(onbep,pron,stan,vol,3o,ev)').
 exceptional_stem_tag(nou,tag,                                       'BW()').
+exceptional_stem_tag(nu,tag,                                        'BW()').
 exceptional_stem_tag(nummer,noun(both,count,sg),                    'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(komen,tag,                                     'WW(pv,tgw,ev)').
 exceptional_stem_tag(kijken,tag,                                    'WW(pv,tgw,ev)').
-exceptional_stem_tag(o,tag,                                         'SPEC(symb)').  % used frequently as an itemizer
 exceptional_stem_tag(om,adjective(pred(_)),                         'VZ(fin)').
 exceptional_stem_tag(ondanks,_,                                     'VZ(init)').
 exceptional_stem_tag(onder,loc_adverb,                              'VZ(fin)').
@@ -1208,12 +1313,9 @@ exceptional_stem_tag(onszelf,_,                                     'VNW(pr,pron
 exceptional_stem_tag(onverschillig,preposition(_,_,of_sbar),        'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(op,adjective(pred(_)),                         'VZ(fin)').
 exceptional_stem_tag(openbaar,noun(het,mass,sg),                    'ADJ(nom,basis,zonder,zonder-n)').
-exceptional_stem_tag(opzet,noun(de,count,sg),                       'N(soort,ev,basis,genus,stan)').
 exceptional_stem_tag(overal,_,                                      'VNW(onbep,adv-pron,obl,vol,3o,getal)').
 exceptional_stem_tag(overeenkomstig,preposition(_,_),               'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(overstag,_,                                    'BW()').
-exceptional_stem_tag(red,   tag,                                    'N(soort,ev,basis,zijd,stan)').
-exceptional_stem_tag('red.',tag,                                    'N(soort,ev,basis,zijd,stan)').
 exceptional_stem_tag(respectievelijk,conj(_),                       'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(respectievelijk,left_conj(_),                  'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(reuze,_,                                       'BW()').
@@ -1246,6 +1348,7 @@ exceptional_stem_tag(veel,adjective(e),                             'VNW(onbep,g
 exceptional_stem_tag(veel,nominalized_adjective,                    'VNW(onbep,grad,stan,nom,met-e,mv-n,basis)').
 exceptional_stem_tag(veevoer,noun(both,mass,sg),                    'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(versus,_,                                      'VZ(init)').
+exceptional_stem_tag(viermaal,noun(both,count,bare_meas),           'BW()').
 exceptional_stem_tag(vol,preposition(_,_),                          'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(volwassen,noun(de,count,sg),                   'ADJ(nom,basis,met-e,zonder-n,stan)').
 exceptional_stem_tag(volwassen,noun(de,count,pl),                   'ADJ(nom,basis,met-e,mv-n)').
@@ -1266,7 +1369,6 @@ exceptional_stem_tag(wiens,determiner(pron,rwh),                    'VNW(vb,pron
 exceptional_stem_tag(wit,determiner(pron),                          'N(soort,ev,basis,gen)').
 exceptional_stem_tag(wit, noun(het,mass,sg),                        'ADJ(nom,basis,zonder,zonder-n)').
 exceptional_stem_tag(xxx,_,                                         'SPEC(onverst)').
-exceptional_stem_tag(x,noun(_,_,_),                                 'SPEC(symb)').
 exceptional_stem_tag(zat,np_adjective,                              'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(zat,clause_np_adjective,                       'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(zat,postadj_adverb,                            'ADJ(vrij,basis,zonder)').
@@ -1281,11 +1383,11 @@ exceptional_stem_tag(zover,_,                                       'BW()').
 exceptional_stem_tag(zwart,determiner(pron),                        'N(soort,ev,basis,gen)').
 
 % hij/zij
-exceptional_stem_tag(hij_zij, pronoun(nwh,thi,sg,de,nom,def),         'VNW(pers,pron,nomin,vol,3,ev,zijd)').
-exceptional_stem_tag(zij_hij, pronoun(nwh,thi,sg,de,nom,def),         'VNW(pers,pron,nomin,vol,3,ev,zijd)').
+exceptional_stem_tag(hij_zij, pronoun(nwh,thi,sg,de,nom,def),         'SPEC(enof)').
+exceptional_stem_tag(zij_hij, pronoun(nwh,thi,sg,de,nom,def),         'SPEC(enof)').
 % hem/haar
-exceptional_stem_tag(hem_haar,pronoun(nwh,thi,sg,de,dat_acc,def),     'VNW(pers,pron,obl,vol,3,ev,zijd)').
-exceptional_stem_tag(haar_hem,pronoun(nwh,thi,sg,de,dat_acc,def),     'VNW(pers,pron,obl,vol,3,ev,zijd)').
+exceptional_stem_tag(hem_haar,pronoun(nwh,thi,sg,de,dat_acc,def),     'SPEC(enof)').
+exceptional_stem_tag(haar_hem,pronoun(nwh,thi,sg,de,dat_acc,def),     'SPEC(enof)').
 % zulks
 exceptional_stem_tag(zulk,    pronoun(nwh,thi,sg,het,both,indef),     'VNW(aanw,pron,stan,vol,3o,ev)').
 % u
@@ -1338,26 +1440,44 @@ exceptional_stem_tag(Num,tag,'SPEC(symb)') :-
 %  exceptional_word_tag(meer,adjective(meer),'VNW(onbep,grad,stan,vrij,zonder,comp)').
 
 exceptional_word_tag('-ie',pronoun(nwh,thi,sg,de,nom,def),      'VNW(pers,pron,nomin,red,3,ev,masc)').
+exceptional_word_tag('\'ie',pronoun(nwh,thi,sg,de,nom,def),      'VNW(pers,pron,nomin,red,3,ev,masc)').
+
+exceptional_word_tag(Stem,number(hoofd(_)),'SPEC(symb)') :-
+    atom(Stem),
+    alpino_util:split_atom(Stem,"/",[Left,Right]),
+    atom_codes(Left,LeftCodes),
+    atom_codes(Right,RightCodes),
+    alpino_lex:number_codes_silent(_,LeftCodes),
+    alpino_lex:number_codes_silent(_,RightCodes).
+
+exceptional_word_tag(Stem,number(hoofd(_)),'SPEC(symb)') :-
+    atom(Stem),
+    atom_codes(Stem,[N1,X,N2]),
+    lists:member(X,[45,46,47]),
+    N1 > 46, N1 < 58,
+    N2 > 46, N2 < 58.
+
+exceptional_word_tag(Stem,np(year),'SPEC(symb)') :-
+    atom(Stem),
+    alpino_util:split_atom(Stem,"/",[Left,Right]),
+    atom_codes(Left,LeftCodes),
+    atom_codes(Right,RightCodes),
+    alpino_lex:number_codes_silent(_,LeftCodes),
+    alpino_lex:number_codes_silent(_,RightCodes).
+
+exceptional_word_tag(Stem,tag,'SPEC(symb)') :-
+    atom(Stem),
+    atom_codes(Stem,[N1,X,N2]),
+    lists:member(X,[45,46,47]),
+    N1 > 46, N1 < 58,
+    N2 > 46, N2 < 58.
 
 exceptional_word_tag(Word,_,'SPEC(afgebr)') :-
     atom(Word),
     atom_concat(_,'*a',Word).
 
-exceptional_word_tag('mg/dag',_,                                     'SPEC(symb)').
-exceptional_word_tag(©,_,                                            'SPEC(symb)').
-exceptional_word_tag('°C',_,                                         'SPEC(symb)').
-exceptional_word_tag('°',_,                                          'SPEC(symb)').
-exceptional_word_tag('×',_,                                          'SPEC(symb)').
-exceptional_word_tag('=',_,                                          'SPEC(symb)').
-exceptional_word_tag('#',_,                                          'SPEC(symb)').
-exceptional_word_tag('+',_,                                          'SPEC(symb)').
-exceptional_word_tag('±',_,                                          'SPEC(symb)').
-exceptional_word_tag('%',_,                                          'SPEC(symb)').
-exceptional_word_tag('&',_,                                          'SPEC(symb)').
-exceptional_word_tag('$',_,                                          'SPEC(symb)').
-exceptional_word_tag('Trb.',_,                                       'SPEC(symb)').
-exceptional_word_tag('Trb',_,                                        'SPEC(symb)').
 exceptional_word_tag('{',_,                                          'LET()').
+exceptional_word_tag('}',_,                                          'LET()').
 
 exceptional_word_tag('\'m', pronoun(nwh,thi,sg,de,dat_acc,def,wkpro),'VNW(pers,pron,obl,red,3,ev,masc)').
 exceptional_word_tag('z\'n',_,                                       'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)').
@@ -1397,17 +1517,25 @@ exceptional_word_tag('Mij',pronoun(nwh,fir,sg,de,dat_acc,def), 'VNW(pr,pron,obl,
 %% kom de gij mee
 exceptional_word_tag(de,    pronoun(nwh,inv,sg,both,both,def),       'VNW(pers,pron,dial)').
 
+exceptional_word_tag(tweetjes,_,'TW(hoofd,nom,mv-n,dim)').
+exceptional_word_tag(drietjes,_,'TW(hoofd,nom,mv-n,dim)').
+exceptional_word_tag(viertjes,_,'TW(hoofd,nom,mv-n,dim)').
+exceptional_word_tag(vijfjes,_,'TW(hoofd,nom,mv-n,dim)').
+exceptional_word_tag(zesjes,_,'TW(hoofd,nom,mv-n,dim)').
+exceptional_word_tag(zeventjes,_,'TW(hoofd,nom,mv-n,dim)').
+exceptional_word_tag(negentjes,_,'TW(hoofd,nom,mv-n,dim)').
+
+%%% exceptional_word_tag/5
+exceptional_word_tag(Word,_,Word,Tag,'SPEC(symb)') :-
+    symb(Word,Tag).
+
 exceptional_word_tag(eentje,één,één, pronoun(nwh,thi,sg,de,both,indef,strpro),  'TW(hoofd,nom,zonder-n,dim)').
 exceptional_word_tag(ééntje,één,één, pronoun(nwh,thi,sg,de,both,indef,strpro),  'TW(hoofd,nom,zonder-n,dim)').
 exceptional_word_tag('Eentje',één,één, pronoun(nwh,thi,sg,de,both,indef,strpro),  'TW(hoofd,nom,zonder-n,dim)').
 exceptional_word_tag('Eéntje',één,één, pronoun(nwh,thi,sg,de,both,indef,strpro),  'TW(hoofd,nom,zonder-n,dim)').
 
-
 exceptional_word_tag(allen,  al,al,_,                                'VNW(onbep,det,stan,nom,met-e,mv-n)').
 exceptional_word_tag('Allen',al,al,_,                                'VNW(onbep,det,stan,nom,met-e,mv-n)').
-exceptional_word_tag(Surf,_,Surf,Tag,Pos) :-
-    symb(Surf,Tag,Pos).
-
 exceptional_word_tag('COMPLEET',_,compleet,robust_skip,'ADJ(vrij,basis,zonder)').
 exceptional_word_tag('BETA',_,'BETA',robust_skip,'SPEC(vreemd)').
 exceptional_word_tag('MISSING',_,'MISSING',robust_skip,'SPEC(vreemd)').
@@ -1424,95 +1552,71 @@ exceptional_word_tag(nl,_,namelijk,sentence_adverb,'SPEC(afk)').
 exceptional_word_tag(Word,_,Stem,_,'SPEC(afk)') :-
     afk(Word,Stem).
 
-afk('plm','plus minus').
+afk('a.k.a','also known as').
 afk('B.B.','Bescherming Bevolking').
-afk('BW','Burgelijk Wetboek').
-afk('e.d.','en dergelijke').
 afk('b.d.','buiten dienst').
-afk('d.i.','dit is').
-afk('o.a.','onder ander').
-afk('O.a.','onder ander').
+afk('b.d.','buiten dienst').
+afk('blz',bladzijde).
+afk('blz.',bladzijde).
+afk('Blz',bladzijde).
+afk('Blz.',bladzijde).
+afk(brt,'bruto register ton').
+afk('b.v.',bijvoorbeeld).
+afk('BW','Burgelijk Wetboek').
 afk('ca.',circa).
 afk('Ca.',circa).
-afk('o.m.','onder meer').
-afk('O.m.','onder meer').
+afk('cf.',confer).
+afk(cfr,confer).
 afk('Chr.','Christus').
-afk('v.',voor).
 afk('c.q.','casu quo').
 afk('cq','casu quo').
-afk('t/m','tot en met').
-afk('nr.',nummer).
-afk('n.a.g.','niet afzonderlijk genoemd').
-afk('b.v.',bijvoorbeeld).
-afk('e.d.','en dergelijke').
+afk('c.s.','cum suis').
+afk('d.d.','de dato').
+afk('d.i.','dit is').
+afk(dmv,'door middel van').
 afk('d.w.z.','dat wil zeggen').
 afk('dwz.','dat wil zeggen').
-afk('t.o.v.','ten opzichte van').
-afk('n.a.v.','naar aanleiding van').
-afk('t.a.v.','ten aanzien van').
-afk('i.v.m.','in verband met').
-afk('i.p.v.','in plaats van').
 afk('e.a.','en andere').
+afk('e.d.','en dergelijke').
+afk('e.d.','en dergelijke').
+afk('i.h.b.','in het bijzonder').
 afk('incl.',inclusief).
-afk('t.z.t.','te zijner tijd').
-afk('N.v.t.','niet van toepassing').
-afk('n.v.t.','niet van toepassing').
-afk('Nr.',nummer).
-afk('c.s.','cum suis').
-afk('blz.',bladzijde).
-afk('Blz.',bladzijde).
-afk('blz',bladzijde).
-afk('Blz',bladzijde).
-afk('m.n.','met name').
-afk('resp.',respectievelijk).
-afk('d.d.','de dato').
+afk('i.p.v.','in plaats van').
 afk('i.s.m.','in samenwerking met').
-afk('vs.',versus).
+afk('i.v.m.','in verband met').
 afk('mln.',miljoen).
+afk('mln.',miljoen).
+afk('m.n.','met name').
+afk('n.a.g.','niet afzonderlijk genoemd').
+afk('n.a.v.','naar aanleiding van').
+afk('N.B.','nota bene').
+afk('nr.',nummer).
+afk('Nr.',nummer).
+afk(nvdr,'noot van de redactie').
+afk('n.v.t.','niet van toepassing').
+afk('N.v.t.','niet van toepassing').
+afk('o.a.','onder ander').
+afk('O.a.','onder ander').
+afk('o.m.','onder meer').
+afk('O.m.','onder meer').
+afk('plm','plus minus').
 afk('plm.','plus minus').
-afk('v.j.','vorig jaar').
+afk('resp.',respectievelijk).
 afk('r.k.','rooms-katholiek').
-afk('b.d.','buiten dienst').
+afk('t.a.v.','ten aanzien van').
+afk('t/m','tot en met').
+afk('t.o.v.','ten opzichte van').
+afk(tov,'ten opzichte van').
+afk('t.w.','te weten').
+afk('t.z.t.','te zijner tijd').
 afk('v.Chr.','voor Christus').
 afk('v.C.','voor Christus').
-afk('a.k.a','also known as').
-afk(nvdr,'noot van de redactie').
-afk(brt,'bruto register ton').
+afk('v.j.','vorig jaar').
+afk('vs.',versus).
+afk('v.',voor).
 afk('z.i.','zijn inzien').
-afk('N.B.','nota bene').
-afk(cfr,confer).
-afk('cf.',confer).
-afk('mln.',miljoen).
-afk('t.w.','te weten').
-afk('i.h.b.','in het bijzonder').
 
-symb('ha.', noun(de,count,meas), 'SPEC(symb)').
-symb(ha, noun(de,count,meas), 'SPEC(symb)').
-symb('¤',_,   'SPEC(symb)').
-symb(mm,_,    'SPEC(symb)').
-symb(m,_,     'SPEC(symb)').
-symb('mm.',_, 'SPEC(symb)').
-symb(cm,_,    'SPEC(symb)').
-symb('cm.',_, 'SPEC(symb)').
-symb(tl,_,    'SPEC(symb)').
-symb('km²',_, 'SPEC(symb)').
-symb(km,_,    'SPEC(symb)').
-symb('km.',_, 'SPEC(symb)').
-symb(km/u,_,  'SPEC(symb)').
-symb(km2,_,   'SPEC(symb)').
-symb(mg,_,    'SPEC(symb)').
-symb('µg',_,  'SPEC(symb)').
-symb(ml,_,    'SPEC(symb)').
-symb('mg.',_, 'SPEC(symb)').
-symb('ml.',_, 'SPEC(symb)').
-
-
-often_het(Stem) :-
-    atom(Stem),
-    alpino_util:split_atom(Stem,"_",[_,W|Ws]),
-    lists:last([W|Ws],Last),
-    often_het(Last).
-    
+/*
 often_het(afval).
 often_het(bestuur).
 often_het(commentaar).
@@ -1534,42 +1638,31 @@ often_het(raam).
 often_het(schilderij).
 often_het(toezicht).
 often_het(weekend).
-
-genus_genus(baldakijn).
-genus_genus(boord).
-genus_genus(keer).
-genus_genus(koolmonoxide).
-genus_genus(soort).
+*/
 
 stem_dependent_tag(cleft_het_noun,het,'VNW(pers,pron,stan,red,3,ev,onz)').
 stem_dependent_tag(cleft_het_noun,dat,'VNW(aanw,pron,stan,vol,3o,ev)').
+stem_dependent_tag(cleft_het_noun,dit,'VNW(aanw,pron,stan,vol,3o,ev)').
 stem_dependent_tag(modal_adverb,enkel,'BW()').
 stem_dependent_tag(adjective(no_e(_)),enkel,'BW()').
-stem_dependent_tag(noun(both,_,sg),Stem,'N(soort,ev,basis,genus,stan)') :-
-    genus_genus(Stem).
-stem_dependent_tag(noun(both,_,bare_meas),Stem,'N(soort,ev,basis,onz,stan)') :-
-    often_het(Stem).
-stem_dependent_tag(noun(both,_,meas),Stem,'N(soort,ev,basis,onz,stan)') :-
-    often_het(Stem).
-stem_dependent_tag(noun(both,_,sg),Stem,'N(soort,ev,basis,onz,stan)') :-
-    often_het(Stem).
+%stem_dependent_tag(noun(both,_,sg),Stem,'N(soort,ev,basis,genus,stan)') :-
+%    genus_genus(Stem).
+%stem_dependent_tag(noun(both,_,bare_meas),Stem,'N(soort,ev,basis,onz,stan)') :-
+%    lm_dehet(Stem,het).
+%stem_dependent_tag(noun(both,_,meas),Stem,'N(soort,ev,basis,onz,stan)') :-
+%    lm_dehet(Stem,het).
+%stem_dependent_tag(noun(both,_,sg),Stem,'N(soort,ev,basis,onz,stan)') :-
+%    lm_dehet(Stem,het).
 stem_dependent_tag(determiner(pron),Cap, 'N(eigen,ev,basis,gen)') :-
     starts_with_capital(Cap). 
 stem_dependent_tag('--', Eh, 'TSW()') :-
     alpino_lexical_analysis:hesitation(Eh).
 stem_dependent_tag('--', Name, 'SPEC(deeleigen)') :-
     starts_with_capital(Name).
-stem_dependent_tag(fixed_part([deelgenoot]),_Word,  'N(soort,ev,basis,zijd,stan)').
-stem_dependent_tag(fixed_part([gehoor]),_Word,      'N(soort,ev,basis,onz,stan)').
-stem_dependent_tag(fixed_part([kenbaar]),_Word,     'ADJ(vrij,basis,zonder)').
-stem_dependent_tag(fixed_part([kandidaat]),_Word,   'N(soort,ev,basis,zijd,stan)').
-stem_dependent_tag(fixed_part([klaar]),_Word,       'ADJ(vrij,basis,zonder)').
-stem_dependent_tag(fixed_part([rood]),_,            'ADJ(vrij,basis,zonder)').
-stem_dependent_tag(fixed_part([uiting]),_Word,      'N(soort,ev,basis,zijd,stan)').
-stem_dependent_tag(fixed_part(_),Word,Tag) :-
-    lassy(Word,Tag).
-stem_dependent_tag(skip,Word,Tag) :-
-    lassy(Word,Tag).
+%stem_dependent_tag(fixed_part(_),Word,Tag) :-
+%    lassy(Word,_,Tag).
+%stem_dependent_tag(skip,Word,Tag) :-
+%    lassy(Word,_,Tag).
     
 stem_dependent_tag(modal_adverb,Word,'ADJ(vrij,basis,zonder)') :-
     alpino_lex:lexicon(adjective(_),_,[Word],[],_).
@@ -1666,12 +1759,6 @@ tjes(zachtjes,zacht).
 tjes(ziekjes,ziek).
 tjes(zuinigjes,zuinig).
 tjes(zwakjes,zwak).
-
-
-cgn_postag_c(Word,Pos,Tag) :-
-    exceptional_word_tag(Word,Pos,Tag).
-cgn_postag_c(_,Pos,Tag) :-
-    cgn_postag_c(Pos,Tag).
 
 %%%% defaults
 cgn_postag_c(particle(raak),                  'ADJ(vrij,basis,zonder)').
@@ -1846,8 +1933,6 @@ cgn_postag_c(iets_anders_noun,                'VNW(onbep,pron,stan,vol,3p,ev)').
 
 cgn_postag_c(het_noun,                        'VNW(pers,pron,stan,red,3,ev,onz)').
 
-cgn_postag_c(proper_name(Agr),                Postag):-
-    name_postag(both,both,Agr,'MISC',Postag).
 cgn_postag_c(proper_name(Agr,Val),            Postag):-
     name_postag(both,both,Agr,Val,Postag).      
 cgn_postag_c(name_determiner(pron),           'N(eigen,ev,basis,gen)').
@@ -2124,7 +2209,7 @@ cgn_postag_proper(Postag,Stem0,Surf,Stem,Q0,Q,Result,SUB) :-
     ),
     stem_al(Stem1,Stem),
     find_node(Q0,Q,Result,Node),
-    find_dehet(Node,DeHet,DeHetSg,Stem),
+    find_dehet_name(Node,DeHet,DeHetSg),
     find_sgpl(Node,SgPl),
     name_postag(DeHet,DeHetSg,SgPl,SUB,Stem,Postag,Q0,Q).
 
@@ -2156,7 +2241,23 @@ find_dehet(Node,De,SgDe,Stem) :-
     ;   \+ Agr = Agr3
     ->  De = de, SgDe = de
     ;   default_dehet(Stem,De1)
-    ->  De = De1, SgDe = de
+    ->  De = De1, SgDe = De1
+    ;   \+ (Agr=Agr4, Agr4 = Agr3)		% if singular, then not het
+    ->  De = both,
+	SgDe = de
+    ;   De = both,
+	SgDe = both
+    ).
+
+find_dehet_name(Node,De,SgDe) :-
+    alpino_data:agr(Node,Agr),
+    alpino_data:de(Agr2),
+    alpino_data:het(Agr3),
+    alpino_data:sg(Agr4),
+    (   \+ Agr = Agr2   
+    ->  De = het, SgDe = het
+    ;   \+ Agr = Agr3   
+    ->  De = de, SgDe = de
     ;   \+ (Agr=Agr4, Agr4 = Agr3)		% if singular, then not het
     ->  De = both,
 	SgDe = de
@@ -2167,28 +2268,50 @@ find_dehet(Node,De,SgDe,Stem) :-
 default_dehet(CompoundStem,DeHet) :-
     atom(CompoundStem),
     alpino_util:split_atom(CompoundStem,"_",[_,W2|Words0]),
+    !,
     lists:last([W2|Words0],Last),
     default_dehet(Last,DeHet).
 
+default_dehet(Coma,DeHet) :-
+    exc_dehet(Coma,DeHet).
+default_dehet(Word,DeHet) :-
+    lm_dehet(Word,DeHet).
 
-default_dehet(aantal,het).
-default_dehet(bureau,het).
-default_dehet(fruit,het).
-default_dehet(geval,het).
-default_dehet(kader,het).
-default_dehet(medicijn,het).
-default_dehet(nummer,het).
-default_dehet(personage,het).
-default_dehet(perspectief,het).
-default_dehet(record,het).
-default_dehet(testosteron,het).
-default_dehet(uitstel,het).
+lm_dehet(Word,DeHet):-
+    alpino_cg:phrase_fluency([xx,de,Word,xx],DeScore),
+    alpino_cg:phrase_fluency([xx,het,Word,xx],HetScore),
+    (    HetScore < DeScore
+    ->   DeHet = het
+    ;    DeHet = de
+    ).
+
+exc_dehet(aura,de).
+exc_dehet(coma,het).
+exc_dehet(baldakijn,genus).
+exc_dehet(boord,genus).
+exc_dehet(doolhof,genus).
+exc_dehet(katoen,genus).
+exc_dehet(koolmonoxide,genus).
+exc_dehet(memo,genus).
+exc_dehet(miljard,het).
+exc_dehet(miljoen,het).
+exc_dehet(opzet,genus).
+exc_dehet(pas,de).		% lm_dehet fails here
+exc_dehet(pedaal,genus).
+exc_dehet(percent,het).
+exc_dehet(poeder,genus).
+exc_dehet(riool,genus).
+exc_dehet(soort,genus).
+exc_dehet(snoep,de).
+exc_dehet(stempel,genus).
+exc_dehet(textiel,genus).
 
 nattr(Node) :-
     alpino_data:aform(Node,Aform),
     alpino_data:not_attr(Aform3),
     \+ \+ Aform = Aform3.
 
+noun_postag(genus,  _, sg,        'N(soort,ev,basis,genus,stan)').
 noun_postag(de,     _, sg,        'N(soort,ev,basis,zijd,stan)').
 noun_postag(het,    _, sg,        'N(soort,ev,basis,onz,stan)').
 noun_postag(both,both, sg,        'N(soort,ev,basis,zijd,stan)').
@@ -2322,6 +2445,12 @@ try_sgpl(Word,pl) :-
     lists:last(Stems,Suffix),
     alpino_lex:plural_suffix(Suffix).
 
+
+try_dehet(L,genus) :-
+    genus_naam(L),
+    !.
+
+%% N31, A7
 try_dehet(Stem,                 de) :-
     atom(Stem),
     (  atom_concat('A',R,Stem)
@@ -2333,8 +2462,6 @@ try_dehet(L,de) :-
     de_naam(L).
 try_dehet(L,het) :-
     het_naam(L).
-try_dehet(L,genus) :-
-    genus_naam(L).
 try_dehet(L,de) :-
     de_heur(L).
 try_dehet(L,het) :-
@@ -2360,7 +2487,6 @@ genus_naam('DHL').
 genus_naam('DNS').
 genus_naam('EcoConsult').
 genus_naam('Enron').
-genus_naam('Estonia').
 genus_naam('Euronext').
 genus_naam('EWI').
 genus_naam('EZ').
@@ -2411,6 +2537,7 @@ de_naam('Al-Qaida').
 de_naam('al-Qaida').
 de_naam('Antenna').
 de_naam('Aquarius').
+de_naam('Apollo').
 de_naam('AR').
 de_naam('ARP').
 de_naam('As-Sadr').
@@ -2448,6 +2575,7 @@ de_naam('Eikenhorst').
 de_naam('Enterprise').
 de_naam('Esmeralda').
 de_naam('Estienne').
+de_naam('Estonia').
 de_naam('Ewell').
 de_naam('FARC').
 de_naam('Farnese').
@@ -2455,6 +2583,7 @@ de_naam('Fere').
 de_naam('Fiat').
 de_naam('Flanagan').
 de_naam('FNB').
+de_naam('FNV').
 de_naam('Gazastrook').
 de_naam('G.R.I.').
 de_naam('Gore').
@@ -2544,6 +2673,7 @@ de_naam('Rodenbach').
 de_naam('Roosevelt').
 de_naam('SIC').
 de_naam('Sangha').
+de_naam('Schelde').
 de_naam('Sharon').
 de_naam('Shell').
 de_naam('Sherman').
@@ -2669,6 +2799,8 @@ het_naam('EUAIN').
 het_naam('Ecolo').
 het_naam('Engels').
 het_naam('Essent').
+het_naam('Estudiantes').
+het_naam('Excelsior').
 het_naam('FAVV').
 het_naam('Feijenoord').         
 het_naam('Feyenoord').
@@ -2704,6 +2836,7 @@ het_naam('Jantje').
 het_naam('Journaal').
 het_naam('Juda').
 het_naam('Juventus').
+het_naam('Katwijk').
 het_naam('KSO').
 het_naam('Keulen').
 het_naam('Kluwer').
@@ -2885,75 +3018,64 @@ mwu_postag(Frame,Stem,_Surf,Q0,Q,_Result) -->
     { mwu_postag_frame_stem(Frame,Stem,Tags) },
     mwu_tags(Tags,Stem,1,Q0,Q).
 
-mwu_postag(_Frame,Stem,_Surf,Q0,Q,_Result) -->
-    { mwu_postag(Stem,Tags,Stems) },
-    mwu_tags_stems(Tags,Stems,Q0,Q).
-
 mwu_postag(_Frame,Stem,Surf,Q0,Q,_Result) -->
     { mwu_postag(Stem,Surf,Tags,Stems) },
     mwu_tags_stems(Tags,Stems,Q0,Q).
-%mwu_postag(proper_name(M),_,Surf,Q0,Q,_Result) -->
-%    { alpino_util:split_atom(Surf," ",Surfs) },
-%    guess_tags(Q0,Q,proper_name(M),Surfs).
-mwu_postag(proper_name(_),_,Surf,Q0,Q,_) -->
-    {  guess_vreemd(Surf,SurfEls) },
-    !,
-    mwu_vreemd_tags(SurfEls,Q0,Q).
 mwu_postag(proper_name(_,'MISC'),_,Surf,Q0,Q,_) -->
     {  guess_vreemd(Surf,SurfEls) },
     !,
     mwu_vreemd_tags(SurfEls,Q0,Q).
-mwu_postag(proper_name(_),Stem,_,Q0,Q,_Result) -->
-    mwu_name_tags(Stem,Q0,Q).
-mwu_postag(proper_name(_,_),Stem,_,Q0,Q,_Result) -->
-    mwu_name_tags(Stem,Q0,Q).
+% in principle, this ought to work, but it harms more than it helps
+%mwu_postag(proper_name(M,'MISC'),_,Surf,Q0,Q,_Result) -->
+%    { alpino_util:split_atom(Surf," ",Surfs) },
+%    guess_tags(Q0,Q,proper_name(M),Surfs),
+%    !.
+mwu_postag(proper_name(_,_),_,Surf,Q0,Q,_Result) -->
+    mwu_name_tags(Surf,Q0,Q).
 
-mwu_postag(preposition(_,_),Stem,Surf,Q0,Q,_) -->
-    {  atom(Surf),
-       alpino_util:split_atom(Surf," ",SurfEls),
-       atom(Stem),
-       alpino_util:split_atom(Stem," ",StemEls),
-       length(SurfEls,Len),
-       length(StemEls,Len),
-       Len is Q-Q0
-    },
-    guess_lexical_tag_list(SurfEls,StemEls,Q0,Q).
+mwu_postag(punct(_),_,Surf,Q0,Q,_) -->
+    mwu_punct_tags(Surf,Q0,Q),
+    !.
 
-mwu_postag(er_adverb(_),Stem,Surf,Q0,Q,_) -->
-    {  atom(Surf),
-       alpino_util:split_atom(Surf," ",SurfEls),
-       atom(Stem),
-       alpino_util:split_atom(Stem," ",StemEls),
-       length(SurfEls,Len),
-       length(StemEls,Len),
-       Len is Q-Q0
-    },
-    guess_lexical_tag_list(SurfEls,StemEls,Q0,Q).
-
-
-mwu_postag(waar_adverb(_),Stem,Surf,Q0,Q,_) -->
-    {  atom(Surf),
-       alpino_util:split_atom(Surf," ",SurfEls),
-       atom(Stem),
-       alpino_util:split_atom(Stem," ",StemEls),
-       length(SurfEls,Len),
-       length(StemEls,Len),
-       Len is Q-Q0
-    },
-    guess_lexical_tag_list(SurfEls,StemEls,Q0,Q).
-
-
-%% en/of written as 'en / of'
-mwu_postag(_Tag,Stem,Surf,Q0,Q,_) -->
+mwu_postag(preposition(A,B),_Stem,Surf,Q0,Q,_) -->
     {  atom(Surf),
        alpino_util:split_atom(Surf," ",SurfEls),
        length(SurfEls,Len),
-       (   hdrug_util:concat_all(SurfEls,Stem,'')
-       ;   hdrug_util:concat_all(SurfEls,Stem,'-')
-       ),
        Len is Q-Q0
     },
-    guess_tag_list(SurfEls,Q0,Q).
+    guess_tag_list(SurfEls,preposition(A,B),Q0,Q).
+
+mwu_postag(er_adverb(A),_Stem,Surf,Q0,Q,_) -->
+    {  atom(Surf),
+       alpino_util:split_atom(Surf," ",SurfEls),
+       length(SurfEls,Len),
+       Len is Q-Q0
+    },
+    guess_tag_list(SurfEls,er_adverb(A),Q0,Q).
+
+
+mwu_postag(waar_adverb(A),_Stem,Surf,Q0,Q,_) -->
+    {  atom(Surf),
+       alpino_util:split_atom(Surf," ",SurfEls),
+       length(SurfEls,Len),
+       Len is Q-Q0
+    },
+    guess_tag_list(SurfEls,waar_adverb(A),Q0,Q).
+
+mwu_punct_tags(Stem,Q0,Q) -->
+    {  atom(Stem),
+       alpino_util:split_atom(Stem," ",Words),
+       length(Words,Len),
+       Len =:= Q-Q0
+    },
+    mwu_punct_tags_(Words,Q0,Q).
+
+mwu_punct_tags_([],Q,Q) --> [].
+mwu_punct_tags_([W|Words],Q0,Q) -->
+    { Q1 is Q0 + 1 },
+    [ cgn_postag(Q0,Q1,W,'LET()') ],
+    mwu_punct_tags_(Words,Q1,Q).
+
 
 %% 
 mwu_name_tags(Stem,Q0,Q) -->
@@ -2971,24 +3093,15 @@ mwu_name_tags_([W|Words],Q0,Q) -->
      mwu_name_tags_(Words,Q1,Q).
 
 mwu_name_tag(Punct,Q0,Q) -->
-    { punct(Punct) },
+    { punct(Punct),
+      \+ Punct = '&'},
     !,
     [cgn_postag(Q0,Q,Punct,'LET()')].
 mwu_name_tag(Punct,Q0,Q) -->
     [cgn_postag(Q0,Q,Punct,'SPEC(deeleigen)')].
 
-punct(':').
-punct(',').
-punct('.').
-punct('(').
-punct(')').
-punct('-').
-punct('"').  % "
-punct('\'').
-punct('/').
-punct('!').
-punct('?').
-
+punct(X) :-
+    alpino_lex:lexicon(punct(_),_,[X],[],_).
 
 mwu_tags_stems([],_,Q,Q) --> [].
 mwu_tags_stems([H|T],[Stem|Stems],Q0,Q) -->
@@ -3046,6 +3159,11 @@ mwu_postag_frame_surf(score_cat,Surf,[ATag,'LET()',BTag]) :-
     alpino_util:codes_to_words(Codes,[A,'-',B]),
     num_postag(A,ATag),
     num_postag(B,BTag).
+
+mwu_postag_frame_stem_surf(name_determiner(pron,_),_Stem,Surf,PosList) :-
+    atom(Surf),
+    alpino_util:split_atom(Surf," ",[_|Parts]),
+    gen_name_parts(Parts,PosList).
 
 mwu_postag_frame_stem_surf(adjective(het_st(_)),Stem,Surf,['LID(bep,stan,evon)',TweedePos]) :-
     atom_concat('het ',_,Stem),
@@ -3183,7 +3301,7 @@ tmp_np1("een",_,'TW(hoofd,vrij)',één).
 tmp_np1(Str,_,'SPEC(afk)',Stem) :-
     afkorting(Str,Stem).
 tmp_np1(W,_Ctxt,P,S) :-
-    tmp_np1(W,P),
+    tmp_np1(W,P),!,
     atom_codes(S,W).
 
 
@@ -3191,6 +3309,10 @@ tmp_np1("+",'SPEC(symb)').
 tmp_np1(String,'N(eigen,ev,basis,zijd,stan)') :-
     atom_codes(Atom,String),
     alpino_lex:date_month([Atom],[]).
+tmp_np1(String,'SPEC(symb)') :-
+    alpino_util:split_string(String,"/",[Left,Right]),
+    alpino_lex:number_codes_silent(_,Left),
+    alpino_lex:number_codes_silent(_,Right).
 tmp_np1([48,N|_],'SPEC(symb)') :-  % 010 070 0345
     N > 47, N < 58.
 tmp_np1(String,'TW(hoofd,vrij)'):-
@@ -3212,6 +3334,9 @@ tmp_np1("en",'VG(neven)').
 tmp_np1("over",'VZ(init)').
 tmp_np1("Christus",'N(eigen,ev,basis,zijd,stan)').
 tmp_np1("of",'VG(neven)').
+tmp_np1(Str,'LET()') :-
+    atom_codes(Atom,Str),
+    punct(Atom).
 tmp_np1(_,'TW(hoofd,vrij)').
 
 afkorting("v.",voor).
@@ -3219,8 +3344,6 @@ afkorting("v.Chr.",'voor Christus').
 afkorting("v.C.",'voor Christus').
 afkorting("Chr.",'Christus').
 afkorting("Chr",'Christus').
-
-
 
 op(op).
 op('Op').
@@ -3240,41 +3363,16 @@ num_postag(A,'TW(hoofd,vrij)') :-
     atom(A),
     atom_codes(A,ACodes),
     alpino_lex:number_codes_silent(Anum,ACodes),
-    integer(Anum),!.
-num_postag(',','LET()').
-num_postag(')','LET()').
-num_postag('(','LET()').
-num_postag('-','LET()').
-num_postag('/','LET()').
-
+    integer(Anum),
+    !.
+num_postag(Pun,'SPEC(symb)'):-
+    symb(Pun,_),
+    !.
+num_postag(Pun,'LET()'):-
+    punct(Pun),
+    !.
 num_postag(_A,'SPEC(symb)').
 %    alpino_lex:num_dot_num(_,A).
-
-%% mwu_postag(lemma,surf,tags,newlemma)
-mwu_postag('lang niet','lang niet',['ADJ(vrij,basis,zonder)','BW()'],[lang,niet]).
-mwu_postag('lang niet','niet lang',['BW()','ADJ(vrij,basis,zonder)'],[niet,lang]).
-mwu_postag('lang niet','niet langer',['BW()','ADJ(vrij,comp,zonder)'],[niet,lang]).
-mwu_postag(voorzover,'voor zover',
-	   ['VZ(init)','BW()'],
-	   [voor,zover]).
-mwu_postag('mogelijk zoveel',_,
-	   ['TW(hoofd,vrij)','ADJ(vrij,basis,zonder)'],
-	   [zoveel,mogelijk]).
-mwu_postag('aantal een',_,
-	   ['LID(onbep,stan,agr)','N(soort,ev,basis,onz,stan)'],
-	   [een,aantal]).
-mwu_postag('hard om','om het hardst',
-	   ['VZ(init)','LID(bep,stan,evon)','ADJ(vrij,sup,zonder)'],
-	   [om,het,hard]).
-
-
-%% da 's
-mwu_postag(v_root(ben,zijn),'da \'s',
-	   ['VNW(aanw,pron,stan,vol,3o,ev)','WW(pv,tgw,ev)'],
-	   [dat,v_root(ben,zijn)]).
-mwu_postag('als het ware','als het ware',
-	   ['VG(onder)','VNW(pers,pron,stan,red,3,ev,onz)','WW(pv,conj,ev)'],
-	   [als,het,v_root(ben,zijn)]).
 
 :- use_module(mwu).
 
@@ -3327,10 +3425,7 @@ with_dt_tags_list([_=DT|T],Q0) -->
     with_dt_tags_list(T,Q0).
 
 cgn_postag_l(Stem0,Stem,Frame0,Tag) :-
-    (   frame_map(Frame0,Stem0,Frame)
-    ->  true
-    ;   Frame0 = Frame
-    ),
+    frame_map(Frame0,Stem0,Frame),
     cgn_postag_l2(Stem0,Stem,Frame,Tag).
 
 cgn_postag_l2(bepaald,bepalen,adjective(ge_no_e(adv)),'WW(vd,vrij,zonder)').
@@ -3342,7 +3437,7 @@ cgn_postag_l2(Stem,Stem2,Frame,Tag) :-
 cgn_postag_l2(Stem,Stem,Frame,Tag) :-
     exceptional_stem_tag(Stem,Frame,Tag), !.
 cgn_postag_l2(Stem,Stem,Frame,Tag) :-
-    cgn_postag_c(Stem,Frame,Tag), !.
+    cgn_postag_c(Frame,Tag), !.
 cgn_postag_l2(Stem,Stem,Frame,'NA()') :-
     format(user_error,"no with_dt cgn tag rule for ~w ~w~n",[Stem,Frame]).
 
@@ -3359,6 +3454,7 @@ number_vrij_path([start_coord(_,_)/1|Path]) :-
 number_vrij_path([end_coord(_,_)/4,start_coord(_,_)/2|Path]) :-
     number_vrij_path(Path).
 
+post_noun_path([n_n_mod_a/2|_]).
 
 number_nom_path([num_num_adv_num/2|Path]) :-
     number_nom_path(Path).
@@ -3443,42 +3539,58 @@ vd_is_adj(tegenover_stellen,tegenovergesteld).
 vd_is_adj(verbijten,verbeten).
 vd_is_adj(verleden,verleden).
 vd_is_adj(vertrouwd,vertrouwd).
+vd_is_adj(volmaakt,volmaakt).
 vd_is_adj(wereldberoemd,wereldberoemd).
 vd_is_adj(zelfverklaard,zelfverklaard).
 vd_is_adj(zogeheten,zogeheten).
 vd_is_adj(zogenaamd,zogenaamd).
 vd_is_adj(zogenoemd,zogenoemd).
 
-frame_map(adjective(postn_no_e(X)),_,         adjective(no_e(X))).
-frame_map(adjective(postn_pred(X)),_,         adjective(pred(X))).
-frame_map(adjective(postn_both(X)),_,         adjective(both(X))).
-frame_map(adjective(X,_),_,                   adjective(X)).
-frame_map(adjective(er(A)),    ander,         adjective(no_e(A))).
-frame_map(adjective(er(A),_),  ander,         adjective(no_e(A))).
-frame_map(adjective(ere),      ander,         adjective(e)).
-frame_map(adjective(ere,_),    ander,         adjective(e)).
-frame_map(post_adjective(er),  ander,         post_adjective(no_e)).
-frame_map(post_adjective(er,_),ander,         post_adjective(no_e)).
-frame_map(me_adjective(X),_,                  adjective(X)).
-frame_map(me_adjective(X,_),_,                adjective(X)).
-frame_map(np_me_adjective(_,X),_,             np_me_adjective(X)).
-frame_map(post_adjective(X,_),_,              post_adjective(X)).
-frame_map(noun(A,B,C,_),_,                    noun(A,B,C)).
-frame_map(tmp_noun(A,B,C),_,                  noun(A,B,C)).
-frame_map(tmp_noun(A,B,C,_),_,                noun(A,B,C)).
-frame_map(mod_noun(A,B,C),_,                  noun(A,B,C)).
-frame_map(mod_noun(A,B,C,_),_,                noun(A,B,C)).
-frame_map(meas_mod_noun(both,count,meas),procent,noun(het,count,meas)).
-frame_map(meas_mod_noun(A,B,C),_,             noun(A,B,C)).
-frame_map(meas_mod_noun(A,B,C,_),_,           noun(A,B,C)).
+frame_map(Frame0,Lemma,Frame) :-
+    (   frame_map_(Frame0,Lemma,Frame1)
+    ->  Frame1 = Frame
+    ;   Frame0 = Frame
+    ).
+
+frame_map_(proper_name(Agr),_,                 proper_name(Agr,'MISC')).
+frame_map_(adjective(postn_no_e(X)),_,         adjective(no_e(X))).
+frame_map_(adjective(postn_pred(X)),_,         adjective(pred(X))).
+frame_map_(adjective(postn_both(X)),_,         adjective(both(X))).
+frame_map_(adjective(X,_),_,                   adjective(X)).
+frame_map_(adjective(er(A)),    ander,         adjective(no_e(A))).
+frame_map_(adjective(er(A),_),  ander,         adjective(no_e(A))).
+frame_map_(adjective(ere),      ander,         adjective(e)).
+frame_map_(adjective(ere,_),    ander,         adjective(e)).
+frame_map_(post_adjective(er),  ander,         post_adjective(no_e)).
+frame_map_(post_adjective(er,_),ander,         post_adjective(no_e)).
+frame_map_(me_adjective(X),_,                  adjective(X)).
+frame_map_(me_adjective(X,_),_,                adjective(X)).
+frame_map_(np_me_adjective(_,X),_,             np_me_adjective(X)).
+frame_map_(post_adjective(X,_),_,              post_adjective(X)).
+frame_map_(noun(A,B,C,_),_,                    noun(A,B,C)).
+frame_map_(tmp_noun(A,B,C),_,                  noun(A,B,C)).
+frame_map_(tmp_noun(A,B,C,_),_,                noun(A,B,C)).
+frame_map_(mod_noun(A,B,C),_,                  noun(A,B,C)).
+frame_map_(mod_noun(A,B,C,_),_,                noun(A,B,C)).
+frame_map_(meas_mod_noun(both,count,meas),procent,noun(het,count,meas)).
+frame_map_(meas_mod_noun(A,B,C),_,             noun(A,B,C)).
+frame_map_(meas_mod_noun(A,B,C,_),_,           noun(A,B,C)).
+
+enof_lemma(hij_zij).
 
 vreemd_lemma(bèta).
+vreemd_lemma(bölke).
+vreemd_lemma(bölkes).
+vreemd_lemma(bölkje).
+vreemd_lemma(capita).
 vreemd_lemma(consolatio).
 vreemd_lemma('Development').
 vreemd_lemma('English').
 vreemd_lemma(fancy).
 vreemd_lemma(fatwa).
 vreemd_lemma('Imbiss').
+vreemd_lemma(issue).
+vreemd_lemma('know-how').
 vreemd_lemma(licensee).
 vreemd_lemma(onsite).
 vreemd_lemma(passphrase).
@@ -3512,995 +3624,1461 @@ lassy(tijde,tijd,        'N(soort,ev,basis,dat)').
 lassy(voordele,voordeel, 'N(soort,ev,basis,dat)').
 lassy(wille,wil,         'N(soort,ev,basis,dat)').
 
-%% most frequent...
-lassy(de, 'LID(bep,stan,rest)').
-lassy('.', 'LET()').
-lassy(van, 'VZ(init)').
-lassy(',', 'LET()').
-lassy(en, 'VG(neven)').
-lassy(het, 'LID(bep,stan,evon)').
-lassy(een, 'LID(onbep,stan,agr)').
-lassy(in, 'VZ(init)').
-lassy(is, 'WW(pv,tgw,ev)').
-lassy(te, 'VZ(init)').
-lassy(op, 'VZ(init)').
-lassy('De', 'LID(bep,stan,rest)').
-lassy(voor, 'VZ(init)').
-lassy(met, 'VZ(init)').
-lassy(')', 'LET()').
-lassy('(', 'LET()').
-lassy(die, 'VNW(betr,pron,stan,vol,persoon,getal)').
-lassy(dat, 'VG(onder)').
-lassy(niet, 'BW()').
-lassy(om, 'VZ(init)').
-lassy(aan, 'VZ(init)').
-lassy(:, 'LET()').
-lassy(door, 'VZ(init)').
-lassy(zijn, 'WW(pv,tgw,mv)').
-lassy(ook, 'BW()').
-lassy(er, 'VNW(aanw,adv-pron,stan,red,3,getal)').
-lassy('\'', 'LET()').
-lassy(-, 'LET()').
-lassy('"', 'LET()').  % "
-lassy(was, 'WW(pv,verl,ev)').
-lassy(bij, 'VZ(init)').
-lassy(zijn, 'VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)').
-lassy(of, 'VG(neven)').
-lassy(tot, 'VZ(init)').
-lassy('In', 'VZ(init)').
-lassy(werd, 'WW(pv,verl,ev)').
-lassy(naar, 'VZ(init)').
-lassy(wordt, 'WW(pv,tgw,met-t)').
-lassy(het, 'VNW(pers,pron,stan,red,3,ev,onz)').
-lassy('Het', 'LID(bep,stan,evon)').
-lassy(heeft, 'WW(pv,tgw,met-t)').
-lassy(hij, 'VNW(pers,pron,nomin,vol,3,ev,masc)').
-lassy(over, 'VZ(init)').
-lassy(nog, 'BW()').
-lassy(als, 'VZ(init)').
-lassy(zich, 'VNW(refl,pron,obl,red,3,getal)').
-lassy(worden, 'WW(inf,vrij,zonder)').
-lassy(jaar, 'N(soort,ev,basis,onz,stan)').
-lassy(maar, 'VG(neven)').
-lassy(uit, 'VZ(init)').
-lassy(hun, 'VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)').
-lassy(deze, 'VNW(aanw,det,stan,prenom,met-e,rest)').
-lassy(kan, 'WW(pv,tgw,ev)').
-lassy(u, 'VNW(pers,pron,nomin,vol,2b,getal)').
-lassy(meer, 'VNW(onbep,grad,stan,vrij,zonder,comp)').
-lassy(ze, 'VNW(pers,pron,stan,red,3,mv)').
-lassy(geen, 'VNW(onbep,det,stan,prenom,zonder,agr)').
-lassy(als, 'VG(onder)').
-lassy('Een', 'LID(onbep,stan,agr)').
-lassy(dan, 'BW()').
-lassy(al, 'BW()').
-lassy(dan, 'VG(onder)').
-lassy(hebben, 'WW(pv,tgw,mv)').
-lassy('Het', 'VNW(pers,pron,stan,red,3,ev,onz)').
-lassy(onder, 'VZ(init)').
-lassy(worden, 'WW(pv,tgw,mv)').
-lassy(nieuwe, 'ADJ(prenom,basis,met-e,stan)').
-lassy('Maar', 'VG(neven)').
-lassy(op, 'VZ(fin)').
-lassy(dat, 'VNW(betr,pron,stan,vol,3,ev)').
-lassy(moet, 'WW(pv,tgw,ev)').
-lassy(and, 'SPEC(vreemd)').
-lassy(andere, 'ADJ(prenom,basis,met-e,stan)').
-lassy(die, 'VNW(aanw,det,stan,prenom,zonder,rest)').
-lassy(;, 'LET()').
-lassy(zou, 'WW(pv,verl,ev)').
-lassy(?, 'LET()').
-lassy('En', 'VG(neven)').
-lassy(zal, 'WW(pv,tgw,ev)').
-lassy(nu, 'BW()').
-lassy(dat, 'VNW(aanw,pron,stan,vol,3o,ev)').
-lassy(zijn, 'WW(inf,vrij,zonder)').
-lassy(na, 'VZ(init)').
-lassy(tegen, 'VZ(init)').
-lassy(eerste, 'TW(rang,prenom,stan)').
-lassy(wel, 'BW()').
-lassy(kunnen, 'WW(pv,tgw,mv)').
-lassy(tussen, 'VZ(init)').
-lassy(werden, 'WW(pv,verl,mv)').
-lassy(had, 'WW(pv,verl,ev)').
-lassy(zo, 'BW()').
-lassy(mensen, 'N(soort,mv,basis)').
-lassy(aan, 'VZ(fin)').
-lassy(twee, 'TW(hoofd,prenom,stan)').
-lassy(dit, 'VNW(aanw,det,stan,prenom,zonder,evon)').
-lassy(waren, 'WW(pv,verl,mv)').
-lassy('Op', 'VZ(init)').
-lassy(uit, 'VZ(fin)').
-lassy('Nederland', 'N(eigen,ev,basis,onz,stan)').
-lassy(alle, 'VNW(onbep,det,stan,prenom,met-e,agr)').
-lassy('Hij', 'VNW(pers,pron,nomin,vol,3,ev,masc)').
-lassy(we, 'VNW(pers,pron,nomin,red,1,mv)').
-lassy('Ook', 'BW()').
-lassy(grote, 'ADJ(prenom,basis,met-e,stan)').
-lassy(waar, 'VNW(vb,adv-pron,obl,vol,3o,getal)').
-lassy('Vlaamse', 'ADJ(prenom,basis,met-e,stan)').
-lassy(gaat, 'WW(pv,tgw,met-t)').
-lassy(/, 'LET()').
-lassy(wat, 'VNW(vb,pron,stan,vol,3o,ev)').
-lassy('Dat', 'VNW(aanw,pron,stan,vol,3o,ev)').
-lassy(zoals, 'VG(onder)').
-lassy(haar, 'VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)').
-lassy(ik, 'VNW(pers,pron,nomin,vol,1,ev)').
-lassy('Europese', 'ADJ(prenom,basis,met-e,stan)').
-lassy('Er', 'VNW(aanw,adv-pron,stan,red,3,getal)').
-lassy(in, 'VZ(fin)').
-lassy(wil, 'WW(pv,tgw,ev)').
-lassy(weer, 'BW()').
-lassy(je, 'VNW(pers,pron,nomin,red,2v,ev)').
-lassy(jaren, 'N(soort,mv,basis)').
-lassy(omdat, 'VG(onder)').
-lassy(uw, 'VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)').
-lassy('Nederlandse', 'ADJ(prenom,basis,met-e,stan)').
-lassy(veel, 'VNW(onbep,grad,stan,prenom,zonder,agr,basis)').
-lassy(alleen, 'BW()').
-lassy(aantal, 'N(soort,ev,basis,onz,stan)').
-lassy(dus, 'BW()').
-lassy('Dit', 'VNW(aanw,pron,stan,vol,3o,ev)').
-lassy(land, 'N(soort,ev,basis,onz,stan)').
-lassy(«, 'LET()').
-lassy(», 'LET()').
-lassy(ze, 'VNW(pers,pron,stan,red,3,ev,fem)').
-lassy('Deze', 'VNW(aanw,det,stan,prenom,met-e,rest)').
-lassy('België', 'N(eigen,ev,basis,onz,stan)').
-lassy(moeten, 'WW(pv,tgw,mv)').
-lassy(hem, 'VNW(pers,pron,obl,vol,3,ev,masc)').
-lassy('Voor', 'VZ(init)').
-lassy(daar, 'VNW(aanw,adv-pron,obl,vol,3o,getal)').
-lassy(maken, 'WW(inf,vrij,zonder)').
-lassy(tijd, 'N(soort,ev,basis,zijd,stan)').
-lassy(steeds, 'BW()').
-lassy(echter, 'BW()').
-lassy(minister, 'N(soort,ev,basis,zijd,stan)').
-lassy(eigen, 'ADJ(prenom,basis,zonder)').
-lassy('Als', 'VG(onder)').
-lassy(zelf, 'BW()').
-lassy(komt, 'WW(pv,tgw,met-t)').
-lassy(af, 'VZ(fin)').
-lassy(landen, 'N(soort,mv,basis)').
-lassy('Bij', 'VZ(init)').
-lassy(meer, 'VNW(onbep,grad,stan,prenom,zonder,agr,comp)').
-lassy(drie, 'TW(hoofd,prenom,stan)').
-lassy(tijdens, 'VZ(init)').
-lassy(kunnen, 'WW(inf,vrij,zonder)').
-lassy(deel, 'N(soort,ev,basis,onz,stan)').
-lassy(dit, 'VNW(aanw,pron,stan,vol,3o,ev)').
-lassy(regering, 'N(soort,ev,basis,zijd,stan)').
-lassy(onderzoek, 'N(soort,ev,basis,onz,stan)').
-lassy(per, 'VZ(init)').
-lassy(hebben, 'WW(inf,vrij,zonder)').
-lassy(euro, 'N(soort,ev,basis,zijd,stan)').
-lassy(vooral, 'BW()').
-lassy(veel, 'VNW(onbep,grad,stan,vrij,zonder,basis)').
-lassy(plaats, 'N(soort,ev,basis,zijd,stan)').
-lassy(toe, 'VZ(fin)').
-lassy('Amerikaanse', 'ADJ(prenom,basis,met-e,stan)').
-lassy('Brussel', 'N(eigen,ev,basis,onz,stan)').
-lassy(via, 'VZ(init)').
-lassy(goed, 'ADJ(vrij,basis,zonder)').
-lassy(gaan, 'WW(inf,vrij,zonder)').
-lassy(kwam, 'WW(pv,verl,ev)').
-lassy('1', 'TW(hoofd,vrij)').
-lassy(verschillende, 'ADJ(prenom,basis,met-e,stan)').
-lassy(..., 'LET()').
-lassy(mee, 'VZ(fin)').
-lassy('Ik', 'VNW(pers,pron,nomin,vol,1,ev)').
-lassy(maar, 'BW()').
-lassy(mogelijk, 'ADJ(vrij,basis,zonder)').
-lassy(te, 'BW()').
-lassy(één, 'TW(hoofd,prenom,stan)').
-lassy(binnen, 'VZ(init)').
-lassy(die, 'VNW(aanw,pron,stan,vol,3,getal)').
-lassy('De', 'SPEC(deeleigen)').
-lassy('Van', 'SPEC(deeleigen)').
-lassy(stad, 'N(soort,ev,basis,zijd,stan)').
-lassy('Met', 'VZ(init)').
-lassy(zullen, 'WW(pv,tgw,mv)').
-lassy(zonder, 'VZ(init)').
-lassy(staat, 'WW(pv,tgw,met-t)').
-lassy(hoe, 'BW()').
-lassy(enkele, 'VNW(onbep,det,stan,prenom,met-e,rest)').
-lassy(uur, 'N(soort,ev,basis,onz,stan)').
-lassy(bijvoorbeeld, 'BW()').
-lassy('Vlaanderen', 'N(eigen,ev,basis,onz,stan)').
-lassy(toch, 'BW()').
-lassy(dag, 'N(soort,ev,basis,zijd,stan)').
-lassy(ten, 'VZ(versm)').
-lassy(dat, 'VNW(aanw,det,stan,prenom,zonder,evon)').
-lassy('Na', 'VZ(init)').
-lassy('Belgische', 'ADJ(prenom,basis,met-e,stan)').
-lassy('%', 'SPEC(symb)').
-lassy(miljoen, 'N(soort,ev,basis,onz,stan)').
-lassy(vandaag, 'BW()').
-lassy(onze, 'VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)').
-lassy(laatste, 'ADJ(prenom,sup,met-e,stan)').
-lassy('Ze', 'VNW(pers,pron,stan,red,3,mv)').
-lassy(wereld, 'N(soort,ev,basis,zijd,stan)').
-lassy(ontwikkeling, 'N(soort,ev,basis,zijd,stan)').
-lassy(altijd, 'BW()').
-lassy(van, 'SPEC(deeleigen)').
-lassy(terug, 'BW()').
-lassy(zelfs, 'BW()').
-lassy(men, 'VNW(pers,pron,nomin,red,3p,ev,masc)').
-lassy(kinderen, 'N(soort,mv,basis)').
-lassy(later, 'ADJ(vrij,comp,zonder)').
-lassy(hadden, 'WW(pv,verl,mv)').
-lassy(sinds, 'VZ(init)').
-lassy(overheid, 'N(soort,ev,basis,zijd,stan)').
-lassy('Zo', 'BW()').
-lassy(samen, 'BW()').
-lassy(elkaar, 'VNW(recip,pron,obl,vol,persoon,mv)').
-lassy(kon, 'WW(pv,verl,ev)').
-lassy(zouden, 'WW(pv,verl,mv)').
-lassy(voor, 'VZ(fin)').
-lassy('Duitsland', 'N(eigen,ev,basis,onz,stan)').
-lassy(volgens, 'VZ(init)').
-lassy(politieke, 'ADJ(prenom,basis,met-e,stan)').
-lassy(informatie, 'N(soort,ev,basis,zijd,stan)').
-lassy(procent, 'N(soort,ev,basis,onz,stan)').
-lassy(hier, 'VNW(aanw,adv-pron,obl,vol,3o,getal)').
-lassy(doen, 'WW(inf,vrij,zonder)').
-lassy('Volgens', 'VZ(init)').
-lassy('Duitse', 'ADJ(prenom,basis,met-e,stan)').
-lassy(leven, 'N(soort,ev,basis,onz,stan)').
-lassy(laten, 'WW(inf,vrij,zonder)').
-lassy(kunt, 'WW(pv,tgw,met-t)').
-lassy(heel, 'ADJ(vrij,basis,zonder)').
-lassy(gemaakt, 'WW(vd,vrij,zonder)').
-lassy(nodig, 'ADJ(vrij,basis,zonder)').
-lassy(volgende, 'WW(od,prenom,met-e)').
-lassy(waarin, 'BW()').
-lassy(partij, 'N(soort,ev,basis,zijd,stan)').
-lassy('Europa', 'N(eigen,ev,basis,onz,stan)').
-lassy(zij, 'VNW(pers,pron,nomin,vol,3p,mv)').
-lassy(komen, 'WW(inf,vrij,zonder)').
-lassy(werk, 'N(soort,ev,basis,onz,stan)').
-lassy(onderwijs, 'N(soort,ev,basis,onz,stan)').
-lassy(of, 'VG(onder)').
-lassy(mag, 'WW(pv,tgw,ev)').
-lassy(geld, 'N(soort,ev,basis,onz,stan)').
-lassy(gebied, 'N(soort,ev,basis,onz,stan)').
-lassy(·, 'LET()').
-lassy(!, 'LET()').
-lassy(zegt, 'WW(pv,tgw,met-t)').
-lassy(eeuw, 'N(soort,ev,basis,zijd,stan)').
-lassy(rond, 'VZ(init)').
-lassy(oorlog, 'N(soort,ev,basis,zijd,stan)').
-lassy(politie, 'N(soort,ev,basis,zijd,stan)').
-lassy(tweede, 'TW(rang,prenom,stan)').
-lassy(internationale, 'ADJ(prenom,basis,met-e,stan)').
-lassy('Om', 'VZ(init)').
-lassy(snel, 'ADJ(vrij,basis,zonder)').
-lassy(ging, 'WW(pv,verl,ev)').
-lassy(de, 'SPEC(deeleigen)').
-lassy(naam, 'N(soort,ev,basis,zijd,stan)').
-lassy(september, 'N(eigen,ev,basis,zijd,stan)').
-lassy('Door', 'VZ(init)').
-lassy(zeer, 'BW()').
-lassy(hele, 'ADJ(prenom,basis,met-e,stan)').
-lassy(over, 'VZ(fin)').
-lassy(krijgt, 'WW(pv,tgw,met-t)').
-lassy('2003', 'TW(hoofd,vrij)').
-lassy(week, 'N(soort,ev,basis,zijd,stan)').
-lassy(ter, 'VZ(versm)').
-lassy(blijft, 'WW(pv,tgw,met-t)').
-lassy(sociale, 'ADJ(prenom,basis,met-e,stan)').
-lassy(man, 'N(soort,ev,basis,zijd,stan)').
-lassy(grootste, 'ADJ(prenom,sup,met-e,stan)').
-lassy(belangrijke, 'ADJ(prenom,basis,met-e,stan)').
-lassy(komen, 'WW(pv,tgw,mv)').
-lassy(zien, 'WW(inf,vrij,zonder)').
-lassy(vaak, 'ADJ(vrij,basis,zonder)').
-lassy(nemen, 'WW(inf,vrij,zonder)').
-lassy(blijkt, 'WW(pv,tgw,met-t)').
-lassy(vindt, 'WW(pv,tgw,met-t)').
-lassy(bekend, 'ADJ(vrij,basis,zonder)').
-lassy('Unie', 'N(soort,ev,basis,zijd,stan)').
-lassy('Franse', 'ADJ(prenom,basis,met-e,stan)').
-lassy('2004', 'TW(hoofd,vrij)').
-lassy(hen, 'VNW(pers,pron,obl,vol,3p,mv)').
-lassy(vier, 'TW(hoofd,prenom,stan)').
-lassy(vanaf, 'VZ(init)').
-lassy(gebruik, 'N(soort,ev,basis,onz,stan)').
-lassy(duidelijk, 'ADJ(vrij,basis,zonder)').
-lassy(manier, 'N(soort,ev,basis,zijd,stan)').
-lassy(toen, 'VG(onder)').
-lassy('2000', 'TW(hoofd,vrij)').
-lassy(opnieuw, 'BW()').
-lassy(aanval, 'N(soort,ev,basis,zijd,stan)').
-lassy(moest, 'WW(pv,verl,ev)').
-lassy(eens, 'BW()').
-lassy(dagen, 'N(soort,mv,basis)').
-lassy(president, 'N(soort,ev,basis,zijd,stan)').
-lassy('2005', 'TW(hoofd,vrij)').
-lassy(staat, 'N(soort,ev,basis,zijd,stan)').
-lassy(geven, 'WW(inf,vrij,zonder)').
-lassy(periode, 'N(soort,ev,basis,zijd,stan)').
-lassy(maakt, 'WW(pv,tgw,met-t)').
-lassy(gebruikt, 'WW(vd,vrij,zonder)').
-lassy(basis, 'N(soort,ev,basis,zijd,stan)').
-lassy('Irak', 'N(eigen,ev,basis,onz,stan)').
-lassy(moeten, 'WW(inf,vrij,zonder)').
-lassy(economische, 'ADJ(prenom,basis,met-e,stan)').
-lassy(wat, 'VNW(onbep,pron,stan,vol,3o,ev)').
-lassy(nooit, 'BW()').
-lassy(waarbij, 'BW()').
-lassy(geleden, 'BW()').
-lassy(houden, 'WW(inf,vrij,zonder)').
-lassy(toen, 'BW()').
-lassy(juni, 'N(eigen,ev,basis,zijd,stan)').
-lassy(school, 'N(soort,ev,basis,zijd,stan)').
-lassy(samenwerking, 'N(soort,ev,basis,zijd,stan)').
-lassy(januari, 'N(eigen,ev,basis,zijd,stan)').
-lassy(epilepsie, 'N(soort,ev,basis,zijd,stan)').
-lassy('Britse', 'ADJ(prenom,basis,met-e,stan)').
-lassy('We', 'VNW(pers,pron,nomin,red,1,mv)').
-lassy(groot, 'ADJ(prenom,basis,zonder)').
-lassy(bijna, 'BW()').
-lassy(iets, 'VNW(onbep,pron,stan,vol,3o,ev)').
-lassy(krijgen, 'WW(inf,vrij,zonder)').
-lassy(zowel, 'BW()').
-lassy(want, 'VG(neven)').
-lassy('Frankrijk', 'N(eigen,ev,basis,onz,stan)').
-lassy(lang, 'ADJ(vrij,basis,zonder)').
-lassy(minder, 'VNW(onbep,grad,stan,vrij,zonder,comp)').
-lassy(kind, 'N(soort,ev,basis,onz,stan)').
-lassy(wie, 'VNW(vb,pron,stan,vol,3p,getal)').
-lassy(geval, 'N(soort,ev,basis,onz,stan)').
-lassy(bestaat, 'WW(pv,tgw,met-t)').
-lassy(rol, 'N(soort,ev,basis,zijd,stan)').
-lassy(leger, 'N(soort,ev,basis,onz,stan)').
-lassy('Wat', 'VNW(vb,pron,stan,vol,3o,ev)').
-lassy('U', 'VNW(pers,pron,nomin,vol,2b,getal)').
-lassy(ongeveer, 'BW()').
-lassy(begin, 'N(soort,ev,basis,onz,stan)').
-lassy(afgelopen, 'WW(vd,prenom,zonder)').
-lassy('Vlaams', 'ADJ(prenom,basis,zonder)').
-lassy(kreeg, 'WW(pv,verl,ev)').
-lassy('Dit', 'VNW(aanw,det,stan,prenom,zonder,evon)').
-lassy('zo\'n', 'VNW(aanw,det,stan,prenom,zonder,agr)').
-lassy(willen, 'WW(pv,tgw,mv)').
-lassy(vrouwen, 'N(soort,mv,basis)').
-lassy(mijn, 'VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)').
-lassy(ligt, 'WW(pv,tgw,met-t)').
-lassy(bedrijf, 'N(soort,ev,basis,onz,stan)').
-lassy(vele, 'VNW(onbep,grad,stan,prenom,met-e,agr,basis)').
-lassy(beter, 'ADJ(vrij,comp,zonder)').
-lassy(beleid, 'N(soort,ev,basis,onz,stan)').
-lassy(maanden, 'N(soort,mv,basis)').
-lassy(belang, 'N(soort,ev,basis,onz,stan)').
-lassy(mei, 'N(eigen,ev,basis,zijd,stan)').
-lassy('Van', 'VZ(init)').
-lassy(niets, 'VNW(onbep,pron,stan,vol,3o,ev)').
-lassy(niks, 'VNW(onbep,pron,stan,vol,3o,ev)').
-lassy(meest, 'VNW(onbep,grad,stan,vrij,zonder,sup)').
-lassy(gaan, 'WW(pv,tgw,mv)').
-lassy(ontwikkelingslanden, 'N(soort,mv,basis)').
-lassy('Commissie', 'N(soort,ev,basis,zijd,stan)').
-lassy(geweest, 'WW(vd,vrij,zonder)').
-lassy(geeft, 'WW(pv,tgw,met-t)').
-lassy(zeker, 'ADJ(vrij,basis,zonder)').
-lassy(een, 'TW(hoofd,nom,zonder-n,basis)').
-lassy(kader, 'N(soort,ev,basis,onz,stan)').
-lassy(goede, 'ADJ(prenom,basis,met-e,stan)').
-lassy(terwijl, 'VG(onder)').
-lassy('2002', 'TW(hoofd,vrij)').
-lassy(ouders, 'N(soort,mv,basis)').
-lassy(net, 'BW()').
-lassy(alles, 'VNW(onbep,pron,stan,vol,3o,ev)').
-lassy(kleine, 'ADJ(prenom,basis,met-e,stan)').
-lassy(water, 'N(soort,ev,basis,onz,stan)').
-lassy(juli, 'N(eigen,ev,basis,zijd,stan)').
-lassy(even, 'BW()').
-lassy('Die', 'VNW(aanw,det,stan,prenom,zonder,rest)').
-lassy(moment, 'N(soort,ev,basis,onz,stan)').
-lassy(groep, 'N(soort,ev,basis,zijd,stan)').
-lassy('2001', 'TW(hoofd,vrij)').
-lassy(situatie, 'N(soort,ev,basis,zijd,stan)').
-lassy(slechts, 'BW()').
-lassy('Tweede', 'TW(rang,prenom,stan)').
-lassy(ons, 'VNW(pr,pron,obl,vol,1,mv)').
-lassy(weken, 'N(soort,mv,basis)').
-lassy(kwamen, 'WW(pv,verl,mv)').
-lassy(problemen, 'N(soort,mv,basis)').
-lassy(film, 'N(soort,ev,basis,zijd,stan)').
-lassy(einde, 'N(soort,ev,basis,onz,stan)').
-lassy('Zijn', 'VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)').
-lassy(maart, 'N(eigen,ev,basis,zijd,stan)').
-lassy(hand, 'N(soort,ev,basis,zijd,stan)').
-lassy(vraag, 'N(soort,ev,basis,zijd,stan)').
-lassy(pas, 'BW()').
-lassy(huidige, 'ADJ(prenom,basis,met-e,stan)').
-lassy('2006', 'TW(hoofd,vrij)').
-lassy(wet, 'N(soort,ev,basis,zijd,stan)').
-lassy('Die', 'VNW(aanw,pron,stan,vol,3,getal)').
-lassy(oude, 'ADJ(prenom,basis,met-e,stan)').
-lassy(bij, 'VZ(fin)').
-lassy(oktober, 'N(eigen,ev,basis,zijd,stan)').
-lassy(doet, 'WW(pv,tgw,met-t)').
-lassy(dezelfde, 'ADJ(prenom,basis,zonder)').
-lassy(beide, 'VNW(onbep,grad,stan,prenom,met-e,mv,basis)').
-lassy(bedrijven, 'N(soort,mv,basis)').
-lassy(alcohol, 'N(soort,ev,basis,zijd,stan)').
-lassy(vorm, 'N(soort,ev,basis,zijd,stan)').
-lassy(duurzame, 'ADJ(prenom,basis,met-e,stan)').
-lassy(werken, 'WW(inf,vrij,zonder)').
-lassy('3', 'TW(hoofd,vrij)').
-lassy(vanuit, 'VZ(init)').
-lassy(belangrijkste, 'ADJ(prenom,sup,met-e,stan)').
-lassy(vijf, 'TW(hoofd,prenom,stan)').
-lassy(staan, 'WW(pv,tgw,mv)').
-lassy(meeste, 'VNW(onbep,grad,stan,prenom,met-e,agr,sup)').
-lassy(deze, 'VNW(aanw,det,stan,nom,met-e,zonder-n)').
-lassy(daarom, 'BW()').
-lassy(december, 'N(eigen,ev,basis,zijd,stan)').
-lassy(zit, 'WW(pv,tgw,ev)').
-lassy(weg, 'N(soort,ev,basis,zijd,stan)').
-lassy(huis, 'N(soort,ev,basis,onz,stan)').
-lassy('2', 'TW(hoofd,vrij)').
-lassy(krijgen, 'WW(pv,tgw,mv)').
-lassy(blijven, 'WW(inf,vrij,zonder)').
-lassy(van, 'VZ(fin)').
-lassy(gevolg, 'N(soort,ev,basis,onz,stan)').
-lassy('Minister', 'N(soort,ev,basis,zijd,stan)').
-lassy(verkiezingen, 'N(soort,mv,basis)').
-lassy(kans, 'N(soort,ev,basis,zijd,stan)').
-lassy(iemand, 'VNW(onbep,pron,stan,vol,3p,ev)').
-lassy(*, 'LET()').
-lassy(maakte, 'WW(pv,verl,ev)').
-lassy(invloed, 'N(soort,ev,basis,zijd,stan)').
-lassy(zes, 'TW(hoofd,prenom,stan)').
-lassy(waarop, 'BW()').
-lassy(augustus, 'N(eigen,ev,basis,zijd,stan)').
-lassy(andere, 'ADJ(nom,basis,met-e,zonder-n,stan)').
-lassy(toekomst, 'N(soort,ev,basis,zijd,stan)').
-lassy(geweld, 'N(soort,ev,basis,onz,stan)').
-lassy(gehouden, 'WW(vd,vrij,zonder)').
-lassy(eind, 'N(soort,ev,basis,onz,stan)').
-lassy(sterk, 'ADJ(vrij,basis,zonder)').
-lassy('Antwerpen', 'N(eigen,ev,basis,onz,stan)').
-lassy(hoge, 'ADJ(prenom,basis,met-e,stan)').
-lassy(door, 'VZ(fin)').
-lassy(woningen, 'N(soort,mv,basis)').
-lassy(steun, 'N(soort,ev,basis,zijd,stan)').
-lassy(lijkt, 'WW(pv,tgw,met-t)').
-lassy(gegevens, 'N(soort,mv,basis)').
-lassy('Ze', 'VNW(pers,pron,stan,red,3,ev,fem)').
-lassy('10', 'TW(hoofd,prenom,stan)').
-lassy(wanneer, 'VG(onder)').
-lassy(strijd, 'N(soort,ev,basis,zijd,stan)').
-lassy(patiënten, 'N(soort,mv,basis)').
-lassy(opdracht, 'N(soort,ev,basis,zijd,stan)').
-lassy(iedereen, 'VNW(onbep,pron,stan,vol,3p,ev)').
-lassy('Zij', 'VNW(pers,pron,nomin,vol,3p,mv)').
-lassy(elke, 'VNW(onbep,det,stan,prenom,met-e,evz)').
-lassy('Hoe', 'BW()').
-lassy(leden, 'N(soort,mv,basis)').
-lassy(bevolking, 'N(soort,ev,basis,zijd,stan)').
-lassy(meteen, 'BW()').
-lassy(soms, 'BW()').
-lassy(erg, 'ADJ(vrij,basis,zonder)').
-lassy(brengen, 'WW(inf,vrij,zonder)').
-lassy(premier, 'N(soort,ev,basis,zijd,stan)').
-lassy(kabinet, 'N(soort,ev,basis,onz,stan)').
-lassy('Want', 'VG(neven)').
-lassy(heb, 'WW(pv,tgw,ev)').
-lassy(ervan, 'BW()').
-lassy('Tijdens', 'VZ(init)').
-lassy('Italië', 'N(eigen,ev,basis,onz,stan)').
-lassy('Gemeenschap', 'N(soort,ev,basis,zijd,stan)').
-lassy(volledig, 'ADJ(vrij,basis,zonder)').
-lassy(economie, 'N(soort,ev,basis,zijd,stan)').
-lassy(aanvallen, 'N(soort,mv,basis)').
-lassy('The', 'SPEC(deeleigen)').
-lassy(macht, 'N(soort,ev,basis,zijd,stan)').
-lassy(behandeling, 'N(soort,ev,basis,zijd,stan)').
-lassy(maatregelen, 'N(soort,mv,basis)').
-lassy(federale, 'ADJ(prenom,basis,met-e,stan)').
-lassy(begon, 'WW(pv,verl,ev)').
-lassy(zodat, 'VG(onder)').
-lassy(vorige, 'ADJ(prenom,basis,met-e,stan)').
-lassy(ruim, 'ADJ(vrij,basis,zonder)').
-lassy(aandacht, 'N(soort,ev,basis,zijd,stan)').
-lassy('Zaken', 'N(soort,mv,basis)').
-lassy(',,', 'LET()').
-lassy(gemeenten, 'N(soort,mv,basis)').
-lassy(geldt, 'WW(pv,tgw,met-t)').
-lassy(contact, 'N(soort,ev,basis,onz,stan)').
-lassy(buiten, 'VZ(init)').
-lassy(achter, 'VZ(init)').
-lassy(waardoor, 'BW()').
-lassy(eerder, 'BW()').
-lassy('Daar', 'VNW(aanw,adv-pron,obl,vol,3o,getal)').
-lassy(welke, 'VNW(vb,det,stan,prenom,met-e,rest)').
-lassy(nationale, 'ADJ(prenom,basis,met-e,stan)').
-lassy('Amsterdam', 'N(eigen,ev,basis,onz,stan)').
-lassy('z\'n', 'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)').
-lassy(recht, 'N(soort,ev,basis,onz,stan)').
-lassy(bleek, 'WW(pv,verl,ev)').
-lassy('Zie', 'WW(pv,tgw,ev)').
-lassy('Toch', 'BW()').
-lassy(zaken, 'N(soort,mv,basis)').
-lassy(zaak, 'N(soort,ev,basis,zijd,stan)').
-lassy(nieuw, 'ADJ(prenom,basis,zonder)').
-lassy('Verenigde', 'WW(vd,prenom,met-e)').
-lassy(zij, 'VNW(pers,pron,nomin,vol,3v,ev,fem)').
-lassy(markt, 'N(soort,ev,basis,zijd,stan)').
-lassy(kwaliteit, 'N(soort,ev,basis,zijd,stan)').
-lassy(jongeren, 'ADJ(nom,comp,met-e,mv-n)').
-lassy(elk, 'VNW(onbep,det,stan,prenom,zonder,evon)').
-lassy(producten, 'N(soort,mv,basis)').
-lassy(november, 'N(eigen,ev,basis,zijd,stan)').
-lassy(inzake, 'VZ(init)').
-lassy(familie, 'N(soort,ev,basis,zijd,stan)').
-lassy(extra, 'ADJ(prenom,basis,zonder)').
-lassy(eerst, 'BW()').
-lassy(april, 'N(eigen,ev,basis,zijd,stan)').
-lassy('Wereldoorlog', 'N(soort,ev,basis,zijd,stan)').
-lassy(sommige, 'VNW(onbep,det,stan,prenom,met-e,rest)').
-lassy(partijen, 'N(soort,mv,basis)').
-lassy(laat, 'WW(pv,tgw,ev)').
-lassy(houdt, 'WW(pv,tgw,met-t)').
-lassy(genomen, 'WW(vd,vrij,zonder)').
-lassy('Tot', 'VZ(init)').
-lassy(tien, 'TW(hoofd,prenom,stan)').
-lassy(je, 'VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)').
-lassy(hulp, 'N(soort,ev,basis,zijd,stan)').
-lassy(gedaan, 'WW(vd,vrij,zonder)').
-lassy(diensten, 'N(soort,mv,basis)').
-lassy('EU', 'N(eigen,ev,basis,zijd,stan)').
-lassy(waarvan, 'BW()').
-lassy(plan, 'N(soort,ev,basis,onz,stan)').
-lassy(miljard, 'N(soort,ev,basis,onz,stan)').
-lassy(langer, 'ADJ(vrij,comp,zonder)').
-lassy('Kamer', 'N(soort,ev,basis,zijd,stan)').
-lassy(zware, 'ADJ(prenom,basis,met-e,stan)').
-lassy(genoeg, 'BW()').
-lassy(stellen, 'WW(inf,vrij,zonder)').
-lassy(scholen, 'N(soort,mv,basis)').
-lassy(rekening, 'N(soort,ev,basis,zijd,stan)').
-lassy(dood, 'N(soort,ev,basis,zijd,stan)').
-lassy('\'\'', 'LET()').
-lassy(uiteindelijk, 'ADJ(vrij,basis,zonder)').
-lassy(troepen, 'N(soort,mv,basis)').
-lassy(genoemd, 'WW(vd,vrij,zonder)').
-lassy('Amerikanen', 'N(eigen,mv,basis)').
-lassy('4', 'TW(hoofd,vrij)').
-lassy(immers, 'BW()').
-lassy(februari, 'N(eigen,ev,basis,zijd,stan)').
-lassy(name, 'N(soort,ev,basis,dat)').
-lassy(keer, 'N(soort,ev,basis,genus,stan)').
-lassy(ooit, 'BW()').
-lassy(neemt, 'WW(pv,tgw,met-t)').
-lassy('Den', 'SPEC(deeleigen)').
-lassy(succes, 'N(soort,ev,basis,onz,stan)').
-lassy(gevolgen, 'N(soort,mv,basis)').
-lassy(boek, 'N(soort,ev,basis,onz,stan)').
-lassy(activiteiten, 'N(soort,mv,basis)').
-lassy(ons, 'VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)').
-lassy(gemeente, 'N(soort,ev,basis,zijd,stan)').
-lassy(financiële, 'ADJ(prenom,basis,met-e,stan)').
-lassy(wij, 'VNW(pers,pron,nomin,vol,1,mv)').
-lassy(stond, 'WW(pv,verl,ev)').
-lassy(zie, 'WW(pv,tgw,ev)').
-lassy(organisatie, 'N(soort,ev,basis,zijd,stan)').
-lassy(maand, 'N(soort,ev,basis,zijd,stan)').
-lassy(gaf, 'WW(pv,verl,ev)').
-lassy('Aan', 'VZ(init)').
-lassy(weten, 'WW(inf,vrij,zonder)').
-lassy(vrouw, 'N(soort,ev,basis,zijd,stan)').
-lassy(meestal, 'BW()').
-lassy(lid, 'N(soort,ev,basis,onz,stan)').
-lassy(der, 'LID(bep,gen,rest3)').
-lassy(konden, 'WW(pv,verl,mv)').
-lassy(geworden, 'WW(vd,vrij,zonder)').
-lassy(bent, 'WW(pv,tgw,met-t)').
-lassy(mogen, 'WW(pv,tgw,mv)').
-lassy(leerlingen, 'N(soort,mv,basis)').
-lassy(betekent, 'WW(pv,tgw,met-t)').
-lassy(wilde, 'WW(pv,verl,ev)').
-lassy(meter, 'N(soort,ev,basis,zijd,stan)').
-lassy(hoofdstad, 'N(soort,ev,basis,zijd,stan)').
-lassy(handel, 'N(soort,ev,basis,zijd,stan)').
-lassy(dienst, 'N(soort,ev,basis,zijd,stan)').
-lassy(weet, 'WW(pv,tgw,ev)').
-lassy('Toen', 'VG(onder)').
-lassy('Daarnaast', 'BW()').
-lassy('DE', 'LID(bep,stan,rest)').
-lassy(vinden, 'WW(inf,vrij,zonder)').
-lassy(nam, 'WW(pv,verl,ev)').
-lassy(lidstaten, 'N(soort,mv,basis)').
-lassy(keer, 'N(soort,ev,basis,zijd,stan)').
-lassy(doel, 'N(soort,ev,basis,onz,stan)').
-lassy(daarbij, 'BW()').
-lassy('Europees', 'ADJ(prenom,basis,zonder)').
-lassy(zei, 'WW(pv,verl,ev)').
-lassy('Als', 'VZ(init)').
-lassy(derde, 'TW(rang,prenom,stan)').
-lassy(der, 'SPEC(deeleigen)').
-lassy(boven, 'VZ(init)').
-lassy(allemaal, 'BW()').
-lassy(probleem, 'N(soort,ev,basis,onz,stan)').
-lassy(middelen, 'N(soort,mv,basis)').
-lassy('\`', 'LET()').
-lassy(politiek, 'N(soort,ev,basis,zijd,stan)').
-lassy(gebracht, 'WW(vd,vrij,zonder)').
-lassy('VS', 'N(eigen,mv,basis)').
-lassy(weinig, 'VNW(onbep,grad,stan,vrij,zonder,basis)').
-lassy(vinden, 'WW(pv,tgw,mv)').
-lassy(stelt, 'WW(pv,tgw,met-t)').
-lassy(militairen, 'N(soort,mv,basis)').
-lassy(kerk, 'N(soort,ev,basis,zijd,stan)').
-lassy(gezien, 'WW(vd,vrij,zonder)').
-lassy(echt, 'ADJ(vrij,basis,zonder)').
-lassy('Sinds', 'VZ(init)').
-lassy('Raad', 'N(soort,ev,basis,zijd,stan)').
-lassy('Onder', 'VZ(init)').
-lassy('China', 'N(eigen,ev,basis,onz,stan)').
-lassy(wijze, 'N(soort,ev,basis,zijd,stan)').
-lassy(mannen, 'N(soort,mv,basis)').
-lassy(lange, 'ADJ(prenom,basis,met-e,stan)').
-lassy(een, 'TW(hoofd,vrij)').
-lassy(anders, 'BW()').
-lassy('20', 'TW(hoofd,prenom,stan)').
-lassy('1995', 'TW(hoofd,vrij)').
-lassy(zeggen, 'WW(inf,vrij,zonder)').
-lassy(helemaal, 'BW()').
-lassy(handen, 'N(soort,mv,basis)').
-lassy(gevallen, 'N(soort,mv,basis)').
-lassy(buitenlandse, 'ADJ(prenom,basis,met-e,stan)').
-lassy(bleef, 'WW(pv,verl,ev)').
-lassy(kort, 'ADJ(vrij,basis,zonder)').
-lassy(koning, 'N(soort,ev,basis,zijd,stan)').
-lassy('Staten', 'N(soort,mv,basis)').
-lassy('Israëlische', 'ADJ(prenom,basis,met-e,stan)').
-lassy(voorzitter, 'N(soort,ev,basis,zijd,stan)').
-lassy(voorkomen, 'WW(inf,vrij,zonder)').
-lassy(systeem, 'N(soort,ev,basis,onz,stan)').
-lassy(reeds, 'BW()').
-lassy(militaire, 'ADJ(prenom,basis,met-e,stan)').
-lassy(daarvan, 'BW()').
-lassy(lokale, 'ADJ(prenom,basis,met-e,stan)').
-lassy(gegeven, 'WW(vd,vrij,zonder)').
-lassy('Israël', 'N(eigen,ev,basis,onz,stan)').
-lassy(bepaalde, 'WW(vd,prenom,met-e)').
-lassy(verder, 'ADJ(vrij,comp,zonder)').
-lassy(geschiedenis, 'N(soort,ev,basis,zijd,stan)').
-lassy(gebieden, 'N(soort,mv,basis)').
-lassy('Haag', 'SPEC(deeleigen)').
-lassy(grond, 'N(soort,ev,basis,zijd,stan)').
-lassy(resultaten, 'N(soort,mv,basis)').
-lassy(provincie, 'N(soort,ev,basis,zijd,stan)').
-lassy(opgenomen, 'WW(vd,vrij,zonder)').
-lassy(ministerie, 'N(soort,ev,basis,onz,stan)').
-lassy(liet, 'WW(pv,verl,ev)').
-lassy(daarmee, 'BW()').
-lassy('Niet', 'BW()').
-lassy(vorig, 'ADJ(prenom,basis,zonder)').
-lassy(regels, 'N(soort,mv,basis)').
-lassy(één, 'TW(hoofd,vrij)').
-lassy(werkt, 'WW(pv,tgw,met-t)').
-lassy(waarmee, 'BW()').
-lassy(valt, 'WW(pv,tgw,met-t)').
-lassy(publiek, 'N(soort,ev,basis,onz,stan)').
-lassy(kennis, 'N(soort,ev,basis,zijd,stan)').
-lassy(helft, 'N(soort,ev,basis,zijd,stan)').
-lassy('Brusselse', 'ADJ(prenom,basis,met-e,stan)').
-lassy('5', 'TW(hoofd,vrij)').
-lassy('3', 'TW(hoofd,prenom,stan)').
-lassy(website, 'N(soort,ev,basis,zijd,stan)').
-lassy(moesten, 'WW(pv,verl,mv)').
-lassy(leiding, 'N(soort,ev,basis,zijd,stan)').
-lassy(inwoners, 'N(soort,mv,basis)').
-lassy(deed, 'WW(pv,verl,ev)').
-lassy(anderen, 'ADJ(nom,basis,met-e,mv-n)').
-lassy(enige, 'VNW(onbep,det,stan,prenom,met-e,rest)').
-lassy(commissie, 'N(soort,ev,basis,zijd,stan)').
-lassy(komende, 'WW(od,prenom,met-e)').
-lassy(één, 'TW(hoofd,nom,zonder-n,basis)').
-lassy(vrij, 'ADJ(vrij,basis,zonder)').
-lassy(steden, 'N(soort,mv,basis)').
-lassy(persoon, 'N(soort,ev,basis,zijd,stan)').
-lassy(niveau, 'N(soort,ev,basis,onz,stan)').
-lassy(juist, 'BW()').
-lassy(beroep, 'N(soort,ev,basis,onz,stan)').
-lassy(ander, 'ADJ(prenom,basis,zonder)').
-lassy('Hoewel', 'VG(onder)').
-lassy('Daarom', 'BW()').
-lassy('Bovendien', 'BW()').
-lassy(vlak, 'N(soort,ev,basis,onz,stan)').
-lassy(namelijk, 'BW()').
-lassy(korte, 'ADJ(prenom,basis,met-e,stan)').
-lassy(al, 'VNW(onbep,det,stan,vrij,zonder)').
-lassy(zichzelf, 'VNW(refl,pron,obl,nadr,3,getal)').
-lassy(staan, 'WW(inf,vrij,zonder)').
-lassy(risico, 'N(soort,ev,basis,onz,stan)').
-lassy('1999', 'TW(hoofd,vrij)').
-lassy('11', 'TW(hoofd,vrij)').
-lassy(zetten, 'WW(inf,vrij,zonder)').
-lassy(naast, 'VZ(init)').
-lassy(kilometer, 'N(soort,ev,basis,zijd,stan)').
-lassy(groot, 'ADJ(vrij,basis,zonder)').
-lassy(druk, 'N(soort,ev,basis,zijd,stan)').
-lassy(woning, 'N(soort,ev,basis,zijd,stan)').
-lassy(gesteld, 'WW(vd,vrij,zonder)').
-lassy(gekomen, 'WW(vd,vrij,zonder)').
-lassy(betreft, 'WW(pv,tgw,met-t)').
-lassy(algemene, 'ADJ(prenom,basis,met-e,stan)').
-lassy('Nederlands', 'N(eigen,ev,basis,onz,stan)').
-lassy('5', 'TW(hoofd,prenom,stan)').
-lassy(verhaal, 'N(soort,ev,basis,onz,stan)').
-lassy(terecht, 'ADJ(vrij,basis,zonder)').
-lassy(maken, 'WW(pv,tgw,mv)').
-lassy(diverse, 'ADJ(prenom,basis,met-e,stan)').
-lassy(avond, 'N(soort,ev,basis,zijd,stan)').
-lassy('Afghanistan', 'N(eigen,ev,basis,onz,stan)').
-lassy('2', 'TW(hoofd,prenom,stan)').
-lassy(weinig, 'VNW(onbep,grad,stan,prenom,zonder,agr,basis)').
-lassy(slachtoffers, 'N(soort,mv,basis)').
-lassy(dient, 'WW(pv,tgw,met-t)').
-lassy(vragen, 'N(soort,mv,basis)').
-lassy(vond, 'WW(pv,verl,ev)').
-lassy(studie, 'N(soort,ev,basis,zijd,stan)').
-lassy(medicijnen, 'N(soort,mv,basis)').
-lassy(centrale, 'ADJ(prenom,basis,met-e,stan)').
-lassy(beste, 'ADJ(prenom,sup,met-e,stan)').
-lassy(zogenaamde, 'ADJ(prenom,basis,met-e,stan)').
-lassy(waarschijnlijk, 'ADJ(vrij,basis,zonder)').
-lassy(nadat, 'VG(onder)').
-lassy(--, 'LET()').
-lassy(reeks, 'N(soort,ev,basis,zijd,stan)').
-lassy(misschien, 'BW()').
-lassy('Nu', 'BW()').
-lassy('Gewest', 'N(soort,ev,basis,onz,stan)').
-lassy(stand, 'N(soort,ev,basis,zijd,stan)').
-lassy(reden, 'N(soort,ev,basis,zijd,stan)').
-lassy(project, 'N(soort,ev,basis,onz,stan)').
-lassy(hoofd, 'N(soort,ev,basis,onz,stan)').
-lassy(grens, 'N(soort,ev,basis,zijd,stan)').
-lassy('Rusland', 'N(eigen,ev,basis,onz,stan)').
-lassy('New', 'SPEC(deeleigen)').
-lassy(ben, 'WW(pv,tgw,ev)').
-lassy('Justitie', 'N(soort,ev,basis,zijd,stan)').
-lassy(waarde, 'N(soort,ev,basis,zijd,stan)').
-lassy(precies, 'ADJ(vrij,basis,zonder)').
-lassy(kosten, 'N(soort,mv,basis)').
-lassy(kant, 'N(soort,ev,basis,zijd,stan)').
-lassy(eigenlijk, 'ADJ(vrij,basis,zonder)').
-lassy(volgt, 'WW(pv,tgw,met-t)').
-lassy(jonge, 'ADJ(prenom,basis,met-e,stan)').
-lassy(goud, 'N(soort,ev,basis,onz,stan)').
-lassy(daarna, 'BW()').
-lassy(burgers, 'N(soort,mv,basis)').
-lassy(binnen, 'VZ(fin)').
-lassy(gebeurt, 'WW(pv,tgw,met-t)').
-lassy(feit, 'N(soort,ev,basis,onz,stan)').
-lassy(eveneens, 'BW()').
-lassy('Veel', 'VNW(onbep,grad,stan,prenom,zonder,agr,basis)').
-lassy(waaronder, 'BW()').
-lassy(proces, 'N(soort,ev,basis,onz,stan)').
-lassy(of, 'SPEC(vreemd)').
-lassy(leggen, 'WW(inf,vrij,zonder)').
-lassy(gevonden, 'WW(vd,vrij,zonder)').
-lassy(beslissing, 'N(soort,ev,basis,zijd,stan)').
-lassy(artikel, 'N(soort,ev,basis,onz,stan)').
-lassy('Russische', 'ADJ(prenom,basis,met-e,stan)').
-lassy('Regering', 'N(soort,ev,basis,zijd,stan)').
-lassy(kregen, 'WW(pv,verl,mv)').
-lassy(eerst, 'TW(rang,nom,zonder-n)').
-lassy(album, 'N(soort,ev,basis,onz,stan)').
-lassy(aanslagen, 'N(soort,mv,basis)').
-lassy('1998', 'TW(hoofd,vrij)').
-lassy('10', 'TW(hoofd,vrij)').
-lassy(vanwege, 'VZ(init)').
-lassy(vader, 'N(soort,ev,basis,zijd,stan)').
-lassy(rechter, 'N(soort,ev,basis,zijd,stan)').
-lassy(na, 'VZ(fin)').
-lassy(leidde, 'WW(pv,verl,ev)').
-lassy(doen, 'WW(pv,tgw,mv)').
-lassy(controle, 'N(soort,ev,basis,zijd,stan)').
-lassy('Jan', 'SPEC(deeleigen)').
-lassy('6', 'TW(hoofd,vrij)').
-lassy(toepassing, 'N(soort,ev,basis,zijd,stan)').
-lassy(the, 'SPEC(vreemd)').
-lassy('Rotterdam', 'N(eigen,ev,basis,onz,stan)').
-lassy('Italiaanse', 'ADJ(prenom,basis,met-e,stan)').
-lassy('Eerste', 'TW(rang,prenom,stan)').
-lassy(speelt, 'WW(pv,tgw,met-t)').
-lassy(soort, 'N(soort,ev,basis,genus,stan)').
-lassy(programma, 'N(soort,ev,basis,onz,stan)').
-lassy(paus, 'N(soort,ev,basis,zijd,stan)').
-lassy(openbare, 'ADJ(prenom,basis,met-e,stan)').
-lassy(inmiddels, 'BW()').
-lassy(blijven, 'WW(pv,tgw,mv)').
-lassy(zoon, 'N(soort,ev,basis,zijd,stan)').
-lassy(sterke, 'ADJ(prenom,basis,met-e,stan)').
-lassy(plaatsen, 'N(soort,mv,basis)').
-lassy(beeld, 'N(soort,ev,basis,onz,stan)').
-lassy('Vanaf', 'VZ(init)').
-lassy('Bush', 'N(eigen,ev,basis,zijd,stan)').
-lassy(leiden, 'WW(inf,vrij,zonder)').
-lassy(hoogte, 'N(soort,ev,basis,zijd,stan)').
-lassy(goederen, 'N(soort,mv,basis)').
-lassy(gehad, 'WW(vd,vrij,zonder)').
-lassy(betalen, 'WW(inf,vrij,zonder)').
-lassy(belangrijk, 'ADJ(vrij,basis,zonder)').
-lassy(zee, 'N(soort,ev,basis,zijd,stan)').
-lassy(werking, 'N(soort,ev,basis,zijd,stan)').
-lassy(natuurlijk, 'ADJ(vrij,basis,zonder)').
-lassy(minder, 'VNW(onbep,grad,stan,prenom,zonder,agr,comp)').
-lassy(dollar, 'N(soort,ev,basis,zijd,stan)').
-lassy('Ron', 'N(eigen,ev,basis,zijd,stan)').
-lassy('II', 'SPEC(deeleigen)').
-lassy('Dat', 'VNW(aanw,det,stan,prenom,zonder,evon)').
-lassy(termijn, 'N(soort,ev,basis,zijd,stan)').
-lassy(oog, 'N(soort,ev,basis,onz,stan)').
-lassy(groei, 'N(soort,ev,basis,zijd,stan)').
-lassy(bezoek, 'N(soort,ev,basis,onz,stan)').
-lassy('Uit', 'VZ(init)').
-lassy('Naast', 'VZ(init)').
-lassy(interne, 'ADJ(prenom,basis,met-e,stan)').
-lassy(instellingen, 'N(soort,mv,basis)').
-lassy('Buitenlandse', 'ADJ(prenom,basis,met-e,stan)').
-lassy(ziet, 'WW(pv,tgw,met-t)').
-lassy(verband, 'N(soort,ev,basis,onz,stan)').
-lassy(vast, 'ADJ(vrij,basis,zonder)').
-lassy(slag, 'N(soort,ev,basis,zijd,stan)').
-lassy(productie, 'N(soort,ev,basis,zijd,stan)').
-lassy(positie, 'N(soort,ev,basis,zijd,stan)').
-lassy(gewoon, 'ADJ(vrij,basis,zonder)').
-lassy(finale, 'N(soort,ev,basis,zijd,stan)').
-lassy(me, 'VNW(pr,pron,obl,red,1,ev)').
-lassy(sector, 'N(soort,ev,basis,zijd,stan)').
-lassy(prijs, 'N(soort,ev,basis,zijd,stan)').
-lassy(personen, 'N(soort,mv,basis)').
-lassy(hoog, 'ADJ(vrij,basis,zonder)').
-lassy(haar, 'VNW(pers,pron,obl,vol,3,getal,fem)').
-lassy(campagne, 'N(soort,ev,basis,zijd,stan)').
-lassy(biedt, 'WW(pv,tgw,met-t)').
-lassy('Hier', 'VNW(aanw,adv-pron,obl,vol,3o,getal)').
-lassy(soldaten, 'N(soort,mv,basis)').
-lassy(parlement, 'N(soort,ev,basis,onz,stan)').
-lassy(om, 'VZ(fin)').
-lassy(loopt, 'WW(pv,tgw,met-t)').
-lassy(je, 'VNW(pr,pron,obl,red,2v,getal)').
-lassy(beschikbaar, 'ADJ(vrij,basis,zonder)').
-lassy(aanpak, 'N(soort,ev,basis,zijd,stan)').
-lassy('Verenigde', 'SPEC(deeleigen)').
-lassy('Epilepsie', 'N(soort,ev,basis,zijd,stan)').
-lassy(woorden, 'N(soort,mv,basis)').
-lassy(volledige, 'ADJ(prenom,basis,met-e,stan)').
-lassy(ver, 'ADJ(vrij,basis,zonder)').
-lassy(uitvoering, 'N(soort,ev,basis,zijd,stan)').
-lassy(partner, 'N(soort,ev,basis,zijd,stan)').
-lassy(advies, 'N(soort,ev,basis,onz,stan)').
-lassy(actief, 'ADJ(vrij,basis,zonder)').
-lassy('8', 'TW(hoofd,vrij)').
-lassy(zuiden, 'N(soort,ev,basis,onz,stan)').
-lassy(viel, 'WW(pv,verl,ev)').
-lassy(leeftijd, 'N(soort,ev,basis,zijd,stan)').
-lassy(gingen, 'WW(pv,verl,mv)').
-lassy(bestaande, 'WW(od,prenom,met-e)').
-lassy(opgericht, 'WW(vd,vrij,zonder)').
-lassy(moeilijk, 'ADJ(vrij,basis,zonder)').
-lassy(middel, 'N(soort,ev,basis,onz,stan)').
-lassy(gebruiken, 'WW(inf,vrij,zonder)').
-lassy(bestuur, 'N(soort,ev,basis,onz,stan)').
-lassy('Iraakse', 'ADJ(prenom,basis,met-e,stan)').
-lassy('Deze', 'VNW(aanw,det,stan,nom,met-e,zonder-n)').
-lassy(voeren, 'WW(inf,vrij,zonder)').
-lassy(studenten, 'N(soort,mv,basis)').
-lassy(speciale, 'ADJ(prenom,basis,met-e,stan)').
-lassy(projecten, 'N(soort,mv,basis)').
-lassy(officiële, 'ADJ(prenom,basis,met-e,stan)').
-lassy(gericht, 'WW(vd,vrij,zonder)').
-lassy(aanwezig, 'ADJ(vrij,basis,zonder)').
-lassy('Engeland', 'N(eigen,ev,basis,onz,stan)').
-lassy('4', 'TW(hoofd,prenom,stan)').
-lassy(werknemers, 'N(soort,mv,basis)').
-lassy(samenleving, 'N(soort,ev,basis,zijd,stan)').
-lassy(richting, 'N(soort,ev,basis,zijd,stan)').
-lassy(plannen, 'N(soort,mv,basis)').
-lassy(overleg, 'N(soort,ev,basis,onz,stan)').
-lassy(ministers, 'N(soort,mv,basis)').
-lassy(leidt, 'WW(pv,tgw,met-t)').
-lassy(hebt, 'WW(pv,tgw,met-t)').
-lassy(gedurende, 'VZ(init)').
-lassy(gebaseerd, 'WW(vd,vrij,zonder)').
-lassy(bovendien, 'BW()').
-lassy('Nederlanders', 'N(eigen,mv,basis)').
-lassy('FNB', 'N(eigen,ev,basis,zijd,stan)').
-lassy('100', 'TW(hoofd,prenom,stan)').
-lassy(stuk, 'N(soort,ev,basis,onz,stan)').
-lassy(specifieke, 'ADJ(prenom,basis,met-e,stan)').
-lassy(resultaat, 'N(soort,ev,basis,onz,stan)').
-lassy(gevaar, 'N(soort,ev,basis,onz,stan)').
-lassy(direct, 'ADJ(vrij,basis,zonder)').
-lassy(betrekking, 'N(soort,ev,basis,zijd,stan)').
-lassy(begint, 'WW(pv,tgw,met-t)').
-lassy(aanslag, 'N(soort,ev,basis,zijd,stan)').
-lassy('Over', 'VZ(init)').
-lassy('Omdat', 'VG(onder)').
-lassy('Duitsers', 'N(eigen,mv,basis)').
-lassy('20', 'TW(hoofd,vrij)').
-lassy(voormalige, 'ADJ(prenom,basis,met-e,stan)').
-lassy(veiligheid, 'N(soort,ev,basis,zijd,stan)').
-lassy(titel, 'N(soort,ev,basis,zijd,stan)').
-lassy(langs, 'VZ(init)').
-lassy(hiervoor, 'BW()').
-lassy(graag, 'BW()').
-lassy('Wie', 'VNW(vb,pron,stan,vol,3p,getal)').
-lassy('Vooral', 'BW()').
-lassy(taal, 'N(soort,ev,basis,zijd,stan)').
-lassy(mogelijke, 'ADJ(prenom,basis,met-e,stan)').
-lassy(leider, 'N(soort,ev,basis,zijd,stan)').
-lassy(kritiek, 'N(soort,ev,basis,zijd,stan)').
-lassy('15', 'TW(hoofd,prenom,stan)').
-lassy(zitten, 'WW(pv,tgw,mv)').
-lassy(zin, 'N(soort,ev,basis,zijd,stan)').
-lassy(vervolgens, 'BW()').
-lassy(tegenover, 'VZ(init)').
-lassy(sprake, 'N(soort,ev,basis,dat)').
-lassy(omgeving, 'N(soort,ev,basis,zijd,stan)').
-lassy(lichaam, 'N(soort,ev,basis,onz,stan)').
-lassy(enkel, 'BW()').
-lassy(daarvoor, 'BW()').
-lassy(boeken, 'N(soort,mv,basis)').
-lassy('Wanneer', 'VG(onder)').
-lassy('Parlement', 'N(soort,ev,basis,onz,stan)').
-lassy('Je', 'VNW(pers,pron,nomin,red,2v,ev)').
-lassy('Daarbij', 'BW()').
-lassy('Alleen', 'BW()').
-lassy(verdere, 'ADJ(prenom,comp,met-e,stan)').
-lassy(uitgevoerd, 'WW(vd,vrij,zonder)').
-lassy(schade, 'N(soort,ev,basis,zijd,stan)').
-lassy(ruimte, 'N(soort,ev,basis,zijd,stan)').
-lassy(organisaties, 'N(soort,mv,basis)').
-lassy(milieu, 'N(soort,ev,basis,onz,stan)').
-lassy(klanten, 'N(soort,mv,basis)').
-lassy(echte, 'ADJ(prenom,basis,met-e,stan)').
-lassy(bracht, 'WW(pv,verl,ev)').
-lassy('9', 'TW(hoofd,vrij)').
-lassy(wist, 'WW(pv,verl,ev)').
-lassy(totale, 'ADJ(prenom,basis,met-e,stan)').
-lassy(thuis, 'BW()').
-lassy(rest, 'N(soort,ev,basis,zijd,stan)').
-lassy(overigens, 'BW()').
-lassy(noorden, 'N(soort,ev,basis,onz,stan)').
-lassy(morgen, 'BW()').
-lassy(minuten, 'N(soort,mv,basis)').
-lassy(groter, 'ADJ(vrij,comp,zonder)').
-lassy(ervoor, 'BW()').
-lassy(effect, 'N(soort,ev,basis,onz,stan)').
-lassy(centrum, 'N(soort,ev,basis,onz,stan)').
-lassy('Wij', 'VNW(pers,pron,nomin,vol,1,mv)').
-lassy('VLD', 'N(eigen,ev,basis,zijd,stan)').
-lassy('Palestijnse', 'ADJ(prenom,basis,met-e,stan)').
-lassy('Al', 'BW()').
-lassy('15', 'TW(hoofd,vrij)').
-lassy('1', 'TW(hoofd,prenom,stan)').
-lassy(toegang, 'N(soort,ev,basis,zijd,stan)').
-lassy(stap, 'N(soort,ev,basis,zijd,stan)').
-lassy(mogelijkheden, 'N(soort,mv,basis)').
-lassy(doden, 'ADJ(nom,basis,met-e,mv-n)').
-lassy(buurt, 'N(soort,ev,basis,zijd,stan)').
-lassy('Amerika', 'N(eigen,ev,basis,onz,stan)').
-lassy(verklaring, 'N(soort,ev,basis,zijd,stan)').
-lassy(moeder, 'N(soort,ev,basis,zijd,stan)').
-lassy(justitie, 'N(soort,ev,basis,zijd,stan)').
-lassy(enorme, 'ADJ(prenom,basis,met-e,stan)').
-lassy(bevat, 'WW(pv,tgw,ev)').
-lassy(vormen, 'WW(pv,tgw,mv)').
-lassy(mogelijkheid, 'N(soort,ev,basis,zijd,stan)').
-lassy('7', 'TW(hoofd,vrij)').
-lassy('God','N(eigen,ev,basis,zijd,stan)').
-lassy(rondje,'N(soort,ev,dim,onz,stan)').
-lassy(afhandig,'ADJ(vrij,basis,zonder)').
-lassy('¤','SPEC(symb)').
+% first 1500 in frequency, but SPEC(deeleigen) all removed
+lassy('de','de','LID(bep,stan,rest)').
+lassy('.','.','LET()').
+lassy(',',',','LET()').
+lassy('van','van','VZ(init)').
+lassy('het','het','LID(bep,stan,evon)').
+lassy('een','een','LID(onbep,stan,agr)').
+lassy('en','en','VG(neven)').
+lassy('in','in','VZ(init)').
+lassy('is','zijn','WW(pv,tgw,ev)').
+lassy('te','te','VZ(init)').
+lassy('op','op','VZ(init)').
+lassy('De','de','LID(bep,stan,rest)').
+lassy('voor','voor','VZ(init)').
+lassy('met','met','VZ(init)').
+lassy('dat','dat','VG(onder)').
+lassy('die','die','VNW(betr,pron,stan,vol,persoon,getal)').
+lassy('niet','niet','BW()').
+lassy(')',')','LET()').
+lassy('(','(','LET()').
+lassy('"','"','LET()').
+lassy('?','?','LET()').
+lassy('om','om','VZ(init)').
+lassy('aan','aan','VZ(init)').
+lassy('er','er','VNW(aanw,adv-pron,stan,red,3,getal)').
+lassy('als','als','VG(onder)').
+lassy('zijn','zijn','WW(pv,tgw,mv)').
+lassy('door','door','VZ(init)').
+lassy(':',':','LET()').
+lassy('was','zijn','WW(pv,verl,ev)').
+lassy('ook','ook','BW()').
+lassy('\'','\'','LET()').
+lassy('zijn','zijn','VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)').
+lassy('heeft','hebben','WW(pv,tgw,met-t)').
+lassy('hij','hij','VNW(pers,pron,nomin,vol,3,ev,masc)').
+lassy('-','-','LET()').
+lassy('bij','bij','VZ(init)').
+lassy('In','in','VZ(init)').
+lassy('werd','worden','WW(pv,verl,ev)').
+lassy('naar','naar','VZ(init)').
+lassy('wordt','worden','WW(pv,tgw,met-t)').
+lassy('Het','het','LID(bep,stan,evon)').
+lassy('tot','tot','VZ(init)').
+lassy('of','of','VG(neven)').
+lassy('nog','nog','BW()').
+lassy('over','over','VZ(init)').
+lassy('zich','zich','VNW(refl,pron,obl,red,3,getal)').
+lassy('worden','worden','WW(inf,vrij,zonder)').
+lassy('jaar','jaar','N(soort,ev,basis,onz,stan)').
+lassy('uit','uit','VZ(init)').
+lassy('maar','maar','VG(neven)').
+lassy('deze','deze','VNW(aanw,det,stan,prenom,met-e,rest)').
+lassy('hun','hun','VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)').
+lassy('ik','ik','VNW(pers,pron,nomin,vol,1,ev)').
+lassy('kan','kunnen','WW(pv,tgw,ev)').
+lassy('meer','veel','VNW(onbep,grad,stan,vrij,zonder,comp)').
+lassy('geen','geen','VNW(onbep,det,stan,prenom,zonder,agr)').
+lassy('Een','een','LID(onbep,stan,agr)').
+lassy('ze','ze','VNW(pers,pron,stan,red,3,mv)').
+lassy('hebben','hebben','WW(pv,tgw,mv)').
+lassy('dan','dan','BW()').
+lassy('al','al','BW()').
+lassy('Hij','hij','VNW(pers,pron,nomin,vol,3,ev,masc)').
+lassy('zal','zullen','WW(pv,tgw,ev)').
+lassy('moet','moeten','WW(pv,tgw,ev)').
+lassy('dat','dat','VNW(betr,pron,stan,vol,3,ev)').
+lassy('op','op','VZ(fin)').
+lassy('zou','zullen','WW(pv,verl,ev)').
+lassy('die','die','VNW(aanw,det,stan,prenom,zonder,rest)').
+lassy('wel','wel','BW()').
+lassy('nu','nu','BW()').
+lassy('u','u','VNW(pers,pron,nomin,vol,2b,getal)').
+lassy('worden','worden','WW(pv,tgw,mv)').
+lassy('onder','onder','VZ(init)').
+lassy('had','hebben','WW(pv,verl,ev)').
+lassy('zijn','zijn','WW(inf,vrij,zonder)').
+lassy('Maar','maar','VG(neven)').
+lassy('nieuwe','nieuw','ADJ(prenom,basis,met-e,stan)').
+lassy('zo','zo','BW()').
+lassy('En','en','VG(neven)').
+lassy('je','je','VNW(pers,pron,nomin,red,2v,ev)').
+lassy('andere','ander','ADJ(prenom,basis,met-e,stan)').
+lassy('we','we','VNW(pers,pron,nomin,red,1,mv)').
+lassy('tegen','tegen','VZ(init)').
+lassy('eerste','één','TW(rang,prenom,stan)').
+lassy('Ik','ik','VNW(pers,pron,nomin,vol,1,ev)').
+lassy('na','na','VZ(init)').
+lassy('aan','aan','VZ(fin)').
+lassy('dit','dit','VNW(aanw,det,stan,prenom,zonder,evon)').
+lassy(';',';','LET()').
+lassy('mensen','mens','N(soort,mv,basis)').
+lassy('tussen','tussen','VZ(init)').
+lassy('uit','uit','VZ(fin)').
+lassy('twee','twee','TW(hoofd,prenom,stan)').
+lassy('waren','zijn','WW(pv,verl,mv)').
+lassy('werden','worden','WW(pv,verl,mv)').
+lassy('kunnen','kunnen','WW(pv,tgw,mv)').
+lassy('Op','op','VZ(init)').
+lassy('Dat','dat','VNW(aanw,pron,stan,vol,3o,ev)').
+lassy('wat','wat','VNW(vb,pron,stan,vol,3o,ev)').
+lassy('alle','al','VNW(onbep,det,stan,prenom,met-e,agr)').
+lassy('waar','waar','VNW(vb,adv-pron,obl,vol,3o,getal)').
+lassy('grote','groot','ADJ(prenom,basis,met-e,stan)').
+lassy('Wat','wat','VNW(vb,pron,stan,vol,3o,ev)').
+lassy('haar','haar','VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)').
+lassy('Nederland','Nederland','N(eigen,ev,basis,onz,stan)').
+lassy('Er','er','VNW(aanw,adv-pron,stan,red,3,getal)').
+lassy('Ook','ook','BW()').
+lassy('hem','hem','VNW(pers,pron,obl,vol,3,ev,masc)').
+lassy('wil','willen','WW(pv,tgw,ev)').
+lassy('weer','weer','BW()').
+lassy('daar','daar','VNW(aanw,adv-pron,obl,vol,3o,getal)').
+lassy('in','in','VZ(fin)').
+lassy('Als','als','VG(onder)').
+lassy('zoals','zoals','VG(onder)').
+lassy('Hoe','hoe','BW()').
+lassy('gaat','gaan','WW(pv,tgw,met-t)').
+lassy('ze','ze','VNW(pers,pron,stan,red,3,ev,fem)').
+lassy('/','/','LET()').
+lassy('land','land','N(soort,ev,basis,onz,stan)').
+lassy('omdat','omdat','VG(onder)').
+lassy('alleen','alleen','BW()').
+lassy('Nederlandse','Nederlands','ADJ(prenom,basis,met-e,stan)').
+lassy('veel','veel','VNW(onbep,grad,stan,prenom,zonder,agr,basis)').
+lassy('jaren','jaar','N(soort,mv,basis)').
+lassy('aantal','aantal','N(soort,ev,basis,onz,stan)').
+lassy('tijd','tijd','N(soort,ev,basis,zijd,stan)').
+lassy('Dit','dit','VNW(aanw,pron,stan,vol,3o,ev)').
+lassy('dus','dus','BW()').
+lassy('Voor','voor','VZ(init)').
+lassy('Wie','wie','VNW(vb,pron,stan,vol,3p,getal)').
+lassy('moeten','moeten','WW(pv,tgw,mv)').
+lassy('af','af','VZ(fin)').
+lassy('men','men','VNW(pers,pron,nomin,red,3p,ev,masc)').
+lassy('hebben','hebben','WW(inf,vrij,zonder)').
+lassy('echter','echter','BW()').
+lassy('minister','minister','N(soort,ev,basis,zijd,stan)').
+lassy('uw','u','VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)').
+lassy('drie','drie','TW(hoofd,prenom,stan)').
+lassy('steeds','steeds','BW()').
+lassy('Deze','deze','VNW(aanw,det,stan,prenom,met-e,rest)').
+lassy('kunnen','kunnen','WW(inf,vrij,zonder)').
+lassy('maar','maar','BW()').
+lassy('zelf','zelf','BW()').
+lassy('veel','veel','VNW(onbep,grad,stan,vrij,zonder,basis)').
+lassy('eigen','eigen','ADJ(prenom,basis,zonder)').
+lassy('plaats','plaats','N(soort,ev,basis,zijd,stan)').
+lassy('Bij','bij','VZ(init)').
+lassy('komt','komen','WW(pv,tgw,met-t)').
+lassy('goed','goed','ADJ(vrij,basis,zonder)').
+lassy('!','!','LET()').
+lassy('maken','maken','WW(inf,vrij,zonder)').
+lassy('dit','dit','VNW(aanw,pron,stan,vol,3o,ev)').
+lassy('«','«','LET()').
+lassy('»','»','LET()').
+lassy('tijdens','tijdens','VZ(init)').
+lassy('toch','toch','BW()').
+lassy('meer','veel','VNW(onbep,grad,stan,prenom,zonder,agr,comp)').
+lassy('te','te','BW()').
+lassy('per','per','VZ(init)').
+lassy('deel','deel','N(soort,ev,basis,onz,stan)').
+lassy('toe','toe','VZ(fin)').
+lassy('regering','regering','N(soort,ev,basis,zijd,stan)').
+lassy('die','die','VNW(aanw,pron,stan,vol,3,getal)').
+lassy('landen','land','N(soort,mv,basis)').
+lassy('België','België','N(eigen,ev,basis,onz,stan)').
+lassy('vooral','vooral','BW()').
+lassy('Amerikaanse','Amerikaans','ADJ(prenom,basis,met-e,stan)').
+lassy('Vlaamse','Vlaams','ADJ(prenom,basis,met-e,stan)').
+lassy('zullen','zullen','WW(pv,tgw,mv)').
+lassy('stad','stad','N(soort,ev,basis,zijd,stan)').
+lassy('Met','met','VZ(init)').
+lassy('hoe','hoe','BW()').
+lassy('heb','hebben','WW(pv,tgw,ev)').
+lassy('uur','uur','N(soort,ev,basis,onz,stan)').
+lassy('dat','dat','VNW(aanw,det,stan,prenom,zonder,evon)').
+lassy('hier','hier','VNW(aanw,adv-pron,obl,vol,3o,getal)').
+lassy('dag','dag','N(soort,ev,basis,zijd,stan)').
+lassy('onderzoek','onderzoek','N(soort,ev,basis,onz,stan)').
+lassy('altijd','altijd','BW()').
+lassy('of','of','VG(onder)').
+lassy('kwam','komen','WW(pv,verl,ev)').
+lassy('Ze','ze','VNW(pers,pron,stan,red,3,mv)').
+lassy('...','...','LET()').
+lassy('ten','te','VZ(versm)').
+lassy('via','via','VZ(init)').
+lassy('enkele','enkel','VNW(onbep,det,stan,prenom,met-e,rest)').
+lassy('kinderen','kind','N(soort,mv,basis)').
+lassy('1','1','TW(hoofd,vrij)').
+lassy('voor','voor','VZ(fin)').
+lassy('mogelijk','mogelijk','ADJ(vrij,basis,zonder)').
+lassy('hadden','hebben','WW(pv,verl,mv)').
+lassy('heel','heel','ADJ(vrij,basis,zonder)').
+lassy('eens','eens','BW()').
+lassy('zonder','zonder','VZ(init)').
+lassy('verschillende','verschillend','ADJ(prenom,basis,met-e,stan)').
+lassy('laatste','laat','ADJ(prenom,sup,met-e,stan)').
+lassy('euro','euro','N(soort,ev,basis,zijd,stan)').
+lassy('onze','ons','VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)').
+lassy('kon','kunnen','WW(pv,verl,ev)').
+lassy('vandaag','vandaag','BW()').
+lassy('welke','welk','VNW(vb,det,stan,prenom,met-e,rest)').
+lassy('gaan','gaan','WW(inf,vrij,zonder)').
+lassy('miljoen','miljoen','N(soort,ev,basis,onz,stan)').
+lassy('Brussel','Brussel','N(eigen,ev,basis,onz,stan)').
+lassy('wereld','wereld','N(soort,ev,basis,zijd,stan)').
+lassy('Na','na','VZ(init)').
+lassy('elkaar','elkaar','VNW(recip,pron,obl,vol,persoon,mv)').
+lassy('binnen','binnen','VZ(init)').
+lassy('één','één','TW(hoofd,prenom,stan)').
+lassy('terug','terug','BW()').
+lassy('staat','staan','WW(pv,tgw,met-t)').
+lassy('zouden','zullen','WW(pv,verl,mv)').
+lassy('We','we','VNW(pers,pron,nomin,red,1,mv)').
+lassy('waarin','waarin','BW()').
+lassy('later','laat','ADJ(vrij,comp,zonder)').
+lassy('wat','wat','VNW(onbep,pron,stan,vol,3o,ev)').
+lassy('komen','komen','WW(inf,vrij,zonder)').
+lassy('bijvoorbeeld','bijvoorbeeld','BW()').
+lassy('over','over','VZ(fin)').
+lassy('volgens','volgens','VZ(init)').
+lassy('zelfs','zelfs','BW()').
+lassy('zij','zij','VNW(pers,pron,nomin,vol,3p,mv)').
+lassy('wie','wie','VNW(vb,pron,stan,vol,3p,getal)').
+lassy('procent','procent','N(soort,ev,basis,onz,stan)').
+lassy('een','één','TW(hoofd,nom,zonder-n,basis)').
+lassy('leven','leven','N(soort,ev,basis,onz,stan)').
+lassy('Europese','Europees','ADJ(prenom,basis,met-e,stan)').
+lassy('doen','doen','WW(inf,vrij,zonder)').
+lassy('Zo','zo','BW()').
+lassy('ontwikkeling','ontwikkeling','N(soort,ev,basis,zijd,stan)').
+lassy('sinds','sinds','VZ(init)').
+lassy('toen','toen','VG(onder)').
+lassy('werk','werk','N(soort,ev,basis,onz,stan)').
+lassy('zegt','zeggen','WW(pv,tgw,met-t)').
+lassy('man','man','N(soort,ev,basis,zijd,stan)').
+lassy('week','week','N(soort,ev,basis,zijd,stan)').
+lassy('samen','samen','BW()').
+lassy('politie','politie','N(soort,ev,basis,zijd,stan)').
+lassy('vaak','vaak','ADJ(vrij,basis,zonder)').
+lassy('mijn','mijn','VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)').
+lassy('Belgische','Belgisch','ADJ(prenom,basis,met-e,stan)').
+lassy('zeer','zeer','BW()').
+lassy('naam','naam','N(soort,ev,basis,zijd,stan)').
+lassy('politieke','politiek','ADJ(prenom,basis,met-e,stan)').
+lassy('mag','mogen','WW(pv,tgw,ev)').
+lassy('Volgens','volgens','VZ(init)').
+lassy('Welke','welk','VNW(vb,det,stan,prenom,met-e,rest)').
+lassy('geld','geld','N(soort,ev,basis,onz,stan)').
+lassy('iets','iets','VNW(onbep,pron,stan,vol,3o,ev)').
+lassy('Duitse','Duits','ADJ(prenom,basis,met-e,stan)').
+lassy('laten','laten','WW(inf,vrij,zonder)').
+lassy('%','%','SPEC(symb)').
+lassy('ons','ons','VNW(pr,pron,obl,vol,1,mv)').
+lassy('lang','lang','ADJ(vrij,basis,zonder)').
+lassy('overheid','overheid','N(soort,ev,basis,zijd,stan)').
+lassy('verder','ver','ADJ(vrij,comp,zonder)').
+lassy('gemaakt','maken','WW(vd,vrij,zonder)').
+lassy('tweede','twee','TW(rang,prenom,stan)').
+lassy('nodig','nodig','ADJ(vrij,basis,zonder)').
+lassy('ligt','liggen','WW(pv,tgw,met-t)').
+lassy('partij','partij','N(soort,ev,basis,zijd,stan)').
+lassy('mee','mee','VZ(fin)').
+lassy('zien','zien','WW(inf,vrij,zonder)').
+lassy('Vlaanderen','Vlaanderen','N(eigen,ev,basis,onz,stan)').
+lassy('keer','keer','N(soort,ev,basis,zijd,stan)').
+lassy('volgende','volgen','WW(od,prenom,met-e)').
+lassy('informatie','informatie','N(soort,ev,basis,zijd,stan)').
+lassy('Duitsland','Duitsland','N(eigen,ev,basis,onz,stan)').
+lassy('gebied','gebied','N(soort,ev,basis,onz,stan)').
+lassy('moeten','moeten','WW(inf,vrij,zonder)').
+lassy('kunt','kunnen','WW(pv,tgw,met-t)').
+lassy('hele','heel','ADJ(prenom,basis,met-e,stan)').
+lassy('ter','te','VZ(versm)').
+lassy('snel','snel','ADJ(vrij,basis,zonder)').
+lassy('nooit','nooit','BW()').
+lassy('u','u','VNW(pr,pron,obl,vol,2,getal)').
+lassy('vier','vier','TW(hoofd,prenom,stan)').
+lassy('Om','om','VZ(init)').
+lassy('niets','niets','VNW(onbep,pron,stan,vol,3o,ev)').
+lassy('moest','moeten','WW(pv,verl,ev)').
+lassy('president','president','N(soort,ev,basis,zijd,stan)').
+lassy('grootste','groot','ADJ(prenom,sup,met-e,stan)').
+lassy('Europa','Europa','N(eigen,ev,basis,onz,stan)').
+lassy('duidelijk','duidelijk','ADJ(vrij,basis,zonder)').
+lassy('onderwijs','onderwijs','N(soort,ev,basis,onz,stan)').
+lassy('me','me','VNW(pr,pron,obl,red,1,ev)').
+lassy('Van','van','VZ(init)').
+lassy('bekend','bekend','ADJ(vrij,basis,zonder)').
+lassy('oorlog','oorlog','N(soort,ev,basis,zijd,stan)').
+lassy('·','·','LET()').
+lassy('rond','rond','VZ(init)').
+lassy('zei','zeggen','WW(pv,verl,ev)').
+lassy('internationale','internationaal','ADJ(prenom,basis,met-e,stan)').
+lassy('geleden','geleden','BW()').
+lassy('krijgt','krijgen','WW(pv,tgw,met-t)').
+lassy('hen','hen','VNW(pers,pron,obl,vol,3p,mv)').
+lassy('eeuw','eeuw','N(soort,ev,basis,zijd,stan)').
+lassy('dagen','dag','N(soort,mv,basis)').
+lassy('geweest','zijn','WW(vd,vrij,zonder)').
+lassy('ben','zijn','WW(pv,tgw,ev)').
+lassy('wij','wij','VNW(pers,pron,nomin,vol,1,mv)').
+lassy('september','september','N(eigen,ev,basis,zijd,stan)').
+lassy('want','want','VG(neven)').
+lassy('Door','door','VZ(init)').
+lassy('even','even','BW()').
+lassy('van','van','VZ(fin)').
+lassy('blijft','blijven','WW(pv,tgw,met-t)').
+lassy('minder','weinig','VNW(onbep,grad,stan,vrij,zonder,comp)').
+lassy('sociale','sociaal','ADJ(prenom,basis,met-e,stan)').
+lassy('belangrijke','belangrijk','ADJ(prenom,basis,met-e,stan)').
+lassy('waarbij','waarbij','BW()').
+lassy('gebruik','gebruik','N(soort,ev,basis,onz,stan)').
+lassy('alles','alles','VNW(onbep,pron,stan,vol,3o,ev)').
+lassy('heet','heten','WW(pv,tgw,ev)').
+lassy('opnieuw','opnieuw','BW()').
+lassy('film','film','N(soort,ev,basis,zijd,stan)').
+lassy('Franse','Frans','ADJ(prenom,basis,met-e,stan)').
+lassy('blijkt','blijken','WW(pv,tgw,met-t)').
+lassy('huis','huis','N(soort,ev,basis,onz,stan)').
+lassy('bijna','bijna','BW()').
+lassy('groot','groot','ADJ(prenom,basis,zonder)').
+lassy('gebruikt','gebruiken','WW(vd,vrij,zonder)').
+lassy('toen','toen','BW()').
+lassy('beter','goed','ADJ(vrij,comp,zonder)').
+lassy('bedrijf','bedrijf','N(soort,ev,basis,onz,stan)').
+lassy('zo\'n','zo\'n','VNW(aanw,det,stan,prenom,zonder,agr)').
+lassy('manier','manier','N(soort,ev,basis,zijd,stan)').
+lassy('kreeg','krijgen','WW(pv,verl,ev)').
+lassy('goede','goed','ADJ(prenom,basis,met-e,stan)').
+lassy('2003','2003','TW(hoofd,vrij)').
+lassy('vanaf','vanaf','VZ(init)').
+lassy('ongeveer','ongeveer','BW()').
+lassy('Waar','waar','VNW(vb,adv-pron,obl,vol,3o,getal)').
+lassy('staat','staat','N(soort,ev,basis,zijd,stan)').
+lassy('kind','kind','N(soort,ev,basis,onz,stan)').
+lassy('zowel','zowel','BW()').
+lassy('Dit','dit','VNW(aanw,det,stan,prenom,zonder,evon)').
+lassy('school','school','N(soort,ev,basis,zijd,stan)').
+lassy('groep','groep','N(soort,ev,basis,zijd,stan)').
+lassy('willen','willen','WW(pv,tgw,mv)').
+lassy('vele','veel','VNW(onbep,grad,stan,prenom,met-e,agr,basis)').
+lassy('periode','periode','N(soort,ev,basis,zijd,stan)').
+lassy('begin','begin','N(soort,ev,basis,onz,stan)').
+lassy('mij','mij','VNW(pr,pron,obl,vol,1,ev)').
+lassy('geval','geval','N(soort,ev,basis,onz,stan)').
+lassy('2004','2004','TW(hoofd,vrij)').
+lassy('zeker','zeker','ADJ(vrij,basis,zonder)').
+lassy('Die','die','VNW(aanw,det,stan,prenom,zonder,rest)').
+lassy('aanval','aanval','N(soort,ev,basis,zijd,stan)').
+lassy('ging','gaan','WW(pv,verl,ev)').
+lassy('krijgen','krijgen','WW(inf,vrij,zonder)').
+lassy('Britse','Brits','ADJ(prenom,basis,met-e,stan)').
+lassy('bestaat','bestaan','WW(pv,tgw,met-t)').
+lassy('januari','januari','N(eigen,ev,basis,zijd,stan)').
+lassy('boek','boek','N(soort,ev,basis,onz,stan)').
+lassy('basis','basis','N(soort,ev,basis,zijd,stan)').
+lassy('vindt','vinden','WW(pv,tgw,met-t)').
+lassy('2000','2000','TW(hoofd,vrij)').
+lassy('eerder','eerder','ADJ(vrij,comp,zonder)').
+lassy('afgelopen','af_lopen','WW(vd,prenom,zonder)').
+lassy('economische','economisch','ADJ(prenom,basis,met-e,stan)').
+lassy('vrouwen','vrouw','N(soort,mv,basis)').
+lassy('samenwerking','samenwerking','N(soort,ev,basis,zijd,stan)').
+lassy('Frankrijk','Frankrijk','N(eigen,ev,basis,onz,stan)').
+lassy('meest','veel','VNW(onbep,grad,stan,vrij,zonder,sup)').
+lassy('bij','bij','VZ(fin)').
+lassy('water','water','N(soort,ev,basis,onz,stan)').
+lassy('rol','rol','N(soort,ev,basis,zijd,stan)').
+lassy('z\'n','zijn','VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)').
+lassy('Ze','ze','VNW(pers,pron,stan,red,3,ev,fem)').
+lassy('maanden','maand','N(soort,mv,basis)').
+lassy('Hoeveel','hoeveel','TW(hoofd,prenom,stan)').
+lassy('juni','juni','N(eigen,ev,basis,zijd,stan)').
+lassy('Zijn','zijn','VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)').
+lassy('welk','welk','VNW(vb,det,stan,prenom,zonder,evon)').
+lassy('problemen','probleem','N(soort,mv,basis)').
+lassy('kleine','klein','ADJ(prenom,basis,met-e,stan)').
+lassy('hand','hand','N(soort,ev,basis,zijd,stan)').
+lassy('2005','2005','TW(hoofd,vrij)').
+lassy('zij','zij','VNW(pers,pron,nomin,vol,3v,ev,fem)').
+lassy('Irak','Irak','N(eigen,ev,basis,onz,stan)').
+lassy('slechts','slechts','BW()').
+lassy('Amsterdam','Amsterdam','N(eigen,ev,basis,onz,stan)').
+lassy('terwijl','terwijl','VG(onder)').
+lassy('mei','mei','N(eigen,ev,basis,zijd,stan)').
+lassy('je','je','VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)').
+lassy('erg','erg','ADJ(vrij,basis,zonder)').
+lassy('vraag','vraag','N(soort,ev,basis,zijd,stan)').
+lassy('maakt','maken','WW(pv,tgw,met-t)').
+lassy('weken','week','N(soort,mv,basis)').
+lassy('net','net','BW()').
+lassy('leger','leger','N(soort,ev,basis,onz,stan)').
+lassy('epilepsie','epilepsie','N(soort,ev,basis,zijd,stan)').
+lassy('beleid','beleid','N(soort,ev,basis,onz,stan)').
+lassy('vrouw','vrouw','N(soort,ev,basis,zijd,stan)').
+lassy('ouders','ouder','N(soort,mv,basis)').
+lassy('door','door','VZ(fin)').
+lassy('weg','weg','N(soort,ev,basis,zijd,stan)').
+lassy('U','u','VNW(pers,pron,nomin,vol,2b,getal)').
+lassy('dezelfde','dezelfde','ADJ(prenom,basis,zonder)').
+lassy('weet','weten','WW(pv,tgw,ev)').
+lassy('geven','geven','WW(inf,vrij,zonder)').
+lassy('pas','pas','BW()').
+lassy('oude','oud','ADJ(prenom,basis,met-e,stan)').
+lassy('gisteren','gisteren','BW()').
+lassy('belang','belang','N(soort,ev,basis,onz,stan)').
+lassy('komen','komen','WW(pv,tgw,mv)').
+lassy('houden','houden','WW(inf,vrij,zonder)').
+lassy('enige','enig','VNW(onbep,det,stan,prenom,met-e,rest)').
+lassy('moment','moment','N(soort,ev,basis,onz,stan)').
+lassy('zit','zitten','WW(pv,tgw,ev)').
+lassy('iemand','iemand','VNW(onbep,pron,stan,vol,3p,ev)').
+lassy('lijkt','lijken','WW(pv,tgw,met-t)').
+lassy('gehouden','houden','WW(vd,vrij,zonder)').
+lassy('situatie','situatie','N(soort,ev,basis,zijd,stan)').
+lassy('blijven','blijven','WW(inf,vrij,zonder)').
+lassy('beide','beide','VNW(onbep,grad,stan,prenom,met-e,mv,basis)').
+lassy('gezien','zien','WW(vd,vrij,zonder)').
+lassy('Aan','aan','VZ(init)').
+lassy('Zij','zij','VNW(pers,pron,nomin,vol,3p,mv)').
+lassy('gedaan','doen','WW(vd,vrij,zonder)').
+lassy('einde','einde','N(soort,ev,basis,onz,stan)').
+lassy('juli','juli','N(eigen,ev,basis,zijd,stan)').
+lassy('vorm','vorm','N(soort,ev,basis,zijd,stan)').
+lassy('kans','kans','N(soort,ev,basis,zijd,stan)').
+lassy('zes','zes','TW(hoofd,prenom,stan)').
+lassy('vijf','vijf','TW(hoofd,prenom,stan)').
+lassy('huidige','huidig','ADJ(prenom,basis,met-e,stan)').
+lassy('ontwikkelingslanden','ontwikkeling_land','N(soort,mv,basis)').
+lassy('genoemd','noemen','WW(vd,vrij,zonder)').
+lassy('gaan','gaan','WW(pv,tgw,mv)').
+lassy('eind','eind','N(soort,ev,basis,onz,stan)').
+lassy('kader','kader','N(soort,ev,basis,onz,stan)').
+lassy('2002','2002','TW(hoofd,vrij)').
+lassy('daarom','daarom','BW()').
+lassy('meeste','veel','VNW(onbep,grad,stan,prenom,met-e,agr,sup)').
+lassy('iedereen','iedereen','VNW(onbep,pron,stan,vol,3p,ev)').
+lassy('elke','elk','VNW(onbep,det,stan,prenom,met-e,evz)').
+lassy('maart','maart','N(eigen,ev,basis,zijd,stan)').
+lassy('Die','die','VNW(aanw,pron,stan,vol,3,getal)').
+lassy('doet','doen','WW(pv,tgw,met-t)').
+lassy('wet','wet','N(soort,ev,basis,zijd,stan)').
+lassy('waarop','waarop','BW()').
+lassy('oktober','oktober','N(eigen,ev,basis,zijd,stan)').
+lassy('bepaalde','bepalen','WW(vd,prenom,met-e)').
+lassy('gevolg','gevolg','N(soort,ev,basis,onz,stan)').
+lassy('begon','beginnen','WW(pv,verl,ev)').
+lassy('deze','deze','VNW(aanw,det,stan,nom,met-e,zonder-n)').
+lassy('belangrijkste','belangrijk','ADJ(prenom,sup,met-e,stan)').
+lassy('allemaal','allemaal','BW()').
+lassy('Daar','daar','VNW(aanw,adv-pron,obl,vol,3o,getal)').
+lassy('zeggen','zeggen','WW(inf,vrij,zonder)').
+lassy('zaken','zaak','N(soort,mv,basis)').
+lassy('krijgen','krijgen','WW(pv,tgw,mv)').
+lassy('bleek','blijken','WW(pv,verl,ev)').
+lassy('waarvan','waarvan','BW()').
+lassy('hoofdstad','hoofdstad','N(soort,ev,basis,zijd,stan)').
+lassy('2001','2001','TW(hoofd,vrij)').
+lassy('vorige','vorig','ADJ(prenom,basis,met-e,stan)').
+lassy('leden','lid','N(soort,mv,basis)').
+lassy('december','december','N(eigen,ev,basis,zijd,stan)').
+lassy('andere','ander','ADJ(nom,basis,met-e,zonder-n,stan)').
+lassy('sterk','sterk','ADJ(vrij,basis,zonder)').
+lassy('soort','soort','N(soort,ev,basis,genus,stan)').
+lassy('wilde','willen','WW(pv,verl,ev)').
+lassy('premier','premier','N(soort,ev,basis,zijd,stan)').
+lassy('hoge','hoog','ADJ(prenom,basis,met-e,stan)').
+lassy('bedrijven','bedrijf','N(soort,mv,basis)').
+lassy('zaak','zaak','N(soort,ev,basis,zijd,stan)').
+lassy('ons','ons','VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)').
+lassy('nemen','nemen','WW(inf,vrij,zonder)').
+lassy('achter','achter','VZ(init)').
+lassy('2','2','TW(hoofd,vrij)').
+lassy('vanuit','vanuit','VZ(init)').
+lassy('invloed','invloed','N(soort,ev,basis,zijd,stan)').
+lassy('toekomst','toekomst','N(soort,ev,basis,zijd,stan)').
+lassy('ervan','ervan','BW()').
+lassy('alcohol','alcohol','N(soort,ev,basis,zijd,stan)').
+lassy('waardoor','waardoor','BW()').
+lassy('strijd','strijd','N(soort,ev,basis,zijd,stan)').
+lassy('wanneer','wanneer','VG(onder)').
+lassy('je','je','VNW(pr,pron,obl,red,2v,getal)').
+lassy('2006','2006','TW(hoofd,vrij)').
+lassy('verkiezingen','verkiezing','N(soort,mv,basis)').
+lassy('Minister','minister','N(soort,ev,basis,zijd,stan)').
+lassy('haar','haar','VNW(pers,pron,obl,vol,3,getal,fem)').
+lassy('gemeente','gemeente','N(soort,ev,basis,zijd,stan)').
+lassy('augustus','augustus','N(eigen,ev,basis,zijd,stan)').
+lassy('weten','weten','WW(inf,vrij,zonder)').
+lassy('geworden','worden','WW(vd,vrij,zonder)').
+lassy('tien','tien','TW(hoofd,prenom,stan)').
+lassy('soms','soms','BW()').
+lassy('opdracht','opdracht','N(soort,ev,basis,zijd,stan)').
+lassy('mee','met','VZ(fin)').
+lassy('heer','heer','N(soort,ev,basis,zijd,stan)').
+lassy('ruim','ruim','ADJ(vrij,basis,zonder)').
+lassy('kabinet','kabinet','N(soort,ev,basis,onz,stan)').
+lassy('geweld','geweld','N(soort,ev,basis,onz,stan)').
+lassy('genomen','nemen','WW(vd,vrij,zonder)').
+lassy('staan','staan','WW(pv,tgw,mv)').
+lassy('paar','paar','N(soort,ev,basis,onz,stan)').
+lassy('genoeg','genoeg','BW()').
+lassy('buiten','buiten','VZ(init)').
+lassy('stond','staan','WW(pv,verl,ev)').
+lassy('weinig','weinig','VNW(onbep,grad,stan,vrij,zonder,basis)').
+lassy('Tot','tot','VZ(init)').
+lassy('geeft','geven','WW(pv,tgw,met-t)').
+lassy('duurzame','duurzaam','ADJ(prenom,basis,met-e,stan)').
+lassy('nieuw','nieuw','ADJ(prenom,basis,zonder)').
+lassy('maakte','maken','WW(pv,verl,ev)').
+lassy('voorzitter','voorzitter','N(soort,ev,basis,zijd,stan)').
+lassy('meter','meter','N(soort,ev,basis,zijd,stan)').
+lassy('bevolking','bevolking','N(soort,ev,basis,zijd,stan)').
+lassy('3','3','TW(hoofd,vrij)').
+lassy('partijen','partij','N(soort,mv,basis)').
+lassy('meteen','meteen','BW()').
+lassy('Want','want','VG(neven)').
+lassy('steun','steun','N(soort,ev,basis,zijd,stan)').
+lassy('eerst','één','TW(rang,nom,zonder-n)').
+lassy('zodat','zodat','VG(onder)').
+lassy('vrij','vrij','ADJ(vrij,basis,zonder)').
+lassy('maatregelen','maatregel','N(soort,mv,basis)').
+lassy('woningen','woning','N(soort,mv,basis)').
+lassy('helemaal','helemaal','BW()').
+lassy('macht','macht','N(soort,ev,basis,zijd,stan)').
+lassy('bent','zijn','WW(pv,tgw,met-t)').
+lassy('\'t','het','LID(bep,stan,evon)').
+lassy('jongeren','jong','ADJ(nom,comp,met-e,mv-n)').
+lassy('één','één','TW(hoofd,nom,zonder-n,basis)').
+lassy('plan','plan','N(soort,ev,basis,onz,stan)').
+lassy('aandacht','aandacht','N(soort,ev,basis,zijd,stan)').
+lassy('Wanneer','wanneer','BW()').
+lassy('langer','lang','ADJ(vrij,comp,zonder)').
+lassy('lange','lang','ADJ(prenom,basis,met-e,stan)').
+lassy('gegevens','gegeven','N(soort,mv,basis)').
+lassy('Zaken','zaak','N(soort,mv,basis)').
+lassy('Toch','toch','BW()').
+lassy('gemeenten','gemeente','N(soort,mv,basis)').
+lassy('markt','markt','N(soort,ev,basis,zijd,stan)').
+lassy('*','*','LET()').
+lassy('boven','boven','VZ(init)').
+lassy('nationale','nationaal','ADJ(prenom,basis,met-e,stan)').
+lassy('laat','laten','WW(pv,tgw,ev)').
+lassy('kwamen','komen','WW(pv,verl,mv)').
+lassy('inwoners','inwoner','N(soort,mv,basis)').
+lassy('Wij','wij','VNW(pers,pron,nomin,vol,1,mv)').
+lassy('volledig','volledig','ADJ(vrij,basis,zonder)').
+lassy('behandeling','behandeling','N(soort,ev,basis,zijd,stan)').
+lassy('al','al','VNW(onbep,det,stan,vrij,zonder)').
+lassy('zichzelf','zichzelf','VNW(refl,pron,obl,nadr,3,getal)').
+lassy('Tijdens','tijdens','VZ(init)').
+lassy('leerlingen','leerling','N(soort,mv,basis)').
+lassy('familie','familie','N(soort,ev,basis,zijd,stan)').
+lassy('betekent','betekenen','WW(pv,tgw,met-t)').
+lassy('recht','recht','N(soort,ev,basis,onz,stan)').
+lassy('Je','je','VNW(pers,pron,nomin,red,2v,ev)').
+lassy('gegeven','geven','WW(vd,vrij,zonder)').
+lassy('april','april','N(eigen,ev,basis,zijd,stan)').
+lassy('rekening','rekening','N(soort,ev,basis,zijd,stan)').
+lassy('anders','anders','BW()').
+lassy('succes','succes','N(soort,ev,basis,onz,stan)').
+lassy('of','of','SPEC(vreemd)').
+lassy('geldt','gelden','WW(pv,tgw,met-t)').
+lassy('contact','contact','N(soort,ev,basis,onz,stan)').
+lassy('zie','zien','WW(pv,tgw,ev)').
+lassy('reeds','reeds','BW()').
+lassy('patiënten','patiënt','N(soort,mv,basis)').
+lassy('ooit','ooit','BW()').
+lassy('`','`','LET()').
+lassy('maand','maand','N(soort,ev,basis,zijd,stan)').
+lassy('konden','kunnen','WW(pv,verl,mv)').
+lassy('kerk','kerk','N(soort,ev,basis,zijd,stan)').
+lassy('elk','elk','VNW(onbep,det,stan,prenom,zonder,evon)').
+lassy('1995','1995','TW(hoofd,vrij)').
+lassy('zware','zwaar','ADJ(prenom,basis,met-e,stan)').
+lassy('november','november','N(eigen,ev,basis,zijd,stan)').
+lassy('Italië','Italië','N(eigen,ev,basis,onz,stan)').
+lassy('extra','extra','ADJ(prenom,basis,zonder)').
+lassy('aanvallen','aanval','N(soort,mv,basis)').
+lassy('dood','dood','N(soort,ev,basis,zijd,stan)').
+lassy('4','4','TW(hoofd,vrij)').
+lassy('Toen','toen','VG(onder)').
+lassy('organisatie','organisatie','N(soort,ev,basis,zijd,stan)').
+lassy('economie','economie','N(soort,ev,basis,zijd,stan)').
+lassy('der','de','LID(bep,gen,rest3)').
+lassy('Antwerpen','Antwerpen','N(eigen,ev,basis,onz,stan)').
+lassy('tot','tot','VG(neven)').
+lassy('mannen','man','N(soort,mv,basis)').
+lassy('gevolgen','gevolg','N(soort,mv,basis)').
+lassy('gebracht','brengen','WW(vd,vrij,zonder)').
+lassy('februari','februari','N(eigen,ev,basis,zijd,stan)').
+lassy('sommige','sommig','VNW(onbep,det,stan,prenom,met-e,rest)').
+lassy('inzake','inzake','VZ(init)').
+lassy('federale','federaal','ADJ(prenom,basis,met-e,stan)').
+lassy('scholen','school','N(soort,mv,basis)').
+lassy('probleem','probleem','N(soort,ev,basis,onz,stan)').
+lassy('Omdat','omdat','VG(onder)').
+lassy('grond','grond','N(soort,ev,basis,zijd,stan)').
+lassy('name','naam','N(soort,ev,basis,dat)').
+lassy('kwaliteit','kwaliteit','N(soort,ev,basis,zijd,stan)').
+lassy('hulp','hulp','N(soort,ev,basis,zijd,stan)').
+lassy('derde','drie','TW(rang,prenom,stan)').
+lassy('eigenlijk','eigenlijk','ADJ(vrij,basis,zonder)').
+lassy('buitenlandse','buitenlands','ADJ(prenom,basis,met-e,stan)').
+lassy('noemt','noemen','WW(pv,tgw,met-t)').
+lassy('lid','lid','N(soort,ev,basis,onz,stan)').
+lassy('hoofd','hoofd','N(soort,ev,basis,onz,stan)').
+lassy('doel','doel','N(soort,ev,basis,onz,stan)').
+lassy('10','10','TW(hoofd,vrij)').
+lassy(',,',',,','LET()').
+lassy('gesteld','stellen','WW(vd,vrij,zonder)').
+lassy('diensten','dienst','N(soort,mv,basis)').
+lassy('commissie','commissie','N(soort,ev,basis,zijd,stan)').
+lassy('vinden','vinden','WW(inf,vrij,zonder)').
+lassy('mogen','mogen','WW(pv,tgw,mv)').
+lassy('miljard','miljard','N(soort,ev,basis,onz,stan)').
+lassy('EU','EU','N(eigen,ev,basis,zijd,stan)').
+lassy('Zie','zien','WW(pv,tgw,ev)').
+lassy('weinig','weinig','VNW(onbep,grad,stan,prenom,zonder,agr,basis)').
+lassy('Onder','onder','VZ(init)').
+lassy('immers','immers','BW()').
+lassy('wijze','wijze','N(soort,ev,basis,zijd,stan)').
+lassy('vorig','vorig','ADJ(prenom,basis,zonder)').
+lassy('uiteindelijk','uiteindelijk','ADJ(vrij,basis,zonder)').
+lassy('natuurlijk','natuurlijk','ADJ(vrij,basis,zonder)').
+lassy('handen','hand','N(soort,mv,basis)').
+lassy('echt','echt','ADJ(vrij,basis,zonder)').
+lassy('dienst','dienst','N(soort,ev,basis,zijd,stan)').
+lassy('daarvan','daarvan','BW()').
+lassy('Niet','niet','BW()').
+lassy('groot','groot','ADJ(vrij,basis,zonder)').
+lassy('gekomen','komen','WW(vd,vrij,zonder)').
+lassy('brengen','brengen','WW(inf,vrij,zonder)').
+lassy('Amerikanen','Amerikaan','N(eigen,mv,basis)').
+lassy('waarmee','waarmee','BW()').
+lassy('troepen','troep','N(soort,mv,basis)').
+lassy('producten','product','N(soort,mv,basis)').
+lassy('handel','handel','N(soort,ev,basis,zijd,stan)').
+lassy('koning','koning','N(soort,ev,basis,zijd,stan)').
+lassy('boeken','boek','N(soort,mv,basis)').
+lassy('activiteiten','activiteit','N(soort,mv,basis)').
+lassy('weg','weg','BW()').
+lassy('publiek','publiek','N(soort,ev,basis,onz,stan)').
+lassy('moesten','moeten','WW(pv,verl,mv)').
+lassy('meestal','meestal','BW()').
+lassy('deed','doen','WW(pv,verl,ev)').
+lassy('leiding','leiding','N(soort,ev,basis,zijd,stan)').
+lassy('The','The','SPEC(vreemd)').
+lassy('juist','juist','ADJ(vrij,basis,zonder)').
+lassy('daarbij','daarbij','BW()').
+lassy('vragen','vraag','N(soort,mv,basis)').
+lassy('\'\'','\'\'','LET()').
+lassy('korte','kort','ADJ(prenom,basis,met-e,stan)').
+lassy('financiële','financieel','ADJ(prenom,basis,met-e,stan)').
+lassy('militaire','militair','ADJ(prenom,basis,met-e,stan)').
+lassy('helft','helft','N(soort,ev,basis,zijd,stan)').
+lassy('binnen','binnen','VZ(fin)').
+lassy('ander','ander','ADJ(prenom,basis,zonder)').
+lassy('gezegd','zeggen','WW(vd,vrij,zonder)').
+lassy('Sinds','sinds','VZ(init)').
+lassy('politiek','politiek','N(soort,ev,basis,zijd,stan)').
+lassy('gehad','hebben','WW(vd,vrij,zonder)').
+lassy('stuk','stuk','N(soort,ev,basis,onz,stan)').
+lassy('Rotterdam','Rotterdam','N(eigen,ev,basis,onz,stan)').
+lassy('middelen','middel','N(soort,mv,basis)').
+lassy('liet','laten','WW(pv,verl,ev)').
+lassy('komende','komen','WW(od,prenom,met-e)').
+lassy('daarmee','daarmee','BW()').
+lassy('beste','goed','ADJ(prenom,sup,met-e,stan)').
+lassy('precies','precies','ADJ(vrij,basis,zonder)').
+lassy('namelijk','namelijk','BW()').
+lassy('Uit','uit','VZ(init)').
+lassy('the','the','SPEC(vreemd)').
+lassy('staan','staan','WW(inf,vrij,zonder)').
+lassy('opgenomen','op_nemen','WW(vd,vrij,zonder)').
+lassy('geschiedenis','geschiedenis','N(soort,ev,basis,zijd,stan)').
+lassy('Daarom','daarom','BW()').
+lassy('werkt','werken','WW(pv,tgw,met-t)').
+lassy('ministerie','ministerie','N(soort,ev,basis,onz,stan)').
+lassy('China','China','N(eigen,ev,basis,onz,stan)').
+lassy('avond','avond','N(soort,ev,basis,zijd,stan)').
+lassy('valt','vallen','WW(pv,tgw,met-t)').
+lassy('vader','vader','N(soort,ev,basis,zijd,stan)').
+lassy('naast','naast','VZ(init)').
+lassy('Welk','welk','VNW(vb,det,stan,prenom,zonder,evon)').
+lassy('persoon','persoon','N(soort,ev,basis,zijd,stan)').
+lassy('nieuws','nieuws','N(soort,ev,basis,onz,stan)').
+lassy('Nederlands','Nederlands','N(eigen,ev,basis,onz,stan)').
+lassy('militairen','militair','N(soort,mv,basis)').
+lassy('lidstaten','lidstaat','N(soort,mv,basis)').
+lassy('eerst','eerst','BW()').
+lassy('anderen','ander','ADJ(nom,basis,met-e,mv-n)').
+lassy('VS','VS','N(eigen,mv,basis)').
+lassy('prijs','prijs','N(soort,ev,basis,zijd,stan)').
+lassy('nadat','nadat','VG(onder)').
+lassy('jonge','jong','ADJ(prenom,basis,met-e,stan)').
+lassy('bleef','blijven','WW(pv,verl,ev)').
+lassy('systeem','systeem','N(soort,ev,basis,onz,stan)').
+lassy('sprake','spraak','N(soort,ev,basis,dat)').
+lassy('misschien','misschien','BW()').
+lassy('daarna','daarna','BW()').
+lassy('Daarnaast','daarnaast','BW()').
+lassy('beroep','beroep','N(soort,ev,basis,onz,stan)').
+lassy('10','10','TW(hoofd,prenom,stan)').
+lassy('woord','woord','N(soort,ev,basis,onz,stan)').
+lassy('won','winnen','WW(pv,verl,ev)').
+lassy('kilometer','kilo_meter','N(soort,ev,basis,zijd,stan)').
+lassy('kant','kant','N(soort,ev,basis,zijd,stan)').
+lassy('Dat','dat','VNW(aanw,det,stan,prenom,zonder,evon)').
+lassy('betreft','betreffen','WW(pv,tgw,met-t)').
+lassy('algemene','algemeen','ADJ(prenom,basis,met-e,stan)').
+lassy('20','20','TW(hoofd,prenom,stan)').
+lassy('verhaal','verhaal','N(soort,ev,basis,onz,stan)').
+lassy('kennis','kennis','N(soort,ev,basis,zijd,stan)').
+lassy('gevallen','geval','N(soort,mv,basis)').
+lassy('DE','de','LID(bep,stan,rest)').
+lassy('wedstrijd','wedstrijd','N(soort,ev,basis,zijd,stan)').
+lassy('provincie','provincie','N(soort,ev,basis,zijd,stan)').
+lassy('om','om','VZ(fin)').
+lassy('gebieden','gebied','N(soort,mv,basis)').
+lassy('resultaten','resultaat','N(soort,mv,basis)').
+lassy('3','3','TW(hoofd,prenom,stan)').
+lassy('programma','programma','N(soort,ev,basis,onz,stan)').
+lassy('Nu','nu','BW()').
+lassy('na','na','VZ(fin)').
+lassy('vond','vinden','WW(pv,verl,ev)').
+lassy('Hoewel','hoewel','VG(onder)').
+lassy('hebt','hebben','WW(pv,tgw,met-t)').
+lassy('Bovendien','bovendien','BW()').
+lassy('Italiaanse','Italiaans','ADJ(prenom,basis,met-e,stan)').
+lassy('graag','graag','BW()').
+lassy('Zij','zij','VNW(pers,pron,nomin,vol,3v,ev,fem)').
+lassy('Commissie','commissie','N(eigen,ev,basis,zijd,stan)').
+lassy('5','5','TW(hoofd,vrij)').
+lassy('waarschijnlijk','waarschijnlijk','ADJ(vrij,basis,zonder)').
+lassy('ver','ver','ADJ(vrij,basis,zonder)').
+lassy('steden','stad','N(soort,mv,basis)').
+lassy('stand','stand','N(soort,ev,basis,zijd,stan)').
+lassy('Russische','Russisch','ADJ(prenom,basis,met-e,stan)').
+lassy('moeilijk','moeilijk','ADJ(vrij,basis,zonder)').
+lassy('bestuur','bestuur','N(soort,ev,basis,onz,stan)').
+lassy('zogenaamde','zogenaamd','ADJ(prenom,basis,met-e,stan)').
+lassy('\'s','de','LID(bep,gen,evmo)').
+lassy('lokale','lokaal','ADJ(prenom,basis,met-e,stan)').
+lassy('gaf','geven','WW(pv,verl,ev)').
+lassy('terecht','terecht','ADJ(vrij,basis,zonder)').
+lassy('minuten','minuut','N(soort,mv,basis)').
+lassy('feit','feit','N(soort,ev,basis,onz,stan)').
+lassy('druk','druk','N(soort,ev,basis,zijd,stan)').
+lassy('artikel','artikel','N(soort,ev,basis,onz,stan)').
+lassy('11','11','TW(hoofd,vrij)').
+lassy('minder','weinig','VNW(onbep,grad,stan,prenom,zonder,agr,comp)').
+lassy('gewoon','gewoon','ADJ(vrij,basis,zonder)').
+lassy('titel','titel','N(soort,ev,basis,zijd,stan)').
+lassy('regels','regel','N(soort,mv,basis)').
+lassy('niveau','niveau','N(soort,ev,basis,onz,stan)').
+lassy('hoog','hoog','ADJ(vrij,basis,zonder)').
+lassy('auto','auto','N(soort,ev,basis,zijd,stan)').
+lassy('opgericht','op_richten','WW(vd,vrij,zonder)').
+lassy('Israëlische','Israëlisch','ADJ(prenom,basis,met-e,stan)').
+lassy('gevonden','vinden','WW(vd,vrij,zonder)').
+lassy('2','2','TW(hoofd,prenom,stan)').
+lassy('Israël','Israël','N(eigen,ev,basis,onz,stan)').
+lassy('5','5','TW(hoofd,prenom,stan)').
+lassy('Rusland','Rusland','N(eigen,ev,basis,onz,stan)').
+lassy('reeks','reeks','N(soort,ev,basis,zijd,stan)').
+lassy('paus','paus','N(soort,ev,basis,zijd,stan)').
+lassy('brief','brief','N(soort,ev,basis,zijd,stan)').
+lassy('zag','zien','WW(pv,verl,ev)').
+lassy('wist','weten','WW(pv,verl,ev)').
+lassy('vast','vast','ADJ(vrij,basis,zonder)').
+lassy('studie','studie','N(soort,ev,basis,zijd,stan)').
+lassy('verband','verband','N(soort,ev,basis,onz,stan)').
+lassy('reden','reden','N(soort,ev,basis,zijd,stan)').
+lassy('morgen','morgen','BW()').
+lassy('zoon','zoon','N(soort,ev,basis,zijd,stan)').
+lassy('woning','woning','N(soort,ev,basis,zijd,stan)').
+lassy('werken','werken','WW(inf,vrij,zonder)').
+lassy('kosten','kost','N(soort,mv,basis)').
+lassy('bezoek','bezoek','N(soort,ev,basis,onz,stan)').
+lassy('beslissing','beslissing','N(soort,ev,basis,zijd,stan)').
+lassy('belangrijk','belangrijk','ADJ(vrij,basis,zonder)').
+lassy('website','web_site','N(soort,ev,basis,zijd,stan)').
+lassy('1999','1999','TW(hoofd,vrij)').
+lassy('zee','zee','N(soort,ev,basis,zijd,stan)').
+lassy('sterke','sterk','ADJ(prenom,basis,met-e,stan)').
+lassy('beeld','beeld','N(soort,ev,basis,onz,stan)').
+lassy('trein','trein','N(soort,ev,basis,zijd,stan)').
+lassy('thuis','thuis','BW()').
+lassy('speelt','spelen','WW(pv,tgw,met-t)').
+lassy('risico','risico','N(soort,ev,basis,onz,stan)').
+lassy('nummer','nummer','N(soort,ev,basis,onz,stan)').
+lassy('eveneens','eveneens','BW()').
+lassy('willen','willen','WW(inf,vrij,zonder)').
+lassy('voorkomen','voorkomen','WW(inf,vrij,zonder)').
+lassy('slachtoffers','slachtoffer','N(soort,mv,basis)').
+lassy('personen','persoon','N(soort,mv,basis)').
+lassy('diverse','divers','ADJ(prenom,basis,met-e,stan)').
+lassy('centrale','centraal','ADJ(prenom,basis,met-e,stan)').
+lassy('waaronder','waaronder','BW()').
+lassy('waarde','waarde','N(soort,ev,basis,zijd,stan)').
+lassy('Vlaams','Vlaams','ADJ(prenom,basis,zonder)').
+lassy('oog','oog','N(soort,ev,basis,onz,stan)').
+lassy('maken','maken','WW(pv,tgw,mv)').
+lassy('inmiddels','inmiddels','BW()').
+lassy('flo','flo','N(soort,ev,basis,zijd,stan)').
+lassy('Brusselse','Brussels','ADJ(prenom,basis,met-e,stan)').
+lassy('Over','over','VZ(init)').
+lassy('dient','dienen','WW(pv,tgw,met-t)').
+lassy('zin','zin','N(soort,ev,basis,zijd,stan)').
+lassy('overleg','overleg','N(soort,ev,basis,onz,stan)').
+lassy('moeder','moeder','N(soort,ev,basis,zijd,stan)').
+lassy('leeftijd','leeftijd','N(soort,ev,basis,zijd,stan)').
+lassy('kregen','krijgen','WW(pv,verl,mv)').
+lassy('gebeurt','gebeuren','WW(pv,tgw,met-t)').
+lassy('Engeland','Engeland','N(eigen,ev,basis,onz,stan)').
+lassy('begint','beginnen','WW(pv,tgw,met-t)').
+lassy('vlak','vlak','N(soort,ev,basis,onz,stan)').
+lassy('slag','slag','N(soort,ev,basis,zijd,stan)').
+lassy('project','project','N(soort,ev,basis,onz,stan)').
+lassy('leider','leider','N(soort,ev,basis,zijd,stan)').
+lassy('Hier','hier','VNW(aanw,adv-pron,obl,vol,3o,getal)').
+lassy('burgers','burger','N(soort,mv,basis)').
+lassy('vanwege','vanwege','VZ(init)').
+lassy('richting','richting','N(soort,ev,basis,zijd,stan)').
+lassy('proces','proces','N(soort,ev,basis,onz,stan)').
+lassy('positie','positie','N(soort,ev,basis,zijd,stan)').
+lassy('medicijnen','medicijn','N(soort,mv,basis)').
+lassy('kort','kort','ADJ(vrij,basis,zonder)').
+lassy('hoogte','hoogte','N(soort,ev,basis,zijd,stan)').
+lassy('grens','grens','N(soort,ev,basis,zijd,stan)').
+lassy('doen','doen','WW(pv,tgw,mv)').
+lassy('Dat','dat','VG(onder)').
+lassy('Afghanistan','Afghanistan','N(eigen,ev,basis,onz,stan)').
+lassy('6','6','TW(hoofd,vrij)').
+lassy('mens','mens','N(soort,ev,basis,zijd,stan)').
+lassy('Vooral','vooral','BW()').
+lassy('Veel','veel','VNW(onbep,grad,stan,prenom,zonder,agr,basis)').
+lassy('Men','men','VNW(pers,pron,nomin,red,3p,ev,masc)').
+lassy('aldus','aldus','BW()').
+lassy('waarom','waarom','BW()').
+lassy('studenten','student','N(soort,mv,basis)').
+lassy('houdt','houden','WW(pv,tgw,met-t)').
+lassy('beschikbaar','beschikbaar','ADJ(vrij,basis,zonder)').
+lassy('vind','vinden','WW(pv,tgw,ev)').
+lassy('vinden','vinden','WW(pv,tgw,mv)').
+lassy('openbare','openbaar','ADJ(prenom,basis,met-e,stan)').
+lassy('geboren','geboren','WW(vd,vrij,zonder)').
+lassy('album','album','N(soort,ev,basis,onz,stan)').
+lassy('al','al','VG(onder)').
+lassy('zaterdag','zaterdag','N(eigen,ev,basis,zijd,stan)').
+lassy('plaatsen','plaats','N(soort,mv,basis)').
+lassy('langs','langs','VZ(init)').
+lassy('werknemers','werknemer','N(soort,mv,basis)').
+lassy('middel','middel','N(soort,ev,basis,onz,stan)').
+lassy('licht','licht','N(soort,ev,basis,onz,stan)').
+lassy('--','--','LET()').
+lassy('bestaande','bestaan','WW(od,prenom,met-e)').
+lassy('Alle','al','VNW(onbep,det,stan,prenom,met-e,agr)').
+lassy('volgt','volgen','WW(pv,tgw,met-t)').
+lassy('ruimte','ruimte','N(soort,ev,basis,zijd,stan)').
+lassy('rechter','rechter','N(soort,ev,basis,zijd,stan)').
+lassy('plannen','plan','N(soort,mv,basis)').
+lassy('leidde','leiden','WW(pv,verl,ev)').
+lassy('Justitie','justitie','N(soort,ev,basis,zijd,stan)').
+lassy('goud','goud','N(soort,ev,basis,onz,stan)').
+lassy('finale','finale','N(soort,ev,basis,zijd,stan)').
+lassy('blijven','blijven','WW(pv,tgw,mv)').
+lassy('beetje','beetje','N(soort,ev,dim,onz,stan)').
+lassy('Alleen','alleen','BW()').
+lassy('woorden','woord','N(soort,mv,basis)').
+lassy('stellen','stellen','WW(inf,vrij,zonder)').
+lassy('direct','direct','ADJ(vrij,basis,zonder)').
+lassy('betrekking','betrekking','N(soort,ev,basis,zijd,stan)').
+lassy('advies','advies','N(soort,ev,basis,onz,stan)').
+lassy('Vanaf','vanaf','VZ(init)').
+lassy('termijn','termijn','N(soort,ev,basis,zijd,stan)').
+lassy('punten','punt','N(soort,mv,basis)').
+lassy('oplossing','oplossing','N(soort,ev,basis,zijd,stan)').
+lassy('lucht','lucht','N(soort,ev,basis,zijd,stan)').
+lassy('Is','zijn','WW(pv,tgw,ev)').
+lassy('controle','controle','N(soort,ev,basis,zijd,stan)').
+lassy('8','8','TW(hoofd,vrij)').
+lassy('vroeg','vragen','WW(pv,verl,ev)').
+lassy('toepassing','toepassing','N(soort,ev,basis,zijd,stan)').
+lassy('overigens','overigens','BW()').
+lassy('nauwelijks','nauwelijks','BW()').
+lassy('Naast','naast','VZ(init)').
+lassy('kritiek','kritiek','N(soort,ev,basis,zijd,stan)').
+lassy('hard','hard','ADJ(vrij,basis,zonder)').
+lassy('groei','groei','N(soort,ev,basis,zijd,stan)').
+lassy('dollar','dollar','N(soort,ev,basis,zijd,stan)').
+lassy('Buitenlandse','buitenlands','ADJ(prenom,basis,met-e,stan)').
+lassy('bovendien','bovendien','BW()').
+lassy('wegens','wegens','VZ(init)').
+lassy('niemand','niemand','VNW(onbep,pron,stan,vol,3p,ev)').
+lassy('half','half','ADJ(prenom,basis,zonder)').
+lassy('functie','functie','N(soort,ev,basis,zijd,stan)').
+lassy('aanwezig','aanwezig','ADJ(vrij,basis,zonder)').
+lassy('15','15','TW(hoofd,prenom,stan)').
+lassy('1','1','TW(hoofd,prenom,stan)').
+lassy('ziet','zien','WW(pv,tgw,met-t)').
+lassy('werking','werking','N(soort,ev,basis,zijd,stan)').
+lassy('volledige','volledig','ADJ(prenom,basis,met-e,stan)').
+lassy('taal','taal','N(soort,ev,basis,zijd,stan)').
+lassy('resultaat','resultaat','N(soort,ev,basis,onz,stan)').
+lassy('parlement','parlement','N(soort,ev,basis,onz,stan)').
+lassy('Nederlanders','Nederlander','N(eigen,mv,basis)').
+lassy('goederen','goed','N(soort,mv,basis)').
+lassy('gekregen','krijgen','WW(vd,vrij,zonder)').
+lassy('gedurende','gedurende','VZ(init)').
+lassy('actief','actief','ADJ(vrij,basis,zonder)').
+lassy('1998','1998','TW(hoofd,vrij)').
+lassy('tegenover','tegenover','VZ(init)').
+lassy('schade','schade','N(soort,ev,basis,zijd,stan)').
+lassy('goed','goed','ADJ(prenom,basis,zonder)').
+lassy('echte','echt','ADJ(prenom,basis,met-e,stan)').
+lassy('stelt','stellen','WW(pv,tgw,met-t)').
+lassy('gezet','zetten','WW(vd,vrij,zonder)').
+lassy('gevaar','gevaar','N(soort,ev,basis,onz,stan)').
+lassy('Europees','Europees','ADJ(prenom,basis,zonder)').
+lassy('Deze','deze','VNW(aanw,det,stan,nom,met-e,zonder-n)').
+lassy('daarvoor','daarvoor','BW()').
+lassy('bedrag','bedrag','N(soort,ev,basis,onz,stan)').
+lassy('antwoord','antwoord','N(soort,ev,basis,onz,stan)').
+lassy('aanslagen','aanslag','N(soort,mv,basis)').
+lassy('speciale','speciaal','ADJ(prenom,basis,met-e,stan)').
+lassy('punt','punt','N(soort,ev,basis,onz,stan)').
+lassy('jij','jij','VNW(pers,pron,nomin,vol,2v,ev)').
+lassy('Dan','dan','BW()').
+lassy('weer','weer','N(soort,ev,basis,onz,stan)').
+lassy('voormalige','voormalig','ADJ(prenom,basis,met-e,stan)').
+lassy('vol','vol','ADJ(vrij,basis,zonder)').
+lassy('orde','orde','N(soort,ev,basis,zijd,stan)').
+lassy('leiden','leiden','WW(inf,vrij,zonder)').
+lassy('-ie','hij','VNW(pers,pron,nomin,red,3,ev,masc)').
+lassy('gebruiken','gebruiken','WW(inf,vrij,zonder)').
+lassy('betalen','betalen','WW(inf,vrij,zonder)').
+lassy('verdere','ver','ADJ(prenom,comp,met-e,stan)').
+lassy('uitvoering','uitvoering','N(soort,ev,basis,zijd,stan)').
+lassy('mogelijkheden','mogelijkheid','N(soort,mv,basis)').
+lassy('gulden','gulden','N(soort,ev,basis,zijd,stan)').
+lassy('4','4','TW(hoofd,prenom,stan)').
+lassy('vrijwel','vrijwel','BW()').
+lassy('voorstel','voorstel','N(soort,ev,basis,onz,stan)').
+lassy('stap','stap','N(soort,ev,basis,zijd,stan)').
+lassy('schreef','schrijven','WW(pv,verl,ev)').
+lassy('mogelijke','mogelijk','ADJ(prenom,basis,met-e,stan)').
+lassy('ministers','minister','N(soort,mv,basis)').
+lassy('kracht','kracht','N(soort,ev,basis,zijd,stan)').
+lassy('groter','groot','ADJ(vrij,comp,zonder)').
+lassy('Bush','Bush','N(eigen,ev,basis,zijd,stan)').
+lassy('verklaring','verklaring','N(soort,ev,basis,zijd,stan)').
+lassy('uitgevoerd','uit_voeren','WW(vd,vrij,zonder)').
+lassy('tegen','tegen','VZ(fin)').
+lassy('soldaten','soldaat','N(soort,mv,basis)').
+lassy('instellingen','instelling','N(soort,mv,basis)').
+lassy('helpen','helpen','WW(inf,vrij,zonder)').
+lassy('heen','heen','VZ(fin)').
+lassy('Amerika','Amerika','N(eigen,ev,basis,onz,stan)').
+lassy('aanslag','aanslag','N(soort,ev,basis,zijd,stan)').
+lassy('100','100','TW(hoofd,prenom,stan)').
+lassy('sector','sector','N(soort,ev,basis,zijd,stan)').
+lassy('Ron','Ron','N(eigen,ev,basis,zijd,stan)').
+lassy('interne','intern','ADJ(prenom,basis,met-e,stan)').
+lassy('campagne','campagne','N(soort,ev,basis,zijd,stan)').
+lassy('spelen','spelen','WW(inf,vrij,zonder)').
+lassy('serie','serie','N(soort,ev,basis,zijd,stan)').
+lassy('productie','productie','N(soort,ev,basis,zijd,stan)').
+lassy('justitie','justitie','N(soort,ev,basis,zijd,stan)').
+lassy('gericht','richten','WW(vd,vrij,zonder)').
+lassy('enorme','enorm','ADJ(prenom,basis,met-e,stan)').
+lassy('buitenland','buitenland','N(soort,ev,basis,onz,stan)').
+lassy('zuiden','zuiden','N(soort,ev,basis,onz,stan)').
+lassy('Wanneer','wanneer','VG(onder)').
+lassy('onderhandelingen','onderhandeling','N(soort,mv,basis)').
+lassy('omgeving','omgeving','N(soort,ev,basis,zijd,stan)').
+lassy('ieder','ieder','VNW(onbep,det,stan,prenom,zonder,evon)').
+lassy('eerste','één','TW(rang,nom,zonder-n)').
+lassy('Duitsers','Duitser','N(eigen,mv,basis)').
+lassy('brand','brand','N(soort,ev,basis,zijd,stan)').
+lassy('25','25','TW(hoofd,prenom,stan)').
+lassy('zwaar','zwaar','ADJ(vrij,basis,zonder)').
+lassy('voorbeeld','voorbeeld','N(soort,ev,basis,onz,stan)').
+lassy('straat','straat','N(soort,ev,basis,zijd,stan)').
+lassy('rapport','rapport','N(soort,ev,basis,onz,stan)').
+lassy('projecten','project','N(soort,mv,basis)').
+lassy('gebaseerd','baseren','WW(vd,vrij,zonder)').
+lassy('doden','dood','ADJ(nom,basis,met-e,mv-n)').
+lassy('buurt','buurt','N(soort,ev,basis,zijd,stan)').
+lassy('zitten','zitten','WW(pv,tgw,mv)').
+lassy('Waarom','waarom','BW()').
+lassy('totale','totaal','ADJ(prenom,basis,met-e,stan)').
+lassy('dergelijke','dergelijk','ADJ(prenom,basis,met-e,stan)').
+lassy('Daarbij','daarbij','BW()').
+lassy('burgemeester','burgemeester','N(soort,ev,basis,zijd,stan)').
+lassy('bezig','bezig','ADJ(vrij,basis,zonder)').
+lassy('aanpak','aanpak','N(soort,ev,basis,zijd,stan)').
+lassy('partner','partner','N(soort,ev,basis,zijd,stan)').
+lassy('mogelijkheid','mogelijkheid','N(soort,ev,basis,zijd,stan)').
+lassy('mate','mate','N(soort,ev,basis,zijd,stan)').
+lassy('jongen','jongen','N(soort,ev,basis,zijd,stan)').
+lassy('Iraakse','Iraaks','ADJ(prenom,basis,met-e,stan)').
+lassy('zien','zien','WW(pv,tgw,mv)').
+lassy('vrienden','vriend','N(soort,mv,basis)').
+lassy('Verder','ver','ADJ(vrij,comp,zonder)').
+lassy('verantwoordelijk','verantwoordelijk','ADJ(vrij,basis,zonder)').
+lassy('veiligheid','veiligheid','N(soort,ev,basis,zijd,stan)').
+lassy('samenleving','samenleving','N(soort,ev,basis,zijd,stan)').
+lassy('organisaties','organisatie','N(soort,mv,basis)').
+lassy('moord','moord','N(soort,ev,basis,zijd,stan)').
+lassy('kwestie','kwestie','N(soort,ev,basis,zijd,stan)').
+lassy('gang','gang','N(soort,ev,basis,zijd,stan)').
+lassy('ervoor','ervoor','BW()').
+lassy('daardoor','daardoor','BW()').
+lassy('bijzonder','bijzonder','ADJ(vrij,basis,zonder)').
+lassy('begonnen','beginnen','WW(vd,vrij,zonder)').
+lassy('beginnen','beginnen','WW(inf,vrij,zonder)').
+lassy('vormen','vormen','WW(pv,tgw,mv)').
+lassy('vervolgens','vervolgens','BW()').
+lassy('specifieke','specifiek','ADJ(prenom,basis,met-e,stan)').
+lassy('prijzen','prijs','N(soort,mv,basis)').
+lassy('lichaam','lichaam','N(soort,ev,basis,onz,stan)').
+lassy('gebeuren','gebeuren','WW(inf,vrij,zonder)').
+lassy('centrum','centrum','N(soort,ev,basis,onz,stan)').
+lassy('betere','goed','ADJ(prenom,comp,met-e,stan)').
+lassy('20','20','TW(hoofd,vrij)').
+lassy('zomer','zomer','N(soort,ev,basis,zijd,stan)').
+lassy('ziekte','ziekte','N(soort,ev,basis,zijd,stan)').
+lassy('ziekenhuis','ziekenhuis','N(soort,ev,basis,onz,stan)').
+lassy('vrijdag','vrijdag','N(eigen,ev,basis,zijd,stan)').
+lassy('rest','rest','N(soort,ev,basis,zijd,stan)').
+lassy('rechtbank','rechtbank','N(soort,ev,basis,zijd,stan)').
+lassy('milieu','milieu','N(soort,ev,basis,onz,stan)').
+lassy('leidt','leiden','WW(pv,tgw,met-t)').
+lassy('klanten','klant','N(soort,mv,basis)').
+lassy('beweging','beweging','N(soort,ev,basis,zijd,stan)').
+lassy('actie','actie','N(soort,ev,basis,zijd,stan)').
+lassy('Unie','unie','N(soort,ev,basis,zijd,stan)').
+lassy('toegang','toegang','N(soort,ev,basis,zijd,stan)').
+lassy('oud','oud','ADJ(vrij,basis,zonder)').
+lassy('ogen','oog','N(soort,mv,basis)').
+lassy('noorden','noorden','N(soort,ev,basis,onz,stan)').
+lassy('hiervoor','hiervoor','BW()').
+lassy('enkel','enkel','BW()').
+lassy('effect','effect','N(soort,ev,basis,onz,stan)').
+lassy('bevat','bevatten','WW(pv,tgw,ev)').
+lassy('30','30','TW(hoofd,prenom,stan)').
+lassy('officiële','officieel','ADJ(prenom,basis,met-e,stan)').
+lassy('koningin','koningin','N(soort,ev,basis,zijd,stan)').
+lassy('hetzelfde','hetzelfde','ADJ(prenom,basis,zonder)').
+lassy('Een','één','TW(hoofd,nom,zonder-n,basis)').
+lassy('betrokken','betrekken','WW(vd,vrij,zonder)').
+lassy('winst','winst','N(soort,ev,basis,zijd,stan)').
+lassy('slecht','slecht','ADJ(vrij,basis,zonder)').
+lassy('keuze','keuze','N(soort,ev,basis,zijd,stan)').
+lassy('FNB','FNB','N(eigen,ev,basis,zijd,stan)').
+lassy('9','9','TW(hoofd,vrij)').
+lassy('7','7','TW(hoofd,vrij)').
+lassy('weten','weten','WW(pv,tgw,mv)').
+lassy('waarvoor','waarvoor','BW()').
+lassy('drank','drank','N(soort,ev,basis,zijd,stan)').
+lassy('bang','bang','ADJ(vrij,basis,zonder)').
+lassy('aanleiding','aanleiding','N(soort,ev,basis,zijd,stan)').
+lassy('Zoals','zoals','VG(onder)').
+lassy('Nog','nog','BW()').
+lassy('nacht','nacht','N(soort,ev,basis,zijd,stan)').
+lassy('meerderheid','meerderheid','N(soort,ev,basis,zijd,stan)').
+lassy('gewone','gewoon','ADJ(prenom,basis,met-e,stan)').
+lassy('erop','erop','BW()').
+lassy('bepaald','bepalen','WW(vd,vrij,zonder)').
+lassy('aarde','aarde','N(soort,ev,basis,zijd,stan)').
+lassy('telt','tellen','WW(pv,tgw,met-t)').
+lassy('tekst','tekst','N(soort,ev,basis,zijd,stan)').
+lassy('technische','technisch','ADJ(prenom,basis,met-e,stan)').
+lassy('schip','schip','N(soort,ev,basis,onz,stan)').
+lassy('hoop','hoop','N(soort,ev,basis,zijd,stan)').
+lassy('gebouw','gebouw','N(soort,ev,basis,onz,stan)').
+lassy('ander','ander','ADJ(nom,basis,zonder,zonder-n)').
+lassy('VLD','VLD','N(eigen,ev,basis,zijd,stan)').
+lassy('moderne','modern','ADJ(prenom,basis,met-e,stan)').
+lassy('lag','liggen','WW(pv,verl,ev)').
+lassy('Japan','Japan','N(eigen,ev,basis,onz,stan)').
+lassy('hiervan','hiervan','BW()').
+lassy('gemeenschap','gemeenschap','N(soort,ev,basis,zijd,stan)').
+lassy('directeur','directeur','N(soort,ev,basis,zijd,stan)').
+lassy('allerlei','allerlei','ADJ(prenom,basis,zonder)').
+lassy('zoveel','zoveel','TW(hoofd,vrij)').
+lassy('vroeger','vroeg','ADJ(vrij,comp,zonder)').
+lassy('regio','regio','N(soort,ev,basis,zijd,stan)').
+lassy('regelmatig','regelmatig','ADJ(vrij,basis,zonder)').
+lassy('Parijs','Parijs','N(eigen,ev,basis,onz,stan)').
+lassy('overwinning','overwinning','N(soort,ev,basis,zijd,stan)').
+lassy('liggen','liggen','WW(pv,tgw,mv)').
+lassy('inkomen','inkomen','N(soort,ev,basis,onz,stan)').
+lassy('horen','horen','WW(inf,vrij,zonder)').
+lassy('heren','heer','N(soort,mv,basis)').
+lassy('groepen','groep','N(soort,mv,basis)').
+lassy('discussie','discussie','N(soort,ev,basis,zijd,stan)').
+lassy('15','15','TW(hoofd,vrij)').
+lassy('zitten','zitten','WW(inf,vrij,zonder)').
+lassy('Wel','wel','BW()').
+lassy('Twee','twee','TW(hoofd,prenom,stan)').
+lassy('muziek','muziek','N(soort,ev,basis,zijd,stan)').
+lassy('initiatief','initiatief','N(soort,ev,basis,onz,stan)').
+lassy('Britten','Brit','N(eigen,mv,basis)').
+lassy('50','50','TW(hoofd,prenom,stan)').
+lassy('zat','zitten','WW(pv,verl,ev)').
+lassy('raad','raad','N(soort,ev,basis,zijd,stan)').
+lassy('open','open','ADJ(vrij,basis,zonder)').
+lassy('ontstond','ontstaan','WW(pv,verl,ev)').
+lassy('omstandigheden','omstandigheid','N(soort,mv,basis)').
+lassy('indien','indien','VG(onder)').
+lassy('grotere','groot','ADJ(prenom,comp,met-e,stan)').
+lassy('gekozen','kiezen','WW(vd,vrij,zonder)').
+lassy('gebeurde','gebeuren','WW(pv,verl,ev)').
+lassy('ernstige','ernstig','ADJ(prenom,basis,met-e,stan)').
+lassy('biedt','bieden','WW(pv,tgw,met-t)').
+lassy('besloot','besluiten','WW(pv,verl,ev)').
+lassy('18','18','TW(hoofd,vrij)').
+lassy('14','14','TW(hoofd,vrij)').
+lassy('vrije','vrij','ADJ(prenom,basis,met-e,stan)').
+lassy('volgen','volgen','WW(inf,vrij,zonder)').
+lassy('vergadering','vergadering','N(soort,ev,basis,zijd,stan)').
+lassy('staten','staat','N(soort,mv,basis)').
+lassy('Spanje','Spanje','N(eigen,ev,basis,onz,stan)').
+lassy('rechten','recht','N(soort,mv,basis)').
+lassy('personeel','personeel','N(soort,ev,basis,onz,stan)').
+lassy('mocht','mogen','WW(pv,verl,ev)').
+lassy('lijst','lijst','N(soort,ev,basis,zijd,stan)').
+lassy('laatste','laat','ADJ(nom,sup,met-e,zonder-n,stan)').
+lassy('idee','idee','N(soort,ev,basis,onz,stan)').
+lassy('vragen','vragen','WW(inf,vrij,zonder)').
+lassy('vaste','vast','ADJ(prenom,basis,met-e,stan)').
+lassy('stoffen','stof','N(soort,mv,basis)').
+lassy('loopt','lopen','WW(pv,tgw,met-t)').
+lassy('Groningen','Groningen','N(eigen,ev,basis,onz,stan)').
+lassy('gevraagd','vragen','WW(vd,vrij,zonder)').
+lassy('geleid','leiden','WW(vd,vrij,zonder)').
+lassy('ene','een','VNW(onbep,det,stan,prenom,met-e,evz)').
+lassy('delen','deel','N(soort,mv,basis)').
+lassy('arts','arts','N(soort,ev,basis,zijd,stan)').
+lassy('17','17','TW(hoofd,vrij)').
+lassy('VVD','VVD','N(eigen,ev,basis,zijd,stan)').
+lassy('voorwaarden','voorwaarde','N(soort,mv,basis)').
+lassy('team','team','N(soort,ev,basis,onz,stan)').
+lassy('Spaanse','Spaans','ADJ(prenom,basis,met-e,stan)').
+lassy('Pakistan','Pakistan','N(eigen,ev,basis,onz,stan)').
+lassy('ontwikkeld','ontwikkelen','WW(vd,vrij,zonder)').
+lassy('gezicht','gezicht','N(soort,ev,basis,onz,stan)').
+lassy('gewond','gewond','ADJ(vrij,basis,zonder)').
+lassy('bereikt','bereiken','WW(vd,vrij,zonder)').
+lassy('bekende','bekend','ADJ(prenom,basis,met-e,stan)').
+lassy('baan','baan','N(soort,ev,basis,zijd,stan)').
+lassy('verleden','verleden','N(soort,ev,basis,onz,stan)').
+lassy('verdrag','verdrag','N(soort,ev,basis,onz,stan)').
+lassy('universiteit','universiteit','N(soort,ev,basis,zijd,stan)').
+lassy('top','top','N(soort,ev,basis,zijd,stan)').
+lassy('Palestijnse','Palestijns','ADJ(prenom,basis,met-e,stan)').
+lassy('moeite','moeite','N(soort,ev,basis,zijd,stan)').
+lassy('....','....','LET()').
+lassy('honderd','honderd','TW(hoofd,prenom,stan)').
+lassy('gingen','gaan','WW(pv,verl,mv)').
+lassy('crisis','crisis','N(soort,ev,basis,zijd,stan)').
+lassy('Al','al','BW()').
+lassy('werken','werk','N(soort,mv,basis)').
+lassy('vrijheid','vrijheid','N(soort,ev,basis,zijd,stan)').
+lassy('Vandaag','vandaag','BW()').
+lassy('vaker','vaak','ADJ(vrij,comp,zonder)').
+lassy('relatie','relatie','N(soort,ev,basis,zijd,stan)').
+lassy('nam','nemen','WW(pv,verl,ev)').
+lassy('kost','kosten','WW(pv,tgw,ev)').
+lassy('halen','halen','WW(inf,vrij,zonder)').
+lassy('brochure','brochure','N(soort,ev,basis,zijd,stan)').
+lassy('betaald','betalen','WW(vd,vrij,zonder)').
+lassy('1994','1994','TW(hoofd,vrij)').
+lassy('wonen','wonen','WW(pv,tgw,mv)').
+lassy('vrede','vrede','N(soort,ev,basis,zijd,stan)').
+lassy('verschil','verschil','N(soort,ev,basis,onz,stan)').
+lassy('verkocht','verkopen','WW(vd,vrij,zonder)').
+lassy('verantwoordelijkheid','verantwoordelijkheid','N(soort,ev,basis,zijd,stan)').
+lassy('ton','ton','N(soort,ev,basis,zijd,stan)').
+lassy('studies','studie','N(soort,mv,basis)').
+lassy('slachtoffer','slachtoffer','N(soort,ev,basis,onz,stan)').
+lassy('ondersteuning','ondersteuning','N(soort,ev,basis,zijd,stan)').
+lassy('klein','klein','ADJ(prenom,basis,zonder)').
+lassy('Iran','Iran','N(eigen,ev,basis,onz,stan)').
+lassy('gesloten','sluiten','WW(vd,vrij,zonder)').
+lassy('gebouwd','bouwen','WW(vd,vrij,zonder)').
+lassy('Frans','Frans','N(eigen,ev,basis,onz,stan)').
+lassy('combinatie','combinatie','N(soort,ev,basis,zijd,stan)').
+lassy('bedoeld','bedoelen','WW(vd,vrij,zonder)').
+lassy('algemeen','algemeen','ADJ(nom,basis,zonder,zonder-n)').
+lassy('wapens','wapen','N(soort,mv,basis)').
+lassy('voordat','voordat','VG(onder)').
+lassy('vliegtuig','vliegtuig','N(soort,ev,basis,onz,stan)').
+lassy('viel','vallen','WW(pv,verl,ev)').
+lassy('product','product','N(soort,ev,basis,onz,stan)').
+lassy('kun','kunnen','WW(pv,tgw,ev)').
+lassy('kent','kennen','WW(pv,tgw,met-t)').
+lassy('iedere','ieder','VNW(onbep,det,stan,prenom,met-e,evz)').
+lassy('hersenen','hersenen','N(soort,mv,basis)').
+lassy('bereiken','bereiken','WW(inf,vrij,zonder)').
+lassy('zondag','zondag','N(eigen,ev,basis,zijd,stan)').
+lassy('voornamelijk','voornamelijk','ADJ(vrij,basis,zonder)').
+lassy('verplicht','verplichten','WW(vd,vrij,zonder)').
+lassy('tevens','tevens','BW()').
+lassy('=','=','SPEC(symb)').
+lassy('Prince','Prince','N(eigen,ev,basis,zijd,stan)').
+lassy('partners','partner','N(soort,mv,basis)').
+lassy('Ondanks','ondanks','VZ(init)').
+lassy('noodzakelijk','noodzakelijk','ADJ(vrij,basis,zonder)').
+lassy('meerdere','meerdere','VNW(onbep,det,stan,prenom,met-e,mv)').
+lassy('Hun','hun','VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)').
+lassy('honderden','honderd','TW(hoofd,nom,mv-n,basis)').
+lassy('hoewel','hoewel','VG(onder)').
+lassy('gemiddeld','gemiddeld','ADJ(vrij,basis,zonder)').
+lassy('Egypte','Egypte','N(eigen,ev,basis,onz,stan)').
+lassy('duizenden','duizend','TW(hoofd,nom,mv-n,basis)').
+lassy('doordat','doordat','VG(onder)').
+lassy('conflict','conflict','N(soort,ev,basis,onz,stan)').
+lassy('belangrijk','belangrijk','ADJ(prenom,basis,zonder)').
+lassy('afstand','afstand','N(soort,ev,basis,zijd,stan)').
+lassy('Afrika','Afrika','N(eigen,ev,basis,onz,stan)').
+lassy('6','6','TW(hoofd,prenom,stan)').
+lassy('40','40','TW(hoofd,prenom,stan)').
+lassy('12','12','TW(hoofd,vrij)').
+lassy('zorg','zorg','N(soort,ev,basis,zijd,stan)').
+lassy('verbonden','verbinden','WW(vd,vrij,zonder)').
+lassy('toestand','toestand','N(soort,ev,basis,zijd,stan)').
+lassy('Londen','Londen','N(eigen,ev,basis,onz,stan)').
+lassy('lezen','lezen','WW(inf,vrij,zonder)').
+lassy('landbouw','landbouw','N(soort,ev,basis,zijd,stan)').
+lassy('initiatieven','initiatief','N(soort,mv,basis)').
+lassy('inderdaad','inderdaad','BW()').
+lassy('gesproken','spreken','WW(vd,vrij,zonder)').
+lassy('denk','denken','WW(pv,tgw,ev)').
+lassy('besloten','besluiten','WW(vd,vrij,zonder)').
+lassy('afdeling','afdeling','N(soort,ev,basis,zijd,stan)').
+lassy('achter','achter','VZ(fin)').
+lassy('1996','1996','TW(hoofd,vrij)').
+lassy('16','16','TW(hoofd,vrij)').
+lassy('zeven','zeven','TW(hoofd,prenom,stan)').
+lassy('tanks','tank','N(soort,mv,basis)').
+lassy('speelde','spelen','WW(pv,verl,ev)').
+lassy('Sommige','sommig','VNW(onbep,det,stan,prenom,met-e,rest)').
+lassy('relatief','relatief','ADJ(vrij,basis,zonder)').
+lassy('onderdeel','onderdeel','N(soort,ev,basis,onz,stan)').
+lassy('Naar','naar','VZ(init)').
+lassy('media','medium','N(soort,mv,basis)').
+lassy('Geen','geen','VNW(onbep,det,stan,prenom,zonder,agr)').
+lassy('bijdrage','bijdrage','N(soort,ev,basis,zijd,stan)').
+lassy('behandeld','behandelen','WW(vd,vrij,zonder)').
+lassy('Amsterdamse','Amsterdams','ADJ(prenom,basis,met-e,stan)').
+lassy('akkoord','akkoord','N(soort,ev,basis,onz,stan)').
+lassy('zoek','zoek','ADJ(vrij,basis,zonder)').
+lassy('vormen','vorm','N(soort,mv,basis)').
+lassy('twintig','twintig','TW(hoofd,prenom,stan)').
+lassy('taak','taak','N(soort,ev,basis,zijd,stan)').
+lassy('officieel','officieel','ADJ(vrij,basis,zonder)').
+lassy('neer','neer','VZ(fin)').
+lassy('medewerkers','medewerker','N(soort,mv,basis)').
+lassy('leek','lijken','WW(pv,verl,ev)').
+lassy('Japanse','Japans','ADJ(prenom,basis,met-e,stan)').
+lassy('hogere','hoog','ADJ(prenom,comp,met-e,stan)').
+lassy('geheel','geheel','ADJ(vrij,basis,zonder)').
+lassy('bouw','bouw','N(soort,ev,basis,zijd,stan)').
+lassy('beelden','beeld','N(soort,mv,basis)').
+lassy('2007','2007','TW(hoofd,vrij)').
+lassy('zon','zon','N(soort,ev,basis,zijd,stan)').
+lassy('wilt','willen','WW(pv,tgw,met-t)').
+lassy('terrein','terrein','N(soort,ev,basis,onz,stan)').
+lassy('soorten','soort','N(soort,mv,basis)').
+lassy('praktijk','praktijk','N(soort,ev,basis,zijd,stan)').
+lassy('kaart','kaart','N(soort,ev,basis,zijd,stan)').
+lassy('India','India','N(eigen,ev,basis,onz,stan)').
+lassy('hoeft','hoeven','WW(pv,tgw,met-t)').
+lassy('gesprek','gesprek','N(soort,ev,basis,onz,stan)').
+lassy('generaal','generaal','N(soort,ev,basis,zijd,stan)').
+lassy('geheel','geheel','N(soort,ev,basis,onz,stan)').
+lassy('gegaan','gaan','WW(vd,vrij,zonder)').
+lassy('besluit','besluit','N(soort,ev,basis,onz,stan)').
+lassy('Arabische','Arabisch','ADJ(prenom,basis,met-e,stan)').
+lassy('8','8','TW(hoofd,prenom,stan)').
+lassy('13','13','TW(hoofd,vrij)').
+lassy('12','12','TW(hoofd,prenom,stan)').
+lassy('volk','volk','N(soort,ev,basis,onz,stan)').
+lassy('verloren','verliezen','WW(vd,vrij,zonder)').
+lassy('uitbreiding','uitbreiding','N(soort,ev,basis,zijd,stan)').
+lassy('reactie','reactie','N(soort,ev,basis,zijd,stan)').
+lassy('o.a.','onder','ander').
+lassy('lijn','lijn','N(soort,ev,basis,zijd,stan)').
+lassy('goudstandaard','goud_standaard','N(soort,ev,basis,zijd,stan)').
+lassy('dingen','ding','N(soort,mv,basis)').
+lassy('Dames','dame','N(soort,mv,basis)').
+lassy('cijfers','cijfer','N(soort,mv,basis)').
+lassy('bijzondere','bijzonder','ADJ(prenom,basis,met-e,stan)').
+lassy('zorgen','zorgen','WW(inf,vrij,zonder)').
+lassy('zeggen','zeggen','WW(pv,tgw,mv)').
+lassy('wilden','willen','WW(pv,verl,mv)').
+lassy('verzet','verzet','N(soort,ev,basis,onz,stan)').
+lassy('verhalen','verhaal','N(soort,mv,basis)').
+lassy('tien','tien','TW(hoofd,vrij)').
+lassy('recente','recent','ADJ(prenom,basis,met-e,stan)').
+lassy('overal','overal','VNW(onbep,adv-pron,obl,vol,3o,getal)').
+lassy('onmiddellijk','onmiddellijk','ADJ(vrij,basis,zonder)').
+lassy('Onderwijs','onderwijs','N(soort,ev,basis,onz,stan)').
+lassy('krant','krant','N(soort,ev,basis,zijd,stan)').
+lassy('journaal','journaal','N(soort,ev,basis,onz,stan)').
+lassy('dochter','dochter','N(soort,ev,basis,zijd,stan)').
+lassy('denkt','denken','WW(pv,tgw,met-t)').
+lassy('bracht','brengen','WW(pv,verl,ev)').
+lassy('acht','acht','TW(hoofd,prenom,stan)').
+lassy('zover','zover','BW()').
+lassy('zoveel','zoveel','TW(hoofd,prenom,stan)').
+lassy('werken','werken','WW(pv,tgw,mv)').
+lassy('voorzien','voorzien','WW(vd,vrij,zonder)').
+lassy('Sosabowski','Sosabowski','N(eigen,ev,basis,zijd,stan)').
+lassy('redenen','reden','N(soort,mv,basis)').
+lassy('ploeg','ploeg','N(soort,ev,basis,zijd,stan)').
+lassy('oudere','oud','ADJ(prenom,comp,met-e,stan)').
+lassy('opleiding','opleiding','N(soort,ev,basis,zijd,stan)').
+lassy('neemt','nemen','WW(pv,tgw,met-t)').
+lassy('Limburg','Limburg','N(eigen,ev,basis,onz,stan)').
+lassy('daarop','daarop','BW()').
+lassy('boeren','boer','N(soort,mv,basis)').
+lassy('beheer','beheer','N(soort,ev,basis,onz,stan)').
+lassy('Thailand','Thailand','N(eigen,ev,basis,onz,stan)').
+lassy('stonden','staan','WW(pv,verl,mv)').
+lassy('slechte','slecht','ADJ(prenom,basis,met-e,stan)').
+lassy('optreden','optreden','N(soort,ev,basis,onz,stan)').
+lassy('museum','museum','N(soort,ev,basis,onz,stan)').
+lassy('juiste','juist','ADJ(prenom,basis,met-e,stan)').
+lassy('hoger','hoog','ADJ(prenom,comp,zonder)').
+lassy('gisteravond','gisteravond','BW()').
+lassy('gehele','geheel','ADJ(prenom,basis,met-e,stan)').
+lassy('Externe','extern','ADJ(prenom,basis,met-e,stan)').
+lassy('cultuur','cultuur','N(soort,ev,basis,zijd,stan)').
+lassy('buiten','buiten','VZ(fin)').
+lassy('bank','bank','N(soort,ev,basis,zijd,stan)').
+lassy('wetenschappelijke','wetenschappelijk','ADJ(prenom,basis,met-e,stan)').
+lassy('wachten','wachten','WW(inf,vrij,zonder)').
+lassy('vormt','vormen','WW(pv,tgw,met-t)').
+lassy('vond','plaats_vinden','WW(pv,verl,ev)').
+lassy('vanmiddag','vanmiddag','BW()').
+lassy('uren','uur','N(soort,mv,basis)').
+lassy('risico\'s','risico','N(soort,mv,basis)').
+lassy('ondanks','ondanks','VZ(init)').
+lassy('mening','mening','N(soort,ev,basis,zijd,stan)').
+lassy('maatschappij','maatschappij','N(soort,ev,basis,zijd,stan)').
+lassy('kunst','kunst','N(soort,ev,basis,zijd,stan)').
+lassy('Kamer','kamer','N(soort,ev,basis,zijd,stan)').
+lassy('Indien','indien','VG(onder)').
+lassy('gouden','gouden','ADJ(prenom,basis,zonder)').
+lassy('gebeurd','gebeuren','WW(vd,vrij,zonder)').
+lassy('Fransen','Fransen','N(eigen,mv,basis)').
+lassy('films','film','N(soort,mv,basis)').
+lassy('én','en','VG(neven)').
+lassy('bieden','bieden','WW(inf,vrij,zonder)').
+lassy('bestaan','bestaan','WW(pv,tgw,mv)').
+lassy('bestaan','bestaan','WW(inf,vrij,zonder)').
+lassy('beschouwd','beschouwen','WW(vd,vrij,zonder)').
+lassy('bescherming','bescherming','N(soort,ev,basis,zijd,stan)').
+lassy('Andere','ander','ADJ(prenom,basis,met-e,stan)').
+lassy('afspraken','afspraak','N(soort,mv,basis)').
+lassy('1993','1993','TW(hoofd,vrij)').
+lassy('zwarte','zwart','ADJ(prenom,basis,met-e,stan)').
+lassy('verlies','verlies','N(soort,ev,basis,onz,stan)').
+lassy('totaal','totaal','N(soort,ev,basis,onz,stan)').
+lassy('Terwijl','terwijl','VG(onder)').
+lassy('rust','rust','N(soort,ev,basis,zijd,stan)').
+lassy('hoeveelheid','hoeveelheid','N(soort,ev,basis,zijd,stan)').
+lassy('hart','hart','N(soort,ev,basis,onz,stan)').
+lassy('één','één','TW(hoofd,vrij)').
+lassy('Chinese','Chinees','ADJ(prenom,basis,met-e,stan)').
+lassy('bier','bier','N(soort,ev,basis,onz,stan)').
+lassy('belangen','belang','N(soort,mv,basis)').
+lassy('banken','bank','N(soort,mv,basis)').
+lassy('aanwezigheid','aanwezigheid','N(soort,ev,basis,zijd,stan)').
+lassy('voorlichting','voorlichting','N(soort,ev,basis,zijd,stan)').
+lassy('verzoek','verzoek','N(soort,ev,basis,onz,stan)').
+lassy('vertrouwen','vertrouwen','N(soort,ev,basis,onz,stan)').
+lassy('veroorzaakt','veroorzaken','WW(vd,vrij,zonder)').
+lassy('Ten','te','VZ(versm)').
+lassy('Tegen','tegen','VZ(init)').
+lassy('strategie','strategie','N(soort,ev,basis,zijd,stan)').
+lassy('spel','spel','N(soort,ev,basis,onz,stan)').
+lassy('Sovjet-Unie','Sovjet-Unie','N(eigen,ev,basis,zijd,stan)').
+lassy('snelle','snel','ADJ(prenom,basis,met-e,stan)').
+lassy('laat','laat','ADJ(vrij,basis,zonder)').
+lassy('kort','kort','ADJ(nom,basis,zonder,zonder-n)').
+lassy('indruk','indruk','N(soort,ev,basis,zijd,stan)').
+lassy('gezag','gezag','N(soort,ev,basis,onz,stan)').
+lassy('geschreven','schrijven','WW(vd,vrij,zonder)').
+lassy('bevoegdheden','bevoegdheid','N(soort,mv,basis)').
+lassy('21','21','TW(hoofd,vrij)').
+lassy('voldoende','voldoende','ADJ(prenom,basis,zonder)').
+lassy('verkeer','verkeer','N(soort,ev,basis,onz,stan)').
+lassy('verboden','verbieden','WW(vd,vrij,zonder)').
+lassy('vastgesteld','vast_stellen','WW(vd,vrij,zonder)').
+lassy('regionale','regionaal','ADJ(prenom,basis,met-e,stan)').
+lassy('principe','principe','N(soort,ev,basis,onz,stan)').
+lassy('open','open','ADJ(prenom,basis,zonder)').
+lassy('onderzocht','onderzoeken','WW(vd,vrij,zonder)').
+lassy('onderneming','onderneming','N(soort,ev,basis,zijd,stan)').
+lassy('momenteel','momenteel','ADJ(vrij,basis,zonder)').
+lassy('materiaal','materiaal','N(soort,ev,basis,onz,stan)').
+lassy('liggen','liggen','WW(inf,vrij,zonder)').
+lassy('laten','laten','WW(pv,tgw,mv)').
+lassy('jullie','jullie','VNW(pers,pron,stan,nadr,2v,mv)').
+lassy('grenzen','grens','N(soort,mv,basis)').
+lassy('God','God','N(eigen,ev,basis,zijd,stan)').
+lassy('gelegenheid','gelegenheid','N(soort,ev,basis,zijd,stan)').
+lassy('CDA','CDA','N(eigen,ev,basis,onz,stan)').
+lassy('aanzien','aanzien','N(soort,ev,basis,onz,stan)').
+lassy('woont','wonen','WW(pv,tgw,met-t)').
+lassy('winnen','winnen','WW(inf,vrij,zonder)').
+lassy('staatssecretaris','staatssecretaris','N(soort,ev,basis,zijd,stan)').
+lassy('ontstaan','ontstaan','WW(vd,vrij,zonder)').
+lassy('Maastricht','Maastricht','N(eigen,ev,basis,onz,stan)').
+lassy('klaar','klaar','ADJ(vrij,basis,zonder)').
+lassy('industrie','industrie','N(soort,ev,basis,zijd,stan)').
+lassy('gewonnen','winnen','WW(vd,vrij,zonder)').
+lassy('dacht','denken','WW(pv,verl,ev)').
+lassy('bijzonder','bijzonder','ADJ(nom,basis,zonder,zonder-n)').
+lassy('aanbod','aanbod','N(soort,ev,basis,onz,stan)').
+lassy('Wolder','Wolder','N(eigen,ev,basis,onz,stan)').
+lassy('voorlopig','voorlopig','ADJ(vrij,basis,zonder)').
+lassy('voordeel','voordeel','N(soort,ev,basis,onz,stan)').
+lassy('volgend','volgen','WW(od,prenom,zonder)').
+lassy('vermoord','vermoorden','WW(vd,vrij,zonder)').
+lassy('Utrecht','Utrecht','N(eigen,ev,basis,onz,stan)').
+lassy('praten','praten','WW(inf,vrij,zonder)').
+lassy('openbaar','openbaar','ADJ(prenom,basis,zonder)').
+lassy('model','model','N(soort,ev,basis,onz,stan)').
+lassy('jaarlijks','jaarlijks','ADJ(vrij,basis,zonder)').
+lassy('ingezet','in_zetten','WW(vd,vrij,zonder)').
+lassy('hoogste','hoog','ADJ(prenom,sup,met-e,stan)').
+lassy('heel','heel','ADJ(prenom,basis,zonder)').
+lassy('gewerkt','werken','WW(vd,vrij,zonder)').
+lassy('gevoel','gevoel','N(soort,ev,basis,onz,stan)').
+lassy('Gent','Gent','N(eigen,ev,basis,onz,stan)').
+lassy('gehaald','halen','WW(vd,vrij,zonder)').
+lassy('gedeelte','gedeelte','N(soort,ev,basis,onz,stan)').
+lassy('ervaring','ervaring','N(soort,ev,basis,zijd,stan)').
+lassy('Engelse','Engels','ADJ(prenom,basis,met-e,stan)').
+lassy('dorp','dorp','N(soort,ev,basis,onz,stan)').
+lassy('dieren','dier','N(soort,mv,basis)').
+lassy('bloed','bloed','N(soort,ev,basis,onz,stan)').
+lassy('Berlijn','Berlijn','N(eigen,ev,basis,onz,stan)').
+lassy('afhankelijk','afhankelijk','ADJ(vrij,basis,zonder)').
+lassy('24','24','TW(hoofd,vrij)').
+lassy('verwacht','verwachten','WW(vd,vrij,zonder)').
+
 
 %%%
 %%% todo
@@ -4514,17 +5092,31 @@ lassy('¤','SPEC(symb)').
 %% mod_hd_adverb in misc assigns adv ipv adj
 %% adverb wat??
 
+particle_tag(erger,      erg,        'ADJ(vrij,comp,zonder)').
+particle_tag(betaald,    betalen,    'WW(vd,vrij,zonder)').
+particle_tag(gedaan,     doen,       'WW(vd,vrij,zonder)').
+particle_tag(gelegen,    liggen,     'WW(vd,vrij,zonder)').
+particle_tag(geroepen,   roepen,     'WW(vd,vrij,zonder)').
+particle_tag(gevangen,   vangen,     'WW(vd,vrij,zonder)').
+particle_tag(gewonnen,   winnen,     'WW(vd,vrij,zonder)').
+particle_tag(ingedrukt,  in_drukken, 'WW(vd,vrij,zonder)').
+particle_tag(geschreven, schrijven,  'WW(vd,vrij,zonder)').
+particle_tag(staande,    staan,      'WW(od,vrij,zonder)').
+particle_tag(vergezeld,  vergezellen,'WW(vd,vrij,zonder)').
+
+particle_tag(StemIn,StemIn,Tag) :-
+    particle_tag(StemIn,Tag).
+
 particle_tag(aaneen,'BW()').
 particle_tag(achterna,'VZ(fin)').
 particle_tag(achterover,'BW()').
 particle_tag(achteruit,'BW()').
+particle_tag(achterwege,'BW()').
 particle_tag(actie,'N(soort,ev,basis,zijd,stan)').
 particle_tag(adem,'N(soort,ev,basis,zijd,stan)').
 particle_tag(af_handig,'ADJ(vrij,basis,zonder)').
 particle_tag(afhandig,'ADJ(vrij,basis,zonder)').
 particle_tag(beet,'N(soort,ev,basis,zijd,stan)').
-particle_tag(bega,'WW(vd,vrij,zonder)').
-particle_tag(begrijp,'WW(vd,vrij,zonder)').
 particle_tag(bekend,'ADJ(vrij,basis,zonder)').
 particle_tag(beschikbaar,'ADJ(vrij,basis,zonder)').
 particle_tag(beter,'ADJ(vrij,comp,zonder)').
@@ -4532,9 +5124,7 @@ particle_tag(bezig,'ADJ(vrij,basis,zonder)').
 particle_tag(bijeen,'BW()').
 particle_tag(binnenskamers,'ADJ(vrij,basis,zonder)').
 particle_tag(blank,'ADJ(vrij,basis,zonder)').
-particle_tag(blijf_uit,'WW(inf,vrij,zonder)').
 particle_tag(blijk,'N(soort,ev,basis,onz,stan)').
-particle_tag(blijk,'WW(inf,vrij,zonder)').
 particle_tag(blind,'ADJ(vrij,basis,zonder)').
 particle_tag(bloot,'ADJ(vrij,basis,zonder)').
 particle_tag(bol,'N(soort,ev,basis,zijd,stan)').
@@ -4543,26 +5133,22 @@ particle_tag(dicht,'ADJ(vrij,basis,zonder)').
 particle_tag(dienst,'N(soort,ev,basis,zijd,stan)').
 particle_tag(dik,'ADJ(vrij,basis,zonder)').
 particle_tag(dood,'ADJ(vrij,basis,zonder)').
+particle_tag(deelgenoot,'N(soort,ev,basis,zijd,stan)').
 particle_tag(duidelijk,'ADJ(vrij,basis,zonder)').
 particle_tag(dwars,'ADJ(vrij,basis,zonder)').
 particle_tag(erg,'ADJ(vrij,basis,zonder)').
-particle_tag(erger,'ADJ(vrij,comp,zonder)').
 particle_tag(eruit,'BW()').
 particle_tag(feest,'N(soort,ev,basis,onz,stan)').
+particle_tag(fout,'ADJ(vrij,basis,zonder)').
 particle_tag(ga,'WW(inf,vrij,zonder)').
-particle_tag(gedaan,'WW(vd,vrij,zonder)').
-particle_tag(gedwongen,'WW(vd,vrij,zonder)').
-particle_tag(gelegen,'WW(vd,vrij,zonder)').
+particle_tag(gehoor,'N(soort,ev,basis,onz,stan)').
 particle_tag(gelijk,'ADJ(vrij,basis,zonder)').
 particle_tag(gelukkig,'ADJ(vrij,basis,zonder)').
 particle_tag(gemeen,'ADJ(vrij,basis,zonder)').
 particle_tag(genoodzaakt,'WW(vd,vrij,zonder)').
 particle_tag(gereed,'ADJ(vrij,basis,zonder)').
-particle_tag(geroepen,'WW(vd,vrij,zonder)').
 particle_tag(gerust,'ADJ(vrij,basis,zonder)').
-particle_tag(gevangen,'WW(vd,vrij,zonder)').
 particle_tag(gewaar,'ADJ(vrij,basis,zonder)').
-particle_tag(gewonnen,'WW(vd,vrij,zonder)').
 particle_tag(glad,'ADJ(vrij,basis,zonder)').
 particle_tag(goed,'ADJ(vrij,basis,zonder)').
 particle_tag(goed,'ADJ(vrij,comp,zonder)').
@@ -4571,8 +5157,8 @@ particle_tag(hem,'VNW(pers,pron,obl,vol,3,ev,masc)').
 particle_tag(hoog,'ADJ(vrij,basis,zonder)').
 particle_tag(hoor,'WW(inf,vrij,zonder)').
 particle_tag(ineen,'BW()').
-particle_tag(ingedrukt,'WW(vd,vrij,zonder)').
 particle_tag(kan,'WW(inf,vrij,zonder)').
+particle_tag(kandidaat,'N(soort,ev,basis,zijd,stan)').
 particle_tag(kapot,'ADJ(vrij,basis,zonder)').
 particle_tag(kenbaar,'ADJ(vrij,basis,zonder)').
 particle_tag(kennis,'N(soort,ev,basis,zijd,stan)').
@@ -4582,22 +5168,17 @@ particle_tag(kwalijk,'ADJ(vrij,basis,zonder)').
 particle_tag(kwijt,'ADJ(vrij,basis,zonder)').
 particle_tag(lam,'ADJ(vrij,basis,zonder)').
 particle_tag(lastig,'ADJ(vrij,basis,zonder)').
-particle_tag(leef,'WW(inf,vrij,zonder)').
 particle_tag(leeg,'ADJ(vrij,basis,zonder)').
 particle_tag(lek,'ADJ(vrij,basis,zonder)').
 particle_tag(les,'N(soort,ev,basis,zijd,stan)').
-particle_tag(lig,'WW(vd,vrij,zonder)').
 particle_tag(los,'ADJ(vrij,basis,zonder)').
 particle_tag(meester,'N(soort,ev,basis,zijd,stan)').
-particle_tag(merk,'WW(inf,vrij,zonder)').
 particle_tag(mis,'ADJ(vrij,basis,zonder)').
 particle_tag(moeilijk,'ADJ(vrij,basis,zonder)').
 particle_tag(neer,'VZ(fin)').
 particle_tag(omver,'BW()').
 particle_tag(onbetuigd,'ADJ(vrij,basis,zonder)').
 particle_tag(onderuit,'BW()').
-particle_tag(ontglip,'WW(inf,vrij,zonder)').
-particle_tag(ontval,'WW(inf,vrij,zonder)').
 particle_tag(onverlet,'ADJ(vrij,basis,zonder)').
 particle_tag(open,'ADJ(vrij,basis,zonder)').
 particle_tag(opzij,'BW()').
@@ -4616,12 +5197,10 @@ particle_tag(rood,'ADJ(vrij,basis,zonder)').
 particle_tag(roodgloeiend,'ADJ(vrij,basis,zonder)').
 particle_tag(samen,'BW()').
 particle_tag(schemer_door,'WW(inf,vrij,zonder)').
-particle_tag(school,'N(soort,ev,basis,zijd,stan)').
 particle_tag(schoon,'ADJ(vrij,basis,zonder)').
-particle_tag(schrijf,'WW(vd,vrij,zonder)').
+particle_tag(schrap,'BW()').
 particle_tag(schuil,'BW()').
 particle_tag(schuldig,'ADJ(vrij,basis,zonder)').
-particle_tag(staande,'WW(od,vrij,zonder)').
 particle_tag(stand,'N(soort,ev,basis,zijd,stan)').
 particle_tag(sterk,'ADJ(vrij,basis,zonder)').
 particle_tag(stil,'ADJ(vrij,basis,zonder)').
@@ -4636,12 +5215,14 @@ particle_tag(teniet,'BW()').
 particle_tag(tentoon,'BW()').
 particle_tag(terecht,'ADJ(vrij,basis,zonder)').
 particle_tag(terug,'BW()').
+particle_tag(terwille,'ADJ(vrij,basis,zonder)').
 particle_tag(teweeg,'BW()').
 particle_tag(tewerk,'BW()').
 particle_tag(thee,'N(soort,ev,basis,zijd,stan)').
 particle_tag(thuis,'BW()').
 particle_tag(trouw,'ADJ(vrij,basis,zonder)').
 particle_tag(uiteen,'BW()').
+particle_tag(uiting,'N(soort,ev,basis,zijd,stan)'). 
 particle_tag(vaar,'WW(inf,vrij,zonder)').
 particle_tag(val,'WW(inf,vrij,zonder)').
 particle_tag(vast,'ADJ(vrij,basis,zonder)').
@@ -4650,8 +5231,7 @@ particle_tag(veilig,'ADJ(vrij,basis,zonder)').
 particle_tag(ver,'ADJ(vrij,basis,zonder)').
 particle_tag(ver,'ADJ(vrij,comp,zonder)').
 particle_tag(verder,'ADJ(vrij,comp,zonder)').
-particle_tag(vergezeld,'WW(vd,vrij,zonder)').
-particle_tag(verzeild,'WW(vd,vrij,zonder)').
+particle_tag(verzeild,'ADJ(vrij,basis,zonder)').
 particle_tag(vij,'ADJ(vrij,basis,zonder)').
 particle_tag(vlam,'N(soort,ev,basis,zijd,stan)').
 particle_tag(voel,'WW(inf,vrij,zonder)').
@@ -4664,21 +5244,12 @@ particle_tag(vooruit,'BW()').
 particle_tag(vorm,'N(soort,ev,basis,zijd,stan)').
 particle_tag(vrij,'ADJ(vrij,basis,zonder)').
 particle_tag(waar,'ADJ(vrij,basis,zonder)').
-particle_tag(wacht,'WW(inf,vrij,zonder)').
-particle_tag(wandel,'WW(inf,vrij,zonder)').
 particle_tag(weer,'BW()').
-particle_tag(weet_af,'WW(inf,vrij,zonder)').
-particle_tag(weet,'WW(inf,vrij,zonder)').
 particle_tag(weg,'BW()').
 particle_tag(wel,'BW()').
 particle_tag(welkom,'ADJ(vrij,basis,zonder)').
 particle_tag(wijs,'ADJ(vrij,basis,zonder)').
 particle_tag(zaken,'N(soort,mv,basis)').
-particle_tag(zeg,'WW(vd,vrij,zonder)').
-particle_tag(zie_aan,'WW(inf,vrij,zonder)').
-particle_tag(zien,'WW(inf,vrij,zonder)').
-particle_tag(zie,'WW(inf,vrij,zonder)').
-particle_tag(zit,'WW(inf,vrij,zonder)').
 particle_tag(zorg,'N(soort,ev,basis,zijd,stan)').
 particle_tag(zuur,'ADJ(vrij,basis,zonder)').
 particle_tag(zwaar,'ADJ(vrij,basis,zonder)').
@@ -4781,12 +5352,6 @@ gelijk           ADJ(vrij,basis,zonder)                       N(soort,ev,basis,o
 
 */
 
-guess_lemma(guess(Surf),Lemma) :-
-    !,
-    (   lassy_lemma(Surf,Lemma1)
-    ->  Lemma = Lemma1
-    ;   Lemma = Surf
-    ).
 guess_lemma(Surf,Lemma) :-
     (    exc_lemma(Surf,Lemma1)
     ->   Lemma = Lemma1
@@ -4822,519 +5387,18 @@ exc_lemma('Verbond',verbond).
 exc_lemma('Vereniging',vereniging).
 exc_lemma('Volkskgezondheid',volksgezondheid).
 
-
-lassy_lemma('Aan',aan).
-lassy_lemma(aanslagen,aanslag).
-lassy_lemma(aanvallen,aanval).
-lassy_lemma(activiteiten,activiteit).
-lassy_lemma(afgelopen,aflopen).
-lassy_lemma(afspraken,afspraak).
-lassy_lemma('Al',al).
-lassy_lemma(algemene,algemeen).
-lassy_lemma(alle,al).
-lassy_lemma('Alle',al).
-lassy_lemma('Alleen',alleen).
-lassy_lemma('Als',als).
-lassy_lemma('Amerikaanse','Amerikaans').
-lassy_lemma('Amerikanen','Amerikaan').
-lassy_lemma(andere,ander).
-lassy_lemma('Andere',ander).
-lassy_lemma(anderen,ander).
-lassy_lemma('Arabische','Arabisch').
-lassy_lemma(banken,bank).
-lassy_lemma(bedoeld,bedoelen).
-lassy_lemma(bedrijven,bedrijf).
-lassy_lemma(beelden,beeld).
-lassy_lemma(begint,beginnen).
-lassy_lemma(begon,beginnen).
-lassy_lemma(begonnen,beginnen).
-lassy_lemma(behandeld,behandelen).
-lassy_lemma(bekende,bekend).
-lassy_lemma(belangen,belang).
-lassy_lemma(belangrijke,belangrijk).
-lassy_lemma(belangrijkste,belangrijk).
-lassy_lemma('Belgische','Belgisch').
-lassy_lemma(bent,zijn).
-lassy_lemma(ben,zijn).
-lassy_lemma(bepaald,bepalen).
-lassy_lemma(bepaalde,bepalen).
-lassy_lemma(beperkt,beperken).
-lassy_lemma(bereikt,bereiken).
-lassy_lemma(beschouwd,beschouwen).
-lassy_lemma(besloot,besluiten).
-lassy_lemma(besloten,besluiten).
-lassy_lemma(bestaande,bestaan).
-lassy_lemma(bestaat,bestaan).
-lassy_lemma(beste,goed).
-lassy_lemma(best,goed).
-lassy_lemma(betaald,betalen).
-lassy_lemma(betekent,betekenen).
-lassy_lemma(betere,goed).
-lassy_lemma(beter,goed).
-lassy_lemma(betreffende,betreffen).
-lassy_lemma(betreft,betreffen).
-lassy_lemma(betrokken,betrekken).
-lassy_lemma(bevat,bevatten).
-lassy_lemma(bevoegdheden,bevoegdheid).
-lassy_lemma(biedt,bieden).
-lassy_lemma('Bij',bij).
-lassy_lemma(bijzondere,bijzonder).
-lassy_lemma(bleef,blijven).
-lassy_lemma(bleek,blijken).
-lassy_lemma(blijft,blijven).
-lassy_lemma(blijkt,blijken).
-lassy_lemma('Blz.',bladzijde).
-lassy_lemma(boeken,boek).
-lassy_lemma(boeren,boer).
-lassy_lemma('Bovendien',bovendien).
-lassy_lemma(bracht,brengen).
-lassy_lemma(brengt,brengen).
-lassy_lemma('Britse','Brits').
-lassy_lemma('Britten','Brit').
-lassy_lemma('Brusselse','Brussels').
-lassy_lemma(buitenlandse,buitenlands).
-lassy_lemma('Buitenlandse',buitenlands).
-lassy_lemma(burgers,burger).
-lassy_lemma(centrale,centraal).
-lassy_lemma('Chinese','Chinees').
-lassy_lemma(cijfers,cijfer).
-lassy_lemma(concrete,concreet).
-lassy_lemma('Daarbij',daarbij).
-lassy_lemma('Daar',daar).
-lassy_lemma('Daarnaast',daarnaast).
-lassy_lemma('Daarom',daarom).
-lassy_lemma(dagen,dag).
-lassy_lemma('Dames',dame).
-lassy_lemma('Dan',dan).
-lassy_lemma('Dat',dat).
-lassy_lemma('De',de).
-lassy_lemma('DE',de).
-lassy_lemma(deed,doen).
-lassy_lemma(delen,deel).
-lassy_lemma(der,de).
-lassy_lemma(der,de).
-lassy_lemma(derde,drie).
-lassy_lemma(dergelijke,dergelijk).
-lassy_lemma('Deze',deze).
-lassy_lemma('Die',die).
-lassy_lemma(diensten,dienst).
-lassy_lemma(dient,dienen).
-lassy_lemma('Dit',dit).
-lassy_lemma(diverse,divers).
-lassy_lemma(doden,dood).
-lassy_lemma(doet,doen).
-lassy_lemma('Door',door).
-lassy_lemma('Duitse','Duits').
-lassy_lemma('Duitsers','Duitser').
-lassy_lemma(duizenden,duizend).
-lassy_lemma(duurzame,duurzaam).
-lassy_lemma(echte,echt).
-lassy_lemma(economische,economisch).
-lassy_lemma('Een',een).
-lassy_lemma(een,één).
-lassy_lemma('Een',één).
-lassy_lemma(eerste,één).
-lassy_lemma(eerst,één).
-lassy_lemma(elke,elk).
-lassy_lemma(ene,een).
-lassy_lemma('En',en).
-lassy_lemma(én,en).
-lassy_lemma(enige,enig).
-lassy_lemma(enkele,enkel).
-lassy_lemma(enorme,enorm).
-lassy_lemma('Epilepsie',epilepsie).
-lassy_lemma('Er',er).
-lassy_lemma(ernstige,ernstig).
-lassy_lemma('Europese','Europees').
-lassy_lemma('Externe',extern).
-lassy_lemma(federale,federaal).
-lassy_lemma(financiële,financieel).
-lassy_lemma('Franse','Frans').
-lassy_lemma('Franstalige','Franstalig').
-lassy_lemma(gaat,gaan).
-lassy_lemma(gaf,geven).
-lassy_lemma(gebaseerd,baseren).
-lassy_lemma(gebeurde,gebeuren).
-lassy_lemma(gebeurt,gebeuren).
-lassy_lemma(gebieden,gebied).
-lassy_lemma(gebouwd,bouwen).
-lassy_lemma(gebracht,brengen).
-lassy_lemma(gebruikt,gebruiken).
-lassy_lemma(gedaan,doen).
-lassy_lemma(geeft,geven).
-lassy_lemma('Geen',geen).
-lassy_lemma(gegeven,geven).
-lassy_lemma(gegevens,gegeven).
-lassy_lemma(gehad,hebben).
-lassy_lemma(gehouden,houden).
-lassy_lemma(gekomen,komen).
-lassy_lemma(gekozen,kiezen).
-lassy_lemma(gekregen,krijgen).
-lassy_lemma(geldt,gelden).
-lassy_lemma(geleid,leiden).
-lassy_lemma(gemaakt,maken).
-lassy_lemma('Gemeenschap',gemeenschap).
-lassy_lemma(gemeenten,gemeente).
-lassy_lemma(genoemd,noemen).
-lassy_lemma(genomen,nemen).
-lassy_lemma(georganiseerd,organiseren).
-lassy_lemma(gericht,richten).
-lassy_lemma(gesloten,sluiten).
-lassy_lemma(gesproken,spreken).
-lassy_lemma(gesteld,stellen).
-lassy_lemma(getroffen,treffen).
-lassy_lemma(gevallen,geval).
-lassy_lemma(gevolgen,gevolg).
-lassy_lemma(gevonden,vinden).
-lassy_lemma(geweest,zijn).
-lassy_lemma(gewone,gewoon).
-lassy_lemma(geworden,worden).
-lassy_lemma(gezegd,zeggen).
-lassy_lemma(gezet,zetten).
-lassy_lemma(gezien,zien).
-lassy_lemma(gingen,gaan).
-lassy_lemma(ging,gaan).
-lassy_lemma(goede,goed).
-lassy_lemma(goederen,goed).
-lassy_lemma(grenzen,grens).
-lassy_lemma(groepen,groep).
-lassy_lemma(grootste,groot).
-lassy_lemma(grote,groot).
-lassy_lemma(grotere,groot).
-lassy_lemma(groter,groot).
-lassy_lemma(hadden,hebben).
-lassy_lemma(had,hebben).
-lassy_lemma(handen,hand).
-lassy_lemma(heb,hebben).
-lassy_lemma(hebt,hebben).
-lassy_lemma(heeft,hebben).
-lassy_lemma(hele,heel).
-lassy_lemma(heren,heer).
-lassy_lemma('Het',het).
-lassy_lemma(hield,houden).
-lassy_lemma('Hier',hier).
-lassy_lemma('Hij',hij).
-lassy_lemma(hoeft,hoeven).
-lassy_lemma('Hoe',hoe).
-lassy_lemma('Hoewel',hoewel).
-lassy_lemma(hoge,hoog).
-lassy_lemma(hogere,hoog).
-lassy_lemma(hoger,hoog).
-lassy_lemma(honderden,honderd).
-lassy_lemma(houdt,houden).
-lassy_lemma(huidige,huidig).
-lassy_lemma('Hun',hun).
-lassy_lemma(iedere,ieder).
-lassy_lemma('Ik',ik).
-lassy_lemma('Indien',indien).
-lassy_lemma(ingezet,inzetten).
-lassy_lemma('In',in).
-lassy_lemma(initiatieven,initiatief).
-lassy_lemma(instellingen,instelling).
-lassy_lemma(internationale,internationaal).
-lassy_lemma(interne,intern).
-lassy_lemma(inwoners,inwoner).
-lassy_lemma('Iraakse','Iraaks').
-lassy_lemma('Israëlische','Israëlisch').
-lassy_lemma(is,zijn).
-lassy_lemma('Is',zijn).
-lassy_lemma('Italiaanse','Italiaans').
-lassy_lemma('Japanse','Japans').
-lassy_lemma(jaren,jaar).
-lassy_lemma('Je',je).
-lassy_lemma(jonge,jong).
-lassy_lemma(jongeren,jong).
-lassy_lemma(juiste,juist).
-lassy_lemma('Justitie',justitie).
-lassy_lemma('Kamer',kamer).
-lassy_lemma(kan,kunnen).
-lassy_lemma(kent,kennen).
-lassy_lemma(kinderen,kind).
-lassy_lemma(klanten,klant).
-lassy_lemma(kleine,klein).
-lassy_lemma(komende,komen).
-lassy_lemma(komt,komen).
-lassy_lemma(konden,kunnen).
-lassy_lemma('Koning',koning).
-lassy_lemma(kon,kunnen).
-lassy_lemma(korte,kort).
-lassy_lemma(kosten,kost).
-lassy_lemma(kreeg,krijgen).
-lassy_lemma(kregen,krijgen).
-lassy_lemma(krijgt,krijgen).
-lassy_lemma(kunt,kunnen).
-lassy_lemma(kwamen,komen).
-lassy_lemma(kwam,komen).
-lassy_lemma(laat,laten).
-lassy_lemma(laatste,laat).
-lassy_lemma(lager,laag).
-lassy_lemma(lag,liggen).
-lassy_lemma(landelijke,landelijk).
-lassy_lemma(landen,land).
-lassy_lemma(lange,lang).
-lassy_lemma(langer,lang).
-lassy_lemma(later,laat).
-lassy_lemma(leden,lid).
-lassy_lemma(leerlingen,leerling).
-lassy_lemma(leidde,leiden).
-lassy_lemma(leidt,leiden).
-lassy_lemma(lidstaten,lidstaat).
-lassy_lemma(liep,lopen).
-lassy_lemma(liet,laten).
-lassy_lemma(ligt,liggen).
-lassy_lemma(lijkt,lijken).
-lassy_lemma(lokale,lokaal).
-lassy_lemma(loopt,lopen).
-lassy_lemma(maakte,maken).
-lassy_lemma(maakten,maken).
-lassy_lemma(maakt,maken).
-lassy_lemma(maanden,maand).
-lassy_lemma('Maar',maar).
-lassy_lemma(maatregelen,maatregel).
-lassy_lemma(mag,mogen).
-lassy_lemma(mannen,man).
-lassy_lemma(medewerkers,medewerker).
-lassy_lemma(medicijnen,medicijn).
-lassy_lemma(meer,veel).
-lassy_lemma('Meer',veel).
-lassy_lemma(meeste,veel).
-lassy_lemma(meest,veel).
-lassy_lemma('Men',men).
-lassy_lemma(mensen,mens).
-lassy_lemma('Met',met).
-lassy_lemma(middelen,middel).
-lassy_lemma(militaire,militair).
-lassy_lemma(militairen,militair).
-lassy_lemma(minder,weinig).
-lassy_lemma('Minister',minister).
-lassy_lemma(ministers,minister).
-lassy_lemma(minuten,minuut).
-lassy_lemma(mocht,mogen).
-lassy_lemma(moderne,modern).
-lassy_lemma(moesten,moeten).
-lassy_lemma(moest,moeten).
-lassy_lemma(moet,moeten).
-lassy_lemma(mogelijke,mogelijk).
-lassy_lemma(mogelijkheden,mogelijkheid).
-lassy_lemma('Naast',naast).
-lassy_lemma(name,naam).
-lassy_lemma(nam,nemen).
-lassy_lemma('Na',na).
-lassy_lemma(nationale,nationaal).
-lassy_lemma('Nederlanders','Nederlander').
-lassy_lemma('Nederlandse','Nederlands').
-lassy_lemma(neemt,nemen).
-lassy_lemma('Niet',niet).
-lassy_lemma(nieuwe,nieuw).
-lassy_lemma('Nog',nog).
-lassy_lemma('nr.',nummer).
-lassy_lemma('Nu',nu).
-lassy_lemma(officiële,officieel).
-lassy_lemma('Of',of).
-lassy_lemma(ogen,oog).
-lassy_lemma('Omdat',omdat).
-lassy_lemma('Om',om).
-lassy_lemma(omstandigheden,omstandigheid).
-lassy_lemma(onderhandelingen,onderhandeling).
-lassy_lemma('Onder',onder).
-lassy_lemma('Onderwijs',onderwijs).
-lassy_lemma(onderzocht,onderzoeken).
-lassy_lemma(ontstond,ontstaan).
-lassy_lemma(ontwikkeld,ontwikkelen).
-lassy_lemma(ontwikkelingslanden,ontwikkelingsland).
-lassy_lemma(onze,ons).
-lassy_lemma('Ook',ook).
-lassy_lemma(openbare,openbaar).
-lassy_lemma(opgenomen,opnemen).
-lassy_lemma(opgericht,oprichten).
-lassy_lemma('Op',op).
-lassy_lemma(organisaties,organisatie).
-lassy_lemma(oude,oud).
-lassy_lemma(oudere,oud).
-lassy_lemma(ouders,ouder).
-lassy_lemma(overheden,overheid).
-lassy_lemma('Over',over).
-lassy_lemma('Palestijnse','Palestijns').
-lassy_lemma(partijen,partij).
-lassy_lemma(partners,partner).
-lassy_lemma(patiënten,patiënt).
-lassy_lemma(personen,persoon).
-lassy_lemma(plaatsen,plaats).
-lassy_lemma(plannen,plan).
-lassy_lemma(politieke,politiek).
-lassy_lemma(prettige,prettig).
-lassy_lemma(prijzen,prijs).
-lassy_lemma(problemen,probleem).
-lassy_lemma(producten,product).
-lassy_lemma(projecten,project).
-lassy_lemma(provincies,provincie).
-lassy_lemma(punten,punt).
-lassy_lemma(raakte,raken).
-lassy_lemma(recente,recent).
-lassy_lemma(rechten,recht).
-lassy_lemma(redenen,reden).
-lassy_lemma(regels,regel).
-lassy_lemma(regionale,regionaal).
-lassy_lemma(resultaten,resultaat).
-lassy_lemma('risico\'s',risico).
-lassy_lemma('Russische','Russisch').
-lassy_lemma(scholen,school).
-lassy_lemma(schreef,schrijven).
-lassy_lemma('\'s',de).
-lassy_lemma('Sinds',sinds).
-lassy_lemma(slachtoffers,slachtoffer).
-lassy_lemma(sociale,sociaal).
-lassy_lemma(soldaten,soldaat).
-lassy_lemma(sommige,sommig).
-lassy_lemma('Sommige',sommig).
-lassy_lemma(soorten,soort).
-lassy_lemma('Spaanse','Spaans').
-lassy_lemma(speciale,speciaal).
-lassy_lemma(specifieke,specifiek).
-lassy_lemma(speelt,spelen).
-lassy_lemma(staat,staan).
-lassy_lemma(staten,staat).
-lassy_lemma(steden,stad).
-lassy_lemma(stelde,stellen).
-lassy_lemma(stelt,stellen).
-lassy_lemma(sterke,sterk).
-lassy_lemma(stoffen,stof).
-lassy_lemma(stond,staan).
-lassy_lemma(studenten,student).
-lassy_lemma(studies,studie).
-lassy_lemma(tanks,tank).
-lassy_lemma(technische,technisch).
-lassy_lemma(telt,tellen).
-lassy_lemma(ten,te).
-lassy_lemma(ten,te).
-lassy_lemma('Ten',te).
-lassy_lemma(ter,te).
-lassy_lemma(ter,te).
-lassy_lemma('Terwijl',terwijl).
-lassy_lemma('\'t',het).
-lassy_lemma('Tijdens',tijdens).
-lassy_lemma('Toch',toch).
-lassy_lemma('Toen',toen).
-lassy_lemma(totale,totaal).
-lassy_lemma('Tot',tot).
-lassy_lemma(troepen,troep).
-lassy_lemma(trok,trekken).
-lassy_lemma(tweede,twee).
-lassy_lemma('Twee',twee).
-lassy_lemma(uitgebreid,uitbreiden).
-lassy_lemma(uitgevoerd,uitvoeren).
-lassy_lemma('Uit',uit).
-lassy_lemma('Unie',unie).
-lassy_lemma('U',u).
-lassy_lemma(vaker,vaak).
-lassy_lemma(valt,vallen).
-lassy_lemma('Vanaf',vanaf).
-lassy_lemma('Vandaag',vandaag).
-lassy_lemma('Van',van).
-lassy_lemma(vaste,vast).
-lassy_lemma('Veel',veel).
-lassy_lemma(vele,veel).
-lassy_lemma(verboden,verbieden).
-lassy_lemma(verbonden,verbinden).
-lassy_lemma(verdachte,verdenken).
-lassy_lemma(verdere,ver).
-lassy_lemma(verder,ver).
-lassy_lemma('Verder',verder).
-lassy_lemma(verhalen,verhaal).
-lassy_lemma(verkiezingen,verkiezing).
-lassy_lemma(verkocht,verkopen).
-lassy_lemma(verloren,verliezen).
-lassy_lemma(vermiste,vermist).
-lassy_lemma(veroorzaakt,veroorzaken).
-lassy_lemma(verplicht,verplichten).
-lassy_lemma(verschillende,verschillend).
-lassy_lemma(verwacht,verwachten).
-lassy_lemma(vielen,vallen).
-lassy_lemma(viel,vallen).
-lassy_lemma(vindt,vinden).
-lassy_lemma('Vlaamse','Vlaams').
-lassy_lemma(volgende,volgen).
-lassy_lemma(volgend,volgen).
-lassy_lemma('Volgens',volgens).
-lassy_lemma(volgt,volgen).
-lassy_lemma(volledige,volledig).
-lassy_lemma(vonden,vinden).
-lassy_lemma(vond,vinden).
-lassy_lemma('Vooral',vooral).
-lassy_lemma(voormalige,voormalig).
-lassy_lemma('Voor',voor).
-lassy_lemma(vóór,voor).
-lassy_lemma(voorwaarden,voorwaarde).
-lassy_lemma(vorige,vorig).
-lassy_lemma(vormen,vorm).
-lassy_lemma(vormt,vormen).
-lassy_lemma(vragen,vraag).
-lassy_lemma(vrienden,vriend).
-lassy_lemma(vrije,vrij).
-lassy_lemma(vrouwen,vrouw).
-lassy_lemma('Waarom',waarom).
-lassy_lemma('Wanneer',wanneer).
-lassy_lemma('Want',want).
-lassy_lemma(wapens,wapen).
-lassy_lemma(waren,zijn).
-lassy_lemma(was,zijn).
-lassy_lemma('Wat',wat).
-lassy_lemma(weet,weten).
-lassy_lemma(weken,week).
-lassy_lemma(welke,welk).
-lassy_lemma('Wel',wel).
-lassy_lemma(wens,wensen).
-lassy_lemma(werden,worden).
-lassy_lemma(werd,worden).
-lassy_lemma(werken,werk).
-lassy_lemma(werknemers,werknemer).
-lassy_lemma(werkte,werken).
-lassy_lemma(werkt,werken).
-lassy_lemma(wetenschappelijke,wetenschappelijk).
-lassy_lemma('We',we).
-lassy_lemma('Wie',wie).
-lassy_lemma('Wij',wij).
-lassy_lemma(wilden,willen).
-lassy_lemma(wilde,willen).
-lassy_lemma(wilt,willen).
-lassy_lemma(wil,willen).
-lassy_lemma(wist,weten).
-lassy_lemma(woningen,woning).
-lassy_lemma(won,winnen).
-lassy_lemma(woorden,woord).
-lassy_lemma(wordt,worden).
-lassy_lemma(zag,zien).
-lassy_lemma(zaken,zaak).
-lassy_lemma('Zaken',zaak).
-lassy_lemma(zal,zullen).
-lassy_lemma(zegt,zeggen).
-lassy_lemma(zei,zeggen).
-lassy_lemma(zet,zetten).
-lassy_lemma('Ze',ze).
-lassy_lemma(ziet,zien).
-lassy_lemma(zie,zien).
-lassy_lemma('Zie',zien).
-lassy_lemma('Zijn',zijn).
-lassy_lemma('Zij',zij).
-lassy_lemma(zit,zitten).
-lassy_lemma('z\'n',zijn).
-lassy_lemma('Zoals',zoals).
-lassy_lemma(zogenaamde,zogenaamd).
-lassy_lemma(zouden,zullen).
-lassy_lemma(zou,zullen).
-lassy_lemma('Zo',zo).
-lassy_lemma(zware,zwaar).
-
-frequent_tag(Atom,Result) :-
-    findall(Tag,alpino_lex:lexicon(Tag,_,[Atom],[],_),Tags),
+frequent_tag(Atom,Stem,Result) :-
+    findall(Tag/Label,alpino_lex:lexicon(Tag,Label,[Atom],[],_),Tags),
     (   ft(T),
-	lists:member(T,Tags)
-    ->  Result = T
-    ;   Tags = [Result|_]
+	lists:member(T/L,Tags)
+    ->  Result/Stem = T/L
+    ;   Tags = [Result/Stem|_]
     ).
 
 ft(noun(_,_,_)).
 ft(number(_)).
+ft(adjective(_)). % prefer over verb (?)
+ft(verb(_,_,_)).  % prefer over v_noun
 
 %%% gcnd(Word) tussenwerpsels
 %%% lijst van The spoken corpus of Southern-Dutch dialects
@@ -5406,14 +5470,6 @@ symb_tags([Sym|Syms],P0,P) -->
     [cgn_postag(P0,P1,Sym,'SPEC(symb)')],
     symb_tags(Syms,P1,P).
 
-guess_lexical_tag_list([],[],Q,Q) --> [].
-guess_lexical_tag_list([H|T],[HS|HT],Q0,Q) -->
-    guess_lexical_tag(H,HS,Q0,Q1),
-    guess_lexical_tag_list(T,HT,Q1,Q).
-
-guess_lexical_tag(_Surf,Stem,Q0,Q) -->
-    guess_tag(Stem,preposition(_,_),Q0,Q).
-
 ignore_cap(Word,Word3,Tag,Tag2) :-
     ignore_cap(Word,Word2),
     ignore_tag(Tag,Word2,Word3,Tag2).
@@ -5425,7 +5481,6 @@ ignore_cap(Word,Word2) :-
 ignore_tag(_,Word,Word2,noun(DeHet,Count,Agr)) :-
     alpino_lex:lexicon(noun(DeHet,Count,Agr),Word2,[Word],[],_),
     !.
-ignore_tag(proper_name(Agr),  W,W,noun(both,both,Agr)).
 ignore_tag(proper_name(Agr,_),W,W,noun(both,both,Agr)).
 
 ignore_cap('Begroting').
@@ -5514,26 +5569,121 @@ mwu_vreemd_tags([W|Words],Q0,Q) -->
      mwu_vreemd_tags(Words,Q1,Q).
 
 mwu_vreemd_tag(Punct,Q0,Q) -->
-    { punct(Punct) },
+    { punct(Punct),
+      \+ Punct = '&'},
     !,
     [cgn_postag(Q0,Q,Punct,'LET()')].
 mwu_vreemd_tag(Punct,Q0,Q) -->
     [cgn_postag(Q0,Q,Punct,'SPEC(vreemd)')].
 
-guess_lex(Q0,Q,Surf,Stem) -->
-    {  frequent_tag(Surf,Frame),
-       !
-    },
-    cgn_postag_c(Frame,Stem,Surf,Q0,Q,none,no).
-    
-guess_lex(Q0,Q,Surf1,Stem) -->
-    {  alpino_unknowns:decap_first(Surf1,Surf),
-       frequent_tag(Surf,Frame),
-       !
-    },
-    cgn_postag_c(Frame,Stem,Surf,Q0,Q,none,no).
-    
 surf_map(Surf0,Surf,Q0,Q) :-
     Q is Q0 + 1,
     alpino_lexical_analysis:user_skips(List),
     lists:member(alt(Q0,Surf0,Surf),List).
+
+gen_name_parts([],['N(eigen,ev,basis,gen)']).
+gen_name_parts([_|T],['SPEC(deeleigen)'|PosList]) :-
+    gen_name_parts(T,PosList).
+
+is_a_number(Atom) :-
+    alpino_lex:parse_number_simple(Atom).
+is_a_number(Atom) :-
+    atom(Atom),
+    atom_codes(Atom,Codes),
+    alpino_lex:roman_number(Codes).
+
+number_tags(Q0,Q,Stem,Tag) -->
+    {  Len is Q-Q0,
+       atom(stem),
+       alpino_util:split_atom(Stem," ",Stems),
+       length(Stems,Len)
+    },
+    !,
+    number_tags_(Stems,Q0,Q,Tag).
+
+number_tags(Q0,Q,Stem,Tag) -->
+    tags(Q0,Q,Stem,Tag).
+
+number_tags_([],_,_,_) --> [].
+number_tags_([Stem|Stems],Q0,Q,Tag) -->
+    {  Q1 is Q0 + 1 },
+    number_tag(Stem,Q0,Q1,Tag),
+    number_tags_(Stems,Q1,Q,Tag).
+
+number_tag(Stem,Q0,Q,_Tag) -->
+    {  symb(Stem,_) },
+    !,
+    [cgn_postag(Q0,Q,Stem,'SPEC(symb)')].
+
+number_tag(Stem,Q0,Q,_Tag) -->
+    {  punct(Stem) },
+    !,
+    [cgn_postag(Q0,Q,Stem,'LET()')].
+
+number_tag(Stem,Q0,Q,_Tag) -->
+    {  atom(Stem),
+       atom_codes(Stem,[N1,X,N2]),
+       lists:member(X,[45,46,47]),
+       N1 > 46, N1 < 58,
+       N2 > 46, N2 < 58
+    },
+    !,
+    [cgn_postag(Q0,Q,Stem,'SPEC(symb)')].
+
+number_tag(Stem,Q0,Q,Tag) -->
+    [cgn_postag(Q0,Q,Stem,Tag)].
+
+
+symb('->',_).
+symb('mg/dag',_).
+symb(Atom,_) :-
+    atom(Atom),
+    atom_concat(_,'°',Atom).
+symb(Atom,_) :-
+    atom(Atom),
+    atom_concat(_,'°C',Atom).
+symb(Atom,_) :-
+    atom(Atom),
+    atom_concat(_,'%',Atom).
+symb(Atom,_) :-
+    atom(Atom),
+    atom_concat(_,',-',Atom).  % 20.000,-
+symb('×',_).
+symb(x,_).
+symb('=',_).
+symb('#',_).
+symb('+',_).
+symb('±',_).
+symb('&',_).
+symb('$',_).
+symb('Trb.',_).
+symb('Trb',_).
+symb('^',_).
+symb('©',_).
+symb('CA',_).
+symb('DLS',_).
+symb('§',_).
+symb('EUR',_).
+symb(o,tag).
+symb('ha.', noun(de,count,meas)).
+symb(ha, noun(de,count,meas)).
+symb('¤',_).
+symb(mm,_).
+symb(m,_).
+symb('mm.',_).
+symb(cm,_).
+symb('cm.',_).
+symb(tl,_).
+symb('km²',_).
+symb(km,_).
+symb('km.',_).
+symb(km/u,_).
+symb(km2,_).
+symb(mg,_).
+symb('µg',_).
+symb(ml,_).
+symb('mg.',_).
+symb('ml.',_).
+symb(kg,_).
+
+
