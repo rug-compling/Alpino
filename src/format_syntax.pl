@@ -450,8 +450,8 @@ add_final_postags([H|T],N,[cgn_postag(N,N1,Lemma,Tag)|Tags]) :-
 %% in case of timeout, this really should depend on the best frame sequence
 %% this is quick hack
 add_postag(H,Tag,Lemma) :-
-    (   alpino_cgn_postags:lassy(H,Tag)
-    ->  Lemma = H
+    (   alpino_cgn_postags:lassy(H,Lemma,Tag)
+    ->  true
     ;   %% e.g. in case of timeout
 	alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,H,His,Frame),
 	alpino_cgn_postags:cgn_postag(Frame,Stem,H,Q0,Q,n,His,[cgn_postag(_,_,Lemma,Tag)],[])
