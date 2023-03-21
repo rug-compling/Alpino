@@ -57,7 +57,7 @@ user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag),Cat,W/[P0,P])),B,[],
 user_transformation(r(REL,p(mwu)),B,Ds0,
 		    r(REL,p(mwu)),B,Ds ,String,_) :-
     surfs(Ds0,Surfs,String), 
-    correct_tags(Surfs,Lemmas,Tags),
+    mwu_postag(Surfs,Tags,Lemmas),
     assign_tags(Lemmas,Tags,Ds0,Ds),
     \+ Ds0 = Ds.
 
@@ -218,15 +218,15 @@ vreemd([LET|T],[Tag|L]) :-
     vreemd1(LET,Tag),
     vreemd(T,L).
 
-correct_tags(L,L,Deeleigen) :-
+mwu_postag(L,Deeleigen,L) :-
     flat(L),
     deeleigen(L,Deeleigen).
 
-correct_tags(L,L,Deeleigen) :-
+mwu_postag(L,Deeleigen,L) :-
     vreemd(L),
     vreemd(L,Deeleigen).
 
-correct_tags(L,L,Deeleigen) :-
+mwu_postag(L,Deeleigen,L) :-
     correct_tags(L,Deeleigen).
 
 flat(_) :-
@@ -234,6 +234,8 @@ flat(_) :-
 
 vreemd(_) :-
     fail.
+
+
 
 correct_tags(_,_) :-
     fail.
@@ -305,5 +307,45 @@ adj(_):-fail.
 %% '//node[@genus="genus" and @rel="hd" and ../node[@rel="det" and @lemma=("de","het","dit","dat","die","deze")]]'
 %% TODO soort genus, also compounds with soort
 %%
+%% *gevend
+%% *lui/*lieden
+%%
+%%% Liege
+%% gebaat zij
 
-%%% kruispunt
+surf_lemma(W,'ADJ(prenom,basis,met-e,stan)','WW(od,prenom,met-e)',_,L):-
+    ende(W,_,L).
+
+surf_lemma(W,'ADJ(prenom,basis,zonder)','WW(od,prenom,zonder)',_,L):-
+    ende(_,W,L).
+surf_lemma(W,'ADJ(vrij,basis,zonder)','WW(od,vrij,zonder)',_,L):-
+    ende(_,W,L).
+
+surf_lemma(W,'ADJ(prenom,basis,met-e,stan)','WW(vd,prenom,met-e)',_,L):-
+    ge_de(W,_,L).
+surf_lemma(W,'ADJ(nom,basis,met-e,zonder-n,stan)','WW(vd,nom,met-e,zonder-n)',_,L):-
+    ge_de(W,_,L).
+
+surf_lemma(W,'ADJ(prenom,basis,zonder)','WW(vd,prenom,zonder)',_,L):-
+    ge_de(_,W,L).
+surf_lemma(W,'ADJ(vrij,basis,zonder)','WW(vd,vrij,zonder)',_,L):-
+    ge_de(_,W,L).
+
+surf_lemma(W,_,'WW(od,nom,met-e,mv-n)',_,L) :-
+    enden(W,L).
+
+surf_lemma(W,_,'WW(vd,nom,met-e,mv-n)',_,L) :-
+    gen(W,L).
+
+ende(_,_,_) :-
+    fail.
+
+ge_de(_,_,_) :-
+    fail.
+
+enden(_,_) :-
+    fail.
+
+gen(_,_) :-
+    fail.
+
