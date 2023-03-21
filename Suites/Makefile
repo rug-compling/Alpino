@@ -29,6 +29,8 @@ keyprefix=""
 %.pl : %.sents
 	echo ":- module(alpino_suite,[ sentence/2 ])." > $*.pl
 	echo >> $*.pl
+	echo ":- hdrug_util:set_flag(print_suite,'$*')." >> $*.pl
+	echo >> $*.pl
 	cat $*.sents |\
         tr -d '' |\
         sed -e "s/  *$$//" \
@@ -47,6 +49,8 @@ qa_application_type_text=":- hdrug_util:set_flag(application_type,qa)."
 ## this is robust against multiple occurrences of |
 %.pl : %.named_sents
 	echo ":- module(alpino_suite,[ sentence/2 ])." > $*.pl
+	echo >> $*.pl
+	echo ":- hdrug_util:set_flag(print_suite,'$*')." >> $*.pl
 	echo >> $*.pl
 	echo $($*_application_type_text) >> $*.pl
 	echo >> $*.pl

@@ -1,5 +1,7 @@
 :- module(alpino_suite,[ sentence/2 ]).
 
+:- hdrug_util:set_flag(print_suite,eans).
+
 sentence('01_03_1',['Ik',heb,nog,één,kaart,in,mijn,hand,'.']).
 sentence('01_03_2',['Hij',kaart,graag,'.']).
 sentence('01_03_3',['Het',is,er,sedert,niet,beter,op,geworden,'.']).

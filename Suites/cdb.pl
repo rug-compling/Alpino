@@ -1,5 +1,7 @@
 :- module(alpino_suite, [ sentence/2 ]).
 
+:- hdrug_util:set_flag(print_suite,cdb).
+
 my_sentence(0,['Dit',in,verband,met,de,gemiddeld,langere,levensduur,van,de,vrouw,'.']).
 my_sentence(1,['De',verzekeringsmaatschappijen,verhelen,niet,dat,ook,de,rentegrondslag,van,vier,procent,nog,een,ruime,marge,laat,ten,opzichte,van,de,thans,geldende,rentestand,'.']).
 my_sentence(2,['Gezien',de,lange,duur,van,vele,verzekeringscontracten,is,dit,onvermijdelijk,',',vooral,omdat,de,aard,van,deze,contracten,een,tussentijdse,premieverhoging,niet,toelaat,'.']).

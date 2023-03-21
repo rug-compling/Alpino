@@ -1,5 +1,7 @@
 :- module(alpino_suite, [ sentence/2 ]).
 
+:- hdrug_util:set_flag(print_suite,'wpspel').
+
 :- hdrug_util:set_flag(application_type,qa).
 
 :- use_module(library(system)).

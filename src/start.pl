@@ -210,7 +210,8 @@ load_suite :-
     ->  inform_undefined_module(suite,alpino_suite)
     ;   File==n
     ->  inform_undefined_module(suite,alpino_suite)
-    ;	overrule_module(File)
+    ;   set_flag(print_suite,""),
+	overrule_module(File)
     ),
 
     if_gui(update_sents),
@@ -274,6 +275,15 @@ hdrug_command(load,load_suite,[s]).
 hdrug_command(load,(load_types,
 		    load_lexicon),[l]).
 hdrug_command(load,load_penalties,[p]).
+
+hdrug_command(su,
+	      (  set_flag(treebank,undefined),
+		 set_suite(SUITE)
+	      ),[SUITE]).
+hdrug_command(suite,
+	      (  set_flag(treebank,undefined),
+		 set_suite(SUITE)
+	      ),[SUITE]).
 
 hdrug_command(l,list_sentences([Key]),[]) :-
     hdrug_flag(current_ref,Key).
@@ -2694,22 +2704,24 @@ add_cgn_numbers(C1,D1,L1) :-
 
 reset_cgn_numbers :-
     set_flag(cgn_numbers,c(0,0,0)).
-    
+
+:- initialize_flag(print_suite,"").
 
 %% sorted, so in order
 %% complete
 compare_cgn([],[],_,[],C,C,L,L,_).
 compare_cgn([cgn_postag(P0,P,LemmaA,H)|T],
 	    [cgn_postag(P0,P,LemmaB0,H2)|T2],P0,[W|Words],C0,C,L0,L,Ident) :-
+    hdrug_flag(print_suite,SuiteStr),
     alpino_treebank:get_lemma_or_word(LemmaB0,LemmaB,W),
     (   H == H2
     ->  C1 is C0 + 1
-    ;   format(user_error,"~w~t~40+~w~t~40+~w~t~40+ #PT# ~w~n",[W,H,H2,Ident]),
+    ;   format(user_error,"~w~t~40+~w~t~40+~w~t~40+ #PT# ~w ~s~n",[W,H,H2,Ident,SuiteStr]),
 	C1 = C0
     ),
     (   LemmaA == LemmaB
     ->  L1 is L0 + 1
-    ;   format(user_error,"~w~t~40+~w~t~40+~w~t~40+ #LM# ~w~n",[W,LemmaA,LemmaB,Ident]),
+    ;   format(user_error,"~w~t~40+~w~t~40+~w~t~40+ #LM# ~w ~s~n",[W,LemmaA,LemmaB,Ident,SuiteStr]),
 	L1 = L0
     ),
     compare_cgn(T,T2,P,Words,C1,C,L1,L,Ident).
