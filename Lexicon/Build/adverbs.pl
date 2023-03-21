@@ -154,7 +154,7 @@ adverb(doodleuk).
 adverb([door,en,door]).
 adverb(dra).
 adverb(duizendmaal).
-adverb(dusdanig).
+%%adverb(dusdanig).  adjective
 adverb(dusver).  
 adverb(dusverre).
 adverb([een,twee,drie]).

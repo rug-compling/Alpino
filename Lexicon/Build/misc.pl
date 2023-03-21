@@ -497,6 +497,9 @@ punct('→',is_gelijk).
 
 punct(',',komma).
 
+punct('·',ligg_streep).    % whatever
+punct('*',ligg_streep).    % whatever
+
 punct(-,ligg_streep).
 punct('',ligg_streep).
 punct('&#8211;',ligg_streep).   % dash
@@ -4395,7 +4398,7 @@ m(beschoren,        np_adjective,beschoren    ).
 m(beu,              np_adjective,beu          ).
 m(kots_beu,         np_adjective,kotsbeu          ).
 m(eens,             np_adjective,eens         ).
-m(gewend,           np_adjective,gewend       ).
+m(wennen,           np_adjective,gewend       ).
 m(gewoon,           np_adjective,gewoon       ).
 m(oneens,           np_adjective,oneens       ).
 m(spuugzat,         np_adjective,spuugzat     ).
@@ -4425,7 +4428,7 @@ m(beu,              clause_np_adjective, beu).
 m(kots_beu,         clause_np_adjective, kotsbeu).
 m(eens,             clause_np_adjective, eens).
 m(eens,             clause_np_adjective(pp(met)), eens). % we zijn het met u eens dat ...
-m(gewend,           clause_np_adjective, gewend).
+m(wennen,           clause_np_adjective, gewend).
 m(gewoon,           clause_np_adjective, gewoon).
 m(moe,              clause_np_adjective, moe).           % VL
 m(oneens,           clause_np_adjective, oneens).
@@ -7182,7 +7185,7 @@ genitive_noun(woords).
 
 %% het lam [gG]ods
 m(god,            pronoun(nwh,thi,sg,de,gen,def),gods).
-m(god,            pronoun(nwh,thi,sg,de,gen,def),'Gods').
+m('God',            pronoun(nwh,thi,sg,de,gen,def),'Gods').
 
 %% 28 miljard mark 's jaars
 m('\'s jaar',            pronoun(nwh,thi,sg,de,gen,def),['\'s',jaars]).
@@ -7827,6 +7830,7 @@ nominalized_adjective(sterk,sterken).
 nominalized_adjective(stil,stillen).
 nominalized_adjective(stom,stommen).
 nominalized_adjective(thuisloos,thuislozen).
+nominalized_adjective(uiterst,uitersten).
 nominalized_adjective(valide,validen,[minder]). 
 nominalized_adjective(veel,velen).
 nominalized_adjective(verantwoordelijk,verantwoordelijken).
@@ -7894,7 +7898,7 @@ with_dt([al,dat],
 with_dt([al,degenen],
         pronoun(nwh,thi,pl,de,both,def,strpro),
         dt(np,[det=l(al,pre_det_quant(al),detp,0,1),
-               hd=l(degenen,pronoun(nwh,thi,pl,de,both,def,strpro),1,2)
+               hd=l(degeen,pronoun(nwh,thi,pl,de,both,def,strpro),1,2)
               ])).
 
 with_dt([al,wie],
@@ -8614,6 +8618,7 @@ term([beat,'\'m',up]).
 term([beat,'\'em',up]).
 term([beat,'\'',m,up]).
 term([beat,'\'',em,up]).
+term([best,practice],[best,practices]).
 term([bible,belt]).
 term(['Bible',belt]).
 term([big,business]).

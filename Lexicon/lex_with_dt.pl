@@ -977,7 +977,7 @@ with_dt_all(af,[kleins,vanaf]).
 with_dt_all(af,[naar]).
 with_dt_all(afstand,[lang]).
 with_dt_all(al,[dat]).
-with_dt_all(al,[degenen]).
+with_dt_all(al,[degeen]).
 with_dt_all(al,[dit]).
 with_dt_all(al,[gij]).
 with_dt_all(al,[hen]).
@@ -2740,8 +2740,8 @@ with_dt_root(dat).
 with_dt_root(de).
 with_dt_root(decennium).
 with_dt_root(deel).
+with_dt_root(degeen).
 with_dt_root(degelijk).
-with_dt_root(degenen).
 with_dt_root(den).
 with_dt_root(denk).
 with_dt_root(derde).

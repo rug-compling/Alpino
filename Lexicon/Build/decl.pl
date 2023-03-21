@@ -246,6 +246,12 @@ wrong_arity_goal(verbs:v(_,_,_,_,_)).
 wrong_arity_goal(verbs:v(_,_,_,_,_,_)).
 %wrong_arity_goal(verbs:v(_,_,_,_,_,_,_,_)).
 wrong_arity_goal(verbs:v(_,_,_,_,_,_,_,_,_)).
+wrong_arity_goal(verbs:psp_only(_,_)).
+wrong_arity_goal(verbs:psp_only(_,_,_)).
+wrong_arity_goal(verbs:psp_only(_,_,_,_,_)).
+
+wrong_arity_goal(verbs:inf_only(_,_,_)).
+wrong_arity_goal(verbs:inf_only(_,_,_,_)).
 
 wrong_arity_goal(misc:m(_)).
 wrong_arity_goal(misc:m(_,_)).

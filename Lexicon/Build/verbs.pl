@@ -4,8 +4,7 @@
     m/3,
     m/2,
     v/7,
-    v/8,
-    psp_only/3.
+    v/8.
 
 m(Stam,Cat1,WordOrWords) :-
     m(Stam,Cat0),
@@ -1047,83 +1046,8 @@ m(v_root(zal,zullen),
               fixed([[best],sbar_subj],no_passive)  % het zal best dat ..
               ])).     
 
-m(v_root(Psp,Psp),verb(_,_,_,Psp,_,_,_,HZ,Subcat)) :-
-    psp_only(Psp,HZ,Subcat).
-
 m(Stem,verb(_,_,_,Psp,_,_,_,HZ,Subcat)) :-
     psp_only(Stem,Psp,HZ,Subcat).
-
-psp_only(v_root(moei,moeien),
-	 gemoeid,
-         zijn,
-         [pc_pp(met)]).
-
-psp_only(bedacht,
-         zijn,
-         [pc_pp(op),
-          er_pp_sbar(op),
-          er_pp_vp(op)]).
-
-psp_only(behept,
-	 zijn,
-	 [
-	  pc_pp(met),
-	  er_pp_sbar(met),
-	  er_pp_vp(met)
-	  ]).
-
-%% dat hem geen lang leven is beschoren (toebedeeld)
-psp_only(beschoren,
-         zijn,
-         [np_np]).
-
-psp_only(gebaat,
-         zijn,
-         [pc_pp(bij),
-          er_pp_vp(bij),
-          er_pp_sbar(bij),
-          pc_pp(met),
-          er_pp_vp(met),
-          er_pp_sbar(met)]).
-
-%% transitive: 'het doelpunt werd geboren uit een briljante actie'/zonnegloren
-psp_only(geboren,
-         hebben,
-         [transitive,
-          np_pc_pp(uit)]).
-
-psp_only(gecharmeerd,
-         zijn,
-         [pc_pp(van),
-          er_pp_sbar(van),
-          er_pp_vp(van)]).
-
-psp_only(geoorloofd,
-         zijn,
-         [vp_subj,
-          vp_subj_so_np]).
-
-psp_only(inbegrepen,
-         zijn,
-         [intransitive,
-          pc_pp(in),
-          er_pp_sbar(in)]).
-
-psp_only(opgewassen,
-         zijn,
-         [pc_pp(tegen)]).
-
-psp_only(toegedaan,
-         zijn,
-         [so_np]).
-
-psp_only(geruggesteund,hebben,[transitive]).
-
-%% omdat we hem dankbaarheid zijn verschuldigd
-psp_only(verschuldigd,
-         unacc,
-         [transitive,
-	  np_np]).
 
 m(v_root(placht,plachten),
   verb(_,_,_,_,placht,plachten,_,hebben,
@@ -1176,112 +1100,113 @@ m(v_root(Stem,Inf),
     lists:member(b(Sc),List).
 
 m(v_root(Lem,Lem),verb(Inf,hebben,inf,[intransitive])) :-
-    inf_only_sport(Inf,Lem),
+    inf_only(Inf,Lem),
     atomic(Inf).
 
 m(v_root(Inf,Inf),verb(Inf,hebben,inf,[intransitive])) :-
-    inf_only_sport(Inf),
+    inf_only(Inf),
     atomic(Inf).
 
 % het skispringen
 % ik wil weer gaan skispringen
-:- discontiguous inf_only_sport/1, inf_only_sport/2.
+:- discontiguous inf_only/1, inf_only/2.
 
-inf_only_sport(allroundschaatsen,allround_schaatsen).
-inf_only_sport(allrounden).
-inf_only_sport(alpineskiën,alpine_skiën).
-inf_only_sport(baanwielrennen,baan_wielrennen).
-inf_only_sport(backpacken).
-inf_only_sport(ballonvaren,ballon_varen).
-inf_only_sport(berglopen).
-inf_only_sport(boekhouden).
-inf_only_sport(bloemschikken).
-inf_only_sport(boogschieten).
-inf_only_sport(campagnevoeren,campagne_voeren).
-inf_only_sport(carpoolen).
-inf_only_sport(crowdsurfen).
-inf_only_sport(deeltijdwerken,deeltijd_werken).
-inf_only_sport(diepzeeduiken,diepzee_duiken).
-inf_only_sport(discuswerpen).
-inf_only_sport(doodslaan).	% want tussen droom en daad
-inf_only_sport(downhillen).
-inf_only_sport(driebanden).
-inf_only_sport(dwergwerpen,dwerg_werpen).
-inf_only_sport(echtbreken).
-inf_only_sport(geitgooien,geit_gooien).
-inf_only_sport(handwerken).
-inf_only_sport(hardlopen,hard_lopen).
-inf_only_sport(haringkaken).
-inf_only_sport(hongerstaken).
-inf_only_sport(hoofdrekenen,hoofd_rekenen).
-inf_only_sport(hoogspringen).
-inf_only_sport(ijszeilen,ijs_zeilen).
-inf_only_sport(inlineskaten,inline_skaten).
-inf_only_sport('inline-skaten',inline_skaten).
-inf_only_sport('in-lineskaten',inline_skaten).
-inf_only_sport('in-line-skaten',inline_skaten).
-inf_only_sport('internet-bankieren',internet_bankieren).
-inf_only_sport(internetbankieren,internet_bankieren).
-inf_only_sport(kantklossen).
-inf_only_sport(kickboksen).
-inf_only_sport(kogelstoten).
-inf_only_sport(koffiedrinken,koffie_drinken).
-inf_only_sport(koorddansen).
-inf_only_sport(koppensnellen).
-inf_only_sport(kunstrijden).
-inf_only_sport(kunstschaatsen).
-inf_only_sport(landschapschilderen,landschap_schilderen).
-inf_only_sport(langebaanschaatsen,langebaan_schaatsen).
-inf_only_sport(linedancen).
-inf_only_sport(machineschrijven,machine_schrijven).
-inf_only_sport(marathonschaatsen,marathon_schaatsen).
-inf_only_sport(maren).		% niets te maren
-inf_only_sport(mierenneuken).
-inf_only_sport(modderworstelen).
-inf_only_sport(motorcrossen).
-inf_only_sport(motorrijden).
-inf_only_sport(nachtvliegen).
-inf_only_sport(oppositievoeren,oppositie_voeren).
-inf_only_sport(paalzitten).
-inf_only_sport(parachutespringen,parachute_springen).
-inf_only_sport(pleasen).
-inf_only_sport(polsstokhoogspringen).
-inf_only_sport(prijsschieten).
-inf_only_sport(profwielrennen,prof_wielrennen).
-inf_only_sport(rekeningrijden).
-inf_only_sport(ruziemaken).
-inf_only_sport(schoolverlaten).
-inf_only_sport(schoolzwemmen,school_zwemmen).
-inf_only_sport(skispringen).
-inf_only_sport(skivliegen).
-inf_only_sport(skydiven).
-inf_only_sport(snowboarden).
-inf_only_sport(speerwerpen).
-inf_only_sport(sportvissen,sport_vissen).
-inf_only_sport(striptekenen,strip_tekenen).
-inf_only_sport(stoepranden).
-inf_only_sport(tandenpoetsen).
-inf_only_sport(teleleren).
-inf_only_sport(telewerken).
-inf_only_sport(thaiboksen).
-inf_only_sport(thuiswerken).
-inf_only_sport(tijdrekken).
-inf_only_sport(tijdrijden,tijd_rijden).
-inf_only_sport(treinreizen,trein_reizen).
-inf_only_sport('tv-kijken').
-inf_only_sport(veldlopen).
-inf_only_sport(veldrijden).
-inf_only_sport(verdachtmaken,verdacht_maken).
-inf_only_sport(vrouwenwielrennen,vrouw_wielrennen).
-inf_only_sport(zakenbankieren).
-inf_only_sport(zakkenrollen).
-inf_only_sport(zandsurfen,zand_surfen).
-inf_only_sport(zeezeilen,zee_zeilen).
-inf_only_sport(zwanendriften,zwaan_driften).
-inf_only_sport(zwartepieten).
-inf_only_sport(zwartrijden).
-inf_only_sport(zwartwerken).
-inf_only_sport(zweefvliegen).
+inf_only(allroundschaatsen,allround_schaatsen).
+inf_only(allrounden).
+inf_only(alpineskiën,alpine_skiën).
+inf_only(baanwielrennen,baan_wielrennen).
+inf_only(backpacken).
+inf_only(ballonvaren,ballon_varen).
+inf_only(berglopen).
+inf_only(boekhouden).
+inf_only(bloemschikken).
+inf_only(boogschieten).
+inf_only(campagnevoeren,campagne_voeren).
+inf_only(carpoolen).
+inf_only(crowdsurfen).
+inf_only(deeltijdwerken,deeltijd_werken).
+inf_only(diepzeeduiken,diepzee_duiken).
+inf_only(discuswerpen).
+inf_only(doodslaan).	% want tussen droom en daad
+inf_only(downhillen).
+inf_only(driebanden).
+inf_only(dwergwerpen,dwerg_werpen).
+inf_only(echtbreken).
+inf_only(geitgooien,geit_gooien).
+inf_only(handwerken).
+inf_only(hardlopen,hard_lopen).
+inf_only(haringkaken).
+inf_only(hongerstaken).
+inf_only(hoofdrekenen,hoofd_rekenen).
+inf_only(hoogspringen).
+inf_only(ijszeilen,ijs_zeilen).
+inf_only(inlineskaten,inline_skaten).
+inf_only('inline-skaten',inline_skaten).
+inf_only('in-lineskaten',inline_skaten).
+inf_only('in-line-skaten',inline_skaten).
+inf_only('internet-bankieren',internet_bankieren).
+inf_only(internetbankieren,internet_bankieren).
+inf_only(kantklossen).
+inf_only(kickboksen).
+inf_only(kogelstoten).
+inf_only(koffiedrinken,koffie_drinken).
+inf_only(koorddansen).
+inf_only(koppensnellen).
+inf_only(kunstrijden).
+inf_only(kunstschaatsen).
+inf_only(landschapschilderen,landschap_schilderen).
+inf_only(langebaanschaatsen,langebaan_schaatsen).
+inf_only(linedancen).
+inf_only(machineschrijven,machine_schrijven).
+inf_only(marathonschaatsen,marathon_schaatsen).
+inf_only(maren).		% niets te maren
+inf_only(mierenneuken).
+inf_only(modderworstelen).
+inf_only(motorcrossen).
+inf_only(motorrijden).
+inf_only(nachtvliegen).
+inf_only(oppositievoeren,oppositie_voeren).
+inf_only(paalzitten).
+inf_only(parachutespringen,parachute_springen).
+inf_only(pleasen).
+inf_only(polsstokhoogspringen).
+inf_only(prijsschieten).
+inf_only(profwielrennen,prof_wielrennen).
+inf_only(rekeningrijden).
+inf_only(ruziemaken).
+inf_only(schoolverlaten).
+inf_only(schoolzwemmen,school_zwemmen).
+inf_only(skispringen).
+inf_only(skivliegen).
+inf_only(skydiven).
+inf_only(snowboarden).
+inf_only(speerwerpen).
+inf_only(sportvissen,sport_vissen).
+inf_only(striptekenen,strip_tekenen).
+inf_only(stoepranden).
+inf_only(tandenpoetsen).
+inf_only(teleleren).
+inf_only(telewerken).
+inf_only(thaiboksen).
+inf_only(thuiswerken).
+inf_only(tijdrekken).
+inf_only(tijdrijden,tijd_rijden).
+inf_only(trampolinespringen).
+inf_only(treinreizen,trein_reizen).
+inf_only('tv-kijken').
+inf_only(veldlopen).
+inf_only(veldrijden).
+inf_only(verdachtmaken,verdacht_maken).
+inf_only(vrouwenwielrennen,vrouw_wielrennen).
+inf_only(zakenbankieren).
+inf_only(zakkenrollen).
+inf_only(zandsurfen,zand_surfen).
+inf_only(zeezeilen,zee_zeilen).
+inf_only(zwanendriften,zwaan_driften).
+inf_only(zwartepieten).
+inf_only(zwartrijden).
+inf_only(zwartwerken).
+inf_only(zweefvliegen).
 
 stem(F0,Stem) :-
     (	atom(F0)
@@ -10480,6 +10405,10 @@ v(ironiseer,ironiseert,ironiseren,geironiseerd,ironiseerde,ironiseerden,
     [h([intransitive,
 	transitive])]).
 
+v(irrigeer,irrigeert,irrigeren,geïrrigeerd,irrigeerde,irrigeerden,
+    [h([intransitive,
+	transitive])]).
+
 v(irriteer,irriteert,irriteren,geïrriteerd,irriteerde,irriteerden,
     [h([intransitive,
 	sbar_subj_so_np,
@@ -13356,12 +13285,6 @@ v(licht,licht,lichten,gelicht,lichtte,lichtten,
 	part_transitive(voor),
 	part_np_pc_pp(op,voor),
 	part_np_pc_pp(voor,over)])]).
-
-
-psp_only(gelieerd,
-         zijn,
-         [pc_pp(aan),
-          pc_pp(met)]).
 
 
 v(lieer,lieert,liëren,gelieerd,lieerde,lieerden,
@@ -17889,6 +17812,10 @@ v(rammel,rammelt,rammelen,gerammeld,rammelde,rammelden,
 v(rand,randt,randen,gerand,randde,randden,
     [h([part_transitive(aan)])]).
 
+v(randomiseer,randomiseert,randomiseren,gerandomiseerd,randomiseerde,randomiseerden,
+  [h([intransitive,
+      transitive])]).
+
 v(rangeer,rangeert,rangeren,gerangeerd,rangeerde,rangeerden,
     [h([intransitive,
 	transitive,
@@ -21662,7 +21589,7 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
 	part_np_er_pp_vp(voor,op),  % hij laat zich voorstaan op
                                     % or svp with laat?
 	part_pc_pp(uit,tegen),
-	part_intransitive(vol),
+%	part_intransitive(vol),   confusion with "dat volstaat"
 	part_pc_pp(vol,met)]),
      b([part_np_np(af),
 	part_so_pp_np(af)])]).
@@ -29249,4 +29176,95 @@ v(zwik,zwikt,zwikken,gezwikt,zwikte,zwikten,
 v(zwoeg,zwoegt,zwoegen,gezwoegd,zwoegde,zwoegden,
     [h([intransitive,
 	pc_pp(op)])]).
+
+psp_only(gelieerd,
+	 gelieerd,
+         zijn,
+         [pc_pp(aan),
+          pc_pp(met)]).
+
+psp_only(v_root(moei,moeien),
+	 gemoeid,
+         zijn,
+         [pc_pp(met)]).
+
+psp_only(v_root(bedenk,bedenken),
+	 bedacht,
+         zijn,
+         [pc_pp(op),
+          er_pp_sbar(op),
+          er_pp_vp(op)]).
+
+psp_only(behept,
+	 behept,
+	 zijn,
+	 [pc_pp(met),
+	  er_pp_sbar(met),
+	  er_pp_vp(met)
+	  ]).
+
+%% dat hem geen lang leven is beschoren (toebedeeld)
+psp_only(beshoren,
+	 beschoren,
+         zijn,
+         [np_np]).
+
+psp_only(v_root(baat,baten),
+	 gebaat,
+         zijn,
+         [pc_pp(bij),
+          er_pp_vp(bij),
+          er_pp_sbar(bij),
+          pc_pp(met),
+          er_pp_vp(met),
+          er_pp_sbar(met)]).
+
+%% transitive: 'het doelpunt werd geboren uit een briljante actie'/zonnegloren
+psp_only(geboren,
+	 geboren,
+         hebben,
+         [transitive,
+          np_pc_pp(uit)]).
+
+psp_only(gecharmeerd,
+	 gecharmeerd,
+         zijn,
+         [pc_pp(van),
+          er_pp_sbar(van),
+          er_pp_vp(van)]).
+
+psp_only(geoorloofd,
+	 geoorloofd,
+         zijn,
+         [vp_subj,
+          vp_subj_so_np]).
+
+psp_only(inbegrepen,
+	 inbegrepen,
+         zijn,
+         [intransitive,
+          pc_pp(in),
+          er_pp_sbar(in)]).
+
+psp_only(opgewassen,
+	 opgewassen,
+         zijn,
+         [pc_pp(tegen)]).
+
+psp_only(toegedaan,
+	 toegedaan,
+         zijn,
+         [so_np]).
+
+psp_only(geruggesteund,
+	 geruggesteund,
+	 hebben,
+	 [transitive]).
+
+%% omdat we hem dankbaarheid zijn verschuldigd
+psp_only(verschuldigd,
+	 verschuldigd,
+         unacc,
+         [transitive,
+	  np_np]).
 

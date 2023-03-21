@@ -3383,6 +3383,9 @@ a([stem(alleen_staan),
    ende(alleenstaande),
    end(alleenstaand)],padv,[],[]).
 
+a([e(allegorische),
+   no_e(allegorisch)],adv,[],[]).
+
 a([e(allemachtige),
    no_e(allemachtig)],adv,[],[]).
 
@@ -6510,7 +6513,8 @@ a([e(blinde),
    st(blindst),
    ste(blindste)],padv,
   [er_pp_sbar(voor),
-   pp(voor)],[]).
+   pp(voor)],
+  [dubbel]).
 
 a([both(blindelings)],adv,[],[]).
 
@@ -13690,13 +13694,13 @@ a([ge_e(geleegde),
 a([ge_e(geleende),
    ge_no_e(geleend)],adv,[],[]).
 
-a([ge_e(geleerde),
+a([e(geleerde),
    er(geleerder),
    ere(geleerdere),
-   ge_no_e(geleerd),
+   no_e(geleerd),
    st(geleerdst),
    ste(geleerdste)],adv,
-  [subject_sbar],[]).
+  [subject_sbar],[hoog]).
 
 a([ge_e(gelegaliseerde),
    ge_no_e(gelegaliseerd),
@@ -14985,6 +14989,10 @@ a([ge_e(geramde),
 a([ge_e(gerande),
    ge_no_e(gerand)],nonadv,[],[]).
 
+a([stem(randomiseren),
+   ge_e(gerandomiseerde),
+   ge_no_e(gerandomiseerd)],nonadv,[],[]).
+
 a([ge_e(gerangschikte),
    ge_no_e(gerangschikt)],adv,[],[]).
 
@@ -15943,7 +15951,7 @@ a([ge_e(gesorteerde),
 a([ge_e(gespaarde),
    ge_no_e(gespaard)],adv,[pp(van)],[]).
 
-a([stem(gespannen),
+a([stem(spannen),
    ge_both(gespannen),
    er(gespannener),
    ere(gespannenere),
@@ -16989,7 +16997,8 @@ a([ge_e(gewelfde),
 
 a([ge_no_e(gewend),
    ge_e(gewende)],padv,
-  [object_vp,
+  [transitive,
+   object_vp,
    object_sbar,
    er_pp_sbar(aan),
    er_pp_vp(aan),
@@ -17628,6 +17637,10 @@ a([ge_e(geïnvesteerde),
 
 a([ge_e(geïnviteerde),
    ge_no_e(geïnviteerd)],adv,[],[]).
+
+a([stem(irrigeren),
+   ge_e(geïrrigeerde),
+   ge_no_e(geïrrigeerd)],padv,[],[]).
 
 a([ge_e(geïrriteerde),
    er(geïrriteerder),
@@ -19064,13 +19077,6 @@ a([e(hoogdravende),
    no_e(hoogdravend),
    st(hoogdravendst),
    ste(hoogdravendste)],padv,[],[]).
-
-a([e(hooggeleerde),
-   er(hooggeleerder),
-   ere(hooggeleerdere),
-   no_e(hooggeleerd),
-   st(hooggeleerdst),
-   ste(hooggeleerdste)],nonadv,[],[]).
 
 a([both(hooggespannen)],nonadv,[],[]).
 
@@ -31765,6 +31771,8 @@ a([e(rooskleurige),
 a([e(roostervrije),
    no_e(roostervrij)],padv,[],[]).
 
+a([both(rose)],nonadv,[],[i(zuur_stok,zuurstok)]).
+
 a([e(rosse),
    er(rosser),
    ere(rossere),
@@ -31821,8 +31829,7 @@ a([e(royale),
    st(royaalst),
    ste(royaalste)],adv,[],[]).
 
-a([both(rose),
-   both(roze)],nonadv,[],[i(zuur_stok,zuurstok)]).
+a([both(roze)],nonadv,[],[i(zuur_stok,zuurstok)]).
 
 a([e(rozige),
    er(roziger),
@@ -37938,6 +37945,10 @@ a([ge_e(versufte),
    st(versuftst),
    ste(versuftste)],adv,[],[]).
 
+a([stem(versuikeren),
+   ge_e(versuikerde),
+   ge_no_e(versuikerd)],adv,[],[]).
+
 a([ge_e(vertaalde),
    ge_no_e(vertaald)],adv,[],[]).
 
@@ -42739,7 +42750,6 @@ stem(geledigd,v_root(ledig,ledigen)).
 stem(geleefd,v_root(leef,leven)).
 stem(geleegd,v_root(leeg,legen)).
 stem(geleend,v_root(leen,lenen)).
-stem(geleerd,v_root(leer,leren)).
 stem(gelegaliseerd,v_root(legaliseer,legaliseren)).
 stem(gelegd,v_root(leg,leggen)).
 stem(gelegen,v_root(lig,liggen)).

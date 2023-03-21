@@ -654,6 +654,8 @@ accent(geinviteerde,geïnviteerde).
 accent(geinviteerd,geïnviteerd).
 accent(geioniseerde,geïoniseerde).
 accent(geioniseerd,geïoniseerd).
+accent(geirrigeerde,geïrrigeerde).
+accent(geirrigeerd,geïrrigeerd).
 accent(geirriteerde,geïrriteerde).
 accent(geirriteerdere,geïrriteerdere).
 accent(geirriteerder,geïrriteerder).

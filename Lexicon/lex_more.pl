@@ -1721,7 +1721,7 @@ parse_number(W,Agr) :-
 	->   Agr=sg_num
 	;    Agr=pl_num
 	)
-    ).
+    ),!.
     % if single character, then it must be a real number
 
 %% 3x2
@@ -3808,43 +3808,46 @@ stand_alone_enumeration([Alpha|Tail]) :-
     ;   Tail = [46]
     ).
 
-stand_alone_enumeration("ii").
-stand_alone_enumeration("iii").
-stand_alone_enumeration("iv").
-stand_alone_enumeration("v").
-stand_alone_enumeration("vi").
-stand_alone_enumeration("vii").
-stand_alone_enumeration("viii").
-stand_alone_enumeration("ix").
-stand_alone_enumeration("xi").
-stand_alone_enumeration("xii").
-stand_alone_enumeration("xiii").
-stand_alone_enumeration("xiv").
-stand_alone_enumeration("xv").
-stand_alone_enumeration("xvi").
-stand_alone_enumeration("xvii").
-stand_alone_enumeration("xviii").
-stand_alone_enumeration("xix").
-stand_alone_enumeration("xx").
+stand_alone_enumeration(Str) :-
+    roman_number(Str).
 
-stand_alone_enumeration("II").
-stand_alone_enumeration("III").
-stand_alone_enumeration("IV").
-stand_alone_enumeration("V").
-stand_alone_enumeration("VI").
-stand_alone_enumeration("VII").
-stand_alone_enumeration("VIII").
-stand_alone_enumeration("IX").
-stand_alone_enumeration("XI").
-stand_alone_enumeration("XII").
-stand_alone_enumeration("XIII").
-stand_alone_enumeration("XIV").
-stand_alone_enumeration("XV").
-stand_alone_enumeration("XVI").
-stand_alone_enumeration("XVII").
-stand_alone_enumeration("XVIII").
-stand_alone_enumeration("XIX").
-stand_alone_enumeration("XX").
+roman_number("ii").
+roman_number("iii").
+roman_number("iv").
+roman_number("v").
+roman_number("vi").
+roman_number("vii").
+roman_number("viii").
+roman_number("ix").
+roman_number("xi").
+roman_number("xii").
+roman_number("xiii").
+roman_number("xiv").
+roman_number("xv").
+roman_number("xvi").
+roman_number("xvii").
+roman_number("xviii").
+roman_number("xix").
+roman_number("xx").
+
+roman_number("II").
+roman_number("III").
+roman_number("IV").
+roman_number("V").
+roman_number("VI").
+roman_number("VII").
+roman_number("VIII").
+roman_number("IX").
+roman_number("XI").
+roman_number("XII").
+roman_number("XIII").
+roman_number("XIV").
+roman_number("XV").
+roman_number("XVI").
+roman_number("XVII").
+roman_number("XVIII").
+roman_number("XIX").
+roman_number("XX").
 
 digit_dot_digit([H|T]) :-
     isdigit(H),

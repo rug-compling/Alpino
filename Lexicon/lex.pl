@@ -661,6 +661,46 @@ lexicon_(Word,proper_name(pl,Type),Stem,Ws,Ws,plural(name),_LC) :-
     atom(Word),
     plural_name(Word,Stem,Type).
 
+prefer_his_list([normal|_],[variant(_,_)|_]).
+prefer_his_list([_|T0],[_|T]) :-
+    prefer_his_list(T0,T).
+
+%% this complication is motivated by the fact that
+%% - both
+%%   Karel van 't Reve
+%%   Karel van het Reve
+%% are in the dictionary
+%% because 't is a variant of het, we would otherwise get two readings
+%% for the occurrence of "Karel van 't Reve" in the input
+multi_name(Tag,Word,Name,Ws1,Ws,His,TYPE,DictNo,Number) :-
+    findall(Tag/Name/Ws1/Ws/His/TYPE/VariantList,
+	    base_multi_name(Tag,Word,Name,Ws1,Ws,His,TYPE,DictNo,Number,VariantList),
+	    List
+	   ),
+    lists:select(Tag/Name/Ws1/Ws/His/TYPE/VariantList,List,List2),
+    \+ (   lists:member(Tag/_/Ws1/Ws/His/TYPE/VariantList2,List2),
+	   prefer_his_list(VariantList2,VariantList)
+       ).
+
+base_multi_name(Tag,Word,Name,Ws1,Ws,His,TYPE,DictNo,Number,VariantList) :-
+    next_words(Words,Ws1,Ws,Number,Word,VariantList),
+    (   hdrug_util:concat_all([Word|Words],Name,' '),
+	pro_fadd:morph_word(Name,DictNo,_,TYPE),
+	Tag = proper_name(Both),
+	guess_number([Word|Words],Both),
+	His = names_dictionary
+    ;   lists:append(Prefix,[Last],[Word|Words]),
+	atom_concat(LastName,'\'s',Last),
+	lists:append(Prefix,[LastName],NameList),
+	hdrug_util:concat_all(NameList,Name,' '),
+	pro_fadd:morph_word(Name,DictNo,_,TYPE),
+	(   Tag = name_determiner(pron),
+	    His = gen(names_dictionary)
+	;   Tag = proper_name(pl),
+	    His = plural(names_dictionary)
+	    )
+	).
+
 in_names_dictionary(Cat,Word,Name,Ws1,Ws,His) :-
     atom(Word),
     initialize_names_dict(DictNo),
@@ -668,24 +708,7 @@ in_names_dictionary(Cat,Word,Name,Ws1,Ws,His) :-
     atom_codes(Result,[ResultH|ResultCodes]),
     (   [ResultH] == "#"
     ->  number_codes(Number,ResultCodes),
-	next_words(Words,Ws1,Ws,Number,Word,VariantList),
-	combine_his_list(VariantList,His0,His),
-	(   hdrug_util:concat_all([Word|Words],Name,' '),
-	    pro_fadd:morph_word(Name,DictNo,_,TYPE),
-	    Tag = proper_name(Both),
-	    guess_number([Word|Words],Both),
-	    His0 = names_dictionary
-	;   lists:append(Prefix,[Last],[Word|Words]),
-	    atom_concat(LastName,'\'s',Last),
-	    lists:append(Prefix,[LastName],NameList),
-	    hdrug_util:concat_all(NameList,Name,' '),
-	    pro_fadd:morph_word(Name,DictNo,_,TYPE),
-	    (   Tag = name_determiner(pron),
-		His0 = gen(names_dictionary)
-	    ;	Tag = proper_name(pl),
-		His0 = plural(names_dictionary)
-	    )
-	)
+	multi_name(Tag,Word,Name,Ws1,Ws,His,TYPE,DictNo,Number)
     ;   TYPE = Result,
 	Name = Word,
 	Ws1  = Ws,
@@ -727,6 +750,7 @@ plural_name('Heinekens','Heineken','PER').
 plural_name('Hurricanes','Hurricane','ORG').
 plural_name('Japen','Jaap','PER').
 plural_name('Lee\'s','Lee','PER').
+plural_name('Limburgen','Limburg','GEO').
 plural_name('Mercedessen','Mercedes','ORG').
 plural_name('Obama\'s','Obama','PER').
 plural_name('Orions','Orion','ORG').
@@ -2028,6 +2052,7 @@ r_requires3(men).
 r_requires3(hij).
 r_requires3(ie).
 r_requires3('-ie').
+r_requires3('\'ie').
 r_requires3(u) :-
     \+ is_word_form(ik).
 r_requires3(het) :-
@@ -3289,6 +3314,7 @@ parse_only_variant(zoja,    'zo ja',sbar).
 
 parse_only_lex(ie,      hij,    pronoun(nwh,thi,sg,de,nom,def,wkpro)).
 parse_only_lex('-ie',   hij,    pronoun(nwh,thi,sg,de,nom,def,wkpro)).
+parse_only_lex('\'ie',  hij,    pronoun(nwh,thi,sg,de,nom,def,wkpro)).
 
 % qtleap: login op de website
 % ipv     log in op de website
@@ -4741,8 +4767,6 @@ combine_his(normal,His0,His) :-
     !,
     His0 = His.
 combine_his(Variant,His0,variant(Variant,His0)).
-
-combine_his_list(_,His,His). % for now
 
 replace_space(Part0,Part) :-
     atom(Part0),
