@@ -807,6 +807,9 @@ unknown_word_heuristic(P1,R1,W,_Ws,"compound(~p)|~p|~p|~p~n",
     \+ tag(P1,_,_,_,_,_,verb_ster,_),
     guess_compound(W,Wmins),
     member(Len-Wmin-Parts,Wmins),
+
+    %% todo: the history of the suffix should be part of the history of the compound
+    %% e.g.: 'televisie-uitzending(en)'  is now not recognizable as SPEC(enof)
     findall(Tag,
 	    alternative_open_class(Len,Wmin,Parts,P1,R1,compound(Len),Tag),
 	    [Th|Tt]).
@@ -2627,6 +2630,9 @@ guess_compoundXX(W,WLast,[WfirstStem],hyphen) :-
     \+ never_compound_part(WLast),
     (   compound_part(first,Wfirst,WfirstStem)
     ->  true
+    ;   atom_concat(Wfir,s,Wfirst),   % arbeids-ongeschikten -> arbeid_ongeschikt
+	compound_part(first,Wfir,WfirstStem)
+    ->  true
     ;   Wfirst = WfirstStem
     ).
 
@@ -2762,6 +2768,8 @@ compound_part(kinder,kind).
 compound_part(hersen,hersen).
 compound_part(hoender,hoen).
 compound_part(huishoud,huishoud).
+compound_part(scheep,schip).
+compound_part(scheeps,schip).
 
 compound_part(achteraf).
 compound_part(anti).
@@ -5216,6 +5224,9 @@ potential_name_fsa(2,_P0,[Junior|Words],Words,[Junior],[junior]) :-
 potential_name_fsa(2,_P0,[de,Rang|Words],Words,[de,Rang],[devijfde]) :-
     word_rang(Rang),
     !.
+potential_name_fsa(2,_P0,[Rang|Words],Words,[Rang],[devijfde]) :-
+    roman_number(Rang),
+    !.
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],His) :-
     name_and(Word),
     foreign_word(Word),
@@ -5673,6 +5684,11 @@ word_rang(achtentwintigste).
 word_rang(negenentwintigste).
 word_rang(dertigste).
 
+roman_number(Atom):-
+    atom(Atom),
+    atom_codes(Atom,Str),
+    alpino_lex:roman_number(Str).
+
 name_initial(Atom) :-
     atom(Atom),
     atom_codes(Atom,Codes),
@@ -5956,7 +5972,8 @@ lexical_analysis_quoted_name__([H1,H2|T],P0,P,R0,_R) :-
     concat_all(Ws,Label,' '),
     \+ (   punct_only(0,P1),	% otherwise too many false hits
 	   punct_only(P2,P)
-       ),			% so " kjals , lkjasdlfj " . is not a name
+       ),		    % so " kjals , lkjasdlfj " . is not a name
+    \+ tag(P1,P2,R1,R,_,_,_,noun(_,_,_)),
     \+ tag(P1,P2,R1,R,_,_,_,proper_name(_,_)),
     \+ tag(P1,P2,R1,R,_,_,_,proper_name(_)),
     assert_tag(P1,P2,R1,R,Label,quoted_name(H1,H2,E1,E2),proper_name(both)).
@@ -5968,6 +5985,7 @@ lexical_analysis_quoted_name__([H|T],P0,P,R0,_R) :-
     R1 is R0 + 1,
     R is R1 + (P2-P1),
     concat_all(Ws,Label,' '),
+    \+ tag(P1,P2,R1,R,_,_,noun(_,_,_),_),
     \+ tag(P1,P2,R1,R,_,_,_,proper_name(_)),
     \+ tag(P1,P2,R1,R,_,_,_,proper_name(_,_)),
     (   H == '«'
