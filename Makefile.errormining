@@ -73,7 +73,6 @@ e:
 		  -e '^[*][*][*][*] parsed'\
                   -e '^FRAME#'\
 		  -e '^timeout[|]'\
-                  -e 'no cgn tag'\
                   -e '^warning: UNKNOWN'\
                   -e '^english compound' |\
          grep -iw -e killed\
