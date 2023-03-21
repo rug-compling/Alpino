@@ -555,7 +555,11 @@ cgn43:
 SHELL=/bin/bash
 
 pt_diff:
-	-diff <(grep -e ' #LM' -e ' #PT' $$suite/poslemma) <(grep -e ' #LM' -e ' #PT' $$suite/job*/log1) | grep '^[>]'
+	-diff -w <(grep -e ' #LM' -e ' #PT' $$suite/poslemma) <(grep -e ' #LM' -e ' #PT' $$suite/job*/log1) | grep '^[>]'
+
+## only per suite
+pt_diff_all:
+	-diff -w <(grep -e ' #LM' -e ' #PT' $(suite)/poslemma) <(grep -e ' #LM' -e ' #PT' $(suite)/job*/log1)
 
 GREP=grep -v -e ^fn -e ^fv -e ^ovis -e ^Titaantjes[-]
 
