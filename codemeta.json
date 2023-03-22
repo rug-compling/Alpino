@@ -1,0 +1,124 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "https://w3id.org/software-iodata",
+    "https://w3id.org/software-types",
+    "https://raw.githubusercontent.com/jantman/repostatus.org/master/badges/latest/ontology.jsonld",
+    {
+      "author": {
+        "@container": "@list",
+        "@id": "schema:author"
+      },
+      "contributor": {
+        "@container": "@list",
+        "@id": "schema:contributor"
+      },
+      "referencePublication": {
+        "@id": "codemeta:referencePublication",
+        "@type": "@id"
+      },
+      "softwareRequirements": {
+        "@id": "schema:softwareRequirements",
+        "@type": "@id"
+      }
+    }
+  ],
+  "@id": "https://github.com/rug-compling/Alpino",
+  "@type": "SoftwareSourceCode",
+  "identifier": "https://github.com/rug-compling/Alpino",
+  "name": "Alpino",
+  "description": "Alpino parser and related tools for Dutch",
+  "version": "0.0.0",
+  "codeRepository": "git+https://github.com/rug-compling/Alpino.git",
+  "url": "https://www.let.rug.nl/~vannoord/alp/Alpino/",
+  "issueTracker": "https://github.com/rug-compling/Alpino/issues",
+  "license": "https://spdx.org/licenses/LGPL-2.1",
+  "developmentStatus": "https://www.repostatus.org/#active",
+  "applicationCategory": [
+    "https://w3id.org/nwo-research-fields#SoftwareForHumanities",
+    "https://w3id.org/nwo-research-fields#Linguistics",
+    "https://w3id.org/nwo-research-fields#ComputationalLinguisticsAndPhilology"
+  ],
+  "producer": {
+    "@type": "Organization",
+    "name": "Taaltechnologie, Faculteit der Letteren, Rijksuniversiteit Groningen",
+    "url": "https://www.rug.nl/research/clcg/research/cl/"
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0001-5564-6341",
+      "givenName": "Gertjan",
+      "familyName": "Van Noord",
+      "email": "g.j.m.van.noord@rug.nl",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Taaltechnologie, Faculteit der Letteren, Rijksuniversiteit Groningen"
+      }
+    }
+  ],
+  "maintainer": [
+    {
+      "@id": "https://orcid.org/0000-0001-5564-6341"
+    }
+  ],
+  "operatingSystem": ["Linux", "Docker"],
+  "programmingLanguage": ["Prolog"],
+  "softwareHelp": [
+    {
+      "@id": "https://www.let.rug.nl/~vannoord/alp/Alpino/",
+      "@type": "WebSite",
+      "name": "Alpino",
+      "url": "https://www.let.rug.nl/~vannoord/alp/Alpino/"
+    }
+  ],
+  "downloadUrl": "https://www.let.rug.nl/~vannoord/alp/Alpino/versions/binary/latest.tar.gz",
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Daniël",
+      "familyName": "De Kok"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Andreas",
+      "familyName": "Van Cranenburgh"
+    }
+  ],
+  "referencePublication": {
+    "@type": "ScholarlyArticle",
+    "sameAs": "https://research.rug.nl/en/publications/at-last-parsing-is-now-operational",
+    "name": "At Last Parsing Is Now Operational",
+    "author": ["Gertjan van Noord"],
+    "pageStart": "20",
+    "pageEnd": "42",
+    "isPartOf": {
+      "@type": "PublicationIssue",
+      "datePublished": "2006",
+      "name": "TALN06. Verbum Ex Machina. Actes de la 13e conference sur le traitement automatique des langues naturelles.",
+      "location": "Leuven, Belgium"
+    },
+    "url": "https://www.let.rug.nl/vannoord/papers/taln.pdf"
+  },
+  "targetProduct": [
+    {
+      "@type": "CommandLineApplication",
+      "name": "Alpino",
+      "executableName": "Alpino",
+      "producesData": {
+        "@type": "Dataset",
+        "encodingFormat": "text/xml"
+      }
+    },
+  ],
+  "funding": {
+    "@type": "Grant",
+    "name": "NWO Pionier Algorithms for Linguistic Processing",
+    "funder": {
+      "@type": "Organization",
+      "name": "NWO",
+      "url": "https://www.nwo.nl"
+    }
+  }
+}
