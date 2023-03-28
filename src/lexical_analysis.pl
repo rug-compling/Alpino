@@ -70,6 +70,7 @@ lexical_analysis_cleanup :-
     retractall(word_form(_)),
     retractall(rpos(_,_)),
     retractall(tag(_,_,_,_,_,_,_,_)),
+    retractall(copy_tag(_,_,_,_,_,_,_,_)),
 %%    retractall(cgn_tag(_,_,_)),
     retractall(index_tag_tag(_,_)),
     retractall(index_tag_stem(_,_)),
@@ -505,7 +506,8 @@ assert_tag(P0,P,R0,R,Label,UsedInput,History,Tag) :-
         tag(P0,P,R0,R,Label,UsedInput,skip(M,_,_,His),Tag),
 	M < N
     ->  true
-    ;   noclp_assert(tag(P0,P,R0,R,Label,UsedInput,History,Tag))
+    ;   noclp_assert(tag(P0,P,R0,R,Label,UsedInput,History,Tag)),
+	noclp_assert(copy_tag(P0,P,R0,R,Label,UsedInput,History,Tag))
     ).	      
 
 search_tag_tag(Tag,tag(P0,P,R0,R,Label,UsedInput,History,Tag)) :-
@@ -536,6 +538,7 @@ assert_tag(P0,P,R0,R,Label,UsedInput,History,Tag) :-
 	M < N
     ->  true
     ;   assertz(tag(P0,P,R0,R,Label,UsedInput,History,Tag),Ref),
+	assertz(copy_tag(P0,P,R0,R,Label,UsedInput,History,Tag)),
 	assertz(index_tag_tag(Tag,Ref)),
 	assertz(index_tag_stem(Label,Ref)),
 	assertz(index_tag_r0(R0,Ref))

@@ -315,11 +315,11 @@ lexical_analysis_name__(Names0,P0,P,History,R0,All,Len,"genitive_name|~p|~p~n",
     start_of_sentence(P0,Start),
     R is R0 + Len.
 
-lexical_analysis_name__(Names,P0,P,_History,R0,_All,1,"adjective_name|~p|~p~n",
+lexical_analysis_name__(Names0,P0,P,_History,R0,_All,1,"adjective_name|~p|~p~n",
 		      [Stem,adjective(E)],tag(P0,P,R0,R,Stem,name_adj(Start),adjective(E)),Least) :-
     P is P0 + 1,   % !
-    ends_with_adjective_marker(Names,E),
-    \+ subsumed_by_dict(P0,P,Names,adjective(E)),
+    ends_with_adjective_marker(Names0,Names,E),
+    \+ subsumed_by_dict(P0,P,Names0,adjective(E)),
     (	nonvar(Least)
     ->	P > Least
     ;	true
@@ -1051,6 +1051,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"suffix|~p|~p|~p~n",[W,Suffix,Tag],_,len(1)) 
     \+ tag(P1,_,_,_,_,_,compound(hyphen),_),
     \+ tag(P1,_,_,_,_,_,prefix_name,_),
     \+ tag(P1,_,_,_,_,_,compar_adj,_),
+    \+ tag(P1,_,_,_,_,_,wo_dia,_),
     guess_form_of_suffix(W,Root,Suffix,Tag,CompTag),
     \+ (   comp_tag(CompTag,CheckTag),
 	   tag(P1,_,_,_,_,_,_,CheckTag)
@@ -2025,6 +2026,10 @@ decap_foreign_word(X,Xx) :- decap_first(X,Xx), foreign_word(Xx).
 
 decap_first(Capped,Small) :-
     atom(Capped),
+    atom_concat('IJ',Rest,Capped),
+    atom_concat('ij',Rest,Small).
+decap_first(Capped,Small) :-
+    atom(Capped),
     atom_codes(Capped,[Upper|Codes]),
     isupper(Upper),
     tolower(Upper,Lower),    
@@ -2772,6 +2777,7 @@ compound_part(scheep,schip).
 compound_part(scheeps,schip).
 
 compound_part(achteraf).
+compound_part(aller).
 compound_part(anti).
 compound_part(ex).
 compound_part(half).
@@ -3081,6 +3087,7 @@ never_compound_part_sc(rk).
 never_compound_part_sc(rna).
 never_compound_part_sc(ro).
 never_compound_part_sc(sch).
+never_compound_part_sc(scheep).
 never_compound_part_sc(sec).
 never_compound_part_sc(sen).
 never_compound_part_sc(sens).
@@ -4150,15 +4157,22 @@ exceptional_not_subsumed_by_dict(enumeration,_,C) :-
     C \= proper_name(_).
 exceptional_not_subsumed_by_dict(decap('Adj-s'),_,_).
 
-ends_with_adjective_marker(List,E) :-
-    last(List,Gen),
-    atom(Gen),
-    \+ foreign_word(Gen),
-    atom_concat(_,Marker,Gen),
-    adjective_marker(Marker,E).
+ends_with_adjective_marker(List,List2,E) :-
+    lists:append(Pref,[Gene],List),
+    atom(Gene),
+    \+ foreign_word(Gene),
+%    atom_concat(_,Marker,Gene),
+    adjective_marker(Gene,E,Gen),
+    lists:append(Pref,[Gen],List2).
+    
 
-adjective_marker('se',e).	% Utrechtse
-adjective_marker(XS,no_e(nonadv)):-	% Utrechts
+%%% Utrechtse
+adjective_marker(Gene,e,Gen) :-
+    atom_concat(_,se,Gene),
+    atom_concat(Gen,e,Gene).
+%%% Utrechts
+adjective_marker(Gen,no_e(nonadv),Gen):-
+    atom_concat(_,XS,Gen),
     char_code(s,S),
     atom(XS),
     atom_codes(XS,[NotQuote,S]),
@@ -6648,4 +6662,5 @@ add_accents(W,Wmin) :-
 
 comp_tag(adjective(ende(_)),adjective(ende(_))).
 comp_tag(adjective(end(_)),adjective(end(_))).
+comp_tag(adjective(no_e(_)),adjective(no_e(_))).
 comp_tag(X,X).
