@@ -2,15 +2,15 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
-      <node begin="1" end="2" id="3" infl="sg3" lemma="dragen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="draag" sc="transitive" stype="declarative" tense="present" word="draagt" wvorm="pv"/>
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="dragen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="draag" word="draagt" wvorm="pv"/>
       <node begin="2" cat="np" end="5" id="4" rel="obj1">
-        <node begin="2" buiging="met-e" end="3" id="5" infl="zulke" lemma="zulk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="zulk" vwtype="aanw" wh="nwh" word="zúlke"/>
-        <node aform="base" begin="3" buiging="met-e" end="4" graad="basis" id="6" infl="e" lemma="gek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gek" vform="adj" word="gekke"/>
-        <node begin="4" end="5" gen="het" getal="mv" graad="basis" id="7" lemma="kleed" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kleed" word="kleren"/>
+        <node begin="2" buiging="met-e" end="3" id="5" lemma="zulk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="zulk" vwtype="aanw" word="zúlke"/>
+        <node begin="3" buiging="met-e" end="4" graad="basis" id="6" lemma="gek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gek" word="gekke"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="7" lemma="kleren" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kleed" word="kleren"/>
       </node>
     </node>
-    <node begin="5" end="6" id="8" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+    <node begin="5" end="6" id="8" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
   </node>
   <sentence>Hij draagt zúlke gekke kleren !</sentence>
 </alpino_ds>

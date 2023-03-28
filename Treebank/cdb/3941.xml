@@ -72,8 +72,8 @@
                       <node begin="34" end="35" getal="mv" graad="basis" id="58" lemma="heer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="heer" word="heren"/>
                       <node begin="35" cat="conj" end="39" id="59" rel="app">
                         <node begin="35" cat="mwu" end="37" id="60" rel="cnj">
-                          <node begin="35" end="36" id="61" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
-                          <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="62" lemma="vrooom" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Vroome" word="Vroome"/>
+                          <node begin="35" end="36" id="61" lemma="De" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+                          <node begin="36" end="37" id="62" lemma="Vroome" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vroome" spectype="deeleigen" word="Vroome"/>
                         </node>
                         <node begin="37" conjtype="neven" end="38" id="63" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                         <node begin="38" end="39" genus="genus" getal="ev" graad="basis" id="64" lemma="Roskam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Roskam" word="Roskam"/>

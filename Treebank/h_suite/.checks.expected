@@ -54,3 +54,4 @@ h_suite/./266.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma=
 h_suite/./457.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
 h_suite/./279.xml	//node[@pt="adj" and @positie="vrij" and (@rel="su" or (@rel="obj1" and not(../@cat="pp")) or @rel="obj2") ]	free adjective as NP?
 h_suite/./687.xml	//node[@cat="np" and node[@rel="hd" and @genus="onz"] and node[@lemma="de" or @lemma="die" or @lemma="deze"]]	onz noun combines with de
+h_suite/./258.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="WW(inf,vrij,zonder)" or @postag="WW(inf,prenom,zonder)" or @postag="WW(inf,prenom,met-e)")]]	inf cat without inf hd?

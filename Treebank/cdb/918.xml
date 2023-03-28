@@ -6,7 +6,7 @@
       <node begin="1" end="2" id="3" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" word="blijft" wvorm="pv"/>
       <node begin="2" end="3" id="4" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
       <node begin="3" cat="conj" end="6" id="5" rel="predc">
-        <node begin="3" buiging="zonder" end="4" graad="comp" id="6" lemma="tv-omroepster" pos="noun" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="cnj" root="tv-omroepster" word="tv-omroepster"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="tv-omroepster" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="tv-omroepster" word="tv-omroepster"/>
         <node begin="4" conjtype="neven" end="5" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="radio_presentatrice" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="radiopresentatrice" word="radiopresentatrice"/>
       </node>

@@ -59,7 +59,7 @@
           <node begin="24" end="25" id="45" lemma="ondanks" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="ondanks" vztype="init" word="ondanks"/>
           <node begin="25" cat="np" end="30" id="46" rel="obj1">
             <node begin="25" end="26" id="47" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="26" buiging="met-e" end="27" graad="basis" id="48" lemma="tegemoet_komen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="tegemoetkomend" word="tegemoetkomende"/>
+            <node begin="26" buiging="met-e" end="27" id="48" lemma="tegemoet_komen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="tegemoetkomend" word="tegemoetkomende" wvorm="od"/>
             <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="49" lemma="truck" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="truck" word="truck"/>
             <node begin="28" cat="rel" end="30" id="50" rel="mod">
               <node begin="28" end="29" getal="getal" id="51" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
@@ -80,7 +80,7 @@
         </node>
         <node begin="34" cat="pp" end="36" id="61" rel="ld">
           <node begin="34" end="35" id="62" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
-          <node begin="35" buiging="zonder" end="36" getal-n="zonder-n" graad="basis" id="63" lemma="rechts" pos="adv" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="obj1" root="rechts" word="rechts"/>
+          <node begin="35" buiging="zonder" end="36" graad="basis" id="63" lemma="rechts" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obj1" root="rechts" word="rechts"/>
         </node>
       </node>
       <node begin="36" conjtype="neven" end="37" id="64" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
@@ -95,7 +95,7 @@
             <node begin="41" end="42" genus="zijd" getal="ev" graad="basis" id="73" lemma="ruk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ruk" word="ruk"/>
             <node begin="42" cat="pp" end="44" id="74" rel="mod">
               <node begin="42" end="43" id="75" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
-              <node begin="43" buiging="zonder" end="44" getal-n="zonder-n" graad="basis" id="76" lemma="links" pos="adv" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="obj1" root="links" word="links"/>
+              <node begin="43" buiging="zonder" end="44" graad="basis" id="76" lemma="links" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obj1" root="links" word="links"/>
             </node>
           </node>
         </node>

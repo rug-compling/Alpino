@@ -16,7 +16,7 @@
         <node begin="6" end="7" id="11" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
         <node begin="7" cat="np" end="18" id="12" rel="obj1">
           <node begin="7" end="8" getal="mv" id="13" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="hd" root="ons" status="vol" vwtype="pr" word="ons"/>
-          <node begin="8" end="9" id="14" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="allen"/>
+          <node begin="8" buiging="met-e" end="9" getal-n="mv-n" id="14" lemma="al" naamval="stan" pdtype="det" pos="adv" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,mv-n)" pt="vnw" rel="mod" root="al" vwtype="onbep" word="allen"/>
           <node begin="9" cat="rel" end="18" id="15" rel="mod">
             <node begin="9" end="10" getal="getal" id="16" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="9" cat="ssub" end="18" id="17" rel="body">

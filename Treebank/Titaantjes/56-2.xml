@@ -58,7 +58,7 @@
                 <node begin="26" buiging="met-e" end="27" graad="basis" id="44" lemma="donker_groen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="donker_groen" word="donkergroene"/>
                 <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="45" lemma="brem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brem" word="brem"/>
                 <node begin="28" cat="pp" end="31" id="46" rel="mod">
-                  <node begin="28" buiging="zonder" end="29" graad="basis" id="47" lemma="vol" pos="prep" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="vol" word="vol"/>
+                  <node begin="28" end="29" id="47" lemma="vol" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="vol" vztype="init" word="vol"/>
                   <node begin="29" cat="np" end="31" id="48" rel="obj1">
                     <node begin="29" buiging="met-e" end="30" graad="basis" id="49" lemma="geel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="geel" word="gele"/>
                     <node begin="30" end="31" getal="mv" graad="basis" id="50" lemma="bloem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bloem" word="bloemen"/>

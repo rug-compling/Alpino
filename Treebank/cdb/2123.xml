@@ -12,7 +12,7 @@
         <node begin="3" cat="pp" end="6" id="8" rel="pc">
           <node begin="3" end="4" id="9" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
           <node begin="4" cat="mwu" end="6" id="10" rel="obj1">
-            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="flo" naamval="stan" ntype="soort" pos="num" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
+            <node begin="4" end="5" id="11" lemma="flo" pos="num" postag="SPEC(symb)" pt="spec" rel="mwp" root="flo" spectype="symb" word="flo"/>
             <node begin="5" end="6" id="12" lemma="20.000" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="20.000" word="20.000"/>
           </node>
         </node>

@@ -48,7 +48,7 @@
             <node begin="20" cat="np" end="23" id="36" rel="mod">
               <node begin="20" end="21" id="37" lemma="bijna" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijna" word="bijna"/>
               <node begin="21" cat="mwu" end="23" id="38" rel="hd">
-                <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="39" lemma="flo" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
+                <node begin="21" end="22" id="39" lemma="flo" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="flo" spectype="symb" word="flo"/>
                 <node begin="22" end="23" id="40" lemma="6" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="6" word="6"/>
               </node>
             </node>
@@ -61,7 +61,7 @@
               <node begin="26" end="27" id="46" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
               <node begin="27" cat="np" end="30" id="47" rel="obj1">
                 <node begin="27" cat="mwu" end="29" id="48" rel="hd">
-                  <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="49" lemma="flo" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
+                  <node begin="27" end="28" id="49" lemma="flo" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="flo" spectype="symb" word="flo"/>
                   <node begin="28" end="29" id="50" lemma="130" naamval="stan" numtype="hoofd" pos="noun" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="130" word="130"/>
                 </node>
                 <node begin="29" buiging="zonder" end="30" id="51" lemma="bieden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="mod" root="bied" word="bieden" wvorm="inf"/>

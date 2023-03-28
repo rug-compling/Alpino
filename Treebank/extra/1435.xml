@@ -4,30 +4,30 @@
     <node begin="0" cat="smain" end="11" id="1" rel="--">
       <node begin="0" cat="np" end="5" id="2" index="1" rel="su">
         <node begin="0" cat="mwu" end="3" id="3" rel="hd">
-          <node begin="0" end="1" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="Boer" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" rnum="sg" root="Boer" word="Boer"/>
-          <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="zoekt" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" rnum="sg" root="zoekt" word="zoekt"/>
-          <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="vrouw_kandidaat" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" rnum="sg" root="vrouw_kandidaat" word="vrouw-kandidaat"/>
+          <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="4" lemma="boer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Boer" word="Boer"/>
+          <node begin="1" end="2" id="5" lemma="zoeken" pos="noun" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="mwp" root="zoekt" word="zoekt" wvorm="pv"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="vrouw_kandidaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="vrouw_kandidaat" word="vrouw-kandidaat"/>
         </node>
         <node begin="3" cat="mwu" end="5" id="7" rel="app">
-          <node begin="3" end="4" id="8" lemma="Geert" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Geert" spectype="deeleigen" word="Geert"/>
-          <node begin="4" end="5" id="9" lemma="Krops" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Krops" spectype="deeleigen" word="Krops"/>
+          <node begin="3" end="4" id="8" lemma="Geert" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Geert" spectype="deeleigen" word="Geert"/>
+          <node begin="4" end="5" id="9" lemma="Krops" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Krops" spectype="deeleigen" word="Krops"/>
         </node>
       </node>
-      <node begin="5" end="6" id="10" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="5" end="6" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="11" id="11" rel="vc">
         <node begin="0" end="5" id="12" index="1" rel="obj1"/>
-        <node begin="6" buiging="zonder" end="7" id="13" infl="psp" lemma="benaderen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="benader" sc="transitive" word="benaderd" wvorm="vd"/>
+        <node begin="6" buiging="zonder" end="7" id="13" lemma="benaderen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="benader" word="benaderd" wvorm="vd"/>
         <node begin="7" cat="pp" end="11" id="14" rel="mod">
           <node begin="7" end="8" id="15" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
           <node begin="8" cat="np" end="11" id="16" rel="obj1">
-            <node begin="8" end="9" id="17" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node aform="base" begin="9" buiging="zonder" end="10" graad="basis" id="18" infl="no_e" lemma="nieuw" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nieuw" vform="adj" word="nieuw"/>
-            <node begin="10" end="11" gen="het" genus="onz" getal="ev" graad="basis" id="19" lemma="programma" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="programma" word="programma"/>
+            <node begin="8" end="9" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="9" buiging="zonder" end="10" graad="basis" id="18" lemma="nieuw" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nieuw" word="nieuw"/>
+            <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="19" lemma="programma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="programma" word="programma"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="11" end="12" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Boer zoekt vrouw-kandidaat Geert Krops is benaderd voor een nieuw programma .</sentence>
 </alpino_ds>

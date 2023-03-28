@@ -9,9 +9,9 @@
         <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="concept" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="concept" word="concept"/>
       </node>
       <node begin="4" cat="mwu" end="7" id="7" rel="predc">
-        <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="click" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="clicks" word="clicks"/>
-        <node begin="5" end="6" id="9" lemma="&amp;" pos="name" postag="SPEC(symb)" pt="spec" rel="mwp" root="&amp;" spectype="symb" word="&amp;"/>
-        <node begin="6" end="7" getal="mv" graad="basis" id="10" lemma="brick" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="bricks" word="bricks"/>
+        <node begin="4" end="5" id="8" lemma="clicks" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="clicks" spectype="vreemd" word="clicks"/>
+        <node begin="5" end="6" id="9" lemma="&amp;" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="&amp;" spectype="vreemd" word="&amp;"/>
+        <node begin="6" end="7" id="10" lemma="bricks" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="bricks" spectype="vreemd" word="bricks"/>
       </node>
     </node>
     <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

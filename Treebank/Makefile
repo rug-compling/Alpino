@@ -10,7 +10,8 @@ LASSYSMALL=/net/corpora/LassyDevelop
 
 all:
 	$(MAKE) -j dtchecks novel
-	$(MAKE) -j prepare_enhanced_all enhanced_all poslemma
+	$(MAKE) -j prepare_enhanced_all
+	$(MAKE) -j enhanced_all poslemma
 	$(MAKE) -j freq trees_doc sents sentspl conllu pair dact
 
 novel:

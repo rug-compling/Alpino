@@ -7,7 +7,7 @@
       <node begin="2" cat="np" end="5" id="4" rel="me">
         <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="hand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hand" word="handen"/>
         <node begin="3" cat="pp" end="5" id="6" rel="mod">
-          <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="vol" pos="prep" positie="postnom" postag="ADJ(postnom,basis,zonder)" pt="adj" rel="hd" root="vol" word="vol"/>
+          <node begin="3" end="4" id="7" lemma="vol" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="vol" vztype="init" word="vol"/>
           <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="geld" word="geld"/>
         </node>
       </node>

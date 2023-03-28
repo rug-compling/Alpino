@@ -10,7 +10,7 @@
           <node begin="2" cat="ppres" end="5" id="7" rel="mod">
             <node begin="2" end="3" id="8" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
             <node begin="3" end="4" id="9" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
-            <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="overrompelend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="overrompelend" word="overrompelende"/>
+            <node begin="4" buiging="met-e" end="5" id="10" lemma="overrompelen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="overrompelend" word="overrompelende" wvorm="od"/>
           </node>
           <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="pianist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pianist" word="pianist"/>
           <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="Wilson" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Wilson" word="Wilson"/>

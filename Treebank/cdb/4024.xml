@@ -10,7 +10,7 @@
       <node begin="3" cat="np" end="7" id="6" rel="obj1">
         <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="ruim" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
         <node begin="4" cat="mwu" end="7" id="8" rel="hd">
-          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="flo" naamval="stan" ntype="soort" pos="num" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
+          <node begin="4" end="5" id="9" lemma="flo" pos="num" postag="SPEC(symb)" pt="spec" rel="mwp" root="flo" spectype="symb" word="flo"/>
           <node begin="5" end="6" id="10" lemma="35" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="35" word="35"/>
           <node begin="6" end="7" id="11" lemma="miljoen" pos="noun" postag="SPEC(afk)" pt="spec" rel="mwp" root="miljoen" spectype="afk" word="mln."/>
         </node>

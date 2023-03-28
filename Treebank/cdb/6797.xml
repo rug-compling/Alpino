@@ -40,8 +40,8 @@
             <node begin="16" buiging="zonder" end="17" graad="basis" id="30" lemma="mooi" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="hd" root="mooi" word="mooi"/>
           </node>
           <node begin="17" cat="mwu" end="19" id="31" rel="hd">
-            <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="32" lemma="concours" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="concours" word="concours"/>
-            <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="33" lemma="hippique" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="hippique" word="hippique"/>
+            <node begin="17" end="18" id="32" lemma="concours" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="concours" spectype="vreemd" word="concours"/>
+            <node begin="18" end="19" id="33" lemma="hippique" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="hippique" spectype="vreemd" word="hippique"/>
           </node>
           <node begin="21" cat="rel" end="26" id="34" rel="mod">
             <node begin="21" end="22" getal="ev" id="35" index="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>

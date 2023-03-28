@@ -3,19 +3,19 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="su">
-        <node begin="0" end="1" id="3" lemma="meneer" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" ntype="soort" getal="ev" graad="basis" genus="zijd" naamval="stan" rel="hd" word="Meneer"/>
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="meneer" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="meneer" word="Meneer"/>
         <node begin="1" cat="np" end="3" id="4" rel="app">
-          <node begin="1" end="2" id="5" lemma="de" pos="lid" postag="LID(bep,stan,rest)" pt="lid" lwtype="bep" naamval="stan" npagr="rest" rel="det" word="de"/>
-          <node begin="2" end="3" id="6" lemma="directeur" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" ntype="soort" getal="ev" graad="basis" genus="zijd" naamval="stan" rel="hd" word="directeur"/>
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="directeur" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="directeur" word="directeur"/>
         </node>
       </node>
-      <node begin="3" end="4" id="7" lemma="luisteren" pos="ww" postag="WW(pv,verl,ev)" pt="ww" wvorm="pv" pvtijd="verl" pvagr="ev" rel="hd" word="luisterde"/>
+      <node begin="3" end="4" id="7" lemma="luisteren" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="luisteren" word="luisterde" wvorm="pv"/>
       <node begin="4" cat="pp" end="6" id="8" rel="mod">
-        <node begin="4" end="5" id="9" lemma="vol" pos="adj" postag="ADJ(vrij,basis,zonder)" pt="adj" positie="vrij" graad="basis" buiging="zonder" rel="hd" word="vol"/>
-        <node begin="5" end="6" id="10" lemma="ongeloof" pos="n" postag="N(soort,ev,basis,onz,stan)" pt="n" ntype="soort" getal="ev" graad="basis" genus="onz" naamval="stan" rel="obj1" word="ongeloof"/>
+        <node begin="4" end="5" id="9" lemma="vol" pos="adj" postag="VZ(init)" pt="vz" rel="hd" root="vol" vztype="init" word="vol"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="ongeloof" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="ongeloof" word="ongeloof"/>
       </node>
     </node>
-    <node begin="6" end="7" id="11" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
+    <node begin="6" end="7" id="11" lemma="." pos="let" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Meneer de directeur luisterde vol ongeloof .</sentence>
   <comments>

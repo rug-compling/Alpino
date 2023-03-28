@@ -23,7 +23,7 @@
           <node begin="10" cat="np" end="16" id="17" rel="obj1">
             <node begin="10" end="11" id="18" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
             <node begin="11" cat="ppart" end="15" id="19" rel="mod">
-              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="toenmaals" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="toenmaals" word="toenmaals"/>
+              <node begin="11" end="12" id="20" lemma="toenmaals" pos="adv" postag="BW()" pt="bw" rel="mod" root="toenmaals" word="toenmaals"/>
               <node begin="12" cat="pp" end="14" id="21" rel="mod">
                 <node begin="12" end="13" id="22" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
                 <node begin="13" end="14" getal="mv" graad="basis" id="23" lemma="Duitser" ntype="eigen" pos="noun" postag="N(eigen,mv,basis)" pt="n" rel="obj1" root="Duitser" word="Duitsers"/>
@@ -49,7 +49,7 @@
                 <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="38" lemma="Castelre" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Castelre" word="Castelre"/>
                 <node begin="23" cat="pp" end="25" id="39" rel="mod">
                   <node begin="23" end="24" id="40" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-                  <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="41" lemma="baarlenassau" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="BaarleNassau" word="BaarleNassau"/>
+                  <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="41" lemma="BaarleNassau" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="BaarleNassau" word="BaarleNassau"/>
                 </node>
               </node>
             </node>

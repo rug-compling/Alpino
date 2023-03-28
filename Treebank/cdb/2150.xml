@@ -39,7 +39,7 @@
           <node begin="22" cat="np" end="25" id="31" rel="dp">
             <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="32" lemma="prijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="prijs" word="prijs"/>
             <node begin="23" cat="mwu" end="25" id="33" rel="mod">
-              <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="34" lemma="flo" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
+              <node begin="23" end="24" id="34" lemma="flo" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="flo" spectype="symb" word="flo"/>
               <node begin="24" end="25" id="35" lemma="4,75" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="4,75" word="4,75"/>
             </node>
           </node>

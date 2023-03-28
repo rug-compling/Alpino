@@ -11,7 +11,7 @@
         <node begin="2" end="3" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="prijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="prijs" word="prijs"/>
         <node begin="5" cat="mwu" end="7" id="10" rel="mod">
-          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="flo" naamval="stan" ntype="soort" pos="num" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
+          <node begin="5" end="6" id="11" lemma="flo" pos="num" postag="SPEC(symb)" pt="spec" rel="mwp" root="flo" spectype="symb" word="flo"/>
           <node begin="6" end="7" id="12" lemma="260.000" pos="num" postag="SPEC(symb)" pt="spec" rel="mwp" root="260.000" spectype="symb" word="260.000"/>
         </node>
       </node>

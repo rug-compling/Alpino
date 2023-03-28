@@ -23,3 +23,4 @@ g_suite/./905.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma=
 g_suite/./905.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
 g_suite/./959.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
 g_suite/./962.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
+g_suite/./887.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="WW(inf,vrij,zonder)" or @postag="WW(inf,prenom,zonder)" or @postag="WW(inf,prenom,met-e)")]]	inf cat without inf hd?

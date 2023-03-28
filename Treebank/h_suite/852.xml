@@ -11,7 +11,7 @@
         <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="4" cat="np" end="7" id="8" rel="predc">
           <node begin="4" buiging="zonder" end="5" getal="ev" id="9" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
-          <node begin="5" buiging="met-e" end="6" graad="basis" id="10" lemma="niet-bestaand" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="niet_besta" word="niet-bestaande"/>
+          <node begin="5" buiging="met-e" end="6" id="10" lemma="niet_bestaan" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="niet_besta" word="niet-bestaande" wvorm="od"/>
           <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="neef" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="neef" word="neef"/>
         </node>
       </node>

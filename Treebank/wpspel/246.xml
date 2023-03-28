@@ -37,8 +37,8 @@
         <node begin="15" end="16" id="26" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
         <node begin="16" cat="np" end="20" id="27" rel="su">
           <node begin="16" cat="mwu" end="18" id="28" rel="hd">
-            <node begin="16" buiging="zonder" end="17" graad="basis" id="29" lemma="prima" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="prima" word="prima"/>
-            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="30" lemma="ballerina" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="ballerina" word="ballerina"/>
+            <node begin="16" end="17" id="29" lemma="prima" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="prima" spectype="vreemd" word="prima"/>
+            <node begin="17" end="18" id="30" lemma="ballerina" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="ballerina" spectype="vreemd" word="ballerina"/>
           </node>
           <node begin="18" cat="mwu" end="20" id="31" rel="app">
             <node begin="18" end="19" id="32" lemma="Anna" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Anna" spectype="deeleigen" word="Anna"/>
