@@ -28,7 +28,11 @@ ensure that the environment variable ALPINO_HOME points to the right directory, 
     make
     make install
 
-In order to build the Tokenization/partok tool, you need Go, and Peter Kleiweg's utilities:
+In order to build the Tokenization/partok tool, you need Go.
 
-    go get github.com/pebbe/util
+
+## Docker
+
+There is also a Docker image available with Alpino and related tools.
+Refer to https://github.com/rug-compling/alpino-docker
 
