@@ -249,7 +249,7 @@ tf:
 
 ptf:
 	@echo "  OLD    NEW        SUITE"
-	@$(MAKE) -s ptf0 | tr -d '()' | awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
+	@$(MAKE) -s ptf0 | tr -d '()%' | awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
 
 ptf0:
 	for file in `echo $(shell ls $(ORDERED) */*/poslemma 2>/dev/null)`; do \
@@ -261,7 +261,7 @@ ptf0:
 
 lmf:
 	@echo "  OLD    NEW        SUITE"
-	@$(MAKE) -s lmf0 | tr -d '()' | awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
+	@$(MAKE) -s lmf0 | tr -d '()%' | awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
 
 lmf0:
 	for file in `echo $(shell ls $(ORDERED) */*/poslemma 2>/dev/null)`; do \
@@ -602,3 +602,6 @@ lemmas:
 
 postags:
 	ls $(EXTRA) */poslemma |$(GREP)| xargs cat |grep ' #PT' | awk '{ print $$1,$$2,$$3 }' |sort | uniq -c |sort -n
+
+postags_sorted:
+	ls $(EXTRA) */poslemma |$(GREP)| xargs cat |grep ' #PT' | awk '{ print $$2,$$3,$$1 }' |sort | uniq -c 
