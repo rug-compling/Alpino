@@ -349,3 +349,13 @@ enden(_,_) :-
 gen(_,_) :-
     fail.
 
+surf_lemma(X,_,'SPEC(symb)',_,X) :-
+    symb(X).
+
+symb(_) :-
+    fail.
+
+vreemd(L) :-
+    v(Atom),
+    alpino_util:split_atom(Atom," ",L).
+
