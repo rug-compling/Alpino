@@ -25069,8 +25069,8 @@ v(verlies,verliest,verliezen,verloren,verloor,verloren,
 	fixed([[uit,het,oog],acc],norm_passive),
 	fixed([[uit,het,oog],sbar],imp_passive)])]).
 
-v(verlig,verligt,verliggen,verlegen,verlag,verlagen,
-    [b([intransitive])]).
+%v(verlig,verligt,verliggen,verlegen,verlag,verlagen,
+%    [b([intransitive])]).
 
 v(verlijd,verlijdt,verlijden,verleden,verleed,verleden,
     [h([transitive])]).

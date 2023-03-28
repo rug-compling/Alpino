@@ -1600,6 +1600,9 @@ a([e('Vlaamse'),
    hh('Oost'),
    hh('West')]).
 
+a([e('Vlaardingse'),
+   no_e('Vlaardings')],nonadv,[],[]).
+
 a([both('Volendammer')],nonadv,[],[]).
 
 a([e('Volendamse'),
@@ -1657,6 +1660,9 @@ a([e('Wolderse'),no_e('Wolders')],nonadv,[],[]).
 
 a([e('Zaanse'),
    no_e('Zaans')],nonadv,[],[]).
+
+a([e('Zaandamse'),
+   no_e('Zaandams')],nonadv,[],[]).
 
 a([e('Zaïrese'),
    no_e('Zaïrees')],nonadv,[],[]).
@@ -3697,7 +3703,10 @@ a([e(arbeidsintensieve),
 
 a([stem(arbeid_ongeschikt),
    e(arbeidsongeschikte),
-   no_e(arbeidsongeschikt)],nonadv,[],[]).
+   no_e(arbeidsongeschikt),
+   e('arbeids-ongeschikte'),
+   no_e('arbeids-ongeschikt')
+  ],nonadv,[],[]).
 
 a([e(arbitraire),
    no_e(arbitrair)],adv,[],[]).
@@ -4907,7 +4916,9 @@ a([ge_e(belasterde),
 
 a([stem(belasting_plichtig),
    e(belastingplichtige),
-   no_e(belastingplichtig)],nonadv,[],[]).
+   no_e(belastingplichtig)],nonadv,[],
+  [h('BTW'),
+   h(niet)]).
 
 a([e(belastingvrije),
    no_e(belastingvrij)],both,[],[]).
@@ -5083,6 +5094,9 @@ a([pred([beneden,de,maat])],nonadv,[],[]).
 
 a([e(benedenste),
    no_e(benedenste)],nonadv,[],[]).
+
+a([e(benedenwaartse),
+   no_e(benedenwaarts)],adv,[],[]).
 
 a([both(benepen)],adv,[],[]).
 
@@ -6445,6 +6459,9 @@ a([e(blanke),
    ste(blankste)],nonadv,[],[]).
 
 a([both(blasé)],padv,[],[]).
+
+a([e(blatante),
+   no_e(blatant)],adv,[],[]).
 
 a([e(blauwe),
    er(blauwer),
@@ -8494,10 +8511,13 @@ a([e(digitale),
    no_e(digitaal)],adv,[],[]).
 
 a([e(dimensionale),
-   no_e(dimensionaal)],adv,[],[]).
+   no_e(dimensionaal)],adv,[],
+  []).
 
 a([e(dimensionele),
-   no_e(dimensioneel)],adv,[],[]).
+   no_e(dimensioneel)],adv,[],
+  [drie,h(drie),
+   vier,h(vier)]).
 
 a([e(dikke),
    er(dikker),
@@ -8652,7 +8672,8 @@ a([e(dogmatische),
    ere(dogmatischere),
    no_e(dogmatisch),
    st(dogmatischt),
-   ste(dogmatischte)],adv,[],[]).
+   ste(dogmatischte)],adv,[],
+  [h(anti)]).
 
 a([e(dolle),
    er(doller),
@@ -10311,7 +10332,11 @@ a([e(experimentele),
    no_e(experimenteel)],adv,[],[]).
 
 a([e(expliciete),
-   no_e(expliciet)],adv,[],[]).
+   no_e(expliciet),
+   ere(explicietere),
+   er(explicieter),
+   ste(explicietste),
+   st(explicietst)],adv,[],[]).
 
 a([e(explosieve),
    er(explosiever),
@@ -12208,7 +12233,8 @@ a([ge_e(gedresseerde),
 a([ge_both(gedreven),
    er(gedrevener)],both,
   [pp(door),
-   object_vp],[]).
+   object_vp],
+  [super]).
 
 a([ge_e(gedribbelde),
    ge_no_e(gedribbeld)],adv,[],[]).
@@ -12815,10 +12841,10 @@ a([ge_no_e(gehandeld),
 a([ge_e(gehandhaafde),
    ge_no_e(gehandhaafd)],adv,[],[]).
 
-a([ge_e(gehandicapte),
+a([e(gehandicapte),
    er(gehandicapter),
    ere(gehandicaptere),
-   ge_no_e(gehandicapt),
+   no_e(gehandicapt),
    st(gehandicaptst),
    ste(gehandicaptste)],adv,[],[]).
 
@@ -18351,7 +18377,11 @@ a([both(handsfree),
    both([hands,free])],adv,[],[]).
 
 a([e(handzame),
-   no_e(handzaam)],nonadv,[],[]).
+   no_e(handzaam),
+   ere(handzamere),
+   er(handzamer),
+   ste(handzamerste),
+   st(handzaamst)],nonadv,[],[]).
 
 a([ende(hangende),
    end(hangend)],padv,[],[laag]).
@@ -29588,6 +29618,11 @@ a([ge_e(overschatte),
 
 a([ge_both(overschreden)],adv,[],[]).
 
+a([ende(overschrijdende),
+   end(overschrijdend)],padv,[],
+  [grens,
+   net]).
+
 a([both(oversized)],padv,[],[]).
 
 a([ge_both(overspannen),
@@ -30274,6 +30309,7 @@ a([e(politieke),
    st(politiekst),
    ste(politiekste)],adv,[],
   [geo,
+   h(socio),
    partij,h(partij)]).
 
 a([e(politionele),
@@ -32446,7 +32482,8 @@ a([e(schuldige),
    np_np,
    transitive,
    object_sbar,
-   object_vp],[]).
+   object_vp],
+  [hoofd]).
 
 a([e(schunnige),
    er(schunniger),
@@ -37075,6 +37112,9 @@ a([ge_e(verkondigde),
 a([ge_e(verkoolde),
    ge_no_e(verkoold)],adv,[],[]).
 
+a([e(verkoopbare),
+   no_e(verkoopbaar)],adv,[],[]).
+
 a([ge_both(verkoren)],adv,[],[]).
 
 a([ge_e(verkorte),
@@ -40167,7 +40207,11 @@ a([e(welsprekende),
    ste(welsprekendste)],adv,[],[]).
 
 a([e(welvarende),
-   no_e(welvarend)],adv,[],[]).
+   no_e(welvarend),
+   er(welvarender),
+   ere(welvarendere),
+   st(welvarendst),
+   ste(welvarendste)],adv,[],[]).
 
 a([e(welverdiende),
    no_e(welverdiend)],nonadv,[],[]).
@@ -40349,6 +40393,9 @@ a([e(wijze),
    st(wijst),
    ste(wijste)],adv,
   [subject_vp],[]).
+
+a([e(wijselijke),
+   no_e(wijselijk)],adv,[],[]).
 
 a([ge_e(wijsgemaakte),
    ge_no_e(wijsgemaakt)],adv,[],[]).

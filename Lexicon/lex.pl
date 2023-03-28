@@ -1093,6 +1093,7 @@ lexicon__(tot,adverb,Label,Ws0,Ws,'tot V-s aan toe',_) :-
     inf(InfVal),
     hdrug_util:concat_all([tot,VerbInfS,aan,toe],Label,' ').
 
+%% TODO: allersterksten
 lexicon__(AllerXst,Adj,AllerLabel,Ws,Ws,'aller-Asuper'(His),LC) :-
     atom(AllerXst),
     atom_concat(aller,Xst,AllerXst),
@@ -1101,18 +1102,18 @@ lexicon__(AllerXst,Adj,AllerLabel,Ws,Ws,'aller-Asuper'(His),LC) :-
     atom_concat(aller_,Label,AllerLabel).
 
 lexicon__(aller,Adj,AllerLabel,Ws0,Ws,'aller-Asuper'(His),LC) :-
-    aller_path(Ws0,Ws1),
+    aller_path(Ws0,Ws1,Consumed,[Label]),
     next_word(Xst,Ws1,Ws2,_),
     lexicon__(Xst,Adj0,Label,Ws2,Ws,His,LC),
     aller(Adj0,Adj),
-    atom_concat(aller_,Label,AllerLabel).
+    hdrug_util:concat_all([aller|Consumed],AllerLabel,' ').
 
 lexicon__('aller-',Adj,AllerLabel,Ws0,Ws,'aller-Asuper'(His),LC) :-
-    aller_path(Ws0,Ws1),
+    aller_path(Ws0,Ws1,Consumed,[Label]),
     next_word(Xst,Ws1,Ws2,_),
     lexicon__(Xst,Adj0,Label,Ws2,Ws,His,LC),
     aller(Adj0,Adj),
-    atom_concat(aller_,Label,AllerLabel).
+    hdrug_util:concat_all(['aller-'|Consumed],AllerLabel,' ').
 
 lexicon__(op,pp,Label1,Ws0,Ws,'op zijn Belgisch'(His),LC) :-
     lists:member(W/L,[zijn/zijn,
@@ -1279,14 +1280,14 @@ lexicon___(Word,Cat,Label,Ws0,Ws,'part-V'):-
     adapt_part_label(Cat1,Label0,Label),
     nominalization(Cat1,Cat,Word).
 
-aller_path(L,L).
-aller_path(L0,L) :-
+aller_path(L,L,M,M).
+aller_path(L0,L,[','|M],M) :-
     next_word(',',L0,L,_).
-aller_path(L0,L) :-
+aller_path(L0,L,[',',Aller|M0],M) :-
     next_word(',',L0,L1,_),
     next_word(Aller,L1,L2,_),
     aller_word(Aller),
-    aller_path(L2,L).
+    aller_path(L2,L,M0,M).
 
 aller_word(aller).
 aller_word('aller-').               
@@ -2959,6 +2960,7 @@ spelling_variant(verwezelijkt,verwezenlijkt).
 spelling_variant(verwezelijken,verwezenlijken).
 spelling_variant(verwezelijkte,verwezenlijkte).
 spelling_variant(verwezelijkten,verwezenlijkten).
+spelling_variant(vollop,      volop).
 spelling_variant(vooor,       voor).
 spelling_variant(wannneer,    wanneer).
 spelling_variant(wanner,      wanneer).

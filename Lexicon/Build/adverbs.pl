@@ -21,6 +21,8 @@ m('ons in_zien',adverb,[onzes,inziens]).
 
 m('aller_eerst',adverb,allereerst).
 
+m(dood_leuk,adverb,doodleuk).
+
 adverb([geen,bal]).
 adverb([geen,barst]).
 adverb([geen,biet]).
@@ -150,7 +152,6 @@ adverb([dien,tengevolge]).
 adverb(dolgraag).
 adverb(domweg).
 adverb([donders,goed]).
-adverb(doodleuk).
 adverb([door,en,door]).
 adverb(dra).
 adverb(duizendmaal).
@@ -555,7 +556,6 @@ adverb(welhaast).
 % adverb(welnu).  tag only...
 adverb([wie,weet]).
 adverb([wijd,en,zijd]).
-adverb(wijselijk).
 adverb(willens).
 adverb([willens,en,wetens]).
 adverb([willens,nillens]).

@@ -1215,6 +1215,7 @@ tag(secundo).
 tag(seh).
 tag(sh).
 tag(shit).
+tag(sjonge).
 tag(slaaplekker).
 tag(snapje).
 tag([so,what]).
@@ -4401,7 +4402,7 @@ m(eens,             np_adjective,eens         ).
 m(wennen,           np_adjective,gewend       ).
 m(gewoon,           np_adjective,gewoon       ).
 m(oneens,           np_adjective,oneens       ).
-m(spuugzat,         np_adjective,spuugzat     ).
+m(spuug_zat,        np_adjective,spuugzat     ).
 m(troef,            np_adjective,troef        ). % Het was armoe troef
 m(zat,              np_adjective,zat          ).
 m(erkentelijk,      np_adjective,erkentelijk  ).
@@ -4432,7 +4433,7 @@ m(wennen,           clause_np_adjective, gewend).
 m(gewoon,           clause_np_adjective, gewoon).
 m(moe,              clause_np_adjective, moe).           % VL
 m(oneens,           clause_np_adjective, oneens).
-m(spuugzat,         clause_np_adjective, spuugzat).
+m(spuug_zat,        clause_np_adjective, spuugzat).
 m(waard,            clause_np_adjective, waard).
 m(zat,              clause_np_adjective, zat).
 
@@ -7600,6 +7601,7 @@ m(rijk, nominalized_compar_adjective,rijkeren).
 m(zwak, nominalized_compar_adjective,zwakkeren).
 
 m(achter,nominalized_super_adjective,achtersten).
+m(beroemd,nominalized_super_adjective,beroemdsten).
 m(laat,  nominalized_super_adjective,laatsten).
 m(lief,  nominalized_super_adjective,liefsten).
 
@@ -7717,12 +7719,15 @@ ge_nominalized_adjective(ziekenfonds_verzekeren,ziekenfondsverzekerden).
 nominalized_adjective(aanstaand,aanstaanden).
 nominalized_adjective(aanwezig,aanwezigen).
 nominalized_adjective(achterlijk,achterlijken).
+nominalized_adjective(afvallig,afvalligen).
 nominalized_adjective(afwezig,afwezigen).
 nominalized_adjective(arbeidsongeschikt,arbeidsongeschikten).
 nominalized_adjective(arm,armen).
 nominalized_adjective(bejaard,bejaarden).
 nominalized_adjective(bekend,bekenden).
 nominalized_adjective(belasting_plichtig,belastingplichtigen).
+nominalized_adjective('BTW_belasting_plichtig','BTW-belastingplichtigen').
+nominalized_adjective('niet_belasting_plichtig','niet-belastingplichtigen').
 nominalized_adjective(beroemd,beroemden).
 nominalized_adjective(bevoorrecht,bevoorrechten).
 nominalized_adjective(blank,blanken).
@@ -7732,6 +7737,8 @@ nominalized_adjective(boos,bozen).
 nominalized_adjective(bruin,bruinen).
 nominalized_adjective(dakloos,daklozen).
 nominalized_adjective(deskundig,deskundigen). % in order to be able to analyze "onafhankelijk deskundigen"
+nominalized_adjective(dezelfde,dezelfden).
+nominalized_adjective(diezelfde,diezelfden).
 nominalized_adjective(dienstplichtig,dienstplichtigen).
 nominalized_adjective(dik,dikken).
 nominalized_adjective(dood,doden).
@@ -7786,6 +7793,7 @@ nominalized_adjective(klein,kleinen).
 nominalized_adjective(krankzinnig,krankzinnigen).
 nominalized_adjective(kreupel,kreupelen).
 nominalized_adjective(krom,krommen).
+nominalized_adjective(kwaad,kwaden).   % waar de goeden onder moeten lijden
 nominalized_adjective(langharigen,langharigen).
 nominalized_adjective(licht_gewond,lichtgewonden).
 nominalized_adjective(los,lossen).
@@ -7852,6 +7860,7 @@ nominalized_adjective(zalig,zaligen).
 nominalized_adjective(ziek,zieken).
 nominalized_adjective(zoveel,zovelen).
 nominalized_adjective(zwaar_gewond,zwaargewonden).
+nominalized_adjective(zwak,zwakken).
 nominalized_adjective(zwakzinnig,zwakzinnigen).
 nominalized_adjective(zwart,zwarten).
 

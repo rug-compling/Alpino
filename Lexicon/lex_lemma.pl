@@ -5228,7 +5228,6 @@ lemma_root(door_verleiden,verleid_door) .
 lemma_root(door_verlengen,verleng_door) .
 lemma_root(door_verlevendigen,verlevendig_door) .
 lemma_root(door_verliezen,verlies_door) .
-lemma_root(door_verliggen,verlig_door) .
 lemma_root(door_verloederen,verloeder_door) .
 lemma_root(door_verlopen,verloop_door) .
 lemma_root(door_verloven,verloof_door) .
@@ -12725,7 +12724,6 @@ lemma_root(raak_verleiden,verleid_raak) .
 lemma_root(raak_verlengen,verleng_raak) .
 lemma_root(raak_verlevendigen,verlevendig_raak) .
 lemma_root(raak_verliezen,verlies_raak) .
-lemma_root(raak_verliggen,verlig_raak) .
 lemma_root(raak_verloederen,verloeder_raak) .
 lemma_root(raak_verlopen,verloop_raak) .
 lemma_root(raak_verloven,verloof_raak) .
@@ -17803,7 +17801,6 @@ lemma_root(uit_verleggen,verleg_uit) .
 lemma_root(uit_verleiden,verleid_uit) .
 lemma_root(uit_verlengen,verleng_uit) .
 lemma_root(uit_verliezen,verlies_uit) .
-lemma_root(uit_verliggen,verlig_uit) .
 lemma_root(uit_verloederen,verloeder_uit) .
 lemma_root(uit_verloven,verloof_uit) .
 lemma_root(uit_verluiden,verluid_uit) .
@@ -20137,7 +20134,6 @@ lemma_root(verleren,verleer) .
 lemma_root(verlevendigen,verlevendig) .
 lemma_root(verlichten,verlicht) .
 lemma_root(verliezen,verlies) .
-lemma_root(verliggen,verlig) .
 lemma_root(verlijden,verlijd) .
 lemma_root(verlinken,verlink) .
 lemma_root(verloederen,verloeder) .
@@ -22705,7 +22701,6 @@ lemma_root(voort_verleiden,verleid_voort) .
 lemma_root(voort_verlengen,verleng_voort) .
 lemma_root(voort_verlevendigen,verlevendig_voort) .
 lemma_root(voort_verliezen,verlies_voort) .
-lemma_root(voort_verliggen,verlig_voort) .
 lemma_root(voort_verloederen,verloeder_voort) .
 lemma_root(voort_verlopen,verloop_voort) .
 lemma_root(voort_verloven,verloof_voort) .

@@ -2197,8 +2197,6 @@ n([mass(afval)],both,[],
 
 n([sg(afvaller),pl(afvallers)],de,[]).
 
-n([pl(afvalligen),sg(afvallige)],de,[]).
-
 n([mass(afvang)],de,[],[]).
 
 n([mass(afvloei)],de,[],[]).
@@ -4269,8 +4267,6 @@ n([pl(belastingbetalers),sg(belastingbetaler)],de,[]).
 
 n([mass(belastingdruk)],de,[]).
 
-n([pl(belastingplichtigen),sg(belastingplichtige)],de,[]).
-
 n([pl(beledigingen),sg(belediging)],de,[subject_sbar]).
 
 n([pl(beleefdheden),sg(beleefdheid)],de,[vp]).
@@ -5602,6 +5598,8 @@ n([mass(bluf)],de,[]).
 
 n([pl(blunders),sg(blunder)],de,[subject_sbar,subject_vp]).
 
+n([sg(blusser),pl(blussers)],de,[],[brand]).
+
 n([pl('boa\'s'),sg(boa)],de,[]).
 
 n([sg([boa,constrictor]),pl([boa,constrictors])],de,[]).
@@ -6392,7 +6390,7 @@ n([pl(brommers),sg(brommer)],de,[]).
 
 n([pl(bronnen),sg(bron)],de,[],
   [energie,
-   inkomsten,
+   i(inkomst,inkomsten),
    kracht,
    voedsel
   ]).
@@ -7070,6 +7068,7 @@ n([pl(centra),pl(centrums),sg(centrum)],het,
    i(asiel_zoeker,asielzoekers),
    s(bezoeker),
    i(brand_wond,brandwonden),
+   confectie,
    controle,
    crisis,
    epi,
@@ -7564,6 +7563,8 @@ n([pl(colleges),sg(college)],het,[],
   [hoor]).
 
 n([pl(collegezalen),sg(collegezaal)],de,[]).
+
+n([sg(collier),pl(colliers)],het,[],[parel]).
 
 n([pl(colloquia),sg(colloquium)],het,[]).
 
@@ -8349,10 +8350,13 @@ n([pl(croissants),sg(croissant)],de,[]).
 n([sg(cross),pl(crosses),pl(crossen)],both,[],
   [motor]).
 
+n([sg('cross-country')],de,[]).
+
 n([sg([cross,country])],de,[]).
 
-n([sg([cross,over]),sg('cross-over'),
-   pl([cross,overs]),pl('cross-overs')],de,[]).
+n([sg([cross,over]),pl([cross,overs])],de,[]).
+
+n([sg('cross-over'),pl('cross-overs')],de,[]).
 
 n([sg(crossing),pl(crossings)],de,[]).
 
@@ -8946,7 +8950,7 @@ n([sg(dermatoloog),pl(dermatologen)],de,[]).
 n([pl(dertigers),sg(dertiger)],de,[]).
 
 n([sg(derving),pl(dervingen)],de,[],
-  [inkomsten,
+  [i(inkomst,inkomsten),
    winst
   ]).
 
@@ -10748,6 +10752,12 @@ n([pl(enveloppen),sg(envelop),
    pl(enveloppes),sg(enveloppe)],de,[measure],[dim(envelopje)]).
 
 n([pl(enzymen),sg(enzym)],het,[app_measure]).
+
+%% kleine lp
+n([sg(ep),sg('EP'),pl('ep\'s'),pl('EP\'s')],de,[]).
+
+%% europarlement
+n([sg('EP')],het,[]).
 
 n([pl(epauletten),sg(epaulet)],de,[]).
 
@@ -16151,7 +16161,8 @@ n([pl(inkomens),sg(inkomen)],het,[],
    week
   ]).
 
-n([pl(inkomsten),sg(inkomst)],de,[],
+n([stem(inkomst),
+   pl(inkomsten),sg(inkomst)],de,[],
   [h(advertentie),
    belasting,
    h(reclame),
@@ -16871,7 +16882,8 @@ n([pl(jongemannen),sg(jongeman)],de,[]).
 n([pl(jongens),sg(jongen)],de,[],
   [buur,
    loop,
-   neger, % excuus, komt in oude romans zo voor
+   neger,			% excuus, komt in oude romans zo voor
+   i(schip,scheeps),
    school,
    straat,
    dim(jongetje)]).
@@ -18053,14 +18065,18 @@ n([mass(kleding)],de,[],
 
 n([pl(kledingstukken),sg(kledingstuk)],het,[]).
 
-n([pl(kleren),stem(kleed)],het,[pred_pp_pl(uit)]).
+n([pl(kleren)],het,
+  [pred_pp_pl(uit)]).
 
-n([pl(kleden),pl(klederen),pl(kleren),sg(kleed)],het,[],
+n([pl(kleren)],het,[],
   [s(schaap),
    i(man,mannen),
    i(vrouw,vrouwen),
-   dim(kleertje),
-   dim(kleedje)]).
+   dim(kleertje)
+  ]).
+
+n([pl(kleden),pl(klederen),sg(kleed)],het,[],
+  [dim(kleedje)]).
 
 n([mass(kleef)],de,[]).
 
@@ -26462,7 +26478,7 @@ n([pl(penetraties),sg(penetratie)],de,[]).
 
 n([pl(penicillines),sg(penicilline)],de,[]).
 
-n([mass(penis)],de,[]).
+n([sg(penis),pl(penissen)],de,[]).
 
 n([pl(penningen),sg(penning)],de,[],[dim(penninkje)]).
 
@@ -31295,9 +31311,10 @@ n([mass(schuurpapier)],het,[]).
 
 n([sg(schwalbe),pl(schwalbes)],de,[]).
 
-n([mass([science,fiction]),
-   mass(sciencefiction),
-   mass('science-fiction')],de,[]).
+n([mass('science-fiction'),
+   mass(sciencefiction)],de,[]).
+
+n([mass([science,fiction])],de,[]).
 
 n([pl(scooters),sg(scooter)],de,[]).
 
@@ -33711,6 +33728,7 @@ n([pl(stoffen),sg(stof)],de,
    bad,
    bouw,
    delf,
+   diamant,  % en niet diamant_tof
    ent,
    fijn,
    s(gesprek),
@@ -34830,7 +34848,9 @@ n([pl(tekens),pl(tekenen),sg(teken)],het,
 
 n([pl(tekens),sg(teken)],het,
   [],
-  [dollar]).
+  [dollar,
+   strijd
+  ]).
 
 n([pl(tekenaars),sg(tekenaar)],de,[],
   [strip]).
@@ -35909,6 +35929,8 @@ n([sg(transformator),pl(transformatoren)],de,[]).
 n([sg(transgender),pl(transgenders)],de,[]).
 
 n([pl(transistors),pl(transistoren),sg(transistor)],de,[]).
+
+n([sg(transitie),pl(transities)],de,[]).
 
 n([mass(transmissie)],de,[]).
 
@@ -38667,6 +38689,7 @@ n([pl(vliegtuigen),sg(vliegtuig)],het,[],
    transport,
    s(verkeer),
    vracht,
+   zweef,
    dim(vliegtuigje)]).
 
 n([sg(vliegtuigbouwer),pl(vliegtuigbouwers)],de,[]).
@@ -38860,7 +38883,9 @@ n([mass(voetbal)],het,[],
    prof,
    top,
    i(vrouw,vrouwen),
-   zaal]).
+   zaal,
+   zaterdag
+  ]).
 
 n([pl(voetballers),sg(voetballer)],de,[],
   [degradatie,
