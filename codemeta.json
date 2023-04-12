@@ -4,67 +4,92 @@
     "https://doi.org/10.5063/schema/codemeta-2.0",
     "https://w3id.org/software-iodata",
     "https://w3id.org/software-types",
-    "https://raw.githubusercontent.com/jantman/repostatus.org/master/badges/latest/ontology.jsonld",
-    {
-      "author": {
-        "@container": "@list",
-        "@id": "schema:author"
-      },
-      "contributor": {
-        "@container": "@list",
-        "@id": "schema:contributor"
-      },
-      "referencePublication": {
-        "@id": "codemeta:referencePublication",
-        "@type": "@id"
-      },
-      "softwareRequirements": {
-        "@id": "schema:softwareRequirements",
-        "@type": "@id"
-      }
-    }
+    "https://raw.githubusercontent.com/jantman/repostatus.org/master/badges/latest/ontology.jsonld"
   ],
-  "@id": "https://github.com/rug-compling/Alpino",
+  "@id": "https://www.let.rug.nl/alfa/rdf/alpino",
   "@type": "SoftwareSourceCode",
-  "identifier": "https://github.com/rug-compling/Alpino",
   "name": "Alpino",
   "description": "Alpino parser and related tools for Dutch",
   "version": "0.0.0",
-  "codeRepository": "git+https://github.com/rug-compling/Alpino.git",
+  "sameAs": "https://tools.clariah.nl/alfa",
+  "codeRepository": "https://github.com/rug-compling/Alpino.git",
+  "readme": "https://github.com/rug-compling/Alpino/blob/master/README.md",
   "url": "https://www.let.rug.nl/~vannoord/alp/Alpino/",
   "issueTracker": "https://github.com/rug-compling/Alpino/issues",
   "license": "https://spdx.org/licenses/LGPL-2.1",
-    "developmentStatus": [
-	"https://www.repostatus.org/#active",
-	"https://w3id.org/research-technology-readiness-levels#Stage4Complete"
-	],
+  "developmentStatus": [
+    "https://www.repostatus.org/#active",
+    "https://w3id.org/research-technology-readiness-levels#Stage4Complete"
+  ],
   "applicationCategory": [
-      "https://w3id.org/nwo-research-fields#SoftwareForHumanities",
-      "https://w3id.org/nwo-research-fields#Linguistics",
-      "https://w3id.org/nwo-research-fields#ComputationalLinguisticsAndPhilology",
-      "https://vocabs.dariah.eu/tadirah/structuralAnalysis"
+    "https://w3id.org/nwo-research-fields#SoftwareForHumanities",
+    "https://w3id.org/nwo-research-fields#Linguistics",
+    "https://w3id.org/nwo-research-fields#ComputationalLinguisticsandPhilology",
+    "https://vocabs.dariah.eu/tadirah/structuralAnalysis"
   ],
   "producer": {
+    "@id": "_:cl",
     "@type": "Organization",
-    "name": "Taaltechnologie, Faculteit der Letteren, Rijksuniversiteit Groningen",
-    "url": "https://www.rug.nl/research/clcg/research/cl/"
+    "name": [
+      {
+        "@value": "Computationele Taalkunde, Faculteit der Letteren, Rijksuniversiteit Groningen",
+        "@language": "nl"
+      },
+      {
+        "@value": "Computational Linguistics, Faculty of Arts, Groningen University",
+        "@language": "en"
+      }
+    ],
+    "url": "https://www.rug.nl/research/clcg/research/cl/",
+    "parentOrganization": {
+      "@id": "_:rug",
+      "@type": "Organization",
+      "name": [
+        {
+          "@value": "Rijksuniversiteit Groningen",
+          "@language": "nl"
+        },
+        {
+          "@value": "Groningen University",
+          "@language": "en"
+        }
+      ],
+      "url": "https://www.rug.nl/",
+      "sameAs": "http://www.wikidata.org/entity/Q850730",
+      "location": {
+        "@id": "_:groningen",
+        "@type": "Place",
+        "name": "Groningen",
+        "address": {
+          "@id": "_:grnNL",
+          "@type": "PostalAddress",
+          "addressLocality": "Groningen",
+          "addressRegion": "Groningen",
+          "addressCountry": "NL"
+        },
+        "sameAs": [
+          "http://www.wikidata.org/entity/Q749",
+          "https://sws.geonames.org/2755251/"
+        ]
+      }
+    }
   },
   "author": [
     {
       "@type": "Person",
-      "@id": "https://orcid.org/0000-0001-5564-6341",
+      "@id": "_:gjvannoord",
+      "sameAs": "https://orcid.org/0000-0001-5564-6341",
       "givenName": "Gertjan",
       "familyName": "Van Noord",
       "email": "g.j.m.van.noord@rug.nl",
       "affiliation": {
-        "@type": "Organization",
-        "name": "Taaltechnologie, Faculteit der Letteren, Rijksuniversiteit Groningen"
+        "@id": "_:cl"
       }
     }
   ],
   "maintainer": [
     {
-      "@id": "https://orcid.org/0000-0001-5564-6341"
+      "@id": "_:gjvannoord"
     }
   ],
   "operatingSystem": ["Linux", "Docker"],
