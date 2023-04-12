@@ -14,7 +14,7 @@
               <node begin="4" cat="np" end="7" id="11" rel="cnj">
                 <node begin="4" end="5" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                 <node begin="5" buiging="zonder" end="6" graad="basis" id="13" lemma="gratis" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="gratis" word="gratis"/>
-                <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="65_plus_jaar_kaart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kaart" word="65-plus-jaarkaart"/>
+                <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="65-plus_jaar_kaart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kaart" word="65-plus-jaarkaart"/>
               </node>
               <node begin="7" conjtype="neven" end="8" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
               <node begin="8" cat="np" end="15" id="16" rel="cnj">
@@ -61,7 +61,7 @@
                   <node begin="28" end="29" id="47" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="29" cat="np" end="31" id="48" rel="obj1">
                     <node begin="29" end="30" id="49" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="30" end="31" id="50" lemma="65-pluskaarten" pos="noun" postag="SPEC(symb)" pt="spec" rel="hd" root="65-pluskaarten" spectype="symb" word="65-pluskaarten"/>
+                    <node begin="30" end="31" getal="mv" graad="basis" id="50" lemma="65-plus_kaart" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="65-pluskaarten" word="65-pluskaarten"/>
                   </node>
                 </node>
               </node>

@@ -9,7 +9,7 @@
         <node begin="2" cat="np" end="5" id="6" rel="su">
           <node begin="2" end="3" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="3" cat="mwu" end="5" id="8" rel="hd">
-            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="bolwell" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Bolwell" word="Bolwell"/>
+            <node begin="3" end="4" id="9" lemma="Bolwell" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bolwell" spectype="deeleigen" word="Bolwell"/>
             <node begin="4" end="5" id="10" lemma="Nagari" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nagari" spectype="deeleigen" word="Nagari"/>
           </node>
         </node>

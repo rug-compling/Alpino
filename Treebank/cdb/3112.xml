@@ -37,9 +37,9 @@
                     <node begin="15" cat="np" end="19" id="33" rel="obj1">
                       <node begin="15" end="16" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                       <node begin="16" cat="mwu" end="19" id="35" rel="hd">
-                        <node begin="16" buiging="met-e" end="17" graad="basis" id="36" lemma="Nederlands" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Nederlandse" word="Nederlandse"/>
-                        <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="37" lemma="bioscoop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Bioscoop" word="Bioscoop"/>
-                        <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="38" lemma="bond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Bond" word="Bond"/>
+                        <node begin="16" end="17" id="36" lemma="Nederlandse" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nederlandse" spectype="deeleigen" word="Nederlandse"/>
+                        <node begin="17" end="18" id="37" lemma="Bioscoop" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bioscoop" spectype="deeleigen" word="Bioscoop"/>
+                        <node begin="18" end="19" id="38" lemma="Bond" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bond" spectype="deeleigen" word="Bond"/>
                       </node>
                     </node>
                   </node>

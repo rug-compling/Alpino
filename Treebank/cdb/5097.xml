@@ -21,8 +21,8 @@
               <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="uitgeverij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="uitgeverij" word="uitgeverij"/>
               <node begin="10" cat="mwu" end="12" id="19" rel="app">
-                <node begin="10" end="11" id="20" lemma="Axel" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Axel" spectype="deeleigen" word="Axel"/>
-                <node begin="11" end="12" genus="genus" getal="ev" graad="basis" id="21" lemma="Springer" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mwp" root="Springer" word="Springer"/>
+                <node begin="10" end="11" id="20" lemma="Axel" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Axel" spectype="deeleigen" word="Axel"/>
+                <node begin="11" end="12" id="21" lemma="Springer" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Springer" spectype="deeleigen" word="Springer"/>
               </node>
               <node begin="12" cat="pp" end="14" id="22" rel="mod">
                 <node begin="12" end="13" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>

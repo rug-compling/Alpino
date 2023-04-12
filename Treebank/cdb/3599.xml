@@ -23,7 +23,7 @@
                 <node begin="5" cat="pp" end="9" id="20" rel="cnj">
                   <node begin="5" end="6" id="21" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="6" cat="mwu" end="9" id="22" rel="obj1">
-                    <node begin="6" end="7" id="23" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+                    <node begin="6" end="7" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
                     <node begin="7" buiging="met-e" end="8" graad="basis" id="24" lemma="Spaans" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Spaanse" word="Spaanse"/>
                     <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="25" lemma="hoer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Hoer" word="Hoer"/>
                   </node>
@@ -47,7 +47,7 @@
                       <node begin="21" cat="np" end="27" id="40" rel="obj1">
                         <node begin="21" cat="mwu" end="23" id="41" rel="det">
                           <node begin="21" end="22" id="42" lemma="Brendan" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Brendan" spectype="deeleigen" word="Brendan"/>
-                          <node begin="22" end="23" id="43" lemma="Behans" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Behans" spectype="deeleigen" word="Behans"/>
+                          <node begin="22" end="23" getal="ev" graad="basis" id="43" lemma="Behan" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="mwp" root="Behans" word="Behans"/>
                         </node>
                         <node begin="23" buiging="met-e" end="24" graad="basis" id="44" lemma="vrijmoedig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vrijmoedig" word="vrijmoedige"/>
                         <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="45" lemma="toneelspel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="toneelspel" word="toneelspel"/>

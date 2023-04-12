@@ -17,8 +17,8 @@
             <node begin="5" cat="np" end="9" id="13" rel="obj1">
               <node begin="5" end="6" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
               <node begin="6" cat="mwu" end="9" id="15" rel="hd">
-                <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="16" lemma="monster" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Monster" word="Monster"/>
-                <node begin="7" end="8" id="17" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+                <node begin="6" end="7" id="16" lemma="Monster" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Monster" spectype="deeleigen" word="Monster"/>
+                <node begin="7" end="8" id="17" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
                 <node begin="8" end="9" id="18" lemma="Florence" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Florence" spectype="deeleigen" word="Florence"/>
               </node>
             </node>

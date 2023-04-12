@@ -13,8 +13,8 @@
           <node begin="3" cat="np" end="6" id="10" rel="obj1">
             <node begin="3" end="4" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
             <node begin="4" cat="mwu" end="6" id="12" rel="hd">
-              <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="13" lemma="corps" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="corps" word="corps"/>
-              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="diplomatique" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="diplomatique" word="diplomatique"/>
+              <node begin="4" end="5" id="13" lemma="corps" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="corps" spectype="vreemd" word="corps"/>
+              <node begin="5" end="6" id="14" lemma="diplomatique" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="diplomatique" spectype="vreemd" word="diplomatique"/>
             </node>
           </node>
         </node>

@@ -9,9 +9,9 @@
             <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
             <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="firma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="firma" word="firma"/>
             <node begin="2" cat="mwu" end="5" id="8" rel="app">
-              <node begin="2" end="3" id="9" lemma="Beuth" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Beuth" spectype="deeleigen" word="Beuth"/>
-              <node begin="3" conjtype="neven" end="4" id="10" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
-              <node begin="4" end="5" id="11" lemma="co." pos="noun" postag="BW()" pt="bw" rel="mwp" root="co." word="co."/>
+              <node begin="2" end="3" id="9" lemma="Beuth" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Beuth" spectype="deeleigen" word="Beuth"/>
+              <node begin="3" end="4" id="10" lemma="en" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="en" spectype="deeleigen" word="en"/>
+              <node begin="4" end="5" id="11" lemma="co." pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="co." spectype="deeleigen" word="co."/>
             </node>
           </node>
           <node begin="5" end="6" id="12" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>

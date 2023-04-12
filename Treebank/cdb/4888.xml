@@ -30,9 +30,9 @@
                     <node begin="12" end="13" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                     <node begin="13" buiging="met-e" end="14" id="26" lemma="gasteren" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="gasterend" word="gasterende" wvorm="od"/>
                     <node begin="14" cat="mwu" end="17" id="27" rel="hd">
-                      <node begin="14" buiging="met-e" end="15" graad="basis" id="28" lemma="nationaal" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Nationale" word="Nationale"/>
-                      <node begin="15" end="16" id="29" lemma="Opera" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Opera" spectype="deeleigen" word="Opera"/>
-                      <node begin="16" end="17" id="30" lemma="Praag" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Praag" spectype="deeleigen" word="Praag"/>
+                      <node begin="14" end="15" id="28" lemma="Nationale" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nationale" spectype="deeleigen" word="Nationale"/>
+                      <node begin="15" end="16" id="29" lemma="Opera" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Opera" spectype="deeleigen" word="Opera"/>
+                      <node begin="16" end="17" id="30" lemma="Praag" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Praag" spectype="deeleigen" word="Praag"/>
                     </node>
                   </node>
                 </node>
@@ -40,10 +40,10 @@
                   <node begin="17" cat="np" end="22" id="32" rel="cnj">
                     <node begin="17" end="18" getal="ev" graad="basis" id="33" lemma="Janacek" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Janacek" word="Janaceks"/>
                     <node begin="18" cat="mwu" end="22" id="34" rel="hd">
-                      <node begin="18" buiging="zonder" end="19" graad="dim" id="35" lemma="uitstap" pos="noun" positie="vrij" postag="ADJ(vrij,dim,zonder)" pt="adj" rel="mwp" root="Uitstapjes" word="Uitstapjes"/>
+                      <node begin="18" end="19" getal="mv" graad="dim" id="35" lemma="uitstap" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="mwp" root="Uitstapjes" word="Uitstapjes"/>
                       <node begin="19" end="20" id="36" lemma="van" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
                       <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="37" lemma="meneer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="meneer" word="meneer"/>
-                      <node begin="21" end="22" id="38" lemma="Broucek" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Broucek" spectype="deeleigen" word="Broucek"/>
+                      <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="38" lemma="Broucek" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Broucek" word="Broucek"/>
                     </node>
                   </node>
                   <node begin="22" conjtype="neven" end="23" id="39" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>

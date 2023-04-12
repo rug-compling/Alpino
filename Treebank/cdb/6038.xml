@@ -48,8 +48,8 @@
                         <node begin="18" buiging="zonder" end="19" getal="ev" id="40" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="haar" status="vol" vwtype="bez" word="haar"/>
                         <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="41" lemma="woning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="woning" word="woning"/>
                         <node begin="21" cat="mwu" end="23" id="42" rel="app">
-                          <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="43" lemma="Bakenessergracht" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mwp" root="Bakenessergracht" word="Bakenessergracht"/>
-                          <node begin="22" end="23" id="44" lemma="26" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="26" word="26"/>
+                          <node begin="21" end="22" id="43" lemma="Bakenessergracht" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bakenessergracht" spectype="deeleigen" word="Bakenessergracht"/>
+                          <node begin="22" end="23" id="44" lemma="26" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="26" spectype="deeleigen" word="26"/>
                         </node>
                       </node>
                     </node>

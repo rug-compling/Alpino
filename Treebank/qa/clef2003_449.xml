@@ -12,7 +12,7 @@
         <node begin="2" end="3" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="3" cat="np" end="12" id="9" rel="su">
           <node begin="3" cat="mwu" end="5" id="10" rel="hd">
-            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="11" lemma="challenger" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Challenger" word="Challenger"/>
+            <node begin="3" end="4" id="11" lemma="Challenger" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Challenger" spectype="deeleigen" word="Challenger"/>
             <node begin="4" end="5" id="12" lemma="Deep" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Deep" spectype="deeleigen" word="Deep"/>
           </node>
           <node begin="6" cat="np" end="12" id="13" rel="app">

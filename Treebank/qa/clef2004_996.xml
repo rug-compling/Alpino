@@ -10,9 +10,9 @@
           <node begin="2" end="3" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
           <node begin="3" buiging="met-e" end="4" graad="sup" id="8" lemma="48" naamval="stan" pos="num" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="48ste" word="48ste"/>
           <node begin="4" cat="mwu" end="7" id="9" rel="hd">
-            <node begin="4" end="5" id="10" lemma="Festival" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Festival" spectype="deeleigen" word="Festival"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="festival" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Festival" word="Festival"/>
             <node begin="5" end="6" id="11" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
-            <node begin="6" end="7" id="12" lemma="Avignon" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Avignon" spectype="deeleigen" word="Avignon"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="12" lemma="Avignon" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mwp" root="Avignon" word="Avignon"/>
           </node>
         </node>
       </node>

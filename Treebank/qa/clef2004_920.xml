@@ -10,8 +10,8 @@
         <node begin="2" cat="np" end="8" id="7" index="2" rel="su">
           <node begin="2" end="3" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="3" cat="mwu" end="6" id="9" rel="hd">
-            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="chaos" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Chaos" word="Chaos"/>
-            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="computer" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Computer" word="Computer"/>
+            <node begin="3" end="4" id="10" lemma="Chaos" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Chaos" spectype="deeleigen" word="Chaos"/>
+            <node begin="4" end="5" id="11" lemma="Computer" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Computer" spectype="deeleigen" word="Computer"/>
             <node begin="5" end="6" id="12" lemma="CLub" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="CLub" spectype="deeleigen" word="CLub"/>
           </node>
           <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="CCC" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" root="CCC" word="CCC"/>

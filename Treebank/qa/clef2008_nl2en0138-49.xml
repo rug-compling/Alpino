@@ -8,16 +8,18 @@
         <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
         <node begin="2" cat="np" end="7" id="6" rel="predc">
           <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="3" cat="mwu" end="7" id="8" rel="hd">
-            <node begin="3" end="4" id="9" lemma="Salesianen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Salesianen" spectype="deeleigen" word="Salesianen"/>
-            <node begin="4" end="5" id="10" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
-            <node begin="5" end="6" id="11" lemma="Don" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Don" spectype="deeleigen" word="Don"/>
-            <node begin="6" end="7" id="12" lemma="Bosco" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bosco" spectype="deeleigen" word="Bosco"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="Salesiaan" ntype="eigen" pos="name" postag="N(eigen,mv,basis)" pt="n" rel="hd" root="Salesianen" word="Salesianen"/>
+          <node begin="4" cat="pp" end="7" id="9" rel="mod">
+            <node begin="4" end="5" id="10" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="5" cat="mwu" end="7" id="11" rel="obj1">
+              <node begin="5" end="6" id="12" lemma="Don" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Don" spectype="deeleigen" word="Don"/>
+              <node begin="6" end="7" id="13" lemma="Bosco" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bosco" spectype="deeleigen" word="Bosco"/>
+            </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+    <node begin="7" end="8" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Wie zijn de Salesianen van Don Bosco ?</sentence>
 </alpino_ds>

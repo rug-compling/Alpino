@@ -36,26 +36,24 @@
           <node begin="11" end="13" id="26" index="1" rel="su"/>
           <node begin="14" cat="pp" end="17" id="27" rel="pc">
             <node begin="14" end="15" getal="getal" id="28" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
-            <node begin="15" cat="mwu" end="17" id="29" rel="hd">
-              <node begin="15" end="16" id="30" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="over" vztype="init" word="over"/>
-              <node begin="16" end="17" id="31" lemma="heen" pos="prep" postag="VZ(fin)" pt="vz" rel="mwp" root="heen" vztype="fin" word="heen"/>
-            </node>
+            <node begin="15" end="16" id="29" lemma="over" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="over" vztype="fin" word="over"/>
+            <node begin="16" end="17" id="30" lemma="heen" pos="prep" postag="VZ(fin)" pt="vz" rel="hdf" root="heen" vztype="fin" word="heen"/>
           </node>
-          <node begin="17" buiging="zonder" end="18" id="32" lemma="gaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gegaan" wvorm="vd"/>
+          <node begin="17" buiging="zonder" end="18" id="31" lemma="gaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gegaan" wvorm="vd"/>
         </node>
       </node>
-      <node begin="19" cat="smain" end="25" id="33" rel="dp">
-        <node begin="19" end="20" getal="getal" id="34" lemma="ergens" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(onbep,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="ergens" status="vol" vwtype="onbep" word="ergens"/>
-        <node begin="20" end="21" id="35" lemma="liggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lig" word="lag" wvorm="pv"/>
-        <node begin="21" cat="np" end="25" id="36" rel="su">
-          <node begin="21" end="22" id="37" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="22" buiging="zonder" end="23" graad="basis" id="38" lemma="nat" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nat" word="nat"/>
-          <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="39" lemma="stuk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stuk" word="stuk"/>
-          <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="40" lemma="krant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="krant" word="krant"/>
+      <node begin="19" cat="smain" end="25" id="32" rel="dp">
+        <node begin="19" end="20" getal="getal" id="33" lemma="ergens" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(onbep,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="ergens" status="vol" vwtype="onbep" word="ergens"/>
+        <node begin="20" end="21" id="34" lemma="liggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lig" word="lag" wvorm="pv"/>
+        <node begin="21" cat="np" end="25" id="35" rel="su">
+          <node begin="21" end="22" id="36" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="22" buiging="zonder" end="23" graad="basis" id="37" lemma="nat" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nat" word="nat"/>
+          <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="38" lemma="stuk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stuk" word="stuk"/>
+          <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="39" lemma="krant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="krant" word="krant"/>
         </node>
       </node>
     </node>
-    <node begin="25" end="26" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="25" end="26" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ik zag dat de keien en &apos;t stof nat waren , de sproeiwagen was er over heen gegaan , ergens lag een nat stuk krant .</sentence>
 </alpino_ds>

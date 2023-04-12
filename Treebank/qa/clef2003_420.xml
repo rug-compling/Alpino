@@ -9,7 +9,7 @@
         <node begin="2" cat="np" end="6" id="6" rel="su">
           <node begin="2" cat="mwu" end="4" id="7" rel="det">
             <node begin="2" end="3" id="8" lemma="Nikki" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nikki" spectype="deeleigen" word="Nikki"/>
-            <node begin="3" end="4" id="9" lemma="Laudas" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Laudas" spectype="deeleigen" word="Laudas"/>
+            <node begin="3" end="4" getal="ev" graad="basis" id="9" lemma="Lauda" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="mwp" root="Laudas" word="Laudas"/>
           </node>
           <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="eigen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="eigen" word="eigen"/>
           <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="luchtvaart_maatschappij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="luchtvaartmaatschappij" word="luchtvaartmaatschappij"/>

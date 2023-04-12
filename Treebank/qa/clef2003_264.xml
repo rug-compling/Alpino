@@ -8,7 +8,7 @@
         <node begin="2" cat="np" end="5" id="5" index="2" rel="su">
           <node begin="2" end="3" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="3" cat="mwu" end="5" id="7" rel="hd">
-            <node begin="3" buiging="met-e" end="4" graad="basis" id="8" lemma="socialistisch" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Socialistische" word="Socialistische"/>
+            <node begin="3" end="4" id="8" lemma="Socialistische" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Socialistische" spectype="deeleigen" word="Socialistische"/>
             <node begin="4" end="5" id="9" lemma="Internationale" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Internationale" spectype="deeleigen" word="Internationale"/>
           </node>
         </node>

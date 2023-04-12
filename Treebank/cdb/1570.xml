@@ -56,9 +56,9 @@
                 <node begin="29" end="30" id="47" lemma="vaak" pos="adj" postag="BW()" pt="bw" rel="hd" root="vaak" word="vaak"/>
               </node>
               <node begin="30" conjtype="neven" end="31" id="48" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-              <node begin="31" cat="ap" end="33" id="49" rel="cnj">
+              <node begin="31" cat="ppart" end="33" id="49" rel="cnj">
                 <node begin="31" end="32" id="50" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
-                <node begin="32" buiging="zonder" end="33" graad="basis" id="51" lemma="ongevraagd" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="ongevraagd" word="ongevraagd"/>
+                <node begin="32" buiging="zonder" end="33" id="51" lemma="on_vragen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ongevraagd" word="ongevraagd" wvorm="vd"/>
               </node>
             </node>
             <node begin="33" cat="pp" end="36" id="52" rel="mod">

@@ -53,9 +53,9 @@
                         <node begin="19" buiging="met-e" end="20" graad="basis" id="43" lemma="54_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="54-jarige"/>
                         <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="44" lemma="Duitser" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Duitser" word="Duitser"/>
                         <node begin="21" cat="mwu" end="24" id="45" rel="app">
-                          <node begin="21" end="22" id="46" lemma="Karl" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Karl" spectype="deeleigen" word="Karl"/>
-                          <node begin="22" end="23" id="47" lemma="Ernst" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ernst" spectype="deeleigen" word="Ernst"/>
-                          <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="48" lemma="d&apos;alc" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="d&apos;Alquer" word="d&apos;Alquer"/>
+                          <node begin="21" end="22" id="46" lemma="Karl" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Karl" spectype="deeleigen" word="Karl"/>
+                          <node begin="22" end="23" id="47" lemma="Ernst" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ernst" spectype="deeleigen" word="Ernst"/>
+                          <node begin="23" end="24" id="48" lemma="d&apos;Alquer" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="d&apos;Alquer" spectype="deeleigen" word="d&apos;Alquer"/>
                         </node>
                       </node>
                       <node begin="24" buiging="zonder" end="25" id="49" lemma="vermoorden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="predm" root="vermoord" word="vermoord" wvorm="vd"/>

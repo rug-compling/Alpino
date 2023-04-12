@@ -34,8 +34,8 @@
             <node begin="12" buiging="met-e" end="13" graad="basis" id="25" lemma="Spaans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Spaans" word="Spaanse"/>
             <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="26" lemma="bureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bureau" word="bureau"/>
             <node begin="14" cat="mwu" end="16" id="27" rel="app">
-              <node begin="14" end="15" id="28" lemma="Mundo" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mundo" spectype="deeleigen" word="Mundo"/>
-              <node begin="15" end="16" id="29" lemma="70" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="70" word="70"/>
+              <node begin="14" end="15" id="28" lemma="Mundo" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mundo" spectype="deeleigen" word="Mundo"/>
+              <node begin="15" end="16" id="29" lemma="70" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="70" spectype="deeleigen" word="70"/>
             </node>
           </node>
         </node>

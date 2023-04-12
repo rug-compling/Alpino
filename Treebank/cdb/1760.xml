@@ -16,8 +16,8 @@
         <node begin="5" cat="np" end="32" id="12" rel="obj1">
           <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="paus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="paus" word="paus"/>
           <node begin="6" cat="mwu" end="8" id="14" rel="app">
-            <node begin="6" end="7" id="15" lemma="Clemens" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Clemens" spectype="deeleigen" word="Clemens"/>
-            <node begin="7" end="8" id="16" lemma="x11" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="x11" word="x11"/>
+            <node begin="6" end="7" id="15" lemma="Clemens" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Clemens" spectype="deeleigen" word="Clemens"/>
+            <node begin="7" end="8" id="16" lemma="x11" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="x11" spectype="deeleigen" word="x11"/>
           </node>
           <node begin="9" cat="rel" end="32" id="17" rel="mod">
             <node begin="9" end="10" getal="getal" id="18" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>

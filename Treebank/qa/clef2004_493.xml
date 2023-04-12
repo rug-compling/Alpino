@@ -9,7 +9,7 @@
         <node begin="2" cat="np" end="5" id="6" rel="su">
           <node begin="2" cat="mwu" end="4" id="7" rel="det">
             <node begin="2" end="3" id="8" lemma="Michael" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Michael" spectype="deeleigen" word="Michael"/>
-            <node begin="3" end="4" id="9" lemma="Jackson&apos;s" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jackson&apos;s" spectype="deeleigen" word="Jackson&apos;s"/>
+            <node begin="3" end="4" getal="ev" graad="basis" id="9" lemma="Jackson" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="mwp" root="Jackson&apos;s" word="Jackson&apos;s"/>
           </node>
           <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="plaat_maatschappij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="platenmaatschappij" word="platenmaatschappij"/>
         </node>

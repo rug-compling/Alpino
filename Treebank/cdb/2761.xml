@@ -28,10 +28,10 @@
               <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="23" lemma="kind_serie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="serie" word="kinderserie"/>
               <node begin="13" cat="mwu" end="18" id="24" rel="app">
                 <node begin="13" end="14" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
-                <node begin="14" end="15" id="26" lemma="Woefs" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Woefs" spectype="deeleigen" word="Woefs"/>
+                <node begin="14" end="15" getal="mv" graad="basis" id="26" lemma="Woefs" ntype="eigen" pos="noun" postag="N(eigen,mv,basis)" pt="n" rel="mwp" root="Woefs" word="Woefs"/>
                 <node begin="15" conjtype="neven" end="16" id="27" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
                 <node begin="16" end="17" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
-                <node begin="17" end="18" id="29" lemma="Lamaars" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lamaars" spectype="deeleigen" word="Lamaars"/>
+                <node begin="17" end="18" getal="mv" graad="basis" id="29" lemma="Lamaars" ntype="eigen" pos="noun" postag="N(eigen,mv,basis)" pt="n" rel="mwp" root="Lamaars" word="Lamaars"/>
               </node>
             </node>
             <node begin="19" cat="pp" end="22" id="30" rel="ld">

@@ -11,7 +11,7 @@
           <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="8" lemma="overste" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overste" word="overste"/>
           <node begin="2" cat="mwu" end="4" id="9" rel="app">
             <node begin="2" end="3" id="10" lemma="S." pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="S." spectype="deeleigen" word="S."/>
-            <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="11" lemma="Springer" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mwp" root="Springer" word="Springer"/>
+            <node begin="3" end="4" id="11" lemma="Springer" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Springer" spectype="deeleigen" word="Springer"/>
           </node>
           <node begin="5" cat="np" end="17" id="12" rel="app">
             <node begin="5" end="6" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>

@@ -3,8 +3,8 @@
   <node begin="0" cat="top" end="14" id="0" rel="top">
     <node begin="0" cat="smain" end="13" id="1" rel="--">
       <node begin="0" cat="mwu" end="2" id="2" rel="su">
-        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="dynamiet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Dynamiet" word="Dynamiet"/>
-        <node begin="1" end="2" id="4" lemma="Hanover" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hanover" spectype="deeleigen" word="Hanover"/>
+        <node begin="0" end="1" id="3" lemma="Dynamiet" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dynamiet" spectype="deeleigen" word="Dynamiet"/>
+        <node begin="1" end="2" id="4" lemma="Hanover" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hanover" spectype="deeleigen" word="Hanover"/>
       </node>
       <node begin="2" end="3" id="5" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
       <node begin="3" end="4" getal="getal" id="6" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>

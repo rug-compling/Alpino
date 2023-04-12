@@ -17,9 +17,9 @@
             <node begin="6" cat="np" end="10" id="13" rel="obj1">
               <node begin="6" end="7" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="7" cat="mwu" end="10" id="15" rel="hd">
-                <node begin="7" end="8" id="16" lemma="Ver." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ver." spectype="deeleigen" word="Ver."/>
-                <node begin="8" end="9" id="17" lemma="van" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
-                <node begin="9" end="10" id="18" lemma="Huisvrouwen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Huisvrouwen" spectype="deeleigen" word="Huisvrouwen"/>
+                <node begin="7" end="8" id="16" lemma="Ver." pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ver." spectype="deeleigen" word="Ver."/>
+                <node begin="8" end="9" id="17" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+                <node begin="9" end="10" id="18" lemma="Huisvrouwen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Huisvrouwen" spectype="deeleigen" word="Huisvrouwen"/>
               </node>
             </node>
           </node>
@@ -41,7 +41,4 @@
     <node begin="17" end="18" id="28" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
   </node>
   <sentence>Denken en Doen , maandblad van de Ver. van Huisvrouwen , doet in dit opzicht enkele suggesties :</sentence>
-  <comments>
-    <comment>in dit opzicht is een multiword unit?</comment>
-  </comments>
 </alpino_ds>

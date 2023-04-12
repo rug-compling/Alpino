@@ -9,8 +9,8 @@
         <node begin="0" buiging="zonder" end="1" getal="ev" id="6" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="Zijn"/>
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="vriend" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vriend" word="vriend"/>
         <node begin="2" cat="mwu" end="4" id="8" rel="app">
-          <node begin="2" end="3" id="9" lemma="Frans" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Frans" spectype="deeleigen" word="Frans"/>
-          <node begin="3" end="4" id="10" lemma="hoekeren" pos="noun" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="mwp" root="Hoekert" word="Hoekert" wvorm="pv"/>
+          <node begin="2" end="3" id="9" lemma="Frans" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Frans" spectype="deeleigen" word="Frans"/>
+          <node begin="3" end="4" id="10" lemma="Hoekert" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hoekert" spectype="deeleigen" word="Hoekert"/>
         </node>
         <node begin="5" end="6" id="11" lemma="midden" pos="adv" postag="BW()" pt="bw" rel="mod" root="midden" word="midden"/>
       </node>

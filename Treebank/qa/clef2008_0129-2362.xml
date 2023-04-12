@@ -15,7 +15,7 @@
           <node begin="5" cat="np" end="12" id="11" rel="obj1">
             <node begin="5" cat="mwu" end="7" id="12" rel="det">
               <node begin="5" end="6" id="13" lemma="Walt" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Walt" spectype="deeleigen" word="Walt"/>
-              <node begin="6" end="7" id="14" lemma="Disneys" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Disneys" spectype="deeleigen" word="Disneys"/>
+              <node begin="6" end="7" getal="ev" graad="basis" id="14" lemma="Disney" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="mwp" root="Disneys" word="Disneys"/>
             </node>
             <node begin="7" end="8" id="15" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
             <node begin="8" buiging="met-e" end="9" graad="basis" id="16" lemma="lang" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="lang" word="lange"/>

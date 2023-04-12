@@ -10,7 +10,7 @@
         <node begin="4" cat="np" end="7" id="7" rel="obj1">
           <node begin="4" end="5" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
           <node begin="5" cat="mwu" end="7" id="9" rel="hd">
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="koningin" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Koningin" word="Koningin"/>
+            <node begin="5" end="6" id="10" lemma="Koningin" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Koningin" spectype="deeleigen" word="Koningin"/>
             <node begin="6" end="7" id="11" lemma="Wilhelminacollege" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wilhelminacollege" spectype="deeleigen" word="Wilhelminacollege"/>
           </node>
         </node>

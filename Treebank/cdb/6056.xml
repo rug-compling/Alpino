@@ -16,9 +16,9 @@
           <node begin="4" end="5" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="5" cat="mwu" end="9" id="13" rel="hd">
             <node begin="5" buiging="met-e" end="6" graad="basis" id="14" lemma="groot" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Grote" word="Grote"/>
-            <node begin="6" end="7" id="15" lemma="Prijs" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Prijs" spectype="deeleigen" word="Prijs"/>
-            <node begin="7" end="8" id="16" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
-            <node begin="8" end="9" id="17" lemma="Menton" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Menton" spectype="deeleigen" word="Menton"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="15" lemma="prijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Prijs" word="Prijs"/>
+            <node begin="7" end="8" id="16" lemma="van" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="17" lemma="Menton" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mwp" root="Menton" word="Menton"/>
           </node>
           <node begin="10" cat="np" end="18" id="18" rel="app">
             <node begin="10" end="11" id="19" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>

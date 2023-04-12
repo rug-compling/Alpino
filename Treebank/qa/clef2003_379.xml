@@ -12,7 +12,7 @@
         <node begin="3" cat="np" end="10" id="8" rel="su">
           <node begin="3" cat="mwu" end="5" id="9" rel="det">
             <node begin="3" end="4" id="10" lemma="Albert" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Albert" spectype="deeleigen" word="Albert"/>
-            <node begin="4" end="5" id="11" lemma="Einsteins" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Einsteins" spectype="deeleigen" word="Einsteins"/>
+            <node begin="4" end="5" getal="ev" graad="basis" id="11" lemma="Einstein" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="mwp" root="Einsteins" word="Einsteins"/>
           </node>
           <node begin="5" buiging="met-e" end="6" graad="sup" id="12" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="oud" word="oudste"/>
           <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="manuscript" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="manuscript" word="manuscript"/>

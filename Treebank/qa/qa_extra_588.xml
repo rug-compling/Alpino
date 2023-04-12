@@ -11,8 +11,8 @@
           <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="bundel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bundel" word="bundel"/>
           <node begin="4" end="5" getal="mv" graad="basis" id="9" lemma="column" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="column" word="columns"/>
           <node begin="5" cat="mwu" end="9" id="10" rel="app">
-            <node begin="5" end="6" id="11" lemma="Allah" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Allah" spectype="deeleigen" word="Allah"/>
-            <node begin="6" end="7" id="12" lemma="Weet" pos="verb" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Weet" spectype="deeleigen" word="Weet"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="Allah" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Allah" word="Allah"/>
+            <node begin="6" end="7" id="12" lemma="weet" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="mwp" root="Weet" word="Weet" wvorm="pv"/>
             <node begin="7" end="8" genus="onz" getal="ev" id="13" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="mwp" root="Het" status="red" vwtype="pers" word="Het"/>
             <node begin="8" buiging="zonder" end="9" graad="comp" id="14" lemma="goed" pos="fixed" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mwp" root="Beter" word="Beter"/>
           </node>

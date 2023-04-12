@@ -7,9 +7,9 @@
         <node begin="1" cat="np" end="5" id="4" rel="obj1">
           <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="2" cat="mwu" end="5" id="6" rel="hd">
-            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="winkel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Winkel" word="Winkel"/>
-            <node begin="3" end="4" id="8" lemma="van" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
-            <node begin="4" end="5" id="9" lemma="Sinkel" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sinkel" spectype="deeleigen" word="Sinkel"/>
+            <node begin="2" end="3" id="7" lemma="Winkel" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Winkel" spectype="deeleigen" word="Winkel"/>
+            <node begin="3" end="4" id="8" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+            <node begin="4" end="5" id="9" lemma="Sinkel" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sinkel" spectype="deeleigen" word="Sinkel"/>
           </node>
         </node>
       </node>

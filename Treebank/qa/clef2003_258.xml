@@ -10,12 +10,12 @@
       </node>
       <node begin="0" cat="sv1" end="10" id="7" rel="body">
         <node begin="0" end="2" id="8" index="1" rel="su"/>
-        <node begin="2" end="3" id="9" lcat="p(sv1)" lemma="bij_wonen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="woon_bij" word="woonden" wvorm="pv"/>
+        <node begin="2" end="3" id="9" lemma="bij_wonen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="woon_bij" word="woonden" wvorm="pv"/>
         <node begin="3" cat="np" end="9" id="10" rel="obj1">
           <node begin="3" end="4" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="5" cat="mwu" end="7" id="12" rel="mod">
             <node begin="5" end="6" id="13" lemma="MED" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="MED" spectype="deeleigen" word="MED"/>
-            <node begin="6" end="7" id="14" lemma="21" numtype="hoofd" pos="name" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="21" word="21"/>
+            <node begin="6" end="7" id="14" lemma="21" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="21" spectype="deeleigen" word="21"/>
           </node>
           <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="conferentie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="conferentie" word="conferentie"/>
         </node>

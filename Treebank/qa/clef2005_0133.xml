@@ -9,7 +9,7 @@
         <node begin="2" cat="np" end="6" id="6" rel="su">
           <node begin="2" cat="mwu" end="4" id="7" rel="det">
             <node begin="2" end="3" id="8" lemma="Henry" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Henry" spectype="deeleigen" word="Henry"/>
-            <node begin="3" end="4" id="9" lemma="Purcells" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Purcells" spectype="deeleigen" word="Purcells"/>
+            <node begin="3" end="4" getal="ev" graad="basis" id="9" lemma="Purcell" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="mwp" root="Purcells" word="Purcells"/>
           </node>
           <node begin="4" buiging="met-e" end="5" graad="sup" id="10" lemma="beroemd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="beroemd" word="beroemdste"/>
           <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="compositie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="compositie" word="compositie"/>

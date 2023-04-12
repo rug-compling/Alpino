@@ -9,7 +9,7 @@
         <node begin="2" cat="np" end="6" id="6" rel="su">
           <node begin="2" cat="mwu" end="4" id="7" rel="mod">
             <node begin="2" end="3" id="8" lemma="Charles" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Charles" spectype="deeleigen" word="Charles"/>
-            <node begin="3" end="4" id="9" lemma="Bukowskis" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bukowskis" spectype="deeleigen" word="Bukowskis"/>
+            <node begin="3" end="4" getal="ev" graad="basis" id="9" lemma="Bukowski" naamval="gen" ntype="eigen" pos="name" postag="N(eigen,ev,basis,gen)" pt="n" rel="mwp" root="Bukowskis" word="Bukowskis"/>
           </node>
           <node begin="4" cat="mwu" end="6" id="10" rel="hd">
             <node begin="4" end="5" id="11" lemma="alter" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="alter" spectype="vreemd" word="alter"/>

@@ -36,9 +36,9 @@
               <node begin="15" cat="np" end="19" id="29" rel="obj1">
                 <node begin="15" end="16" id="30" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                 <node begin="16" cat="mwu" end="19" id="31" rel="hd">
-                  <node begin="16" end="17" id="32" lemma="Bouwfonds" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bouwfonds" spectype="deeleigen" word="Bouwfonds"/>
-                  <node begin="17" buiging="met-e" end="18" graad="basis" id="33" lemma="Nederlands" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Nederlandse" word="Nederlandse"/>
-                  <node begin="18" end="19" getal="mv" graad="basis" id="34" lemma="gemeente" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Gemeenten" word="Gemeenten"/>
+                  <node begin="16" end="17" id="32" lemma="Bouwfonds" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bouwfonds" spectype="deeleigen" word="Bouwfonds"/>
+                  <node begin="17" end="18" id="33" lemma="Nederlandse" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nederlandse" spectype="deeleigen" word="Nederlandse"/>
+                  <node begin="18" end="19" id="34" lemma="Gemeenten" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gemeenten" spectype="deeleigen" word="Gemeenten"/>
                 </node>
               </node>
             </node>

@@ -9,10 +9,10 @@
         <node begin="2" cat="np" end="7" id="6" rel="su">
           <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="3" cat="mwu" end="7" id="8" rel="hd">
-            <node begin="3" end="4" id="9" lemma="Europese" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europees" spectype="deeleigen" word="Europese"/>
+            <node begin="3" end="4" id="9" lemma="Europese" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europese" spectype="deeleigen" word="Europese"/>
             <node begin="4" end="5" id="10" lemma="Gemeenschap" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gemeenschap" spectype="deeleigen" word="Gemeenschap"/>
-            <node begin="5" end="6" id="11" lemma="voor" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
-            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="atoom_energie" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Atoomenergie" word="Atoomenergie"/>
+            <node begin="5" end="6" id="11" lemma="voor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="voor" spectype="deeleigen" word="voor"/>
+            <node begin="6" end="7" id="12" lemma="Atoomenergie" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Atoomenergie" spectype="deeleigen" word="Atoomenergie"/>
           </node>
         </node>
       </node>

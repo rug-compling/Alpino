@@ -13,7 +13,7 @@
           <node begin="5" cat="pp" end="8" id="10" rel="mod">
             <node begin="5" end="6" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="6" cat="mwu" end="8" id="12" rel="obj1">
-              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="doctor" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Doctor" word="Doctor"/>
+              <node begin="6" end="7" id="13" lemma="Doctor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Doctor" spectype="deeleigen" word="Doctor"/>
               <node begin="7" end="8" id="14" lemma="Snuggles" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Snuggles" spectype="deeleigen" word="Snuggles"/>
             </node>
           </node>
