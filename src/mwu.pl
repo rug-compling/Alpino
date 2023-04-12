@@ -69,6 +69,8 @@ mwu_postag('aan het',['VZ(init)','LID(bep,stan,evon)'],[aan,het]).
 mwu_postag('aan het adres van',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(init)'],[aan,het,adres,van]).
 mwu_postag('aan den lijve',['VZ(init)','LID(bep,dat,evmo)','N(soort,ev,basis,dat)'],[aan,de,lijf]).
 mwu_postag('aan t',['VZ(init)','LID(bep,stan,evon)'],[aan,het]).
+mwu_postag('aan toe',['VZ(fin)','VZ(fin)'],[aan,toe]).
+mwu_postag('ach ja',['TSW()','TSW()'],[ach,ja]).
 mwu_postag('achter de rug',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[achter,de,rug]).
 mwu_postag('acht-uur Journaal',['SPEC(deeleigen)','N(eigen,ev,basis,onz,stan)'],[acht_uur,'Journaal']).
 mwu_postag('ACHT uur Journaal',['TW(hoofd,vrij)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,onz,stan)'],[acht,uur,journaal]).
@@ -81,13 +83,14 @@ mwu_postag('Agenda 2010',['N(soort,ev,basis,zijd,stan)','TW(hoofd,vrij)'],[agend
 mwu_postag('Alcohol Infolijn',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)'],[alcohol,infolijn]).
 mwu_postag('Algemeen Klassement',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[algemeen,klassement]).
 mwu_postag('Algemeen Maatschappelijk Werk',['ADJ(prenom,basis,zonder)','ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[algemeen,maatschappelijk,werk]).
-mwu_postag('Algemene Begraafplaats',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[algemeen,begraafplaats]).
 mwu_postag('Algemene Kinderbijslagwet',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[algemeen,'Kinderbijslagwet']).
 mwu_postag('Algemene Maatregel van Bestuur',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,onz,stan)'],[algemeen,maatregel,van,bestuur]).
 mwu_postag('Algemene Ouderdomswet',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[algemeen,ouderdomswet]).
 mwu_postag('Algemene Zaken',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[algemeen,zaak]).
+mwu_postag('alleen dan',['BW()','BW()'],[alleen,dan]).
 mwu_postag('alleen maar',['BW()','BW()'],[alleen,maar]).
 mwu_postag('alleen niet',['BW()','BW()'],[niet,alleen]).
+mwu_postag('alles behalve',['VNW(onbep,pron,stan,vol,3o,ev)','VG(onder)'],[alles,behalve]).
 mwu_postag('al dan niet',['BW()','BW()','BW()'],[al,dan,niet]).
 mwu_postag('al met al',['BW()','VZ(init)','BW()'],[al,met,al]).
 mwu_postag('al naargelang',['BW()','VG(onder)'],[al,naargelang]).
@@ -102,10 +105,10 @@ mwu_postag('Amsterdamse School',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basi
 mwu_postag('anabole steroïden',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[anabool,steroïde]).
 mwu_postag('Andere Tijden',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[ander,tijd]).
 mwu_postag('Anders GAan LEVen',['BW()','WW(inf,vrij,zonder)','WW(inf,vrij,zonder)'],[anders,gaan,leven]).
-mwu_postag('a raison de',['SPEC(vreem)','SPEC(vreemd)','SPEC(vreemd)'],[à,raison,de]).
-mwu_postag('à raison de',['SPEC(vreem)','SPEC(vreemd)','SPEC(vreemd)'],[à,raison,de]).
-mwu_postag('a raison van',['SPEC(vreem)','SPEC(vreemd)','VZ(init)'],[à,raison,van]).
-mwu_postag('à raison van',['SPEC(vreem)','SPEC(vreemd)','VZ(init)'],[à,raison,van]).
+mwu_postag('a raison de',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)'],[a,raison,de]).
+mwu_postag('à raison de',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)'],[à,raison,de]).
+mwu_postag('a raison van',['SPEC(vreemd)','SPEC(vreemd)','VZ(init)'],[a,raison,van]).
+mwu_postag('à raison van',['SPEC(vreemd)','SPEC(vreemd)','VZ(init)'],[à,raison,van]).
 mwu_postag('art deco-stijl',['SPEC(vreemd)','N(soort,ev,basis,zijd,stan)'],[art,deco_stijl]).
 mwu_postag('Artificiële Intelligentie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[artificieel,intelligentie]).
 mwu_postag('Asterix en Obelix-strips',['N(eigen,ev,basis,zijd,stan)','VG(neven)','N(soort,mv,basis)'],['Asterix',en,'Obelix_strip']).
@@ -133,6 +136,7 @@ mwu_postag('bij dezen',['VZ(init)','VNW(aanw,det,dat,nom,met-e,zonder-n)'],[bij,
 mwu_postag('bij het rechte eind',['VZ(init)','LID(bep,stan,evon)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,onz,stan)'],[bij,het,recht,eind]).
 mwu_postag('bij hoog en bij laag',['VZ(init)','ADJ(vrij,basis,zonder)','VG(neven)','VZ(init)','ADJ(vrij,basis,zonder)'],[bij,hoog,en,bij,laag]).
 mwu_postag('bij lange',['VZ(init)','ADJ(prenom,basis,met-e,stan)'],[bij,lang]).
+mwu_postag('bij lange na',['VZ(init)','ADJ(nom,basis,met-e,zonder-n,stan)','VZ(fin)'],[bij,lang,na]).
 mwu_postag('bij machte',['VZ(init)','N(soort,ev,basis,dat)'],[bij,macht]).
 mwu_postag('bij monde van',['VZ(init)','N(soort,ev,basis,dat)','VZ(init)'],[bij,mond,van]).
 mwu_postag('bij tijd en wijle',['VZ(init)','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[bij,tijd,en,wijle]).
@@ -144,7 +148,7 @@ mwu_postag('Binnenlandse Zaken en Koninkrijksrelaties',['ADJ(prenom,basis,met-e,
 mwu_postag('Binnenlandse Zaken',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],['binnenlands','zaak']).
 mwu_postag('Binnenlandse zaken',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],['binnenlands','zaak']).
 mwu_postag('binnenlandse zaken',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],['binnenlands','zaak']).
-mwu_postag('binnenste buiten',['ADJ(prenom,basis,met-e,stan)','VZ(fin)'],[binnenst,buiten]).
+mwu_postag('binnenste buiten',['ADJ(nom,basis,met-e,zonder-n,stan)','VZ(fin)'],[binnenste,buiten]).
 mwu_postag('Brussel-Hoofdstedelijk Gewest',['SPEC(deeleigen)','SPEC(deeleigen)'],['Brussel_Hoofdstedelijk','Gewest']).
 mwu_postag('Brusselse Hoofdstedelijke Gewest',['ADJ(prenom,basis,met-e,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,onz,stan)'],['Brussels',hoofdstedelijk,gewest]).
 mwu_postag('Brusselse Hoofdstedelijke Regering',['ADJ(prenom,basis,met-e,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Brussels',hoofdstedelijk,regering]).
@@ -208,6 +212,7 @@ mwu_postag('dan wel',['BW()','BW()'],[dan,wel]).
 mwu_postag('dat wil zeggen',['VNW(aanw,pron,stan,vol,3o,ev)','WW(pv,tgw,ev)','WW(inf,vrij,zonder)'],[dat,willen,zeggen]).
 mwu_postag('Davis Cup-team',['SPEC(deeleigen)','N(eigen,ev,basis,onz,stan)'],['Davis','Cup_team']).
 mwu_postag('degelijk wel',['BW()','ADJ(vrij,basis,zonder)'],[wel,degelijk]).
+mwu_postag('De Dag',['LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[de,dag]).
 mwu_postag('de eerste de beste',['LID(bep,stan,rest)','TW(rang,prenom,stan)','LID(bep,stan,rest)','ADJ(prenom,sup,met-e,stan)'],[de,één,de,goed]).
 mwu_postag('de ene na de andere',['LID(bep,stan,rest)','VNW(onbep,det,stan,prenom,met-e,evz)','VZ(init)','LID(bep,stan,rest)','ADJ(nom,basis,met-e,zonder-n,stan)'],[de,een,na,de,ander]).
 mwu_postag('Derde Republiek',['TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[drie,republiek]).
@@ -221,7 +226,6 @@ mwu_postag('der Nederlanden',['LID(bep,gen,rest3)','N(eigen,mv,basis)'],[de,'Ned
 mwu_postag('de ronde',['LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[de,ronde]).
 mwu_postag('De Rode Ridder',['LID(bep,stan,rest)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[de,rood,ridder]).
 mwu_postag('De roze rimpel',['LID(bep,stan,rest)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[de,roze,rimpel]).
-mwu_postag('Dertigjarige Oorlog',['SPEC(deeleigen)','SPEC(deeleigen)'],['Dertig_jarige','Oorlog']).
 mwu_postag('De Russische muziek',['LID(bep,stan,rest)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[de,'Russisch',muziek]).
 mwu_postag('des avonds',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,avond]).
 mwu_postag('des te',['LID(bep,gen,evmo)','VZ(init)'],[de,te]).
@@ -265,11 +269,11 @@ mwu_postag('dit keer',['VNW(aanw,det,stan,prenom,zonder,evon)','N(soort,ev,basis
 mwu_postag('dit soort',['VNW(aanw,det,stan,prenom,zonder,evon)','N(soort,ev,basis,onz,stan)'],[dit,soort]).
 mwu_postag('DJ Tiësto',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)'],[dj,'Tiësto']).
 mwu_postag('Doha Conferentie',['N(eigen,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)'],['Doha',conferentie]).
-mwu_postag('Doha Development Agenda',['N(eigen,ev,basis,onz,stan)','SPEC(vreemd)','N(soort,ev,basis,zijd,stan)'],['Doha','Development',agenda]).
 mwu_postag('Doha Ministeriële Conferentie',['N(eigen,ev,basis,onz,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Doha',ministerieel,conferentie]).
 mwu_postag('door de knieen',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[door,de,knie]).
 mwu_postag('door de knieën',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[door,de,knie]).
 mwu_postag('door en door',['VZ(fin)','VG(neven)','VZ(fin)'],[door,en,door]).
+mwu_postag('door het stof',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[door,het,stof]).
 mwu_postag('door middel van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[door,middel,van]).
 mwu_postag('door toedoen van',['VZ(init)','WW(inf,nom,zonder,zonder-n)','VZ(init)'],[door,toe_doen,van]).
 mwu_postag('Douane 2000"',['N(soort,ev,basis,zijd,stan)','TW(hoofd,vrij)'],[douane,'2000']). % "
@@ -300,6 +304,7 @@ mwu_postag('een oogje',['LID(onbep,stan,agr)','N(soort,ev,dim,onz,stan)'],[een,o
 mwu_postag('een paar',['LID(onbep,stan,agr)','N(soort,ev,basis,onz,stan)'],[een,paar]).
 mwu_postag('een slordige',['LID(onbep,stan,agr)','ADJ(prenom,basis,met-e,stan)'],[een,slordig]).
 mwu_postag('een soort',['LID(onbep,stan,agr)','N(soort,ev,basis,genus,stan)'],[een,soort]).
+mwu_postag('één voor één',['TW(hoofd,prenom,stan)','VZ(init)','TW(hoofd,prenom,stan)'],[één,voor,één]).
 mwu_postag('een weinig',['LID(onbep,stan,agr)','VNW(onbep,grad,stan,vrij,zonder,basis)'],[een,weinig]).
 mwu_postag('een zulk',['LID(onbep,stan,agr)','VNW(aanw,det,stan,vrij,zonder)'],[zulk,een]).
 mwu_postag('eens niet',['BW()','BW()'],[niet,eens]).
@@ -338,7 +343,6 @@ mwu_postag('Europese Strategie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basi
 mwu_postag('Europese Zaken',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],['Europees',zaak]).
 mwu_postag('Exclusieve Belgische Economische Zone',['ADJ(prenom,basis,met-e,stan)','ADJ(prenom,basis,met-e,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[exclusief,'Belgisch',economisch,zone]).
 mwu_postag('Exclusieve Economische Zone',['ADJ(prenom,basis,met-e,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[exclusief,economisch,zone]).
-mwu_postag('Export Informatiecentrum',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,onz,stan)'],[export,informatiecentrum]).
 mwu_postag('Externe Communicatie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[extern,communicatie]).
 mwu_postag('Externe Hulp',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[extern,hulp]).
 mwu_postag('Extern Optreden',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[extern,op_treden]).
@@ -374,6 +378,7 @@ mwu_postag('geen van allen',['VNW(onbep,det,stan,prenom,zonder,agr)','VZ(init)',
 mwu_postag('geen van beiden',['VNW(onbep,det,stan,prenom,zonder,agr)','VZ(init)','VNW(onbep,grad,stan,nom,met-e,mv-n,basis)'],[geen,van,beide]).
 mwu_postag('geheime dienst',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[geheim,dienst]).
 mwu_postag('geleidelijk aan',['ADJ(vrij,basis,zonder)','VZ(fin)'],[geleidelijk,aan]).
+mwu_postag('gelukkig maar',['ADJ(vrij,basis,zonder)','BW()'],[gelukkig,maar]).
 mwu_postag('Gemeenschappelijke Marktordening',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[gemeenschappelijk,marktordening]).
 mwu_postag('Gemeenschappelijk Landbouwbeleid',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[gemeenschappelijk,landbouw_beleid]).
 mwu_postag('Gemeenschappelijk Leidraad',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,zijd,stan)'],[gemeenschappelijk,leidraad]).
@@ -466,6 +471,7 @@ mwu_postag('bijzonder het in',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,zo
 mwu_postag('echt het in',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,zonder,zonder-n)'],[in,het,echt]).
 mwu_postag('echter op grond van',['VZ(init)','N(soort,ev,basis,zijd,stan)','BW()','VZ(init)'],[op,grond,echter,van]).
 mwu_postag('groot het in',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,zonder,zonder-n)'],[in,het,groot]).
+mwu_postag('het hof',['LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[het,hof]).
 mwu_postag('het in klein',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,zonder,zonder-n)'],[in,het,klein]).
 mwu_postag('het in kort',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,zonder,zonder-n)'],[in,het,kort]).
 mwu_postag('het in lang',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,zonder,zonder-n)'],[in,het,lang]).
@@ -476,9 +482,6 @@ mwu_postag('Het Louvre',['LID(bep,stan,evon)','N(eigen,ev,basis,onz,stan)'],[het
 mwu_postag('hij / zij',['VNW(pers,pron,nomin,vol,3,ev,masc)','LET()','VNW(pers,pron,nomin,vol,3v,ev,fem)'],[hij,'/',zij]).
 mwu_postag('Hoge Commissaris voor de Mensenrechten',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[hoog,commissaris,voor,de,mensenrecht]).
 mwu_postag('Hogere Handelsschool Erasmus',['ADJ(prenom,comp,met-e,stan)','N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)'],[hoog,handelsschool,'Erasmus']).
-mwu_postag('Hogeschool Gent',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,onz,stan)'],[hogeschool,'Gent']).
-mwu_postag('Hogeschool voor de Kunsten',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[hogeschool,voor,de,kunst]).
-mwu_postag('Hogeschool West-Vlaanderen',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,onz,stan)'],[hogeschool,'West-Vlaanderen']).
 mwu_postag('Hoge Snelheidslijn',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[hoog,snelheidslijn]).
 mwu_postag('Hoge Vergadering',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[hoog,vergadering]).
 mwu_postag('Hoge Vertegenwoordiger',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[hoog,vertegenwoordiger]).
@@ -486,6 +489,7 @@ mwu_postag('Hollands Glorie',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,zijd,
 mwu_postag('honderd uit',['TW(hoofd,vrij)','VZ(fin)'],[honderd,uit]).
 mwu_postag('Honderdjarige Oorlog',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[honderjarig,oorlog]).
 mwu_postag('Hoofdstedelijk Parlement',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[hoofdstedelijk,parlement]).
+mwu_postag('hoog tijd',['ADJ(vrij,basis,zonder)','N(soort,ev,basis,zijd,stan)'],[hoog,tijd]).
 mwu_postag('Huis Bernadotte',['N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,zijd,stan)'],[huis,'Bernadotte']).
 mwu_postag('Huis Bourbon-Huis Napoléon',['N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)'],[huis,'Bourbon','Napoléon']).
 mwu_postag('Huis der Ottonen',['N(soort,ev,basis,onz,stan)','LID(bep,gen,rest3)','N(eigen,mv,basis)'],[huis,de,'Ottoon']).
@@ -501,17 +505,16 @@ mwu_postag('Hulpkas voor Werkloosheidsuitkeringen',['N(eigen,ev,basis,zijd,stan)
 mwu_postag('Humalog Mix-producten',['SPEC(deeleigen)','N(soort,mv,basis)'],['Humalog','Mix_product']).
 mwu_postag('Humane Wetenschappen',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[humaan,wetenschap]).
 mwu_postag('IB-Groep Infolijn',['N(eigen,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)'],['IB-groep',infolijn]).
-mwu_postag('imam-Ali Moskee',['SPEC(deeleigen)','SPEC(deeleigen)'],[imam_Ali,'Moskee']).
-mwu_postag('Imam Ali-moskee',['SPEC(deeleigen)','SPEC(deeleigen)'],['Imam','Ali_moskee']).
 mwu_postag('Immateriële Erfgoed van de Mensheid',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,onz,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[immaterieel,erfgoed,van,de,mensheid]).
 mwu_postag('import / export-inspectie',['N(soort,ev,basis,zijd,stan)','LET()','N(soort,ev,basis,zijd,stan)'],[import,/,export_inspectie]).
+mwu_postag('in acht',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,acht]).
 mwu_postag('in allerijl',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,allerijl]).
 mwu_postag('in antwoord op',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[in,antwoord,op]).
-mwu_postag('in casu',['VZ(init)','SPEC(vreemd)'],[in,casu]).
 mwu_postag('in combinatie met',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,combinatie,met]).
 mwu_postag('in de aanloop naar',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,de,aanloop,naar]).
 mwu_postag('in de boeien',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[in,de,boei]).
 mwu_postag('in de eerste plaats',['VZ(init)','LID(bep,stan,rest)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[in,de,één,plaats]).
+mwu_postag('in de fout',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[in,de,fout]).
 mwu_postag('in de gaten',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[in,de,gat]).
 mwu_postag('in de lijn der verwachting',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','LID(bep,gen,rest3)','N(soort,ev,basis,zijd,stan)'],[in,de,lijn,de,verwachting]).
 mwu_postag('in de lijn der verwachtingen',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','LID(bep,gen,rest3)','N(soort,mv,basis)'],[in,de,lijn,de,verwachting]).
@@ -519,6 +522,7 @@ mwu_postag('in de loop van',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,z
 mwu_postag('in de maak',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[in,de,maak]).
 mwu_postag('in de plaats',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[in,de,plaats]).
 mwu_postag('in de prijzen',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[in,de,prijs]).
+mwu_postag('in de rede',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[in,de,rede]).
 mwu_postag('in de schoenen',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[in,de,schoen]).
 mwu_postag('in de sterren geschreven',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)','WW(vd,vrij,zonder)'],[in,de,ster,schrijven]).
 mwu_postag('in de weer',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[in,de,weer]).
@@ -552,6 +556,7 @@ mwu_postag('in levende lijve',['VZ(init)','WW(od,prenom,met-e)','N(soort,ev,basi
 mwu_postag('in lichterlaaie',['VZ(init)','BW()'],[in,lichterlaaie]).
 mwu_postag('in naam van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,naam,van]).
 mwu_postag('in navologing van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,navolging,van]).
+mwu_postag('in omloop',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,omloop]).
 mwu_postag('in orde',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,orde]).
 mwu_postag('in overleg met',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[in,overleg,met]).
 mwu_postag('in opdracht van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,opdracht,van]).
@@ -562,6 +567,7 @@ mwu_postag('in spe',['VZ(init)','SPEC(vreemd)'],[in,spe]).
 mwu_postag('in staat',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,staat]).
 mwu_postag('in strijd',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,strijd]).
 mwu_postag('in weerwil van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,weerwil,van]).
+mwu_postag('in zijn werk',['VZ(init)','VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)','N(soort,ev,basis,onz,stan)'],[in,zijn,werk]).
 mwu_postag('Integraal Dossier JGZ',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,zijd,stan)'],[integraal,dossier,'JGZ']).
 mwu_postag('Intercultureel Onderwijs',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[intercultureel,onderwijs]).
 mwu_postag('Intergouvernementele Conferentie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[intergouvernementeel,conferentie]).
@@ -597,11 +603,6 @@ mwu_postag('Jeugd en Stad',['N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,e
 mwu_postag('jihad - strijders',['N(soort,ev,basis,zijd,stan)','LET()','N(soort,mv,basis)'],[jihad,-,strijder]).
 mwu_postag('Jurgen van den Goorbergh-tribune',['SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)','N(soort,ev,basis,zijd,stan)'],['Jurgen',van,den,'Goorbergh_tribune']).
 mwu_postag('Juridische Zaken',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[juridisch,zaak]).
-mwu_postag('kabinet-Balkenende II',['N(eigen,ev,basis,onz,stan)','SPEC(deeleigen)'],[kabinet_Balkenende,'II']).
-mwu_postag('kabinet-Den Uyl',['SPEC(deeleigen)','SPEC(deeleigen)'],[kabinet_Den,'Uyl']).
-mwu_postag('kabinet-Kok II',['N(soort,ev,basis,onz,stan)','SPEC(deeleigen)'],[kabinet_Kok,'II']).
-mwu_postag('kabinet-Kok I',['N(soort,ev,basis,onz,stan)','SPEC(deeleigen)'],[kabinet_Kok,'I']).
-mwu_postag('kabinet-Van Agt II',['N(soort,ev,basis,onz,stan)','SPEC(deeleigen)','SPEC(deeleigen)'],[kabinet_Van,'Agt','II']).
 mwu_postag('Kaders van België',['N(soort,mv,basis)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[kader,van,'België']).
 mwu_postag('Kalmthoutse School',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Kalmthouts',school]).
 mwu_postag('Kamers van Koophandel',['N(soort,mv,basis)','VZ(init)','N(soort,ev,basis,zijd,stan)'],[kamer,van,koophandel]).
@@ -612,10 +613,10 @@ mwu_postag('Kamer van Volksvertegenwoordigers',['N(soort,ev,basis,zijd,stan)','V
 mwu_postag('Kanselarij Algemene Diensten',['N(soort,ev,basis,zijd,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[kanselarij,algemeen,dienst]).
 mwu_postag('Kanselarij & Voorlichting',['N(soort,ev,basis,zijd,stan)','SPEC(symb)','N(soort,ev,basis,zijd,stan)'],[kanselarij,&,voorlichting]).
 mwu_postag('Kasteel van Stuyvenberg',['N(soort,ev,basis,onz,stan)','VZ(init)','N(eigen,ev,basis,zijd,stan)'],[kasteel,van,'Stuyvenberg']).
-mwu_postag('Katholieke Hogeschool Brugge-Oostende',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,onz,stan)'],[katholiek,hogeschool,'Brugge-Oostende']).
 mwu_postag('keer op keer',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)'],[keer,op,keer]).
 mwu_postag('Kerkelijke Staat',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[kerkelijk,staat]).
 mwu_postag('Keuringsdienst van Waren',['N(soort,ev,basis,zijd,stan)','VZ(init)','WW(pv,verl,mv)'],[keuringsdienst,van,zijn]).
+mwu_postag('kijk- en luistergeld',['SPEC(afgebr)','VG(neven)','N(soort,ev,basis,onz,stan)'],['kijk-',en,luister_geld]).
 mwu_postag('Klassieke Oudheid',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[klassiek,oudheid]).
 mwu_postag('kommer en kwel',['N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[kommer,en,kwel]).
 mwu_postag('koning der Belgen',['N(soort,ev,basis,zijd,stan)','LID(bep,gen,rest3)','N(eigen,mv,basis)'],[koning,de,'Belg']).
@@ -715,18 +716,17 @@ mwu_postag('min mogelijk zo',['BW()','BW()','ADJ(vrij,basis,zonder)'],[zo,min,mo
 mwu_postag('mond- en klauwzeercrisis',['SPEC(afgebr)','VG(neven)','N(soort,ev,basis,zijd,stan)'],['mond-',en,klauwzeer_crisis]).
 mwu_postag('Muziekhuis van Pantalone',['N(soort,ev,basis,onz,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[muziekhuis,van,'Pantalone']).
 mwu_postag('na afloop van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[na,afloop,van]).
-mwu_postag('na verloop van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[na,verloop,van]).
+mwu_postag('na verloop van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[na,verloop,van]).
 mwu_postag('naar aanleiding van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[naar,aanleiding,van]).
+mwu_postag('naar buiten',['VZ(init)','VZ(fin)'],[naar,buiten]).
 mwu_postag('naar gelang van',['VZ(init)','VG(onder)','VZ(init)'],[naar,naargelang,van]).
 mwu_postag('naar schatting',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[naar,schatting]).
 mwu_postag('naar verluidt',['VZ(init)','WW(pv,tgw,met-t)'],[naar,verluiden]).
 mwu_postag('naar voren',['VZ(init)','BW()'],[naar,voren]).
 mwu_postag('Nationaal Akkoord Wonen',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)','WW(inf,vrij,zonder)'],[nationaal,akkoord,wonen]).
-mwu_postag('Nationaal Fond Ouderenhulp',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)'],[nationaal,fond,ouderenhulp]).
 mwu_postag('Nationaal Herbarium',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[nationaal,herbarium]).
 mwu_postag('Nationaal Isolatie Programma',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,onz,stan)'],[nationaal,isolatie,programma]).
 mwu_postag('Nationaal Monument Slavernijverleden',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,onz,stan)'],[nationaal,monument,slavernijverleden]).
-mwu_postag('Nationaal Ouderenfonds',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[nationaal,ouderenfonds]).
 mwu_postag('Nationaal Schengen Informatie Systeem',['ADJ(prenom,basis,zonder)','N(eigen,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,onz,stan)'],[nationaal,'Schengen',informatie,systeem]).
 mwu_postag('Nationaal-Socialistische Arbeiderspartij',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[nationaal_socialistisch,arbeiderspartij]).
 mwu_postag('Nationaal Waterkanaal',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[nationaal,waterkanaal]).
@@ -756,6 +756,7 @@ mwu_postag('niet het minst',['BW()','LID(bep,stan,evon)','VNW(onbep,grad,stan,no
 mwu_postag('niet meer dan',['BW()','VNW(onbep,grad,stan,vrij,zonder,comp)','VG(onder)'],[niet,veel,dan]).
 mwu_postag('niet minder dan',['BW()','VNW(onbep,grad,stan,vrij,zonder,comp)','VG(onder)'],[niet,weinig,dan]).
 mwu_postag('niet zonder',['BW()','VZ(init)'],[niet,zonder]).
+mwu_postag('niet zozeer',['BW()','BW()'],[niet,zozeer]).
 mwu_postag('niets minder dan',['VNW(onbep,pron,stan,vol,3o,ev)','VNW(onbep,grad,stan,vrij,zonder,comp)','VG(onder)'],[niets,weinig,dan]).
 mwu_postag('Nieuwe Orde',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[nieuw,orde]).
 mwu_postag('Nieuws in Het Kort',['N(soort,ev,basis,onz,stan)','VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,zonder,zonder-n)'],[nieuws,in,het,kort]).
@@ -777,7 +778,9 @@ mwu_postag('NOS Actueel',['N(eigen,ev,basis,zijd,stan)','ADJ(vrij,basis,zonder)'
 mwu_postag('NOS Journaal',['N(eigen,ev,basis,zijd,stan)','N(soort,ev,basis,onz,stan)'],['NOS',journaal]).
 mwu_postag('NOS Televisie',['N(eigen,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)'],['NOS',televisie]).
 mwu_postag('nou ja',['BW()','TSW()'],[nou,ja]).
+mwu_postag('nou eenmaal',['BW()','BW()'],[nou,eenmaal]).
 mwu_postag('nu eenmaal',['BW()','BW()'],[nu,eenmaal]).
+mwu_postag('nu eens',['BW()','BW()'],[nu,eens]).
 mwu_postag('nummer 1 hits',['N(soort,ev,basis,onz,stan)','TW(hoofd,vrij)','N(soort,mv,basis)'],[nummer,'1',hit]).
 mwu_postag('o ja',['TSW()','TSW()'],[o,ja]).
 mwu_postag('o nee',['TSW()','TSW()'],[o,nee]).
@@ -807,7 +810,8 @@ mwu_postag('onder voorzitterschap van',['VZ(init)','N(soort,ev,basis,onz,stan)',
 mwu_postag('Onderwijs , Cultuur en Wetenschappen',['N(soort,ev,basis,onz,stan)','LET()','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,mv,basis)'],[onderwijs,',',cultuur,en,wetenschap]).
 mwu_postag('Onderwijs Cultuur en Wetenschappen',['N(soort,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,mv,basis)'],[onderwijs,cultuur,en,wetenschap]).
 mwu_postag('oog in oog',['N(soort,ev,basis,onz,stan)','VZ(init)','N(soort,ev,basis,onz,stan)'],[oog,in,oog]).
-mwu_postag('op andere gedachten',['VZ(init)','ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[op,ander,gedacht]).
+mwu_postag('ook maar',['BW()','BW()'],[ook,maar]).
+mwu_postag('op andere gedachten',['VZ(init)','ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[op,ander,gedachte]).
 mwu_postag('op basis van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[op,basis,van]).
 mwu_postag('op de hoogte',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[op,de,hoogte]).
 mwu_postag('op de hielen',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[op,de,hiel]).
@@ -823,6 +827,7 @@ mwu_postag('op en top',['VZ(fin)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[op
 mwu_postag('op gang',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[op,gang]).
 mwu_postag('op het gebied van',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(init)'],[op,het,gebied,van]).
 mwu_postag('op het gevaar af',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(fin)'],[op,het,gevaar,af]).
+mwu_postag('op hol',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[op,hol]).
 mwu_postag('Openbaar Vervoer',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[openbaar,vervoer]).
 mwu_postag('Openbare Bibliotheken',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[openbaar,bibliotheek]).
 mwu_postag('Operatie Barbarossa',['N(soort,ev,basis,zijd,stan)','SPEC(vreemd)'],[operatie,'Barbarossa']).
@@ -856,10 +861,12 @@ mwu_postag('Op weg naar',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[
 mwu_postag('op weg naar',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[op,weg,naar]).
 mwu_postag('op zichzelfstaande',['VZ(init)','ADJ(prenom,basis,met-e,stan)'],[op,op_zichzelf_staand]).
 mwu_postag('op zoek',['VZ(init)','ADJ(vrij,basis,zonder)'],[op,zoek]).
+mwu_postag('oud en nieuw',['ADJ(nom,basis,zonder,zonder-n)','VG(neven)','ADJ(nom,basis,zonder,zonder-n)'],[oud,en,nieuw]).
 mwu_postag('orde op zaken',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,mv,basis)'],[orde,op,zaak]).
 mwu_postag('over de schreef',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[over,de,schreef]).
-mwu_postag('over en weer',['VZ(init)','VG(neven)','VZ(fin)'],[over,en,weer]).
+mwu_postag('over en weer',['VZ(fin)','VG(neven)','VZ(fin)'],[over,en,weer]).
 mwu_postag('Palestijnse Gebieden',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],['Palestijns',gebied]).
+mwu_postag('pas op de plaats',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[pas,op,de,plaats]).
 mwu_postag('Platform JGZ',['N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,zijd,stan)'],[platform,'JGZ']).
 mwu_postag('Prins Alexander',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)'],[prins,'Alexander']).
 mwu_postag('Prins Aymeric',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)'],[prins,'Aymeric']).
@@ -887,7 +894,6 @@ mwu_postag('Prins Willem-Alexanderhof',['N(soort,ev,basis,zijd,stan)','N(eigen,e
 mwu_postag('Provinciaalse Zeeuwse Courant',['ADJ(prenom,basis,met-e,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Provinciaals','Zeeuws',courant]).
 mwu_postag('Rad van Fortuin',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,onz,stan)'],[rad,van,fortuin]).
 mwu_postag('Regio Brussel',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,onz,stan)'],[regio,'Brussel']).
-mwu_postag('Renault FT-17',['SPEC(deeleigen)','SPEC(deeleigen)'],['Renault','FT_17']).
 mwu_postag('rock en roll',['SPEC(vreemd)','VG(neven)','SPEC(vreemd)'],[rock,en,roll]).
 mwu_postag('Rode Brigades',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[rood,brigade]).
 mwu_postag('Rode Duivels',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[rood,duivel]).
@@ -898,6 +904,8 @@ mwu_postag('Ruimtelijk Structuurplan Vlaanderen',['ADJ(prenom,basis,zonder)','N(
 mwu_postag('Ruimtelijk Structuurplan Vlaanderen',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,onz,stan)'],[ruimtelijk,structuurplan,'Vlaanderen']).
 mwu_postag('Russische Revolutie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Russisch',revolutie]).
 mwu_postag('rustig aan',['ADJ(vrij,basis,zonder)','VZ(fin)'],[rustig,aan]).
+mwu_postag('\'s anderdaags',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,anderdaags]).
+mwu_postag('\'s anderendaags',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,anderendaags]).
 mwu_postag('\'s avonds',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,avond]).
 mwu_postag('\'s Avonds',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,avond]).
 mwu_postag('Slag bij Chattanooga',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[slag,bij,'Chattanooga']).
@@ -929,6 +937,10 @@ mwu_postag('\'s mens',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,mens]).
 mwu_postag('\'s mens',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,mens]).
 mwu_postag('\'s wereld',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,wereld]).
 mwu_postag('\'s wereld',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,wereld]).
+mwu_postag('\'s woensdagavonds',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,woensdag_avond]).
+mwu_postag('\'s zaterdagavonds',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,zaterdag_avond]).
+mwu_postag('\'s zondags',['LID(bep,gen,evmo)','N(eigen,ev,basis,gen)'],[de,zondag]).
+mwu_postag('sinds dat',['VG(onder)','VG(onder)'],[sinds,dat]).
 mwu_postag('Sociaal-Economisch Rapport',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['sociaal-economisch',rapport]).
 mwu_postag('Sociaal-Economisch Rapport Vlaanderen 2007',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,onz,stan)','TW(hoofd,vrij)'],['sociaal-economisch',rapport,'Vlaanderen','2007']).
 mwu_postag('Sociale Economie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[sociaal,economie]).
@@ -941,6 +953,7 @@ mwu_postag('Sociale Zaken en Volksgezondheid',['ADJ(prenom,basis,met-e,stan)','N
 mwu_postag('Sociale Zaken en Werkgelegenheid',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[sociaal,zaak,en,werkgelegenheid]).
 mwu_postag('Sociale Zekerheid',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[sociaal,zekerheid]).
 mwu_postag('SP.a - Spirit',['N(eigen,ev,basis,zijd,stan)','LET()','N(eigen,ev,basis,genus,stan)'],['sp.a',-,spirit]).
+mwu_postag('Sportvrouw van het jaar',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[sportvrouw,van,het,jaar]).
 mwu_postag('Sri Lankaanse',['SPEC(deeleigen)','ADJ(prenom,basis,met-e,stan)'],['Sri','Lankaans']).
 mwu_postag('Sri Lankese',['SPEC(deeleigen)','ADJ(prenom,basis,met-e,stan)'],['Sri','Lankees']).
 mwu_postag('Stadion Galgenwaard',['N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,zijd,stan)'],[stadion,'Galgenwaard']).
@@ -963,6 +976,8 @@ mwu_postag('\'s zomers',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,zomer]
 mwu_postag('\'s anderendaags',['LID(bep,gen,evmo)','BW()'],[de,anderendaags]).
 mwu_postag('Tante Sidonia',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)'],[tante,'Sidonia']).
 mwu_postag('te allen tijde',['VZ(init)','VNW(onbep,det,dat,prenom,met-e,evmo)','N(soort,ev,basis,dat)'],[te,al,tijd]).
+mwu_postag('te boven',['VZ(init)','VZ(fin)'],[te,boven]).
+mwu_postag('te buiten',['VZ(init)','VZ(fin)'],[te,buiten]).
 mwu_postag('te gast',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,gast]).
 mwu_postag('te gelegenertijd',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,gelegenertijd]).
 mwu_postag('te goed',['VZ(init)','ADJ(vrij,basis,zonder)'],[te,goed]).
@@ -974,9 +989,11 @@ mwu_postag('te kort',['VZ(init)','ADJ(vrij,basis,zonder)'],[te,kort]).
 mwu_postag('te leen',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,leen]).
 mwu_postag('te meer',['BW()','VNW(onbep,grad,stan,vrij,zonder,comp)'],[te,veel]).
 mwu_postag('te na',['BW()','VZ(fin)'],[te,na]).
+mwu_postag('te pakken',['VZ(init)','WW(inf,vrij,zonder)'],[te,pakken]).
 mwu_postag('te pas',['VZ(init)','BW()'],[te,pas]).
 mwu_postag('te onpas',['VZ(init)','BW()'],[te,onpas]).
 mwu_postag('te over',['VZ(init)','VZ(fin)'],[te,over]).
+mwu_postag('te snel af',['VZ(fin)','ADJ(vrij,basis,zonder)','VZ(fin)'],[te,snel,af]).
 mwu_postag('te voorschijn',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,voorschijn]).
 mwu_postag('te water',['VZ(init)','N(soort,ev,basis,onz,stan)'],[te,water]).
 mwu_postag('te weten',['VZ(init)','WW(inf,vrij,zonder)'],[te,weten]).
@@ -1021,6 +1038,7 @@ mwu_postag('ten noordwesten van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(i
 mwu_postag('ten noord-oosten van',['VZ(versm)','N(eigen,ev,basis,onz,stan)','VZ(init)'],[te,noordoosten,van]).
 mwu_postag('ten noord-westen van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,noordwesten,van]).
 mwu_postag('ten onder',['VZ(versm)','VZ(fin)'],[te,onder]).
+mwu_postag('ten ondergaan',['VZ(versm)','WW(inf,vrij,zonder)'],[te,onder_gaan]).
 mwu_postag('ten ongerieve van',['VZ(versm)','N(soort,ev,basis,dat)','VZ(init)'],[te,ongerief,van]).
 mwu_postag('ten onrechte',['VZ(versm)','N(soort,ev,basis,dat)'],[te,onrecht]).
 mwu_postag('ten oosten van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,oosten,van]).
@@ -1044,9 +1062,9 @@ mwu_postag('ten vroegste',['VZ(versm)','ADJ(nom,sup,met-e,zonder-n,stan)'],[te,v
 mwu_postag('ten westen van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,westen,van]).
 mwu_postag('ten zeerste',['VZ(versm)','BW()'],[te,zeerste]).
 mwu_postag('ten zuiden van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,zuiden,van]).
-mwu_postag('ten zuidoosten van',['VZ(versm)','N(eigen,ev,basis,onz,stan)','VZ(init)'],[te,zuidoosten,van]).
+mwu_postag('ten zuidoosten van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,zuidoosten,van]).
 mwu_postag('ten zuidwesten van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,zuidwesten,van]).
-mwu_postag('ten zuid-oosten van',['VZ(versm)','N(eigen,ev,basis,onz,stan)','VZ(init)'],[te,zuidoosten,van]).
+mwu_postag('ten zuid-oosten van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,zuidoosten,van]).
 mwu_postag('ten zuid=westen van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,zuidwesten,van]).
 mwu_postag('te rade',['VZ(init)','N(soort,ev,basis,dat)'],[te,raad]).
 mwu_postag('ter attentie van',['VZ(versm)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[te,attentie,van]).
@@ -1084,11 +1102,15 @@ mwu_postag(terzake,['VZ(versm)','N(soort,ev,basis,dat)'],[te,zaak]).
 mwu_postag('ter ziele',['VZ(versm)','N(soort,ev,basis,dat)'],[te,ziel]).
 mwu_postag('\'t koudst',['LID(bep,stan,evon)','ADJ(vrij,sup,zonder)'],[het,koud]).
 mwu_postag('t / m',['SPEC(afk)','LET()','SPEC(afk)'],[tot,/,met]).
+mwu_postag('tot daar aan toe',['VZ(init)','VNW(aanw,adv-pron,obl,vol,3o,getal)','VZ(fin)','VZ(fin)'],[tot,daar,aan,toe]).
 mwu_postag('tot dusver',['VZ(init)','BW()'],[tot,dusver]).
 mwu_postag('tot dusverre',['VZ(init)','BW()'],[tot,dusverre]).
 mwu_postag('tot en met',['VZ(init)','VG(neven)','VZ(init)'],[tot,en,met]).
-mwu_postag('tot ziens',['VZ(init)','TSW()'],[tot,ziens]).
+mwu_postag('tot staan',['VZ(init)','WW(inf,vrij,zonder)'],[tot,staan]).
+mwu_postag('tot vervelens toe',['VZ(init)','BW()','VZ(fin)'],[tot,vervelens,toe]).
 mwu_postag('tot voor kort',['VZ(init)','VZ(init)','ADJ(vrij,basis,zonder)'],[tot,voor,kort]).
+mwu_postag('tot ziens',['VZ(init)','TSW()'],[tot,ziens]).
+mwu_postag('tot zinken',['VZ(init)','WW(inf,vrij,zonder)'],[tot,zinken]).
 mwu_postag('Tweede Kamerfractie',['SPEC(deeleigen)','N(soort,ev,basis,zijd,stan)'],['Tweede','Kamer_fractie']).
 mwu_postag('Tweede Kamerlid',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)'],[twee,kamer_lid]).
 mwu_postag('Tweede Kamerverkiezingen',['TW(rang,prenom,stan)','N(soort,mv,basis)'],[twee,'Kamer_verkiezing']).
@@ -1125,13 +1147,14 @@ mwu_postag('van alles',['VZ(init)','VNW(onbep,pron,stan,vol,3o,ev)'],[van,alles]
 mwu_postag('van dien aard',['VZ(init)','VNW(aanw,det,dat,prenom,met-e,evmo)','N(soort,ev,basis,zijd,stan)'],[van,die,aard]).
 mwu_postag('van dien',['VZ(init)','VNW(aanw,det,dat,prenom,met-e,evmo)'],[van,die]).
 mwu_postag('van een leien dakje',['VZ(init)','LID(onbep,stan,agr)','ADJ(prenom,basis,zonder)','N(soort,ev,dim,onz,stan)'],[van,een,leien,dak]).
-mwu_postag('van gedachten',['VZ(init)','N(soort,mv,basis)'],[van,gedacht]).
+mwu_postag('van gedachten',['VZ(init)','N(soort,mv,basis)'],[van,gedachte]).
 mwu_postag('van harte',['VZ(init)','N(soort,ev,basis,dat)'],[van,hart]).
 mwu_postag('van heb ik jou daar',['VZ(init)','WW(pv,tgw,ev)','VNW(pers,pron,nomin,vol,1,ev)','VNW(pers,pron,obl,vol,2v,ev)','VNW(aanw,adv-pron,obl,vol,3o,getal)'],[van,hebben,ik,jou,daar]).
 mwu_postag('van heinde en verre',['VZ(init)','BW()','VG(neven)','BW()'],[van,heinde,en,verre]).
 mwu_postag('van jewelste',['VZ(init)','BW()'],[van,jewelste]).
 mwu_postag('van je welste',['VZ(init)','VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)','BW()'],[van,je,welste]).		
 mwu_postag('van kracht',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[van,kracht]).
+mwu_postag('van pas',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[van,pas]).
 mwu_postag('van te voren',['VZ(init)','VZ(init)','BW()'],[van,te,voren]).
 mwu_postag('van tevoren',['VZ(init)','BW()'],[van,tevoren]).
 mwu_postag('van toepassing',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[van,toepassing]).
@@ -1149,8 +1172,6 @@ mwu_postag('Vindplaats Trb',['N(soort,ev,basis,zijd,stan)','SPEC(symb)'],[vind_p
 mwu_postag('Vlaams Audiovisueel Fonds',['ADJ(prenom,basis,zonder)','ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['Vlaams',audiovisueel,fonds]).
 mwu_postag('Vlaams Blok-meeting',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,zijd,stan)'],['Vlaams',blok_meeting]).
 mwu_postag('Vlaamse Executieve',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Vlaams',executieve]).
-mwu_postag('Vlaamse Infolijn',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Vlaams',infolijn]).
-mwu_postag('Vlaamse Infolijn ­ Onderwijs',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','LET()','N(soort,ev,basis,onz,stan)'],['Vlaams',infolijn,­,onderwijs]).
 mwu_postag('Vlaamse KMO',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Vlaams','KMO']).
 mwu_postag('Vlaamse MiNa-Raad',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Vlaams','MiNa-raad']).
 mwu_postag('Vlaamse Openbare Instellingen',['ADJ(prenom,basis,met-e,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],['Vlaams',openbaar,instelling]).
@@ -1189,8 +1210,13 @@ mwu_postag('voor het geval',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,o
 mwu_postag('voor het éérst',['VZ(init)','LID(bep,stan,evon)','TW(rang,nom,zonder-n)'],[voor,het,één]).
 mwu_postag('voor het laatst',['VZ(init)','LID(bep,stan,evon)','ADJ(vrij,sup,zonder)'],[voor,het,laat]).
 mwu_postag('voor het lapje',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,dim,onz,stan)'],[voor,het,lap]).
+mwu_postag('voor het zeggen',['VZ(init)','LID(bep,stan,evon)','WW(inf,nom,zonder,zonder-n)'],[voor,het,zeggen]).
+mwu_postag('voor in de plaats',['VZ(fin)','VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd)'],[voor,in,de,plaats]).
+mwu_postag('voor lief',['VZ(init)','ADJ(vrij,basis,zonder)'],[voor,lief]).
 mwu_postag('voor ogen',['VZ(init)','N(soort,mv,basis)'],[voor,oog]).
 mwu_postag('voor en tegen',['N(soort,mv,basis)','VG(neven)','N(soort,mv,basis)'],[voor,en,tegen]).
+mwu_postag('voor zover',['VZ(init)','BW()'],[voor,zover]).
+mwu_postag('Voor zover',['VZ(init)','BW()'],[voor,zover]).
 mwu_postag('Vrede van Aken',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[vrede,van,'Aken']).
 mwu_postag('Vrede van Brest-Litovsk',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[vrede,van,'Brest-Litovsk']).
 mwu_postag('Vrede van Karlowitz',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[vrede,van,'Karlowitz']).
@@ -1206,6 +1232,7 @@ mwu_postag('Waalse en Brusselse Hoofdstedelijk Gewest',['ADJ(prenom,basis,met-e,
 mwu_postag('Waalse en Brussels Hoofdstedelijk Gewest',['ADJ(prenom,basis,met-e,stan)','VG(neven)','ADJ(prenom,basis,zonder)','ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['Waals',en,'Brussels',hoofdstedelijk,gewest]).
 mwu_postag('Waalse milieuraad voor duurzame ontwikkeling',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','VZ(init)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Waals',milieu_raad,voor,duurzaam,ontwikkeling]).
 mwu_postag('Waals Parlement',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['Waals',parlement]).
+mwu_postag('wat af',['VNW(onbep,pron,stan,vol,3o,ev)','VZ(fin)'],[wat,af]).
 mwu_postag('wat betreft',['VNW(vb,pron,stan,vol,3o,ev)','WW(pv,tgw,met-t)'],[wat,betreffen]).
 mwu_postag('wat een',['VNW(excl,pron,stan,vol,3,getal)','LID(onbep,stan,agr)'],[wat,een]).
 mwu_postag('wat voor',['VNW(vb,pron,stan,vol,3o,ev)','VZ(init)'],[wat,voor]).
@@ -1244,15 +1271,18 @@ mwu_postag('Wijs op Reis',['ADJ(vrij,basis,zonder)','VZ(init)','N(soort,ev,basis
 mwu_postag('win win',['WW(pv,tgw,ev)','WW(pv,tgw,ev)'],[winnen,winnen]).
 mwu_postag('zegge en schrijve',['WW(pv,conj,ev)','VG(neven)','WW(pv,conj,ev)'],[zeggen,en,schrijven]).
 mwu_postag('zeg maar',['WW(pv,tgw,ev)','BW()'],[zeggen,maar]).
+mwu_postag('zich zelf',['VNW(refl,pron,obl,red,3,getal)','BW()'],[zich,zelf]).
 mwu_postag('zij het',['WW(pv,conj,ev)','VNW(pers,pron,stan,red,3,ev,onz)'],[zijn,het]).
 mwu_postag('Zijne Koninklijke Hoogheid',['VNW(bez,det,stan,vol,3m,ev,prenom,met-e,rest)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[zijn,koninklijk,hoogheid]).
 mwu_postag('Zijne Koninklijke en Keizerlijke Hoogheid',['VNW(bez,det,stan,vol,3m,ev,prenom,met-e,rest)','ADJ(prenom,basis,met-e,stan)','VG(neven)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[zijn,koninklijk,en,keizerlijk,hoogheid]).
 mwu_postag('zijns inziens',['VNW(pers,pron,gen,vol,3m,ev)','N(soort,ev,basis,gen)'],[zijn,in_zien]).
 mwu_postag('zo af en toe',['BW()','VG(fin)','VG(neven)','VG(fin)'],[zo,af,en,toe]).
+mwu_postag('zo gauw',['BW()','ADJ(vrij,basis,zonder)'],[zo,gauw]).
 mwu_postag('zo ja',['BW()','TSW()'],[zo,ja]).
 mwu_postag('zo meteen',['BW()','BW()'],[zo,meteen]).
 mwu_postag('zo niet',['BW()','BW()'],[zo,niet]).
 mwu_postag('zo nu en dan',['BW()','BW()','VG(neven)','BW()'],[zo,nu,en,dan]).
+mwu_postag('zo ook',['BW()','BW()'],[zo,ook]).
 mwu_postag('zo te zien',['BW()','VZ(init)','WW(inf,vrij,zonder)'],[zo,te,zien]).
 mwu_postag('zonder meer',['VZ(init)','VNW(onbep,grad,stan,vrij,zonder,comp)'],[zonder,veel]).
 mwu_postag('zulk een',['VNW(aanw,det,stan,vrij,zonder)','LID(onbep,stan,agr)'],[zulk,een]).
@@ -1266,9 +1296,11 @@ vreemd([W|T],[Tag|L]) :-
     ),
     vreemd(T,L).
 
+
 vreemd('2001 : A Space Odyssey').
 vreemd('2004 est').
 vreemd('action man').
+vreemd('action painting').
 vreemd('ad absurdum').
 vreemd('ad hoc').
 vreemd('ad rem').
@@ -1287,6 +1319,7 @@ vreemd('amber box').
 vreemd('American football').
 vreemd('American Journal of Epidemiology').
 vreemd('ancien régime').
+vreemd('ancien régimete').
 vreemd('An Inconvenient Truth').
 vreemd('Annals of the Rheumatic Diseases').
 vreemd('annus mirabilis').
@@ -1297,8 +1330,12 @@ vreemd('Archives of General Psychiatry').
 vreemd('Army of Northern Virginia').
 vreemd('Army of the Potomac').
 vreemd('art deco').
-vreemd('Autorité centrale communautaire').
+vreemd('art déco').
+vreemd('art de vivre').
+vreemd('art nouveau').
+vreemd('au fond').
 vreemd('au sérieux').
+vreemd('Autorité centrale communautaire').
 vreemd('bad guy').
 vreemd('Ballad of Hollis Brown').
 vreemd('Battle of Britain').
@@ -1310,8 +1347,11 @@ vreemd('Behavioural Ecology and Sociobiology').
 vreemd('best practice').
 vreemd('best practices').
 vreemd('BETA COMPLEET').
+vreemd('bien commun').
 vreemd('Big Brother').
+vreemd('big buissiness').
 vreemd('Big en Little Round Tops').
+vreemd('billard russe').
 vreemd('binge drinken').
 vreemd('Biogas for Better Life').
 vreemd('Black Album').
@@ -1319,45 +1359,66 @@ vreemd('Black Venus').
 vreemd('Blowin\' in the Wind').
 vreemd('blue box').
 vreemd('blue chip rate').
+vreemd('box tank').
 vreemd('Budget of Paradoxes').
 vreemd('business angel').
 vreemd('business class').
+vreemd('business lines').
 vreemd('Business Partner').
 vreemd('Business Partners').
-vreemd('ça va').
 vreemd('captain of industry').
 vreemd('captains of industry').
+vreemd('carbon sink').
 vreemd('carte blanche').
 vreemd('case mix').
+vreemd('case study').
+vreemd('cash & carry').
 vreemd('catch phrases').
+vreemd('ça va').
+vreemd('cavalry runs').
+vreemd('char de bataille').
+vreemd('char léger').
+vreemd('char lourd').
 vreemd('checks and balances').
 vreemd('chief executive officer').
+vreemd('civil order').
 vreemd('civil society').
+vreemd('clicks & bricks').
 vreemd('Closer than Ever').
+vreemd('code civil').
 vreemd('collegia musica').
+vreemd('coming man').
 vreemd('commander in chief').
-vreemd('Commission Communautaire Française').
 vreemd('community workers').
 vreemd('con amore').
 vreemd('Concertación Democrática').
 vreemd('concours hippique').
+vreemd('condition humaine').
 vreemd('connected home').
+vreemd('consilium abeundi').
 vreemd('consumer concern').
 vreemd('consumer concerns').
+vreemd('contradictio in terminis').
 vreemd('cordon sanitaire').
 vreemd('corporate governance').
 vreemd('corporate services').
+vreemd('corps diplomatique').
 vreemd('country club').
 vreemd('Coupe du monde').
+vreemd('courtesy pass').
 vreemd('Creativity , Humor and Imagery in Language').
+vreemd('credentials evaluation').
 vreemd('credit points').
+vreemd('crème de menthe').
 vreemd('cross country').
 vreemd('cross over').
 vreemd('Crystal Ball').
 vreemd('curriculum vitae').
+vreemd('custom made').
 vreemd('Dance Valley').
 vreemd('Deep Space Nine').
 vreemd('de facto').
+vreemd('dementia praecox').
 vreemd('Democratic Voice of Birma').
 vreemd('den Um').
 vreemd('Den Um').
@@ -1369,8 +1430,13 @@ vreemd('director general').
 vreemd('Dirty Mind').
 vreemd('Doha Development Agenda').
 vreemd('Don\'t Look Back').
+vreemd('double digit').
 vreemd('Drang nach Osten').
+vreemd('drotrecogin alfa').
+vreemd('Drotrecogin alfa').
+vreemd('dual use').
 vreemd('du chef').
+vreemd('early warning').
 vreemd('economy class').
 vreemd('email address').
 vreemd('empire of evil').
@@ -1380,51 +1446,78 @@ vreemd('En masse').
 vreemd('en passant').
 vreemd('et cetera').
 vreemd('Europ Aid').
-vreemd('European Association of Urology').
 vreemd('Europe Publicaties').
 vreemd('Everything But Arms').
+vreemd('evidence based').
+vreemd('execeteur testementair').
 vreemd('fair trade').
 vreemd('fait divers').
 vreemd('fast forward').
+vreemd('fata morgana').
+vreemd('fata morgana\'s').
 vreemd('Financial Times').
+vreemd('fine fleur').
+vreemd('fine printing').
 vreemd('First Corps').
+vreemd('foramen obturatorium').
 vreemd('For You').
 vreemd('founding fathers').
 vreemd('from France').
+vreemd('front office').
+vreemd('full colour').
+vreemd('full time').
+vreemd('fund management').
+vreemd('gay parade').
 vreemd('Gegen die Wand').
 vreemd('Gender-related development index').
 vreemd('general manager').
 vreemd('girl power').
+vreemd('girls only').
 vreemd('Global Economic Prospects and the Developing Countries 2002').
+vreemd('go between').
+vreemd('good governance').
 vreemd('Good Luck').
+vreemd('government requests').
 vreemd('Graffiti Bridge').
 vreemd('grand batterie').
 vreemd('grand café').
 vreemd('grand chef').
+vreemd('grande vedette').
 vreemd('Grand Gala').
 vreemd('Grand Jury').
 vreemd('Grand Prix du Disque').
+vreemd('grand slam').
+vreemd('grand strategy').
 vreemd('green box').
 vreemd('grosso modo').
 vreemd('Guinness Book of Records').
 vreemd('Guinness Book of World Records').
+vreemd('gyrus frontalis inferior').
+vreemd('gyrus frontalis medius').
 vreemd('gyrus fusiformis').
+vreemd('gyrus supramarginalis').
 vreemd('hands free').
 vreemd('happy end').
 vreemd('happy few').
 vreemd('hard drugs').
 vreemd('haute couture').
+vreemd('haute couturier').
 vreemd('haute cuisine').
 vreemd('haute finance').
 vreemd('hazard ratio').
+vreemd('high pressure liquid chromatograph').
 vreemd('Highway 61 Revisited').
 vreemd('Hormones and Behavior').
+vreemd('host friends').
 vreemd('human capital management').
 vreemd('Human development index').
 vreemd('Human Development Report').
 vreemd('human media interaction').
 vreemd('Human poverty index').
+vreemd('human resource management').
 vreemd('human resources').
+vreemd('human resources management').
+vreemd('human rights monitors').
 vreemd('IBM Human Capital Management').
 vreemd('IBM Technology Collaboration Solutions').
 vreemd('ICT Executives').
@@ -1432,17 +1525,21 @@ vreemd('Il neige sur Liège').
 vreemd('im groszen ganzen').
 vreemd('in casu').
 vreemd('in extremis').
+vreemd('information retrieval').
 vreemd('in memoriam').
 vreemd('In memoriam').
 vreemd('in pectore').
 vreemd('in petto').
 vreemd('in residence').
 vreemd('in spe').
-vreemd('information retrieval').
+vreemd('institutional trading').
 vreemd('Integrated Framework for Trade-related Technical Assistance').
+vreemd('intensive care').
 vreemd('International Student Barometer').
 vreemd('Internet Service Providers').
 vreemd('In the Valley of Elah').
+vreemd('intra muros').
+vreemd('island hopping').
 vreemd('It\'s the economy , stupid').
 vreemd('Jean de Bruges').
 vreemd('jeu de boules').
@@ -1457,39 +1554,55 @@ vreemd('Journal of Neuroendocrinology').
 vreemd('Journal of the Acoustical Society of America').
 vreemd('Journal of the Acoustic Society of America').
 vreemd('Kingdom of Heaven').
+vreemd('knock out').
 vreemd('know how').
 vreemd('La bastille').
+vreemd('la Douce France').
 vreemd('La Mort de Tintagiles').
 vreemd('La Vita È Bella').
 vreemd('lead donor').
+vreemd('leader of tomorrow').
+vreemd('lead nation').
 vreemd('Le Chant du Rossignol').
 vreemd('Les Arts Décoratiefs').
 vreemd('Les bonbons').
 vreemd('Les bourgeois').
 vreemd('Les Echos').
 vreemd('Les flamandes').
+vreemd('les zoreilles').
+vreemd('lettres de foire').
 vreemd('level playing field').
 vreemd('Like A Rolling Stone').
-vreemd('Line Out').
+vreemd('limited edition').
 vreemd('linea recta').
+vreemd('Line Out').
+vreemd('lingua franca').
 vreemd('Little Round Top').
 vreemd('Lord Brougham').
 vreemd('Lord of War').
+vreemd('love peace en happiness').
 vreemd('low bat').
 vreemd('Mai 40').
 vreemd('mala fide').
+vreemd('managing director').
 vreemd('Manufacture Belge de Lampes Electriques').
 vreemd('Market Access for Developing Country Exports - selected issues').
+vreemd('martial arts').
 vreemd('Masterly Inactivity').
 vreemd('Mein Kampf').
+vreemd('minimal art').
 vreemd('Ministère de la Communauté française').
 vreemd('Ministerium der Deutschsprachigen Gemeinschaft').
 vreemd('missing link').
 vreemd('missing links').
 vreemd('MISSING PARA').
 vreemd('mission statement').
+vreemd('model validation').
+vreemd('modus operandi').
 vreemd('Mons Pietatis').
+vreemd('monstre sacré').
 vreemd('More from People').
+vreemd('mother fucker').
 vreemd('Moulin Rouge').
 vreemd('multiple sclerose').
 vreemd('Ne me quitte pas').
@@ -1498,23 +1611,37 @@ vreemd('New Scientist').
 vreemd('New York Times').
 vreemd('noblesse oblige').
 vreemd('non compos mentis').
-vreemd('not-state actors').
+vreemd('non-state actors').
+vreemd('North by Northwest').
 vreemd('North Country Blues').
 vreemd('North Sea Survey').
 vreemd('nota bene').
+vreemd('not allowed').
+vreemd('not amused').
+vreemd('not out').
+vreemd('not-state actors').
 vreemd('Nouvelle Vague').
+vreemd('nucleus accumbens').
 vreemd('Ode to Napoleon').
 vreemd('Official Development Assistance').
+vreemd('off shoring').
 vreemd('On Demand business').
 vreemd('On Demand Business').
 vreemd('One Nite Alone').
 vreemd('One Nite Alone Live').
+vreemd('one-off measures').
 vreemd('on line').
 vreemd('on the spot').
 vreemd('open source').
 vreemd('over the top').
 vreemd('Pals Battalions').
+vreemd('pars pro toto').
+vreemd('pay by view').
+vreemd('peace clause').
+vreemd('period rooms').
+vreemd('perpetua mobiles').
 vreemd('per se').
+vreemd('petite histoire').
 vreemd('Physiology and Behavior').
 vreemd('Pickett\'s Charge').
 vreemd('Plum Run').
@@ -1522,21 +1649,26 @@ vreemd('pop up').
 vreemd('pop ups').
 vreemd('practical joke').
 vreemd('practical jokes').
+vreemd('premium product').
+vreemd('price bands').
 vreemd('Prière païenne').
 vreemd('prima ballerina').
 vreemd('prime rate').
 vreemd('prime time').
 vreemd('Prime time').
+vreemd('prime times').
 vreemd('private banker').
 vreemd('private bankers').
 vreemd('Private Bankers').
-vreemd('Private Bankers Association').
 vreemd('Private Banking').
 vreemd('Proceedings of the National Academy of Sciences').
 vreemd('promotor fidei').
+vreemd('pro-poor growth').
+vreemd('prunus anneniaca').
 vreemd('Pulp Fiction').
 vreemd('Purple Rain').
 vreemd('Purple Rain Tour').
+vreemd('quality time').
 vreemd('Quand maman reviendra').
 vreemd('Quand on n\'a que l\'amour').
 vreemd('Quatre Bras').
@@ -1550,43 +1682,63 @@ vreemd('reductio ad absurdum').
 vreemd('Regional Surveys of the World').
 vreemd('remote control').
 vreemd('remote controls').
+vreemd('retail banking').
 vreemd('right policy mix').
 vreemd('rock and roll').
 vreemd('rule of law').
+vreemd('running joke').
 vreemd('running mate').
+vreemd('salle d\'applications').
 vreemd('science fiction').
 vreemd('Science fiction').
 vreemd('Science Fiction').
 vreemd('Seasons in the sun').
+vreemd('second opinion').
 vreemd('Secret Story').
 vreemd('Security code').
 vreemd('sede vacante').
 vreemd('Senior Business').
 vreemd('sense of urgency').
+vreemd('sensu stricto').
 vreemd('sentinel node').
 vreemd('serotonin-norepinephrine reuptake inhibitor').
 vreemd('Service Oriented Architecture').
 vreemd('shared services').
 vreemd('Sign " O " The Times').
 vreemd('signum bello').
+vreemd('silver cushions').
+vreemd('sine regno').
 vreemd('SKETCH ARTIST').
+vreemd('slow motion').
+vreemd('slow starter').
 vreemd('smoking gun').
 vreemd('sneak preview').
 vreemd('soft drugs').
+vreemd('soft skills').
 vreemd('space shuttle').
+vreemd('standard setters').
+vreemd('standard takers').
 vreemd('Star Trek').
 vreemd('Star Trek : The Motion Picture').
 vreemd('State of the Union').
+vreemd('status epilepticus').
 vreemd('status quo').
 vreemd('status quo ante').
 vreemd('Stranger in my house').
+vreemd('strategic policy unit').
 vreemd('stricto sensu').
 vreemd('student union').
 vreemd('student unions').
+vreemd('success stories').
 vreemd('Sunday Telegraph').
+vreemd('surat jalan').
+vreemd('surround sound').
+vreemd('survival syndrome').
 vreemd('Sustainable Trade and Innovation Centre').
 vreemd('Symbol Album').
 vreemd('tabula rasa').
+vreemd('tailor made').
+vreemd('task force').
 vreemd('Task Force').
 vreemd('Technology Upgrade').
 vreemd('Tequila Effect').
@@ -1595,17 +1747,26 @@ vreemd('The Amazing Adventures of Kavalier and Clay').
 vreemd('the Army of Northern Virginia').
 vreemd('the Army of the Potomac').
 vreemd('The Army of the Potomac').
+vreemd('The Astrophysical Journal').
+vreemd('The Atlantic Monthly').
+vreemd('The Basement Tapes').
 vreemd('The Battle of Arnhem').
+vreemd('The Bootleg Series 5').
+vreemd('The Boston Globe').
 vreemd('The Cross').
 vreemd('The Daily Express').
 vreemd('The Differential and Integral Calculus').
+vreemd('The Economist').
 vreemd('The end of the world').
+vreemd('The Evening Standard').
 vreemd('The Game').
 vreemd('The Gold Experience').
 vreemd('The Gold Experience Tour').
 vreemd('the Guardian').
 vreemd('The Guardian').
+vreemd('The Independant').
 vreemd('The Independent').
+vreemd('The Jungle Book').
 vreemd('The Language Blueprint').
 vreemd('The Lonesome Death of Hattie Caroll').
 vreemd('The lovers').
@@ -1615,6 +1776,8 @@ vreemd('The New York Daily News').
 vreemd('The New Yorker').
 vreemd('The New York Times').
 vreemd('The Next Generation Films').
+vreemd('The Observer').
+vreemd('The Original Series').
 vreemd('The Original Series Films').
 vreemd('The passion of the Christ').
 vreemd('The return of the king').
@@ -1622,27 +1785,41 @@ vreemd('The Sun').
 vreemd('The Sunday Times').
 vreemd('The trials of Oscar Wilde').
 vreemd('The Truth').
+vreemd('The Wall Street Journal').
+vreemd('The Washington Post').
+vreemd('The Wild Bunch').
 vreemd('time trip').
 vreemd('top secret').
 vreemd('total loss').
 vreemd('tour de force').
+vreemd('tour d\'horizon').
+vreemd('tour of duty').
 vreemd('traveller cheque').
 vreemd('traveller cheques').
 vreemd('Trigonometry and Double Algebra').
 vreemd('troy ounce').
 vreemd('try out').
+vreemd('ultimi habitatores mundi').
+vreemd('under attack').
 vreemd('Under The Cherry Moon').
+vreemd('unfinished business').
 vreemd('urbi et orbi').
 vreemd('Urbi et Orbi').
 vreemd('user interface').
+vreemd('varlet de chambre').
+vreemd('venture capitalist').
 vreemd('vice versa').
 vreemd('Vice versa').
+vreemd('view contact').
 vreemd('Villa des Roses').
+vreemd('viola d\'amore').
+vreemd('vota bronca').
 vreemd('war for talent').
 vreemd('warming up').
 vreemd('wealth management').
 vreemd('Web Gallery of Art').
 vreemd('wet lease').
+vreemd('wishful thinking').
 vreemd('Women\'s Ordination Worldwide').
 vreemd('Woodstock of Dance').
 vreemd('World Economic Forum').
@@ -1651,19 +1828,3 @@ vreemd('World Social Forum').
 vreemd('World Summit on Sustainable Development').
 vreemd('You love it or you hate it').
 vreemd('zero sum game').
-
-vreemd('The Washington Post').
-vreemd('The Wall Street Journal').
-vreemd('The Economist').
-vreemd('The Boston Globe').
-vreemd('The Astrophysical Journal').
-vreemd('The Wild Bunch').
-vreemd('The Original Series').
-vreemd('The Observer').
-vreemd('The New Yorker').
-vreemd('The Jungle Book').
-vreemd('The Independant').
-vreemd('The Evening Standard').
-vreemd('The Bootleg Series 5').
-vreemd('The Basement Tapes').
-vreemd('THe Atlantic Monthly').

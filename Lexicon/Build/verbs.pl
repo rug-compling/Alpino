@@ -1168,6 +1168,7 @@ inf_only(nachtvliegen).
 inf_only(oppositievoeren,oppositie_voeren).
 inf_only(paalzitten).
 inf_only(parachutespringen,parachute_springen).
+inf_only('parachute-springen',parachute_springen).
 inf_only(pleasen).
 inf_only(polsstokhoogspringen).
 inf_only(prijsschieten).

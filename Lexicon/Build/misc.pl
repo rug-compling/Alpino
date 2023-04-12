@@ -4346,8 +4346,8 @@ zijn(hun).
 zijn(zijn).
 zijn('z\'n').
 
-m('het eerst',     adjective(het_st(adv)),   [Het,eerst]) :- het(Het).
-m('het eerst',     adjective(het_st(oadv)), [Het,eerste]) :- het(Het).
+m('het één',     adjective(het_st(adv)),   [Het,eerst]) :- het(Het).
+m('het één',     adjective(het_st(oadv)), [Het,eerste]) :- het(Het).
 
 %%%% TODO: netzomin/evenmin/evenveel XP als XP ... (conj?)
 m(evenmin,          als_adjective(both(adv)),evenmin).
@@ -8942,6 +8942,7 @@ term([so,far,',',so,good]).
 term([special,issue]).
 term([splendid,isoalation]).
 term([state,of,the,art]).
+term([status,epilepticus]).
 term([street,credibility]).
 term([struggle,for,life]).
 term([sudden,death]).
@@ -8960,6 +8961,8 @@ term([the,show,must,go,on]).
 term([time,slot],[time,slots]).
 term([tongue,in,cheek]).
 term([total,loss]).
+term([trade,off]).
+term(['trade-off']).
 term([tour,de,chante]).
 term([tour,de,force]).
 term([tour,of,duty]).

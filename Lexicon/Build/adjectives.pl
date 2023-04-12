@@ -8,12 +8,12 @@
 
 m(Stem,Tag,Surf) :-
     a(Forms,Adv,Subcat,Suffixes),
-    candidate_stem(Stem0,Forms),
+    select_form(Forms,Adv,Surf1,Infl),
+    candidate_stem(Stem0,Surf1,Forms),
     (	atom(Stem0)
     ->  Stem0 = Stem1
     ;   hdrug_util:concat_all(Stem0,Stem1,' ')
     ),
-    select_form(Forms,Adv,Surf1,Infl),
     select_subcat(Subcat,Infl,Tag),
     add_compounds:add_compounds(Suffixes,Stem1,Surf1,Stem,Surf).
 
@@ -93,59 +93,88 @@ illegal_infl_subcat_pair(er_pp_sbar(_)).
 illegal_infl_subcat_pair(er_pp_vp(_)).
 illegal_infl_subcat_pair(refl_er_pp_sbar(_)).
 
-candidate_stem(Stem,Forms) :-
-    (   lists:member(stem(Stem0),Forms)
+candidate_stem(Stem,Surf,Forms) :-
+    (   lists:member(stem(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(no_e(Stem0),Forms)
+    ;   lists:member(no_e(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
     ;   lists:member(ge_no_e(Stem0),Forms)
     ->  (   stem(Stem0,v_root(_,Stem)), !
 	;   Stem0=Stem
-	)
-    ;   lists:member(postn_no_e(Stem0),Forms)
+	),
+	same_len(Stem0,Surf)
+    ;   lists:member(postn_no_e(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(both(Stem0),Forms)
+    ;   lists:member(both(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
     ;   lists:member(ge_both(Stem0),Forms)
     ->  (   stem(Stem0,v_root(_,Stem)), !
 	;   Stem0=Stem
-	)
-    ;   lists:member(postn_both(Stem0),Forms)
+	),
+	same_len(Stem0,Surf)
+    ;   lists:member(postn_both(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(postn_pred(Stem0),Forms)
+    ;   lists:member(postn_pred(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(stof(Stem0),Forms)
+    ;   lists:member(stof(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(prefix(Stem0),Forms)
+    ;   lists:member(prefix(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(pred(Stem0),Forms)
+    ;   lists:member(pred(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(pred_er(Stem0),Forms)
+    ;   lists:member(pred_er(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(pp_pred(Stem0),Forms)
+    ;   lists:member(pp_pred(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
     ;   lists:member(end(Stem0),Forms),
-	atom_concat(Stem1,end,Stem0)
+	atom_concat(Stem1,end,Stem0),
+	same_len(Stem0,Surf)
     ->  atom_concat(Stem1,en,Stem)
-    ;   lists:member(end(Stem0),Forms)
+    ;   lists:member(end(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(ende(Stem0),Forms)
+    ;   lists:member(ende(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(e(Stem0),Forms)
+    ;   lists:member(e(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(ge_e(Stem0),Forms)
+    ;   lists:member(ge_e(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(er(Stem0),Forms)
+    ;   lists:member(er(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(ere(Stem0),Forms)
+    ;   lists:member(ere(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(st(Stem0),Forms)
+    ;   lists:member(st(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(ste(Stem0),Forms)
+    ;   lists:member(ste(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   format(user_error,"No stem for ~w~n",[Forms]),
+    ;   format(user_error,"No stem for ~w ~w~n",[Surf,Forms]),
         fail
     ).
+
+same_len(X,Y) :-
+    atom(X),
+    atom(Y),
+    !.
+same_len([_|T],[_|T2]) :-
+    same_len(T,T2).
 
 a([prefix('ad-valorem'),
    prefix([ad,valorem])],nonadv,[],[]).
@@ -8372,13 +8401,6 @@ a([both(dichtgevallen)],adv,[],[]).
 
 a([ge_both(dichtgevroren)],adv,[],[]).
 
-a([   e(dichtstbijzijnde),
-   no_e(dichtstbijzijnd),
-      e([dichtst,bijzijnde]),
-   no_e([dichtst,bijzijnd]),
-      e([dichts,bijzijnde]),
-   no_e([dichts,bijzijnd])],nonadv,[],[]).
-
 a([e(dictatoriale),
    e(diktatoriale),
    er(dictatorialer),
@@ -11228,7 +11250,7 @@ a([e(gearmde),
    no_e(gearmd)],padv,[],[]).
 
 a([ge_e(gearrangeerde),
-   ge_no_e(gearrangeerd)],adv,[],[]).
+   ge_no_e(gearrangeerd)],adv,[],[h(rijk)]).
 
 a([ge_e(gearresteerde),
    ge_no_e(gearresteerd)],adv,[],[]).
@@ -15721,6 +15743,10 @@ a([ge_e(geschuwde),
 
 a([ge_e(gescoorde),
    ge_no_e(gescoord)],adv,[],[]).
+
+a([stem(screenen),
+   ge_e(gescreende),
+   ge_no_e(gescreend)],adv,[],[]).
 
 a([ge_e(geseculariseerde),
    ge_no_e(geseculariseerd)],padv,[],[]).
@@ -26532,7 +26558,8 @@ a([e(ongevoelige),
    ste(ongevoeligste)],adv,
   [pp(voor)],[]).
 
-a([ge_e(ongevraagde),
+a([stem(on_vragen),
+   ge_e(ongevraagde),
    ge_no_e(ongevraagd)],padv,[],[]).
 
 a([ge_e(ongewapende),
@@ -26551,7 +26578,8 @@ a([ge_e(ongewenste),
   [subject_vp,
    subject_sbar],[]).
 
-a([ge_e(ongewijzigde),
+a([stem(on_wijzigen),
+   ge_e(ongewijzigde),
    ge_no_e(ongewijzigd)],padv,[],[]).
 
 a([stem(ongewild),
@@ -31780,6 +31808,7 @@ a([e(roomse),
    ere(roomsere)],nonadv,[],[]).
 
 a([stem('Rooms-katholiek'),
+   stem(['Rooms',katholiek]),
    e('rooms-katholieke'),
    e('rooms-katolieke'),
    e([rooms,katolieke]),
@@ -33399,10 +33428,10 @@ a([e(stekelige),
    st(stekeligst),
    ste(stekeligste)],adv,[],[]).
 
-a([e(stekende),
+a([ende(stekende),
    er(stekender),
    ere(stekendere),
-   no_e(stekend),
+   end(stekend),
    st(stekendst),
    ste(stekendste)],adv,[],[]).
 

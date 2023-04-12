@@ -1959,7 +1959,6 @@ spelling_variant21(naar,mate,     naarmate).
 spelling_variant21(ofte,wel,      oftewel).
 spelling_variant21(om,heen,       omheen).
 spelling_variant21(op,eens,       opeens).
-spelling_variant21(over,heen,     overheen).
 spelling_variant21(non,actief,    'non-actief').
 spelling_variant21(plus,minus,    plusminus).
 spelling_variant21(score,verloop, scoreverloop).
@@ -2926,7 +2925,6 @@ spelling_variant(profesionele,professionele).
 spelling_variant(quite,       quitte).
 spelling_variant(rechtsstreeks,rechtstreeks).
 spelling_variant(rechtsstreekse,rechtstreekse).
-spelling_variant(rede,        reden).
 spelling_variant(registeren,  registreren).
 spelling_variant(schijft,     schrijft).
 spelling_variant(sierraad,    sieraad).
@@ -3306,6 +3304,9 @@ parse_only_variant(kk,kanker,intensifier).
 parse_only_variant(kkr,kanker,intensifier).
 
 %% others
+parse_only_variant(rede, reden,noun(de,count,sg)).
+parse_only_variant(rede, reden,noun(de,count,sg,_)).
+
 parse_only_variant(vraagde, vroeg,verb(_,_,_)).
 parse_only_variant(vraagden,vroegen,verb(_,_,_)).
 

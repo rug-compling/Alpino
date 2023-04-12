@@ -37,15 +37,15 @@ more_general(meas_mod_noun(De,Count,Sg,Sc),  noun(De,Count,Sg,Sc)).
 more_general(mod_noun(De,Count,Sg,Sc),       meas_mod_noun(De,Count,Sg,Sc)).
 more_general(mod_noun(De,Count,Sg,Sc),       tmp_noun(De,Count,Sg,Sc)).
 
-%%% TODO (?): choose stem with same number of parts
+%%% NOW: choose stem with same number of parts
 %%% so, 'pop up' does not get stem 'pop-up' but rather 'pop up'?
 n0(Stem,Tag,Surf,Forms,Gender,Subcat,Suffixes) :-    
-    candidate_stem(Stem0,Forms),
+    select_form(Forms,Gender,Surf1,Tag0),
+    candidate_stem(Stem0,Surf1,Forms),
     (	atom(Stem0)
     ->  Stem0 = Stem1
     ;   hdrug_util:concat_all(Stem0,Stem1,' ')
     ),
-    select_form(Forms,Gender,Surf1,Tag0),
     select_subcat(Subcat,Tag0,Tag1),
     select_mod(Subcat,Tag1,Tag2),
     add_dim(Suffixes,Tag2,Tag,Stem1,Surf1,Stem2,Surf2),
@@ -140,22 +140,35 @@ adapt_mod_fun(meas_mod,  meas_mod_noun).
 adapt_mod_fun(temp_mod,  tmp_noun).
 
 
-candidate_stem(Stem,Forms) :-
-    (   lists:member(stem(Stem0),Forms)
+candidate_stem(Stem,Surf,Forms) :-
+    (   lists:member(stem(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(sg(Stem0),Forms)
+    ;   lists:member(sg(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(mass(Stem0),Forms)
+    ;   lists:member(mass(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(meas(Stem0),Forms)
+    ;   lists:member(meas(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(bare_meas(Stem0),Forms)
+    ;   lists:member(bare_meas(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   lists:member(pl(Stem0),Forms)
+    ;   lists:member(pl(Stem0),Forms),
+	same_len(Stem0,Surf)
     ->  Stem0=Stem
-    ;   format(user_error,"No stem for ~w~n",[Forms]),
+    ;   format(user_error,"No stem for ~w ~w~n",[Surf,Forms]),
         fail
     ).
+
+same_len(X,Y) :-
+    atom(X),
+    atom(Y),
+    !.
+same_len([_|T],[_|T2]) :-
+    same_len(T,T2).
 
 :- discontiguous
     n/3,
@@ -5293,7 +5306,7 @@ n([pl(binnenlanden),sg(binnenland)],het,[]).
 
 n([sg(binnenstaat),pl(binnenstaten)],de,[]).
 
-n([mass(binnenste)],het,[]).
+%%n([mass(binnenste)],het,[]).
 
 n([mass(binnenvaart)],de,[]).
 
@@ -6530,7 +6543,7 @@ n([mass(buitenspel)],het,[]).
 
 n([pl(buitenstaanders),sg(buitenstaander)],de,[]).
 
-n([pl(buitensten),sg(buitenste)],het,[measure]).
+%%n([pl(buitensten),sg(buitenste)],het,[measure]).
 
 n([pl(buitenverblijven),sg(buitenverblijf)],het,[]).
 
@@ -7917,7 +7930,9 @@ n([pl(conductrices),sg(conductrice)],de,[],
 
 n([pl(confederaties),sg(confederatie)],de,[]).
 
-n([pl(conferenties),sg(conferentie)],de,[],[klimaat]).
+n([pl(conferenties),sg(conferentie)],de,[],
+  [donor,
+   klimaat]).
 
 n([pl(configuraties),sg(configuratie)],de,[]).
 
@@ -8270,7 +8285,8 @@ n([mass(credit)],het,[]).
 
 n([pl(crediteuren),pl(crediteurs),sg(crediteur)],de,[]).
 
-n([pl([credit,cards]),sg([credit,card]),
+n([stem(creditcard),
+   pl([credit,cards]),sg([credit,card]),
    pl('credit-cards'),sg('credit-card'),
    pl(creditcards),sg(creditcard)],de,[]).
 
@@ -14484,7 +14500,8 @@ n([sg('hard-disc'),sg('hard-disk'),sg([hard,disk]),sg([hard,disc]),
 n([sg('hard-drive'),sg([hard,drive]),
    pl('hard-drives'),pl([hard,drives])],de,[]).
 
-n([pl([hard,drugs]),sg([hard,drug]),
+n([stem(harddrug),
+   pl([hard,drugs]),sg([hard,drug]),
    pl('hard-drugs'),sg('hard-drug'),
    pl(harddrugs),sg(harddrug)],de,[]).
 
@@ -14986,7 +15003,8 @@ n([sg([high,school]),pl([high,schools])],de,[]).
 
 n([sg([high,tea]),pl([high,teas])],de,[]).
 
-n([mass([high,tech]),mass('high-tech'),mass(hightech),mass('hi-tech'),
+n([stem(hightech),
+   mass([high,tech]),mass('high-tech'),mass(hightech),mass('hi-tech'),
    pl([high,techs]),pl('high-techs'),pl(hightechs),pl('hi-techs')],de,[]).
 
 n([sg(hijs)],de,[]).
@@ -21153,7 +21171,7 @@ n([pl(machten),sg(macht)],de,[],
    s(staat),
    stabilisatie,
    super,
-   troepen,
+   i(troep,troepen),
    s(vrede),
    h('VN'),
    i('VN_vrede','VN-vredes'),
@@ -24705,6 +24723,8 @@ n([pl(ontvoerders),sg(ontvoerder)],de,[]).
 
 n([pl(ontvoeringen),sg(ontvoering)],de,[]).
 
+n([sg(ontvoogding),pl(ontvoogdingen)],de,[]).  % en niet on_tv_oog_ding
+
 n([mass(ontwaarding)],de,[]).
 
 n([mass(ontwapening)],de,[]).
@@ -25382,7 +25402,7 @@ n([pl(organen),sg(orgaan)],het,[],
    s(bestuur),
    s(geslacht),
    s(overheid),
-   overleg,
+   overleg,h(overleg),
    pers,
    s(staat),
    s(uitvoering),
@@ -25826,6 +25846,10 @@ n([pl(paarden),sg(paard)],het,[],
   [hobbel,
    parade,
    dim(paardje)]).
+
+n([sg('paard-en-wagen'),
+   pl('paard-en-wagens'),
+   stem(paard_en_wagen)],both,[]).
 
 n([pl(paardebloemen),sg(paardebloem)],de,[]).
 
@@ -27473,6 +27497,8 @@ n([pl(poorten),sg(poort)],de,[],
 n([sg(poos),pl(pozen)],de,[measure,temp_mod,sbar],[dim(poosje)]).
 
 n([pl(poten),sg(poot)],de,[],[dim(pootje)]).
+
+n([sg(popart)],de,[],[]).
 
 n([pl(poppen),sg(pop)],de,[],[sneeuw,
 			      dim(poppetje),
@@ -29283,6 +29309,8 @@ n([pl(regelen),pl(regels),sg(regel)],de,
    privacy,
    straf,
    dim(regeltje)]).
+
+n([sg(regelaar),pl(regelaars)],de,[]).
 
 n([pl(regelgevingen),sg(regelgeving)],de,[sbar,vp]).
 
@@ -32376,7 +32404,10 @@ n([mass(soevereiniteit)],de,[]).
 
 n([pl('sofa\'s'),sg(sofa)],de,[],[dim(sofaatje)]).
 
-n([pl([soft,drugs]),sg([soft,drug]),pl(softdrugs)],de,[]).
+n([stem(softdrug),
+   pl([soft,drugs]),sg([soft,drug]),
+   pl('soft-drugs'),sg('soft-drug'),
+   pl(softdrugs),sg(softdrug)],de,[]).
 
 n([mass(software)],de,[],
   [pauze,
@@ -32969,6 +33000,7 @@ n([sg(spotje),pl(spotjes)],het,[],
   [radio,
    reclame,
    televisie,
+   tv,
    dim(spotje)]).
 
 n([sg(spotter),pl(spotters)],de,[],
