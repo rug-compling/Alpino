@@ -1365,9 +1365,11 @@ foreign_word(a).
 foreign_word(abnormale).  % in scientific names
 foreign_word(about).
 foreign_word(account).
+foreign_word(activation).
 foreign_word(adieux).
 foreign_word(adventure).
 foreign_word(adventures).
+foreign_word(advisor).
 foreign_word(after).
 foreign_word(again).
 foreign_word(ainsi).
@@ -1393,7 +1395,9 @@ foreign_word(arms).
 foreign_word(art).
 foreign_word(arts).
 foreign_word(as).
+foreign_word(assignment).
 foreign_word(assist).
+foreign_word(associate).
 foreign_word(at).
 foreign_word(au).
 foreign_word(auch).
@@ -1476,6 +1480,7 @@ foreign_word(class).
 foreign_word(clock).
 foreign_word(close).
 foreign_word(club).
+foreign_word(code).
 foreign_word(come).
 foreign_word(comme).
 foreign_word(commercial).
@@ -1710,6 +1715,7 @@ foreign_word(mais).
 foreign_word(major).
 foreign_word(make).
 foreign_word(man).
+foreign_word(manager).
 foreign_word(management).
 foreign_word(marginale).  % in scientific names
 foreign_word(market).
@@ -2616,8 +2622,8 @@ guess_compound(W,Results0) :-
     ),
     Results0=Results.
 
-%% man/vrouw compounds
-guess_compoundXX(W,WLast,[WfirstStem],slash) :-
+%% man/vrouw compounds IS THIS STILL USEFUL?
+guess_compoundXX(W,WLast,[WfirstStem],0) :-
     atom(W),
     once(atom_split(W,'/',Wfirst,WLast)),
     \+ never_compound_part(Wfirst),
@@ -2627,8 +2633,8 @@ guess_compoundXX(W,WLast,[WfirstStem],slash) :-
     ;   Wfirst = WfirstStem
     ).
 
-%% Word-Word compounds
-guess_compoundXX(W,WLast,[WfirstStem],hyphen) :-
+%% Word-Word compounds IS THIS STILL USEFUL?
+guess_compoundXX(W,WLast,[WfirstStem],1) :-
     atom(W),
     once(atom_split(W,'-',Wfirst,WLast)),
     \+ never_compound_part(Wfirst),
@@ -2678,9 +2684,15 @@ guess_compound__(W,W,L,L,[Wstem],_,_) :-
     compound_part(final,W,Wstem).
 guess_compound__(SW,FinalPart,L0,L,Parts,Prev,PrevPrefix) :-
     atom(SW),
-    atom_concat(s,W,SW),
-    W \= schap, % no -s- with schap
-    allow_verbindings_s(Prev),
+    (   atom_concat('-',W,SW)
+    ;   atom_concat('/',W,SW)
+    ;   atom_concat(s,W,SW),
+        W \= schap, % no -s- with schap
+        allow_verbindings_s(Prev)
+    ;   atom_concat('s-',W,SW),
+        W \= schap, % no -s- with schap
+        allow_verbindings_s(Prev)
+    ),
     guess_compound__nos(W,FinalPart,L0,L,Parts,Prev,PrevPrefix).  % not 2x s "ademhalingsspieren =/= ademhaling_pier
 guess_compound__(W,FinalPart,L0,L,Parts,Prev,PrevPrefix):-
     \+ do_not_split(W),
@@ -2747,6 +2759,7 @@ compound_part(first,W,Stem) :-
     \+ never_compound_part(W),
     once(open_class_stem_tag_pair(non_final,W,Stem,_)).
 
+compound_part(first,'tv-',tv).
 compound_part(first,W0,W) :-
     compound_part(W0,W).
 compound_part(first,W0,W) :-
@@ -2770,9 +2783,7 @@ compound_part(final,W,Stem) :-
 compound_part(W,W) :-
     compound_part(W).
 compound_part(kinder,kind).
-compound_part(hersen,hersen).
 compound_part(hoender,hoen).
-compound_part(huishoud,huishoud).
 compound_part(scheep,schip).
 compound_part(scheeps,schip).
 
@@ -2782,6 +2793,8 @@ compound_part(anti).
 compound_part(ex).
 compound_part(half).
 compound_part(her).
+compound_part(hersen).
+compound_part(huishoud).
 compound_part(hyper).
 compound_part(inter).
 compound_part(intra).
@@ -2805,6 +2818,7 @@ compound_part(semi).
 compound_part(sub).
 compound_part(super).
 compound_part(ultra).
+compound_part(vice).
 compound_part(wan).
 compound_part(welkomst).
 compound_part(west).
@@ -2819,7 +2833,7 @@ unique_open_class_stem_tag_pair(Final,W,Stem) :-
 %% since we try this for all possible suffixes, this ought to be fast
 %% and therefore we immediately call alpino_lex:xl/5...
 %%
-%% try non-verbs/adjs before adjs before verbs, because the resulting lemma is more
+%% try non-verbs before adjs before verbs, because the resulting lemma is more
 %% often correct...
 open_class_stem_tag_pair(Final,W,Stem,Cat) :-
     (   alpino_lex:xl(W,Cat0,Stem0,[],[]), 
@@ -2837,7 +2851,10 @@ open_class_stem_tag_pair(Final,W,Stem,Cat) :-
 	alpino_lex:lexicon_fallback_(W,end_nominalized_adjective,Stem,[],[],His,_),
 	lists:member(His,['V-den','part-V-den']) % zoekenden
     ;   alpino_lex:in_names_dictionary(Cat0,W,Stem,[],[],_),
-        \+ Cat0 = proper_name(_,'PER')
+	(   Cat0 = proper_name(_,'PER') % Brel-verzamel-lp
+	->  famous_per(W)
+	;   true
+	)
     ;   alpino_lex:simple_convert_number(W,_),
         Cat0 = number(hoofd(pl_num)),
         Stem=W
@@ -2939,6 +2956,32 @@ never_middle_compound_part(om).
 never_middle_compound_part(on).
 never_middle_compound_part(op).
 never_middle_compound_part(pi).
+
+    
+
+%% words with - that can be compound part
+exceptional_compound_part(Atom) :-
+    alpino_lex:number_dash_number(Atom).   % 3-1-overwinning => 3-1_overwinning
+
+exceptional_compound_part('chi-square').
+exceptional_compound_part('human-interest').
+exceptional_compound_part('mid-market').
+exceptional_compound_part('plug-and-play').
+exceptional_compound_part('S-FOR').
+exceptional_compound_part('wild-west').
+
+
+never_compound_part(L) :-
+    exceptional_compound_part(L),
+    !,
+    fail.
+
+never_compound_part(L) :-
+    sub_atom(L,_,1,_,'-'),
+    \+ alpino_lex:lexicon(_,_,[L],[],_).
+
+never_compound_part(L) :-
+    sub_atom(L,_,1,_,'/').
 
 never_compound_part(L) :-
     atom(L),
@@ -3247,7 +3290,7 @@ form_of_suffix_rule(ees,ees,post_adjective(no_e),[abonnes,
 						  trainees,
 						  vlees,
 						  vrees]).
-form_of_suffix_rule(end,end,adjective(end(both)),[]).
+form_of_suffix_rule(end,en,adjective(end(both)),[eend]).
 form_of_suffix_rule(esk,esk,adjective(no_e(adv)),[desk]).
 form_of_suffix_rule(eus,eus,adjective(no_e(adv)),[keus,
 						  reus]).
@@ -3298,8 +3341,9 @@ form_of_suffix_rule(ale,     aal,     adjective(e),[centrale,
 						    finale,
 						    whale]).
 form_of_suffix_rule(eerde,   eerd,    adjective(e),[]).
-form_of_suffix_rule(ende,    end,     adjective(ende(padv)),['Balkenende',
+form_of_suffix_rule(ende,    en,      adjective(ende(padv)),['Balkenende',
 							     bende,
+							     eende,
 							     oostende]).
 form_of_suffix_rule(eske,    esk,     adjective(e),[burleske]).
 form_of_suffix_rule(euze,    eus,     adjective(e),[]).
@@ -3809,7 +3853,7 @@ alternative_open_class(2,Boog,[Voorover],P0,R0,Name,Tag) :-
     Tag = verb(HZ,Fin,ninv(Sc1,Sc2)),
     assert_tag(P0,P,R0,R,v_root(RootL,LemmaL),dir_v(Name),Tag).
 
-alternative_open_class(slash,Word,Parts,P0,R0,Name,Tag):-
+alternative_open_class(0,Word,Parts,P0,R0,Name,Tag):-
     alpino_lex:lexicon(Tag,Stem,[Word],[],_),
     lists:append(Parts,[Stem],PartsStem),
     alpino_lex:concat_stems(PartsStem,NewStem),
@@ -3817,7 +3861,7 @@ alternative_open_class(slash,Word,Parts,P0,R0,Name,Tag):-
     R is R0+1,
     assert_tag(P0,P,R0,R,NewStem,Name,Tag).
 
-alternative_open_class(hyphen,Word,Parts,P0,R0,Name,Tag):-
+alternative_open_class(1,Word,Parts,P0,R0,Name,Tag):-
     alpino_lex:lexicon(Tag0,Stem,[Word],[],_),
     open_class_tag(Tag0,Tag),
     lists:append(Parts,[Stem],PartsStem),
@@ -6663,4 +6707,15 @@ add_accents(W,Wmin) :-
 comp_tag(adjective(ende(_)),adjective(ende(_))).
 comp_tag(adjective(end(_)),adjective(end(_))).
 comp_tag(adjective(no_e(_)),adjective(no_e(_))).
+comp_tag(adjective(no_e(_)),adjective(ge_no_e(_))).
+comp_tag(adjective(e),adjective(ge_e)).
+comp_tag(adjective(e),adjective(ere)).
 comp_tag(X,X).
+
+%% if we allow all PER, then way too many false positives
+famous_per('Brel').
+famous_per('Jacques-Brel').
+famous_per('Clinton').
+famouw_per('Michel-Legrand').
+famous_per('Poetin').
+famous_per('Strauss').

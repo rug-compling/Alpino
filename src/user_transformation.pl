@@ -226,8 +226,8 @@ mwu_postag(L,Deeleigen,L) :-
     vreemd(L),
     vreemd(L,Deeleigen).
 
-mwu_postag(L,Deeleigen,L) :-
-    correct_tags(L,Deeleigen).
+mwu_postag(L,Deeleigen,S) :-
+    correct_tags(L,Deeleigen,S).
 
 flat(_) :-
     fail.
@@ -235,9 +235,7 @@ flat(_) :-
 vreemd(_) :-
     fail.
 
-
-
-correct_tags(_,_) :-
+correct_tags(_,_,_) :-
     fail.
 
 root_lemma(_,_,_) :- fail.
@@ -354,8 +352,4 @@ surf_lemma(X,_,'SPEC(symb)',_,X) :-
 
 symb(_) :-
     fail.
-
-vreemd(L) :-
-    v(Atom),
-    alpino_util:split_atom(Atom," ",L).
 
