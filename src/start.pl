@@ -394,6 +394,12 @@ test1_options :-
     set_flag(compare_cgn,on),
     veryfast_options.
 
+no_test1_options :-
+    set_flag(after_timeout_options,off),
+    set_flag(end_hook,undefined),
+    set_flag(compare_cgn,off),
+    veryfast_options.    
+
 veryfast_options :-
     fast_options,
     set_flag(use_guides,on),
