@@ -563,15 +563,25 @@ pt_diff_all:
 
 GREP=grep -v -e ^fn -e ^fv -e ^ovis -e ^Titaantjes[-]
 
+## slow variant, now no longer used; use pt_ns instead
 pt_diffs:
 	@for file in `echo $(shell ls $(ORDERED) */job*/log1 | $(GREP)  2>/dev/null)`; do \
         suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
+	echo $$suite;\
 	$(MAKE) -s pt_diff suite=$$suite;\
 	done
 
+
+PTS=$(shell ls $(ORDERED) */job*/log1 | $(GREP)  2>/dev/null)
+pt_ns: $(PTS:%=%.pt)
+
+%.pt:
+	@if diff -w <(grep -e ' #LM' -e ' #PT'  $(dir $*)../poslemma) <(grep -e ' #LM' -e ' #PT' $*) | grep '^[>]'; then true ; else true; fi
+
+
 f: cf ptf lmf
 
-d: cs pt_diffs
+d: cs pt_ns
 
 PATTERNS=cdb extra fn fv f[nv] novel
 
@@ -596,7 +606,8 @@ overview0:
 	@for file in `ls $(PATTERN)*/poslemma`; do cat $$file | grep '^#LM#' | tail -n1 | sed -e 's/#LM#//'; done  | awk 'END {printf "%.2f\n",100*C/T} {C = C+$$1;T=T+$$3}'
 	@for file in `ls $(PATTERN)*/poslemma`; do cat $$file | grep '^#PT#' | tail -n1 | sed -e 's/#PT#//'; done  | awk 'END {printf "%.2f\n",100*C/T} {C = C+$$1;T=T+$$3}'
 
-EXTRA=/net/corpora/LassyDevelop/Test/*/poslemma
+LASSY=/net/corpora/LassyDevelop
+EXTRA=$(LASSY)/Test/*/poslemma
 lemmas:
 	ls $(EXTRA) */poslemma |$(GREP)| xargs cat |grep ' #LM' | awk '{ print $$1,$$2,$$3 }' |sort | uniq -c |sort -n
 
@@ -605,3 +616,13 @@ postags:
 
 postags_sorted:
 	ls $(EXTRA) */poslemma |$(GREP)| xargs cat |grep ' #PT' | awk '{ print $$2,$$3,$$1 }' |sort | uniq -c 
+
+test.mwu: $(LASSY)/Test/*/job*/log* */job*/log*
+	cat $(LASSY)/Test/*/job*/log* */job*/log* | grep '^MWU#' | sed -e 's/MWU#//' | sort | uniq -c > test.mwu0
+	paste <(cut -c9- test.mwu0) <(cut -c-8 test.mwu0) | awk '{print $$0,"TEST"}' > test.mwu
+
+treebank.mwu: ../Treebank/FREQ/mwu-tagged.freq
+	paste <(cut -c9- $<) <(cut -c-8 $<) |awk '{ print $$0,"TREE" }' >treebank.mwu
+
+compare.mwu: test.mwu treebank.mwu
+	cat test.mwu treebank.mwu | tr '\t' '|' | sed -e 's/  *[|]/|/g' -e 's/[|]  */|/g' | LANG=POSIX sort -t\| -k1,1 | awk -F\| '{ if($$1 == PREV && $$2 != PREVTAG) { print $$0; print PREVLINE; } PREV=$$1; PREVTAG=$$2; PREVLINE=$$0 }'
