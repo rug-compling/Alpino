@@ -580,18 +580,6 @@ guess_tag(Stem,_,Q0,Q) -->
     { Q is Q0 + 1 },
     [cgn_postag(Q0,Q,Stem,'NA()')].
 
-/*
-guess_tag(Word,robust_skip,Q0,Q) -->
-    {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Word,His,Frame) },
-    !,  
-    cgn_postag(Frame,Stem,Word,Q0,Q,no,His).
-
-guess_tag(Word,skip,Q0,Q) -->
-    {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Word,His,Frame) },
-    !,  
-    cgn_postag(Frame,Stem,Word,Q0,Q,no,His).
-*/
-
 guess_lex(Q0,Q,Frame,Surf,Stem) -->
     {  var(Surf),
        !,
@@ -5766,7 +5754,7 @@ frequent_tag(Atom,Stem,Result) :-
 
 frequent_copy_tag(Q0,Q,Stem,Surf,Result) :-
     findall(Tag/Label,alpino_lexical_analysis:copy_tag(_,_,Q0,Q,Label,Surf,_,Tag),[TagsH|TagsT]),
-    (   ft(T),
+    (   ( ft(T) ; true ),
 	lists:member(T/L,[TagsH|TagsT])
     ->  Result/Stem = T/L
     ;   TagsH = Result/Stem

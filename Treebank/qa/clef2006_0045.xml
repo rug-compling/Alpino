@@ -10,8 +10,8 @@
         <node begin="2" cat="np" end="9" id="7" index="2" rel="su">
           <node begin="2" end="3" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="4" cat="mwu" end="6" id="9" rel="hd">
-            <node begin="4" buiging="zonder" end="5" graad="comp" id="10" lemma="kil" pos="name" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mwp" root="killer" word="killer"/>
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="smog" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="smog" word="smog"/>
+            <node begin="4" end="5" id="10" lemma="killer" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="killer" spectype="vreemd" word="killer"/>
+            <node begin="5" end="6" id="11" lemma="smog" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="smog" spectype="vreemd" word="smog"/>
           </node>
           <node begin="7" cat="pp" end="9" id="12" rel="mod">
             <node begin="7" end="8" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>

@@ -9,8 +9,8 @@
         <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="benaming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="benaming" word="benaming"/>
         <node begin="3" cat="mwu" end="5" id="8" rel="app">
-          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="guiding" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="guiding" word="guiding"/>
-          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="instruction" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="instruction" word="instruction"/>
+          <node begin="3" end="4" id="9" lemma="guiding" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="guiding" spectype="vreemd" word="guiding"/>
+          <node begin="4" end="5" id="10" lemma="instruction" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="instruction" spectype="vreemd" word="instruction"/>
         </node>
       </node>
       <node begin="6" end="7" id="11" lemma="suggereren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="suggereer" word="suggereert" wvorm="pv"/>
