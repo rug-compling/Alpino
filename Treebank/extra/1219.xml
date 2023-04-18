@@ -2,29 +2,29 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="14" id="0" rel="top">
     <node begin="0" cat="smain" end="13" id="1" rel="--">
-      <node begin="1" end="2" id="2" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="present" word="moet" wvorm="pv"/>
+      <node begin="1" end="2" id="2" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
       <node begin="0" cat="inf" end="13" id="3" rel="vc">
-        <node begin="2" buiging="zonder" end="3" id="4" infl="inf" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" sc="passive" word="worden" wvorm="inf"/>
+        <node begin="2" buiging="zonder" end="3" id="4" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
         <node begin="0" cat="ppart" end="13" id="5" rel="vc">
-          <node begin="0" buiging="zonder" end="1" id="6" infl="psp" lemma="voorkomen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voorkom" sc="sbar" word="Voorkomen" wvorm="vd"/>
+          <node begin="0" buiging="zonder" end="1" id="6" lemma="voorkomen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voorkom" word="Voorkomen" wvorm="vd"/>
           <node begin="3" cat="cp" end="13" id="7" rel="vc">
-            <node begin="3" conjtype="onder" end="4" id="8" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+            <node begin="3" conjtype="onder" end="4" id="8" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
             <node begin="4" cat="ssub" end="13" id="9" rel="body">
-              <node aform="compar" begin="4" buiging="met-e" end="5" getal-n="mv-n" graad="comp" id="10" index="1" lemma="oud" num="pl" personalized="true" pos="adj" positie="nom" postag="ADJ(nom,comp,met-e,mv-n)" pt="adj" rel="su" rnum="pl" root="oud" special="a_noun" word="ouderen"/>
-              <node begin="6" end="7" id="11" infl="pl" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" sc="passive" tense="present" word="worden" wvorm="pv"/>
+              <node begin="4" buiging="met-e" end="5" getal-n="mv-n" graad="comp" id="10" index="1" lemma="oud" pos="adj" positie="nom" postag="ADJ(nom,comp,met-e,mv-n)" pt="adj" rel="su" root="oud" word="ouderen"/>
+              <node begin="6" end="7" id="11" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
               <node begin="4" cat="ppart" end="13" id="12" rel="vc">
                 <node begin="4" end="5" id="13" index="1" rel="obj1"/>
-                <node begin="5" buiging="zonder" end="6" id="14" infl="psp" lemma="verrassen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verras" sc="transitive" word="verrast" wvorm="vd"/>
+                <node begin="5" buiging="zonder" end="6" id="14" lemma="verrassen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verras" word="verrast" wvorm="vd"/>
                 <node begin="7" cat="pp" end="13" id="15" rel="mod">
                   <node begin="7" end="8" id="16" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
                   <node begin="8" cat="np" end="13" id="17" rel="obj1">
-                    <node begin="8" end="9" id="18" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="9" end="10" gen="de" genus="zijd" getal="ev" graad="basis" id="19" lemma="om_wisseling" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="om_wisseling" word="omwisseling"/>
+                    <node begin="8" end="9" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="omwisseling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="om_wisseling" word="omwisseling"/>
                     <node begin="10" cat="pp" end="13" id="20" rel="mod">
                       <node begin="10" end="11" id="21" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                       <node begin="11" cat="np" end="13" id="22" rel="obj1">
-                        <node begin="11" end="12" id="23" infl="sg_num" lemma="één" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="één" special="hoofd" word="één"/>
-                        <node begin="12" end="13" gen="de" genus="zijd" getal="ev" graad="basis" id="24" lemma="dag" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="dag" special="tmp" word="dag"/>
+                        <node begin="11" end="12" id="23" lemma="één" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="één" word="één"/>
+                        <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="24" lemma="dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="dag"/>
                       </node>
                     </node>
                   </node>
@@ -35,7 +35,7 @@
         </node>
       </node>
     </node>
-    <node begin="13" end="14" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="13" end="14" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Voorkomen moet worden dat ouderen verrast worden door de omwisseling in één dag .</sentence>
 </alpino_ds>

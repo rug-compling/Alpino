@@ -6,7 +6,7 @@
       <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="2" cat="np" end="10" id="4" rel="predc">
         <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="3" buiging="met-e" end="4" graad="basis" id="6" lemma="onbetwist" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="onbetwist" word="onbetwiste"/>
+        <node begin="3" buiging="met-e" end="4" id="6" lemma="on_betwisten" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="onbetwist" word="onbetwiste" wvorm="vd"/>
         <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="winnaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="winnaar" word="winnaar"/>
         <node begin="5" cat="pp" end="10" id="8" rel="mod">
           <node begin="5" end="6" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>

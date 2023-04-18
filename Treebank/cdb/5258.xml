@@ -23,7 +23,7 @@
         <node begin="9" conjtype="neven" end="10" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="10" cat="np" end="17" id="17" rel="cnj">
           <node begin="10" end="11" id="18" lemma="daardoor" pos="adv" postag="BW()" pt="bw" rel="mod" root="daardoor" word="daardoor"/>
-          <node begin="11" buiging="met-e" end="12" graad="basis" id="19" lemma="onbetwist" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="onbetwist" word="onbetwiste"/>
+          <node begin="11" buiging="met-e" end="12" id="19" lemma="on_betwisten" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="onbetwist" word="onbetwiste" wvorm="vd"/>
           <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="20" lemma="sleutelfiguur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sleutelfiguur" word="sleutelfiguur"/>
           <node begin="13" cat="pp" end="17" id="21" rel="mod">
             <node begin="13" end="14" id="22" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>

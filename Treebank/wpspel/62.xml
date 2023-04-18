@@ -8,7 +8,7 @@
         <node begin="0" end="1" id="5" lemma="benoemen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="benoem" word="Benoem" wvorm="pv"/>
         <node begin="1" cat="np" end="4" id="6" rel="obj1">
           <node begin="1" end="2" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="2" buiging="zonder" end="3" graad="basis" id="8" lemma="meewerkend" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="meewerkend" word="meewerkend"/>
+          <node begin="2" buiging="zonder" end="3" id="8" lemma="mee_werken" pos="adj" positie="prenom" postag="WW(od,prenom,zonder)" pt="ww" rel="mod" root="meewerkend" word="meewerkend" wvorm="od"/>
           <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="voorwerp" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voorwerp" word="voorwerp"/>
         </node>
       </node>

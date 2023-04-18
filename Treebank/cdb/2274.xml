@@ -13,7 +13,7 @@
             <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="stoel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stoel" word="stoel"/>
           </node>
           <node begin="6" buiging="zonder" end="7" graad="comp" id="11" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
-          <node begin="7" buiging="zonder" end="8" graad="basis" id="12" lemma="onbezet" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="onbezet" word="onbezet"/>
+          <node begin="7" buiging="zonder" end="8" id="12" lemma="on_bezetten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="predc" root="onbezet" word="onbezet" wvorm="vd"/>
           <node begin="8" end="9" id="13" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
         </node>
       </node>
