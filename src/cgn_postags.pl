@@ -561,7 +561,7 @@ guess_tag(Stem,skip,Q0,Q) -->
     [cgn_postag(Q0,Q,Stem,'TSW()')].
 
 guess_tag(Surf,_,Q0,Q) -->
-    { afk(Surf,Stem),
+    { afk(Surf,Stem,_),
       Q is Q0 + 1
     },
     !,
@@ -1766,85 +1766,92 @@ exceptional_word_tag(kwoots,_,quote,_,'N(soort,mv,basis)').
 
 exceptional_word_tag(nl,_,'Nederland',noun(_,_,_),'SPEC(afk)').
 exceptional_word_tag(nl,_,namelijk,sentence_adverb,'SPEC(afk)').
-exceptional_word_tag(Word,_,Stem,_,'SPEC(afk)') :-
-    afk(Word,Stem).
+exceptional_word_tag(Word,_,Stem,Tag,'SPEC(afk)') :-
+    afk(Word,Stem,Tag).
 
-afk('a.k.a','also known as').
-afk('B.B.','Bescherming Bevolking').
-afk('b.d.','buiten dienst').
-afk('b.d.','buiten dienst').
-afk('blz',bladzijde).
-afk('blz.',bladzijde).
-afk('Blz',bladzijde).
-afk('Blz.',bladzijde).
-afk(brt,'bruto register ton').
-afk('Bulg.','Bulgaars').
-afk('b.v.',bijvoorbeeld).
-afk('BW','Burgerlijk Wetboek').
-afk('ca',circa).
-afk('ca.',circa).
-afk('Ca.',circa).
-afk('cf.',confer).
-afk(cfr,confer).
-afk('Chr.','Christus').
-afk('c.q.','casu quo').
-afk('cq','casu quo').
-afk('c.s.','cum suis').
-afk('d.d.','de dato').
-afk('d.i.','dit is').
-afk('dierl.',dierlijk).
-afk(dmv,'door middel van').
-afk('d.w.z.','dat wil zeggen').
-afk('dwz.','dat wil zeggen').
-afk('e.a.','en andere').
-afk('e.d.','en dergelijke').
-afk('e.d.','en dergelijke').
-afk('e.v.',eerstvolgende).
-afk(evt,eventueel).
-afk('i.h.b.','in het bijzonder').
-afk('incl.',inclusief).
-afk('i.p.v.','in plaats van').
-afk('i.s.m.','in samenwerking met').
-afk('i.v.m.','in verband met').
-afk('j.l.',jongstleden).
-afk('jr',junior).
-afk('jr.',junior).
-afk('max.',maximaal).
-afk('mln.',miljoen).
-afk('mln.',miljoen).
-afk('m.n.','met name').
-afk('n.a.g.','niet afzonderlijk genoemd').
-afk('n.a.v.','naar aanleiding van').
-afk('N.B.','nota bene').
-afk('n.Chr.','na Christus').
-afk('Nederl.','Nederlands').
-afk('nr.',nummer).
-afk('Nr.',nummer).
-afk(nvdr,'noot van de redactie').
-afk('n.v.t.','niet van toepassing').
-afk('N.v.t.','niet van toepassing').
-afk('o.a.','onder ander').
-afk('O.a.','onder ander').
-afk('o.m.','onder meer').
-afk('O.m.','onder meer').
-afk('plant.',plantaardig).
-afk('plm','plus minus').
-afk('plm.','plus minus').
-afk('resp.',respectievelijk).
-afk('r.k.','rooms-katholiek').
-afk('t.a.v.','ten aanzien van').
-afk('t/m','tot en met').
-afk('t.o.v.','ten opzichte van').
-afk(tov,'ten opzichte van').
-afk('t.w.','te weten').
-afk('t.z.t.','te zijner tijd').
-afk('v.Chr.','voor Christus').
-afk('v.C.','voor Christus').
-afk('v.j.','vorig jaar').
-afk('vs.',versus).
-afk('v.',voor).
-afk('z.g.',zogenaamd).
-afk('z.i.','zijn inzien').
+afk('a.k.a','also known as',_).
+afk('B.B.','Bescherming Bevolking',_).
+afk('b.d.','buiten dienst',_).
+afk('b.d.','buiten dienst',_).
+afk('blz',bladzijde,_).
+afk('blz.',bladzijde,_).
+afk('Blz',bladzijde,_).
+afk('Blz.',bladzijde,_).
+afk(brt,'bruto register ton',_).
+afk('Bulg.','Bulgaars',_).
+afk('b.v.',bijvoorbeeld,_).
+afk('BW','Burgerlijk Wetboek',_).
+afk('ca',circa,_).
+afk('ca.',circa,_).
+afk('Ca.',circa,_).
+afk('cf.',confer,_).
+afk(cfr,confer,_).
+afk('Chr.','Christus',_).
+afk('ct.',cent,_).
+afk('c.q.','casu quo',_).
+afk('cq','casu quo',_).
+afk('c.s.','cum suis',_).
+afk('d.d.','de dato',_).
+afk('d.i.','dit is',_).
+afk('dierl.',dierlijk,_).
+afk(dmv,'door middel van',_).
+afk('d.w.z.','dat wil zeggen',_).
+afk('dwz.','dat wil zeggen',_).
+afk('e.a.','en andere',_).
+afk('e.d.','en dergelijke',_).
+afk('e.d.','en dergelijke',_).
+afk('e.v.',eerstvolgende,_).
+afk(evt,eventueel,_).
+afk('i.h.b.','in het bijzonder',_).
+afk('incl.',inclusief,_).
+afk('i.p.v.','in plaats van',_).
+afk('i.s.m.','in samenwerking met',_).
+afk('i.v.m.','in verband met',_).
+afk('j.l.',jongstleden,_).
+afk('jr',junior,_).
+afk('jr.',junior,_).
+afk('max.',maximaal,_).
+afk('mln',miljoen,_).
+afk('mln.',miljoen,_).
+afk('m.n.','met name',_).
+afk('n.a.g.','niet afzonderlijk genoemd',_).
+afk('n.a.v.','naar aanleiding van',_).
+afk('N.B.','nota bene',_).
+afk('n.Chr.','na Christus',_).
+afk('Ned','Nederland',_).
+afk('Nederl.','Nederlands',_).
+afk('NL','Nederland',_).
+afk('No.',numero,_).
+afk('nom.',nominaal,_).
+afk('nr.',nummer,_).
+afk('Nr.',nummer,_).
+afk(nvdr,'noot van de redactie',_).
+afk('n.v.t.','niet van toepassing',_).
+afk('N.v.t.','niet van toepassing',_).
+afk('o.a.','onder ander',_).
+afk('O.a.','onder ander',_).
+afk('O.M.','Openbaar Ministerie',proper_name(sg,'ORG')).
+afk('OM','Openbaar Ministerie',proper_name(sg,'ORG')).
+afk('o.m.','onder meer',_).
+afk('O.m.','onder meer',_).
+afk('plant.',plantaardig,_).
+afk('plm','plus minus',_).
+afk('plm.','plus minus',_).
+afk('resp.',respectievelijk,_).
+afk('r.k.','rooms-katholiek',_).
+afk('t.a.v.','ten aanzien van',_).
+afk('t/m','tot en met',_).
+afk('t.o.v.','ten opzichte van',_).
+afk(tov,'ten opzichte van',_).
+afk('t.w.','te weten',_).
+afk('t.z.t.','te zijner tijd',_).
+afk('v.Chr.','voor Christus',_).
+afk('v.C.','voor Christus',_).
+afk('v.j.','vorig jaar',_).
+afk('vs.',versus,_).
+afk('v.',voor,_).
+afk('z.g.',zogenaamd,_).
+afk('z.i.','zijn inzien',_).
 
 stem_dependent_tag(cleft_het_noun,het,'VNW(pers,pron,stan,red,3,ev,onz)').
 stem_dependent_tag(cleft_het_noun,dat,'VNW(aanw,pron,stan,vol,3o,ev)').
@@ -6005,14 +6012,17 @@ amount_tags(Q0,Q,Stem) -->
 amount_tags_([],_,_) --> [].
 amount_tags_([Amount,Euro],Q0,Q) -->
     {  Q1 is Q0 + 1,
-       amount_noun_tag(Euro,EuroTag),
-       \+ amount_noun_tag(Amount,_),
-       \+ symb(Amount,_),
+       amount_noun_tag(Euro,EuroTag,EuroLemma),
+       \+ amount_noun_tag(Amount,_,_),
+       (   symb(Amount,_)
+       ->  simple_number(Amount,_)
+       ;   true
+       ),
        \+ punct(Amount)
     },
     !,
     [cgn_postag(Q0,Q1,Amount,'TW(hoofd,prenom,stan)'),
-     cgn_postag(Q1,Q, Euro,  EuroTag)
+     cgn_postag(Q1,Q, EuroLemma,  EuroTag)
     ].
 amount_tags_([Stem|Stems],Q0,Q) -->
     {  Q1 is Q0 + 1 },
@@ -6020,9 +6030,19 @@ amount_tags_([Stem|Stems],Q0,Q) -->
     amount_tags_(Stems,Q1,Q).
 
 amount_tag(Stem,Q0,Q) -->
+    {  simple_number(Stem,_) },
+    !,
+    [cgn_postag(Q0,Q,Stem,'TW(hoofd,vrij)')].
+
+amount_tag(Stem,Q0,Q) -->
     {  symb(Stem,_) },
     !,
     [cgn_postag(Q0,Q,Stem,'SPEC(symb)')].
+
+amount_tag(Stem0,Q0,Q) -->
+    {  afk(Stem0,Stem,_) },
+    !,
+    [cgn_postag(Q0,Q,Stem,'SPEC(afk)')].
 
 amount_tag(Stem,Q0,Q) -->
     {  punct(Stem) },
@@ -6030,22 +6050,20 @@ amount_tag(Stem,Q0,Q) -->
     [cgn_postag(Q0,Q,Stem,'LET()')].
 
 amount_tag(Euro,Q0,Q) -->
-    {  amount_noun_tag(Euro,EuroTag)
+    {  amount_noun_tag(Euro,EuroTag,EuroLemma)
     },
     !,
-    [cgn_postag(Q0,Q,Euro,EuroTag)].
+    [cgn_postag(Q0,Q,EuroLemma,EuroTag)].
 
 amount_tag(Stem,Q0,Q) -->
     [cgn_postag(Q0,Q,Stem,'TW(hoofd,vrij)')].
 
-amount_noun_tag(euro,'N(soort,ev,basis,zijd,stan)').
-
-amount_noun_tag('Euro','N(soort,ev,basis,zijd,stan)').
-
-amount_noun_tag(miljard,'N(soort,ev,basis,onz,stan)').
-
-amount_noun_tag(miljoen,'N(soort,ev,basis,onz,stan)').
-
+amount_noun_tag(euro,'N(soort,ev,basis,zijd,stan)',euro).
+amount_noun_tag('Euro','N(soort,ev,basis,zijd,stan)','Euro').
+amount_noun_tag(miljard,'N(soort,ev,basis,onz,stan)',miljard).
+amount_noun_tag(miljoen,'N(soort,ev,basis,onz,stan)',miljoen).
+amount_noun_tag(Afk,'SPEC(afk)',miljoen) :-
+    afk(Afk,miljoen,_).
 
 
 symb('???',_).

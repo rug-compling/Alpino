@@ -1362,6 +1362,7 @@ foreign_word(bracket(_)) :-
     fail.
 
 foreign_word(a).
+foreign_word(à).
 foreign_word(abnormale).  % in scientific names
 foreign_word(about).
 foreign_word(account).
@@ -1393,6 +1394,8 @@ foreign_word(après).
 foreign_word(are).
 foreign_word(arms).
 foreign_word(art).
+foreign_word(artist).
+foreign_word(artists).
 foreign_word(arts).
 foreign_word(as).
 foreign_word(assignment).
@@ -1420,6 +1423,7 @@ foreign_word(basale). % scientific names
 foreign_word(baseline).
 foreign_word(baselines).
 foreign_word(basic).
+foreign_word(battle).
 foreign_word(be).
 foreign_word(beauty).
 foreign_word(been).
@@ -1441,6 +1445,7 @@ foreign_word(body).
 foreign_word(bonbon).
 foreign_word(bonbons).
 foreign_word(booming).
+foreign_word(born).
 foreign_word(bottle).
 foreign_word(boy).
 foreign_word(boys).
@@ -1458,6 +1463,7 @@ foreign_word(camp).
 foreign_word(campus).
 foreign_word(can).
 foreign_word('can\'t').
+foreign_word(capital).
 foreign_word(care).
 foreign_word(cast).
 foreign_word(casual).
@@ -1468,6 +1474,7 @@ foreign_word(certains).
 foreign_word(ces).
 foreign_word('c\'est').
 foreign_word(cette).
+foreign_word(challenge).
 foreign_word(change).
 foreign_word(chant).
 foreign_word(check).
@@ -1476,15 +1483,18 @@ foreign_word(chef).
 foreign_word(chip).
 foreign_word(cinema).
 foreign_word(city).
+foreign_word(civil).
 foreign_word(class).
 foreign_word(clock).
 foreign_word(close).
 foreign_word(club).
 foreign_word(code).
 foreign_word(come).
+foreign_word(commande).
 foreign_word(comme).
 foreign_word(commercial).
 foreign_word(commercials).
+foreign_word(community).
 foreign_word(consent).
 foreign_word(consultant).
 foreign_word(consultants).
@@ -1493,6 +1503,7 @@ foreign_word(corner).
 foreign_word(could).
 foreign_word(country).
 foreign_word(coupe).
+foreign_word(cour).
 foreign_word(credit).
 foreign_word(crew).
 foreign_word(crime).
@@ -1510,6 +1521,7 @@ foreign_word(day).
 foreign_word(de).
 foreign_word(dead).
 foreign_word(death).
+foreign_word(degree).
 foreign_word(dein).
 foreign_word(del).
 foreign_word(della).
@@ -1582,17 +1594,21 @@ foreign_word(femme).
 foreign_word(field).
 foreign_word(file).
 foreign_word(financial).
+foreign_word(fine).
 foreign_word(first).
 foreign_word(fit).
 foreign_word(fits).
 foreign_word(fix).
 foreign_word(focus).
 foreign_word(for).
+foreign_word(force).
 foreign_word(format).
 foreign_word(formats).
+foreign_word(française).
 foreign_word(frame).
 foreign_word(free).
 foreign_word(from).
+foreign_word(fuck).
 foreign_word(full).
 foreign_word(fun).
 foreign_word(funding).
@@ -1626,11 +1642,13 @@ foreign_word(grand).
 foreign_word(grande).
 foreign_word(grandes).
 foreign_word(great).
+foreign_word(greatest).
 foreign_word(green).
 foreign_word(groszen).
 foreign_word(growth).
 foreign_word(haben).
 foreign_word(had).
+foreign_word(happiness).
 foreign_word(happy).
 foreign_word(hard).
 foreign_word(has).
@@ -1645,12 +1663,16 @@ foreign_word(high).
 foreign_word(highs).
 foreign_word(him).
 foreign_word(his).
+foreign_word(hit).
+foreign_word(hits).
+foreign_word(holy).
 foreign_word(home).
 foreign_word(homo).
 foreign_word(hot).
 foreign_word(hots).
 foreign_word(house).
 foreign_word(how).
+foreign_word(human).
 foreign_word(i).
 foreign_word('i\'m').
 foreign_word(ich).
@@ -1676,8 +1698,10 @@ foreign_word(joint).
 foreign_word(jus).
 foreign_word(just).
 foreign_word(kick).
+foreign_word(killer).
 foreign_word(know).
 foreign_word('l\'amour').
+foreign_word('l\'avenir').
 foreign_word('l\'homme').
 foreign_word(ladies).
 foreign_word(lady).
@@ -1688,6 +1712,7 @@ foreign_word(les).
 foreign_word(let).
 foreign_word(leur).
 foreign_word(leurs).
+foreign_word(liberty).
 foreign_word(libre).
 foreign_word(life).
 foreign_word(light).
@@ -1717,6 +1742,7 @@ foreign_word(make).
 foreign_word(man).
 foreign_word(manager).
 foreign_word(management).
+foreign_word(managing).
 foreign_word(marginale).  % in scientific names
 foreign_word(market).
 foreign_word(marketing).
@@ -1748,6 +1774,7 @@ foreign_word(mort).
 foreign_word(much).
 foreign_word(music).
 foreign_word(my).
+foreign_word(myself).
 foreign_word(naõ).
 foreign_word(name).
 foreign_word(ne).
@@ -1765,6 +1792,7 @@ foreign_word(nothing).
 foreign_word(nous).
 foreign_word(now).
 foreign_word(o).
+foreign_word(objective).
 foreign_word(of).
 foreign_word(off).
 foreign_word(official).
@@ -1774,11 +1802,13 @@ foreign_word(one).
 foreign_word(online).
 foreign_word(only).
 foreign_word(on).
+foreign_word(onsite).
 foreign_word(ont).
 foreign_word(operator).
 foreign_word(operators).
 foreign_word(or).
 foreign_word(orchestre).
+foreign_word(oriented).
 foreign_word(os).  % beginwoord voor rare botjes
 foreign_word(other).
 foreign_word(ou).
@@ -1797,8 +1827,10 @@ foreign_word(party).
 foreign_word(pas).
 foreign_word(pass).
 foreign_word(passer).
+foreign_word(peace).
 foreign_word(people).
 foreign_word(perfect).
+foreign_word(personal).
 foreign_word(peur).
 foreign_word(peut).
 foreign_word(phantom).
@@ -1809,15 +1841,18 @@ foreign_word(planet).
 foreign_word(play).
 foreign_word(point).
 foreign_word(points).
+foreign_word(policing).
 foreign_word(por).
 foreign_word(pour).
 foreign_word(power).
+foreign_word(principale).
 foreign_word(producer).
 foreign_word(product).
 foreign_word(professional).
 foreign_word(professionals).
 foreign_word(protocol).
 foreign_word(public).
+foreign_word(pursuit).
 foreign_word(quatre).
 foreign_word(que).
 foreign_word(qui).
@@ -1835,14 +1870,18 @@ foreign_word(red).
 foreign_word(relaxed).
 foreign_word(release).
 foreign_word(releases).
+foreign_word(république).
 foreign_word(research).
 foreign_word(return).
 foreign_word(right).
+foreign_word(river).
 foreign_word(rock).
 foreign_word(road).
-foreign_word(roei).   % scientific
+foreign_word(roei).		% scientific
+foreign_word(romance).
 foreign_word(room).
 foreign_word(rooms).
+foreign_word(rose).
 foreign_word(roses).
 foreign_word(rund).
 foreign_word(running).
@@ -1870,6 +1909,7 @@ foreign_word(short).
 foreign_word(shot).
 foreign_word(shots).
 foreign_word(should).
+foreign_word(shopping).
 foreign_word(show).
 foreign_word(shows).
 foreign_word(showroom).
@@ -1879,9 +1919,11 @@ foreign_word(sleep).
 foreign_word(slip).
 foreign_word(small).
 foreign_word(smart).
+foreign_word(smog).
 foreign_word(so).
 foreign_word(soft).
 foreign_word(software).
+foreign_word(sold).
 foreign_word(solitaire).
 foreign_word(sollen).
 foreign_word(solution).
@@ -1909,6 +1951,7 @@ foreign_word(status).
 foreign_word(still).
 foreign_word(stop).
 foreign_word(story).
+foreign_word(strategic).
 foreign_word(stream).
 foreign_word(stupid).
 foreign_word(subtitles).
@@ -1917,12 +1960,15 @@ foreign_word(suis).
 foreign_word(sum).
 foreign_word(sur).
 foreign_word(sustainable).
+foreign_word(task).
 foreign_word(team).
 foreign_word(tempo).
 foreign_word(take).
 foreign_word(takes).
 foreign_word(tango).
-foreign_word(tér).  % Hongaarse straat?
+foreign_word(tér).		% Hongaarse straat?
+foreign_word(technical).
+foreign_word(terre).
 foreign_word(test).
 foreign_word(than).
 foreign_word(that).
@@ -1950,6 +1996,7 @@ foreign_word(track).
 foreign_word(tracks).
 foreign_word(train).
 foreign_word(trains).
+foreign_word(tres).
 foreign_word(très).
 foreign_word(trial).
 foreign_word(triviale). % scientific names
@@ -1975,6 +2022,8 @@ foreign_word(vie).
 foreign_word(vieux).
 foreign_word(ville).
 foreign_word(virus).
+foreign_word(vive).
+foreign_word(voice).
 foreign_word(voir).
 foreign_word(vou).
 foreign_word(voucher).
@@ -1997,6 +2046,7 @@ foreign_word(where).
 foreign_word(white).
 foreign_word(who).
 foreign_word(why).
+foreign_word(wild).
 foreign_word(will).
 foreign_word(win).
 foreign_word(with).
@@ -2014,6 +2064,7 @@ foreign_word(you).
 foreign_word('you\'re').
 foreign_word(young).
 foreign_word(your).
+foreign_word(yourself).
 foreign_word(zu).
 
 foreign_word('*').
@@ -2330,6 +2381,7 @@ function('Fotografe').
 function('Fotomodel').
 function('Fractievoorzitter').
 function('Fractievoorzitster').
+function('française').
 function('Fransman').
 function('Freule').
 function('Gedeputeerde').
@@ -2572,10 +2624,17 @@ guess_left_headed_compound(W,Ws,Wmin,Stem,Surf,SurfLength) :-
     \+ compound_part(Wmin,_),
     atom_codes(W1,[RestH1,RestH2|RestT]),
     hdrug_util:debug_message(5,"try lhc: ~w~n",[[W1|Ws]]),
-    alpino_lex:lexicon(_,Stem,[W1|Ws],Remains,names_dictionary),
-    append([_|Surf0],Remains,[W1|Ws]),
-    length([W|Surf0],SurfLength),
-    concat_all([W|Surf0],Surf,' ').
+    (   alpino_lex:lexicon(_,Stem,[W1|Ws],Remains,names_dictionary),
+	append([_|Surf0],Remains,[W1|Ws]),
+	length([W|Surf0],SurfLength),
+	concat_all([W|Surf0],Surf,' ')
+    ;   zaliger(W1),
+	Ws = [],
+	SurfLength = 1,
+	Surf = W,
+	Stem = W1
+    ).
+    
 
 guess_prefix_compound(W,Wfirst,WLast) :-
     atom(W),
@@ -2805,12 +2864,14 @@ compound_part(mega).
 compound_part(micro).
 compound_part(multi).
 compound_part(neo).
+compound_part(neuro).
 compound_part(niet).
 compound_part(noord).
 compound_part(oer).
 compound_part(on).
 compound_part(oost).
 compound_part(oud).
+compound_part(para).
 compound_part(post).
 compound_part(pre).
 compound_part(pro).
@@ -6716,6 +6777,9 @@ comp_tag(X,X).
 famous_per('Brel').
 famous_per('Jacques-Brel').
 famous_per('Clinton').
-famouw_per('Michel-Legrand').
+famous_per('Michel-Legrand').
 famous_per('Poetin').
 famous_per('Strauss').
+
+zaliger(zaliger).
+zaliger(generaal).

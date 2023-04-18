@@ -4286,7 +4286,9 @@ a([ge_e(bedoelde),
    ge_no_e(bedoeld)],padv,
   [pred,
    pp(voor),
-   object_vp],[]).
+   object_vp],
+  [boven,
+   onder]).
 
 a([ge_both(bedolven)],padv,[],[]).
 
@@ -17899,8 +17901,9 @@ a([e(goedaardige),
    st(goedaardigst),
    ste(goedaardigste)],adv,[],[]).
 
-a([e(goedbedoelde),
-   no_e(goedbedoeld)],adv,[],[]).
+a([stem(goed_bedoelen),
+   ge_e(goedbedoelde),
+   ge_no_e(goedbedoeld)],adv,[],[]).
 
 a([stem(goed_bedoelen),
    end(goedbedoelend),
@@ -23461,9 +23464,6 @@ a([e(merkwaardige),
    subject_vp,
    pp(voor)],[]).
 
-a([e(messcherpe),
-   no_e(messcherp)],adv,[],[]).
-
 a([stof(messing)],nonadv,[],[]).
 
 a([e(metaalachtige),
@@ -25187,8 +25187,9 @@ a([pred([on,and,off,the,record])],adv,[],[]).
 
 a([pred([on,en,off,the,record])],adv,[],[]).
 
-a([e(onaangedane),
-   no_e(onaangedaan)],padv,[],[]).
+a([stem(on_aan_doen),
+   ge_e(onaangedane),
+   ge_no_e(onaangedaan)],padv,[],[]).
 
 a([e(onaangekondigde),
    no_e(onaangekondigd)],padv,[],[]).
@@ -25318,11 +25319,13 @@ a([e(onbedaarlijke),
    st(onbedaarlijkst),
    ste(onbedaarlijkste)],adv,[],[]).
 
-a([e(onbedekte),
-   no_e(onbedekt)],adv,[],[]).
+a([stem(on_bedekken),
+   ge_e(onbedekte),
+   ge_no_e(onbedekt)],adv,[],[]).
 
-a([e(onbedoelde),
-   no_e(onbedoeld)],adv,[],[]).
+a([stem(on_bedoelen),
+   ge_e(onbedoelde),
+   ge_no_e(onbedoeld)],adv,[],[]).
 
 a([both(onbedorven),
    er(onbedorvener),
@@ -25349,14 +25352,16 @@ a([both(onbegonnen)],nonadv,[],[]).
 a([ge_e(begraasde),
    ge_no_e(begraasd)],padv,[],[]).
 
-a([e(onbegrensde),
+a([stem(on_begrenzen),
+   ge_e(onbegrensde),
    er(onbegrensder),
    ere(onbegrensdere),
-   no_e(onbegrensd),
+   ge_no_e(onbegrensd),
    st(onbegrensdst),
    ste(onbegrensdste)],adv,[],[]).
 
-a([both(onbegrepen),
+a([stem(on_begrijpen),
+   ge_both(onbegrepen),
    er(onbegrepener),
    ere(onbegrepenere),
    st(onbegrepenst),
@@ -25454,8 +25459,9 @@ a([e(onbelemmerde),
    st(onbelemmerdst),
    ste(onbelemmerdste)],adv,[],[]).
 
-a([e(onbemande),
-   no_e(onbemand)],padv,[],[]).
+a([stem(on_bemannen),
+   ge_e(onbemande),
+   ge_no_e(onbemand)],padv,[],[]).
 
 a([e(onbeminde),
    no_e(onbemind)],padv,[],[]).
@@ -25470,20 +25476,23 @@ a([e(onbenullige),
    st(onbenulligst),
    ste(onbenulligste)],adv,[],[]).
 
-a([e(onbenutte),
-   no_e(onbenut)],nonadv,[],[]).
+a([stem(on_benutten),
+   ge_e(onbenutte),
+   no_ge_e(onbenut)],nonadv,[],[]).
 
-a([e(onbepaalde),
+a([stem(on_bepalen),
+   ge_e(onbepaalde),
    er(onbepaalder),
    ere(onbepaaldere),
-   no_e(onbepaald),
+   ge_no_e(onbepaald),
    st(onbepaaldst),
    ste(onbepaaldste)],adv,[],[]).
 
-a([e(onbeperkte),
+a([stem(on_beperken),
+   ge_e(onbeperkte),
    er(onbeperkter),
    ere(onbeperktere),
-   no_e(onbeperkt),
+   ge_no_e(onbeperkt),
    st(onbeperktst),
    ste(onbeperktste)],adv,[],[]).
 
@@ -25530,8 +25539,9 @@ a([e(onbeschaamde),
    st(onbeschaamdst),
    ste(onbeschaamdste)],adv,[],[]).
 
-a([e(onbeschadigde),
-   no_e(onbeschadigd)],padv,[],[]).
+a([stem(on_beschadigen),
+   ge_e(onbeschadigde),
+   ge_no_e(onbeschadigd)],padv,[],[]).
 
 a([both(onbescheiden),
    er(onbescheidener),
@@ -25539,8 +25549,9 @@ a([both(onbescheiden),
    st(onbescheidenst),
    ste(onbescheidenste)],adv,[],[]).
 
-a([e(onbeschermde),
-   no_e(onbeschermd)],both,[],[]).
+a([stem(on_beschermen),
+   ge_e(onbeschermde),
+   ge_no_e(onbeschermd)],both,[],[]).
 
 a([e(onbeschofte),
    er(onbeschofter),
@@ -25574,8 +25585,9 @@ a([both(onbesproken)],adv,[subject_sbar],[]).
 a([e(onbestaanbare),
    no_e(onbestaanbaar)],nonadv,[subject_sbar,subject_vp],[]).
 
-a([e(onbestaande),
-   no_e(onbestaand)],nonadv,[],[]).
+a([stem(on_bestaan),
+   ende(onbestaande),
+   end(onbestaand)],nonadv,[],[]).
 
 a([e(onbestemde),
    er(onbestemder),
@@ -25594,13 +25606,15 @@ a([e(onbetaalbare),
    st(onbetaalbaarst),
    ste(onbetaalbaarste)],nonadv,[],[]).
 
-a([e(onbetaalde),
-   no_e(onbetaald)],padv,[],[]).
+a([stem(on_betalen),
+   ge_e(onbetaalde),
+   ge_no_e(onbetaald)],padv,[],[]).
 
-a([e(onbetekenende),
+a([stem(on_betekenen),
+   ende(onbetekenende),
    er(onbetekenender),
    ere(onbetekenendere),
-   no_e(onbetekenend),
+   end(onbetekenend),
    st(onbetekenendst),
    ste(onbetekenendste)],nonadv,[],[]).
 
@@ -25621,10 +25635,11 @@ a([e(onbetwijfelbare),
    st(onbetwijfelbaarst),
    ste(onbetwijfelbaarste)],adv,[],[]).
 
-a([e(onbetwiste),
+a([stem(on_betwisten),
+   ge_e(onbetwiste),
    er(onbetwister),
    ere(onbetwistere),
-   no_e(onbetwist)],adv,[subject_sbar],[]).
+   ge_no_e(onbetwist)],adv,[subject_sbar],[]).
 
 a([e(onbetwistbare),
    er(onbetwistbaarder),
@@ -25661,10 +25676,10 @@ a([e(onbevredigde),
    st(onbevredigdst),
    ste(onbevredigdste)],adv,[],[]).
 
-a([e(onbevredigende),
+a([ende(onbevredigende),
    er(onbevredigender),
    ere(onbevredigendere),
-   no_e(onbevredigend),
+   end(onbevredigend),
    st(onbevredigendst),
    ste(onbevredigendste)],nonadv,
   [subject_sbar,
@@ -25677,10 +25692,11 @@ a([e(onbevreesde),
    st(onbevreesdst),
    ste(onbevreesdste)],adv,[],[]).
 
-a([e(onbewaakte),
+a([stem(on_bewaken),
+   ge_e(onbewaakte),
    er(onbewaakter),
    ere(onbewaaktere),
-   no_e(onbewaakt),
+   ge_no_e(onbewaakt),
    st(onbewaaktst),
    ste(onbewaaktste)],adv,[],[]).
 
@@ -25693,7 +25709,8 @@ a([e(onbeweeglijke),
 
 a([both(onbewezen)],padv,[],[]).
 
-a([both(onbewogen),
+a([stem(on_bewegen),
+   ge_both(onbewogen),
    er(onbewogener),
    ere(onbewogenere),
    st(onbewogenst),
@@ -25706,16 +25723,18 @@ a([e(onbewoonbare),
    st(onbewoonbaarst),
    ste(onbewoonbaarste)],nonadv,[],[]).
 
-a([e(onbewoonde),
-   no_e(onbewoond)],nonadv,[],[]).
+a([stem(on_bewonen),
+   ge_e(onbewoonde),
+   ge_no_e(onbewoond)],nonadv,[],[]).
 
 a([e(onbewuste),
    er(onbewuster),
    ere(onbewustere),
    no_e(onbewust)],both,[],[]).
 
-a([e(onbezette),
-   no_e(onbezet)],nonadv,[],[]).
+a([stem(on_bezetten),
+   ge_e(onbezette),
+   ge_no_e(onbezet)],nonadv,[],[]).
 
 a([both(onbezonnen),
    er(onbezonnener),
@@ -25925,10 +25944,11 @@ a([stem(ondernemen),
 
 a([ge_both(ondernomen)],adv,[],[]).
 
-a([e(onderontwikkelde),
+a([stem(onder_ontwikkelen),
+   ge_e(onderontwikkelde),
    er(onderontwikkelder),
    ere(onderontwikkeldere),
-   no_e(onderontwikkeld),
+   ge_no_e(onderontwikkeld),
    st(onderontwikkeldst),
    ste(onderontwikkeldste)],nonadv,[],[]).
 
@@ -32266,7 +32286,7 @@ a([e(scherpe),
    ere(scherpere),
    no_e(scherp),
    st(scherpst),
-   ste(scherpste)],adv,[],[]).
+   ste(scherpste)],adv,[],[mes]).
 
 a([e(scherpzinnige),
    er(scherpzinniger),
@@ -40142,7 +40162,8 @@ a([e(wekelijkse),
 
 a([pred(wel)],adv,[],[]).
 
-a([both(welbegrepen)],nonadv,[],[]).
+a([stem(wel_begrijpen),
+   ge_both(welbegrepen)],nonadv,[],[]).
 
 a([e(welbekende),
    postn_no_e(welbekend)],nonadv,

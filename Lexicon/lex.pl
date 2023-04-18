@@ -2550,6 +2550,7 @@ spelling_variant(laaste,   laatste).
 spelling_variant(meerde,   meerdere).
 spelling_variant(moelijk,  moeilijk).
 spelling_variant(moelijke, moeilijke).
+spelling_variant(moskeën,  moskeeën).
 spelling_variant(opeenvolgde,opeenvolgende).
 spelling_variant(ouwe,     oude).
 spelling_variant(ouwer,    ouder).

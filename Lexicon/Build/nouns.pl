@@ -2109,6 +2109,8 @@ n([pl(afscheidingen),sg(afscheiding)],de,[]).
 
 n([pl(afscheidsbrieven),sg(afscheidsbrief)],de,[]).
 
+n([sg(afscherming),pl(afschermingen)],de,[]).
+
 n([pl(afschriften),sg(afschrift)],het,[],
   [bank]). % niet ban_kaf_schrift
 
@@ -6405,6 +6407,7 @@ n([pl(bronnen),sg(bron)],de,[],
   [energie,
    i(inkomst,inkomsten),
    kracht,
+   olie,
    voedsel
   ]).
 
@@ -8382,6 +8385,8 @@ n([mass(crowdfunding)],de,[]).
 
 n([pl('cru\'s'),pl(crus),sg(cru)],de,[]).
 
+n([sg(cruise),pl(cruises)],de,[]).
+
 n([mass([cruise,control])],de,[]).
 
 n([sg(crux)],de,[subject_sbar,subject_vp]).
@@ -9414,6 +9419,8 @@ n([pl(diskussies),sg(diskussie)],de,[]).
 n([sg(diskwalificatie),pl(diskwalificaties)],de,[]).
 
 n([pl(dispensaties),sg(dispensatie)],de,[]).
+
+n([sg(dispersie),pl(dispersies)],de,[]).
 
 n([pl(disposities),sg(dispositie)],de,[vp]).
 
@@ -10448,6 +10455,8 @@ n([mass(eerzucht)],de,[]).
 n([pl(eethuizen),sg(eethuis)],het,[],[dim(eethuisje)]).
 
 n([mass(eetlust)],de,[]).
+
+n([sg(eetster),pl(eetsters)],de,[]).
 
 n([pl(eetzalen),sg(eetzaal)],de,[]).
 
@@ -12414,6 +12423,8 @@ n([mass(gebulder)],het,[]).
 
 n([sg(gecommitteerde),pl(gecommitteerden)],de,[]).
 
+n([sg(gedaagde),pl(gedaagden)],de,[],[mede]).
+
 n([pl(gedaanten),pl(gedaantes),sg(gedaante)],de,[]).
 
 n([pl(gedachten),pl(gedachtes),sg(gedachte)],de,
@@ -13016,6 +13027,8 @@ n([mass(geroffel)],het,[],
 n([mass(geroep)],het,[],
   [boe,
    hulp]).
+
+n([mass(geronk)],het,[]).
 
 n([mass(gerst)],de,[]).
 
@@ -14526,6 +14539,10 @@ n([pl(haringen),sg(haring)],de,[],[dim(harinkje)]).
 n([pl(harken),sg(hark)],de,[]).
 
 n([pl(harlekijns),sg(harlekijn)],de,[]).
+
+n([sg(harmonica),pl('harmonica\'s')],de,[],
+  [mond,
+   trek]).
 
 n([pl(harmonies),pl(harmonieën),sg(harmonie)],de,[]).
 
@@ -16501,6 +16518,8 @@ n([sg(interpellatie),pl(interpellaties)],de,[]).
 
 n([pl(interpretaties),sg(interpretatie)],de,[sbar]).
 
+n([sg(interpunctie),pl(interpuncties)],de,[]).
+
 n([sg(interruptie),pl(interrupties)],de,[]).
 
 n([pl(intervallen),sg(interval)],het,[]).
@@ -16745,8 +16764,6 @@ n([sg(jaarbasis)],de,[]).
 n([pl(jaargangen),sg(jaargang)],de,[temp_mod,sbar]).
 
 n([sg(jaargetijde),pl(jaargetijden)],het,[temp_mod,sbar]).
-
-n([pl(jaarneerslagen),sg(jaarneerslag)],de,[]).
 
 n([pl(jaarrekeningen),sg(jaarrekening)],de,[]).
 
@@ -17493,6 +17510,8 @@ n([pl(kapitalen),sg(kapitaal)],het,[],
    start,
    dim(kapitaaltje)]).
 
+n([sg(kapitalisatie),pl(kapitalisaties)],de,[]).
+
 n([mass(kapitalisme)],het,[]).
 
 n([pl(kapitalisten),sg(kapitalist)],de,[]).
@@ -17632,6 +17651,8 @@ n([mass(kattekwaad),
 n([pl(kauwen),sg(kauw)],de,[]).
 
 n([mass(kauwgom)],both,[]).
+
+n([mass(kauwgum)],both,[]).
 
 n([sg(kavel),pl(kavels)],both,[measure]).  % kavels bouwgrond
 
@@ -19573,6 +19594,8 @@ n([pl(lasers),sg(laser)],de,[]).
 
 n([pl([laser,guns]),sg([laser,gun])],de,[]).
 
+n([sg(lasser),pl(lassers)],de,[]).
+
 n([pl('lasso\'s'),sg(lasso)],de,[],[dim(lassootje)]).
 
 n([pl(lasten),sg(last)],de,
@@ -21137,6 +21160,8 @@ n([sg(mac)],de,[]).
 
 n([mass(macaroni)],de,[]).
 
+n([sg(machinatie),pl(machinaties)],de,[]).
+
 n([pl(machines),sg(machine)],de,[],
   [chip,
    s(codering),
@@ -21182,17 +21207,11 @@ n([pl(machten),sg(macht)],de,[],
 
 n([mass(machteloosheid)],de,[]).
 
-n([pl(machthebbers),sg(machthebber)],de,[]).
+n([pl(machthebbers),sg(machthebber),
+   pl(machtshebbers),sg(machtshebber)
+   ],de,[]).
 
 n([pl(machtigingen),sg(machtiging)],de,[]).
-
-n([pl(machtsovernamen),sg(machtsovername)],de,[]).
-
-n([pl(machtsstructuren),sg(machtsstructuur)],de,[]).
-
-n([mass(machtsuitoefening)],de,[]).
-
-n([mass(machtsvertoon)],het,[]).
 
 n([pl(madammen),pl(madams),sg(madam),
    pl(madames),pl(mesdames),sg(madame)],de,[],[dim(madammetje),
@@ -21581,8 +21600,6 @@ n([mass(marktaandeel),pl(marktaandelen),sg(marktaandeel)],het,[]).
 
 n([pl(marktpleinen),sg(marktplein)],het,[]).
 
-n([pl(marktsegmenten),sg(marktsegment)],het,[]).
-
 n([sg(marktwaarde)],de,[]).
 
 n([mass(marktwerking)],de,[]).
@@ -21621,8 +21638,6 @@ n([pl(massages),sg(massage)],de,[]).
 n([pl(massagraven),sg(massagraf)],het,[]).
 
 n([pl(massamedia),sg(massamedium)],het,[]).
-
-n([sg(massavernietigingswapen),pl(massavernietigingswapens)],het,[]).  % zeer lelijk woord
 
 n([sg(massief)],het,[]).
 
@@ -22010,8 +22025,6 @@ n([pl(mensenkinderen),sg(mensenkind)],het,[]).
 n([pl(mensenlevens),sg(mensenleven)],het,[]).
 
 n([pl('mensenmassa\'s'),sg(mensenmassa)],de,[]).
-
-n([sg(mensenmenigte),pl(mensenmenigtes),pl(mensenmenigten)],de,[]).
 
 n([pl(mensenzielen),sg(mensenziel)],de,[]).
 
@@ -22630,6 +22643,8 @@ n([pl(modifikaties),sg(modifikatie)],de,[sbar,vp]).
 
 n([pl(modi),sg(modus)],de,[]).
 
+n([sg(modulator),pl(modulatoren),pl(modulators)],de,[]).
+
 n([sg(module),pl(modules)],de,[app_measure]).
 
 n([sg([modus,operandi])],de,[]).
@@ -22657,8 +22672,6 @@ n([sg(['Moeder',des,'Vaderlands']),pl(['Moeders',des,'Vaderlands'])],de,[]).
 n([pl('moeder-oversten'),sg('moeder-overste')],de,[]).
 
 n([sg(moederbord),pl(moederborden)],het,[]).
-
-n([mass(moederland),pl(moederlanden),sg(moederland)],het,[]).
 
 n([mass(moederschap)],het,[]).
 
@@ -23081,8 +23094,6 @@ n([mass(muziek)],de,[],
    dim(muziekje)]).
 
 n([pl(muziekkritieken),sg(muziekkritiek)],de,[]).
-
-n([mass(muziekleven)],het,[]).
 
 n([pl(muziekstukken),sg(muziekstuk)],het,[]).
 
@@ -23523,6 +23534,8 @@ n([pl(netwerken),sg(netwerk)],het,[],
    terreur,
    i(terrorist,terroristen)]).
 
+n([sg(netwerking),pl(netwerkingen)],de,[]).
+
 n([sg(neuker),pl(neukers)],de,[],[dim(neukertje)]).
 
 n([pl(neurologen),sg(neuroloog)],de,[]).
@@ -23568,7 +23581,8 @@ n([mass([new,wave])],de,[]).
 
 n([meas(newton)],de,[meas_mod,measure]).
 
-n([sg(ngo),pl('ngo\'s'),
+n([stem(ngo),
+   sg(ngo),pl('ngo\'s'),
    sg('NGO'),pl('NGO\'s')],de,[]).
 
 n([sg(niche),pl(niches)],de,[]).
@@ -23989,6 +24003,8 @@ n([pl(oefenmeesters),sg(oefenmeester)],de,[]).
 
 n([sg(oelewapper),pl(oelewappers)],de,[]).
 
+n([sg(oenologie)],de,[]).  % wijnbouwtechnische wetenschap
+
 n([pl(oerwouden),sg(oerwoud)],het,[]).
 
 n([pl(oesters),sg(oester)],de,[],[dim(oestertje)]).
@@ -24067,12 +24083,6 @@ n([pl(olies),pl(oliën),sg(olie)],de,[],
    stook]).
 
 n([pl(oliebollen),sg(oliebol)],de,[]).
-
-n([pl(oliebronnen),sg(oliebron)],de,[]).
-
-n([pl(olielampen),sg(olielamp)],de,[]).
-
-n([pl(olietankers),sg(olietanker)],de,[]).
 
 n([pl(olifanten),sg(olifant)],de,[],
   [dim(olifantje)]).
@@ -24214,6 +24224,8 @@ n([mass(omvang)],de,[],
 n([pl(omvormingen),sg(omvorming)],de,[]).
 
 n([pl(omwentelingen),sg(omwenteling)],de,[]).
+
+n([pl(omwisselingen),sg(omwisseling)],de,[]).
 
 n([sg(omwonende),pl(omwonenden)],de,[]).
 
@@ -26893,7 +26905,8 @@ n([sg(placebo),pl('placebo\'s')],de,[]).
 
 n([sg(plag),pl(plaggen)],de,[]).
 
-n([pl(plagen),sg(plaag)],de,[]).
+n([pl(plagen),sg(plaag)],de,[],
+  [dim(plaagje)]).
 
 n([pl(platen),sg(plaat)],de,[measure],
   [dim(plaatje)]).
@@ -28457,7 +28470,7 @@ n([sg(psychologe)],de,[]).
 
 n([mass(psychologie)],de,[]).
 
-n([pl(psychologen),sg(psycholoog)],de,[]).
+n([pl(psychologen),sg(psycholoog)],de,[],[neuro]).
 
 n([pl(psychopaten),sg(psychopaat)],de,[]).
 
@@ -28511,6 +28524,8 @@ n([mass(pulp)],both,[]).
 n([pl(punaises),sg(punaise)],de,[]).
 
 n([mass(punch)],de,[]).
+
+n([sg(punctie),pl(puncties)],de,[]).
 
 n([mass(punctualiteit)],de,[]).
 
@@ -29349,6 +29364,8 @@ n([pl(regelingen),sg(regeling)],de,[],
 n([mass(regelmaat)],de,[]).
 
 n([pl(regens),sg(regen)],de,[measure]).
+
+n([pl(regens),sg(regen)],de,[],[moesson]).
 
 n([pl(regenbogen),sg(regenboog)],de,[]).
 
@@ -31922,7 +31939,8 @@ n([pl(slaapzalen),sg(slaapzaal)],de,[]).
 
 n([pl(slaapzakken),sg(slaapzak)],de,[]).
 
-n([pl(slaatjes),sg(slaatje)],het,[]).
+n([stem(sla_DIM),
+   pl(slaatjes),sg(slaatje)],het,[]).
 
 n([sg(slab),pl(slabben)],de,[],
   [dim(slabbetje),
@@ -34412,6 +34430,8 @@ n([pl(synagogen),sg(synagoge)],de,[]).
 
 n([sg(synaps),pl(synapsen)],de,[]).
 
+n([sg(syndicaat),pl(syndicaten)],het,[]).
+
 n([pl(syndromen),sg(syndroom)],het,[]).
 
 n([mass(synergie)],de,[]).
@@ -34630,7 +34650,8 @@ n([pl('tango\'s'),sg(tango)],de,[]).
 n([pl(tanks),sg(tank)],de,[],
   [brandstof]).
 
-n([pl(tankers),sg(tanker)],de,[]).
+n([pl(tankers),sg(tanker)],de,[],
+  [olie,h(olie)]).
 
 n([sg(tankklep),pl(tankkleppen)],de,[]).
 
@@ -37302,6 +37323,8 @@ n([mass([verdeel,en,heers])],both,[]).
 
 n([mass(verdeeldheid)],de,[]).
 
+n([sg(verdelging),pl(verdelgingen)],de,[]).
+
 n([pl(verdelingen),sg(verdeling)],de,
   [sbar],
   [s(arbeid),
@@ -37989,10 +38012,14 @@ n([pl(verschijningen),sg(verschijning)],de,[]).
 n([pl(verschijningsvormen),sg(verschijningsvorm)],de,[]).
 
 n([pl(verschijnselen),pl(verschijnsels),sg(verschijnsel)],het,
-  [sbar,vp,app_measure]).
+  [sbar,vp,app_measure],
+  [neven]
+ ).
 
 n([pl(verschijnselen),pl(verschijnsels),sg(verschijnsel)],het,[],
-  [s(ontwenning)]).
+  [s(ontwenning),
+   neven  % en niet neef_verschijnsel 
+  ]).
 
 n([pl(verschillen),sg(verschil)],het,[sbar,subject_sbar,vp]).
 
@@ -38830,6 +38857,10 @@ n([pl(vluchten),sg(vlucht)],de,[temp_mod],
 n([pl(vluchtelingen),sg(vluchteling)],de,[],
   [boot,
    h('Hutu')]).
+
+%% vooral bij wielrennen
+n([sg(vluchter),pl(vluchters)],de,[],
+  [mede]).
 
 n([mass(vmbo)],het,[]).
 
@@ -40021,7 +40052,7 @@ n([pl(wapenen),pl(wapens),sg(wapen)],het,[],
    kern,
    moord,
    steek,
-   i(massa_vernieting,massavernietings)]).
+   i(massa_vernietiging,massavernietigings)]).
 
 n([pl('wapenembargo\'s'),sg(wapenembargo)],het,[]).
 
@@ -40749,6 +40780,7 @@ n([pl(wetenschappen),sg(wetenschap)],de,[],
   [communicatie,
    godsdienst,
    informatie,
+   neuo,
    taal]).
 
 n([mass(wetenschappelijkheid)],de,[]).

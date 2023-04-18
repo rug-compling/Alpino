@@ -7637,6 +7637,7 @@ ge_nominalized_adjective(benadelen,benadeelden).
 ge_nominalized_adjective(benoemen,benoemden).
 ge_nominalized_adjective(beperken,beperkten).
 ge_nominalized_adjective(beschuldigen,beschuldigden).
+ge_nominalized_adjective(beschuldigen,beschuldigden).
 ge_nominalized_adjective(besmetten,besmetten).
 ge_nominalized_adjective(bestraffen,bestraften).
 ge_nominalized_adjective(betalen,betaalden).
