@@ -62,8 +62,7 @@ Titaantjes-orig_test1_options=-flag treebank ../Treebank/Titaantjes
 
 job := job${shell echo $$$$}
 
-test1:
-	$(MAKE) $(suite).test1
+test1: $(suite).test1
 
 $(suite).test1:
 	mkdir -p $(suite)$(part)/$(job)
@@ -90,21 +89,19 @@ test1rest:
 	cat $(suite)$(part)/$(job)/scores >> $(suite)$(part)/$(job)/score
 	grep -e 'LM#' -e 'PT#' -e 'Lexical analysis: ' $(suite)$(part)/$(job)/log1 > $(suite)$(part)/$(job)/poslemma
 	$(MAKE) report
-	-$(MAKE) compare_score suite=$(prefix)$(suite)
 
-cpu1=${shell ls -t $(suite)$(part)/*/log?|head -n 1}
-cpu2=$(prefix)$(suite)$(part)/time
+JOBS=$(sort $(wildcard */job*/log1))
 
-L1 := $(shell mktemp -u)
-L2 := $(shell mktemp -u)
-L3 := $(shell mktemp -u)
+cg:
+	@$(MAKE) -s $(JOBS:%/log1=%/cpu) | grep '^AV '
 
-compare_cpu:
-	@grep 'cputime total' $(cpu1) | awk '{ print $$3 }' >$(L1)
-	@grep 'cputime total' $(cpu2)| awk '{ print $$3 }' >$(L2) 
-	@grep 'Running parser(s) on' $(cpu1) | awk '{ print $$6 }' > $(L3)
+compare_cpu: $(suite)/job*/cpu
+
+%/cpu: %/log1
 	@echo "NEW	PREV		ITEM"
-	@paste $(L1) $(L2) $(L3) |\
+	@paste <( grep 'cputime total' $< | awk '{ print $$3 }' ) \
+	       <( grep 'cputime total' $(dir $(dir $*))/time | awk '{ print $$3 }' ) \
+	       <( grep 'Running parser(s) on' $< | awk '{ print $$6 }' ) |\
           awk 'BEGIN {I=1}                                                  \
                      { if (NF==3) {                                         \
                           if ($$1>1.1*$$2 && $$1>500)                      \
@@ -119,44 +116,11 @@ compare_cpu:
                      }                                                      \
                END {print "------------";                                   \
                     print "AVERAGES after " I-1 " sentences";               \
-                    printf "AV %10.1f %10.1f   %8.5f   %30s\n", N/(I-1), M/(I-1), (N/(I-1))/(M/(I-1)),"$(cpu1)"; \
+                    printf "AV %10.1f %10.1f   %8.5f   %30s\n", N/(I-1), M/(I-1), (N/(I-1))/(M/(I-1)),"$*"; \
                     print "================================================";           \
                    }' 
-	rm -f $(L1) $(L2) $(L3)
 
 
-score1=${shell ls -t $(suite)$(part)/job*/score|head -n 1}
-score2=$(suite)$(part)/score
-
-compare_score:
-	@grep 'BEST SCORE' $(score1) | awk '{ print $$11, $$3, 1 }' \
-                                      > $(L1)
-	@grep 'BEST SCORE' $(score2) | awk '{ print $$11, $$3, 1 }' \
-                                      > $(L2)
-	@$(MAKE) compare_best0 suite=$(suite) L1=$(L1) L2=$(L2)
-	rm -f $(L1) $(L2)
-
-COMPARE_C=$(ALPINO_HOME)/TestN/compare_c 
-
-compare_best0:
-	echo $(L1) $(L2)
-	@$(COMPARE_C) $(suite) $(L1) $(L2)
-	@rm -f $(L1) $(L2)
-
-compare_confidence:
-	@grep '^Q' $(suite)$(part)/job*/log1 | awk -F\| '{ print $$1,$$6 }'\
-           | sed -e 's/Q#//' > $(L1)
-	@grep 'BEST SCORE' $(suite)$(part)/best | awk '{ print $$11,$$3 }'\
-           > $(L2)
-	@paste $(L1) $(L2) | awk '{ if ($$1==$$3) print $$2,$$4}' \
-           | awk '    { N=N+1; if ($$1>=0 && $$2=="100.00") {O=O+1};\
-                               if ($$1<0 && $$2!="100.00") {O=O+1};\
-                               if ($$2=="100.00") {B=B+1} } \
-                  END { printf "confidence: %.2f accuracy (baseline %.2f)\n",\
-                               O/N,B/N } '
-	@rm -f $(L1) $(L2)
-
-GUIDES=
 trees:
 	@echo > $(dir)/times
 	hostname -f >>$(dir)/times
@@ -168,15 +132,11 @@ trees:
           -flag suite $(suitepath)/$(suite)\
           $(default_test$(mode)_options)\
           $($(suite)_test$(mode)_options)\
-          $(GUIDES)\
           $(extra) -notk cmdint=off\
                           2>$(dir)/log$(mode) | tee -a $(dir)/times #> $(dir)/result
 	@cat $(dir)/times >> $(suite)$(part)/times
 
 ## REPORTING STATISTICS ETC
-
-log=${shell ls -t */*/log?|head -n 1}
-
 
 bestall0:
 	@grep '$(grep) SCORE' $(dir)/log? |\
@@ -207,21 +167,33 @@ reportcurrentscore:
           echo "----- expected:";\
           grep ca-score $(suite)$(part)/score | head -n1; fi
 
-suites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite m_suite lot_test_suite1 wpspel extra 
+PTFS=$(sort $(wildcard */*/poslemma))
 
-clean:
-	for suite in $(suites) $(CGNSUITES) ;\
-        do rm -rf $$suite/job*;\
-        done
+ptf:
+	@echo "  OLD    NEW        SUITE"
+	@$(MAKE) -s $(PTFS:%/poslemma=%/ptf) | tr -d '()%' |\
+	     awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
 
-JOBNAME=$(suite)$(part).t
-SHORTJOBNAME=$(ssuite).t
-ssuite=$(shell echo $(suite)$(part) | tr -d "aeiou_" | rev | cut -c-8 | rev)
+
+%/ptf:%/poslemma
+	echo `grep '^#PT#' $(dir $(dir $*))/poslemma| tail -n1 | awk '{ print $$5 }'` `grep '^#PT#' $< | tail -n1| awk '{ print $$5 }'` $(dir $(dir $*))
+
+
+lmf:
+	@echo "  OLD    NEW        SUITE"
+	@$(MAKE) -s $(PTFS:%/poslemma=%/lmf) | tr -d '()%' |\
+	     awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
+
+%/lmf:%/poslemma
+	echo `grep '^#LM#' $(dir $(dir $*))poslemma| tail -n1 | awk '{ print $$5 }'` `grep '^#LM#' $< | tail -n1| awk '{ print $$5 }'` $(dir $(dir $*))
+
+
+SCORES=$(sort $(wildcard */*/scores))
 
 cf:
 	@echo "       %ACCURACY        #ITEMS            #MSEC/s         #SENTS    SUITE"
 	@echo "      NEW     OLD      NEW      OLD      NEW    OLD      N      O"
-	@$(MAKE) -s cf0 |\
+	@$(MAKE) -s $(SCORES:%/scores=%/cf) |\
             awk '{ GX=" "; HX=" ";\
                    if ($$1>$$2) {GX="!"};\
                    if ($$2>$$1) {GX="?"};\
@@ -234,72 +206,29 @@ cf:
                 END {printf "\n  %7.3f %7.3f %8d %8d  %6d %6d %6.1f %6.1f mean\n",\
                        A/N,B/N,C/N,D/N,E/N,F/N,G/N,H/N}'
 
-tf0:
-	@for suite in $(suites);\
-        do\
-            if [ -r $$suite/job*/times ];\
-            then echo $$suite `grep '^%XX' $$suite/times| awk '{ print $$5 }' | tail -n 2` ;\
-            fi\
-        done
+%/cf:%/scores
+	echo `grep 'ca-score:' $< | awk '{ print $$2 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'ca-score:' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$2 }' ; fi`"	"`grep 'items' $< | awk '{ print $$3 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'items' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $(dir $<)/time`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $(dir $(dir $*))/time`"	"`grep 'sents' $< | awk '{ print $$3 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'sents' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"`grep extra= $(dir $<)/times|sed -e 's/extra=//'`"	" $(dir $<)
 
-tf:
-	@echo "     OLD      NEW   SUITE"
-	@$(MAKE) -s tf0 | awk '{ printf "%8d %8d   %s\n",$$2,$$3,$$1}'
+upd_all: $(patsubst %/poslemma,%/poslemma.update,$(sort $(wildcard */job*/poslemma)))\
+         $(patsubst %/score,%/score.update,$(sort $(wildcard */job*/score)))\
+         $(patsubst %/best,%/best.update,$(sort $(wildcard */job*/best)))\
+         $(patsubst %/time,%/time.update,$(sort $(wildcard */job*/time)))\
+         $(patsubst %/result,%/result.update,$(sort $(wildcard */job*/result)))\
 
+%/poslemma.update:%/poslemma
+	@echo cp $< $(dir $(dir $*))/poslemma
 
-ptf:
-	@echo "  OLD    NEW        SUITE"
-	@$(MAKE) -s ptf0 | tr -d '()%' | awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
+%/score.update:%/score
+	@echo cp $< $(dir $(dir $*))/score
 
-ptf0:
-	for file in `echo $(shell ls $(ORDERED) */*/poslemma 2>/dev/null)`; do \
-        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
-	poslemma=$$suite/poslemma;\
-	echo `grep '^#PT#' $$poslemma| tail -n1 | awk '{ print $$5 }'` `grep '^#PT#' $$file| tail -n1| awk '{ print $$5 }'` $$suite;\
-	done
+%/best.update:%/best
+	@echo cp $< $(dir $(dir $*))/best
 
+%/time.update:%/time
+	@echo cp $< $(dir $(dir $*))/time
 
-lmf:
-	@echo "  OLD    NEW        SUITE"
-	@$(MAKE) -s lmf0 | tr -d '()%' | awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
-
-lmf0:
-	for file in `echo $(shell ls $(ORDERED) */*/poslemma 2>/dev/null)`; do \
-        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
-	poslemma=$$suite/poslemma;\
-	echo `grep '^#LM#' $$poslemma| tail -n1 | awk '{ print $$5 }'` `grep '^#LM#' $$file| tail -n1| awk '{ print $$5 }'` $$suite;\
-	done
-
-
-cf0:
-	for file in `echo $(shell ls $(ORDERED) */*/scores 2>/dev/null)`; do \
-        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
-        times=`echo $$file | sed -e 's/scores/times/'`;\
-        time=`echo $$file | sed -e 's/scores/time/'`;\
-        echo `grep 'ca-score:' $$file | awk '{ print $$2 }' `"	"`if [ -f $$suite/score ]; then grep 'ca-score:' $$suite/score | tail -n 2 | head -n 1 | awk '{ print $$2 }' ; fi`"	"`grep 'items' $$file | awk '{ print $$3 }' `"	"`if [ -f $$suite/score ]; then grep 'items' $$suite/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $$time`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $$suite/time`"	"`grep 'sents' $$file | awk '{ print $$3 }' `"	"`if [ -f $$suite/score ]; then grep 'sents' $$suite/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"$$suite"	"`grep extra= $$times|sed -e 's/extra=//'`"	"`echo $$file| awk -F/ '{ print $$2 }'`;\
-        done
-
-upd_all:
-	@for file in `echo $(shell ls $(ORDERED) */*/poslemma 2>/dev/null)`; do \
-        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
-	echo "cp $$file $(prefix)$$suite/";\
-        done
-	@for file in `echo $(shell ls $(ORDERED) */*/score 2>/dev/null)`; do \
-        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
-	echo "cp $$file $(prefix)$$suite/";\
-        done
-	@for file in `echo $(shell ls $(ORDERED) */*/best 2>/dev/null)`; do \
-        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
-	echo "cp $$file $(prefix)$$suite/";\
-        done
-	@for file in `echo $(shell ls $(ORDERED) */*/time 2>/dev/null)`; do \
-        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
-	echo "cp $$file $(prefix)$$suite/";\
-        done
-	@for file in `echo $(shell ls $(ORDERED) */*/result 2>/dev/null)`; do \
-        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
-	echo "cp $$file $(prefix)$$suite/";\
-        done
+%/result.update:%/result
+	@echo cp $< $(dir $(dir $*))/result
 
 rm_all:
 	@for dir in */job*;\
@@ -312,11 +241,14 @@ rm_all:
 
 ORDERED=-rt
 
-compare_score_logs:
-	@for file in `echo $(shell ls $(ORDERED) $(suite)$(part)/*/log1 2>/dev/null)`;\
-        do echo $$file;\
-           $(MAKE) -s compare_score score1=$$file suite=$(prefix)$(suite)$(part);\
-        done
+cs: $(JOBS:%/log1=%/compare)
+
+COMPARE_C=$(ALPINO_HOME)/TestN/compare_c 
+
+%/compare: %/log1
+	echo $(dir $(dir $*))
+	@$(COMPARE_C) $(dir $(dir $*)) <(grep 'BEST SCORE' $< | awk '{ print $$11, $$3, 1 }' ) \
+	                               <(grep 'BEST SCORE' $(dir $(dir $*))/score | awk '{ print $$11, $$3, 1 }' )
 
 IS=0 1 2 3 4 5 6 7 8 9
 
@@ -407,18 +339,6 @@ t28:
 t29:
 	make test1 suite=Titaantjes
 
-
-jobsuites=$(sort $(dir $(wildcard */job*)))
-
-cs:
-	for j in $(jobsuites); do $(MAKE) -s compare_score_logs suite=$$j; done
-
-cg:
-	@for file in `ls -tr */job*/log*`;\
-        do echo $$file;\
-           $(MAKE) -s compare_cpu cpu1=$$file cpu2=`dirname $$file`/../time;\
-        done | grep '^AV '
-
 fscore:
 	@awk '/^BEST SCORE/ { OV=OV+$$5; CORR=CORR+$$7; SYS=SYS+$$9}\
              END {P=OV/SYS; R=OV/CORR; F=(2*P*R)/(P+R);\
@@ -431,11 +351,6 @@ cascore:
 
 short_report:
 	@if [ -r $(suite)/score -a -r $(suite)/time ]; then echo `grep ca-score $(suite)/score | tail -n 1 | awk '{ printf "%.2f\n", $$2 }'` "	"`grep '^T#' $(suite)/time | awk -F\| '{ print $$4 }' | mean | awk '{ printf "%.0f\n",$$0}'` "	"`grep -c '^BEST SCORE' $(suite)/score`"	$(suite)" ; fi
-
-reports:
-	for suite in $(suites); do\
-        $(MAKE) --no-print-directory short_report suite=$$suite;\
-        done
 
 cdb_report:
 	@echo "CA%	msec/s	suite"
@@ -554,36 +469,20 @@ cgn43:
 
 SHELL=/bin/bash
 
-pt_diff:
-	-diff -w <(grep -e ' #LM' -e ' #PT' $$suite/poslemma) <(grep -e ' #LM' -e ' #PT' $$suite/job*/log1) | grep '^[>]'
-
-## only per suite
-pt_diff_all:
-	-diff -w <(grep -e ' #LM' -e ' #PT' $(suite)/poslemma) <(grep -e ' #LM' -e ' #PT' $(suite)/job*/log1)
-
 GREP=grep -v -e ^fn -e ^fv -e ^ovis -e ^Titaantjes[-]
 
-## slow variant, now no longer used; use pt_ns instead
-pt_diffs:
-	@for file in `echo $(shell ls $(ORDERED) */job*/log1 | $(GREP)  2>/dev/null)`; do \
-        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
-	echo $$suite;\
-	$(MAKE) -s pt_diff suite=$$suite;\
-	done
+PTS=$(filter-out fn% fv% ovis% Titaantjes-%,$(wildcard */job*/log1))
 
-
-PTS=$(shell ls $(ORDERED) */job*/log1 | $(GREP)  2>/dev/null)
-pt_ns: $(PTS:%=%.pt)
+pt_diffs: $(PTS:%=%.pt)
 
 %.pt:
 	@if diff -w <(grep -e ' #LM' -e ' #PT'  $(dir $*)../poslemma) <(grep -e ' #LM' -e ' #PT' $*) | grep '^[>]'; then true ; else true; fi
 
-
 f: cf ptf lmf
 
-d: cs pt_ns
+d: cs pt_diffs
 
-PATTERNS=cdb extra fn fv f[nv] novel
+PATTERNS=cdb extra fn fv f[nv] novel 
 
 SUITESDIR=.Suites/
 
