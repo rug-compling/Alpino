@@ -170,27 +170,36 @@ reportcurrentscore:
 PTFS=$(sort $(wildcard */*/poslemma))
 
 ptf:
+ifeq ($(strip $(PTFS)),)
+	@echo "ptf: nothing to do"
+else
 	@echo "  OLD    NEW        SUITE"
 	@$(MAKE) -s $(PTFS:%/poslemma=%/ptf) | tr -d '()%' |\
 	     awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
-
+endif
 
 %/ptf:%/poslemma
 	echo `grep '^#PT#' $(dir $(dir $*))/poslemma| tail -n1 | awk '{ print $$5 }'` `grep '^#PT#' $< | tail -n1| awk '{ print $$5 }'` $(dir $(dir $*))
 
 
 lmf:
+ifeq ($(strip $(PTFS)),)
+	@echo "lmf: nothing to do"
+else
 	@echo "  OLD    NEW        SUITE"
 	@$(MAKE) -s $(PTFS:%/poslemma=%/lmf) | tr -d '()%' |\
 	     awk '{ XX="   "; if ($$1 < $$2) XX="!!!"; if ($$2<$$1) XX="???"; printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
 
 %/lmf:%/poslemma
 	echo `grep '^#LM#' $(dir $(dir $*))poslemma| tail -n1 | awk '{ print $$5 }'` `grep '^#LM#' $< | tail -n1| awk '{ print $$5 }'` $(dir $(dir $*))
-
+endif
 
 SCORES=$(sort $(wildcard */*/scores))
 
 cf:
+ifeq ($(strip $(SCORES)),)
+	@echo "cf: nothing to do"
+else
 	@echo "       %ACCURACY        #ITEMS            #MSEC/s         #SENTS    SUITE"
 	@echo "      NEW     OLD      NEW      OLD      NEW    OLD      N      O"
 	@$(MAKE) -s $(SCORES:%/scores=%/cf) |\
@@ -205,6 +214,7 @@ cf:
                                             E=E+$$5; F=F+$$6; G=G+$$7; H=H+$$8; }\
                 END {printf "\n  %7.3f %7.3f %8d %8d  %6d %6d %6.1f %6.1f mean\n",\
                        A/N,B/N,C/N,D/N,E/N,F/N,G/N,H/N}'
+endif
 
 %/cf:%/scores
 	echo `grep 'ca-score:' $< | awk '{ print $$2 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'ca-score:' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$2 }' ; fi`"	"`grep 'items' $< | awk '{ print $$3 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'items' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $(dir $<)/time`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $(dir $(dir $*))/time`"	"`grep 'sents' $< | awk '{ print $$3 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'sents' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"`grep extra= $(dir $<)/times|sed -e 's/extra=//'`"	" $(dir $<)
