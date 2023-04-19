@@ -25676,7 +25676,8 @@ a([e(onbevredigde),
    st(onbevredigdst),
    ste(onbevredigdste)],adv,[],[]).
 
-a([ende(onbevredigende),
+a([stem(on_bevredigen),
+   ende(onbevredigende),
    er(onbevredigender),
    ere(onbevredigendere),
    end(onbevredigend),
