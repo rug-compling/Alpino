@@ -18,13 +18,13 @@ export SP_CTYPE=utf8
 if ( ldd $ALPINO_HOME/create_bin/Alpino.bin | grep -q -E '(libtcl|libtk).*not found' )
 then
     LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ALPINO_HOME/create_bin/extralibs
-    export TCL_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tcl8.5
-    export TK_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tk8.5
+    export TCL_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tcl8.6
+    export TK_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tk8.6
 fi
 
 if ( ldd $ALPINO_HOME/create_bin/Alpino.bin | grep -q 'libboost.*not found' )
 then
-    LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ALPINO_HOME/create_bin/extralibs/boost
+    LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ALPINO_HOME/create_bin/extralibs
 fi
 
 $ALPINO_HOME/create_bin/Alpino.bin\
