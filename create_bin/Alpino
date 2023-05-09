@@ -2,26 +2,12 @@
 
 export ALPINO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 
-export LD_LIBRARY_PATH=$ALPINO_HOME/Tokenization:$ALPINO_HOME/fadd:$ALPINO_HOME/TreebankTools/IndexedCorpus:$ALPINO_HOME/create_bin:$ALPINO_HOME/unix:$ALPINO_HOME/create_bin/extralibs${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export TCL_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tcl8.5
-export TK_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tk8.5
-export SP_CSETLEN=212
-export SP_CTYPE=utf8
+. $ALPINO_HOME/create_bin/env.sh
 
 echo ALPINO_HOME=$ALPINO_HOME
 echo LD_LIBRARY_PATH=$LD_LIBRARY_PATH
 echo TK_LIBRARY=$TK_LIBRARY
 echo TCL_LIBRARY=$TCL_LIBRARY
-
-## there are different versions of tcl/tk 8.6, therefore we must ensure
-## we use the same one as we used for compiling Alpino (if we use 8.6)
-## therefore we cannot rely on an existing tcltk installation :-(
-### example: our current one has (init.tcl):
-### package require -exact Tcl 8.6.5
-### whereas newer ones will have e.g.
-### package require -exact Tcl 8.6.10
-### and then it does no longer work
-## perhaps this does not apply to 8.5
 
 $ALPINO_HOME/create_bin/Alpino.bin\
    debug=undefined\
