@@ -1,3 +1,7 @@
+Please start by reading README.mk
+
+Most of this is out of date
+
 * you *need* to use the UTF-8 language environment. This is, because there
 is some internal communication between Prolog and the foreign language 
 interface which at the moment only works under this locale.
@@ -86,8 +90,12 @@ you will find the relevant scripts in the Alpino/bin directory
 
 ====================================================================
 
+THIS is no longer supported:
+
   - to build Alpino on Mac OS X or Windows, set the 'PLATFORM'
     variable to 'darwin' or 'windows' respectively in Makefile.defs
+
+THIS is no longer supported:
 
   - building Alpino on Windows requires Visual Studio 2005
 
