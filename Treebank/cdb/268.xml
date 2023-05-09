@@ -11,7 +11,7 @@
           <node begin="3" cat="np" end="11" id="8" rel="obj1">
             <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="32_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="32-jarige"/>
-            <node begin="5" buiging="met-e" end="6" graad="basis" id="11" lemma="ongehuwd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ongehuwd" word="ongehuwde"/>
+            <node begin="5" buiging="met-e" end="6" id="11" lemma="on_huwen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="ongehuwd" word="ongehuwde" wvorm="vd"/>
             <node begin="6" cat="mwu" end="9" id="12" rel="hd">
               <node begin="6" end="7" id="13" lemma="Fred" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Fred" spectype="deeleigen" word="Fred"/>
               <node begin="7" end="8" id="14" lemma="L." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="L." spectype="deeleigen" word="L."/>

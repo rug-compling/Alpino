@@ -5,7 +5,7 @@
     <node begin="0" cat="smain" end="15" id="2" rel="--">
       <node begin="0" cat="np" end="8" id="3" rel="su">
         <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="ongeoorloofd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ongeoorloofd" word="ongeoorloofde"/>
+        <node begin="1" buiging="met-e" end="2" id="5" lemma="on_geoorloofd" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="ongeoorloofd" word="ongeoorloofde" wvorm="vd"/>
         <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="vliegstunt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vlieg_stunt" word="vliegstunt"/>
         <node begin="3" cat="rel" end="8" id="7" rel="mod">
           <node begin="3" end="4" getal="getal" id="8" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>

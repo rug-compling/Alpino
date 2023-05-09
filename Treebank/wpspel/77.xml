@@ -9,9 +9,9 @@
         <node begin="0" end="1" id="6" index="1" rel="su"/>
         <node begin="1" end="2" id="7" lemma="winnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="win" word="won" wvorm="pv"/>
         <node begin="3" cat="conj" end="8" id="8" rel="mod">
-          <node begin="3" cat="ap" end="5" id="9" rel="cnj">
+          <node begin="3" cat="ppart" end="5" id="9" rel="cnj">
             <node begin="3" buiging="zonder" end="4" graad="basis" id="10" lemma="totaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="totaal" word="totaal"/>
-            <node begin="4" buiging="zonder" end="5" graad="basis" id="11" lemma="onverwacht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="onverwacht" word="onverwacht"/>
+            <node begin="4" buiging="zonder" end="5" id="11" lemma="on_verwachten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="onverwacht" word="onverwacht" wvorm="vd"/>
           </node>
           <node begin="5" conjtype="neven" end="6" id="12" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="6" cat="pp" end="8" id="13" rel="cnj">

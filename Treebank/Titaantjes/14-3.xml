@@ -20,9 +20,9 @@
             </node>
             <node begin="11" end="12" id="16" lemma="blijven" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="blijf" word="bleven" wvorm="pv"/>
             <node begin="9" cat="conj" end="13" id="17" rel="predc">
-              <node begin="9" cat="ap" end="11" id="18" rel="cnj">
+              <node begin="9" cat="ppart" end="11" id="18" rel="cnj">
                 <node begin="9" buiging="zonder" end="10" graad="basis" id="19" lemma="tamelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="tamelijk" word="tamelijk"/>
-                <node begin="10" buiging="zonder" end="11" graad="basis" id="20" lemma="ongeschonden" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="ongeschonden" word="ongeschonden"/>
+                <node begin="10" buiging="zonder" end="11" id="20" lemma="on_schenden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ongeschonden" word="ongeschonden" wvorm="vd"/>
               </node>
               <node begin="12" conjtype="neven" end="13" id="21" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             </node>

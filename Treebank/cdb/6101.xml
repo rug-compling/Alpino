@@ -5,8 +5,8 @@
     <node begin="0" cat="du" end="28" id="2" rel="--">
       <node begin="0" conjtype="neven" end="1" id="3" lemma="want" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="want" word="Want"/>
       <node begin="1" cat="smain" end="28" id="4" rel="nucl">
-        <node begin="1" cat="ap" end="3" id="5" rel="predm">
-          <node begin="1" buiging="zonder" end="2" graad="basis" id="6" lemma="ongeschonden" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="ongeschonden" word="ongeschonden"/>
+        <node begin="1" cat="ppart" end="3" id="5" rel="predm">
+          <node begin="1" buiging="zonder" end="2" id="6" lemma="on_schenden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ongeschonden" word="ongeschonden" wvorm="vd"/>
           <node begin="2" end="3" id="7" lemma="tenslotte" pos="adv" postag="BW()" pt="bw" rel="mod" root="tenslotte" word="tenslotte"/>
         </node>
         <node begin="3" end="4" id="8" lemma="stappen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="stap" word="stapten" wvorm="pv"/>

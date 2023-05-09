@@ -71,8 +71,10 @@
                 <node begin="33" end="34" id="54" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                 <node begin="34" cat="np" end="37" id="55" rel="obj1">
                   <node begin="34" end="35" id="56" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                  <node begin="35" buiging="zonder" end="36" graad="basis" id="57" lemma="pannerdens" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="Pannerdens" word="Pannerdens"/>
-                  <node begin="36" end="37" genus="onz" getal="ev" graad="basis" id="58" lemma="kanaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kanaal" word="kanaal"/>
+                  <node begin="35" cat="mwu" end="37" id="57" rel="hd">
+                    <node begin="35" end="36" id="58" lemma="Pannerdens" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pannerdens" spectype="deeleigen" word="Pannerdens"/>
+                    <node begin="36" end="37" id="59" lemma="kanaal" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="kanaal" spectype="deeleigen" word="kanaal"/>
+                  </node>
                 </node>
               </node>
             </node>
@@ -80,7 +82,7 @@
         </node>
       </node>
     </node>
-    <node begin="37" end="38" id="59" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="37" end="38" id="60" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Een in zijn boerderij verschanste veehouder van 72 jaar , vanuit het keukenraam schietend op een politiemacht van veertig man , zorgde gistermorgen voor een Bonanza-achtige sfeer in het anders zo rustige kerkdorp aan het Pannerdens kanaal .</sentence>
 </alpino_ds>

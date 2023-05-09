@@ -40,7 +40,7 @@
         </node>
         <node begin="19" cat="np" end="33" id="31" rel="app">
           <node begin="19" end="20" id="32" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="20" buiging="met-e" end="21" graad="basis" id="33" lemma="opwindend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="opwindend" word="opwindende"/>
+          <node begin="20" buiging="met-e" end="21" id="33" lemma="op_winden" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="opwindend" word="opwindende" wvorm="od"/>
           <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="34" lemma="roes" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="roes" word="roes"/>
           <node begin="22" cat="cp" end="33" id="35" rel="mod">
             <node begin="22" conjtype="onder" end="23" id="36" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
