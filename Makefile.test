@@ -1,0 +1,80 @@
+### cg: summarizes cpu usage of running and finished tests
+
+JOBS=$(sort $(wildcard */job*/log))
+
+cg:
+ifeq ($(strip $(JOBS)),)
+	@echo "cg: nothing to do"
+else
+	@$(MAKE) -s $(JOBS:%/log=%/cpu) | grep '^AV '
+endif
+
+compare_cpu: $(suite)/job*/cpu
+
+%/cpu: %/log
+	@echo "       NEW       PREV		                 ITEM"
+	@paste <( grep 'cputime total' $< | awk '{ print $$3 }' ) \
+	       <( grep 'cputime total' $(dir $(dir $*))/time | awk '{ print $$3 }' ) \
+	       <( grep 'Running parser(s) on' $< | awk '{ print $$6 }' ) |\
+          awk 'BEGIN {I=1}                                                  \
+                     { if (NF==3) {                                         \
+                          if ($$1>1.1*$$2 && $$1>500)                      \
+                             { F="???" };                                   \
+                          if ($$2>1.1*$$1 && $$2>500)                      \
+                             { F="!!!" };                                   \
+                          if(F) { printf "%10d %10d %30s %s\n", $$1, $$2, $$3, F }    \
+                          F="";                                             \
+                          I=I+1;                                            \
+                          N=N+$$1;                                          \
+                          M=M+$$2 }                                         \
+                     }                                                      \
+               END {print "------------";                                   \
+                    print "AVERAGES after " I-1 " sentences";               \
+                    printf "AV %10.1f %10.1f   %8.5f   %30s\n", N/(I-1), M/(I-1), (N/(I-1))/(M/(I-1)),"$*"; \
+                    print "================================================";           \
+                   }' 
+
+
+## for running on the HPC cluster
+include $(ALPINO_HOME)/Makefile.hpc
+
+## for errormining:
+include $(ALPINO_HOME)/Makefile.errormining
+LOGS=*/job*/log
+cat=cat
+
+suitepath=../Suites
+
+suite=g_suite
+
+### UPDATE current test score as new baseline score for future reference
+### it will echo the required command, not actually do it
+upd_all: $(patsubst %/poslemma,%/poslemma.update,$(sort $(wildcard */job*/poslemma)))\
+         $(patsubst %/score,%/score.update,$(sort $(wildcard */job*/score)))\
+         $(patsubst %/best,%/best.update,$(sort $(wildcard */job*/best)))\
+         $(patsubst %/time,%/time.update,$(sort $(wildcard */job*/time)))
+
+%/poslemma.update:%/poslemma
+	@echo cp $< $(dir $(dir $*))/poslemma
+
+%/score.update:%/score
+	@echo cp $< $(dir $(dir $*))/score
+
+%/best.update:%/best
+	@echo cp $< $(dir $(dir $*))/best
+
+%/time.update:%/time
+	@echo cp $< $(dir $(dir $*))/time
+
+### REMOVE current tests
+### it will echo the required command, not actually do it
+rm_all:
+	@for dir in */job*;\
+         do\
+             if    cmp -s $$dir/score $$dir/../score \
+                || cmp -s $$dir/best $$dir/../best     ;\
+             then echo "rm -rf $$dir";\
+             fi;\
+         done
+
+
