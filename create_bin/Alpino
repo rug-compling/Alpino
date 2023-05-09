@@ -15,17 +15,25 @@ export LD_LIBRARY_PATH
 export SP_CSETLEN=212
 export SP_CTYPE=utf8
 
-if ( ldd $ALPINO_HOME/create_bin/Alpino.bin | grep -q -E '(libtcl|libtk).*not found' )
-then
-    LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ALPINO_HOME/create_bin/extralibs
-    export TCL_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tcl8.5
-    export TK_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tk8.5
-fi
-
 if ( ldd $ALPINO_HOME/create_bin/Alpino.bin | grep -q 'libboost.*not found' )
 then
-    LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ALPINO_HOME/create_bin/extralibs/boost
+    LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ALPINO_HOME/create_bin/extralibs
 fi
+
+## there are different versions of tcl/tk 8.6, therefore we must ensure
+## we use the same one as we used for compiling Alpino
+## therefore we cannot rely on an existing tcltk installation :-(
+## our current one has (init.tcl):
+## package require -exact Tcl 8.6.5
+## whereas newer ones will have e.g.
+## package require -exact Tcl 8.6.10
+## and then it does no longer work
+
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ALPINO_HOME/create_bin/extralibs
+export TCL_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tcl8.6
+export TK_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tk8.6
+
+echo $LD_LIBRARY_PATH
 
 $ALPINO_HOME/create_bin/Alpino.bin\
    debug=undefined\
