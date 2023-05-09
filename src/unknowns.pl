@@ -1565,6 +1565,7 @@ foreign_word(el).
 foreign_word(elle).
 foreign_word(encore).
 foreign_word(end).
+foreign_word(english).
 foreign_word(enterprise).
 foreign_word(entertainment).
 foreign_word(entre).
@@ -1936,6 +1937,7 @@ foreign_word(sont).
 foreign_word(sorry).
 foreign_word(sound).
 foreign_word(space).
+foreign_word(speak).
 foreign_word(special).
 foreign_word(spot).
 foreign_word(spots).

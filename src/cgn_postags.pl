@@ -1275,6 +1275,8 @@ exceptional_stem_tag(mee,preposition(met,[mee],extracted_np), 'VZ(fin)',met).
 exceptional_stem_tag(ons,noun(both,count,sg),                 'VNW(bez,det,stan,vol,1,mv,nom,met-e,zonder-n)',ons).
 exceptional_stem_tag(op,adjective(_),                         'VZ(fin)',op).
 exceptional_stem_tag(over,adjective(_),                       'VZ(fin)',over).
+exceptional_stem_tag(overledene,noun(de,count,sg),            'WW(vd,nom,met-e,zonder-n)',overlijden).
+exceptional_stem_tag(overledenen,noun(de,count,pl),           'WW(vd,nom,met-e,mv-n)',overlijden).
 exceptional_stem_tag(senior,postn_adverb,                     'ADJ(postnom,basis,zonder)',senior).
 exceptional_stem_tag(sprake,_,                                'N(soort,ev,basis,dat)',spraak).
 exceptional_stem_tag(stel,tag,                                'WW(pv,tgw,ev)',stellen).
