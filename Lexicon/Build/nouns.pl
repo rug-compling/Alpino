@@ -11294,16 +11294,15 @@ n([mass(fascisme)],het,[]).
 
 n([pl(fascisten),sg(fascist)],de,[],[h(neo)]).
 
-n([pl(fasen),pl(fases),sg(fase),
-   pl(fazen),pl(fazes),sg(faze)],de,[sbar,temp_mod],
+n([pl(fasen),pl(fases),sg(fase)],de,[sbar,temp_mod],
   [alarm,
    eind,
    s(groep),
    s(ontwikkeling),
+   s(overgang),
    slot]).
 
-n([pl(faseringen),sg(fasering),
-   pl(fazeringen),sg(fazering)],de,[]).
+n([pl(faseringen),sg(fasering)],de,[]).
 
 n([mass([fast,food])],both,[]).
 
@@ -12888,6 +12887,8 @@ n([pl(genieën),sg(genie)],het,[]).
 n([mass(genie)],de,[]).
 
 n([mass(geniep)],het,[]).
+
+n([sg(genieter),pl(genieters)],de,[],[dim(genietertje)]).
 
 n([sg(genius)],de,[]). % de kwade g.
 
@@ -16372,6 +16373,7 @@ n([pl(instellingen),sg(instelling)],de,[sbar,vp]).
 n([pl(instellingen),sg(instelling)],de,[],
   [s(fabriek),
    kunst,
+   onderwijs,
    s(overheid),
    s(uitvoering)]).
 
@@ -17420,6 +17422,7 @@ n([pl(kansen),sg(kans)],de,[sbar,vp],[dim(kansje)]).
 n([pl(kansen),sg(kans)],de,[],
   [i(bui,buien),
    neerslag,
+   s(overleving),
    pak,
    s(slaging),
    winst]).
@@ -17763,7 +17766,8 @@ n([pl(kerels),sg(kerel)],de,[],[dim(kereltje)]).
 n([sg(kerf),pl(kerven)],de,[]).
 
 n([pl(kerken),sg(kerk)],de,[],
-  [pinkster, % niet pink_ster_kerk
+  [parochie,
+   pinkster,			% niet pink_ster_kerk
    h(rk),
    'Samen-op-weg',h('Samen-op-weg'),h('Sow'),
    dim(kerkje)]).
@@ -19261,7 +19265,9 @@ n([mass(kwaadheid)],de,[]).
 
 n([mass(kwaads)],het,[]).
 
-n([pl(kwalen),sg(kwaal)],de,[],[dim(kwaaltje)]).
+n([pl(kwalen),sg(kwaal)],de,[],
+  [s(oudedag),
+   dim(kwaaltje)]).
 
 n([pl(kwadraten),sg(kwadraat)],het,[]).
 
@@ -23692,7 +23698,8 @@ n([pl(niveaus),sg(niveau)],het,[pred_pp(onder),pred_pp(onder,subject_vp),
 				pred_pp(beneden),pred_pp(beneden,subject_vp),
 				pred_pp(boven),pred_pp(boven,subject_vp),
 				pred_pp(van)],
-  [top]).
+  [s(opleiding),
+   top]).
 
 n([pl(niveaus),sg(niveau)],het,[],
   [s(deelnemer),
@@ -24456,11 +24463,7 @@ n([mass(onderwijs)],het,[],
 
 n([pl(onderwijsgevenden),sg(onderwijsgevende)],de,[]).
 
-n([pl(onderwijsinstellingen),sg(onderwijsinstelling)],de,[]).
-
 n([mass(onderwijskunde)],de,[]).
-
-n([mass(onderwijsveld)],het,[]).
 
 n([pl(onderwijzers),sg(onderwijzer)],de,[],[hoofd]).
 
@@ -24494,10 +24497,6 @@ n([pl(onderzoekers),sg(onderzoeker)],de,[],
    markt]).
 
 n([pl(onderzoekingen),sg(onderzoeking)],de,[]).
-
-n([pl(onderzoeksrechters),sg(onderzoeksrechter)],de,[]).
-
-n([pl(onderzoeksresultaten),sg(onderzoeksresultaat)],het,[subject_sbar,sbar]).
 
 n([pl(onderzoeksters),sg(onderzoekster)],de,[]).
 
@@ -24682,6 +24681,8 @@ n([sg(ontmanteling),pl(ontmantelingen)],de,[]).
 
 n([pl(ontmaskeringen),sg(ontmaskering)],de,[]).
 
+n([sg(ontmijning),pl(ontmijningen)],de,[]).
+
 n([pl(ontmoetingen),sg(ontmoeting)],de,[],
   ['Davis-Cup',
    top]).
@@ -24725,7 +24726,8 @@ n([mass(ontstentenis)],de,[]).
 n([mass(ontucht)],de,[]).
 
 n([pl(ontvangers),sg(ontvanger)],de,[],
-  [s(bijstand)]).
+  [s(bijstand),
+   dim(ontvangertje)]).
 
 n([pl(ontvangsten),sg(ontvangst)],both,[],[order]).
 
@@ -24971,6 +24973,8 @@ n([pl(opdrachtgevers),sg(opdrachtgever)],de,[]).
 
 n([pl(opdrachtgeefsters),sg(opdrachtgeefster)],de,[]).
 
+n([pl(opdrachtnemers),sg(opdrachtnemer)],de,[]).
+
 n([sg(opdruk),pl(opdrukken)],de,[]).
 
 n([pl(opeenhopingen),sg(opeenhoping)],de,[]).
@@ -25058,8 +25062,6 @@ n([pl(ophopingen),sg(ophoping)],de,[]).
 
 n([pl(opinies),sg(opinie)],de,[sbar,vp]).
 
-n([pl('opiniepagina\'s'),sg(opiniepagina)],de,[]).
-
 n([sg(opiniepeiler),pl(opiniepeilers)],de,[]).
 
 n([pl(opiniepeilingen),sg(opiniepeiling)],de,[]).
@@ -25116,9 +25118,6 @@ n([pl(opleidingen),sg(opleiding)],de,
    h('VWO'),
    h('WO')
    ]).
-
-n([pl(opleidingsniveaus),sg(opleidingsniveau)],het,[pred_pp(beneden),
-						    pred_pp(boven)]).
 
 n([pl(oplettendheden),sg(oplettendheid)],de,[]).
 
@@ -25217,6 +25216,8 @@ n([pl(oproepen),sg(oproep)],de,[vp,sbar]).
 n([pl(oproepingen),sg(oproeping)],de,[]).
 
 n([pl(oproeren),sg(oproer)],both,[],[s(volk)]).  % en niet volk-sop-roer
+
+n([sg(opruiing),pl(opruiingen)],de,[]).
 
 n([pl(opruimingen),sg(opruiming)],de,[]).
 
@@ -25405,7 +25406,7 @@ n([pl(ordeningen),sg(ordening)],de,[],[markt]).
 
 n([pl(orders),sg(order)],both,[measure,sbar,vp],[dim(ordertje)]).
 
-n([sg(orderportefeuille),pl(orderportefeuilles)],de,[]).
+n([sg(ordinantie),pl(ordinanties)],de,[]).
 
 n([pl(ordonnansen),sg(ordonnans)],de,[]).
 
@@ -25470,10 +25471,6 @@ n([pl(organisaties),sg(organisatie),
 n([pl('organisatie-strukturen'),sg('organisatie-struktuur')],de,[]).
 
 n([pl(organisatiemodellen),sg(organisatiemodel)],het,[]).
-
-n([pl(organisatiestructuren),sg(organisatiestructuur)],de,[]).
-
-n([pl(organisatiestrukturen),sg(organisatiestruktuur)],de,[]).
 
 n([pl(organisatoren),pl(organisators),sg(organisator)],de,[],[reis]).
 
@@ -25543,8 +25540,6 @@ n([pl(ouders),sg(ouder)],de,[],
 n([mass(ouderdom)],de,[]).
 
 n([pl(ouderlingen),sg(ouderling)],de,[]).
-
-n([pl(ouderparen),sg(ouderpaar)],het,[]).
 
 n([mass(ouderschap)],het,[]).
 
@@ -25640,10 +25635,6 @@ n([mass(overeenstemming),pl(overeenstemmingen),sg(overeenstemming)],de,
 
 n([pl(overgangen),sg(overgang)],de,[subject_sbar,subject_vp]).
 
-n([pl(overgangsfasen),pl(overgangsfases),sg(overgangsfase)],de,[]).
-
-n([pl(overgangsfazen),pl(overgangsfazes),sg(overgangsfaze)],de,[]).
-
 n([mass(overgave)],de,[]).
 
 n([mass(overgevoeligheid),pl(overgevoeligheden),sg(overgevoeligheid)],de,[]).
@@ -25654,6 +25645,8 @@ n([mass(overgroei)],de,[]).
 
 n([pl(overgrootmoeders),sg(overgrootmoeder)],de,[]).
 
+n([pl(overgrootouders),sg(overgrootouder)],de,[]).
+
 n([pl(overgrootvaders),sg(overgrootvader)],de,[]).
 
 n([sg(overhaal)],de,[]).
@@ -25662,13 +25655,11 @@ n([mass(overhand)],de,[]).
 
 n([sg(overhang)],de,[]).
 
+n([sg(overheerser),pl(overheersers)],de,[]).
+
 n([pl(overheersingen),sg(overheersing)],de,[]).
 
 n([pl(overheden),sg(overheid)],de,[],[s(rijk)]).
-
-n([pl(overheidsinstanties),sg(overheidsinstantie)],de,[]).
-
-n([sg(overheidsoptreden),pl(overheidsoptredens)],het,[]).
 
 n([pl(overhemden),sg(overhemd)],het,[]).
 
@@ -25710,8 +25701,6 @@ n([pl(overlevers),sg(overlever)],de,[]).
 n([pl(overleveringen),sg(overlevering)],de,[]).
 
 n([mass(overleving)],de,[]).
-
-n([pl(overlevingskansen),sg(overlevingskans)],de,[]).
 
 n([stem(overlijden),pl(overlijdens)],het,[]).
 
@@ -25853,7 +25842,8 @@ n([sg(paar),pl(paren),
    ignore_stem(paar)],het,[],
   [homo,
    jeugd,
-   s(koning)
+   s(koning),
+   ouder
   ]).
 
 n([pl(paarden),sg(paard)],het,[],
@@ -25865,15 +25855,27 @@ n([sg('paard-en-wagen'),
    pl('paard-en-wagens'),
    stem(paard_en_wagen)],both,[]).
 
-n([pl(paardebloemen),sg(paardebloem)],de,[]).
+n([stem(paardenbloem),
+   sg(paardenbloem),pl(paardenbloemen),
+   pl(paardebloemen),sg(paardebloem)],de,[]).
 
-n([pl(paardehoeven),sg(paardehoef)],de,[]).
+n([stem(paard_hoef),
+   sg(paardenhoef),pl(paardenhoeven),
+   pl(paardehoeven),sg(paardehoef)],de,[]).
 
-n([pl(paardekoppen),sg(paardekop)],de,[]).
+n([stem(paard_kop),
+   sg(paardenkop),pl(paardenkoppen),
+   pl(paardekoppen),sg(paardekop)],de,[]).
 
-n([pl(paardestaarten),sg(paardestaart)],de,[]).
+n([mass(paardenkracht)],de,[]).
 
-n([pl(paardestallen),sg(paardestal)],de,[]).
+n([stem(paard_staart),
+   sg(paardenstaart),pl(paardenstaarten),
+   pl(paardestaarten),sg(paardestaart)],de,[]).
+
+n([stem(paard_stal),
+   sg(paardenstal),pl(paardenstallen),
+   pl(paardestallen),sg(paardestal)],de,[]).
 
 n([mass(paars)],het,[]).
 
@@ -25912,9 +25914,11 @@ n([pl(paden),sg(pad)],het,[],
    zebra,
    dim(paadje)]).
 
-n([pl(paddestoelen),sg(paddestoel)],de,[],[dim(paddestoeltje)]).
+n([stem(paddenstoel),
+   pl(paddestoelen),sg(paddestoel)],de,[],[dim(paddestoeltje)]).
 
-n([pl(paddenstoelen),sg(paddenstoel)],de,[],[dim(paddenstoeltje)]).
+n([stem(paddenstoel),
+   pl(paddenstoelen),sg(paddenstoel)],de,[],[dim(paddenstoeltje)]).
 
 n([pl(padvinders),sg(padvinder)],de,[]).
 
@@ -25922,7 +25926,8 @@ n([sg(pageturner),pl(pageturners)],de,[]).
 
 % vele pagina's tekst
 n([pl('pagina\'s'),sg(pagina)],de,[measure],
-  [dim(paginaatje)]).
+  [opinie,
+   dim(paginaatje)]).
 
 n([pl('pagina\'s'),sg(pagina)],de,[],
   ['Facebook',
@@ -26139,8 +26144,6 @@ n([pl(parken),sg(park)],het,[np_app_measure],
    thema,
    wagen,
    wild]).
-
-n([pl(parkeergarages),sg(parkeergarage)],de,[]).
 
 n([pl(parketten),sg(parket)],het,[]).
 
@@ -27555,6 +27558,7 @@ n([pl(portefeuilles),sg(portefeuille)],de,[app_measure]).
 
 n([pl(portefeuilles),sg(portefeuille)],de,[],
   [s(belegging),
+   order,
    vastgoed]).
 
 n([pl(portemonnees),sg(portemonnee)],de,[],[dim(portemonneetje)]).
@@ -28734,6 +28738,8 @@ n([pl('rabbi\'s'),sg(rabbi)],de,[]).
 
 n([pl(rabbijnen),sg(rabbijn)],de,[]).
 
+n([sg(rabbinaat),pl(rabbinaten)],het,[]).
+
 n([mass(rabiës)],de,[]).
 
 n([pl(races),sg(race)],de,[measure,temp_mod,sbar],
@@ -29090,6 +29096,7 @@ n([pl(rechters),sg(rechter)],de,[],
   [kamp,
    jeugd,
    i(kind,kinder),
+   s(onderzoek),
    opper]).
 
 n([pl(rechterkanten),sg(rechterkant)],de,[]).
@@ -29781,6 +29788,7 @@ n([pl(restricties),sg(restrictie)],de,[sbar,vp]).
 
 n([pl(resultaten),sg(resultaat)],het,[sbar,subject_sbar],
   [eind,
+   s(onderzoek),
    tussen]).
 
 n([pl(resultaten),sg(resultaat)],het,[],
@@ -34144,6 +34152,7 @@ n([mass(structurering),pl(structureringen),sg(structurering)],de,[]).
 
 n([pl(structuren),sg(structuur)],de,[],
   [s(bestuur),
+   organisatie,
    s(persoonlijkheid)]).
 
 n([pl('structuurschema\'s'),sg(structuurschema)],het,[]).
@@ -37145,6 +37154,7 @@ n([pl(velden),sg(veld)],het,[],
    koren,
    maai,
    olie,
+   onderwijs,
    rijst,
    speel,
    s(training),
@@ -38013,12 +38023,12 @@ n([pl(verschijningsvormen),sg(verschijningsvorm)],de,[]).
 
 n([pl(verschijnselen),pl(verschijnsels),sg(verschijnsel)],het,
   [sbar,vp,app_measure],
-  [neven]
+  [neven] % en niet neef_verschijnsel 
  ).
 
 n([pl(verschijnselen),pl(verschijnsels),sg(verschijnsel)],het,[],
   [s(ontwenning),
-   neven  % en niet neef_verschijnsel 
+   s(onthouding)  
   ]).
 
 n([pl(verschillen),sg(verschil)],het,[sbar,subject_sbar,vp]).
@@ -41413,6 +41423,8 @@ n([pl(zagen),sg(zaag)],de,[]).
 n([mass(zaagsel)],het,[]).
 
 n([mass(zaai)],de,[]).
+
+n([sg(zaaier),pl(zaaiers)],de,[]).
 
 n([sg(zaakgelastigde),
    pl(zaakgelastigden)],de,[]).

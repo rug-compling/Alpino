@@ -1019,6 +1019,12 @@ accent(ongeinteresseerder,ongeïnteresseerder).
 accent(ongeinteresseerd,ongeïnteresseerd).
 accent(ongeinteresseerdste,ongeïnteresseerdste).
 accent(ongeinteresseerdst,ongeïnteresseerdst).
+accent(ongeisoleerde,ongeïsoleerde).
+accent(ongeisoleerdere,ongeïsoleerdere).
+accent(ongeisoleerder,ongeïsoleerder).
+accent(ongeisoleerd,ongeïsoleerd).
+accent(onofficiele,onofficiële).
+accent(onofficieler,onofficiëler).
 accent(oorlogssituatien,oorlogssituatiën).
 accent(openingsceremonien,openingsceremoniën).
 accent(opgeeiste,opgeëiste).

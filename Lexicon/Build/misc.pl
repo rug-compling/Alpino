@@ -7814,6 +7814,7 @@ nominalized_adjective(ongelukkig,ongelukkigen).
 nominalized_adjective(ontevreden,ontevredenen).
 nominalized_adjective(ontheemd,ontheemden).
 nominalized_adjective(onwetend,onwetenden).
+nominalized_adjective(onzalig,onzaligen).
 nominalized_adjective(orthodox,orthodoxen).
 nominalized_adjective(oud,ouden).
 nominalized_adjective(overig,overigen).
