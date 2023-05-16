@@ -52,6 +52,7 @@ suite=g_suite
 upd_all: $(patsubst %/poslemma,%/poslemma.update,$(sort $(wildcard */job*/poslemma)))\
          $(patsubst %/score,%/score.update,$(sort $(wildcard */job*/score)))\
          $(patsubst %/best,%/best.update,$(sort $(wildcard */job*/best)))\
+         $(patsubst %/mwu,%/mwu.update,$(sort $(wildcard */job*/mwu)))\
          $(patsubst %/time,%/time.update,$(sort $(wildcard */job*/time)))
 
 %/poslemma.update:%/poslemma
@@ -62,6 +63,9 @@ upd_all: $(patsubst %/poslemma,%/poslemma.update,$(sort $(wildcard */job*/poslem
 
 %/best.update:%/best
 	@echo cp $< $(dir $(dir $*))/best
+
+%/mwu.update:%/mwu
+	@echo cp $< $(dir $(dir $*))/mwu
 
 %/time.update:%/time
 	@echo cp $< $(dir $(dir $*))/time

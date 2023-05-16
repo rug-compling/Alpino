@@ -60,7 +60,7 @@ test1: $(suite).test1
 	@mkdir -p $*/$(job)
 	@echo "extra=$(extra)" >> $*/scores
 	$(MAKE) trees dir=$*/$(job) suite=$*
-	$(MAKE) test1rest dir=$*/$(job) suite=$*
+	$(MAKE) test1rest dir=$*/$(job)
 
 trees:
 	@echo > $(dir)/times
@@ -75,7 +75,7 @@ trees:
           $($(suite)_test1_options)\
           $(extra) -notk cmdint=off\
                           2>$(dir)/log | tee -a $(dir)/times 
-	@cat $(dir)/times >> $(suite)/times
+	@cat $(dir)/times >> $(dir $(dir $(dir)))/times
 
 test1rest:
 	grep 'BEST SCORE' $(dir)/log |\
@@ -88,13 +88,14 @@ test1rest:
                  }'\
             | tee $(dir)/scores
 	grep 'BEST SCORE' $(dir)/log | cut -d' ' -f1-15       > $(dir)/score
+	-grep '^MWU#' $(dir)/log                               > $(dir)/mwu
 	grep 'cputime total' $(dir)/log                       > $(dir)/time
 	grep '^T#' $(dir)/log                                >> $(dir)/time
 	grep '^%XX' $(dir)/times |\
              awk '{ printf "sents   : %s\n",$$3 }'            >> $(dir)/scores
 	grep '^%XX' $(dir)/times |\
              awk '{ printf "items   : %s\n",$$7 }'            >> $(dir)/scores
-	cat $(dir)/scores                                     >> $(suite)/scores
+	cat $(dir)/scores                                     >> $(dir $(dir $(dir)))/scores
 	cat $(dir)/scores                                     >> $(dir)/score
 	grep -e 'LM#' -e 'PT#' \
              -e 'Lexical analysis: ' $(dir)/log               > $(dir)/poslemma
@@ -107,25 +108,25 @@ test1rest:
 ### displays summarizing statistics of the last N runs for suite SUITE
 n=5
 report:
-	@if [ -f $(suite)/times ]; then\
-         grep '^%XX' $(suite)/times | tail -n $(n); fi
+	@if [ -f $(dir $(dir $(dir)))/times ]; then\
+         grep '^%XX' $(dir $(dir $(dir)))/times | tail -n $(n); fi
 	@echo "WORST	FIRST	BEST	TREES/SENT"
-	@if [ -f $(suite)/bests ]; then\
+	@if [ -f $(dir $(dir $(dir)))/bests ]; then\
           echo "----- recent:";\
-          paste <(grep 'readings/s'      $(suite)/bests | tail -n $(n) | cut -d' ' -f 1)\
-                <(grep 'WORST: ca-score' $(suite)/bests | tail -n $(n) | cut -d' ' -f 3)\
-                <(grep 'FIRST: ca-score' $(suite)/bests | tail -n $(n) | cut -d' ' -f 3)\
-                <(grep 'BEST: ca-score'  $(suite)/bests | tail -n $(n) | cut -d' ' -f 3);\
+          paste <(grep 'readings/s'      $(dir $(dir $(dir)))/bests | tail -n $(n) | cut -d' ' -f 1)\
+                <(grep 'WORST: ca-score' $(dir $(dir $(dir)))/bests | tail -n $(n) | cut -d' ' -f 3)\
+                <(grep 'FIRST: ca-score' $(dir $(dir $(dir)))/bests | tail -n $(n) | cut -d' ' -f 3)\
+                <(grep 'BEST: ca-score'  $(dir $(dir $(dir)))/bests | tail -n $(n) | cut -d' ' -f 3);\
         fi
-	@if [ -f $(suite)/scores ]; then\
+	@if [ -f $(dir $(dir $(dir)))/scores ]; then\
           echo "----- recent:";\
-          grep ca-score $(suite)/scores | tail -n $(n); fi
+          grep ca-score $(dir $(dir $(dir)))/scores | tail -n $(n); fi
 	@$(MAKE) -s reportcurrentscore
 
 reportcurrentscore:
-	@if [ -f $(suite)/score ]; then\
+	@if [ -f $(dir $(dir $(dir)))/score ]; then\
           echo "----- expected:";\
-          grep ca-score $(suite)/score | head -n1; fi
+          grep ca-score $(dir $(dir $(dir)))/score | head -n1; fi
 
 ### make ptf: compare finished tests wrt postag accuracy
 PTFS=$(sort $(wildcard */*/poslemma))
@@ -173,7 +174,7 @@ cf:
 ifeq ($(strip $(SCORES)),)
 	@echo "cf: nothing to do"
 else
-	@echo "       %ACCURACY        #ITEMS            #MSEC/s         #SENTS    SUITE"
+	@echo "       %ACCURACY        #ITEMS            #MSEC/s         #SENTS    LOG	           EXTRA"
 	@echo "      NEW     OLD      NEW      OLD      NEW    OLD      N      O"
 	@$(MAKE) -s $(SCORES:%/scores=%/cf) |\
             awk '{ GX=" "; HX=" ";\
@@ -181,8 +182,9 @@ else
                    if ($$2>$$1) {GX="?"};\
                    if ($$5>(1.1 * $$6)) {HX="?"};\
                    if ($$6>(1.1 * $$5)) {HX="!"};\
-                   printf "%s %7.3f %7.3f %8d %8d %s %6d %6d %6d %6d %s %s %s\n",\
-                               GX,$$1,$$2,$$3,$$4,HX,$$5,$$6,$$7,$$8,$$9,$$10,$$11;\
+                   printf "%s %7.3f %7.3f %8d %8d %s %6d %6d %6d %6d %s",\
+                               GX,$$1,$$2,$$3,$$4,HX,$$5,$$6,$$7,$$8,$$9;\
+		   out=""; for (i=10; i<=NF;i++){out = out " " $$i}; print out;\
                    N=N+1; A=A+$$1; B=B+$$2; C=C+$$3; D=D+$$4;\
                                             E=E+$$5; F=F+$$6; G=G+$$7; H=H+$$8; }\
                 END {printf "\n  %7.3f %7.3f %8d %8d  %6d %6d %6.1f %6.1f mean\n",\
@@ -190,7 +192,7 @@ else
 endif
 
 %/cf:%/scores
-	@echo `grep 'ca-score:' $< | awk '{ print $$2 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'ca-score:' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$2 }' ; fi`"	"`grep 'items' $< | awk '{ print $$3 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'items' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $(dir $<)/time`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $(dir $(dir $*))/time`"	"`grep 'sents' $< | awk '{ print $$3 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'sents' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"`grep extra= $(dir $<)/times|sed -e 's/extra=//'`"	" $(dir $<)
+	@echo `grep 'ca-score:' $< | awk '{ print $$2 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'ca-score:' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$2 }' ; fi`"	"`grep 'items' $< | awk '{ print $$3 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'items' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $(dir $<)/time`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $(dir $(dir $*))/time`"	"`grep 'sents' $< | awk '{ print $$3 }' `"	"`if [ -f $(dir $(dir $*))/score ]; then grep 'sents' $(dir $(dir $*))/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	" $(dir $<)"	"`grep extra= $(dir $<)/times|sed -e 's/extra=//'`
 
 ### compare concept accuracy of all running and finished tests
 cs: $(JOBS:%/log=%/compare)
@@ -293,15 +295,15 @@ postags_sorted:
 	ls $(EXTRA) */poslemma |$(GREP)| xargs cat |grep ' #PT' |\
         awk '{ print $$2,$$3,$$1 }' |sort | uniq -c 
 
-ALLLOGS=$(wildcard $(LASSY)/Test/*/job*/log* */job*/log*)
+ALLMWU=$(wildcard $(LASSY)/Test/*/mwu */mwu)
 
-## lemma/postag analysis of all mwu in current tests
-test.mwu: $(ALLLOGS)
-ifeq ($(strip $(ALLLOGS)),)
-	@echo "test.mwu: no log files"
+## lemma/postag analysis of all mwu in all suites
+test.mwu: $(ALLMWU)
+ifeq ($(strip $(ALLMWU)),)
+	@echo "test.mwu: no mwu files"
 	cat >test.mwu
 else
-	cat $(ALLLOGS) | grep '^MWU#' | sed -e 's/MWU#//' | sort | uniq -c > test.mwu0
+	cat $(ALLMWU) | grep '^MWU#' | sed -e 's/MWU#//' | sort | uniq -c > test.mwu0
 	paste <(cut -c9- test.mwu0) <(cut -c-8 test.mwu0) | awk '{print $$0,"TEST"}' > test.mwu
 endif
 
@@ -309,7 +311,7 @@ TREEBANK_MWU=../Treebank/FREQ/mwu-tagged.freq
 
 ## find differences in poslemma/tag of mwu between current tests and treebank
 compare.mwu: test.mwu $(TREEBANK_MWU)
-	cat test.mwu <( paste <(cut -c9- $(TREEBANK_MWU))\
+	@cat test.mwu <( paste <(cut -c9- $(TREEBANK_MWU))\
                               <(cut -c-8 $(TREEBANK_MWU))  |\
         awk '{ print $$0,"TREE" }' ) |\
         tr '\t' '|' |\

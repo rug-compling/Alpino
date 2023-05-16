@@ -155,7 +155,7 @@ longs: cdb.testN PPH.testN PPI.testN dpc-ind.testN dpc-rou.testN wpspel.testN La
 SCORES=$(sort $(wildcard */*/bests))
 bf:
 ifeq ($(strip $(SCORES)),)
-	@echo "cf: nothing to do"
+	@echo "bf: nothing to do"
 else
 	@echo "        BEST-CA          #PARSES        SUITE"
 	@echo "      NEW     OLD      NEW      OLD"
