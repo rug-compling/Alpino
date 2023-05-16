@@ -1850,6 +1850,10 @@ skip_word('&virtpunt;').
 skip_word('**').
 skip_word('***').
 skip_word('****').
+skip_word(Atom) :-   %html codes
+    atom(Atom),
+    atom_concat('<',Rest,Atom),
+    atom_concat(_,'>',Rest).
 skip_word(Atom) :-      % ignore mis-tokenized stuff in brackets
     atom(Atom),
     atom_concat('(',_,Atom),
