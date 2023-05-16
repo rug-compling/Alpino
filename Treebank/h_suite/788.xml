@@ -7,7 +7,7 @@
       <node begin="1" end="2" id="4" lemma="schieten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="schiet" word="schoot" wvorm="pv"/>
       <node begin="2" end="3" getal="ev" id="5" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" root="mij" status="vol" vwtype="pr" word="mij"/>
       <node begin="3" cat="mwu" end="5" id="6" rel="svp">
-        <node begin="3" end="4" id="7" lemma="te" pos="fixed" postag="BW()" pt="bw" rel="mwp" root="te" word="te"/>
+        <node begin="3" end="4" id="7" lemma="te" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="te" vztype="init" word="te"/>
         <node begin="4" end="5" id="8" lemma="binnen" pos="fixed" postag="VZ(fin)" pt="vz" rel="mwp" root="binnen" vztype="fin" word="binnen"/>
       </node>
       <node begin="6" cat="cp" end="9" id="9" rel="su">

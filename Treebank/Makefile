@@ -141,18 +141,16 @@ poslemma: $(DIRECTORIES:%=POSLEMMA/%.poslemma)
 
 gitversion=$(shell git log --oneline | wc -l)
 
-tars:
-	for dir in $(DIRECTORIES); do make tar dir=$$dir; done
+tars: $(DIRECTORIES:%=%.tar)
 
-tars-install:
-	for dir in $(DIRECTORIES); do make tar-install dir=$$dir; done
+tars-install: $(DIRECTORIES:%=%.tar-install)
 
-tar:
-	( cd Enhanced ; tar czf $(dir)-$(gitversion).tar.gz $(dir) )
+%.tar:Enhanced/%
+	( cd Enhanced ; tar czf $*-$(gitversion).tar.gz $* )
 
-tar-install: 
-	mv Enhanced/$(dir)-$(gitversion).tar.gz ~/public_html/treebanks/
-	( cd ~/public_html/treebanks; rm -f $(dir).tar.gz; ln -s $(dir)-$(gitversion).tar.gz $(dir).tar.gz )
+%.tar-install:Enhanced/%
+	mv Enhanced/$*-$(gitversion).tar.gz ~/public_html/treebanks/
+	( cd ~/public_html/treebanks; rm -f $*.tar.gz; ln -s $*-$(gitversion).tar.gz $*.tar.gz )
 
 dtchecks:
 	touch .dtchecks2
@@ -246,7 +244,7 @@ FREQ/LEMMA.freq: $(TMPDATA)
 	cut -f2  $(TMPDATA) | sort | uniq -c | sort -nr > FREQ/LEMMA.freq 
 
 FREQ/RLEMMA.freq: $(TMPDATA)
-	grep -v -e 'SPEC(vreemd)' -e 'SPEC(deeleigen)' -e 'SPEC(afgebr)' $(TMPDATA) | cut -f2 | sort | uniq > FREQ/RLEMMA.freq 
+	grep -v -e 'SPEC(vreemd)' -e 'SPEC(deeleigen)' -e 'SPEC(afgebr)' -e 'SPEC(symb)' $(TMPDATA) | cut -f2 | sort | uniq > FREQ/RLEMMA.freq 
 
 FREQ/WORD-POS.freq: $(TMPDATA)
 	cut -f1,3  $(TMPDATA) | sort | uniq -c | sort -nr > FREQ/WORD-POS.freq 

@@ -1391,8 +1391,11 @@ foreign_word(angel).
 foreign_word(angels).
 foreign_word(ans).
 foreign_word(après).
+foreign_word(application).
+foreign_word(applications).
 foreign_word(are).
 foreign_word(arms).
+foreign_word(army).
 foreign_word(art).
 foreign_word(artist).
 foreign_word(artists).
@@ -1430,6 +1433,7 @@ foreign_word(been).
 foreign_word(bei).
 foreign_word(belief).
 foreign_word(best).
+foreign_word(beta).
 foreign_word(bête).
 foreign_word(bêtes).
 foreign_word(big).
@@ -1447,9 +1451,9 @@ foreign_word(bonbons).
 foreign_word(booming).
 foreign_word(born).
 foreign_word(bottle).
+foreign_word(box).
 foreign_word(boy).
 foreign_word(boys).
-foreign_word(box).
 foreign_word(brand).
 foreign_word(break).
 foreign_word(breeds).
@@ -1526,6 +1530,7 @@ foreign_word(dein).
 foreign_word(del).
 foreign_word(della).
 foreign_word(dem).
+foreign_word(demand).
 foreign_word(den).
 foreign_word(der).
 foreign_word(des).
@@ -1563,6 +1568,7 @@ foreign_word(einem).
 foreign_word(einen).
 foreign_word(el).
 foreign_word(elle).
+foreign_word(empire).
 foreign_word(encore).
 foreign_word(end).
 foreign_word(english).
@@ -1584,6 +1590,7 @@ foreign_word(factor).
 foreign_word(fair).
 foreign_word(fait).
 foreign_word(family).
+foreign_word(fancy).
 foreign_word(father).
 foreign_word(favor).
 foreign_word(favour).
@@ -1621,6 +1628,7 @@ foreign_word(games).
 foreign_word(gap).
 foreign_word(gegen).
 foreign_word(gendarme).
+foreign_word(general).
 foreign_word(générale).
 foreign_word(gens).
 foreign_word(gentlemen).
@@ -1634,8 +1642,10 @@ foreign_word(goals).
 foreign_word(goes).
 foreign_word(gold).
 foreign_word(golden).
+foreign_word(gone).
 foreign_word(good).
 foreign_word(got).
+foreign_word(grand).
 foreign_word(gum).
 foreign_word(gun).
 foreign_word(gut).
@@ -1683,6 +1693,7 @@ foreign_word(il).
 foreign_word(im).
 foreign_word(in).
 foreign_word(indeed).
+foreign_word(independent).
 foreign_word(input).
 foreign_word(instant).
 foreign_word(into).
@@ -1696,9 +1707,11 @@ foreign_word('it\'s').
 foreign_word(jazz).
 foreign_word(je).
 foreign_word(joint).
+foreign_word(journal).
 foreign_word(jus).
 foreign_word(just).
 foreign_word(kick).
+foreign_word(kid).
 foreign_word(killer).
 foreign_word(know).
 foreign_word('l\'amour').
@@ -1762,6 +1775,7 @@ foreign_word(même).
 foreign_word(mich).
 foreign_word(military).
 foreign_word(mind).
+foreign_word(missing).
 foreign_word(mit).
 foreign_word(mode).
 foreign_word(model).
@@ -1778,6 +1792,7 @@ foreign_word(my).
 foreign_word(myself).
 foreign_word(naõ).
 foreign_word(name).
+foreign_word(national).
 foreign_word(ne).
 foreign_word('n\'est').
 foreign_word(never).
@@ -1788,6 +1803,8 @@ foreign_word(night).
 foreign_word(no).
 foreign_word(node).
 foreign_word(non).
+foreign_word(north).
+foreign_word(northern).
 foreign_word(not).
 foreign_word(nothing).
 foreign_word(nous).
@@ -1847,6 +1864,7 @@ foreign_word(por).
 foreign_word(pour).
 foreign_word(power).
 foreign_word(principale).
+foreign_word(private).
 foreign_word(producer).
 foreign_word(product).
 foreign_word(professional).
@@ -1871,6 +1889,7 @@ foreign_word(red).
 foreign_word(relaxed).
 foreign_word(release).
 foreign_word(releases).
+foreign_word(report).
 foreign_word(république).
 foreign_word(research).
 foreign_word(return).
@@ -1891,6 +1910,7 @@ foreign_word(safe).
 foreign_word(said).
 foreign_word(sans).
 foreign_word(say).
+foreign_word(science).
 foreign_word(screen).
 foreign_word(scroll).
 foreign_word(se).
@@ -1915,6 +1935,7 @@ foreign_word(show).
 foreign_word(shows).
 foreign_word(showroom).
 foreign_word(si).
+foreign_word(sign).
 foreign_word(sleazy).
 foreign_word(sleep).
 foreign_word(slip).
@@ -1922,6 +1943,7 @@ foreign_word(small).
 foreign_word(smart).
 foreign_word(smog).
 foreign_word(so).
+foreign_word(society).
 foreign_word(soft).
 foreign_word(software).
 foreign_word(sold).
@@ -1936,6 +1958,8 @@ foreign_word(songs).
 foreign_word(sont).
 foreign_word(sorry).
 foreign_word(sound).
+foreign_word(south).
+foreign_word(southern).
 foreign_word(space).
 foreign_word(speak).
 foreign_word(special).
@@ -1955,6 +1979,8 @@ foreign_word(stop).
 foreign_word(story).
 foreign_word(strategic).
 foreign_word(stream).
+foreign_word(strike).
+foreign_word(strikes).
 foreign_word(stupid).
 foreign_word(subtitles).
 foreign_word(such).
@@ -1962,6 +1988,7 @@ foreign_word(suis).
 foreign_word(sum).
 foreign_word(sur).
 foreign_word(sustainable).
+foreign_word(table).
 foreign_word(task).
 foreign_word(team).
 foreign_word(tempo).
@@ -1970,7 +1997,9 @@ foreign_word(takes).
 foreign_word(tango).
 foreign_word(tér).		% Hongaarse straat?
 foreign_word(technical).
+foreign_word(teens).
 foreign_word(terre).
+foreign_word(terror).
 foreign_word(test).
 foreign_word(than).
 foreign_word(that).
@@ -2016,10 +2045,13 @@ foreign_word(up).
 foreign_word(upgrade).
 foreign_word(urban).
 foreign_word(us).
+foreign_word(valley).
 foreign_word(value).
 foreign_word(values).
 foreign_word(vers).
 foreign_word(very).
+foreign_word(veux).
+foreign_word(vice).
 foreign_word(vie).
 foreign_word(vieux).
 foreign_word(ville).
@@ -2595,7 +2627,7 @@ name_koning('Schout').
 
 guess_number(W) :-
     \+ wikipedia_list(W),
-    \+ alpino_lexical_analysis:hesitation(W),
+    \+ alpino_lexical_analysis:skip_word(W),
     atom(W),
     atom_codes(W,Codes),
     guess_number_(Codes).
@@ -2948,7 +2980,9 @@ open_class_tag_or_name(non_final,proper_name(_,_)).
 open_class_tag_or_name(non_final,Tag) :-
     non_final_open_class_tag(Tag).
 
-non_final_open_class_tag(nominalized_adjective).  % daklozendiner dodendans dodentrein
+non_final_open_class_tag(nominalized_adjective).     % daklozendiner dodendans dodentrein
+non_final_open_class_tag(ge_nominalized_adjective).  % gehuwden-pensioen
+non_final_open_class_tag(end_nominalized_adjective). % belanghebbenden-overzicht
 non_final_open_class_tag(verb(_,sg1,_)).
 non_final_open_class_tag(number(hoofd(pl_num))).
 non_final_open_class_tag(noun(_,_,_)).
@@ -5174,7 +5208,7 @@ potential_name_fsa_not_begin(unknown,P0,[Word|Words],Ws,[Word|Prefix],
     P1 is P0 + 1,
     (   name_unknown(Word,P0),
         potential_name_fsa(23,P1,Words,Ws,Prefix,His)
-    ;   \+ alpino_lexical_analysis:hesitation(Word),
+    ;   \+ alpino_lexical_analysis:skip_word(Word),
 	potential_name_fsa(2,P1,Words,Ws,Prefix,His)
     ).
 potential_name_fsa_not_begin(unknown,P0,['\'s',Word|Words],Ws,
@@ -5835,7 +5869,7 @@ name_unknown(Word,P0) :-
          His \= normal('Adj-s')
        ),
     \+ wikipedia_list(Word),
-    \+ alpino_lexical_analysis:hesitation(Word),
+    \+ alpino_lexical_analysis:skip_word(Word),
     \+ name_vanhet(Word),
     \+ name_and(Word),
     \+ name_title(Word),

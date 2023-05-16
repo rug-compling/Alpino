@@ -310,6 +310,9 @@ adj(_):-fail.
 %%
 %%% Liege
 %% gebaat zij
+%%
+%% niet- en niet_
+%% non- en non_
 
 surf_lemma(W,'ADJ(prenom,basis,met-e,stan)','WW(od,prenom,met-e)',_,L):-
     ende(W,_,L).
@@ -335,6 +338,9 @@ surf_lemma(W,_,'WW(od,nom,met-e,mv-n)',_,L) :-
 surf_lemma(W,_,'WW(vd,nom,met-e,mv-n)',_,L) :-
     gen(W,L).
 
+surf_lemma(X,_,'SPEC(symb)',_,X) :-
+    symb(X).
+
 ende(_,_,_) :-
     fail.
 
@@ -347,9 +353,9 @@ enden(_,_) :-
 gen(_,_) :-
     fail.
 
-surf_lemma(X,_,'SPEC(symb)',_,X) :-
-    symb(X).
-
 symb(_) :-
     fail.
+
+%% pilot
+
 

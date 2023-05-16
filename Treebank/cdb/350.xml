@@ -5,7 +5,7 @@
     <node begin="0" cat="smain" end="25" id="2" rel="--">
       <node begin="0" cat="ppart" end="3" id="3" rel="mod">
         <node begin="0" cat="np" end="2" id="4" rel="obj1">
-          <node begin="0" buiging="met-e" end="1" graad="basis" id="5" lemma="onvoorzien" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="onvoorziene" word="Onvoorziene"/>
+          <node begin="0" buiging="met-e" end="1" id="5" lemma="on_voorzien" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="onvoorziene" word="Onvoorziene" wvorm="vd"/>
           <node begin="1" end="2" getal="mv" graad="basis" id="6" lemma="omstandigheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="omstandigheid" word="omstandigheden"/>
         </node>
         <node begin="2" buiging="zonder" end="3" id="7" lemma="voor_behouden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voorbehouden" word="voorbehouden" wvorm="vd"/>

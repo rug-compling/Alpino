@@ -332,6 +332,7 @@ mwu_postag('Energie Prestatie Coëfficiënt',['N(soort,ev,basis,zijd,stan)','N(s
 mwu_postag('Energie Prestatie Norm',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)'],[energie,prestatie,norm]).
 mwu_postag('en ga zo maar door',['VG(neven)','WW(pv,tgw,ev)','BW()','BW()','VZ(fin)'],[en,gaan,zo,maar,door]).
 mwu_postag('en of',['VG(neven)','VG(neven)'],[en,of]).
+mwu_postag('en / of',['VG(neven)','LET()','VG(neven)'],[en,'/',of]).
 mwu_postag('en wat dies meer zij',['VG(neven)','VNW(vb,pron,stan,vol,3o,ev)','VNW(aanw,pron,gen,vol,3o,ev)','VNW(onbep,grad,stan,vrij,zonder,comp)','WW(pv,conj,ev)'],[en,wat,die,veel,zijn]).
 mwu_postag('en zo meer',['VG(neven)','BW()','VNW(onbep,grad,stan,vrij,zonder,comp)'],[en,zo,veel]).
 mwu_postag('Epilepsie Infolijn',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)'],[epilepsie,'Infolijn']).
@@ -547,16 +548,20 @@ mwu_postag('in gebreke',['VZ(init)','N(soort,ev,basis,dat)'],[in,gebrek]).
 mwu_postag('in gebruik',['VZ(init)','N(soort,ev,basis,onz,stan)'],[in,gebruik]).
 mwu_postag('in geval van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[in,geval,van]).
 mwu_postag('in goeie doen',['VZ(init)','ADJ(prenom,basis,met-e,stan)','WW(inf,nom,zonder,zonder-n)'],[in,goed,doen]).
+mwu_postag('in godsnaam',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,god_naam]).
+mwu_postag('in Godsnaam',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,'God_naam']).
 mwu_postag('in groten getale',['VZ(init)','ADJ(prenom,basis,met-e,bijz)','N(soort,ev,basis,dat)'],[in,groot,getal]).
 mwu_postag('in het geheel',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[in,het,geheel]).
 mwu_postag('in het geval',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[in,het,geval]).
 mwu_postag('in het geweer',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[in,het,geweer]).
 mwu_postag('in het kader van',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(init)'],[in,het,kader,van]).
 mwu_postag('in het licht van',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(init)'],[in,het,licht,van]).
+mwu_postag('in het onzekere',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,met-e,zonder-n,stan)'],[in,het,onzeker]).
 mwu_postag('in het oog',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[in,het,oog]).
 mwu_postag('in het spel',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[in,het,spel]).
 mwu_postag('in het teken',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[in,het,teken]).
 mwu_postag('in het wilde weg',['VZ(init)','LID(bep,stan,evon)','ADJ(prenom,basis,met-e,stan)','BW()'],[in,het,wild,weg]).
+mwu_postag('in het zadel',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[in,het,zadel]).
 mwu_postag('in kaart',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,kaart]).
 mwu_postag('in lang',['VZ(init)','ADJ(vrij,basis,zonder)'],[in,lang]).
 mwu_postag('in levende lijve',['VZ(init)','WW(od,prenom,met-e)','N(soort,ev,basis,dat)'],[in,leven,lijf]).
@@ -570,7 +575,6 @@ mwu_postag('in opdracht van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)
 mwu_postag('in plaats van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,plaats,van]).
 mwu_postag('in ruil voor',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,ruil,voor]).
 mwu_postag('in samenwerking met',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,samenwerking,met]).
-mwu_postag('in spe',['VZ(init)','SPEC(vreemd)'],[in,spe]).
 mwu_postag('in staat',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,staat]).
 mwu_postag('in strijd',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,strijd]).
 mwu_postag('in weerwil van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,weerwil,van]).
@@ -820,6 +824,7 @@ mwu_postag('onder stoelen of banken',['VZ(init)','N(soort,mv,basis)','VG(neven)'
 mwu_postag('onder voorzitterschap van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[onder,voorzitterschap,van]).
 mwu_postag('Onderwijs , Cultuur en Wetenschappen',['N(soort,ev,basis,onz,stan)','LET()','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,mv,basis)'],[onderwijs,',',cultuur,en,wetenschap]).
 mwu_postag('Onderwijs Cultuur en Wetenschappen',['N(soort,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,mv,basis)'],[onderwijs,cultuur,en,wetenschap]).
+mwu_postag('ons inziens',['VNW(bez,det,stan,vol,1,mv,prenom,zonder,evmo)','N(soort,ev,basis,gen)'],[ons,in_zien]).
 mwu_postag('oog in oog',['N(soort,ev,basis,onz,stan)','VZ(init)','N(soort,ev,basis,onz,stan)'],[oog,in,oog]).
 mwu_postag('ook maar',['BW()','BW()'],[ook,maar]).
 mwu_postag('op andere gedachten',['VZ(init)','ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[op,ander,gedachte]).
@@ -990,6 +995,7 @@ mwu_postag('\'s zomers',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,zomer]
 mwu_postag('\'s anderendaags',['LID(bep,gen,evmo)','BW()'],[de,anderendaags]).
 mwu_postag('Tante Sidonia',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)'],[tante,'Sidonia']).
 mwu_postag('te allen tijde',['VZ(init)','VNW(onbep,det,dat,prenom,met-e,evmo)','N(soort,ev,basis,dat)'],[te,al,tijd]).
+mwu_postag('te berde',['VZ(init)','N(soort,ev,basis,dat)'],[te,berde]).
 mwu_postag('te boven',['VZ(init)','VZ(fin)'],[te,boven]).
 mwu_postag('te buiten',['VZ(init)','VZ(fin)'],[te,buiten]).
 mwu_postag('te gast',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,gast]).
@@ -1295,7 +1301,7 @@ mwu_postag('zich zelf',['VNW(refl,pron,obl,red,3,getal)','BW()'],[zich,zelf]).
 mwu_postag('zij het',['WW(pv,conj,ev)','VNW(pers,pron,stan,red,3,ev,onz)'],[zijn,het]).
 mwu_postag('Zijne Koninklijke Hoogheid',['VNW(bez,det,stan,vol,3m,ev,prenom,met-e,rest)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[zijn,koninklijk,hoogheid]).
 mwu_postag('Zijne Koninklijke en Keizerlijke Hoogheid',['VNW(bez,det,stan,vol,3m,ev,prenom,met-e,rest)','ADJ(prenom,basis,met-e,stan)','VG(neven)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[zijn,koninklijk,en,keizerlijk,hoogheid]).
-mwu_postag('zijns inziens',['VNW(pers,pron,gen,vol,3m,ev)','N(soort,ev,basis,gen)'],[zijn,in_zien]).
+mwu_postag('zijns inziens',['VNW(bez,det,gen,vol,3,ev,prenom,zonder,evmo)','N(soort,ev,basis,gen)'],[zijn,in_zien]).
 mwu_postag('zo af en toe',['BW()','VG(fin)','VG(neven)','VG(fin)'],[zo,af,en,toe]).
 mwu_postag('zo gauw',['BW()','ADJ(vrij,basis,zonder)'],[zo,gauw]).
 mwu_postag('zo ja',['BW()','TSW()'],[zo,ja]).
