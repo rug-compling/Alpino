@@ -229,6 +229,16 @@ history_tags(decap(X),Q0,Q,Stem,Surf,Frame,Result) -->
 history_tags(normal(X),Q0,Q,Stem,Surf,Frame,Result) -->
     history_tags(X,Q0,Q,Stem,Surf,Frame,Result).
 
+history_tags('-heid',Q0,Q,Stem,_,_,_) -->
+    {  Q is Q0 + 1 },
+    !,
+    [cgn_postag(Q0,Q,Stem,'N(soort,ev,basis,zijd,stan)')].      % and never N(eigen
+
+history_tags('-heden',Q0,Q,Stem,_,_,_) -->
+    {  Q is Q0 + 1 },
+    !,
+    [cgn_postag(Q0,Q,Stem,'N(soort,mv,basis)')].      % and never N(eigen
+
 history_tags(variant(ignore_internal_brackets,normal),Q0,Q,_,Surf,_,_) -->
     {  Q is Q0 + 1 },
     !,
@@ -390,9 +400,23 @@ history_tags(quoted_name(_,_),Q0,Q,_,Surf,Frame,_) -->
     },
     guess_tag_list(Words,Frame,Q0,Q).
 
-history_tags(enumeration,Q0,Q,Stem,_,_,_) -->
+history_tags(enumeration,Q0,Q,Stem0,_,_,_) -->
     { 1 is Q-Q0,
-      is_a_number(Stem)
+      is_a_number(Stem0,Stem)
+    }, 
+    !,
+    [ cgn_postag(Q0,Q,Stem,'TW(hoofd,vrij)') ].
+
+history_tags(skip,Q0,Q,Stem0,_,_,_) -->
+    { 1 is Q-Q0,
+      is_a_number(Stem0,Stem)
+    }, 
+    !,
+    [ cgn_postag(Q0,Q,Stem,'TW(hoofd,vrij)') ].
+
+history_tags(bracketed_year,Q0,Q,Stem0,_,_,_) -->
+    { 1 is Q-Q0,
+      is_a_number(Stem0,Stem)
     }, 
     !,
     [ cgn_postag(Q0,Q,Stem,'TW(hoofd,vrij)') ].
@@ -598,6 +622,13 @@ guess_lex(Q0,Q,Frame0,Surf,Stem) -->
        \+ Frame = Frame0
     },
     cgn_postag(Frame,Stem,Surf,Q0,Q,no,His),
+    !.
+guess_lex(Q0,Q,_,Surf,Stem) -->
+    {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Surf,_,Frame1),
+       frame_map(Frame1,Stem,Frame),
+       cgn_postag_c(Frame,POS)
+       },
+    [ cgn_postag(Q0,Q,Stem,POS) ],
     !.
 guess_lex(Q0,Q,Frame0,Surf,Stem) -->
     {  frequent_copy_tag(Q0,Q,Stem,Surf,Frame1),
@@ -1399,8 +1430,10 @@ exceptional_stem_tag(bijster,_,                                     'BW()').
 exceptional_stem_tag(binnen,loc_adverb,                             'VZ(fin)').
 exceptional_stem_tag(blauw, noun(het,mass,sg),                      'ADJ(nom,basis,zonder,zonder-n)').
 exceptional_stem_tag(boven,loc_adverb,                              'VZ(fin)').
+exceptional_stem_tag(bovendien,_,                                   'BW()').
 exceptional_stem_tag(bovengronds,pp(_),                             'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(buiten,loc_adverb,                             'VZ(fin)').
+exceptional_stem_tag(dag,tag,                                       'N(soort,ev,basis,zijd,stan)').
 exceptional_stem_tag(daarom, _,                                     'BW()').
 exceptional_stem_tag(datgeen,_,                                     'VNW(aanw,det,stan,nom,met-e,zonder-n)').
 exceptional_stem_tag(degeen,pronoun(nwh,thi,sg,de,both,def,strpro), 'VNW(aanw,det,stan,nom,met-e,zonder-n)').
@@ -1431,6 +1464,7 @@ exceptional_stem_tag(elk,predm_adverb,                              'VNW(onbep,d
 exceptional_stem_tag(elkaar,pronoun(nwh,thi,pl,de,dat_acc,def),     'VNW(recip,pron,obl,vol,persoon,mv)').
 exceptional_stem_tag(elkaar,determiner(pron),                       'VNW(recip,pron,gen,vol,persoon,mv)').
 exceptional_stem_tag(elkander,determiner(pron),                     'VNW(recip,pron,gen,vol,persoon,mv)').
+exceptional_stem_tag('en/of',_,                                     'SPEC(enof)').
 exceptional_stem_tag(enkel,nominalized_adjective,                   'VNW(onbep,det,stan,nom,met-e,mv-n)').
 exceptional_stem_tag(ergens,_,                                      'VNW(onbep,adv-pron,obl,vol,3o,getal)').
 exceptional_stem_tag(even,adjective(both(tmpadv)),                  'BW()').
@@ -1446,6 +1480,7 @@ exceptional_stem_tag(genoeg, _,                                     'BW()').
 exceptional_stem_tag(ggg,_,                                         'SPEC(onverst)').
 exceptional_stem_tag(geleden,_,                                     'BW()').
 exceptional_stem_tag(gelukkig,tag,                                  'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag('God',tag,                                     'N(eigen,ev,basis,zijd,stan)').
 exceptional_stem_tag(god,determiner(pron),                          'N(soort,ev,basis,gen)').
 exceptional_stem_tag('God',determiner(pron),                        'N(eigen,ev,basis,gen)').
 exceptional_stem_tag(god,pronoun(nwh,thi,sg,de,gen,def),            'N(soort,ev,basis,gen)').
@@ -1462,16 +1497,18 @@ exceptional_stem_tag(hem,pronoun(nwh,thi,sg,de,dat_acc,def,wkpro),  'VNW(pers,pr
 exceptional_stem_tag(hemzelf,_,                                     'VNW(pers,pron,obl,nadr,3m,ev,masc)').
 exceptional_stem_tag(henzelf,_,                                     'VNW(pers,pron,obl,nadr,3p,mv)').
 exceptional_stem_tag(hetzelfde,sentence_adverb,                     'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(hier,_,                                        'VNW(aanw,adv-pron,obl,vol,3o,getal)').
 exceptional_stem_tag(hij,pronoun(nwh,thi,sg,de,nom,def),            'VNW(pers,pron,nomin,vol,3,ev,masc)').
 exceptional_stem_tag(hij,pronoun(nwh,thi,sg,de,nom,def,wkpro),      'VNW(pers,pron,nomin,red,3,ev,masc)').
 exceptional_stem_tag(hijzelf,_,                                     'VNW(pers,pron,nomin,nadr,3m,ev,masc)').
+exceptional_stem_tag(hoewel,_,                                      'VG(onder)').
 exceptional_stem_tag(honderd_duizend,noun(de,count,pl),             'TW(hoofd,nom,mv-n,basis)').
 exceptional_stem_tag(honderd,noun(de,count,pl),                     'TW(hoofd,nom,mv-n,basis)').
 exceptional_stem_tag(hoogst,intensifier,                            'BW()').
 exceptional_stem_tag(hopelijk,vandaar_adverb,                       'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(hun,determiner(pron),                          'VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)').
 exceptional_stem_tag(ieder,predm_adverb,                            'VNW(onbep,det,stan,vrij,zonder)').
-exceptional_stem_tag(ieder,determiner(pron),                       'VNW(onbep,pron,gen,vol,3p,ev)').
+exceptional_stem_tag(ieder,determiner(pron),                        'VNW(onbep,pron,gen,vol,3p,ev)').
 exceptional_stem_tag(iemand,determiner(pron),                       'VNW(onbep,pron,gen,vol,3p,ev)').
 exceptional_stem_tag(iemand,_,                                      'VNW(onbep,pron,stan,vol,3p,ev)').
 exceptional_stem_tag(iets,_,                                        'VNW(onbep,pron,stan,vol,3o,ev)').
@@ -1524,6 +1561,7 @@ exceptional_stem_tag(niemand,_,                                     'VNW(onbep,p
 exceptional_stem_tag(niemands,determiner(pron),                     'VNW(onbep,pron,gen,vol,3p,ev)').
 exceptional_stem_tag(niets,_,                                       'VNW(onbep,pron,stan,vol,3o,ev)').
 exceptional_stem_tag(niks,_,                                        'VNW(onbep,pron,stan,vol,3o,ev)').
+exceptional_stem_tag(nogmaals,_,                                    'BW()').
 exceptional_stem_tag(nou,tag,                                       'BW()').
 exceptional_stem_tag(nu,tag,                                        'BW()').
 exceptional_stem_tag(nummer,noun(both,count,sg),                    'N(soort,ev,basis,onz,stan)').
@@ -1544,6 +1582,7 @@ exceptional_stem_tag(openbaar,noun(het,mass,sg),                    'ADJ(nom,bas
 exceptional_stem_tag(overal,_,                                      'VNW(onbep,adv-pron,obl,vol,3o,getal)').
 exceptional_stem_tag(overeenkomstig,preposition(_,_),               'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(overstag,_,                                    'BW()').
+exceptional_stem_tag(papa,_,                                        'N(soort,ev,basis,zijd,stan)').
 exceptional_stem_tag(respectievelijk,conj(_),                       'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(respectievelijk,left_conj(_),                  'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(reuze,_,                                       'BW()').
@@ -1554,6 +1593,7 @@ exceptional_stem_tag(samen,_,                                       'BW()').
 exceptional_stem_tag(sinds,complementizer,                          'VZ(init)').
 exceptional_stem_tag(land,determiner(pron),                         'N(soort,ev,basis,gen)').
 exceptional_stem_tag(schuldig,np_adjective,                         'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(shit,tag,                                      'N(soort,ev,basis,zijd,stan)').
 exceptional_stem_tag(sommig,nominalized_adjective,                  'VNW(onbep,det,stan,nom,met-e,mv-n)').
 exceptional_stem_tag(streven,noun(sg,_,het),                        'WW(inf,nom,zonder,zonder-n)').
 exceptional_stem_tag(tal,determiner(wat,nwh,mod,pro,yparg),         'N(soort,ev,basis,onz,stan)').
@@ -1592,6 +1632,7 @@ exceptional_stem_tag(waard,subject_sbar_pred_np_adjective,          'ADJ(vrij,ba
 exceptional_stem_tag(waard,subject_vp_pred_np_adjective,            'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(wat,adverb,                                    'VNW(onbep,pron,stan,vol,3o,ev)').
 exceptional_stem_tag(watte,pronoun(ywh,thi,sg,het,both,indef,nparg),'VNW(vrag,pron,stan,nadr,3o,ev)').
+exceptional_stem_tag(wel,tag,                                       'BW()').
 exceptional_stem_tag(welletjes,_,                                   'BW()').
 exceptional_stem_tag(wereld,determiner(pron),                       'N(soort,ev,basis,gen)').
 exceptional_stem_tag(wit,determiner(pron),                          'N(soort,ev,basis,gen)').
@@ -1604,6 +1645,7 @@ exceptional_stem_tag(zeggen,tag,                                    'WW(pv,tgw,e
 exceptional_stem_tag(zichzelf,_,                                    'VNW(refl,pron,obl,nadr,3,getal)').
 exceptional_stem_tag(zijn,determiner(pron),                         'VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)').
 exceptional_stem_tag(zijn,preposition(zijnde,[]),                   'WW(od,vrij,zonder)').
+exceptional_stem_tag('zijn/haar',_,                                 'SPEC(enof)').
 exceptional_stem_tag(zijzelf,_,                                     'VNW(pers,pron,nomin,nadr,3v,ev,fem)').
 exceptional_stem_tag(zo,_,                                          'BW()').
 exceptional_stem_tag('zo\'n',_,                                     'VNW(aanw,det,stan,prenom,zonder,agr)').
@@ -1665,7 +1707,19 @@ exceptional_stem_tag(Num,tag,'SPEC(symb)') :-
     atom_codes(Num,[C|_]),
     hdrug_util:between(49,57,C).
 
+exceptional_stem_tag(Atom,_,'SPEC(enof)') :-
+    atom(Atom),
+    enof_sub(Sub),
+    sub_atom(Atom,_,_,_,Sub).
 
+enof_sub('(s)').
+enof_sub('(en)').
+enof_sub('(je)').
+enof_sub('(in)').
+enof_sub('(her)').
+enof_sub('(deel)').
+enof_sub('(her)').
+enof_sub('(tje)').
 
 %  exceptional_word_tag(meer,adjective(meer),'VNW(onbep,grad,stan,vrij,zonder,comp)').
 
@@ -3933,18 +3987,25 @@ frame_map_(meas_mod_noun(A,B,C,_),_,           noun(A,B,C)).
 
 enof_lemma(hij_zij).
 
+vreemd_lemma(ad).
 vreemd_lemma(alfa).
+vreemd_lemma(banker).
+vreemd_lemma(bankers).
 vreemd_lemma(bèta).
+vreemd_lemma(binge).
 vreemd_lemma(bölke).
 vreemd_lemma(bölkes).
 vreemd_lemma(bölkje).
 vreemd_lemma(capita).
 vreemd_lemma(consolatio).
+vreemd_lemma(corporate).
 vreemd_lemma('cross-country').
 vreemd_lemma('cross-over').
+vreemd_lemma(design).
 vreemd_lemma('Development').
 vreemd_lemma('English').
 vreemd_lemma(entarted).
+vreemd_lemma(erectus).
 vreemd_lemma(fancy).
 vreemd_lemma(fatwa).
 vreemd_lemma('high-performance').
@@ -3952,10 +4013,13 @@ vreemd_lemma(home).
 vreemd_lemma('Imbiss').
 vreemd_lemma(issue).
 vreemd_lemma('know-how').
+vreemd_lemma(lease).
 vreemd_lemma(licensee).
 vreemd_lemma(onsite).
 vreemd_lemma(passphrase).
 vreemd_lemma('pop-up').
+vreemd_lemma(sideletter).
+vreemd_lemma(sideletters).
 vreemd_lemma('Spartakusbund').
 vreemd_lemma(vice).
 vreemd_lemma(versa).
@@ -5961,9 +6025,14 @@ gen_name_parts([],['N(eigen,ev,basis,gen)']).
 gen_name_parts([_|T],['SPEC(deeleigen)'|PosList]) :-
     gen_name_parts(T,PosList).
 
-is_a_number(Atom) :-
+is_a_number(Atom,Stem) :-
+    atom(Atom),
+    atom_codes(Atom,[40,A,B,C,D,41]),
+    digits([A,B,C,D]),
+    atom_codes(Stem,[A,B,C,D]).
+is_a_number(Atom,Atom) :-
     alpino_lex:parse_number_simple(Atom).
-is_a_number(Atom) :-
+is_a_number(Atom,Atom) :-
     atom(Atom),
     atom_codes(Atom,Codes),
     alpino_lex:roman_number(Codes).
