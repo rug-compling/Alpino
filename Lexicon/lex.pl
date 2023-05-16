@@ -2909,6 +2909,8 @@ spelling_variant(ontvreemdden,ontvreemden).
 spelling_variant(opniew,      opnieuw).
 spelling_variant(oogste,      oogstte).
 spelling_variant(oogsten,     oogstten).
+spelling_variant(ornitoloog,  ornitholoog).
+spelling_variant(ornitologen, ornithologen).
 spelling_variant(overeenkomt, overeenkomst).
 spelling_variant(overgens,    overigens).
 spelling_variant(penitentiare,penitentiaire).

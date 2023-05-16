@@ -7818,6 +7818,7 @@ nominalized_adjective(onzalig,onzaligen).
 nominalized_adjective(orthodox,orthodoxen).
 nominalized_adjective(oud,ouden).
 nominalized_adjective(overig,overigen).
+nominalized_adjective(partijloos,partijlozen).
 nominalized_adjective(prominent,prominenten).
 nominalized_adjective(rampzalig,rampzaligen).
 nominalized_adjective(rap,rappen).

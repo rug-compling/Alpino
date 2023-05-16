@@ -11809,6 +11809,10 @@ a([ge_e(geconsulteerde),
 a([ge_e(geconsumeerde),
    ge_no_e(geconsumeerd)],adv,[],[]).
 
+a([stem(contamineren),
+   ge_e(gecontamineerde),
+   ge_no_e(gecontamineerd)],adv,[],[on]).
+
 a([ge_e(gecontinueerde),
    ge_no_e(gecontinueerd)],adv,[],[]).
 
@@ -15889,8 +15893,9 @@ a([ge_both(gesloten),
    ste(geslotenste)],adv,
   [pp(voor)],[]).
 
-a([e(gesluierde),
-   no_e(gesluierd)],padv,[],[]).
+a([stem(sluieren),
+   ge_e(gesluierde),
+   ge_no_e(gesluierd)],padv,[],[on]).
 
 a([ge_e(geslurpte),
    ge_no_e(geslurpt)],adv,[],[]).
@@ -26920,10 +26925,11 @@ a([e(onrustige),
    st(onrustigst),
    ste(onrustigste)],adv,[],[]).
 
-a([e(onsamenhangende),
+a([stem(on_samen_hangen),
+   ende(onsamenhangende),
    er(onsamenhangender),
    ere(onsamenhangendere),
-   no_e(onsamenhangend),
+   end(onsamenhangend),
    st(onsamenhangendst),
    ste(onsamenhangendste)],adv,[],[]).
 
@@ -27835,9 +27841,6 @@ a([e(onvolmaakte),
    st(onvolmaaktst),
    ste(onvolmaaktste)],nonadv,[],[]).
 
-a([e(onvoltooide),
-   no_e(onvoltooid)],nonadv,[],[]).
-
 a([both(onvolwassen)],adv,[],[]).
 
 a([ge_e(onvoorbereide),
@@ -28110,6 +28113,11 @@ a([e(oogverblindende),
    st(oogverblindendst),
    ste(oogverblindendste)],adv,[],[]).
 
+a([e(oorlogzuchtige),
+   no_e(oorlogzuchtig),
+   e(oorlogszuchtige),
+   no_e(oorlogszuchtig)],adv,[],[]).
+
 a([e(oorspronkelijke),
    er(oorspronkelijker),
    ere(oorspronkelijkere),
@@ -28149,9 +28157,7 @@ a([pred([op,de,hoogte])],padv,
    er_pp_sbar(van),
    object_sbar],[]).
 
-a([pred([op,handen])],nonadv,[],[]).
-
-a([pred(ophanden)],nonadv,[],[]).
+a([pred([op,handen]),pred(ophanden)],nonadv,[],[]).
 
 a([pred([op,dreef])],nonadv,[],[]).
 
@@ -38694,7 +38700,7 @@ a([e(voltallige),
 a([both(voltijds),e(voltijdse)],adv,[],[]).
 
 a([ge_e(voltooide),
-   ge_no_e(voltooid)],adv,[],[]).
+   ge_no_e(voltooid)],adv,[],[on]).
 
 a([ge_both(voltrokken)],adv,[],[]).
 
