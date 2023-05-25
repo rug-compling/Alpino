@@ -2921,6 +2921,8 @@ spelling_variant(permiteerden,permitteerden).
 spelling_variant(permiteert,  permitteert).
 spelling_variant(permiteren,  permitteren).
 spelling_variant(gepermiteerd,gepermitteerd).
+spelling_variant(pitbul,      pitbull).
+spelling_variant(pitbuls,     pitbulls).
 spelling_variant(plaatsvind,  plaatsvindt).
 spelling_variant(progamma,    programma).
 spelling_variant(profesioneel,professioneel).
@@ -2929,6 +2931,8 @@ spelling_variant(quite,       quitte).
 spelling_variant(rechtsstreeks,rechtstreeks).
 spelling_variant(rechtsstreekse,rechtstreekse).
 spelling_variant(registeren,  registreren).
+spelling_variant(rigoreus,    rigoureus).
+spelling_variant(rigoreuze,   rigoureuze).
 spelling_variant(schijft,     schrijft).
 spelling_variant(sierraad,    sieraad).
 spelling_variant(sinsdien,    sindsdien).

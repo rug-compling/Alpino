@@ -1106,7 +1106,6 @@ accent(poussecafe,poussecafé).
 accent(prairien,prairiën).
 accent(praktijktheorieen,praktijktheorieën).
 accent(preferentiele,preferentiële).
-accent(prehistorien,prehistoriën).
 accent(premiere,première).
 accent(premieres,premières).
 accent(pre,pré).
@@ -1125,6 +1124,10 @@ accent('prive-leven','privé-leven').
 accent(priveleven,privéleven).
 accent('prive-levens','privé-levens').
 accent(privelevens,privélevens).
+accent('prive-leventje','privé-leventje').
+accent(priveleventje,privéleventje).
+accent('prive-leventjes','privé-leventjes').
+accent(priveleventjes,privéleventjes).
 accent(prive,privé).
 accent(probleemsituatien,probleemsituatiën).
 accent(procede,procédé).
@@ -1135,6 +1138,8 @@ accent(proletarier,proletariër).
 accent(proletariers,proletariërs).
 accent(prostituee,prostituée).
 accent(prostituees,prostituées).
+accent(protege,protegé).
+accent(proteges,protegés).
 accent(protestactien,protestactiën).
 accent(protestaktien,protestaktiën).
 accent(provincien,provinciën).

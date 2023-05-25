@@ -29885,8 +29885,9 @@ a([e(pittoreske),
 a([e(plaatselijke),
    no_e(plaatselijk)],adv,[],[]).
 
-a([e(plaatsvervangende),
-   no_e(plaatsvervangend)],padv,[],[]).
+a([stem(plaats_vervangen),
+   ende(plaatsvervangende),
+   end(plaatsvervangend)],padv,[],[]).
 
 a([e(plagerige),
    er(plageriger),

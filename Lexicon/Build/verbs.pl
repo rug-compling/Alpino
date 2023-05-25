@@ -4310,6 +4310,7 @@ v(bom,bomt,bommen,gebomd,bomde,bomden,
 v(bombardeer,bombardeert,bombarderen,gebombardeerd,bombardeerde,bombardeerden,
     [h([ap_pred_np,
 	transitive,
+	part_transitive(plat),
 	intransitive,
 	np_pc_pp(met),
 	np_pc_pp(tot)])]).

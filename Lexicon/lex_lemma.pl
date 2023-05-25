@@ -10436,6 +10436,7 @@ lemma_root(plannen,plan) .
 lemma_root(planten,plant) .
 lemma_root(plassen,plas) .
 lemma_root(plat_bellen,bel_plat) .
+lemma_root(plat_bombarderen,bombardeer_plat) .
 lemma_root(plat_branden,brand_plat) .
 lemma_root(plat_drukken,druk_plat) .
 lemma_root(plat_leggen,leg_plat) .
