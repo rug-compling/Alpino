@@ -2984,6 +2984,7 @@ non_final_open_class_tag(nominalized_adjective).     % daklozendiner dodendans d
 non_final_open_class_tag(ge_nominalized_adjective).  % gehuwden-pensioen
 non_final_open_class_tag(end_nominalized_adjective). % belanghebbenden-overzicht
 non_final_open_class_tag(verb(_,sg1,_)).
+non_final_open_class_tag(verb(_,sg,_)).
 non_final_open_class_tag(number(hoofd(pl_num))).
 non_final_open_class_tag(noun(_,_,_)).
 non_final_open_class_tag(mod_noun(_,_,_)).
