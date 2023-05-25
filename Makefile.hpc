@@ -25,37 +25,8 @@ job:
    echo "#SBATCH --ntasks=1" ;\
    echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
    echo "#SBATCH --time=24:00:00" ;\
-   echo "#SBATCH --constraint=centos7" ;\
-   echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
-   echo "hostname -f " ;\
-   echo "echo $(suite) " ;\
-   echo "cd `pwd`";\
-   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) cdb_part=$(cdb_part)";\
-       ) | sbatch --job-name=$(suite)
-
-command:
-	(  \
-   echo "#!/bin/sh" ;\
-   echo "#SBATCH --nodes=1" ;\
-   echo "#SBATCH --ntasks=1" ;\
-   echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
-   echo "#SBATCH --time=24:00:00" ;\
-   echo "#SBATCH --constraint=centos7" ;\
-   echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
-   echo "hostname -f " ;\
-   echo "echo $(suite) " ;\
-   echo "cd `pwd`";\
-   echo "$(COMMAND)" ;\
-       ) | sbatch 
-
-longjob:
-	(  \
-   echo "#!/bin/sh" ;\
-   echo "#SBATCH --nodes=1" ;\
-   echo "#SBATCH --ntasks=1" ;\
-   echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
-   echo "#SBATCH --time=240:00:00" ;\
-   echo "#SBATCH --constraint=centos7" ;\
+   echo "module load Python/2.7.18-GCCcore-11.3.0-bare";\
+   echo "module load Boost/1.79.0-GCC-11.3.0";\
    echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
    echo "hostname -f " ;\
    echo "echo $(suite) " ;\
@@ -69,27 +40,14 @@ shortjob:
    echo "#SBATCH --nodes=1" ;\
    echo "#SBATCH --ntasks=1" ;\
    echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
-   echo "#SBATCH --constraint=centos7" ;\
+   echo "module load Python/2.7.18-GCCcore-11.3.0-bare";\
+   echo "module load Boost/1.79.0-GCC-11.3.0";\
    echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
    echo "hostname -f" ;\
    echo "echo $(suite) " ;\
    echo "cd `pwd`";\
    echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) cdb_part=$(cdb_part)";\
        ) | sbatch --partition=short --job-name=$(suite)
-
-
-hmjob:
-	(  \
-   echo "#!/bin/sh" ;\
-   echo "#SBATCH --nodes=1" ;\
-   echo "#SBATCH --ntasks=1" ;\
-   echo "#SBATCH --time=24:00:00" ;\
-   echo "#SBATCH --constraint=centos7" ;\
-   echo "hostname -f" ;\
-   echo "echo $(suite) " ;\
-   echo "cd `pwd`";\
-   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) cdb_part=$(cdb_part)";\
-       ) | sbatch --partition=himem --job-name=$(suite)
 
 
 SUITES=$(ALPINO_HOME)/Suites/Machine
