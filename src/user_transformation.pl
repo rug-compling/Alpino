@@ -356,4 +356,6 @@ gen(_,_) :-
 symb(_) :-
     fail.
 
-%% schaakspel
+%% skût
+
+

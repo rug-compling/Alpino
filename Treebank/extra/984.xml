@@ -9,7 +9,7 @@
             <node begin="0" end="1" id="6" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="Aan"/>
             <node begin="1" cat="np" end="3" id="7" rel="obj1">
               <node begin="1" end="2" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="2" end="3" getal="mv" graad="basis" id="9" lemma="screenshot" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="screen_shot" word="screenshots"/>
+              <node begin="2" end="3" id="9" lemma="screenshot" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="hd" root="screen_shot" spectype="vreemd" word="screenshots"/>
             </node>
           </node>
           <node begin="4" buiging="zonder" end="5" id="10" lemma="zien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zie" word="zien" wvorm="inf"/>

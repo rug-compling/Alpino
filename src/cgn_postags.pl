@@ -1896,6 +1896,7 @@ afk('plant.',plantaardig,_).
 afk('plm','plus minus',_).
 afk('plm.','plus minus',_).
 afk('resp.',respectievelijk,_).
+afk('rubr.',rubriek,_).
 afk('r.k.','rooms-katholiek',_).
 afk('t.a.v.','ten aanzien van',_).
 afk('t/m','tot en met',_).
