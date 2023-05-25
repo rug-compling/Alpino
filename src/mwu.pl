@@ -824,7 +824,7 @@ mwu_postag('onder stoelen of banken',['VZ(init)','N(soort,mv,basis)','VG(neven)'
 mwu_postag('onder voorzitterschap van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[onder,voorzitterschap,van]).
 mwu_postag('Onderwijs , Cultuur en Wetenschappen',['N(soort,ev,basis,onz,stan)','LET()','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,mv,basis)'],[onderwijs,',',cultuur,en,wetenschap]).
 mwu_postag('Onderwijs Cultuur en Wetenschappen',['N(soort,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,mv,basis)'],[onderwijs,cultuur,en,wetenschap]).
-mwu_postag('ons inziens',['VNW(bez,det,stan,vol,1,mv,prenom,zonder,evmo)','N(soort,ev,basis,gen)'],[ons,in_zien]).
+mwu_postag('ons inziens',['VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)','N(soort,ev,basis,gen)'],[ons,in_zien]).
 mwu_postag('oog in oog',['N(soort,ev,basis,onz,stan)','VZ(init)','N(soort,ev,basis,onz,stan)'],[oog,in,oog]).
 mwu_postag('ook maar',['BW()','BW()'],[ook,maar]).
 mwu_postag('op andere gedachten',['VZ(init)','ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[op,ander,gedachte]).
@@ -1511,8 +1511,10 @@ vreemd('grand chef').
 vreemd('grande vedette').
 vreemd('Grand Gala').
 vreemd('Grand Jury').
+vreemd('Grand Prix').
 vreemd('Grand Prix du Disque').
 vreemd('grand slam').
+vreemd('Grand Slam').
 vreemd('grand strategy').
 vreemd('green box').
 vreemd('grosso modo').

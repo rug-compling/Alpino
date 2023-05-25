@@ -5763,7 +5763,7 @@ potential_name_fsa(23,P0,[Word|Words],Ws,[Word|Prefix],[capital|His]) :-
 potential_name_fsa(23,P0,[Word|Words],Ws,[Word|Prefix],[capital_foreign|His]) :-
     decap_foreign_word(Word),!,
     P is P0 + 1,
-    potential_name_fsa(23,P,Words,Ws,Prefix,His).
+    potential_name_fsa(222,P,Words,Ws,Prefix,His).
 potential_name_fsa(23,_,['>',Word,Hellip|Ws],Ws,['>',Word,Hellip],['>']) :-
     hellip(Hellip),
     !.

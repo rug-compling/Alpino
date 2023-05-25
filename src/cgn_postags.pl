@@ -391,14 +391,14 @@ history_tags(url,Q0,Q,_,Surf,_,_) -->
     { 1 is Q-Q0 }, 
     [ cgn_postag(Q0,Q,Surf,'SPEC(symb)') ].
 
-history_tags(quoted_name(_,_),Q0,Q,_,Surf,Frame,_) -->
+history_tags(quoted_name(_,_),Q0,Q,_,Surf,_,_) -->
     {  atom(Surf),
        atom_codes(Surf,Codes),
        alpino_util:codes_to_words(Codes,Words),
        length(Words,Len),
        Len is Q - Q0
     },
-    guess_tag_list(Words,Frame,Q0,Q).
+    guess_tag_list(Words,none,Q0,Q).
 
 history_tags(enumeration,Q0,Q,Stem0,_,_,_) -->
     { 1 is Q-Q0,
@@ -618,13 +618,15 @@ guess_lex(Q0,Q,_,Surf,Stem) -->
     [  cgn_postag(Q0,Q,Stem,Tag) ].
 guess_lex(Q0,Q,Frame0,Surf,Stem) -->
     {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Surf,His,Frame1),
+       \+ His = quoted_name(_,_),
        frame_map(Frame1,Stem,Frame),
        \+ Frame = Frame0
     },
     cgn_postag(Frame,Stem,Surf,Q0,Q,no,His),
     !.
 guess_lex(Q0,Q,_,Surf,Stem) -->
-    {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Surf,_,Frame1),
+    {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Surf,His,Frame1),
+       \+ His = quoted_name(_,_),
        frame_map(Frame1,Stem,Frame),
        cgn_postag_c(Frame,POS)
        },

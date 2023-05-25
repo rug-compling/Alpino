@@ -46,7 +46,7 @@ user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag),Cat,W/[P0,P])),B,[],
     ; \+ Tag = 'SPEC(deeleigen)',
       \+ Tag = 'SPEC(vreemd)'
     ),
-    lemma(L0,L1),
+    lemma(L0,L1), nonvar(L1),
     format(user_error,"~w -> ~w~n",[L0,L1]).
 
 user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag),Cat,W/[P0,P])),B,[],
@@ -356,6 +356,4 @@ gen(_,_) :-
 symb(_) :-
     fail.
 
-%% pilot
-
-
+%% schaakspel
