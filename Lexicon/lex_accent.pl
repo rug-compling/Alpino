@@ -367,6 +367,7 @@ accent(enquetekommissies,enquêtekommissies).
 accent(enquetes,enquêtes).
 accent(epidemieen,epidemieën).
 accent(essentiele,essentiële).
+accent(estuarien,estuariën).
 accent('Ethiopier','Ethiopiër').
 accent('Ethiopiers','Ethiopiërs').
 accent(europarlementarier,europarlementariër).

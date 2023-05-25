@@ -5577,7 +5577,6 @@ n([pl(blokken),sg(blok)],het,[],
    i(huis,huizen),
    motor,
    notitie,
-   rots, % niet rot_blok
    schrijf,
    start,
    woon,
@@ -9758,6 +9757,8 @@ n([mass(doorkijk)],de,[]).
 
 n([sg(doorlaat),pl(doorlaten)],de,[]).
 
+n([sg(doorlichting),pl(doorlichtingen)],de,[]).
+
 n([mass(doorloop)],de,[]).
 
 n([pl(doornen),pl(doorns),sg(doorn)],de,[],
@@ -10923,6 +10924,8 @@ n([pl(esters),sg(ester)],de,[]).
 n([pl(estheten),sg(estheet)],de,[]).
 
 n([mass(esthetiek)],de,[]).
+
+n([sg(estuarium),pl(estuariën),pl(estuaria)],het,[]).
 
 n([pl(etablissementen),sg(etablissement)],het,[]).
 
@@ -12292,7 +12295,7 @@ n([mass(gebak)],het,[],
 
 n([pl(gebakjes),sg(gebakje)],het,[]).
 
-n([pl(gebeden),sg(gebed)],het,[]).
+n([pl(gebeden),sg(gebed)],het,[],[dim(gebedje)]).
 
 n([pl(gebeenten),sg(gebeente)],het,[]).
 
@@ -23074,7 +23077,9 @@ n([pl(musea),pl(museums),sg(museum)],het,[],
   [film,
    openlucht,
    s(rijk),
-   strip]).
+   strip,
+   scheepvaart
+  ]).
 
 n([pl(musicals),sg(musical)],de,[]).
 
@@ -24941,7 +24946,9 @@ n([pl(oorlogen),sg(oorlog),mass(oorlog)],de,[],
    prijs,i(prijs,prijzen),
    supermarkt,
    taxi,
-   wereld]).
+   wereld,
+   dim(oorlogje)
+  ]).
 
 n([sg(oormerk),pl(oormerken)],het,[]).
 
@@ -29486,6 +29493,8 @@ n([pl(registraties),sg(registratie)],de,[],
 
 n([pl(reglementen),sg(reglement)],het,[app_measure]).
 
+n([sg(reglementering),pl(reglementeringen)],de,[]).
+
 n([pl(regressies),sg(regressie)],de,[]).
 
 n([sg(regularisatie),pl(regularisaties)],de,[]).
@@ -30339,7 +30348,8 @@ n([pl(rotonden),pl(rotondes),sg(rotonde)],both,[]).  %VL het rotonde
 
 n([pl(rotsen),sg(rots)],de,[]).
 
-n([pl(rotsblokken),sg(rotsblok)],het,[]).
+n([pl(rotsblokken),sg(rotsblok)],het,[],
+  [dim(rotsblokje)]).				% niet rot_blok
 
 n([pl(rotswanden),sg(rotswand)],de,[]).
 
@@ -30839,8 +30849,6 @@ n([pl(schadeloosstellingen),sg(schadeloosstelling)],de,[]).
 
 n([pl(schadeposten),sg(schadepost)],de,[]).
 
-n([pl(schadevergoedingen),sg(schadevergoeding)],de,[]).
-
 n([pl(schaduwen),sg(schaduw)],de,[],
   [slag]).
 
@@ -31207,8 +31215,6 @@ n([pl(schooltassen),sg(schooltas)],de,[]).
 
 n([pl(schoolverlaters),sg(schoolverlater)],de,[]).
 
-n([pl(schoolvoorbeelden),sg(schoolvoorbeeld)],het,[sbar]).
-
 n([mass(schoon)],het,[],
   [natuur]).
 
@@ -31281,8 +31287,6 @@ n([pl(schouders),sg(schouder)],de,[],
 n([pl(schouderklopjes),sg(schouderklopje)],het,[]).
 
 n([mass(schouderophalen)],het,[]).
-
-n([pl(schoudertassen),sg(schoudertas)],de,[]).
 
 n([pl(schouten),sg(schout)],de,[]).
 
@@ -31361,8 +31365,6 @@ n([pl(schulden),sg(schuld)],de,[],
    studie,
    s(staat)]).
 
-n([pl(schuldbekentenissen),sg(schuldbekentenis)],de,[]).
-
 n([pl(schuldeisers),sg(schuldeiser)],de,[]).
 
 n([pl(schuldenaars),pl(schuldenaren),sg(schuldenaar)],de,[]).
@@ -31399,6 +31401,8 @@ n([mass('science-fiction'),
 n([mass([science,fiction])],de,[]).
 
 n([pl(scooters),sg(scooter)],de,[]).
+
+n([sg(scootmobiel),pl(scootmobielen)],de,[]).
 
 n([pl(scores),sg(score),pl(scoren)  % VL: de scoren openen
   ],de,[],
@@ -31513,6 +31517,8 @@ n([sg(sedatie)],de,[]).
 
 n([sg(sediment),pl(sedimenten)],het,[]).
 
+n([sg(sedimentatie),pl(sedimentaties)],de,[]).
+
 n([sg('Sefardim'),pl('Sefardim')],de,[]).
 
 n([pl(segmenten),sg(segment)],het,[app_measure]).
@@ -31591,6 +31597,10 @@ n([pl('senorita\'s'),sg(senorita)],de,[]).
 
 n([pl(sensaties),sg(sensatie)],de,[sbar,vp]).
 
+n([sg(sensibilisatie),pl(sensibilisaties)],de,[]).
+
+n([sg(sensibilisering),pl(sensibilisering)],de,[]).
+
 n([sg(sensor),pl(sensoren)],de,[]).
 
 n([pl(sentimenten),sg(sentiment)],het,[sbar]).
@@ -31667,8 +31677,6 @@ n([pl(sets),sg(set)],de,
   [dim(setje)]).
 
 n([sg([set,top,box]),pl([set,top,boxen])],de,[]).
-
-n([sg(setstand),pl(setstanden)],de,[]).
 
 n([mass(setting)],de,[]).
 
@@ -31778,6 +31786,8 @@ n([pl(signalen),sg(signaal)],het,[],
    fluit]).
 
 n([pl(signalementen),sg(signalement)],het,[sbar]).
+
+n([sg(signalering),pl(signaleringen)],de,[]).
 
 n([pl(signaturen),sg(signatuur)],de,
   [vp,
@@ -39172,7 +39182,8 @@ n([pl(vooravonden),sg(vooravond)],de,[]).
 n([mass([voorbedachten,rade])],de,[]).
 
 n([pl(voorbeelden),sg(voorbeeld)],het,[app_measure,sbar,vp],
-  [dim(voorbeeldje)]).
+  [school,
+   dim(voorbeeldje)]).
 
 n([sg(voorbehoud),pl(voorbehouden)],het,[sbar,vp]).
 

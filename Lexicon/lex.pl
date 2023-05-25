@@ -2933,6 +2933,7 @@ spelling_variant(rechtsstreekse,rechtstreekse).
 spelling_variant(registeren,  registreren).
 spelling_variant(rigoreus,    rigoureus).
 spelling_variant(rigoreuze,   rigoureuze).
+spelling_variant(sateliet,    satelliet).
 spelling_variant(schijft,     schrijft).
 spelling_variant(sierraad,    sieraad).
 spelling_variant(sinsdien,    sindsdien).

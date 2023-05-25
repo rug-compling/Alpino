@@ -707,10 +707,12 @@ a([e('Canadese'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Caribische'),
-   no_e('Caribisch'),
-   e('Caraïbische'),
+%% both forms are ok
+a([e('Caraïbische'),
    no_e('Caraïbisch')],nonadv,[],[]).
+
+a([no_e('Caribisch'),
+   e('Caribische')],nonadv,[],[]).
 
 a([e('Catalaanse'),
    no_e('Catalaans')],nonadv,[],[]).
@@ -3251,10 +3253,11 @@ a([e(afkomstige),
   [pp(uit),
    pp(van)],[]).
 
-a([e(afschrikwekkende),
+a([stem(afschrik_wekken),
+   ende(afschrikwekkende),
    er(afschrikwekkender),
    ere(afschrikwekkendere),
-   no_e(afschrikwekkend),
+   end(afschrikwekkend),
    st(afschrikwekkendst),
    ste(afschrikwekkendste)],adv,[],[]).
 
@@ -10203,6 +10206,9 @@ a([no_e(esthetisch),
    st(esthetischt),
    ste(estetischte),
    ste(esthetischte)],adv,[],[]).
+
+a([e(estuariene),
+   no_e(estuarien)],nonadv,[],[]).
 
 a([e(eterische),
    e(etherische),
@@ -31266,8 +31272,9 @@ a([e(riante),
    st(riantst),
    ste(riantste)],adv,[],[]).
 
-a([e(richtinggevende),
-   no_e(richtinggevend)],nonadv,[],[]).
+a([stem(richting_geven),
+   ende(richtinggevende),
+   end(richtinggevend)],nonadv,[],[]).
 
 a([e(ridicule),
    e(ridikule),
@@ -32185,19 +32192,21 @@ a([ende(schrijnende),
   [subject_sbar,
    subject_vp],[]).
 
-a([e(schrikbarende),
+a([stem(schrik_baren),
+   ende(schrikbarende),
    er(schrikbarender),
    ere(schrikbarendere),
-   no_e(schrikbarend),
+   end(schrikbarend),
    st(schrikbarendst),
    ste(schrikbarendste)],adv,
   [subject_sbar,
    subject_vp],[]).
 
-a([e(schrikwekkende),
+a([stem(schrik_wekken),
+   ende(schrikwekkende),
    er(schrikwekkender),
    ere(schrikwekkendere),
-   no_e(schrikwekkend),
+   end(schrikwekkend),
    st(schrikwekkendst),
    ste(schrikwekkendste)],adv,[],[]).
 

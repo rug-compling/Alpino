@@ -4636,8 +4636,8 @@ lemma_root(door_ruimen,ruim_door) .
 lemma_root(door_ruisen,ruis_door) .
 lemma_root(door_rukken,ruk_door) .
 lemma_root(door_rusten,rust_door) .
+lemma_root(door_ruzieën,ruzie_door) .
 lemma_root(door_ruziemaken,ruziemaken_door) .
-lemma_root(door_ruziën,ruzie_door) .
 lemma_root(door_sabbelen,sabbel_door) .
 lemma_root(door_sabelen,sabel_door) .
 lemma_root(door_saboteren,saboteer_door) .
@@ -12170,8 +12170,8 @@ lemma_root(raak_ruimen,ruim_raak) .
 lemma_root(raak_ruisen,ruis_raak) .
 lemma_root(raak_rukken,ruk_raak) .
 lemma_root(raak_rusten,rust_raak) .
+lemma_root(raak_ruzieën,ruzie_raak) .
 lemma_root(raak_ruziemaken,ruziemaken_raak) .
-lemma_root(raak_ruziën,ruzie_raak) .
 lemma_root(raak_sabbelen,sabbel_raak) .
 lemma_root(raak_sabelen,sabel_raak) .
 lemma_root(raak_saboteren,saboteer_raak) .
@@ -13526,8 +13526,8 @@ lemma_root(ruiten,ruit) .
 lemma_root(rukken,ruk) .
 lemma_root(runnen,run) .
 lemma_root(rusten,rust) .
+lemma_root(ruzieën,ruzie) .
 lemma_root(ruziemaken,ruziemaken) .
-lemma_root(ruziën,ruzie) .
 lemma_root(sabbelen,sabbel) .
 lemma_root(sabelen,sabel) .
 lemma_root(saboteren,saboteer) .
@@ -17307,7 +17307,7 @@ lemma_root(uit_ruimen,ruim_uit) .
 lemma_root(uit_ruisen,ruis_uit) .
 lemma_root(uit_rukken,ruk_uit) .
 lemma_root(uit_rusten,rust_uit) .
-lemma_root(uit_ruziën,ruzie_uit) .
+lemma_root(uit_ruzieën,ruzie_uit) .
 lemma_root(uit_sabbelen,sabbel_uit) .
 lemma_root(uit_saboteren,saboteer_uit) .
 lemma_root(uit_sakkeren,sakker_uit) .
@@ -22146,8 +22146,8 @@ lemma_root(voort_ruimen,ruim_voort) .
 lemma_root(voort_ruisen,ruis_voort) .
 lemma_root(voort_rukken,ruk_voort) .
 lemma_root(voort_rusten,rust_voort) .
+lemma_root(voort_ruzieën,ruzie_voort) .
 lemma_root(voort_ruziemaken,ruziemaken_voort) .
-lemma_root(voort_ruziën,ruzie_voort) .
 lemma_root(voort_sabbelen,sabbel_voort) .
 lemma_root(voort_sabelen,sabel_voort) .
 lemma_root(voort_saboteren,saboteer_voort) .

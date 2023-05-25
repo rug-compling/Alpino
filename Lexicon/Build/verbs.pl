@@ -18929,7 +18929,7 @@ v(rust,rust,rusten,gerust,rustte,rustten,
 	part_np_pc_pp(uit,met),
 	part_pc_pp(uit,van)])]).
 
-v(ruzie,ruziet,[ruziën,ruzieën],geruzied,ruziede,ruzieden,
+v(ruzie,ruziet,[ruzieën,ruziën],geruzied,ruziede,ruzieden,
     [h([intransitive,
 	mod_pp(met),
 	pc_pp(over)])]).
