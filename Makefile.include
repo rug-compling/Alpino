@@ -15,7 +15,7 @@ include $(ALPINO_HOME)/Makefile.defs
 endif
 
 ifndef ALPINO
-       ALPINO=$(ALPINO_HOME)/src/Alpino
+       ALPINO=$(ALPINO_HOME)/bin/Alpino
 endif
 
 ifeq ($(PLATFORM),darwin)

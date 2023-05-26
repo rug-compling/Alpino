@@ -13,7 +13,7 @@ annotate:
 	mkdir -p $(DISK)/$(suite)
 	rm -f $(DISK)/$(suite)/*
 	zcat $(SUITES)/$(suite).sents.gz | \
-        $(ALPINO_HOME)/src/Alpino -notk cmdint=off\
+        $(ALPINO) -notk cmdint=off\
           -veryfast\
           user_max=190000 debug=1\
           min_sentence_length=$(MIN)\
@@ -37,7 +37,7 @@ dump:
 	echo '<?xml version="1.0" encoding="UTF-8"?>'
 	echo "<alpino_ds_list>"
 	zcat $(SUITES)/$(suite).sents.gz | \
-        $(ALPINO_HOME)/src/Alpino -notk cmdint=off\
+        $(ALPINO) -notk cmdint=off\
           -veryfast\
           user_max=190000 debug=1\
           min_sentence_length=$(MIN)\
@@ -64,7 +64,7 @@ annotatemore:
 #	mkdir -p ./$(suite)
 #	rm -f ./$(suite)/*
 	zcat $(SUITES)/$(suite).sents.gz | \
-        $(ALPINO_HOME)/src/Alpino -notk cmdint=off\
+        $(ALPINO) -notk cmdint=off\
           -veryfast\
           user_max=190000 debug=1\
           min_sentence_length=$(MIN)\
