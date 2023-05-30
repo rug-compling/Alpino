@@ -1,5 +1,6 @@
 SUITES=$(ALPINO_HOME)/Suites/Machine
 
+include $(ALPINO_HOME)/Makefile.include
 include $(ALPINO_HOME)/Makefile.errormining
 include $(ALPINO_HOME)/Makefile.triples
 include $(ALPINO_HOME)/Makefile.hpc
