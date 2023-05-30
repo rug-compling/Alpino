@@ -7615,6 +7615,8 @@ end_nominalized_adjective(belang_hebben,belanghebbenden).
 end_nominalized_adjective(belang_stellen,belangstellenden).
 end_nominalized_adjective(hulp_zoeken,hulpzoekenden).
 end_nominalized_adjective(leiding_geven,leidinggevenden).
+end_nominalized_adjective(slecht_horen,slechthorenden).
+end_nominalized_adjective(slecht_zien,slechtzienden).
 end_nominalized_adjective(werk_zoeken,werkzoekenden).
 end_nominalized_adjective(woning_zoeken,woningzoekenden).
 

@@ -32582,8 +32582,9 @@ a([e(slechte),
    pp(met),
    pp(voor)],[]).
 
-a([e(slechtziende),
-   no_e(slechtziend)],padv,[],[]).
+a([stem(slecht_zien),
+   ende(slechtziende),
+   end(slechtziend)],padv,[],[]).
 
 a([e(sleetse),
    no_e(sleets)],padv,[],[]).

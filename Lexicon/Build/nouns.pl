@@ -11478,7 +11478,8 @@ n([pl(figuranten),sg(figurant)],de,[]).
 
 n([pl(figuren),sg(figuur)],both,[],
   [hoofd,
-   neven, % en niet neef_figuur
+   neven,			% en niet neef_figuur
+   sleutel,
    s(sprookje),
    stijl,
    strip,
@@ -19294,6 +19295,8 @@ n([pl(kwalen),sg(kwaal)],de,[],
   [s(oudedag),
    dim(kwaaltje)]).
 
+n([sg(kwab),pl(kwabben)],de,[]).
+
 n([pl(kwadraten),sg(kwadraat)],het,[]).
 
 n([pl(kwadranten),sg(kwadrant)],het,[]).
@@ -26112,6 +26115,8 @@ n([pl(papieren),sg(papier)],het,[],
    dim(papiertje)
   ]).
 
+n([sg(papil),pl(papillen)],de,[]).
+
 n([mass([pappen,en,nathouden])],het,[]).
 
 n([pl('paprika\'s'),sg(paprika)],de,[]).
@@ -31980,8 +31985,6 @@ n([mass(slaap),pl(slapen),sg(slaap)],de,[pred_pp(in)]).
 
 n([pl(slaapwandelaars),sg(slaapwandelaar)],de,[]).
 
-n([pl(slaapzalen),sg(slaapzaal)],de,[]).
-
 n([pl(slaapzakken),sg(slaapzak)],de,[]).
 
 n([stem(sla_DIM),
@@ -32111,8 +32114,6 @@ n([pl(sleutels),sg(sleutel)],de,[],
    muziek,
    verdeel,
    dim(sleuteltje)]).
-
-n([pl(sleutelfiguren),sg(sleutelfiguur)],de,[]).
 
 n([pl(sleutelgaten),sg(sleutelgat)],het,[]).
 
@@ -41570,6 +41571,7 @@ n([pl(zalen),sg(zaal)],de,[np_app_measure],
    gym,
    muziek,
    parochie,
+   slaap,
    toon,
    troon,
    dim(zaaltje)]).
