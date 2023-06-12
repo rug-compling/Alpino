@@ -8278,6 +8278,16 @@ short_max_hoe_advp(X) :-
     X:wh => yq,
     X:wh_reltmploc => hoe_hoe.
 
+%% ( lacht ) ik heb op een andere party gestemd
+grammar_rule(bracketed_mod_start,Start,[OPEN,Mod,CLOSE,Root]) :-
+    Start => start,
+    OPEN => punct, OPEN:puncttype => haak_open,
+    CLOSE => punct, CLOSE:puncttype => haak_sluit,
+    Mod => start,
+    Root => max,
+    Root:max_type => t_root,
+    dp_dp_structure(Mod,Root,Start).
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%% TOP Categories %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%

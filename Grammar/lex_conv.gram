@@ -1813,9 +1813,9 @@ adj_number_features(pl_num, Sign) :-
 adj_number_features(both, _).
 adj_number_features(enkel,Sign) :-
     Sign:agr => sg & indef & het, % combines with een/geen
-    Sign:n_meas =?> no,  
+%    Sign:n_meas =?> no,          % geen enkel jaar 
     Sign:case =?> ~gen.
 adj_number_features(enkele,Sign) :-
-    Sign:n_meas =?> no,
+%    Sign:n_meas =?> no,          % (g)een enkele keer/maal
     Sign:agr => ~(sg & het & indef),
     Sign:case =?> ~gen.
