@@ -34,6 +34,8 @@ t(verb(_,B0,C0),            verb(B,C)) :-
 %% adv_tag no longer exists
 t(adv_tag,tag).
 
+t(adj_number(enkele),adjective(e)).
+
 t(name_determiner(X),  determiner(X)).
 t(name_determiner(X,_),determiner(X)).
 

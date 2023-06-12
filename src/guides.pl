@@ -171,8 +171,15 @@ tr_tag(ge_nominalized_adjective(SC),Tag) :-
 tr_tag(end_nominalized_adjective(SC),Tag) :-
     !,
     Tag = nominalized_adjective(SC).
-
-
+tr_tag(conj(_),Tag) :-
+    !,
+    Tag = conj.
+tr_tag(left_conj(_),Tag) :-
+    !,
+    Tag = left_conj.
+tr_tag(right_conj(_),Tag) :-
+    !,
+    Tag = right_conj.
 tr_tag(Tag,Tag).
 
 adj_infl(aller_st(X),St) :-
