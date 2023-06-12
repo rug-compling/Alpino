@@ -356,6 +356,4 @@ gen(_,_) :-
 symb(_) :-
     fail.
 
-%% skût
-
-
+%% spouw

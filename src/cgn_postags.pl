@@ -717,6 +717,11 @@ context_dependent_tag_lemma(adjective(ere),'ADJ(nom,comp,met-e,zonder-n,stan)',w
     noun_path(Path).
 context_dependent_tag_lemma(adjective(ere),'VNW(onbep,grad,stan,prenom,met-e,agr,comp)',weinig,_,weinig,_Q0,_Q,_Result).
 
+%% ENKELE this should not be neccesary anymore
+context_dependent_tag_lemma(adjective(e),'VNW(onbep,det,stan,nom,met-e,zonder-n)',enkel,_,enkel,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    noun_path(Path).
+
 %% ?
 context_dependent_tag_lemma(adjective(e),'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)',weinig,_,weinig,Q0,Q,Result) :-
     find_node(Q0,Q,Result,Node),

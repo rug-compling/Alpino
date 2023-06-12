@@ -11,8 +11,8 @@
           <node begin="4" cat="np" end="7" id="8" rel="obj1">
             <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="5" cat="mwu" end="7" id="10" rel="hd">
-              <node begin="5" buiging="met-e" end="6" graad="basis" id="11" lemma="oostelijk" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Oostelijke" word="Oostelijke"/>
-              <node begin="6" end="7" getal="mv" graad="basis" id="12" lemma="sporaden" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Sporaden" word="Sporaden"/>
+              <node begin="5" end="6" id="11" lemma="Oostelijke" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Oostelijke" spectype="deeleigen" word="Oostelijke"/>
+              <node begin="6" end="7" id="12" lemma="Sporaden" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sporaden" spectype="deeleigen" word="Sporaden"/>
             </node>
           </node>
         </node>
