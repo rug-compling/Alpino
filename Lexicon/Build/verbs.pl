@@ -3983,6 +3983,7 @@ v(blijf,blijft,blijven,gebleven,bleef,bleven,
 	part_intransitive(bij),
 	part_intransitive(op),
 	part_intransitive(open),
+	part_intransitive(opzij), % VL, De voetballer bleeft geschorst opzij
 	part_intransitive(over),
 	part_intransitive(thuis),
 	part_intransitive(uit),
@@ -8120,8 +8121,8 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	part_so_pp_np(op),
 	part_so_pp_np(over),
 	part_so_pp_np(terug),
-	fixed([{[acc(definitie),pc(van)]}],norm_passive),
-	fixed([{[acc(schets),pc(van)]}],norm_passive),
+	np_pc_pp(van),    % overziht, definitie, schets, voorbeeld, ...
+	np_np_pc_pp(van), % ik geef jullie een voorbeeld van ... 
 	part_fixed(uit,[{[pc(voor),acc(geld)]}],norm_passive),
 	part_fixed(uit,[{[er_pp(voor,X),acc(geld)]},extra_vp(X)],norm_passive),
 	part_so_np(toe),
@@ -13017,6 +13018,7 @@ v(leg,legt,leggen,gelegd,legde,legden,
 	part_intransitive(bij),
 	part_intransitive(in),
  	part_intransitive(vast),
+	part_intransitive(voor),
 	part_ld_pp(terug),
 	part_np_sbar(uit),
 	part_pred_np(uit),
@@ -13396,6 +13398,7 @@ v(lig,ligt,liggen,gelegen,lag,lagen,
 	fixed([svp_pp(onder,vuur)],no_passive),
 	fixed([[op,de,loer]],no_passive),
         fixed([[voor,anker]],no_passive),
+	fixed([[wakker],pc(van)],no_passive),
 	fixed([[wakker],er_pp(van,C),extra_sbar(C)],no_passive),
         part_intransitive(stil),
 	part_ld_pp(vast),
@@ -14125,6 +14128,9 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	fixed([[te,gelde],acc],norm_passive),
 	fixed([[te,niet],acc],norm_passive),
 	fixed([[te,schande],acc],norm_passive),
+	fixed([{[pc(bij),acc(tekening)]}],imp_passive),
+	fixed([{[er_pp(bij,C),acc(tekening)]},extra_vp(C)],imp_passive),
+	fixed([{[er_pp(bij,C),acc(tekening)]},extra_sbar(C)],imp_passive),
 	fixed([{[acc(toespeling),pc(op)]}],norm_passive),
 	fixed([[tot,voorwerp],{[acc,pc(van)]}],norm_passive),
 	fixed([[uit,de,voeten],refl],no_passive),
@@ -14597,6 +14603,9 @@ v(misken,miskent,miskennen,miskend,miskende,miskenden,
     [h([sbar,
 	transitive])]).
 
+v(miskijk,miskijkt,miskijken,miskeken,miskeek,miskeken,
+    [h([refl])]).  
+
 v(misleid,misleidt,misleiden,misleid,misleidde,misleidden,
     [h([sbar_subj_so_np,
 	transitive,
@@ -14613,6 +14622,11 @@ v(mismaak,mismaakt,mismaken,mismaakt,mismaakte,mismaakten,
 
 v(misprijs,misprijst,misprijzen,misprezen,misprees,misprezen,
     [h([transitive])]).
+
+v(misreken,misrekent,misrekenen,misrekend,misrekende,misrekenden,
+  [h([refl,
+      pc_pp_refl(op)
+     ])]).
 
 v(missta,misstaat,inflected(misstaan,misstane),misstaan,misstond,misstonden,
     [h([intransitive,
@@ -15309,6 +15323,9 @@ v(omsluit,omsluit,omsluiten,omsloten,omsloot,omsloten,
 v(omspan,omspant,omspannen,omspannen,omspande,omspanden,
     [h([transitive])]).
 
+v(omspeel,omspeelt,omspelen,omspeeld,omspeelde,omspeelden,
+    [h([transitive])]).
+
 v(omspoel,omspoelt,omspoelen,omspoeld,omspoelde,omspoelden,
     [h([transitive])]).
 
@@ -15345,8 +15362,9 @@ v(onderbouw,onderbouwt,onderbouwen,onderbouwd,onderbouwde,onderbouwden,
 	transitive])]).
 
 v(onderbreek,onderbreekt,onderbreken,onderbroken,onderbrak,onderbraken,
-    [h([transitive,
-        acc_np_dip_sbar])]).
+  [h([transitive,
+      intransitive,
+      acc_np_dip_sbar])]).
 
 v(onderdruk,onderdrukt,onderdrukken,onderdrukt,onderdrukte,onderdrukten,
     [h([transitive])]).
@@ -20667,7 +20685,7 @@ v(snerp,snerpt,snerpen,gesnerpt,snerpte,snerpten,
 v(sneuvel,sneuvelt,sneuvelen,gesneuveld,sneuvelde,sneuvelden,
     [unacc([intransitive])]).
 
-v([snijd,snij],snijdt,snijden,gesneden,sneed,sneden,
+v([snij,snijd],snijdt,snijden,gesneden,sneed,sneden,
     [h([intransitive,
 	ld_pp,
 	ld_adv,
@@ -21747,6 +21765,8 @@ v(steek,steekt,steken,gestoken,stak,staken,
 	part_transitive(op),
 	part_transitive(over),
 	part_transitive(toe),
+	part_transitive(weg),	% VL
+	part_sbar(weg),
 	part_pc_pp(toe,aan), % VL maar we willen er ook niet aan toesteken .
 	part_transitive(uit),
 	pc_pp(naar),
@@ -24772,7 +24792,9 @@ v(verhul,verhult,verhullen,verhuld,verhulde,verhulden,
 
 v(verhuur,verhuurt,verhuren,verhuurd,verhuurde,verhuurden,
     [h([np_np,
-	% refl,
+	part_so_pp_np(door),
+	part_transitive(door),   % hij koopt woningen om ze door te verhuren (aan arme mensen)
+	intransitive,
 	so_pp_np,
 	transitive])]).
 
@@ -26589,6 +26611,7 @@ v(vind,vindt,vinden,gevonden,vond,vonden,
         fixed([vc(kan,inf,intransitive),het_pobj1(sbar)],no_passive),
         fixed([vc(ben,psp,intransitive),ap_pred(mooi),het_obj1],no_passive),
         fixed([[in,gebreke],acc],norm_passive),
+	fixed([{[[geen,graten],er_pp(in)]}],no_passive), % VL
 	fixed([{[[geen,graten],er_pp(in,C)]},extra_sbar(C)],no_passive), % VL
 	fixed([{[[geen,graten],er_pp(in,C)]},extra_vp(C)],no_passive),  % VL
 	% VL de uitbaatster vond er niet beter op dan de brandweer op te trommelen

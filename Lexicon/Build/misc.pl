@@ -2554,6 +2554,7 @@ particle(vlot).
 particle(vol).
 particle(vooraf).
 particle(voorbij).
+particle(voorlangs).
 particle(voorop).
 particle(voor).
 particle(voort).
@@ -8871,6 +8872,7 @@ term([reduce]).
 term([remedial,teaching]).
 term([res,publica]).
 term([rigor,mortis]).
+term([rite,de,passage],[rites,de,passage]).
 term([rule,of,law]).
 term([rules,of,engagement]).
 term([running,gag]).

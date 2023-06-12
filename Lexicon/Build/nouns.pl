@@ -1464,6 +1464,8 @@ n([pl(aanslagen),sg(aanslag)],de,[],
 
 n([pl(aansluitingen),sg(aansluiting)],de,[],[internet]).
 
+n([pl(aanspanningen),sg(aanspanning)],de,[]).  % van de spieren
+
 n([pl(aansporingen),sg(aansporing)],de,[vp]).
 
 n([pl(aanspraken),sg(aanspraak)],de,[sbar,vp]).
@@ -5577,6 +5579,7 @@ n([pl(blokken),sg(blok)],het,[],
    i(huis,huizen),
    motor,
    notitie,
+   rots,
    schrijf,
    start,
    woon,
@@ -8658,7 +8661,7 @@ n([sg(dar),pl(darren)],de,[]).
 n([sg([dark,room]),pl([dark,rooms])],de,[]).
 
 n([pl(darmen),sg(darm)],de,[],
-  [blinde,
+  [i(blind,blinde),
    endel,
    dim(darmpje)]).
 
@@ -8737,7 +8740,7 @@ n([pl(debuten),sg(debuut)],het,
   ],
   [film,
    regie,
-   speelfilm,
+   l(speel_film,speelfilm),
    thriller,
    toneel]).
 
@@ -9351,6 +9354,7 @@ n([pl(directeuren),pl(directeurs),sg(directeur)],de,[app_measure],
    h(interim),
    koers,
    museum,
+   muziek,
    onder,
    h(oud),
    h(president),
@@ -10198,7 +10202,7 @@ n([mass(duister)],het,[]).
 
 n([pl(duisternissen),sg(duisternis)],de,[]).
 
-n([pl(duiten),sg(duit)],de,[]).
+n([pl(duiten),sg(duit)],de,[],[dim(duitje)]).
 
 n([sg(duvel),pl(duvels)],de,[],[dim(duveltje)]).
 
@@ -11899,7 +11903,7 @@ n([pl(fouten),sg(fout)],de,
 
 n([pl(foxen),sg(fox)],de,[]).
 
-n([pl(foyers),sg(foyer)],de,[]).
+n([pl(foyers),sg(foyer)],both,[]).
 
 n([mass(fraais)],het,[]).
 
@@ -17306,7 +17310,7 @@ n([pl(kamers),sg(kamer)],de,[],
    zolder,
    dim(kamertje)]).
 
-n([pl(kameraads),pl(kameraden),sg(kameraad)],de,[]).
+n([pl(kameraads),pl(kameraden),sg(kameraad)],de,[],[dim(kameraadje)]).
 
 n([mass(kameraadschap)],de,[]).
 
@@ -30353,11 +30357,6 @@ n([pl(rotonden),pl(rotondes),sg(rotonde)],both,[]).  %VL het rotonde
 
 n([pl(rotsen),sg(rots)],de,[]).
 
-n([pl(rotsblokken),sg(rotsblok)],het,[],
-  [dim(rotsblokje)]).				% niet rot_blok
-
-n([pl(rotswanden),sg(rotswand)],de,[]).
-
 n([pl(rotterdammers),sg(rotterdammer)],de,[]).
 
 n([mass(rotting)],de,[]).
@@ -32399,27 +32398,32 @@ n([sg([soap,opera]),pl([soap,'opera\'s'])],de,[]).
 
 n([mass(soberheid)],de,[]).
 
-n([pl('sociaal-democraten'),sg('sociaal-democraat'),
+n([stem(sociaal_democraat),
+   pl('sociaal-democraten'),sg('sociaal-democraat'),
    pl([sociaal,democraten]),sg([sociaal,democraat]),
    pl('sociaal-demokraten'),sg('sociaal-demokraat'),
    pl([sociaal,demokraten]),sg([sociaal,demokraat]),
    pl(sociaaldemocraten),sg(sociaaldemocraat),
    pl(sociaaldemokraten),sg(sociaaldemokraat)],de,[]).
 
-n([mass('sociaal-democratie'),
+n([stem(sociaal_democratie),
+   mass('sociaal-democratie'),
    mass([sociaal,democratie]),
    mass('sociaal-demokratie'),
    mass([sociaal,demokratie]),
    mass(sociaaldemocratie),
    mass(sociaaldemokratie)],de,[]).
 
-n([pl('sociaal-psychologen'),sg('sociaal-psycholoog'),
+n([stem(sociaal_psycholoog),
+   pl('sociaal-psychologen'),sg('sociaal-psycholoog'),
    pl([sociaal,psychologen]),sg([sociaal,psycholoog])],de,[]).
 
-n([pl('sociaal-raadslieden'),sg('sociaal-raadslid'),
+n([stem(sociaal_raadslid),
+   pl('sociaal-raadslieden'),sg('sociaal-raadslid'),
    pl([sociaal,raadslieden]),sg([sociaal,raadslid])],de,[]).
 
-n([pl('sociaal-rechercheurs'),sg('sociaal-rechercheur'),
+n([stem(sociaal_rechercheur),
+   pl('sociaal-rechercheurs'),sg('sociaal-rechercheur'),
    pl([sociaal,rechercheurs]),sg([sociaal,rechercheur])],de,[]).
 
 n([pl(socialisaties),sg(socialisatie),
@@ -32627,8 +32631,6 @@ n([sg(spanner),pl(spanners)],de,[]).  % insect
 
 n([pl(spanningen),sg(spanning)],de,[]).
 
-n([pl(spanningsvelden),sg(spanningsveld)],het,[]).
-
 n([sg(spant),pl(spanten)],het,[]).
 
 n([pl(sparren),sg(spar)],de,[],[dim(sparretje)]).
@@ -32694,9 +32696,6 @@ n([mass(speeksel)],het,[]).
 n([pl(speelballen),sg(speelbal)],de,[]).
 
 n([pl(speelgoederen),sg(speelgoed)],het,[]).
-
-n([pl(speelkameraads),pl(speelkameraden),sg(speelkameraad)],de,[],
-  [dim(speelkameraadje)]).
 
 n([sg(speelronde),pl(speelronden),pl(speelrondes)],de,[]).
 
@@ -32888,7 +32887,7 @@ n([sg('spin-off'),pl('spin-offs')],de,[]).
 
 n([mass(spinazie)],de,[]).
 
-n([pl(spinnewebben),sg(spinneweb)],het,[]).
+n([pl(spinnenwebben),sg(spinnenweb),pl(spinnewebben),sg(spinneweb)],het,[]).
 
 n([sg(spint)],de,[]).  % oude oppervlaktemaat 
 
@@ -33060,6 +33059,8 @@ n([pl(sporthallen),sg(sporthal)],de,[]).
 n([pl(sportlieden),pl(sportlui),pl(sportmannen),sg(sportman)],de,[]).
 
 n([pl(sportvelden),sg(sportveld)],het,[]).
+
+n([sg(sportvrouw),sg(sportvrouwe),pl(sportvrouwen)],de,[]).
 
 n([mass(spot),pl(spots),sg(spot)],de,[],[reclame]).
 
@@ -35660,7 +35661,8 @@ n([pl(toernooien),sg(toernooi),
   [app_measure,
    temp_mod,
    sbar],
-  [h('ATP'),
+  [['10.000',dollar],
+   h('ATP'),
    beker,
    'Davis-Cup',
    eind,
@@ -37085,7 +37087,7 @@ n([pl(varianten),sg(variant)],de,[]).
 
 n([pl(variaties),sg(variatie)],de,[pred_pp(op)]).
 
-n([pl(variëteiten),sg(variëteit)],de,[]).
+n([pl(variëteiten),sg(variëteit)],de,[measure]).
 
 n([pl(varkens),sg(varken)],het,[],[dim(varkentje)]).
 
@@ -40071,6 +40073,7 @@ n([pl(wanden),sg(wand)],de,[],
   [achter,
    berg,
    darm,
+   rots,
    dim(wandje)]).
 
 n([pl(wandaden),sg(wandaad)],de,
