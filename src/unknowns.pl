@@ -949,6 +949,18 @@ lexical_analysis_double(Input,[Nummer,Een],Surf0,Surf,P0,R0,Tag) :-
     alpino_lex:concat_stems([Stem0a,Stem0b,Stem1],Stem),
     assert_tag(P0,P,R0,R,Stem,double_compound,Tag).
 
+%% 10.000 dollar-toernooi
+lexical_analysis_double(Input,[Tien,Gulden],Surf0,Surf,P0,R0,Tag) :-
+    alpino_lex:lexicon(number(hoofd(_)),TienStem,[Tien],[],_),
+    concat_all(Surf0,Surf,' '),
+    alpino_lex:lexicon(meas_mod_noun(_,_,_),GuldenStem,[Gulden],[],_),
+    alpino_lex:lexicon(Tag0,Stem1,[Input],[],_),    
+    open_class_tag(Tag0,Tag),
+    P is P0+2,
+    R is R0+2,
+    alpino_lex:concat_stems([TienStem,GuldenStem,Stem1],Stem),
+    assert_tag(P0,P,R0,R,Stem,double_compound,Tag).
+
 %% oer-rock & roll
 unknown_word_heuristic(P1,R1,W,[WsH|WsT],"compound_double|~p|~p ...|~p~n",
 		       [W,Rock,[Th|Tt]],_Words,HIS) :-
@@ -3801,6 +3813,7 @@ open_class_tag(mod_noun(A,B,meas),mod_noun(A,B,sg)).
 open_class_tag(meas_mod_noun(A,B,meas),meas_mod_noun(A,B,sg)).
 open_class_tag(noun(A,B,meas,measure),noun(A,B,sg,measure)).
 open_class_tag(noun(A,B,meas,app_measure),noun(A,B,sg,app_measure)).
+open_class_tag(verb(_,inf,_),v_noun(intransitive)).
 open_class_tag(verb(A,B,Sc0),verb(A,B,Sc)) :-
     Sc0 = [_|_],!,
     non_part_sc(Sc0,Sc).
@@ -4039,6 +4052,10 @@ allow_verb_only_if_particle(verb(HZ,VF,SC),
 
 % campagnevoeren; skispringen ...
 % but disallow longer compounds
+allow_verb_only_if_particle(v_noun(intransitive),v_noun(intransitive),Parts,Stem,NewStem) :-
+    !,
+    lists:append(Parts,[Stem],PartsStem),
+    alpino_lex:concat_stems(PartsStem,NewStem).
 allow_verb_only_if_particle(v_noun(X),v_noun(X),Parts,Stem,NewStem) :-
     !,
     Parts = [_],
@@ -5449,6 +5466,11 @@ potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[end_loc|His]) :-
     name_end_loc(Word),!,
     P is P0 + 1,
     potential_name_fsa(5,P,Words,Ws,Prefix,His).
+potential_name_fsa(2,P0,['&',Zn|Words],Ws,['&',Zn|Prefix],[end_firma|His]) :-
+    zn(Zn),
+    !,
+    P is P0 + 2,
+    potential_name_fsa(5,P,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[end_firma|His]) :-
     name_end_firma(Word),!,
     P is P0 + 1,
@@ -5592,6 +5614,11 @@ potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[number|His]) :-
     name_number(Word),!,
     P is P0 + 1,
     potential_name_fsa(5,P,Words,Ws,Prefix,His).
+potential_name_fsa(4,P0,['&',Zn|Words],Ws,['&',Zn|Prefix],[end_firma|His]) :-
+    zn(Zn),
+    !,
+    P is P0 + 2,
+    potential_name_fsa(5,P,Words,Ws,Prefix,His).
 potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[end_firma|His]) :-
     name_end_firma(Word),!,
     P is P0 + 1,
@@ -5629,6 +5656,11 @@ potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[unknown|His]) :-
     P is P0 + 1,
     potential_name_fsa(6,P,Words,Ws,Prefix,His).
 
+potential_name_fsa(5,P0,['&',Zn|Words],Ws,['&',Zn|Prefix],[end_firma|His]) :-
+    zn(Zn),
+    !,
+    P is P0 + 2,
+    potential_name_fsa(5,P,Words,Ws,Prefix,His).
 potential_name_fsa(5,P0,[',',Word|Words],Ws,[',',Word|Prefix],[end_firma|His]) :-
     name_end_firma(Word),!,
     P is P0 + 2,
@@ -5658,6 +5690,11 @@ potential_name_fsa(55,P0,[',',Word|Words],Ws,[',',Word|Prefix],[end_firma|His]) 
 potential_name_fsa(55,P0,[Word|Words],Ws,[Word|Prefix],[end_firma|His]) :-
     name_end_firma(Word),!,
     P is P0 + 1,
+    potential_name_fsa(5,P,Words,Ws,Prefix,His).
+potential_name_fsa(55,P0,['&',Zn|Words],Ws,['&',Zn|Prefix],[end_firma|His]) :-
+    zn(Zn),
+    !,
+    P is P0 + 2,
     potential_name_fsa(5,P,Words,Ws,Prefix,His).
 potential_name_fsa(55,P0,[',',Word|Words],Ws,[','|Prefix],[postcode]) :-
     P1 is P0 + 1,
@@ -5734,6 +5771,9 @@ potential_name_fsa(222,_,['!'|Ws],Ws,['!'],[uitroepteken]) :- !.
 potential_name_fsa(222,P0,Ws0,Ws,W0,His) :-
     potential_name_fsa(22,P0,Ws0,Ws,W0,His).
 
+potential_name_fsa(23,_P0,['&',Zn|Words],Words,['&',Zn],[end_firma]) :-
+    zn(Zn),
+    !.
 potential_name_fsa(23,_P0,[et,'al.'|Words],Words,[et,'al.'],[etal]) :-
     !.
 potential_name_fsa(23,P0,[The,Word|Words],Ws,[The,Word|Prefix],[foreign,foreign|His]) :-
@@ -6820,3 +6860,6 @@ famous_per('Strauss').
 
 zaliger(zaliger).
 zaliger(generaal).
+
+zn(zn).
+zn(zoon).
