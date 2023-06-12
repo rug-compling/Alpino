@@ -31,7 +31,7 @@ job:
    echo "hostname -f " ;\
    echo "echo $(suite) " ;\
    echo "cd `pwd`";\
-   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) cdb_part=$(cdb_part)";\
+   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite)";\
        ) | sbatch --job-name=$(suite)
 
 shortjob:
@@ -46,7 +46,7 @@ shortjob:
    echo "hostname -f" ;\
    echo "echo $(suite) " ;\
    echo "cd `pwd`";\
-   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) cdb_part=$(cdb_part)";\
+   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite)";\
        ) | sbatch --partition=short --job-name=$(suite)
 
 
