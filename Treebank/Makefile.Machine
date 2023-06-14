@@ -28,7 +28,6 @@ annotate:
           demo=off\
           end_hook=xml $(extra) -parse 2>> $(DISK)/$(suite).log
 	$(miniact) -c $(DISK)/$(suite)
-	-$(MAKE) e LOGS=$(DISK)/$(suite).log > $(DISK)/$(suite).errors
 	gzip -f $(DISK)/$(suite).log
 	rm -rf $(DISK)/$(suite)
 	mv $(DISK)/$(suite).* .
@@ -55,7 +54,6 @@ dump:
 
 finish:
 	$(miniact) -c $(DISK)/$(suite)
-	-$(MAKE) e LOGS=$(DISK)/$(suite).log > $(DISK)/$(suite).errors
 	gzip -f $(DISK)/$(suite).log
 	rm -rf $(DISK)/$(suite)
 	mv $(DISK)/$(suite).* .
@@ -79,7 +77,6 @@ annotatemore:
           demo=off\
           end_hook=xml $(extra) -parse 2>> ./$(suite).log
 	$(miniact) -c ./$(suite)
-	-$(MAKE) e LOGS=./$(suite).log > ./$(suite).errors
 	gzip -f ./$(suite).log
 	rm -rf ./$(suite)
 
