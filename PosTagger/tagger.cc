@@ -119,7 +119,7 @@ void tagger_init(int    p_model,
   // initialize fadd library
   // nb the key is ignored at the moment, and the memory is never returned.
   int fadd_key=fadd_init_lib(16);
-  if(fadd_init_lib < 0)
+  if(fadd_key < 0)
     cerr << "TAGGER ERROR: fadd_init_lib returns error code " << fadd_key << endl;
 
   // load fadd data structures

@@ -1,7 +1,9 @@
 all: stylesheets/sanity-checks.xsl
-	for d in $(DIRS); do ( cd $$d ; $(MAKE) all ); done
+	$(MAKE) -C IndexedCorpus all
+	$(MAKE) -C miniact all
+	$(MAKE) -C enhance all
 
-DIRS=IndexedCorpus miniact
+DIRS=IndexedCorpus miniact enhance
 
 ifeq "$(shell if [ -r ../Makefile.include ]; then echo yes; fi)" "yes"
 include ../Makefile.include

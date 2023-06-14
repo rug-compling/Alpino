@@ -27,6 +27,7 @@ annotate:
           -flag treebank $(DISK)/$(suite)\
           demo=off\
           end_hook=xml $(extra) -parse 2>> $(DISK)/$(suite).log
+	$(ALPINO_HOME)/bin/enhance $(DISK)/$(suite) $(enhance) >> $(DISK)/$(suite).log
 	$(miniact) -c $(DISK)/$(suite)
 	gzip -f $(DISK)/$(suite).log
 	rm -rf $(DISK)/$(suite)
@@ -53,6 +54,7 @@ dump:
 	echo "</alpino_ds_list>"
 
 finish:
+	$(ALPINO_HOME)/bin/enhance $(DISK)/$(suite) $(enhance) >> $(DISK)/$(suite).log
 	$(miniact) -c $(DISK)/$(suite)
 	gzip -f $(DISK)/$(suite).log
 	rm -rf $(DISK)/$(suite)
