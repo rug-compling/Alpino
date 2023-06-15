@@ -17309,7 +17309,7 @@ v(preciseer,preciseert,preciseren,gepreciseerd,preciseerde,preciseerden,
     [h([sbar,
 	transitive])]).
 
-v(predik,predikt,prediken,gepredikt,predikte,predikten,
+v(predik,predikt,[prediken,predikken],gepredikt,predikte,predikten,
     [h([intransitive,
 	sbar,
 	transitive,

@@ -8015,6 +8015,8 @@ n([sg(consigne),pl(consignes)],het,
 
 n([mass(consistentie)],de,[]).
 
+n([sg(console)],de,[]).
+
 n([mass(consolidatie)],de,[]).
 
 n([pl(consorten)],de,[]).
