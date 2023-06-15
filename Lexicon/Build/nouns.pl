@@ -35905,6 +35905,8 @@ n([pl(totalen),sg(totaal)],het,[],
 
 n([mass(totaliteit)],de,[]).
 
+n([sg(toto)],de,[]).
+
 n([mass(totstandbrenging)],de,[]).
 
 n([mass(totstandkoming)],de,[]).
