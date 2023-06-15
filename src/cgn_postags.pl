@@ -2556,6 +2556,7 @@ exc_dehet(coma,het).
 exc_dehet(baldakijn,genus).
 exc_dehet(boord,genus).
 exc_dehet(doolhof,genus).
+exc_dehet(dehet,genus).
 exc_dehet(katoen,genus).
 exc_dehet(koolmonoxide,genus).
 exc_dehet(kwart,het).
