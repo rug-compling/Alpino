@@ -1,5 +1,10 @@
 
-DST = /net/aistaff/vannoord/public_html/alp/Alpino/tred/
+## if you change something for personal use only on your local machine,
+## then this directory should be
+## $(HOME)/.tred.d/extensions (and some of the copied files are redundant)
+## The following is used to be put on the website, so that other users
+## can update their Alpino extension
+DST = $(HOME)/public_html/alp/Alpino/tred/
 
 all: \
 	dirs \
