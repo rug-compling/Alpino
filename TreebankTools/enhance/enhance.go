@@ -15,7 +15,7 @@ import (
 var (
 	sources   = map[string][2]string{}
 	sourcesLL = map[string][2]string{
-		// type           source      description
+		// type:          source,     description
 		"WR-P-E-A":     {"SONAR500", "discussion lists"},
 		"WR-P-E-C":     {"SONAR500", "e-magazines"},
 		"WR-P-E-E":     {"SONAR500", "newsletters"},
@@ -56,6 +56,27 @@ var (
 		"senseval":     {"SENSEVAL", ""},
 		"troonrede":    {"TROONREDE", ""},
 	}
+	sourcesLLX = map[string][2]string{
+		// type:              source, description
+		"Books":             {"Books", ""},
+		"ch":                {"CHILDES", ""},
+		"ad":                {"CLEF", ""},
+		"nh":                {"CLEF", ""},
+		"DGT":               {"DGT", ""},
+		"wyt":               {"DutchWebCorpus", ""},
+		"reve":              {"GELOOFDERKAMERADEN", ""},
+		"GlobalVoices":      {"GlobalVoices", ""},
+		"JRC-Acquis":        {"JRC-Acquis", ""},
+		"News-Commentary11": {"News-Commentary11", ""},
+		"OpenSubtitles2018": {"OpenSubtitles2018", ""},
+		"ParaCrawl":         {"ParaCrawl", ""},
+		"TED2013":           {"TED2013", ""},
+		"Tatoeba":           {"Tatoeba", ""},
+		"ep":                {"europarl7", ""},
+		"giga-art":          {"gigacorpus.nl", ""},
+		"giga-boo":          {"gigacorpus.nl", ""},
+		"wiki":              {"wiki2017", ""},
+	}
 
 	x = util.CheckErr
 )
@@ -71,8 +92,11 @@ Het laatste deel van het path wordt gebruikt om het corpus te herkennen
 
 Opties, gescheiden door komma, geen spatie:
 
-    LL = Metadata voor LassyLarge invoegen
-    UD = Universal Dependencies invoegen
+    LL  = Metadata voor LassyLarge invoegen
+    LLX = Metadata voor LassyLargeExtra invoegen
+    UD  = Universal Dependencies invoegen
+
+Je kunt maar één set Metadata kiezen
 
 `, os.Args[0], os.Args[0])
 		return
@@ -87,6 +111,8 @@ Opties, gescheiden door komma, geen spatie:
 			switch strings.ToLower(opt) {
 			case "ll":
 				sources = sourcesLL
+			case "llx":
+				sources = sourcesLLX
 			case "ud":
 				ud = true
 			}
