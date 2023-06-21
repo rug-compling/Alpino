@@ -60,8 +60,8 @@ var (
 		// type:              source, description
 		"Books":             {"Books", ""},
 		"ch":                {"CHILDES", ""},
-		"ad":                {"CLEF", ""},
-		"nh":                {"CLEF", ""},
+		"ad":                {"CLEF", "Algemeen Dagblad,"},
+		"nh":                {"CLEF", "NRC Handelsblad"},
 		"DGT":               {"DGT", ""},
 		"wyt":               {"DutchWebCorpus", ""},
 		"reve":              {"GELOOFDERKAMERADEN", ""},
@@ -73,8 +73,8 @@ var (
 		"TED2013":           {"TED2013", ""},
 		"Tatoeba":           {"Tatoeba", ""},
 		"ep":                {"europarl7", ""},
-		"giga-art":          {"gigacorpus.nl", ""},
-		"giga-boo":          {"gigacorpus.nl", ""},
+		"giga-art":          {"gigacorpus.nl", "articles"},
+		"giga-boo":          {"gigacorpus.nl", "books"},
 		"wiki":              {"wiki2017", ""},
 	}
 
