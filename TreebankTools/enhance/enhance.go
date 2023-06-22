@@ -63,7 +63,7 @@ var (
 		"ad":                {"CLEF", "Algemeen Dagblad,"},
 		"nh":                {"CLEF", "NRC Handelsblad"},
 		"DGT":               {"DGT", ""},
-		"wyt":               {"DutchWebCorpus", ""},
+		"DWC":               {"DutchWebCorpus", ""},
 		"reve":              {"GELOOFDERKAMERADEN", ""},
 		"GlobalVoices":      {"GlobalVoices", ""},
 		"JRC-Acquis":        {"JRC-Acquis", ""},
