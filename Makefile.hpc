@@ -35,6 +35,23 @@ job:
    echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) enhance=$(enhance)";\
        ) | sbatch --job-name=$(suite)
 
+longjob:
+	(  \
+   echo "#!/bin/sh" ;\
+   echo "#SBATCH --nodes=1" ;\
+   echo "#SBATCH --ntasks=1" ;\
+   echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
+   echo "#SBATCH --time=72:00:00" ;\
+   echo "module load Python/2.7.18-GCCcore-11.3.0-bare";\
+   echo "module load Boost/1.79.0-GCC-11.3.0";\
+   echo "module load Tk/8.6.12-GCCcore-11.3.0";\
+   echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
+   echo "hostname -f " ;\
+   echo "echo $(suite) " ;\
+   echo "cd `pwd`";\
+   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) enhance=$(enhance)";\
+       ) | sbatch --job-name=$(suite)
+
 shortjob:
 	(  \
    echo "#!/bin/sh" ;\
@@ -62,6 +79,11 @@ files:
 jobs:
 	for suite in $(FILES);\
         do echo $$suite $$jobname; $(MAKE) -s job suite=$$suite enhance=$(ENHANCE); sleep 0.02;\
+        done
+
+longjobs:
+	for suite in $(FILES);\
+        do echo $$suite $$jobname; $(MAKE) -s longjob suite=$$suite enhance=$(ENHANCE); sleep 0.02;\
         done
 
 jobnames:
