@@ -278,8 +278,8 @@ lexical_analysis_or_bracket(bracket(close),Rest,Rest1,P0,P,R,R,I,I,BC0,BC,LC,LC)
 	)
     ->	BC is BC0-1,
 	close_bracket_type(Rest,Rest1,P0,P)
-    ;	format(user_error,"error: brackets not balanced~n",[])
-	% raise_exception(alpino_error(unbalanced_brackets))
+    ;	format(user_error,"error: brackets not balanced~n",[]),
+	raise_exception(alpino_error(unbalanced_brackets))
     ).
 lexical_analysis_or_bracket(W,Rest,Rest,P0,P,R0,R,[W|I],I,BC,BC,LC,[W|LC]) :-
     P is P0 + 1,
@@ -2028,10 +2028,13 @@ garbage_atom('FILE').
 garbage_atom('__').
 garbage_atom('__').
 garbage_atom(Atom) :-
+    atom(Atom),
     sub_atom(Atom,_,_,_,'_____').
 garbage_atom(Atom) :-
+    atom(Atom),
     sub_atom(Atom,_,_,_,'-----').
 garbage_atom(Atom) :-
+    atom(Atom),
     sub_atom(Atom,_,_,_,'=====').
 garbage_atom('NOTOC').
 
@@ -2701,7 +2704,11 @@ guess_english_compound(tag(P0,P,R0,R,Label,Used,normal(english_compound),Tag2)) 
     search_tag_r0(R1,tag(P1,P, R1,R, Label2,Used2,_His2,Tag2)),
     noun_tag(Tag2),
     second_part_english_compound(R1,R,Tag2),
-    alpino_lex:concat_stems([Label1,Label2],Label,' '),
+    (   Label1 = v_root(Label1A,_)
+    ->  true
+    ;   Label1 = Label1A
+    ),
+    alpino_lex:concat_stems([Label1A,Label2],Label,' '),
     concat_all([Used1,Used2],Used,' '),
     \+ search_tag_r0(R0,tag(P0,P,R0,R,_,_,_,_)),
     \+ (  tag(Z0,Z,_,_,_,_,_,_),
