@@ -1218,6 +1218,8 @@ tag(shit).
 tag(sjonge).
 tag(slaaplekker).
 tag(snapje).
+tag(snif).
+tag(snotter).
 tag([so,what]).
 tag(soit).
 tag(sorry).
@@ -8298,6 +8300,11 @@ with_dt([me,dunkt],
 	denk_ik_dip,
 	dt(sv1,[hd=l(v_root(dunk,dunken),verb(hebben,sg3,dip_sbar_subj_so_np_no_het),1,2),
 		su=l(me,pronoun(nwh,fir,sg,de,dat_acc,def,wkpro),np,0,1)])).
+
+with_dt([geloof,me],
+	denk_ik,
+	dt(sv1,[hd=l(v_root(geloof,geloven),verb(hebben,sg1,tr_sbar),0,1),
+		su=l(me,pronoun(nwh,fir,sg,de,dat_acc,def,wkpro),np,1,2)])).
 
 with_dt([denk,ik],
 	denk_ik,

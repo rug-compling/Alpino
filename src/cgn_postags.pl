@@ -171,7 +171,7 @@ cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_) -->
     !.
 
 cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_) -->
-    {  format(user_error,"error: no cgn tag for ~w ~w ~w~n",[Surf,Stem,Frame]) },
+    {  format(user_error,"warning: no cgn tag for ~w ~w ~w~n",[Surf,Stem,Frame]) },
     guess_tags(Q0,Q,Frame,Surf).
 
 add_tags([],Q,Q,_Tag) --> [].
@@ -186,7 +186,8 @@ tags(Q0,Q,Stem0,Surf,Tag,L0,L) :-
     Len is Q-Q0,
     (   Len =:= 1
     ->  L0 = [cgn_postag(Q0,Q,Stem,Tag)|L]
-    ;	alpino_util:split_atom(Stem," ",Stems),
+    ;	atom(Stem),
+	alpino_util:split_atom(Stem," ",Stems),
 	length(Stems,Len2),
 	(   Len =:= Len2
 	->  new_tags(Stems,Surfs,Q0,Q,Tag,L0,L)
@@ -692,8 +693,8 @@ context_dependent_tag_lemma(determiner(pron,rwh),Postag,wier,_,wie,Q0,Q,Result) 
     !,
     find_node(Q0,Q,Result,Node),
     (   wh_relagr_pl(Node)
-    ->  Postag = 'VNW(betr,pron,gen,vol,3o,mv)'
-    ;   Postag = 'VNW(betr,pron,gen,vol,3o,ev)'
+    ->  Postag = 'VNW(vb,pron,gen,vol,3p,mv)'
+    ;   Postag = 'VNW(vb,pron,gen,vol,3v,ev)'
     ).
 
 context_dependent_tag_lemma(proper_name(_,SUB),Postag,Stem0,Surf,Stem,Q0,Q,Result) :-
@@ -2542,6 +2543,7 @@ default_dehet(Word,DeHet) :-
     lm_dehet(Word,DeHet).
 
 lm_dehet(Word,DeHet):-
+    atom(Word),
     alpino_cg:phrase_fluency([xx,de,Word,'.'],DeScore),
     alpino_cg:phrase_fluency([xx,het,Word,'.'],HetScore),
     (    HetScore < DeScore
@@ -3780,7 +3782,8 @@ num_postag(_A,'SPEC(symb)').
 with_dt_tags(Tree,Q0,L0,L) :-
     (   with_dt_tags_(Tree,Q0,L0,L)
     ->  true
-    ;   hdrug_util:debug_message(1,"warning: with_dt_tags failed~n",[]),
+    ;   hdrug_util:hdrug_flag(current_ref,Key),
+	hdrug_util:debug_message(1,"warning: with_dt_tags failed in ~w~n",[Key]),
 	hdrug_util:debug_message(2,"~w~n",[Tree]),
 	L0 = L
     ).
@@ -3795,18 +3798,17 @@ with_dt_tags_l_l(Stem0,Frame,R0,R,Q0) -->
        S is Q0 + R,
        cgn_postag_l(Stem0,Stem,Frame,Tag)
     }.
-with_dt_tags_l_l(Stem,Tag,R0,R,Q0) -->
+with_dt_tags_l_l(_Stem,Tag,R0,R,Q0) -->
     { integer(R0),
       integer(R),
       R - R0 > 1 },
     !,
-    { atom(Stem),
-      alpino_util:split_atom(Stem," ",Words),
+    { alpino_util:thread_flag(current_input_sentence,Input),
       S0 is Q0 + R0,
-      S  is Q0 + R
+      S  is Q0 + R,
+      alpino_lexical_analysis:surface_form(Input,S0,S,Used)
     },
-    guess_tags(S0,S,Tag,Words).
-    
+    guess_tags(S0,S,Tag,Used).
 
 with_dt_tags_(dt(_,List),Q0) -->
     with_dt_tags_list(List,Q0).
@@ -5353,7 +5355,7 @@ lassy('volk','volk','N(soort,ev,basis,onz,stan)').
 lassy('verloren','verliezen','WW(vd,vrij,zonder)').
 lassy('uitbreiding','uitbreiding','N(soort,ev,basis,zijd,stan)').
 lassy('reactie','reactie','N(soort,ev,basis,zijd,stan)').
-lassy('o.a.','onder','ander').
+lassy('o.a.','onder ander','SPEC(afk)').
 lassy('lijn','lijn','N(soort,ev,basis,zijd,stan)').
 lassy('goudstandaard','goud_standaard','N(soort,ev,basis,zijd,stan)').
 lassy('dingen','ding','N(soort,mv,basis)').

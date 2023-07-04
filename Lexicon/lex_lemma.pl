@@ -4019,6 +4019,7 @@ lemma_root(door_krabben,krab_door) .
 lemma_root(door_kraken,kraak_door) .
 lemma_root(door_krassen,kras_door) .
 lemma_root(door_kreperen,krepeer_door) .
+lemma_root(door_kreuken,kreuk_door) .
 lemma_root(door_kreunen,kreun_door) .
 lemma_root(door_kriebelen,kriebel_door) .
 lemma_root(door_krijgen,krijg_door) .
@@ -4731,6 +4732,7 @@ lemma_root(door_scouten,scout_door) .
 lemma_root(door_scrollen,scroll_door) .
 lemma_root(door_sealen,seal_door) .
 lemma_root(door_seinen,sein_door) .
+lemma_root(door_seksen,seks_door) .
 lemma_root(door_selecteren,selecteer_door) .
 lemma_root(door_serveren,serveer_door) .
 lemma_root(door_shockeren,shockeer_door) .
@@ -7782,6 +7784,7 @@ lemma_root(kramen,kraam) .
 lemma_root(krassen,kras) .
 lemma_root(krenken,krenk) .
 lemma_root(kreperen,krepeer) .
+lemma_root(kreuken,kreuk) .
 lemma_root(kreunen,kreun) .
 lemma_root(kriebelen,kriebel) .
 lemma_root(krijgen,krijg) .
@@ -10255,6 +10258,7 @@ lemma_root(over_stijgen,stijg_over) .
 lemma_root(over_stommelen,stommel_over) .
 lemma_root(over_stormen,storm_over) .
 lemma_root(over_storten,stort_over) .
+lemma_root(over_stralen,straal_over) .
 lemma_root(overstromen,overstroom) .
 lemma_root(over_stromen,stroom_over) .
 lemma_root(over_strompelen,strompel_over) .
@@ -11602,6 +11606,7 @@ lemma_root(raak_krabben,krab_raak) .
 lemma_root(raak_kraken,kraak_raak) .
 lemma_root(raak_krassen,kras_raak) .
 lemma_root(raak_kreperen,krepeer_raak) .
+lemma_root(raak_kreuken,kreuk_raak) .
 lemma_root(raak_kreunen,kreun_raak) .
 lemma_root(raak_kriebelen,kriebel_raak) .
 lemma_root(raak_krijsen,krijs_raak) .
@@ -12269,6 +12274,7 @@ lemma_root(raak_scouten,scout_raak) .
 lemma_root(raak_scrollen,scroll_raak) .
 lemma_root(raak_sealen,seal_raak) .
 lemma_root(raak_seinen,sein_raak) .
+lemma_root(raak_seksen,seks_raak) .
 lemma_root(raak_selecteren,selecteer_raak) .
 lemma_root(raak_serveren,serveer_raak) .
 lemma_root(raak_shockeren,shockeer_raak) .
@@ -13678,6 +13684,7 @@ lemma_root(screenen,screen) .
 lemma_root(scrollen,scroll) .
 lemma_root(sealen,seal) .
 lemma_root(seinen,sein) .
+lemma_root(seksen,seks) .
 lemma_root(selecteren,selecteer) .
 lemma_root(selekteren,selekteer) .
 lemma_root(seponeren,seponeer) .
@@ -16756,6 +16763,7 @@ lemma_root(uit_krabben,krab_uit) .
 lemma_root(uit_kraken,kraak_uit) .
 lemma_root(uit_kramen,kraam_uit) .
 lemma_root(uit_krassen,kras_uit) .
+lemma_root(uit_kreuken,kreuk_uit) .
 lemma_root(uit_kreunen,kreun_uit) .
 lemma_root(uit_kriebelen,kriebel_uit) .
 lemma_root(uit_krijgen,krijg_uit) .
@@ -17405,6 +17413,7 @@ lemma_root(uit_scouten,scout_uit) .
 lemma_root(uit_scrollen,scroll_uit) .
 lemma_root(uit_sealen,seal_uit) .
 lemma_root(uit_seinen,sein_uit) .
+lemma_root(uit_seksen,seks_uit) .
 lemma_root(uit_selecteren,selecteer_uit) .
 lemma_root(uit_serveren,serveer_uit) .
 lemma_root(uit_shockeren,shockeer_uit) .
@@ -21579,6 +21588,7 @@ lemma_root(voort_krabben,krab_voort) .
 lemma_root(voort_kraken,kraak_voort) .
 lemma_root(voort_krassen,kras_voort) .
 lemma_root(voort_kreperen,krepeer_voort) .
+lemma_root(voort_kreuken,kreuk_voort) .
 lemma_root(voort_kreunen,kreun_voort) .
 lemma_root(voort_kriebelen,kriebel_voort) .
 lemma_root(voort_krijsen,krijs_voort) .
@@ -22249,6 +22259,7 @@ lemma_root(voort_scouten,scout_voort) .
 lemma_root(voort_scrollen,scroll_voort) .
 lemma_root(voort_sealen,seal_voort) .
 lemma_root(voort_seinen,sein_voort) .
+lemma_root(voort_seksen,seks_voort) .
 lemma_root(voort_selecteren,selecteer_voort) .
 lemma_root(voort_serveren,serveer_voort) .
 lemma_root(voort_shockeren,shockeer_voort) .

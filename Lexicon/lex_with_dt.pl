@@ -1598,6 +1598,7 @@ with_dt_all(gelijk,[gelijk,kap,monnik]).
 with_dt_all(gelijk,[zijn]).
 with_dt_all(geloof,[het,niet,of]).
 with_dt_all(geloof,[ik]).
+with_dt_all(geloof,[me]).
 with_dt_all(geloof,[niet,te]).
 with_dt_all(gemeentewege,[van]).
 with_dt_all(genoeg,[jammer]).

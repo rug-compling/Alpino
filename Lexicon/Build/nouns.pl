@@ -1747,7 +1747,7 @@ n([pl(achterpoten),sg(achterpoot)],de,[]).
 
 n([pl(achterruiten),sg(achterruit)],de,[]).
 
-n([pl(achterstanden),sg(achterstand)],de,[]).
+n([pl(achterstanden),sg(achterstand)],de,[],[taal]).
 
 n([pl(achterstes),sg(achterste)],het,[]).
 
@@ -5788,6 +5788,8 @@ n([pl(bokken),sg(bok)],de,[],[dim(bokje)]).
 
 n([pl(bokalen),sg(bokaal)],de,[],[dim(bokaaltje)]).
 
+n([sg(boks),pl(boksen)],de,[]). 
+
 n([pl(boksers),sg(bokser)],de,[],[prof]).
 
 n([pl(bollen),sg(bol)],de,[measure],[dim(bolletje)]). % cocaine
@@ -6931,6 +6933,8 @@ n([pl(carrières),sg(carrière)],de,[],
    s(trainer)]).
 
 n([pl(carrosserieën),sg(carrosserie)],de,[]).
+
+n([sg(carrousel),pl(carrousellen)],de,[]).
 
 n([pl(carrés),sg(carré)],het,[]).
 
@@ -8179,7 +8183,7 @@ n([mass([corporate,finance])],both,[]).
 
 n([mass([corporate,governance])],both,[]).
 
-n([mass([corporate,governance,code])],de,[]).  %Tabaksblatt
+n([mass([corporate,governance,code])],de,[]).  %Tabaksblat
 
 n([mass([corporate,identity])],both,[]).
 
@@ -8639,7 +8643,7 @@ n([pl(dancings),sg(dancing)],de,[]).
 
 n([pl('dandy\'s'),sg(dandy)],de,[]).
 
-n([mass(dank)],de,[sbar]).
+n([mass(dank)],de,[sbar,subject_sbar]).
 
 n([mass(dankbaarheid)],de,[]).
 
@@ -9111,7 +9115,7 @@ n([mass(diagnostiek)],de,[]).
 
 n([sg(diagonaal),pl(diagonalen)],de,[]).
 
-n([pl(diagrammen),sg(diagram)],het,[]).
+n([pl(diagrammen),sg(diagram)],het,[],[dim(diagrammetje)]).
 
 n([pl(dialecten),sg(dialect),pl(dialekten),sg(dialekt)],het,[]).
 
@@ -13383,6 +13387,8 @@ n([mass(gewichtheffen)],het,[]).
 n([pl(gewijsden),sg(gewijsde)],het,[]).
 
 n([mass(gewin)],het,[]).
+
+n([mass(gewoel)],het,[],[strijd]).
 
 n([pl(gewoonten),pl(gewoontes),sg(gewoonte)],de,
   [sbar,
@@ -26028,11 +26034,13 @@ n([mass('PPS')],de,[]).		% publiek-private samenwerking
 
 n([sg('Palestijn'),pl('Palestijnen')],de,[]).
 
-n([pl(paletten),sg(palet)],het,[]).
+n([pl(paletten),sg(palet)],both,[]).
 
 n([sg(palindroom),pl(palindromen)],both,[app_measure]).
 
 n([pl(palingen),sg(paling)],de,[],[dim(palinkje)]).
+
+n([pl(pallets), pl(palletten),sg(pallet)],both,[]).
 
 n([pl(palmen),sg(palm)],de,[],[dim(palmpje)]).
 
@@ -29521,6 +29529,8 @@ n([mass(reine)],het,[]).
 
 n([mass(reinheid)],de,[]).
 
+n([sg(reiniger),pl(reinigers)],de,[]).
+
 n([pl(reinigingen),sg(reiniging)],de,[]).
 
 n([mass(reïntegratie)],de,[]).
@@ -32976,6 +32986,8 @@ n([pl(spoorbruggen),sg(spoorbrug)],de,[]).
 
 n([pl(spoorwegen),sg(spoorweg)],de,[]).
 
+n([sg(spouw)],de,[]).
+
 n([pl(sporten),sg(sport)],de,[app_measure],
   [amateur,
    atletiek,
@@ -33234,8 +33246,6 @@ n([sg(staatssecretariaat),
    sg(staatsecretariaat),
    pl(staatsecretariaten)],het,[app_measure]).
 
-n([pl(staatsvormen),sg(staatsvorm)],de,[]).
-
 n([pl(stabilisaties),sg(stabilisatie),
    pl(stabilizaties),sg(stabilizatie)],de,[]).
 
@@ -33279,13 +33289,9 @@ n([pl(stadsgewesten),sg(stadsgewest)],het,[app_measure],[]).
 
 n([sg(stadsprovincie),pl(stadsprovincies)],de,[app_measure]).
 
-n([pl(stadsvernieuwingen),sg(stadsvernieuwing)],de,[]).
-
 n([pl(staven),sg(staf)],de,[],
   [defensie,
    dim(stafje)]).
-
-n([pl(stafchefs),sg(stafchef)],de,[]).
 
 n([pl(stages),sg(stage)],de,[],
   [hoogte,
@@ -33415,8 +33421,6 @@ n([pl(startbanen),sg(startbaan)],de,[]).
 n([pl(starters),sg(starter)],de,[]).
 
 n([sg(startup),sg('start-up'),pl(startups),pl('start-ups')],de,[]).
-
-n([pl(startseinen),sg(startsein)],het,[]).
 
 n([pl(statements),sg(statement)],het,[]).
 
@@ -33578,10 +33582,6 @@ n([pl(stembanden),sg(stemband)],de,[]).
 
 n([pl(stembussen),sg(stembus)],de,[]).
 
-n([pl(stemgeluiden),sg(stemgeluid)],het,[]).
-
-n([sg(stemlokaal),pl(stemlokalen)],het,[]).
-
 n([sg(stemmer),pl(stemmers)],de,[],
   [tegen,
    voor]).
@@ -33639,7 +33639,8 @@ n([pl(sterkten),pl(sterktes),sg(sterkte)],de,[subject_sbar],
 
 n([pl(sternen),pl(sterns),sg(stern)],de,[]).
 
-n([pl(sterrenbeelden),sg(sterrenbeeld)],het,[np_app_measure]).
+n([pl(sterrenbeelden),sg(sterrenbeeld),
+   pl(sterrebeelden),sg(sterrebeeld)],het,[np_app_measure]).
 
 n([mass(sterrenhemel)],de,[]).
 
@@ -33882,7 +33883,7 @@ n([sg(stolling),pl(stollingen)],de,[],[bloed]).
 
 n([pl(stolpen),sg(stolp)],de,[]).
 
-n([sg(stolsel),pl(stolsels)],de,[],[bloed]).
+n([sg(stolsel),pl(stolsels)],both,[],[bloed]).
 
 n([pl(stomheden),sg(stomheid)],de,[sbar,vp]).
 
@@ -33984,10 +33985,6 @@ n([pl(straten),sg(straat)],de,[],
    zij,
    dim(straatje)]).
 
-n([mass(straatkant)],de,[]).
-
-n([pl(straatlantaarns),sg(straatlantaarn)],de,[]).
-
 n([sg(straatlengte),sg(straatlengten),sg(straatlengtes)],de,[measure]).
 
 n([pl(straatstenen),sg(straatsteen)],de,[]).
@@ -34008,14 +34005,6 @@ n([pl(straffen),sg(straf)],de,[],
    werk]).
 
 n([mass(strafbaarstelling)],de,[]).
-
-n([pl(strafgevangenissen),sg(strafgevangenis)],de,[]).
-
-n([pl(strafkamers),sg(strafkamer)],de,[]).
-
-n([pl(strafmaatregelen),sg(strafmaatregel)],de,[]).
-
-n([pl(strafrechters),sg(strafrechter)],de,[]).
 
 n([pl(strafschoppen),sg(strafschop)],de,[]).
 
@@ -34423,7 +34412,11 @@ n([sg(supervisor),pl(supervisors),pl(supervisoren)],de,[]).
 
 n([pl(supplementen),sg(supplement)],het,[],[s(voeding)]).
 
+n([sg(suppletie),pl(suppleties)],de,[]).
+
 n([pl(suppoosten),sg(suppoost)],de,[]).
+
+n([sg(support)],de,[]).
 
 n([pl(supporters),sg(supporter)],de,[]).
 
@@ -34471,9 +34464,9 @@ n([pl(sympathizanten),sg(sympathizant)],de,[]).
 
 n([pl(sympatieën),sg(sympatie)],de,[]).
 
-n([pl(sympatizanten),sg(sympatisant)],de,[]).
+n([pl(sympatisanten),sg(sympatisant)],de,[]).
 
-n([pl(sympatisanten),sg(sympatizant)],de,[]).
+n([pl(sympatizanten),sg(sympatizant)],de,[]).
 
 n([pl(symposia),pl(symposiums),sg(symposium)],het,[]).
 
@@ -34484,6 +34477,8 @@ n([pl(synagogen),sg(synagoge)],de,[]).
 n([sg(synaps),pl(synapsen)],de,[]).
 
 n([sg(syndicaat),pl(syndicaten)],het,[]).
+
+n([sg(syndicalisme)],het,[]).
 
 n([pl(syndromen),sg(syndroom)],het,[]).
 
@@ -34557,8 +34552,6 @@ n([pl(talen),sg(taal)],de,[],
    voer,
    s(volk),
    dim(taaltje)]).
-
-n([sg(taalachterstand),pl(taalachterstanden)],de,[]).
 
 n([mass(taaleigen)],het,[]).
 
@@ -34706,8 +34699,6 @@ n([pl(tanks),sg(tank)],de,[],
 n([pl(tankers),sg(tanker)],de,[],
   [olie,h(olie)]).
 
-n([sg(tankklep),pl(tankkleppen)],de,[]).
-
 n([mass(tannine)],de,[]).
 
 n([pl(tantes),sg(tante)],de,[],
@@ -34771,10 +34762,6 @@ n([pl(taxaties),pl(taxatiën),sg(taxatie)],de,[sbar]).
 n([mass(taxfree)],de,[]).
 
 n([pl('taxi\'s'),sg(taxi)],de,[],[trein]).
-
-n([pl('taxi-chauffeurs'),sg('taxi-chauffeur')],de,[]).
-
-n([pl(taxichauffeurs),sg(taxichauffeur)],de,[]).
 
 n([mass(taxol)],de,[]).  % kankerremmer
 
@@ -35354,8 +35341,6 @@ n([pl(thrillers),sg(thriller)],de,[]).
 
 n([mass(thuis)],both,[]).
 
-n([pl(thuishavens),sg(thuishaven)],de,[]).
-
 n([mass(thuiskomst)],de,[]).
 
 n([pl(thuislanden),sg(thuisland)],het,[]).
@@ -35372,7 +35357,7 @@ n([sg(tiebreak),pl(tiebreaks),
 
 n([pl(tienen),sg(tien)],de,[]).
 
-n([pl(tienden)],both,[meas_mod]).
+n([stem(tiende), pl(tienden)],both,[meas_mod]).
 
 n([stem(tien_duizend),pl(tienduizenden)],de,[measure]).
 
@@ -35382,6 +35367,8 @@ n([bare_meas(tienmaal),pl(tienmalen)],both,[temp_mod,measure,sbar]).
 
 n([stem(tien_DIM),
    pl(tientjes),sg(tientje)],het,[measure]). % een tientje korting
+
+n([sg(tier),pl(tiers)],de,[]).  % vooral voor tier 1-instrumenten
 
 n([pl(tieten),sg(tiet)],de,[measure], % measure?
   []).
@@ -35800,8 +35787,6 @@ n([meas(ton),pl(tonnen)],de,[meas_mod,measure],
 
 n([pl(tonelen),sg(toneel)],het,[],[wereld]).
 
-n([pl(toneelschrijvers),sg(toneelschrijver)],de,[]).
-
 n([pl(toneelspelen),sg(toneelspel)],het,[]).
 
 n([pl(toneelstukken),sg(toneelstuk)],het,[],[dim(toneelstukje)]).
@@ -35858,8 +35843,6 @@ n([pl(toppen),sg(top)],de,[],
    dim(topje)]).
 
 n([sg([top,level,domain])],het,[]).
-
-n([pl(topconferenties),sg(topconferentie)],de,[]).
 
 n([sg(topic),pl(topics)],both,[]).
 
@@ -37555,7 +37538,9 @@ n([pl(vergoedingen),sg(vergoeding)],de,[],
   [i(kilo_meter,kilometer),
    ontslag,
    rente,
-   uur]).
+   schade,
+   uur
+  ]).
 
 n([sg(vergrendeling),pl(vergrendelingen)],de,[]).
 
@@ -39053,7 +39038,6 @@ n([pl(vogelen),pl(vogels),sg(vogel)],de,[],
    s(ongeluk),
    ijs,
    roof,
-   struis,
    trek,
    waad,
    water,

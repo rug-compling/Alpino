@@ -6896,7 +6896,7 @@ grammar_rule(sbar(mod_pp),SBAR,[ Comp, COMMA, MOD, COMMA2, XP ]) :-
 
 grammar_rule(sbar(a),SBAR,[ Comp, XP ]) :-
     max_nadv_ap(XP0),
-    unify_except_l(XP0,XP,[adv,e_deps,wh]),
+    unify_except_l(XP0,XP,[adv,e_deps,wh,deverbal]),
     sbar_comp_xp_structure(Comp,XP,SBAR).
 
 grammar_rule(sbar(quoted_a),SBAR,[ Comp, QL, XP, QR ]) :-

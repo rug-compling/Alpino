@@ -339,6 +339,7 @@ next_word__(GrandSlamtoernooi,['(',GS|Ws],Ws,repair_tokenize_brackets,_) :-
 %% treat ( Grand Slam-)toernooi as Grand Slam-toernooi
 next_word__(Word,['('|Ws0],Ws,skip_l_brack(His),LC) :-
     Ws0 = [W1,GS|Tail],
+    atom(GS),
     sub_atom(GS,_,1,_,')'),
     atom_concat(Prefix,Rest,GS),
     atom_concat(')',Suffix,Rest),
@@ -2149,6 +2150,11 @@ l_requires_pl('We').
 l_requires_pl('Wij').
 l_requires_pl('Jullie').
 
+spelling_variant_context(zijde,gij,_,bent).
+spelling_variant_context(bende,gij,_,bent).
+spelling_variant_context(kunde,gij,_,kunt).
+spelling_variant_context(hebde,gij,_,hebt).
+
 %% verrichte hij --> verrichtte hij
 spelling_variant_context(StemTe,Requires3,_,StemTTe) :-
     atom(StemTe),
@@ -2583,10 +2589,6 @@ spelling_variant(eener,ener).
 
 spelling_variant(wa,wat).
 
-spelling_variant(hebde,hebt).
-
-spelling_variant(zijde,ben).
-spelling_variant(zijde,bent).
 spelling_variant(zijt,ben).
 spelling_variant(zijt,bent).
 
@@ -2649,6 +2651,7 @@ spelling_variant(keinder,kinderen).
 spelling_variant(machien,machine).
 spelling_variant(maman,mama).
 spelling_variant(oe,uw).
+spelling_variant(oew,uw).
 spelling_variant(stukske,stukje).
 spelling_variant(stukskes,stukjes).
 spelling_variant(tornooi,toernooi).
@@ -3513,6 +3516,7 @@ parse_only_lex(gewn,   gewoon, adjective(no_e(adv))    ).
 parse_only_lex(ier,    hier,   er_loc_adverb           ).
 parse_only_lex(ni,     niet,   adverb                  ).
 parse_only_lex(nie,    niet,   adverb                  ).
+parse_only_lex(niej,   niet,   adverb                  ).
 parse_only_lex(oek,    ook,    sentence_adverb         ).
 parse_only_lex(omda,   omdat,  complementizer          ).
 parse_only_lex(tis,    v_root(ben,zijn),    verb(zijn,sg3,ninv(incorporated_subj_topic(copula),incorporated_subj_topic(copula)))).
@@ -3550,6 +3554,9 @@ parse_only_lex(kga,v_root(ga,gaan),verb(zijn,sg1,ninv(part_incorporated_subj_top
 parse_only_lex(kheb,v_root(heb,hebben),verb(hebben,sg1,ninv(incorporated_subj_topic(aux_psp_hebben),incorporated_subj_topic(aux_psp_hebben)))).
 parse_only_lex(kheb,v_root(heb,hebben),verb(hebben,sg1,ninv(incorporated_subj_topic(transitive_ndev),incorporated_subj_topic(transitive_ndev)))).
 parse_only_lex(kheb,v_root(heb,hebben),verb(hebben,sg1,ninv(incorporated_subj_topic(nonp_pred_np_ndev),incorporated_subj_topic(nonp_pred_np_ndev)))).
+
+parse_only_lex(kvin,v_root(vind,vinden),verb(hebben,sg1,ninv(incorporated_subj_topic(X),incorporated_subj_topic(X)))) :-
+    lists:member(X,[pred_np,tr_sbar,van_sbar,np_pc_pp(aan),transitive_ndev_ndev]).
 
 parse_only_lex(zen,    zijn,   determiner(pron)        ).
 
@@ -3725,6 +3732,7 @@ abbreviation('dir.',   directeur).
 abbreviation('div.',   divers).
 abbreviation('div.',   diverse).
 abbreviation('div.',   divisie).
+abbreviation(dln,      delen).
 abbreviation('Duitsl.','Duitsland').
 abbreviation('eig.',   eigenlijk).
 abbreviation('electr.', electrisch).

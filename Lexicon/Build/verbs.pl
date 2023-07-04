@@ -5798,6 +5798,7 @@ v(dien,dient,dienen,gediend,diende,dienden,diene,
         part_intransitive(toe),
 	part_transitive(uit),
         als_copula,
+	fixed([[ter,zake]],no_passive),
         fixed([vc(zeg,psp,intransitive),sbar_subj_opt_het],no_passive),
 	pc_pp(ter),
 	pc_pp(tot),
@@ -12203,6 +12204,11 @@ v(kreun,kreunt,kreunen,gekreund,kreunde,kreunden,
         transitive,  % een liedje kreunen (?!)
 	part_intransitive(na)])]).
 
+v(kreuk,kreukt,kreuken,gekreukt,kreukte,kreukten,
+  [h([intransitive,
+      transitive
+     ])]).
+
 v(kriebel,kriebelt,kriebelen,gekriebeld,kriebelde,kriebelden,
     [h([intransitive,
 	transitive,
@@ -18049,6 +18055,8 @@ v(regen,regent,regenen,geregend,regende,regenden,
     [h([het_subj,
 	het_subj_sbar_obcomp,
         part_intransitive(binnen),
+	part_intransitive(in),
+	part_transitive(in), % het inregenen van mest
 	part_transitive(weg),
 	ld_pp,     % granaatscherven regenden op de daken
 	part_ld_pp(neer),  % brokken regenden neer op de dorpjes
@@ -19956,6 +19964,11 @@ v(sein,seint,seinen,geseind,seinde,seinden,
 	part_transitive(in),
 	vp,
 	pc_pp(om)])]).
+
+v(seks,sekst,seksen,gesekst,sekste,seksten,
+    [h([transitive,
+	intransitive
+       ])]).
 
 v(selecteer,selecteert,selecteren,geselecteerd,selecteerde,selecteerden,
     [h([transitive,
@@ -22318,20 +22331,21 @@ v(stouw,stouwt,stouwen,gestouwd,stouwde,stouwden,
 	part_transitive(weg)])]).
 
 v(straal,straalt,stralen,gestraald,straalde,straalden,
-    [h([part_transitive(uit),
-        part_transitive(door),
-        part_transitive(af),  % het geluid wordt afgestraald
-	fixed([[iets],van_sbar],no_passive),  % ze straalden iets uit van : ...
-	mod_pp(bij),          % maar ze straalt er een beetje bij
-	part_sbar(uit)]),
-     b([intransitive,
-	part_pc_pp(af,op),
-	pc_pp(van),
-        er_pc_pp(af),  % waar de tevredenheid af straalt
-        part_pc_er_transitive(af), % voor: "waar de tevredenheid afstraalt"
-	part_pc_pp(af,van),
-	part_so_np(tegemoet),
-	part_intransitive(uit)])]).
+  [h([part_transitive(uit),
+      part_transitive(over),
+      part_transitive(door),
+      part_transitive(af),	% het geluid wordt afgestraald
+      fixed([[iets],van_sbar],no_passive), % ze straalden iets uit van : ...
+      mod_pp(bij),		% maar ze straalt er een beetje bij
+      part_sbar(uit)]),
+   b([intransitive,
+      part_pc_pp(af,op),
+      pc_pp(van),
+      er_pc_pp(af),		   % waar de tevredenheid af straalt
+      part_pc_er_transitive(af), % voor: "waar de tevredenheid afstraalt"
+      part_pc_pp(af,van),
+      part_so_np(tegemoet),
+      part_intransitive(uit)])]).
 
 v(straf,straft,straffen,gestraft,strafte,straften,
     [h([intransitive,

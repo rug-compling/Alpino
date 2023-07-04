@@ -1560,6 +1560,7 @@ vreemd('in pectore').
 vreemd('in petto').
 vreemd('in residence').
 vreemd('in spe').
+vreemd('in vitro').
 vreemd('institutional trading').
 vreemd('Integrated Framework for Trade-related Technical Assistance').
 vreemd('intensive care').

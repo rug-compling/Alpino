@@ -356,4 +356,4 @@ gen(_,_) :-
 symb(_) :-
     fail.
 
-%% spouw
+%% tor

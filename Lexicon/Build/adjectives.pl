@@ -10024,7 +10024,7 @@ a([e(empirische),
 
 a([pred([en,vogue])],padv,[],[]).
 
-a([e(endemische),no_e(endemisch)],nonadv,[],[]).
+a([e(endemische),no_e(endemisch)],adv,[],[]).  % die endemisch voorkomen in ...
 
 a([e(endocriene),
    no_e(endocrien)],nonadv,[],[]).
@@ -13940,6 +13940,9 @@ a([ge_e(geliquideerde),
 
 a([ge_e(gelispelde),
    ge_no_e(gelispeld)],adv,[],[]).
+
+a([ge_e(gelobde),
+   ge_no_e(gelobd)],adv,[],[]).
 
 a([ge_e(gelocaliseerde),
    ge_no_e(gelocaliseerd)],adv,[],[]).
