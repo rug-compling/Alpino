@@ -11,6 +11,10 @@ WORD_PER_LINE=tr -s '\012\011 ' '\012'
 
 default:
 
+### if you get problems because of some weird very long lines in the
+### input, you can try to preprocess your .q files using
+### zcat my.q | grep -vE 1000 | gzip >new.q
+
 %.ok : %.m_ngram %.a_ngram
 	$(SADIR)/parsability_table.with-binom-test $*.m_ngram $*.a_ngram\
                  > $*.ok
