@@ -930,7 +930,11 @@ check_atts([A1-V1|Tail],A,V,Rest) :-
     (   A1 == A
     ->  (   V1==V
 	->  Rest=Rest1
-	;   format(user_error,"error: duplicate inconsistent attributes: ~w ~w~n",[A=V,A=V1]),
+	;   (   A == numtype % numtype is added both by lassy postags as by alpino frame
+	                     % "twee derde"  is both hoofd and rang :-(
+	    ->  true
+	    ;   format(user_error,"error: duplicate inconsistent attributes: ~w ~w~n",[A=V,A=V1])
+	    ),
 	    Rest=Rest1
 	)
     ;   Rest=[A1-V1|Rest1]
