@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" infl="sg1" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="incorporated_subj_topic(copula)" stype="declarative" tense="present" v_per="invje;fir" word="kben" wvorm="pv"/>
+      <node begin="1" end="2" id="3" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="nie"/>
+      <node begin="2" cat="mwu" end="4" id="4" rel="predc">
+        <node aform="base" begin="2" end="3" id="5" infl="pred" lemma="op" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="op" vform="adj" vztype="init" word="op"/>
+        <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="6" infl="pred" lemma="zoek" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="zoek" vform="adj" word="zoek"/>
+      </node>
+    </node>
+  </node>
+  <sentence>kben nie op zoek</sentence>
+</alpino_ds>

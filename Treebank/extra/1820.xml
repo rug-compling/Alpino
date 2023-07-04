@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+      <node begin="1" end="2" id="3" infl="sg1" lemma="geven" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="geef" sc="np_np_pc_pp(van)" stype="declarative" tense="present" v_per="fir" word="geef" wvorm="pv"/>
+      <node begin="2" case="both" def="def" end="3" gen="de" getal="getal" id="4" lemma="u" naamval="obl" num="sg" pdtype="pron" per="u" persoon="2" pos="pron" postag="VNW(pr,pron,obl,vol,2,getal)" pt="vnw" rel="obj2" rnum="sg" root="u" status="vol" vwtype="pr" wh="nwh" word="u"/>
+      <node begin="4" cat="np" end="6" id="5" rel="obj1">
+        <node begin="4" buiging="met-e" end="5" id="6" infl="enkele" lemma="enkel" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" special="adj_number" vwtype="onbep" word="enkele"/>
+        <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="7" lemma="bijzonderheid" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="bijzonderheid" word="bijzonderheden"/>
+      </node>
+      <node begin="3" cat="pp" end="7" id="8" rel="pc">
+        <node begin="3" end="4" getal="getal" id="9" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="6" end="7" id="10" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik geef u er enkele bijzonderheden van</sentence>
+</alpino_ds>

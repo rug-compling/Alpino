@@ -44,3 +44,5 @@ extra/./1140.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt="bw" or 
 extra/./1695.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
 extra/./1736.xml	//node[node[@getal="mv" and @rel="hd"] and node[@rel="det" and (@root="het" or @root="een" or @root="dit" or @root="dat")]]	plural head noun with singular determiner?
 extra/./1760.xml	//node[@cat="smain" and not(node[@rel="su"]) and node[@rel="obj1"]]	no subject in smain?
+extra/./1821.xml	//node[@cat="smain" and not(node[@rel="su"]) and node[@rel="obj1"]]	no subject in smain?
+extra/./1822.xml	//node[@cat="smain" and not(node[@rel="su"]) and node[@rel="obj1"]]	no subject in smain?
