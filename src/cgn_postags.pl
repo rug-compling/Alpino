@@ -2363,6 +2363,7 @@ cgn_postag_c(verb(_,sg_is,_),                 'WW(pv,tgw,ev)').
 cgn_postag_c(verb(_,modal_not_u,_),           'WW(pv,tgw,ev)').
 cgn_postag_c(verb(_,imp(sg1),_),              'WW(pv,tgw,ev)').
 cgn_postag_c(verb(_,sg1,_),                   'WW(pv,tgw,ev)').
+cgn_postag_c(verb(_,sg2,_),                   'WW(pv,tgw,ev)').
 cgn_postag_c(verb(_,sg3,_),                   'WW(pv,tgw,met-t)').
 cgn_postag_c(verb(_,subjunctive,_),           'WW(pv,conj,ev)').
 cgn_postag_c(verb(_,sg,_),                    'WW(pv,tgw,ev)').
