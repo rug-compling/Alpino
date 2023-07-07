@@ -2150,10 +2150,14 @@ l_requires_pl('We').
 l_requires_pl('Wij').
 l_requires_pl('Jullie').
 
+spelling_variant_context(as,ge,_,als).
 spelling_variant_context(zijde,gij,_,bent).
 spelling_variant_context(bende,gij,_,bent).
 spelling_variant_context(kunde,gij,_,kunt).
 spelling_variant_context(hebde,gij,_,hebt).
+spelling_variant_context(krijg,hij,_,krijgt).
+
+spelling_variant_context(wilt,hij,_,wil).
 
 %% verrichte hij --> verrichtte hij
 spelling_variant_context(StemTe,Requires3,_,StemTTe) :-
@@ -2365,6 +2369,11 @@ context_spelling_variant(Word,Hij,_,Wordt) :-
     ;   atom_concat(Word0,t,Wordt),
 	lexicon___(Wordt, verb(_,sg3,_),_,[],[],_)
     ).
+
+%% Je denk toch niet ..
+context_spelling_variant(denk,Ik,_,denkt) :-
+    l_requires3(Ik).
+context_spelling_variant(plaatst,de,_,plaats).
 
 context_spelling_variant(HerinnerDDen,Werd,_,HerinnerDen) :-
     atom(HerinnerDDen),
@@ -2651,6 +2660,7 @@ spelling_variant(keinder,kinderen).
 spelling_variant(machien,machine).
 spelling_variant(maman,mama).
 spelling_variant(oe,uw).
+spelling_variant(oe,hoe).
 spelling_variant(oew,uw).
 spelling_variant(stukske,stukje).
 spelling_variant(stukskes,stukjes).
@@ -2787,6 +2797,7 @@ spelling_variant(dult,        duldt).
 spelling_variant(éé,          één).
 spelling_variant(eistte,      eiste).
 spelling_variant(eistten,     eisten).
+spelling_variant('ge-e-maild','ge-emaild').
 spelling_variant(failliette,  failliete).
 spelling_variant(fronzen,     fronsen).
 spelling_variant(gefronsd,    gefronst).
@@ -2860,6 +2871,7 @@ spelling_variant(premiere,    première).
 spelling_variant(koninging,   koningin).
 spelling_variant(kunen,       kunnen).
 spelling_variant(kunnnen,     kunnen).
+spelling_variant(kunne,       kunnen).
 spelling_variant(kwa,         qua).
 spelling_variant(laatse,      laatste).
 spelling_variant(lk,          ik).

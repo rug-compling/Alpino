@@ -158,6 +158,9 @@ m(v_root(heb,hebben),
 				 incorporated_subj_topic(nonp_pred_np_ndev))
 			    ])).
 
+m(v_root(heb,hebben),
+  verb(hebde,hebben,sg2,[incorporated_subj(aux_psp_hebben)])).
+
 %% topic drop is not allowed for prs=1 in the grammar
 %% therefore special frame for "vraag" to get
 %% "vraag me af of hij komt"
@@ -7038,13 +7041,15 @@ v(emancipeer,emancipeert,emanciperen,geëmancipeerd,emancipeerde,emancipeerden,
 
 v(email,emailt,emailen,geëmaild,emailde,emailden,
     [h([transitive,
-      intransitive,
+	intransitive,
+	np_np, % ik heb hem foto's geëmaild
       sbar,
       np_sbar])]).
 
 v('e-mail','e-mailt','e-mailen','ge-emaild','e-mailde','e-mailden',
     [h([transitive,
-      intransitive,
+	intransitive,
+	np_np, % ik heb hem foto's ge-emaild
       sbar,
       np_sbar])]).
 

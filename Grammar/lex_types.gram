@@ -1603,6 +1603,7 @@ pp_complementizer(C) :-
 
 a_complementizer(C) :-
     ARG => a,
+    ARG:avform => ~avform_aan_ti & ~avform_ti,
     xp_complementizer(C,ARG).
 
 adv_complementizer(C) :-
@@ -4064,6 +4065,17 @@ incorporated_subj_topic(Frame,V,C0,C) :-
     V:subj => np,
     V:dt:su => [],
     V:tpart => yes,
+    V:subj:nform => none.
+
+incorporated_subj(Frame,V,C0,C) :-
+    Frame =.. [F|Args],
+    lists:append(Args,[V0,C0,C],Args1),
+    Goal =.. [F|Args1],
+    call(Goal),
+    unify_except(V0,V,subj),
+    V:inv => yes,		% requires V to be fronted
+    V:subj => np,
+    V:dt:su => [],
     V:subj:nform => none.
 
 fixed_dep(Frame,V,C0,C) :-

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" special="punt_komma" word=";"/>
+    <node begin="0" cat="du" end="15" id="2" rel="--">
+      <node begin="0" cat="smain" end="6" id="3" rel="dp">
+        <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="4" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="We"/>
+        <node begin="1" end="2" id="5" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="present" v_per="fir" word="hebben" wvorm="pv"/>
+        <node begin="2" end="3" id="6" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="3" cat="np" end="6" id="7" rel="obj1">
+          <node begin="3" cat="detp" end="5" id="8" rel="det">
+            <node begin="3" end="4" id="9" lemma="te" pos="adv" postag="BW()" pt="bw" rel="mod" root="te" special="intensifier" word="te"/>
+            <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="10" infl="no_e" lemma="weinig" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="hd" root="weinig" vform="adj" vwtype="onbep" word="weinig"/>
+          </node>
+          <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="11" lemma="politie_agent" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="politie_agent" word="politieagenten"/>
+        </node>
+      </node>
+      <node begin="7" cat="du" end="15" id="12" rel="dp">
+        <node begin="7" case="both" def="indef" end="8" gen="het" getal="ev" id="13" lemma="zulk" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="dp" rnum="sg" root="zulk" status="vol" vwtype="aanw" wh="nwh" word="zulks"/>
+        <node begin="8" cat="pp" end="15" id="14" rel="dp">
+          <node begin="8" cat="mwu" end="11" id="15" rel="hd">
+            <node begin="8" end="9" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="tegenstelling" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="tegenstelling" word="tegenstelling"/>
+            <node begin="10" end="11" id="18" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="tot" vztype="init" word="tot"/>
+          </node>
+          <node begin="11" cat="whrel" end="15" id="19" rel="obj1">
+            <node begin="11" case="both" def="indef" end="12" gen="het" getal="ev" id="20" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="wat"/>
+            <node begin="11" cat="ssub" end="15" id="21" rel="body">
+              <node begin="11" end="12" id="22" index="1" rel="obj1"/>
+              <node begin="12" cat="np" end="14" id="23" rel="su">
+                <node begin="12" end="13" id="24" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="13" end="14" gen="de" getal="mv" graad="basis" id="25" lemma="politie_baas" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="politie_baas" word="politiebazen"/>
+              </node>
+              <node begin="14" end="15" id="26" infl="pl" lemma="beweren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="beweer" sc="transitive" tense="present" v_per="thi" word="beweren" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>We hebben niet te weinig politieagenten ; zulks in tegenstelling tot wat de politiebazen beweren .</sentence>
+</alpino_ds>

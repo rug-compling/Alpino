@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="1" end="2" id="2" infl="sg2" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="incorporated_subj(aux_psp_hebben)" stype="declarative" tense="present" v_per="ninvje;invje" word="hebde" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="5" id="3" rel="vc">
+        <node begin="0" end="1" getal="ev" id="4" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="Dat"/>
+        <node begin="2" end="3" id="5" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+        <node aform="base" begin="3" end="4" id="6" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
+        <node begin="4" buiging="zonder" end="5" id="7" infl="psp" lemma="zien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zie" sc="transitive_ndev_ndev" word="gezien" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Dat hebde toch wel gezien</sentence>
+</alpino_ds>

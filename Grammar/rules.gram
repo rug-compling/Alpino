@@ -6291,7 +6291,9 @@ pp_p_arg_np_structure(PP,P,OPTPUNCT,XP) :-
     XP => np,
     XP:sel => ~to_topic,
     XP:nform => ~er,
-    XP:parg => yes,
+%%%    XP:parg => yes,   % in het Vlaams kan het wel, althans voor dit/dat/deze/?die
+    XP:hstem <=> STEM,
+    dif(STEM,het),
     XP:pred => npred,
     pp_p_arg_structure(P,XP,PP),
     PP:pcat => ~voor_pred_ap.
@@ -6897,6 +6899,7 @@ grammar_rule(sbar(mod_pp),SBAR,[ Comp, COMMA, MOD, COMMA2, XP ]) :-
 grammar_rule(sbar(a),SBAR,[ Comp, XP ]) :-
     max_nadv_ap(XP0),
     unify_except_l(XP0,XP,[adv,e_deps,wh,deverbal]),
+    XP:avform => ~avform_aan_ti & ~avform_ti,
     sbar_comp_xp_structure(Comp,XP,SBAR).
 
 grammar_rule(sbar(quoted_a),SBAR,[ Comp, QL, XP, QR ]) :-
@@ -7559,7 +7562,7 @@ grammar_rule(start_start_dubb_punt_q,M,[A,COMMA,QL,B,QR]) :-
 
 dit_omdat_structure(Start,PRON,SBAR) :-
     PRON => pron,
-    PRON:agr => sg&het&def,
+    PRON:agr => sg&het, %&def,  "zulks"
     PRON:wkpro => ~weakpro,
     PRON:parg => no,
     np_omdat_structure(Start,PRON,SBAR).

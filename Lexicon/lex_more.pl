@@ -3700,7 +3700,7 @@ phrasal_entry(Tag,enumeration) -->
 
 enumeration_tag(tag).
 enumeration_tag(enumeration).
-% enumeration_tag(proper_name(both)). ??
+enumeration_tag(proper_name(both)). % dat vind u in lid a ) t/m e )  
 
 enumeration -->
     n_word('('),

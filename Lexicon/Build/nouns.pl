@@ -3461,7 +3461,7 @@ n([pl(ballen),sg(bal)],de,[],
 n([pl(bals),sg(bal)],het,[]).
 
 n([pl(balansen),sg(balans)],de,[pred_pp(in)],
-  []).
+  [tussen]).
 
 n([pl(balansen),sg(balans)],de,[],
   [s(betaling),
@@ -7854,7 +7854,9 @@ n([sg(comédienne),pl(comédiennes)],de,[]).
 
 n([pl(concentraties),sg(concentratie)],de,[measure]).
 
-n([pl(concepten),sg(concept)],het,[sbar]).
+n([pl(concepten),sg(concept)],het,
+  [sbar,
+   app_measure]).
 
 n([pl(concepties),sg(conceptie)],de,[sbar,vp]).
 
@@ -13032,10 +13034,12 @@ n([pl(geraniums),sg(geranium)],de,[]).
 
 n([pl(geranten),pl(gerants),sg(gerant)],de,[]).
 
-n([pl(gerechten),sg(gerecht)],het,[],[bij,
-				      hoofd,
-				      na,
-				      voor]).
+n([pl(gerechten),sg(gerecht)],het,[],
+  [bij,
+   hoofd,
+   na,
+   tussen,
+   voor]).
 
 n([pl(gerechtigheden),sg(gerechtigheid)],de,
   [sbar,
@@ -14097,6 +14101,7 @@ n([pl(groepen),sg(groep)],de,[app_measure],
    terreur,
    theater,
    toneel,
+   tussen,
    vak,
    wereld,
    werk,
@@ -26956,7 +26961,7 @@ n([mass([pisang,goreng])],de,[]).
 
 n([sg(pissebed),pl(pissebedden)],both,[]).
 
-n([pl(pistes),sg(piste)],de,[],
+n([pl(pistes),sg(piste),pl(pisten)],de,[],
   [ijs,
    tussen]).
 
@@ -35913,8 +35918,6 @@ n([pl(tovenaars),pl(tovenaren),sg(tovenaar)],de,[],[dim(tovenaartje)]).
 
 n([mass(tover)],de,[]).
 
-n([pl(toverformules),sg(toverformule)],de,[]).
-
 n([pl(toverijen),sg(toverij)],de,[sbar,vp]).
 
 n([mass(toverslag)],de,[]).
@@ -35930,6 +35933,8 @@ n([sg(tracé),pl('tracé\'s')],het,[]).
 n([sg(track),pl(tracks)],de,[]).
 
 n([pl(tractaten),sg(tractaat)],het,[sbar,vp]).
+
+n([sg(tractie)],de,[]).
 
 n([pl(tractoren),pl(tractors),sg(tractor)],de,[]).
 
@@ -36065,8 +36070,6 @@ n([pl(trappen),sg(trap)],de,[],
    dim(trapje)]).
 
 n([sg([trap,na])],de,[]).
-
-n([pl(trapgaten),sg(trapgat)],het,[]).
 
 n([pl(trappehuizen),sg(trappehuis)],het,[]).
 
@@ -36308,6 +36311,8 @@ n([pl(tuinen),sg(tuin)],de,[],
   ]).
 
 n([mass(tuinbouw)],de,[],[glas]).
+
+n([sg(tuinbouwer),pl(tuinbouwers)],de,[],[]).
 
 n([pl(tuinders),sg(tuinder)],de,[]).
 
@@ -41309,7 +41314,9 @@ n([pl(woorden),sg(woord)],het,[],
    ja,h(ja),
    s(macht)]).
 
-n([pl(woorden),sg(woord)],het,[sbar],
+n([pl(woorden),sg(woord)],het,
+  [subject_sbar,
+   sbar],
   [na,
    voor,
    weer,

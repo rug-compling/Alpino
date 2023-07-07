@@ -1608,6 +1608,11 @@ features_verb_infl(sg1,Sign) :-
     Sign:vform => fin,
     Sign:ccat0 ==> ssub,
     subject_verb_agreement(Sign,sg,(fir; invje)).
+features_verb_infl(sg2,Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,sg,(ninvje;invje)).
 %% hij/u heeft/heb je
 %% hij/u is (?)
 features_verb_infl(sg_heeft,Sign) :-
