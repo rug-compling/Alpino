@@ -13,7 +13,7 @@ default:
 
 ### if you get problems because of some weird very long lines in the
 ### input, you can try to preprocess your .q files using
-### zcat my.q | grep -vE 1000 | gzip >new.q
+### awk 'length($0) < 1000' 
 
 %.ok : %.m_ngram %.a_ngram
 	$(SADIR)/parsability_table.with-binom-test $*.m_ngram $*.a_ngram\
@@ -27,15 +27,32 @@ default:
 %.mistakes:%.q
 	zcat $*.q | $(Q) -m > $*.mistakes
 
-%.m_ngram: %.m_fsa
+%.mistakes:%.nq
+	cat $*.nq | $(Q) -m > $*.mistakes
+
+%.m_ngram: %.m_fsa %.q
 	zcat $*.q | $(Q) -m |\
         $(UNIQ) |\
 	$(WORD_PER_LINE) |\
         $(SADIR)/suffix_array -N -e -d $*.m_fsa -n $(N) -w -G\| -f $(f) -u\
              | grep -v ' @ ' > $*.m_ngram
 
-%.a_ngram: %.a_fsa
+%.a_ngram: %.a_fsa %.q
 	zcat $*.q | $(Q) -a |\
+        $(UNIQ) |\
+	$(WORD_PER_LINE) |\
+        $(SADIR)/suffix_array -N -e -d $*.a_fsa -n $(N) -w -G\|  -f $(f) -u\
+              | grep -v ' @ ' > $*.a_ngram
+
+%.m_ngram: %.m_fsa %.nq
+	cat $*.nq | $(Q) -m |\
+        $(UNIQ) |\
+	$(WORD_PER_LINE) |\
+        $(SADIR)/suffix_array -N -e -d $*.m_fsa -n $(N) -w -G\| -f $(f) -u\
+             | grep -v ' @ ' > $*.m_ngram
+
+%.a_ngram: %.a_fsa %.nq
+	cat $*.nq | $(Q) -a |\
         $(UNIQ) |\
 	$(WORD_PER_LINE) |\
         $(SADIR)/suffix_array -N -e -d $*.a_fsa -n $(N) -w -G\|  -f $(f) -u\
@@ -52,6 +69,18 @@ default:
 
 %.m_fsa: %.q
 	zcat $*.q | $(Q) -m |\
+	$(WORD_PER_LINE) |\
+        LANG=POSIX LC_ALL=POSIX sort -u |\
+        fsa_build -N -o $*.m_fsa
+
+%.a_fsa: %.nq
+	cat $*.nq | $(Q) -a |\
+	$(WORD_PER_LINE) |\
+        LANG=POSIX LC_ALL=POSIX sort -u |\
+        fsa_build -N -o $*.a_fsa
+
+%.m_fsa: %.nq
+	cat $*.nq | $(Q) -m |\
 	$(WORD_PER_LINE) |\
         LANG=POSIX LC_ALL=POSIX sort -u |\
         fsa_build -N -o $*.m_fsa
