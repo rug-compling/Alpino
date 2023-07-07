@@ -563,6 +563,8 @@ valid_sc(refl_np,                     [check_refl]).
 valid_sc(copula,                      []).
 valid_sc(incorporated_subj_topic(Frame), Checks) :-
     valid_sc(Frame,Checks).
+valid_sc(incorporated_subj(Frame), Checks) :-
+    valid_sc(Frame,Checks).
 valid_sc(als_copula,                  [check_tag(complementizer(als))]).
 valid_sc(ap_copula,                   [check_ap_copula]).
 valid_sc(ap_copula(Stem),             [check_stem(Stem),check_ap_copula]).

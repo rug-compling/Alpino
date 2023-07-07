@@ -982,14 +982,18 @@ requires_longest_match(normal(spaced_letters)).
 requires_longest_match(name(not_begin)).
 requires_longest_match(name(begin)).
 
-requires_unique_match(normal(variant(wrong_quote_s,normal)),normal(variant(variant21('\'s','\'',s),normal)),0,0).
-requires_unique_match(normal(variant(wrong_quote_s,normal)),normal(variant(variant21('\'s','\'',s),variant)),0,0).
-requires_unique_match(normal(spaced_letters),normal(_),5,0).
-requires_unique_match(normal(bridge),normal(bridge),5,0).
-requires_unique_match(normal(number_sequence),normal(number_sequence),5,0).
-requires_unique_match(name(_),name(_),10,5).
-requires_unique_match(name(_),name_gen(_),10,4).
-requires_unique_match(name_gen(_),name_gen(_),6,3).
+requires_unique_match(name(not_begin),proper_name(sg,_),normal(enumeration),proper_name(both),_,_).
+requires_unique_match(normal(decap(normal)),meas_mod_noun(_,_,_),normal(enumeration),proper_name(both),_,_).
+requires_unique_match(normal(decap(normal)),noun(_,_,_),normal(enumeration),proper_name(both),_,_).
+requires_unique_match(normal(number_expression),number(hoofd(_)),normal(enumeration),proper_name(both),_,_).
+requires_unique_match(normal(variant(wrong_quote_s,normal)),_,normal(variant(variant21('\'s','\'',s),normal)),_,0,0).
+requires_unique_match(normal(variant(wrong_quote_s,normal)),_,normal(variant(variant21('\'s','\'',s),variant)),_,0,0).
+requires_unique_match(normal(spaced_letters),_,normal(_),_,5,0).
+requires_unique_match(normal(bridge),_,normal(bridge),_,5,0).
+requires_unique_match(normal(number_sequence),_,normal(number_sequence),_,5,0).
+requires_unique_match(name(_),_,name(_),_,10,5).
+requires_unique_match(name(_),_,name_gen(_),_,10,4).
+requires_unique_match(name_gen(_),_,name_gen(_),_,6,3).
 
 enforce_longest_match(Words,0,P) :-
     count_edges(tag(_,_,_,_,_,_,_,_),Edges0),
@@ -1007,8 +1011,8 @@ enforce_longest_match(Words,0,P) :-
 
 enforce_unique_match :-    
     count_edges(tag(_,_,_,_,_,_,_,_),Edges0),
-    (   requires_unique_match(His,His1,MaxLarge,MaxSmall),
-	enforce_unique_match(His,His1,MaxLarge,MaxSmall),
+    (   requires_unique_match(His,Tag,His1,Tag1,MaxLarge,MaxSmall),
+	enforce_unique_match(His,Tag,His1,Tag1,MaxLarge,MaxSmall),
 	fail
     ;   true
     ),
@@ -1231,14 +1235,21 @@ capitalized(W) :-
     isupper(F).
 
 
-enforce_unique_match(H,H1,MaxLarge,MaxSmall) :-
-    (	clause(tag(_,_,R0,R,_,_,H,_),true,_Ref),
+enforce_unique_match(H,Tag,H1,Tag1,MaxLarge,MaxSmall) :-
+    (   number(MaxLarge),
+	number(MaxSmall),
+        clause(tag(_,_,R0,R,_,_,H,Tag),true,_Ref),
 	R-R0 > MaxLarge,
-	clause(tag(_,_,S0,S,_,_,H1,_),true,Ref2),
+	clause(tag(_,_,S0,S,_,_,H1,Tag1),true,Ref2),
 	S-S0 > MaxSmall,
 	part_of_interval(R0,R,S0,S),
 	erase_tag(Ref2),
 	fail
+    ;   var(MaxLarge),
+	var(MaxSmall),
+	clause(tag(_,_,S0,S,_,_,H,Tag),true,_Ref),
+	clause(tag(_,_,S0,S,_,_,H1,Tag1),true,Ref2),
+	erase_tag(Ref2)
     ;   true
     ).
 
@@ -1729,6 +1740,9 @@ skippable(tag(P0,P1,R0,R1,de,de,skip,skip)):-
 skippable(tag(P0,P1,R0,R1,de,de,skip,skip)):-
     tag(P0,P1,R0,R1,de,de,normal(normal),determiner(de)),
     tag(P1,_,R1,_,u,uw,normal(normal),determiner(pron)).
+skippable(tag(P0,P1,R0,R1,de,de,skip,skip)):-
+    tag(P0,P1,R0,R1,de,de,normal(normal),determiner(de)),
+    tag(P1,_,R1,_,degeen,degene,normal(normal),pronoun(nwh,thi,sg,de,both,def,strpro)).
 
 
 part_of_longpunct([H|T],P0,P) :-

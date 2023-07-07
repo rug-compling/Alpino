@@ -1759,6 +1759,7 @@ foreign_word(lover).
 foreign_word(loves).
 foreign_word(low).
 foreign_word(loyelty).
+foreign_word('\'m').   % I 'm at ...
 foreign_word(ma).
 foreign_word(maai).
 foreign_word(made).
@@ -2924,6 +2925,7 @@ compound_part(pro).
 compound_part(semi).
 compound_part(sub).
 compound_part(super).
+compound_part(tussen).
 compound_part(ultra).
 compound_part(vice).
 compound_part(wan).
