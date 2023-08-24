@@ -47,7 +47,10 @@ AlpinoNS:
 ## undefined, so that yes/no batch will set debug to 0/1 resp.
 debugcmd='set_flag(debug,undefined),set_flag(demo,undefined)'
 
-gitversion=$(shell git log --oneline | wc -l)
+#gitversion=$(shell git log --oneline | wc -l)
+# that variant did not show full history for a recently checked out version
+
+gitversion=$(shell git log -1 --format="%at" | xargs -I{} date -u -d @{} +%Y%m%d.%H%M%S)
 
 ifeq "$(PROLOG)" "sicstus"
 
@@ -62,7 +65,7 @@ state:
 	-echo "Alpino-$(PLATFORM)-git$(gitversion)-$(PROLOG)" > ../version
 	-echo "use_module('../Hdrug/Prolog/hdrug_main'),\
                use_module(start),\
-   version('Alpino (development), `cat ../version` $(shell date "+%Y-%m-%dT%H:%M%z")'),\
+   version('Alpino (development), `cat ../version`-$(shell date "+%Y-%m-%dT%H:%M%z")'),\
                $(EXTRA_SICSTUS_GOAL)\
                save_program('$(DISK)/Alpino.sav.new',hdrug_main)." |\
         sicstus  -f
