@@ -91,6 +91,11 @@ index.html: $(files:%=%.xml) $(files:%=%.svg) $(files:%=%.pdf) $(thisdir)/create
               | grep [.]| sed -e 's/[.]xml//g' |\
          $(thisdir)/create_html -s $(suite) -c $(css) > index.html
 
+treebank.html: $(files:%=%.xml) $(files:%=%.svg) $(thisdir)/create_simple_html 
+	dtxslt --stylesheet $(ttdir)/stylesheets/dt2sentid.xsl $(files:%=%.xml)\
+              | grep [.]| sed -e 's/[.]xml//g' |\
+         $(thisdir)/create_simple_html -s $(suite) -c $(css) > treebank.html
+
 prefix="./"
 
 data=$(wildcard *.data.dz)
