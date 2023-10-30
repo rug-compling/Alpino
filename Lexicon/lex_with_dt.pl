@@ -909,6 +909,7 @@ with_dt_all('af aan',[kleins,sinds]).
 with_dt_all('af aan',[kleins,van]).
 with_dt_all('af aan',[kleins,vanaf]).
 with_dt_all('af aan',[nu,van]).
+with_dt_all('af aan',[toen,van]).
 with_dt_all('af aan',[van,voor]).
 with_dt_all('af aan',[van,voren]).
 with_dt_all(af,[bij]).

@@ -269,6 +269,11 @@ subject_vp_noun(N) :-
     VP:subj_nform => obl_het,
     subject_verbal_arg_noun(N,VP).
 
+subject_vp_no_het_noun(N) :-
+    no_subj_vp_arg(VP),
+    VP:subj_nform => opt_het,
+    subject_verbal_arg_noun(N,VP).
+
 deverbal_noun(V,N) :-
     N => v_noun,
     V => v,
@@ -314,6 +319,11 @@ pred_pp(Prep,subject_sbar,N) :-
 
 pred_pp(Prep,subject_sbar_no_het,N) :-
     subject_sbar_no_het_noun(N0),
+    unify_except(N0,N,pred),
+    N:pred:predp ==> Prep.
+
+pred_pp(Prep,subject_vp_no_het,N) :-
+    subject_vp_no_het_noun(N0),
     unify_except(N0,N,pred),
     N:pred:predp ==> Prep.
 
@@ -2355,6 +2365,7 @@ r_ld_prep([ten,'noord-oosten',van]).
 r_ld_prep([ten,'noord-westen',van]).
 r_ld_prep([ten,oosten,van]).
 r_ld_prep([ten,westen,van]).
+r_ld_prep([ten,zuiden,van]).
 r_ld_prep([ten,zuidoosten,van]).
 r_ld_prep([ten,zuidwesten,van]).
 r_ld_prep([ten,'zuid-oosten',van]).
@@ -3340,7 +3351,7 @@ transitive_ndev(V,C,C) :-
     main_v(V),
     acc_np_arg(Obj),
     ndev(Obj),
-    V:passive => norm_passive,
+%    V:passive => norm_passive,  % no: Dansen kan worden geleerd op een dansschool
     dependents(V,[obj1/Obj]).
 
 transitive_ndev_ndev(V,C0,C) :-

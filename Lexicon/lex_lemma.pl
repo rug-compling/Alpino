@@ -1827,6 +1827,7 @@ lemma_root(bedelven,bedelf) .
 lemma_root(bedenken,bedenk) .
 lemma_root(bederven,bederf) .
 lemma_root(bedienen,bedien) .
+lemma_root(bedijken,bedijk) .
 lemma_root(bedingen,beding) .
 lemma_root(bediscussiëren,bediscussieer) .
 lemma_root(bedisselen,bedissel) .
@@ -2573,6 +2574,7 @@ lemma_root(blind_staren,staar_blind) .
 lemma_root(blinken,blink) .
 lemma_root(bloeden,bloed) .
 lemma_root(bloeien,bloei) .
+lemma_root(bloemlezen,bloemlezen) .
 lemma_root(bloemschikken,bloemschikken) .
 lemma_root(bloezen,bloes) .
 lemma_root(bloggen,blog) .
@@ -3084,6 +3086,7 @@ lemma_root(door_believen,belief_door) .
 lemma_root(door_belijden,belijd_door) .
 lemma_root(door_bellen,bel_door) .
 lemma_root(door_beloven,beloof_door) .
+lemma_root(door_bemesten,bemest_door) .
 lemma_root(door_bemiddelen,bemiddel_door) .
 lemma_root(door_beminnen,bemin_door) .
 lemma_root(door_bemoedigen,bemoedig_door) .
@@ -3178,6 +3181,7 @@ lemma_root(door_bliksemen,bliksem_door) .
 lemma_root(door_blinken,blink_door) .
 lemma_root(door_bloeden,bloed_door) .
 lemma_root(door_bloeien,bloei_door) .
+lemma_root(door_bloemlezen,bloemlezen_door) .
 lemma_root(door_bloemschikken,bloemschikken_door) .
 lemma_root(door_bloezen,bloes_door) .
 lemma_root(door_bloggen,blog_door) .
@@ -3815,6 +3819,7 @@ lemma_root(door_inspireren,inspireer_door) .
 lemma_root(door_installeren,installeer_door) .
 lemma_root(door_institutionaliseren,institutionaliseer_door) .
 lemma_root(door_integreren,integreer_door) .
+lemma_root(door_intensiveren,intensiveer_door) .
 lemma_root(door_internet_bankieren,internet_bankieren_door) .
 lemma_root(door_internetten,internet_door) .
 lemma_root(door_interrumperen,interrumpeer_door) .
@@ -4271,6 +4276,7 @@ lemma_root(door_ontbreken,ontbreek_door) .
 lemma_root(door_ontdekken,ontdek_door) .
 lemma_root(door_ontdooien,ontdooi_door) .
 lemma_root(door_onteigenen,onteigen_door) .
+lemma_root(door_ontginnen,ontgin_door) .
 lemma_root(door_ontglippen,ontglip_door) .
 lemma_root(door_ontgoochelen,ontgoochel_door) .
 lemma_root(door_ontgrendelen,ontgrendel_door) .
@@ -4284,6 +4290,7 @@ lemma_root(door_ontkennen,ontken_door) .
 lemma_root(door_ontkiemen,ontkiem_door) .
 lemma_root(door_ontkomen,ontkom_door) .
 lemma_root(door_ontladen,ontlaad_door) .
+lemma_root(door_ontleden,ontleed_door) .
 lemma_root(door_ontluiken,ontluik_door) .
 lemma_root(door_ontmenselijken,ontmenselijk_door) .
 lemma_root(door_ontnuchteren,ontnuchter_door) .
@@ -5337,6 +5344,7 @@ lemma_root(door_vervreemden,vervreemd_door) .
 lemma_root(door_vervuilen,vervuil_door) .
 lemma_root(door_verwaaien,verwaai_door) .
 lemma_root(door_verwachten,verwacht_door) .
+lemma_root(door_verwarmen,verwarm_door) .
 lemma_root(door_verwarren,verwar_door) .
 lemma_root(door_verwateren,verwater_door) .
 lemma_root(door_verweken,verweek_door) .
@@ -6635,6 +6643,7 @@ lemma_root(herbewapenen,herbewapen) .
 lemma_root(herbezinnen,herbezin) .
 lemma_root(herbouwen,herbouw) .
 lemma_root(herbronnen,herbron) .
+lemma_root(herbruiken,herbruik) .
 lemma_root(herdenken,herdenk) .
 lemma_root(herdrukken,herdruk) .
 lemma_root(herenigen,herenig) .
@@ -10717,6 +10726,7 @@ lemma_root(raak_belenen,beleen_raak) .
 lemma_root(raak_belijden,belijd_raak) .
 lemma_root(raak_bellen,bel_raak) .
 lemma_root(raak_beloven,beloof_raak) .
+lemma_root(raak_bemesten,bemest_raak) .
 lemma_root(raak_bemiddelen,bemiddel_raak) .
 lemma_root(raak_beminnen,bemin_raak) .
 lemma_root(raak_bemoedigen,bemoedig_raak) .
@@ -10806,6 +10816,7 @@ lemma_root(raak_bliksemen,bliksem_raak) .
 lemma_root(raak_blinken,blink_raak) .
 lemma_root(raak_bloeden,bloed_raak) .
 lemma_root(raak_bloeien,bloei_raak) .
+lemma_root(raak_bloemlezen,bloemlezen_raak) .
 lemma_root(raak_bloemschikken,bloemschikken_raak) .
 lemma_root(raak_bloezen,bloes_raak) .
 lemma_root(raak_bloggen,blog_raak) .
@@ -11412,6 +11423,7 @@ lemma_root(raak_inspireren,inspireer_raak) .
 lemma_root(raak_installeren,installeer_raak) .
 lemma_root(raak_institutionaliseren,institutionaliseer_raak) .
 lemma_root(raak_integreren,integreer_raak) .
+lemma_root(raak_intensiveren,intensiveer_raak) .
 lemma_root(raak_internet_bankieren,internet_bankieren_raak) .
 lemma_root(raak_internetten,internet_raak) .
 lemma_root(raak_interrumperen,interrumpeer_raak) .
@@ -11838,6 +11850,7 @@ lemma_root(raak_ontbranden,ontbrand_raak) .
 lemma_root(raak_ontbreken,ontbreek_raak) .
 lemma_root(raak_ontdooien,ontdooi_raak) .
 lemma_root(raak_onteigenen,onteigen_raak) .
+lemma_root(raak_ontginnen,ontgin_raak) .
 lemma_root(raak_ontglippen,ontglip_raak) .
 lemma_root(raak_ontgoochelen,ontgoochel_raak) .
 lemma_root(raak_ontgrendelen,ontgrendel_raak) .
@@ -11851,6 +11864,7 @@ lemma_root(raak_ontkennen,ontken_raak) .
 lemma_root(raak_ontkiemen,ontkiem_raak) .
 lemma_root(raak_ontkomen,ontkom_raak) .
 lemma_root(raak_ontladen,ontlaad_raak) .
+lemma_root(raak_ontleden,ontleed_raak) .
 lemma_root(raak_ontluiken,ontluik_raak) .
 lemma_root(raak_ontmenselijken,ontmenselijk_raak) .
 lemma_root(raak_ontnuchteren,ontnuchter_raak) .
@@ -12841,6 +12855,7 @@ lemma_root(raak_vervreemden,vervreemd_raak) .
 lemma_root(raak_vervuilen,vervuil_raak) .
 lemma_root(raak_verwaaien,verwaai_raak) .
 lemma_root(raak_verwachten,verwacht_raak) .
+lemma_root(raak_verwarmen,verwarm_raak) .
 lemma_root(raak_verwarren,verwar_raak) .
 lemma_root(raak_verwateren,verwater_raak) .
 lemma_root(raak_verweken,verweek_raak) .
@@ -13563,6 +13578,7 @@ lemma_root(samen_persen,pers_samen) .
 lemma_root(samen_smelten,smelt_samen) .
 lemma_root(samen_spannen,span_samen) .
 lemma_root(samen_spelen,speel_samen) .
+lemma_root(samen_stampen,stamp_samen) .
 lemma_root(samen_stellen,stel_samen) .
 lemma_root(samen_trekken,trek_samen) .
 lemma_root(samen_vallen,val_samen) .
@@ -15183,6 +15199,7 @@ lemma_root(troosten,troost) .
 lemma_root(trotseren,trotseer) .
 lemma_root(trouwen,trouw) .
 lemma_root(tsjirpen,tsjirp) .
+lemma_root(tuchtigen,tuchtig) .
 lemma_root(tuffen,tuf) .
 lemma_root(tuigen,tuig) .
 lemma_root(tuimelen,tuimel) .
@@ -15913,6 +15930,7 @@ lemma_root(uit_belenen,beleen_uit) .
 lemma_root(uit_belijden,belijd_uit) .
 lemma_root(uit_bellen,bel_uit) .
 lemma_root(uit_beloven,beloof_uit) .
+lemma_root(uit_bemesten,bemest_uit) .
 lemma_root(uit_bemiddelen,bemiddel_uit) .
 lemma_root(uit_beminnen,bemin_uit) .
 lemma_root(uit_bemoedigen,bemoedig_uit) .
@@ -16990,6 +17008,7 @@ lemma_root(uit_ontbijten,ontbijt_uit) .
 lemma_root(uit_ontbreken,ontbreek_uit) .
 lemma_root(uit_ontdekken,ontdek_uit) .
 lemma_root(uit_onteigenen,onteigen_uit) .
+lemma_root(uit_ontginnen,ontgin_uit) .
 lemma_root(uit_ontgoochelen,ontgoochel_uit) .
 lemma_root(uit_ontgrendelen,ontgrendel_uit) .
 lemma_root(uit_onthaasten,onthaast_uit) .
@@ -17870,6 +17889,7 @@ lemma_root(uit_vervoeren,vervoer_uit) .
 lemma_root(uit_vervolgen,vervolg_uit) .
 lemma_root(uit_vervormen,vervorm_uit) .
 lemma_root(uit_verwachten,verwacht_uit) .
+lemma_root(uit_verwarmen,verwarm_uit) .
 lemma_root(uit_verwarren,verwar_uit) .
 lemma_root(uit_verwerken,verwerk_uit) .
 lemma_root(uit_verwijderen,verwijder_uit) .
@@ -19991,6 +20011,7 @@ lemma_root(verdiepen,verdiep) .
 lemma_root(verdikken,verdik) .
 lemma_root(verdisconteren,verdisconteer) .
 lemma_root(verdiskonteren,verdiskonteer) .
+lemma_root(verdobbelen,verdobbel) .
 lemma_root(verdoemen,verdoem) .
 lemma_root(verdoen,verdoe) .
 lemma_root(verdoezelen,verdoezel) .
@@ -20155,6 +20176,7 @@ lemma_root(verlevendigen,verlevendig) .
 lemma_root(verlichten,verlicht) .
 lemma_root(verliezen,verlies) .
 lemma_root(verlijden,verlijd) .
+lemma_root(verlijmen,verlijm) .
 lemma_root(verlinken,verlink) .
 lemma_root(verloederen,verloeder) .
 lemma_root(verlokken,verlok) .
@@ -20699,6 +20721,7 @@ lemma_root(voort_belenen,beleen_voort) .
 lemma_root(voort_belijden,belijd_voort) .
 lemma_root(voort_bellen,bel_voort) .
 lemma_root(voort_beloven,beloof_voort) .
+lemma_root(voort_bemesten,bemest_voort) .
 lemma_root(voort_bemiddelen,bemiddel_voort) .
 lemma_root(voort_beminnen,bemin_voort) .
 lemma_root(voort_bemoedigen,bemoedig_voort) .
@@ -20788,6 +20811,7 @@ lemma_root(voort_bliksemen,bliksem_voort) .
 lemma_root(voort_blinken,blink_voort) .
 lemma_root(voort_bloeden,bloed_voort) .
 lemma_root(voort_bloeien,bloei_voort) .
+lemma_root(voort_bloemlezen,bloemlezen_voort) .
 lemma_root(voort_bloemschikken,bloemschikken_voort) .
 lemma_root(voort_bloezen,bloes_voort) .
 lemma_root(voort_bloggen,blog_voort) .
@@ -21395,6 +21419,7 @@ lemma_root(voort_inspireren,inspireer_voort) .
 lemma_root(voort_installeren,installeer_voort) .
 lemma_root(voort_institutionaliseren,institutionaliseer_voort) .
 lemma_root(voort_integreren,integreer_voort) .
+lemma_root(voort_intensiveren,intensiveer_voort) .
 lemma_root(voort_internet_bankieren,internet_bankieren_voort) .
 lemma_root(voort_internetten,internet_voort) .
 lemma_root(voort_interrumperen,interrumpeer_voort) .
@@ -21821,6 +21846,7 @@ lemma_root(voort_ontbranden,ontbrand_voort) .
 lemma_root(voort_ontbreken,ontbreek_voort) .
 lemma_root(voort_ontdooien,ontdooi_voort) .
 lemma_root(voort_onteigenen,onteigen_voort) .
+lemma_root(voort_ontginnen,ontgin_voort) .
 lemma_root(voort_ontglippen,ontglip_voort) .
 lemma_root(voort_ontgoochelen,ontgoochel_voort) .
 lemma_root(voort_ontgrendelen,ontgrendel_voort) .
@@ -21834,6 +21860,7 @@ lemma_root(voort_ontkennen,ontken_voort) .
 lemma_root(voort_ontkiemen,ontkiem_voort) .
 lemma_root(voort_ontkomen,ontkom_voort) .
 lemma_root(voort_ontladen,ontlaad_voort) .
+lemma_root(voort_ontleden,ontleed_voort) .
 lemma_root(voort_ontluiken,ontluik_voort) .
 lemma_root(voort_ontmenselijken,ontmenselijk_voort) .
 lemma_root(voort_ontnuchteren,ontnuchter_voort) .
@@ -22827,6 +22854,7 @@ lemma_root(voort_vervreemden,vervreemd_voort) .
 lemma_root(voort_vervuilen,vervuil_voort) .
 lemma_root(voort_verwaaien,verwaai_voort) .
 lemma_root(voort_verwachten,verwacht_voort) .
+lemma_root(voort_verwarmen,verwarm_voort) .
 lemma_root(voort_verwarren,verwar_voort) .
 lemma_root(voort_verwateren,verwater_voort) .
 lemma_root(voort_verweken,verweek_voort) .

@@ -611,7 +611,9 @@ loc(maison).
 loc(markt).
 loc(mountain).
 loc(museum).
+loc(nad).  % deel van Tsjechische plaatsnamen
 loc(oceaan).
+loc(okres). % deel van Slowaakse plaatsnamen
 loc(paleis).
 loc(pavillon).
 loc(piazza).
@@ -631,6 +633,7 @@ loc(stadion).
 loc(stadium).
 loc(steeg).
 loc(straat).
+loc('Straße').
 loc(territory).
 loc(theater).
 loc(theatre).

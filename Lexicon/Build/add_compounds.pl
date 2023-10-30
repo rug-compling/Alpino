@@ -82,3 +82,6 @@ add_compound(post_wh([First|Rest]),Stem0,Surf0,Stem,[Surf2|Rest]) :-
     atom_concat(Stem0,'_',Stem1),
     atom_concat(Stem1,First,Stem2),
     concat_all([Stem2|Rest],Stem,' ').
+add_compound(l(X,Y),_,_,_,_) :-
+    format(user_error,"no such meta-notation: ~w~n",[l(X,Y)]),
+    fail.

@@ -21,6 +21,8 @@ accent(aidspatienten,aidspatiënten).
 accent('aids-patientes','aids-patiëntes').
 accent(aidspatientes,aidspatiëntes).
 accent(aktien,aktiën).
+accent(algebraisch,algebraïsch).
+accent(algebraische,algebraïsche).
 accent(alleeen,alleeën).
 accent(allegorieen,allegorieën).
 accent(allergieen,allergieën).
@@ -946,6 +948,7 @@ accent(milieuhygiene,milieuhygiëne).
 accent(milieuhygienische,milieuhygiënische).
 accent(milieuhygienisch,milieuhygiënisch).
 accent(miltvuurbacterien,miltvuurbacteriën).
+accent(miniserien,miniseriën).
 accent(ministeriele,ministeriële).
 accent(misere,misère).
 accent(miseres,misères).
@@ -1261,6 +1264,7 @@ accent(sleeen,sleeën).
 accent(slotscene,slotscène).
 accent(slotscenes,slotscènes).
 accent(sluitingsceremonien,sluitingsceremoniën).
+accent(smaort,småort).
 accent(smeuige,smeuïge).
 accent(smeuig,smeuïg).
 accent(sneeen,sneeën).

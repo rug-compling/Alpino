@@ -996,6 +996,7 @@ tag(ho).
 tag(hoho).
 tag(hohoho).
 tag(hola).
+tag([hoe,de,fuck]).
 tag(hoera).
 tag(hoewel).
 tag(hoezee).
@@ -1936,6 +1937,7 @@ m('iets van',        pre_num_adv(pl),           [iets,van]).
 m('nog geen',        pre_num_adv(pl),           [nog,geen]).
 m('over de',         pre_num_adv(pl),           [over,de]).
 m('rond de',         pre_num_adv(pl_indef),     [rond,de]).
+m('om en nabij de',  pre_num_adv(pl_indef),     [om,en,nabij,de]).
 m('tegen de',        pre_num_adv(pl_indef),     [tegen,de]).
 m('zo\'n',           pre_num_adv(pl_indef),     'zo\'n').
 m('zo\'n kleine',    pre_num_adv(pl_indef),     ['zo\'n',kleine]).
@@ -3260,6 +3262,7 @@ with_dt([P,Adv,Part1,Part2],
     p_adv_part_part_pp(P,Adv,Part1,Part2),
     hdrug_util:concat_all([Part1,Part2],Part,' ').
 
+p_adv_part_part_pp(van,toen,af,aan).
 p_adv_part_part_pp(van,nu,af,aan).
 p_adv_part_part_pp(van,voor,af,aan).
 p_adv_part_part_pp(van,voren,af,aan).
@@ -5067,7 +5070,9 @@ m(minimaal,         modal_adverb(noun_prep),minimaal).
 m(minstens,         modal_adverb(noun_prep),minstens).
 m(misschien,        modal_adverb(noun_prep),misschien).
 m('om en bij',      modal_adverb(noun_prep),[om,en,bij]). % VL
+m('om en nabij',    modal_adverb(noun_prep),[om,en,bij]). % VL
 m('om en bij de',   modal_adverb(noun_prep),[om,en,bij,de]). % VL
+m('om en nabij de', modal_adverb(noun_prep),[om,en,bij,de]). % VL
 m('om en rond',     modal_adverb(noun_prep),[om,en,rond]). % VL
 m('om en rond de',  modal_adverb(noun_prep),[om,en,rond,de]). % VL
 m(ongeveer,         modal_adverb(noun_prep),ongeveer).
@@ -6383,6 +6388,7 @@ m(genoeg,           om_postadj_adverb,genoeg). % gek genoeg om
 m(althans,          postadj_adverb,althans).
 m(bijvoorbeeld,     postadj_adverb,bijvoorbeeld).
 m(daarentegen,      postadj_adverb,daarentegen).
+m('dan ook',        postadj_adverb,[dan,ook]).
 m(derhalve,         postadj_adverb,derhalve).
 m(dus,              postadj_adverb,dus).        % logisch dus , dat
 m(echter,           postadj_adverb,echter).
@@ -6392,6 +6398,7 @@ m(immers,           postadj_adverb,immers).
 m(intussen,         postadj_adverb,intussen).
 m(nog,              postadj_adverb,nog). % wat bleekjes nog ...
 m(nu,               postadj_adverb,nu).
+m(ook,              postadj_adverb,ook).
 m(tenslotte,        postadj_adverb,tenslotte).
 m('ten slotte',     postadj_adverb,[ten,slotte]).
 m('wel te verstaan',postadj_adverb,welteverstaan).
@@ -6590,9 +6597,11 @@ m(Stem,predm_adverb,Surf) :-
 m(al,predm_adverb,alle).
 m(beide,predm_adverb,beiden).
 
-m('geen van alle', predm_adverb, [geen,van,alle]).
-m('geen van allen', predm_adverb, [geen,van,allen]).
-m(al,            predm_adverb, allen).
+m('geen van alle',  predm_adverb,  [geen,van,alle]).
+m('geen van allen', predm_adverb,  [geen,van,allen]).
+m(al,               predm_adverb,  allen).
+m('geen van beide', predm_adverb,  [geen,van,beide]).
+m('geen van beide', predm_adverb,  [geen,van,beiden]).
 
 % floating quantifiers and similar:
 predm_adverb(allebei).
@@ -6608,7 +6617,6 @@ predm_adverb([elk,voor,zich]).
 predm_adverb([en,bloc]).
 predm_adverb([en,masse]).
 predm_adverb(gedrieën).
-predm_adverb([geen,van,beiden]).
 predm_adverb([geen,van,drieën]).
 predm_adverb([geen,van,tweeën]).
 predm_adverb([geen,van,vieren]).
@@ -8006,6 +8014,7 @@ m(het,              het_noun, het).
 m(dat,              cleft_het_noun, dat).
 m(dit,              cleft_het_noun,dit).
 
+m(aanvang,          tmp_app_noun,aanvang).
 m(begin,            tmp_app_noun,begin).
 m(eind,             tmp_app_noun,eind).
 m(halfweg,          tmp_app_noun,halfweg).
@@ -8654,6 +8663,7 @@ term([blind,date]).
 term([bloody,shame]).
 term([body,mass,index]).
 term([born,to,be,wild]).
+term(borough,boroughs).  % plaats in USA
 term([brain,drain]).
 term([breaking,news]).
 term(breedband).
@@ -8666,7 +8676,9 @@ term([buy]).
 term([buy,out]).
 term([carpe,diem]).
 term([carte,blanche]).
+term([carte,de,visite],[cartes,de,visite]).
 term([cause,célèbre]).
+term(['census-designated',place],['census-designated',places]).
 term([ceremonie,protocollaire]).
 term([chambre,de,réflexion]).
 term([chambre,'d\'hôtes']).
@@ -8949,6 +8961,7 @@ term([sine,qua,non]).
 term([slip,of,the,pen]).
 term([slip,of,the,tongue]).
 term([small,cap],[small,caps]).
+term(småort). % dorp in Zweden
 term([soul,jazz]).
 term([soft,skill],[soft,skills]).
 term([so,far,so,good]).

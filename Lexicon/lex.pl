@@ -142,9 +142,9 @@ lexicon_fallback_(Word,nominalized_super_adjective,Label,Ws,Ws,'A-n',_) :-
     atom_concat(Adj,n,Word),
     xl(Adj,adjective(ste),Label,[],[]).
 
-adj_e(e).
-adj_e(ende).
-adj_e(ge_e).
+%adj_e(e).
+%adj_e(ende).
+%adj_e(ge_e).
 
 %% gezeur/gebel/geloop/gezucht...
 %% W sg1       --> ge+W noun
@@ -335,6 +335,21 @@ next_word__(GrandSlamtoernooi,['(',GS|Ws],Ws,repair_tokenize_brackets,_) :-
     atom_concat(Prefix,Rest,GS),
     atom_concat(')',Suffix,Rest),
     atom_concat(Prefix,Suffix,GrandSlamtoernooi).
+
+%% treat ( turf-)schip as turfschip
+next_word__(GrandSlamtoernooi,['(',GS|Ws],Ws,repair_tokenize_brackets,_) :-
+    atom(GS),
+    sub_atom(GS,_,2,_,'-)'),
+    atom_concat(Prefix,Rest,GS),
+    atom_concat('-)',Suffix,Rest),
+    atom_concat(Prefix,Suffix,GrandSlamtoernooi).
+
+%% treat ( turf-)schip as schip
+next_word__(Suffix,['(',GS|Ws],Ws,repair_tokenize_brackets_robust,_) :-
+    atom(GS),
+    sub_atom(GS,_,2,_,'-)'),
+    atom_concat(_,Rest,GS),
+    atom_concat('-)',Suffix,Rest).
 
 %% treat ( Grand Slam-)toernooi as Grand Slam-toernooi
 next_word__(Word,['('|Ws0],Ws,skip_l_brack(His),LC) :-
@@ -824,6 +839,7 @@ number_both(['PS']).  % provinciale staten?
 number_both(['Pyreneeen']).
 number_both(['Pyreneeën']).
 number_both(['Rode','Khmers']).
+number_both(['Seychellen']).
 number_both(['Staten','Generaal']).
 number_both(['Staten-Generaal']).
 number_both(['Talibaan']).
@@ -857,6 +873,9 @@ number_both_last(Atom) :-
     atom_concat(_,Suffix,Atom),
     plural_suffix(Suffix).
 
+%% Biologische soorten:
+plural_suffix(ae).
+
 plural_suffix(admirals).
 plural_suffix(alpen).
 plural_suffix(angels).
@@ -884,6 +903,7 @@ plural_suffix(cars).
 plural_suffix(cats).
 plural_suffix(charlatans).
 plural_suffix(chieftains).
+plural_suffix(comoren).
 plural_suffix(corrs).
 plural_suffix(cranberries).
 plural_suffix(creatures).
@@ -977,6 +997,7 @@ plural_suffix(persons).
 plural_suffix(persuasions).
 plural_suffix(pigs).
 plural_suffix(pistols).
+plural_suffix(plassen).
 plural_suffix(players).
 plural_suffix(poets).
 plural_suffix(posies).
@@ -1164,7 +1185,7 @@ lexicon__(om,adjective(het_st(adv)),Label1,Ws0,Ws,'om ter Asuper'(His),LC) :-
 
 %% zij is het aardigst(e) ---> ambiguous between complex adj and [@np det adj]
 %% zij zwemt het hardst(e)
-%% zij is het leukste, always analysed as NP
+%% zij is het leukste, also analysed as NP
 %% since indeed you can add relative clause
 lexicon__(het,Adj,Label,[STE|Ws],Ws,'het Asuper'(His),_) :-
     het_ste_tag(Adj,Label0,STE,His),
@@ -2127,6 +2148,13 @@ l_requires3('U').
 l_requires3('Wat').
 l_requires3(zich).
 
+%% left neighbour
+l_requires_psp(Word,_) :-
+    l_requires_psp(Word).
+%% or one word further to the left
+l_requires_psp(_,[Word|_]) :-
+    l_requires_psp(Word).
+
 l_requires_psp(anders).
 l_requires_psp('Wordt').
 l_requires_psp(wordt).
@@ -2142,6 +2170,11 @@ l_requires_psp(heeft).
 l_requires_psp(hebben).
 l_requires_psp(had).
 l_requires_psp(hadden).
+l_requires_psp(raakt).
+l_requires_psp(raakte).
+l_requires_psp(raakten).
+l_requires_psp(raak).
+l_requires_psp(raken).
 
 l_requires_pl(we).
 l_requires_pl(wij).
@@ -2375,9 +2408,9 @@ context_spelling_variant(denk,Ik,_,denkt) :-
     l_requires3(Ik).
 context_spelling_variant(plaatst,de,_,plaats).
 
-context_spelling_variant(HerinnerDDen,Werd,_,HerinnerDen) :-
+context_spelling_variant(HerinnerDDen,Werd,More,HerinnerDen) :-
     atom(HerinnerDDen),
-    l_requires_psp(Werd),
+    l_requires_psp(Werd,More),
     (   atom_concat(Herinner,dden,HerinnerDDen),
         atom_concat(Herinner,den,HerinnerDen)
     ;   atom_concat(Herinner,tten,HerinnerDDen),
@@ -2385,9 +2418,9 @@ context_spelling_variant(HerinnerDDen,Werd,_,HerinnerDen) :-
     ),
     lexicon___(HerinnerDen,verb(_,psp,_),_,[],[],_).
 
-context_spelling_variant(Herinnert,Werd,_,Herinnerd) :-
+context_spelling_variant(Herinnert,Werd,More,Herinnerd) :-
     atom(Herinnert),
-    l_requires_psp(Werd),
+    l_requires_psp(Werd,More),
     atom_concat(Herinner,t,Herinnert),
     (   atom_concat(Herinner,d,Herinnerd)
     ;   Herinner = Herinnerd
@@ -2691,6 +2724,7 @@ spelling_variant(goeiendag,goedendag).
 spelling_variant(goeiemorgen,goedemorgen).
 spelling_variant(hiero,hier).
 spelling_variant(ikke,ik).
+spelling_variant(klere,kleren).
 spelling_variant(mammie,mama).
 spelling_variant(ouwerwets,ouderwets).
 spelling_variant(ouwerwetse,ouderwetse).
@@ -2951,6 +2985,7 @@ spelling_variant(rigoreuze,   rigoureuze).
 spelling_variant(sateliet,    satelliet).
 spelling_variant(schijft,     schrijft).
 spelling_variant(sierraad,    sieraad).
+spelling_variant(sind,        sinds).
 spelling_variant(sinsdien,    sindsdien).
 spelling_variant(suggeren,    suggereren).
 spelling_variant(symphatiek,  sympathiek).

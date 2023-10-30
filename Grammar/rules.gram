@@ -1250,6 +1250,7 @@ grammar_rule(vp_om_vpx,VP,[Comp,V]):-
 
 grammar_rule(mod_om_vpx,VP,[Comp,V]):-
     VP => modifier,
+    VP:cj => ncj,
     VP:mcat => mcat_vp,
     VP:wh => nwh,
     VP:eps => no,
@@ -2252,17 +2253,7 @@ unify_vslash(VSLASH,V) :-
     VSLASH:vtype <=> V:vtype,
     VSLASH:cleft <=> V:cleft,  % never was here ?
 
-    VSLASH:dt <=> V:dt,
-    VSLASH:ccat0 <=> V:ccat0,
-    VSLASH:ccat <=> V:ccat,    
-    VSLASH:mods <=> V:mods,
-    VSLASH:cmods <=> V:cmods,
-    VSLASH:predms <=> V:predms,
-    VSLASH:cpredms <=> V:cpredms,
-    VSLASH:apps <=> V:apps,
-    VSLASH:capps <=> V:capps,
-    VSLASH:dets <=> V:dets,
-    VSLASH:cdets <=> V:cdets.
+    unify_dt(VSLASH,V).
 
 v2_structure(Vmain,VP,Sv1,IDENTIFIER,VSLASH) :-
     structure,
@@ -3755,7 +3746,8 @@ grammar_rule(adv_a,Adv,[Adj]) :-
     Adv:subadv => subadv_adj,
     Adj:cj => ncj, % reduce spurious amb.
     Adj:adv => (yadv;oadv),
-    Adj:agr => het & indef & sg, % should not have -e suffix!
+    %%    Adj:agr => het & indef & sg, % should not have -e suffix!
+    %% however: "Voorafgaande aan de visitatie moeten we ..."
     Adj:aform => nattr,  % was: (attr;nattr)
     hd_structure(Adj,Adv).
 
@@ -3810,7 +3802,8 @@ grammar_rule(mod1, Mod, [ Adv ] ) :-
     Adv:tmploc => (ntmploc;wk_er),
 
     Mod:mcat => mcat_adv,
-    Adv:cj => ncj, % diy
+    Mod:cj => ncj,
+    Adv:cj => ncj, 
     Adv:redrel => no,
     hd_structure(Adv,Mod).
 
@@ -3821,6 +3814,7 @@ grammar_rule(mod1a, Mod, [ Adv ] ) :-
     Adv:tmploc => (tmp;tmp_n;meas_n;loc;sent;me;postp),
 
     Mod:mcat => mcat_adv,
+    Mod:cj => ncj,
     Adv:cj => ncj, % diy
     Adv:redrel => no,
     hd_structure(Adv,Mod).
@@ -3835,6 +3829,7 @@ grammar_rule(mod1b, Mod, [ Adv ] ) :-
 
     Mod:mcat => mcat_adv,
     Adv:cj => ncj, % diy
+    Mod:cj => ncj,
     Adv:redrel => no,
     hd_structure(Adv,Mod).
 
@@ -3849,18 +3844,19 @@ grammar_rule(mod2, Mod, [ Pp ] ) :-
     NotRight => ~to_right,
 
     when(nonvar(ER),
-	 (  ER = No
-	 ;  ER = Yes, Sel = NotRight
-	 )),
+    	 (  ER = No
+    	 ;  ER = Yes, Sel = NotRight
+    	 )),
     
     Mod:mcat => mcat_pp,
     Mod:eps => no,
     Pp:cj => ncj, % diy
+    Mod:cj => ncj,
     Pp:e_deps => [],    % otherwise spurious ambiguities
     Pp:nnform => ~refl, % id.
     Pp:ld_pc => (mod_pp;pred_pp),
     Pp:pp_role => pp_obj1,
-    Pp:vc => yes,
+				% Pp:vc => yes,
     hd_structure(Pp,Mod ).
 
 %% SBARs
@@ -3869,6 +3865,7 @@ grammar_rule(mod5, Mod, [ Sbar ]) :-
     Mod:mcat => mcat_sbar,
     Sbar => sbar,
     Sbar:cj => ncj, %diy
+    Mod:cj => ncj,
     Sbar:tags => [],
     Sbar:ctype => (c_mod;c_compare),
     Sbar:e_deps => [],
@@ -3880,6 +3877,7 @@ grammar_rule(mod5, Mod, [ Sbar ]) :-
 %% TODO: disallow 'die/wie' relative, since this refers to 'proposition' ?
 grammar_rule(mod5rr, Mod, [ Sbar ]) :-
     Mod => modifier,
+    Mod:cj => ncj,
     redrel_modifier(Sbar),
     Mod:mcat => mcat_redrel,
     Mod:eps => no,
@@ -3892,6 +3890,7 @@ grammar_rule(mod7, Mod, [ SV1 ]) :-
     Mod:mcat => mcat_imp,
     Mod:sel => (to_right;to_topic),
     SV1:cj => ncj, % diy
+    Mod:cj => ncj,
     SV1:sv1_mod => yes,
     SV1:can_be_max => yes,
     max_sv1(SV1),
@@ -4247,6 +4246,9 @@ grammar_rule(adv_adv_sbar,AdvP,[Adv,OPTCl,Sbar,OPTCr]) :-
     optcomma(OPTCr),
     hd_mod_structure(Adv,Sbar,AdvP).
 
+%% ook year:
+%% Nidwalden werd reeds 4000 v.Chr. bewoond .
+%% Hij heeft het circa 1 n.Chr. gepubliceerd .
 grammar_rule(adv_tmp_np,Adv,[NP]) :-
     Adv0 => adv,
     unify_except(Adv0,Adv,wh_reltmploc),
@@ -4256,7 +4258,7 @@ grammar_rule(adv_tmp_np,Adv,[NP]) :-
     NP => np,
     NP:redrel => no,
     NP:pred => npred,
-    NP:nform => temp,
+    NP:nform => (year;temp),
     NP:e_deps => [],
     NP:cj => ncj,
     NP:bmeas => no,
@@ -4738,6 +4740,11 @@ grammar_rule(np_n_tmpnapp, NP, [ DET, APP_N, N ]) :-
 %% TODO: prevent post-n modifiers attached to N?
 %% NO: minister van justitie X
 grammar_rule(n_n_pnapp, NP, [ N, PN ]) :-
+    n_n_pnapp_structure(NP,N,PN).
+
+grammar_rule(n_n_q_pnapp, NP, [ N, QL, PN, QR ]) :-
+    ql(QL),
+    optqr(QR),
     n_n_pnapp_structure(NP,N,PN).
 
 n_n_pnapp_structure(NP,N,PN) :-
@@ -6050,6 +6057,24 @@ grammar_rule(a_me_comp_a, AP, [ NP, A]) :-
 	),   % not for relatives!
     NP:wh_reltmploc <=> AP:wh_reltmploc,
     hd_comp_structure(A,NP,AP0).
+
+grammar_rule(a_tot_me_comp_a, AP, [ TOT, A]) :-
+    AP => a, A => a,
+    A:lex => yes,   
+    A:me_adj => yes,
+    haspreyes(A),
+    A:wh => nwh,		% * np hoe beter
+    max_pp(TOT),
+    TOT:prep ==> tot,
+    TOT:haspart => no,
+    TOT:pp_er => no,
+    TOT:allow_modal => no,
+    TOT:niet => no,
+    max_np(NP),
+    unify_dt(TOT,NP),
+    NP:exs <=> TOT:exs,
+    NP:mexs <=> TOT:mexs,
+    hd_comp_structure(A,NP,AP).
 
 grammar_rule(a_np_comp_a, AP, [ NP, A]) :-
     AP => a, A => a,
@@ -8737,6 +8762,7 @@ grammar_rule(max_xp(np),Max,[X]) :-
 
 grammar_rule(max_xp(adj),Max,[X]) :-
     max_ap(X),
+    X:cj => ncj,
     X:adv => oadv,
     top_max_structure(X,Max).
 
@@ -8780,6 +8806,7 @@ grammar_rule(max_xp(sbar),Max,[X]) :-
 
 grammar_rule(max_xp(advp),Max,[X]) :-
     max_advp(X),
+    X:cj => ncj,
     X:subadv => ~subadv_adj,
     top_max_structure(X,Max).
 
@@ -8791,6 +8818,7 @@ grammar_rule(max_xp(pred),Max,[X]) :-
     top_max_structure(X,Max).
 
 grammar_rule(max_xp(pp),Max,[X]) :-
+    X:cj => ncj,
     ind_max_pp(X),
     top_max_structure(X,Max).
 
@@ -8837,6 +8865,14 @@ grammar_rule(max_xp(om_rel),Max,[X]) :-
 %    ),
     X:nform => norm,
     top_max_structure(X,Max).
+
+%% coordination of unlike cats, e.g., modifiers
+%% "zowel solo als met begeleidingsband"
+%%
+grammar_rule(max_xp(conj),Max,[Mod]) :-
+    Mod => modifier,
+    Mod:cj => (one_crd; two_crd),
+    top_max_structure(Mod,Max).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% RELATIVE CLAUSES %%%%

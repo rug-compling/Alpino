@@ -51,6 +51,12 @@ phrasal_entry(adjective(e),Root,numbereeuwse) -->
     n_word(NumberPersoons),
     { rangnumbereeuwse(NumberPersoons,Root) }.
 
+%% In wikipedia is formula_23 meta-notation which stands for some
+%% text typeset as a mathematical symbol/formula
+phrasal_entry(proper_name(sg),Word,formula_) -->
+    n_word(Word),
+    { formula(Word) }.
+
 phrasal_entry(noun(het,count,pl),Stem,numbercilinders) -->
     { hdrug_util:debug_message(4,"numbercilinders~n",[]) },
     n_word(NumberTal),
@@ -290,7 +296,8 @@ phrasal_entry(postnp_adverb,bracketed_year) -->
 
 phrasal_entry(tmp_np,temporal_expression) -->
     { hdrug_util:debug_message(4,"temporal_expression~n",[]) },
-    temporal_expression.
+    temporal_expression,
+    opt_temporal_expression_suffix.
 
 phrasal_entry(tmp_np,date_expression) -->
     { hdrug_util:debug_message(4,"date_expression~n",[]) },
@@ -2119,6 +2126,17 @@ tmp_uur_uur('u.').
 tmp_uur_uur(u).
 tmp_uur_uur(ure).
 
+opt_temporal_expression_suffix --> [].
+opt_temporal_expression_suffix -->
+    n_word('GMT').
+opt_temporal_expression_suffix -->
+    n_word('CEST').
+opt_temporal_expression_suffix -->
+    n_word('CET').
+opt_temporal_expression_suffix -->
+    n_word('UTC').
+%% there are many more, of course...
+
 temporal_expression -->
     tmp_uur_num,
     tmp_uur_uur.
@@ -3523,6 +3541,7 @@ phrasal_entry(noun(both,count,bare_meas),procents) -->
 procent(procent).
 procent('pct.').
 procent('%').
+procent('‰').
 procent(pct).
 procent(X) :-
     procents(X).
@@ -3615,6 +3634,8 @@ meter_loper_meter(Words,Stem) :-
     atom(Abb),
     xl(Abb,MeasureTag,Stem,[],[]),
     measure_tag(MeasureTag).
+
+meter_loper_meter(holes,hole).
 
 measure_tag(meas_mod_noun(_,_,meas)).
 measure_tag(mod_noun(_,_,meas)).
@@ -4318,3 +4339,9 @@ rewrite_stem0(AtomDuizend,Atom_Duizend) :-
     atom_concat(Atom,duizend,AtomDuizend),
     atom_concat(Atom,'_duizend',Atom_Duizend).
 rewrite_stem0(A,A).
+
+formula(Word) :-
+    atom(Word),
+    atom_concat(formula_,DigitAtom,Word),
+    atom_codes(DigitAtom,Codes),
+    number_codes_silent(_,Codes).

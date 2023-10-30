@@ -3392,6 +3392,9 @@ a([prefix(alfa)],nonadv,[],[]).
 a([e(alfabetische),
    no_e(alfabetisch)],adv,[],[]).
 
+a([e(algebraïsche),
+   no_e(algebraïsch)],adv,[],[]).
+
 a([e(algehele),
    no_e(algeheel)],nonadv,[],[]).
 
@@ -6600,13 +6603,6 @@ a([e(bloedige),
    st(bloedigst),
    ste(bloedigste)],adv,[],[koud,warm]).
 
-a([e(bloedrode),
-   er(bloedroder),
-   ere(bloedrodere),
-   no_e(bloedrood),
-   st(bloedroodst),
-   ste(bloedroodste)],adv,[],[]).
-
 a([stem(bloed_stollen),
    ende(bloedstollende),
    end(bloedstollend)],adv,[],[]).
@@ -7439,6 +7435,9 @@ a([e(compacte),
    st(kompaktst),
    ste(compactste),
    ste(kompaktste)],adv,[],[]).
+
+a([e(compatibele),
+   no_e(compatibel)],adv,[],[]).
 
 a([e(compensabele),
    no_e(compensabel)],nonadv,[],[]).
@@ -15685,7 +15684,7 @@ a([ge_e(geschorste),
 a([ge_e(geschorte),
    ge_no_e(geschort)],adv,[],[]).
 
-a([ge_both(geschoten)],adv,[],[]).
+a([ge_both(geschoten)],adv,[],[fixed([te,hulp])]).
 
 a([ge_e(geschouwde),
    ge_no_e(geschouwd)],adv,[],[]).
@@ -15731,6 +15730,9 @@ a([ge_e(geschrompelde),
 
 a([ge_e(geschroomde),
    ge_no_e(geschroomd)],adv,[],[]).
+
+a([ge_e(geschubde),
+   ge_no_e(geschubd)],adv,[],[]).
 
 a([ge_e(geschudde),
    ge_no_e(geschud)],adv,[],[]).
@@ -16296,7 +16298,9 @@ a([ge_e(gestoorde),
    ere(gestoordere),
    ge_no_e(gestoord),
    st(gestoordst),
-   ste(gestoordste)],both,[],[on]).
+   ste(gestoordste)],both,[],
+  [i(geest,geestes),
+   on]).
 
 a([ge_e(gestopte),
    ge_no_e(gestopt)],adv,[],[]).
@@ -17994,7 +17998,7 @@ a([e(gore),
    ste(goorste)],adv,[],[]).
 
 a([e(gotische),
-   no_e(gotisch)],nonadv,[],[]).
+   no_e(gotisch)],nonadv,[],[neo]).
 
 a([stof(gouden)],nonadv,[],[]).
 
@@ -21325,7 +21329,7 @@ a([e(kleverige),
    ste(kleverigste)],nonadv,[],[]).
 
 a([e(klimatologische),
-   no_e(klimatologisch)],nonadv,[],[]).
+   no_e(klimatologisch)],adv,[],[]).
 
 a([e(klinische),
    no_e(klinisch)],adv,[],[]).
@@ -21342,13 +21346,6 @@ a([e(kloeke),
 
 a([both(klote),
    both(kloten)],adv,[],[]).
-
-a([e(knalrode),
-   er(knalroder),
-   ere(knalrodere),
-   no_e(knalrood),
-   st(knalroodst),
-   ste(knalroodste)],nonadv,[],[]).
 
 a([e(knappe),
    er(knapper),
@@ -24803,7 +24800,9 @@ a([e(nutteloze),
    ere(nuttelozere),
    no_e(nutteloos),
    st(nutteloost),
-   ste(nuttelooste)],adv,[],[]).
+   ste(nuttelooste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(nuttige),
    er(nuttiger),
@@ -28980,7 +28979,8 @@ a([stem(op_winden),
    end(opwindend),
    st(opwindendst),
    ste(opwindendste)],adv,
-  [subject_sbar,
+  [refl,
+   subject_sbar,
    subject_vp],[]).
 
 a([e(opzettelijke),
@@ -29385,6 +29385,9 @@ a([e(overmoedige),
    no_e(overmoedig),
    st(overmoedigst),
    ste(overmoedigste)],adv,[],[]).
+
+a([e(overnaadse),
+   no_e(overnaads)],adv,[],[]).
 
 a([ge_both(overreden)],adv,[],[]).
 
@@ -31538,8 +31541,12 @@ a([e(rode),
    no_e(rood),
    st(roodst),
    ste(roodste)],adv,[],
-  [donker,
-   licht]).
+  [bloed,
+   donker,
+   knal,
+   licht,
+   vuur,
+   wijn]).
 
 a([e(roodachtige),
    er(roodachtiger),
@@ -37030,6 +37037,9 @@ a([e(verlieslijdende),
 a([e(verlievende),
    no_e(verlievend)],adv,[],[]).
 
+a([ge_e(verlijmde),
+   ge_no_e(verlijmd)],adv,[],[]).
+
 a([ge_e(verloederde),
    ge_no_e(verloederd)],nonadv,[],[]).
 
@@ -39403,13 +39413,6 @@ a([e(vurige),
    st(vurigst),
    ste(vurigste)],adv,[],[]).
 
-a([e(vuurrode),
-   er(vuurroder),
-   ere(vuurrodere),
-   no_e(vuurrood),
-   st(vuurroodst),
-   ste(vuurroodste)],nonadv,[],[]).
-
 a([e(vuurvaste),
    no_e(vuurvast)],nonadv,[],[]).
 
@@ -40173,13 +40176,6 @@ a([e(wijdverbreide),
    no_e(wijdverbreid)],adv,[],[]).
 
 a([both(wijlen)],nonadv,[],[]).
-
-a([e(wijnrode),
-   er(wijnroder),
-   ere(wijnrodere),
-   no_e(wijnrood),
-   st(wijnroodst),
-   ste(wijnroodste)],nonadv,[],[]).
 
 a([e(wijze),
    er(wijzer),
@@ -40965,6 +40961,13 @@ a([e(zuidelijke),
 
 a([e(zuidwaartse),
    postn_no_e(zuidwaarts)],diradv,[],[]).
+
+a([e(zuidoostelijke),
+   er(zuidoostelijker),
+   ere(zuidoostelijkere),
+   no_e(zuidoostelijk),
+   st(zuidoostelijkst),
+   ste(zuidoostelijkste)],adv,[],[]).
 
 a([e(zuidwestelijke),
    er(zuidwestelijker),
