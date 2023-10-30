@@ -28,6 +28,7 @@
     add_skip_word/2,
     word_form/1,
     tag/8,
+    copy_tag/8,
     rpos/2,
     open_bracket/3, close_bracket/3,
     syn_lex_analysis/4, syn_lex_analysis/6, syn_sem_lex_analysis/10,
@@ -872,7 +873,7 @@ infinitive_tag(verb(_,inf(_),_)).
 
 followed_by_proper_name_or_tmp_np(Q1) :-
     search_tag_r0(Q1,tag(_,_,_,_,_,W,_,_)),
-    lists:member(W,[wapen,huis,drommel]).
+    lists:member(W,[lucht,wapen,huis,drommel]).
 followed_by_proper_name_or_tmp_np(Q1) :-
     search_tag_r0(Q1,tag(_,_,Q1,_,_,_,_,NAME)),
     proper_name_or_tmp_np_tag(NAME).
@@ -1238,7 +1239,7 @@ capitalized(W) :-
 enforce_unique_match(H,Tag,H1,Tag1,MaxLarge,MaxSmall) :-
     (   number(MaxLarge),
 	number(MaxSmall),
-        clause(tag(_,_,R0,R,_,_,H,Tag),true,_Ref),
+	search_tag_tag(Tag,tag(_,_,R0,R,_,_,H,Tag)),
 	R-R0 > MaxLarge,
 	clause(tag(_,_,S0,S,_,_,H1,Tag1),true,Ref2),
 	S-S0 > MaxSmall,
@@ -1247,9 +1248,10 @@ enforce_unique_match(H,Tag,H1,Tag1,MaxLarge,MaxSmall) :-
 	fail
     ;   var(MaxLarge),
 	var(MaxSmall),
-	clause(tag(_,_,S0,S,_,_,H,Tag),true,_Ref),
+	search_tag_tag(Tag,tag(_,_,S0,S,_,_,H,Tag)),
 	clause(tag(_,_,S0,S,_,_,H1,Tag1),true,Ref2),
-	erase_tag(Ref2)
+	erase_tag(Ref2),
+	fail
     ;   true
     ).
 
@@ -2235,12 +2237,14 @@ is_used(P1) :-
     P0 < P1, P1 < P.
 
 is_dict_used(P1) :-
-    tag(P1,P2,_,_,_,_,normal(_),_),
+    tag(P1,P2,_,_,_,_,normal(Type),_),
+    \+ Type = url,
     \+ probably_wrong_tag(P1,P2).
 is_dict_used(P1) :-
-    tag(P0,P,_,_,_,_,normal(_),_),
+    tag(P0,P,_,_,_,_,normal(Type),_),
     P0 < P1,
     P1 < P,
+    \+ Type = url,
     \+ probably_wrong_tag(P0,P).
 is_dict_used(P) :-
     close_bracket(P,_,_).
@@ -2716,8 +2720,7 @@ guess_english_compound(tag(P0,P,R0,R,Label,Used,normal(english_compound),Tag2)) 
 	search_tag_stem(Label1,tag(P0,P1,R0,R1,Label1,Used1,_His1,_Tag1))
     ),
     search_tag_r0(R1,tag(P1,P, R1,R, Label2,Used2,_His2,Tag2)),
-    noun_tag(Tag2),
-    second_part_english_compound(R1,R,Tag2),
+    second_part_english_compound(tag(P1,P, R1,R, Label2,Used2,_His2,Tag2)),
     (   Label1 = v_root(Label1A,_)
     ->  true
     ;   Label1 = Label1A
@@ -2735,9 +2738,14 @@ first_part_english_compound(R0,R1) :-
     \+ alternative_to_compound(R0,R1,l),
     \+ first_alternative_to_compound(R0,R1).
 
-second_part_english_compound(R1,R,Tag2) :-
+second_part_english_compound(tag(_,_,R1,R,_,_,_,Tag2)) :-
     noun_tag(Tag2),
     \+ alternative_to_compound(R1,R,r).
+second_part_english_compound(tag(_,_,_,_,L,_,_,Tag)):-
+    second_part_lemma(L,Tag).
+
+second_part_lemma(elite,noun(_,_,_)).
+second_part_lemma(vormig,adjective(_)).
 
 first_alternative_to_compound(R0,R1) :-
     search_tag_r0(R0,tag(_,_,R0,R1,_,_,_,Tag)),

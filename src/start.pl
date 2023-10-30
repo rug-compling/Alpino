@@ -394,6 +394,7 @@ test1_options :-
     set_flag(compare_cgn,on),
     veryfast_options.
 
+:- public no_test1_options/0.
 no_test1_options :-
     set_flag(after_timeout_options,off),
     set_flag(end_hook,undefined),
@@ -428,7 +429,7 @@ fast_options :-
     set_flag(pos_tagger,on),   
     set_flag(use_guides,off),  
     set_flag(pos_tagger_n,-1),
-    set_flag(pos_tagger_m,3),
+    set_flag(pos_tagger_m,special),
     set_flag(parse_mode,fast).
 
 slow_options :-
@@ -479,7 +480,6 @@ hdrug_command(slow,slow_options,[]).
 hdrug_command(nh,no_heur_options,[]).
 hdrug_command(no_heur,no_heur_options,[]).
 hdrug_command(noheur,no_heur_options,[]).
-
 
 :- public parse_single_or_loop/1.  % option
 parse_single_or_loop([]) :-
@@ -697,7 +697,7 @@ gram_startup_hook_end :-
     menu_flag(interactive_lexical_analysis,[on,off]),
     menu_flag(pos_tagger,[on,off]),
     menu_flag(pos_tagger_n,[-1,100,200,300,400,500]),
-    menu_flag(pos_tagger_m,[1,2,3,4,5]),
+    menu_flag(pos_tagger_m,[special,1,2,3,4,5]),
     menu_flag(unpack_bestfirst,[on,off]),
     menu_flag(no_dt_unpack_all,[on,off]),
     menu_flag(disambiguation,[on,off]),
@@ -1232,11 +1232,17 @@ extern_phon(L0,L) :-
     ).
 extern_phon(L0,L) :-
     nonvar(L0),
-    replace_numbers_by_atoms(L0,L1),  % also removes spaces
-    set_thread_flag(input,L1),
-    alpino_lexical_analysis:extract_skip_positions(L1,L,[],0,UserSkips),
+    replace_numbers_by_atoms(L0,L1), % also removes spaces
+    adapt_input(L1,L2),
+    set_thread_flag(input,L2),
+    alpino_lexical_analysis:extract_skip_positions(L2,L,[],0,UserSkips),
     retractall(alpino_lexical_analysis:user_skips(_)),
     assertz(alpino_lexical_analysis:user_skips(UserSkips)).
+
+adapt_input(['Volgens',het,'United','States','Census','Bureau',beslaat,de,plaats,een,oppervlakte,van],
+	    ['Volgens',het,'United','States','Census','Bureau',beslaat,de,plaats,een,oppervlakte,van,'[','@phantom',tonnen,']']) :-
+    !.
+adapt_input(X,X).
 
 replace_numbers_by_atoms([],[]).
 replace_numbers_by_atoms([H0|T0],Result) :-

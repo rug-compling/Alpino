@@ -58,13 +58,11 @@ pos_filter_initialize_ :-
 pos_filter(Sent,EraseTagRefs,RefTagList):-
     statistics(runtime,[T0,_]),
     hdrug_flag(pos_tagger,Tagger),
+    get_tagger_options(Sent,P_t,P_p,P_m),
     (	Tagger == on
     ->	pos_filter_initialize,   % ensure it has been initialized
 	all_tags(Tags,RefsLists),
 	length(Tags,TagsLength),
-	hdrug_flag(pos_tagger_n,P_t),
-	hdrug_flag(pos_tagger_p,P_p),
-	hdrug_flag(pos_tagger_m,P_m),
 	hdrug_flag(pos_tagger_state_size,Size),
 	hdrug_flag(debug,Debug0),
 	Debug is Debug0-1,
@@ -212,3 +210,20 @@ inform_postags_([t(P0,P,String,_LogProb)|Tail],Sent) :-
     lists:nth0(P0,Sent,Word),
     format("~w\t~w\t~w\t~s\t~s\t~n",[P,Word,Word,String,String]),
     inform_postags_(Tail,Sent).
+
+get_tagger_options(Sent,P_t,P_p,P_m) :-
+    hdrug_flag(pos_tagger_n,P_t),
+    hdrug_flag(pos_tagger_p,P_p),
+    hdrug_flag(pos_tagger_m,P_m0),
+    (   P_m0 == special
+    ->  length(Sent,Len),
+	P_m is max(0, 6.2 - log(Len))
+	% (   Len < 15
+	% ->  P_m = 4
+	% ;   Len < 25
+	% ->  P_m = 3
+	% ;   P_m = 2.5
+	% )
+    ;   P_m = P_m0
+    ).
+

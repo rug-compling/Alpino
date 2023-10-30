@@ -121,6 +121,7 @@ tr_num(Out,Out).
 ignore_noun_subcat(subject_sbar).
 ignore_noun_subcat(subject_sbar_no_het).
 ignore_noun_subcat(subject_vp).
+ignore_noun_subcat(subject_vp_no_het).
 ignore_noun_subcat(pred_pp(_)).
 ignore_noun_subcat(pred_pp(_,_)).
 ignore_noun_subcat(pred_pp_pl(_)).
