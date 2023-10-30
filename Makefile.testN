@@ -159,7 +159,7 @@ ifeq ($(strip $(SCORES)),)
 else
 	@echo "        BEST-CA          #PARSES        SUITE"
 	@echo "      NEW     OLD      NEW      OLD"
-	@$(MAKE) -s $(SCORES:%bests=%/bf) |\
+	@$(MAKE) -s $(SCORES:%bests=%bf) |\
             awk '{ G=" ";\
                    if ($$1>$$2) {G="!"};\
                    if ($$2>$$1) {G="?"};\
@@ -171,7 +171,7 @@ else
 endif
 
 %/bf:%/bests
-	@echo `grep 'BEST: ca-score' $< | awk '{ print $$3 }' `"	"`if [ -f $(dir $(dir $*))/best ]; then grep 'BEST: ca-score' $(dir $(dir $*))/best | tail -n 2 | head -n 1 | awk '{ print $$3 }'; fi`"	"`grep readings/sentence $< | awk '{ print $$1 }'`"	"`if [ -f $(dir $(dir $*))/best ]; then grep 'readings/sentence' $(dir $(dir $*))/best | tail -n 2 |head -n 1 | awk '{ print $$1 }'; fi`"	"$(dir $(dir $*))"	"`grep extra= $(dir $(dir $*))/times |sed -e 's/extra=//' | tr ' ' ',' `
+	@echo `grep 'BEST: ca-score' $< | awk '{ print $$3 }' `"	"`if [ -f $(dir $(dir $*))/best ]; then grep 'BEST: ca-score' $(dir $(dir $*))/best | tail -n 2 | head -n 1 | awk '{ print $$3 }'; fi`"	"`grep readings/sentence $< | awk '{ print $$1 }'`"	"`if [ -f $(dir $(dir $*))/best ]; then grep 'readings/sentence' $(dir $(dir $*))/best | tail -n 2 |head -n 1 | awk '{ print $$1 }'; fi`"	"$(dir $(dir $*))"	"`grep extra= $(dir $(dir $*))/times |tail -n 1|sed -e 's/extra=//' | tr ' ' ',' `
 
 ORDERED=-rt
 
