@@ -14,7 +14,7 @@ OBJECTS=$(SOURCES:.cpp=.o)
 all: miniact
 
 
-BOOST_LIBRARIES=-lboost_system
+#BOOST_LIBRARIES=-lboost_system
 ifeq ($(PLATFORM),darwin)
 	BOOST_LIBRARIES=-lboost_system-mt
 endif

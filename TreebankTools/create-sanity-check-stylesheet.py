@@ -10,6 +10,7 @@ import string
 
 ### HIER MOETEN DE CHECKS AAN TOEGEVOEGD WORDEN
 def sanity_checks():
+   check('/alpino_ds/node[count(node[@cat])>1]','more than one top node???')
    multi_head_check()
    expected_daughters('du', ('dp', 'sat', 'nucl', 'tag','dlink'))
    expected_daughters('mwu', ('mwp',))
