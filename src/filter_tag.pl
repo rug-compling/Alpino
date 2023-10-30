@@ -418,6 +418,8 @@ valid_noun_sc(subject_vp,             [or([check_verb_sc(copula_vp),
 					   check_verb_sc(als_pred_np_vp),
 					   check_verb_sc(voor_pred_np_vp)]),
 				       check_vform(te)]).
+valid_noun_sc(subject_vp_no_het,L):-
+    valid_noun_sc(subject_vp,L).
 valid_noun_sc(sbar,                   [check_of_dat_whsub_sbar]).
 valid_noun_sc(van_sbar,               [check_tag(complementizer(van))]).
 valid_noun_sc(subject_sbar,           []).  % ik vertrek , was zijn eerste reactie 
@@ -1720,6 +1722,8 @@ check_subject_vp(P0,P) :-
     ;   check_noun_sc(subject_vp,P0,P)
     ;   check_noun_sc(pred_pp(_,subject_vp),P0,P)
     ;   check_noun_sc(pred_pp_pl(_,subject_vp),P0,P)
+    ;   check_noun_sc(pred_pp(_,subject_vp_no_het),P0,P)
+    ;   check_noun_sc(pred_pp_pl(_,subject_vp_no_het),P0,P)
     ;   check_reduced_relative(P0,P)
     ).
 

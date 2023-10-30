@@ -114,15 +114,28 @@ guess_slash_pairs :-
     ).
 
 similar_tags(_,punct(_),_,_) :- !, fail.
-similar_tags(_,Tag,Tag,Tag) :- !.
-similar_tags(_,noun(_,_,Nm), noun(_,_,Nm),noun(both,both,Nm)).
+similar_tags(_,noun(_,_,Nm), noun(_,_,Nm),Tag) :-
+    !, Tag = noun(both,both,Nm).
                                 % groente & fruit
                                 % marketing & communicatie
-similar_tags(_,proper_name(_,ORG),proper_name(_,ORG),proper_name(both,ORG)).
-similar_tags(_,proper_name(_),proper_name(_),proper_name(both)).
-
+similar_tags(_,proper_name(_,ORG),proper_name(_,ORG),Tag) :-
+    !, Tag = proper_name(both,ORG).
+similar_tags(_,proper_name(_),proper_name(_),Tag) :-
+    !, Tag = proper_name(both).
 %% inw. / km²
-similar_tags('/',noun(A,B,C),meas_mod_noun(_,_,_),noun(A,B,C)).
+similar_tags('/',noun(A,B,C),meas_mod_noun(_,_,_),Tag) :-
+    !, Tag = noun(A,B,C).
+similar_tags('/',verb(U,Sg,Sc),verb(U,Sg2,Sc),verb(U,Sg3,Sc)):-
+    infl_verb(Sg,Sg2,Sg3).
+similar_tags(_,Tag,Tag,Tag).
+
+infl_verb(sg,past(sg),sg).
+infl_verb(sg_is,past(sg),sg).
+infl_verb(past(sg),sg,sg).
+infl_verb(past(sg),sg_is,sg).
+infl_verb(pl,past(pl),pl).
+infl_verb(past(pl),pl,pl).
+infl_verb(X,X,X).
 
 a_slash_tag(R0,R,Surf) :-
     slash_tag(R0,R,Surf),
@@ -874,13 +887,13 @@ unknown_word_heuristic(P1,R1,W,_Ws,"suffix_name|~p|~p|~p~n",
     debug_message(3,"trying heuristic suffix_name~n",[]),
     \+ tag(P1,_,_,_,_,_,decap(_),_),
     \+ tag(P1,_,_,_,_,_,special(decap(_)),_),
-    findall(Wfirst-Wmin,guess_suffix_compound(W,Wfirst,Wmin),Wmins0),
+    findall(Wfirst-Wmin-Tag-His,guess_suffix_compound(W,Wfirst,Wmin,Tag,His),Wmins0),
     sort(Wmins0,Wmins),
-    member(Wfirst-Wmin,Wmins),
+    member(Wfirst-Wmin-Tag-His,Wmins),
     P is P1 +1,
     R is R1 +1,
     alpino_lex:concat_stems([Wfirst,Wmin],Stem),
-    assert_tag(P1,P,R1,R,Stem,suffix_name,proper_name(both,'LOC')).
+    assert_tag(P1,P,R1,R,Stem,His,Tag).
 
 %% motie-Goudzwaard
 unknown_word_heuristic(P1,R1,W,Ws,"left_headed_compound|~p|~p|~p~n",
@@ -1480,6 +1493,7 @@ foreign_word(campus).
 foreign_word(can).
 foreign_word('can\'t').
 foreign_word(capital).
+foreign_word(car).
 foreign_word(care).
 foreign_word(cast).
 foreign_word(casual).
@@ -1517,6 +1531,7 @@ foreign_word(consultants).
 foreign_word(cool).
 foreign_word(corner).
 foreign_word(could).
+foreign_word(county).
 foreign_word(country).
 foreign_word(coupe).
 foreign_word(cour).
@@ -1627,6 +1642,7 @@ foreign_word(formats).
 foreign_word(française).
 foreign_word(frame).
 foreign_word(free).
+foreign_word(freguesia).
 foreign_word(from).
 foreign_word(fuck).
 foreign_word(full).
@@ -1726,9 +1742,11 @@ foreign_word(kick).
 foreign_word(kid).
 foreign_word(killer).
 foreign_word(know).
+foreign_word(község).  % Hongaarse plaats, frequent in Wikipedia
 foreign_word('l\'amour').
 foreign_word('l\'avenir').
 foreign_word('l\'homme').
+foreign_word(la).
 foreign_word(ladies).
 foreign_word(lady).
 foreign_word(label).
@@ -1867,6 +1885,7 @@ foreign_word(peut).
 foreign_word(phantom).
 foreign_word('pick-up').
 foreign_word(pink).
+foreign_word(place).
 foreign_word(planning).
 foreign_word(planet).
 foreign_word(play).
@@ -1935,6 +1954,7 @@ foreign_word(ses).
 foreign_word(set).
 foreign_word(sie).
 foreign_word(simple).
+foreign_word(sind).
 foreign_word(single).
 foreign_word(singles).
 foreign_word(shall).
@@ -2032,10 +2052,12 @@ foreign_word(til).
 foreign_word(time).
 foreign_word(times).
 foreign_word(to).
+foreign_word(today).
 foreign_word(together).
 foreign_word(too).
 foreign_word(top).
 foreign_word(tout).
+foreign_word(town).
 foreign_word(track).
 foreign_word(tracks).
 foreign_word(train).
@@ -2067,6 +2089,7 @@ foreign_word(veux).
 foreign_word(vice).
 foreign_word(vie).
 foreign_word(vieux).
+foreign_word(village).
 foreign_word(ville).
 foreign_word(virus).
 foreign_word(vive).
@@ -2695,11 +2718,20 @@ guess_prefix_compound(W,Wfirst,WLast) :-
     ).
 
 %% Groningen-centrum
-guess_suffix_compound(W,Wfirst,WLast) :-
+guess_suffix_compound(W,Wfirststem,WLast,proper_name(both,'LOC'),suffix_name) :-
     atom(W),
     once(atom_split(W,'-',Wfirst,WLast)),
     loc_suffix(WLast),
-    alpino_lex:lexicon(_,_,[Wfirst],[],names_dictionary).
+    alpino_lex:lexicon(_,Wfirststem,[Wfirst],[],names_dictionary).
+
+%% het comité-generaal
+guess_suffix_compound(W,Wfirststem,WLast,noun(A,B,C),suffix_noun) :-
+    atom(W),
+    once(atom_split(W,'-',Wfirst,WLast)),
+    noun_suffix(WLast),
+    alpino_lex:lexicon(noun(A,B,C),Wfirststem,[Wfirst],[],_).
+
+noun_suffix(generaal).
 
 loc_suffix(centrum).
 loc_suffix(midden).
@@ -3297,7 +3329,17 @@ remove_longer_compounds_with_same_suffix_([I-R-Parts|T],R0,List) :-
     ),
     remove_longer_compounds_with_same_suffix_(T,R0,T0).
 
+
 %% TODO: add proper stems!!
+
+guess_form_of_suffix(W,Label,'/',Tag,Tag) :-
+    atom(W),
+    once(atom_split(W,'/',Left,Right)),
+    alpino_lex:lexicon(Tag1,LabelL,[Left],[],normal),
+    alpino_lex:lexicon(Tag2,LabelR,[Right],[],normal),
+    similar_tags('/',Tag1,Tag2,Tag),
+    alpino_lex:concat_stems([LabelL,LabelR],Label,'_').
+
 guess_form_of_suffix(W,Root,Suffix,Tag,CompTag) :-
     guess_using_suffix0(W,_,Suffix,2,1),  % generate in decreasing length
     findall(Suffix-RootSuffix-Tag-CompTag,apply_suffix_rule(Suffix,RootSuffix,Tag,CompTag,W),[H|T]),
@@ -3344,6 +3386,17 @@ guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,transitive),verb(_,psp,
     \+ member(W,[gerard]),
     atom_concat(Stem0,'_',Stem1),
     atom_concat(Stem1,Af,Stem).
+
+%% not a suffix of course, but ok
+guess_form_of_suffix(W,W,'i.v.m.',preposition(W,[]),preposition(_,_)) :-
+    atom(W),
+    atom_codes(W,[A,46,B,46,C|Tail]),
+    (  Tail = []
+    ;  Tail = [46]
+    ),
+    islower(A),
+    islower(B),
+    islower(C).
 
 psp_suffix(cht,t).
 psp_suffix(ft,t).
@@ -4106,6 +4159,8 @@ add_number(name_determiner(Pron), name_determiner(Pron),_,_).
 add_number('PER',Agr,Stem) :-
     Agr = sg,
     atom(Stem),
+    \+ atom_concat(_,i,Stem),
+    \+ atom_concat(_,ae,Stem),
     \+ atom_concat(_,en,Stem),
     \+ atom_concat(_,s,Stem),
     !.
@@ -6844,13 +6899,22 @@ add_accents(W,Wmin) :-
 add_accents(W,Wmin) :-
     accent(W,Wmin).  % from names
 
-comp_tag(adjective(ende(_)),adjective(ende(_))).
-comp_tag(adjective(end(_)),adjective(end(_))).
-comp_tag(adjective(no_e(_)),adjective(no_e(_))).
-comp_tag(adjective(no_e(_)),adjective(ge_no_e(_))).
+comp_tag(adjective(ende(Adv0)),adjective(ende(Adv))) :-
+    comp_adv(Adv0,Adv).
+comp_tag(adjective(end(Adv0)),adjective(end(Adv))) :-
+    comp_adv(Adv0,Adv).
+comp_tag(adjective(no_e(Adv0)),adjective(no_e(Adv))) :-
+    comp_adv(Adv0,Adv).
+comp_tag(adjective(no_e(Adv0)),adjective(ge_no_e(Adv))) :-
+    comp_adv(Adv0,Adv).
+comp_tag(adjective(ge_no_e(Adv0)),adjective(no_e(Adv))) :-
+    comp_adv(Adv0,Adv).
 comp_tag(adjective(e),adjective(ge_e)).
 comp_tag(adjective(e),adjective(ere)).
 comp_tag(X,X).
+
+comp_adv(nonadv,adv).
+comp_adv(A,A).
 
 %% if we allow all PER, then way too many false positives
 famous_per('Brel').

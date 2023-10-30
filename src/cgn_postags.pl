@@ -3346,6 +3346,14 @@ mwu_postag(waar_adverb(A),_Stem,Surf,Q0,Q,_) -->
     },
     guess_tag_list(SurfEls,waar_adverb(A),Q0,Q).
 
+mwu_postag(tag,_,Surf,Q0,Q,_) -->
+    {  atom(Surf),
+       alpino_util:split_atom(Surf," ",Tags),
+       length(Tags,Len),
+       Len is Q-Q0
+    },
+    guess_tag_list(Tags,tag,Q0,Q).
+
 mwu_punct_tags(Stem,Q0,Q) -->
     {  atom(Stem),
        alpino_util:split_atom(Stem," ",Words),

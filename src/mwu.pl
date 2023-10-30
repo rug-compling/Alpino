@@ -62,6 +62,7 @@ mwu_postag('2e Wereldoorlog',['SPEC(deeleigen)','SPEC(deeleigen)'],['2e','Wereld
 mwu_postag('4 x 100 meter vrije slag',['TW(hoofd,prenom,stan)','SPEC(symb)','TW(hoofd,prenom,stan)','N(soort,ev,basis,zijd,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['4',x,'100',meter,vrij,slag]).
 mwu_postag('50 meter vrije slag',['TW(hoofd,prenom,stan)','N(soort,ev,basis,zijd,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['50',meter,vrij,slag]).
 mwu_postag('aan banden',['VZ(init)','N(soort,mv,basis)'],[aan,band]).
+mwu_postag('aan de bal',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[aan,de,bal]).
 mwu_postag('aan de gang',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[aan,de,gang]).
 mwu_postag('aan de hand van',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[aan,de,hand,van]).
 mwu_postag('aan de vooravond van',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[aan,de,vooravond,van]).
@@ -880,6 +881,7 @@ mwu_postag('op zichzelfstaande',['VZ(init)','ADJ(prenom,basis,met-e,stan)'],[op,
 mwu_postag('op zoek',['VZ(init)','ADJ(vrij,basis,zonder)'],[op,zoek]).
 mwu_postag('oud en nieuw',['ADJ(nom,basis,zonder,zonder-n)','VG(neven)','ADJ(nom,basis,zonder,zonder-n)'],[oud,en,nieuw]).
 mwu_postag('orde op zaken',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,mv,basis)'],[orde,op,zaak]).
+mwu_postag('over de',['VZ(init)','LID(bep,stan,rest)'],[over,de]).
 mwu_postag('over de schreef',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[over,de,schreef]).
 mwu_postag('over en weer',['VZ(fin)','VG(neven)','VZ(fin)'],[over,en,weer]).
 mwu_postag('Palestijnse Gebieden',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],['Palestijns',gebied]).
@@ -1004,6 +1006,7 @@ mwu_postag('te goed',['VZ(init)','ADJ(vrij,basis,zonder)'],[te,goed]).
 mwu_postag('te gortig',['BW()','ADJ(vrij,basis,zonder)'],[te,gortig]).
 mwu_postag('te gronde',['VZ(init)','N(soort,ev,basis,dat)'],[te,grond]).
 mwu_postag('te huis',['VZ(init)','N(soort,ev,basis,onz,stan)'],[te,huis]).
+mwu_postag('te huur',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,huur]).
 mwu_postag('te koop',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,koop]).
 mwu_postag('te kort',['VZ(init)','ADJ(vrij,basis,zonder)'],[te,kort]).
 mwu_postag('te leen',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,leen]).
@@ -1184,6 +1187,7 @@ mwu_postag('van tevoren',['VZ(init)','BW()'],[van,tevoren]).
 mwu_postag('van toepassing',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[van,toepassing]).
 mwu_postag('van tussenuit',['VZ(fin)','VZ(fin)'],[van,tussenuit]).
 mwu_postag('van kwaad naar erger',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)','ADJ(vrij,comp,zonder)'],[van,kwaad,naar,erg]).
+mwu_postag('van week tot week',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)'],[van,week,tot,week]).
 mwu_postag('van zins',['VZ(init)','N(soort,ev,basis,gen)'],[van,zin]).
 mwu_postag('van zodra',['VZ(init)','VG(onder)'],[van,zodra]).
 mwu_postag('Vendex / KBB-directie',['N(eigen,ev,basis,genus,stan)','LET()','N(soort,ev,basis,zijd,stan)'],['Vendex',/,'KBB_directie']).
