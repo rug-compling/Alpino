@@ -45,3 +45,7 @@ analyse:
 	@grep Lemmas *.compare | awk '{ N=N+1; T = T + $$9 } END { print "Lemmas\t" T/N }'
 	@grep UAS *.compare | awk '{ N=N+1; T = T + $$9 } END { print "UAS\t" T/N }'
 	@grep LAS *.compare | awk '{ N=N+1; T = T + $$9 } END { print "LAS\t" T/N }'
+
+clean:
+	rm -f  $(SUITES:%=%.compare) $(SUITES:%=%.log) $(SUITES:%=%.conllu.cln)
+	rm -rf $(SUITES)
