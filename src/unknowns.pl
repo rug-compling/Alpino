@@ -1447,6 +1447,7 @@ foreign_word(back).
 foreign_word(bad).
 foreign_word(ballet).
 foreign_word(bangers).
+foreign_word(barre).
 foreign_word(basale). % scientific names
 foreign_word(baseline).
 foreign_word(baselines).
@@ -1535,6 +1536,7 @@ foreign_word(county).
 foreign_word(country).
 foreign_word(coupe).
 foreign_word(cour).
+foreign_word(courant).
 foreign_word(credit).
 foreign_word(crew).
 foreign_word(crime).

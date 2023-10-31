@@ -5380,6 +5380,9 @@ n([pl(biotopen),sg(biotoop)],both,[]).
 
 n([sg(bips),pl(bipsen)],de,[]).
 
+%% ter bis van die verordening
+n([sg(bis)],both,[]).
+
 n([pl(bisdommen),sg(bisdom)],het,[],[aarts]).
 
 n([pl(bisschoppen),sg(bisschop)],de,[],[aarts,hulp]).
@@ -29171,6 +29174,8 @@ n([pl(realisten),sg(realist)],de,[],
   []).
 
 n([pl(realiteiten),sg(realiteit)],de,[sbar,vp]).
+
+n([mass('real-time'),mass(realtime)],both,[]).
 
 n([sg(rebbe)],de,[]).
 

@@ -6018,6 +6018,8 @@ v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
 	part_so_pp_np(toe),
 	part_transitive(aan),
 	part_transitive(af),
+	part_fixed(af,[sbar_subj_no_het,pc(aan)],no_passive),
+	%% Hieraan doet niet af dat verzoekers het niet eens zijn met dit oordeel .
 	part_transitive(dicht),
 	part_transitive(in), % oordopjes
 	part_transitive(na),

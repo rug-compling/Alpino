@@ -2357,6 +2357,8 @@ context_spelling_variant_context(de,_,_,wel,_,je_POSTV).
 context_spelling_variant_context(de,_,_,wat,_,je_POSTV).
 context_spelling_variant_context(de,_,_,wie,_,je_POSTV).
 
+
+context_spelling_variant_context(behoeven,ten,_,van,_,behoeve).
 context_spelling_variant_context(plaatst,in,_,van,_,plaats).
 context_spelling_variant_context(nog,kant,_,wal,_,noch).
 context_spelling_variant_context(raden,te,_,gaan,_,rade).

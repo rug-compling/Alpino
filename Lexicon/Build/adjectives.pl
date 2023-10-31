@@ -16928,6 +16928,7 @@ a([ge_e(gevraagde),
    ste(gevraagdste)],padv,
   [pp(door),
    so_np,
+   pp(naar),  % Daarnaar gevraagd zei de minister ...
    object_vp,
    object_sbar],[on]).
 
