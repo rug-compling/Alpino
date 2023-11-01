@@ -1765,7 +1765,7 @@ n([pl(achterstes),sg(achterste)],het,[]).
 
 n([mass(achterstelling)],de,[]).
 
-n([pl(achterstevens),sg(achtersteven)],de,[]).
+n([pl(achterstevens),sg(achtersteven)],both,[]).
 
 n([sg(achteruit)],de,[]).
 
@@ -20038,7 +20038,7 @@ n([pl(leidslieden),sg(leidsman)],de,[]).
 n([pl(leidsters),sg(leidster)],de,[],
   [oppositie]).
 
-n([pl(lekken),sg(lek)],het,[],[gas]).
+n([pl(lekken),sg(lek)],both,[],[gas]).
 
 n([sg(lekkage),pl(lekkages)],de,[]).
 
@@ -30915,7 +30915,11 @@ n([sg(scan),pl(scans)],de,[]).
 
 n([sg(scanner),pl(scanners)],de,[]).
 
-n([pl('scenario\'s'),sg(scenario)],het,[sbar,vp],
+n([pl('scenario\'s'),sg(scenario)],het,
+  [subject_sbar,
+   subject_vp,
+   sbar,
+   vp],
   [doem]).
 
 n([sg(scenarist),pl(scenaristen)],de,[]).

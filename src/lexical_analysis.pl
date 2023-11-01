@@ -2701,6 +2701,7 @@ first_compound_root(v_root(haal_af,af_halen),afhaal).
 first_compound_root(v_root(slank_af,af_slanken),afslank).
 first_compound_root(v_root(schrijf_in,in_schrijven),inschrijf).
 first_compound_root(v_root(vraag_aan,aan_vragen),aanvraag).
+first_compound_root(taal,taal).
 
 guess_english_compounds :-
     findall(Tag, guess_english_compound(Tag), Tags0),

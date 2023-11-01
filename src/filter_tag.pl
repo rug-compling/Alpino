@@ -876,6 +876,7 @@ check_fixed_el(extra_vp_no_control(_),[check_vform(te)|Cs],Cs).
 check_fixed_el(extra_obj_vp(_,_),     [check_vform(te)|Cs],Cs).
 check_fixed_el(obj_vp(_),             [check_vform(te)|Cs],Cs).
 check_fixed_el(het_obj1,              [check_het|Cs],Cs).
+check_fixed_el(het_obj1_pass,         [check_het|Cs],Cs).
 check_fixed_el(het_svp,               [check_het|Cs],Cs).
 check_fixed_el(het_subj,              [check_het|Cs],Cs).
 check_fixed_el(het_pobj1,             [check_het|Cs],Cs).

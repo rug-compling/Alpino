@@ -6409,6 +6409,14 @@ map_dep(het_obj1,obj1,Cat,_) :-
     Cat:passivizes => no,
     Cat:case => acc,
     Cat:sel => ~to_topic.
+map_dep(het_obj1_pass,obj1,Cat,_) :-
+    Cat => np,
+    unify_mods(Cat),
+    Cat:nform => het_nform,
+    Cat:e_deps => [],
+    Cat:passivizes => yes,
+    Cat:case => acc,
+    Cat:sel => ~to_topic.
 %% TODO: if corresponding sbar/vp topicalized, then no 'het'...
 %% TODO: passivization is possible??? Het werd mij toegestaan dat/om ...
 map_dep(het_pobj1,pobj1,Cat,_) :-

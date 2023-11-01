@@ -2135,6 +2135,7 @@ l_requires3(dat).
 l_requires3(dit).
 l_requires3(die).
 l_requires3(u).
+l_requires3(iedereen).
 l_requires3('Hij').
 l_requires3('Men').
 l_requires3('Jij').
@@ -2147,6 +2148,7 @@ l_requires3('Dit').
 l_requires3('U').
 l_requires3('Wat').
 l_requires3(zich).
+l_requires3('Iedereen').
 
 %% left neighbour
 l_requires_psp(Word,_) :-
@@ -2869,6 +2871,7 @@ spelling_variant(geruimte,    geruime).
 spelling_variant(geschikst,   geschiktst).
 spelling_variant(geschikste,  geschiktste).
 spelling_variant(gestichtte,  gestichte).
+spelling_variant(geworde,     geworden).
 spelling_variant(gezamelijk,  gezamenlijk).
 spelling_variant(haden,       hadden).
 spelling_variant(haddden,     hadden).

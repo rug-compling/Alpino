@@ -2752,6 +2752,7 @@ preposition(om,[heen]).
 preposition(omheen). % Vlaams
 preposition(onder,[door,vandaan]).
 preposition(onderaan).
+preposition(onderdoor). % Vlaams
 preposition(onderin).
 preposition(onderop).
 preposition(onderuit).
@@ -3335,6 +3336,7 @@ pp([te,gepasten,tijde]).
 pp([ten,gepasten,tijde]).
 pp([te,kust,en,te,keur]).
 pp([te,voorschijn],te).
+pp([te,wier,laste]).
 pp([ter,leering,ende,vermaak]).
 pp([ter,lering,ende,vermaak]).
 pp([ter,leering,ende,vermaeck]).
@@ -4830,6 +4832,7 @@ m(genoeg,           postnp_adverb,genoeg). % todo: + om-vp
 m(temeer,           postnp_adverb,temeer).  % reden temeer
 m('te veel',           postnp_adverb,[te,meer]).  % reden temeer
 m('te over',        postnp_adverb,[te,over]). % todo: + om-vp
+m('te over',        postnp_adverb,[ten,over]). % todo: + om-vp
 
 m(ongeveer,         postnp_adverb,ongeveer).
 m(zowat,            postnp_adverb,zowat).

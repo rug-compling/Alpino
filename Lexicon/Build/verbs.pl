@@ -9980,6 +9980,8 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	fixed([er_pp(bij,A),het_obj1,extra_sbar(A)],no_passive), %% VL ik hou het erbij dat
 	fixed([pc(op),het_obj1],no_passive),
 	fixed([er_pp(op,A),het_obj1,extra_sbar(A)],no_passive), %% ik hou het erop dat
+	fixed([er_pp(voor,A),het_obj1_pass,extra_sbar(A)],norm_passive),
+	% Het wordt ervoor gehouden dat vervolgens de doorgang is versperd ... (VL?)
         fixed([[in,het,zeil],[een,oogje]],imp_passive),
         fixed([[gestand],acc],norm_passive),
 	fixed([[gezelschap],acc],norm_passive),
@@ -14152,6 +14154,7 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	fixed([{[acc(inbreuk),pc(op)]}],no_passive),
 	fixed([{[acc(onderscheid),pc(tussen)]}],no_passive),
 	fixed([{[acc(opmerking),pc(over)]}],norm_passive),
+	fixed([[een,pas,op,de,plaats]],imp_passive),
 	fixed([[pas,op,de,plaats]],imp_passive),
 	fixed([{[[plaats],pc(voor)]}],imp_passive),
 	fixed([[plaats]],imp_passive),

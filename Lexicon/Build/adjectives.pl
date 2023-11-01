@@ -4363,7 +4363,8 @@ a([e(bedroefde),
    no_e(bedroefd),
    st(bedroefdst),
    ste(bedroefdste)],both,
-  [er_pp_sbar(over),
+  [subject_sbar,
+   er_pp_sbar(over),
    er_pp_vp(over),
    pp(over)],[diep]).
 
@@ -31987,7 +31988,7 @@ a([e(schattige),
    ere(schattigere),
    no_e(schattig),
    st(schattigst),
-   ste(schattigste)],adv,[],[]).
+   ste(schattigste)],adv,[subject_sbar],[]).
 
 a([e(scheve),
    er(schever),
@@ -33885,7 +33886,8 @@ a([pred([te,leen])],nonadv,[],[]).
 
 a([pred([te,na])],nonadv,[transitive],[]).
 
-a([pred([te,over])],nonadv,[],[]).
+a([pred([te,over]),
+   pred([ten,over])],nonadv,[],[]).
 
 a([pred([te,pletter])],adv,[],[]).
 
