@@ -1,0 +1,30 @@
+#!/usr/bin/perl -w
+
+$opt_c="";
+
+use Getopt::Std;
+getopts('s:c:');
+
+print "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\">\n";
+print "<HTML><HEAD><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n";
+print "<TITLE>$opt_s</TITLE>\n";
+print "<LINK rel=stylesheet href=\"$opt_c\" type=\"text/css\">\n";
+print "<style>";
+print ".svg { overflow: scroll; }";
+print "</style>";
+print "</HEAD><BODY><div class=\"box\">\n";
+print "<H1>$opt_s</H1><p>\n";
+print "<H2>Last updated: ". `date +"%B %d, %Y"` . "</H2>\n";
+
+while (<>) {
+  chomp;
+
+  print "<p><b>$_</b><br>\n";
+  # print "[<a href=$file.svg>svg</a>,<a href=$file.xml>xml</a>,<a href=$file.pdf>pdf</a>]</p>\n";
+
+  print "<div class='svg'><img src=$_.svg></div></p>\n";
+  
+
+}
+
+print "</div></body></html>\n";

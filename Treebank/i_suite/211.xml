@@ -10,7 +10,7 @@
           <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="3" buiging="met-e" end="4" graad="basis" id="8" lemma="jaarlijks" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jaarlijks" word="jaarlijkse"/>
           <node begin="4" cat="mwu" end="6" id="9" rel="hd">
-            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="niveau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="niveau" word="niveau"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="service" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="service" word="service"/>
             <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="check" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="check" word="check"/>
           </node>
         </node>
@@ -18,5 +18,5 @@
     </node>
     <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
-  <sentence>Wat is de jaarlijkse niveau check ?</sentence>
+  <sentence>Wat is de jaarlijkse service check ?</sentence>
 </alpino_ds>

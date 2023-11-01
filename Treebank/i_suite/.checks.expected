@@ -68,3 +68,9 @@ i_suite/./877.xml	//node[@rel="whd" and not(@index)]	whd without index?
 i_suite/./878.xml	//node[@rel="whd" and not(@index)]	whd without index?
 i_suite/./879.xml	//node[@rel="whd" and not(@index)]	whd without index?
 i_suite/./880.xml	//node[@rel="whd" and not(@index)]	whd without index?
+i_suite/./289.xml	/alpino_ds/node[count(node[@cat])>1]	more than one top node???
+i_suite/./920.xml	//node[ @cat and @rel="me" and not(@cat="np") and not(@cat="ap") and not(@cat="conj") and not(@cat="mwu")]	unexpected me-category.   Expected cats: np ap conj mwu
+i_suite/./922.xml	//node[ @cat and @rel="me" and not(@cat="np") and not(@cat="ap") and not(@cat="conj") and not(@cat="mwu")]	unexpected me-category.   Expected cats: np ap conj mwu
+i_suite/./923.xml	//node[ @cat and @rel="me" and not(@cat="np") and not(@cat="ap") and not(@cat="conj") and not(@cat="mwu")]	unexpected me-category.   Expected cats: np ap conj mwu
+i_suite/./924.xml	//node[ @cat and @rel="me" and not(@cat="np") and not(@cat="ap") and not(@cat="conj") and not(@cat="mwu")]	unexpected me-category.   Expected cats: np ap conj mwu
+i_suite/./925.xml	//node[ @cat and @rel="me" and not(@cat="np") and not(@cat="ap") and not(@cat="conj") and not(@cat="mwu")]	unexpected me-category.   Expected cats: np ap conj mwu

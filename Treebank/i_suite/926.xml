@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="1" end="2" id="2" infl="modal_not_u" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" stype="declarative" tense="present" v_per="thi" word="kan" wvorm="pv"/>
+      <node begin="0" cat="inf" end="7" id="3" rel="vc">
+        <node begin="2" buiging="zonder" end="3" id="4" infl="inf" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" sc="passive" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="7" id="5" rel="vc">
+          <node begin="0" buiging="zonder" end="1" getal-n="zonder-n" id="6" lemma="dansen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="obj1" rnum="sg" root="dans" sc="intransitive" special="v_noun" word="Dansen" wvorm="inf"/>
+          <node begin="3" buiging="zonder" end="4" id="7" infl="psp" lemma="leren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leer" sc="transitive_ndev_ndev" word="geleerd" wvorm="vd"/>
+          <node begin="4" cat="pp" end="7" id="8" rel="mod">
+            <node begin="4" end="5" id="9" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="5" cat="np" end="7" id="10" rel="obj1">
+              <node begin="5" end="6" id="11" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="dans_school" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="dans_school" word="dansschool"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Dansen kan worden geleerd op een dansschool</sentence>
+</alpino_ds>

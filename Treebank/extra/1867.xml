@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="6" end="7" id="2" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" stype="declarative" tense="past" v_per="thi" word="werd" wvorm="pv"/>
+      <node begin="7" cat="np" end="11" id="3" index="1" rel="su">
+        <node begin="7" cat="detp" end="9" id="4" rel="det">
+          <node begin="7" end="8" id="5" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node aform="base" begin="8" buiging="zonder" end="9" graad="basis" id="6" infl="no_e" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="hd" root="veel" vform="adj" vwtype="onbep" word="veel"/>
+        </node>
+        <node aform="compar" begin="9" buiging="met-e" end="10" graad="comp" id="7" infl="e" lemma="nader" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="nader" vform="adj" word="nadere"/>
+        <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lemma="informatie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="informatie" word="informatie"/>
+      </node>
+      <node begin="0" cat="ppart" end="13" id="9" rel="vc">
+        <node begin="0" cat="pp" end="6" id="10" rel="mod">
+          <node begin="0" end="1" id="11" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" sc="modal" word="Ook"/>
+          <node begin="1" end="2" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="2" cat="np" end="6" id="13" rel="obj1">
+            <node begin="2" end="3" id="14" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" cat="ppart" end="5" id="15" rel="mod">
+              <node begin="3" end="4" id="16" lemma="daartegen" pos="pp" postag="BW()" pt="bw" rel="mod" root="daartegen" special="er" word="daartegen"/>
+              <node aform="base" begin="4" buiging="met-e" end="5" id="17" infl="e" lemma="voeren" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="voeren" vform="psp" word="gevoerde" wvorm="vd"/>
+            </node>
+            <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="18" lemma="bezwaar_procedure" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="bezwaar_procedure" word="bezwaarprocedure"/>
+          </node>
+        </node>
+        <node begin="7" end="11" id="19" index="1" rel="obj1"/>
+        <node aform="base" begin="11" buiging="zonder" end="12" graad="basis" id="20" infl="no_e" lemma="openbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="openbaar" vform="adj" word="openbaar"/>
+        <node begin="12" buiging="zonder" end="13" id="21" infl="psp" lemma="maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" sc="pred_np" word="gemaakt" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="13" end="14" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Ook in de daartegen gevoerde bezwaarprocedure werd niet veel nadere informatie openbaar gemaakt .</sentence>
+</alpino_ds>
