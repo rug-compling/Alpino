@@ -90,7 +90,7 @@ COMPARE_C=$(ALPINO_HOME)/TestN/compare_c
 
 %/compare: %/log
 	@echo $(dir $(dir $*))
-	@$(COMPARE_C) $(dir $(dir $*))\
+	-@$(COMPARE_C) $(dir $(dir $*))\
           <( grep 'BEST SCORE' $< | awk '{ print $$11, $$3, $$15 }' ) \
           <( grep 'BEST SCORE' $(dir $(dir $*))/best | awk '{ print $$11, $$3, $$15 }' ) 
 

@@ -202,7 +202,8 @@ COMPARE_C=$(ALPINO_HOME)/TestN/compare_c
 ## this uses number of correct triples ($7), as approx of sentence length,
 ## rather than number of parses, which is always 1 anyway for test1
 %/compare: %/log
-	@$(COMPARE_C) $(dir $(dir $*))\
+	@echo $(dir $(dir $*))
+	-@$(COMPARE_C) $(dir $(dir $*))\
            <(grep 'BEST SCORE' $< | awk '{ print $$11, $$3, $$7 }' ) \
 	   <(grep 'BEST SCORE' $(dir $(dir $*))/score | awk '{ print $$11, $$3, $$7 }' )
 
