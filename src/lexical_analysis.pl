@@ -211,6 +211,7 @@ lexical_analysisXXX(Input) :-
 	    time(Debug,skips),
 	    time(Debug,filter_te_tags),
 	    time(Debug,replace_per_tags),
+	    time(Debug,replace_dehet_tags),
 	    time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for tagger
 	    count_edges(tag(_,_,_,_,_,_,_,_),Edges)
 	),
@@ -782,6 +783,22 @@ replace_per_tags :-
 	->  erase_tag(Ref),
 	    assert_tag(P1,P,Q1,Q,W,L,replace_per(His),proper_name(Num)),
 	    debug_message(1,"ignore 'PER' after 'het' for ~w~n",[W])
+	),
+	fail
+    ;   true
+    ).
+
+dehet(de,het).
+dehet(het,de).
+
+replace_dehet_tags :-
+    (   clause(tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg)),true,Ref),
+	dehet(De,Het),
+	unique(P1,P,Ref),
+	(   tag(_,P1,_,Q1,Het,_,_,_)
+	->  erase_tag(Ref),
+	    assert_tag(P1,P,Q1,Q,W,L,replace_dehet(His),noun(both,Count,sg)),
+	    debug_message(1,"ignore ~w after ~w for ~w~n",[Het,De,W])
 	),
 	fail
     ;   true
@@ -2264,29 +2281,30 @@ is_dict_used(P1) :-
         P1 < P
     ).
 
-alternative_to_het_sg_noun(P1,P) :-
-    tag(P1,P,_,_,_,_,_,Tag),
-    Tag \= noun(het,_,sg),
-    Tag \= noun(het,_,sg,_).
-alternative_to_het_sg_noun(P1,P) :-
-    tag(P1,P,_,_,_,_,_,Tag),
-    (  Tag = noun(het,_,sg)
-    ;  Tag = noun(het,_,sg,_)
-    ),
-    tag(P,_,_,_,_,_,_,adjective(_,pred)).
+% alternative_to_het_sg_noun(P1,P) :-
+%     tag(P1,P,_,_,_,_,_,Tag),
+%     Tag \= noun(het,_,sg),
+%     Tag \= noun(het,_,sg,_).
+% alternative_to_het_sg_noun(P1,P) :-
+%     tag(P1,P,_,_,_,_,_,Tag),
+%     (  Tag = noun(het,_,sg)
+%     ;  Tag = noun(het,_,sg,_)
+%     ),
+%     tag(P,_,_,_,_,_,_,adjective(_,pred)).
 
-alternative_to_de_sg_noun(P1,P) :-
-    tag(P1,P,_,_,_,_,_,Tag),
-    Tag \= noun(de,_,sg),
-    Tag \= noun(de,_,sg,_).
+% alternative_to_de_sg_noun(P1,P) :-
+%     tag(P1,P,_,_,_,_,_,Tag),
+%     Tag \= noun(de,_,sg),
+%     Tag \= noun(de,_,sg,_).
 
-probably_wrong_tag(P1,P) :-
-    search_tag_stem(de,tag(_,P1,_,_,de,_,_,determiner(de))),
-    \+ alternative_to_het_sg_noun(P1,P).
-
-probably_wrong_tag(P1,P) :-
-    search_tag_stem(het,tag(_,P1,_,_,het,'Het',_,determiner(het,nwh,nmod,pro,nparg,wkpro))),
-    \+ alternative_to_de_sg_noun(P1,P).
+%%% now treated differently 
+%probably_wrong_tag(P1,P) :-
+%    search_tag_stem(de,tag(_,P1,_,_,de,_,_,determiner(de))),
+%    \+ alternative_to_het_sg_noun(P1,P).
+%
+%probably_wrong_tag(P1,P) :-
+%    search_tag_stem(het,tag(_,P1,_,_,het,'Het',_,determiner(het,nwh,nmod,pro,nparg,wkpro))),
+%    \+ alternative_to_de_sg_noun(P1,P).
 
 probably_wrong_tag(P1,P) :-
     search_tag_stem(te,tag(_,P1,_,_,_,_,preposition(te,[],nodet),_)),

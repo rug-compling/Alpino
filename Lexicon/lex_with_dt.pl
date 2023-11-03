@@ -1737,6 +1737,7 @@ with_dt_all(hoeverre,[in]).
 with_dt_all(hoever,[tot]).
 with_dt_all(hoever,[voor]).
 with_dt_all(hoog,[of]).
+with_dt_all(hoop,[ik]).
 with_dt_all(hoor,[voor,wat,wat]).
 with_dt_all(huize,[mijnen,te]).
 with_dt_all(huize,[te,uwen]).

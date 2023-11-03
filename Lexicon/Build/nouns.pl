@@ -26712,6 +26712,8 @@ n([pl(penicillines),sg(penicilline)],de,[]).
 
 n([sg(penis),pl(penissen)],de,[]).
 
+n([sg(pennenlikker),pl(pennenlikkers)],de,[]).
+
 n([pl(penningen),sg(penning)],de,[],[dim(penninkje)]).
 
 n([pl(penningmeesters),sg(penningmeester)],de,[]).
@@ -28689,7 +28691,7 @@ n([mass(puf)],de,[]).   % ik heb geen puf meer
 n([pl(puien),sg(pui)],de,[],
   [schuif]).
 
-n([mass(puin)],het,[pred_pp(in)]).
+n([mass(puin)],both,[pred_pp(in)]).
 
 n([pl(puinhopen),sg(puinhoop)],de,[]).
 
@@ -38779,6 +38781,8 @@ n([sg(vijzel),pl(vijzels)],de,[]).
 
 n([pl(vikingen),pl(vikings),sg(viking)],de,[]).
 
+n([mass(vilein)],het,[]).
+
 %% villa de Eikenhorst
 n([pl('villa\'s'),sg(villa)],de,[np_app_measure],[dim(villaatje)]).
 
@@ -39006,6 +39010,8 @@ n([pl(vlinders),sg(vlinder)],de,[],
   ]).
 
 n([mass(vlinderslag)],de,[]).
+
+n([sg(vlog),pl(vloggen)],de,[]).
 
 n([pl(vlooien),sg(vlo)],de,[],[dim(vlootje),
 			       dim(vlooitje)]).
@@ -42426,7 +42432,12 @@ n([mass(zwang)],de,[]).
 n([mass(zwangerschap),pl(zwangerschappen)],de,[],
   [f([mola])]).
 
-n([mass(zwart)],het,[]).
+n([mass(zwart)],het,[],
+  [blauw,
+   git,
+   inkt,
+   kool,
+   pik]).
 
 n([mass('zwart-wit')],het,[]).
 

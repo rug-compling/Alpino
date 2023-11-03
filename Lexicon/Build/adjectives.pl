@@ -16879,7 +16879,9 @@ a([e(gevoelloze),
    ere(gevoellozere),
    no_e(gevoelloos),
    st(gevoelloost),
-   ste(gevoellooste)],adv,[],[]).
+   ste(gevoellooste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(gevoelsmatige),
    no_e(gevoelsmatig)],adv,[],[]).
@@ -18517,16 +18519,18 @@ a([e(hartelijke),
    ere(hartelijkere),
    no_e(hartelijk),
    st(hartelijkst),
-   ste(hartelijkste)],adv,[subject_sbar,
-                           subject_vp],[]).
+   ste(hartelijkste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(harteloze),
    er(hartelozer),
    ere(hartelozere),
    no_e(harteloos),
    st(harteloost),
-   ste(hartelooste)],nonadv,[subject_sbar,
-                             subject_vp],[]).
+   ste(hartelooste)],nonadv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(hartgrondige),
    er(hartgrondiger),
@@ -18680,7 +18684,9 @@ a([e(heilloze),
    ere(heillozere),
    no_e(heilloos),
    st(heilloost),
-   ste(heillooste)],adv,[],[]).
+   ste(heillooste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(heilzame),
    er(heilzamer),
@@ -19240,7 +19246,9 @@ a([e(hopeloze),
    ere(hopelozere),
    no_e(hopeloos),
    st(hopeloost),
-   ste(hopelooste)],adv,[],[]).
+   ste(hopelooste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([no_e(horendol),
    e(horendolle)],nonadv,[],[]).
@@ -20885,7 +20893,9 @@ a([e(kansarme),
    no_e(kansarm)],adv,[],[]).
 
 a([e(kansloze),
-   no_e(kansloos)],adv,[],[]).
+   no_e(kansloos)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(kansrijke),
    no_e(kansrijk),
@@ -23255,7 +23265,9 @@ a([e(meedogenloze),
    ere(meedogenlozere),
    no_e(meedogenloos),
    st(meedogenloost),
-   ste(meedogenlooste)],adv,[],[]).
+   ste(meedogenlooste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([ge_e(meegebrachte),
    ge_no_e(meegebracht)],adv,[],[]).
@@ -24634,7 +24646,9 @@ a([e(nodeloze),
    ere(nodelozere),
    no_e(nodeloos),
    st(nodeloost),
-   ste(nodelooste)],adv,[subject_vp],[]).
+   ste(nodelooste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(nodige),
    er(nodiger),
@@ -29102,6 +29116,8 @@ a([e(oude),
    oer,
    stok]).
 
+a([both(oudbakken)],nonadv,[],[]).
+
 a([e(ouderlijke),
    no_e(ouderlijk)],nonadv,[],[]).
 
@@ -30334,7 +30350,9 @@ a([e(pretentieuze),
    ste(pretentieuste)],adv,[],[]).
 
 a([e(pretentieloze),
-   no_e(pretentieloos)],adv,[],[]).
+   no_e(pretentieloos)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(prettige),
    er(prettiger),
@@ -31219,7 +31237,9 @@ a([e(respectabele),
    ste(respektabelste)],adv,[],[]).
 
 a([e(respectloze),
-   no_e(respectloos)],adv,[],[]).
+   no_e(respectloos)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(respectieve),
    e(respektieve),
@@ -31417,7 +31437,9 @@ a([e(roekeloze),
    ere(roekelozere),
    no_e(roekeloos),
    st(roekeloost),
-   ste(roekelooste)],adv,[],[]).
+   ste(roekelooste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(roemloze),
    no_e(roemloos)],adv,[],[]).
@@ -32686,8 +32708,9 @@ a([e(smakeloze),
    ere(smakelozere),
    no_e(smakeloos),
    st(smakeloost),
-   ste(smakelooste)],adv,[subject_sbar,
-			  subject_vp],[]).
+   ste(smakelooste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(smalle),
    er(smaller),
@@ -34821,7 +34844,9 @@ a([e(troosteloze),
    ere(troostelozere),
    no_e(troosteloos),
    st(troosteloost),
-   ste(troostelooste)],adv,[],[]).
+   ste(troostelooste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([end(troostend),
    ende(troostende)],padv,[transitive],[]).
@@ -35611,7 +35636,9 @@ a([e(uitzichtloze),
    ere(uitzichtlozere),
    no_e(uitzichtloos),
    st(uitzichtloost),
-   ste(uitzichtlooste)],adv,[],[]).
+   ste(uitzichtlooste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(uitzinnige),
    er(uitzinniger),
@@ -35803,7 +35830,9 @@ a([pred([van,hetzelfde,laken,een,pak])],nonadv,[],[]).
 
 a([pred([van,kracht])],nonadv,[],[]).
 
-a([pred([van,streek])],padv,[],[]).
+a([pred([van,slag])],padv,[pp(van)],[]).
+
+a([pred([van,streek])],padv,[pp(van)],[]).
 
 a([pred([van,toepassing])],nonadv,
   [pp(op)],[]).
@@ -39387,7 +39416,9 @@ a([e(vruchteloze),
    ere(vruchtelozere),
    no_e(vruchteloos),
    st(vruchteloost),
-   ste(vruchtelooste)],adv,[],[]).
+   ste(vruchtelooste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(vuige),
    no_e(vuig)],adv,[],[]).
@@ -39455,7 +39486,8 @@ a([e(waardeloze),
    no_e(waardeloos),
    st(waardeloost),
    ste(waardelooste)],adv,
-  [subject_sbar],[]).
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(waarderende),
    er(waarderender),
@@ -39684,7 +39716,9 @@ a([e(weerbarstige),
    ste(weerbarstigste)],adv,[],[]).
 
 a([e(weergaloze),
-   no_e(weergaloos)],adv,[],[]).
+   no_e(weergaloos)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([ge_both(weergegeven)],adv,[],[]).
 

@@ -1467,8 +1467,8 @@ nominalization(V,V,_).
 nominalization(verb(_,InfVal,Frame0), v_noun(Frame),Word) :-
     inf(InfVal),
     drop_inv(Frame0,Frame1),
-    possible_nominalization(Frame1),
-    optionally_drop_np_complement(Frame1,Frame),
+    possible_nominalization(Frame1,Frame2),
+    optionally_drop_np_complement(Frame2,Frame),
     check_already_het_noun(Frame,Word).
 
 check_already_het_noun(Intransitive,Word) :-
@@ -1538,7 +1538,6 @@ optionally_drop_np_complement(np_ld_pp,ld_pp).
 optionally_drop_np_complement(pc_pp(_),intransitive).
 optionally_drop_np_complement(refl_ld_pp,intransitive).
 optionally_drop_np_complement(refl_pc_pp,intransitive).
-optionally_drop_np_complement(het_subj,intransitive).
 optionally_drop_np_complement(np_ld_dir,ld_dir).
 optionally_drop_np_complement(ld_transitive,intransitive).
 optionally_drop_np_complement(pred_np,copula).
@@ -1554,7 +1553,8 @@ optionally_drop_np_complement(np_vp_obj1,vp).
 optionally_drop_np_complement(fixed(List0,Passive), fixed(List,Passive)) :-
     lists:select(acc,List0,List).
 
-possible_nominalization(Fr0) :-
+possible_nominalization(het_subj,intransitive).
+possible_nominalization(Fr0,Fr0) :-
     strip_part(Fr0,Fr1),
     \+ impossible_nominalization_frame(Fr1).
 
@@ -2309,6 +2309,8 @@ spelling_variant_context(onderscheidt,gemaakt,_,onderscheid).
 spelling_variant_context(puur,sang,_,pur).
 spelling_variant_context(went,of,[keert|_],wendt).
 spelling_variant_context(wend,of,[keert|_],wendt).
+spelling_variant_context(lukken,het,_,lukt).   % sommige mensen lukken het niet -> lukt
+spelling_variant_context(lukten,het,_,lukte).
 
 spelling_variant_context('Das',een,_,'da\'s').
 spelling_variant_context('tis',een,_,'da\'s').
@@ -2490,7 +2492,9 @@ context_spelling_variant(weining,te,_,weinig).
 context_spelling_variant(bezuinigingen,te,_,bezuinigen).
 context_spelling_variant(teruggeven,worden,_,teruggegeven).
 context_spelling_variant(bezuinigen,de,_,bezuinigingen).
+context_spelling_variant(plaatst,vond,_,plaats).
 context_spelling_variant(uitkomt,de,_,uitkomst).
+context_spelling_variant(uitsprak,de,_,uitspraak).
 context_spelling_variant(verwachtte,de,_,verwachte).
 context_spelling_variant(plaatsten,sommige,[op|_],plaatsen).
 context_spelling_variant(plaatsten,het,_,plaatsen).
@@ -2999,6 +3003,7 @@ spelling_variant(onsymphatiek,onsympathiek).
 spelling_variant(onsymphatieke,onsympathieke).
 spelling_variant(onsymphathiek,onsympathiek).
 spelling_variant(onsymphathieke,onsympathieke).
+spelling_variant(tegehouden,tegenhouden).
 spelling_variant(tegenoverstelde,
                               tegenovergestelde).
 spelling_variant(tjdens,      tijdens).

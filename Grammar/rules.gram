@@ -4053,7 +4053,9 @@ grammar_rule(xp_modal_xp(np),XP,[Adv,X]):-
 
 grammar_rule(xp_modal_xp(sbar),X,[Adv,OPTCOMMA,Y]):-
     X => sbar,
-    X:ctype => (c_mod;c_als;c_compare;c_compare_np;c_dat),
+    X:ctype => (c_mod;c_als;c_compare;c_compare_np;c_dat;c_redrel),
+    %% added c_redrel: bijvoorbeeld hoe hij denkt over een potje cricket
+    %% 
     %% ook dat ze arm zijn deert ze niet
     %% vooral dat ze niet komen stoorde mij zeer
     Y => sbar,
@@ -4580,14 +4582,14 @@ grammar_rule(pron_pron_modroot(min), N, [ N0, Cl, ROOT, Cr ]) :-
     ROOT => start,
     pron_mod_structure(N0,ROOT,N).
 
-%% Wij Nederlanders
+%% Wij Nederlanders, wij ouderen
 grammar_rule(pron_pron_napp, NP, [ N, APP ]) :-
     NP => pron, N => pron, APP => n,
     NP:agr => pl&def,    % required?
     APP:agr => pl,       % required?
     NP:wkpro => ~weakpro,  % required?
     NP:subn => sub_def_pron, % required?
-    APP:subn => sub_noun,% required?
+    APP:subn => (sub_noun;sub_adj_pl),% required?
     hd_app_structure(N,APP,NP).
 
 pron_mod_structure(N,MOD,NP) :-
@@ -6869,7 +6871,8 @@ grammar_rule(sbar(mod_np),SBAR,[ Comp, COMMA, MOD, COMMA2, XP ]) :-
 %% see any other way, and this is an infrequent event
 %% alternative: have ':' as body?
 grammar_rule(sbar(dubb),SBAR,[ Comp, DUBB ]) :-
-    dubb(DUBB),
+    DUBB => punct,
+    DUBB:puncttype => (dubb_punt;hellip),
     max_np(NP),
     sbar_comp_xp_structure(Comp0,NP,SBAR0),
     unify_except_l(Comp0,Comp,[cmods,mods,cdets,dets,
@@ -7075,6 +7078,15 @@ grammar_rule(ques_imp,ROOT,[Ques, OPTC, Dan]) :-
     max_sv1(Ques),
     max_imp(Dan),
     nucl_sat_structure(Dan,Ques,ROOT).
+
+%% Ziet u het voor zich , die pennenlikkers met een kruiwagen ?
+grammar_rule(ques_np,ROOT,[Ques, COMMA, NP]) :-
+    comma(COMMA),
+    ROOT => max,
+    ROOT:max_type => t_dp,
+    max_sv1(Ques),
+    ind_max_np(NP),
+    nucl_sat_structure(Ques,NP,ROOT).
 
 %% voor vragen , zie de uitleg op bladzijde 23
 grammar_rule(pp_imp,ROOT,[Ques, OPTC, Dan]) :-
@@ -7658,12 +7670,13 @@ grammar_rule(dit_allemaal_vanwege,Start,[PRON,ALLEMAAL,OPTCOMMA,SBAR]) :-
 %% om te beginnen de neveneffecten
 %% als laatste het milieu
 %% TODO "bijgaand de notulen"
+%% redrel: wat mij betreft een goede ontwikkeling
 grammar_rule(start_mod_np,M,[MOD,NP]) :-
     M => max,
     M:max_type => t_dp,
     M:mod_np => yes,
     max_modifier(MOD),
-    MOD:mcat => (mcat_pp;mcat_adv;mcat_vp;mcat_sbar),
+    MOD:mcat => (mcat_pp;mcat_adv;mcat_vp;mcat_sbar;mcat_redrel),
     MOD:wh => nwh,  % separate rule for wh case
     ind_max_np(NP),
     NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"

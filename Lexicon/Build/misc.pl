@@ -5004,6 +5004,7 @@ m(heel,             modal_adverb(adv_noun_prep),heel).
 %% heel ergens anders; heel dikwijls; heel af en toe; binnenkort
 
 m(praktisch,        modal_adverb(adv_noun_prep),praktisch).
+m(stevig,           modal_adverb(adv_noun_prep),stevig).
 m(vrijwel,          modal_adverb(adv_noun_prep),vrijwel).
 m(werkelijk,        modal_adverb(adv_noun_prep),werkelijk).
 m('zeg maar',       modal_adverb(adv_noun_prep),[zeg,maar]).
@@ -8321,6 +8322,11 @@ with_dt([geloof,me],
 with_dt([denk,ik],
 	denk_ik,
 	dt(sv1,[hd=l(v_root(denk,denken),verb(hebben,sg1,tr_sbar),0,1),
+		su=l(ik,pronoun(nwh,fir,sg,de,nom,def),np,1,2)])).
+
+with_dt([hoop,ik],
+	denk_ik,
+	dt(sv1,[hd=l(v_root(hoop,hopen),verb(hebben,sg1,tr_sbar),0,1),
 		su=l(ik,pronoun(nwh,fir,sg,de,nom,def),np,1,2)])).
 
 with_dt([vermoed,ik],

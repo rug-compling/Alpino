@@ -1753,6 +1753,7 @@ foreign_word(ladies).
 foreign_word(lady).
 foreign_word(label).
 foreign_word(le).
+foreign_word(least).
 foreign_word(legal).
 foreign_word(les).
 foreign_word(let).
@@ -1805,6 +1806,7 @@ foreign_word(meetings).
 foreign_word(mehr).
 foreign_word(men).
 foreign_word(même).
+foreign_word(merchandising).
 foreign_word(mich).
 foreign_word(military).
 foreign_word(mind).
