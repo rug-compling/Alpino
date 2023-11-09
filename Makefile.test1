@@ -137,10 +137,14 @@ ifeq ($(strip $(PTFS)),)
 else
 	@echo "  OLD    NEW        SUITE"
 	@$(MAKE) -s $(PTFS:%/poslemma=%/ptf) | tr -d '()%' |\
-	     awk '{ XX="   ";\
+	     awk '{ N++;\
+	            A=A+$$1;\
+		    B=B+$$2;\
+	            XX="   ";\
                     if ($$1 < $$2) XX="!!!";\
                     if ($$2 < $$1) XX="???";\
-                    printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
+                    printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}\
+		    END { printf "\n%6.2f %6.2f       total\n",A/N,B/N}'
 endif
 
 %/ptf:%/poslemma
@@ -156,10 +160,14 @@ ifeq ($(strip $(PTFS)),)
 else
 	@echo "  OLD    NEW        SUITE"
 	@$(MAKE) -s $(PTFS:%/poslemma=%/lmf) | tr -d '()%' |\
-	     awk '{ XX="   ";\
+	     awk '{ N++;\
+	            A=A+$$1;\
+		    B=B+$$2;\
+	            XX="   ";\
                     if ($$1 < $$2) XX="!!!";\
                     if ($$2 < $$1) XX="???";\
-                    printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}'
+                    printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}\
+		    END { printf "\n%6.2f %6.2f       total\n",A/N,B/N}'
 
 %/lmf:%/poslemma
 	echo `grep '^#LM#' $(dir $(dir $*))poslemma|\

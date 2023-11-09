@@ -13,7 +13,7 @@ compare_cpu: $(suite)/job*/cpu
 
 %/cpu: %/log
 	@echo "       NEW       PREV		                 ITEM"
-	@paste <( grep 'cputime total' $< | awk '{ print $$3 }' ) \
+	-@paste <( grep 'cputime total' $< | awk '{ print $$3 }' ) \
 	       <( grep 'cputime total' $(dir $(dir $*))/time | awk '{ print $$3 }' ) \
 	       <( grep 'Running parser(s) on' $< | awk '{ print $$6 }' ) |\
           awk 'BEGIN {I=1}                                                  \
