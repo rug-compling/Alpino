@@ -2363,7 +2363,7 @@ n([stem(akkoord),pl(akkoorden),sg(akkoord),sg(accoord),pl(accoorden)],het,[],
    s(najaar),
    h(principe),
    principe,
-   regeer,
+   h(regeer),regeer,
    slot,
    s(vrede),
    dim(akkoordje)]).
@@ -16548,7 +16548,8 @@ n([mass(integriteit)],de,[]).
 
 n([pl(intellecten),sg(intellect)],het,[]).
 
-n([pl(intellectuelen),sg(intellectueel)],de,[]).
+n([pl(intellectuelen),sg(intellectueel),
+   pl(intellektuelen),sg(intellektueel)],de,[]).
 
 n([pl(intelligenties),sg(intelligentie)],de,[]).
 
@@ -25791,6 +25792,7 @@ n([pl(overeenkomsten),sg(overeenkomst)],de,
   [],
   [s(arbeid),
    associatie,
+   beheers,h(beheers),
    s(handel),
    huur,
    partnerschap,
@@ -26366,7 +26368,8 @@ n([pl(participanten),sg(participant)],de,[]).
 
 n([pl(participaties),sg(participatie)],de,[],[s(arbeid)]).
 
-n([pl(particulieren),sg(particulier)],de,[]).
+n([pl(particulieren),sg(particulier),
+   pl(partikulieren),sg(partikulier)],de,[]).
 
 %% wedstrijd
 %% een partij(tje) sjoelen
@@ -32397,6 +32400,8 @@ n([sg(smartlap),pl(smartlappen)],de,[]).
 
 n([pl(smeekbeden),pl(smeekbedes),sg(smeekbede)],de,[vp]).
 
+n([mass(smeer)],het,[]).  % VL?
+
 n([pl(smeerlappen),sg(smeerlap)],de,[]).
 
 n([pl(smeersels),sg(smeersel)],het,[],[dim(smeerseltje)]).
@@ -34137,6 +34142,10 @@ n([pl(straten),sg(straat)],de,[],
    winkel,
    zij,
    dim(straatje)]).
+
+%% hij woonde maar een paar straten/*wegen van stadion
+n([pl(straten),sg(straat)],de,[temp_mod],
+  []).
 
 n([sg(straatlengte),sg(straatlengten),sg(straatlengtes)],de,[measure]).
 
@@ -36826,6 +36835,8 @@ n([pl(uitlopers),sg(uitloper)],de,[]).
 n([pl(uitnodigingen),sg(uitnodiging)],de,[vp]).
 
 n([mass(uitoefening)],de,[]).
+
+n([sg(uitprint),pl(uitprinten)],de,[]).  % VL?
 
 n([mass(uitputting)],de,[]).
 
@@ -39910,6 +39921,8 @@ n([sg(vriespunt),pl(vriespunten)],het,[]).
 n([sg(vriezer),pl(vriezers)],de,[]).
 
 n([mass(vrij)],both,[]).  % (geen) vrij krijgen/nemen/hebben/vragen
+
+n([mass(vrijaf)],both,[]).  % (geen) vrijaf krijgen/nemen/hebben/vragen
 
 n([pl(vrijbrieven),sg(vrijbrief)],de,[vp]).
 

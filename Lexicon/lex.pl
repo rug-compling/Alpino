@@ -997,6 +997,7 @@ plural_suffix(persons).
 plural_suffix(persuasions).
 plural_suffix(pigs).
 plural_suffix(pistols).
+plural_suffix(pistons).
 plural_suffix(plassen).
 plural_suffix(players).
 plural_suffix(poets).
@@ -2832,6 +2833,7 @@ spelling_variant(dezelfe,     dezelfde).
 spelling_variant(dichts,      dichtst).
 spelling_variant(dichtsbijzijnde,      dichtstbijzijnde).
 spelling_variant(dindsdag,    dinsdag).
+spelling_variant(direkt,      direct).
 spelling_variant(doogeschoten,doodgeschoten).
 spelling_variant(doorbereken, doorberekenen).
 spelling_variant(duizende,    duizenden).

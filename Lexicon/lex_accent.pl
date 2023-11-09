@@ -544,8 +544,6 @@ accent(gefohnd,geföhnd).
 accent(gefrobeld,gefröbeld).
 accent(geidealiseerde,geïdealiseerde).
 accent(geidealiseerd,geïdealiseerd).
-accent(geidealizeerde,geïdealizeerde).
-accent(geidealizeerd,geïdealizeerd).
 accent(geidentificeerde,geïdentificeerde).
 accent(geidentificeerd,geïdentificeerd).
 accent(geillustreerde,geïllustreerde).
@@ -564,8 +562,6 @@ accent(geimporteerde,geïmporteerde).
 accent(geimporteerd,geïmporteerd).
 accent(geimproviseerde,geïmproviseerde).
 accent(geimproviseerd,geïmproviseerd).
-accent(geimprovizeerde,geïmprovizeerde).
-accent(geimprovizeerd,geïmprovizeerd).
 accent(geincasseerde,geïncasseerde).
 accent(geincasseerd,geïncasseerd).
 accent(geincorporeerd,geïncorporeerd).
@@ -575,19 +571,13 @@ accent(geindiceerde,geïndiceerde).
 accent(geindiceerd,geïndiceerd).
 accent(geindividualiseerde,geïndividualiseerde).
 accent(geindividualiseerd,geïndividualiseerd).
-accent(geindividualizeerde,geïndividualizeerde).
-accent(geindividualizeerd,geïndividualizeerd).
 accent(geindoctrineerd,geïndoctrineerd).
 accent(geinduceerde,geïnduceerde).
 accent(geinduceerd,geïnduceerd).
 accent(geindustrialiseerde,geïndustrialiseerde).
 accent(geindustrialiseerd,geïndustrialiseerd).
-accent(geindustrializeerde,geïndustrializeerde).
-accent(geindustrializeerd,geïndustrializeerd).
 accent(geinfecteerde,geïnfecteerde).
 accent(geinfecteerd,geïnfecteerd).
-accent(geinfekteerde,geïnfekteerde).
-accent(geinfekteerd,geïnfekteerd).
 accent(geinfiltreerde,geïnfiltreerde).
 accent(geinfiltreerd,geïnfiltreerd).
 accent(geinformeerde,geïnformeerde).
@@ -597,7 +587,6 @@ accent(geinhaleerd,geïnhaleerd).
 accent(geinitieerde,geïnitieerde).
 accent(geinitieerd,geïnitieerd).
 accent(geinjecteerd,geïnjecteerd).
-accent(geinkasseerde,geïnkasseerde).
 accent(geinkasseerd,geïnkasseerd).
 accent(geinkt,geïnkt).
 accent(geinnoveerd,geïnnoveerd).
@@ -605,8 +594,6 @@ accent(geinsinueerde,geïnsinueerde).
 accent(geinsinueerd,geïnsinueerd).
 accent(geinspecteerde,geïnspecteerde).
 accent(geinspecteerd,geïnspecteerd).
-accent(geinspekteerde,geïnspekteerde).
-accent(geinspekteerd,geïnspekteerd).
 accent(geinspireerde,geïnspireerde).
 accent(geinspireerdere,geïnspireerdere).
 accent(geinspireerder,geïnspireerder).
@@ -617,8 +604,6 @@ accent(geinstalleerde,geïnstalleerde).
 accent(geinstalleerd,geïnstalleerd).
 accent(geinstitutionaliseerde,geïnstitutionaliseerde).
 accent(geinstitutionaliseerd,geïnstitutionaliseerd).
-accent(geinstitutionalizeerde,geïnstitutionalizeerde).
-accent(geinstitutionalizeerd,geïnstitutionalizeerd).
 accent(geinstrueerde,geïnstrueerde).
 accent(geinstrueerd,geïnstrueerd).
 accent(geintegreerde,geïntegreerde).
@@ -649,8 +634,6 @@ accent(geintroduceerde,geïntroduceerde).
 accent(geintroduceerd,geïntroduceerd).
 accent(geinventariseerde,geïnventariseerde).
 accent(geinventariseerd,geïnventariseerd).
-accent(geinventarizeerde,geïnventarizeerde).
-accent(geinventarizeerd,geïnventarizeerd).
 accent(geinvesteerde,geïnvesteerde).
 accent(geinvesteerd,geïnvesteerd).
 accent(geinviteerde,geïnviteerde).
@@ -669,8 +652,6 @@ accent(geisoleerde,geïsoleerde).
 accent(geisoleerdere,geïsoleerdere).
 accent(geisoleerder,geïsoleerder).
 accent(geisoleerd,geïsoleerd).
-accent(gekoordineerde,gekoördineerde).
-accent(gekoordineerd,gekoördineerd).
 accent(genante,gênante).
 accent(genantere,gênantere).
 accent(genanter,gênanter).
@@ -884,13 +865,6 @@ accent(klienten,kliënten).
 accent(klient,kliënt).
 accent(knieen,knieën).
 accent(kolonien,koloniën).
-accent(kooperatief,koöperatief).
-accent(kooperatieve,koöperatieve).
-accent(koordineerde,koördineerde).
-accent(koordineerden,koördineerden).
-accent(koordineer,koördineer).
-accent(koordineert,koördineert).
-accent(koordineren,koördineren).
 accent(kopieen,kopieën).
 accent(kopieren,kopiëren).
 accent(kroonkolonien,kroonkoloniën).

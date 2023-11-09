@@ -896,6 +896,7 @@ with_dt_all(achttien,[zij]).
 with_dt_all(acht,[u]).
 with_dt_all(acht,[wij]).
 with_dt_all(acht,[zij]).
+with_dt_all('af aan',[dan,van]).
 with_dt_all('af aan',[jongs,sinds]).
 with_dt_all('af aan',[jongs,van]).
 with_dt_all('af aan',[jongs,vanaf]).
@@ -1117,7 +1118,6 @@ with_dt_all(bij,[drie,zes]).
 with_dt_all(bij,[drie,zeven]).
 with_dt_all(bij,[elf,vier]).
 with_dt_all(bijna,[direct]).
-with_dt_all(bijna,[direkt]).
 with_dt_all(bij,[name]).
 with_dt_all(bijna,[meteen]).
 with_dt_all(bijna,[onmiddellijk]).
@@ -1393,9 +1393,6 @@ with_dt_all(dikwijls,[zeer]).
 with_dt_all(direct,[haast]).
 with_dt_all(direct,[per]).
 with_dt_all(direct,[vrijwel]).
-with_dt_all(direkt,[haast]).
-with_dt_all(direkt,[per]).
-with_dt_all(direkt,[vrijwel]).
 with_dt_all(dit,[en,het,jaar,kom]).
 with_dt_all(dit,[en,het,jaar,volg]).
 with_dt_all(dit,[en,het,kom,millenium]).
@@ -2636,7 +2633,6 @@ with_dt_root(dien).
 with_dt_root(diep).
 with_dt_root(dikwijls).
 with_dt_root(direct).
-with_dt_root(direkt).
 with_dt_root(dit).
 with_dt_root(doe).
 with_dt_root(doen).

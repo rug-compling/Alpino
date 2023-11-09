@@ -572,6 +572,7 @@ valid_sc(ap_copula,                   [check_ap_copula]).
 valid_sc(ap_copula(Stem),             [check_stem(Stem),check_ap_copula]).
 valid_sc(pp_copula,                   [check_pp_copula]).
 valid_sc(pp_copula(Aan,Slag),         [check_pp_copula(Aan,Slag)]).
+valid_sc(so_ap_copula,                [check_ap_copula]).
 valid_sc(so_nonp_copula,              [check_nonp_copula]).
 valid_sc(nonp_copula,                 [check_nonp_copula]).
 valid_sc(copula_vp,                   [check_subject_vp,check_vform(te)]).

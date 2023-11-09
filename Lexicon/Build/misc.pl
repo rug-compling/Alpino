@@ -543,6 +543,11 @@ punct('!!!!!!',uitroep).
 punct('!!!!!!!',uitroep).
 punct('!!!!!!!!',uitroep).
 punct('?',vraag).
+punct(['.','?'],vraag).
+punct(['?','.'],vraag).
+punct(['.','?','?'],vraag).
+punct(['.','?','?','?'],vraag).
+punct(['.','?','?','?','?'],vraag).
 punct('??',vraag).
 punct('???',vraag).
 punct('????',vraag).
@@ -3053,7 +3058,6 @@ p_adv_pp(tot,zo).
 
 p_adv_pp(anno,nu).
 p_adv_pp(per,direct).
-p_adv_pp(per,direkt).
 p_adv_pp(per,onmiddellijk).
 p_adv_pp(van,oudsher).
 
@@ -3263,8 +3267,9 @@ with_dt([P,Adv,Part1,Part2],
     p_adv_part_part_pp(P,Adv,Part1,Part2),
     hdrug_util:concat_all([Part1,Part2],Part,' ').
 
-p_adv_part_part_pp(van,toen,af,aan).
+p_adv_part_part_pp(van,dan,af,aan).  % VL?
 p_adv_part_part_pp(van,nu,af,aan).
+p_adv_part_part_pp(van,toen,af,aan).
 p_adv_part_part_pp(van,voor,af,aan).
 p_adv_part_part_pp(van,voren,af,aan).
 
@@ -5133,7 +5138,6 @@ m('zegge en schrijve', modal_adverb(noun_prep),[zeggen,en,schrijven]).
 %% even voor/na het einde; even voordat ..
 m(even,             modal_adverb(comp_prep),even).
 m(direct,           modal_adverb(comp_prep),direct).
-m(direct,           modal_adverb(comp_prep),direkt).
 m(meteen,           modal_adverb(comp_prep),meteen). % meteen na(dat)..
 m(onmiddellijk,     modal_adverb(comp_prep),onmiddellijk).
 m(terstond,         modal_adverb(comp_prep),terstond).
@@ -5146,15 +5150,12 @@ with_dt([Ook,Al],
     modified_modal_mod_hd_comp_prep(Ook,Al,Cat,Pos).
 
 modified_modal_mod_hd_comp_prep(vrijwel,direct,ap,adjective(no_e(adv))).
-modified_modal_mod_hd_comp_prep(vrijwel,direkt,ap,adjective(no_e(adv))).
 modified_modal_mod_hd_comp_prep(vrijwel,meteen,advp,adverb).
 modified_modal_mod_hd_comp_prep(vrijwel,onmiddellijk,ap,adjective(no_e(adv))).
 modified_modal_mod_hd_comp_prep(bijna,direct,ap,adjective(no_e(adv))).
-modified_modal_mod_hd_comp_prep(bijna,direkt,ap,adjective(no_e(adv))).
 modified_modal_mod_hd_comp_prep(bijna,meteen,advp,adverb).
 modified_modal_mod_hd_comp_prep(bijna,onmiddellijk,ap,adjective(no_e(adv))).
 modified_modal_mod_hd_comp_prep(haast,direct,ap,adjective(no_e(adv))).
-modified_modal_mod_hd_comp_prep(haast,direkt,ap,adjective(no_e(adv))).
 modified_modal_mod_hd_comp_prep(haast,meteen,advp,adverb).
 modified_modal_mod_hd_comp_prep(haast,onmiddellijk,ap,adjective(no_e(adv))).
 modified_modal_mod_hd_comp_prep(niet,lang,ap,adjective(no_e(adv))).
@@ -6616,6 +6617,7 @@ predm_adverb(allevier).
 predm_adverb(allevijf).
 predm_adverb(beide).
 predm_adverb([Een,voor,Een2]) :- een1(Een), een1(Een2).
+predm_adverb([Een,na,Een2]) :- een1(Een), een1(Een2).  % VL
 predm_adverb(elk).
 predm_adverb([elk,voor,zich]).
 predm_adverb([en,bloc]).
@@ -7502,7 +7504,9 @@ m(hetwelk,      rel_pronoun(both,  no_obl), hetwelk).
 m(wat,          rel_pronoun(het,   both),   wat).
 m(welk,         rel_pronoun(both,     obl), welke). % een vereniging, voor welke nog hoop bestaat
 m(welk,         rel_pronoun(both,     obl), [de,welke]). %VL
-m(wie,          rel_pronoun(both,     obl), wie).  % het moedertje voor wie dat belangrijk is
+m(wie,          rel_pronoun(both,     obl), wie). % het moedertje voor wie dat belangrijk is
+
+m('hetgeen dat',rel_pronoun(het,   both),   [hetgeen,dat]). % dat is hetgeen dat ze zoeken
 
 m(je,           reflexive(je,both),je).
 m(jullie,       reflexive(je,pl),jullie).
@@ -8032,8 +8036,10 @@ m(ultimo,           tmp_app_noun,ultimo).
 %% voor het eerst deze week
 %% voor het laatst dit seizoen
 m('voor het eerst', tmp_app_noun,[voor,Het,eerst]) :- het(Het).
+m('voor het aller_eerst', tmp_app_noun,[voor,Het,allereerst]) :- het(Het).
 m('voor het eerst', tmp_app_noun,[voor,eerst]). % VL
 m('voor het laatst',tmp_app_noun,[voor,Het,laatst]) :- het(Het).
+m('voor het aller_laatst',tmp_app_noun,[voor,Het,allerlaatst]) :- het(Het).
 
 %% niets dan ellende
 m(niets,comp_noun(het,mass,sg,dan),niets).

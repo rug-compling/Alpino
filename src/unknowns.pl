@@ -569,7 +569,13 @@ unknown_word_heuristic(P1,R1,W,Ws,"g_ch|~p|~p|~p~n",
 	    alternative([Wmin|Ws],P1,_,R1,_,g_ch_letters,Tag,HIS),
 	    [Th|Tt]).
 
-
+unknown_word_heuristic(P1,R1,W,Ws,"k_c|~p|~p|~p~n",
+		       [W,Wmin,[Th|Tt]],_,HIS) :-
+    debug_message(3,"trying heuristic k_c~n",[]),
+    k_c_letters(W,Wmin),
+    findall(Tag,
+	    alternative([Wmin|Ws],P1,_,R1,_,k_c_letters,Tag,HIS),
+	    [Th|Tt]).
 
 unknown_word_heuristic(P1,R1,W,Ws,"skip_bracket|~p|~p|~p~n",
 		       [W,Wmin,[Th|Tt]],_,HIS ):-
@@ -726,6 +732,14 @@ decap_some_word_heuristic(W,P1,R1,CapW,Ws,"decap(g_ch)|~p|~p|~p~n",
 		       [CapW,Wmin,[Th|Tt]],_) :-
     debug_message(3,"trying heuristic decap(g_ch)~n",[]),
     g_ch_letters(W,Wmin),
+    findall(Tag,
+	    alternative([Wmin|Ws],P1,_,R1,_,decap(g_ch_letters),Tag,_),
+	    [Th|Tt]).
+
+decap_some_word_heuristic(W,P1,R1,CapW,Ws,"decap(k_c)|~p|~p|~p~n",
+		       [CapW,Wmin,[Th|Tt]],_) :-
+    debug_message(3,"trying heuristic decap(k_c)~n",[]),
+    k_c_letters(W,Wmin),
     findall(Tag,
 	    alternative([Wmin|Ws],P1,_,R1,_,decap(g_ch_letters),Tag,_),
 	    [Th|Tt]).
@@ -1475,6 +1489,7 @@ foreign_word(body).
 foreign_word(bonbon).
 foreign_word(bonbons).
 foreign_word(booming).
+foreign_word(bord).
 foreign_word(born).
 foreign_word(bottle).
 foreign_word(box).
@@ -1531,6 +1546,7 @@ foreign_word(consultant).
 foreign_word(consultants).
 foreign_word(cool).
 foreign_word(corner).
+foreign_word(corporate).
 foreign_word(could).
 foreign_word(county).
 foreign_word(country).
@@ -1720,6 +1736,7 @@ foreign_word(ich).
 foreign_word(if).
 foreign_word(ihn).
 foreign_word(il).
+foreign_word(ils).
 foreign_word(im).
 foreign_word(in).
 foreign_word(indeed).
@@ -1821,6 +1838,7 @@ foreign_word(monsieur).
 foreign_word(moral).
 foreign_word(more).
 foreign_word(mort).
+foreign_word(mot).
 foreign_word(much).
 foreign_word(music).
 foreign_word(my).
@@ -1879,6 +1897,7 @@ foreign_word(partner).
 foreign_word(party).
 foreign_word(pas).
 foreign_word(pass).
+foreign_word(passe).
 foreign_word(passer).
 foreign_word(peace).
 foreign_word(people).
@@ -1893,6 +1912,7 @@ foreign_word(place).
 foreign_word(planning).
 foreign_word(planet).
 foreign_word(play).
+foreign_word(plus).
 foreign_word(point).
 foreign_word(points).
 foreign_word(policing).
@@ -2061,6 +2081,8 @@ foreign_word(together).
 foreign_word(too).
 foreign_word(top).
 foreign_word(tout).
+foreign_word(toute).
+foreign_word(toutes).
 foreign_word(town).
 foreign_word(track).
 foreign_word(tracks).
@@ -2103,6 +2125,7 @@ foreign_word(vou).
 foreign_word(voucher).
 foreign_word(vouchers).
 foreign_word(vous).
+foreign_word(vue).
 foreign_word(wake).
 foreign_word(want).
 foreign_word(was).
@@ -3672,6 +3695,18 @@ g_ch_letters(Word0,Word) :-
     g_ch_letters(C0,C,0,1),
     atom_codes(Word,C).
 
+k_c_letters(Word0,Word) :-
+    atom(Word0),
+    atom_codes(Word0,C0),
+    k_c_letters(C0,C,0,1),
+    atom_codes(Word,C).
+
+k_c_letters(Word0,Word) :-
+    atom(Word0),
+    atom_codes(Word0,C0),
+    kr_chr_letters(C0,C,0,1),
+    atom_codes(Word,C).
+
 iseer_letters(Word0,Word) :-
     atom(Word0),
     iseer(End0,End),
@@ -3681,6 +3716,8 @@ iseer_letters(Word0,Word) :-
 iseer(izeer,iseer).
 iseer(izeert,iseert).
 iseer(izeerd,iseerd).
+iseer(izeerde,iseerde).
+iseer(izeerden,iseerden).
 iseer(izeren,iseren).
 
 %% replace any isupper with islower variant
@@ -6742,6 +6779,20 @@ g_ch_letters([103|T0],[99,104|T],_,1) :-
     g_ch_letters(T0,T,_,1).
 g_ch_letters([H|T0],[H|T],I0,I) :-
     g_ch_letters(T0,T,I0,I).
+
+k_c_letters([],[],I,I).
+k_c_letters([107|T0],[99|T],_,1) :-
+    !,
+    k_c_letters(T0,T,_,1).
+k_c_letters([H|T0],[H|T],I0,I) :-
+    k_c_letters(T0,T,I0,I).
+
+kr_chr_letters([],[],I,I).
+kr_chr_letters([107,114|T0],[99,104,114|T],_,1) :-
+    !,
+    kr_chr_letters(T0,T,_,1).
+kr_chr_letters([H|T0],[H|T],I0,I) :-
+    kr_chr_letters(T0,T,I0,I).
 
 %% +TweeHonderdTachtig +Honderd ?Twee ?Tachtig).
 %% more efficient than 2x atom_concat

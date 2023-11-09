@@ -7907,7 +7907,8 @@ grammar_rule(a_advp_dp,MAX,[A,COMMA,XP]) :-
 
 grammar_rule(adv_vp_dp,MAX,[ADV,COMMA,XP]) :-
     optcomma(COMMA),
-    MAX => start,
+    MAX => max,
+    MAX:max_type => t_dp,
     max_advp(ADV),
     ADV:redrel => no,
     max_vp(XP),

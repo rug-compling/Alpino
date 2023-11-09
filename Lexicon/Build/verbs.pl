@@ -568,7 +568,7 @@ m(v_root(heb,hebben),
         % het heeft er veel van weg dat ..
 	part_transitive(terug),        % ik wil dat terughebben
 	part_intransitive(over),       % ik heb nog over
-	part_intransitive(plaats),     % de verkiezingen vonden toch plaats
+	part_intransitive(plaats),     % de verkiezingen hebben toch plaats
 	part_intransitive(vrijaf),
 	part_sbar(door),               % ik had door dat hij komt
 	part_sbar(voor),               % ik had voor hem tijdig in te lichten
@@ -1435,13 +1435,6 @@ v(ageer,ageert,ageren,geageerd,ageerde,ageerden,
     [h([intransitive,
         mod_pp(tegen)])]).
 
-v(akteer,akteert,akteren,geakteerd,akteerde,akteerden,
-    [h([intransitive])]).
-
-v(aktiveer,aktiveert,aktiveren,geaktiveerd,aktiveerde,aktiveerden,
-    [h([transitive,
-	intransitive])]).
-
 v(alarmeer,alarmeert,alarmeren,gealarmeerd,alarmeerde,alarmeerden,
     [h([transitive,
 	intransitive])]).
@@ -1575,10 +1568,6 @@ v(arriveer,arriveert,arriveren,gearriveerd,arriveerde,arriveerden,
             ld_pp])]).
 
 v(articuleer,articuleert,articuleren,gearticuleerd,articuleerde,articuleerden,
-    [h([intransitive,
-	transitive])]).
-
-v(artikuleer,artikuleert,artikuleren,geartikuleerd,artikuleerde,artikuleerden,
     [h([intransitive,
 	transitive])]).
 
@@ -1748,12 +1737,7 @@ v(barbecue,barbecuet,barbecuen,gebarbecued,barbecuede,barbecueden,
     [h([intransitive,
 	transitive])]).
 
-v([barricadeer,barrikadeer],
-  [barricadeert,barrikadeert],
-  [barricaderen,barrikaderen],
-  [gebarricadeerd,gebarrikadeerd],
-  [barricadeerde,barrikadeerde],
-  [barricadeerden,barrikadeerden],
+v(barricadeer,barricadeert,barricaderen,gebarricadeerd,barricadeerde,barricadeerden,
   [h([% refl,
       transitive,
       np_mod_pp(met)])]).
@@ -1799,7 +1783,9 @@ v(bazuin,bazuint,bazuinen,gebazuind,bazuinde,bazuinden,
 
 v(beaam,beaamt,beamen,beaamd,beaamde,beaamden,
     [h([sbar,
-	transitive])]).
+	transitive,
+	intransitive
+       ])]).
 
 v(beadem,beademt,beademen,beademd,beademde,beademden,
     [h([transitive])]).
@@ -2758,6 +2744,7 @@ v(beredeneer,beredeneert,beredeneren,beredeneerd,beredeneerde,beredeneerden,
 v(bereid,bereidt,bereiden,bereid,bereidde,bereidden,
     [h([np_np,
 	transitive,
+	np_mod_pp(van),
 	part_transitive(toe),
 	part_transitive(voor),
 	part_np_er_pp_sbar(voor,op),
@@ -3069,6 +3056,7 @@ v(besta,bestaat,inflected(bestaan,bestane),bestaan,bestond,bestonden,
 	fixed([subj(aandacht),pc(voor)],no_passive),
         fixed([pc(tot),subj(aanleiding)],no_passive),
         fixed([pc(voor),subj(aanleiding)],no_passive),
+	fixed([subj(akkoord),pc(over)],no_passive),
 	fixed([subj(antwoord),pc(op)],no_passive),
 	fixed([subj(behoefte),pc(aan)],no_passive),
 	fixed([subj(belangstelling),pc(voor)],no_passive),
@@ -5571,13 +5559,6 @@ v(dek,dekt,dekken,gedekt,dekte,dekten,
 	part_transitive(toe),
 	part_np_pc_pp(af,met)])]).
 
-v(deklameer,deklameert,deklameren,gedeklameerd,deklameerde,deklameerden,
-    [h([intransitive,
-	transitive])]).
-
-v(dekreteer,dekreteert,dekreteren,gedekreteerd,dekreteerde,dekreteerden,
-    [h([transitive])]).
-
 v(delegeer,delegeert,delegeren,gedelegeerd,delegeerde,delegeerden,
     [h([transitive,
 	intransitive,
@@ -5727,9 +5708,6 @@ v(deserteer,deserteert,deserteren,gedeserteerd,deserteerde,deserteerden,
     [z([intransitive])]).
 
 v(desinfecteer,desinfecteert,desinfecteren,gedesinfecteerd,desinfecteerde,desinfecteerden,
-    [h([transitive])]).
-
-v(desinfekteer,desinfekteert,desinfekteren,gedesinfekteerd,desinfekteerde,desinfekteerden,
     [h([transitive])]).
 
 v(desintegreer,desintegreert,desintegreren,gedesintegreerd,desintegreerde,desintegreerden,
@@ -7328,6 +7306,7 @@ v(fiets,fietst,fietsen,gefietst,fietste,fietsten,
 	part_intransitive(aan),
 	part_transitive(aan), % de motoren moeten worden aangefietst
 	transitive,
+	np_ld_dir,            % we hebben hem de stad rondgefietst
 	np_ld_pp              % ik fiets jullie er wel even heen
        ]),
      b([ld_pp,
@@ -10247,7 +10226,10 @@ v(importeer,importeert,importeren,geïmporteerd,importeerde,importeerden,
 
 v(improviseer,improviseert,improviseren,geïmproviseerd,improviseerde,improviseerden,
     [h([intransitive,
-	transitive])]).
+	transitive,
+	np_pc_pp(op),
+	pc_pp(op)
+       ])]).
 
 v(in,int,innen,geïnd,inde,inden,
     [h([transitive,
@@ -10284,10 +10266,6 @@ v(industrialiseer,industrialiseert,industrialiseren,geïndustrialiseerd,industri
 	transitive])]).
 
 v(infecteer,infecteert,infecteren,geïnfecteerd,infecteerde,infecteerden,
-    [h([transitive,
-	np_pc_pp(met)])]).
-
-v(infekteer,infekteert,infekteren,geïnfekteerd,infekteerde,infekteerden,
     [h([transitive,
 	np_pc_pp(met)])]).
 
@@ -10338,10 +10316,6 @@ v(insinueer,insinueert,insinueren,geïnsinueerd,insinueerde,insinueerden,
 v(inspecteer,inspecteert,inspecteren,geïnspecteerd,inspecteerde,inspecteerden,
     [h([intransitive,
 	sbar,
-	transitive])]).
-
-v(inspekteer,inspekteert,inspekteren,geïnspekteerd,inspekteerde,inspekteerden,
-    [h([intransitive,
 	transitive])]).
 
 v(inspireer,inspireert,inspireren,geïnspireerd,inspireerde,inspireerden,
@@ -10732,9 +10706,6 @@ v(kapitaliseer,kapitaliseert,kapitaliseren,gekapitaliseerd,kapitaliseerde,
 v(kapittel,kapittelt,kapittelen,gekapitteld,kapittelde,kapittelden,
     [h([transitive])]).
 
-v(kapituleer,kapituleert,kapituleren,gekapituleerd,kapituleerde,kapituleerden,
-    [h([intransitive])]).
-
 v(kapseis,kapseist,kapseizen,gekapseisd,kapseisde,kapseisden,
     [b([intransitive])]).
 
@@ -10748,9 +10719,6 @@ v(karakteriseer,karakteriseert,karakteriseren,gekarakteriseerd,karakteriseerde,k
 
 v(kastijd,kastijdt,kastijden,gekastijd,kastijdde,kastijdden,
     [h([transitive])]).  
-
-v(kastreer,kastreert,kastreren,gekastreerd,kastreerde,kastreerden,
-    [h([transitive])]).
 
 v(kat,kat,katten,gekat,katte,katten,
   [h([pc_pp(op),
@@ -11128,10 +11096,6 @@ v(klasseer,klasseert,klasseren,geklasseerd,klasseerde,klasseerden,
     [h([refl,
 	transitive,
 	refl_pc_pp(voor)])]).
-
-v(klassificeer,klassificeert,klassificeren,geklassificeerd,klassificeerde,klassificeerden,
-    [h([als_pred_np,
-	transitive])]).
 
 v(klater,klatert,klateren,geklaterd,klaterde,klaterden,
     [h([intransitive,
@@ -11832,6 +11796,7 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
 	  part_so_np(toe),
 	  part_vp_subj_so_np(toe),
 	  part_pc_pp(toe,aan),
+	  part_er_pp_vp(toe,aan),  % ik kom er niet aan toe de boeken te openen
 	  part_pc_pp(toe,met),
 	  part_ld_pp(toe),
 	  part_intransitive(tussen),
@@ -12140,13 +12105,6 @@ v(korf,korft,korven,gekorfd,korfde,korfden,
 v(korfbal,korfbalt,korfballen,gekorfbald,korfbalde,korfbalden,
     [h([intransitive])]).
 
-v(korrespondeer,korrespondeert,korresponderen,gekorrespondeerd,korrespondeerde,korrespondeerden,
-    [h([intransitive,
-	pc_pp(met)])]).
-
-v(korrigeer,korrigeert,korrigeren,gekorrigeerd,korrigeerde,korrigeerden,
-    [h([transitive])]).
-
 v(kort,kort,korten,gekort,kortte,kortten,
     [h([transitive,
 	np_pc_pp(met),
@@ -12178,9 +12136,6 @@ v(kots,kotst,kotsen,gekotst,kotste,kotsten,
 	part_transitive(uit),
 	part_transitive(onder),
 	pc_pp(van)])]).
-
-v(koördineer,koördineert,koördineren,gekoördineerd,koördineerde,koördineerden,
-    [h([transitive])]).
 
 v(kraai,kraait,kraaien,gekraaid,kraaide,kraaiden,
     [h([intransitive,
@@ -12433,6 +12388,7 @@ v(krioel,krioelt,krioelen,gekrioeld,krioelde,krioelden,
 v(kristalliseer,kristalliseert,kristalliseren,gekristalliseerd,kristalliseerde,kristalliseerden,
   [h([part_refl(uit)]),
    unacc([intransitive,
+	  transitive,
           part_intransitive(uit)])]).
 
 v(kritiseer,kritiseert,kritiseren,gekritiseerd,kritiseerde,kritiseerden,
@@ -12522,12 +12478,6 @@ v(kukel,kukelt,kukelen,gekukeld,kukelde,kukelden,
     [h([intransitive]),
      z([ld_pp,
 	ld_dir])]).
-
-v(kulmineer,kulmineert,kulmineren,gekulmineerd,kulmineerde,kulmineerden,
-    [h([intransitive])]).
-
-v(kultiveer,kultiveert,kultiveren,gekultiveerd,kultiveerde,kultiveerden,
-    [h([transitive])]).
 
 v(kus,kust,kussen,gekust,kuste,kusten,
     [h([intransitive,
@@ -14112,6 +14062,8 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	part_transitive(na),
 	part_transitive(nat),
 	part_transitive(op),
+	part_np_mod_pp(op,over),  % verslag opmaken over
+	part_np_mod_pp(op,van),  % verslag opmaken van
 	part_transitive(open),
 	part_transitive(over),
 	part_transitive(schoon),
@@ -16589,7 +16541,8 @@ v(parel,parelt,parelen,gepareld,parelde,parelden,
 	ld_adv])]).
 
 v(parfumeer,parfumeert,parfumeren,geparfumeerd,parfumeerde,parfumeerden,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive])]).
 
 v(parkeer,parkeert,parkeren,geparkeerd,parkeerde,parkeerden,
     [h([intransitive,
@@ -16602,7 +16555,8 @@ v(parkeer,parkeert,parkeren,geparkeerd,parkeerde,parkeerden,
 	np_ld_adv])]).
 
 v(parodieer,parodieert,parodieren,geparodieerd,parodieerde,parodieerden,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive])]).
 
 v(parse,parset,parsen,geparset,parsete,parseten,
     [h([intransitive,
@@ -16666,7 +16620,8 @@ v(pasteuriseer,pasteuriseert,pasteuriseren,gepasteuriseerd,pasteuriseerde,pasteu
     [h([transitive])]).
 
 v(patenteer,patenteert,patenteren,gepatenteerd,patenteerde,patenteerden,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive])]).
 
 v(patrouilleer,patrouilleert,patrouilleren,gepatrouilleerd,patrouilleerde,patrouilleerden,
     [h([intransitive])]).
@@ -16763,10 +16718,8 @@ v(peper,pepert,peperen,gepeperd,peperde,peperden,
 	pc_pp(in)])]).
 
 v(perfectioneer,perfectioneert,perfectioneren,geperfectioneerd,perfectioneerde,perfectioneerden,
-    [h([transitive])]).
-
-v(perfektioneer,perfektioneert,perfektioneren,geperfektioneerd,perfektioneerde,perfektioneerden,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive])]).
 
 v(perform,performt,performen,geperformd,performde,performden,
     [h([intransitive,
@@ -17132,7 +17085,7 @@ v(pluk,plukt,plukken,geplukt,plukte,plukten,
     [h([ap_pred_np,
 	transitive,
 %	np_pc_pp(van), LD
-	fixed([{[acc(vruch),pc(van)]}],norm_passive),
+	fixed([{[acc(vrucht),pc(van)]}],norm_passive),
 	np_ld_pp,
 	pc_pp(aan)])]).
 
@@ -17197,7 +17150,8 @@ v(polder,poldert,polderen,gepolderd,polderde,polderden,
 	intransitive])]).
   
 v(polijst,polijst,polijsten,gepolijst,polijstte,polijstten,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive])]).
 
 v(politiseer,politiseert,politiseren,gepolitiseerd,politiseerde,politiseerden,
     [z([intransitive]),
@@ -17591,9 +17545,6 @@ v(programmeer,programmeert,programmeren,geprogrammeerd,programmeerde,programmeer
 v(projecteer,projecteert,projecteren,geprojecteerd,projecteerde,projecteerden,
     [h([transitive,
 	np_pc_pp(op)])]).
-
-v(projekteer,projekteert,projekteren,geprojekteerd,projekteerde,projekteerden,
-    [h([transitive])]).
 
 v(proklameer,proklameert,proklameren,geproklameerd,proklameerde,proklameerden,
     [h([transitive])]).
@@ -18261,9 +18212,6 @@ v(reken,rekent,rekenen,gerekend,rekende,rekenden,
 	part_np_pc_pp(toe,aan),
 	fixed([pc(tot),het_pobj1(vp_no_control)],imp_passive)])]).
 
-v(rekonstrueer,rekonstrueert,rekonstrueren,gerekonstrueerd,rekonstrueerde,rekonstrueerden,
-    [h([transitive])]).
-
 v(rekruteer,rekruteert,rekruteren,gerekruteerd,rekruteerde,rekruteerden,
     [h([transitive,
 	intransitive])]).
@@ -18375,9 +18323,6 @@ v(respecteer,respecteert,respecteren,gerespecteerd,respecteerde,respecteerden,
   [h([transitive,
       sbar_obj,
       sbar])]).
-
-v(respekteer,respekteert,respekteren,gerespekteerd,respekteerde,respekteerden,
-    [h([transitive])]).
 
 v(ressorteer,ressorteert,ressorteren,geressorteerd,ressorteerde,ressorteerden,
     [h([intransitive,
@@ -20040,9 +19985,6 @@ v(selecteer,selecteert,selecteren,geselecteerd,selecteerde,selecteerden,
 	np_pc_pp(op),
 	intransitive,
 	part_transitive(uit)])]).
-
-v(selekteer,selekteert,selekteren,geselekteerd,selekteerde,selekteerden,
-    [h([transitive])]).
 
 v(seponeer,seponeert,seponeren,geseponeerd,seponeerde,seponeerden,
     [h([transitive])]).
@@ -22074,8 +22016,9 @@ v(stelp,stelpt,stelpen,gestelpt,stelpte,stelpten,
     [h([transitive])]).
 
 v(stem,stemt,stemmen,gestemd,stemde,stemden,
-    [h([ap_pred_np,
-	su_ap_pred_sbar,	% het stemt ons tevreden dat je komt
+  [h([ap_pred_np,
+      so_ap_copula,           % de solidariteit stemt me hoopvol
+	su_ap_pred_sbar,      % het stemt ons tevreden dat je komt
 	pp_sbar_subj(tot),    % het stemt tot tevredenheid dat je komt
 	part_np_sbar(toe),    % u zult me toestemmen dat (ouderwets)
 	intransitive,
@@ -22804,7 +22747,7 @@ v(sympathiseer,sympathiseert,sympathiseren,gesympathiseerd,sympathiseerde,sympat
     [h([pc_pp(met),
         intransitive])]).
 
-v(sympatiseer,sympatiseert,sympatiseren,gesympatiseerd,sympatiseerde,sympatizeerden,
+v(sympatiseer,sympatiseert,sympatiseren,gesympatiseerd,sympatiseerde,sympatiseerden,
     [h([pc_pp(met),
         intransitive])]).
 
@@ -23306,6 +23249,10 @@ v(tracteer,tracteert,tracteren,getracteerd,tracteerde,tracteerden,
 	transitive,
 	np_pc_pp(op),
 	pc_pp(op)])]).
+
+v(trade,tradet,traden,getraded,tradede,tradeden,
+    [h([intransitive,
+	transitive])]).
 
 v(train,traint,trainen,getraind,trainde,trainden,
     [h([intransitive,
@@ -24647,6 +24594,7 @@ v(vergeet,vergeet,vergeten,vergeten,vergat,vergaten,
 	subj_control(te),  % omdat ze dat vergeten te zeggen
 	refl,
 	transitive,
+	np_mod_pp(bij),  % Men vergeet er zelfs de gepeperde rekening bij .
 	intransitive % je moet leren te vergeten
        ])]).
 
@@ -27779,6 +27727,7 @@ v(wen,went,wennen,gewend,wende,wenden,
 	pc_pp(aan),
 	er_pp_sbar(aan)]),
      h([np_pc_pp(aan),
+	np_er_pp_sbar(aan),
 	part_np_np(af),
 	part_transitive(af)])]).
 
@@ -28322,7 +28271,8 @@ v(wuif,wuift,wuiven,[gewuifd,gewoven],[wuifde,woof],[wuifden,woven],
 	pc_pp(met)])]).
 
 v(wurg,wurgt,wurgen,gewurgd,wurgde,wurgden,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive])]).
 
 v(wurm,wurmt,wurmen,gewurmd,wurmde,wurmden,
     [h([intransitive,

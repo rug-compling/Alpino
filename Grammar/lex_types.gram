@@ -4137,6 +4137,12 @@ so_nonp_copula(V,C0,C) :-
     V:deps <=> [Pred|_],
     Pred:pcat => ~np_pred.
 
+so_ap_copula(V,C0,C) :-
+    so_copula(V,C0,C),
+    V:imper => no,
+    V:deps <=> [Pred|_],
+    Pred:pcat => ap_pred.
+
 %% het is waarschijnlijk dat hij komt
 %% dat hij komt is waarschijnlijk
 %% het is bespottelijk om nu te vertrekken
@@ -4840,7 +4846,7 @@ het_obj_or_topicalize(V,_Pred,Sdat,Deps0) :-
     lists:append(Deps0,[vc/Sdat],Deps),
     dependents(V,Deps).
 
-su_ap_pred_sbar(V,C0,C) :-
+su_ap_pred_sbar(V,C0,C) :-  % what is the difference with so_copula_sbar????
     su_ap_pred(V,sbar,C0,C).
 
 su_ap_pred_vp(V,C0,C) :-
