@@ -7,6 +7,11 @@ def main():
         (w,t,k,i,j,h,p,r,c,s) = line.rstrip().split("|")
         if t == "pronoun(nwh,thi,sg,both,both,indef,strpro)" and r == "één":
             t = "pronoun(nwh,thi,sg,de,both,indef,strpro)"
+        if t == "adjective(ge_no_e(both))" and r == "bedroeven":
+            t = "adjective(no_e(both))"
+            r = "bedroefd"
+        if t == "adjective(ge_no_e(both))" and r == "bedroefd":
+            t = "adjective(no_e(both))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 

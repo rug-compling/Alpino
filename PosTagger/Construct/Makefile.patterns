@@ -22,8 +22,12 @@
         | grep '^FRAME#' \
         | sed -e 's/^FRAME#//'\
         | sed -e 's/v_root(\([^,]*\),[^)]*)/\1/g'\
-        | $(ALPINO_HOME)/PosTagger/Construct/correct.py \
+        | $(ALPINO_HOME)/PosTagger/Construct/correct.py\
         | $(ALPINO_HOME)/PosTagger/Construct/transform_mwu | gzip >$@
+
+## is this still required:               | sed -e 's/v_root(\([^,]*\),[^)]*)/\1/g'
+## final step only if required:          | $(ALPINO_HOME)/PosTagger/Construct/correct.py
+
 
 %.sfr : %.fr %.tm $(ALPINO_HOME)/PosTagger/Construct/stags \
                   $(ALPINO_HOME)/PosTagger/Construct/rewriteNgramData

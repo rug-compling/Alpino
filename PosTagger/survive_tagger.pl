@@ -44,11 +44,18 @@ survives(tag(_,_,R2,_,Root3,Word3,_,Tag3)) :-
 
 survives(tag(_,_,_,R1,Root1,Word1,_,Tag1)) :-
     survives_bigram(Root1,Word1,Tag1,Root2,Word2,Tag2),
-    alpino_lexical_analysis:tag(_,_,R1,_,Root2,Word2,_,Tag2).
+    alpino_lexical_analysis:tag(_,_,R1,_,Root2,Word2,_,Tag2),
+    format(user_error,"survives bigram ~w ~w ~n",[Word1,Word2]).
 
 survives(tag(_,_,R1,_,Root2,Word2,_,Tag2)) :-
     survives_bigram(Root1,Word1,Tag1,Root2,Word2,Tag2),
-    alpino_lexical_analysis:tag(_,_,_,R1,Root1,Word1,_,Tag1).
+    alpino_lexical_analysis:tag(_,_,_,R1,Root1,Word1,_,Tag1),
+    format(user_error,"survives bigram ~w ~w ~n",[Word1,Word2]).
+
+% :- use_module(surv_big).
+
+% survives_bigram(_,W1,T1,_,W2,T2) :-
+%     surv_big(W1,W2,T1,T2).
 
 %% because "naar voren" is also fixed_part, it is often filtered out
 survives_bigram(naar,_,preposition(naar,[toe],loc_adv),voren,_,loc_adverb).

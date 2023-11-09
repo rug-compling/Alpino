@@ -183,3 +183,14 @@ TAGGER=$(ALPINO_HOME)/PosTagger/tagger
 include $(ALPINO_HOME)/PosTagger/Construct/Makefile.eval
 
 .PRECIOUS : %.fr %.tmi %.tmo %.sfr
+
+# surv_big.pl: fr
+# 	cat fr |\
+#         awk -v IF="\t" -v OFS="\t" '{ if ($$2 > 20) { print $$3,$$4,$$5,$$6 }}' |\
+#         Alpino cmdint=off -notk batch_command=go -l toprolog.pl > surv_big.pl
+
+# frs = $(wildcard TRAINING/*.fr)
+# fr: $(frs)
+# 	zcat $(frs) |\
+#         ./create_surv_big.py > fr
+

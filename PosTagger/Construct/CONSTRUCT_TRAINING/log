@@ -247,6 +247,14 @@ time_out/failure:   3219
 time_out/time_out:   33
 failure:   4346
 
+nov 2023
+
+total:    442260
+ok:       419929
+coverage: 0.949507077284855
+coverage: 0.989397519962114 (ignoring time_out)
+time_out:   17831
+failure:   4277
 
 -------------------------------------------------------
 
@@ -264,6 +272,14 @@ NRC 1995
 84.09	640120	59022	2	538297	2003/08/26
 91.72	640120	33021	2	587132	2005/01/01
 93.11	640054	24299	2	595964	new cluster summer 2005
+
+total:    860632
+ok:       806673
+coverage: 0.937303051710836
+coverage: 0.990765077524712 (ignoring time_out)
+time_out:   46440
+failure:   7126
+out_of_memory:   91
 
 -------------------------------------------------------
 
@@ -312,6 +328,14 @@ coverage: 0.986247407595518 (ignoring time_out)
 failure:   4370
 time_out:   15692
 
+nov 2023
+
+total:    389797
+ok:       367380
+coverage: 0.942490578429285
+coverage: 0.989847715736041 (ignoring time_out)
+failure:   3619
+time_out:   18649
 
 -------------------------------------------------------
 
@@ -417,6 +441,16 @@ time_out/failure:   5836
 time_out/time_out:   37
 failure:   7394
 
+nov 2023
+
+total:    749148
+ok:       704090
+coverage: 0.939854341198268
+coverage: 0.989593728127012 (ignoring time_out)
+time_out:   37654
+failure:   7208
+out_of_memory:   1
+
 -------------------------------------------------------
 
 NRC 2003
@@ -489,6 +523,16 @@ out_of_memory:   18
 PAROOL 1998
 
 90.12	6530	272	0	5885	march 2006
+
+
+nov 2023
+
+total:    7188
+ok:       6837
+coverage: 0.951168614357262
+coverage: 0.988863176164304 (ignoring time_out)
+time_out:   274
+failure:   75
 
 -------------------------------------------------------
 
@@ -710,6 +754,16 @@ failure:   6664
 time_out/failure:   6198
 time_out/time_out:   35
 
+nov 2023
+
+total:    767922
+ok:       721404
+coverage: 0.939423535202794
+coverage: 0.991124715606212 (ignoring time_out)
+time_out:   40058
+out_of_memory:   1
+failure:   6238
+
 
 -------------------------------------------------------
 
@@ -886,6 +940,14 @@ time_out/time_out:   41
 time_out/failure:   6819
 failure:   6590
 
+nov 2023
+total:    800423
+ok:       752850
+coverage: 0.940565176163104
+coverage: 0.99137346408551 (ignoring time_out)
+failure:   6427
+time_out:   41022
+out_of_memory:   1
 
 -------------------------------------------------------
 
@@ -1055,6 +1117,14 @@ VOLKSKRANT2003
 
 92.89	364055	12182	2	338191	2005/09/24 robustness without skips
 92.32	409307	17393	2	377888	march 2006
+
+nov 2023
+total:    450737
+ok:       425419
+coverage: 0.943829772128758
+coverage: 0.988062030987623 (ignoring time_out)
+time_out:   20178
+failure:   4830
 
 -------------------------------------------------------
 
@@ -1326,6 +1396,28 @@ coverage: 0.941099143414469 (ignoring time_out)
 failure:   32488
 time_out:   5473
 out_of_memory:   91
+
+SONAR WRPPH (nov 2023)
+
+total:    4059327
+ok:       3850274
+coverage: 0.948500576573407
+coverage: 0.98762605444023 (ignoring time_out)
+failure:   45868
+time_out:   160813
+out_of_memory:   25
+
+
+SONAR WSUEA (nov 2023)
+
+total:    2031105
+ok:       1933579
+coverage: 0.951983772380059
+coverage: 0.981122224009442 (ignoring time_out)
+failure:   33503
+time_out:   60322
+
+
 
 DAISY
 klm svb uwv
