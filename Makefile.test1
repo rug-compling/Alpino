@@ -135,7 +135,7 @@ ptf:
 ifeq ($(strip $(PTFS)),)
 	@echo "ptf: nothing to do"
 else
-	@echo "  OLD    NEW        SUITE"
+	@echo "  NEW    OLD        SUITE"
 	@$(MAKE) -s $(PTFS:%/poslemma=%/ptf) | tr -d '()%' |\
 	     awk '{ N++;\
 	            A=A+$$1;\
@@ -143,8 +143,8 @@ else
 	            XX="   ";\
                     if ($$1 < $$2) XX="!!!";\
                     if ($$2 < $$1) XX="???";\
-                    printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}\
-		    END { printf "\n%6.2f %6.2f       total\n",A/N,B/N}'
+                    printf "%6.2f %6.2f   %s %s\n",$$2,$$1,XX,$$3}\
+		    END { printf "\n%6.2f %6.2f       mean postag accuracy\n",B/N,A/N}'
 endif
 
 %/ptf:%/poslemma
@@ -158,7 +158,7 @@ lmf:
 ifeq ($(strip $(PTFS)),)
 	@echo "lmf: nothing to do"
 else
-	@echo "  OLD    NEW        SUITE"
+	@echo "  NEW    OLD        SUITE"
 	@$(MAKE) -s $(PTFS:%/poslemma=%/lmf) | tr -d '()%' |\
 	     awk '{ N++;\
 	            A=A+$$1;\
@@ -166,8 +166,8 @@ else
 	            XX="   ";\
                     if ($$1 < $$2) XX="!!!";\
                     if ($$2 < $$1) XX="???";\
-                    printf "%6.2f %6.2f   %s %s\n",$$1,$$2,XX,$$3}\
-		    END { printf "\n%6.2f %6.2f       total\n",A/N,B/N}'
+                    printf "%6.2f %6.2f   %s %s\n",$$2,$$1,XX,$$3}\
+		    END { printf "\n%6.2f %6.2f       mean lemma accuracy\n",B/N,A/N}'
 
 %/lmf:%/poslemma
 	echo `grep '^#LM#' $(dir $(dir $*))poslemma|\
@@ -195,7 +195,7 @@ else
 		   out=""; for (i=10; i<=NF;i++){out = out " " $$i}; print out;\
                    N=N+1; A=A+$$1; B=B+$$2; C=C+$$3; D=D+$$4;\
                                             E=E+$$5; F=F+$$6; G=G+$$7; H=H+$$8; }\
-                END {printf "\n  %7.3f %7.3f %8d %8d  %6d %6d %6.1f %6.1f mean\n",\
+                END {printf "\n  %7.3f %7.3f %8d %8d  %6d %6d %6.1f %6.1f mean concept accuracy\n",\
                        A/N,B/N,C/N,D/N,E/N,F/N,G/N,H/N}'
 endif
 
