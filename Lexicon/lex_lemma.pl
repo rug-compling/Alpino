@@ -727,6 +727,7 @@ lemma_root(achterna_glibberen,glibber_achterna) .
 lemma_root(achterna_glijden,glijd_achterna) .
 lemma_root(achterna_glippen,glip_achterna) .
 lemma_root(achterna_gluren,gluur_achterna) .
+lemma_root(achterna_goochelen,goochel_achterna) .
 lemma_root(achterna_gooien,gooi_achterna) .
 lemma_root(achterna_groeien,groei_achterna) .
 lemma_root(achterna_gulpen,gulp_achterna) .
@@ -893,6 +894,7 @@ lemma_root(achterna_suizen,suis_achterna) .
 lemma_root(achterna_sukkelen,sukkel_achterna) .
 lemma_root(achterna_takelen,takel_achterna) .
 lemma_root(achterna_tillen,til_achterna) .
+lemma_root(achterna_toeren,toer_achterna) .
 lemma_root(achterna_tollen,tol_achterna) .
 lemma_root(achterna_toveren,tover_achterna) .
 lemma_root(achterna_trappen,trap_achterna) .
@@ -1122,6 +1124,7 @@ lemma_root(af_glijden,glijd_af) .
 lemma_root(af_glippen,glip_af) .
 lemma_root(af_gluren,gluur_af) .
 lemma_root(af_golven,golf_af) .
+lemma_root(af_goochelen,goochel_af) .
 lemma_root(af_gooien,gooi_af) .
 lemma_root(af_graaien,graai_af) .
 lemma_root(af_grabbelen,grabbel_af) .
@@ -2316,6 +2319,7 @@ lemma_root(binnen_glibberen,glibber_binnen) .
 lemma_root(binnen_glijden,glijd_binnen) .
 lemma_root(binnen_glippen,glip_binnen) .
 lemma_root(binnen_gluren,gluur_binnen) .
+lemma_root(binnen_goochelen,goochel_binnen) .
 lemma_root(binnen_gooien,gooi_binnen) .
 lemma_root(binnen_groeien,groei_binnen) .
 lemma_root(binnen_gulpen,gulp_binnen) .
@@ -2486,6 +2490,7 @@ lemma_root(binnen_sukkelen,sukkel_binnen) .
 lemma_root(binnen_takelen,takel_binnen) .
 lemma_root(binnen_tikken,tik_binnen) .
 lemma_root(binnen_tillen,til_binnen) .
+lemma_root(binnen_toeren,toer_binnen) .
 lemma_root(binnen_tollen,tol_binnen) .
 lemma_root(binnen_toveren,tover_binnen) .
 lemma_root(binnen_trappen,trap_binnen) .
@@ -3098,6 +3103,7 @@ lemma_root(door_berglopen,berglopen_door) .
 lemma_root(door_berispen,berisp_door) .
 lemma_root(door_berusten,berust_door) .
 lemma_root(door_beschadigen,beschadig_door) .
+lemma_root(door_beschermen,bescherm_door) .
 lemma_root(door_beschikken,beschik_door) .
 lemma_root(door_beschimmelen,beschimmel_door) .
 lemma_root(door_beslaan,besla_door) .
@@ -3815,6 +3821,7 @@ lemma_root(door_integreren,integreer_door) .
 lemma_root(door_intensiveren,intensiveer_door) .
 lemma_root(door_internet_bankieren,internet_bankieren_door) .
 lemma_root(door_internetten,internet_door) .
+lemma_root(door_interpreteren,interpreteer_door) .
 lemma_root(door_interrumperen,interrumpeer_door) .
 lemma_root(door_interveniëren,intervenieer_door) .
 lemma_root(door_intimideren,intimideer_door) .
@@ -6935,6 +6942,7 @@ lemma_root(in_glijden,glijd_in) .
 lemma_root(in_glippen,glip_in) .
 lemma_root(in_gluren,gluur_in) .
 lemma_root(in_golven,golf_in) .
+lemma_root(in_goochelen,goochel_in) .
 lemma_root(in_gooien,gooi_in) .
 lemma_root(in_graaien,graai_in) .
 lemma_root(in_grabbelen,grabbel_in) .
@@ -7977,6 +7985,7 @@ lemma_root(langs_glijden,glijd_langs) .
 lemma_root(langs_glippen,glip_langs) .
 lemma_root(langs_gluren,gluur_langs) .
 lemma_root(langs_golven,golf_langs) .
+lemma_root(langs_goochelen,goochel_langs) .
 lemma_root(langs_gooien,gooi_langs) .
 lemma_root(langs_graaien,graai_langs) .
 lemma_root(langs_grabbelen,grabbel_langs) .
@@ -9036,6 +9045,7 @@ lemma_root(om_glibberen,glibber_om) .
 lemma_root(om_glijden,glijd_om) .
 lemma_root(om_glippen,glip_om) .
 lemma_root(om_gluren,gluur_om) .
+lemma_root(om_goochelen,goochel_om) .
 lemma_root(om_gooien,gooi_om) .
 lemma_root(om_groeien,groei_om) .
 lemma_root(om_gulpen,gulp_om) .
@@ -9237,6 +9247,7 @@ lemma_root(om_sukkelen,sukkel_om) .
 lemma_root(om_takelen,takel_om) .
 lemma_root(om_tikken,tik_om) .
 lemma_root(om_tillen,til_om) .
+lemma_root(om_toeren,toer_om) .
 lemma_root(om_tollen,tol_om) .
 lemma_root(om_toveren,tover_om) .
 lemma_root(om_trappen,trap_om) .
@@ -9609,6 +9620,7 @@ lemma_root(op_glijden,glijd_op) .
 lemma_root(op_glippen,glip_op) .
 lemma_root(op_gloeien,gloei_op) .
 lemma_root(op_gluren,gluur_op) .
+lemma_root(op_goochelen,goochel_op) .
 lemma_root(op_gooien,gooi_op) .
 lemma_root(op_graven,graaf_op) .
 lemma_root(op_groeien,groei_op) .
@@ -9880,6 +9892,7 @@ lemma_root(op_tellen,tel_op) .
 lemma_root(opteren,opteer) .
 lemma_root(op_tillen,til_op) .
 lemma_root(optimaliseren,optimaliseer) .
+lemma_root(op_toeren,toer_op) .
 lemma_root(op_tollen,tol_op) .
 lemma_root(op_tornen,torn_op) .
 lemma_root(op_toveren,tover_op) .
@@ -10052,6 +10065,7 @@ lemma_root(over_glibberen,glibber_over) .
 lemma_root(over_glijden,glijd_over) .
 lemma_root(over_glippen,glip_over) .
 lemma_root(over_gluren,gluur_over) .
+lemma_root(over_goochelen,goochel_over) .
 lemma_root(over_gooien,gooi_over) .
 lemma_root(over_groeien,groei_over) .
 lemma_root(over_gulpen,gulp_over) .
@@ -10279,6 +10293,7 @@ lemma_root(overtekenen,overteken) .
 lemma_root(over_tekenen,teken_over) .
 lemma_root(over_tikken,tik_over) .
 lemma_root(over_tillen,til_over) .
+lemma_root(over_toeren,toer_over) .
 lemma_root(over_tollen,tol_over) .
 lemma_root(over_toveren,tover_over) .
 lemma_root(over_trappen,trap_over) .
@@ -10732,6 +10747,7 @@ lemma_root(raak_berglopen,berglopen_raak) .
 lemma_root(raak_berispen,berisp_raak) .
 lemma_root(raak_berusten,berust_raak) .
 lemma_root(raak_beschadigen,beschadig_raak) .
+lemma_root(raak_beschermen,bescherm_raak) .
 lemma_root(raak_beschikken,beschik_raak) .
 lemma_root(raak_beschimmelen,beschimmel_raak) .
 lemma_root(raak_beslaan,besla_raak) .
@@ -11415,6 +11431,7 @@ lemma_root(raak_integreren,integreer_raak) .
 lemma_root(raak_intensiveren,intensiveer_raak) .
 lemma_root(raak_internet_bankieren,internet_bankieren_raak) .
 lemma_root(raak_internetten,internet_raak) .
+lemma_root(raak_interpreteren,interpreteer_raak) .
 lemma_root(raak_interrumperen,interrumpeer_raak) .
 lemma_root(raak_interveniëren,intervenieer_raak) .
 lemma_root(raak_intimideren,intimideer_raak) .
@@ -13295,6 +13312,7 @@ lemma_root(rond_glibberen,glibber_rond) .
 lemma_root(rond_glijden,glijd_rond) .
 lemma_root(rond_glippen,glip_rond) .
 lemma_root(rond_gluren,gluur_rond) .
+lemma_root(rond_goochelen,goochel_rond) .
 lemma_root(rond_gooien,gooi_rond) .
 lemma_root(rond_groeien,groei_rond) .
 lemma_root(rond_gulpen,gulp_rond) .
@@ -13466,6 +13484,7 @@ lemma_root(rond_suizen,suis_rond) .
 lemma_root(rond_sukkelen,sukkel_rond) .
 lemma_root(rond_takelen,takel_rond) .
 lemma_root(rond_tillen,til_rond) .
+lemma_root(rond_toeren,toer_rond) .
 lemma_root(rond_tollen,tol_rond) .
 lemma_root(rond_toveren,tover_rond) .
 lemma_root(rond_trappen,trap_rond) .
@@ -14097,6 +14116,7 @@ lemma_root(tegemoet_glijden,glijd_tegemoet) .
 lemma_root(tegemoet_glimmen,glim_tegemoet) .
 lemma_root(tegemoet_glippen,glip_tegemoet) .
 lemma_root(tegemoet_gluren,gluur_tegemoet) .
+lemma_root(tegemoet_goochelen,goochel_tegemoet) .
 lemma_root(tegemoet_gooien,gooi_tegemoet) .
 lemma_root(tegemoet_groeien,groei_tegemoet) .
 lemma_root(tegemoet_gulpen,gulp_tegemoet) .
@@ -14265,6 +14285,7 @@ lemma_root(tegemoet_suizen,suis_tegemoet) .
 lemma_root(tegemoet_sukkelen,sukkel_tegemoet) .
 lemma_root(tegemoet_takelen,takel_tegemoet) .
 lemma_root(tegemoet_tillen,til_tegemoet) .
+lemma_root(tegemoet_toeren,toer_tegemoet) .
 lemma_root(tegemoet_tollen,tol_tegemoet) .
 lemma_root(tegemoet_toveren,tover_tegemoet) .
 lemma_root(tegemoet_trappen,trap_tegemoet) .
@@ -14366,6 +14387,7 @@ lemma_root(temporiseren,temporiseer) .
 lemma_root(tenderen,tendeer) .
 lemma_root(tengoede_komen,kom_tengoede) .
 lemma_root(teniet_doen,doe_teniet) .
+lemma_root(teniet_gaan,ga_teniet) .
 lemma_root(tennissen,tennis) .
 lemma_root('ten onder_gaan','ga_ten onder') .
 lemma_root(tenonder_gaan,ga_tenonder) .
@@ -15940,6 +15962,7 @@ lemma_root(uit_beraadslagen,beraadslaag_uit) .
 lemma_root(uit_bergen,berg_uit) .
 lemma_root(uit_berispen,berisp_uit) .
 lemma_root(uit_berusten,berust_uit) .
+lemma_root(uit_beschermen,bescherm_uit) .
 lemma_root(uit_beschikken,beschik_uit) .
 lemma_root(uit_beslissen,beslis_uit) .
 lemma_root(uit_besluiten,besluit_uit) .
@@ -16585,6 +16608,7 @@ lemma_root(uit_inspecteren,inspecteer_uit) .
 lemma_root(uit_inspireren,inspireer_uit) .
 lemma_root(uit_installeren,installeer_uit) .
 lemma_root(uit_internetten,internet_uit) .
+lemma_root(uit_interpreteren,interpreteer_uit) .
 lemma_root(uit_interrumperen,interrumpeer_uit) .
 lemma_root(uit_interveniëren,intervenieer_uit) .
 lemma_root(uit_intimideren,intimideer_uit) .
@@ -17951,6 +17975,7 @@ lemma_root(uit_vonken,vonk_uit) .
 lemma_root(uit_vonnissen,vonnis_uit) .
 lemma_root(uit_voorspellen,voorspel_uit) .
 lemma_root(uit_vorsen,vors_uit) .
+lemma_root(uit_vouwen,vouw_uit) .
 lemma_root(uit_vragen,vraag_uit) .
 lemma_root(uit_vreten,vreet_uit) .
 lemma_root(uit_vrezen,vrees_uit) .
@@ -18238,6 +18263,7 @@ lemma_root(vanaf_glijden,glijd_vanaf) .
 lemma_root(vanaf_glippen,glip_vanaf) .
 lemma_root(vanaf_gluren,gluur_vanaf) .
 lemma_root(vanaf_golven,golf_vanaf) .
+lemma_root(vanaf_goochelen,goochel_vanaf) .
 lemma_root(vanaf_gooien,gooi_vanaf) .
 lemma_root(vanaf_graaien,graai_vanaf) .
 lemma_root(vanaf_grabbelen,grabbel_vanaf) .
@@ -20737,6 +20763,7 @@ lemma_root(voort_berglopen,berglopen_voort) .
 lemma_root(voort_berispen,berisp_voort) .
 lemma_root(voort_berusten,berust_voort) .
 lemma_root(voort_beschadigen,beschadig_voort) .
+lemma_root(voort_beschermen,bescherm_voort) .
 lemma_root(voort_beschikken,beschik_voort) .
 lemma_root(voort_beschimmelen,beschimmel_voort) .
 lemma_root(voort_beslaan,besla_voort) .
@@ -21421,6 +21448,7 @@ lemma_root(voort_integreren,integreer_voort) .
 lemma_root(voort_intensiveren,intensiveer_voort) .
 lemma_root(voort_internet_bankieren,internet_bankieren_voort) .
 lemma_root(voort_internetten,internet_voort) .
+lemma_root(voort_interpreteren,interpreteer_voort) .
 lemma_root(voort_interrumperen,interrumpeer_voort) .
 lemma_root(voort_interveniëren,intervenieer_voort) .
 lemma_root(voort_intimideren,intimideer_voort) .

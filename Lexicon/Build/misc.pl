@@ -1910,6 +1910,9 @@ een_aantal_detp_pos(dat,soort,pron,determiner(het,nwh,nmod,pro,nparg)).
 een_aantal_detp_pos(dit,soort,pron,determiner(het,nwh,nmod,pro,nparg)).
 een_aantal_detp_pos(zulk,soort,pron,determiner(zulk)).
 
+een_aantal_detp_pos(dat,type,pron,determiner(het,nwh,nmod,pro,nparg)).   % dit type klysma's hebben ...
+een_aantal_detp_pos(dit,type,pron,determiner(het,nwh,nmod,pro,nparg)).
+
 een_aantal_detp(Een,hele,hoop,wat) :- een(Een).
 
 with_dt([Een,paar,Honderd],
@@ -8678,7 +8681,6 @@ term([blind,date]).
 term([bloody,shame]).
 term([body,mass,index]).
 term([born,to,be,wild]).
-term(borough,boroughs).  % plaats in USA
 term([brain,drain]).
 term([breaking,news]).
 term(breedband).

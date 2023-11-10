@@ -2861,9 +2861,10 @@ v(beschaduw,beschaduwt,beschaduwen,beschaduwd,beschaduwde,beschaduwden,
     [h([transitive])]).
 
 v(bescherm,beschermt,beschermen,beschermd,beschermde,beschermden,
-    [h([transitive,
-	pc_pp(tegen),
-	np_pc_pp(tegen)])]).
+  [h([transitive,
+      intransitive,
+      pc_pp(tegen),
+      np_pc_pp(tegen)])]).
 
 v(bescheur,bescheurt,bescheuren,bescheurd,bescheurde,bescheurden,
     [h([refl,
@@ -7830,6 +7831,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	part_intransitive(tekeer),
 	part_pc_pp(tekeer,tegen),
 	part_intransitive(teloor),
+	part_intransitive(teniet),
 	part_intransitive(terug),
 	part_ld_pp(terug),
 	part_pc_pp(terug,op),
@@ -7950,7 +7952,6 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	fixed([[te,lijf],acc],norm_passive),  % hij werd te lijf gegaan
 	fixed([[ten,gronde]],no_passive),
 	fixed([[ten,gronde],pc(aan)],no_passive),
-        fixed([[teniet]],no_passive),
 	fixed([[ter,harte],dat],no_passive),
 	fixed([[van,start]],imp_passive),
 	fixed([[van,au]],no_passive),
@@ -8680,8 +8681,9 @@ v(gons,gonst,gonzen,gegonsd,gonsde,gonsden,
 	part_intransitive(na)])]).
 
 v(goochel,goochelt,goochelen,gegoocheld,goochelde,goochelden,
-    [h([intransitive,
-	pc_pp(met)])]).
+  [h([intransitive,
+      np_ld_dir,  % hij goochelde het konijn tevoorschijn
+      pc_pp(met)])]).
 
 v([google,googel],[googlet,googelt],[googleën,googelen],[gegoogled,gegoogeld],[googlede,googelde],[googleden],[googelden],
   [h([intransitive,
@@ -10372,7 +10374,9 @@ v(internet,internet,internetten,geïnternet,internette,internetten,
 v(interpreteer,interpreteert,interpreteren,geïnterpreteerd,interpreteerde,interpreteerden,
     [h([nonp_pred_np,
 	sbar,
-	transitive])]).
+	transitive,
+	intransitive
+       ])]).
 
 v(interrumpeer,interrumpeert,interrumperen,geïnterrumpeerd,interrumpeerde,interrumpeerden,
     [h([transitive,
@@ -13007,7 +13011,9 @@ v(leg,legt,leggen,gelegd,legde,legden,
 	transitive,
 	np_ld_pp,
 	np_np_ld_pp,
-	np_ld_adv,  % opzij boven onder buiten  ...
+	np_ld_adv,		% opzij boven onder buiten  ...
+	np_vp_obj1,		% ik leg de appels te rijpen
+	                        % de appels worden te rijpen gelegd
 	part_np_np(aan),
 	part_np_np(op),
 	part_np_np(uit),
@@ -14258,7 +14264,7 @@ v(mangel,mangelt,mangelen,gemangeld,mangelde,mangelden,
 v(manifesteer,manifesteert,manifesteren,gemanifesteerd,manifesteerde,manifesteerden,
     [h([refl,
 	refl_pc_pp(in),
-        % transitive,
+        transitive,  % (*) ze wilden hun vrijheid manifesteren 
         intransitive])]).
 
 v(manipuleer,manipuleert,manipuleren,gemanipuleerd,manipuleerde,manipuleerden,
@@ -20079,7 +20085,9 @@ v(situeer,situeert,situeren,gesitueerd,situeerde,situeerden,
 	np_ld_adv,
 	als_pred_refl,
 	refl_ld_pp, % VL?
-	intransitive])]).
+	intransitive,
+	transitive
+       ])]).
 
 v(sjoel,sjoelt,sjoelen,gesjoeld,sjoelde,sjoelden,
     [h([intransitive])]).
@@ -23118,7 +23126,9 @@ v(toef,toeft,toeven,getoefd,toefde,toefden,
 
 v([toer,tour],[toert,tourt],[toeren,touren],[getoerd,getourd],[toerde,tourde],[toerden,tourden],
     [h([intransitive,
-        ld_pp])]).
+        ld_pp,
+	ld_dir   % de wereld rond
+       ])]).
 
 v(toeter,toetert,toeteren,getoeterd,toeterde,toeterden,
     [h([np_np,
@@ -27171,8 +27181,11 @@ v(vors,vorst,vorsen,gevorst,vorste,vorsten,
 	pc_pp(naar)])]).
 
 v(vouw,vouwt,vouwen,gevouwen,vouwde,vouwden,
-    [h([ap_pred_np,
+  [unacc([part_intransitive(uit),
+	  part_intransitive(open)]),
+   h([ap_pred_np,
 	transitive,
+	part_transitive(uit),
 	part_transitive(op),
 	part_transitive(open)])]).
 
@@ -28393,6 +28406,7 @@ v(zeg,zegt,zeggen,gezegd,zei,zeiden,zegge,
 	np_pc_pp(bij),		% dat zei hij er niet bij
 	pp_sbar(bij),   % hij zei er niet bij dat ...
 	pp_sbar(met),   % hij wilde daar mee zeggen dat ..
+	pp_sbar(van),   % er werd van gezegd dat het door omkoping was verkregen
 	np_pc_pp(met),  % hij wilde daar verder niets mee zeggen
         np_pc_pp(in),   % je hebt er niets in te zeggen
 	part_np_np(na),

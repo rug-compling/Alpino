@@ -379,6 +379,8 @@ n([mass('Babylonisch')],het,[]).
 
 n([sg('Balinees'),pl('Balinezen')],de,[]).
 
+n([mass('Baltisch')],het,[]).
+
 n([sg('Bask'),pl('Basken')],de,[]).
 
 n([mass('Baskisch')],het,[]).
@@ -620,7 +622,11 @@ n([pl('Friezen'),sg('Fries')],de,[],
    hh('Oost'),
    hh('West')]).
 
-n([mass('Fries')],het,[]).
+n([mass('Fries')],het,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 n([sg('Geallieerde'),pl('Geallieerden')],de,[]).
 
@@ -1432,7 +1438,10 @@ n([pl(aanmerkingen),sg(aanmerking)],de,[sbar,vp]).
 
 n([pl(aanmoedigingen),sg(aanmoediging)],de,[vp]).
 
-n([pl(aannamen),pl(aannames),sg(aanname)],de,[sbar,subject_sbar]).
+n([pl(aannamen),pl(aannames),sg(aanname)],de,
+  [sbar,subject_sbar],
+  [basis,
+   standaard]).
 
 n([pl(aannemers),sg(aannemer)],de,[],[onder]).
 
@@ -6013,6 +6022,8 @@ n([pl(boten),sg(boot)],de,[np_app_measure],
 n([pl(bootslieden),pl(bootslui),sg(bootsman)],de,[]).
 
 n([pl(boots)],de,[]). % schoenen?
+
+n([sg(borough),pl(boroughs)],de,[]).   % plaats in USA
 
 %% er hing een bord dat roken verboden is
 n([pl(borden),sg(bord)],het,[sbar],
@@ -26815,7 +26826,7 @@ n([sg(periode),pl(perioden),pl(periodes)],de,
    verslag,
    s(zitting)]).
 
-n([pl(periodieken),sg(periodiek)],de,[]).
+n([pl(periodieken),sg(periodiek)],both,[]).
 
 n([pl(perken),sg(perk)],het,[]).
 
@@ -28071,6 +28082,9 @@ n([pl(priesters),sg(priester)],de,[]).
 n([pl(priesteressen),sg(priesteres)],de,[]).
 
 n([mass(priesterschap)],het,[]).
+
+%% @ Maar de prijs was dat het Vaticaan Hitlers bewind erkende .
+n([pl(prijzen),sg(prijs)],de,[subject_sbar],[]).
 
 n([pl(prijzen),sg(prijs)],de,[app_measure],
   [s(aanmoediging),
@@ -40093,7 +40107,7 @@ n([pl(waakhonden),sg(waakhond)],de,[],
 
 n([mass(waakzaamheid)],de,[]).
 
-n([mass(waan),pl(wanen)],de,[sbar]).
+n([mass(waan),pl(wanen)],de,[sbar,vp]).
 
 n([pl(waanvoorstellingen),sg(waanvoorstelling)],de,[sbar]).
 

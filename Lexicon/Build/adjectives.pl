@@ -2781,8 +2781,12 @@ a([ge_both(afgegoten)],nonadv,[],[]).
 
 a([ge_both(afgegraven)],nonadv,[],[]).
 
+a([ge_e(afgegrensde),
+   ge_no_e(afgegrensd)],adv,[],[]).
+
 a([ge_e(afgehaalde),
-   ge_no_e(afgehaald)],adv,[],[]).
+   ge_no_e(afgehaald),
+   stem(af_grenzen)],adv,[],[]).
 
 a([ge_e(afgegrendelde),
    ge_no_e(afgegrendeld)],nonadv,[],[]).
@@ -13450,7 +13454,7 @@ a([e(gelijke),
   [pp(aan)],[]).
 
 a([e(gelijkaardige),
-   no_e(gelijkaardig)],nonadv,[],[]).
+   no_e(gelijkaardig)],adv,[],[]).
 
 a([ende(gelijkende),
    er(gelijkender),
@@ -38623,7 +38627,7 @@ a([e(vormloze),
    ere(vormlozere),
    no_e(vormloos),
    st(vormloost),
-   ste(vormlooste)],nonadv,[],[]).
+   ste(vormlooste)],adv,[],[]).  %adv: @ Het postimpressionisme wil vormloos en vluchtig schilderen .
 
 a([e(vorstelijke),
    er(vorstelijker),

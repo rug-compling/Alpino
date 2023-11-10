@@ -1207,6 +1207,7 @@ with_dt_all(dat,[giet,het]).
 with_dt_all(dat,[het,kraak]).
 with_dt_all(dat,[ondanks]).
 with_dt_all(dat,[soort]).
+with_dt_all(dat,[type]).
 with_dt_all(dat,[van]).
 with_dt_all(dat,[van,veel]).
 with_dt_all(dat,[zonder]).
@@ -1405,6 +1406,7 @@ with_dt_all(dit,[keer]).
 with_dt_all(dit,[maal]).
 with_dt_all(dit,[soort]).
 with_dt_all(dit,[terzijde]).
+with_dt_all(dit,[type]).
 with_dt_all(dit,[van]).
 with_dt_all(doe,[ik,zeg]).
 with_dt_all(doen,[goede,in]).
@@ -2997,6 +2999,7 @@ with_dt_root(twee_DIM).
 with_dt_root(tweeduizend).
 with_dt_root(tweehonderd).
 with_dt_root(twintig).
+with_dt_root(type).
 with_dt_root(u).
 with_dt_root(uit).
 with_dt_root(uitsluitend).
