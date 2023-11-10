@@ -794,15 +794,31 @@ dehet(het,de).
 replace_dehet_tags :-
     (   clause(tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg)),true,Ref),
 	dehet(De,Het),
-	unique(P1,P,Ref),
+	not_non_noun_tag(P1,P),
 	(   tag(_,P1,_,Q1,Het,_,_,_)
 	->  erase_tag(Ref),
 	    assert_tag(P1,P,Q1,Q,W,L,replace_dehet(His),noun(both,Count,sg)),
 	    debug_message(1,"ignore ~w after ~w for ~w~n",[Het,De,W])
 	),
 	fail
+    ;   clause(tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg,SC)),true,Ref),
+	dehet(De,Het),
+	not_non_noun_tag(P1,P),
+	(   tag(_,P1,_,Q1,Het,_,_,_)
+	->  erase_tag(Ref),
+	    assert_tag(P1,P,Q1,Q,W,L,replace_dehet(His),noun(both,Count,sg,SC)),
+	    debug_message(1,"ignore ~w after ~w for ~w~n",[Het,De,W])
+	),
+	fail
     ;   true
     ).
+
+not_non_noun_tag(P1,P) :-
+    tag(Z0,Z,_,_,_,_,_,Tag),
+    overlap(P1,P,Z0,Z),
+    \+ Tag = noun(_,_,_,_),
+    \+ Tag = noun(_,_,_),
+    !.    
 
 unique(P0,P,Ref) :-
     findall(Ref2,( clause(tag(Z0,Z,_,_,_,_,_,_),_,Ref2),
