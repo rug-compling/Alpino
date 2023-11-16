@@ -1277,6 +1277,7 @@ unknown_word_heuristic(P1,R1,W,Ws,"mistok|~p|~p|~p~n",[W,W1,[H|T]],_,HIS) :-
     atom(W),
     mis_tokenized(W,W1),
     \+ W1 = '',
+    \+ alpino_lex:initial(W),
     findall(Tag,alternative([W1|Ws],P1,_,R1,_,mistok,Tag,HIS),[H|T]).
 
 % -De
@@ -3313,6 +3314,7 @@ never_compound_part_sc(sol).
 never_compound_part_sc(sp).
 never_compound_part_sc(st).
 never_compound_part_sc(sten).
+never_compound_part_sc(sy).
 never_compound_part_sc('s\'s').
 never_compound_part_sc(te).
 never_compound_part_sc(teek).
@@ -3982,7 +3984,9 @@ lexical_analysis_prefixed_verb(Ws,P0,R0,Part,Name,Tag):-
     assert_tag(P0,P,R0,R,Stem,Name,Tag).
 
 alternative(Input,P0,P,R0,R,Name,Tag,len(Length)):-
-    alpino_lex:lexicon(Tag,Stem,Input,Input1,_),
+    alpino_lex:lexicon(Tag,Stem,Input,Input1,His),
+    \+ His = url,
+    \+ His = enumeration,
     append([_Stem0|UsedInput],Input1,Input),
     length([_|UsedInput],Length),
     P is P0+Length,
@@ -3991,11 +3995,11 @@ alternative(Input,P0,P,R0,R,Name,Tag,len(Length)):-
 
 spaced_alternative(Input,P0,P,R0,R,Name,Tag,len(Length)):-
     concat_all(Input,Word,''),
-    alpino_lex:lexicon(Tag,Stem,[Word],[],_),
+    alpino_lex:lexicon(Tag,Stem,[Word],[],His),
     length(Input,Length),
     P is P0+Length,
     R is R0+Length,
-    assert_tag(P0,P,R0,R,Stem,Name,Tag).
+    assert_tag(P0,P,R0,R,Stem,Name/His,Tag).
 
 lexical_analysis_add_space(Input,P0,R0,Name,Tag,len(Consumed)):-
     alpino_lex:lexicon(Tag0,Stem,Input,Input1,normal),
@@ -4543,6 +4547,11 @@ unlikely_name(Input,_,_) :-
     name_koning(Burgemeester,B),
     append(_,[van|Geo],Rest),
     alpino_lex:lexicon(proper_name(both,'LOC'),_,Geo,[],names_dictionary).
+
+unlikely_name([A,',',B],P0,P) :-
+    tag(P0,P1,_,_,_,A,normal(names_dictionary),_),
+    P2 is P1 + 1,
+    tag(P2,P,_,_,_,B,normal(names_dictionary),_).    
 
 %% name with comma: there should not be a larger name
 %% seperated by comma

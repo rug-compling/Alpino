@@ -14,7 +14,7 @@ cgn_postag(Frame0,Stem,Surf0,Q0,Q,Result,His,L0,L) :-
     ;   Surf0 = Surf
     ),
     cgn_postag_c(Frame,Stem,Surf,Q0,Q,Result,His,L0,L),
-    hdrug_util:debug_call(1,\+ \+ alpino_cgn_postags:report_mwu(Q0,Q,Surf,L0,L)).
+    hdrug_util:debug_call(2,\+ \+ alpino_cgn_postags:report_mwu(Q0,Q,Surf,L0,L)).
 
 report_mwu(Q0,Q,Surf,L0,[]) :-
     (   Q-Q0 =:= 1

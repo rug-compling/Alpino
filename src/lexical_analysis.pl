@@ -179,8 +179,6 @@ lexical_analysisXXX(Input) :-
 	time(Debug,
 	     lexical_analysis(Input,0,P,0,R,UnbracketedInput,0,[])),
 
-	time(Debug,filter_enumeration_tags),
-
 	%%    time(Debug,assert_cgn_tags(R)),
 
 	(   Unk == on
@@ -204,6 +202,7 @@ lexical_analysisXXX(Input) :-
 	
 	add_user_skips,
 	
+
 	time(2,filter_tags(Filter)),
 
 	(   Unk == on
@@ -212,6 +211,8 @@ lexical_analysisXXX(Input) :-
 	    time(Debug,filter_te_tags),
 	    time(Debug,replace_per_tags),
 	    time(Debug,replace_dehet_tags),
+	    time(Debug,filter_enumeration_tags),
+	    time(Debug,filter_bracketed_tags),
 	    time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for tagger
 	    count_edges(tag(_,_,_,_,_,_,_,_),Edges)
 	),
@@ -227,7 +228,7 @@ lexical_analysisXXX(Input) :-
 	;	true
 	),
 	count_edges(tag(_,_,_,_,_,_,_,_),VVEdges),
-	time(Debug,check_connected(Input,MaxPos,ErasedTags,Filter)),
+	time(Debug,check_connected(Input,P,ErasedTags,Filter)),
 	
 	alpino_unknowns:retract_wikipedia_list,
 	
@@ -482,6 +483,13 @@ non_part_lexicon_verb([Word|Tail],HZ,Infl,Label) :-
 
 cmd_skip_word([Word|Tail]) :-
     noclp_assertz(add_skip_word(Word,Tail)).
+
+current_word(P0,P,UsedInput):-
+    thread_flag(current_input_sentence,Input),
+    length(Input,Len),
+    between(0,Len,P0),
+    P is P0 + 1,
+    surface_form(Input,P0,P,UsedInput).
 
 assert_tag(P0,P,R0,R,Label,History,Tag) :-
     interval_not_bracket(P0,P),
@@ -794,18 +802,20 @@ dehet(het,de).
 replace_dehet_tags :-
     (   clause(tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg)),true,Ref),
 	dehet(De,Het),
-	not_non_noun_tag(P1,P),
+	\+ non_noun_tag(P1,P),
 	(   tag(_,P1,_,Q1,Het,_,_,_)
 	->  erase_tag(Ref),
+	    \+ tag(P1,P,Q1,Q,W,L,_,noun(Het,_,sg)),
 	    assert_tag(P1,P,Q1,Q,W,L,replace_dehet(His),noun(both,Count,sg)),
 	    debug_message(1,"ignore ~w after ~w for ~w~n",[Het,De,W])
 	),
 	fail
     ;   clause(tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg,SC)),true,Ref),
 	dehet(De,Het),
-	not_non_noun_tag(P1,P),
+	\+ non_noun_tag(P1,P),
 	(   tag(_,P1,_,Q1,Het,_,_,_)
 	->  erase_tag(Ref),
+	    \+ tag(P1,P,Q1,Q,W,L,_,noun(Het,_,sg)),
 	    assert_tag(P1,P,Q1,Q,W,L,replace_dehet(His),noun(both,Count,sg,SC)),
 	    debug_message(1,"ignore ~w after ~w for ~w~n",[Het,De,W])
 	),
@@ -813,19 +823,18 @@ replace_dehet_tags :-
     ;   true
     ).
 
-not_non_noun_tag(P1,P) :-
+non_noun_tag(P1,P) :-
     tag(Z0,Z,_,_,_,_,_,Tag),
     overlap(P1,P,Z0,Z),
     \+ Tag = noun(_,_,_,_),
-    \+ Tag = noun(_,_,_),
-    !.    
+    \+ Tag = noun(_,_,_).    
 
 unique(P0,P,Ref) :-
     findall(Ref2,( clause(tag(Z0,Z,_,_,_,_,_,_),_,Ref2),
 		   overlap(P0,P,Z0,Z)
 		 ), [Ref]).
     
-	
+
 filter_enumeration_tags :-
     findall(Ref,enumeration_tag_with_enumeration_neighbor(Ref),Refs),
     (   member(R,Refs),
@@ -833,6 +842,20 @@ filter_enumeration_tags :-
 	fail
     ;   true
     ).
+
+filter_bracketed_tags :-
+    %% forbid "3 )" as a tag if preceded by "("
+    %% forbid "( 3" as a tag if followed by ")"
+    (   current_word(P0,P1,'('),
+	current_word(P2,P,')'),
+	(   clause(tag(P1,P,_,_,_,_,_,_),true,R)
+	;   clause(tag(P0,P2,_,_,_,_,_,_),true,R)
+	),
+	erase_tag(R),
+	fail
+    ;   true
+    ).
+    
 
 enumeration_tag_with_enumeration_neighbor(Ref) :-
     clause(tag(_,_,_,Q1,_,_,normal(enumeration),_),true,Ref1),
@@ -992,8 +1015,37 @@ check_connected(Words,MaxPos,_Erased,Filter) :-
 	%expand_skip_tags,
 	%keep_track_of_skips,
 	fail
-    ;   filter_tags(Filter)
+    ;   remove_orphans(MaxPos),
+	filter_tags(Filter)
     ).
+
+remove_orphans(MaxPos) :-
+    (   clause(tag(X0,X1,_,_,_,_,_,_),_,Ref),
+	(  X1 < MaxPos,
+	   \+  starting_position(X1)
+	;  X0 > 0,
+           \+ ending_position(X0)
+	),
+	erase_tag(Ref),
+	fail
+    ;   true
+    ).
+
+ending_position(X0) :-
+    tag(_,X0,_,_,_,_,_,_).
+ending_position(X0) :-
+    open_bracket(_,X0,_).
+ending_position(X0) :-
+    close_bracket(_,X0,_).
+
+starting_position(X1):-
+    tag(X1,_,_,_,_,_,_,_).
+starting_position(X1):-
+    open_bracket(X1,_,_).
+starting_position(X1):-
+    close_bracket(X1,_,_).
+
+
 
 restore_tags(Pos,List) :-
     (   member(tag(P0,P,R0,R,L,U,H,T),List),
@@ -1017,6 +1069,8 @@ requires_longest_match(name(not_begin)).
 requires_longest_match(name(begin)).
 
 requires_unique_match(name(not_begin),proper_name(sg,_),normal(enumeration),proper_name(both),_,_).
+requires_unique_match(normal(names_dictionary),proper_name(_),normal(enumeration),proper_name(both),_,_).
+requires_unique_match(normal(names_dictionary),proper_name(_,_),normal(enumeration),proper_name(both),_,_).
 requires_unique_match(normal(decap(normal)),meas_mod_noun(_,_,_),normal(enumeration),proper_name(both),_,_).
 requires_unique_match(normal(decap(normal)),noun(_,_,_),normal(enumeration),proper_name(both),_,_).
 requires_unique_match(normal(number_expression),number(hoofd(_)),normal(enumeration),proper_name(both),_,_).
@@ -1217,7 +1271,10 @@ competing_tag(H,H,Tag,Tag,_).
 competing_tag(name(Begin),name(Begin),Tag0,Tag,_) :-
     functor(Tag0,proper_name,_),
     functor(Tag,proper_name,_).
-competing_tag(name(_),normal(enumeration),_,_,_).
+competing_tag(name(begin),normal(enumeration),Tag0,Tag,_) :-
+    functor(Tag0,proper_name,_),
+    functor(Tag,proper_name,_).
+competing_tag(name(not_begin),normal(enumeration),_,_,_).
 competing_tag(normal(names_dictionary),normal(enumeration),_,_,_).
 %% Berlijnse Muur, Olympische Spelen, ...,
 %% prevent capitalized adjectives that modify names if the thing itself is a name too
@@ -1815,7 +1872,8 @@ expand_skip(tag(P0,P,R0,R,Stem,Surf,skip(Count,[],Rights,His),Tag)) :-
     Tag \= skip,
     Tag \= longpunct,
     Tag \= 'UNKNOWN',
-    skip_labels(P1,P,R1,R,Rights,Count).
+    skip_labels(P1,P,R1,R,Rights,Count),
+    \+ tag(P0,P,R0,R,_,_,_,Tag).
 
 expand_skip(tag(0,P,R0,R,Stem,Surf,skip(Count,Lefts,Rights,His),Tag)) :-
     skip_labels(0,P1,R0,R1,Lefts,Count1),
@@ -1823,7 +1881,8 @@ expand_skip(tag(0,P,R0,R,Stem,Surf,skip(Count,Lefts,Rights,His),Tag)) :-
     Tag \= skip,
     Tag \= longpunct,
     Tag \= 'UNKNOWN',
-    skip_labels(P2,P,R2,R,Rights,Count1,Count).
+    skip_labels(P2,P,R2,R,Rights,Count1,Count),
+    \+ tag(0,P,R0,R,_,_,_,Tag).
 
 %% at least 1
 skip_labels(P0,P,R0,R,Names,C) :-

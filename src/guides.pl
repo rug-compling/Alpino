@@ -180,6 +180,9 @@ tr_tag(left_conj(_),Tag) :-
 tr_tag(right_conj(_),Tag) :-
     !,
     Tag = right_conj.
+tr_tag(adv_tag,Tag) :-
+    !,
+    Tag = tag.
 tr_tag(Tag,Tag).
 
 adj_infl(aller_st(X),St) :-
