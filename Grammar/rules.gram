@@ -1316,6 +1316,7 @@ grammar_rule(rel_om_vpx,REL,[Comp1,V]):-
 grammar_rule(max_xp(vpx),Max,[Ecomp,V]) :-
     Max => max,
     Max:max_type => t_xp,
+    Max:sv1 => no,
     V => vpx,
     V:haswh => no,
     V:vform => (pass_te;psp;inf),
@@ -4744,10 +4745,14 @@ grammar_rule(np_n_tmpnapp, NP, [ DET, APP_N, N ]) :-
 grammar_rule(n_n_pnapp, NP, [ N, PN ]) :-
     n_n_pnapp_structure(NP,N,PN).
 
-grammar_rule(n_n_q_pnapp, NP, [ N, QL, PN, QR ]) :-
-    ql(QL),
-    optqr(QR),
-    n_n_pnapp_structure(NP,N,PN).
+%% spurious amb
+%% makes certain wrong analyses work whereas correct ones need 1 skip
+%% ' Ankor ' bijvoorbeeld , en ' mast ' en sjtoerman ' .
+%% dus in Angelica Garnett is de schrijfster van de memoires " Deceived with Kindness .
+%% moet de " maar geskipped worden
+%grammar_rule(n_n_q_pnapp, NP, [ N, QL, PN ]) :-
+%    ql(QL),
+%    n_n_pnapp_structure(NP,N,PN).
 
 n_n_pnapp_structure(NP,N,PN) :-
     PN => pn,
@@ -8509,6 +8514,7 @@ grammar_rule(top_adv_tag_start_sv1, Start, [Tag,COMMA,Max]):-
     COMMA:puncttype => (komma;dubb_punt;hellip;punt),
     unify_mods(Tag),
     Max => max,
+    Max:max_type => t_xp,
     Max:sv1 => yes,
     tag_max_structure(Max,Tag,Start).
 
@@ -8709,6 +8715,7 @@ top_max_structure(XP,Max) :-
     Max => max,
     Max:max_type => t_xp,
 %    unify_mods(XP),
+    Max:sv1 => no,
     XP:sc =?> [],
     XP:slash =?> [],
     XP:iexs =?> [],
@@ -8782,9 +8789,9 @@ grammar_rule(max_xp(adj),Max,[X]) :-
 
 grammar_rule(max_xp(sv1),Max,[X]) :-
     max_sv1(X),
-    top_max_structure(X,Max),
+    top_max_structure(X,Max0),
+    overwrite(Max0,Max,sv1,yes),
     Max:dt:stype => ~declarative & ~topic_drop & ~whquestion,
-    Max:sv1 => yes,
     Max:puncttype => (punt;uitroep;dubb_punt;punt_komma;vraag;hellip).
 
 grammar_rule(max_xp(dip_sv1),Max,[X0]) :-

@@ -4838,7 +4838,7 @@ m(zijnerzijds,      postnp_adverb,zijnerzijds).
 
 m(genoeg,           postnp_adverb,genoeg). % todo: + om-vp
 m(temeer,           postnp_adverb,temeer).  % reden temeer
-m('te veel',           postnp_adverb,[te,meer]).  % reden temeer
+m('te veel',        postnp_adverb,[te,meer]).  % reden temeer
 m('te over',        postnp_adverb,[te,over]). % todo: + om-vp
 m('te over',        postnp_adverb,[ten,over]). % todo: + om-vp
 
@@ -5005,6 +5005,7 @@ m(dik,              modal_adverb(adv_noun_prep),dik).
 m(gemiddeld,        modal_adverb(adv_noun_prep),gemiddeld).
 m(nagenoeg,         modal_adverb(adv_noun_prep),nagenoeg).
 m(haast,            modal_adverb(adv_noun_prep),haast).
+m(ongeveer,         modal_adverb(adv_noun_prep),ongeveer).
 
 m(heel,             modal_adverb(adv_noun_prep),heel).
 %% heel de wereld; heel Nederland
@@ -5087,7 +5088,7 @@ m('om en bij de',   modal_adverb(noun_prep),[om,en,bij,de]). % VL
 m('om en nabij de', modal_adverb(noun_prep),[om,en,bij,de]). % VL
 m('om en rond',     modal_adverb(noun_prep),[om,en,rond]). % VL
 m('om en rond de',  modal_adverb(noun_prep),[om,en,rond,de]). % VL
-m(ongeveer,         modal_adverb(noun_prep),ongeveer).
+%m(ongeveer,         modal_adverb(noun_prep),ongeveer). % also adv now
 m('±',              modal_adverb(noun_prep),'±').
 m('+ / -',          modal_adverb(noun_prep),['+','/','-']).
 m('pak hem beet',   modal_adverb(noun_prep),[pak,hem,beet]).
@@ -6311,6 +6312,7 @@ m(oming,            intensifier,oming).
 m(te,               intensifier,te).
 m('veel te',        intensifier,veelste).
 m('verre van',      intensifier,[verre,van]).
+m(verrekte,         intensifier,verrekte).
 
 m(te,               vp_om_intensifier,te).
 

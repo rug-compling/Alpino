@@ -8013,6 +8013,7 @@ v(garneer,garneert,garneren,gegarneerd,garneerde,garneerden,
 v(gebaar,gebaart,gebaren,gebaard,gebaarde,gebaarden,
     [h([np_vp_obj,
 	sbar,
+	np_sbar,
 	intransitive,
 	vp])]).
 
@@ -8741,6 +8742,7 @@ v(graaf,graaft,graven,gegraven,groef,groeven,
 	part_intransitive(af),
 	ld_pp,
 	refl_ld_pp,
+	refl_np_ld_pp,	       % hij groef zich een weg naar buiten
 	ld_adv,
 	np_ld_pp, % een gracht graven om de stad; er een gracht omheen graven
 	mod_pp(met),
@@ -8825,7 +8827,8 @@ v(grill,grillt,grillen,gegrilld,grillde,grillden,
 
 v(grijns,grijnst,grijnzen,gegrijnsd,grijnsde,grijnsden,
     [h([intransitive,
-	sbar,   % dip only?
+	sbar,			% dip only?
+	mod_pp(bij),  % hij grijnst er gemeen bij
 	part_transitive(aan),
 	part_transitive(toe),
 	pc_pp(naar)])]).
@@ -9656,13 +9659,13 @@ v(hevel,hevelt,hevelen,geheveld,hevelde,hevelden,
 v(highlight,highlight,highlighten,gehighlight,highlightte,highlightten,
     [h([transitive,
 	intransitive])
-    ]
- ).
+    ]).
 
 v(hijg,hijgt,hijgen,gehijgd,hijgde,hijgden,
     [h([intransitive,
 	sbar,
 	pc_pp(naar),
+	fixed([svp_pp(in,nek),dat],no_passive), % @ Hij moet weten dat wij hem in zijn nek hijgen .
 	part_intransitive(uit),
 	part_intransitive(na)])]).
 
@@ -9976,6 +9979,7 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	fixed([er_pp(voor,A),het_obj1_pass,extra_sbar(A)],norm_passive),
 	% Het wordt ervoor gehouden dat vervolgens de doorgang is versperd ... (VL?)
         fixed([[in,het,zeil],[een,oogje]],imp_passive),
+        fixed([[in,het,zeil],[geen,oogje]],imp_passive),
         fixed([[gestand],acc],norm_passive),
 	fixed([[gezelschap],acc],norm_passive),
 	fixed([{[acc(huis),pc(met)]}],norm_passive),
@@ -19940,7 +19944,9 @@ v(schutter,schuttert,schutteren,geschutterd,schutterde,schutterden,
 
 v(schuur,schuurt,schuren,geschuurd,schuurde,schuurden,
     [h([intransitive,
-	transitive])]).
+	transitive,
+	part_transitive(uit)
+       ])]).
 
 v(schuw,schuwt,schuwen,geschuwd,schuwde,schuwden,
     [h([transitive,
@@ -20242,7 +20248,8 @@ v(sla,slaat,slaan,geslagen,sloeg,sloegen,
 	part_transitive(weg),
 	fixed([{[pc(op),acc(acht)]}],norm_passive),
         fixed([svp_acc(alarm)],norm_passive),  % groot alarm werd geslagen
-	fixed([{[pc(uit),[een,slaatje]]}],imp_passive),
+ 	fixed([{[pc(uit),[een,slaatje]]}],imp_passive),
+ 	fixed([{[pc(uit),[geen,slaatje]]}],imp_passive),
 	fixed([{[pc(uit),acc(munt)]}],imp_passive),
 	fixed([[in,elkaar],acc(hand)],norm_passive),
 	fixed([[inelkaar],acc(hand)],norm_passive),
@@ -23311,7 +23318,9 @@ v(transplanteer,transplanteert,transplanteren,getransplanteerd,
 
 v(transporteer,transporteert,transporteren,getransporteerd,transporteerde,transporteerden,
     [h([intransitive,
-	transitive])]).
+	transitive,
+	np_mod_pp(in)
+       ])]).
 
 v(trap,trapt,trappen,getrapt,trapte,trapten,
     [z([ld_pp]),
@@ -26434,6 +26443,7 @@ v(verzaak,verzaakt,verzaken,verzaakt,verzaakte,verzaakten,
 v(verzacht,verzacht,verzachten,verzacht,verzachtte,verzachtten,
     [h([sbar_subj_so_np,
 	transitive,
+	intransitive,
 	vp_subj_so_np])]).
 
 v(verzadig,verzadigt,verzadigen,verzadigd,verzadigde,verzadigden,
@@ -28555,8 +28565,9 @@ v(zet,zet,zetten,gezet,zette,zetten,
 	part_transitive(stop),
 	part_transitive(terug),
 	part_intransitive(terug),
-	pc_pp(tot),     % ik kon me er niet toe zetten.
-	er_pp_vp(tot),  % ik kon me er niet toe zetten om ..
+	so_np_pc_pp(tot),       % ik kon me er niet toe zetten.
+				% ik kon me er niet toe zetten om ..
+	fixed([er_pp(tot,C),dat,extra_vp(C)],no_passive),
 	part_transitive(uit),
 	part_transitive(uiteen),
 	part_transitive(vast),

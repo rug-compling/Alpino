@@ -365,6 +365,10 @@ next_word__(Autos,[Auto,'\'',s|Ws],Ws,wrong_quote_s,_) :-
     atom(Auto),
     atom_concat(Auto,'\'s',Autos).
 
+next_word__(Autos,[Auto,'\'s'|Ws],Ws,wrong_quote_s,_) :-
+    atom(Auto),
+    atom_concat(Auto,'\'s',Autos).
+
 next_word__(Autos,[Auto,'&apos;',s|Ws],Ws,xml_entity_s,_) :-
     atom(Auto),
     atom_concat(Auto,'\'s',Autos).

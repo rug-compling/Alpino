@@ -12016,7 +12016,7 @@ a([ge_e(gedrukte),
    pp(door),
    pp(in),
    pp(op),
-   pp(voor)],[]).
+   pp(voor)],[vet]).
 
 a([ge_e(gedruppelde),
    ge_no_e(gedruppeld)],adv,[],[]).
@@ -32692,7 +32692,10 @@ a([e(stemmige),
    st(stemmigst),
    ste(stemmigste)],adv,[],[]).
 
-a([stof(stenen)],nonadv,[],[natuur]).
+a([stof(stenen)],nonadv,[],
+  [hard,
+   natuur,
+   zand]).
 
 a([e(stenige),
    no_e(stenig)],nonadv,[],[]).

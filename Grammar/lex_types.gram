@@ -117,10 +117,74 @@ complex_etc(Sign) :-
 
 tag(Sign) :-
     Sign => tag,
-    Sign:adv => no,
     Sign:np => no,
     sign(Sign,advp),
-    initialize_dt([],Sign).
+    initialize_dt([],Sign),
+    Sign:dt:hwrd:lemma <=> WORD,
+    when(nonvar(WORD),adv_tag(WORD,Sign)).
+
+adv_tag(Word,Sign):-
+    adv_tag(Word),
+    !,
+    Sign:adv => yes.
+adv_tag(_,Sign):-
+    Sign:adv => no.
+
+
+
+adv_tag(allemachtig).
+adv_tag(althans).   % according to CGN annotations
+adv_tag(asjeblief).
+adv_tag(alsjeblief).
+adv_tag(alsjeblieft).
+adv_tag(alstublieft).
+adv_tag(bovendien).
+adv_tag(echt).
+adv_tag(eindelijk).
+adv_tag(gelukkig).
+adv_tag(godbetert).
+adv_tag(gvd).
+adv_tag('god betert').
+adv_tag('god betere het').
+adv_tag('god betere \'t').
+adv_tag('God betert').
+adv_tag('God betere het').
+adv_tag('God betere \'t').
+adv_tag(godverdomme).
+adv_tag(godverdorie).
+adv_tag(godverdegodver).
+adv_tag(goddomme).
+adv_tag(godzijdank).
+adv_tag(goed).
+adv_tag(graag).
+adv_tag(heus).
+adv_tag(hier).
+adv_tag(immers).
+adv_tag(inderdaad).
+adv_tag(jammer).
+adv_tag(kortom).
+adv_tag(natuurlijk).
+adv_tag(nice).
+adv_tag(nogmaals).
+adv_tag(nou).
+adv_tag(nu).
+adv_tag(overigens).
+adv_tag(tenminste).
+adv_tag('ten minste').  % officieel is schrijfwijze afhankelijk van betekenis, dus ander lemma
+adv_tag(toch).
+adv_tag(trouwens).
+adv_tag(uiteraard).
+adv_tag(vooruit).
+adv_tag(warempel).
+adv_tag(wel).
+adv_tag(weliswaar).
+adv_tag('wel te verstaan').
+adv_tag(welteverstaan).
+adv_tag(zeker).
+adv_tag('zeer zeker').
+adv_tag('zeg maar').
+adv_tag(zelfs).
+adv_tag(zo).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%% Nouns %%%%%%%%%%%%%%%%%%%%%%%%%%%
