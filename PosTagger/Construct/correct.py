@@ -12,6 +12,8 @@ def main():
             r = "bedroefd"
         if t == "adjective(ge_no_e(both))" and r == "bedroefd":
             t = "adjective(no_e(both))"
+        if t == "modal_adverb(noun_prep)" and r == "ongeveer":
+            t = "modal_adverb(adv_noun_prep)"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
