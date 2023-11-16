@@ -6,7 +6,7 @@ cg:
 ifeq ($(strip $(JOBS)),)
 	@echo "cg: nothing to do"
 else
-	@$(MAKE) -s $(JOBS:%/log=%/cpu) | grep '^AV '
+	@$(MAKE) -s $(JOBS:%/log=%/cpu) | grep '^AV ' | awk '{ print $0; N=N+1; T=T+$$4 } END { printf "Total                       %5.3f\n",T/N}'
 endif
 
 compare_cpu: $(suite)/job*/cpu
