@@ -69,12 +69,6 @@ survives_bigram(voor,_,preposition(voor,[],voor_pred),bekeken,_,adjective(ge_bot
 survives_bigram(kort,korte,adjective(e),termijn,termijn,tmp_noun(de,count,sg)).
 %% lange termijn is mwu too
 survives_bigram(lang,lange,adjective(e),termijn,termijn,tmp_noun(de,count,sg)).
-%% temp
-survives_bigram(op,_,preposition(op,_),bezoek,_,tmp_noun(het,count,sg)).
-survives_bigram(op,_,preposition(op,_),bezoek,_,tmp_noun(het,count,sg,pred_pp(op))).
-survives_bigram(alleen,_,_,maar,_,postadv_adverb).
-%% temp
-survives_bigram(het,_,determiner(het,nwh,nmod,pro,nparg,wkpro),laatste,_,number(rang)).
 %% dat soort is mwu too
 survives_bigram(dat,_,determiner(het,nwh,nmod,pro,nparg),soort,_,noun(both,count,sg,_)).
 
@@ -110,20 +104,9 @@ surviving_root(_):-
 
 surviving_word_tag(zorgen,noun(de,count,pl)).
 
-%% temp
-surviving_word_tag(eten,noun(het,mass,sg)).
-
 %% often wrong in novels
 surviving_word_tag('Beiden',predm_adverb).
 surviving_word_tag('Wat',adverb).
-
-%% temp
-surviving_word_tag(bezoek,tmp_noun(het,count,sg)).
-surviving_word_tag(bezoek,tmp_noun(het,count,sg,pred_pp(op))).
-surviving_word_tag(voorbij,adjective(both(adv))).
-
-%% temp
-surviving_word_tag(weg,adjective(pred(locadv))).
 
 %surviving_word_tag(_,_):-
 %    fail.
@@ -138,6 +121,13 @@ surviving_root_tag(terecht,adjective(_,_)).
 surviving_root_tag(aan,particle(aan)) :-
     alpino_lexical_analysis:tag(_,_,_,_,v_root(kondig_aan,aan_kondigen),_,_,_).
 
+%% temp, confusion with tag, changed analysis
+surviving_root_tag(inderdaad,sentence_adverb).
+surviving_root_tag(nou,adverb).
+surviving_root_tag(alsjeblieft,adverb).
+surviving_root_tag(alstublieft,adverb).
+surviving_root_tag(allemachtig,adjective(no_e(adv))).
+
 surviving_tag(_):-
     fail.
 
@@ -148,9 +138,6 @@ surviving_tag(fixed_part(_)).
 surviving_tag(particle(_)).
 
 surviving_tag(preposition(_,_,me_adj)).
-
-%% temporarily
-surviving_tag(particle('ten onder')).
 
 %% finite verbs survive since if they appear in V2, their context is not
 %% locally available
