@@ -86,7 +86,7 @@ trees:
 
 cb: $(JOBS:%/log=%/compare)
 
-COMPARE_C=$(ALPINO_HOME)/TestN/compare_c 
+COMPARE_C=$(ALPINO_HOME)/compare_c
 
 %/compare: %/log
 	@echo $(dir $(dir $*))
@@ -183,7 +183,7 @@ errors_timeout: cdb.err_timeout dpc-ind.err_timeout dpc-rou.err_timeout PPH.err_
 %.err: %.errors
 	@for file in $*/job*/log;\
          do echo $$file;\
-            $(ALPINO_HOME)/TestN/compare_errors -q $$file $*.errors;\
+            $(ALPINO_HOME)/compare_errors -q $$file $*.errors;\
          done
 
 %.err_timeout:%.errors

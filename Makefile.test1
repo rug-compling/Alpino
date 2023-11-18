@@ -205,7 +205,7 @@ endif
 ### compare concept accuracy of all running and finished tests
 cs: $(JOBS:%/log=%/compare)
 
-COMPARE_C=$(ALPINO_HOME)/TestN/compare_c 
+COMPARE_C=$(ALPINO_HOME)/compare_c 
 
 ## this uses number of correct triples ($7), as approx of sentence length,
 ## rather than number of parses, which is always 1 anyway for test1
