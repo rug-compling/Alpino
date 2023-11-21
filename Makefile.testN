@@ -44,6 +44,9 @@ cgn_exs_testN_options="number_analyses=5000"
 ovistrain_testN_options=-flag treebank ../Treebank/ovis
 oviswg_testN_options=-flag treebank ../Treebank/ovis
 wpspel_testN_options=-flag treebank ../Treebank/wpspel
+g_suite_options=robustness=off
+h_suite_options=robustness=off
+i_suite_options=robustness=off
 
 job := job${shell echo $$$$}
 
