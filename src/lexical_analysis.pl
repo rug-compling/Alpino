@@ -211,6 +211,7 @@ lexical_analysisXXX(Input) :-
 	    time(Debug,filter_te_tags),
 	    time(Debug,replace_per_tags),
 	    time(Debug,replace_dehet_tags),
+	    time(Debug,generalize_tags),
 	    time(Debug,filter_enumeration_tags),
 	    time(Debug,filter_bracketed_tags),
 	    time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for tagger
@@ -784,6 +785,20 @@ filter_te_tags :-
     ;   true
     ).
 
+generalized_tag_pair(noun(De,Count,sg),noun(De,Count,pl),noun(De,Count,both)).
+generalized_tag_pair(noun(De,Count,sg,Sc),noun(De,Count,pl,Sc),noun(De,Count,both,Sc)).
+
+generalize_tags :-
+    (   generalized_tag_pair(Tag0,Tag1,Tag),
+        clause(tag(P0,P,Q0,Q,L,W,His,Tag0),true,Ref0),
+	clause(tag(P0,P,Q0,Q,L,W,His,Tag1),true,Ref1),
+	erase_tag(Ref0),
+	erase_tag(Ref1),
+	assert_tag(P0,P,Q0,Q,L,W,His,Tag),
+	fail
+    ;   true
+    ).
+
 replace_per_tags :-
     (   clause(tag(P1,P,Q1,Q,W,L,His,proper_name(Num,'PER')),true,Ref),
 	unique(P1,P,Ref),
@@ -836,7 +851,7 @@ unique(P0,P,Ref) :-
     
 
 filter_enumeration_tags :-
-    findall(Ref,enumeration_tag_with_enumeration_neighbor(Ref),Refs),
+    findall(Ref,enumeration_tag_with_wrong_neighbor(Ref),Refs),
     (   member(R,Refs),
 	erase_tag(R),
 	fail
@@ -853,16 +868,23 @@ filter_bracketed_tags :-
 	),
 	erase_tag(R),
 	fail
+    ;   current_word(P1,P2,'-'),
+	clause(tag(_,P1,_,_,_,_,_,Enumeration),true,Ref1),
+	clause(tag(P2,_,_,_,_,_,_,Enumeration),true,Ref2),
+	lists:member(Enumeration,[enumeration,tag]),
+	erase_tag(Ref1),
+	erase_tag(Ref2),
+	fail
     ;   true
     ).
     
 
-enumeration_tag_with_enumeration_neighbor(Ref) :-
+enumeration_tag_with_wrong_neighbor(Ref) :-
     clause(tag(_,_,_,Q1,_,_,normal(enumeration),_),true,Ref1),
     clause(tag(_,_,Q1,_,_,_,normal(enumeration),_),true,Ref2),
     (   Ref = Ref1
     ;   Ref = Ref2
-    ).	
+    ).
 
 %% only bother about the systematic ones
 cannot_follow_te(v_noun(_)).
@@ -872,7 +894,6 @@ intensifier_tag(intensifier).
 intensifier_tag(me_intensifier).
 intensifier_tag(vp_om_intensifier).
 intensifier_tag(vp_om_me_intensifier).
-
 
 %% if a fixed-part is the unique tag for a certain position, and
 %% there is a unique position which requires that fixed-part, then
@@ -1068,12 +1089,14 @@ requires_longest_match(normal(spaced_letters)).
 requires_longest_match(name(not_begin)).
 requires_longest_match(name(begin)).
 
+requires_unique_match(normal(date_year),np(year),normal(enumeration),_,_,_).
 requires_unique_match(name(not_begin),proper_name(sg,_),normal(enumeration),proper_name(both),_,_).
 requires_unique_match(normal(names_dictionary),proper_name(_),normal(enumeration),proper_name(both),_,_).
 requires_unique_match(normal(names_dictionary),proper_name(_,_),normal(enumeration),proper_name(both),_,_).
 requires_unique_match(normal(decap(normal)),meas_mod_noun(_,_,_),normal(enumeration),proper_name(both),_,_).
 requires_unique_match(normal(decap(normal)),noun(_,_,_),normal(enumeration),proper_name(both),_,_).
 requires_unique_match(normal(number_expression),number(hoofd(_)),normal(enumeration),proper_name(both),_,_).
+requires_unique_match(normal(number_expression),number(hoofd(_)),normal(num_dash_num),_,_,_).
 requires_unique_match(normal(variant(wrong_quote_s,normal)),_,normal(variant(variant21('\'s','\'',s),normal)),_,0,0).
 requires_unique_match(normal(variant(wrong_quote_s,normal)),_,normal(variant(variant21('\'s','\'',s),variant)),_,0,0).
 requires_unique_match(normal(spaced_letters),_,normal(_),_,5,0).
@@ -1788,6 +1811,7 @@ skippable(tag(P0,P,R0,R,Surf,Surf,skip,skip)):-
     findall(Q0/Q,tag(Q0,Q,_,_,_,_,normal(longpunct),_),Pairs),
     tag(P0,P,R0,R,_,Surf,_His,Tag),
     skip_tag(Tag),
+    \+ between_enumeration(P0,P),
     \+ part_of_longpunct(Pairs,P0,P),
     \+ alpino_unknowns:wikipedia_list(Surf).
 skippable(tag(P0,P,R0,R,'.','.',skip,skip)) :-
@@ -1894,27 +1918,31 @@ skip_labels(P0,P,R0,R,Names,C0,C) :-
     skip_closure(P0,P,R0,R,Names,C0,C).
     
 skip_closure(P0,P,R0,R,Names,C0,C) :-
-    C is C0 + 1,
-    skip_label(P0,P,R0,R,Names).
+    skip_label(P0,P,R0,R,Names,Cnt),
+    C is C0 + Cnt.
 
 skip_closure(P0,P,R0,R,Names,C0,C) :-
-    skip_label(P0,P1,R0,R1,Names0),
-    skip_label(P1,P2,R1,R2,Names1),
+    skip_label(P0,P1,R0,R1,Names0,Cnt1),
+    skip_label(P1,P2,R1,R2,Names1,Cnt2),
     lists:append(Names0,Names1,Names2),
-    C1 is C0 + 2,
+    C1 is C0 + Cnt1 + Cnt2,
     skip_closure_lm(P2,P,R2,R,Names2,Names,C1,C).
 
 skip_closure_lm(P0,P,R0,R,Names0,Names,C0,C) :-
-    skip_label(P0,P2,R0,R2,Names1),
+    skip_label(P0,P2,R0,R2,Names1,Cnt),
     !,
     lists:append(Names0,Names1,Names2),
-    C2 is C0 + 1,
+    C2 is C0 + Cnt,
     skip_closure_lm(P2,P,R2,R,Names2,Names,C2,C).
 skip_closure_lm(P,P,R,R,Names,Names,C,C).
 
 
-skip_label(P0,P,R0,R,Ws) :-
+skip_label(P0,P,R0,R,Ws,Count) :-
     tag(P0,P,R0,R,_,W,_,skip),
+    (   alpino_robust:allow_skip(W)
+    ->  Count = 0
+    ;   Count = 1
+    ),
     (   P =:= P0 + 1
     ->  Ws = [W]
     ;   atom(W)
@@ -3064,3 +3092,6 @@ remove_worse([path(Score,P,R,Path)|Ag0],P1,R1,Ag):-
 	remove_worse(Ag0,P1,R1,Ag1)
     ).
 
+between_enumeration(P0,P) :-
+    tag(_,P0,_,_,_,_,normal(enumeration),_),
+    tag(P,_,_,_,_,_,normal(enumeration),_).

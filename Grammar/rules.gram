@@ -467,6 +467,7 @@ e_agr1(no,Yes,M):-
 e_agr1(yes,_,_).
 
 e_agr2(yes,M) :-
+    M:dt => dt,
     M:e_agr <=> M:dt:num.
 e_agr2(no,_).
 
@@ -3731,6 +3732,7 @@ grammar_rule(er_np,NP,[ADV]) :-
     ADV => adv,
     ADV:tmploc => (wk_er;str_er),
     ADV:redrel => no,
+    ADV0 => adv,
     max(ADV0),
     unify_except(ADV0,ADV,exs), % ik wil nergens anders op rekenen dan op jou
     NP => np,
@@ -4809,6 +4811,7 @@ grammar_rule(n_n_n_pnapp,NP,[N, N2, PN ]) :-
 % bijlage III
 grammar_rule(n_n_pntag,NP,[N,Tag]) :-
     Tag => enumeration,
+    Tag:num => no,
     N:cj => ncj,
     n_n_app_structure(NP,N,Tag).
 
@@ -7912,6 +7915,9 @@ grammar_rule(a_advp_dp,MAX,[A,COMMA,XP]) :-
 
 grammar_rule(adv_vp_dp,MAX,[ADV,COMMA,XP]) :-
     optcomma(COMMA),
+    adv_vp_dp_struct(ADV,XP,MAX).
+
+adv_vp_dp_struct(ADV,XP,MAX) :-
     MAX => max,
     MAX:max_type => t_dp,
     max_advp(ADV),
@@ -7922,17 +7928,13 @@ grammar_rule(adv_vp_dp,MAX,[ADV,COMMA,XP]) :-
     dp_dp_structure(ADV,XP,MAX).
 
 grammar_rule(adv_vp_tag_dp,MAX,[ADV0,TAG,COMMA,XP]) :-
-    max_advp(ADV),
     optcomma(COMMA),
-    MAX => start,
-    unify_except_dt(ADV0,ADV),
+    max_advp(ADV0),
+    max_advp(ADV),
+    ADV0:redrel => no,
     TAG => tag,
     nucl_tag_structure(ADV0,TAG,ADV),
-    ADV:redrel => no,
-    max_vp(XP),
-    XP:e_deps => [],
-    XP:vform => om, % otherwise adv normally is modifier of VP
-    dp_dp_structure(ADV,XP,MAX).
+    adv_vp_dp_struct(ADV,XP,MAX).
 
 grammar_rule(adv_rel_vp_dp,MAX,[ADV,COMMA,XP]) :-
     optcomma(COMMA),
@@ -8014,6 +8016,16 @@ grammar_rule(loc_pp_dp,MAX,[NP1,PP2]) :-
 %% maybe refuse ADV that are also TAG
 grammar_rule(adv_mod_sbar_dp,MAX,[ADV,OPTCOMMA,XP]) :-
     optcomma(OPTCOMMA),
+    adv_mod_sbar_struct(MAX,ADV,XP).
+
+grammar_rule(adv_mod_tag_sbar_dp,MAX,[ADV0,TAG,OPTCOMMA,XP]) :-
+    optcomma(OPTCOMMA),
+    max_advp(ADV0),
+    TAG => tag,
+    nucl_tag_structure(ADV0,TAG,ADV),
+    adv_mod_sbar_struct(MAX,ADV,XP).
+
+adv_mod_sbar_struct(MAX,ADV,XP) :-
     MAX => start,
     max_advp(ADV),
     ADV:redrel => no,
@@ -8021,6 +8033,7 @@ grammar_rule(adv_mod_sbar_dp,MAX,[ADV,OPTCOMMA,XP]) :-
     XP:ctype => c_mod,
     dp_dp_structure(ADV,XP,MAX).
 
+%% ambitieus , omdat ..
 grammar_rule(adj_mod_sbar_dp,MAX,[ADJ,OPTCOMMA,XP]) :-
     optcomma(OPTCOMMA),
     MAX => start,
@@ -8028,18 +8041,6 @@ grammar_rule(adj_mod_sbar_dp,MAX,[ADJ,OPTCOMMA,XP]) :-
     max_sbar(XP),
     XP:ctype => c_mod,
     dp_dp_structure(ADJ,XP,MAX).
-
-grammar_rule(adv_mod_tag_sbar_dp,MAX,[ADV0,TAG,OPTCOMMA,XP]) :-
-    optcomma(OPTCOMMA),
-    MAX => start,
-    max_advp(ADV),
-    ADV:redrel => no,
-    TAG => tag,
-    unify_except_dt(ADV0,ADV),
-    nucl_tag_structure(ADV0,TAG,ADV),
-    max_sbar(XP),
-    XP:ctype => c_mod,
-    dp_dp_structure(ADV,XP,MAX).
 
 %% kortom, ik kom niet
 %% maybe refuse ADV that are also TAG

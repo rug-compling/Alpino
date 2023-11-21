@@ -229,7 +229,7 @@ cat_type(pp,      [hcj,wh,wh_reltmploc,haspart,slash,exs,mexs,prep,preptype,pp_e
                    sel,vc,allow_modal,pp_role,vhasmod,veps,pcat,
                    e_deps,nhstem,nnform,ndt,nagr,cj,ld_pc,niet]).
 cat_type(tag,     [adv,np]).
-cat_type(enumeration,[cj]).
+cat_type(enumeration,[cj,num]).
 cat_type(adv,     [haspre,tmploc,redrel,mexs,exs,wh,hstem,wh_reltmploc,cj,pron,
                    nsubn,subadv,can_postv,adj_can_postv,agr,modifies_a,modifies_v,sel,wk]).
 cat_type(int_adv, [agr,sc,exs]).

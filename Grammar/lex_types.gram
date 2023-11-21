@@ -115,6 +115,7 @@ complex_etc(Sign) :-
 %%%%%%%%%%%%%%%%%%%%%%% tag %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% adv=yes if the word is a frequent adverb too
 tag(Sign) :-
     Sign => tag,
     Sign:np => no,
@@ -129,8 +130,6 @@ adv_tag(Word,Sign):-
     Sign:adv => yes.
 adv_tag(_,Sign):-
     Sign:adv => no.
-
-
 
 adv_tag(allemachtig).
 adv_tag(althans).   % according to CGN annotations
@@ -432,10 +431,23 @@ post_n_n(Num) :-
     sign(Num,np),
     initialize_dt([],Num).
 
+%% num=yes if the word is a number too
 enumeration(Num) :-
     Num => enumeration,
     sign(Num,np),
-    initialize_dt([],Num).
+    initialize_dt([],Num),
+    Num:dt:hwrd:lemma <=> WORD,
+    when(nonvar(WORD),num_enumeration(WORD,Num)).
+
+num_enumeration(Word,Sign):-
+    num_enumeration(Word),
+    !,
+    Sign:num => yes.
+num_enumeration(_,Sign):-
+    Sign:num => no.
+
+num_enumeration(Num) :-
+    alpino_lex:lexicon(number(hoofd(_)),_,[Num],[],_).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%% proper names %%%%%%%%%%%%%%%%%%
