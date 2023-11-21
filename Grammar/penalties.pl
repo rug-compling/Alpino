@@ -969,6 +969,20 @@ deriv_ds([H|T],[NH|NT]) :-
 
 %% lexical_penalty_frame(gen,Stem,Word,_,_,_,lexical_choice(Stem,Word)).
 
+lexical_penalty_frame_skip(skip(_,_,_,_),_,_,_,_, _,skip).
+lexical_penalty_frame_skip(skip(_,[H|T],_,_),_,_,_,_,_,skip(W)) :-
+    member(W,[H|T]).
+lexical_penalty_frame_skip(skip(_,_,[H|T],_),_,_,_,_,_,skip(W)) :-
+    member(W,[H|T]).
+lexical_penalty_frame_skip(skip(_,_,_,SkipHis),B,C,D,E,F,Feature) :-
+    lexical_penalty_frame(SkipHis,B,C,D,E,F,Feature).
+
+lexical_penalty_frame(His,A,B,C,D,E,Feature) :-
+    nonvar(His),
+    His = skip(_,_,_,_),
+    !,
+    lexical_penalty_frame_skip(His,A,B,C,D,E,Feature).
+    
 lexical_penalty_frame(_,Noun,_,noun(Lid,count,sg),noun,_,bal(Noun,Lid)).
 lexical_penalty_frame(_,Stem,_,_,_,_,stem_best(Stem)).
 lexical_penalty_frame(_,_,Surf,verb(_,subjunctive,_),_,_,subjunctive(Surf)).
@@ -977,22 +991,17 @@ lexical_penalty_frame(_,_,Surf,_,Frame,_,f2(Surf,Frame)) :-
 lexical_penalty_frame(_,_,_,_,Frame,_,f1(Frame)).
 lexical_penalty_frame(_,_,Surf,_,Frame,_,z_f2-Score) :-
     z_f2(Surf,Frame,Score).
-lexical_penalty_frame(His,_,_,_,_,_,_):-
-    var(His),
-    !,
-    fail.
-lexical_penalty_frame(His,_,_,_,_Frame,Len,h1(His)) :-
+lexical_penalty_frame(His,_,_,_,Tag,Len,Feature):-
+    nonvar(His),
+    lexical_penalty_frame_his(His,Tag,Len,Feature).
+
+lexical_penalty_frame_his(His,_,Len,h1(His)) :-
     nonvar(Len), % for generation!
     generate_i(Len).
-lexical_penalty_frame(compound(_),_,_,_,Tag,_,compound(Fun)) :-
+lexical_penalty_frame_his(compound(_),Tag,_,compound(Fun)) :-
     functor(Tag,Fun,_).
-lexical_penalty_frame(form_of_suffix(_),_,_,_,_,_,form_of_suffix).
-lexical_penalty_frame(form_of_suffix(X),_,_,_,_,_,form_of_suffix(X)).
-lexical_penalty_frame(skip(_,_,_,_),_,_,_,_,    _,skip).
-lexical_penalty_frame(skip(_,[H|T],_,_),_,_,_,_,_,skip(W)) :-
-    member(W,[H|T]).
-lexical_penalty_frame(skip(_,_,[H|T],_),_,_,_,_,_,skip(W)) :-
-    member(W,[H|T]).
+lexical_penalty_frame_his(form_of_suffix(_),_,_,form_of_suffix).
+lexical_penalty_frame_his(form_of_suffix(X),_,_,form_of_suffix(X)).
 
 %lexical_penalty_frame(gen,Stem,Surf,Frame,_,_,para) :- 
 %    alpino_paraphrase:add_lex(Stem,Surf,Frame).
