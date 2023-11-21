@@ -255,7 +255,18 @@ next_skips_candidate(Q0,Q,Word,Ts0,Ts) :-
 %% [x1...xi] [,] [xj...xn]
 %% should not be worse than
 %% [x1...xi,xj..xm] [xm..xn]
+
+/*
 allow_skip(',').
+allow_skip('-').
+allow_skip(';').
+allow_skip(':').
+allow_skip('*').
+allow_skip('\'').
+allow_skip('"').
+*/
+allow_skip(_) :-
+    fail.
 
 next_cats(St0,_,Hs) :-
     findall(Item,max_category_first_or_allowed_skips(St0,_,Item),Hs).
