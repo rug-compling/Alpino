@@ -212,7 +212,7 @@ lexical_analysisXXX(Input) :-
 	    time(Debug,replace_per_tags),
 	    time(Debug,replace_dehet_tags),
 	    time(Debug,generalize_tags),
-	    time(Debug,filter_enumeration_tags),
+	    time(Debug,filter_more_tags),
 	    time(Debug,filter_bracketed_tags),
 	    time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for tagger
 	    count_edges(tag(_,_,_,_,_,_,_,_),Edges)
@@ -850,10 +850,17 @@ unique(P0,P,Ref) :-
 		 ), [Ref]).
     
 
-filter_enumeration_tags :-
+filter_more_tags :-
     findall(Ref,enumeration_tag_with_wrong_neighbor(Ref),Refs),
     (   member(R,Refs),
 	erase_tag(R),
+	fail
+    ;   true
+    ),
+    (   tag(_,P,_,_,_,_,normal(date_expression),_),
+	P1 is P-1,
+	clause(tag(P1,P,_,_,_,_,normal(date_year),_),true,Ref),
+	erase_tag(Ref),
 	fail
     ;   true
     ).
@@ -2841,8 +2848,8 @@ guess_english_compound(tag(P0,P,R0,R,Label,Used,normal(english_compound),Tag2)) 
     ;   first_compound_root(Label1,Used1),
 	search_tag_stem(Label1,tag(P0,P1,R0,R1,Label1,Used1,_His1,_Tag1))
     ),
-    search_tag_r0(R1,tag(P1,P, R1,R, Label2,Used2,_His2,Tag2)),
-    second_part_english_compound(tag(P1,P, R1,R, Label2,Used2,_His2,Tag2)),
+    search_tag_r0(R1,tag(P1,P, R1,R, Label2,Used2,His2,Tag2)),
+    second_part_english_compound(tag(P1,P, R1,R, Label2,Used2,His2,Tag2)),
     (   Label1 = v_root(Label1A,_)
     ->  true
     ;   Label1 = Label1A
