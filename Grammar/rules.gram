@@ -4526,6 +4526,7 @@ grammar_rule(pron_det, PRON, [ DET ] ) :-
     PRON => pron,
     hd_structure(DET, PRON).
 
+/* NOT USED
 %% twee procent meer rente dan voorheen
 grammar_rule(det_me_det, M, [ ME, DET ] ) :-
     M => det,
@@ -4533,6 +4534,7 @@ grammar_rule(det_me_det, M, [ ME, DET ] ) :-
     np_me_arg(ME),
     DET:parg <=> M:parg,
     hd_comp_structure(DET, ME, M).
+*/
 
 grammar_rule(pron_pron_pps, NP,[ N, PP ] ) :-
     NP => pron, N => pron, PP => pp,
@@ -5498,7 +5500,7 @@ n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
     %%    N:has_app2 => yes,
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
     ),
-    NP:subn => ~sub_indef_adj,
+    NP:subn => ~sub_indef_adj, 
     NP:wkpro => ~weakpro, % ?? 29 jan 2020
     optcomma(OPTCr),
     Cl => punct, 
@@ -5535,9 +5537,11 @@ grammar_rule(n_n_modified_np,N,[N0,Cl,MOD,NP0,OPTCr]) :-
     np_np_modmod_structure(NP0,MOD,NP),
     n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr).
 
+/* NOT USED
 grammar_rule(n_n_predm_np,N,[N0,Cl,MOD,NP0,OPTCr]) :-
     np_np_predm_mod_structure(NP0,MOD,NP),
     n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr).
+*/
 
 %% Jan , zelf een dappere strijder , ..
 grammar_rule(n_n_predm_modified_np,N,[N0,Cl,MOD,NP0,OPTCr]) :-
@@ -8021,6 +8025,7 @@ grammar_rule(adv_mod_sbar_dp,MAX,[ADV,OPTCOMMA,XP]) :-
 grammar_rule(adv_mod_tag_sbar_dp,MAX,[ADV0,TAG,OPTCOMMA,XP]) :-
     optcomma(OPTCOMMA),
     max_advp(ADV0),
+    ADV => adv,
     TAG => tag,
     nucl_tag_structure(ADV0,TAG,ADV),
     adv_mod_sbar_struct(MAX,ADV,XP).
@@ -10083,12 +10088,15 @@ mid_coord_structure(Name,Blist,A,Clist) :-
 
 grammar_rule(mid_coord(Name),Blist,[COMMA, A, Clist]) :-
     mid_coord_structure(Name,Blist,A,Clist),
+    \+ lists:member(Name,[max,v_noun,comp,within_word_conjunction(adv)]), /* NOT USED */			  
     Blist:conj <=> Clist:conj,
     COMMA => punct,
     COMMA:puncttype => komma.
 
 grammar_rule(mid_coord(Name,conj),Blist,[OPTCOMMA, Conj, A, Clist]) :-
     mid_coord_structure(Name,Blist,A,Clist),
+    \+ lists:member(Name,[max,v_noun,comp,enumeration,within_word_conjunction(num),
+			  within_word_conjunction(pp)]), /* NOT USED */
     Conj => conj,
     Conj:cform <=> CFORM,
     when((nonvar(CFORM)),
@@ -10121,7 +10129,8 @@ grammar_rule(bracketed_end_coord(Name,conj),Blist,
     OPEN => punct, OPEN:puncttype => haak_open,
     optend_mod_punct(OPTPUNCT),
     CLOSE => punct, CLOSE:puncttype => haak_sluit,
-    end_coord_conj_structure(Name,Blist,Conj,A,[]).
+    end_coord_conj_structure(Name,Blist,Conj,A,[]),
+    \+ lists:member(Name,[v_noun,enumeration,comp,max,part]).  /*  NOT USED */
 
 end_coord_conj_structure(Name,Blist,Conj,A,ModList) :-
     structure,
@@ -10156,7 +10165,8 @@ grammar_rule(end_coord(Name,conj,mod), Blist,
     optcomma_end(OPTCOMMA_DASH),
     optcomma_dash(OPTCOMMA_DASH2),
 %    OPTCOMMA_DASH:cat:puncttype <=> OPTCOMMA_DASH2:cat:puncttype,
-    end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A).
+    end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A),
+    \+ lists:member(Name,[enumeration,max]). /* NOT USED */
 
 grammar_rule(bracketed_end_coord(Name,conj,mod), Blist,
 	     [OPEN,Conj,MOD,A,OPTPUNCT,CLOSE]) :-
@@ -10164,7 +10174,8 @@ grammar_rule(bracketed_end_coord(Name,conj,mod), Blist,
     OPEN => punct, OPEN:puncttype => haak_open,
     optend_mod_punct(OPTPUNCT),
     CLOSE => punct, CLOSE:puncttype => haak_sluit,
-    end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A).
+    end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A),
+    \+ lists:member(Name,[vb,enumeration,max,imp,part]).  /* NOT USED */
 
 %% wat is politiek en , nog belangrijker , wat is beleid
 %% wat is politiek en vooral , wat is beleid
@@ -10172,7 +10183,8 @@ grammar_rule(end_coord(Name,conj,c_mod), Blist,
 	     [OPTCOMMA_DASH,Conj,Cl,MOD,Cr,A]) :-
     optcomma_end(OPTCOMMA_DASH),
     optcomma_dash(Cl), comma_dash(Cr),
-    end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A).
+    end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A),
+    \+ lists:member(Name,[max]).   /* NOT USED */
 
 %% wat is politiek en , nog belangrijker , wat is beleid
 %% wat is politiek en vooral , wat is beleid
@@ -10182,6 +10194,7 @@ grammar_rule(bracketed_end_coord(Name,conj,c_mod), Blist,
     OPEN => punct, OPEN:puncttype => haak_open,
     CLOSE => punct, CLOSE:puncttype => haak_sluit,
     optcomma(Cl), comma(Cr),
+    lists:member(Name,[np,pp,pred,root,modifier]),  %%% OTHERS ARE NOT USED
     end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A).
 
 end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A) :-
@@ -10205,6 +10218,7 @@ end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A) :-
     ).
 
 grammar_rule(end_coord(Name,noconj),Clist,[COMMA, A, OPTCOMMA]) :-
+    lists:member(Name,[np,pred,num]),  /* OTHERS NOT USED */
     structure,
     optcomma(OPTCOMMA),
     Clist => clist,
@@ -10356,7 +10370,7 @@ allows_within_word_conjunction(a).
 allows_within_word_conjunction(np).
 allows_within_word_conjunction(n).
 allows_within_word_conjunction(pred).
-allows_within_word_conjunction(v_noun).
+/* allows_within_word_conjunction(v_noun).  NOT USED */
 allows_within_word_conjunction(vc_noun).
 %% zowel voor- als achterin
 allows_within_word_conjunction(pp).
