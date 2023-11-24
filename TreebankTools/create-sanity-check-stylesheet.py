@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 # Dit script genereert een stylesheet dat gebruikt kan worden voor
 # sanity checks op de Treebank.

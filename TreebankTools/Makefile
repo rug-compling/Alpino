@@ -37,7 +37,7 @@ MAKEFILEDEFSDEP=
 endif
 
 stylesheets/sanity-checks.xsl: create-sanity-check-stylesheet.py
-	if echo "" | python 2>/dev/null; then\
+	if echo "" | python2 2>/dev/null; then\
 		python create-sanity-check-stylesheet.py > \
 		stylesheets/sanity-checks.xsl;\
 	fi
