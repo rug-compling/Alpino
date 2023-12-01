@@ -22,7 +22,9 @@
  1  TreebankTools/bin/dtsearch
  1  TreebankTools/bin/dtxslt
     TreebankTools/create-sanity-check-stylesheet.py
- 1  TreebankTools/python-lib/*
+ 1  TreebankTools/python-lib/*, gebruikt door:
+	TreebankTools/bin/*
+	TreebankTools/treebank-server
     TreebankTools/treebank-server
     UD2.0/conll17_ud_eval.py
     alpino2conll/tools/alpino.py
@@ -30,3 +32,20 @@
     alpino2conll/tools/tag.py
     alpino_client.py
     webdemo.py
+
+
+Aanroep van python in andere bestanden:
+
+    CGN/Makefile
+    Generation/fluency/CreateLM/Makefile
+    Generation/fluency/CreateMaxent/Makefile
+    Makefile.EvalUD
+    Makefile.hpc
+    Names/Create/Makefile
+    Treebank/Makefile
+    TreebankTools/IndexedCorpus/Makefile
+    TreebankTools/Makefile
+    
+    AlpinoUserGuide.html
+    Documentation/UserGuide/AlpinoUserGuide.txt
+
