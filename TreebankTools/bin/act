@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # $Id: act,v 1.47 2006-10-16 15:32:16 geertk Exp $
 
@@ -63,7 +63,7 @@
 # het meegeven pad ook wordt geprint.
 #
 # Ter illustratie, "act --list cdb" (of "act --list cdb.index" etc.)
-# geeft uitvoer als: 
+# geeft uitvoer als:
 #
 #   cdb/0.xml
 #   cdb/1.xml
@@ -74,14 +74,14 @@
 #
 #
 # En "act --list ./cdb":
-# 
+#
 #   ./cdb/0.xml
 #   ./cdb/1.xml
 #   ./cdb/2.xml
 #   ./cdb/3.xml
 #   ./cdb/4.xml
 #   ./cdb/5.xml
-#   
+#
 # Merk op dat bij het creeeren van een corpus de bestanden op
 # *numerieke* volgorde in het corpus geplaatst worden.
 #
@@ -116,7 +116,7 @@
 
 import sys
 import os
-from optparse import OptionParser
+from argparse import ArgumentParser
 
 # pad naar de lokale modules zetten
 ALPINO_HOME = os.getenv("ALPINO_HOME")
@@ -126,7 +126,7 @@ if not ALPINO_HOME:
 
 sys.path.insert(0, os.path.join(ALPINO_HOME, "TreebankTools/python-lib"))
 
-from actlib import *
+import actlib as ac
 
 
 #----------------------------------------------------------------------
@@ -141,59 +141,60 @@ usage = "Usage: " + argv0 + " OPTIONS <arguments>\n"
 
 if __name__ == '__main__':
 
-    parser = OptionParser("%prog [OPTIONS] arguments")
+    parser = ArgumentParser("act")
 
-    parser.add_option("-c", "--create", action="store_true", dest="create",
+    parser.add_argument("name", type=str, nargs="*", help="Input file or directory")
+
+    parser.add_argument("-c", "--create", action="store_true", dest="create",
                       help="create compact archive.  arguments should be directories.")
 
-    parser.add_option("--update", action="store_true", dest="update",
+    parser.add_argument("--update", action="store_true", dest="update",
                       help="Add files to an existing compact corpus")
 
-    parser.add_option("-x", "--extract", 
+    parser.add_argument("-x", "--extract",
                       action="store_true", dest="extract",
                       help="extract compact archive(s).")
 
-    parser.add_option("-l", "--list", action="store_true", dest="list",
+    parser.add_argument("-l", "--list", action="store_true", dest="list",
                       help="list compact archive(s).")
 
-    parser.add_option("-d", "--targetdir", dest="targetdir",
+    parser.add_argument("-d", "--targetdir", dest="targetdir",
                       default = os.getcwd(),
                       help="target directory for --extract, --create, --update")
 
-    parser.add_option("-r", "--recursive", action="store_true", dest="recursive",
+    parser.add_argument("-r", "--recursive", action="store_true", dest="recursive",
                       help="Recursively create or update archives")
 
-    parser.add_option("-f", "--force", action="store_true", dest="force",
+    parser.add_argument("-f", "--force", action="store_true", dest="force",
                       help="force overwriting directories or compact corpora")
 
-    parser.add_option("--only-newer", action="store_true", dest="only_newer",
-                      help="only overwrite an existing corpus file when the source directory is newer")
+    parser.add_argument("--only-newer", action="store_true", dest="only_newer",
+        help="only overwrite an existing corpus file when the source directory is newer")
 
-    parser.add_option("--remove", action="store_true", dest="remove",
+    parser.add_argument("--remove", action="store_true", dest="remove",
                       help="Remove source files after creating compact corpus")
 
-    parser.add_option("--stdin",  action="store_true", dest="stdin",
-                      help="Read file arguments from stdin.  Any non-option arguments on the commandline will be ignored.")
+    parser.add_argument("--stdin",  action="store_true", dest="stdin",
+        help="Read file arguments from stdin.  Any non-option arguments on the commandline will be ignored.")
 
-    parser.add_option("--get-data",  action="store_true", dest="get_data",
+    parser.add_argument("--get-data",  action="store_true", dest="get_data",
                       help="print the xmldata from arg to stdout")
 
-    parser.add_option("-q", "--query", "-e", "--expr", dest="query",
+    parser.add_argument("-q", "--query", "-e", "--expr", dest="query",
                       help="XPath expression to search for")
 
-    parser.add_option("--stylesheet", dest="stylesheet",
+    parser.add_argument("--stylesheet", dest="stylesheet",
                       help="stylesheet to use for output")
 
 
     # Hoe kan ik/zal ik XSLT-parameters meegeven?  xsltproc gebruikt
-    # "--param param value", twee argumenten per vlag.  
+    # "--param param value", twee argumenten per vlag.
     # Is dat haalbaar?    ==> te doen met optparse
     # Is dat slim?
     # Hoe doet Saxon dat? ==> param=value argumenten
 
-
-    (options, args) = parser.parse_args()
-
+    options = parser.parse_args()
+    args = options.name
 
     if not (options.create or
             options.extract or
@@ -201,17 +202,17 @@ if __name__ == '__main__':
             options.update or
             options.query or
             options.get_data):
-        sys.stderr.write(usage)
+        parser.print_usage()
         sys.exit(1)
 
     # FIXME: deze controle moet voor alle onmogelijke optie-combinaties, toch?
     #        hoe kunnen we dat op een elegante manier oplossen?
     if options.create and options.update:
-        msg("Error: can't use --create and --update together")
+        ac.msg("Error: can't use --create and --update together")
         sys.exit(1)
 
     if not (args or options.stdin):
-        msg("Error: No arguments to process.  Exiting....")
+        ac.msg("Error: No arguments to process.  Exiting....")
         sys.exit(1)
 
     # stylesheet alvast parsen indien nodig
@@ -227,22 +228,22 @@ if __name__ == '__main__':
     if options.stylesheet:
 
         # De stringparam "expr" moet gequote worden
-        params["expr"] = xslt_quote_string(options.query)
+        params["expr"] = ac.xslt_quote_string(options.query)
 
         # We moeten het stylesheet compileren
-        styledoc = etree.parse(options.stylesheet)
-        stylesheet = etree.XSLT(styledoc)
+        styledoc = ac.etree.parse(options.stylesheet)
+        stylesheet = ac.etree.XSLT(styledoc)
 
     # argumenten uit stdin lezen indien nodig
     # voor de archief-onderhoudsacties lezen we eerst alle argumenten in
     if options.stdin and (options.create or options.update or options.extract or options.list):
-        args = get_arglist_from_stdin()
+        args = ac.get_arglist_from_stdin()
 
     # de actie-opties bijlangs
 
     if options.recursive and (options.create or options.update):
         for arg in args:
-            recursive_create_archive(arg,
+            ac.recursive_create_archive(arg,
                                      options.targetdir,
                                      options.update,
                                      options.only_newer,
@@ -250,25 +251,26 @@ if __name__ == '__main__':
                                      options.force)
 
     elif options.create:
-        create_archives(args, options.targetdir, options.force, options.only_newer, options.remove)
+        ac.create_archives(args, options.targetdir, options.force,
+                           options.only_newer, options.remove)
 
     elif options.update:
-        update_archives(args, options.targetdir, options.only_newer, options.remove)
+        ac.update_archives(args, options.targetdir, options.only_newer, options.remove)
 
     elif options.extract:
         if options.recursive:
-            raise('recursive behaviour not yet implemented for this method')
-        extract_archives(args, options.targetdir, options.force)
+            raise RuntimeError('recursive behaviour not yet implemented for this method')
+        ac.extract_archives(args, options.targetdir, options.force)
 
     elif options.list:
         if options.recursive:
-            raise('recursive behaviour not yet implemented for this method')
-        list_archives(args)
+            raise RuntimeError('recursive behaviour not yet implemented for this method')
+        ac.list_archives(args)
 
     elif options.query:
-        
-        process_arguments(args,
-                          xmlmatch_from_mem,
+
+        ac.process_arguments(args,
+                          ac.xmlmatch_from_mem,
                           options.stdin,
                           options.recursive,
                           True,
@@ -277,7 +279,7 @@ if __name__ == '__main__':
                           stylesheet=stylesheet)
 
     elif options.get_data:
-        process_arguments(args, print_xmldata, options.stdin,
+        ac.process_arguments(args, ac.print_xmldata, options.stdin,
             options.recursive, True)
 
     # eind van de actie-opties

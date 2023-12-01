@@ -36,10 +36,10 @@ PROLOGLIBS=prolog/corpusreader$(MODULEEXT)
 endif
 
 
-PYTHONLIBS=python/indexedcorpus$(PYMODULEEXT)
+PYTHONLIBS=python/indexedcorpus.touch
 
 all: libcorpus$(DYLIBEXT) libcorpus.a $(PROLOGLIBS) $(PYTHONLIBS)
-	cp python/indexedcorpus$(PYMODULEEXT) ../python-lib
+	cp python/indexedcorpus.touch ../python-lib
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
@@ -93,13 +93,12 @@ prolog/corpusreader.s.o: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpu
 		-lboost_filesystem -lboost_system -lstdc++ -lz
 	mv corpusreader.s.o $@
 
-python/indexedcorpus$(PYMODULEEXT): python/indexedcorpus.cpp libcorpus.a
-	rm -f python/indexedcorpus$(PYMODULEEXT)
-	rm -rf python/build
+python/indexedcorpus.touch: python/indexedcorpus.cpp libcorpus.a
+	rm -rf python/IndexedCorpus.egg-info python/build
 	if [ -x ${PLATFORM} = "darwin" ] ; then \
-		( cd python ; CFLAGS="$(CXXFLAGS)" ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=/usr python setup.py install --install-platlib=. ) \
+		( cd python ; CFLAGS="$(CXXFLAGS)" ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=/usr python3 setup.py install --install-platlib=../../python-lib --single-version-externally-manage --record=/dev/null && touch indexedcorpus.touch ) \
 	else \
-		( cd python ; CFLAGS="$(CXXFLAGS)" BOOST_HOME=/usr python setup.py install --install-platlib=. ) \
+		( cd python ; CFLAGS="$(CXXFLAGS)" BOOST_HOME=/usr python3 setup.py install --install-platlib=../../python-lib --single-version-externally-manage --record=/dev/null && touch indexedcorpus.touch ) \
 	fi
 
 test/test: libcorpus.a test/test.cpp
@@ -115,10 +114,12 @@ clean:
 realclean: clean
 	rm -f libcorpus$(DYLIBEXT)
 	rm -f prolog/corpusreader$(MODULEEXT) prolog/corpusreader_swi_glue.c
-	rm -f python/indexedcorpus$(DYLIBEXT) python/IndexedCorpus-1.0.egg-info
+	rm -f python/indexedcorpus.touch
+	rm -fr python/IndexedCorpus*.egg-info
 	rm -f libcorpus.a
 	rm -f test/test
-	rm -f ../python-lib/indexedcorpus$(PYMODULEEXT)
+	rm -f ../python-lib/indexedcorpus.*
+	rm -fr ../python-lib/IndexedCorpus-1.0.egg-info
 
 install: dtnext
 	cp dtnext dtprev ../../bin

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # wikipedia_paths.py -- filename manipulaties voor het wikipedia corpus
 
@@ -26,14 +26,14 @@
 #
 # Op basis van de filenaam kan dan eenvoudig de bijbehorende directory
 # bepaald worden:
-# 
+#
 #   wikipedia/23423-3-19.xml
 #
 # is voldoende om het volledige pad te kunnen achterhalen.
 #
 # Door de directory-namen (filenames van de compacte corpora) uit
 # te vullen kunnen we vanuit een shell de corpus files gemakkelijk
-# in de juiste volgorde bijlangs.  
+# in de juiste volgorde bijlangs.
 #
 # Voor de sortering binnenin de compacte corpora is uitvullen niet
 # nodig.
@@ -47,7 +47,7 @@ import re
 # FIXME: de notie van file-id zonder .xml extensie maakt het geheel
 #        rommelig
 #        het lijkt logischer de .xml extensie hier mee te nemen.
-#        bovendien zijn er veel teveel functies die bijna hetzelfde doen. 
+#        bovendien zijn er veel teveel functies die bijna hetzelfde doen.
 
 def wikipedia_directory(lemmanr):
     """retourneer een directory-naam op basis van LEMMANR"""
@@ -83,7 +83,7 @@ def getdirectory(basename):
 
 if __name__ == '__main__':
 
-    usage = "Usage: wikipedia_path.py --test | fileid [fileids]\n" 
+    usage = "Usage: wikipedia_path.py --test | fileid [fileids]\n"
 
     import sys
 
@@ -94,14 +94,14 @@ if __name__ == '__main__':
     if sys.argv[1] == '--test':
 
         # Een aantal randgevallen testen:
-        print wikipedia_path(0           ,5, 1)
-        print wikipedia_path(chunksize-1 ,5, 1)
-        print wikipedia_path(chunksize   ,5, 1)
-        print wikipedia_path(chunksize+1 ,5, 1)
+        print(wikipedia_path(0           ,5, 1))
+        print(wikipedia_path(chunksize-1 ,5, 1))
+        print(wikipedia_path(chunksize   ,5, 1))
+        print(wikipedia_path(chunksize+1 ,5, 1))
 
         # En een willekeurige andere file:
-        print wikipedia_path(23423, 3, 19)
+        print(wikipedia_path(23423, 3, 19))
 
     else:
         for i in sys.argv[1:]:
-            print fileid2path(i)
+            print(fileid2path(i))

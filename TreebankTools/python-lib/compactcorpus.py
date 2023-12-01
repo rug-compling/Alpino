@@ -5,7 +5,6 @@
 import sys
 import os
 import re
-import gzip
 import numsort
 from glob import glob
 from indexedcorpus import IndexedCorpusReader, IndexedCorpusWriter
@@ -13,15 +12,14 @@ import tempfile
 
 corpusfile_re = re.compile(r'(?:\.data\.dz|\.index)$')
 
-def msg(str):
-    sys.stderr.write("%s: %s\n" % (os.path.basename(sys.argv[0]), str + "\n"))
+def msg(s):
+    sys.stderr.write("%s: %s\n" % (os.path.basename(sys.argv[0]), s + "\n"))
 
 
 def extract(xmlData, filename, targetDir):
     outfile = os.path.join(targetDir, os.path.basename(filename))
-    ofp = open(outfile,"w")
-    ofp.write(xmlData)
-    ofp.close
+    with open(outfile,"w", encoding="utf-8") as ofp:
+        ofp.write(xmlData)
 
 def endCurry(func, *curried):
     return lambda *args: func(*(args + curried))
@@ -42,7 +40,7 @@ def extract_archive(arg, targetdir, force=False):
     process_compact_corpus(arg, extractFun, True)
 
 def printFileName(fileName):
-    print fileName
+    print(fileName)
 
 def list_archive(archive):
     process_compact_corpus(archive, printFileName, False)
@@ -53,6 +51,8 @@ def get_corpus_noext(arg):
     Retourneert het corpusbestand zonder extensie en evt. inclusief pad.
     """
     m = re.match(r"(.*?)(\.index|\.data\.dz)?$", arg)
+    if m is None:
+        return arg
     return m.group(1)
 
 
@@ -68,7 +68,7 @@ def get_corpus_filenames(arg):
     Retourneert (indexfile, datafile).
     """
     corpus_noext =  get_corpus_noext(arg)
-    return (corpus_noext + ".index", corpus_noext + ".data.dz") 
+    return (corpus_noext + ".index", corpus_noext + ".data.dz")
 
 
 def get_corpus_name(arg):
@@ -83,7 +83,7 @@ def get_corpus_name(arg):
     Retourneert CORPUSNAAM
     """
     corpus_noext =  get_corpus_noext(arg)
-    return (os.path.basename(corpus_noext))
+    return os.path.basename(corpus_noext)
 
 
 def corpus_exists_p(corpuspath):
@@ -91,9 +91,9 @@ def corpus_exists_p(corpuspath):
     (indexfile, datafile) = get_corpus_filenames(corpuspath)
 
     if not os.path.exists(indexfile):
-        return(0)
+        return 0
     if not os.path.exists(datafile):
-        return(0)
+        return 0
     return 1
 
 
@@ -112,8 +112,7 @@ def create_archive(directory, targetdir, force=0, only_newer=0, remove=0):
     When REMOVE is set, the source files in DIRECTORY will be deleted
     afterwards
     """
-    startdir = os.getcwd()
-    
+
     sys.stderr.write("processing `%s'\n" % (directory))
 
     filelist = glob(os.path.join(directory,'*.xml'))
@@ -126,7 +125,7 @@ def create_archive(directory, targetdir, force=0, only_newer=0, remove=0):
     # de laatste component van de directory wordt de naam van het corpus
     corpus_name= os.path.basename(os.path.normpath(directory))
 
-    indexfile, datafile = get_corpus_filenames(os.path.join(targetdir, corpus_name))
+    _, datafile = get_corpus_filenames(os.path.join(targetdir, corpus_name))
 
     if os.path.exists(datafile):
         if not force:
@@ -148,13 +147,13 @@ def create_archive(directory, targetdir, force=0, only_newer=0, remove=0):
     corpuswriter = IndexedCorpusWriter("%s.index" % basePath,
         "%s.data.dz" % basePath)
 
-    offset = 0
     for file in filelist:
         indexName = os.path.basename(file)
-        data = open(file).read()
+        with open(file, encoding="utf-8") as fp:
+            data = fp.read()
 
         if len(data.strip()) == 0:
-            print >> sys.stderr, "Skipping empty file: %s" % file
+            print("Skipping empty file: %s" % file, file=sys.stderr)
             continue
 
         corpuswriter.write(indexName, data)
@@ -210,7 +209,7 @@ def update_archive(sourcedir, targetdir, only_newer=0, remove=0):
     targetIndexFile, targetDataFile = get_corpus_filenames(targetcorpuspath)
     if only_newer:
         if os.path.getmtime(targetDataFile) > os.path.getmtime(sourcedir):
-            msg("corpus `%s' is up to date" % (datafile))
+            msg("corpus `%s' is up to date" % (targetcorpuspath))
             return
 
     # tell the user we're actually doing something...
@@ -223,7 +222,7 @@ def update_archive(sourcedir, targetdir, only_newer=0, remove=0):
     # - the filenames should be on the same file system as the target
     #   compact corpus
     #
-    # - there's no way to have mktemp make a  .index and a .data.dz 
+    # - there's no way to have mktemp make a  .index and a .data.dz
     #   with the same basename
     #
     # - so we'll create a subdirectory within the target directory;
@@ -253,7 +252,7 @@ def update_archive(sourcedir, targetdir, only_newer=0, remove=0):
     old_pos = 0
     update_pos = 0
 
-    while (1):
+    while 1:
 
         if update_pos >= update_len:
             # take the rest of the old corpus
@@ -265,12 +264,13 @@ def update_archive(sourcedir, targetdir, only_newer=0, remove=0):
 
             # and we're done
             break
-        
+
         if old_pos >= old_len:
             # take the rest of the new stuff
             while update_pos < update_len:
                 name = os.path.basename(sourcefiles[update_pos])
-                data = open(sourcefiles[update_pos]).read()
+                with open(sourcefiles[update_pos], encoding="utf-8") as fp:
+                    data = fp.read()
                 writer.write(name, data)
                 update_pos += 1
 
@@ -283,14 +283,16 @@ def update_archive(sourcedir, targetdir, only_newer=0, remove=0):
 
         if cmp_result == 0:
             # take the file from the update
-            data = open(sourcefiles[update_pos]).read()
+            with open(sourcefiles[update_pos], encoding="utf-8") as fp:
+                data = fp.read()
             writer.write(update_key, data)
             old_pos += 1
             update_pos += 1
 
         elif cmp_result < 0:
             # take the file from the update
-            data = open(sourcefiles[update_pos]).read()
+            with open(sourcefiles[update_pos], encoding="utf-8") as fp:
+                data = fp.read()
             writer.write(update_key, data)
             update_pos += 1
 
@@ -354,16 +356,17 @@ def process_compact_corpus(corpus, function, passData, **keywords):
     reader = IndexedCorpusReader(indexfile, datafile)
 
     for entry in reader.entries():
+        xmldata = None
         if passData:
             xmldata = reader.data(entry)
- 
+
         # zodat we "subdir/corpusnaam/filenaam.xml" als uitvoer krijgen
         filename = os.path.join(corpus_noext, entry)
 
         if passData:
-            apply(function, (xmldata, filename), keywords)
+            function(*(xmldata, filename), **keywords)
         else:
-            apply(function, (filename,), keywords)
+            function(*(filename,), **keywords)
 
 if __name__ == '__main__':
     list_archive(sys.argv[1])
