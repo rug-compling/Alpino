@@ -1,25 +1,26 @@
 #!/usr/bin/python
 
-import optparse
+import argparse
 import random
 import re
 import sys
+from functools import reduce
 
 # List element shuffling. We have random.shuffle, but it is in-place
 # and does not seem to have such good properties. This should do for
 # our purposes.
 def shuffle(x):
-	n = len(x)
-	shuffled = list() 
-	indicesSet = set()
+    n = len(x)
+    shuffled = []
+    indicesSet = set()
 
-	while len(shuffled) != n:
-		pick = int(random.random() * n)
-		if not pick in indicesSet:
-			shuffled.append(x[pick])
-			indicesSet.add(pick)
+    while len(shuffled) != n:
+        pick = int(random.random() * n)
+        if not pick in indicesSet:
+            shuffled.append(x[pick])
+            indicesSet.add(pick)
 
-	return shuffled 
+    return shuffled
 
 
 # Bad habits? ;)
@@ -27,7 +28,7 @@ def endCurry(func, *curried):
     return lambda *args: func(*(args + curried))
 
 def readFeatureWeights(fh):
-    featureWeights = dict()
+    featureWeights = {}
 
     for line in fh:
         (feature, weight) = line.strip().rsplit('|', 1)
@@ -37,7 +38,7 @@ def readFeatureWeights(fh):
     return featureWeights
 
 def featureValues(featurePairs):
-    vals = dict()
+    vals = {}
 
     for pair in featurePairs:
         (val, feature) = pair.split('@', 1)
@@ -45,12 +46,12 @@ def featureValues(featurePairs):
         vals[feature] = float(val)
 
     return vals
-        
+
 
 def scoreSent(featureWeights, featureValues):
     score = 0.0
 
-    for pair in featureValues.items():
+    for pair in list(featureValues.items()):
         weight = featureWeights.get(pair[0], 0.0)
         score += weight * pair[1]
 
@@ -68,25 +69,25 @@ def scoreSents(sents, featureWeights):
     return scoredSents
 
 def sentCmp(x, y, scoreField):
-    if (x[scoreField] > y[scoreField]):
+    if x[scoreField] > y[scoreField]:
         return 1
-    if (x[scoreField] < y[scoreField]):
+    if x[scoreField] < y[scoreField]:
         return -1
-    else:
-        # We can't pick one based on the score. This seems not to be
-        # completely fair, consider the case where s2 is the correct
-        # sentence, and the results of ranking are:
-        #
-        # 0.5 s1
-        # 0.5 s2
-        # [...]
-        #
-        # On the other hand, if we judge this as a correct match, the
-        # evaluation can be cheated easily by giving all the realizations
-        # the same score (see the commented return statement).
-        return 0
 
-        #return cmp(y[2], x[2])
+    # We can't pick one based on the score. This seems not to be
+    # completely fair, consider the case where s2 is the correct
+    # sentence, and the results of ranking are:
+    #
+    # 0.5 s1
+    # 0.5 s2
+    # [...]
+    #
+    # On the other hand, if we judge this as a correct match, the
+    # evaluation can be cheated easily by giving all the realizations
+    # the same score (see the commented return statement).
+    return 0
+
+    #return cmp(y[2], x[2])
 
 def evalScoredSents(scoredSents, scoreField = 0, inverse = False):
     cmpFun0 = sentCmp
@@ -114,9 +115,9 @@ def processSents(fh, featureWeights, minRealizations):
 
     for line in fh:
         line = line.strip()
-        
+
         sentMatch = re.match(r'G#([^#]+)#', line)
-        if sentMatch == None:
+        if sentMatch is None:
             continue
 
         sent = sentMatch.group(1)
@@ -152,10 +153,9 @@ def printResults(scores, bestScores, randomScores, worstScores):
     exactMatches = reduce(lambda x, y: x + 1 if y == 1.0 else x, scores, 0)
     exactMatchRatio = float(exactMatches) / len(scores)
     bestMatches = reduce(lambda x, y: x + 1 if y[0] == y[1] else x,
-                         zip(scores, bestScores), 0)
+                         list(zip(scores, bestScores)), 0)
     bestMatchRatio = float(bestMatches) / len(scores)
-    relScores = map(lambda (s, b, w): (s - w) / (b - w) if b != w else 1.0,
-		    zip(scores, bestScores, worstScores))
+    relScores = [(s_b_w[0] - s_b_w[2]) / (s_b_w[1] - s_b_w[2]) if s_b_w[1] != s_b_w[2] else 1.0 for s_b_w in zip(scores, bestScores, worstScores)]
     relScoreAvg = sum(relScores) / len(relScores)
 
     bestAvg = sum(bestScores) / len(bestScores)
@@ -164,29 +164,28 @@ def printResults(scores, bestScores, randomScores, worstScores):
     #rndRelScores = map(lambda (s, b, r): (s - r) / (b - r) if b != r else s / r, zip(scores, bestScores, randomScores))
     #rndRelScoreAvg = sum(rndRelScores) / len (rndRelScores)
 
-    print "Average GTM score: %f" % scoreAvg
-    print "Avg relative GTM score (worst): %f" % relScoreAvg
-    print "Avg relative GTM score (random): %f" % rndRelAvg
-    print "Exact matches: %f" % exactMatchRatio
-    print "Best matches: %f" % bestMatchRatio
+    print("Average GTM score: %f" % scoreAvg)
+    print("Avg relative GTM score (worst): %f" % relScoreAvg)
+    print("Avg relative GTM score (random): %f" % rndRelAvg)
+    print("Exact matches: %f" % exactMatchRatio)
+    print("Best matches: %f" % bestMatchRatio)
 
 def printModelScores(scores, bestScores):
-    bestMatches = map(lambda x: 1 if x[0] == x[1] else 0.0,
-        zip(scores, bestScores))
+    bestMatches = [1 if x[0] == x[1] else 0.0 for x in zip(scores, bestScores)]
 
     for score in zip(scores, bestMatches):
-        print score[0], score[1]
+        print(score[0], score[1])
 
 if __name__ == "__main__":
-    parser = optparse.OptionParser()
-    parser.add_option("-f", "--features", dest = "features",
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-f", "--features", dest = "features",
                       default = "train.weights", help = "Feature weight file")
-    parser.add_option("-r", "--realizations", dest = "realizations",
-		      default = "1", help = "Minimum number of realizations")
-    parser.add_option("-s", "--scores", dest = "modelScores",
+    parser.add_argument("-r", "--realizations", dest = "realizations",
+              default = "1", help = "Minimum number of realizations")
+    parser.add_argument("-s", "--scores", dest = "modelScores",
           action="store_true", default = False, help = "Print model scores")
 
-    (options, args) = parser.parse_args()
+    options = parser.parse_args()
 
     # Make results reproducable.
     random.seed(13)
@@ -197,16 +196,16 @@ if __name__ == "__main__":
     minRealizations = int(options.realizations)
 
     (scores, lmScores, tagScores, randomScores, bestScores, worstScores) = processSents(
-	    sys.stdin,
-	    featureWeights,
-	    minRealizations)
+        sys.stdin,
+        featureWeights,
+        minRealizations)
 
-    if (options.modelScores):
-      printModelScores(scores, bestScores)
-      sys.exit(0)
+    if options.modelScores:
+        printModelScores(scores, bestScores)
+        sys.exit(0)
 
-    print "--- Overview ---"
-    print "Inputs: %d" % len(scores)
+    print("--- Overview ---")
+    print("Inputs: %d" % len(scores))
 
     # print "--- random model ---"
     # printResults(randomScores, bestScores, randomScores, worstScores)
@@ -217,5 +216,5 @@ if __name__ == "__main__":
     # print "-- tag ngram model ---"
     # printResults(tagScores, bestScores, randomScores, worstScores)
 
-    print "--- maxent model ---"
+    print("--- maxent model ---")
     printResults(scores, bestScores, randomScores, worstScores)

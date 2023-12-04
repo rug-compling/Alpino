@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # CoNLL 2017 UD Parsing evaluation script.
 #
@@ -80,8 +80,8 @@
 # (even partially) any multi-word span are then aligned as tokens.
 
 
-from __future__ import division
-from __future__ import print_function
+
+
 
 import argparse
 import io
@@ -89,7 +89,7 @@ import sys
 import unittest
 
 # CoNLL-U column names
-ID, FORM, LEMMA, UPOS, XPOS, FEATS, HEAD, DEPREL, DEPS, MISC = range(10)
+ID, FORM, LEMMA, UPOS, XPOS, FEATS, HEAD, DEPREL, DEPS, MISC = list(range(10))
 
 # UD Error is used when raising exceptions in this module
 class UDError(Exception):
@@ -200,7 +200,7 @@ def load_conllu(file):
         # Handle multi-word tokens to save word(s)
         if "-" in columns[ID]:
             try:
-                start, end = map(int, columns[ID].split("-"))
+                start, end = list(map(int, columns[ID].split("-")))
             except:
                 raise UDError("Cannot parse multi-word token ID '{}'".format(columns[ID]))
 
@@ -348,8 +348,8 @@ def evaluate(gold_ud, system_ud, deprel_weights=None):
 
     def compute_lcs(gold_words, system_words, gi, si, gs, ss):
         lcs = [[0] * (si - ss) for i in range(gi - gs)]
-        for g in reversed(range(gi - gs)):
-            for s in reversed(range(si - ss)):
+        for g in reversed(list(range(gi - gs))):
+            for s in reversed(list(range(si - ss))):
                 if lower(gold_words[gs + g].columns[FORM]) == lower(system_words[ss + s].columns[FORM]):
                     lcs[g][s] = 1 + (lcs[g+1][s+1] if g+1 < gi-gs and s+1 < si-ss else 0)
                 lcs[g][s] = max(lcs[g][s], lcs[g+1][s] if g+1 < gi-gs else 0)
@@ -452,7 +452,7 @@ def load_deprel_weights(weights_file):
     return deprel_weights
 
 def load_conllu_file(path):
-    _file = open(path, mode="r", **({"encoding": "utf-8"} if sys.version_info >= (3, 0) else {}))
+    _file = open(path, "r", encoding="utf-8")
     return load_conllu(_file)
 
 def evaluate_wrapper(args):

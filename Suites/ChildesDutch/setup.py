@@ -1,5 +1,5 @@
 
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 import sys
 
 if sys.version_info[0] > 2:

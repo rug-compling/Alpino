@@ -1,19 +1,31 @@
+0 = geconverteerd, maar met nog veel fouten volgens pylint
 1 = geconverteerd
 2 = getest
 
 
-    CGN/convert_plk_alpino.py
-    Disambiguation/score0-1.py
-    Documentation/DutchGrid/create-nodemap.py
-    EvalUD/goodkeys.py
-    Generation/fluency/CreateLM/sfr2frames.py
-    Generation/fluency/CreateLM/sfr2words.py
-    Generation/fluency/CreateMaxent/evaluate.py
-    Generation/fluency/CreateMaxent/filter_features.py
-    Names/Create/classify
-    Names/Create/maxent.py
-    Suites/ChildesDutch/*
+    AlpinoUserGuide.html
+ 1  CGN/Makefile
+ 1  CGN/convert_plk_alpino.py
+ 1  Disambiguation/score0-1.py
+ 1  Documentation/DutchGrid/create-nodemap.py
+    Documentation/UserGuide/AlpinoUserGuide.txt
+ 1  EvalUD/goodkeys.py
+ 1  Generation/fluency/CreateLM/Makefile
+ 1  Generation/fluency/CreateLM/sfr2frames.py
+ 1  Generation/fluency/CreateLM/sfr2words.py
+ 1  Generation/fluency/CreateMaxent/Makefile
+ 1  Generation/fluency/CreateMaxent/evaluate.py
+ 1  Generation/fluency/CreateMaxent/filter_features.py
+    Makefile.EvalUD
+    Makefile.hpc
+ 1  Names/Create/Makefile
+ 0  Names/Create/classify
+ 0  Names/Create/maxent.py
+ 1  Suites/ChildesDutch/*
+    Treebank/Makefile
+ 2  TreebankTools/IndexedCorpus/Makefile
  2  TreebankTools/IndexedCorpus/python/*
+    TreebankTools/Makefile
  1  TreebankTools/bin/act
  1  TreebankTools/bin/dtcanonicalize.py
  1  TreebankTools/bin/dtget
@@ -21,31 +33,15 @@
  1  TreebankTools/bin/dtlist
  1  TreebankTools/bin/dtsearch
  1  TreebankTools/bin/dtxslt
-    TreebankTools/create-sanity-check-stylesheet.py
+ 1  TreebankTools/create-sanity-check-stylesheet.py
  1  TreebankTools/python-lib/*, gebruikt door:
-	TreebankTools/bin/*
-	TreebankTools/treebank-server
-    TreebankTools/treebank-server
-    UD2.0/conll17_ud_eval.py
-    alpino2conll/tools/alpino.py
-    alpino2conll/tools/alpino2tab.py
-    alpino2conll/tools/tag.py
-    alpino_client.py
-    webdemo.py
-
-
-Aanroep van python in andere bestanden:
-
-    CGN/Makefile
-    Generation/fluency/CreateLM/Makefile
-    Generation/fluency/CreateMaxent/Makefile
-    Makefile.EvalUD
-    Makefile.hpc
-    Names/Create/Makefile
-    Treebank/Makefile
-    TreebankTools/IndexedCorpus/Makefile
-    TreebankTools/Makefile
-    
-    AlpinoUserGuide.html
-    Documentation/UserGuide/AlpinoUserGuide.txt
+        TreebankTools/bin/*
+        TreebankTools/treebank-server
+ 1  TreebankTools/treebank-server
+ 1  UD2.0/conll17_ud_eval.py
+ 1  alpino2conll/tools/alpino.py
+    alpino2conll/tools/alpino2tab.py  # regel 264: Else clause on loop without a break statement
+    alpino2conll/tools/tag.py         # onherstelbare mix van tabs en spaties
+ 1  alpino_client.py
+ 1  webdemo.py
 

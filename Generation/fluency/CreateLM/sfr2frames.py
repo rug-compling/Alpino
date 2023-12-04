@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 #
 # Read 'sfr' input and produce a sequence of frames, one sentence per
 # line.
@@ -22,10 +22,10 @@ def is_mwu(tag):
                 final=True
                 base=parts[1]
     return (result,final,base)
-    
+
 if __name__ == '__main__':
     curId = ''
-    frames = list()
+    frames = []
 
     for line in sys.stdin:
         lineParts = line.split('|')
@@ -36,9 +36,9 @@ if __name__ == '__main__':
         lineId = lineParts[2]
         if curId != lineId:
             if curId != '':
-                if(frames):
-                    print ' '.join(frames)
-                frames = list()
+                if frames:
+                    print(' '.join(frames))
+                frames = []
 
             curId = lineId
 
@@ -52,5 +52,5 @@ if __name__ == '__main__':
             frames.append(base)
 
     # Flush
-    if(frames):
-        print ' '.join(frames)
+    if frames:
+        print(' '.join(frames))

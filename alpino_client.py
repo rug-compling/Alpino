@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import socket
 
 def alpino_parse(sent, host='localhost', port=42424):
@@ -17,7 +19,7 @@ def alpino_parse(sent, host='localhost', port=42424):
 
 
 def main():
-    sentence=input("Geef de zin die Alpino moet analyseren: ")
+    sentence=eval(input("Geef de zin die Alpino moet analyseren: "))
     xml=alpino_parse(sentence)
     print(xml)
 
