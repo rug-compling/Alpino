@@ -16882,8 +16882,8 @@ a([ge_e(geziene),
 a([ge_e(gezigzagde),
    ge_no_e(gezigzagd)],adv,[],[]).
 
-a([ge_e(gezinde),
-   ge_no_e(gezind)],padv,
+a([e(gezinde),
+   no_e(gezind)],padv,
   [pred_so_np],
   [s(behoud),
    goed]).

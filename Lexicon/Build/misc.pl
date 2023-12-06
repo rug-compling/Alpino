@@ -4698,9 +4698,6 @@ m(zo,               zo_mogelijk_zo,zo).
 m(mogelijk,         zo_mogelijk_mogelijk(no_e),mogelijk).
 m(mogelijk,         zo_mogelijk_mogelijk(e),mogelijke).
 
-%% postn_adverb: not with pronouns
-%% postnp_adverb: also with pronouns
-
 m(allerlei,         postn_adverb,allerlei). % Vlaams
 m(allerhande,       postn_adverb,allerhande). 
 m(apart,            postn_adverb,apart).  % verhaal, vak, paar, geval, klasse
