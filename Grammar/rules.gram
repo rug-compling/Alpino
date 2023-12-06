@@ -8988,6 +8988,7 @@ grammar_rule(xp_en_ques,Start,[XP,OPTCOMMA,CRD,ROOT]) :-
     XP => max,
     XP:cj => ncj,
     XP:max_type => (t_xp;t_dp),
+    XP:sv1 => no,  % reduce spurious ambiguity with ordinary sv1 conjunction
     max_sv1(ROOT),
     xp_en_root_structure(Start,XP,CRD,ROOT).
 
@@ -9842,7 +9843,31 @@ grammar_rule(van_en,NP4,[NP1,Van,En,NP2,Op,NP3]) :-
     NP:dt:cnj <=> [Conj1Dt,Conj2Dt],
     unify_except(NP,NP4,hstem).
 
+%% np
 %%EX%% appels en peren
+%% sv1
+%%EX%% Hou je van films en ben je onder de achttien ?
+%% imp
+%%EX%% Kom naar de bioscoop en koop een kaartje .
+%%EX%% Heb ik niet en wil ik niet .
+%% root
+%%EX%% Ik moet naar huis en ik moet nog boodschappen doen
+%% vproj
+%%EX%% Omdat ik de kinderen moest ophalen en boodschappen wou doen
+%% vpx
+%%EX%% Ik moet de kinderen ophalen en boodschappen doen
+%% modifier
+%%EX%% Rustig en zonder buren woon ik daar
+%% n
+%%EX%% De vrouwen en kinderen moeten eerst
+%% pred
+%%EX%% We zijn beleefd en vriendelijk
+%% a
+%%EX%% De beleefd en vriendelijke ambtenaar
+%% vpx
+%%EX%% We hebben een boek gelezen en een krant gekocht
+%% finvp
+%%EX%% TODO
 grammar_rule(start_coord(Name,en), M, [ XP, Clist ]) :-
     start_coord_name_en_structure(Name,M,XP,Clist).
 
@@ -11150,12 +11175,14 @@ comparative_structure(Comp,XP,CompP) :-
 	 )),
     cmp_body_structure(Comp,XP,CompP,cp).
 
-
+%%EX%% Hij is groter dan ik
+%%EX%% Hij is groter dan mij
 grammar_rule(comparative(np), CompP, [ Comp, XP ]) :-
     ind_max_np(XP),
     XP:subn => ~sub_indef_verb,
     comparative_structure(Comp,XP,CompP).
 
+%%EX%% Hij deed het beter dan , zoals verwacht , Loek
 grammar_rule(comparative(mod_np), CompP, [ Comp, COMMA, MOD, COMMA2, XP ]) :-
     comma_dash(COMMA),
     comma_dash(COMMA2),
@@ -11166,6 +11193,7 @@ grammar_rule(comparative(mod_np), CompP, [ Comp, COMMA, MOD, COMMA2, XP ]) :-
     hd_mod_structure(XP,MOD,XP1),
     comparative_structure(Comp,XP1,CompP).
 
+%%EX%% Zij deden het beter dan destijd Rusland
 grammar_rule(comparative(adv_np), CompP, [ Comp, MOD, XP ]) :-
     max_advp(MOD),
     MOD:subadv => ~subadv_adj,
@@ -11176,10 +11204,12 @@ grammar_rule(comparative(adv_np), CompP, [ Comp, MOD, XP ]) :-
     dp_dp_structure(MOD,XP,XP1),
     comparative_structure(Comp,XP1,CompP).
 
+%%EX%% Hij speelt even slecht als tegen Feyenoord
 grammar_rule(comparative(pp), CompP, [ Comp, XP ]) :-
     ind_max_pp(XP),
     comparative_structure(Comp,XP,CompP).
 
+%%EX%% Hij speelt even slecht als destijds tegen Feyenoord
 grammar_rule(comparative(adv_pp), CompP, [ Comp, MOD, XP ]) :-
     max_advp(MOD),
     MOD:subadv => ~subadv_adj,
@@ -11190,26 +11220,34 @@ grammar_rule(comparative(adv_pp), CompP, [ Comp, MOD, XP ]) :-
     dp_dp_structure(MOD,XP,XP1),
     comparative_structure(Comp,XP1,CompP).
 
+%%EX%% Die kleur werkt net zo rustgevend als groen
 grammar_rule(comparative(a), CompP, [ Comp, XP ]) :-
     max_nadv_ap(XP),
     XP:adv => nboth,
     comparative_structure(Comp,XP,CompP).
 
+%%EX%% Dat klinkt net zo mooi als vroeger
 grammar_rule(comparative(adv), CompP, [ Comp, XP ]) :-
     max_advp(XP),
     comparative_structure(Comp,XP,CompP).
 
+%%EX%% Hij was vriendelijker dan dat ik me herinnerde
 grammar_rule(comparative(sbar), CompP, [ Comp, XP ]) :-
     XP => sbar,
     XP:tags => [],
     comparative_structure(Comp,XP,CompP).
 
+%%EX%% Ik rust zoveel als ik maar kan
+%%EX%% Ik ga vaker naar de winkel om fruit te kopen dan om snoep te halen
+%%EX%% Ik probeer liever een dag vrij te nemen dan elke dag korter te werken
 grammar_rule(comparative(vp), CompP, [ Comp, XP ]) :-
     XP => vp,
     XP:vform => (om;fin;te),
     XP:e_deps => [],
     comparative_structure(Comp,XP,CompP).
 
+%%EX%% Ik heb vaker gewandeld dan gefietst
+%%EX%% Ik zou liever willen wandelen dan willen fietsen
 grammar_rule(comparative(vpx), CompP, [ Comp, XP ]) :-
     XP => vpx,
     XP:vform => (inf;psp),
@@ -11217,9 +11255,8 @@ grammar_rule(comparative(vpx), CompP, [ Comp, XP ]) :-
     XP:e_deps => [],
     comparative_structure(Comp,XP,CompP).
 
-%% "ik slaap zoveel [als] ik maar kan"
-%% "ik gilde zo hard [als] ik maar kon
-%% 
+%%EX%% ik slaap zoveel ik maar kan
+%%EX%% ik gilde zo hard ik maar kon
 grammar_rule(comparative(empty_als),C,[VP]) :-
     structure,
     C => comparativep,
@@ -11250,6 +11287,7 @@ grammar_rule(optpunct(ne),OPTPUNCT,[PUNCT]) :-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% liever X dan X
+%%EX%% Liever hij dan ik
 grammar_rule(compar_np_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     Start => start,
     MOD0 => modifier,
@@ -11260,6 +11298,7 @@ grammar_rule(compar_np_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     hd_extra_structure(MOD0,OBCOMP,MOD),
     dp_dp_structure(MOD,XP,Start).
 
+%%EX%% Liever met chocolade dan zonder chocolade
 grammar_rule(compar_pp_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     Start => start,
     MOD0 => modifier,
@@ -11270,6 +11309,7 @@ grammar_rule(compar_pp_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     hd_extra_structure(MOD0,OBCOMP,MOD),
     dp_dp_structure(MOD,XP,Start).
 
+%%EX%% Liever buiten dan binnen
 grammar_rule(compar_adv_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     Start => start,
     MOD0 => modifier,
@@ -11280,6 +11320,7 @@ grammar_rule(compar_adv_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     hd_extra_structure(MOD0,OBCOMP,MOD),
     dp_dp_structure(MOD,XP,Start).
 
+%%EX%% Liever lui dan moe
 grammar_rule(compar_adj_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     Start => start,
     MOD0 => modifier,
