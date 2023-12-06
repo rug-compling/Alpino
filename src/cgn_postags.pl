@@ -655,6 +655,7 @@ guess_lex(Q0,Q,Frame0,Surf,Stem) -->
 %% no longer necc?
 %% only used for parts of mwu that are not in lexicon without decap
 %% "Eerste Kamerfractie"
+%% "IJs en weder" dienende
 guess_lex(Q0,Q,_,Surf,Stem) -->
     {  alpino_unknowns:decap_first(Surf,Surf1),
        frequent_tag(Surf1,Stem,Frame)
