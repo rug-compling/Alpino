@@ -355,10 +355,7 @@ def xmlmatch_from_mem(xmldata, filename, query=None, stylesheet=None, params=Non
 
             # uitvoer naar stdout
             #codecs.getwriter('utf-8')(sys.stdout).write(str(result))
-            if isinstance(result, bytes):
-                sys.stdout.buffer.write(result)
-            else:
-                sys.stdout.buffer.write(result.encode('utf-8', 'xmlcharrefreplace'))
+            sys.stdout.buffer.write(str(result).encode('utf-8', 'xmlcharrefreplace'))
         else:
             print(filename)
 
