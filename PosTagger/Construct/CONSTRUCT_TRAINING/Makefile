@@ -48,7 +48,7 @@ install_test:
 include $(ALPINO_HOME)/Makefile.errormining
 
 
-TTS=tt_part00001 tt_part00002 tt_part00003 tt_part00004 tt_part00005 tt_part00006 tt_part00007 tt_part00008 tt_part00009 tt_part00010 tt_part00011 tt_part00012 tt_part00013 tt_part00014 tt_part00015 tt_part00016 tt_part00017 tt_part00018 
+TTS=tt_part00001 tt_part00002 tt_part00003 tt_part00004 tt_part00005 tt_part00006 tt_part00007 tt_part00008 tt_part00009 tt_part00010 tt_part00011 tt_part00012 tt_part00013 tt_part00014 tt_part00015 tt_part00016 tt_part00017 tt_part00018 tt_part00019 tt_part00020
 
 TUS=tu_part00001 tu_part00002 tu_part00003 tu_part00004 tu_part00005 tu_part00006 tu_part00007 tu_part00008 tu_part00009 tu_part00010 
 
