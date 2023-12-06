@@ -1,33 +1,35 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import sys
 
-from optparse import OptionParser
+from argparse import ArgumentParser
 
 ALPINO_HOME = os.getenv("ALPINO_HOME")
 if not ALPINO_HOME:
-	sys.stderr.write("act: Error: please set your ALPINO_HOME variable\n")
-	sys.exit(1)
+    sys.stderr.write("act: Error: please set your ALPINO_HOME variable\n")
+    sys.exit(1)
 
 sys.path.insert(0, os.path.join(ALPINO_HOME, "TreebankTools/python-lib"))
 
-from actlib import *
-
-def usage(progName):
-	print "Usage %s <xmlfiles>" % progName
-	print
-	print "The xmlfiles can be normal files or be part of a compact corpus."
+import actlib as ac
 
 if __name__ == "__main__":
-	if len(sys.argv) < 2:
-		usage(sys.argv[0])
-		sys.exit(1)
-	
-	parser = OptionParser("%prog [OPTIONS] arguments")
-	parser.add_option("--stdin",  action="store_true", dest="stdin",
-	 	help="Read file arguments from stdin.  Any non-option arguments on the commandline will be ignored.")
 
-	(options, args) = parser.parse_args()
-	
-	process_arguments(args, print_xmldata, options.stdin, False, True)
+    parser = ArgumentParser(
+        os.path.basename(sys.argv[0]),
+        epilog="The xmlfiles can be normal files or be part of a compact corpus.")
+
+    parser.add_argument("name", type=str, nargs="*", help="xmlfile")
+
+    parser.add_argument("--stdin",  action="store_true", dest="stdin",
+         help="Read file arguments from stdin.  Any non-option arguments on the commandline will be ignored.")
+
+    options = parser.parse_args()
+    args = options.name
+
+    if not args and not options.stdin:
+        parser.print_help(sys.stderr)
+        sys.exit(1)
+
+    ac.process_arguments(args, ac.print_xmldata, options.stdin, False, True)

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 '''
 Script to call Alpino and get pos tags
@@ -6,8 +6,6 @@ Script to call Alpino and get pos tags
 
 __author__ = 'Barbara <b.plank@rug.nl>'
 
-import string
-import sys
 import os.path
 import subprocess
 # adjust path
@@ -17,99 +15,99 @@ DIR=os.environ["ALPINO2CONLL_HOME"]+"/tools/"
 #DIR=os.environ["ALPINO2CONLL_HOME"]
 
 def alpino(sentence, filename):
-	"""
-	parse sentence with alpino, return triples
-	"""
+    """
+    parse sentence with alpino, return triples
+    """
 
-	i = 0
-	for w in sentence:
-		if sentence[i].find("|") != -1:
-			print sentence[i]
-			sentence[i] = "[ @postag punct(staand_streep) streep ]"
-			#sentence[i] = sentence[i].replace("|","\|",1)
-			print sentence[i]
-		i+=1
+    i = 0
+    for w in sentence:
+        if sentence[i].find("|") != -1:
+            print(sentence[i])
+            sentence[i] = "[ @postag punct(staand_streep) streep ]"
+            #sentence[i] = sentence[i].replace("|","\|",1)
+            print(sentence[i])
+        i+=1
 
-	outf = open(filename,"w")
-	print sentence
-	sent = open("sent","w")
-	sent.write("| ") # empty key identifier
-	sent.write(string.join(sentence))
-	sent.close()
+    outf = open(filename,"w", encoding="utf-8")
+    print(sentence)
+    sent = open("sent","w", encoding="utf-8")
+    sent.write("| ") # empty key identifier
+    sent.write(''.join(sentence))
+    sent.close()
 
-	fin = subprocess.Popen(["cat","sent"],stdout=subprocess.PIPE)
+    fin = subprocess.Popen(["cat","sent"],stdout=subprocess.PIPE)
 
-#	executable = os.environ["ALPINO_HOME"] +"/src/Alpino"
-	executable = os.environ["ALPINO_HOME"] +"/bin/Alpino"
-# 	args = [executable, "-notk", "-fast", "end_hook=triples_with_full_postags","user_max=14400000", "-parse"]   # this was used for LASSY conversion
- 	args = [executable, "-notk", "-veryfast", "end_hook=triples_with_full_postags","user_max=14400000", "-parse"]
-	alp = subprocess.Popen(args,stdin=fin.stdout,stdout=subprocess.PIPE)
-	output = alp.communicate()[0]
+#    executable = os.environ["ALPINO_HOME"] +"/src/Alpino"
+    executable = os.environ["ALPINO_HOME"] +"/bin/Alpino"
+#     args = [executable, "-notk", "-fast", "end_hook=triples_with_full_postags","user_max=14400000", "-parse"]   # this was used for LASSY conversion
+    args = [executable, "-notk", "-veryfast", "end_hook=triples_with_full_postags","user_max=14400000", "-parse"]
+    alp = subprocess.Popen(args,stdin=fin.stdout,stdout=subprocess.PIPE)
+    output = alp.communicate()[0]
 
-	print "OUT:"
-	print output
+    print("OUT:")
+    print(output)
 
-	output = triples2tab(output)
+    output = triples2tab(output)
 
-	for item in output:
-		outf.write(item)
-		outf.write(" ")
-	outf.close()
-	# convert triples
-	p = subprocess.Popen([DIR+"alppos2conllfeat.pl",filename],stdout=subprocess.PIPE)
-	cfeat = p.stdout.read()
-	print cfeat
-	
-	
-	return cfeat
+    for item in output:
+        outf.write(item)
+        outf.write(" ")
+    outf.close()
+    # convert triples
+    p = subprocess.Popen([DIR+"alppos2conllfeat.pl",filename],stdout=subprocess.PIPE)
+    cfeat = p.stdout.read()
+    print(cfeat)
+
+
+    return cfeat
 
 
 def triples2tab(output):
-	lines = output.split("\n")
-	word_pos_list = []
-	for line in lines:
-		if len(line.split("|")) > 1:
-			word_pos_list.append(line.split("|")[0:2]) #first word and pos
-			word_pos_list.append(line.split("|")[3:]) #second word and pos
-			print "**",line
+    lines = output.split("\n")
+    word_pos_list = []
+    for line in lines:
+        if len(line.split("|")) > 1:
+            word_pos_list.append(line.split("|")[0:2]) #first word and pos
+            word_pos_list.append(line.split("|")[3:]) #second word and pos
+            print("**",line)
 
-	# get position of words
-	t=0
-	for w in word_pos_list:
-		split = w[0].split("/[")
-		##print "** ",split
-		row = []
-		row.append(split[1].split(",")[0]) # word index
-		row.append(split[0].replace(" ","_")) #word
-		row.append(w[1].replace(" ","_")) #pos
-		#row.append(w[1]) #pos
-		word_pos_list[t] = string.join(row,"@")
-		t+=1
+    # get position of words
+    t=0
+    for w in word_pos_list:
+        split = w[0].split("/[")
+        ##print "** ",split
+        row = []
+        row.append(split[1].split(",")[0]) # word index
+        row.append(split[0].replace(" ","_")) #word
+        row.append(w[1].replace(" ","_")) #pos
+        #row.append(w[1]) #pos
+        word_pos_list[t] = "@".join(row)
+        t+=1
 
 
-	wl = list(set(word_pos_list)) # get uniq words
+    wl = list(set(word_pos_list)) # get uniq words
 
-	# split in index and word@pos to sort
-	t=0
-	for w in wl:
-		row = []
-		split = w.split("@")
-		row.append(int(split[0]))
-		row.append(string.join(split[1:],"@"))
-		wl[t] = tuple(row)
-		t+=1
-		
-	#print wl
-	#wl = wl.sort(numeric_compare) # sort
-	wl.sort() # sort
-	#print "sorted: ", wl
-	#wl=sorted(wl.iteritems(),lambda x,y: 1 if x[1] >y[1] else -1)
-	# remove word index
-	output = []
-	for w in wl:
-		output.append(w[1])
-	print output
-	return output
+    # split in index and word@pos to sort
+    t=0
+    for w in wl:
+        row = []
+        split = w.split("@")
+        row.append(int(split[0]))
+        row.append("@".join(split[1:]))
+        wl[t] = tuple(row)
+        t+=1
+
+    #print wl
+    #wl = wl.sort(numeric_compare) # sort
+    wl.sort() # sort
+    #print "sorted: ", wl
+    #wl=sorted(wl.iteritems(),lambda x,y: 1 if x[1] >y[1] else -1)
+    # remove word index
+    output = []
+    for w in wl:
+        output.append(w[1])
+    print(output)
+    return output
 
 
 ### to test

@@ -1,24 +1,26 @@
+#!/usr/bin/env python3
+
 import sys
 import re
 
-def output_current(id,sent):
+def output_current(ID,sent):
     if sent:
-        print("{}|{}".format(id,sent))
+        print("{}|{}".format(ID,sent))
 
 def main(argv):
     mid=argv[1]
     pattern = re.compile('<au id="(.*)" s=".*" tb=".*">')
     ignore_pattern = re.compile('<mu ')
     sent = ""
-    id = mid + "__" + "0"
+    ID = mid + "__" + "0"
     ignore = True
     for line in sys.stdin:
         match = pattern.match(line)
         ignore_match = ignore_pattern.match(line)
         if match:
-            output_current(id,sent)
+            output_current(ID,sent)
             sent = ""
-            id = mid + "__" + match.group(1)
+            ID = mid + "__" + match.group(1)
             ignore = False
         elif ignore_match:
             ignore = True
@@ -29,7 +31,7 @@ def main(argv):
                 sent = sent + " " + word
             else:
                 sent = word
-    output_current(id,sent)
+    output_current(ID,sent)
 
 
 if __name__ == "__main__":

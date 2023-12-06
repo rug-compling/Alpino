@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 # Een forkende treebank server.
 
@@ -28,17 +28,17 @@ CORPUSDIR = os.path.join(ALPINO_HOME, "Treebank")
 
 sys.path.insert(0, os.path.join(ALPINO_HOME, "TreebankTools/python-lib"))
 
-from optparse import OptionParser
+from argparse import ArgumentParser
 from indexedcorpus import CorpusReader
 import socket
 
-import SocketServer
+import socketserver
 
 
 ### FUNCTIONS
 
-def msg(str):
-    sys.stderr.write(os.path.basename(sys.argv[0]) + ": " + str + "\n")
+def msg(s):
+    sys.stderr.write(os.path.basename(sys.argv[0]) + ": " + s + "\n")
 
 
 class MessageLogger:
@@ -47,9 +47,9 @@ class MessageLogger:
         self.prog = prog
         self.pid = os.getpid()
 
-    def msg(self,str):
-        sys.stderr.write("%s(%d): %s\n" % (self.prog, self.pid, str))
-   
+    def msg(self,s):
+        sys.stderr.write("%s(%d): %s\n" % (self.prog, self.pid, s))
+
 
 class VerboseFileReader(CorpusReader):
     """CorpusReader met minder fatale consquenties door fouten"""
@@ -61,20 +61,20 @@ class VerboseFileReader(CorpusReader):
     def data(self, name):
         try:
             return CorpusReader.data(self, name)
-        except RuntimeError, err:
+        except RuntimeError as err:
             self.msg(str(err))
 
         return ""
 
     # zorgen dat het pid ook geprint wordt
-    def msg(self,msg):
-        self.messagelogger.msg(msg)
+    def msg(self,s):
+        self.messagelogger.msg(s)
 
 # OK...  We leiden niet af van SocketServer.StreamRequestHandler maar
 # van BaseRequestHandler zodat we zelf de buffering kunnen bepalen.
 # Dan kunnen we zelf bepalen dat we geen flush() willen na het
 # schrijven van de grootte.
-class TreebankRequestHandler(SocketServer.BaseRequestHandler):
+class TreebankRequestHandler(socketserver.BaseRequestHandler):
     """Implementeert het treebank protocol
 
     - De client vraagt om een bestand
@@ -99,6 +99,9 @@ class TreebankRequestHandler(SocketServer.BaseRequestHandler):
     verbose = 0
     corpusdir = ""
 
+    close_connection = 0
+    requestfile = ""
+
     def setup(self):
         self.connection = self.request
         self.rfile = self.connection.makefile('rb', self.rbufsize)
@@ -121,7 +124,7 @@ class TreebankRequestHandler(SocketServer.BaseRequestHandler):
         """Handle one request"""
 
         self.parse_request()
-        
+
         if self.close_connection:
             return
 
@@ -133,7 +136,7 @@ class TreebankRequestHandler(SocketServer.BaseRequestHandler):
         # alleen paden relatief aan de treebank directory accepteren
         # (os.path.join zorgt dat /a//b/c ==> /b/c)
         path = os.path.normpath(os.path.join(self.corpusdir, self.requestfile))
-                                    
+
         if not path.startswith(self.corpusdir):
             # FIXME: hier zou een error status geretourneerd kunnen
             # worden
@@ -167,14 +170,14 @@ class TreebankRequestHandler(SocketServer.BaseRequestHandler):
         if not line:
             self.close_connection = 1
         self.requestfile = line.rstrip()
-        
+
 
     def handle(self):
         "handle multiple requests if necessary"
         self.close_connection = 0
 
         # self.handle_one_request()
-        while(1):
+        while True:
             # hier moet een check op close van een socket()
             if self.close_connection:
                 return
@@ -182,11 +185,11 @@ class TreebankRequestHandler(SocketServer.BaseRequestHandler):
 
 
 
-class TreebankServer(SocketServer.ForkingTCPServer):
+class TreebankServer(socketserver.ForkingTCPServer):
     # Jobs on the cluster can cause many simultaneous
     # connections
     max_children = 20                  # default 40
-    
+
     # om makkelijk te kunnen herstarten?
     # ==> werkt nog niet omdat de kinderen ook blijven
     #     luisteren op de een of andere manier
@@ -203,25 +206,25 @@ if __name__ == '__main__':
     signal.signal(signal.SIGPIPE, signal.SIG_DFL)
 
 
-    parser = OptionParser("usage: %prog [options]")
+    parser = ArgumentParser()
 
-    parser.add_option("-p", "--port", action="store", type="int", dest="port",
+    parser.add_argument("-p", "--port", action="store", type=int, dest="port",
                       default = DEFAULTPORT,
                       help="the port to listen on (default: %d)" % (DEFAULTPORT))
 
-    parser.add_option("-c", "--corpus-root", action="store", dest="corpusdir",
+    parser.add_argument("-c", "--corpus-root", action="store", dest="corpusdir",
                       default = CORPUSDIR,
                       help="file location (default: %s)" % (CORPUSDIR))
 
-    parser.add_option("-l", "--localhost", action="store_true", dest="localhost",
+    parser.add_argument("-l", "--localhost", action="store_true", dest="localhost",
                       help="use localhost (loopback) interface")
 
-    parser.add_option("-v", "--verbose", action="store_true", dest="verbose",
+    parser.add_argument("-v", "--verbose", action="store_true", dest="verbose",
                       help="use (more) verbose logging")
 
 
     # parse de command line opties
-    options, args = parser.parse_args()
+    options = parser.parse_args()
 
 
     # default is de "buiten-interface"

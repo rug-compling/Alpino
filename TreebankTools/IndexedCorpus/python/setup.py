@@ -1,11 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import os
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
-if not os.environ.has_key('BOOST_HOME'):
-  raise "Please set BOOST_HOME"
+if 'BOOST_HOME' not in os.environ:
+    raise RuntimeError("Please set BOOST_HOME")
 
 BOOST_HOME = os.environ['BOOST_HOME']
 BOOST_LIB = "%s/lib" % BOOST_HOME

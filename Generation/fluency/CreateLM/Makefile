@@ -34,10 +34,10 @@ DISK=./disk
 default:
 
 $(DISK)/frames: $(SFR)
-	zcat $(SFR) | python $(CURRENT)/sfr2frames.py > $(DISK)/frames
+	zcat $(SFR) | python3 $(CURRENT)/sfr2frames.py > $(DISK)/frames
 
 $(DISK)/corpus: $(SFR)
-	zcat $(SFR) | python $(CURRENT)/sfr2words.py > $(DISK)/corpus
+	zcat $(SFR) | python3 $(CURRENT)/sfr2words.py > $(DISK)/corpus
 
 new: 
 	rm -f $(DISK)/frames $(DISK)/corpus

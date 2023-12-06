@@ -1,9 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 #
 # WIP: feature counts seem off...
 #
 
-import optparse
+import argparse
 import sys
 
 VELLDAL_FEATURES = ['lds', 'ldsb', 'lds_dl', 'lds_skew', 'tngram', 'tngramw']
@@ -18,21 +18,21 @@ DEP_FEATURES = ['lds_deps']
 TAG_NGRAM_FEATURES = ['ngram_tag']
 
 if __name__ == "__main__":
-    parser = optparse.OptionParser()
-    parser.add_option("-p", "--no-parse-features", action = "store_false",
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-p", "--no-parse-features", action = "store_false",
                       dest = "parseFeatures", default = True,
                       help = "don't include parsing features in the evaluation")
-    parser.add_option("-d", "--no-dependency-features", action = "store_false",
+    parser.add_argument("-d", "--no-dependency-features", action = "store_false",
                       dest = "depFeatures", default = True,
                       help = "don't include lds dependency features in the evaluation")
-    parser.add_option("-t", "--no-tag-ngram-features", action = "store_false",
+    parser.add_argument("-t", "--no-tag-ngram-features", action = "store_false",
                       dest = "tagNgramFeatures", default = True,
                       help = "don't include tag ngram features in the evaluation")
-    parser.add_option("-v", "--no-velldal-features", action = "store_false",
+    parser.add_argument("-v", "--no-velldal-features", action = "store_false",
                       dest = "velldalFeatures", default= True,
                       help = "don't include Velldal features")
 
-    (options, args) = parser.parse_args()
+    options = parser.parse_args()
     parseFeatures = options.parseFeatures
     depFeatures = options.depFeatures
     tagNgramFeatures = options.tagNgramFeatures
@@ -61,5 +61,4 @@ if __name__ == "__main__":
             if featureFun in VELLDAL_FEATURES:
                 continue
 
-        print line
-
+        print(line)
