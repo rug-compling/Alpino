@@ -407,23 +407,13 @@ valid_noun_sc(pred_pp(Prep,SubType),  [prep(Prep)|Conds]) :-
 valid_noun_sc(pred_pp_pl(Prep),       [prep(Prep)]).
 valid_noun_sc(pred_pp_pl(Prep,Sub),   [prep(Prep)|Conds]) :-
     valid_noun_sc(Sub,Conds).
-valid_noun_sc(subject_vp,             [or([check_verb_sc(copula_vp),
-					   check_verb_sc(so_copula_vp),
-					   check_verb_sc(so_nonp_copula_vp),
-					   check_verb_sc(pp_copula_vp),
-					   check_verb_sc(pp_copula_vp(_,_)),
-					   check_verb_sc(pred_np_vp),
-					   check_verb_sc(pp_pred_np_vp),
-					   check_verb_sc(pp_pred_np_vp(_,_)),
-					   check_verb_sc(als_pred_np_vp),
-					   check_verb_sc(voor_pred_np_vp)]),
-				       check_vform(te)]).
+valid_noun_sc(subject_vp,             [check_vform(te)]).  % hoogste tijd, natuurlijk , om te vertrekken
 valid_noun_sc(subject_vp_no_het,L):-
     valid_noun_sc(subject_vp,L).
 valid_noun_sc(sbar,                   [check_of_dat_whsub_sbar]).
 valid_noun_sc(van_sbar,               [check_tag(complementizer(van))]).
-valid_noun_sc(subject_sbar,           []).  % ik vertrek , was zijn eerste reactie 
-valid_noun_sc(subject_sbar_no_het,    []).  % ik vertrek , was zijn eerste reactie
+valid_noun_sc(subject_sbar,           []).   % een schande , natuurlijk , dat hij komt
+valid_noun_sc(subject_sbar_no_het,    []).   % een probleem , natuurlijk , dat hij de grootste werd
 valid_noun_sc(measure,                []).
 valid_noun_sc(np_measure,             []).
 valid_noun_sc(app_measure,            []).
