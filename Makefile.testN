@@ -47,6 +47,7 @@ wpspel_testN_options=-flag treebank ../Treebank/wpspel
 g_suite_options=robustness=off
 h_suite_options=robustness=off
 i_suite_options=robustness=off
+j_suite_options=robustness=off
 
 job := job${shell echo $$$$}
 
@@ -145,14 +146,19 @@ reportcurrentbest:
         echo "$$trees	$$worst	$$first	$$best	$(suite)";\
         fi
 
-tests: i_suite.testN h_suite.testN g_suite.testN leuven_yellow_pages.testN lot_test_suite1.testN \
+tests: j_suite.testN i_suite.testN h_suite.testN g_suite.testN leuven_yellow_pages.testN lot_test_suite1.testN \
        cgn_exs.testN qa.testN extra.testN cdb.testN PPH.testN PPI.testN dpc-ind.testN \
        dpc-rou.testN wpspel.testN LassySmall.testN lassy.testN WSU.testN novelsample_corrected.testN\
        eans.testN
 
-shs: i_suite.testN h_suite.testN g_suite.testN 
+shs: i_suite.testN h_suite.testN g_suite.testN j_suite.testN
 
-shorts:i_suite.testN h_suite.testN g_suite.testN leuven_yellow_pages.testN lot_test_suite1.testN \
+shs_rest: leuven_yellow_pages.testN lot_test_suite1.testN \
+       cgn_exs.testN qa.testN extra.testN lassy.testN novelsample_corrected.testN eans.testN \
+       cdb.testN PPH.testN PPI.testN dpc-ind.testN dpc-rou.testN wpspel.testN LassySmall.testN \
+       WSU.testN
+
+shorts:j_suite.testN i_suite.testN h_suite.testN g_suite.testN leuven_yellow_pages.testN lot_test_suite1.testN \
        cgn_exs.testN qa.testN extra.testN lassy.testN novelsample_corrected.testN eans.testN
 
 longs: cdb.testN PPH.testN PPI.testN dpc-ind.testN dpc-rou.testN wpspel.testN LassySmall.testN \
@@ -196,20 +202,4 @@ errors_timeout: cdb.err_timeout dpc-ind.err_timeout dpc-rou.err_timeout PPH.err_
 	@for pat in `make $*.err| awk  '/new error/{ print $$4}' | sort -u`; \
         do grep "^T#$$pat|" $*/job*/log;\
         done | grep -v time_out | grep -v out_of_memory | sort -t\| -k2,2n 
-
-hpctests:
-	$(MAKE) job HPCTARGET=testN suite=i_suite 
-	$(MAKE) shortjob HPCTARGET=testN suite=h_suite 
-	$(MAKE) shortjob HPCTARGET=testN suite=g_suite 
-	$(MAKE) shortjob HPCTARGET=testN suite=leuven_yellow_pages 
-	$(MAKE) shortjob HPCTARGET=testN suite=lot_test_suite1 
-	$(MAKE) job HPCTARGET=testN suite=cgn_exs
-	$(MAKE) job HPCTARGET=testN suite=qa 
-	$(MAKE) job HPCTARGET=testN suite=extra
-	$(MAKE) job HPCTARGET=testN suite=cdb
-	$(MAKE) job HPCTARGET=testN suite=PPH
-	$(MAKE) job HPCTARGET=testN suite=PPI
-	$(MAKE) job HPCTARGET=testN suite=dpc-ind
-	$(MAKE) job HPCTARGET=testN suite=dpc-rou
-	$(MAKE) job HPCTARGET=testN suite=wpspel
 

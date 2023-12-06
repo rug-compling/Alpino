@@ -338,7 +338,7 @@ tests: ts cgns lassy.test1 ovistest.test1 Titaantjes.test1
 
 ltests: ts lassy.test1 Titaantjes.test1
 
-ts: cdbt g_suite.test1 h_suite.test1 i_suite.test1 extra.test1\
+ts: cdbt g_suite.test1 h_suite.test1 i_suite.test1 j_suite.test1 extra.test1\
     leuven_yellow_pages.test1 lot_test_suite1.test1 cgn_exs.test1\
     qa.test1 wpspel.test1 novelsample_corrected.test1\
     eans.test1 m_suite.test1
@@ -437,26 +437,4 @@ cgn42:
 	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv801065 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv801065"
 cgn43:
 	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv801195 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv801195"
-
-hpctests:
-	make job HPCTARGET=test1 suite=cdb_part cdb_part=0
-	make job HPCTARGET=test1 suite=cdb_part cdb_part=1
-	make job HPCTARGET=test1 suite=cdb_part cdb_part=2
-	make job HPCTARGET=test1 suite=cdb_part cdb_part=3
-	make job HPCTARGET=test1 suite=cdb_part cdb_part=4
-	make job HPCTARGET=test1 suite=cdb_part cdb_part=5
-	make job HPCTARGET=test1 suite=cdb_part cdb_part=6
-	make job HPCTARGET=test1 suite=cdb_part cdb_part=7
-	make job HPCTARGET=test1 suite=cdb_part cdb_part=8
-	make job HPCTARGET=test1 suite=cdb_part cdb_part=9
-	make shortjob HPCTARGET=test1 suite=g_suite
-	make shortjob HPCTARGET=test1 suite=h_suite
-	make shortjob HPCTARGET=test1 suite=i_suite
-	make shortjob HPCTARGET=test1 suite=m_suite
-	make shortjob HPCTARGET=test1 suite=extra
-	make shortjob HPCTARGET=test1 suite=leuven_yellow_pages
-	make shortjob HPCTARGET=test1 suite=lot_test_suite1
-	make shortjob HPCTARGET=test1 suite=cgn_exs
-	make shortjob HPCTARGET=test1 suite=qa
-	make shortjob HPCTARGET=test1 suite=wpspel
 
