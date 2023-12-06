@@ -15,10 +15,10 @@ all:
 	$(MAKE) -j freq trees_doc sents sentspl conllu pair dact
 
 novel:
-	( cd fast; make -j i_suite.log extra.log )
+	( cd fast; make -j i_suite.log extra.log j_suite.log )
 
 DIRECTORIES=cdb cgn_exs eans extra g_suite h_suite i_suite lassy leuven_yellow_pages lot_test_suite1 \
-             novelsample_corrected ntv-suite qa Titaantjes wpspel
+             novelsample_corrected ntv-suite qa Titaantjes wpspel j_suite
 
 trees_doc: 
 	for dir in $(DIRECTORIES); do\
