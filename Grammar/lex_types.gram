@@ -1891,7 +1891,7 @@ start_complementizer(C) :-
     C => comp,
     C:wh => nwh,
     C:ctype => c_compare_np,
-    comp(C,smain),
+    comp(C,cp),
     C:sc <=> [START],
     START => start,
     unify_mods(START).
@@ -2691,6 +2691,7 @@ preposition_of_sbar(P) :-
 preposition_redrel(PREP,P) :-
     preposition_sbar(P0),
     overwrite(P0,P1,sc:h:ctype,c_redrel),
+    P1:sc:h:tmploc => ntmploc,
     unify_except(P1,P,prep),
     P:prep ==> PREP.
 
