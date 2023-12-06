@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="du" end="4" id="1" rel="--">
+      <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="2" infl="no_e" lemma="fijn" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="fijn" sc="subject_sbar" vform="adj" word="fijn"/>
+      <node begin="1" cat="cp" end="4" id="3" rel="dp">
+        <node begin="1" conjtype="onder" end="2" id="4" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="2" cat="ssub" end="4" id="5" rel="body">
+          <node begin="2" case="nom" def="def" end="3" gen="de" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+          <node begin="3" end="4" id="7" infl="sg3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" sc="intransitive" tense="present" v_per="thi" word="komt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>fijn dat hij komt</sentence>
+</alpino_ds>

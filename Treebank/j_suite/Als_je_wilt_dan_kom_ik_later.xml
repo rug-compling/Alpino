@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" cat="cp" end="3" id="2" rel="sat">
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="Als"/>
+        <node begin="1" cat="ssub" end="3" id="4" rel="body">
+          <node begin="1" case="both" def="def" end="2" gen="de" getal="ev" id="5" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+          <node begin="2" end="3" id="6" infl="sg_hebt" lemma="willen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="wil" sc="intransitive" tense="present" v_per="ninvje" word="wilt" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="3" cat="smain" end="7" id="7" rel="nucl">
+        <node begin="3" end="4" id="8" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
+        <node begin="4" end="5" id="9" infl="sg1" lemma="komen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kom" sc="intransitive" stype="declarative" tense="present" v_per="fir" word="kom" wvorm="pv"/>
+        <node begin="5" case="nom" def="def" end="6" gen="de" getal="ev" id="10" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+        <node aform="compar" begin="6" buiging="zonder" end="7" graad="comp" id="11" infl="no_e" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="laat" vform="adj" word="later"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Als je wilt dan kom ik later</sentence>
+</alpino_ds>

@@ -1,0 +1,29 @@
+j_suite/./De_naar_verluidt_aardige_kinderen_klierden.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?
+j_suite/./De_tot_vier_centimeter_lange_tentakels_van_dit_insect.xml	//node[ @cat and @rel="me" and not(@cat="np") and not(@cat="ap") and not(@cat="conj") and not(@cat="mwu")]	unexpected me-category.   Expected cats: np ap conj mwu
+j_suite/./Er_zijn_er_ook_geweest_die_dat_niet_deden.xml	//node[ @cat and @rel="su" and not(@cat="np") and not(@cat="conj") and not(@cat="cp") and not(@cat="ti") and not(@cat="oti") and not(@cat="whrel") and not(@cat="whsub") and not(@cat="svan") and not(@cat="mwu")]	unexpected su-category.   Expected cats: np conj cp ti oti whrel whsub svan mwu
+j_suite/./Hij_verdween_om_,_hoe_kan_het_ook_anders_,_keihard_terug_te_komen.xml	//node[ @cat and @rel="mod" and not(@cat="rel") and not(@cat="cp") and not(@cat="np") and not(@cat="advp") and not(@cat="ap") and not(@cat="ppart") and not(@cat="pp") and not(@cat="mwu") and not(@cat="conj") and not(@cat="oti") and not(@cat="du") and not(@cat="smain") and not(@cat="whrel") and not(@cat="ti") and not(@cat="sv1") and not(@cat="ppres")]	unexpected mod-category.   Expected cats: rel cp np advp ap ppart pp mwu conj oti du smain whrel ti sv1 ppres
+j_suite/./Ik_ga_niet_,_behalve_dan_om_even_de_deur_uit_te_zijn.xml	//node[ @cat and @rel="body" and not(@cat="ssub") and not(@cat="ti") and not(@cat="sv1") and not(@cat="inf") and not(@cat="np") and not(@cat="conj") and not(@cat="pp") and not(@cat="cp") and not(@cat="mwu") and not(@cat="du") and not(@cat="ppart") and not(@cat="smain") and not(@cat="whrel") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres")]	unexpected body-category.   Expected cats: ssub ti sv1 inf np conj pp cp mwu du ppart smain whrel ap ppart ppres
+j_suite/./Ik_ga_niet_,_behalve_om_even_de_deur_uit_te_zijn.xml	//node[ @cat and @rel="body" and not(@cat="ssub") and not(@cat="ti") and not(@cat="sv1") and not(@cat="inf") and not(@cat="np") and not(@cat="conj") and not(@cat="pp") and not(@cat="cp") and not(@cat="mwu") and not(@cat="du") and not(@cat="ppart") and not(@cat="smain") and not(@cat="whrel") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres")]	unexpected body-category.   Expected cats: ssub ti sv1 inf np conj pp cp mwu du ppart smain whrel ap ppart ppres
+j_suite/./we_kennen_hem_vooral_als_@.xml	//node[ ../@cat="cp" and not(@rel="cmp") and not(@rel="body") and not(@rel="mod")]	unexpected cp-daughter.   Expected rels: cmp body mod
+j_suite/./we_kennen_hem_vooral_als_@.xml	//node[@lemma="als" and (@pt="vz" or @rel="hd" or ../@cat="pp")]	als is not a prep but a complementizer
+j_suite/./we_kennen_hem_vooral_als_@.xml	//node[@cat="cp" and not(node[@rel="body"])]	cp without body
+j_suite/./we_kennen_hem_vooral_als_@.xml	//node[@cat="cp" and not(node[@rel="cmp"])]	cp without cmp
+j_suite/./Als_dat_niet_arrogant_is_,_tja_,_wat_dan_wel_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./Als_dat_niet_arrogant_is_,_wat_dan_wel_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./Omdat_?.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
+j_suite/./ik_kom_,_omdat_@.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
+j_suite/./ik_kom_,_tenzij_....xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
+j_suite/./Hij_verstoorde_met_opmerkingen_als_@___Q2___jullie_zijn_corrupt_!___Q2___de_rust.xml	//node[not(@cat="svan") and node[@cat="smain" and @rel="body"]]	smain as the body????
+j_suite/./Hij_verstoorde_met_opmerkingen_als___Q2___jullie_zijn_corrupt_!___Q2___de_rust.xml	//node[not(@cat="svan") and node[@cat="smain" and @rel="body"]]	smain as the body????
+j_suite/./Hoezo_dat_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./Waarom_groen_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./Waarom_in_Assen_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./met_welk_doel_dan_zo__Q1__n_onderzoek_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./met_welk_doel_zo__Q1__n_onderzoek_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./waarom_dan_deze_vragen_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./waarom_dan_niet_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./waarom_deze_vragen_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./waarom_niet_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./welke_kinderen_dan_niet_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./wie_dan_?.xml	//node[@rel="whd" and not(@index)]	whd without index?
+j_suite/./De_naar_verluidt_achthonderd_demonstranten.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?

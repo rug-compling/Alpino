@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="3" infl="sg" lemma="vragen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vraag" sc="sbar" stype="declarative" tense="past" v_per="thi" word="vroeg" wvorm="pv"/>
+      <node begin="2" cat="whsub" end="5" id="4" rel="vc">
+        <node begin="2" end="3" id="5" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" wh="ywh" word="hoe"/>
+        <node begin="2" cat="ti" end="5" id="6" rel="body">
+          <node begin="3" end="4" id="7" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+          <node begin="2" cat="inf" end="5" id="8" rel="body">
+            <node begin="2" end="3" id="9" index="1" rel="mod"/>
+            <node begin="4" buiging="zonder" end="5" id="10" infl="inf" lemma="handelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="handel" sc="intransitive" word="handelen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Hij vroeg hoe te handelen ?</sentence>
+</alpino_ds>

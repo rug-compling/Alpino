@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="9" id="2" rel="--">
+      <node begin="0" case="both" def="def" end="1" gen="de" getal="ev" id="3" lemma="iedereen" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="su" rnum="sg" root="iedereen" special="strpro" status="vol" vwtype="onbep" wh="nwh" word="Iedereen"/>
+      <node begin="1" end="2" id="4" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="2" cat="ap" end="4" id="5" rel="predc">
+        <node begin="2" end="3" genus="onz" getal="ev" id="6" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="zat" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="zat" special="np" word="zat"/>
+      </node>
+      <node begin="5" cat="cp" end="9" id="8" rel="mod">
+        <node begin="5" conjtype="onder" end="6" id="9" lemma="behalve" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="behalve" sc="np" word="behalve"/>
+        <node begin="6" end="7" id="10" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
+        <node begin="7" cat="np" end="9" id="11" rel="body">
+          <node begin="7" end="8" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="8" end="9" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lemma="voorzitter" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="voorzitter" word="voorzitter"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Iedereen is het zat , behalve dan de voorzitter</sentence>
+</alpino_ds>

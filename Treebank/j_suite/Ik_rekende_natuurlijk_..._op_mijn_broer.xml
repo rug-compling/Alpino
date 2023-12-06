@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." special="hellip" word="..."/>
+    <node begin="0" cat="smain" end="7" id="2" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="3" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+      <node begin="1" end="2" id="4" infl="sg" lemma="rekenen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="reken" sc="pc_pp(op)" stype="declarative" tense="past" v_per="fir" word="rekende" wvorm="pv"/>
+      <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="5" infl="no_e" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" vform="adj" word="natuurlijk"/>
+      <node begin="4" cat="pp" end="7" id="6" rel="pc">
+        <node begin="4" end="5" id="7" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="5" cat="np" end="7" id="8" rel="obj1">
+          <node begin="5" buiging="zonder" end="6" getal="ev" id="9" infl="pron" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+          <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="broer" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="broer" word="broer"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik rekende natuurlijk ... op mijn broer</sentence>
+</alpino_ds>

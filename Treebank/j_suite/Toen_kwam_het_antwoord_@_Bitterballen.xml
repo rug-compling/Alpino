@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" special="dubb_punt" word=":"/>
+    <node begin="0" cat="du" end="6" id="2" rel="--">
+      <node begin="0" cat="smain" end="4" id="3" rel="nucl">
+        <node begin="0" end="1" id="4" lemma="toen" pos="adv" postag="BW()" pt="bw" rel="mod" root="toen" special="tmp" word="Toen"/>
+        <node begin="1" end="2" id="5" infl="sg" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="kwam" wvorm="pv"/>
+        <node begin="2" cat="np" end="4" id="6" rel="su">
+          <node begin="2" end="3" id="7" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+          <node begin="3" end="4" gen="het" genus="onz" getal="ev" graad="basis" id="8" lemma="antwoord" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="antwoord" word="antwoord"/>
+        </node>
+      </node>
+      <node begin="5" buiging="zonder" end="6" getal-n="zonder-n" id="9" lemma="bitter_ballen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="sat" rnum="sg" root="bitter_bal" sc="intransitive" special="v_noun" word="Bitterballen" wvorm="inf"/>
+    </node>
+  </node>
+  <sentence>Toen kwam het antwoord : Bitterballen</sentence>
+</alpino_ds>

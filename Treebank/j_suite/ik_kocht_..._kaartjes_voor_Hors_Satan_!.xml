@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." special="hellip" word="..."/>
+    <node begin="0" cat="smain" end="7" id="2" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="3" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="1" end="2" id="4" infl="sg" lemma="kopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="koop" sc="transitive" stype="declarative" tense="past" v_per="fir" word="kocht" wvorm="pv"/>
+      <node begin="3" cat="np" end="7" id="5" rel="obj1">
+        <node begin="3" end="4" gen="het" getal="mv" graad="dim" id="6" lemma="kaart" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" rnum="pl" root="kaart_DIM" word="kaartjes"/>
+        <node begin="4" cat="pp" end="7" id="7" rel="mod">
+          <node begin="4" end="5" id="8" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="5" cat="mwu" end="7" id="9" rel="obj1">
+            <node begin="5" end="6" id="10" lemma="Hors" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Hors" spectype="deeleigen" word="Hors"/>
+            <node begin="6" end="7" id="11" lemma="Satan" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Satan" spectype="deeleigen" word="Satan"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+  </node>
+  <sentence>ik kocht ... kaartjes voor Hors Satan !</sentence>
+</alpino_ds>

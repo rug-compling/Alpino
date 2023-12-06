@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="ap" end="3" id="2" rel="predm">
+        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="3" infl="no_e" lemma="keurig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="keurig" vform="adj" word="keurig"/>
+        <node begin="1" cat="cp" end="3" id="4" rel="mod">
+          <node begin="1" conjtype="onder" end="2" id="5" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
+          <node begin="2" end="3" id="6" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="body" root="altijd" special="sentence" word="altijd"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" infl="pl" lemma="veroordelen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="veroordeel" sc="transitive" stype="declarative" tense="present" v_per="fir" word="veroordelen" wvorm="pv"/>
+      <node begin="4" case="nom" def="def" end="5" gen="de" getal="mv" id="8" lemma="wij" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" rnum="pl" root="wij" status="vol" vwtype="pers" wh="nwh" word="wij"/>
+      <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="9" lemma="anarchisme" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="anarchisme" word="anarchisme"/>
+    </node>
+  </node>
+  <sentence>keurig als altijd veroordelen wij anarchisme</sentence>
+</alpino_ds>

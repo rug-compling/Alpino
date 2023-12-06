@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="du" end="6" id="1" rel="--">
+      <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="2" infl="no_e" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="leuk" sc="subject_vp" vform="adj" word="Leuk"/>
+      <node begin="1" cat="ti" end="6" id="3" rel="dp">
+        <node begin="4" end="5" id="4" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="1" cat="inf" end="6" id="5" rel="body">
+          <node begin="1" case="both" def="def" end="2" gen="de" getal="getal" id="6" lemma="je" naamval="obl" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,red,2v,getal)" pt="vnw" rel="obj1" rnum="sg" root="je" special="wkpro" status="red" vwtype="pr" wh="nwh" word="je"/>
+          <node begin="2" end="3" id="7" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+          <node begin="3" end="4" id="8" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" special="tmp" word="eens"/>
+          <node begin="5" buiging="zonder" end="6" id="9" infl="inf" lemma="ontmoeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ontmoet" sc="transitive" word="ontmoeten" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Leuk je weer eens te ontmoeten</sentence>
+</alpino_ds>

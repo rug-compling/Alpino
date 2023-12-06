@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
+        <node begin="1" cat="ppart" end="5" id="4" rel="mod">
+          <node begin="1" cat="pp" end="4" id="5" rel="pc">
+            <node begin="1" end="2" id="6" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="2" cat="np" end="4" id="7" rel="obj1">
+              <node begin="2" end="3" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="9" lemma="omstandigheid" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="omstandigheid" word="omstandigheden"/>
+            </node>
+          </node>
+          <node aform="base" begin="4" buiging="met-e" end="5" id="10" infl="e" lemma="aan_passen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="aan_passen" sc="pp(aan)" vform="psp" word="aangepaste" wvorm="vd"/>
+        </node>
+        <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="protocol" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="protocol" word="protocol"/>
+      </node>
+      <node begin="6" end="7" id="12" infl="sg" lemma="voldoen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="voldoe" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="voldeed" wvorm="pv"/>
+      <node aform="base" begin="7" buiging="zonder" end="8" graad="basis" id="13" infl="both" lemma="prima" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="prima" vform="adj" word="prima"/>
+    </node>
+  </node>
+  <sentence>Het aan de omstandigheden aangepaste protocol voldeed prima</sentence>
+</alpino_ds>

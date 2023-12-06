@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="whd">
+        <node begin="0" cat="np" end="2" id="3" rel="me">
+          <node begin="0" end="1" id="4" lemma="hoeveel" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="hoeveel" wh="ywh" word="hoeveel"/>
+          <node begin="1" end="2" gen="het" getal="mv" graad="basis" id="5" lemma="boek" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="boek" word="boeken"/>
+        </node>
+        <node aform="compar" begin="2" buiging="zonder" end="3" graad="comp" id="6" infl="meer" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" rnum="sg" root="meer" vform="adj" vwtype="onbep" word="meer"/>
+      </node>
+      <node begin="0" cat="sv1" end="5" id="7" rel="body">
+        <node begin="0" end="3" id="8" index="1" rel="obj1"/>
+        <node begin="3" end="4" id="9" infl="sg" lemma="bezitten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="bezit" sc="transitive" stype="whquestion" tense="present" v_per="thi" word="bezit" wvorm="pv"/>
+        <node begin="4" case="nom" def="def" end="5" gen="de" genus="masc" getal="ev" id="10" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>hoeveel boeken meer bezit hij ?</sentence>
+</alpino_ds>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="pp" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" sc="absolute" vztype="init" word="met"/>
+      <node begin="1" cat="cp" end="4" id="3" rel="mod">
+        <node begin="1" conjtype="onder" end="2" id="4" lemma="behalve" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="behalve" sc="np" word="behalve"/>
+        <node begin="2" cat="np" end="4" id="5" rel="body">
+          <node begin="2" end="3" id="6" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="3" end="4" gen="both" genus="zijd" getal="ev" graad="basis" id="7" lemma="afzegging" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="afzegging" word="afzegging"/>
+        </node>
+      </node>
+      <node begin="4" cat="np" end="7" id="8" rel="obj1">
+        <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="9" infl="no_e" lemma="weinig" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="weinig" vform="adj" vwtype="onbep" word="weinig"/>
+        <node aform="base" begin="5" buiging="met-e" end="6" graad="basis" id="10" infl="e" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" vform="adj" word="nieuwe"/>
+        <node begin="6" end="7" gen="het" getal="mv" graad="basis" id="11" lemma="lid" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="lid" word="leden"/>
+      </node>
+    </node>
+  </node>
+  <sentence>met behalve een afzegging weinig nieuwe leden</sentence>
+</alpino_ds>
