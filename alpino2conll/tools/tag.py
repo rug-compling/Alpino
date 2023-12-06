@@ -12,11 +12,9 @@ Script augmenting the tabular conll format with the alpino full pos tags (which 
 __author__ = 'Erwin Marsi <e.c.marsi@uvt.nl> modified by Barbara <b.plank@rug.nl>'
 __version__ = '$Id: retag.py,v 1.4 2006/01/12 19:28:34 erwin Exp $'
 
-import string
 import sys
 import os.path
-import optparse
-import subprocess
+import argparse
 import copy
 
 import alpino as parse
@@ -27,22 +25,22 @@ debug = True
 tags = []
 
 def retag(intabfn, outtabfn=None):
-        '''
-        replaces the column containing the original POS tags from the Alpino
-        dependency trees with a a column containing POS tags predicted by the
-        Alpino full pos tagger
-        '''
-        lines = []
-        tokens = []
+    '''
+    replaces the column containing the original POS tags from the Alpino
+    dependency trees with a a column containing POS tags predicted by the
+    Alpino full pos tagger
+    '''
+    lines = []
+    tokens = []
 
-        for l in open(intabfn):
-                fields = l.split('\t')
-                lines.append(fields)
+    for l in open(intabfn):
+        fields = l.split('\t')
+        lines.append(fields)
         print(fields)
 
         ##### surround words by [ @mwu WORD ] to give tokenization/bracketing to Alpino
         ##### prevents that Alpino interprets 'het ADJ' as a mwu
-                if len(fields) > 2:
+        if len(fields) > 2:
             word = fields[options.wordcol-1]
             if word.find('_'):
                 word = word.replace('_',' ')
@@ -63,7 +61,7 @@ def retag(intabfn, outtabfn=None):
                 lines[t] = newlines
                 write_output_single(outtabfn, lines)
                 break
-            
+
             print("Parse string with Alpino")
             tmptags = parse.alpino(tokens, outtabfn+".parsed")
             print("tags:")
@@ -84,17 +82,17 @@ def retag(intabfn, outtabfn=None):
                         print(newlines)
                         lines[t] = newlines
                         t+=1
-                    
+
                 write_output_single(outtabfn, lines)
                 break
-            
-                
+
+
 
             #tags = []
             for i in taglines:
                 tags.append(i.split('\t'))
-                
-            
+
+
             print(lines)
             print(tags)
             print(len(tags))
@@ -106,7 +104,7 @@ def retag(intabfn, outtabfn=None):
 
             else:
                 print("LENGTH MISMATCH: split/join", file=sys.stdout)
-                                #split or join
+                #split or join
                 t = 0
                 for fields in lines:
                     # skip over empty lines
@@ -116,7 +114,7 @@ def retag(intabfn, outtabfn=None):
                         tword = tags[t][1]
                         lword = lines[t][options.wordcol-1]
                         llabel = lines[t][3]  # = fields[3]
-                                                
+
                         if debug:
                             print(tword, " ", lword, " llabe=",llabel)
                             print("t= ",t)
@@ -125,7 +123,7 @@ def retag(intabfn, outtabfn=None):
                             t += 1 #jump over it
                             print("jump over t_/_m")
                             continue
-                            
+
 
 
                         ###
@@ -149,28 +147,28 @@ def retag(intabfn, outtabfn=None):
                         ###
                         elif llabel == 'mwu':
                             t += joinFields(lword,tword,t,lines,outtabfn)
-                            
+
 
                         ####
                         #### split tags
                         ####
-                        elif (len(tword.split('_')) > 1):
+                        elif len(tword.split('_')) > 1:
                             #if options.split:
                             print("splitting")
                             t += splitFields(lword,tword,t,lines,outtabfn)
-                            
+
                         ## else do nothing
                         else:
                             t += 1
 
                 print("***** PROBLEM WITH FILE ", outtabfn)
 
-                            
+
 
 
 def joinFields(lword,tword,t,lines,outtabfn):
     '''
-    joins fields together
+    joins fields together 
     '''
     global tags
 
@@ -195,7 +193,7 @@ def joinFields(lword,tword,t,lines,outtabfn):
         # to prevent case 1034.tab
         #print "##check ", tags[t+1][1], " ", lines[t+1][2]
         #if tags[t+1][1] == lines[t+1][2] and j >1:
-        #    j = j - 1  #don't join with this
+        #       j = j - 1  #don't join with this
 
         print("** tags **")
         for x in tags:
@@ -227,17 +225,17 @@ def joinFields(lword,tword,t,lines,outtabfn):
     else:
         print("nothing")
     return 1
-                            
+
 def splitFields(lword,tword,t,lines,outtabfn):
     '''
     splits fields
     '''
     global tags
-    
+
     print("TODOOO shorter ", os.path.basename(outtabfn))
     print(tword, lword)
     tag = tags[t]
-                            
+
     if not equal(tword, lword) and nextWordsDiffer(tags,lines,t):
 
         print("they differ")
@@ -245,22 +243,22 @@ def splitFields(lword,tword,t,lines,outtabfn):
         print("###split positions: ", positions)
 
         positions = getEffectiveSplitPositions(tword,positions,lines,t)
-        
+
         print("###effective: ", positions)
 
         if len(positions) ==0:
             print("no splitting found - try again")
             return joinFields(lword,tword,t,lines,outtabfn)
-        
+
         newtag = split_pos(tag, positions)
-        
+
         print("###newtag:", newtag)
-        
+
         tags[t:t+1] = newtag
-        
-        
+
+
         #t += 1 # don't jump over split rest
-        
+
         if debug:
             print("tags:** ", tags)
 
@@ -279,14 +277,14 @@ def splitFields(lword,tword,t,lines,outtabfn):
         #t += 1
 
     return 1
-                            
 
-        
+
+
 def join(list,index,symb):
     out = []
     for i in list:
         out.append(i[index])
-    return string.join(out,symb)
+    return symb.join(out)
 
 def split_pos(tag, positions):
     word = tag[options.wordcol-1]
@@ -300,12 +298,12 @@ def split_pos(tag, positions):
         newtag.append(new)
 
     return newtag
-        
+
 
 def nextWordsDiffer(tags,lines,t):
     print("check whether next Words differ")
     # if they don't differ, don't split
-    
+
     # TODO: problem if second word in splitword equal to next word!
     # only split if next words are not equal
     # -- take stem from lines
@@ -320,27 +318,24 @@ def nextWordsDiffer(tags,lines,t):
             print("wordtosplit=",wordtosplit)
             if wordtosplit.find(next_lword)  == -1:
                 return False
-            else:
-                print(next_lword, " is a substring of ", wordtosplit, "!!")
-                return True
-        else:
+            print(next_lword, " is a substring of ", wordtosplit, "!!")
             return True
-    else:
         return True
+    return True
 
 def equal(word1, word2):
     print("Check whether they're equal: ", word1, " ", word2)
     #ignore case
-    word1 = string.lower(word1)
-    word2 = string.lower(word2)
+    word1 = word1.lower()
+    word2 = word2.lower()
 
     # (-) is equal to -
     word1 = word1.replace('(-)','-')
     word2 = word2.replace('(-)','-')
 
 
-        #Check whether they're equal:
-        #Windmill_voorzitterGert_Harmsen   Windmill-voorzitter_Gert_Harmsen
+    #Check whether they're equal:
+    #Windmill_voorzitterGert_Harmsen   Windmill-voorzitter_Gert_Harmsen
     # don't differ by -
     # but both must contain either - or _
     if (word1.find('-') and word2.find('_')) or \
@@ -350,14 +345,14 @@ def equal(word1, word2):
         word1 = word1.replace('_','')
         word2 = word2.replace('_','')
         word2 = word2.replace('-','')
-    
-    
+
+
     # words don't differ only by underscores
     w1 = word1.replace('_','')
     w2 = word2.replace('_','')
     print("w1,w2:",w1,w2)
     if w1 == w2:
-         return True
+        return True
 
 
     # literally different
@@ -365,12 +360,12 @@ def equal(word1, word2):
     print("check ending: word2=",word2, " word1=",word1)
     if isValidEnding(word2,word1) or isValidEnding(word1,word2):
         return True
-        
+
     # same check but with _ removed
     if isValidEnding(w2,w1) or isValidEnding(w1,w2):
         return True
-        
-    return (word1 == word2)
+
+    return word1 == word2
 
 def print_list(l):
     for i in l:
@@ -378,13 +373,13 @@ def print_list(l):
 
 
 def isValidEnding(word,longword):
-         if (longword.startswith(word)):
+    if longword.startswith(word):
         rest = longword.replace(word,"",1)
         print("rest: ", rest, " len=", len(rest))
-               if len(rest) <= 3 and not len(rest.split('_')) != 1 and isSuffix(rest):
+        if len(rest) <= 3 and not len(rest.split('_')) != 1 and isSuffix(rest):
             # only a few chars matter
             print("OK isValidEnding: word=",word,"longword=",longword)
-             return True
+            return True
     elif len(longword.split('_')) > 1:
         # check middle for endings
         print("check middle for endings")
@@ -405,7 +400,7 @@ def isValidEnding(word,longword):
         if len(listrest) == 0:
             return False
         #if len(rest) == 0:
-        #    return False
+        #       return False
         else:
             returnValue = False
             for rest in listrest:
@@ -415,22 +410,26 @@ def isValidEnding(word,longword):
                     return False
             return returnValue
 
+    return False
+
 
 def differ(word1, word2):
     print("Check whether they differ: ", word1, " ", word2)
     #ignore case
-    word1 = string.lower(word1)
-    word2 = string.lower(word2)
-    
+    word1 = word1.lower(word1)
+    word2 = word2.lower(word2)
+
     # words don't differ only by underscores
     w1 = word1.replace('_','')
     w2 = word2.replace('_','')
     print("w1,w2:",w1,w2)
     if w1 == w2:
-         return False
+        return False
     # literally different
     if word1 != word2:
         return True
+
+    return False
 
 
 def isSuffix(rest):
@@ -455,9 +454,8 @@ def isSuffix(rest):
         return True
     if rest == 'ge': # prefix also ok
         return True
-    else:
-        print("Is not a suffix (rest): ",rest)
-        return False
+    print("Is not a suffix (rest): ",rest)
+    return False
 
 def write_output(outtabfn, tags, lines):
     outstream = open(outtabfn, 'w')
@@ -465,7 +463,7 @@ def write_output(outtabfn, tags, lines):
     print_list(tags)
     print("** printing:")
     print_list(lines)
-    
+
     t = 0
     for fields in lines:
         if debug:
@@ -474,7 +472,7 @@ def write_output(outtabfn, tags, lines):
         if len(fields) > 2:
             fields = fields[:4]  + tags[t][2:4] + fields[4:]
             t += 1
-            outstream.write(string.join(fields, '\t'))
+            outstream.write('\t'.join(fields))
     outstream.write("\n")
 
 def write_output_single(outtabfn, lines):
@@ -482,7 +480,7 @@ def write_output_single(outtabfn, lines):
 
     print("** printing:")
     print_list(lines)
-    
+
     t = 0
     for fields in lines:
         if debug:
@@ -490,10 +488,10 @@ def write_output_single(outtabfn, lines):
         # skip empty lines
         if len(fields) > 2:
             t += 1
-            outstream.write(string.join(fields, '\t'))
+            outstream.write('\t'.join(fields))
     outstream.write("\n")
 
-            
+
 def getLengthMWU(word,taglist,startindex):
     # underscore in first part
     print("getLengthMWU: word=",word," taglist=",taglist, " startindex=",startindex)
@@ -505,7 +503,7 @@ def getLengthMWU(word,taglist,startindex):
     #j = len(word.split('_')) - x
     if word.startswith(newword):
         x = len(newword.split('_')) - 1
-                #x = str.count(newword,'_')
+        #x = str.count(newword,'_')
         j = len(word.split('_')) - x
     else:
         j = len(word.split('_'))
@@ -522,7 +520,7 @@ def getEffectiveLengthMWU(word,taglist,startindex,j_max):
     ## ignore DIM at end
     if word.endswith("_DIM"):
         j_max = j_max-1
-    
+
     # try to build up word
     build = ""
     j=j_max
@@ -574,7 +572,7 @@ def getEffectiveSplitPositions(word, positions, lines, startindex):
     # try to build up word to find max len
     newpositions = []
     build = ""
-    
+
     for i in range(0,j_max+1):
         print(i)
         if build == "":
@@ -582,7 +580,7 @@ def getEffectiveSplitPositions(word, positions, lines, startindex):
         else:
             build += "_"
             build += lines[startindex+i][1]
-            
+
         print("current build: ",build)
 
         if (len(build.split('_'))+i) > abs_max:
@@ -611,57 +609,60 @@ def split_word(word,positions):
     return l
 
 
-# main stuff
+# main stuff   
 
 usage = \
 """
-        %prog [options] FILES
+    %prog [options] FILES
 
 
 purpose:
-        replaces original Alpino POS tags by Mbt POS tags
+    replaces original Alpino POS tags by Mbt POS tags
 
 args:
-        FILES           dependency trees in tabular format"""
+    FILES       dependency trees in tabular format"""
 
-parser = optparse.OptionParser(usage, version=__version__)
+parser = argparse.ArgumentParser(description='replaces original Alpino POS tags by Mbt POS tags')
 
-parser.add_option('-f', '--file',
-                                        dest='file',
-                                        action='store_true',
-                                        default=False,
-                                        help='write output to file, possibly overwriting original file')
+parser.add_argument("filename", type=str, nargs="+", help="dependency tree in tabular format")
 
-parser.add_option('-s', '--split',
-                                        dest='split',
-                                        action='store_true',
-                                        default=False,
-                                        help='split further')
+parser.add_argument('-f', '--file',
+                    dest='file',
+                    action='store_true',
+                    default=False,
+                    help='write output to file, possibly overwriting original file')
+
+parser.add_argument('-s', '--split',
+                    dest='split',
+                    action='store_true',
+                    default=False,
+                    help='split further')
 
 
-parser.add_option('-w', '--word-column',
-                                        dest='wordcol',
-                                        default=2,
-                                        type='int',
-                                        metavar='NUMBER',
-                                        help='number of column containing words')
+parser.add_argument('-w', '--word-column',
+                    dest='wordcol',
+                    default=2,
+                    type=int,
+                    metavar='NUMBER',
+                    help='number of column containing words')
 
-(options, args) = parser.parse_args()
+options = parser.parse_args()
+args = options.filename
 
 if not args:
-        sys.stderr.write('Error: incorrect number of arguments\n')
+    sys.stderr.write('Error: incorrect number of arguments\n')
 
 elif os.environ["ALPINO_HOME"] == "":
     sys.stderr.write('Error: no ALPINO_HOME set!\n')
 else:
-        for intabfn in args:
-                if options.file:
-                        outtabfn = os.path.basename(intabfn) + "2"
-                        print('retagging %s to %s' % (intabfn, outtabfn), file=sys.stderr)    
-                        retag(intabfn, outtabfn)
-                else:
-                        print('retagging', intabfn, file=sys.stderr)    
-                        retag(intabfn)
+    for intabfn in args:
+        if options.file:
+            outtabfn = os.path.basename(intabfn) + "2"
+            print('retagging %s to %s' % (intabfn, outtabfn), file=sys.stderr)     
+            retag(intabfn, outtabfn)
+        else:
+            print('retagging', intabfn, file=sys.stderr)       
+            retag(intabfn)
 
 
 
