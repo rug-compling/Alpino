@@ -30,7 +30,7 @@ def convert(xmlstream, tabstream):
     """
     convert dependency tree in Alpino XML format to tabular format.
     """
-    dom = parseString(''.join(xmlstream.readlines()))
+    dom = parseString(' '.join(xmlstream.readlines()))
     removeWhitespaceNodes(dom.documentElement)
 
     topnode = topNode(dom)
