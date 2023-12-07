@@ -168,7 +168,7 @@ def retag(intabfn, outtabfn=None):
 
 def joinFields(lword,tword,t,lines,outtabfn):
     '''
-    joins fields together 
+    joins fields together
     '''
     global tags
 
@@ -609,7 +609,7 @@ def split_word(word,positions):
     return l
 
 
-# main stuff   
+# main stuff
 
 usage = \
 """
@@ -658,11 +658,8 @@ else:
     for intabfn in args:
         if options.file:
             outtabfn = os.path.basename(intabfn) + "2"
-            print('retagging %s to %s' % (intabfn, outtabfn), file=sys.stderr)     
+            print('retagging %s to %s' % (intabfn, outtabfn), file=sys.stderr)
             retag(intabfn, outtabfn)
         else:
-            print('retagging', intabfn, file=sys.stderr)       
+            print('retagging', intabfn, file=sys.stderr)
             retag(intabfn)
-
-
-
