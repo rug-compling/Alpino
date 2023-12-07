@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="3" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="2" cat="conj" end="8" id="4" rel="predc">
+        <node begin="2" end="3" id="5" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" special="left" word="zowel"/>
+        <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="6" infl="no_e" lemma="onbeleefd" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="onbeleefd" vform="adj" word="onbeleefd"/>
+        <node begin="4" conjtype="onder" end="5" id="7" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="als" special="right" word="als"/>
+        <node begin="5" cat="np" end="8" id="8" rel="cnj">
+          <node begin="5" end="6" id="9" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node aform="base" begin="6" buiging="met-e" end="7" graad="basis" id="10" infl="e" lemma="echt" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="echt" vform="adj" word="echte"/>
+          <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="ploert" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="ploert" word="ploert"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij is zowel onbeleefd als een echte ploert</sentence>
+</alpino_ds>

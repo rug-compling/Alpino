@@ -9851,11 +9851,13 @@ grammar_rule(van_en,NP4,[NP1,Van,En,NP2,Op,NP3]) :-
 %%EX%% Kom naar de bioscoop en koop een kaartje .
 %%EX%% Heb ik niet en wil ik niet .
 %% root
-%%EX%% Ik moet naar huis en ik moet nog boodschappen doen
+%%EX%% Ik moet naar huis want ik moet nog boodschappen doen
 %% vproj
 %%EX%% Omdat ik de kinderen moest ophalen en boodschappen wou doen
+%%EX%% Hij heeft boeken willen kopen en moeten verkopen
 %% vpx
 %%EX%% Ik moet de kinderen ophalen en boodschappen doen
+%%EX%% Ik probeer om te komen en op tijd te zijn
 %% modifier
 %%EX%% Rustig en zonder buren woon ik daar
 %% n
@@ -9863,11 +9865,57 @@ grammar_rule(van_en,NP4,[NP1,Van,En,NP2,Op,NP3]) :-
 %% pred
 %%EX%% We zijn beleefd en vriendelijk
 %% a
-%%EX%% De beleefd en vriendelijke ambtenaar
+%%EX%% De beleefde en vriendelijke ambtenaar
 %% vpx
 %%EX%% We hebben een boek gelezen en een krant gekocht
+%%EX%% Een boek om te zoenen en lief te hebben
 %% finvp
-%%EX%% TODO
+%%EX%% Als je gaat fietsen en je komt langs de groenteman , wil je dan tomaten kopen ?
+%% pp
+%%EX%% Hij woonde boven een sexshop en naast een kraakpand
+%% vc
+%%EX%% Omdat ik heb moeten rusten en willen doorwerken
+%% vp ?inf ?psp
+%%EX%% Ik probeer om te komen en om op tijd te zijn
+%%EX%% Ik probeer te komen en op tijd te zijn
+%% v
+%%EX%% Ze komen en gaan
+%% vb
+%%EX%% Ik loop harder dan gevraagd of verplicht wordt
+%% sbar
+%%EX%% Ik hoop dat die regering er niet komt en dat we opnieuw gaan stemmen
+%% adv
+%%EX%% Hij zit altijd achter of voor
+%% num
+%%EX%% Er waren zes of zeven sprekers
+%% prep
+%%EX%% Hij woont boven of naast een sexshop
+%% rel
+%%EX%% De onderwijzer die ik in de vierde klas had en die naar Spanje verhuisde
+%% pn
+%%EX%% de ministers van Agt en Wiegel
+%% within_word_conjunction(n)
+%%EX%% Onze boven- en benedenburen
+%% det
+%%EX%% Zijn of haar partner
+%% within_word_conjunction(np)
+%%EX%% Hart- en vaatziekten
+%% vc_noun
+%%EX%% Het foto's ontwikkelen en afdrukken doet niemand tegenwoordig zelf
+%% part
+%%EX%% Zij ademde rustig in en uit
+%% within_word_conjunction(a)
+%%EX%% We hebben licht- en donkergroene stof
+%% within_word_conjunction(num)
+%%EX%% We hebben zeven- of achttien deelnemers
+%% within_word_conjunction(pred)
+%%EX%% De tegels worden licht- of donkergroen
+%% within_word_conjunction(modifier)
+%%EX%% Hebben jullie nu onder- of bovengemiddeld gepresteerd ?
+%% within_word_conjunction(adv)
+%%EX%% Ga je achter- of voorlangs ?
+%% comp
+%%EX%% nadat of voordat hij komt moet er wel iets gebeuren
 grammar_rule(start_coord(Name,en), M, [ XP, Clist ]) :-
     start_coord_name_en_structure(Name,M,XP,Clist).
 
@@ -10211,7 +10259,26 @@ unify_subj(M,XP) :-
     M:topic_hstem <=> Topic,
     M:subj <?=?> Subj.
 
-%% zowel appels als peren
+%% np
+%%EX%% zowel appels als peren
+%% modifier
+%%EX%% Hij zwom zowel naakt als met een snorkel
+%% pred
+%%EX%% Hij is zowel onbeleefd als een echte ploert
+%% pp
+%%EX%% Hij is zowel op vakantie als op zakenreis
+%% a
+%%EX%% Hij kwam zowel ziek als slecht gekleed binnen
+%% num
+%%EX%% We kunnen met zowel zeven als acht paren spelen
+%% sbar
+%%EX%% Niet omdat de herinneringen te pijnlijk waren , maar omdat hij dat deel van zijn hersenen had bevroren .
+%% adv
+%%EX%% We moeten niet linksaf maar rechtsaf
+%% prep
+%%EX%% Hij woonde niet naast maar boven een sexshop
+%% vc
+%%EX%% Een tunnel die ofwel moest instorten ofwel naar chaos moest leiden .
 grammar_rule(start_coord(Name,zowel_als),M,[ConjL, XP, Clist]) :-
     zowel_als_start_structure(Name,M,CrdType,ConjL,XP,Clist),
     CrdType => two_crd,
@@ -10607,7 +10674,10 @@ grammar_rule(end_coord(complex_enz),Clist,[OPTCOMMA, Conj]) :-
 start_coord_daughter(A,B,Mother,D,E,F) :-
     nonfinal_coord_daughter(A,B,Mother,D,E,F).
 
-%% ik vroeg of en (zo ja) met wie hij komt
+%% of(modifier)
+%%EX%% ik vroeg of en ( zo ja ) wanneer hij komt
+%% of(pp)
+%%EX%% ik vroeg of en ( zo ja ) met wie hij komt
 %% * of of naar waar gaat dat naartoe leiden ?
 start_coord_daughter(of(Sub),Cat,Mother,Type,Mods,ETC) :-
     ETC => no,

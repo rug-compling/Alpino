@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="3" infl="sg3" lemma="wonen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="woon" sc="ld_pp" stype="declarative" tense="present" v_per="thi" word="woont" wvorm="pv"/>
+      <node begin="2" cat="conj" end="7" id="4" rel="ld">
+        <node begin="3" conjtype="neven" end="4" id="5" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+        <node begin="2" cat="pp" end="7" id="6" rel="cnj">
+          <node begin="2" end="3" id="7" lemma="boven" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="boven" vztype="init" word="boven"/>
+          <node begin="5" cat="np" end="7" id="8" index="1" rel="obj1">
+            <node begin="5" end="6" id="9" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="seks_shop" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="seks_shop" word="sexshop"/>
+          </node>
+        </node>
+        <node begin="4" cat="pp" end="7" id="11" rel="cnj">
+          <node begin="4" end="5" id="12" lemma="naast" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naast" vztype="init" word="naast"/>
+          <node begin="5" end="7" id="13" index="1" rel="obj1"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij woont boven of naast een sexshop</sentence>
+</alpino_ds>
