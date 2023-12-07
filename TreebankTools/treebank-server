@@ -147,10 +147,10 @@ class TreebankRequestHandler(socketserver.BaseRequestHandler):
 
 
         # geef aan hoe groot de data is
-        self.wfile.write("%d\n" % len(data))
+        self.wfile.write(("%d\n" % len(data)).encode('utf-8'))
 
         # en knal het over de lijn
-        self.wfile.write(data)
+        self.wfile.write(data.encode('utf-8'))
         self.wfile.flush()
 
 
@@ -169,7 +169,7 @@ class TreebankRequestHandler(socketserver.BaseRequestHandler):
         line = self.rfile.readline()
         if not line:
             self.close_connection = 1
-        self.requestfile = line.rstrip()
+        self.requestfile = line.rstrip().decode('utf-8')
 
 
     def handle(self):
