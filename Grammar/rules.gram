@@ -9916,6 +9916,13 @@ grammar_rule(van_en,NP4,[NP1,Van,En,NP2,Op,NP3]) :-
 %%EX%% Ga je achter- of voorlangs ?
 %% comp
 %%EX%% nadat of voordat hij komt moet er wel iets gebeuren
+%% enumeration
+%%EX%% De hoofdstukken VII en VIII horen bij de tentamenstof
+%% within_word_conjunction(pp)
+%%EX%% Alle bemanningsleden boven- en benedendeks waren ondervraagd
+%% within_word_conjunction(adv)
+%%EX%% Rijden we voor- of achterlangs ?
+%% v_noun
 grammar_rule(start_coord(Name,en), M, [ XP, Clist ]) :-
     start_coord_name_en_structure(Name,M,XP,Clist).
 
@@ -10279,8 +10286,24 @@ unify_subj(M,XP) :-
 %%EX%% Hij woonde niet naast maar boven een sexshop
 %% vc
 %%EX%% Een tunnel die ofwel moest instorten ofwel naar chaos moest leiden .
+%% vp
+%%EX%% Ik probeerde noch om te hoog te bieden noch om te passief te zijn
+%% within_word_conjunction(np)
+%%EX%% zowel boven- als benedenburen worden hiervoor uitgenodigd
+%% within_word_conjunction(modifier)
+%%EX%% Je kunt het medicijn zowel in- als uitwendig gebruiken
+%% within_word_conjunction(a)
+%%EX%% Zowel binnen- als buitenlandse gezinnen komen voor deze regeling in aanmerking
+%% within_word_conjunction(pred)
+%%EX%% De pijn zit zowel in- als uitwendig
+%% part
+%%EX%% De onrust neemt eerder toe dan af
+%% max
+%%EX%% Hij heeft overwinningen behaald waarvan vele nipt en heel wat met geluk
 grammar_rule(start_coord(Name,zowel_als),M,[ConjL, XP, Clist]) :-
     zowel_als_start_structure(Name,M,CrdType,ConjL,XP,Clist),
+    \+ Name = within_word_conjunction(num),
+    \+ Name = within_word_conjunction(pp),
     CrdType => two_crd,
     M:cj <=> CrdType.
 
@@ -10445,7 +10468,11 @@ mid_coord_structure(Name,Blist,A,Clist) :-
 %%EX%% Appels , peren en druiven
 grammar_rule(mid_coord(Name),Blist,[COMMA, A, Clist]) :-
     mid_coord_structure(Name,Blist,A,Clist),
-    \+ lists:member(Name,[max,v_noun,comp,within_word_conjunction(adv)]), /* NOT USED */			  
+    \+ lists:member(Name,[max,
+			  v_noun,
+			  comp,
+			  within_word_conjunction(vc_noun),
+			  within_word_conjunction(adv)]), /* NOT USED */			  
     Blist:conj <=> Clist:conj,
     COMMA => punct,
     COMMA:puncttype => komma.
@@ -10453,7 +10480,14 @@ grammar_rule(mid_coord(Name),Blist,[COMMA, A, Clist]) :-
 %%EX%% En appels , en peren en druiven
 grammar_rule(mid_coord(Name,conj),Blist,[OPTCOMMA, Conj, A, Clist]) :-
     mid_coord_structure(Name,Blist,A,Clist),
-    \+ lists:member(Name,[max,v_noun,comp,enumeration,within_word_conjunction(num),
+    \+ lists:member(Name,[max,
+			  v_noun,
+			  vc_noun,
+			  comp,
+			  enumeration,
+			  within_word_conjunction(modifier),  
+			  within_word_conjunction(num),  
+			  within_word_conjunction(adv),  
 			  within_word_conjunction(pp)]), /* NOT USED */
     Conj => conj,
     Conj:cform <=> CFORM,
@@ -10490,7 +10524,7 @@ grammar_rule(bracketed_end_coord(Name,conj),Blist,
     optend_mod_punct(OPTPUNCT),
     CLOSE => punct, CLOSE:puncttype => haak_sluit,
     end_coord_conj_structure(Name,Blist,Conj,A,[]),
-    \+ lists:member(Name,[v_noun,enumeration,comp,max,part]).  /*  NOT USED */
+    \+ lists:member(Name,[vb,v_noun,enumeration,comp,max,part]).  /*  NOT USED */
 
 end_coord_conj_structure(Name,Blist,Conj,A,ModList) :-
     structure,
@@ -10536,7 +10570,7 @@ grammar_rule(bracketed_end_coord(Name,conj,mod), Blist,
     optend_mod_punct(OPTPUNCT),
     CLOSE => punct, CLOSE:puncttype => haak_sluit,
     end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A),
-    \+ lists:member(Name,[vb,enumeration,max,imp,part]).  /* NOT USED */
+    \+ lists:member(Name,[finvp,vp,adv,vb,sbar,enumeration,max,imp,part]).  /* NOT USED */
 
 %%EX%% wat is politiek en , nog belangrijker , wat is beleid
 %%EX%% wat is politiek en vooral , wat is beleid
@@ -10545,7 +10579,7 @@ grammar_rule(end_coord(Name,conj,c_mod), Blist,
     optcomma_end(OPTCOMMA_DASH),
     optcomma_dash(Cl), comma_dash(Cr),
     end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A),
-    \+ lists:member(Name,[max]).   /* NOT USED */
+    \+ lists:member(Name,[part,vb,max,enumeration]).   /* NOT USED */
 
 %%EX%% wat is politiek ( en , nog belangrijker , wat is beleid )
 %%EX%% wat is politiek ( en vooral , wat is beleid )
@@ -10555,7 +10589,7 @@ grammar_rule(bracketed_end_coord(Name,conj,c_mod), Blist,
     OPEN => punct, OPEN:puncttype => haak_open,
     CLOSE => punct, CLOSE:puncttype => haak_sluit,
     optcomma(Cl), comma(Cr),
-    lists:member(Name,[np,pp,pred,root,modifier]),  %%% OTHERS ARE NOT USED
+    lists:member(Name,[np,pp,root,modifier]),  %%% OTHERS ARE NOT USED
     end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A).
 
 end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A) :-
@@ -10674,11 +10708,19 @@ grammar_rule(end_coord(complex_enz),Clist,[OPTCOMMA, Conj]) :-
 start_coord_daughter(A,B,Mother,D,E,F) :-
     nonfinal_coord_daughter(A,B,Mother,D,E,F).
 
+%% * of of naar waar gaat dat naartoe leiden ?
 %% of(modifier)
+%%EX%% ik vroeg of en wanneer hij komt
 %%EX%% ik vroeg of en ( zo ja ) wanneer hij komt
 %% of(pp)
+%%EX%% ik vroeg of en met wie hij komt
 %%EX%% ik vroeg of en ( zo ja ) met wie hij komt
-%% * of of naar waar gaat dat naartoe leiden ?
+%% of(np)
+%%EX%% ik vroeg of en welke buren worden uitgenodigd
+%%EX%% ik vroeg of en ( zo ja ) welke buren worden uitgenodigd
+%% of(adv)
+%%EX%% Ik vroeg of en waar de kinderen gevonden werden
+%%EX%% Ik vroeg of en ( zo ja ) waar de kinderen gevonden werden
 start_coord_daughter(of(Sub),Cat,Mother,Type,Mods,ETC) :-
     ETC => no,
     Cat => comp,
@@ -10738,7 +10780,7 @@ allows_within_word_conjunction(np).
 allows_within_word_conjunction(n).
 allows_within_word_conjunction(pred).
 /* allows_within_word_conjunction(v_noun).  NOT USED */
-allows_within_word_conjunction(vc_noun).
+%% allows_within_word_conjunction(vc_noun). HARDLY USED? 
 %% zowel voor- als achterin
 allows_within_word_conjunction(pp).
 allows_within_word_conjunction(modifier).
@@ -11022,7 +11064,7 @@ conjunction_cat(part,M,Crd,ETC) :-
 % vform inf: ?"te kopen of verkopen"
 conjunction_cat(v,M,Crd,ETC) :-
     ETC => no,
-    Crd => ~no_crd, 
+    Crd => ~no_crd & ~two_crd, 
     M => v,
     M:eps3 => no,
     M:vslash => [],
@@ -11157,6 +11199,7 @@ conjunction_cat(sbar,S,Crd,_) :-
 
 conjunction_cat(det,S,Crd,ETC) :-
     ETC => no,
+    Crd => ~two_crd,  % per december 7, 2023
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
@@ -11180,10 +11223,12 @@ conjunction_cat(vproj,VP,Crd,ETC) :-
      VP:eps3 => no,  % reduce search space and spur. ambiguities
      VP:tags => [].
 
+/* almost NOT USED
 conjunction_cat(v_noun,V,Crd,ETC) :-
     ETC => no,
     Crd => one_crd,
     V => v_noun.
+*/
 
 conjunction_cat(vc_noun,V,Crd,ETC) :-
     ETC => no,
