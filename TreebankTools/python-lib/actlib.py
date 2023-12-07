@@ -330,7 +330,10 @@ def xmlmatch_from_mem(xmldata, filename, query=None, stylesheet=None, params=Non
 
     """
 
+    if isinstance(xmldata, str):
+        xmldata = xmldata.encode('utf-8')
     try:
+        # fromstring werkt niet met string
         doc = etree.fromstring(xmldata)
     except Exception as error:
         print("Could not parse %s: %s" % (filename, error), file=sys.stderr)

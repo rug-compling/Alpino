@@ -52,6 +52,9 @@ def workhorse(xmldata, filename, query=""):
 
     query = options.query
 
+    if isinstance(xmldata, str):
+        xmldata = xmldata.encode('utf-8')
+
     doc = etree.fromstring(xmldata)
 
     xpathres = doc.xpath(query)
