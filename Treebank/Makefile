@@ -12,7 +12,7 @@ all:
 	$(MAKE) -j dtchecks novel
 	$(MAKE) -j prepare_enhanced_all
 	$(MAKE) -j enhanced_all poslemma
-	$(MAKE) -j freq trees_doc sents sentspl conllu pair dact
+	$(MAKE) -j freq trees_doc sentspl conllu pair dact
 
 novel:
 	( cd fast; make -j i_suite.log extra.log j_suite.log )
@@ -182,7 +182,7 @@ sents: $(DIRECTORIES:%=../SENTS/%.sents)
              $(XSL)/dt2sent_with_sentid.xsl |\
              sed -e 's/\[/\\\[/g' \
                  -e 's/\]/\\\]/g') > $@
-sentspl:
+sentspl: sents
 	(  cd ../SENTS ; make )
 
 conllu: $(DIRECTORIES:%=../CONLLU/%.conllu)

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="2" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="We"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" sc="ld_dir" stype="declarative" tense="present" v_per="fir" word="moeten" wvorm="pv"/>
+      <node begin="2" cat="conj" end="6" id="4" rel="ld">
+        <node begin="2" end="3" id="5" lemma="niet" pos="vg" postag="BW()" pt="bw" rel="crd" root="niet" special="left" word="niet"/>
+        <node begin="3" end="4" id="6" lemma="linksaf" pos="adv" postag="BW()" pt="bw" rel="cnj" root="linksaf" special="dir" word="linksaf"/>
+        <node begin="4" conjtype="neven" end="5" id="7" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+        <node begin="5" end="6" id="8" lemma="rechtsaf" pos="adv" postag="BW()" pt="bw" rel="cnj" root="rechtsaf" special="dir" word="rechtsaf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>We moeten niet linksaf maar rechtsaf</sentence>
+</alpino_ds>

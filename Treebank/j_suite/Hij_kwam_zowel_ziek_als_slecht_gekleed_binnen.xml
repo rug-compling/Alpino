@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="3" infl="sg" lemma="binnen_komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom_binnen" sc="part_intransitive(binnen)" stype="declarative" tense="past" v_per="thi" word="kwam" wvorm="pv"/>
+      <node begin="2" cat="conj" end="7" id="4" rel="predm">
+        <node begin="2" end="3" id="5" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" special="left" word="zowel"/>
+        <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="6" infl="no_e" lemma="ziek" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="ziek" vform="adj" word="ziek"/>
+        <node begin="4" conjtype="onder" end="5" id="7" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="als" special="right" word="als"/>
+        <node begin="5" cat="ppart" end="7" id="8" rel="cnj">
+          <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="9" infl="no_e" lemma="slecht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="slecht" vform="adj" word="slecht"/>
+          <node aform="base" begin="6" buiging="zonder" end="7" id="10" infl="no_e" lemma="kleden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kleden" vform="psp" word="gekleed" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="7" end="8" id="11" lemma="binnen" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="binnen" vztype="fin" word="binnen"/>
+    </node>
+  </node>
+  <sentence>Hij kwam zowel ziek als slecht gekleed binnen</sentence>
+</alpino_ds>
