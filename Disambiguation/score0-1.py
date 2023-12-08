@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Barbara, October 2010
 import os
@@ -67,7 +67,7 @@ for line in sys.stdin:
             parses = updateScores(scores,parses)
             print(len(parses))
             for i in parses:
-                print(''.join(i))
+                print(' '.join(i))
         parses=[]
         scores=[]
     else:
@@ -80,4 +80,4 @@ if len(parses)> 0:
     parses = updateScores(scores,parses)
     print(len(parses))
     for i in parses:
-        print(''.join(i))
+        print(' '.join(i))

@@ -32,7 +32,7 @@ def alpino(sentence, filename):
     print(sentence)
     sent = open("sent","w", encoding="utf-8")
     sent.write("| ") # empty key identifier
-    sent.write(''.join(sentence))
+    sent.write(' '.join(sentence))
     sent.close()
 
     fin = subprocess.Popen(["cat","sent"],stdout=subprocess.PIPE)
