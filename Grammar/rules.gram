@@ -10301,6 +10301,8 @@ unify_subj(M,XP) :-
 %%EX%% De onrust neemt eerder toe dan af
 %% max
 %%EX%% Hij heeft overwinningen behaald waarvan vele nipt en heel wat met geluk
+%% det
+%%EX%% Zowel mijn als haar voorstel werd gehonoreerd
 grammar_rule(start_coord(Name,zowel_als),M,[ConjL, XP, Clist]) :-
     zowel_als_start_structure(Name,M,CrdType,ConjL,XP,Clist),
     \+ Name = within_word_conjunction(num),
@@ -11200,7 +11202,7 @@ conjunction_cat(sbar,S,Crd,_) :-
 
 conjunction_cat(det,S,Crd,ETC) :-
     ETC => no,
-    Crd => ~two_crd,  % per december 7, 2023
+%%    Crd => ~two_crd,  % zowel mijn als haar voorstel
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
