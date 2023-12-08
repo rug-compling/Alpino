@@ -7327,6 +7327,18 @@ grammar_rule(sat_nucl(sbar),ROOT,[Max, COMMA, Dan]) :-
     Max:ctype => (c_mod;c_dat;c_of),
     root_nucl_sat_structure(Dan,Max,ROOT).
 
+%%EX%% Als hij komt , zei de minister , dan vertrek ik
+grammar_rule(sat_dip_nucl(sbar),ROOT,[Max, COMMA, Tag, COMMA2, Dan]) :-
+    comma(COMMA),
+    comma(COMMA2),
+    Tag => dip,
+    max_sbar(Max),
+    Max:ctype => (c_mod;c_dat;c_of),
+    root_nucl_sat_structure(Dan,Max,ROOT0),
+    ROOT => max,
+    ROOT:max_type => t_dp,
+    nucl_tag_structure(ROOT0,Tag,ROOT).
+
 %%EX%% om kort te gaan , ik kom niet
 grammar_rule(sat_nucl(oti),ROOT,[Max, COMMA, Dan]) :-
     COMMA => punct, COMMA:puncttype => komma,
@@ -7920,6 +7932,7 @@ grammar_rule(start_mod_comma_np,M,[MOD,COMMA,NP]) :-
     dp_dp_structure(MOD,NP,M).
 
 %%EX%% Hij heeft een baard , zij heeft een tattoo
+%%EX%% Hij heeft een baard , kun je nagaan ...
 grammar_rule(dp_dp_root,ROOT,[ROOTA, COMMA, ROOTB]) :-
     end_punct(COMMA,Punct),
     ROOT => max,
@@ -7928,7 +7941,7 @@ grammar_rule(dp_dp_root,ROOT,[ROOTA, COMMA, ROOTB]) :-
     ROOTA:max_type => (t_dp;t_root;t_rootbar;t_topic_drop),
     ROOTA:puncttype <=> Punct,
     ROOTB => max,
-    ROOTB:max_type => (t_dp;t_root),
+    ROOTB:max_type => (t_dp;t_root;t_topic_drop),
     dp_dp_structure(ROOTA,ROOTB,ROOT).
 
 %%EX%% Hij heeft een baard , is dat gek ?

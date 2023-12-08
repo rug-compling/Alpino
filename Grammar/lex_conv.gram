@@ -1221,8 +1221,8 @@ adjective_features(pred_er(ADV),Sign) :-
     Sign:avform => avform_ap,
     Sign:cform => compar,
     Sign:aform => nattr.
-adjective_features(postn_pred(ADV),Sign) :-
-    features_adjective_adv(ADV,Sign),
+adjective_features(postn_pred(padv),Sign) :- % NB can be used as modifier in front of conjuncts, "Kees en samen met Piet de kinderen"
+    features_adjective_adv(both,Sign),
     Sign:can_postn => yes,
     Sign:can_nominalize => no,
     Sign:can_marked_attr => no,
