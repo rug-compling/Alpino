@@ -4,6 +4,7 @@
 #
 
 import argparse
+import io
 import sys
 
 VELLDAL_FEATURES = ['lds', 'ldsb', 'lds_dl', 'lds_skew', 'tngram', 'tngramw']
@@ -37,6 +38,9 @@ if __name__ == "__main__":
     depFeatures = options.depFeatures
     tagNgramFeatures = options.tagNgramFeatures
     velldalFeatures = options.velldalFeatures
+
+    sys.stdin  = io.TextIOWrapper(sys.stdin.detach(),  encoding='utf-8')
+    sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
 
     for line in sys.stdin:
         line = line.strip()
