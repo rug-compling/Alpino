@@ -7327,6 +7327,18 @@ grammar_rule(sat_nucl(sbar),ROOT,[Max, COMMA, Dan]) :-
     Max:ctype => (c_mod;c_dat;c_of),
     root_nucl_sat_structure(Dan,Max,ROOT).
 
+%%EX%% Als hij komt , zei de minister , dan vertrek ik
+grammar_rule(sat_dip_nucl(sbar),ROOT,[Max, COMMA, Tag, COMMA2, Dan]) :-
+    comma(COMMA),
+    comma(COMMA2),
+    Tag => dip,
+    max_sbar(Max),
+    Max:ctype => (c_mod;c_dat;c_of),
+    root_nucl_sat_structure(Dan,Max,ROOT0),
+    ROOT => max,
+    ROOT:max_type => t_dp,
+    nucl_tag_structure(ROOT0,Tag,ROOT).
+
 %%EX%% om kort te gaan , ik kom niet
 grammar_rule(sat_nucl(oti),ROOT,[Max, COMMA, Dan]) :-
     COMMA => punct, COMMA:puncttype => komma,
@@ -7920,6 +7932,7 @@ grammar_rule(start_mod_comma_np,M,[MOD,COMMA,NP]) :-
     dp_dp_structure(MOD,NP,M).
 
 %%EX%% Hij heeft een baard , zij heeft een tattoo
+%%EX%% Hij heeft een baard , kun je nagaan ...
 grammar_rule(dp_dp_root,ROOT,[ROOTA, COMMA, ROOTB]) :-
     end_punct(COMMA,Punct),
     ROOT => max,
@@ -7928,7 +7941,7 @@ grammar_rule(dp_dp_root,ROOT,[ROOTA, COMMA, ROOTB]) :-
     ROOTA:max_type => (t_dp;t_root;t_rootbar;t_topic_drop),
     ROOTA:puncttype <=> Punct,
     ROOTB => max,
-    ROOTB:max_type => (t_dp;t_root),
+    ROOTB:max_type => (t_dp;t_root;t_topic_drop),
     dp_dp_structure(ROOTA,ROOTB,ROOT).
 
 %%EX%% Hij heeft een baard , is dat gek ?
@@ -9922,7 +9935,8 @@ grammar_rule(van_en,NP4,[NP1,Van,En,NP2,Op,NP3]) :-
 %%EX%% Alle bemanningsleden boven- en benedendeks waren ondervraagd
 %% within_word_conjunction(adv)
 %%EX%% Rijden we voor- of achterlangs ?
-%% v_noun
+%% vc_noun
+%%EX%% Het met behulp van zijn vrouw op- en afgaan van de trap was een ellende
 grammar_rule(start_coord(Name,en), M, [ XP, Clist ]) :-
     start_coord_name_en_structure(Name,M,XP,Clist).
 
@@ -10300,6 +10314,8 @@ unify_subj(M,XP) :-
 %%EX%% De onrust neemt eerder toe dan af
 %% max
 %%EX%% Hij heeft overwinningen behaald waarvan vele nipt en heel wat met geluk
+%% det
+%%EX%% Zowel mijn als haar voorstel werd gehonoreerd
 grammar_rule(start_coord(Name,zowel_als),M,[ConjL, XP, Clist]) :-
     zowel_als_start_structure(Name,M,CrdType,ConjL,XP,Clist),
     \+ Name = within_word_conjunction(num),
@@ -10613,6 +10629,7 @@ end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A) :-
     ).
 
 %%EX%% Appels , peren
+%%EX%% Bladzijde 333 - 341
 grammar_rule(end_coord(Name,noconj),Clist,[COMMA, A, OPTCOMMA]) :-
     lists:member(Name,[np,pred,num]),  /* OTHERS NOT USED */
     structure,
@@ -10627,8 +10644,7 @@ grammar_rule(end_coord(Name,noconj),Clist,[COMMA, A, OPTCOMMA]) :-
     ClistCat:cj <=> CrdType,
     final_coord_daughter(Name,A,ClistCat,CrdType,[],ETC),
     Clist:cats <=> [DtA],
-    COMMA => punct,
-    COMMA:puncttype => komma,
+    comma_dash(COMMA),
     Clist:last => last,
     Clist:last <=> CLast,
     one_daughter_unifications(CLast,A),
@@ -10780,7 +10796,7 @@ allows_within_word_conjunction(np).
 allows_within_word_conjunction(n).
 allows_within_word_conjunction(pred).
 /* allows_within_word_conjunction(v_noun).  NOT USED */
-%% allows_within_word_conjunction(vc_noun). HARDLY USED? 
+allows_within_word_conjunction(vc_noun). % cdb 2372
 %% zowel voor- als achterin
 allows_within_word_conjunction(pp).
 allows_within_word_conjunction(modifier).
@@ -11199,7 +11215,7 @@ conjunction_cat(sbar,S,Crd,_) :-
 
 conjunction_cat(det,S,Crd,ETC) :-
     ETC => no,
-    Crd => ~two_crd,  % per december 7, 2023
+%%    Crd => ~two_crd,  % zowel mijn als haar voorstel
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
