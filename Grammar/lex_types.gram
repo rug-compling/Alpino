@@ -2936,7 +2936,7 @@ absolute_preposition(Sign) :-
     unify_mods(Obj1),
     Predc => pred,
     unify_mods(Predc),
-    instantiated_deprel(Sign,obj1,Obj1),
+    deprel(Sign,obj1,Obj1),  % not instantiated, for : "met als titel :"
     instantiated_deprel(Sign,predc,Predc),
     Sign:sc <=> [Obj1,Predc].
 
