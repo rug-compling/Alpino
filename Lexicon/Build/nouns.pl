@@ -32509,7 +32509,8 @@ n([mass(sms),mass([short,message,service])],de,[],
    dim('SMS\'je'),
    dim('SMS-je')]).
 
-n([sg(smurf),pl(smurfen)],de,[]).
+n([sg(smurf),pl(smurfen),
+   sg('Smurf'),pl('Smurfen')],de,[]).
 
 n([pl(snaren),sg(snaar)],de,[],[dim(snaartje)]).
 

@@ -548,10 +548,10 @@ pp_modifier(PP) :-
     PP:slash => [],
     PP:e_deps => [].
 
-pp_predm(PP) :-
-    max_pred(PP),
-    PP:wh => nwh,
-    PP:pcat => (als_pred;pp_pred).
+%pp_predm(PP) :-
+%    max_pred(PP),
+%    PP:wh => nwh,
+%    PP:pcat => (als_pred;pp_pred).
 
 wh_pp_predm(PP) :-
     max_pred(PP),
@@ -631,6 +631,13 @@ max_imp(X) :-
 max_pred(X) :-
     X => pred,
     max(X).
+
+max_ap_pp_predm(X):-
+    X => pred,
+    X:slash => [],
+    X:e_deps => [],
+    X:adv => padv,
+    X:pcat => (ap_pred;pp_pred;als_pred).
 
 max_modifier(X) :-
     X => modifier,
@@ -1876,16 +1883,21 @@ grammar_rule(vp_predm_v, VP, [ Mod, CommaR, V ] ) :-
     Mod => predm_adv,
     vp_predm_comma_v_structure(VP,Mod,CommaR,V).
 
-%%EX%% Hij kwam ziek binnen
-grammar_rule(vp_predm_adj_v, VP, [ Mod, CommaR, V ] ) :-
-    predm_adj(Mod),
-    vp_predm_comma_v_structure(VP,Mod,CommaR,V).
+%grammar_rule(vp_predm_adj_v, VP, [ Mod, CommaR, V ] ) :-
+%    predm_adj(Mod),
+%    vp_predm_comma_v_structure(VP,Mod,CommaR,V).
 
+%%EX%% Hij kwam ziek binnen
+%%EX%% De stof is zowel in poedervorm als vloeibaar verkrijgbaar
 %%EX%% Hij kon als voorzitter moeilijk weigeren
 %%EX%% Hij kon in bezit van een rijbewijs moeilijk weigeren
-grammar_rule(vp_predm_pp_v, VP, [ Mod, CommaR, V ] ) :-
-    pp_predm(Mod),
+grammar_rule(vp_predm_adj_v,  VP, [ Mod, CommaR, V ] ) :-
+    max_ap_pp_predm(Mod),
     vp_predm_comma_v_structure(VP,Mod,CommaR,V).
+
+%grammar_rule(vp_predm_pp_v, VP, [ Mod, CommaR, V ] ) :-
+%    pp_predm(Mod),
+%    vp_predm_comma_v_structure(VP,Mod,CommaR,V).
 
 %%EX%% Ze werden , allemaal , toegelaten
 grammar_rule(vp_predm_v_comma, VP, [ CommaL, Mod, CommaR, V ] ) :-
@@ -1894,16 +1906,16 @@ grammar_rule(vp_predm_v_comma, VP, [ CommaL, Mod, CommaR, V ] ) :-
     vp_comma_predm_comma_structure(VP,CommaL,Mod,CommaR,V).
 
 %%EX%% Hij kon , nog ziek van de nederlaag , zich niet verbeteren
-grammar_rule(vp_predm_adj_v_comma, VP, [ CommaL, Mod, CommaR, V ] ) :-
+%%EX%% Hij kon , in bezit van een rijbewijs , moeilijk weigeren
+grammar_rule(vp_predm_v_comma_adj, VP, [ CommaL, Mod, CommaR, V ] ) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
-    predm_adj(Mod),
+    max_ap_pp_predm(Mod),
     vp_comma_predm_comma_structure(VP,CommaL,Mod,CommaR,V).
 
-%%EX%% Hij kon , in bezit van een rijbewijs , moeilijk weigeren
-grammar_rule(vp_predm_pp_v_comma, VP, [ CommaL, Mod, CommaR, V ] ) :-
-    hdrug_util:hdrug_flag(parse_or_generate,parse),
-    pp_predm(Mod),
-    vp_comma_predm_comma_structure(VP,CommaL,Mod,CommaR,V).
+%grammar_rule(vp_predm_pp_v_comma, VP, [ CommaL, Mod, CommaR, V ] ) :-
+%    hdrug_util:hdrug_flag(parse_or_generate,parse),
+%    pp_predm(Mod),
+%    vp_comma_predm_comma_structure(VP,CommaL,Mod,CommaR,V).
 
 %%EX%% Ze werden ( allemaal ) toegelaten
 grammar_rule(vp_bracketed_predm_v, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
@@ -1911,14 +1923,14 @@ grammar_rule(vp_bracketed_predm_v, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
     vp_bracketed_predm_v_structure(VP,OPEN,Mod,END,CLOSE,CommaR,V).
 
 %%EX%% Hij kon ( nog ziek van de nederlaag ) zich niet verbeteren
-grammar_rule(vp_bracketed_predm_adj_v, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
-    predm_adj(Mod),
+%%EX%% Hij kon ( in bezit van een rijbewijs ) moeilijk weigeren
+grammar_rule(vp_bracketed_predm_v_adj, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
+    max_ap_pp_predm(Mod),
     vp_bracketed_predm_v_structure(VP,OPEN,Mod,END,CLOSE,CommaR,V).
 
-%%EX%% Hij kon ( in bezit van een rijbewijs ) moeilijk weigeren
-grammar_rule(vp_bracketed_predm_pp_v, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
-    pp_predm(Mod),
-    vp_bracketed_predm_v_structure(VP,OPEN,Mod,END,CLOSE,CommaR,V).
+%grammar_rule(vp_bracketed_predm_pp_v, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
+%    pp_predm(Mod),
+%    vp_bracketed_predm_v_structure(VP,OPEN,Mod,END,CLOSE,CommaR,V).
     
 %%EX%% Ze werden - allemaal - toegelaten
 grammar_rule(vp_dashed_predm_v, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
@@ -1926,55 +1938,14 @@ grammar_rule(vp_dashed_predm_v, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
     vp_dashed_predm_v_structure(VP,OPEN,Mod,END,CLOSE,CommaR,V).
 
 %%EX%% Hij kon - nog ziek van de nederlaag - zich niet verbeteren
-grammar_rule(vp_dashed_predm_adj_v, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
-    predm_adj(Mod),
-    vp_dashed_predm_v_structure(VP,OPEN,Mod,END,CLOSE,CommaR,V).
-
 %%EX%% Hij kon - in bezit van een rijbewijs - moeilijk weigeren
-grammar_rule(vp_dashed_predm_pp_v, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
-    pp_predm(Mod),
+grammar_rule(vp_dashed_predm_v_adj, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
+    max_ap_pp_predm(Mod),
     vp_dashed_predm_v_structure(VP,OPEN,Mod,END,CLOSE,CommaR,V).
 
-%%EX%% Hij kon niet weigeren als voorzitter
-grammar_rule(vp_v_predm_pp, VP, [ V, PP ] ) :-
-    VP => vproj, V => vproj,
-    VP:eps1 => no,
-    VP:eps2 => no,
-    VP:eps3 <=> V:eps3,
-    VP:haspre => no,
-    VP:mf <=> V:mf,
-    V:eps1 => no,
-    VP:rightx => yes,
-    pp_predm(PP),
-    hd_predm_structure(V,PP,VP).
-
-%%EX%% Hij lag in bed ziek van ellende
-grammar_rule(vp_v_predm_ap, VP, [ V, ADJ ] ) :-
-    VP => vproj, V => vproj,
-    VP:eps1 => no,
-    VP:eps2 => no,
-    VP:eps3 <=> V:eps3,
-    VP:haspre => no,
-    VP:mf <=> V:mf,
-    V:eps1 => no,
-    VP:rightx => yes,
-    predm_adj(ADJ),
-    ADJ:avform => ~avform_ppart,  %% too many false hits
-    hd_predm_structure(V,ADJ,VP).
-
-%%EX%% Ze lagen in bed allemaal
-grammar_rule(vp_v_predm_adv, VP, [ V, COMMA, ADJ ] ) :-
-    optcomma(COMMA),
-    VP => vproj, V => vproj,
-    VP:eps1 => no,
-    VP:eps2 => no,
-    VP:eps3 <=> V:eps3,
-    VP:haspre => no,
-    VP:mf <=> V:mf,
-    V:eps1 => no,
-    VP:rightx => yes,
-    ADJ => predm_adv,
-    hd_predm_structure(V,ADJ,VP).
+%grammar_rule(vp_dashed_predm_pp_v, VP, [OPEN,Mod,END,CLOSE,CommaR,V ] ) :-
+%    pp_predm(Mod),
+%    vp_dashed_predm_v_structure(VP,OPEN,Mod,END,CLOSE,CommaR,V).
 
 %% vproj --> vproj MOD
 %% two separate rules; otherwise variant with komma can't be used
@@ -2001,6 +1972,8 @@ grammar_rule(vp_v_mod, VP, [ V, Mod ] ) :-
     Mod:modifies_v => yes,
     hd_mod_structure(V,Mod,VP).
 
+%% outside of extraposed stuff
+%%EX%% Jij doet het beter dan wij vanavond
 grammar_rule(vpx_v_mod, VP, [ V, Mod ] ) :-
     VP => vpx, V => vpx, Mod => modifier,
     VP:rightx => yes,
@@ -2012,6 +1985,7 @@ grammar_rule(vpx_v_mod, VP, [ V, Mod ] ) :-
     Mod:modifies_v => yes,
     hd_mod_structure(V,Mod,VP).
 
+%%EX%% Jij hebt het beter gedaan dan ik
 grammar_rule(vp_v_extra, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx, V => vpx, Extra => comparativep,
     VP:eps3 <=> V:eps3,
@@ -2022,6 +1996,7 @@ grammar_rule(vp_v_extra, VP, [ V, OPTCOMMA, Extra ] ) :-
     optcomma(OPTCOMMA),
     hd_extra_structure(V,Extra,VP).
 
+%%EX%% Hij is ook actief geweest als balletcriticus
 grammar_rule(vp_v_extra_pred, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx, V => vpx, Extra => pred,
     V:cj => ncj,
@@ -2032,6 +2007,7 @@ grammar_rule(vp_v_extra_pred, VP, [ V, OPTCOMMA, Extra ] ) :-
     optcomma(OPTCOMMA),
     hd_extra_structure(V,Extra,VP).
 
+%%EX%% Hij is erg jaloers geweest op zijn buurman
 grammar_rule(vp_v_extra_pp, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx, V => vpx, Extra => pp,
     V:cj => ncj,
@@ -2043,6 +2019,7 @@ grammar_rule(vp_v_extra_pp, VP, [ V, OPTCOMMA, Extra ] ) :-
     optcomma(OPTCOMMA),
     hd_extra_structure(V,Extra,VP).
 
+%%EX%% Dat boek moet leuk zijn om te lezen
 grammar_rule(vp_v_extra_rel, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx, V => vpx, Extra => rel,
     VP:eps3 <=> V:eps3,
@@ -2053,6 +2030,7 @@ grammar_rule(vp_v_extra_rel, VP, [ V, OPTCOMMA, Extra ] ) :-
     optcomma(OPTCOMMA),
     hd_extra_structure(V,Extra,VP).
 
+%%EX%% Dat boek moet leuk zijn ( om kado te doen )
 grammar_rule(vp_v_bracketed_extra_rel, VP, [ V, OPEN, Extra, OPTPUNCT, CLOSE ] ) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     VP => vpx, V => vpx, Extra => rel,
@@ -2065,6 +2043,7 @@ grammar_rule(vp_v_bracketed_extra_rel, VP, [ V, OPEN, Extra, OPTPUNCT, CLOSE ] )
     optend_mod_punct(OPTPUNCT),
     hd_extra_structure(V,Extra,VP).
 
+%%EX%% Ik ben wel bang geweest dat hij terug zou komen .
 grammar_rule(vp_v_sbar, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx, V => vpx, Extra => sbar,
     VP:eps3 <=> V:eps3,
@@ -2077,6 +2056,7 @@ grammar_rule(vp_v_sbar, VP, [ V, OPTCOMMA, Extra ] ) :-
     optcomma(OPTCOMMA),
     hd_extra_structure(V,Extra,VP).
 
+%%EX%% Zij zou bereid zijn om te helpen
 grammar_rule(vp_v_inf, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx, V => vpx, 
     VP:eps3 <=> V:eps3,
@@ -2088,6 +2068,7 @@ grammar_rule(vp_v_inf, VP, [ V, OPTCOMMA, Extra ] ) :-
     optcomma(OPTCOMMA),
     hd_extra_structure(V,Extra,VP).
 
+%%EX%% Toen heb ik de kinderen ontmoet die door de buurvrouw waren opgevoed
 grammar_rule(vp_v_m_extra, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx, V => vpx, Extra => rel,
     VP:eps3 <=> V:eps3,
@@ -2099,6 +2080,9 @@ grammar_rule(vp_v_m_extra, VP, [ V, OPTCOMMA, Extra ] ) :-
     hd_m_extra_structure(V,Extra,VP).
 
 %% ?? is this worth it
+%% check treebank, the VP often can be regarded a complement
+%% query includes om_rel cases: //node[@cat="np" and node[@rel="mod"  and @cat="oti" and %PQ_nachfeld% ]]
+%%EX%% We moeten een middel bedenken om het probleem op te lossen
 grammar_rule(vp_v_m_extra_vp, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx, V => vpx, 
     VP:eps3 <=> V:eps3,
@@ -2133,6 +2117,7 @@ no_missing_subj(Extra) :-
     SubjNP:dt => [], % !
     SubjNP:allows_drop => yes.
 
+%%EX%% Toen heb ik de kinderen ontmoet ( die trouwens erg verlegen waren )
 grammar_rule(vp_v_bracketed_m_extra, VP, [V,OPEN,Extra,OPTPUNCT,CLOSE]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     VP => vpx, V => vpx, Extra => rel,
@@ -2146,6 +2131,7 @@ grammar_rule(vp_v_bracketed_m_extra, VP, [V,OPEN,Extra,OPTPUNCT,CLOSE]) :-
     hd_m_extra_structure(V,Extra,VP).
 
 %% ?? is this worth it
+%%EX%% We moeten een middel bedenken ( om het probleem eindelijk op te lossen )
 grammar_rule(vp_v_bracketed_m_extra_vp, VP, [V,OPEN,Extra,OPTPUNCT,CLOSE]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     VP => vpx, V => vpx, 
@@ -2162,6 +2148,7 @@ grammar_rule(vp_v_bracketed_m_extra_vp, VP, [V,OPEN,Extra,OPTPUNCT,CLOSE]) :-
     hd_m_extra_structure(V,Extra,VP).
 
 %% vproj --> vproj , MOD
+%%EX%% We moeten gaan afrekenen , eindelijk met de tegenpartij
 grammar_rule(vp_v_komma_mod, VP, [ V, COMMA, Mod ] ) :-
     VP => vproj, V => vproj, Mod => modifier,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
@@ -2181,6 +2168,7 @@ grammar_rule(vp_v_komma_mod, VP, [ V, COMMA, Mod ] ) :-
     hd_mod_structure(V,Mod,VP).
 
 %% vproj --> vproj , MOD
+%%EX%% We hebben beter gepresteerd dan jullie , eindelijk
 grammar_rule(vpx_v_komma_mod, VP, [ V, COMMA, Mod ] ) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     VP => vpx, V => vpx, Mod => modifier,
@@ -2194,17 +2182,35 @@ grammar_rule(vpx_v_komma_mod, VP, [ V, COMMA, Mod ] ) :-
     Mod:modifies_v => yes,
     hd_mod_structure(V,Mod,VP).
 
-grammar_rule(vp_v_komma_predm, VP, [ V, COMMA, Mod ] ) :-
-    hdrug_util:hdrug_flag(parse_or_generate,parse),
+%%EX%% Ze lagen in bed allemaal
+grammar_rule(vp_v_predm, VP, [ V, COMMA, ADJ ] ) :-
+    optcomma(COMMA),
     VP => vproj, V => vproj,
-    VP:eps3 <=> V:eps3,
-    VP:rightx => yes,
-    predm_adj(Mod),
-    VP:mf <=> V:mf,
     VP:eps1 => no,
     VP:eps2 => no,
+    VP:eps3 <=> V:eps3,
     VP:haspre => no,
-    comma(COMMA),
+    VP:mf <=> V:mf,
+    V:eps1 => no,
+    VP:rightx => yes,
+    ADJ => predm_adv,
+    hd_predm_structure(V,ADJ,VP).
+
+%%EX%% Hij kon niet weigeren als voorzitter
+%%EX%% Hij lag in bed ziek van ellende
+%%EX%% Hij bleef in bed liggen , ziek van ellende
+%%EX%% Hij kon niet weigeren , als voorzitter
+grammar_rule(vp_v_komma_predm, VP, [ V, COMMA, Mod ] ) :-
+    VP => vproj, V => vproj,
+    V:eps1 => no,
+    VP:eps1 => no,
+    VP:eps2 => no,
+    VP:eps3 <=> V:eps3,
+    VP:haspre => no,
+    VP:rightx => yes,
+    max_ap_pp_predm(Mod),
+    VP:mf <=> V:mf,
+    optcomma(COMMA),
     hd_predm_structure(V,Mod,VP).
 
 %% main clause syntax 
@@ -2321,6 +2327,7 @@ imp_structure(Sv1,Vmain,VP,IDENTIFIER,VSLASH) :-
 
 
 %% special case of imp rule above: this one for true imperatives
+%%EX%% Loop naar de pomp !
 grammar_rule(imp_imp, Imp, [ Vmain, call(put_val(IDENTIFIER,VSLASH)), VP ]):-
     Imp => imp,
     Imp:dt:stype => imparative,
@@ -2348,8 +2355,7 @@ grammar_rule(imp_imp, Imp, [ Vmain, call(put_val(IDENTIFIER,VSLASH)), VP ]):-
     alpino_wappend:wappend(Sc,[Subj],Sc0).
 
 
-%% In Google, type de volgende zoekopdracht in
-
+%%EX%% In Google typ de volgende zoekopdracht in
 grammar_rule(imp_mod_imp,ImpMother,[Mod, Imp]) :-
     ind_max_pp(Mod),
     Mod:pp_er => no,
@@ -2357,9 +2363,9 @@ grammar_rule(imp_mod_imp,ImpMother,[Mod, Imp]) :-
     ImpMother => imp,
     hd_mod_structure(Imp,Mod,ImpMother).
 
-%% tel uit je winst
-%% leg neer die bal
-%% spreek uit Djoomoo
+%%EX%% tel uit je winst
+%%EX%% leg neer die bal
+%%EX%% spreek uit Djoomoo
 grammar_rule(imp_part_imp,Imp, [Vmain0, Part, call(put_val(IDENTIFIER,VSLASH)), VP ]):-
     Vmain0 => v,
     Vmain => v,
@@ -2393,12 +2399,12 @@ grammar_rule(imp_part_imp,Imp, [Vmain0, Part, call(put_val(IDENTIFIER,VSLASH)), 
 
 % %% spoken language only?
 % %% topic-drop
-% %% kan ik niet
-% %% weet ik 
-% %% zeg ik niet
-% %% heeft niemand last van
+%%EX%% kan ik niet
+%%EX%% weet ik 
+%%EX%% heeft niemand last van
+%%EX%% is er niet
+%%EX%% vindt u niet erg ?
 grammar_rule(topic_drop,ROOT,[EmptyTopic,Ques]) :-
-%    hdrug_util:hdrug_flag(parse_or_generate,parse),
     EmptyTopic => etopic,
     Ques:iexs => [],
     Ques:imexs => [],
@@ -2408,12 +2414,11 @@ grammar_rule(topic_drop,ROOT,[EmptyTopic,Ques]) :-
     Topic:nform => (norm;er),   % BUT: kan best zijn dat ...
                                 %      *regent
     Topic:agr <=> Topic:e_agr,
-    Topic:prs => (fir;thi),  % OK: vroeg me af of hij zou komen
-                       %       kan me niet voorstellen dat ...
+    Topic:prs => (fir;thi),
     Topic:case => (nom;acc),
-                 % ok: "Piet?  Geef ik boeken.
-                 % but the same dep.str. is assigned anyway
-                 % using trans. frame...
+				% ok: "Piet?  Geef ik boeken.
+				% but the same dep.str. is assigned anyway
+				% using trans. frame...
     Ques => sv1,
     Ques:haswh => no,
     ROOT => max,
@@ -2422,24 +2427,20 @@ grammar_rule(topic_drop,ROOT,[EmptyTopic,Ques]) :-
     ROOT:dt:dropped_agr <=> Topic:agr,
     ROOT:dt:dropped_prs <=> Topic:prs,
     ROOT:dt:stype => topic_drop,
-    
-%    ROOT:puncttype => ~vraag,   % vindt u niet erg ?
-%    unify_mods(Ques),
     projected_hd_filler_structure(Ques,Topic,ROOT,sv1).
-%% error: variable slash in weakening; therefore explicit empty topic
-%% element.
 
 grammar_rule(etopic,EmptyTopic,[]) :-
-%    hdrug_util:hdrug_flag(parse_or_generate,parse),
     structure,
     EmptyTopic => etopic.
 
+%%EX%% geen bal van te begrijpen
 grammar_rule(ecomp,EmptyComp,[]) :-
     structure,
     EmptyComp => ecomp.
 
 %% root --> WH v1
-%% root --> topic v1 (local) 
+%% root --> topic v1 (local)
+%%EX%% Ik vertrek
 grammar_rule(non_wh_topicalization(np),ROOT,[Topic,OPTCOMMA,Ques]) :-
     Topic => np,
     not_er_topic_with_men_subject(Topic,Ques),
@@ -2448,6 +2449,7 @@ grammar_rule(non_wh_topicalization(np),ROOT,[Topic,OPTCOMMA,Ques]) :-
     unify_except(ROOT0,ROOT,niet),
     ROOT:niet <=> Topic:niet.
 
+%%EX%% Ongelukkig ben ik nooit geweest
 grammar_rule(non_wh_topicalization(pred),ROOT,[Topic,OPTCOMMA,Ques]) :-
     Topic => pred,
     optcomma(OPTCOMMA),
@@ -2455,6 +2457,7 @@ grammar_rule(non_wh_topicalization(pred),ROOT,[Topic,OPTCOMMA,Ques]) :-
     unify_except(ROOT0,ROOT,niet),
     ROOT:niet <=> Topic:niet.
 
+%%EX%% In Aduard woon je plezierig
 grammar_rule(non_wh_topicalization(pp),ROOT,[Topic,OPTCOMMA,Ques]) :-
     Topic => pp,
     optcomma(OPTCOMMA),
@@ -2462,22 +2465,29 @@ grammar_rule(non_wh_topicalization(pp),ROOT,[Topic,OPTCOMMA,Ques]) :-
     unify_except(ROOT0,ROOT,niet),
     ROOT:niet <=> Topic:niet.
 
+%%EX%% Of we wilden komen werd ons gevraagd
+%%EX%% Welke kandidaten kon hij niet uitleggen
+%%EX%% Hoeveel precies wisten we niet
 grammar_rule(non_wh_topicalization(sbar),ROOT,[Topic,OPTCOMMA,Ques]) :-
     Topic => sbar,
 %    Topic:ctype => ~c_of_short, % ! reduce weird ambiguities
-% must be allowed for
-% cdb4269 cdb2976
-% 'wat voor affiniteit kon hij niet uitleggen'
-% 'hoeveel precies wisten we niet'
+%%% must be allowed for
+%%% cdb4269 cdb2976
+%%% 'wat voor affiniteit kon hij niet uitleggen'
+%%% 'hoeveel precies wisten we niet'
     optcomma(OPTCOMMA),
     non_wh_topic_structure(Ques,Topic,ROOT).
 
+%%EX%% Bovenaan stond Feyenoord al sinds de winterstop
+%%EX%% Rechtsomkeert gingen we
+%%EX%% Zo lang duurde de pauze toch niet ?
 grammar_rule(non_wh_topicalization(adv),ROOT,[Topic,OPTCOMMA,Ques]) :-
     Topic => adv,
     Topic:tmploc => (loc;ld_dir;me),
     optcomma(OPTCOMMA),
     non_wh_topic_structure(Ques,Topic,ROOT).
-
+%%EX%% Om beroemd te worden is nooit mijn bedoeling geweest
+%%EX%% Beroemd te worden is nooit mijn bedoeling geweest
 grammar_rule(non_wh_topicalization(vp),ROOT,[Topic,OPTCOMMA,Ques]) :-
     Topic => vp,
     Topic:vform => (om;te),
@@ -2487,6 +2497,7 @@ grammar_rule(non_wh_topicalization(vp),ROOT,[Topic,OPTCOMMA,Ques]) :-
     non_wh_topic_structure(Ques,Topic,ROOT).
 
 %% maybe: only allow rel/vp modifier extraction from topic?
+%%EX%% Om er vanaf te zijn gaf ik haar gelijk
 grammar_rule(non_wh_topicalization(modifier),ROOT,[Topic,OPTCOMMA,Ques]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     Topic => modifier,
@@ -2516,6 +2527,7 @@ grammar_rule(non_wh_topicalization(modifier),ROOT,[Topic,OPTCOMMA,Ques]) :-
     non_wh_topic_structure(Ques,Topic,ROOT1).
 
 %% this rule does not yet work in generation, therefore switch it off
+%%EX%% Gekust heb ik haar nog nooit
 grammar_rule(non_wh_topicalization(vc),ROOT,[Topic,OPTCOMMA,Ques]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     Topic => vc,
@@ -2526,7 +2538,7 @@ grammar_rule(non_wh_topicalization(vc),ROOT,[Topic,OPTCOMMA,Ques]) :-
     optcomma(OPTCOMMA),
     non_wh_topic_structure(Ques,Topic,ROOT).
 
-%% aldus verklaarde de hoofdofficier
+%%EX%% Aldus verklaarde de hoofdofficier
 grammar_rule(non_wh_topicalization_dip,ROOT,[ZO,Q]) :-
     ROOT => root,
     ROOT:allows_root_imp => no,
@@ -2545,7 +2557,8 @@ grammar_rule(non_wh_topicalization_dip,ROOT,[ZO,Q]) :-
     ZO:dt <=> SLASH:dt,
     projected_hd_filler_structure(Q,SLASH,ROOT,smain).
 
-%% zo klonk het; zo heette het
+%%EX%% zo klonk het
+%%EX%% zo heette het
 grammar_rule(non_wh_topicalization_dip_pred,ROOT,[ZO,Q]) :-
     ROOT => root,
     ROOT:allows_root_imp => no,
@@ -2564,7 +2577,8 @@ grammar_rule(non_wh_topicalization_dip_pred,ROOT,[ZO,Q]) :-
     ZO:dt <=> SLASH:dt,
     projected_hd_filler_structure(Q,SLASH,ROOT,smain).
 
-%% zo begon hij, allows dip (in contrast to normal modifier in topic)
+%%EX%% Ik vertrek , zo begon hij zijn verhaal
+%% allows dip (in contrast to normal modifier in topic)
 grammar_rule(non_wh_topicalization_dip_mod,ROOT,[ZO,Q]) :-
     ROOT => root,
     ROOT:allows_root_imp => no,
@@ -2585,20 +2599,25 @@ grammar_rule(non_wh_topicalization_dip_mod,ROOT,[ZO,Q]) :-
 
 %% todo: treat iexs and exs like in hd_filler_structs...
 %% for next three rules
+%%EX%% Allemaal hadden ze een masker op
 grammar_rule(predm_topicalization,ROOT,[PREDM,OPTCOMMA,Ques]) :-
     PREDM => predm_adv,
     optcomma(OPTCOMMA),
     nwh_topicalized_predm_structure(Ques,PREDM,ROOT).
 
-grammar_rule(predm_ap_topicalization,ROOT,[PREDM,OPTCOMMA,Ques]) :-
-    predm_adj(PREDM),
+%%EX%% Ziek kwamen ze binnen
+%%EX%% In poedervorm is de stof op de markt gebracht
+%%EX%% Vloeibaar en in poedervorm is de stof op de markt gebracht
+grammar_rule(predm_topicalization_adj,ROOT,[PREDM,OPTCOMMA,Ques]) :-
+    max_ap_pp_predm(PREDM),
+    PREDM:wh => nwh,
     optcomma(OPTCOMMA),
     nwh_topicalized_predm_structure(Ques,PREDM,ROOT).
 
-grammar_rule(predm_pp_topicalization,ROOT,[PP,OPTCOMMA,Ques]) :-
-    pp_predm(PP),
-    optcomma(OPTCOMMA),
-    nwh_topicalized_predm_structure(Ques,PP,ROOT).
+%grammar_rule(predm_pp_topicalization,ROOT,[PP,OPTCOMMA,Ques]) :-
+%    pp_predm(PP),
+%    optcomma(OPTCOMMA),
+%    nwh_topicalized_predm_structure(Ques,PP,ROOT).
 
 nwh_topicalized_predm_structure(Ques,PREDM,ROOT) :-
     ROOT => root,
@@ -2654,6 +2673,7 @@ non_wh_topic_structure(Ques,Topic,ROOT) :-
     ROOT:allows_root_imp => no,
     projected_hd_filler_structure(Ques,Topic,ROOT,smain).
 
+%%EX%% Vast staat dat hij de dader geholpen heeft
 grammar_rule(vast_staat,ROOT,
              [VastVmain,call(put_val(IDENTIFIER,VSLASH)),VP]) :-
     imp_structure(Sv1,Vmain,VP,IDENTIFIER,VSLASH),
@@ -2688,24 +2708,28 @@ wh_topic_structure(Ques,Topic,ROOT) :-
     Topic:wh => yq,
     Topic:wh_reltmploc => ~hoe_hoe.
 
+%%EX%% Wat doe jij ?
 grammar_rule(wh_topicalization(np), ROOT, [Topic, OPTCOMMA, Ques]) :-
     Ques => sv1,
     Topic => np,
     optcomma(OPTCOMMA),
     wh_topic_structure(Ques,Topic,ROOT).
 
+%%EX%% Hoe groot ben jij ?
 grammar_rule(wh_topicalization(pred), ROOT, [Topic, OPTCOMMA, Ques]) :-
     Ques => sv1,
     Topic => pred,
     optcomma(OPTCOMMA),
     wh_topic_structure(Ques,Topic,ROOT).
 
+%%EX%% Op wie wacht jij ?
 grammar_rule(wh_topicalization(pp), ROOT, [Topic, OPTCOMMA, Ques]) :-
     Ques => sv1,
     Topic => pp,
     optcomma(OPTCOMMA),
     wh_topic_structure(Ques,Topic,ROOT).
 
+%%EX%% Waar woon jij ?
 grammar_rule(wh_topicalization(adv), ROOT, [Topic, OPTCOMMA, Ques]) :-
     Ques => sv1,
     Topic => adv,
@@ -2713,6 +2737,7 @@ grammar_rule(wh_topicalization(adv), ROOT, [Topic, OPTCOMMA, Ques]) :-
     optcomma(OPTCOMMA),
     wh_topic_structure(Ques,Topic,ROOT).
 
+%%EX%% Wanneer slaap jij eigenlijk ?
 grammar_rule(wh_topicalization(modifier), ROOT, [Topic, OPTCOMMA, Ques]) :-
     Ques => sv1,
     Topic => modifier,
@@ -2720,7 +2745,7 @@ grammar_rule(wh_topicalization(modifier), ROOT, [Topic, OPTCOMMA, Ques]) :-
     optcomma(OPTCOMMA),
     wh_topic_structure(Ques,Topic,ROOT).
 
-%% wat te zeggen van die problemen?
+%%EX%% wat te zeggen van die problemen?
 grammar_rule(wh_topicalization(np,vp), ROOT, [Topic, OPTCOMMA, Ques]) :-
     Ques => vp,
     Ques:vform => te,
@@ -2729,9 +2754,9 @@ grammar_rule(wh_topicalization(np,vp), ROOT, [Topic, OPTCOMMA, Ques]) :-
     optcomma(OPTCOMMA),
     wh_topic_structure(Ques,Topic,ROOT).
 
-%% waarom een invaller gezocht?
-%% waarom een invaller zoeken?
-%% hoe een invaller te vinden?
+%%EX%% waarom een invaller gezocht ?
+%%EX%% waarom een invaller zoeken ?
+%%EX%% hoe een invaller te vinden ?
 grammar_rule(wh_topicalization(modifier,vp), ROOT, [Topic,OPTCOMMA,Ques]) :-
     Ques => vp,
     Ques:vform => (inf;psp;te),
@@ -2742,13 +2767,13 @@ grammar_rule(wh_topicalization(modifier,vp), ROOT, [Topic,OPTCOMMA,Ques]) :-
     optcomma(OPTCOMMA),
     wh_topic_structure(Ques,Topic,ROOT).
 
-%% met z'n hoevelen komen jullie?
+%%EX%% met z'n hoevelen komen jullie ?
 grammar_rule(predm_ap_wh_topicalization,ROOT,[PREDM,OPTCOMMA,Ques]) :-
     optcomma(OPTCOMMA),
     wh_predm_adj(PREDM),
     predm_wh_topic_structure(ROOT,PREDM,Ques).
 
-%% als welk personage wilt u na uw dood terugkeren?
+%%EX%% als welk personage wilt u na uw dood terugkeren ?
 grammar_rule(predm_pp_wh_topicalization,ROOT,[PREDM,OPTCOMMA,Ques]) :-
     optcomma(OPTCOMMA),
     wh_pp_predm(PREDM),
@@ -2785,6 +2810,7 @@ nominalization_cat(N) :-
     N:lex => yes,
     N:nform => norm.
 
+%%EX%% vissen is gemeen
 grammar_rule(nominalization,N,[V]) :-
     nominalization_cat(N),
     V => vpx_noun,
@@ -2801,16 +2827,19 @@ grammar_rule(vpx_vc_noun,VPX,[VC]) :-
     VC => vc_noun,
     hd_structure(VC,VPX).
 
+%%EX%% Harder rijden dan 50 is niet toegestaan
 grammar_rule(vpnoun_v_extra, VP, [ V, Extra ] ) :-
     VP => vpx_noun, V => vpx_noun, Extra => comparativep,
     hd_extra_structure(V,Extra,VP).
 
+%%EX%% Bang zijn voor muizen is heel gewoon
 grammar_rule(vpnoun_v_pp, VP, [ V, Extra ] ) :-
     VP => vpx_noun, V => vpx_noun, Extra => pp,
     Extra:slash => [],
     Extra:sel => to_right,
     hd_extra_structure(V,Extra,VP).
 
+%%EX%% Bang zijn dat er ingebroken wordt komt vaak voor
 grammar_rule(vpnoun_v_sbar, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx_noun, V => vpx_noun, Extra => sbar,
     Extra:slash => [],
@@ -2818,17 +2847,20 @@ grammar_rule(vpnoun_v_sbar, VP, [ V, OPTCOMMA, Extra ] ) :-
     optcomma(OPTCOMMA),
     hd_extra_structure(V,Extra,VP).
 
+%%EX%% Altijd bereid zijn om te helpen is een mooie eigenschap
 grammar_rule(vpnoun_v_inf, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx_noun, V => vpx_noun,
     mod_vp(Extra),
     optcomma(OPTCOMMA),
     hd_extra_structure(V,Extra,VP).
 
+%%EX%% Kinderen helpen die weinig mogelijkheden hebben wordt weinig gedaan
 grammar_rule(vpnoun_v_m_extra, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx_noun, V => vpx_noun, Extra => rel,
     optcomma(OPTCOMMA),
     hd_m_extra_structure(V,Extra,VP).
 
+%%EX%% Visjes vangen is gemeen
 grammar_rule(deverbal_vp_arg_v(np),VP, [Arg, V] ) :-
     Arg => np,
     Arg:sel => to_left,
@@ -2846,6 +2878,7 @@ grammar_rule(deverbal_vp_arg_v(np),VP, [Arg, V] ) :-
     VP:hasmod <=> V:hasmod,
     hd_comp_structure(V,Arg,VP). 
 
+%%EX%% Bakzeil halen tijdens de onderhandelingen werd niet op prijs gesteld
 grammar_rule(deverbal_vp_arg_v(fixed_pred),VP, [Arg, V] ) :-
     Arg => fixed_part,
     Arg:sel => to_left,
@@ -2856,6 +2889,7 @@ grammar_rule(deverbal_vp_arg_v(fixed_pred),VP, [Arg, V] ) :-
     VP:hasmod <=> V:hasmod,
     hd_comp_structure(V,Arg,VP). 
 
+%%EX%% Op je vrouw wachten kan soms lang duren
 grammar_rule(deverbal_vp_arg_v(pp),VP, [Arg, V] ) :-
     Arg => pp,
     Arg:sel => to_left,
@@ -2868,6 +2902,7 @@ grammar_rule(deverbal_vp_arg_v(pp),VP, [Arg, V] ) :-
     V:hasmod <=> Arg:vhasmod,
     hd_comp_structure(V,Arg,VP). 
 
+%%EX%% Wachten op je vrouw kan soms lang duren
 grammar_rule(deverbal_vp_v_arg(pp),VP, [V, Arg] ) :-
     Arg => pp,
     Arg:sel => to_right,
@@ -2878,6 +2913,7 @@ grammar_rule(deverbal_vp_v_arg(pp),VP, [V, Arg] ) :-
     VP:haspre2 => yes,
     hd_comp_structure(V,Arg,VP). 
 
+%%EX%% Zeggen dat je dat morgen wel zult doen is te makkelijk
 grammar_rule(deverbal_vp_v_arg(sbar),VP, [V, Arg] ) :-
     Arg => sbar,
     Arg:sel => to_right,
@@ -2887,6 +2923,7 @@ grammar_rule(deverbal_vp_v_arg(sbar),VP, [V, Arg] ) :-
     VP:haspre2 => yes,
     hd_comp_structure(V,Arg,VP). 
 
+%%EX%% Vragen om op tijd te komen zal ook wel niet helpen
 grammar_rule(deverbal_vp_v_arg(vp),VP, [V, Arg] ) :-
     Arg => vp,
     Arg:sel => to_right,
@@ -2897,6 +2934,7 @@ grammar_rule(deverbal_vp_v_arg(vp),VP, [V, Arg] ) :-
     VP:haspre2 => yes,
     hd_comp_structure(V,Arg,VP). 
 
+%%EX%% Naar Groningen fietsen doe ik tegenwoordig met plezier
 grammar_rule(deverbal_vp_arg_v(adv),VP, [Arg, V] ) :-
     Arg => adv,
     Arg:sel => to_left,
@@ -2906,6 +2944,7 @@ grammar_rule(deverbal_vp_arg_v(adv),VP, [Arg, V] ) :-
     V => vc_noun,
     hd_comp_structure(V,Arg,VP). 
 
+%%EX%% Jong zijn duurt maar even
 grammar_rule(deverbal_vp_arg_v(pred),VP, [Arg, V] ) :-
     Arg => pred,
     Arg:sel => to_left,
@@ -2914,6 +2953,7 @@ grammar_rule(deverbal_vp_arg_v(pred),VP, [Arg, V] ) :-
     V => vc_noun,
     hd_comp_structure(V,Arg,VP). 
 
+%%EX%% Hard fietsen wordt wielrennen genoemd
 grammar_rule(deverbal_vp_mod_v,VP, [MOD, V] ) :-
     MOD => modifier,
     MOD:wh => nwh,
@@ -2926,6 +2966,7 @@ grammar_rule(deverbal_vp_mod_v,VP, [MOD, V] ) :-
     MOD:modifies_v => yes,
     hd_mod_structure(V,MOD,VP). 
 
+%%EX%% Fietsen met slecht weer is een kleine ramp
 grammar_rule(deverbal_vp_v_mod,VP, [V, MOD] ) :-
     MOD => modifier,
     MOD:wh => nwh,
@@ -2937,6 +2978,7 @@ grammar_rule(deverbal_vp_v_mod,VP, [V, MOD] ) :-
     MOD:modifies_v => yes,
     hd_mod_structure(V,MOD,VP). 
 
+%%EX%% Zelf appelbeignets bakken is een mooie traditie
 grammar_rule(deverbal_vp_predm_v,VP, [MOD, V] ) :-
     MOD => predm_adv,
     VP => vc_noun,
@@ -2945,14 +2987,16 @@ grammar_rule(deverbal_vp_predm_v,VP, [MOD, V] ) :-
     VP:hasmod => yes,
     hd_predm_structure(V,MOD,VP). 
 
+%%EX%% Ziek tentamens maken leidt natuurlijk tot problemen
 grammar_rule(deverbal_vp_predm_adj_v,VP, [MOD, V] ) :-
-    predm_adj(MOD),
+    max_ap_pp_predm(MOD),
     VP => vc_noun,
     V => vc_noun,
     V:haspre2 => no,
     VP:hasmod => yes,
     hd_predm_structure(V,MOD,VP). 
 
+%%EX%% Door moeten lopen met een kapotte schoen is lastig
 grammar_rule(deverbal_vp_part_v,VP, [Part, V] ) :-
     VP => vc_noun,
     V => v_noun,
@@ -2966,6 +3010,7 @@ grammar_rule(deverbal_vc_v,VP,[V]) :-
     VP:vc => yes,
     hd_structure(V,VP).
 
+%%EX%% Het moeten afwachten is nog het moeilijkste
 grammar_rule(deverbal_v_v_v,VP, [V, Inf] ) :-	
     VP => v_noun, V => v_noun, Inf => vc,
     V:lex => yes, % !!
@@ -2976,6 +3021,7 @@ grammar_rule(deverbal_v_v_v,VP, [V, Inf] ) :-
     hd_comp_structure(V,Inf,VP).
 
 %% (het) gekust worden is lekker
+%%EX%% Getroost worden door opa vindt ze fijn
 grammar_rule(deverbal_v_inv_v_v,VP, [Psp, V] ) :-	
     VP => v_noun, V => v_noun, Psp => vb, Psp1 => vc,
     unify_vc_vb(Psp,Psp1),
@@ -2988,6 +3034,7 @@ grammar_rule(deverbal_v_inv_v_v,VP, [Psp, V] ) :-
 %%%%% rules for DIPs %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%EX%% Ik kom niet , zei Piet 
 grammar_rule(dip_sv1,DIPP,[DIP]) :-
     DIPP => dip,
     DIP => sv1,
@@ -3004,6 +3051,7 @@ grammar_rule(dip_sv1,DIPP,[DIP]) :-
     SbarArg:dt => [], % !
     projected_hd_filler_structure(DIP,SbarArg,DIPP).
 
+%%EX%% Ik kom niet , zo verklaarde Piet
 grammar_rule(dip_root,DIPP,[DIP]) :-
     DIPP => dip,
     DIP => root,
@@ -3012,6 +3060,7 @@ grammar_rule(dip_root,DIPP,[DIP]) :-
     unify_mods(DIP),
     hd_structure(DIP,DIPP).
 
+%%EX%% We doen niets , aldus de minister
 grammar_rule(dip_pp,DIPP,[DIP]) :-
     DIPP => dip,
     pp_modifier(DIP),
@@ -3020,12 +3069,22 @@ grammar_rule(dip_pp,DIPP,[DIP]) :-
     alpino_wappend:wwmember(PREP,[aldus,volgens]),
     hd_structure(DIP,DIPP).
 
+%%EX%% De minister , zei hij , moet opstappen
 grammar_rule(sv1_dip_sv1,VP,[COMMAL,DIP,COMMAR,V]) :-
     comma(COMMAL),
     comma(COMMAR),
     LQ => no,
     sv1_dip_sv1_structure(V,DIP,VP,LQ).
 
+%%EX%% De minister - zei hij - moet opstappen
+grammar_rule(sv1_dip_sv1_ligg,VP,[COMMAL,DIP,COMMAR,V]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    dash(COMMAL),
+    dash(COMMAR),
+    LQ => no,
+    sv1_dip_sv1_structure(V,DIP,VP,LQ).
+
+%%EX%% Morgen , trouwens dat heb ik al verteld , ga ik naar Sint Maartenszee
 grammar_rule(sv1_smain_sv1,VP,[COMMAL,MAX,COMMAR,V]) :-
     comma(COMMAL),
     comma(COMMAR),
@@ -3041,6 +3100,7 @@ grammar_rule(sv1_smain_sv1,VP,[COMMAL,MAX,COMMAR,V]) :-
     unify_mods(MAX),
     xp_dip_xp_structure(V,MAX,VP,LQ).
 
+%%EX%% " De minister " zei hij " moet opstappen "
 grammar_rule(sv1_dip_sv1_q,VP,[QR,COMMAL,DIP,COMMAR,QL,V]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     optcomma(COMMAL),
@@ -3050,15 +3110,7 @@ grammar_rule(sv1_dip_sv1_q,VP,[QR,COMMAL,DIP,COMMAR,QL,V]) :-
     LQ => yes,
     sv1_dip_sv1_structure(V,DIP,VP,LQ).
 
-grammar_rule(sv1_dip_sv1_ligg,VP,[COMMAL,DIP,COMMAR,V]) :-
-    hdrug_util:hdrug_flag(parse_or_generate,parse),
-    COMMAL => punct,
-    COMMAR => punct,
-    COMMAL:puncttype => ligg_streep,
-    COMMAR:puncttype => ligg_streep,
-    LQ => no,
-    sv1_dip_sv1_structure(V,DIP,VP,LQ).
-
+%%EX%% De minister ( zei hij ) moet opstappen 
 grammar_rule(sv1_dip_sv1_haak,VP,[COMMAL,DIP,OptQm, COMMAR,V]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMAL => punct,
@@ -3132,8 +3184,7 @@ initialize_dt_in(Result) :-
     Result:predm => [].
 
 %% vproj --> , sv1 , vproj
-%% Ik denk , zei Jan , dat dit niet mogelijk is
-%% I think, John said , that this is not possible
+%%EX%% " Ik denk " , zei Jan , " dat dit niet mogelijk is "
 grammar_rule(vp_dip_vp,VP1,[QR,COMMAL,Sv1,COMMAR,OPTQL,V]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(QR),
@@ -3144,6 +3195,7 @@ grammar_rule(vp_dip_vp,VP1,[QR,COMMAL,Sv1,COMMAR,OPTQL,V]) :-
     LQ => yes,
     vp_dip_vp_structure(V,Sv1,VP1,LQ).
 
+%%EX%% Ik denk , zei Jan , dat dit niet mogelijk is
 grammar_rule(vp_dip_vp1,VP1,[COMMAL,Sv1,COMMAR,OPTQL,V]) :-
     optql(OPTQL),
     comma(COMMAL),
@@ -3152,6 +3204,7 @@ grammar_rule(vp_dip_vp1,VP1,[COMMAL,Sv1,COMMAR,OPTQL,V]) :-
     LQ => no,
     vp_dip_vp_structure(V,Sv1,VP1,LQ).
 
+%%EX%% ' Ik heb toen ' zei Jan ' lang gewacht '
 grammar_rule(vp_dip_vp2,VP1,[QR,Sv1,OPTCOMMA,QL,V]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(QR),
@@ -3161,6 +3214,7 @@ grammar_rule(vp_dip_vp2,VP1,[QR,Sv1,OPTCOMMA,QL,V]) :-
     LQ => yes,
     vp_dip_vp_structure(V,Sv1,VP1,LQ).
 
+%%EX%% Ik denk , ja , dat dit niet kan
 grammar_rule(vp_tag_vp1,VP1,[COMMAL,TAG,COMMAR,V]) :-
 %    hdrug_util:hdrug_flag(parse_or_generate,parse),
     comma(COMMAL),
@@ -3169,6 +3223,7 @@ grammar_rule(vp_tag_vp1,VP1,[COMMAL,TAG,COMMAR,V]) :-
     TAG:adv => no,
     vp_dip_vp_structure(V,TAG,VP1,_).
 
+%%EX%% Ik heb gewacht , ja , op zijn antwoord
 grammar_rule(vp_vp1_tag,VP1,[V,COMMAL,TAG,COMMAR]) :-
 %    hdrug_util:hdrug_flag(parse_or_generate,parse),
     comma(COMMAL),
@@ -3177,29 +3232,29 @@ grammar_rule(vp_vp1_tag,VP1,[V,COMMAL,TAG,COMMAR]) :-
     TAG:adv => no,
     vp_dip_vp_structure(V,TAG,VP1,_).
 
+%%EX%% " Ik denk " - zei Jan - " dat dit niet mogelijk is "
 grammar_rule(vp_dip_vp_ligg,VP1,[QR,COMMAL,Sv1,COMMAR,OPTQL,V]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(QR),
     optql(OPTQL),
-    COMMAL => punct,
-    COMMAR => punct,
-    COMMAL:puncttype => ligg_streep,
-    COMMAR:puncttype => ligg_streep,
+    dash(COMMAL),
+    dash(COMMAR),
     Sv1 => dip,
     LQ => yes,
     vp_dip_vp_structure(V,Sv1,VP1,LQ).
 
+%%EX%% Ik denk - zei Jan - dat dit niet mogelijk is
 grammar_rule(vp_dip_vp_ligg2,VP1,[COMMAL,Sv1,COMMAR,OPTQL,V]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     optql(OPTQL),
-    COMMAL => punct,
-    COMMAR => punct,
-    COMMAL:puncttype => ligg_streep,
-    COMMAR:puncttype => ligg_streep,
+    dash(COMMAL),
+    dash(COMMAR),
     Sv1 => dip,
     LQ => no,
     vp_dip_vp_structure(V,Sv1,VP1,LQ).
 
+/* NOT USED can go using vp_dip_vp_haak2? 
+%%EX%% " Ik denk " ( zei Jan ) " dat dit niet mogelijk is "
 grammar_rule(vp_dip_vp_haak,VP1,[QR,COMMAL,Sv1,OptQm,COMMAR,OPTQL,V]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(QR),
@@ -3212,7 +3267,10 @@ grammar_rule(vp_dip_vp_haak,VP1,[QR,COMMAL,Sv1,OptQm,COMMAR,OPTQL,V]) :-
     Sv1 => dip,
     LQ => yes,
     vp_dip_vp_structure(V,Sv1,VP1,LQ).
+*/
 
+%%EX%% Ik denk ( zei Jan ) dat dit niet mogelijk is
+%%EX%% " Ik denk " ( zei Jan ) " dat dit niet mogelijk is "
 grammar_rule(vp_dip_vp_haak2,VP1,[COMMAL,Sv1,OptQm,COMMAR,OPTQL,V]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     optql(OPTQL),
@@ -3225,9 +3283,8 @@ grammar_rule(vp_dip_vp_haak2,VP1,[COMMAL,Sv1,OptQm,COMMAR,OPTQL,V]) :-
     LQ => no,
     vp_dip_vp_structure(V,Sv1,VP1,LQ).
 
-%% we moeten denk ik naar huis
-%% we moeten geloof ik naar huis
-
+%%EX%% we moeten denk ik naar huis
+%%EX%% we moeten geloof ik naar huis
 grammar_rule(vp_dip_vp_no_comma, VP1,[DIP,V]) :-
     DIP => denk_ik,
     LQ => no,
@@ -3243,16 +3300,18 @@ dip_scope_structure(NUCL,ROOT) :-
     TAG:dt_in <=> NUCLDT,
     TAG:dt_out <=> ROOTDT.
 
+%%EX%% We moeten , zei Piet , naar huis
 grammar_rule(dip_scope_root,ROOT,[NUCL]) :-
     ROOT => root, NUCL => root,
     dip_scope_structure(NUCL,ROOT).
 
+%%EX%% Ga nu eens , zei Piet , naar huis
 grammar_rule(dip_scope_imp,ROOT,[NUCL]) :-
     ROOT => imp, NUCL => imp,
     dip_scope_structure(NUCL,ROOT).
 
 %% voor:
-%% " Dit " , zegt Piet , " komt voort uit onmacht .
+%%EX%% " Dit " , zegt Piet , " komt voort uit onmacht .
 %% maar maakt deze stuk:
 %% " Zoiets zit er altijd in , als je begint .
 %% todo: limit to cases where DIP is not on the left edge
@@ -3266,17 +3325,23 @@ grammar_rule(dip_scope_root_q,ROOT,[QL,NUCL,QR]) :-
     dip_scope_structure(NUCL,ROOT).
 
 %% really, if embbeded?
+%%EX%% Hij keek me aan alsof hij wilde zeggen : flauwekul !
+%%EX%% We vertrekken , al moeten we , denk ik , uitkijken !
+%%% always with dip_scope_vp ? No.
 grammar_rule(dip_scope_sbar,ROOT,[NUCL]) :-
     ROOT => sbar,
     dip_scope_structure(NUCL,ROOT).
 
-%% really, if embedded?
+%%EX%% Waarop de jongens zeiden : " Je hebt wel geld "
+%%EX%% Hij wijst samenwerking af , omdat , aldus De Jong , " zoiets niet meer van deze tijd is . "
+%%EX%% Om er onmiddellijk aan toe te voegen : " maar ik kom niet ! "
+%%EX%% Om er onmiddellijk aan toe te voegen : maar ik kom niet !
 grammar_rule(dip_scope_vp,ROOT,[NUCL]) :-
     ROOT => vp,
     dip_scope_structure(NUCL,ROOT).
 
-%% ik zei: dat is onzin!
-%% ik zei: met wie?
+%%EX%% ik zei : dat is onzin !
+%%EX%% ik zei : met wie ?
 %% TODO: require/allow that TAG misses SBAR/NP argument!
 grammar_rule(vp_vp_dip,VP,[V,COLON,NUCL]) :-
     NUCL => start,
@@ -3294,6 +3359,7 @@ grammar_rule(vp_vp_dip,VP,[V,COLON,NUCL]) :-
     vp_vp_dip_structure(V1,NUCL,VP),
     VP:haspre2 => yes.
 
+%%EX%% Ik zei : " dat is onzin "
 grammar_rule(vp_vp_dip_q,VP,[V,COLON,QL,NUCL,OPTEND,QR]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND,Type),
@@ -3310,6 +3376,7 @@ grammar_rule(vp_vp_dip_q,VP,[V,COLON,QL,NUCL,OPTEND,QR]) :-
     vp_v_arg_structure(V,SBAR,V1,_),
     vp_vp_dip_structure(V1,NUCL,VP).
 
+%%EX%% Ik zei toen " dat is onzin "
 grammar_rule(vp_vp_dip_q_nocolon,VP,[V,QL,NUCL,OPTEND,QR]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND),
@@ -3327,21 +3394,15 @@ grammar_rule(vp_vp_dip_q_nocolon,VP,[V,QL,NUCL,OPTEND,QR]) :-
 
 %% specifically for cdb corpus, where : is often treated as sentence
 %% boundary:
+%%EX%% Hij zei toen :
 grammar_rule(vp_vp_colon,VP,[V,COLON]) :-
 %    hdrug_util:hdrug_flag(parse_or_generate,parse),
     COLON => punct,
     COLON:puncttype => dubb_punt,
-    max_np(NP),
-    NP:mexs => [],
-    NP:hstem => [],
-    NP:nform => norm,
-    NP:subn => sub_noun,
-    NP:case => (obl;acc;nom),  % don't use obj2 here
-    NP:dt => [], % !
-    NP:allows_drop => yes,
+    empty_np(NP),
     vp_v_arg_structure(V,NP,VP,_).
 
-%% beste luisteraars , zet uw radio maar op 3
+%%EX%% beste luisteraars , zet uw radio maar op 3
 grammar_rule(np_imp,START,[NP,COMMA,IMP,OPTPUNCT]) :-
     START => start,
     ind_max_np(NP),
@@ -3351,7 +3412,7 @@ grammar_rule(np_imp,START,[NP,COMMA,IMP,OPTPUNCT]) :-
     nucl_tag_structure(IMP,NP,START),
     Type => (hellip;uitroep;punt).
 
-%%% ga onmiddellijk naar binnen , spelbreker
+%%EX% ga onmiddellijk naar binnen , spelbreker
 grammar_rule(imp_np,START,[IMP,COMMA,NP,OPTPUNCT]) :-
     START => start,
     ind_max_np(NP),
@@ -3361,7 +3422,7 @@ grammar_rule(imp_np,START,[IMP,COMMA,NP,OPTPUNCT]) :-
     nucl_tag_structure(IMP,NP,START),
     Type => (hellip;uitroep;punt).
 
-%% dat is een teunisbloem denk ik
+%%EX%% dat is een teunisbloem denk ik
 grammar_rule(start_max_denk_ik,START,[NUCL,OPTPUNCT,COMMA,TAG]) :-
     START => max,
     START:max_type => t_dp,
@@ -3372,7 +3433,7 @@ grammar_rule(start_max_denk_ik,START,[NUCL,OPTPUNCT,COMMA,TAG]) :-
     optcomma(COMMA),
     nucl_tag_structure(NUCL,TAG,START).
 
-%% Hij is gek ! , riep ik
+%%EX%% Hij is gek ! , riep ik
 grammar_rule(start_max_dip,START,[NUCL,OPTPUNCT,COMMA,TAG]) :-
     START => max,
     START:max_type => t_dp,
@@ -3383,7 +3444,7 @@ grammar_rule(start_max_dip,START,[NUCL,OPTPUNCT,COMMA,TAG]) :-
     TAG => dip,
     nucl_tag_structure(NUCL,TAG,START).
 
-%% " Wie ben jij ? " , vroeg ik 
+%%EX%% " Wie ben jij ? " , vroeg ik 
 grammar_rule(start_dq1_max_dip,START,[DQ1,NUCL,OPTPUNCT,DQ2,COMMA,TAG]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     ql(DQ1),
@@ -3397,7 +3458,7 @@ grammar_rule(start_dq1_max_dip,START,[DQ1,NUCL,OPTPUNCT,DQ2,COMMA,TAG]) :-
     TAG => dip,
     nucl_tag_structure(NUCL,TAG,START).
 
-%% " Wie ben jij ? " , vroeg ik 
+%%EX%% Wie ben jij ? " , vroeg ik 
 grammar_rule(start_dq2_max_dip,START,[NUCL,OPTPUNCT,DQ2,COMMA,TAG]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(DQ2),
@@ -3410,7 +3471,7 @@ grammar_rule(start_dq2_max_dip,START,[NUCL,OPTPUNCT,DQ2,COMMA,TAG]) :-
     TAG => dip,
     nucl_tag_structure(NUCL,TAG,START).
 
-%% ik kom , " zei hij 
+%%EX%% ik kom , " zei hij 
 grammar_rule(start_dq3_max_dip,START,[NUCL,COMMA,DQ2,TAG]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(DQ2),
@@ -3421,7 +3482,7 @@ grammar_rule(start_dq3_max_dip,START,[NUCL,COMMA,DQ2,TAG]) :-
     TAG => dip,
     nucl_tag_structure(NUCL,TAG,START).
 
-%% " ik kom , " zei hij 
+%%EX%% " ik kom , " zei hij 
 grammar_rule(start_dq4_max_dip,START,[DQ1,NUCL,COMMA,DQ2,TAG]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     ql(DQ1),
@@ -3433,7 +3494,7 @@ grammar_rule(start_dq4_max_dip,START,[DQ1,NUCL,COMMA,DQ2,TAG]) :-
     TAG => dip,
     nucl_tag_structure(NUCL,TAG,START).
 
-%% Wie ben jij ? vroeg hij
+%%EX%% Wie ben jij ? vroeg hij
 grammar_rule(start_max_dip_no_comma,START,[NUCL,PUNCT,TAG]) :-
     START => max,
     START:max_type => t_dp,
@@ -3444,7 +3505,7 @@ grammar_rule(start_max_dip_no_comma,START,[NUCL,PUNCT,TAG]) :-
     TAG => dip,
     nucl_tag_structure(NUCL,TAG,START).
 
-%% " Wie ben jij ? " vroeg hij
+%%EX%% " Wie ben jij ? " vroeg hij
 grammar_rule(start_dq1_max_dip_no_comma,START,[DQ1,NUCL,PUNCT,DQ2,TAG]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     ql(DQ1),
@@ -3458,7 +3519,7 @@ grammar_rule(start_dq1_max_dip_no_comma,START,[DQ1,NUCL,PUNCT,DQ2,TAG]) :-
     TAG => dip,
     nucl_tag_structure(NUCL,TAG,START).
 
-%% Wie ben jij ? " vroeg hij
+%%EX%% Wie ben jij ? " vroeg hij
 grammar_rule(start_dq2_max_dip_no_comma,START,[NUCL,PUNCT,DQ2,TAG]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(DQ2),
@@ -3471,7 +3532,7 @@ grammar_rule(start_dq2_max_dip_no_comma,START,[NUCL,PUNCT,DQ2,TAG]) :-
     TAG => dip,
     nucl_tag_structure(NUCL,TAG,START).
 
-%% Kok : " ik hou er mee op "
+%%EX%% Kok : ik hou er mee op
 grammar_rule(np_dip,MAX,[NP,DUBB,XP,OPTEND]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND,Type),
@@ -3484,6 +3545,7 @@ grammar_rule(np_dip,MAX,[NP,DUBB,XP,OPTEND]) :-
     XP:puncttype <=> Type,
     nucl_tag_structure(XP,NP,MAX).
 
+%%EX%% Kok : " ik hou er mee op "
 grammar_rule(np_quoted_dip,MAX,[NP,DUBB,DQ1,XP,OPTEND,DQ2]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND,Type),
@@ -3498,7 +3560,7 @@ grammar_rule(np_quoted_dip,MAX,[NP,DUBB,DQ1,XP,OPTEND,DQ2]) :-
     qr(DQ2),
     nucl_tag_structure(XP,NP,MAX).
 
-%% Lachend : " ik hou er mee op "
+%%EX%% Lachend : ik hou er mee op
 grammar_rule(ap_dip,MAX,[AP,DUBB,XP,OPTEND]) :-
     optend_punct(OPTEND,Type),
     MAX => start,
@@ -3509,7 +3571,7 @@ grammar_rule(ap_dip,MAX,[AP,DUBB,XP,OPTEND]) :-
     XP:puncttype <=> Type,
     nucl_tag_structure(XP,AP,MAX).
 
-%% Lachend : " ik hou er mee op "
+%%EX%% Lachend : " ik hou er mee op "
 grammar_rule(ap_quoted_dip,MAX,[AP,DUBB,DQ1,XP,OPTEND,DQ2]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND,Type),
@@ -3523,7 +3585,32 @@ grammar_rule(ap_quoted_dip,MAX,[AP,DUBB,DQ1,XP,OPTEND,DQ2]) :-
     qr(DQ2),
     nucl_tag_structure(XP,AP,MAX).
 
-%% " dat is raar " zei hij " dat doet hij anders nooit "
+/* toch met dip_scope_vp
+grammar_rule(vp_dip,MAX,[VP,DUBB,XP,OPTEND]) :-
+    optend_punct(OPTEND,Type),
+    MAX => start,
+    max_vp(VP),
+    VP:vform => om,
+    dubb(DUBB),
+    XP => start,
+    XP:puncttype <=> Type,
+    nucl_tag_structure(XP,VP,MAX).   
+
+grammar_rule(vp_quoted_dip,MAX,[VP,DUBB,DQ1,XP,OPTEND,DQ2]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    optend_punct(OPTEND,Type),
+    MAX => start,
+    max_vp(VP),
+    VP:vform => om,
+    dubb(DUBB),
+    ql(DQ1),
+    qr(DQ2),
+    XP => start,
+    XP:puncttype <=> Type,
+    nucl_tag_structure(XP,VP,MAX).   
+*/
+
+%%EX%% dat is raar , zei hij , dat doet hij anders nooit
 grammar_rule(start_max_dip_max,START,[START1,COMMA1,DIP,COMMA2,START2]) :-
     START => start,
     max_root(START1), START1:needs_dip => no,
@@ -3535,6 +3622,7 @@ grammar_rule(start_max_dip_max,START,[START1,COMMA1,DIP,COMMA2,START2]) :-
     DIP => dip,
     nucl_tag_structure(START0,DIP,START).
 
+%%EX%% " dat is raar " , zei hij , " dat doet hij anders nooit . "
 grammar_rule(start_max_dip_max_q,START,[QL1,START1,OPTEND1,QR1,COMMA1,DIP,COMMA2,QL2,START2,OPTEND2,QR2]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     START => start,
@@ -3553,6 +3641,7 @@ grammar_rule(start_max_dip_max_q,START,[QL1,START1,OPTEND1,QR1,COMMA1,DIP,COMMA2
     DIP => dip,
     nucl_tag_structure(START0,DIP,START).
 
+%%EX%% " dat is raar " , zei hij , " dat doet hij anders nooit .
 grammar_rule(start_max_dip_max_q2,START,[QL1,START1,OPTEND1,QR1,COMMA1,DIP,COMMA2,QL2,START2,END]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     START => start,
@@ -3570,6 +3659,7 @@ grammar_rule(start_max_dip_max_q2,START,[QL1,START1,OPTEND1,QR1,COMMA1,DIP,COMMA
     DIP => dip,
     nucl_tag_structure(START0,DIP,START).
 
+%%EX%% Een boek , ja , we kopen een boek
 grammar_rule(start_max_tag_max,START,[START1,COMMA1,TAG,COMMA2,START2]) :-
     START => start,
     START1 => start,
@@ -3582,6 +3672,7 @@ grammar_rule(start_max_tag_max,START,[START1,COMMA1,TAG,COMMA2,START2]) :-
     unify_mods(TAG),
     nucl_tag_structure(START0,TAG,START).
 
+%%EX%% Ja , zei Piet , we kopen een boek
 grammar_rule(start_tag_dip_max,START,[TAG,COMMA1,DIP,COMMA2,START1] ):-
     START => start,
     START1 => start,
@@ -3594,6 +3685,7 @@ grammar_rule(start_tag_dip_max,START,[TAG,COMMA1,DIP,COMMA2,START1] ):-
     nucl_tag_structure(START1,TAG,START0),
     nucl_tag_structure(START0,DIP,START).
 
+%%EX%% " Ja " , zei Piet , " we kopen een boek "
 grammar_rule(start_tag_dip_max_q,START,[QL1,TAG,QR1,COMMA1,DIP,COMMA2,QL2,START1,OPTEND,QR2] ):-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     START => start,
@@ -3613,6 +3705,7 @@ grammar_rule(start_tag_dip_max_q,START,[QL1,TAG,QR1,COMMA1,DIP,COMMA2,QL2,START1
     nucl_tag_structure(START1,TAG,START0),
     nucl_tag_structure(START0,DIP,START).
 
+%%EX%% " Ja " , zei Piet , " we kopen een boek !
 grammar_rule(start_tag_dip_max_q2,START,[QL1,TAG,QR1,COMMA1,DIP,COMMA2,QL2,START1,END] ):-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     START => start,
@@ -3644,6 +3737,11 @@ grammar_rule(pred_a,Pred,[A]) :-
     Pred:pcat => ap_pred,
     hd_structure(A,Pred).
 
+%%EX%% Dat zijn betere
+%%EX%% Wij vinden dat spijkers op laag water zoeken
+%%EX%% Wat je zegt ben je zelf
+%%EX%% Geef de keizer wat des keizers is
+%%EX%% Dat is zogenaamd niet des Ajax
 grammar_rule(pred_np,Pred,[NP]) :-
     Pred0 => pred,
     NP => np,
@@ -3676,6 +3774,7 @@ pred_pp_structure(Pred,PP) :-
     Pred:hstem <=> PP:prep,
     Pred:niet <=> PP:niet.
 
+%%EX%% Hij zit vol goede plannen
 grammar_rule(pred_pp_vol,Pred,[PP]) :-
     pred_pp_structure(Pred,PP),
     Pred:pcat => ap_pred,
@@ -3683,6 +3782,7 @@ grammar_rule(pred_pp_vol,Pred,[PP]) :-
     PP:prep ==> vol.
 
 %% "voor onbenullig" in "ik houd hem voor onbenullig"
+%%EX%% Ik houd hem voor onbenullig
 grammar_rule(pred_pp_voor,Pred,[PP]) :-
     pred_pp_structure(Pred,PP),
     Pred:pcat => (voor_pred_ap;voor_pred_np),
@@ -3690,6 +3790,7 @@ grammar_rule(pred_pp_voor,Pred,[PP]) :-
     PP:prep ==> voor.
 
 %% "zoals X" in "hij is zoals hij is/zoals Piet"
+%%EX%% Hij is nu eenmaal zoals hij is
 grammar_rule(pred_zoals_cp,Pred,[CP]) :-
     Pred => pred,
     CP => sbar,
@@ -3699,6 +3800,7 @@ grammar_rule(pred_zoals_cp,Pred,[CP]) :-
     Pred:pcat => zoals_pred,
     hd_structure(CP,Pred).
 
+%%EX%% Het toestel is nog als nieuw
 grammar_rule(pred_als_cp,Pred,[CP]) :-
     Pred => pred,
     CP => sbar,
@@ -3727,9 +3829,9 @@ grammar_rule(pred_als_cp,Pred,[CP]) :-
 
 %% *er reken ik niet op
 %% but
-%% er wordt op gerekend
-%% er bestaan voorbeelden van
-%% er zijn mensen bang voor
+%%EX%% er wordt op gerekend
+%%EX%% er bestaan voorbeelden van
+%%EX%% er zijn mensen bang voor
 %% so we don't make a distinction between NP[+er], once
 %% they are promoted into nouns
 grammar_rule(er_np,NP,[ADV]) :-
@@ -3747,6 +3849,7 @@ grammar_rule(er_np,NP,[ADV]) :-
 %%%% MODIFICATION %%%%
 %%%%%%%%%%%%%%%%%%%%%%
 
+%%EX%% Hij werkt hard
 grammar_rule(adv_a,Adv,[Adj]) :-
     Adv => adv,
     ap_arg(Adj),
@@ -3758,6 +3861,7 @@ grammar_rule(adv_a,Adv,[Adj]) :-
     Adj:aform => nattr,  % was: (attr;nattr)
     hd_structure(Adj,Adv).
 
+%%EX%% Gisteren immers kwam hij nog te laat
 grammar_rule(adv_meer,Adv,[Niet,Meer]) :-
     Adv => adv, Niet => adv, Meer => post_adv_adv,
     Niet:wk => no,
@@ -3768,6 +3872,7 @@ grammar_rule(adv_meer,Adv,[Niet,Meer]) :-
     Niet:tmploc => ~str_er & ~wk_er & ~postp & ~hoe_hoe & ~tmp_n,
     hd_mod_structure(Niet,Meer,Adv).
 
+%%EX%% Daar ergens moet je zijn
 grammar_rule(adv_ergens,Adv,[Daar,Ergens]) :-
     Adv => adv, Daar => adv, Ergens => post_loc_adv_adv,
     Daar:wk => no,
@@ -3776,6 +3881,7 @@ grammar_rule(adv_ergens,Adv,[Daar,Ergens]) :-
     Daar:tmploc => loc,
     hd_mod_structure(Daar,Ergens,Adv).
 
+%%EX%% Daarom immers hebben we hem niet aangesteld
 grammar_rule(daarom_immers,Adv,[Daarom,Immers]) :-
     Adv => pp, Daarom => pp, Immers => post_adv_adv,
     Adv:pp_er => yes,
@@ -3783,6 +3889,7 @@ grammar_rule(daarom_immers,Adv,[Daarom,Immers]) :-
     Daarom:pp_role => pp_obj1,
     hd_mod_structure(Daarom,Immers,Adv).
 
+%%EX%% Daarboven ergens moet je zoeken
 grammar_rule(daarboven_ergens,Adv,[Daarom,Immers]) :-
     Adv => pp, Daarom => pp, Immers => post_loc_adv_adv,
     Adv:pp_er => yes,
@@ -5840,14 +5947,17 @@ grammar_rule(a_er_a,AP,[ER,A]) :-
 
 %%EX%% De naar verluidt aardige kinderen klierden
 %%EX%% De zoals verwacht vervelende kinderen werden naar de gang gestuurd
-grammar_rule(a_cp_a,AP,[SBAR,A]) :-
+%%EX%% Roland Holst , evenals zijn vrouw socialistisch ingesteld , had een andere opvatting
+%%EX%% Roland Holst , evenals zijn vrouw , socialistisch ingesteld , had een andere opvatting
+grammar_rule(a_cp_a,AP,[SBAR,COMMA,A]) :-
     AP => a, SBAR => sbar, A => a,
     haspreyes(A),
+    optcomma(COMMA),
     SBAR => sbar,
     SBAR:tags => [],
     SBAR:slash => [],
     SBAR:wh => nwh,
-    SBAR:ctype => c_adv,
+    SBAR:ctype => (c_adv;c_mod),
     hd_mod_structure(A,SBAR,AP).
 
 %%EX%% Hoe langer je nadenkt , hoe groter de problemen worden
@@ -6221,13 +6331,14 @@ grammar_rule(a_predm_a, AP, [ PRED, A]) :-
     hd_predm_structure(A,PRED,AP).
 
 %%EX%% De ziek binnenkomende bejaaarden
-grammar_rule(a_predm_dev_a, AP, [ PRED, A]) :-
+%%EX%% De in poedervorm hallucinerende medicijnen
+grammar_rule(a_predm_a_adj, AP, [ PRED, A]) :-
     AP => a, A => a,
 %    A:deverbal => yes,         % only for 'te-V' adjectives? should also allow present/past participles
     A:avform => ~avform_ap,
     haspreyes(A),
     A:wh => nwh,		% * np hoe beter
-    predm_adj(PRED),            % de nieuw uit te geven aandelen
+    max_ap_pp_predm(PRED),            % de nieuw uit te geven aandelen
     hd_predm_structure(A,PRED,AP).
 
 %%EX%% Ik kom zo snel mogelijk
@@ -6365,13 +6476,7 @@ grammar_rule(pp_p_arg(np), PP, [ P, OPTPUNCT, XP ]) :-
 grammar_rule(pp_p_arg(dubb), PP, [ P, DUBB ]) :-
     DUBB => punct,
     DUBB:puncttype => (dubb_punt;hellip),
-    max_np(NP),
-    NP:mexs => [],
-    NP:hstem => [],
-    NP:nform => norm,
-    NP:subn => sub_noun,
-    NP:dt => [],
-    NP:allows_drop => yes,
+    empty_np(NP),
     pp_p_arg_np_structure(PP,P,_OPTPUNCT,NP).
 
 %% too liberal??
@@ -6593,6 +6698,13 @@ grammar_rule(abs_p_mod_predc,PP,[Met,NP,MOD,PRED]) :-
 
 %%EX%% met als gevolg een enorme ravage
 grammar_rule(abs_p_predc_inv,PP,[Met,PRED,NP]) :-
+    abs_p_np_predc_structure(Met,NP,PRED,PP),
+    PRED:pcat => als_pred.
+
+%%EX%% Hij publiceerde een bundel essays met als titel :
+grammar_rule(abs_p_predc_inv_dubb,PP,[Met,PRED,DUBB]) :-
+    dubb(DUBB),
+    empty_np(NP),
     abs_p_np_predc_structure(Met,NP,PRED,PP),
     PRED:pcat => als_pred.
 
@@ -7094,6 +7206,8 @@ grammar_rule(sbar(vp),SBAR,[ Comp, XP ]) :-
     XP:haswh => no,
     XP:subj => np,
     XP:subj:prs =?> ~invje,
+    %% "island"  for dip/tag:
+    XP:tags => [],
     sbar_comp_xp_structure(Comp,XP,SBAR).
 
 %%EX%% Ik ga niet , behalve dan om even de deur uit te zijn
@@ -8217,6 +8331,19 @@ grammar_rule(loc_pp_dp,MAX,[NP1,PP2]) :-
     ind_max_pp(PP2),PP2:prep ==> naar,
     dp_dp_structure(NP1,PP2,MAX).
 
+%%EX%% In de eerste plaats , omdat hij zo zeurde
+grammar_rule(pp_sbar_dp,MAX,[PP,OPTCOMMA,SBAR]) :-
+    optcomma(OPTCOMMA),
+    pp_sbar_struct(MAX,PP,SBAR).
+
+pp_sbar_struct(MAX,PP,XP) :-
+    MAX => max,
+    MAX:max_type => t_dp,
+    ind_max_pp(PP),
+    max_sbar(XP),
+    XP:ctype => c_mod,
+    dp_dp_structure(PP,XP,MAX).
+
 %%EX%% Waarschijnlijk omdat ik je miste
 %%EX%% heerlijk , als je je kleintje weer ziet
 %% maybe refuse ADV that are also TAG
@@ -8234,7 +8361,8 @@ grammar_rule(adv_mod_tag_sbar_dp,MAX,[ADV0,TAG,OPTCOMMA,XP]) :-
     adv_mod_sbar_struct(MAX,ADV,XP).
 
 adv_mod_sbar_struct(MAX,ADV,XP) :-
-    MAX => start,
+    MAX => max,
+    MAX:max_type => t_dp,
     max_advp(ADV),
     ADV:redrel => no,
     max_sbar(XP),
@@ -8244,7 +8372,8 @@ adv_mod_sbar_struct(MAX,ADV,XP) :-
 %%EX%% ambitieus , omdat hij nog wat in te halen had
 grammar_rule(adj_mod_sbar_dp,MAX,[ADJ,OPTCOMMA,XP]) :-
     optcomma(OPTCOMMA),
-    MAX => start,
+    MAX => max,
+    MAX:max_type => t_dp,
     max_nadv_ap(ADJ),
     max_sbar(XP),
     XP:ctype => c_mod,
@@ -8254,7 +8383,8 @@ grammar_rule(adj_mod_sbar_dp,MAX,[ADJ,OPTCOMMA,XP]) :-
 %% maybe refuse ADV that are also TAG
 grammar_rule(adv_root_dp,MAX,[ADV,COMMA,XP]) :-
     comma(COMMA),
-    MAX => start,
+    MAX => max,
+    MAX:max_type => t_dp,
     max_advp(ADV),
     ADV:redrel => no,
     max_root(XP),
@@ -8265,19 +8395,21 @@ grammar_rule(adv_root_dp,MAX,[ADV,COMMA,XP]) :-
 %%EX%% hoe triest ook , we moeten door
 %% maybe refuse ADV that are also TAG
 grammar_rule(padv_root_dp,MAX,[ADV,COMMA,XP]) :-
-    comma(COMMA),
-    MAX => start,
+    optcomma(COMMA),
+    MAX => max,
+    MAX:max_type => t_dp,
     max_ap(ADV),
     predm_adj(ADV),
     max_root(XP),
     XP:needs_dip => no,
     dp_dp_structure(ADV,XP,MAX).
 
-%%EX%% triest hoor , ze doen het niet
+%%EX%% Geweldig , hoor , hij komt
 grammar_rule(adv_tag_root_dp,MAX,[ADV,OPTCOMMA,TAG,COMMA,XP]) :-
     comma(COMMA),
     optcomma(OPTCOMMA),
-    MAX => start,
+    MAX => max,
+    MAX:max_type => t_dp,
     max_advp(ADV),
     ADV:redrel => no,
     max_root(XP),
@@ -8388,7 +8520,8 @@ short_np(NP1,SUBN) :-
 %%EX%% Ik een drankprobleem ?
 %%EX%% Zoetemelk tweede
 %% abbr of "NP is/heeft NP"
-grammar_rule(np_np,START,[NP1,NP2]) :-
+grammar_rule(np_np,START,[NP1,COMMA,NP2]) :-
+    optcomma(COMMA),
     START => max,
     START:max_type => t_dp,  % was missing here???
     START:mod_np => yes,
@@ -8399,6 +8532,25 @@ grammar_rule(np_np,START,[NP1,NP2]) :-
     short_np(NP20,SUBN2),
     unify_except(NP20,NP2,hdet),
     dp_dp_structure(NP1,NP2,START).
+
+%%EX%% Jan Derks dit jaar scheidsrechter van het jaar
+%%EX%% Niets , niets , niets
+grammar_rule(np_np_np,START,[NP1,COMMA,NP2,COMMA2,NP3]) :-
+    optcomma(COMMA),
+    optcomma(COMMA2),
+    START => max,
+    START:max_type => t_dp,  % was missing here???
+    START:mod_np => yes,
+    SUBN1 => (sub_def_pron;sub_noun;sub_name),
+    short_np(NP1,SUBN1),
+    NP1:meas => no,
+    SUBN2 => (sub_num;sub_name;sub_noun),
+    short_np(NP20,SUBN2),
+    unify_except(NP20,NP2,hdet),
+    SUBN3 => (sub_num;sub_name;sub_noun),
+    short_np(NP30,SUBN3),
+    unify_except(NP30,NP3,hdet),
+    dp_dp_structure(NP1,NP2,NP3,START).
 
 %%EX%% Provinciezetel te koop
 grammar_rule(np_ap,START,[NP,AP]) :-
@@ -8680,6 +8832,9 @@ grammar_rule(top_quoted_start, TOP, [ OPEN, START, CLOSE, PUNCT ]):-
 %% start --> Top_category
 %%EX% Groningen .
 grammar_rule(top_start_xp, Start, [ Max ]):-
+    top_start_xp_struct(Start,Max).
+
+top_start_xp_struct(Start,Max) :-
     Start => start,
     Max => max,
     Max:max_type => ~t_part,
@@ -9100,6 +9255,9 @@ grammar_rule(max_xp(post_pp),Max,[X]) :-
 
 %%EX%% geen mens te zien
 grammar_rule(max_xp(vp),Max,[X]) :-
+    max_xp_vp_struct(Max,X).
+
+max_xp_vp_struct(Max,X) :-
     X => vp,
     X:vform => (pass_te;om;inf;psp),
     X:e_deps => [],
@@ -11647,3 +11805,13 @@ not_er_topic_with_men_subject(Topic,Ques) :-
 	 (  ER \== er
 	 ;  ER == er, MEN \== men
 	 )).
+
+empty_np(NP) :-
+    max_np(NP),
+    NP:dt => [],
+    NP:mexs => [],
+    NP:hstem => [],
+    NP:nform => norm,
+    NP:subn => sub_noun,
+    NP:case => (obl;acc;nom),
+    NP:allows_drop => yes.
