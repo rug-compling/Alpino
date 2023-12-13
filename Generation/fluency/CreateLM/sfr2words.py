@@ -5,11 +5,15 @@
 #
 #
 
+import io
 import sys
 
 if __name__ == '__main__':
     curId = ''
     frames = []
+
+    sys.stdin  = io.TextIOWrapper(sys.stdin.detach(),  encoding='utf-8')
+    sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
 
     for line in sys.stdin:
         lineParts = line.split('|')

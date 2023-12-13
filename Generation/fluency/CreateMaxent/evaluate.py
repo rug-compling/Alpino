@@ -1,6 +1,7 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import argparse
+import io
 import random
 import re
 import sys
@@ -68,38 +69,13 @@ def scoreSents(sents, featureWeights):
 
     return scoredSents
 
-def sentCmp(x, y, scoreField):
-    if x[scoreField] > y[scoreField]:
-        return 1
-    if x[scoreField] < y[scoreField]:
-        return -1
-
-    # We can't pick one based on the score. This seems not to be
-    # completely fair, consider the case where s2 is the correct
-    # sentence, and the results of ranking are:
-    #
-    # 0.5 s1
-    # 0.5 s2
-    # [...]
-    #
-    # On the other hand, if we judge this as a correct match, the
-    # evaluation can be cheated easily by giving all the realizations
-    # the same score (see the commented return statement).
-    return 0
-
-    #return cmp(y[2], x[2])
+def sentKey(x, scoreField):
+    return x[scoreField]
 
 def evalScoredSents(scoredSents, scoreField = 0, inverse = False):
-    cmpFun0 = sentCmp
-    cmpFun0 = endCurry(cmpFun0, scoreField)
-    if inverse:
-        # Hmmm, this is strange, if we build cmpFun from cmpFun (rather
-        # than the auxiliary cmpFun0), we get an infinite recursion. But
-        # apparently the currying above is fine...
-        cmpFun = lambda x, y: -cmpFun0(x, y)
-    else:
-        cmpFun = cmpFun0
-    scoredSents = sorted(scoredSents, cmpFun)
+    keyFun0 = sentKey
+    keyFun0 = endCurry(keyFun0, scoreField)
+    scoredSents = sorted(scoredSents, key=keyFun0, reverse=inverse)
 
     return scoredSents[0][4]
 
@@ -194,6 +170,9 @@ if __name__ == "__main__":
     featureWeights = readFeatureWeights(featureFh)
 
     minRealizations = int(options.realizations)
+
+    sys.stdin  = io.TextIOWrapper(sys.stdin.detach(),  encoding='utf-8')
+    sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
 
     (scores, lmScores, tagScores, randomScores, bestScores, worstScores) = processSents(
         sys.stdin,
