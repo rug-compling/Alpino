@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
-    <node begin="2" end="3" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
     <node begin="0" cat="du" end="9" id="2" rel="--">
       <node begin="0" cat="smain" end="2" id="3" rel="tag">
-        <node begin="0" case="nom" def="def" end="1" frame="pronoun(nwh,thi,sg,de,nom,def)" gen="de" genus="masc" getal="ev" id="4" lcat="np" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" sense="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
-        <node begin="1" end="2" frame="verb(hebben,past(sg),tr_sbar)" id="5" infl="sg" lcat="smain" lemma="denken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="denk" sc="tr_sbar" sense="denk" tense="past" word="dacht" wvorm="pv"/>
+        <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="4" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+        <node begin="1" end="2" id="5" infl="sg" lemma="denken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="denk" sc="tr_sbar" tense="past" word="dacht" wvorm="pv"/>
       </node>
       <node begin="3" cat="smain" end="9" id="6" rel="nucl">
-        <node begin="3" case="nom" def="def" end="4" frame="pronoun(nwh,fir,sg,de,nom,def)" gen="de" getal="ev" id="7" lcat="np" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" sense="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
-        <node begin="4" end="5" frame="verb(hebben,sg1,pp_pred_np(in,brand))" id="8" infl="sg1" lcat="smain" lemma="steken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="steek" sc="pp_pred_np(in,brand)" sense="in-brand-steek" tense="present" word="steek" wvorm="pv"/>
+        <node begin="3" case="nom" def="def" end="4" gen="de" getal="ev" id="7" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+        <node begin="4" end="5" id="8" infl="sg1" lemma="steken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="steek" sc="pp_pred_np(in,brand)" tense="present" word="steek" wvorm="pv"/>
         <node begin="5" cat="np" end="7" id="9" rel="obj1">
-          <node begin="5" end="6" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="10" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
-          <node begin="6" end="7" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="11" lcat="np" lemma="huis" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="huis" sense="huis" word="huis"/>
+          <node begin="5" end="6" id="10" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+          <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="huis" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="huis" word="huis"/>
         </node>
         <node begin="7" cat="pp" end="9" id="12" rel="predc">
-          <node begin="7" end="8" frame="preposition(in,[])" id="13" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
-          <node begin="8" end="9" frame="noun(de,count,sg,pred_pp(in))" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lcat="np" lemma="brand" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="brand" sc="pred_pp(in)" sense="brand" word="brand"/>
+          <node begin="7" end="8" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="8" end="9" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lemma="brand" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="brand" sc="pred_pp(in)" word="brand"/>
         </node>
       </node>
     </node>
