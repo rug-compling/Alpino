@@ -23,6 +23,11 @@ try:
 except:
     pass
 
+if sys.version_info.major == 2:
+    my_intern = intern
+else:
+    my_intern = sys.intern
+
 class Source:
     pass
 
@@ -53,15 +58,17 @@ class C4_5Source(Source):
 
         # get category
 
-        cl = sys.intern(items.pop())
+        cl = my_intern(items.pop())
 
         # collect feature/value pairs
 
         j = 0
         for i in range(0,len(items)):
-            items[i] = (j,sys.intern(items[i]))
+            items[i] = (j,my_intern(items[i]))
             j += 1
         return (items,cl,line)
+
+    next = __next__
 
 class RainbowSource(Source):
     """Data source class for files generated using rainbow -B sin"""
@@ -88,7 +95,7 @@ class RainbowSource(Source):
 
         # get category
 
-        cl = sys.intern(items[1])
+        cl = my_intern(items[1])
 
         # collect feature/value pairs
 
@@ -100,6 +107,8 @@ class RainbowSource(Source):
                 pairs.append((items[i],items[i+1]))
 
         return (pairs,cl,line)
+
+    next = __next__
 
 class SparseSource(Source):
     """Data source class for Sparse Binary files"""
@@ -128,15 +137,17 @@ class SparseSource(Source):
 
         # get category (minus trailing period)
 
-        cl = sys.intern(items.pop())
+        cl = my_intern(items.pop())
         if cl[-1] == '.':
-            cl = sys.intern(cl[:-1])
+            cl = my_intern(cl[:-1])
 
         # collect feature/value pairs
 
         for i in range(0,len(items)):
             items[i] = (items[i],1)
         return (items,cl,line)
+
+    next = __next__
 
 class Sink:
     pass
@@ -152,7 +163,7 @@ class AccuracySink(Sink):
 
     def update(self,feats,cl,best,write):
         if write:
-            print(best, file=sys.stdout)
+            sys.stdout.write('{}\n'.format(best))
         if best is not None:
             self.total += 1
             if cl == best:
@@ -167,15 +178,13 @@ class AccuracySink(Sink):
 
     def confusion(self):
         """Print confusion matrix"""
-        print('Confusion matrix')
-        print()
-        print('\tas')
-        print('is\t', '\t'.join(list(self.tags.keys())))
+        sys.stdout.write('Confusion matrix\n\n\tas\nis\t ')
+        sys.stdout.write('\t'.join(list(self.tags.keys())) + '\n')
         for tag1 in list(self.tags.keys()):
-            print(tag1,'\t', end=' ')
+            sys.stdout.write('{}\t '.format(tag1))
             for tag2 in list(self.tags.keys()):
-                print(self.matrix.get((tag1,tag2),0),'\t', end=' ')
-            print()
+                sys.stdout.write('{}\t '.format(self.matrix.get((tag1,tag2),0)))
+            sys.stdout.write('\n')
 
 class Categorizer:
 
@@ -204,11 +213,11 @@ class Categorizer:
 
     def dump(self):
         for cand in list(self.categories.keys()):
-            print("CATEGORY|%s|%s" % ( cand , self.features.get((cand),0.0) ))
+            sys.stdout.write("CATEGORY|%s|%s\n" % ( cand , self.features.get((cand),0.0) ))
 
         for feat in self.features:
             if feat not in ('LOC','ORG','MISC','PER'):
-                print("FEATURE|%s|%s|%s|%s" % ( feat[0],
+                sys.stdout.write("FEATURE|%s|%s|%s|%s\n" % ( feat[0],
                                                 feat[1],
                                                 feat[2] ,
                                                 self.features[feat] ))
@@ -273,10 +282,9 @@ class MaxEntInducer(Inducer):
         if quiet:
             os.system(command+' >/dev/null')
         else:
-            print('=======', file=sys.stderr)
-            print(command, file=sys.stderr)
+            sys.stderr.write('=======\n{}\n'.format(command))
             os.system(command)
-            print('=======', file=sys.stderr)
+            sys.stderr.write('=======\n')
 
         # load parameter values
 
@@ -325,7 +333,7 @@ class MaxEntInducer(Inducer):
         cl_list  = list(cat.categories.keys())
 
         for feats, entry in list(events.items()):
-            print(len(cl_list), file=outfile)
+            outfile.write('{}\n'.format(len(cl_list)))
             for c in cl_list:
                 codes = []
                 if c in cat.features:
@@ -333,10 +341,10 @@ class MaxEntInducer(Inducer):
                 for f,v in feats:
                     if (f,v,c) in cat.features:
                         codes.append(cat.features[(f,v,c)])
-                print(entry.get(c,0)+eps, len(codes), end=' ', file=outfile)
+                outfile.write('{} {} '.format(entry.get(c,0)+eps, len(codes)))
                 for f in codes:
-                    print(f, '1', end=' ', file=outfile)
-                print(file=outfile)
+                    outfile.write('{} 1 '.format(f))
+                outfile.write('\n')
 
         outfile.close()
 
@@ -377,7 +385,7 @@ class NaiveBayesInducer(Inducer):
                     overflow = True
 
         if overflow:
-            print('Zero probabilities found -- try smoothing counts (-s)!', file=sys.stderr)
+            sys.stderr.write('Zero probabilities found -- try smoothing counts (-s)!\n')
 
         # collect category priors
 
@@ -429,9 +437,7 @@ def main():
 
 
     if True:
-        print(file=sys.stderr)
-        print('Bayesian classifier', file=sys.stderr)
-        print(file=sys.stderr)
+        sys.stderr.write('\nBayesian classifier\n\n')
 
     options = parser.parse_args()
 
@@ -441,41 +447,38 @@ def main():
         # no training file, so check model file
         if options.model != '':
             if not options.quiet:
-                print('Reading model from',options.model, file=sys.stderr)
+                sys.stderr.write('Reading model from {}\n'.format(options.model))
             file = open(options.model,'r')
             me = pickle.load(file)
             file.close()
         else:
-            print('No training file or model given!', file=sys.stderr)
+            sys.stderr.write('No training file or model given!\n')
             raise Exception
     else:
         if options.data_format == 'Rainbow':
             if not options.quiet:
-                print('Reading Rainbow training data from', \
-                      options.train, file=sys.stderr)
+                sys.stderr.write('Reading Rainbow training data from {}\n'.format(options.train))
             source = RainbowSource(options.train,binary=True)
         elif options.data_format == 'C45':
             if not options.quiet:
-                print('Reading C4.5 training data from', \
-                      options.train, file=sys.stderr)
+                sys.stderr.write('Reading C4.5 training data from {}\n'.format(options.train))
             source = C4_5Source(options.train)
         elif options.data_format == 'Sparse':
             if not options.quiet:
-                print('Reading Sparse Binary training data from', \
-                      options.train, file=sys.stderr)
+                sys.stderr.write('Reading Sparse Binary training data from {}\n'.format(options.train))
             source = SparseSource(options.train)
         else:
             raise Exception
 
         if options.algorithm == 'MaxEnt':
-            print('Building MaxEnt model', file=sys.stderr)
+            sys.stderr.write('Building MaxEnt model\n')
             cat = MaxEntInducer().train(source, \
                                         quiet=options.quiet, \
                                         eps=options.smooth, \
                                         var=options.prior, \
                                         use_baseline=not options.no_baseline)
         elif options.algorithm == 'NaiveBayes':
-            print('Building naive Bayes model', file=sys.stderr)
+            sys.stderr.write('Building naive Bayes model\n')
             cat =  NaiveBayesInducer().train(source, \
                                              quiet=options.quiet, \
                                              eps=options.smooth)
@@ -484,7 +487,7 @@ def main():
 
     if (options.train != '') and (options.model != ''):
         if (not options.quiet):
-            print('Writing model to',options.model, file=sys.stderr)
+            sys.stderr.write('Writing model to {}\n'.format(options.model))
         file = open(options.model,'w')
         pickle.dump(cat,file,True)
         file.close()
@@ -494,18 +497,15 @@ def main():
     if options.test != '':
         if options.data_format == 'Rainbow':
             if not options.quiet:
-                print('Reading Rainbow test data from', \
-                      options.test, file=sys.stderr)
+                sys.stderr.write('Reading Rainbow test data from {}\n'.format(options.test))
             source = RainbowSource(options.test,binary=True)
         elif options.data_format == 'C45':
             if not options.quiet:
-                print('Reading C4.5 test data from', \
-                      options.test, file=sys.stderr)
+                sys.stderr.write('Reading C4.5 test data from {}\n'.format(options.test))
             source = C4_5Source(options.test)
         elif options.data_format == 'Sparse':
             if not options.quiet:
-                print('Reading Sparse Binary test data from', \
-                      options.test, file=sys.stderr)
+                sys.stderr.write('Reading Sparse Binary test data from {}\n'.format(options.test))
             source = SparseSource(options.test)
         else:
             raise Exception
@@ -514,7 +514,7 @@ def main():
         cat.apply(source,acc,options.write)
 
         if not options.write:
-            print('Accuracy =', acc.score() * 100.0)
+            sys.stdout.write('Accuracy = {}\n'.format(acc.score() * 100.0))
 
         if options.confusion:
             acc.confusion()
