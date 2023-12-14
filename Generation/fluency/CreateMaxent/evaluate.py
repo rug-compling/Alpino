@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import argparse
-import io
 import random
 import re
 import sys
@@ -171,8 +170,8 @@ if __name__ == "__main__":
 
     minRealizations = int(options.realizations)
 
-    sys.stdin  = io.TextIOWrapper(sys.stdin.detach(),  encoding='utf-8')
-    sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
+    sys.stdin.reconfigure(encoding='utf-8')
+    sys.stdout.reconfigure(encoding='utf-8')
 
     (scores, lmScores, tagScores, randomScores, bestScores, worstScores) = processSents(
         sys.stdin,
