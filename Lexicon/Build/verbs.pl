@@ -1496,6 +1496,8 @@ v(antwoord,antwoordt,antwoorden,geantwoord,antwoordde,antwoordden,
 	van_sbar,
 	transitive,
 	vp,
+	np_pc_pp(op),
+	pp_sbar(op),
 	pc_pp(op)])]).
 
 v(apaiseer,apaiseert,apaiseren,geapaiseerd,apaiseerde,apaiseerden,
@@ -14940,7 +14942,7 @@ v(neem,neemt,nemen,genomen,nam,namen,neme,
 	part_intransitive(waar),
 	part_refl_np(voor),
 	part_sbar(aan),
-        part_van_sbar(aan),
+        part_van_sbar(aan),  % ik neem aan van wel
 	part_sbar(op),
 	part_sbar(terug),
 	part_sbar(waar),
@@ -23940,6 +23942,8 @@ v(vat,vat,vatten,gevat,vatte,vatten,
 	np_ld_pp,
         sbar_obj,  % het is niet te vatten dat hij komt
 	part_als_pred_np(op),
+	part_als_pred_np_sbar(op),  % ik vat het als een beleding op dat ...
+	part_als_pred_np_vp(op),  % ik vat het als een belemmering op om ...
 	part_intransitive(post),
         part_intransitive(vlam),
 	part_transitive(aan),

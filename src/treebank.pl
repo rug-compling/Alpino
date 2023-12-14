@@ -622,6 +622,7 @@ deptree_xml(Cat,String,Comments,Meta,Flag,Tags,HisList) -->
 
 
 %% version 1.3: added mwu_root attribute for mwu nodes / removed again, not used
+%% version 1.3 should be used for manual annotation
 %% version 1.4: metadata
 %% version 1.5: sentid
 %% currently, sentid only in output
@@ -1911,6 +1912,8 @@ converse_xml_files([File|Files]) :-
     converse_xml_files(Files).
 
 converse_xml_file(File) :-
+    set_flag(xml_format_frame,off),
+    set_flag(alpino_ds_version,'1.3'),
     xml_file_to_dt(File,DT0,Sentence0,Comments),
     string_to_words(Sentence0,Sentence),
     (   alpino_dt:apply_dt_transformations(DT0,DT,Sentence,Change)
@@ -1933,11 +1936,15 @@ canonical_xml_overwrite_files([File|Files]) :-
     canonical_xml_overwrite_files(Files).
 
 canonical_xml_overwrite_file(File) :-
+    set_flag(xml_format_frame,off),
+    set_flag(alpino_ds_version,'1.3'),
     xml_file_to_dt(File,DT,Sentence0,Comments,Meta),
     string_to_words(Sentence0,Sentence),
     xml_save(already_dt(DT),Sentence,Comments,Meta,File,normal).
 
 canonical_xml_file(File) :-
+    set_flag(xml_format_frame,off),
+    set_flag(alpino_ds_version,'1.3'),
     xml_file_to_dt(File,DT,Sentence0,Comments,Meta),
     string_to_words(Sentence0,Sentence),
     xml_save(already_dt(DT),Sentence,Comments,Meta,stream(user_output),normal).

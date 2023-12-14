@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" index="1" rel="su">
+        <node begin="0" cat="pp" end="3" id="3" rel="pc">
+          <node begin="0" end="1" id="4" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="Op"/>
+          <node begin="1" cat="np" end="3" id="5" rel="obj1">
+            <node begin="1" buiging="zonder" end="2" getal="ev" id="6" infl="pron" lemma="je" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="je" status="red" vwtype="bez" word="je"/>
+            <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lemma="vrouw" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="vrouw" word="vrouw"/>
+          </node>
+        </node>
+        <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="8" lemma="wachten" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" rnum="sg" root="wacht" sc="pc_pp(op)" special="v_noun" word="wachten" wvorm="inf"/>
+      </node>
+      <node begin="4" end="5" id="9" infl="modal_not_u" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" stype="declarative" tense="present" v_per="thi" word="kan" wvorm="pv"/>
+      <node begin="0" cat="inf" end="8" id="10" rel="vc">
+        <node begin="0" end="4" id="11" index="1" rel="su"/>
+        <node begin="5" end="6" id="12" lemma="soms" pos="adv" postag="BW()" pt="bw" rel="mod" root="soms" special="sentence" word="soms"/>
+        <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="13" infl="no_e" lemma="lang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="me" root="lang" vform="adj" word="lang"/>
+        <node begin="7" buiging="zonder" end="8" id="14" infl="inf" lemma="duren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="duur" sc="adv_meas" word="duren" wvorm="inf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Op je vrouw wachten kan soms lang duren</sentence>
+</alpino_ds>

@@ -180,7 +180,7 @@ cat_type(v2_vp,   [vslash,haswh,slash,subj,mf,tags]).
 cat_type(num,     [cj,n_meas,e_agr,agr,pro,app]).
 cat_type(pre_det_quant,[agr]).
 cat_type(pred,    [slash,exs,mexs,e_deps,wh,wh_reltmploc,subn,redrel,deverbal,
-                   avform,pcat,cform,hstem,nhstem,wkpro,sel,cj,niet]).
+                   adv,avform,pcat,cform,hstem,nhstem,wkpro,sel,cj,niet]).
 cat_type(conj,    [left_conj,cform]).
 cat_type(lconj,   [needs_right_cform]).
 cat_type(root,    [question,allows_root_imp,puncttype,

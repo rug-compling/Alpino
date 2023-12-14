@@ -1166,7 +1166,8 @@ find_missing_positions([H|T],Ps0,P,Ns0,Ns,Flag,Frames) :-
 	T=T2
     ->  Ns0=Ns1
     ;   Ps1=Ps0,
-	(   member(_-frame(_,_,P,P1,Hstem0,Tag0,_,_),Frames)
+	(   nonvar(Frames),
+	    member(_-frame(_,_,P,P1,Hstem0,Tag0,_,_),Frames)
 	->  true
 	;   P1 is P + 1
 	),
@@ -1195,7 +1196,8 @@ guess_tag(Tag,H,Hstem,_P,_) :-
 	->   true
 	;    Tag0 = Tag
 	)
-    ;   hook(alpino_lex:lexicon___(H,Tag0,Hstem,[],[],normal))
+    ;   alpino_lex:lex_initialize,
+	hook(alpino_lex:lexicon___(H,Tag0,Hstem,[],[],normal))
     ->  (    Tag0 = with_dt(Tag,_)
 	->   true
 	;    Tag0 = Tag

@@ -2,8 +2,8 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="15" id="0" rel="top">
     <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="0" cat="du" end="14" id="2" rel="--">
-      <node begin="0" cat="smain" end="10" id="3" rel="dp">
+    <node begin="0" cat="conj" end="14" id="2" rel="--">
+      <node begin="0" cat="smain" end="10" id="3" rel="cnj">
         <node begin="0" cat="cp" end="6" id="4" rel="vc">
           <node begin="0" conjtype="onder" end="1" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="Dat"/>
           <node begin="1" cat="ssub" end="6" id="6" rel="body">
@@ -24,15 +24,13 @@
         <node begin="8" end="9" id="17" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
         <node begin="9" end="10" id="18" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
       </node>
-      <node begin="11" cat="du" end="14" id="19" rel="dp">
-        <node begin="11" conjtype="neven" end="12" id="20" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="nucl" root="maar" word="maar"/>
-        <node begin="12" cat="sv1" end="14" id="21" rel="tag">
-          <node begin="12" end="13" id="22" lemma="zeggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zeg" word="zegt" wvorm="pv"/>
-          <node begin="13" end="14" genus="masc" getal="ev" id="23" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
-        </node>
+      <node begin="11" conjtype="neven" end="12" id="19" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="12" cat="sv1" end="14" id="20" rel="cnj">
+        <node begin="12" end="13" id="21" lemma="zeggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zeg" word="zegt" wvorm="pv"/>
+        <node begin="13" end="14" genus="masc" getal="ev" id="22" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
       </node>
     </node>
-    <node begin="14" end="15" id="24" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="14" end="15" id="23" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
   </node>
   <sentence>Dat alle taboes weer zullen terugkeren gelooft Serge ook niet , maar zegt hij :</sentence>
 </alpino_ds>
