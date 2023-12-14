@@ -144,26 +144,26 @@ class TreeNode:
             node.debug_print_node(outfile, indent + '  ')
 
 
-    def write_xml(self, outfile=sys.stdout, indent='', version='1.5', encoding='utf-8'):
+    def write_xml(self, outfile=sys.stdout, indent='', version='1.5'):
         """Write the structure as XML, assume the encoder on outfile
         has been set"""
-        outfile.buffer.write(indent.encode(encoding))
-        outfile.buffer.write(b'<node')
+        outfile.write(indent)
+        outfile.write('<node')
         attrs = list(self.attributes.keys())
         attrs.sort()
         for attr in attrs:
-            outfile.buffer.write((' %s="' % attr).encode(encoding))
-            write_xml_data(outfile, self.attributes[attr], encoding)
-            outfile.buffer.write(b'"')
+            outfile.write(' %s="' % attr)
+            write_xml_data(outfile, self.attributes[attr])
+            outfile.write('"')
 
         if self.has_children():
-            outfile.buffer.write(b'>\n')
+            outfile.write('>\n')
             for child in self.children:
-                child.write_xml(outfile, indent + '  ', encoding=encoding)
-            outfile.buffer.write(indent.encode(encoding))
-            outfile.buffer.write(b'</node>\n')
+                child.write_xml(outfile, indent + '  ')
+            outfile.write(indent)
+            outfile.write('</node>\n')
         else:
-            outfile.buffer.write(b"/>\n")
+            outfile.write("/>\n")
 
 
 class DTFile:
@@ -210,53 +210,52 @@ class DTFile:
     def write_xml(self, outfile, encoding='UTF-8', version='1.5'):
         """write the dependency structure to xml in encoding"""
 
-        # FIXME?: moeten we ook wat doen met \u escapes?
+        outfile.reconfigure(encoding=encoding)
 
         # de xml-header
-        outfile.buffer.write(('<?xml version="1.0" encoding="%s"?>\n'
-                      % encoding).encode(encoding))
+        outfile.write('<?xml version="1.0" encoding="%s"?>\n' % encoding)
 
         # de root node
         if version == "":
-            outfile.buffer.write(b'<alpino_ds>\n')
+            outfile.write('<alpino_ds>\n')
         else:
-            outfile.buffer.write(('<alpino_ds version="%s">\n' % version).encode(encoding))
+            outfile.write('<alpino_ds version="%s">\n' % version)
 
         # metadata
         if self.metalist and len(self.metalist) > 0:
-            outfile.buffer.write(b'  <metadata>\n')
+            outfile.write('  <metadata>\n')
 
             for meta in self.metalist:
-                outfile.buffer.write(('    <meta type="%s" name="%s" value="%s"/>\n' %
-                    (meta['type'], meta['name'], meta['value'])).encode(encoding))
+                outfile.write('    <meta type="%s" name="%s" value="%s"/>\n' %
+                    (meta['type'], meta['name'], meta['value']))
 
-            outfile.buffer.write(b'  </metadata>\n')
+            outfile.write('  </metadata>\n')
 
         # de nodes
-        self.rootnode.write_xml(outfile, indent='  ', encoding=encoding)
+        self.rootnode.write_xml(outfile, indent='  ')
 
         # de zin
         if self.sentid == "":
-            outfile.buffer.write(b'  <sentence>')
+            outfile.write('  <sentence>')
         else:
-            outfile.buffer.write(('  <sentence sentid="%s">' % self.sentid).encode(encoding))
-        write_xml_data(outfile, self.sentence, encoding=encoding)
-        outfile.buffer.write(b'</sentence>\n')
+            outfile.write('  <sentence sentid="%s">' % self.sentid)
+        write_xml_data(outfile, self.sentence)
+        outfile.write('</sentence>\n')
 
         # evt commentaar
         if self.commentlist and len(self.commentlist) > 0:
-            outfile.buffer.write(b'  <comments>\n')
+            outfile.write('  <comments>\n')
 
             for comment in self.commentlist:
-                outfile.buffer.write(b'    <comment>')
-                write_xml_data(outfile,comment, encoding=encoding)
-                outfile.buffer.write(b'</comment>\n')
+                outfile.write('    <comment>')
+                write_xml_data(outfile,comment)
+                outfile.write('</comment>\n')
 
-            outfile.buffer.write(b'  </comments>\n')
+            outfile.write('  </comments>\n')
 
 
         # en de sluittag niet vergeten...
-        outfile.buffer.write(b'</alpino_ds>\n')
+        outfile.write('</alpino_ds>\n')
 
 
 class DTParser:
@@ -741,12 +740,12 @@ def remove_doubles(lst):
 
 # we write the xml handling ourselves to have full control so we can
 # ensure the output is identical to Alpino's output.
-def write_xml_data(outfile, data, encoding):
+def write_xml_data(outfile, data):
     "Write data to outfile."
     data = data.replace("&", "&amp;").replace("<", "&lt;")
     data = data.replace("\"", "&quot;").replace(">", "&gt;")
     data = data.replace("'", "&apos;")  # eigenlijk overbodig
-    outfile.buffer.write(data.encode(encoding))
+    outfile.write(data)
 
 
 if __name__ == '__main__':
