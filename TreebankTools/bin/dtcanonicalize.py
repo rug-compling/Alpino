@@ -105,9 +105,6 @@ class TreeNode:
     def __delitem__(self, key):
         del self.attributes[key]
 
-    def has_key(self, key):
-        return key in self.attributes
-
     def keys(self):
         return list(self.attributes.keys())
 
@@ -123,8 +120,8 @@ class TreeNode:
             raise RuntimeError('node without attributes!')
 
         t = self.NORMAL
-        if self.has_key('index'):
-            if self.has_key('cat') or self.has_key('pos'):
+        if 'index' in self.attributes:
+            if 'cat' in self.attributes or 'pos' in self.attributes:
                 t = self.INDEXED
             else:
                 t = self.INDEX
@@ -134,8 +131,8 @@ class TreeNode:
     def debug_print_node(self, outfile=sys.stdout, indent=''):
         outfile.write(indent)
         outfile.write('node[ ')
-        for key in self.attributes.keys():
-            outfile.write('%s="%s" ' % (key, self.attributes[key]))
+        for key, value in self.attributes.items():
+            outfile.write('%s="%s" ' % (key, value))
         outfile.write(']')
         if self.begin is not None:
             outfile.write("begin=%d, end=%d" % (self.begin, self.end))
@@ -362,8 +359,8 @@ class DTParser:
 
     def do_meta(self, xmlnode, container):
         a = {}
-        for attr in xmlnode.attributes.keys():
-            a[attr] = html.escape(xmlnode.attributes[attr].value, True)
+        for attr, value in xmlnode.attributes.items():
+            a[attr] = html.escape(value, True)
         container.add_meta(a)
 
     def do_comments(self, xmlnode, container):
@@ -461,7 +458,7 @@ class Canonicalizer:
         elif node.gettype() == node.INDEX:
             index = node['index']
 
-            if not index in self.index_nodes:
+            if index not in self.index_nodes:
                 self.index_nodes[index] = [node]
             else:
                 self.index_nodes[index].append(node)
@@ -476,7 +473,7 @@ class Canonicalizer:
         # zijn, we hernummeren later toch
 
         # is er voor elke indexed node een index node?
-        for index in self.indexed_nodes.keys():
+        for index in self.indexed_nodes:
             if index not in self.index_nodes:
                 # # okee dan, we kunnen de index weghalen:
                 #
@@ -492,7 +489,7 @@ class Canonicalizer:
                                   'no target node for index "%s"' % index.encode('utf-8'))
 
         # en is er voor iedere index node wel een indexed node?
-        for index in self.index_nodes.keys():
+        for index in self.index_nodes:
             if index not in self.indexed_nodes:
                 # een kale verwijzing
                 raise self.Error(self.filename,
@@ -603,7 +600,7 @@ class Canonicalizer:
     def check_leaf_node(self, node):
         """Check for missing attributes"""
         for attr in 'begin', 'end', 'word', 'lemma', 'postag':
-            if not node.has_key(attr):
+            if attr not in node.attributes:
                 raise self.Error(self.filename,
                                  "leaf node without @%s : %s!" % (attr, node.attributes))
 
