@@ -19,7 +19,7 @@ def alpino_parse(sent, host='localhost', port=42424):
 
 
 def main():
-    sentence=eval(input("Geef de zin die Alpino moet analyseren: "))
+    sentence=input("Geef de zin die Alpino moet analyseren: ")
     xml=alpino_parse(sentence)
     print(xml)
 
