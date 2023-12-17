@@ -98,7 +98,7 @@ python/indexedcorpus.touch: python/indexedcorpus.cpp libcorpus.a
 	if [ -x ${PLATFORM} = "darwin" ] ; then \
 		( cd python ; CFLAGS="$(CXXFLAGS)" ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=/usr python3 setup.py install --install-platlib=../../python-lib && touch indexedcorpus.touch ) \
 	else \
-		( cd python ; CFLAGS="$(CXXFLAGS)" BOOST_HOME=/usr python3 setup.py install --install-platlib=../../python-lib --record=/dev/null && touch indexedcorpus.touch ) \
+		( cd python ; CFLAGS="$(CXXFLAGS)" BOOST_HOME=/usr python3 setup.py install --install-platlib=../../python-lib && touch indexedcorpus.touch ) \
 	fi
 
 test/test: libcorpus.a test/test.cpp
