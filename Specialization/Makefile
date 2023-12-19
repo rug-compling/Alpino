@@ -105,6 +105,11 @@ PPI=ppi_part00001.log.gz ppi_part00002.log.gz ppi_part00003.log.gz ppi_part00004
 ppis:
 	$(MAKE) -j $(J) $(PPI)
 
+PPH=$(subst sents,log,$(notdir $(wildcard ../Suites/Machine/pph_part*.sents.gz )))
+
+pphs:
+	$(MAKE) -j $(J) $(PPH)
+
 
 
 rules:
