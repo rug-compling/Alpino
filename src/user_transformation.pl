@@ -63,8 +63,18 @@ user_transformation(r(REL,p(mwu)),B,Ds0,
     assign_tags(Lemmas,Tags,Ds0,Ds),
     \+ Ds0 = Ds.
 
-
 /*
+%user_transformation(REL,A,B,_,_,_,_,_) :-
+%   format(user_error,"~w~n",[REL]), fail.
+
+user_transformation(r(Rel,p(mwu)),B,[D1,D2],
+		    r(Rel,p(advp)),B,[E1,E2],_,_) :-
+    D1 = tree(r(mwp,l(read_from_treebank(_,alleen,D13),D14,D15)),D16,[]),
+    E1 = tree(r(hd,l(read_from_treebank(adv,alleen,D13),D14,D15)),D16,[]),
+    D2 = tree(r(mwp,l(read_from_treebank(_,al,D23),D24,D25)),D26,[]),
+    E2 = tree(r(mod,l(read_from_treebank(adv,al,D23),D24,D25)),D26,[]).
+
+
 user_transformation(r(app,p(mwu)),B,[N1,Dash1,N2],
 		    r(app,p(conj)),B,[C1,C2],_,_) :-
     Dash1 = tree(r(mwp,l(read_from_treebank(_,'-','LET()'),_,_)),_,[]),

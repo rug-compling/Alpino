@@ -169,6 +169,7 @@ filter_tag_rule(etc,                   []).
 filter_tag_rule(complex_etc,           []).
 filter_tag_rule(postnp_adverb,         []).
 filter_tag_rule(postn_adverb,          []).
+filter_tag_rule(postpn_adverb,         []).
 filter_tag_rule(postpron_adverb,       []).
 filter_tag_rule(post_wh_adverb,        []).
 filter_tag_rule(pre_wh_adverb,         []).
