@@ -476,6 +476,7 @@ lemma_root(aan_stampen,stamp_aan) .
 lemma_root(aan_stapelen,stapel_aan) .
 lemma_root(aan_stappen,stap_aan) .
 lemma_root(aan_staren,staar_aan) .
+lemma_root(aan_starten,start_aan) .
 lemma_root(aan_stationeren,stationeer_aan) .
 lemma_root(aan_steken,steek_aan) .
 lemma_root(aan_stellen,stel_aan) .
@@ -1522,6 +1523,7 @@ lemma_root(af_stampen,stamp_af) .
 lemma_root(af_stapelen,stapel_af) .
 lemma_root(af_stappen,stap_af) .
 lemma_root(af_staren,staar_af) .
+lemma_root(af_starten,start_af) .
 lemma_root(af_stationeren,stationeer_af) .
 lemma_root(af_steken,steek_af) .
 lemma_root(af_stellen,stel_af) .
@@ -2204,6 +2206,7 @@ lemma_root(bij_brengen,breng_bij) .
 lemma_root(bij_draaien,draai_bij) .
 lemma_root(bij_dragen,draag_bij) .
 lemma_root(bij_drukken,druk_bij) .
+lemma_root(bijeen_bedelen,bedel_bijeen) .
 lemma_root(bijeen_brengen,breng_bijeen) .
 lemma_root(bijeen_houden,houd_bijeen) .
 lemma_root(bijeen_komen,kom_bijeen) .
@@ -6461,6 +6464,7 @@ lemma_root(heen_stampen,stamp_heen) .
 lemma_root(heen_stapelen,stapel_heen) .
 lemma_root(heen_stappen,stap_heen) .
 lemma_root(heen_staren,staar_heen) .
+lemma_root(heen_starten,start_heen) .
 lemma_root(heen_stationeren,stationeer_heen) .
 lemma_root(heen_steken,steek_heen) .
 lemma_root(heen_stellen,stel_heen) .
@@ -7330,6 +7334,7 @@ lemma_root(instand_houden,houd_instand) .
 lemma_root(in_stapelen,stapel_in) .
 lemma_root(in_stappen,stap_in) .
 lemma_root(in_staren,staar_in) .
+lemma_root(in_starten,start_in) .
 lemma_root(in_stationeren,stationeer_in) .
 lemma_root(in_steken,steek_in) .
 lemma_root(in_stellen,stel_in) .
@@ -8308,6 +8313,7 @@ lemma_root(langs_stampen,stamp_langs) .
 lemma_root(langs_stapelen,stapel_langs) .
 lemma_root(langs_stappen,stap_langs) .
 lemma_root(langs_staren,staar_langs) .
+lemma_root(langs_starten,start_langs) .
 lemma_root(langs_stationeren,stationeer_langs) .
 lemma_root(langs_steken,steek_langs) .
 lemma_root(langs_stellen,stel_langs) .
@@ -14984,6 +14990,7 @@ lemma_root(toe_stampen,stamp_toe) .
 lemma_root(toe_stapelen,stapel_toe) .
 lemma_root(toe_stappen,stap_toe) .
 lemma_root(toe_staren,staar_toe) .
+lemma_root(toe_starten,start_toe) .
 lemma_root(toe_stationeren,stationeer_toe) .
 lemma_root(toe_steken,steek_toe) .
 lemma_root(toe_stellen,stel_toe) .
@@ -15651,6 +15658,7 @@ lemma_root(tussen_stampen,stamp_tussen) .
 lemma_root(tussen_stapelen,stapel_tussen) .
 lemma_root(tussen_stappen,stap_tussen) .
 lemma_root(tussen_staren,staar_tussen) .
+lemma_root(tussen_starten,start_tussen) .
 lemma_root(tussen_stationeren,stationeer_tussen) .
 lemma_root(tussen_steken,steek_tussen) .
 lemma_root(tussen_stellen,stel_tussen) .
@@ -17614,6 +17622,7 @@ lemma_root(uit_stangen,stang_uit) .
 lemma_root(uit_stapelen,stapel_uit) .
 lemma_root(uit_stappen,stap_uit) .
 lemma_root(uit_staren,staar_uit) .
+lemma_root(uit_starten,start_uit) .
 lemma_root(uit_stationeren,stationeer_uit) .
 lemma_root(uit_steggelen,steggel_uit) .
 lemma_root(uit_steigeren,steiger_uit) .
@@ -18588,6 +18597,7 @@ lemma_root(vanaf_stampen,stamp_vanaf) .
 lemma_root(vanaf_stapelen,stapel_vanaf) .
 lemma_root(vanaf_stappen,stap_vanaf) .
 lemma_root(vanaf_staren,staar_vanaf) .
+lemma_root(vanaf_starten,start_vanaf) .
 lemma_root(vanaf_stationeren,stationeer_vanaf) .
 lemma_root(vanaf_steken,steek_vanaf) .
 lemma_root(vanaf_stellen,stel_vanaf) .
@@ -19180,6 +19190,7 @@ lemma_root(vandaan_stampen,stamp_vandaan) .
 lemma_root(vandaan_stapelen,stapel_vandaan) .
 lemma_root(vandaan_stappen,stap_vandaan) .
 lemma_root(vandaan_staren,staar_vandaan) .
+lemma_root(vandaan_starten,start_vandaan) .
 lemma_root(vandaan_stationeren,stationeer_vandaan) .
 lemma_root(vandaan_steken,steek_vandaan) .
 lemma_root(vandaan_stellen,stel_vandaan) .
@@ -19767,6 +19778,7 @@ lemma_root(vandoor_stampen,stamp_vandoor) .
 lemma_root(vandoor_stapelen,stapel_vandoor) .
 lemma_root(vandoor_stappen,stap_vandoor) .
 lemma_root(vandoor_staren,staar_vandoor) .
+lemma_root(vandoor_starten,start_vandoor) .
 lemma_root(vandoor_stationeren,stationeer_vandoor) .
 lemma_root(vandoor_steken,steek_vandoor) .
 lemma_root(vandoor_stellen,stel_vandoor) .

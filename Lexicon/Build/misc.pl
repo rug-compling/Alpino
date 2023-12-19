@@ -1137,6 +1137,7 @@ tag([o,nee]).
 tag([o,wee]).
 tag(och).
 tag(ocharme).
+tag([och,arme]).
 tag(oef).
 tag(oeh).
 tag(oei).
@@ -4163,6 +4164,7 @@ etc(enzo).
 etc([en,zo,voort]).
 etc([en,zo,voorts]).
 etc([en,dergelijke]).
+etc([en,dies,meer]).
 etc([en,wat,dies,meer,zij]).
 etc([en,wat,niet,al]).
 etc('e.a').
@@ -4749,6 +4751,15 @@ m(sprint,           postn_adverb,sprint).
 m(weltergewicht,    postn_adverb,weltergewicht).
 m(zwaargewicht,     postn_adverb,zwaargewicht).
 
+with_dt([alleen,al],
+	postp_adverb,
+	dt(advp,[hd=l(alleen,adverb,advp,0,1),
+		 mod=l(al,adverb,advp,1,2)
+		])).
+
+m(junior,           postpn_adverb,junior).
+m(senior,           postpn_adverb,senior).
+
 %% in principe althans
 %% volgens Piet althans
 m(al,               postp_adverb,al). %% In januari al, voor zijn geboorte al,
@@ -4819,8 +4830,13 @@ m(hemzelf,          postnp_adverb,hemzelve).
 m(opnieuw,          postnp_adverb,opnieuw).  % elke dag opnieuw
 m(weer,             postnp_adverb,weer).     % elke dag weer
 
+with_dt([alleen,al],
+	postnp_adverb,
+	dt(advp,[hd=l(alleen,adverb,advp,0,1),
+		 mod=l(al,adverb,advp,1,2)
+		])).
+
 m(al,               postnp_adverb,al).	%% tweehonderd mensen al hebben ..
-m('alleen al',      postnp_adverb,[alleen,al]).
 m(reeds,            postnp_adverb,reeds).
 m(inmiddels,        postnp_adverb,inmiddels).
 
@@ -4936,13 +4952,18 @@ modified_modal_mod_hd(alleen,maar,advp,adverb).
 
 modified_modal_hd_mod_mod(vooral,ook,weer).
 
+with_dt([alleen,al],
+	modal_adverb,
+	dt(advp,[hd=l(alleen,adverb,advp,0,1),
+		 mod=l(al,adverb,advp,1,2)
+		])).
+
 m(Stem, modal_adverb, Surf) :-
     modal_adverb(Surf),
     stem_from_surf(Surf,Stem).
 
 modal_adverb(al).
 modal_adverb(alleen).  
-modal_adverb([alleen,al]).
 modal_adverb([al,dan,niet]).
 modal_adverb([al,of,niet]).
 modal_adverb(allesbehalve).
@@ -5143,6 +5164,18 @@ m(meteen,           modal_adverb(comp_prep),meteen). % meteen na(dat)..
 m(onmiddellijk,     modal_adverb(comp_prep),onmiddellijk).
 m(terstond,         modal_adverb(comp_prep),terstond).
 m(vlak,             modal_adverb(comp_prep),vlak). % vlak voor(dat)..
+
+with_dt([naar,schatting],
+	 modal_adverb(noun),
+	 dt(pp,[hd=l(naar,preposition(naar,[]),pp,0,1),
+		obj1=l(schatting,noun(de,count,sg),np,1,2)
+	       ])).
+
+with_dt([naar,schatting],
+	 adverb,
+	 dt(pp,[hd=l(naar,preposition(naar,[]),pp,0,1),
+		obj1=l(schatting,noun(de,count,sg),np,1,2)
+	       ])).
 
 with_dt([Ook,Al],
 	modal_adverb(comp_prep),
@@ -6358,6 +6391,7 @@ m(daarentegen,      postadv_adverb,daarentegen).
 m(derhalve,         postadv_adverb,derhalve).
 m(echter,           postadv_adverb,echter).
 m(dus,              postadv_adverb,dus).
+m(eerst,            postadv_adverb,eerst).   % dan eerst kan Pakistan een normaal land worden
 m(evenwel,          postadv_adverb,evenwel).
 m(immers,           postadv_adverb,immers).
 m(intussen,         postadv_adverb,intussen).
@@ -9028,6 +9062,7 @@ term([welles,'-',nietes]).
 term([welles,'/',nietes]).
 term(['welles-nietes']).
 term(['welles/nietes']).
+term([wet,lease]).
 term([white,trash]).
 term([winner,takes,all]).
 term([winning,goal],       [winning,goals]).

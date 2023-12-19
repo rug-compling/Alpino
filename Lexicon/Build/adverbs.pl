@@ -246,6 +246,7 @@ adverb(heletijd).
 adverb([de,heletijd]).
 adverb(hieromtrent).
 adverb(hierzo).
+adverb(hoedanook).
 adverb(hoegenaamd).
 adverb(honderdmaal).
 adverb(hoogstens).
@@ -329,7 +330,6 @@ adverb(mitsgaders).
 adverb(mogelijks). % Vlaams
 adverb(mondjesmaat).
 adverb(mordicus).   % + (op) tegen
-adverb([naar,schatting]).
 adverb(nagenoeg).
 adverb(nauwelijks).
 adverb(neer). % loc dir pred?

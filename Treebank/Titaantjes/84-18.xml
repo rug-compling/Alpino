@@ -4,34 +4,34 @@
     <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
     <node begin="6" end="7" id="2" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
     <node begin="7" end="8" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="1" cat="du" end="15" id="4" rel="--">
-      <node begin="1" cat="du" end="6" id="5" rel="nucl">
-        <node begin="1" cat="sv1" end="5" id="6" rel="nucl">
-          <node begin="1" end="2" id="7" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="Moet" wvorm="pv"/>
-          <node begin="2" end="3" getal="ev" id="8" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
-          <node begin="2" cat="inf" end="5" id="9" rel="vc">
-            <node begin="2" end="3" id="10" index="1" rel="su"/>
-            <node begin="3" end="4" getal="getal" id="11" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" status="vol" vwtype="aanw" word="hier"/>
-            <node begin="4" buiging="zonder" end="5" id="12" lemma="zijn" pos="det" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zijn" word="zijn" wvorm="inf"/>
+    <node begin="1" cat="conj" end="15" id="4" rel="--">
+      <node begin="1" cat="du" end="10" id="5" rel="cnj">
+        <node begin="1" cat="du" end="6" id="6" rel="nucl">
+          <node begin="1" cat="sv1" end="5" id="7" rel="nucl">
+            <node begin="1" end="2" id="8" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="Moet" wvorm="pv"/>
+            <node begin="2" end="3" getal="ev" id="9" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+            <node begin="2" cat="inf" end="5" id="10" rel="vc">
+              <node begin="2" end="3" id="11" index="1" rel="su"/>
+              <node begin="3" end="4" getal="getal" id="12" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" status="vol" vwtype="aanw" word="hier"/>
+              <node begin="4" buiging="zonder" end="5" id="13" lemma="zijn" pos="det" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zijn" word="zijn" wvorm="inf"/>
+            </node>
           </node>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="vriend" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="tag" root="vriend" word="vriend"/>
         </node>
-        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="vriend" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="tag" root="vriend" word="vriend"/>
-      </node>
-      <node begin="8" cat="conj" end="15" id="14" rel="tag">
-        <node begin="8" cat="sv1" end="10" id="15" rel="cnj">
+        <node begin="8" cat="sv1" end="10" id="15" rel="tag">
           <node begin="8" end="9" id="16" lemma="vragen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vraag" word="vroeg" wvorm="pv"/>
           <node begin="9" end="10" getal="ev" id="17" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
         </node>
-        <node begin="10" conjtype="neven" end="11" id="18" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-        <node begin="9" cat="sv1" end="15" id="19" rel="cnj">
-          <node begin="9" end="10" id="20" index="2" rel="su"/>
-          <node begin="11" end="12" id="21" lemma="wijzen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="wees" wvorm="pv"/>
-          <node begin="12" cat="pp" end="15" id="22" rel="ld">
-            <node begin="12" end="13" id="23" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
-            <node begin="13" cat="np" end="15" id="24" rel="obj1">
-              <node begin="13" buiging="zonder" end="14" id="25" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="dat"/>
-              <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="26" lemma="woord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="woord" word="woord"/>
-            </node>
+      </node>
+      <node begin="10" conjtype="neven" end="11" id="18" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="9" cat="sv1" end="15" id="19" rel="cnj">
+        <node begin="9" end="10" id="20" index="2" rel="su"/>
+        <node begin="11" end="12" id="21" lemma="wijzen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="wees" wvorm="pv"/>
+        <node begin="12" cat="pp" end="15" id="22" rel="ld">
+          <node begin="12" end="13" id="23" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="13" cat="np" end="15" id="24" rel="obj1">
+            <node begin="13" buiging="zonder" end="14" id="25" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="dat"/>
+            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="26" lemma="woord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="woord" word="woord"/>
           </node>
         </node>
       </node>

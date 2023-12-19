@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="2" end="3" id="2" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" v_per="fir" word="heb" wvorm="pv"/>
+      <node begin="3" case="nom" def="def" end="4" gen="de" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="0" cat="ppart" end="8" id="4" rel="vc">
+        <node begin="0" cat="np" end="2" id="5" rel="obj1">
+          <node begin="0" buiging="zonder" end="1" getal-n="zonder-n" graad="basis" id="6" infl="de" lemma="dezelfde" pos="det" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="hd" rnum="sg" root="dezelfde" wh="nwh" word="Dezelfde"/>
+          <node begin="1" end="2" id="7" lemma="ongeveer" pos="adv" postag="BW()" pt="bw" rel="mod" root="ongeveer" special="postnp" word="ongeveer"/>
+        </node>
+        <node begin="3" end="4" id="8" index="1" rel="su"/>
+        <node begin="4" cat="pp" end="7" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="5" cat="np" end="7" id="11" rel="obj1">
+            <node begin="5" end="6" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="Hema" naamval="stan" neclass="ORG" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="Hema" word="Hema"/>
+          </node>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="14" infl="psp" lemma="kopen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="koop" sc="transitive" word="gekocht" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Dezelfde ongeveer heb ik bij de Hema gekocht</sentence>
+</alpino_ds>

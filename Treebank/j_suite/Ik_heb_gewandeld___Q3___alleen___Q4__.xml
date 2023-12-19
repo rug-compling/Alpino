@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" special="haak_open" word="("/>
+    <node begin="0" cat="smain" end="5" id="2" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+      <node begin="1" end="2" id="4" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" v_per="fir" word="heb" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="5" id="5" rel="vc">
+        <node begin="0" end="1" id="6" index="1" rel="su"/>
+        <node begin="2" buiging="zonder" end="3" id="7" infl="psp" lemma="wandelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wandel" sc="intransitive" word="gewandeld" wvorm="vd"/>
+        <node aform="base" begin="4" end="5" id="8" infl="pred" lemma="alleen" pos="adj" postag="BW()" pt="bw" rel="mod" root="alleen" vform="adj" word="alleen"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="9" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" special="haak_sluit" word=")"/>
+  </node>
+  <sentence>Ik heb gewandeld ( alleen )</sentence>
+</alpino_ds>

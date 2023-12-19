@@ -516,6 +516,9 @@ a_lex(pre_num_adv(Agr),Sign) :-
 a_lex(postn_adverb,Sign) :-
     postn_adverb(Sign).
 
+a_lex(postpn_adverb,Sign) :-
+    postpn_adverb(Sign).
+
 a_lex(postp_adverb,Sign) :-
     postp_adverb(Sign).
 
