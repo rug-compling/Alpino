@@ -149,17 +149,17 @@ reportcurrentbest:
 tests: j_suite.testN i_suite.testN h_suite.testN g_suite.testN leuven_yellow_pages.testN lot_test_suite1.testN \
        cgn_exs.testN qa.testN extra.testN cdb.testN PPH.testN PPI.testN dpc-ind.testN \
        dpc-rou.testN wpspel.testN LassySmall.testN lassy.testN WSU.testN novelsample_corrected.testN\
-       eans.testN
+       eans.testN Titaantjes.testN
 
 shs: i_suite.testN h_suite.testN g_suite.testN j_suite.testN
 
 shs_rest: leuven_yellow_pages.testN lot_test_suite1.testN \
        cgn_exs.testN qa.testN extra.testN lassy.testN novelsample_corrected.testN eans.testN \
        cdb.testN PPH.testN PPI.testN dpc-ind.testN dpc-rou.testN wpspel.testN LassySmall.testN \
-       WSU.testN
+       WSU.testN Titaantjes.testN
 
 shorts:j_suite.testN i_suite.testN h_suite.testN g_suite.testN leuven_yellow_pages.testN lot_test_suite1.testN \
-       cgn_exs.testN qa.testN extra.testN lassy.testN novelsample_corrected.testN eans.testN
+       cgn_exs.testN qa.testN extra.testN lassy.testN novelsample_corrected.testN eans.testN Titaantjes.testN
 
 longs: cdb.testN PPH.testN PPI.testN dpc-ind.testN dpc-rou.testN wpspel.testN LassySmall.testN \
        WSU.testN
