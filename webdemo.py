@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
 
-import os
+import io
 import socket
+import sys
 import tempfile
 from urllib import parse
 
+#sys.stdin.reconfigure(encoding='utf-8')
+sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
 form = {}
-for key, val in parse.parse_qsl(os.getenv('QUERY_STRING', ''),
-                                keep_blank_values=False,
-                                strict_parsing=False,
-                                encoding='utf-8',
-                                errors='replace',
-                                max_num_fields=None,
-                                separator='&'):
-    if not key in form:
-        form[key] = []
-    form[key].append(val)
+for line in sys.stdin:
+    for key, val in parse.parse_qsl(line,
+                                    strict_parsing=False,
+                                    encoding='utf-8',
+                                    errors='replace',
+                                    max_num_fields=None):
+        if key not in form:
+            form[key] = []
+        form[key].append(val)
 
 words = form.get('words', '')
 

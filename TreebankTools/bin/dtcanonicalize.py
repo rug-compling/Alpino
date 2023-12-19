@@ -105,9 +105,6 @@ class TreeNode:
     def __delitem__(self, key):
         del self.attributes[key]
 
-    def has_key(self, key):
-        return key in self.attributes
-
     def keys(self):
         return list(self.attributes.keys())
 
@@ -123,8 +120,8 @@ class TreeNode:
             raise RuntimeError('node without attributes!')
 
         t = self.NORMAL
-        if self.has_key('index'):
-            if self.has_key('cat') or self.has_key('pos'):
+        if 'index' in self.attributes:
+            if 'cat' in self.attributes or 'pos' in self.attributes:
                 t = self.INDEXED
             else:
                 t = self.INDEX
@@ -134,8 +131,8 @@ class TreeNode:
     def debug_print_node(self, outfile=sys.stdout, indent=''):
         outfile.write(indent)
         outfile.write('node[ ')
-        for key in self.attributes.keys():
-            outfile.write('%s="%s" ' % (key, self.attributes[key]))
+        for key, value in self.attributes.items():
+            outfile.write('%s="%s" ' % (key, value))
         outfile.write(']')
         if self.begin is not None:
             outfile.write("begin=%d, end=%d" % (self.begin, self.end))
@@ -144,26 +141,26 @@ class TreeNode:
             node.debug_print_node(outfile, indent + '  ')
 
 
-    def write_xml(self, outfile=sys.stdout, indent='', version='1.5', encoding='utf-8'):
+    def write_xml(self, outfile=sys.stdout, indent='', version='1.5'):
         """Write the structure as XML, assume the encoder on outfile
         has been set"""
-        outfile.buffer.write(indent.encode(encoding))
-        outfile.buffer.write(b'<node')
+        outfile.write(indent)
+        outfile.write('<node')
         attrs = list(self.attributes.keys())
         attrs.sort()
         for attr in attrs:
-            outfile.buffer.write((' %s="' % attr).encode(encoding))
-            write_xml_data(outfile, self.attributes[attr], encoding)
-            outfile.buffer.write(b'"')
+            outfile.write(' %s="' % attr)
+            write_xml_data(outfile, self.attributes[attr])
+            outfile.write('"')
 
         if self.has_children():
-            outfile.buffer.write(b'>\n')
+            outfile.write('>\n')
             for child in self.children:
-                child.write_xml(outfile, indent + '  ', encoding=encoding)
-            outfile.buffer.write(indent.encode(encoding))
-            outfile.buffer.write(b'</node>\n')
+                child.write_xml(outfile, indent + '  ')
+            outfile.write(indent)
+            outfile.write('</node>\n')
         else:
-            outfile.buffer.write(b"/>\n")
+            outfile.write("/>\n")
 
 
 class DTFile:
@@ -210,53 +207,52 @@ class DTFile:
     def write_xml(self, outfile, encoding='UTF-8', version='1.5'):
         """write the dependency structure to xml in encoding"""
 
-        # FIXME?: moeten we ook wat doen met \u escapes?
+        outfile.reconfigure(encoding=encoding)
 
         # de xml-header
-        outfile.buffer.write(('<?xml version="1.0" encoding="%s"?>\n'
-                      % encoding).encode(encoding))
+        outfile.write('<?xml version="1.0" encoding="%s"?>\n' % encoding)
 
         # de root node
         if version == "":
-            outfile.buffer.write(b'<alpino_ds>\n')
+            outfile.write('<alpino_ds>\n')
         else:
-            outfile.buffer.write(('<alpino_ds version="%s">\n' % version).encode(encoding))
+            outfile.write('<alpino_ds version="%s">\n' % version)
 
         # metadata
         if self.metalist and len(self.metalist) > 0:
-            outfile.buffer.write(b'  <metadata>\n')
+            outfile.write('  <metadata>\n')
 
             for meta in self.metalist:
-                outfile.buffer.write(('    <meta type="%s" name="%s" value="%s"/>\n' %
-                    (meta['type'], meta['name'], meta['value'])).encode(encoding))
+                outfile.write('    <meta type="%s" name="%s" value="%s"/>\n' %
+                    (meta['type'], meta['name'], meta['value']))
 
-            outfile.buffer.write(b'  </metadata>\n')
+            outfile.write('  </metadata>\n')
 
         # de nodes
-        self.rootnode.write_xml(outfile, indent='  ', encoding=encoding)
+        self.rootnode.write_xml(outfile, indent='  ')
 
         # de zin
         if self.sentid == "":
-            outfile.buffer.write(b'  <sentence>')
+            outfile.write('  <sentence>')
         else:
-            outfile.buffer.write(('  <sentence sentid="%s">' % self.sentid).encode(encoding))
-        write_xml_data(outfile, self.sentence, encoding=encoding)
-        outfile.buffer.write(b'</sentence>\n')
+            outfile.write('  <sentence sentid="%s">' % self.sentid)
+        write_xml_data(outfile, self.sentence)
+        outfile.write('</sentence>\n')
 
         # evt commentaar
         if self.commentlist and len(self.commentlist) > 0:
-            outfile.buffer.write(b'  <comments>\n')
+            outfile.write('  <comments>\n')
 
             for comment in self.commentlist:
-                outfile.buffer.write(b'    <comment>')
-                write_xml_data(outfile,comment, encoding=encoding)
-                outfile.buffer.write(b'</comment>\n')
+                outfile.write('    <comment>')
+                write_xml_data(outfile,comment)
+                outfile.write('</comment>\n')
 
-            outfile.buffer.write(b'  </comments>\n')
+            outfile.write('  </comments>\n')
 
 
         # en de sluittag niet vergeten...
-        outfile.buffer.write(b'</alpino_ds>\n')
+        outfile.write('</alpino_ds>\n')
 
 
 class DTParser:
@@ -363,8 +359,8 @@ class DTParser:
 
     def do_meta(self, xmlnode, container):
         a = {}
-        for attr in xmlnode.attributes.keys():
-            a[attr] = html.escape(xmlnode.attributes[attr].value, True)
+        for attr, value in xmlnode.attributes.items():
+            a[attr] = html.escape(value, True)
         container.add_meta(a)
 
     def do_comments(self, xmlnode, container):
@@ -462,7 +458,7 @@ class Canonicalizer:
         elif node.gettype() == node.INDEX:
             index = node['index']
 
-            if not index in self.index_nodes:
+            if index not in self.index_nodes:
                 self.index_nodes[index] = [node]
             else:
                 self.index_nodes[index].append(node)
@@ -477,7 +473,7 @@ class Canonicalizer:
         # zijn, we hernummeren later toch
 
         # is er voor elke indexed node een index node?
-        for index in self.indexed_nodes.keys():
+        for index in self.indexed_nodes:
             if index not in self.index_nodes:
                 # # okee dan, we kunnen de index weghalen:
                 #
@@ -493,7 +489,7 @@ class Canonicalizer:
                                   'no target node for index "%s"' % index.encode('utf-8'))
 
         # en is er voor iedere index node wel een indexed node?
-        for index in self.index_nodes.keys():
+        for index in self.index_nodes:
             if index not in self.indexed_nodes:
                 # een kale verwijzing
                 raise self.Error(self.filename,
@@ -604,7 +600,7 @@ class Canonicalizer:
     def check_leaf_node(self, node):
         """Check for missing attributes"""
         for attr in 'begin', 'end', 'word', 'lemma', 'postag':
-            if not node.has_key(attr):
+            if attr not in node.attributes:
                 raise self.Error(self.filename,
                                  "leaf node without @%s : %s!" % (attr, node.attributes))
 
@@ -741,12 +737,12 @@ def remove_doubles(lst):
 
 # we write the xml handling ourselves to have full control so we can
 # ensure the output is identical to Alpino's output.
-def write_xml_data(outfile, data, encoding):
+def write_xml_data(outfile, data):
     "Write data to outfile."
     data = data.replace("&", "&amp;").replace("<", "&lt;")
     data = data.replace("\"", "&quot;").replace(">", "&gt;")
     data = data.replace("'", "&apos;")  # eigenlijk overbodig
-    outfile.buffer.write(data.encode(encoding))
+    outfile.write(data)
 
 
 if __name__ == '__main__':

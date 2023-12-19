@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import argparse
-import io
 import random
 import re
 import sys
@@ -32,7 +31,7 @@ def readFeatureWeights(fh):
     featureWeights = {}
 
     for line in fh:
-        (feature, weight) = line.strip().rsplit('|', 1)
+        feature, weight = line.strip().rsplit('|', 1)
 
         featureWeights[feature] = -float(weight)
 
@@ -42,7 +41,7 @@ def featureValues(featurePairs):
     vals = {}
 
     for pair in featurePairs:
-        (val, feature) = pair.split('@', 1)
+        val, feature = pair.split('@', 1)
 
         vals[feature] = float(val)
 
@@ -52,9 +51,9 @@ def featureValues(featurePairs):
 def scoreSent(featureWeights, featureValues):
     score = 0.0
 
-    for pair in list(featureValues.items()):
-        weight = featureWeights.get(pair[0], 0.0)
-        score += weight * pair[1]
+    for key, value in featureValues.items():
+        weight = featureWeights.get(key, 0.0)
+        score += weight * value
 
     return score
 
@@ -166,13 +165,13 @@ if __name__ == "__main__":
     # Make results reproducable.
     random.seed(13)
 
-    featureFh = open(options.features)
-    featureWeights = readFeatureWeights(featureFh)
+    sys.stdin.reconfigure(encoding='utf-8')
+    sys.stdout.reconfigure(encoding='utf-8')
+
+    with open(options.features, encoding='utf-8') as featureFh:
+        featureWeights = readFeatureWeights(featureFh)
 
     minRealizations = int(options.realizations)
-
-    sys.stdin  = io.TextIOWrapper(sys.stdin.detach(),  encoding='utf-8')
-    sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
 
     (scores, lmScores, tagScores, randomScores, bestScores, worstScores) = processSents(
         sys.stdin,

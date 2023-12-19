@@ -6,7 +6,6 @@
 #
 # adapted by GvN: now undoes MWU, because that is how the model is applied
 # in the generator
-import io
 import sys
 
 def is_mwu(tag):
@@ -28,8 +27,8 @@ if __name__ == '__main__':
     curId = ''
     frames = []
 
-    sys.stdin  = io.TextIOWrapper(sys.stdin.detach(),  encoding='utf-8')
-    sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
+    sys.stdin.reconfigure(encoding='utf-8')
+    sys.stdout.reconfigure(encoding='utf-8')
 
     for line in sys.stdin:
         lineParts = line.split('|')

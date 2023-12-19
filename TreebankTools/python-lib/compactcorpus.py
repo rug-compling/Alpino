@@ -6,9 +6,13 @@ import sys
 import os
 import re
 import numsort
-from glob import glob
-from indexedcorpus import IndexedCorpusReader, IndexedCorpusWriter
 import tempfile
+from glob import glob
+
+for d in glob(os.path.join(os.path.dirname(__file__), '*.egg')):
+    sys.path.insert(0, d)
+
+from indexedcorpus import IndexedCorpusReader, IndexedCorpusWriter
 
 corpusfile_re = re.compile(r'(?:\.data\.dz|\.index)$')
 
