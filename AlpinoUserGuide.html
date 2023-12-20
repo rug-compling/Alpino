@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 9.0.0rc1" />
+<meta name="generator" content="AsciiDoc 10.2.0" />
 <title>Alpino User Guide</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -794,12 +794,12 @@ lxml
 </li>
 <li>
 <p>
-python2
+python3, version 3.7 or above
 </p>
 </li>
 <li>
 <p>
-python2 library lxml
+python3 library lxml
 </p>
 </li>
 <li>
@@ -1855,22 +1855,23 @@ languages. For instance, the following defines a simple
 Alpino client in Python:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><code>import socket
+<pre><code>#!/usr/bin/env python3
 
-def alpino_parse(sent, host='vingolf.let.rug.nl', port=42424):
+import socket
+
+def alpino_parse(sent, host='localhost', port=42424):
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     s.connect((host,port))
     sent = sent + "\n\n"
-    s.sendall(sent.encode())
+    s.sendall(sent.encode('utf-8'))
     total_xml=[]
     while True:
         xml = s.recv(8192)
         if not xml:
             break
-        total_xml.append(str(xml,encoding='utf8'))
+        total_xml.append(xml.decode('utf8'))
 
     return "".join(total_xml)
-
 
 
 def main():
@@ -1960,7 +1961,7 @@ such keys correctly.</p></div>
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2022-09-21 10:22:43 CEST
+ 2023-12-20 19:07:42 CET
 </div>
 </div>
 </body>

@@ -178,7 +178,7 @@ else:
     port = 42424
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     s.connect((host,port))
-    s.sendall(data.encode())
+    s.sendall(data.encode('utf-8'))
     total_xml=[]
     while True:
         xml = s.recv(8192)

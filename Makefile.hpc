@@ -25,7 +25,8 @@ job:
    echo "#SBATCH --ntasks=1" ;\
    echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
    echo "#SBATCH --time=24:00:00" ;\
-   echo "module load Python/2.7.18-GCCcore-11.3.0-bare";\
+   echo "module load Python/3.10.4-GCCcore-11.3.0";\
+   echo "module load lxml/4.9.1-GCCcore-11.3.0";\
    echo "module load Boost/1.79.0-GCC-11.3.0";\
    echo "module load Tk/8.6.12-GCCcore-11.3.0";\
    echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
@@ -42,7 +43,8 @@ longjob:
    echo "#SBATCH --ntasks=1" ;\
    echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
    echo "#SBATCH --time=72:00:00" ;\
-   echo "module load Python/2.7.18-GCCcore-11.3.0-bare";\
+   echo "module load Python/3.10.4-GCCcore-11.3.0";\
+   echo "module load lxml/4.9.1-GCCcore-11.3.0";\
    echo "module load Boost/1.79.0-GCC-11.3.0";\
    echo "module load Tk/8.6.12-GCCcore-11.3.0";\
    echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
@@ -58,7 +60,8 @@ shortjob:
    echo "#SBATCH --nodes=1" ;\
    echo "#SBATCH --ntasks=1" ;\
    echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
-   echo "module load Python/2.7.18-GCCcore-11.3.0-bare";\
+   echo "module load Python/3.10.4-GCCcore-11.3.0";\
+   echo "module load lxml/4.9.1-GCCcore-11.3.0";\
    echo "module load Boost/1.79.0-GCC-11.3.0";\
    echo "module load Tk/8.6.12-GCCcore-11.3.0";\
    echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\

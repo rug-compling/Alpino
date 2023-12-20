@@ -32,7 +32,7 @@ list. Typically you need a recent version ;-)
 * go
 * tcl/tk
 * lxml
-* python3
+* python3, version 3.7 or above
 * python3 library lxml
 * dictzip (sometimes packaged with dictd)
 * libpopt
@@ -965,22 +965,23 @@ Alpino client in Python:
 
 ---------------------------------------------------------
 
+#!/usr/bin/env python3
+
 import socket
 
-def alpino_parse(sent, host='vingolf.let.rug.nl', port=42424):
+def alpino_parse(sent, host='localhost', port=42424):
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     s.connect((host,port))
     sent = sent + "\n\n"
-    s.sendall(sent.encode())    
+    s.sendall(sent.encode('utf-8'))
     total_xml=[]
     while True:
         xml = s.recv(8192)
         if not xml:
             break
-        total_xml.append(str(xml,encoding='utf8'))
+        total_xml.append(xml.decode('utf8'))
 
     return "".join(total_xml)
-
 
 
 def main():
