@@ -572,7 +572,10 @@ m(v_root(heb,hebben),
 	part_intransitive(vrijaf),
 	part_sbar(door),               % ik had door dat hij komt
 	part_sbar(voor),               % ik had voor hem tijdig in te lichten
-	part_vp(voor),                 % ik had voor, hem in te lichten
+	part_vp(voor),		% ik had voor, hem in te lichten
+	fixed([pc(met),[voor],[goed],acc],no_passive), % we zouden het wel goed voor met hem hebben
+	fixed([[voor],pc(met),[goed],acc],no_passive), % we zouden het wel goed met hem voor hebben
+	fixed([[voor],[goed],pc(met),acc],no_passive), % we zouden het wel met hem goed voor hebben
 	part_transitive(aan),          % ze had geen kleren aan
 	part_transitive(af),           % we moeten het afhebben
         part_transitive(beet),
@@ -643,6 +646,7 @@ m(v_root(heb,hebben),
 	fixed([[vol],{[acc(buik),pc(van)]}],no_passive),
 	fixed([{[acc(contact),pc(met)]}],no_passive),
 	fixed([{[acc(controle),mod_pp(over)]}],no_passive),
+	fixed([[in,de,zeilen],[de,wind]],no_passive),
 	fixed([{[acc(dobber),pc(aan)]}],no_passive),  % we hebben daar een zware humanitaire dobber aan
 	fixed([er_pp(in),[een,hard,hoofd]],no_passive),
 	fixed([er_pp(in,X),[een,hard,hoofd],extra_sbar(X)],no_passive),
@@ -1862,8 +1866,9 @@ v(bedek,bedekt,bedekken,bedekt,bedekte,bedekten,
 	np_mod_pp(met)])]).
 
 v(bedel,bedelt,bedelen,gebedeld,bedelde,bedelden,
-    [h([intransitive,
-	pc_pp(om)])]).
+  [h([intransitive,
+      part_transitive(bijeen),
+      pc_pp(om)])]).
 
 v(bedelf,bedelft,bedelven,bedolven,bedolf,bedolven,
     [h([transitive,
@@ -3224,8 +3229,11 @@ v(betaal,betaalt,betalen,betaald,betaalde,betaalden,
 	fixed([ap_pred,refl],no_passive), % we betalen ons blauw
 	fixed([{[pc(aan),ap_pred]},refl],no_passive),
 	part_np_np(door),
+	part_so_pp_np(door),
 	part_np_np(terug),
+	part_so_pp_np(terug),
 	part_np_np(uit),
+	part_so_pp_np(uit),
 	part_intransitive(aan),
 	part_intransitive(bij),
 	part_transitive(door),
@@ -6951,7 +6959,9 @@ v(dwing,dwingt,dwingen,gedwongen,dwong,dwongen,
 	np_vp_obj1,
 	transitive,
 	np_ld_pp,
+	pc_pp(tot),
 	np_pc_pp(tot),
+	obj_np_er_pp_vp(tot),
 	part_sbar(af),
 	part_pp_sbar(af,van),
 	part_transitive(af)])]).
@@ -7698,7 +7708,7 @@ v(fungeer,fungeert,fungeren,gefungeerd,fungeerde,fungeerden,
         als_copula])]).
 
 v(fuseer,fuseert,fuseren,gefuseerd,fuseerde,fuseerden,
-    [z([intransitive,
+  [z([intransitive,
 	pc_pp(met)])]).
 
 v(fusilleer,fusilleert,fusilleren,gefusilleerd,fusilleerde,fusilleerden,
@@ -7922,6 +7932,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	fixed([er_pp(op,A),[prat],extra_vp(A)],no_passive),
 	part_fixed(op,[subj(stem),vp],no_passive),
 	part_fixed(op,[subj(stem),sbar],no_passive),
+        fixed([[op,de,loop]],no_passive),
 	fixed([[te,boven],dat],norm_passive),
 	fixed([ap_pred,pc(aan)],no_passive),  % hij gaat te gronde/kapot/dood/.. aan
 	fixed([[te,keer]],no_passive),
@@ -11692,6 +11703,7 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
 	  aux(psp(part_ld_pp(_,_))),	   % hij komt op ons afgerend
 	  er_pp_sbar(achter),		   % ik kwam erachter dat ..
 	  er_pp_sbar(bij),		   % hoe komt u er bij dat ..
+	  mod_pp(bij),          % er komt een ton bij
 	  er_pp_sbar(in),		   % ik kan er in komen dat ..
 	  er_pp_sbar(tot),	% VL we moeten ertoe komen dat ..
 	  pp_copula,
@@ -11832,14 +11844,14 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
 	  fixed([[als,geroepen]],no_passive),
 	  als_copula,	     % als een (geweldige) schok/verrassing/..
 	  fixed([svp_pp(aan,einde)],no_passive),
-	  fixed([[gelegen]],no_passive),
-	  fixed([[ongelegen]],no_passive),
-	  fixed([[gelegen],dat],no_passive),
-	  fixed([[ongelegen],dat],no_passive),
-	  fixed([sbar_subj,[gelegen]],no_passive),
-	  fixed([sbar_subj,[ongelegen]],no_passive),
-          fixed([sbar_subj,[gelegen],dat],no_passive),
-          fixed([sbar_subj,[ongelegen],dat],no_passive),
+	  fixed([ap_pred(gelegen)],no_passive),
+	  fixed([ap_pred(ongelegen)],no_passive),
+	  fixed([ap_pred(gelegen),dat],no_passive),
+	  fixed([ap_pred(ongelegen),dat],no_passive),
+	  fixed([sbar_subj,ap_pred(gelegen)],no_passive),
+	  fixed([sbar_subj,ap_pred(ongelegen)],no_passive),
+          fixed([sbar_subj,ap_pred(gelegen),dat],no_passive),
+          fixed([sbar_subj,ap_pred(ongelegen),dat],no_passive),
           fixed([[op,andere,gedachten]],norm_passive),
           fixed([[op,de,proppen],pc(met)],no_passive),
           fixed([[naar,buiten],sbar_subj_no_het],no_passive),
@@ -12815,7 +12827,8 @@ v(lach,lacht,lachen,gelachen,lachte,lachten,
 	part_transitive(uit),
 	part_np_mod_pp(uit,om),
 	part_transitive(weg),
-	mod_pp(bij),  % ze lacht er lief bij
+	mod_pp(bij),		% ze lacht er lief bij
+	mod_pp(met),            % ze kan er niet mee lachen
 	pc_pp(om),
 	pc_pp(over),
 	pc_pp(tegen)])]).
@@ -14151,9 +14164,12 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	fixed([[te,gelde],acc],norm_passive),
 	fixed([[te,niet],acc],norm_passive),
 	fixed([[te,schande],acc],norm_passive),
-	fixed([{[pc(bij),acc(tekening)]}],imp_passive),
-	fixed([{[er_pp(bij,C),acc(tekening)]},extra_vp(C)],imp_passive),
-	fixed([{[er_pp(bij,C),acc(tekening)]},extra_sbar(C)],imp_passive),
+	fixed([{[er_pp(bij),acc(tekening)]}],norm_passive),
+	fixed([{[er_pp(bij),acc(tekening)]},vp_no_control],norm_passive),
+	fixed([{[er_pp(bij),acc(tekening)]},sbar],norm_passive),
+	fixed([{[er_pp(bij),acc(tekening_DIM)]}],norm_passive),
+	fixed([{[er_pp(bij),acc(tekening_DIM)]},vp_no_control],norm_passive),
+	fixed([{[er_pp(bij),acc(tekening_DIM)]},sbar],norm_passive),
 	fixed([{[acc(toespeling),pc(op)]}],norm_passive),
 	fixed([[tot,voorwerp],{[acc,pc(van)]}],norm_passive),
 	fixed([[uit,de,voeten],refl],no_passive),
@@ -18192,6 +18208,7 @@ v(reken,rekent,rekenen,gerekend,rekende,rekenden,
 	part_fixed(aan,[dat,het_pobj1(sbar)],imp_passive),
 	part_fixed(aan,[dat,sbar],imp_passive),
 	part_transitive(aan),
+	part_np_np(aan),
 	part_intransitive(af),
 	part_transitive(af),
 	part_np_pc_pp(af,met),
@@ -19744,7 +19761,7 @@ v(schrijf,schrijft,schrijven,geschreven,schreef,schreven,
 	np_ld_dir, % iemand de grond in schrijven
 	transitive,
 	vp,
-	np_ld_pp,
+	np_ld_pp,          % een brief schrijven naar
 	pc_pp(over),
 	np_pc_pp(over),
 	part_intransitive(terug),
@@ -21762,6 +21779,7 @@ v(stapel,stapelt,stapelen,gestapeld,stapelde,stapelden,
 v(start,start,starten,gestart,startte,startten,
     [z([intransitive,
 	pc_pp(met),
+	ld_pp,
 	part_intransitive(op)]),
      b([transitive]),
      h([part_transitive(op)])]).
@@ -21970,6 +21988,8 @@ v(stel,stelt,stellen,gesteld,stelde,stelden,
 	fixed([[beschikbaar],{[acc,dat_pp(aan)]}],norm_passive),
 	fixed([[kandidaat],refl],imp_passive),
 	fixed([[kandidaat],pc(voor),refl],imp_passive),
+	fixed([[in,beschuldiging],acc],norm_passive),
+	fixed([[in,staat,van,beschuldiging],acc],norm_passive),
 	fixed([[in,de,gelegenheid],i(acc,A),obj_vp(A)],norm_passive),
 	fixed([[in,gebreke],acc],norm_passive),
 	fixed([[in,het,gelijk],acc],norm_passive),
@@ -22039,7 +22059,8 @@ v(stem,stemt,stemmen,gestemd,stemde,stemden,
 	pp_sbar_subj(tot),    % het stemt tot tevredenheid dat je komt
 	part_np_sbar(toe),    % u zult me toestemmen dat (ouderwets)
 	intransitive,
-	transitive,
+        transitive,
+        pc_pp(tot), % dat stemt tot nadenken
 	np_pc_pp(tot),
 	part_intransitive(in),
 	part_dip_sbar(in),
@@ -24938,6 +24959,7 @@ v(verkil,verkilt,verkillen,verkild,verkilde,verkilden,
 v(verklaar,verklaart,verklaren,verklaard,verklaarde,verklaarden,
     [h([pred_np,
 	refl,
+	pred_refl,   % zij verklaarden zich eens met ...
 	sbar,
 	so_pp_sbar,
 	transitive,
@@ -25363,6 +25385,7 @@ v(vernederlands,vernederlandst,vernederlandsen,vernederlandst,vernederlandste,ve
 v(verneem,verneemt,vernemen,vernomen,vernam,vernamen,
     [h([sbar,
 	np_pc_pp(van),
+	pp_sbar(van),
         np_mod_pp(over),
         pc_pp(van),
 	transitive])]).
@@ -26301,8 +26324,9 @@ v(verwed,verwedt,verwedden,verwed,verwedde,verwedden,
 	np_er_pp_sbar(onder)])]).
 
 v(verweef,verweeft,verweven,verweven,verweefde,verweefden,
-    [h([transitive,
-	np_pc_pp(met)])]).
+  [h([transitive,
+      np_pc_pp(tot),
+      np_pc_pp(met)])]).
 
 v(verweek,verweekt,verweken,verweekt,verweekte,verweekten,
     [unacc([intransitive]),
@@ -26388,7 +26412,8 @@ v(verwijt,verwijt,verwijten,verweten,verweet,verweten,
 	vp])]).
 
 v(verwikkel,verwikkelt,verwikkelen,verwikkeld,verwikkelde,verwikkelden,
-    [h([transitive])]).
+  [h([np_pc_pp(in),
+      transitive])]).
 
 v(verwilder,verwildert,verwilderen,verwilderd,verwilderde,verwilderden,
     [unacc([intransitive]),
@@ -26752,7 +26777,9 @@ v(vit,vit,vitten,gevit,vitte,vitten,
 v(vlag,vlagt,vlaggen,gevlagd,vlagde,vlagden,
     [h([intransitive,
         part_intransitive(af),
-	part_transitive(af)])]).
+	part_transitive(af),
+	part_intransitive(uit),
+	part_transitive(uit)])]).
 
 v(vlak,vlakt,vlakken,gevlakt,vlakte,vlakten,
     [h([part_intransitive(af),
@@ -28595,6 +28622,7 @@ v(zet,zet,zetten,gezet,zette,zetten,
 	fixed([[klem],acc],norm_passive),
 	fixed([[in,gang],acc],norm_passive),
 	fixed([[in,het,pak],acc],norm_passive), % Vlaams
+	fixed([[in,de,verf],acc],norm_passive), 
         fixed([[in,lichterlaaie],acc],norm_passive),
         fixed([[in,lichterlaaien],acc],norm_passive),
 	fixed([[op,het,spel],acc],norm_passive),
@@ -29208,7 +29236,8 @@ v(zwem,zwemt,zwemmen,gezwommen,zwom,zwommen,
      ])]).
 
 v(zwengel,zwengelt,zwengelen,gezwengeld,zwengelde,zwengelden,
-    [h([part_transitive(aan),
+  [z([part_intransitive(aan)]),
+   h([part_transitive(aan),
 	transitive])]).
 
 v(zwenk,zwenkt,zwenken,gezwenkt,zwenkte,zwenkten,
@@ -29320,10 +29349,10 @@ psp_only(behept,
 	  ]).
 
 %% dat hem geen lang leven is beschoren (toebedeeld)
-psp_only(beshoren,
+psp_only(beschoren,
 	 beschoren,
          zijn,
-         [np_np]).
+         [so_np]).
 
 psp_only(v_root(baat,baten),
 	 gebaat,

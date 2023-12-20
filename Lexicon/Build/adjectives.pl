@@ -557,7 +557,7 @@ a([e('Arubaanse'),
    no_e('Arubaans')],nonadv,[],[]).
 
 a([e('Atlantische'),
-   no_e('Atlantisch')],nonadv,[],[]).
+   no_e('Atlantisch')],adv,[],[]).  % adv: "de Atlantisch gezinde bondgenoot"
 
 a([e('Australische'),
    er('Australischer'),
@@ -11239,7 +11239,6 @@ a([ge_both(gebonden)],adv,
    gebouw,
    grond,s(grond),
    s(leeftijd),
-   on,
    persoon,s(persoon),
    prestatie,
    school,
@@ -11250,9 +11249,10 @@ a([ge_both(gebonden)],adv,
    water
   ]).
 
-a([ge_both(gebonden)],adv,
+a([ge_both(gebonden)],both,
   [pp(aan)],
   [niet,h(niet),
+   on,
    tijd]).
 
 a([ge_both(gebonkt)],adv,[],[]).
@@ -12371,6 +12371,7 @@ a([ge_e(gefusilleerde),
 a([ge_e(gegane),
    ge_no_e(gegaan)],nonadv,
   [ap_pred,
+   part('ten onder'),
    part(teloor)],[]).
 
 a([ge_e(gegalmde),
@@ -12537,7 +12538,7 @@ a([ge_e(gegutste),
    ge_no_e(gegutst)],adv,[],[]).
 
 a([e(gehaaide),
-   no_e(gehaaid)],padv,[],[]).
+   no_e(gehaaid)],padv,[],[subject_vp,subject_sbar]).
 
 a([ge_e(gehaakte),
    ge_no_e(gehaakt)],adv,[],[]).
@@ -20173,7 +20174,7 @@ a([e(ironische),
    ere(ironischere),
    no_e(ironisch),
    st(ironischt),
-   ste(ironischte)],padv,
+   ste(ironischte)],both,
   [subject_sbar,
    subject_vp],[]).
 
@@ -24347,7 +24348,7 @@ a([e(obscure),
 
 a([e(obstinate),no_e(obstinaat)],nonadv,[],[]).
 
-a([both(ocharme)],nonadv,[],[]).
+a([both(ocharme),both([och,arme])],nonadv,[],[]).
 
 a([e(occulte),
    no_e(occult)],nonadv,[],[]).
@@ -25753,7 +25754,7 @@ a([e(ongeldige),
    ere(ongeldigere),
    no_e(ongeldig),
    st(ongeldigst),
-   ste(ongeldigste)],nonadv,[],[]).
+   ste(ongeldigste)],adv,[],[]).  % ze stemden ongeldig
 
 a([both(ongelegen),
    er(ongelegener),

@@ -3877,6 +3877,7 @@ abbreviation(mhz,      megahertz).
 abbreviation('Mhz',    megahertz).
 abbreviation('Mw',     megawatt).
 abbreviation('MW',     megawatt).
+abbreviation('n.a.g.', genoemd).  % niet afzonderlijk genoemd
 abbreviation(nm,       nanometer).
 abbreviation('Nm',     nanometer).
 abbreviation('no.',    nummer).

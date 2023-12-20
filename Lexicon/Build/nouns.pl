@@ -2594,7 +2594,8 @@ n([pl(analisten),sg(analist)],de,[]).
 
 n([pl(analitici),sg(analiticus)],de,[]).
 
-n([pl(analogieën),sg(analogie)],de,[sbar]).
+%% de analogie mens/aap
+n([pl(analogieën),sg(analogie)],de,[sbar,app_measure]).
 
 n([pl(analysen),pl(analyses),sg(analyse)],de,[sbar,subject_sbar]).
 
@@ -22994,6 +22995,8 @@ n([pl(monsters),sg(monster)],het,[measure],
   [urine,
    dim(monstertje)]).
 
+n([sg([monstre,sacré])],het,[]).
+
 n([pl(montages),sg(montage)],de,[]).
 
 n([pl(monteurs),sg(monteur)],de,[],
@@ -34900,6 +34903,8 @@ n([pl(talenten),sg(talent)],het,[],
   [natuur,
    voetbal]).
 
+n([sg('Taliban')],de,[]).  % de Taliban John Walker Lindh arriveerde in de USA
+
 n([pl(talismans),sg(talisman)],de,[]).
 
 n([sg([tall,ship]),pl([tall,ships])],de,[]).
@@ -35004,7 +35009,7 @@ n([sg('tbs\'er'),pl('tbs\'ers'),
    sg('TBS\'er'),pl('TBS\'ers')],de,[],
   [h(ex)]).
 
-n([pl(teams),sg(team)],het,[measure],[]). % een team verkopers
+n([pl(teams),sg(team)],het,[measure,app_measure],[]). % een team verkopers, het team Beleidsondersteuning
 
 n([pl(teams),sg(team)],het,[],
   [arrestatie,
@@ -39948,7 +39953,12 @@ n([pl(vreemdelingen),sg(vreemdeling)],de,[]).
 
 n([mass(vreemdelingenlegioen)],het,[]).
 
-n([pl(vrezen),sg(vrees)],de,[sbar,vp]).
+n([pl(vrezen),sg(vrees)],de,
+  [sbar,
+   vp,
+   subject_sbar,
+   subject_vp
+  ]).
 
 n([pl(vrezen),sg(vrees)],de,[],
   [examen,

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="2" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="present" v_per="fir" word="hebben" wvorm="pv"/>
+      <node begin="2" end="3" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="geluk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="geluk" word="geluk"/>
+      <node begin="3" cat="sv1" end="6" id="5" rel="mod">
+        <node begin="3" end="4" id="6" infl="sg" lemma="mogen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="mag" sc="modifier(aux(inf))" tense="past" v_per="thi" word="mocht" wvorm="pv"/>
+        <node begin="4" end="5" getal="ev" id="7" index="1" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+        <node begin="4" cat="inf" end="6" id="8" rel="vc">
+          <node begin="4" end="5" id="9" index="1" rel="su"/>
+          <node begin="5" buiging="zonder" end="6" id="10" infl="inf(no_e)" lemma="door_gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga_door" sc="part_intransitive(door)" word="doorgaan" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>we hebben geluk mocht dat doorgaan</sentence>
+</alpino_ds>

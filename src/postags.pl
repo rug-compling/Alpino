@@ -133,6 +133,7 @@ p_of_f(postadv_adverb,adv,[special=postadv]).
 p_of_f(post_loc_adv_adv,adv,[special=postlocadv]).
 p_of_f(postnp_adverb,adv,[special=postnp]).
 p_of_f(postn_adverb,adv,[special=postn]).
+p_of_f(postpn_adverb,adv,[special=postpn]).
 p_of_f(postp_adverb,adv,[special=postp]).
 p_of_f(sentence_adverb,adv,[special=sentence]).
 p_of_f(er_vp_adverb,adv,[special=er]).

@@ -929,6 +929,7 @@ with_dt_all(af,[kleins,van]).
 with_dt_all(af,[kleins,vanaf]).
 with_dt_all(af,[naar]).
 with_dt_all(afstand,[lang]).
+with_dt_all(al,[alleen]).
 with_dt_all(al,[dat]).
 with_dt_all(al,[degeen]).
 with_dt_all(al,[dit]).
@@ -2031,6 +2032,7 @@ with_dt_all('\'n',[aantal,flink]).
 with_dt_all('\'n',[aantal,groot]).
 with_dt_all('\'n',[aantal,klein]).
 with_dt_all('\'n',[aantal,respectabel]).
+with_dt_all(naar,[schatting]).
 with_dt_all(naar,[verwachting]).
 with_dt_all(nadele,[te,uwen]).
 with_dt_all(nadele,[te,zijnen]).
@@ -2942,6 +2944,7 @@ with_dt_root(rijp).
 with_dt_root(rond).
 with_dt_root(ruste).
 with_dt_root(samen).
+with_dt_root(schatting).
 with_dt_root(schiet).
 with_dt_root(secundair).
 with_dt_root(seizoen).

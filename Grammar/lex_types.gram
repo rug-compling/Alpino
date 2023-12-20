@@ -2294,6 +2294,11 @@ postn_adverb(ADV) :-
     initialize_dt([],ADV),
     sign(ADV,advp).
 
+postpn_adverb(ADV) :-
+    ADV => post_pn_adv,
+    initialize_dt([],ADV),
+    sign(ADV,advp).
+
 postp_adverb(ADV) :-
     ADV => post_p_adv,
     initialize_dt([],ADV),
@@ -3068,6 +3073,7 @@ dependents_(V0,V,[X|Dependents],[Dep|Deps]) :-
 %% predc: keurig als we zijn veroordelen we racisme
 %% su, obj1, obj2: topic-drop
 %% vc: dip
+%% me: colon "de winst bedroeg :"
 dependent(DepRel/Dep,V0,V,Dep) :-
     (   DepRel == none
     ->  V0=V
@@ -3093,8 +3099,8 @@ dependent(DepRel/Dep,V0,V,Dep) :-
     ->  V0=V, instantiated_deprel(V,pc,Dep)
     ;   DepRel == ld
     ->  V0=V, instantiated_deprel(V,ld,Dep)
-    ;   DepRel == me
-    ->  V0=V, instantiated_deprel(V,me,Dep)
+%    ;   DepRel == me
+%    ->  V0=V, instantiated_deprel(V,me,Dep)
     ;   DepRel == se
     ->  V0=V, instantiated_deprel(V,se,Dep)
     ;   V0=V,

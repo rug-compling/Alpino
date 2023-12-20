@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="mod">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="ieder" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="ieder" special="tmp" vwtype="onbep" word="Iedere"/>
+        <node begin="1" end="2" id="4" infl="pl_num" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+        <node begin="2" end="3" gen="het" genus="onz" getal="ev" graad="basis" id="5" lemma="jaar" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="jaar" special="tmp" word="jaar"/>
+      </node>
+      <node begin="3" end="4" id="6" infl="pl" lemma="gaan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ga" sc="ld_pp" stype="declarative" tense="present" v_per="fir" word="gaan" wvorm="pv"/>
+      <node begin="4" case="nom" def="def" end="5" gen="de" getal="mv" id="7" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+      <node begin="5" cat="pp" end="7" id="8" rel="ld">
+        <node begin="5" end="6" id="9" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="10" lemma="Schiermonnikoog" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Schiermonnikoog" word="Schiermonnikoog"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Iedere twee jaar gaan we naar Schiermonnikoog</sentence>
+</alpino_ds>

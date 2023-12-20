@@ -583,6 +583,7 @@ loc(basiliek).
 loc(beach).
 loc(berg).
 loc(berg).
+loc(boulevard).
 loc(center).
 loc('col ').
 loc(county).
@@ -632,6 +633,7 @@ loc(square).
 loc(stadion).
 loc(stadium).
 loc(steeg).
+loc(street).
 loc(straat).
 loc('Straße').
 loc(territory).
