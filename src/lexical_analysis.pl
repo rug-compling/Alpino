@@ -378,10 +378,21 @@ normal_lex2(Tag,Label,[Word|Input0],Input,P,normal(decap(His)),LC,Tags) :-
     \+ member(f(Tag,_,Input,_),Tags),
     \+ forbid_odd_normal_word(Word,Tag).
 
+/* does not work for mwu that start with full capitals "OP het gebied van"
 normal_lex2(Tag,Label,[Word|Input0],Input,P,special(decap(His)),LC,Tags) :-
     alpino_unknowns:special_capitalized_word(P,Word,Input0,Input1,DecapWord,Len),
     length(Consumed,Len),
     lists:append(Consumed,Input,[DecapWord|Input1]),
+    in_lexicon(Tag,Label,[DecapWord|Input1],Input,His,LC),
+    \+ His = chess,
+    \+ His = variant(variant(_,_),normal),
+    \+ member(f(Tag,_,Input,_),Tags).
+*/
+
+normal_lex2(Tag,Label,[Word|Input0],Input,P,special(decap(His)),LC,Tags) :-
+    alpino_unknowns:special_capitalized_word(P,Word,Input0,Input1,DecapWord,_Len),
+%    length(Consumed,Len),
+%    lists:append(Consumed,Input,[DecapWord|Input1]),
     in_lexicon(Tag,Label,[DecapWord|Input1],Input,His,LC),
     \+ His = chess,
     \+ His = variant(variant(_,_),normal),
@@ -1020,9 +1031,16 @@ add_skips_for_unknowns(Words) :-
 %% 1. this was actually correct, because this last tag was wrong, but we
 %%    should restore the correct alternative 
 %% 2. this was undesirable, restore licensing tag
+%%
+%% it is a mess, of course
+%% old version could remove *all* tags. Now do not throw away UNKNOWN
+%% yet, but assume this position is required to have a tag, so treat it
+%% as unknown / name (since this position was required earlier for connectness)
+%% BUT that sometimes leads to explosion of tags...
 check_connected(Words,MaxPos,_Erased,Filter) :-
     retractall(tag(_,_,_,_,_,_,'UNKNOWN','UNKNOWN')),
     (   unused_pos(P,MaxPos),
+	%%% ;   retract(tag(P,_,_,_,_,_,'UNKNOWN','UNKNOWN'))
         P1 is P+1,
         nth(P1,Words,W),
         debug_message(1,
@@ -1033,7 +1051,9 @@ check_connected(Words,MaxPos,_Erased,Filter) :-
 	R is R0 + 1,
 
 	%% treat it as unknown
+	alpino_unknowns:guess_names([W],[W],P,R0),
 	call_with_decreased_debug(guess_unknown_words(Words,[P])),
+
 
 	%% and known
 	add_lexical_types(W,P,P1,R0,R),
@@ -1095,6 +1115,7 @@ requires_longest_match(normal(names_dictionary)).
 requires_longest_match(normal(spaced_letters)).
 requires_longest_match(name(not_begin)).
 requires_longest_match(name(begin)).
+requires_longest_match(normal(telephone)).
 
 requires_unique_match(normal(date_year),np(year),normal(enumeration),_,_,_).
 requires_unique_match(name(not_begin),proper_name(sg,_),normal(enumeration),proper_name(both),_,_).
@@ -1108,6 +1129,7 @@ requires_unique_match(normal(variant(wrong_quote_s,normal)),_,normal(variant(var
 requires_unique_match(normal(variant(wrong_quote_s,normal)),_,normal(variant(variant21('\'s','\'',s),variant)),_,0,0).
 requires_unique_match(normal(spaced_letters),_,normal(_),_,5,0).
 requires_unique_match(normal(bridge),_,normal(bridge),_,5,0).
+requires_unique_match(normal(telephone),_,normal(telephone),_,5,0).
 requires_unique_match(normal(number_sequence),_,normal(number_sequence),_,5,0).
 requires_unique_match(name(_),_,name(_),_,10,5).
 requires_unique_match(name(_),_,name_gen(_),_,10,4).
