@@ -1373,6 +1373,7 @@ with_dt_all(deze,[en,volg]).
 with_dt_all(deze,[en,vorig]).
 with_dt_all(deze,[honderdduizend,paar]).
 with_dt_all(deze,[honderd,paar]).
+with_dt_all(dezelfde,[en,één]).
 with_dt_all(deze,[miljard,paar]).
 with_dt_all(deze,[miljoen,paar]).
 with_dt_all(deze,[van]).
@@ -2631,6 +2632,7 @@ with_dt_root(dertien).
 with_dt_root(dertig).
 with_dt_root('des te').
 with_dt_root(deze).
+with_dt_root(dezelfde).
 with_dt_root(dichter).
 with_dt_root(die).
 with_dt_root(dien).

@@ -5882,6 +5882,9 @@ n([pl(bonnen),pl(bons),sg(bon)],de,[],
    i(plaat,platen),
    dim(bonnetje)]).
 
+n([pl(bonnen),pl(bons),sg(bon)],de,[pred_pp(op)],
+  []).
+
 %% voor: het is zo simpel als bonjour
 n([mass(bonjour)],both,[]).
 
@@ -21264,7 +21267,7 @@ n([bare_meas(maand),pl(maanden)],de,
 n([sg(maand),pl(maanden),
    ignore_stem(maand),
    ignore_stem(maand_DIM)],de,
-  [temp_mod,sbar],
+  [temp_mod,sbar,app_measure],
   [feest,
    vakantie,
    vasten,
@@ -39749,6 +39752,8 @@ n([pl(voorzitters),sg(voorzitter)],de,[],
    jury,
    i(jong,jongeren),
    'Kamer',
+   ['Tweede','Kamer'],
+   ['Eerste','Kamer'],
    kamer,
    omroep,
    onder,
@@ -40297,6 +40302,15 @@ n([pl(wagens),sg(wagen)],de,[],
    vuilnis,
    woon,
    i(ziek,zieken),
+   dim(wagentje)]).
+
+%% drie vrachtwacgens vuilnis
+n([pl(wagens),sg(wagen)],de,[measure],
+  [aanhang,
+   bestel,
+   verhuis,
+   vracht,
+   vuilnis,
    dim(wagentje)]).
 
 n([pl(wagons),sg(wagon)],de,[measure],[dim(wagonnetje)]).
@@ -41544,10 +41558,15 @@ n([pl(woonlasten)],de,[]).
 n([mass(woonomgeving)],de,[]).
 
 n([pl(woorden),sg(woord)],het,
+  [pred_pp(aan)],
+  []).
+
+n([pl(woorden),sg(woord)],het,
   [start_app_measure,           % met de woorden "...."
    pred_pp(aan),                % aan het woord zijn/blijven/komen
    measure],			% geen woord Spaans
-  []).
+                                % een woordje uitleg
+  [dim(woordje)]).
 
 n([pl(woorden),sg(woord)],het,
   [app_measure],

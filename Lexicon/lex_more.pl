@@ -658,6 +658,10 @@ phrasal_entry(score_cat,score) -->
        parse_number_simple(Away)
     }.
 
+phrasal_entry(np,telephone) -->
+    { hdrug_util:debug_message(4,"telephone~n",[]) },
+    telephone.
+
 phrasal_entry(np,chess) -->
     { hdrug_util:debug_message(4,"chess_game~n",[]) },
     chess_game.
@@ -4345,3 +4349,27 @@ formula(Word) :-
     atom_concat(formula_,DigitAtom,Word),
     atom_codes(DigitAtom,Codes),
     number_codes_silent(_,Codes).
+
+telephone -->
+    tel_word,
+    tel_word,
+    telephone_rest.
+
+telephone_rest --> [].
+telephone_rest -->
+    tel_word,
+    telephone_rest.
+
+tel_word -->
+    n_word(Atom),
+    {  digits(Atom) }.
+
+digits(Atom) :-
+    atom(Atom),
+    atom_codes(Atom,Codes),
+    isdigits(Codes).
+
+isdigits([]).
+isdigits([H|T]) :-
+    isdigit(H),
+    isdigits(T).

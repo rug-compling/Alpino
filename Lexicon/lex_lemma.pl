@@ -312,6 +312,7 @@ lemma_root(aan_ontdekken,ontdek_aan) .
 lemma_root(aan_ontrollen,ontrol_aan) .
 lemma_root(aan_ontsnappen,ontsnap_aan) .
 lemma_root(aan_pakken,pak_aan) .
+lemma_root(aan_palen,paal_aan) .
 lemma_root(aan_pappen,pap_aan) .
 lemma_root(aan_parelen,parel_aan) .
 lemma_root(aan_parkeren,parkeer_aan) .
@@ -670,6 +671,7 @@ lemma_root(abonneren,abonneer) .
 lemma_root(aborteren,aborteer) .
 lemma_root(absorberen,absorbeer) .
 lemma_root(abstraheren,abstraheer) .
+lemma_root(accelereren,accelereer) .
 lemma_root(accentueren,accentueer) .
 lemma_root(accepteren,accepteer) .
 lemma_root(acclimatiseren,acclimatiseer) .
@@ -1330,6 +1332,7 @@ lemma_root(af_ontdekken,ontdek_af) .
 lemma_root(af_ontrollen,ontrol_af) .
 lemma_root(af_ontsnappen,ontsnap_af) .
 lemma_root(af_pakken,pak_af) .
+lemma_root(af_palen,paal_af) .
 lemma_root(af_parelen,parel_af) .
 lemma_root(af_parkeren,parkeer_af) .
 lemma_root(af_passen,pas_af) .
@@ -2646,6 +2649,7 @@ lemma_root(braken,braak) .
 lemma_root(brallen,bral) .
 lemma_root(branden,brand) .
 lemma_root(brandmerken,brandmerk) .
+lemma_root(brandschatten,brandschatten) .
 lemma_root(breiden,breid) .
 lemma_root(breien,brei) .
 lemma_root(breken,breek) .
@@ -2660,6 +2664,7 @@ lemma_root(brokkelen,brokkel) .
 lemma_root(brokken,brok) .
 lemma_root(brommen,brom) .
 lemma_root(bronzen,brons) .
+lemma_root(brouilleren,brouilleer) .
 lemma_root(brouwen,brouw) .
 lemma_root(bruinen,bruin) .
 lemma_root(bruisen,bruis) .
@@ -2961,6 +2966,7 @@ lemma_root(door_aarzelen,aarzel_door) .
 lemma_root(door_aborteren,aborteer_door) .
 lemma_root(door_absorberen,absorbeer_door) .
 lemma_root(door_abstraheren,abstraheer_door) .
+lemma_root(door_accelereren,accelereer_door) .
 lemma_root(door_accentueren,accentueer_door) .
 lemma_root(door_accepteren,accepteer_door) .
 lemma_root(door_acclimatiseren,acclimatiseer_door) .
@@ -3232,6 +3238,7 @@ lemma_root(door_brainstormen,brainstorm_door) .
 lemma_root(door_braken,braak_door) .
 lemma_root(door_brallen,bral_door) .
 lemma_root(door_branden,brand_door) .
+lemma_root(door_brandschatten,brandschatten_door) .
 lemma_root(door_breien,brei_door) .
 lemma_root(door_breken,breek_door) .
 lemma_root(doorbreken,doorbreek) .
@@ -3244,6 +3251,7 @@ lemma_root(door_broeien,broei_door) .
 lemma_root(door_brokkelen,brokkel_door) .
 lemma_root(door_brokken,brok_door) .
 lemma_root(door_brommen,brom_door) .
+lemma_root(door_brouilleren,brouilleer_door) .
 lemma_root(door_brouwen,brouw_door) .
 lemma_root(door_bruinen,bruin_door) .
 lemma_root(door_bruisen,bruis_door) .
@@ -6312,6 +6320,7 @@ lemma_root(heen_ontdekken,ontdek_heen) .
 lemma_root(heen_ontrollen,ontrol_heen) .
 lemma_root(heen_ontsnappen,ontsnap_heen) .
 lemma_root(heen_pakken,pak_heen) .
+lemma_root(heen_palen,paal_heen) .
 lemma_root(heen_parelen,parel_heen) .
 lemma_root(heen_parkeren,parkeer_heen) .
 lemma_root(heen_passen,pas_heen) .
@@ -7149,6 +7158,7 @@ lemma_root(in_ontdekken,ontdek_in) .
 lemma_root(in_ontrollen,ontrol_in) .
 lemma_root(in_ontsnappen,ontsnap_in) .
 lemma_root(in_pakken,pak_in) .
+lemma_root(in_palen,paal_in) .
 lemma_root(in_palmen,palm_in) .
 lemma_root(in_parelen,parel_in) .
 lemma_root(in_parkeren,parkeer_in) .
@@ -8155,6 +8165,7 @@ lemma_root(langs_ontdekken,ontdek_langs) .
 lemma_root(langs_ontrollen,ontrol_langs) .
 lemma_root(langs_ontsnappen,ontsnap_langs) .
 lemma_root(langs_pakken,pak_langs) .
+lemma_root(langs_palen,paal_langs) .
 lemma_root(langs_parelen,parel_langs) .
 lemma_root(langs_parkeren,parkeer_langs) .
 lemma_root(langs_passen,pas_langs) .
@@ -10615,6 +10626,7 @@ lemma_root(raak_aarzelen,aarzel_raak) .
 lemma_root(raak_aborteren,aborteer_raak) .
 lemma_root(raak_absorberen,absorbeer_raak) .
 lemma_root(raak_abstraheren,abstraheer_raak) .
+lemma_root(raak_accelereren,accelereer_raak) .
 lemma_root(raak_accentueren,accentueer_raak) .
 lemma_root(raak_accepteren,accepteer_raak) .
 lemma_root(raak_acclimatiseren,acclimatiseer_raak) .
@@ -10874,6 +10886,7 @@ lemma_root(raak_brainstormen,brainstorm_raak) .
 lemma_root(raak_braken,braak_raak) .
 lemma_root(raak_brallen,bral_raak) .
 lemma_root(raak_branden,brand_raak) .
+lemma_root(raak_brandschatten,brandschatten_raak) .
 lemma_root(raak_breien,brei_raak) .
 lemma_root(raak_breken,breek_raak) .
 lemma_root(raak_bridgen,bridge_raak) .
@@ -10882,6 +10895,7 @@ lemma_root(raak_broeden,broed_raak) .
 lemma_root(raak_broeien,broei_raak) .
 lemma_root(raak_brokkelen,brokkel_raak) .
 lemma_root(raak_brommen,brom_raak) .
+lemma_root(raak_brouilleren,brouilleer_raak) .
 lemma_root(raak_brouwen,brouw_raak) .
 lemma_root(raak_bruinen,bruin_raak) .
 lemma_root(raak_bruisen,bruis_raak) .
@@ -14832,6 +14846,7 @@ lemma_root(toe_ontdekken,ontdek_toe) .
 lemma_root(toe_ontrollen,ontrol_toe) .
 lemma_root(toe_ontsnappen,ontsnap_toe) .
 lemma_root(toe_pakken,pak_toe) .
+lemma_root(toe_palen,paal_toe) .
 lemma_root(toe_parelen,parel_toe) .
 lemma_root(toe_parkeren,parkeer_toe) .
 lemma_root(toe_passen,pass_toe) .
@@ -15507,6 +15522,7 @@ lemma_root(tussen_ontdekken,ontdek_tussen) .
 lemma_root(tussen_ontrollen,ontrol_tussen) .
 lemma_root(tussen_ontsnappen,ontsnap_tussen) .
 lemma_root(tussen_pakken,pak_tussen) .
+lemma_root(tussen_palen,paal_tussen) .
 lemma_root(tussen_parelen,parel_tussen) .
 lemma_root(tussen_parkeren,parkeer_tussen) .
 lemma_root(tussen_passen,pass_tussen) .
@@ -15843,6 +15859,7 @@ lemma_root(uit_aarzelen,aarzel_uit) .
 lemma_root(uit_aborteren,aborteer_uit) .
 lemma_root(uit_absorberen,absorbeer_uit) .
 lemma_root(uit_abstraheren,abstraheer_uit) .
+lemma_root(uit_accelereren,accelereer_uit) .
 lemma_root(uit_accentueren,accentueer_uit) .
 lemma_root(uit_accepteren,accepteer_uit) .
 lemma_root(uit_achtervolgen,achtervolg_uit) .
@@ -16091,6 +16108,7 @@ lemma_root(uit_broeien,broei_uit) .
 lemma_root(uit_brokkelen,brokkel_uit) .
 lemma_root(uit_brokken,brok_uit) .
 lemma_root(uit_brommen,brom_uit) .
+lemma_root(uit_brouilleren,brouilleer_uit) .
 lemma_root(uit_brouwen,brouw_uit) .
 lemma_root(uit_bruisen,bruis_uit) .
 lemma_root(uit_brullen,brul_uit) .
@@ -18439,6 +18457,7 @@ lemma_root(vanaf_ontdekken,ontdek_vanaf) .
 lemma_root(vanaf_ontrollen,ontrol_vanaf) .
 lemma_root(vanaf_ontsnappen,ontsnap_vanaf) .
 lemma_root(vanaf_pakken,pak_vanaf) .
+lemma_root(vanaf_palen,paal_vanaf) .
 lemma_root(vanaf_parelen,parel_vanaf) .
 lemma_root(vanaf_parkeren,parkeer_vanaf) .
 lemma_root(vanaf_passen,pass_vanaf) .
@@ -19039,6 +19058,7 @@ lemma_root(vandaan_ontdekken,ontdek_vandaan) .
 lemma_root(vandaan_ontrollen,ontrol_vandaan) .
 lemma_root(vandaan_ontsnappen,ontsnap_vandaan) .
 lemma_root(vandaan_pakken,pak_vandaan) .
+lemma_root(vandaan_palen,paal_vandaan) .
 lemma_root(vandaan_parelen,parel_vandaan) .
 lemma_root(vandaan_parkeren,parkeer_vandaan) .
 lemma_root(vandaan_passen,pass_vandaan) .
@@ -19627,6 +19647,7 @@ lemma_root(vandoor_ontdekken,ontdek_vandoor) .
 lemma_root(vandoor_ontrollen,ontrol_vandoor) .
 lemma_root(vandoor_ontsnappen,ontsnap_vandoor) .
 lemma_root(vandoor_pakken,pak_vandoor) .
+lemma_root(vandoor_palen,paal_vandoor) .
 lemma_root(vandoor_parelen,parel_vandoor) .
 lemma_root(vandoor_parkeren,parkeer_vandoor) .
 lemma_root(vandoor_passen,pass_vandoor) .
@@ -20438,6 +20459,7 @@ lemma_root(vervluchtigen,vervluchtig) .
 lemma_root(vervoegen,vervoeg) .
 lemma_root(vervoeren,vervoer) .
 lemma_root(vervolgen,vervolg) .
+lemma_root(vervolledigen,vervolledig) .
 lemma_root(vervolmaken,vervolmaak) .
 lemma_root(vervormen,vervorm) .
 lemma_root(vervreemden,vervreemd) .
@@ -20639,6 +20661,7 @@ lemma_root(voort_aarzelen,aarzel_voort) .
 lemma_root(voort_aborteren,aborteer_voort) .
 lemma_root(voort_absorberen,absorbeer_voort) .
 lemma_root(voort_abstraheren,abstraheer_voort) .
+lemma_root(voort_accelereren,accelereer_voort) .
 lemma_root(voort_accentueren,accentueer_voort) .
 lemma_root(voort_accepteren,accepteer_voort) .
 lemma_root(voort_acclimatiseren,acclimatiseer_voort) .
@@ -20898,6 +20921,7 @@ lemma_root(voort_brainstormen,brainstorm_voort) .
 lemma_root(voort_braken,braak_voort) .
 lemma_root(voort_brallen,bral_voort) .
 lemma_root(voort_branden,brand_voort) .
+lemma_root(voort_brandschatten,brandschatten_voort) .
 lemma_root(voort_breien,brei_voort) .
 lemma_root(voort_breken,breek_voort) .
 lemma_root(voort_brengen,breng_voort) .
@@ -20907,6 +20931,7 @@ lemma_root(voort_broeden,broed_voort) .
 lemma_root(voort_broeien,broei_voort) .
 lemma_root(voort_brokkelen,brokkel_voort) .
 lemma_root(voort_brommen,brom_voort) .
+lemma_root(voort_brouilleren,brouilleer_voort) .
 lemma_root(voort_brouwen,brouw_voort) .
 lemma_root(voort_bruinen,bruin_voort) .
 lemma_root(voort_bruisen,bruis_voort) .

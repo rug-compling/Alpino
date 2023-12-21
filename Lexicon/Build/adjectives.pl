@@ -657,7 +657,7 @@ a([e('Bosnische'),
    no_e('Bosnisch')],adv,[],[]).
 
 a([e('Brabantse'),
-   no_e('Brabants')],nonadv,[],[]).
+   no_e('Brabants')],nonadv,[],[h('Vlaams')]).
 
 a([e('Braziliaanse'),
    no_e('Braziliaans')],nonadv,[],[]).
@@ -2128,7 +2128,7 @@ a([ge_e(aangetaste),
    ge_no_e(aangetast)],adv,[],[]).
 
 a([ge_e(aangetekende),
-   ge_no_e(aangetekend)],adv,
+   ge_no_e(aangetekend)],both,
   [pp(bij),
    pp(tegen)],[]).
 
@@ -4813,7 +4813,7 @@ a([ge_e(bekommerde),
    ere(bekommerdere),
    ge_no_e(bekommerd),
    st(bekommerdst),
-   ste(bekommerdste)],adv,[],[]).
+   ste(bekommerdste)],adv,[pc(om)],[]).
 
 a([ge_e(bekoorde),
    ge_no_e(bekoord)],adv,[],[]).
@@ -14431,7 +14431,9 @@ a([ge_e(geprepareerde),
    ge_no_e(geprepareerd)],adv,[],[]).
 
 a([ge_e(gepresenteerde),
-   ge_no_e(gepresenteerd)],adv,[],[]).
+   ge_no_e(gepresenteerd)],adv,
+  [so_np,
+   so_pp(aan)],[]).
 
 a([ge_e(gepreste),
    ge_no_e(geprest)],adv,[],[]).
@@ -15738,7 +15740,8 @@ a([ge_e(gestelde),
 
 a([ge_e(gestelde),
    ge_no_e(gesteld)],adv,
-  [],[tewerk]).
+  [],[ap_pred,  % slecht gesteld
+      tewerk]).
 
 a([ge_e(gestelpte),
    ge_no_e(gestelpt)],adv,[],[]).
@@ -19796,8 +19799,9 @@ a([ge_both(ingevlogen)],padv,[],[]).
 
 a([ge_both(ingevroren)],nonadv,[],[]).
 
+%% predm: stuur ingevuld retour
 a([ge_e(ingevulde),
-   ge_no_e(ingevuld)],adv,[],[]).
+   ge_no_e(ingevuld)],both,[],[]).
 
 a([ge_e(ingewerkte),
    ge_no_e(ingewerkt)],adv,[],[]).
@@ -26538,7 +26542,7 @@ a([ge_e(ontdane),
    pp(over)],[]).
 
 a([ge_e(ontdekte),
-   ge_no_e(ontdekt)],adv,[],[her,on]).
+   ge_no_e(ontdekt)],adv,[],[on]).
 
 a([ge_both(ontdoken)],adv,[],[]).
 
@@ -34578,7 +34582,7 @@ a([ge_both(uitgefloten)],padv,[],[]).
 a([ge_e(uitgegane),
    ge_no_e(uitgegaan)],adv,[],[]).
 
-a([ge_both(uitgegeven)],adv,[],[her,on]).
+a([ge_both(uitgegeven)],adv,[],[on]).
 
 a([ge_both(uitgegleden)],adv,[],[]).
 
@@ -37708,7 +37712,7 @@ a([ge_e(verzekerde),
    ge_no_e(verzekerd)],padv,
   [er_pp_sbar(van),
    pp(van),
-   pp(voor)],[her]).
+   pp(voor)],[]).
 
 a([ge_e(verzelfstandigde),
    ge_no_e(verzelfstandigd)],nonadv,[],[]).
@@ -38805,7 +38809,7 @@ a([stem(vrij_staan),
    ende(vrijstaande),
    end(vrijstaand)],padv,[],[]).
 
-a([pred(vrijuit)],adv,[],[]).
+a([pred(vrijuit),pred([vrij,uit])],adv,[],[]).
 
 a([e(vrijwillige),
    er(vrijwilliger),

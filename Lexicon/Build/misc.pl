@@ -2323,6 +2323,20 @@ with_dt([van,zulke],
 		])
        ).
 
+with_dt([één,en,dezelfde],
+	determiner(de,nwh,mod,pro,yparg),
+	dt(conj,[cnj=l(één,number(hoofd(sg_num)),detp,0,1),
+		 crd=l(en,conj(en),conj,1,2),
+		 cnj=l(dezelfde,determiner(de,nwh,mod,pro,yparg),detp,2,3)
+		])).
+
+with_dt([één,of,meerdere],
+	determiner(pl_num,nwh,nmod,pro,yparg),
+	dt(conj,[cnj=l(één,number(hoofd(sg_num)),detp,0,1),
+		 crd=l(of,conj(of),conj,1,2),
+		 cnj=l(meerdere,determiner(pl_num,nwh,nmod,pro,yparg),detp,2,3)
+		])).
+
 %m(welk,          determiner(pron,rwh), welks). parse_only_lex
 m(wiens,         determiner(pron,rwh), wiens).
 m(wier,          determiner(pron,rwh), wier).
@@ -4077,6 +4091,7 @@ m(Stem,conj(Stem),Surf) :-
     conj/2,
     conj/3.
 
+conj('&',              '&').
 conj(à,                à).
 conj(alsmede,          alsmede,   maar).
 conj(alsook,           alsook,    maar).

@@ -1133,6 +1133,7 @@ inf_only(bloemlezen).
 inf_only(boekhouden).
 inf_only(bloemschikken).
 inf_only(boogschieten).
+inf_only(brandschatten).
 inf_only(campagnevoeren,campagne_voeren).
 inf_only(carpoolen).
 inf_only(crowdsurfen).
@@ -1326,6 +1327,9 @@ v(abstraheer,abstraheert,abstraheren,geabstraheerd,abstraheerde,abstraheerden,
 	transitive,
 	pc_pp(van),
 	np_pc_pp(van)])]).
+
+v(accelereer,accelereert,accelereren,geaccelereerd,accelereerde,accelereerden,
+    [h([intransitive])]).
 
 v(accentueer,accentueert,accentueren,geaccentueerd,accentueerde,accentueerden,
     [h([transitive,
@@ -2198,7 +2202,9 @@ v([behoud,behoud],behoudt,behouden,behouden,behield,behielden,
     [h([transitive,
 	part_np_np(voor),
 	part_transitive(voor),
-	part_np_pc_pp(voor,aan)])]).
+	part_np_pc_pp(voor,aan),
+	part_np_pc_pp(voor,voor)
+       ])]).
 
 v(beid,beidt,beiden,gebeid,beidde,beidden,
     [h([intransitive])]).
@@ -4785,6 +4791,12 @@ v(brom,bromt,brommen,gebromd,bromde,bromden,
 
 v(brons,bronst,bronzen,gebronsd,bronsde,bronsden,
     [h([transitive])]).
+
+v(brouilleer,brouilleert,brouilleren,gebrouilleerd,brouilleerde,brouilleerden,
+  [h([intransitive,
+      np_pc_pp(met),
+      pc_pp(met),
+      transitive])]).
 
 v(brouw,brouwt,brouwen,gebrouwen,brouwde,brouwden,
     [h([intransitive,
@@ -7734,6 +7746,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	pp_copula(in,staking),
 	pp_copula(in,honger_staking),
         pp_copula(in,vervulling),
+	pp_copula(op,bon),     % vlees gaat op de bon
         pp_copula(uit,kleed),  % meervoud alleen
         aan_het,
 	ld_dir,                         % het bos uit, achteruit
@@ -11686,6 +11699,7 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
       part_vp(overeen),
       pc_pp(aan),		% hoe kom je aan wormen?
                                 % een eind(e) komen aan
+                                 % hij komt er eindelijk aan ==> er aan LD?
       
       pc_pp(achter),		% hoe kom je achter de waarheid
       pc_pp(door)		% dat kwam door jullie
@@ -11709,6 +11723,7 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
 	  pp_copula,
 	  pp_copula_sbar,
 	  ap_copula('onder de indruk'),
+	  ap_copula('aan de beurt'),
 	  ap_copula('in gebruik'),
 	  ap_copula('in orde'),
 	  ap_copula('ter beschikking'),
@@ -12432,6 +12447,7 @@ v(kronkel,kronkelt,kronkelen,gekronkeld,kronkelde,kronkelden,
 v(kroon,kroont,kronen,gekroond,kroonde,kroonden,
     [h([pred_np,
 	transitive,
+	np_pc_pp(tot),
 	pc_pp(tot)])]).
 
 v(krop,kropt,kroppen,gekropt,kropte,kropten,
@@ -12993,7 +13009,8 @@ v(lees,leest,lezen,gelezen,las,lazen,
 	intransitive,
 	sbar,
 	transitive,
-	mod_pp(doorheen),          % een boek waar je gretig doorheen leest
+	mod_pp(doorheen),     % een boek waar je gretig doorheen leest
+	mod_pp(in),           % dat kun je er allemaal in lezen
 	part_np_er_pc_pp(af,aan),  % dat lees je er niet aan af
 	part_pp_sbar(af,aan),      % je leest er niet aan af dat ..
 	part_pp_sbar(af,van),      
@@ -13018,6 +13035,8 @@ v(lees,leest,lezen,gelezen,las,lazen,
 	part_intransitive(terug),
 	part_transitive(terug),
 	part_transitive(uit),
+	fixed([{[acc,pc(over),mod_pp(in)]}],norm_passive),
+	fixed([{[pc(over),mod_pp(in)]}],imp_passive),
 	np_mod_pp(van),
 	pc_pp(over),
         np_pc_pp(over)])]).
@@ -16481,8 +16500,9 @@ v(paai,paait,paaien,gepaaid,paaide,paaiden,
 	transitive])]).
 
 v(paal,paalt,palen,gepaald,paalde,paalden,
-    [h([intransitive,
-	transitive])]).
+  [h([intransitive,
+      ld_pp,
+      transitive])]).
 
 v(paar,paart,paren,gepaard,paarde,paarden,
     [h([intransitive,
@@ -21610,6 +21630,7 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
 	fixed([[op,de,nominatie]],no_passive),
 	fixed([[op,de,nominatie],vp],no_passive),
 	fixed([[onder,contract]],no_passive),
+	fixed([[onder,water]],no_passive),
 	fixed([pp_pred(onder,druk),vp],no_passive),
 	fixed([{[pc(van),pp_pred(onder,bevel)]}],no_passive),
 	fixed([[op,de,been]],no_passive),
@@ -26245,6 +26266,9 @@ v(vervolg,vervolgt,vervolgen,vervolgd,vervolgde,vervolgden,
         intransitive  % justitie vervolgt niet
        ])]).
 
+v(vervolledig,vervolledigt,vervolledigen,vervolledigd,vervolledigde,vervolledigden,
+    [h([transitive])]).
+
 v(vervolmaak,vervolmaakt,vervolmaken,vervolmaakt,vervolmaakte,vervolmaakten,
     [h([sbar_subj_so_np,
 	transitive])]).
@@ -29014,6 +29038,7 @@ v(zoef,zoeft,zoeven,gezoefd,zoefde,zoefden,
 v(zoek,zoekt,zoeken,gezocht,zocht,zochten,
     [h([intransitive,
 	transitive,
+	vp,   % hij zocht mensen te overtuigen
 	np_ld_pp,
 	part_als_pred_np(aan),
 	part_sbar(op),
@@ -29025,6 +29050,7 @@ v(zoek,zoekt,zoeken,gezocht,zocht,zochten,
 	part_transitive(op),
 	part_transitive(uit),
 	part_np_pc_pp(uit,op),
+	np_mod_pp(voor),  % uitlaatklep,oplossing,alternatief zoeken voor ...
 	pc_pp(naar),
         pc_pp(op),  % zoekterm
         sbar, % zoeken of er nog iets is

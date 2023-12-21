@@ -2518,6 +2518,14 @@ grammar_rule(non_wh_topicalization(vp),ROOT,[Topic,OPTCOMMA,Ques]) :-
     optcomma(OPTCOMMA),
     non_wh_topic_structure(Ques,Topic,ROOT).
 
+%%EX%% van 1980 tot 2003 heeft hij daar gestudeerd
+grammar_rule(non_wh_topicalization(pp_pp),ROOT,[PP1,COMMA1,PP2,COMMA2,Ques]) :-
+    optcomma(COMMA1),
+    optcomma(COMMA2),
+    DP => modifier,
+    van_naar_struct(PP1,PP2,DP),
+    non_wh_topic_structure(Ques,DP,ROOT).
+
 %% maybe: only allow rel/vp modifier extraction from topic?
 %%EX%% Om er vanaf te zijn gaf ik haar gelijk
 grammar_rule(non_wh_topicalization(modifier),ROOT,[Topic,OPTCOMMA,Ques]) :-
@@ -6994,6 +7002,8 @@ te_v_structure(VP,Te,V) :-
 
 %%EX%% De door ons te nemen maatregelen
 %%EX%% De te doorstane proef
+%%EX%% De bij de offerte te voegen benodigheden
+%%EX%% De van de Duitsers te vorderen fietsen
 grammar_rule(adj_te_v, AP, [ V ] ) :-
     AP => a,
     AP:adv => nadv,
@@ -7001,7 +7011,6 @@ grammar_rule(adj_te_v, AP, [ V ] ) :-
     AP:deverbal => yes,
     AP:slash => [],
     AP:exs => [],
-    AP:sc => [],
     AP:agr <=> V:adj_agr,  %% 'de te doorstane/*doorstaan proef
     AP:avform => avform_ti,
     AP:tmploc => ntmploc,
@@ -7015,7 +7024,8 @@ grammar_rule(adj_te_v, AP, [ V ] ) :-
     V0:subj:subn => sub_noun,
     hd_structure(V0,AP),
     unify_except(V0,V,sc),
-    V:sc <=> [NP],
+    AP:sc <=> Tail,        %% now inherits remaining subcat elements; 
+    V:sc <=> [NP|Tail],	%% except for an NP; perhaps this should be select rather than the first one???
     NP => np,
     NP:dt => [],
     NP:allows_drop => yes,
@@ -8315,8 +8325,12 @@ grammar_rule(adv_adv_dp,MAX,[XP,COMMA,ADV]) :-
 %% van - naar -
 %%EX%% van Assen naar Groningen
 %%EX%% van 1989 tot 1993
-grammar_rule(pp_pp_dp,MAX,[PP1,PP2]) :-
+grammar_rule(pp_pp_dp,MAX,[PP1,COMMA,PP2]) :-
+    optcomma(COMMA),
     MAX => start,
+    van_naar_struct(PP1,PP2,MAX).
+
+van_naar_struct(PP1,PP2,MAX) :-
     ind_max_pp(PP1),
     PP1:prep ==> van,
     ind_max_pp(PP2),

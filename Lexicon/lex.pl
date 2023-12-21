@@ -818,6 +818,7 @@ number_both(['Clintons']).
 number_both(['De','Borg']).
 number_both(['De','Heideroosjes']).
 number_both(['Deathray','Davies']).
+number_both(['De','Nederlanden']).
 number_both(['Domobranci']).
 number_both(['Drumbassadors']).
 number_both(['Dukes'|_]).
@@ -1993,6 +1994,7 @@ spelling_variant21(sinds,dien,    sindsdien).
 spelling_variant21(te,kort,       tekort).
 spelling_variant21(te,weeg,       teweeg).
 spelling_variant21(tegen,op,      tegenop).
+spelling_variant21(tegen,over,    tegenover).
 spelling_variant21(terug,reis,    terugreis).
 spelling_variant21(terug,weg,     terugweg).
 spelling_variant21(tot,dat,       totdat).
