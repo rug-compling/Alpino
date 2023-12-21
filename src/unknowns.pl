@@ -2179,6 +2179,23 @@ decap_foreign_word(X) :- decap_first(X,Xx), foreign_word(Xx).
 decap_foreign_word(X,X) :- foreign_word(X).
 decap_foreign_word(X,Xx) :- decap_first(X,Xx), foreign_word(Xx).
 
+decap_first_few(Capped,Small):-
+    atom(Capped),
+    atom_codes(Capped,Codes0),
+    decap_first_few_cs(Codes0,Codes),
+    atom_codes(Small,Codes).
+
+decap_first_few_cs([Upper|Codes0],[Lower|Codes]):-
+    isupper(Upper),
+    tolower(Upper,Lower),    
+    decap_first_few_cs0(Codes0,Codes).
+
+decap_first_few_cs0([Upper|Codes0],[Lower|Codes]):-
+    isupper(Upper),
+    !,
+    tolower(Upper,Lower),    
+    decap_first_few_cs0(Codes0,Codes).
+decap_first_few_cs0(C,C).
 
 decap_first(Capped,Small) :-
     atom(Capped),
