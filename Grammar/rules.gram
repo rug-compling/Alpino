@@ -8330,6 +8330,7 @@ grammar_rule(pp_pp_dp,MAX,[PP1,COMMA,PP2]) :-
     MAX => start,
     van_naar_struct(PP1,PP2,MAX).
 
+%% TODO: add tot en met
 van_naar_struct(PP1,PP2,MAX) :-
     ind_max_pp(PP1),
     PP1:prep ==> van,
@@ -8338,6 +8339,7 @@ van_naar_struct(PP1,PP2,MAX) :-
     when(nonvar(Naar),
 	 (   Naar == naar
 	 ;   Naar == tot
+	 ;   Naar == [tot,en,met]
 	 )
 	),
     dp_dp_structure(PP1,PP2,MAX).
