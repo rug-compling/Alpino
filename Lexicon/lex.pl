@@ -2681,7 +2681,7 @@ spelling_variant(zouen,zouden).
 
 spelling_variant(dorst,durfde).
 spelling_variant(dorsten,durfden).
-
+spelling_variant(vollop,volop).
 spelling_variant(vijwel,vrijwel).
 spelling_variant(vrijwiliger,vrijwilliger).
 

@@ -499,6 +499,8 @@ punct(',',komma).
 
 punct('·',ligg_streep).    % whatever
 punct('*',ligg_streep).    % whatever
+punct('**',ligg_streep).    % whatever
+punct('***',ligg_streep).    % whatever
 
 punct(-,ligg_streep).
 punct('',ligg_streep).
@@ -5218,6 +5220,7 @@ m('te veel',        modal_adverb(comp), [te,meer]).  % temeer daar/omdat
 
 
 m(desnoods,         modal_adverb(prep),desnoods).
+m(centraal,         modal_adverb(prep),centraal). 
 m(dicht,            modal_adverb(prep),dicht).    % dicht tegen zich aan ; dicht bij de macht?
 m(diep,             modal_adverb(prep),diep).     % diep in blessuretijd
 m(dwars,            modal_adverb(prep),dwars).    % dwars door

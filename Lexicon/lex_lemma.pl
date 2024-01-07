@@ -13691,6 +13691,7 @@ lemma_root(scholen,school) .
 lemma_root(schommelen,schommel) .
 lemma_root(schonen,schoon) .
 lemma_root(schooien,schooi) .
+lemma_root(school_lopen,loop_school) .
 lemma_root(schoolverlaten,schoolverlaten) .
 lemma_root(school_zwemmen,school_zwemmen) .
 lemma_root(schoon_boenen,boen_schoon) .

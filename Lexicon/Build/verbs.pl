@@ -670,6 +670,7 @@ m(v_root(heb,hebben),
         fixed([{[ap_pred(vol),pc(aan)]},acc(hand)],no_passive),
         fixed([{[ap_pred(vol),er_pp(aan,X)]},acc(hand),extra_vp(X)],no_passive),
         fixed([ap_pred('in het oog'),acc],no_passive),
+	fixed([[in,het,verschiet],acc],no_passive),
 
         fixed([acc(indruk),yt(sbar)],no_passive), % dat is voorbij, heb ik de indruk
 	fixed([{[acc(informatie),pc(over)]}],no_passive),
@@ -3116,11 +3117,11 @@ v(besta,bestaat,inflected(bestaan,bestane),bestaan,bestond,bestonden,
 	fixed([subj(woord),pc(voor)],no_passive),
 	fixed([subj(zekerheid),pc(over)],no_passive),
 	fixed([subj(zicht),pc(op)],no_passive),
-	er_pp_vp(in),
+	er_pp_vp_no_control(in),
 	er_pp_sbar(in),
 	pc_pp(uit),
 	er_pp_sbar(uit),
-	er_pp_vp(uit),
+	er_pp_vp_no_control(uit),
 	pc_pp(van)])]).
 
 v(besteed,besteedt,besteden,besteed,besteedde,besteedden,
@@ -3629,8 +3630,9 @@ v(bezeil,bezeilt,bezeilen,bezeild,bezeilde,bezeilden,
 	fixed([{[acc(land),pc(met)]}],norm_passive)])]).
 
 v(bezeer,bezeert,bezeren,bezeerd,bezeerde,bezeerden,
-    [h([%refl,
-	transitive])]).
+  [h([refl,
+      refl_pc_pp(aan),
+      transitive])]).
 
 v(bezegel,bezegelt,bezegelen,bezegeld,bezegelde,bezegelden,
     [h([transitive,
@@ -5144,6 +5146,7 @@ v(concentreer,concentreert,concentreren,geconcentreerd,concentreerde,concentreer
 	np_ld_pp,
 	np_pc_pp(op),
 	refl_ld_pp,
+	refl_ld_adv,
 	refl_pc_pp(op)])]).
 
 v(concipieer,concipieert,concipiëren,geconcipieerd,concipieerde,concipieerden,
@@ -13022,6 +13025,7 @@ v(lees,leest,lezen,gelezen,las,lazen,
 	part_so_pp_np(voor,aan),
 	part_so_np(voor),
 	part_np_np(voor),
+	part_so_pp(voor,aan),
 	part_amb_so_np_pass(voor),  % ik word/krijg voorgelezen
 	part_intransitive(kaart),
 	part_sbar(na),
@@ -13860,7 +13864,9 @@ v(loop,loopt,lopen,gelopen,liep,liepen,
 	part_transitive(na),         % ik heb/ben haar nagelopen
 	part_transitive(over),       % ik ben/heb de brug overgelopen
 	part_intransitive(rond),     % ik ben/heb rondgelopen
-	part_ld_pp(rond),            % ik ben/heb rondgelopen in het bos
+	part_ld_pp(rond),	% ik ben/heb rondgelopen in het bos
+	part_intransitive(school),
+	part_ld_pp(school),
 	part_refl(stuk),             % hij loopt zich stuk
         part_intransitive(stuk),     % de aanvallen liepen stuk
 	part_refl_pc_pp(stuk,op),    % hij loopt zich stuk op de verdediging
@@ -24026,6 +24032,7 @@ v(veeg,veegt,vegen,geveegd,veegde,veegden,
 	ld_pp,
 	ld_adv,
 	np_ld_pp,
+	part_np_ld_pp(weg),
 	part_fixed(uit,[[de,mantel],dat],imp_passive),
 	part_transitive(aan),
 	part_transitive(af),

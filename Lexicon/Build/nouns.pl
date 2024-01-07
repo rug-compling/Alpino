@@ -12694,7 +12694,7 @@ n([sg([gehakkelde,aurelia]),pl([gehakkelde,'aurelia\'s'])],de,[]).
 n([mass(gehakt)],both,[]).
 
 n([pl(gehalten),pl(gehaltes),sg(gehalte)],het,
-  [pred_pp(van)],
+  [],
   [alcohol,
    cholesterol,cholestorol,
    suiker,
@@ -12703,6 +12703,11 @@ n([pl(gehalten),pl(gehaltes),sg(gehalte)],het,
    zout,
    zuur,
    i(zuur,zuren)]).
+
+n([pl(gehalten),pl(gehaltes),sg(gehalte)],het,
+  [measure,
+   pred_pp(van)],
+  []).
 
 n([mass(geharrewar)],het,[]).
 
@@ -23834,6 +23839,9 @@ n([pl(nieuwkomers),sg(nieuwkomer)],de,[]).
 
 n([mass(nieuwlichterij)],de,[]).
 
+n([mass(nieuws)],het,[pred_pp(in)],
+  []).
+
 n([mass(nieuws)],het,[subject_sbar,sbar],
   [nep,
    voorpagina,
@@ -25168,7 +25176,7 @@ n([sg(opdeling),pl(opdelingen)],de,[]).
 n([sg(opdonder),pl(opdonders)],de,[]).
 
 n([pl(opdrachten),sg(opdracht)],de,
-  [sbar,vp]).
+  [sbar,vp,subject_sbar,subject_vp]).
 
 n([pl(opdrachten),sg(opdracht)],de,[],
   [s(overheid),
@@ -41377,6 +41385,9 @@ n([pl(winnaars),sg(winnaar)],de,[app_measure]).
 n([pl(winnaars),sg(winnaar)],de,[],
   [beker,
    eind,
+   [gouden,medaille],
+   [zilveren,medaille],
+   [bronzen,medaille],
    s(groep),
    medaille,
    'Tour']).

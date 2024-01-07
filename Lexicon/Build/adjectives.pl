@@ -4813,7 +4813,7 @@ a([ge_e(bekommerde),
    ere(bekommerdere),
    ge_no_e(bekommerd),
    st(bekommerdst),
-   ste(bekommerdste)],adv,[pc(om)],[]).
+   ste(bekommerdste)],adv,[pp(om)],[]).
 
 a([ge_e(bekoorde),
    ge_no_e(bekoord)],adv,[],[]).
@@ -12770,7 +12770,7 @@ a([ge_e(gehuurde),
    ge_no_e(gehuurd)],adv,[],[]).
 
 a([ge_e(gehuwde),
-   ge_no_e(gehuwd)],adv,
+   ge_no_e(gehuwd)],both,
   [pp(met)],[on]).
 
 a([ge_e(gehypnotiseerde),
@@ -24905,6 +24905,7 @@ a([e(onbekende),
    st(onbekendst),
    ste(onbekendste)],nonadv,
   [subject_sbar_no_het,
+   pp(met),
    so_np],[]).
 
 a([e(onbekommerde),

@@ -4352,8 +4352,12 @@ formula(Word) :-
 
 telephone -->
     tel_word,
+    opt_dash,
     tel_word,
     telephone_rest.
+
+opt_dash --> [].
+opt_dash --> n_word('-').
 
 telephone_rest --> [].
 telephone_rest -->
@@ -4362,9 +4366,9 @@ telephone_rest -->
 
 tel_word -->
     n_word(Atom),
-    {  digits(Atom) }.
+    {  tel_digits(Atom) }.
 
-digits(Atom) :-
+tel_digits(Atom) :-
     atom(Atom),
     atom_codes(Atom,Codes),
     isdigits(Codes).
