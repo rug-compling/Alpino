@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="5" end="6" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="0" cat="smain" end="8" id="3" rel="--">
+      <node begin="0" cat="np" end="5" id="4" rel="su">
+        <node begin="0" end="1" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="opleiding" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="opleiding" word="opleiding"/>
+        <node begin="3" cat="np" end="5" id="7" rel="mod">
+          <node aform="base" begin="3" buiging="met-e" end="4" graad="basis" id="8" infl="e" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" vform="adj" word="nieuwe"/>
+          <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="stijl" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stijl" word="stijl"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="10" infl="sg" lemma="bevallen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="beval" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="beviel" wvorm="pv"/>
+      <node aform="base" begin="7" buiging="zonder" end="8" graad="basis" id="11" infl="no_e" lemma="uitstekend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uitstekend" vform="adj" word="uitstekend"/>
+    </node>
+  </node>
+  <sentence>de opleiding &quot; nieuwe stijl &quot; beviel uitstekend</sentence>
+</alpino_ds>
