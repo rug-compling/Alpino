@@ -72,12 +72,3 @@ tus:
 %.tu.log.gz: ../../../Suites/Machine/%.sents.gz
 	$(MAKE) frames suite=$* extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/extra end_hook=best_score\(frames\)"
 
-AD94=$(shell cat ad94.txt)
-
-ad94s:
-	$(MAKE) -j $(J) $(AD94)
-
-AD04=$(shell cat ad04.txt)
-
-ad04s:
-	$(MAKE) -j $(J) $(AD04)
