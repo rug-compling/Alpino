@@ -100,18 +100,6 @@ TTS=tt_part00001.log.gz tt_part00002.log.gz tt_part00003.log.gz tt_part00004.log
 tts:
 	$(MAKE) -j $(J) $(TTS)
 
-PPI=ppi_part00001.log.gz ppi_part00002.log.gz ppi_part00003.log.gz ppi_part00004.log.gz ppi_part00005.log.gz ppi_part00006.log.gz ppi_part00007.log.gz ppi_part00008.log.gz ppi_part00009.log.gz ppi_part00010.log.gz ppi_part00011.log.gz ppi_part00012.log.gz ppi_part00013.log.gz ppi_part00014.log.gz ppi_part00015.log.gz ppi_part00016.log.gz ppi_part00017.log.gz ppi_part00018.log.gz ppi_part00019.log.gz ppi_part00020.log.gz ppi_part00021.log.gz ppi_part00022.log.gz ppi_part00023.log.gz ppi_part00024.log.gz ppi_part00025.log.gz ppi_part00026.log.gz ppi_part00027.log.gz ppi_part00028.log.gz ppi_part00029.log.gz ppi_part00030.log.gz ppi_part00031.log.gz ppi_part00032.log.gz ppi_part00033.log.gz ppi_part00034.log.gz ppi_part00035.log.gz ppi_part00036.log.gz ppi_part00037.log.gz ppi_part00038.log.gz ppi_part00039.log.gz ppi_part00040.log.gz ppi_part00041.log.gz ppi_part00042.log.gz ppi_part00043.log.gz ppi_part00044.log.gz ppi_part00045.log.gz ppi_part00046.log.gz ppi_part00047.log.gz ppi_part00048.log.gz ppi_part00049.log.gz ppi_part00050.log.gz ppi_part00051.log.gz ppi_part00052.log.gz ppi_part00053.log.gz ppi_part00054.log.gz ppi_part00055.log.gz ppi_part00056.log.gz ppi_part00057.log.gz ppi_part00058.log.gz ppi_part00059.log.gz ppi_part00060.log.gz ppi_part00061.log.gz ppi_part00062.log.gz ppi_part00063.log.gz ppi_part00064.log.gz ppi_part00065.log.gz ppi_part00066.log.gz ppi_part00067.log.gz ppi_part00068.log.gz ppi_part00069.log.gz ppi_part00070.log.gz ppi_part00071.log.gz ppi_part00072.log.gz ppi_part00073.log.gz ppi_part00074.log.gz
-
-ppis:
-	$(MAKE) -j $(J) $(PPI)
-
-PPH=$(subst sents,log,$(notdir $(wildcard ../Suites/Machine/pph_part*.sents.gz )))
-
-pphs:
-	$(MAKE) -j $(J) $(PPH)
-
-
-
 rules:
 	cat *.ps| grep finish |awk -F\| '{ printf "%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n",$$2,$$3,$$4,$$5,$$6,$$7,$$8,$$9,$$10,$$11,$$12,$$13,$$14,$$15,$$16,$$17,$$18,$$19 }' | grep -v 'lex(' | grep -v finish | grep . | sort | uniq -c | sort -nr | awk '{ printf "frequent_rule(%s,%s).\n",$$2,$$1 }' > rules
 
