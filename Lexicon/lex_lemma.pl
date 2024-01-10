@@ -516,6 +516,7 @@ lemma_root(aan_sukkelen,sukkel_aan) .
 lemma_root(aan_takelen,takel_aan) .
 lemma_root(aan_tappen,tap_aan) .
 lemma_root(aan_tasten,tast_aan) .
+lemma_root(aan_taxiën,taxi_aan) .
 lemma_root(aan_tekenen,teken_aan) .
 lemma_root(aan_telefoneren,telefoneer_aan) .
 lemma_root(aan_tijgen,tijg_aan) .
@@ -1573,6 +1574,7 @@ lemma_root(af_takelen,takel_af) .
 lemma_root(af_takken,tak_af) .
 lemma_root(af_tappen,tap_af) .
 lemma_root(af_tasten,tast_af) .
+lemma_root(af_taxiën,taxi_af) .
 lemma_root(af_tekenen,teken_af) .
 lemma_root(af_telefoneren,telefoneer_af) .
 lemma_root(af_tellen,tel_af) .
@@ -6509,6 +6511,7 @@ lemma_root(heen_sukkelen,sukkel_heen) .
 lemma_root(heen_takelen,takel_heen) .
 lemma_root(heen_tappen,tap_heen) .
 lemma_root(heen_tasten,tast_heen) .
+lemma_root(heen_taxiën,taxi_heen) .
 lemma_root(heen_telefoneren,telefoneer_heen) .
 lemma_root(heen_tijgen,tijg_heen) .
 lemma_root(heen_tikken,tik_heen) .
@@ -7384,6 +7387,7 @@ lemma_root(in_sukkelen,sukkel_in) .
 lemma_root(in_takelen,takel_in) .
 lemma_root(in_tappen,tap_in) .
 lemma_root(in_tasten,tast_in) .
+lemma_root(in_taxiën,taxi_in) .
 lemma_root(integreren,integreer) .
 lemma_root(in_tekenen,teken_in) .
 lemma_root(in_telefoneren,telefoneer_in) .
@@ -8360,6 +8364,7 @@ lemma_root(langs_sukkelen,sukkel_langs) .
 lemma_root(langs_takelen,takel_langs) .
 lemma_root(langs_tappen,tap_langs) .
 lemma_root(langs_tasten,tast_langs) .
+lemma_root(langs_taxiën,taxi_langs) .
 lemma_root(langs_telefoneren,telefoneer_langs) .
 lemma_root(langs_tijgen,tijg_langs) .
 lemma_root(langs_tikken,tik_langs) .
@@ -15043,6 +15048,7 @@ lemma_root(toe_sukkelen,sukkel_toe) .
 lemma_root(toe_takelen,takel_toe) .
 lemma_root(toe_tappen,tap_toe) .
 lemma_root(toe_tasten,tast_toe) .
+lemma_root(toe_taxiën,taxi_toe) .
 lemma_root(toe_telefoneren,telefoneer_toe) .
 lemma_root(toeteren,toeter) .
 lemma_root(toe_tijgen,tijg_toe) .
@@ -15711,6 +15717,7 @@ lemma_root(tussen_sukkelen,sukkel_tussen) .
 lemma_root(tussen_takelen,takel_tussen) .
 lemma_root(tussen_tappen,tap_tussen) .
 lemma_root(tussen_tasten,tast_tussen) .
+lemma_root(tussen_taxiën,taxi_tussen) .
 lemma_root(tussen_telefoneren,telefoneer_tussen) .
 lemma_root(tussen_tijgen,tijg_tussen) .
 lemma_root(tussen_tikken,tik_tussen) .
@@ -18653,6 +18660,7 @@ lemma_root(vanaf_sukkelen,sukkel_vanaf) .
 lemma_root(vanaf_takelen,takel_vanaf) .
 lemma_root(vanaf_tappen,tap_vanaf) .
 lemma_root(vanaf_tasten,tast_vanaf) .
+lemma_root(vanaf_taxiën,taxi_vanaf) .
 lemma_root(vanaf_telefoneren,telefoneer_vanaf) .
 lemma_root(vanaf_tijgen,tijg_vanaf) .
 lemma_root(vanaf_tikken,tik_vanaf) .
@@ -19247,6 +19255,7 @@ lemma_root(vandaan_sukkelen,sukkel_vandaan) .
 lemma_root(vandaan_takelen,takel_vandaan) .
 lemma_root(vandaan_tappen,tap_vandaan) .
 lemma_root(vandaan_tasten,tast_vandaan) .
+lemma_root(vandaan_taxiën,taxi_vandaan) .
 lemma_root(vandaan_telefoneren,telefoneer_vandaan) .
 lemma_root(vandaan_tijgen,tijg_vandaan) .
 lemma_root(vandaan_tikken,tik_vandaan) .
@@ -19836,6 +19845,7 @@ lemma_root(vandoor_sukkelen,sukkel_vandoor) .
 lemma_root(vandoor_takelen,takel_vandoor) .
 lemma_root(vandoor_tappen,tap_vandoor) .
 lemma_root(vandoor_tasten,tast_vandoor) .
+lemma_root(vandoor_taxiën,taxi_vandoor) .
 lemma_root(vandoor_telefoneren,telefoneer_vandoor) .
 lemma_root(vandoor_tijgen,tijg_vandoor) .
 lemma_root(vandoor_tikken,tik_vandoor) .

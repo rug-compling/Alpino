@@ -22927,7 +22927,10 @@ v(taxeer,taxeert,taxeren,getaxeerd,taxeerde,taxeerden,
 	np_pc_pp(op)])]).
 
 v(taxi,taxiet,taxiën,getaxied,taxiede,taxieden,
-    [h([intransitive])]).  
+  [h([intransitive,
+      ld_pp,
+      np_ld_pp
+     ])]).  
 
 v(teel,teelt,telen,geteeld,teelde,teelden,
     [h([transitive])]).

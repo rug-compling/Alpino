@@ -22602,7 +22602,7 @@ n([mass(minachting)],de,[]).
 
 n([sg(minaret),pl(minaretten)],de,[]).
 
-n([pl(minderheden),sg(minderheid)],de,[]).
+n([pl(minderheden),sg(minderheid)],de,[pred_pp(in)]).
 
 n([pl(minderingen),sg(mindering)],de,[]).
 
