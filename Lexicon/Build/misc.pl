@@ -2787,7 +2787,7 @@ preposition(per).  % per een bepaalde periode; per die datum; etc.
 preposition(staande).
 preposition(tegenover).
 preposition(tegen,[aan,in,op]).
-preposotion(tegenaan). % VL
+preposition(tegenaan). % VL
 preposition(tot,[toe,[aan,toe]]).
 preposition(tussen,[door,in,vandaan]).
 preposition(uit,[vandaan]).

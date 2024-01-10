@@ -216,6 +216,12 @@ dp_tag_dp_structure(L,TAG,R,M) :-
     TAG:np => no,
     nucl_tag_structure(M0,TAG,M).
 
+dp_dip_dp_structure(L,TAG,R,M) :-
+    unify_except_dt(M0,M),
+    dp_dp_structure(L,R,M0),
+    TAG => dip,
+    nucl_tag_structure(M0,TAG,M).
+
 dlink_nucl_structure(Comp,VP,Sbar) :-
     Comp:ccat0 <=> Cat,
     non_projected_hd_structure(Comp,[VP],[],[],[],[],[],Sbar,Cat),
@@ -822,7 +828,8 @@ dubb(DUBB) :-
 optdubb(OPTDUBB) :-
     OPTDUBB => optpunct,
     OPTDUBB:cat <=> DUBB,
-    dubb(DUBB).
+    DUBB => punct,
+    DUBB:puncttype => (dubb_punt;hellip).
 
 optend_punct(OPTPunct) :-
     optend_punct(OPTPunct,_).
@@ -2227,7 +2234,7 @@ grammar_rule(vp_v_komma_predm, VP, [ V, COMMA, Mod ] ) :-
     VP:rightx => yes,
     max_ap_pp_predm(Mod),
     VP:mf <=> V:mf,
-    optcomma(COMMA),
+    optcomma_dash(COMMA),
     hd_predm_structure(V,Mod,VP).
 
 %% main clause syntax 
@@ -5544,6 +5551,15 @@ grammar_rule(np_np_adv,NP,[N,ADV]):-
     N:nform => (temp;norm;meas_mod;temp_meas_mod),
     n_post_mod_structure(N,ADV,NP).
 
+%%EX%% de opleiding " nieuwe stijl " beviel uitstekend
+grammar_rule(np_np_q_adv,NP,[N,QL,ADV,QR]):-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    ql(QL),
+    qr(QR),
+    ADV => post_np_adv,
+    N:nform => (temp;norm;meas_mod;temp_meas_mod),
+    n_post_mod_structure(N,ADV,NP).
+
 %%EX%% de scheepsbouw , bijvoorbeeld , kan geen verdere offers brengen
 grammar_rule(np_np_comma_adv,NP,[N,COMMA,ADV,OPTCOMMA]):-
     ADV => post_np_adv,
@@ -5808,11 +5824,12 @@ np_np_modadj_structure(N0,MOD,N) :-
     N:subn => (sub_noun;sub_name),  %% too strict???
     N:nform => norm.
 
+%%EX%% Het wegrijden , hier op animatie , verliep zonder problemen .
 np_np_modadv_structure(N0,MOD,N) :-
     MOD => adv,
     MOD:tmploc => ~hoe_hoe & ~wk_er,
     max(MOD),
-    MOD:subadv => ~subadv_adv,
+%%    MOD:subadv => ~subadv_adv,    removed Jan 9, 2024
     np_np_mod_structure(N0,MOD,N),
     N:nform => norm.
 
@@ -6471,6 +6488,8 @@ pp_p_arg_structure(P,XP,PP) :-
     hd_comp_structure(P,XP,PP0).
 
 %%EX%% buiten de kooi
+%%EX%% van ... Jan Marijnissen
+%%EX%% met : de PVV
 grammar_rule(pp_p_arg(np), PP, [ P, OPTPUNCT, XP ]) :-
     pp_p_arg_np_structure(PP,P,OPTPUNCT,XP).
 
@@ -8439,6 +8458,18 @@ grammar_rule(adv_tag_root_dp,MAX,[ADV,OPTCOMMA,TAG,COMMA,XP]) :-
     XP:needs_dip => no,
     dp_tag_dp_structure(ADV,TAG,XP,MAX).
 
+%%EX%% Geweldig , zei Jan , hij komt
+grammar_rule(adv_dip_root_dp,MAX,[ADV,OPTCOMMA,TAG,COMMA,XP]) :-
+    comma(COMMA),
+    optcomma(OPTCOMMA),
+    MAX => max,
+    MAX:max_type => t_dp,
+    max_advp(ADV),
+    ADV:redrel => no,
+    max_root(XP),
+    XP:needs_dip => no,
+    dp_dip_dp_structure(ADV,TAG,XP,MAX).
+
 max_wh_xp_structure(WH,XP,MAX) :-
     MAX => max,
     MAX:max_type => t_dp,
@@ -8738,6 +8769,16 @@ grammar_rule(bracketed_mod_start,Start,[OPEN,Mod,CLOSE,Root]) :-
 %%EX%% Ik vertrek !
 grammar_rule(top_start, TOP, [ START, PUNCT_D ]):-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
+    optend_punct(PUNCT_D,PUNCT),
+    TOP => top_cat,
+    START => start,
+    START:puncttype <=> PUNCT,
+    hd_structure(START,TOP).
+
+%%EX%% - Jaarboek 1987 - 1988
+grammar_rule(top_start_ligg, TOP, [ LIGG, START, PUNCT_D ]):-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    dash(LIGG),
     optend_punct(PUNCT_D,PUNCT),
     TOP => top_cat,
     START => start,

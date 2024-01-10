@@ -14759,9 +14759,10 @@ n([pl(havezaten),sg(havezate)],de,[]).
 
 n([pl(haviken),sg(havik)],de,[]).
 
-n([mass(havo)],both,[]).
+%% pl: ze zit in 3 havo
+n([mass(havo),pl(havo)],both,[]).
 
-n([mass('havo/vwo')],both,[]).
+n([mass('havo/vwo'),pl('havo/vwo')],both,[]).
 
 n([pl(hazelaars),pl(hazelaren),sg(hazelaar)],de,[]).
 
@@ -21903,11 +21904,12 @@ n([sg(mattie),pl(matties)],both,[]).
 
 n([pl(mausolea),pl(mausoleums),sg(mausoleum)],het,[]).
 
-n([mass(mavo)],both,[]).
+%% pl: ze zit in 2 mavo
+n([mass(mavo),pl(mavo)],both,[]).
 
-n([mass('mavo/havo')],both,[]).
+n([mass('mavo/havo'),pl('mavo/havo')],both,[]).
 
-n([mass('mavo/havo/vwo')],both,[]).
+n([mass('mavo/havo/vwo'),pl('mavo/havo/vwo')],both,[]).
 
 n([mass(maxi)],both,[]).
 
@@ -31074,6 +31076,8 @@ n([mass(schaft)],de,[]).
 
 n([pl(schakels),sg(schakel)],de,[],[dim(schakeltje)]).
 
+n([mass(schaken)],het,[]).  % het schaakspel; ik leer hem schaken =/= ik leer hem_i schaken(su=i)  ?
+
 n([pl(schakelaars),sg(schakelaar)],de,[],
   [licht,
    dim(schakelaartje)]).
@@ -40161,9 +40165,10 @@ n([mass(vuurwerk)],het,[],
 
 n([pl(vuurzeeën),sg(vuurzee)],de,[]).
 
-n([mass(vwo)],het,[]).
+%% pl: ze zit in 3 vwo
+n([mass(vwo),pl(vwo)],het,[]).
 
-n([mass('vwo/havo')],both,[]).
+n([mass('vwo/havo'),pl('vwo/havo')],both,[]).
 
 n([sg(vzw)],de,[]). % VL
 

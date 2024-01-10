@@ -29098,6 +29098,8 @@ a([both(paranoïde)],padv,[],[]).
 a([e(paranormale),
    no_e(paranormaal)],adv,[],[]).
 
+a([both(parboiled)],nonadv,[],[]).    % iets met rijst
+
 a([stof(parelmoeren)],nonadv,[],[]).
 
 a([e(parlementaire),
