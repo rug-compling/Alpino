@@ -173,7 +173,7 @@ nl_lassysmall-ud-train.named_sents: $(UNIVERSAL)/nl_lassysmall-ud-train.conllu
 
 SHELL := /bin/bash
 j_suite.named_sents:../Grammar/rules.gram
-	grep '^%%EX%%' ../Grammar/rules.gram | sed -e 's/^%%EX%% //' > j_suite.named_sents0
+	grep '^%%EX%%' ../Grammar/rules.gram | sed -e 's/^%%EX%%  *//' > j_suite.named_sents0
 	paste -d '|' <(tr ' :' '_@' <j_suite.named_sents0 |\
         sed -e "s/'/__Q1__/g" -e 's/"/__Q2__/g'   \
             -e "s/[(]/__Q3__/g" -e 's/[)]/__Q4__/g' \
