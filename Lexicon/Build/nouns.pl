@@ -750,6 +750,9 @@ n([pl('Javanen'),sg('Javaan')],de,[]).
 
 n([mass('Javaans')],het,[]).
 
+n([sg(['Jehovah\'s','Getuige']),
+   pl(['Jehovah\'s','Getuigen'])],de,[]).
+
 n([sg('Joegoslaaf'),pl('Joegoslaven')],de,[]).
 
 n([sg('Jordaniër'),pl('Jordaniërs')],de,[]).
@@ -23978,12 +23981,14 @@ n([mass(noodzaak)],de,[vp,sbar]).
 
 n([pl(noodzakelijkheden),sg(noodzakelijkheid)],de,[sbar,vp]).
 
-n([mass(noord)],both,[]).
+n([mass(noord),
+   mass('Noord')],both,[]).
 
 n([sg('noord-zuid'),
    pl('noord-zuid')],both,[]).
 
-n([mass(noorden)],het,[]).
+n([mass(noorden),
+   mass('Noorden')],het,[]).
 
 n([mass(noordkant)],de,[]).
 
@@ -25142,14 +25147,17 @@ n([pl(oorzaken),sg(oorzaak)],de,[sbar],
 n([pl(oorzaken),sg(oorzaak)],de,[],
   [s(dood)]).
 
-n([mass(oost)],both,[]).
+n([mass(oost),
+   mass('Oost')],both,[]).
 
 n([sg('oost-west'),
    pl('oost-west')],both,[]).
 
 n([mass(oostblok)],het,[]).
 
-n([mass(oosten)],het,[]).
+n([mass(oosten),
+   mass('Oosten')
+  ],het,[]).
 
 n([pl(oosterlingen),sg(oosterling)],de,[]).
 
@@ -31314,6 +31322,7 @@ n([pl(schepen),sg(schip)],het,[np_app_measure],
    lucht,
    midden,
    moeder,
+   s(onderzoek),
    s(oorlog),oorlog,
    s(passagier),
    ruimte,
@@ -41078,9 +41087,11 @@ n([pl(wespen),sg(wesp)],de,[],
 
 n([sg(wespennest),pl(wespennesten)],het,[]).
 
-n([mass(west)],both,[]).
+n([mass(west),
+   mass('West')],both,[]).
 
-n([mass(westen)],het,[]).
+n([mass(westen),
+   mass('Westen')],het,[]).
 
 n([pl(westerlingen),sg(westerling)],de,[]).
 
@@ -42472,9 +42483,11 @@ n([pl(zoutkoepels),sg(zoutkoepel)],de,[]).
 
 n([mass(zucht),pl(zuchten),sg(zucht)],de,[measure],[dim(zuchtje)]).
 
-n([mass(zuid)],both,[]).
+n([mass(zuid),
+   mass('Zuid')],both,[]).
 
-n([mass(zuiden)],het,[]).
+n([mass(zuiden),
+   mass('Zuiden')],het,[]).
 
 n([sg(zuiderling),pl(zuiderlingen)],de,[]).
 

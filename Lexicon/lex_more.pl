@@ -4351,6 +4351,7 @@ formula(Word) :-
     number_codes_silent(_,Codes).
 
 telephone -->
+    tel_land,
     tel_word,
     opt_dash,
     tel_word,
@@ -4372,6 +4373,22 @@ tel_digits(Atom) :-
     atom(Atom),
     atom_codes(Atom,Codes),
     isdigits(Codes).
+
+tel_land -->
+    n_word('('),
+    tel_land,
+    n_word(')').
+
+tel_land -->
+    n_word('+'),
+    n_word(Atom),
+    {  tel_digits(Atom) }.
+
+tel_land -->
+    n_word(Atom),
+    {  atom_concat('+',Atom1,Atom),
+       tel_digits(Atom1)
+    }.
 
 isdigits([]).
 isdigits([H|T]) :-

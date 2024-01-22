@@ -1527,7 +1527,16 @@ a([e('Spaanse'),
    hh('West')]).
 
 a([e('Srilankaanse'),
-   no_e('Srilankaans')],nonadv,[],[]).
+   no_e('Srilankaans'),
+   e(['Sri','Lankaanse']),
+   no_e(['Sri','Lankaans'])
+  ],nonadv,[],[]).
+
+a([e('Srilankese'),
+   no_e('Srilankees'),
+   e(['Sri','Lankese']),
+   no_e(['Sri','Lankees'])
+  ],nonadv,[],[]).
 
 a([e('Sudanese'),
    no_e('Sudanees')],nonadv,[],[]).
@@ -16879,7 +16888,7 @@ a([ge_e(geziene),
    ere(gezienere),
    ge_no_e(gezien),
    st(gezienst),
-   ste(gezienste)],adv,
+   ste(gezienste)],both,
   [pp(bij),
    fixed([[tegemoet]])],[on]).
 
@@ -25498,7 +25507,7 @@ a([ge_e(onderuitgezakte),
    ge_no_e(onderuitgezakt)],adv,[],[]).
 
 a([ge_e(onderverdeelde),
-   ge_no_e(onderverdeeld)],adv,[],[]).
+   ge_no_e(onderverdeeld)],adv,[pp(in)],[]).
 
 a([e(ondervoede),
    no_e(ondervoed)],nonadv,[],[]).
@@ -35275,6 +35284,9 @@ a([pred([van,dien,aard])],nonadv,[],[]).
 
 a([pred([van,dik,hout,zaagt,men,planken])],nonadv,[],[]).
 
+a([pred([van,hetzelfde,laken,een,pak]),
+   pred([van,het,zelfde,laken,een,pak])],nonadv,[],[]).
+
 a([pred([van,kwaad,naar,erger])],nonadv,[],[]).
 
 a([pred([van,kwaad,tot,erger])],nonadv,[],[]).
@@ -38061,7 +38073,7 @@ a([e(voelbare),
    ere(voelbaardere),
    no_e(voelbaar),
    st(voelbaarst),
-   ste(voelbaarste)],adv,[],[subject_sbar]).
+   ste(voelbaarste)],adv,[subject_sbar_no_het],[]).
 
 a([pred(voetbalmoe)],padv,[],[]).
 

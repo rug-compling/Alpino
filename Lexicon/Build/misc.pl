@@ -2961,6 +2961,7 @@ collocational_preposition([op,uitnodiging,van]).
 collocational_preposition([op,verdenking,van]).
 collocational_preposition([op,verzoek,van]).
 collocational_preposition([op,voet,van]).
+collocational_preposition([op,vraag,van]). % VL
 collocational_preposition([te,midden]).  % VL
 collocational_preposition([te,midden,van]).
 collocational_preposition([ten,aanzien,van]).
@@ -5110,7 +5111,7 @@ m(krap,             modal_adverb(noun_prep),krap).
 m(liefst,           modal_adverb(noun_prep),liefst).
 % maar de helft van de aanwezigen had een kaartje
 % maar in twaalf procent van de gevallen ...
-m(maar,             modal_adverb(noun_prep),maar).
+m(maar,             modal_adverb(noun_prep),maar).    % also adv? "maar ternauwernood"
 m('maar liefst',    modal_adverb(noun_prep),[maar,liefst]).
 m('maar liefst',    modal_adverb(noun_prep),maarliefst).
 m(maximaal,         modal_adverb(noun_prep),maximaal).
@@ -6654,12 +6655,12 @@ m(Stem,predm_adverb,Surf) :-
     predm_adverb(Surf),
     stem_from_surf(Surf,Stem).
 
-m(al,predm_adverb,alle).
-m(beide,predm_adverb,beiden).
+m(al,               predm_adverb,  alle).
+m(al,               predm_adverb,  allen).
+m(beide,            predm_adverb,  beiden).
 
 m('geen van alle',  predm_adverb,  [geen,van,alle]).
 m('geen van allen', predm_adverb,  [geen,van,allen]).
-m(al,               predm_adverb,  allen).
 m('geen van beide', predm_adverb,  [geen,van,beide]).
 m('geen van beide', predm_adverb,  [geen,van,beiden]).
 
@@ -7315,7 +7316,7 @@ with_dt([helemaal,niks],
 with_dt([zo,eentje],
 	pronoun(nwh,thi,sg,de,both,indef,strpro),
 	dt(np,[mod=l(zo,adverb,advp,0,1),
-	       hd=l(eentje,pronoun(nwh,thi,sg,de,both,indef,strpro),1,2)
+	       hd=l(één,pronoun(nwh,thi,sg,de,both,indef,strpro),1,2)
 	      ])).
 
 with_dt([niet,iedereen],
