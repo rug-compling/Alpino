@@ -147,22 +147,19 @@ reportcurrentbest:
         fi
 
 tests: j_suite.testN i_suite.testN h_suite.testN g_suite.testN leuven_yellow_pages.testN lot_test_suite1.testN \
-       cgn_exs.testN qa.testN extra.testN cdb.testN PPH.testN PPI.testN dpc-ind.testN \
-       dpc-rou.testN wpspel.testN LassySmall.testN lassy.testN WSU.testN novelsample_corrected.testN\
-       eans.testN Titaantjes.testN
+       cgn_exs.testN qa.testN extra.testN cdb.testN wpspel.testN LassySmall.testN lassy.testN\
+       novelsample_corrected.testN eans.testN Titaantjes.testN ovistest
 
 shs: i_suite.testN h_suite.testN g_suite.testN j_suite.testN
 
 shs_rest: leuven_yellow_pages.testN lot_test_suite1.testN \
        cgn_exs.testN qa.testN extra.testN lassy.testN novelsample_corrected.testN eans.testN \
-       cdb.testN PPH.testN PPI.testN dpc-ind.testN dpc-rou.testN wpspel.testN LassySmall.testN \
-       WSU.testN Titaantjes.testN
+       cdb.testN wpspel.testN LassySmall.testN Titaantjes.testN
 
 shorts:j_suite.testN i_suite.testN h_suite.testN g_suite.testN leuven_yellow_pages.testN lot_test_suite1.testN \
        cgn_exs.testN qa.testN extra.testN lassy.testN novelsample_corrected.testN eans.testN Titaantjes.testN
 
-longs: cdb.testN PPH.testN PPI.testN dpc-ind.testN dpc-rou.testN wpspel.testN LassySmall.testN \
-       WSU.testN
+longs: cdb.testN wpspel.testN LassySmall.testN
 
 SCORES=$(sort $(wildcard */*/bests))
 bf:
@@ -187,19 +184,11 @@ endif
 
 ORDERED=-rt
 
-errors: cdb.err dpc-ind.err dpc-rou.err PPH.err
-
-errors_timeout: cdb.err_timeout dpc-ind.err_timeout dpc-rou.err_timeout PPH.err_timeout
-
+errors: cdb.err LassySmall.err
 
 %.err: %.errors
 	@for file in $*/job*/log;\
-         do echo $$file;\
-            $(ALPINO_HOME)/compare_errors -q $$file $*.errors;\
+         do $(ALPINO_HOME)/compare_errors.py <(grep '^BEST SCORE' $$file | awk '{ print $$3, $$11 }') $*.errors;\
          done
 
-%.err_timeout:%.errors
-	@for pat in `make $*.err| awk  '/new error/{ print $$4}' | sort -u`; \
-        do grep "^T#$$pat|" $*/job*/log;\
-        done | grep -v time_out | grep -v out_of_memory | sort -t\| -k2,2n 
 
