@@ -8789,7 +8789,7 @@ grammar_rule(np_np_ap,START,[NP1,NP2,AP]) :-
 %% [[adv pp][adv pp]]    hoe later op de avond hoe later op het werk
 %% etc?
 
-%%EX%%  Hoe ouder hij wordt , hoe eigenwijzer hij zich gedraagt
+%%EX%% Hoe ouder hij wordt , hoe eigenwijzer hij zich gedraagt
 grammar_rule(hoe_hoe,M,[A,COMMA,B]) :-
     M => start,
     optcomma(COMMA),
@@ -9894,7 +9894,7 @@ rel_arg_np_structure(Rel,Pro,VP) :-
 %% if the np is temporal, relative is not possible, but
 %% special "dat-clause" is used (?):
 %% ik heb heimwee naar de jaren *die/dat ik in Assen woonde
-%%EX%%  Ik verheug mij over iedere millimeter die wij vooruitkomen .
+%%EX%% Ik verheug mij over iedere millimeter die wij vooruitkomen .
 grammar_rule(rel_arg(meas_mod_np), Rel, [Pro, VP]) :-
     rel_arg_np_structure(Rel,Pro,VP0),
     Pro:wh_reltmploc => non_adv,
