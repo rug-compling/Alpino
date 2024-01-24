@@ -312,6 +312,7 @@ lemma_root(aan_ontdekken,ontdek_aan) .
 lemma_root(aan_ontrollen,ontrol_aan) .
 lemma_root(aan_ontsnappen,ontsnap_aan) .
 lemma_root(aan_pakken,pak_aan) .
+lemma_root(aan_palen,paal_aan) .
 lemma_root(aan_pappen,pap_aan) .
 lemma_root(aan_parelen,parel_aan) .
 lemma_root(aan_parkeren,parkeer_aan) .
@@ -374,6 +375,7 @@ lemma_root(aan_reikhalzen,reikhals_aan) .
 lemma_root(aan_reïntegreren,reïntegreer_aan) .
 lemma_root(aan_reizen,reis_aan) .
 lemma_root(aan_rekenen,reken_aan) .
+lemma_root(aan_remigreren,remigreer_aan) .
 lemma_root(aan_rennen,ren_aan) .
 lemma_root(aan_richten,richt_aan) .
 lemma_root(aan_rijden,rijd_aan) .
@@ -515,6 +517,7 @@ lemma_root(aan_sukkelen,sukkel_aan) .
 lemma_root(aan_takelen,takel_aan) .
 lemma_root(aan_tappen,tap_aan) .
 lemma_root(aan_tasten,tast_aan) .
+lemma_root(aan_taxiën,taxi_aan) .
 lemma_root(aan_tekenen,teken_aan) .
 lemma_root(aan_telefoneren,telefoneer_aan) .
 lemma_root(aan_tijgen,tijg_aan) .
@@ -670,6 +673,7 @@ lemma_root(abonneren,abonneer) .
 lemma_root(aborteren,aborteer) .
 lemma_root(absorberen,absorbeer) .
 lemma_root(abstraheren,abstraheer) .
+lemma_root(accelereren,accelereer) .
 lemma_root(accentueren,accentueer) .
 lemma_root(accepteren,accepteer) .
 lemma_root(acclimatiseren,acclimatiseer) .
@@ -1330,6 +1334,7 @@ lemma_root(af_ontdekken,ontdek_af) .
 lemma_root(af_ontrollen,ontrol_af) .
 lemma_root(af_ontsnappen,ontsnap_af) .
 lemma_root(af_pakken,pak_af) .
+lemma_root(af_palen,paal_af) .
 lemma_root(af_parelen,parel_af) .
 lemma_root(af_parkeren,parkeer_af) .
 lemma_root(af_passen,pas_af) .
@@ -1397,6 +1402,7 @@ lemma_root(af_reikhalzen,reikhals_af) .
 lemma_root(af_reïntegreren,reïntegreer_af) .
 lemma_root(af_reizen,reis_af) .
 lemma_root(af_rekenen,reken_af) .
+lemma_root(af_remigreren,remigreer_af) .
 lemma_root(af_remmen,rem_af) .
 lemma_root(af_rennen,ren_af) .
 lemma_root(af_richten,richt_af) .
@@ -1570,6 +1576,7 @@ lemma_root(af_takelen,takel_af) .
 lemma_root(af_takken,tak_af) .
 lemma_root(af_tappen,tap_af) .
 lemma_root(af_tasten,tast_af) .
+lemma_root(af_taxiën,taxi_af) .
 lemma_root(af_tekenen,teken_af) .
 lemma_root(af_telefoneren,telefoneer_af) .
 lemma_root(af_tellen,tel_af) .
@@ -2646,6 +2653,7 @@ lemma_root(braken,braak) .
 lemma_root(brallen,bral) .
 lemma_root(branden,brand) .
 lemma_root(brandmerken,brandmerk) .
+lemma_root(brandschatten,brandschatten) .
 lemma_root(breiden,breid) .
 lemma_root(breien,brei) .
 lemma_root(breken,breek) .
@@ -2660,6 +2668,7 @@ lemma_root(brokkelen,brokkel) .
 lemma_root(brokken,brok) .
 lemma_root(brommen,brom) .
 lemma_root(bronzen,brons) .
+lemma_root(brouilleren,brouilleer) .
 lemma_root(brouwen,brouw) .
 lemma_root(bruinen,bruin) .
 lemma_root(bruisen,bruis) .
@@ -2961,6 +2970,7 @@ lemma_root(door_aarzelen,aarzel_door) .
 lemma_root(door_aborteren,aborteer_door) .
 lemma_root(door_absorberen,absorbeer_door) .
 lemma_root(door_abstraheren,abstraheer_door) .
+lemma_root(door_accelereren,accelereer_door) .
 lemma_root(door_accentueren,accentueer_door) .
 lemma_root(door_accepteren,accepteer_door) .
 lemma_root(door_acclimatiseren,acclimatiseer_door) .
@@ -3232,6 +3242,7 @@ lemma_root(door_brainstormen,brainstorm_door) .
 lemma_root(door_braken,braak_door) .
 lemma_root(door_brallen,bral_door) .
 lemma_root(door_branden,brand_door) .
+lemma_root(door_brandschatten,brandschatten_door) .
 lemma_root(door_breien,brei_door) .
 lemma_root(door_breken,breek_door) .
 lemma_root(doorbreken,doorbreek) .
@@ -3244,6 +3255,7 @@ lemma_root(door_broeien,broei_door) .
 lemma_root(door_brokkelen,brokkel_door) .
 lemma_root(door_brokken,brok_door) .
 lemma_root(door_brommen,brom_door) .
+lemma_root(door_brouilleren,brouilleer_door) .
 lemma_root(door_brouwen,brouw_door) .
 lemma_root(door_bruinen,bruin_door) .
 lemma_root(door_bruisen,bruis_door) .
@@ -4573,6 +4585,7 @@ lemma_root(door_relativeren,relativeer_door) .
 lemma_root(door_relaxen,relax_door) .
 lemma_root(door_releveren,releveer_door) .
 lemma_root(door_rellen,rel_door) .
+lemma_root(door_remigreren,remigreer_door) .
 lemma_root(door_remixen,remix_door) .
 lemma_root(door_remmen,rem_door) .
 lemma_root(door_renderen,rendeer_door) .
@@ -6312,6 +6325,7 @@ lemma_root(heen_ontdekken,ontdek_heen) .
 lemma_root(heen_ontrollen,ontrol_heen) .
 lemma_root(heen_ontsnappen,ontsnap_heen) .
 lemma_root(heen_pakken,pak_heen) .
+lemma_root(heen_palen,paal_heen) .
 lemma_root(heen_parelen,parel_heen) .
 lemma_root(heen_parkeren,parkeer_heen) .
 lemma_root(heen_passen,pas_heen) .
@@ -6370,6 +6384,7 @@ lemma_root(heen_reikhalzen,reikhals_heen) .
 lemma_root(heen_reïntegreren,reïntegreer_heen) .
 lemma_root(heen_reizen,reis_heen) .
 lemma_root(heen_rekenen,reken_heen) .
+lemma_root(heen_remigreren,remigreer_heen) .
 lemma_root(heen_rennen,ren_heen) .
 lemma_root(heen_rijden,rijd_heen) .
 lemma_root(heen_rijten,rijt_heen) .
@@ -6500,6 +6515,7 @@ lemma_root(heen_sukkelen,sukkel_heen) .
 lemma_root(heen_takelen,takel_heen) .
 lemma_root(heen_tappen,tap_heen) .
 lemma_root(heen_tasten,tast_heen) .
+lemma_root(heen_taxiën,taxi_heen) .
 lemma_root(heen_telefoneren,telefoneer_heen) .
 lemma_root(heen_tijgen,tijg_heen) .
 lemma_root(heen_tikken,tik_heen) .
@@ -7149,6 +7165,7 @@ lemma_root(in_ontdekken,ontdek_in) .
 lemma_root(in_ontrollen,ontrol_in) .
 lemma_root(in_ontsnappen,ontsnap_in) .
 lemma_root(in_pakken,pak_in) .
+lemma_root(in_palen,paal_in) .
 lemma_root(in_palmen,palm_in) .
 lemma_root(in_parelen,parel_in) .
 lemma_root(in_parkeren,parkeer_in) .
@@ -7216,6 +7233,7 @@ lemma_root(in_reikhalzen,reikhals_in) .
 lemma_root(in_reïntegreren,reïntegreer_in) .
 lemma_root(in_reizen,reis_in) .
 lemma_root(in_rekenen,reken_in) .
+lemma_root(in_remigreren,remigreer_in) .
 lemma_root(in_rennen,ren_in) .
 lemma_root(in_resulteren,resulteer_in) .
 lemma_root(in_richten,richt_in) .
@@ -7374,6 +7392,7 @@ lemma_root(in_sukkelen,sukkel_in) .
 lemma_root(in_takelen,takel_in) .
 lemma_root(in_tappen,tap_in) .
 lemma_root(in_tasten,tast_in) .
+lemma_root(in_taxiën,taxi_in) .
 lemma_root(integreren,integreer) .
 lemma_root(in_tekenen,teken_in) .
 lemma_root(in_telefoneren,telefoneer_in) .
@@ -8155,6 +8174,7 @@ lemma_root(langs_ontdekken,ontdek_langs) .
 lemma_root(langs_ontrollen,ontrol_langs) .
 lemma_root(langs_ontsnappen,ontsnap_langs) .
 lemma_root(langs_pakken,pak_langs) .
+lemma_root(langs_palen,paal_langs) .
 lemma_root(langs_parelen,parel_langs) .
 lemma_root(langs_parkeren,parkeer_langs) .
 lemma_root(langs_passen,pas_langs) .
@@ -8215,6 +8235,7 @@ lemma_root(langs_reikhalzen,reikhals_langs) .
 lemma_root(langs_reïntegreren,reïntegreer_langs) .
 lemma_root(langs_reizen,reis_langs) .
 lemma_root(langs_rekenen,reken_langs) .
+lemma_root(langs_remigreren,remigreer_langs) .
 lemma_root(langs_rennen,ren_langs) .
 lemma_root(langs_richten,richt_langs) .
 lemma_root(langs_rijden,rijd_langs) .
@@ -8349,6 +8370,7 @@ lemma_root(langs_sukkelen,sukkel_langs) .
 lemma_root(langs_takelen,takel_langs) .
 lemma_root(langs_tappen,tap_langs) .
 lemma_root(langs_tasten,tast_langs) .
+lemma_root(langs_taxiën,taxi_langs) .
 lemma_root(langs_telefoneren,telefoneer_langs) .
 lemma_root(langs_tijgen,tijg_langs) .
 lemma_root(langs_tikken,tik_langs) .
@@ -9387,6 +9409,7 @@ lemma_root(ontbieden,ontbied) .
 lemma_root(ontbijten,ontbijt) .
 lemma_root(ontbinden,ontbind) .
 lemma_root(ontbloten,ontbloot) .
+lemma_root(ontbossen,ontbos) .
 lemma_root(ontbranden,ontbrand) .
 lemma_root(ontbreken,ontbreek) .
 lemma_root(ontcijferen,ontcijfer) .
@@ -10615,6 +10638,7 @@ lemma_root(raak_aarzelen,aarzel_raak) .
 lemma_root(raak_aborteren,aborteer_raak) .
 lemma_root(raak_absorberen,absorbeer_raak) .
 lemma_root(raak_abstraheren,abstraheer_raak) .
+lemma_root(raak_accelereren,accelereer_raak) .
 lemma_root(raak_accentueren,accentueer_raak) .
 lemma_root(raak_accepteren,accepteer_raak) .
 lemma_root(raak_acclimatiseren,acclimatiseer_raak) .
@@ -10874,6 +10898,7 @@ lemma_root(raak_brainstormen,brainstorm_raak) .
 lemma_root(raak_braken,braak_raak) .
 lemma_root(raak_brallen,bral_raak) .
 lemma_root(raak_branden,brand_raak) .
+lemma_root(raak_brandschatten,brandschatten_raak) .
 lemma_root(raak_breien,brei_raak) .
 lemma_root(raak_breken,breek_raak) .
 lemma_root(raak_bridgen,bridge_raak) .
@@ -10882,6 +10907,7 @@ lemma_root(raak_broeden,broed_raak) .
 lemma_root(raak_broeien,broei_raak) .
 lemma_root(raak_brokkelen,brokkel_raak) .
 lemma_root(raak_brommen,brom_raak) .
+lemma_root(raak_brouilleren,brouilleer_raak) .
 lemma_root(raak_brouwen,brouw_raak) .
 lemma_root(raak_bruinen,bruin_raak) .
 lemma_root(raak_bruisen,bruis_raak) .
@@ -12136,6 +12162,7 @@ lemma_root(raak_relativeren,relativeer_raak) .
 lemma_root(raak_relaxen,relax_raak) .
 lemma_root(raak_releveren,releveer_raak) .
 lemma_root(raak_rellen,rel_raak) .
+lemma_root(raak_remigreren,remigreer_raak) .
 lemma_root(raak_remixen,remix_raak) .
 lemma_root(raak_remmen,rem_raak) .
 lemma_root(raak_renderen,rendeer_raak) .
@@ -13192,6 +13219,7 @@ lemma_root(relativeren,relativeer) .
 lemma_root(relaxen,relax) .
 lemma_root(releveren,releveer) .
 lemma_root(rellen,rel) .
+lemma_root(remigreren,remigreer) .
 lemma_root(remixen,remix) .
 lemma_root(remmen,rem) .
 lemma_root(renderen,rendeer) .
@@ -13677,6 +13705,7 @@ lemma_root(scholen,school) .
 lemma_root(schommelen,schommel) .
 lemma_root(schonen,schoon) .
 lemma_root(schooien,schooi) .
+lemma_root(school_lopen,loop_school) .
 lemma_root(schoolverlaten,schoolverlaten) .
 lemma_root(school_zwemmen,school_zwemmen) .
 lemma_root(schoon_boenen,boen_schoon) .
@@ -14832,6 +14861,7 @@ lemma_root(toe_ontdekken,ontdek_toe) .
 lemma_root(toe_ontrollen,ontrol_toe) .
 lemma_root(toe_ontsnappen,ontsnap_toe) .
 lemma_root(toe_pakken,pak_toe) .
+lemma_root(toe_palen,paal_toe) .
 lemma_root(toe_parelen,parel_toe) .
 lemma_root(toe_parkeren,parkeer_toe) .
 lemma_root(toe_passen,pass_toe) .
@@ -14890,6 +14920,7 @@ lemma_root(toe_reikhalzen,reikhals_toe) .
 lemma_root(toe_reïntegreren,reïntegreer_toe) .
 lemma_root(toe_reizen,reis_toe) .
 lemma_root(toe_rekenen,reken_toe) .
+lemma_root(toe_remigreren,remigreer_toe) .
 lemma_root(toe_rennen,ren_toe) .
 lemma_root(toeren,toer) .
 lemma_root(toe_rijden,rijd_toe) .
@@ -15027,6 +15058,7 @@ lemma_root(toe_sukkelen,sukkel_toe) .
 lemma_root(toe_takelen,takel_toe) .
 lemma_root(toe_tappen,tap_toe) .
 lemma_root(toe_tasten,tast_toe) .
+lemma_root(toe_taxiën,taxi_toe) .
 lemma_root(toe_telefoneren,telefoneer_toe) .
 lemma_root(toeteren,toeter) .
 lemma_root(toe_tijgen,tijg_toe) .
@@ -15507,6 +15539,7 @@ lemma_root(tussen_ontdekken,ontdek_tussen) .
 lemma_root(tussen_ontrollen,ontrol_tussen) .
 lemma_root(tussen_ontsnappen,ontsnap_tussen) .
 lemma_root(tussen_pakken,pak_tussen) .
+lemma_root(tussen_palen,paal_tussen) .
 lemma_root(tussen_parelen,parel_tussen) .
 lemma_root(tussen_parkeren,parkeer_tussen) .
 lemma_root(tussen_passen,pass_tussen) .
@@ -15565,6 +15598,7 @@ lemma_root(tussen_reikhalzen,reikhals_tussen) .
 lemma_root(tussen_reïntegreren,reïntegreer_tussen) .
 lemma_root(tussen_reizen,reis_tussen) .
 lemma_root(tussen_rekenen,reken_tussen) .
+lemma_root(tussen_remigreren,remigreer_tussen) .
 lemma_root(tussen_rennen,ren_tussen) .
 lemma_root(tussen_rijden,rijd_tussen) .
 lemma_root(tussen_rijten,rijt_tussen) .
@@ -15694,6 +15728,7 @@ lemma_root(tussen_sukkelen,sukkel_tussen) .
 lemma_root(tussen_takelen,takel_tussen) .
 lemma_root(tussen_tappen,tap_tussen) .
 lemma_root(tussen_tasten,tast_tussen) .
+lemma_root(tussen_taxiën,taxi_tussen) .
 lemma_root(tussen_telefoneren,telefoneer_tussen) .
 lemma_root(tussen_tijgen,tijg_tussen) .
 lemma_root(tussen_tikken,tik_tussen) .
@@ -15843,6 +15878,7 @@ lemma_root(uit_aarzelen,aarzel_uit) .
 lemma_root(uit_aborteren,aborteer_uit) .
 lemma_root(uit_absorberen,absorbeer_uit) .
 lemma_root(uit_abstraheren,abstraheer_uit) .
+lemma_root(uit_accelereren,accelereer_uit) .
 lemma_root(uit_accentueren,accentueer_uit) .
 lemma_root(uit_accepteren,accepteer_uit) .
 lemma_root(uit_achtervolgen,achtervolg_uit) .
@@ -16091,6 +16127,7 @@ lemma_root(uit_broeien,broei_uit) .
 lemma_root(uit_brokkelen,brokkel_uit) .
 lemma_root(uit_brokken,brok_uit) .
 lemma_root(uit_brommen,brom_uit) .
+lemma_root(uit_brouilleren,brouilleer_uit) .
 lemma_root(uit_brouwen,brouw_uit) .
 lemma_root(uit_bruisen,bruis_uit) .
 lemma_root(uit_brullen,brul_uit) .
@@ -17298,6 +17335,7 @@ lemma_root(uit_relativeren,relativeer_uit) .
 lemma_root(uit_relaxen,relax_uit) .
 lemma_root(uit_releveren,releveer_uit) .
 lemma_root(uit_rellen,rel_uit) .
+lemma_root(uit_remigreren,remigreer_uit) .
 lemma_root(uit_remixen,remix_uit) .
 lemma_root(uit_remmen,rem_uit) .
 lemma_root(uit_renderen,rendeer_uit) .
@@ -18439,6 +18477,7 @@ lemma_root(vanaf_ontdekken,ontdek_vanaf) .
 lemma_root(vanaf_ontrollen,ontrol_vanaf) .
 lemma_root(vanaf_ontsnappen,ontsnap_vanaf) .
 lemma_root(vanaf_pakken,pak_vanaf) .
+lemma_root(vanaf_palen,paal_vanaf) .
 lemma_root(vanaf_parelen,parel_vanaf) .
 lemma_root(vanaf_parkeren,parkeer_vanaf) .
 lemma_root(vanaf_passen,pass_vanaf) .
@@ -18499,6 +18538,7 @@ lemma_root(vanaf_reikhalzen,reikhals_vanaf) .
 lemma_root(vanaf_reïntegreren,reïntegreer_vanaf) .
 lemma_root(vanaf_reizen,reis_vanaf) .
 lemma_root(vanaf_rekenen,reken_vanaf) .
+lemma_root(vanaf_remigreren,remigreer_vanaf) .
 lemma_root(vanaf_rennen,ren_vanaf) .
 lemma_root(vanaf_richten,richt_vanaf) .
 lemma_root(vanaf_rijden,rijd_vanaf) .
@@ -18633,6 +18673,7 @@ lemma_root(vanaf_sukkelen,sukkel_vanaf) .
 lemma_root(vanaf_takelen,takel_vanaf) .
 lemma_root(vanaf_tappen,tap_vanaf) .
 lemma_root(vanaf_tasten,tast_vanaf) .
+lemma_root(vanaf_taxiën,taxi_vanaf) .
 lemma_root(vanaf_telefoneren,telefoneer_vanaf) .
 lemma_root(vanaf_tijgen,tijg_vanaf) .
 lemma_root(vanaf_tikken,tik_vanaf) .
@@ -19039,6 +19080,7 @@ lemma_root(vandaan_ontdekken,ontdek_vandaan) .
 lemma_root(vandaan_ontrollen,ontrol_vandaan) .
 lemma_root(vandaan_ontsnappen,ontsnap_vandaan) .
 lemma_root(vandaan_pakken,pak_vandaan) .
+lemma_root(vandaan_palen,paal_vandaan) .
 lemma_root(vandaan_parelen,parel_vandaan) .
 lemma_root(vandaan_parkeren,parkeer_vandaan) .
 lemma_root(vandaan_passen,pass_vandaan) .
@@ -19097,6 +19139,7 @@ lemma_root(vandaan_reikhalzen,reikhals_vandaan) .
 lemma_root(vandaan_reïntegreren,reïntegreer_vandaan) .
 lemma_root(vandaan_reizen,reis_vandaan) .
 lemma_root(vandaan_rekenen,reken_vandaan) .
+lemma_root(vandaan_remigreren,remigreer_vandaan) .
 lemma_root(vandaan_rennen,ren_vandaan) .
 lemma_root(vandaan_rijden,rijd_vandaan) .
 lemma_root(vandaan_rijten,rijt_vandaan) .
@@ -19226,6 +19269,7 @@ lemma_root(vandaan_sukkelen,sukkel_vandaan) .
 lemma_root(vandaan_takelen,takel_vandaan) .
 lemma_root(vandaan_tappen,tap_vandaan) .
 lemma_root(vandaan_tasten,tast_vandaan) .
+lemma_root(vandaan_taxiën,taxi_vandaan) .
 lemma_root(vandaan_telefoneren,telefoneer_vandaan) .
 lemma_root(vandaan_tijgen,tijg_vandaan) .
 lemma_root(vandaan_tikken,tik_vandaan) .
@@ -19627,6 +19671,7 @@ lemma_root(vandoor_ontdekken,ontdek_vandoor) .
 lemma_root(vandoor_ontrollen,ontrol_vandoor) .
 lemma_root(vandoor_ontsnappen,ontsnap_vandoor) .
 lemma_root(vandoor_pakken,pak_vandoor) .
+lemma_root(vandoor_palen,paal_vandoor) .
 lemma_root(vandoor_parelen,parel_vandoor) .
 lemma_root(vandoor_parkeren,parkeer_vandoor) .
 lemma_root(vandoor_passen,pass_vandoor) .
@@ -19685,6 +19730,7 @@ lemma_root(vandoor_reikhalzen,reikhals_vandoor) .
 lemma_root(vandoor_reïntegreren,reïntegreer_vandoor) .
 lemma_root(vandoor_reizen,reis_vandoor) .
 lemma_root(vandoor_rekenen,reken_vandoor) .
+lemma_root(vandoor_remigreren,remigreer_vandoor) .
 lemma_root(vandoor_rennen,ren_vandoor) .
 lemma_root(vandoor_rijden,rijd_vandoor) .
 lemma_root(vandoor_rijten,rijt_vandoor) .
@@ -19814,6 +19860,7 @@ lemma_root(vandoor_sukkelen,sukkel_vandoor) .
 lemma_root(vandoor_takelen,takel_vandoor) .
 lemma_root(vandoor_tappen,tap_vandoor) .
 lemma_root(vandoor_tasten,tast_vandoor) .
+lemma_root(vandoor_taxiën,taxi_vandoor) .
 lemma_root(vandoor_telefoneren,telefoneer_vandoor) .
 lemma_root(vandoor_tijgen,tijg_vandoor) .
 lemma_root(vandoor_tikken,tik_vandoor) .
@@ -20189,6 +20236,7 @@ lemma_root(verklikken,verklik) .
 lemma_root(verkloten,verkloot) .
 lemma_root(verknallen,verknal) .
 lemma_root(verkneukelen,verkneukel) .
+lemma_root(verknippen,verknip) .
 lemma_root(verknoeien,verknoei) .
 lemma_root(verkokeren,verkoker) .
 lemma_root(verkolen,verkool) .
@@ -20438,6 +20486,7 @@ lemma_root(vervluchtigen,vervluchtig) .
 lemma_root(vervoegen,vervoeg) .
 lemma_root(vervoeren,vervoer) .
 lemma_root(vervolgen,vervolg) .
+lemma_root(vervolledigen,vervolledig) .
 lemma_root(vervolmaken,vervolmaak) .
 lemma_root(vervormen,vervorm) .
 lemma_root(vervreemden,vervreemd) .
@@ -20639,6 +20688,7 @@ lemma_root(voort_aarzelen,aarzel_voort) .
 lemma_root(voort_aborteren,aborteer_voort) .
 lemma_root(voort_absorberen,absorbeer_voort) .
 lemma_root(voort_abstraheren,abstraheer_voort) .
+lemma_root(voort_accelereren,accelereer_voort) .
 lemma_root(voort_accentueren,accentueer_voort) .
 lemma_root(voort_accepteren,accepteer_voort) .
 lemma_root(voort_acclimatiseren,acclimatiseer_voort) .
@@ -20898,6 +20948,7 @@ lemma_root(voort_brainstormen,brainstorm_voort) .
 lemma_root(voort_braken,braak_voort) .
 lemma_root(voort_brallen,bral_voort) .
 lemma_root(voort_branden,brand_voort) .
+lemma_root(voort_brandschatten,brandschatten_voort) .
 lemma_root(voort_breien,brei_voort) .
 lemma_root(voort_breken,breek_voort) .
 lemma_root(voort_brengen,breng_voort) .
@@ -20907,6 +20958,7 @@ lemma_root(voort_broeden,broed_voort) .
 lemma_root(voort_broeien,broei_voort) .
 lemma_root(voort_brokkelen,brokkel_voort) .
 lemma_root(voort_brommen,brom_voort) .
+lemma_root(voort_brouilleren,brouilleer_voort) .
 lemma_root(voort_brouwen,brouw_voort) .
 lemma_root(voort_bruinen,bruin_voort) .
 lemma_root(voort_bruisen,bruis_voort) .
@@ -22162,6 +22214,7 @@ lemma_root(voort_relativeren,relativeer_voort) .
 lemma_root(voort_relaxen,relax_voort) .
 lemma_root(voort_releveren,releveer_voort) .
 lemma_root(voort_rellen,rel_voort) .
+lemma_root(voort_remigreren,remigreer_voort) .
 lemma_root(voort_remixen,remix_voort) .
 lemma_root(voort_remmen,rem_voort) .
 lemma_root(voort_renderen,rendeer_voort) .

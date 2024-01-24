@@ -1172,7 +1172,7 @@ find_missing_positions([H|T],Ps0,P,Ns0,Ns,Flag,Frames) :-
 	;   P1 is P + 1
 	),
 	skip_positions(P,P1,T,T2),
-	guess_tag(Tag0,Tag,Hstem0,H,Hstem,P,P1),
+	guess_tag(Tag0,Tag,Hstem0,H,Hstem,P,P1),       %MAKE EXCEPTION here for mwu punctuation???
         Ns0=[tree(r('--',l(Tag,Cat,Hstem/[P,P1])),_,[])|Ns1],
         missing_node_message(Flag,Tag0,Tag,Cat,H)
     ),

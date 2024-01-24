@@ -750,6 +750,9 @@ n([pl('Javanen'),sg('Javaan')],de,[]).
 
 n([mass('Javaans')],het,[]).
 
+n([sg(['Jehovah\'s','Getuige']),
+   pl(['Jehovah\'s','Getuigen'])],de,[]).
+
 n([sg('Joegoslaaf'),pl('Joegoslaven')],de,[]).
 
 n([sg('Jordaniër'),pl('Jordaniërs')],de,[]).
@@ -5881,6 +5884,9 @@ n([pl(bonnen),pl(bons),sg(bon)],de,[],
   [i(boek,boeken),
    i(plaat,platen),
    dim(bonnetje)]).
+
+n([pl(bonnen),pl(bons),sg(bon)],de,[pred_pp(op)],
+  []).
 
 %% voor: het is zo simpel als bonjour
 n([mass(bonjour)],both,[]).
@@ -12691,7 +12697,7 @@ n([sg([gehakkelde,aurelia]),pl([gehakkelde,'aurelia\'s'])],de,[]).
 n([mass(gehakt)],both,[]).
 
 n([pl(gehalten),pl(gehaltes),sg(gehalte)],het,
-  [pred_pp(van)],
+  [],
   [alcohol,
    cholesterol,cholestorol,
    suiker,
@@ -12700,6 +12706,11 @@ n([pl(gehalten),pl(gehaltes),sg(gehalte)],het,
    zout,
    zuur,
    i(zuur,zuren)]).
+
+n([pl(gehalten),pl(gehaltes),sg(gehalte)],het,
+  [measure,
+   pred_pp(van)],
+  []).
 
 n([mass(geharrewar)],het,[]).
 
@@ -14751,9 +14762,10 @@ n([pl(havezaten),sg(havezate)],de,[]).
 
 n([pl(haviken),sg(havik)],de,[]).
 
-n([mass(havo)],both,[]).
+%% pl: ze zit in 3 havo
+n([mass(havo),pl(havo)],both,[]).
 
-n([mass('havo/vwo')],both,[]).
+n([mass('havo/vwo'),pl('havo/vwo')],both,[]).
 
 n([pl(hazelaars),pl(hazelaren),sg(hazelaar)],de,[]).
 
@@ -21264,7 +21276,7 @@ n([bare_meas(maand),pl(maanden)],de,
 n([sg(maand),pl(maanden),
    ignore_stem(maand),
    ignore_stem(maand_DIM)],de,
-  [temp_mod,sbar],
+  [temp_mod,sbar,app_measure],
   [feest,
    vakantie,
    vasten,
@@ -21895,11 +21907,12 @@ n([sg(mattie),pl(matties)],both,[]).
 
 n([pl(mausolea),pl(mausoleums),sg(mausoleum)],het,[]).
 
-n([mass(mavo)],both,[]).
+%% pl: ze zit in 2 mavo
+n([mass(mavo),pl(mavo)],both,[]).
 
-n([mass('mavo/havo')],both,[]).
+n([mass('mavo/havo'),pl('mavo/havo')],both,[]).
 
-n([mass('mavo/havo/vwo')],both,[]).
+n([mass('mavo/havo/vwo'),pl('mavo/havo/vwo')],both,[]).
 
 n([mass(maxi)],both,[]).
 
@@ -22592,7 +22605,7 @@ n([mass(minachting)],de,[]).
 
 n([sg(minaret),pl(minaretten)],de,[]).
 
-n([pl(minderheden),sg(minderheid)],de,[]).
+n([pl(minderheden),sg(minderheid)],de,[pred_pp(in)]).
 
 n([pl(minderingen),sg(mindering)],de,[]).
 
@@ -23831,6 +23844,9 @@ n([pl(nieuwkomers),sg(nieuwkomer)],de,[]).
 
 n([mass(nieuwlichterij)],de,[]).
 
+n([mass(nieuws)],het,[pred_pp(in)],
+  []).
+
 n([mass(nieuws)],het,[subject_sbar,sbar],
   [nep,
    voorpagina,
@@ -23965,12 +23981,14 @@ n([mass(noodzaak)],de,[vp,sbar]).
 
 n([pl(noodzakelijkheden),sg(noodzakelijkheid)],de,[sbar,vp]).
 
-n([mass(noord)],both,[]).
+n([mass(noord),
+   mass('Noord')],both,[]).
 
 n([sg('noord-zuid'),
    pl('noord-zuid')],both,[]).
 
-n([mass(noorden)],het,[]).
+n([mass(noorden),
+   mass('Noorden')],het,[]).
 
 n([mass(noordkant)],de,[]).
 
@@ -25129,14 +25147,17 @@ n([pl(oorzaken),sg(oorzaak)],de,[sbar],
 n([pl(oorzaken),sg(oorzaak)],de,[],
   [s(dood)]).
 
-n([mass(oost)],both,[]).
+n([mass(oost),
+   mass('Oost')],both,[]).
 
 n([sg('oost-west'),
    pl('oost-west')],both,[]).
 
 n([mass(oostblok)],het,[]).
 
-n([mass(oosten)],het,[]).
+n([mass(oosten),
+   mass('Oosten')
+  ],het,[]).
 
 n([pl(oosterlingen),sg(oosterling)],de,[]).
 
@@ -25165,7 +25186,7 @@ n([sg(opdeling),pl(opdelingen)],de,[]).
 n([sg(opdonder),pl(opdonders)],de,[]).
 
 n([pl(opdrachten),sg(opdracht)],de,
-  [sbar,vp]).
+  [sbar,vp,subject_sbar,subject_vp]).
 
 n([pl(opdrachten),sg(opdracht)],de,[],
   [s(overheid),
@@ -31063,6 +31084,8 @@ n([mass(schaft)],de,[]).
 
 n([pl(schakels),sg(schakel)],de,[],[dim(schakeltje)]).
 
+n([mass(schaken)],het,[]).  % het schaakspel; ik leer hem schaken =/= ik leer hem_i schaken(su=i)  ?
+
 n([pl(schakelaars),sg(schakelaar)],de,[],
   [licht,
    dim(schakelaartje)]).
@@ -31299,6 +31322,7 @@ n([pl(schepen),sg(schip)],het,[np_app_measure],
    lucht,
    midden,
    moeder,
+   s(onderzoek),
    s(oorlog),oorlog,
    s(passagier),
    ruimte,
@@ -39749,6 +39773,8 @@ n([pl(voorzitters),sg(voorzitter)],de,[],
    jury,
    i(jong,jongeren),
    'Kamer',
+   ['Tweede','Kamer'],
+   ['Eerste','Kamer'],
    kamer,
    omroep,
    onder,
@@ -40148,9 +40174,10 @@ n([mass(vuurwerk)],het,[],
 
 n([pl(vuurzeeën),sg(vuurzee)],de,[]).
 
-n([mass(vwo)],het,[]).
+%% pl: ze zit in 3 vwo
+n([mass(vwo),pl(vwo)],het,[]).
 
-n([mass('vwo/havo')],both,[]).
+n([mass('vwo/havo'),pl('vwo/havo')],both,[]).
 
 n([sg(vzw)],de,[]). % VL
 
@@ -40297,6 +40324,15 @@ n([pl(wagens),sg(wagen)],de,[],
    vuilnis,
    woon,
    i(ziek,zieken),
+   dim(wagentje)]).
+
+%% drie vrachtwacgens vuilnis
+n([pl(wagens),sg(wagen)],de,[measure],
+  [aanhang,
+   bestel,
+   verhuis,
+   vracht,
+   vuilnis,
    dim(wagentje)]).
 
 n([pl(wagons),sg(wagon)],de,[measure],[dim(wagonnetje)]).
@@ -41051,9 +41087,11 @@ n([pl(wespen),sg(wesp)],de,[],
 
 n([sg(wespennest),pl(wespennesten)],het,[]).
 
-n([mass(west)],both,[]).
+n([mass(west),
+   mass('West')],both,[]).
 
-n([mass(westen)],het,[]).
+n([mass(westen),
+   mass('Westen')],het,[]).
 
 n([pl(westerlingen),sg(westerling)],de,[]).
 
@@ -41363,6 +41401,9 @@ n([pl(winnaars),sg(winnaar)],de,[app_measure]).
 n([pl(winnaars),sg(winnaar)],de,[],
   [beker,
    eind,
+   [gouden,medaille],
+   [zilveren,medaille],
+   [bronzen,medaille],
    s(groep),
    medaille,
    'Tour']).
@@ -41544,10 +41585,15 @@ n([pl(woonlasten)],de,[]).
 n([mass(woonomgeving)],de,[]).
 
 n([pl(woorden),sg(woord)],het,
+  [pred_pp(aan)],
+  []).
+
+n([pl(woorden),sg(woord)],het,
   [start_app_measure,           % met de woorden "...."
    pred_pp(aan),                % aan het woord zijn/blijven/komen
    measure],			% geen woord Spaans
-  []).
+                                % een woordje uitleg
+  [dim(woordje)]).
 
 n([pl(woorden),sg(woord)],het,
   [app_measure],
@@ -42437,9 +42483,11 @@ n([pl(zoutkoepels),sg(zoutkoepel)],de,[]).
 
 n([mass(zucht),pl(zuchten),sg(zucht)],de,[measure],[dim(zuchtje)]).
 
-n([mass(zuid)],both,[]).
+n([mass(zuid),
+   mass('Zuid')],both,[]).
 
-n([mass(zuiden)],het,[]).
+n([mass(zuiden),
+   mass('Zuiden')],het,[]).
 
 n([sg(zuiderling),pl(zuiderlingen)],de,[]).
 

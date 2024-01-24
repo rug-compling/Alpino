@@ -47,28 +47,26 @@
           <node begin="20" end="21" getal="mv" graad="basis" id="35" lemma="wieler_troef" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="troef" word="wielertroeven"/>
         </node>
       </node>
-      <node begin="21" cat="advp" end="23" id="36" rel="mod">
-        <node begin="21" end="22" id="37" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
-        <node begin="22" end="23" id="38" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="hd" root="nog" word="nog"/>
-      </node>
-      <node begin="23" cat="np" end="28" id="39" rel="su">
-        <node begin="23" end="24" id="40" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="24" buiging="zonder" end="25" graad="basis" id="41" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="groot" word="groot"/>
-        <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="42" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
-        <node begin="26" cat="np" end="28" id="43" rel="mod">
-          <node begin="26" buiging="met-e" end="27" graad="basis" id="44" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
-          <node begin="27" buiging="met-e" end="28" getal-n="mv-n" graad="basis" id="45" lemma="prominent" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="prominent" word="prominenten"/>
+      <node begin="21" end="22" id="36" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+      <node begin="22" end="23" id="37" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+      <node begin="23" cat="np" end="28" id="38" rel="su">
+        <node begin="23" end="24" id="39" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="24" buiging="zonder" end="25" graad="basis" id="40" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="groot" word="groot"/>
+        <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="41" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
+        <node begin="26" cat="np" end="28" id="42" rel="mod">
+          <node begin="26" buiging="met-e" end="27" graad="basis" id="43" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
+          <node begin="27" buiging="met-e" end="28" getal-n="mv-n" graad="basis" id="44" lemma="prominent" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="prominent" word="prominenten"/>
         </node>
       </node>
-      <node begin="28" cat="pp" end="31" id="46" rel="ld">
-        <node begin="28" end="29" id="47" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
-        <node begin="29" cat="np" end="31" id="48" rel="obj1">
-          <node begin="29" end="30" id="49" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="50" lemma="start" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="start" word="start"/>
+      <node begin="28" cat="pp" end="31" id="45" rel="ld">
+        <node begin="28" end="29" id="46" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+        <node begin="29" cat="np" end="31" id="47" rel="obj1">
+          <node begin="29" end="30" id="48" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="49" lemma="start" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="start" word="start"/>
         </node>
       </node>
     </node>
-    <node begin="31" end="32" id="51" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="31" end="32" id="50" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>In Alexanderstad , waar in de kader van C&apos;70 vrijdagavond een wielercriterium wordt verreden , komen behalve de sterkste Zuidhollandse wielertroeven ook nog een groot aantal andere prominenten aan de start .</sentence>
 </alpino_ds>

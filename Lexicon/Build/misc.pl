@@ -499,6 +499,8 @@ punct(',',komma).
 
 punct('·',ligg_streep).    % whatever
 punct('*',ligg_streep).    % whatever
+punct('**',ligg_streep).    % whatever
+punct('***',ligg_streep).    % whatever
 
 punct(-,ligg_streep).
 punct('',ligg_streep).
@@ -2323,6 +2325,20 @@ with_dt([van,zulke],
 		])
        ).
 
+with_dt([één,en,dezelfde],
+	determiner(de,nwh,mod,pro,yparg),
+	dt(conj,[cnj=l(één,number(hoofd(sg_num)),detp,0,1),
+		 crd=l(en,conj(en),conj,1,2),
+		 cnj=l(dezelfde,determiner(de,nwh,mod,pro,yparg),detp,2,3)
+		])).
+
+with_dt([één,of,meerdere],
+	determiner(pl_num,nwh,nmod,pro,yparg),
+	dt(conj,[cnj=l(één,number(hoofd(sg_num)),detp,0,1),
+		 crd=l(of,conj(of),conj,1,2),
+		 cnj=l(meerdere,determiner(pl_num,nwh,nmod,pro,yparg),detp,2,3)
+		])).
+
 %m(welk,          determiner(pron,rwh), welks). parse_only_lex
 m(wiens,         determiner(pron,rwh), wiens).
 m(wier,          determiner(pron,rwh), wier).
@@ -2771,7 +2787,7 @@ preposition(per).  % per een bepaalde periode; per die datum; etc.
 preposition(staande).
 preposition(tegenover).
 preposition(tegen,[aan,in,op]).
-preposotion(tegenaan). % VL
+preposition(tegenaan). % VL
 preposition(tot,[toe,[aan,toe]]).
 preposition(tussen,[door,in,vandaan]).
 preposition(uit,[vandaan]).
@@ -2945,6 +2961,7 @@ collocational_preposition([op,uitnodiging,van]).
 collocational_preposition([op,verdenking,van]).
 collocational_preposition([op,verzoek,van]).
 collocational_preposition([op,voet,van]).
+collocational_preposition([op,vraag,van]). % VL
 collocational_preposition([te,midden]).  % VL
 collocational_preposition([te,midden,van]).
 collocational_preposition([ten,aanzien,van]).
@@ -4077,6 +4094,7 @@ m(Stem,conj(Stem),Surf) :-
     conj/2,
     conj/3.
 
+conj('&',              '&').
 conj(à,                à).
 conj(alsmede,          alsmede,   maar).
 conj(alsook,           alsook,    maar).
@@ -5093,7 +5111,7 @@ m(krap,             modal_adverb(noun_prep),krap).
 m(liefst,           modal_adverb(noun_prep),liefst).
 % maar de helft van de aanwezigen had een kaartje
 % maar in twaalf procent van de gevallen ...
-m(maar,             modal_adverb(noun_prep),maar).
+m(maar,             modal_adverb(noun_prep),maar).    % also adv? "maar ternauwernood"
 m('maar liefst',    modal_adverb(noun_prep),[maar,liefst]).
 m('maar liefst',    modal_adverb(noun_prep),maarliefst).
 m(maximaal,         modal_adverb(noun_prep),maximaal).
@@ -5203,6 +5221,7 @@ m('te veel',        modal_adverb(comp), [te,meer]).  % temeer daar/omdat
 
 
 m(desnoods,         modal_adverb(prep),desnoods).
+m(centraal,         modal_adverb(prep),centraal). % centraal in het midden; op het veld
 m(dicht,            modal_adverb(prep),dicht).    % dicht tegen zich aan ; dicht bij de macht?
 m(diep,             modal_adverb(prep),diep).     % diep in blessuretijd
 m(dwars,            modal_adverb(prep),dwars).    % dwars door
@@ -5214,6 +5233,7 @@ m(pal,              modal_adverb(prep),pal).      % pal naast/achter/..
 m(recht,            modal_adverb(prep),recht).    % recht tegenover ..
 m(recht,            modal_adverb(prep),recht).    % lijnrecht tegenover ..
 m(redelijk,         modal_adverb(prep),redelijk). % redelijk op tijd
+m(ster,             modal_adverb(prep),sterk).    % sterk in de minderheid
 m(volkomen,         modal_adverb(prep),volkomen). % with pp (predicative?)
 				% 'volkomen tegen mijn wil' / in de war
 
@@ -6635,12 +6655,12 @@ m(Stem,predm_adverb,Surf) :-
     predm_adverb(Surf),
     stem_from_surf(Surf,Stem).
 
-m(al,predm_adverb,alle).
-m(beide,predm_adverb,beiden).
+m(al,               predm_adverb,  alle).
+m(al,               predm_adverb,  allen).
+m(beide,            predm_adverb,  beiden).
 
 m('geen van alle',  predm_adverb,  [geen,van,alle]).
 m('geen van allen', predm_adverb,  [geen,van,allen]).
-m(al,               predm_adverb,  allen).
 m('geen van beide', predm_adverb,  [geen,van,beide]).
 m('geen van beide', predm_adverb,  [geen,van,beiden]).
 
@@ -7296,7 +7316,7 @@ with_dt([helemaal,niks],
 with_dt([zo,eentje],
 	pronoun(nwh,thi,sg,de,both,indef,strpro),
 	dt(np,[mod=l(zo,adverb,advp,0,1),
-	       hd=l(eentje,pronoun(nwh,thi,sg,de,both,indef,strpro),1,2)
+	       hd=l(één,pronoun(nwh,thi,sg,de,both,indef,strpro),1,2)
 	      ])).
 
 with_dt([niet,iedereen],

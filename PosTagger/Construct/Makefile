@@ -22,16 +22,17 @@ MAXSCORE            = 1350
 
 sort = LANG=POSIX LC_ALL=POSIX sort -u
 
-parool2001_test.la: $(ALPINO_HOME)/PosTagger/tr_tag.pl $(ALPINO_HOME)/PosTagger/Construct/tr.pl
-	zcat ../../Suites/parool2001_test.sents.gz |\
-        $(ALPINO_HOME)/src/Alpino\
-           suite=undefined\
-           penalties=undefined\
-           pos_tagger=off\
-           grammar=undefined\
-          display_lexical_analysis=tagger_test\
-          $(extra) batch_command=lex_all\
-                         2>parool2001_test.la.log > parool2001_test.la
+## this is also in CONSTRUCT_TRAINING/Makefile, do it there!
+# parool2001_test.la: $(ALPINO_HOME)/PosTagger/tr_tag.pl $(ALPINO_HOME)/PosTagger/Construct/tr.pl
+# 	zcat ../../Suites/parool2001_test.sents.gz |\
+#         $(ALPINO_HOME)/src/Alpino\
+#            suite=undefined\
+#            penalties=undefined\
+#            pos_tagger=off\
+#            grammar=undefined\
+#           display_lexical_analysis=tagger_test\
+#           $(extra) batch_command=lex_all\
+#                          2>parool2001_test.la.log > parool2001_test.la
 
 ###########################################################################
 

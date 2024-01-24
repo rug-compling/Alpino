@@ -1,7 +1,7 @@
 DISK=/dev/shm
 MAKEFLAGS=--no-print-directory
 
-QPROLOGMAXSIZE=20000
+QPROLOGMAXSIZE=15000
 
 jobname=$(shell echo $(suite)|sed -e 's/nlcow_part/nlc/'\
                                   -e 's/part//'\
@@ -23,8 +23,8 @@ job:
    echo "#!/bin/sh" ;\
    echo "#SBATCH --nodes=1" ;\
    echo "#SBATCH --ntasks=1" ;\
-   echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
    echo "#SBATCH --time=24:00:00" ;\
+   echo "#SBATCH --mem=15G";\
    echo "module load Python/3.10.4-GCCcore-11.3.0";\
    echo "module load lxml/4.9.1-GCCcore-11.3.0";\
    echo "module load Boost/1.79.0-GCC-11.3.0";\
@@ -35,42 +35,6 @@ job:
    echo "cd `pwd`";\
    echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) enhance=$(enhance)";\
        ) | sbatch --job-name=$(suite)
-
-longjob:
-	(  \
-   echo "#!/bin/sh" ;\
-   echo "#SBATCH --nodes=1" ;\
-   echo "#SBATCH --ntasks=1" ;\
-   echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
-   echo "#SBATCH --time=72:00:00" ;\
-   echo "module load Python/3.10.4-GCCcore-11.3.0";\
-   echo "module load lxml/4.9.1-GCCcore-11.3.0";\
-   echo "module load Boost/1.79.0-GCC-11.3.0";\
-   echo "module load Tk/8.6.12-GCCcore-11.3.0";\
-   echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
-   echo "hostname -f " ;\
-   echo "echo $(suite) " ;\
-   echo "cd `pwd`";\
-   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) enhance=$(enhance)";\
-       ) | sbatch --job-name=$(suite)
-
-shortjob:
-	(  \
-   echo "#!/bin/sh" ;\
-   echo "#SBATCH --nodes=1" ;\
-   echo "#SBATCH --ntasks=1" ;\
-   echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
-   echo "module load Python/3.10.4-GCCcore-11.3.0";\
-   echo "module load lxml/4.9.1-GCCcore-11.3.0";\
-   echo "module load Boost/1.79.0-GCC-11.3.0";\
-   echo "module load Tk/8.6.12-GCCcore-11.3.0";\
-   echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
-   echo "hostname -f" ;\
-   echo "echo $(suite) " ;\
-   echo "cd `pwd`";\
-   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) cdb_part=$(cdb_part)";\
-       ) | sbatch --partition=short --job-name=$(suite)
-
 
 SUITES=$(ALPINO_HOME)/Suites/Machine
 PATTERN=none

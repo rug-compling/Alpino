@@ -67,7 +67,7 @@ tus:
 	$(MAKE) frames suite=$*
 
 %.test.log.gz: ../../../Suites/Machine/%.sents.gz
-	$(MAKE) frames suite=$* TRAIN_TEST=test &
+	$(MAKE) frames suite=$* TRAIN_TEST=test
 
 %.tu.log.gz: ../../../Suites/Machine/%.sents.gz
 	$(MAKE) frames suite=$* extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/extra end_hook=best_score\(frames\)"

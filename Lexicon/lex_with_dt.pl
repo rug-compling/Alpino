@@ -1373,6 +1373,7 @@ with_dt_all(deze,[en,volg]).
 with_dt_all(deze,[en,vorig]).
 with_dt_all(deze,[honderdduizend,paar]).
 with_dt_all(deze,[honderd,paar]).
+with_dt_all(dezelfde,[en,één]).
 with_dt_all(deze,[miljard,paar]).
 with_dt_all(deze,[miljoen,paar]).
 with_dt_all(deze,[van]).
@@ -1486,7 +1487,6 @@ with_dt_all(een,[stelletje]).
 with_dt_all(eens,[temeer]).
 with_dt_all(eens,['te veel']).
 with_dt_all(eens,[zo]).
-with_dt_all(eentje,[zo]).
 with_dt_all(een,[welk]).
 with_dt_all(eerder,[gisteravond]).
 with_dt_all(eerder,[gisteren]).
@@ -2269,6 +2269,7 @@ with_dt_all(zes,[zij]).
 with_dt_all(zeventien,[zij]).
 with_dt_all(zeven,[zij]).
 with_dt_all(zijn,[zuster]).
+with_dt_all(zo,[één]).
 with_dt_all('zo\'n',[zorg]).
 with_dt_root('0').
 with_dt_root('00').
@@ -2631,6 +2632,7 @@ with_dt_root(dertien).
 with_dt_root(dertig).
 with_dt_root('des te').
 with_dt_root(deze).
+with_dt_root(dezelfde).
 with_dt_root(dichter).
 with_dt_root(die).
 with_dt_root(dien).
@@ -2657,7 +2659,6 @@ with_dt_root(ede).
 with_dt_root(een).
 with_dt_root(één).
 with_dt_root(eens).
-with_dt_root(eentje).
 with_dt_root(eerder).
 with_dt_root(eerlijk).
 with_dt_root(eerst).

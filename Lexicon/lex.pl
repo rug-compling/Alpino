@@ -740,6 +740,7 @@ in_names_dictionary(Cat,Word,Name,Ws1,Ws,His) :-
     add_type(TYPE,Tag,Cat0),
     Cat0=Cat.
 
+genitive_s('Ditvoorst','Ditvoorst').  % hack for frequent case in Wikipedia
 genitive_s(Word,Name) :-     % Frankrijks opstelling
     remove_s(Word,Name).
 genitive_s(Name,Name) :-     % Ajax opstelling, really not correct, but for robustness
@@ -818,6 +819,7 @@ number_both(['Clintons']).
 number_both(['De','Borg']).
 number_both(['De','Heideroosjes']).
 number_both(['Deathray','Davies']).
+number_both(['De','Nederlanden']).
 number_both(['Domobranci']).
 number_both(['Drumbassadors']).
 number_both(['Dukes'|_]).
@@ -1236,7 +1238,7 @@ lexicon__(Word,Cat,Label,Ws,Ws,variant(His),LC) :-
     lexicon__(Word1,Cat,Label,Ws,Ws,His,LC).
 
 %% op m'n eentje
-lexicon__(op,pp,Label1,Ws0,Ws,'in mijn eentje',_) :-
+lexicon__(op,TAG,Label1,Ws0,Ws,'op mijn eentje',_) :-
     lists:member(W/L,[zijn/  zijn,
 		      'z\'n'/zijn,
 		      haar/  haar,
@@ -1249,10 +1251,16 @@ lexicon__(op,pp,Label1,Ws0,Ws,'in mijn eentje',_) :-
 		      je/    je]),
     next_word(W,Ws0,Ws1,_),
     next_word(eentje,Ws1,Ws,_),
-    hdrug_util:concat_all([op,L,één],Label1,' ').
+    sort_not_unique([in,L,één],Roots0),
+    hdrug_util:concat_all(Roots0,Label1,' '),
+    TAG = with_dt(pp,dt(pp,[hd=l(op,preposition(op,[]),pp,0,1),
+			    obj1=dt(np,[det=l(L,determiner(pron),np,1,2),
+					hd=l(één,pronoun(nwh,thi,sg,de,both,indef,strpro),2,3)
+				       ])
+			   ])).
 
 %% in je eentje
-lexicon__(in,pp,Label1,Ws0,Ws,'in mijn eentje',_) :-
+lexicon__(in,TAG,Label1,Ws0,Ws,'in mijn eentje',_) :-
     lists:member(W/L,[zijn/  zijn,
 		      'z\'n'/zijn,
 		      haar/  haar,
@@ -1265,7 +1273,14 @@ lexicon__(in,pp,Label1,Ws0,Ws,'in mijn eentje',_) :-
 		      je/    je]),
     next_word(W,Ws0,Ws1,_),
     next_word(eentje,Ws1,Ws,_),
-    hdrug_util:concat_all([op,L,één],Label1,' ').
+    sort_not_unique([in,L,één],Roots0),
+    hdrug_util:concat_all(Roots0,Label1,' '),
+    TAG = with_dt(pp,dt(pp,[hd=l(in,preposition(in,[]),pp,0,1),
+			    obj1=dt(np,[det=l(L,determiner(pron),np,1,2),
+					hd=l(één,pronoun(nwh,thi,sg,de,both,indef,strpro),2,3)
+				       ])
+			   ])).
+
 
 %% special stuff for verbs
 %% dat hij daar tegen inbracht dat ...
@@ -1993,6 +2008,7 @@ spelling_variant21(sinds,dien,    sindsdien).
 spelling_variant21(te,kort,       tekort).
 spelling_variant21(te,weeg,       teweeg).
 spelling_variant21(tegen,op,      tegenop).
+spelling_variant21(tegen,over,    tegenover).
 spelling_variant21(terug,reis,    terugreis).
 spelling_variant21(terug,weg,     terugweg).
 spelling_variant21(tot,dat,       totdat).
@@ -2679,7 +2695,7 @@ spelling_variant(zouen,zouden).
 
 spelling_variant(dorst,durfde).
 spelling_variant(dorsten,durfden).
-
+spelling_variant(vollop,volop).
 spelling_variant(vijwel,vrijwel).
 spelling_variant(vrijwiliger,vrijwilliger).
 

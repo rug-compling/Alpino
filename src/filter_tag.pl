@@ -1184,6 +1184,13 @@ check_tag_particle_left(Part,Q) :-
 check_tag_particle_left(Part,Q) :-
     once(alpino_lexical_analysis:search_tag_tag(punct(_),tag(_,_,Q0,Q,_,_,_,punct(_)))),
     check_tag_particle_left(Part,Q0).
+%% next two for conjunctions: omdat hij steeds terug of vooruit spoelde
+check_tag_particle_left(Part,Q) :-
+    once(alpino_lexical_analysis:search_tag_tag(conj(_),tag(_,_,Q0,Q,_,_,_,conj(_)))),
+    check_tag_particle_left(Part,Q0).
+check_tag_particle_left(Part,Q) :-
+    once(alpino_lexical_analysis:search_tag_tag(particle(_),tag(_,_,Q0,Q,_,_,_,particle(_)))),
+    check_tag_particle_left(Part,Q0).
 
 check_ld_prep(Prep,P0,P) :-
     check_prep(Prep,P0,P).

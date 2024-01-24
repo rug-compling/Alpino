@@ -1546,6 +1546,7 @@ foreign_word(community).
 foreign_word(consent).
 foreign_word(consultant).
 foreign_word(consultants).
+foreign_word(contemporain).
 foreign_word(cool).
 foreign_word(corner).
 foreign_word(corporate).
@@ -1602,7 +1603,8 @@ foreign_word(dossier).
 foreign_word(dossiers).
 foreign_word(down).
 foreign_word(drink).
-foreign_word(du).
+foreign_word('d\'art').
+foreign_word('d\'Art').
 foreign_word('d\'amour').
 foreign_word('d\'une').
 foreign_word(e).
@@ -1833,6 +1835,7 @@ foreign_word(missing).
 foreign_word(mit).
 foreign_word(mode).
 foreign_word(model).
+foreign_word(moderne).
 foreign_word(module).
 foreign_word(mon).
 foreign_word(monde).
@@ -2179,6 +2182,23 @@ decap_foreign_word(X) :- decap_first(X,Xx), foreign_word(Xx).
 decap_foreign_word(X,X) :- foreign_word(X).
 decap_foreign_word(X,Xx) :- decap_first(X,Xx), foreign_word(Xx).
 
+decap_first_few(Capped,Small):-
+    atom(Capped),
+    atom_codes(Capped,Codes0),
+    decap_first_few_cs(Codes0,Codes),
+    atom_codes(Small,Codes).
+
+decap_first_few_cs([Upper|Codes0],[Lower|Codes]):-
+    isupper(Upper),
+    tolower(Upper,Lower),    
+    decap_first_few_cs0(Codes0,Codes).
+
+decap_first_few_cs0([Upper|Codes0],[Lower|Codes]):-
+    isupper(Upper),
+    !,
+    tolower(Upper,Lower),    
+    decap_first_few_cs0(Codes0,Codes).
+decap_first_few_cs0(C,C).
 
 decap_first(Capped,Small) :-
     atom(Capped),
@@ -4611,6 +4631,10 @@ unlikely_name([_,_|_],P1,P2) :-
     per_or_loc_or_org(LAB),
     loc_list(LAB,Q1).
 
+unlikely_name(_,P0,P):-
+    tag(P0,P1,_,_,_,_,normal(names_dictionary),_),
+    tag(P1,P,_,_,_,_,_,punct(_)).
+
 next_one_special_decap(P0) :-
     tag(P0,_,_,_,_,_,special(decap(_)),_).
 next_one_special_decap(P0) :-
@@ -5452,11 +5476,12 @@ potential_name_fsa(not_begin(Flag),Pos0,Ws0,Ws,Ls0,Hs) :-
     potential_name_fsa_not_begin(Flag,Pos0,Ws0,Ws,Ls0,Hs).
 
 potential_name_fsa(begin,P0,[Word1|Words0],Words,[Word1|Used],[begin|His]) :-
+    P1 is P0 + 1,
     \+ (   Word1 = 'De',
 	   Words0 = [Ini|_],
 	   \+ (  name_initial(Ini)
 	      ;  name_vanhet(de,Ini)
-	      ;  starts_with_capital(Ini)
+	      ;  starts_with_capital(Ini), name_unknown(Ini,P1)
 	      )
        ), % De K. had samen met een vriend een man lastig gevallen die ...
           % De la Rua had weinig keus

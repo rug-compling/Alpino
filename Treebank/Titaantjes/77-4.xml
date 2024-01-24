@@ -62,36 +62,34 @@
               <node begin="26" cat="ppart" end="35" id="47" rel="vc">
                 <node begin="26" end="27" id="48" index="1" rel="su"/>
                 <node begin="27" end="28" id="49" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
-                <node begin="28" cat="advp" end="30" id="50" rel="mod">
-                  <node begin="28" end="29" id="51" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
-                  <node begin="29" end="30" getal="getal" id="52" lemma="ergens" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(onbep,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="hd" root="ergens" status="vol" vwtype="onbep" word="ergens"/>
+                <node begin="28" end="29" id="50" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+                <node begin="29" end="30" getal="getal" id="51" lemma="ergens" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(onbep,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="ergens" status="vol" vwtype="onbep" word="ergens"/>
+                <node begin="30" cat="np" end="33" id="52" rel="obj1">
+                  <node begin="30" end="31" id="53" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="31" buiging="zonder" end="32" graad="basis" id="54" lemma="bronzen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="bronzen" word="bronzen"/>
+                  <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="55" lemma="paard" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="paard" word="paard"/>
                 </node>
-                <node begin="30" cat="np" end="33" id="53" rel="obj1">
-                  <node begin="30" end="31" id="54" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                  <node begin="31" buiging="zonder" end="32" graad="basis" id="55" lemma="bronzen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="bronzen" word="bronzen"/>
-                  <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="56" lemma="paard" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="paard" word="paard"/>
-                </node>
-                <node begin="34" buiging="zonder" end="35" id="57" lemma="zien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zie" word="gezien" wvorm="vd"/>
+                <node begin="34" buiging="zonder" end="35" id="56" lemma="zien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zie" word="gezien" wvorm="vd"/>
               </node>
             </node>
           </node>
         </node>
       </node>
-      <node begin="36" cat="du" end="41" id="58" rel="dp">
-        <node begin="36" end="37" id="59" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="dp" root="allemaal" word="allemaal"/>
-        <node begin="37" cat="np" end="41" id="60" rel="dp">
-          <node begin="37" end="38" getal="mv" graad="basis" id="61" lemma="ding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ding" word="dingen"/>
-          <node begin="38" cat="pp" end="41" id="62" rel="mod">
-            <node begin="38" end="39" id="63" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
-            <node begin="39" cat="np" end="41" id="64" rel="obj1">
-              <node begin="39" buiging="met-e" end="40" graad="basis" id="65" lemma="duur" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="duur" word="dure"/>
-              <node begin="40" end="41" getal="mv" graad="basis" id="66" lemma="bazar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bazar" word="bazars"/>
+      <node begin="36" cat="du" end="41" id="57" rel="dp">
+        <node begin="36" end="37" id="58" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="dp" root="allemaal" word="allemaal"/>
+        <node begin="37" cat="np" end="41" id="59" rel="dp">
+          <node begin="37" end="38" getal="mv" graad="basis" id="60" lemma="ding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ding" word="dingen"/>
+          <node begin="38" cat="pp" end="41" id="61" rel="mod">
+            <node begin="38" end="39" id="62" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+            <node begin="39" cat="np" end="41" id="63" rel="obj1">
+              <node begin="39" buiging="met-e" end="40" graad="basis" id="64" lemma="duur" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="duur" word="dure"/>
+              <node begin="40" end="41" getal="mv" graad="basis" id="65" lemma="bazar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bazar" word="bazars"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="41" end="42" id="67" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="41" end="42" id="66" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Zijn gordijnen waren van pluche , z&apos;n stoelen bekleed met geel moquette , op den schoorsteen stond een zwarte pendule met candelabres en ik meen dat ik ook nog ergens een bronzen paard heb gezien , allemaal dingen uit dure bazars .</sentence>
 </alpino_ds>
