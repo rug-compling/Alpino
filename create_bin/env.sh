@@ -40,12 +40,12 @@ then
     LD_LIBRARY_PATH="$a/fadd:$a/unix:$a/create_bin/extralibs:$a/TreebankTools/IndexedCorpus${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
     if [ "$ZSH_VERSION" != "" ]
     then
-	p="$PROMPT"
-	prompt off
-	PROMPT="[Alpino] $p"
-	unset p
+        p="$PROMPT"
+        prompt off
+        PROMPT="[Alpino] $p"
+        unset p
     else
-	PS1="[Alpino] $PS1"
+        PS1="[Alpino] $PS1"
     fi
     SP_CSETLEN=212
     SP_CTYPE=utf8
@@ -60,6 +60,13 @@ then
     export SP_CTYPE
 fi
 unset a
+
+if `which alto > /dev/null`
+then
+    export HAS_ALTO=1
+else
+    export HAS_ALTO=0
+fi
 
 ## note why we always set TK_LIBRARY and TCL_LIBRARAY:
 ## there are different versions of tcl/tk 8.6, therefore we must ensure

@@ -220,7 +220,22 @@ def main():
     if options.dtview:
         shellquotedquery = shellquote(options.query)
         dtview_fp = None
-        process_arguments(args, workhorse, options.stdin, 1, True)
+        if os.getenv("HAS_ALTO") != "1":
+            process_arguments(args, workhorse, options.stdin, 1, True)
+        else:
+            if options.stdin:
+                opt = '-i '
+            else:
+                opt = ''
+            command = 'alto ' + opt + ' '.join(args) + ' fp:' + shellquotedquery + ' tt:%f | dtview -s -query ' + shellquotedquery
+            if options.stdin:
+                fp = os.popen(command, "w")
+                for line in sys.stdin:
+                    fp.write(line)
+                fp.close()
+            else:
+                os.system(command)
+            sys.exit(0)
     elif options.rootlabels:
         counthash = {'root': {}, 'lemma': {}, 'word':{} }
         process_arguments(args, workhorse, options.stdin, 1, True)

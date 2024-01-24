@@ -10,7 +10,8 @@ encoding system utf-8
 set cligdir "$env(ALPINO_HOME)/Hdrug/Tcl/Clig"
 set env(CLIG_DIR) $cligdir
 set stylesheetdir $env(ALPINO_HOME)/TreebankTools/stylesheets
-set cligsheet "$stylesheetdir/dt2clig1.xsl"
+set cligsheet  "$stylesheetdir/dt2clig1.xsl"
+set cligsheet2 "$stylesheetdir/dt2clig2.xsl"
 set sentencesheet "$stylesheetdir/dt2sent.xsl"
 set sentidsheet "$stylesheetdir/dt2sentid.xsl"
 set metasheet "$stylesheetdir/dt2meta.xsl"
@@ -19,6 +20,7 @@ set initial_width  1024
 set initial_height  786
 set listbox_width 150
 set extended_attributes 0
+set has_alto "$env(HAS_ALTO)"
 
 #----------------------------------------------------------------------
 ### PROCS
@@ -57,16 +59,16 @@ proc show {obj} { ;# destroys graphical top and displays obj
     set scaling [scale-graph $graph_scale .graphics]
 
     # fit canvas to size
-    
+
     set width  [expr [lindex $size 0]*$scaling+1]
     set height [expr [lindex $size 1]*$scaling+1]
 
     .graphics configure -width $width
     .graphics configure -height $height
     .graphics configure -scrollregion [list 0 0 $width $height]
-    
-    # switch on cursor change        
-    . configure -cursor {}      
+
+    # switch on cursor change
+    . configure -cursor {}
     update idletasks
 }
 
@@ -76,7 +78,7 @@ proc setup-clig-canvas {parent} {
     global background_color main_background_color clig_globals
     global initial_width initial_height
 
-    # zorgen dat we geen ".." window paden krijgen 
+    # zorgen dat we geen ".." window paden krijgen
     if {$parent == "."} {
         set parent ""
     }
@@ -84,7 +86,7 @@ proc setup-clig-canvas {parent} {
     # setup canvas and scrollbars
     scrollbar $parent.ygraph -command ".graphics yview" -width 10
     scrollbar $parent.xgraph -command ".graphics xview" -width 10 -orient horizontal
-    
+
     # de zoom procedures gaan er vanuit dat het canvas ".graphics" heet
     canvas .graphics -bg $background_color -borderwidth 0 \
         -highlightthickness 0 \
@@ -193,7 +195,7 @@ proc build_gui {} {
         clig_globals topframe exprframe butframe descriptionlist \
         graph_scale clig_canvas filelist current filelistbox  \
         extended_attributes opts
-    
+
 
     # GUI defaults zetten
     . configure -bg $main_background_color
@@ -231,7 +233,7 @@ proc build_gui {} {
     button .apply -text "Apply"    -command show-tree
     button .togglefilelist  -text "Filelist" -command toggle-filelist
     setBalloonHelp .togglefilelist {Toggles display of the list of file names (t)}
-    
+
     button .toggle-extd-attrs -text "Attributes" \
         -relief [lindex {raised sunken} $extended_attributes] \
         -command toggle-extd-attrs
@@ -245,7 +247,7 @@ proc build_gui {} {
     setBalloonHelp .next {Go to next file (p)}
 
     button .smaller -text "<" \
-        -command { 
+        -command {
             if ($graph_scale>2) {
                 unscale $graph_scale .graphics
                 set graph_scale [expr $graph_scale-2]
@@ -256,7 +258,7 @@ proc build_gui {} {
     setBalloonHelp .smaller {Smaller font}
 
     button .bigger -text ">" \
-        -command { 
+        -command {
             if ($graph_scale<32) {
                 unscale $graph_scale .graphics
                 set graph_scale [expr $graph_scale+2]
@@ -267,7 +269,7 @@ proc build_gui {} {
     setBalloonHelp .bigger {Bigger font}
 
     button .normal -text "<>" \
-        -command { 
+        -command {
             set graph_scale [expr $clig_globals(fontsize)]
             show $main_object
         }
@@ -305,7 +307,7 @@ proc build_gui {} {
             next-file
         }
     setBalloonHelp .ignore {Ignore this warning in future (white-listed in .checks.expected)}
-    
+
 
     button .converse -text "Converse" \
         -command { puts "executing Alpino  -xml_converse [lindex $filelist $current] "
@@ -412,7 +414,7 @@ proc build_gui {} {
     # pack .parserlabel -fill x -expand yes -in $topframe
     bind .parserlabel <Configure> {.parserlabel configure -wraplength %w}
 
-    # het canvas en de listbox plaatsen 
+    # het canvas en de listbox plaatsen
     panedwindow .pane
     pack .pane -side top -expand yes -fill both
 
@@ -438,7 +440,7 @@ proc build_gui {} {
     .pane add .pane.canvasframe
 
     if $opts(-m) {
-        maximize 
+        maximize
     }
 
 
@@ -490,11 +492,11 @@ proc maak_listbox {parent} {
     set scrolly  $parent.scrolly
     set listbox  $parent.listbox
 
-    listbox   $listbox  -yscrollcommand "$scrolly set" -xscrollcommand "$scrollx set" 
-    scrollbar $scrollx  -command "$listbox xview" -orient horizontal 
+    listbox   $listbox  -yscrollcommand "$scrolly set" -xscrollcommand "$scrollx set"
+    scrollbar $scrollx  -command "$listbox xview" -orient horizontal
     scrollbar $scrolly  -command "$listbox yview"
 
-    pack $scrollx -side bottom -fill x 
+    pack $scrollx -side bottom -fill x
     pack $scrolly -side right  -fill y
     pack $listbox -expand yes  -fill both
 }
@@ -524,7 +526,7 @@ proc clig {obj} {
 
 
 # dtxslt "--stringparam" "expr='//node\[@rel = \"cnj\"]'"
-#          -s "showmatch3.xsl" "/mnt/devel/Alpino/Treebank/cdb/33.xml 
+#          -s "showmatch3.xsl" "/mnt/devel/Alpino/Treebank/cdb/33.xml
 
 proc show-tree-old {} {
     global dtget cligsheet filelist current expr extended_attributes
@@ -562,20 +564,42 @@ proc shellquote {s} {
 }
 
 proc show-tree {} {
-    global dtget cligsheet env filelist current expr extended_attributes
+    global dtget cligsheet cligsheet2 env filelist current expr extended_attributes has_alto
     # laat de boom uit FILELIST op positie CURRENT zien mbv CLIGSHEET en EXPR
 
     # de boomstructuur op het canvas toveren
 
-    set commandline "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt --stylesheet $cligsheet"
+    if {"$has_alto" == "1"} {
 
-    if {[expr [string length $expr] > 0]} {
-        append commandline " --stringparam "  expr=[shellquote $expr]
+        set commandline "alto -n -v extended-attributes=$extended_attributes "
+        append commandline [shellquote [lindex $filelist $current]]
+        if {[expr [string length $expr] > 0]} {
+            append commandline " fp:" [shellquote $expr]
+        }
+        append commandline " ts:$cligsheet2"
+        set output [exec sh -c $commandline]
+
+        if {"$output" == "" && [expr [string length $expr] > 0]} {
+            set commandline "alto -n -v extended-attributes=$extended_attributes "
+            append commandline [shellquote [lindex $filelist $current]]
+            append commandline " ts:$cligsheet2"
+            set output [exec sh -c $commandline]
+        }
+
+    } else {
+
+        set commandline "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt --stylesheet $cligsheet"
+
+        if {[expr [string length $expr] > 0]} {
+            append commandline " --stringparam "  expr=[shellquote $expr]
+        }
+        append commandline " --param extended-attributes=$extended_attributes "
+        append commandline [shellquote [lindex $filelist $current]]
+
+        set output [exec sh -c $commandline]
+
     }
-    append commandline " --param extended-attributes=$extended_attributes "
-    append commandline [shellquote [lindex $filelist $current]]
 
-    set output [exec sh -c $commandline]
     eval $output
 
     # FIXME, hoort hier eigenlijk niet (toch?)
@@ -587,7 +611,7 @@ proc show-tree {} {
 
 
 # FIXME: De window title bevat informatie die eigenlijk in een
-# status-bar thuishoort.  
+# status-bar thuishoort.
 #
 # Omdat het wijzigen van de window title (blijkbaar!) een betrekkelijk
 # dure operatie is (zie "window_title_update_timer" en "stdin_handler"
@@ -599,9 +623,9 @@ proc update-window-title {} {
     if {$still_getting_files} {
         set gf {, still getting files...}
     } else {
-        set gf "" 
+        set gf ""
     }
-    
+
     # dtview <filenaam> (number of total)
     wm title . "[file tail $argv0] [lindex $filelist $current] \
                 ([expr $current + 1] of [llength $filelist]$gf)"
@@ -612,49 +636,68 @@ proc update-window-title {} {
 
 proc show-sentence {} {
     # update het sentence label
-    global dtget env sentencesheet sentidsheet metasheet parsersheet filelist current topframe
-    
+    global dtget env sentencesheet sentidsheet metasheet parsersheet filelist current topframe has_alto
+
     # de sentence op het scherm toveren
 
-    set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
-    lappend arglist --stylesheet $sentidsheet
-    lappend arglist [shellquote [lindex $filelist $current]]
-
+    if {"$has_alto" == "1"} {
+        set arglist "alto tt:%I "
+        lappend arglist [shellquote [lindex $filelist $current]]
+    } else {
+        set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
+        lappend arglist --stylesheet $sentidsheet
+        lappend arglist [shellquote [lindex $filelist $current]]
+    }
     set sentid [exec sh -c [join $arglist " "]]
 
     if { "$sentid" != "" } {
-	set sentid "$sentid: "
+        set sentid "$sentid: "
     }
 
-    set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
-    lappend arglist --stylesheet $sentencesheet
-    lappend arglist [shellquote [lindex $filelist $current]]
+    if {"$has_alto" == "1"} {
+        set arglist "alto tt:%s "
+        lappend arglist [shellquote [lindex $filelist $current]]
+    } else {
+        set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
+        lappend arglist --stylesheet $sentencesheet
+        lappend arglist [shellquote [lindex $filelist $current]]
+    }
 
     set sentence [exec sh -c [join $arglist " "]]
 
     .sentencelabel configure -text "$sentid$sentence"
 
-    set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
-    lappend arglist --stylesheet $metasheet
-    lappend arglist [shellquote [lindex $filelist $current]]
+    if {"$has_alto" == "1"} {
+        set arglist "alto tt:%d "
+        lappend arglist [shellquote [lindex $filelist $current]]
+    } else {
+        set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
+        lappend arglist --stylesheet $metasheet
+        lappend arglist [shellquote [lindex $filelist $current]]
+    }
 
     set meta [exec sh -c [join $arglist " "]]
 
     pack forget .metalabel
     if { "$meta" != "" } {
-	pack .metalabel -fill x -expand yes -in $topframe
+        pack .metalabel -fill x -expand yes -in $topframe
         .metalabel configure -text $meta
     }
 
-    set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
-    lappend arglist --stylesheet $parsersheet
-    lappend arglist [shellquote [lindex $filelist $current]]
+    if {"$has_alto" == "1"} {
+        set arglist "alto ts:$parsersheet "
+        lappend arglist [shellquote [lindex $filelist $current]]
+    } else {
+        set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
+        lappend arglist --stylesheet $parsersheet
+        lappend arglist [shellquote [lindex $filelist $current]]
+    }
 
     set parser [exec sh -c [join $arglist " "]]
 
     pack forget .parserlabel
     if { "$parser" != "" } {
-	pack .parserlabel -fill x -expand yes -in $topframe
+        pack .parserlabel -fill x -expand yes -in $topframe
         .parserlabel configure -text $parser
     }
 
@@ -674,7 +717,7 @@ proc next-file {} {
     } else {
         if {!$still_getting_files} {
             exit
-        } 
+        }
     }
 }
 
@@ -695,11 +738,11 @@ proc previous-file {} {
 # maak de prev/next buttons active/inactive indien nodig
 proc set-button-activity {} {
     global current filelist opts
-    
+
     # prev
     if {$current > 0} {
         .prev configure -state normal
-    } else { 
+    } else {
         .prev configure -state disabled
     }
 
@@ -761,7 +804,7 @@ proc Pop {varname {nth 0}} {
 #
 proc stdin_handler {use_file_query_pairs} {
     global filelist querylist descriptionlist \
-        stream_contains_filenames still_getting_files 
+        stream_contains_filenames still_getting_files
 
     gets stdin line
 
@@ -801,14 +844,14 @@ proc stdin_handler {use_file_query_pairs} {
         # beschikbaar is teveel van het goede: de X-server en de
         # window manager schieten dan in de stress.  We lossen dit op
         # met een timer die om de zoveel tijd een update doet
-                
+
         set-button-activity
 
         # Alleen voor de eerste file die binnen is moeten we
         # wat op het scherm toveren
         if {!$stream_contains_filenames} {
             set stream_contains_filenames 1
-            
+
             update-query-field
             update-filelist-selection
             show-tree
@@ -834,13 +877,13 @@ proc window_title_update_timer {timeout} {
 
 #
 # Voeg een button toe aan de gui om de te kunnen stoppen met het lezen
-# uit stdin.  
+# uit stdin.
 #
 proc add_stop_button {} {
     global butframe
 
     button .stop -text "Stop" -command stop_handler \
-        -fg red -activeforeground red 
+        -fg red -activeforeground red
     pack .stop -in $butframe -side right
     focus .stop
     setBalloonHelp .stop {Stop getting further files...}
@@ -860,7 +903,7 @@ proc remove_stop_button {} {
 #
 proc stop_handler {} {
     global still_getting_files
-    
+
     close stdin
     set still_getting_files 0
     update-window-title
@@ -874,7 +917,7 @@ proc stop_handler {} {
 #
 proc update-query-field {} {
     global expr current querylist opts
-    
+
     if {$opts(-file-query-pairs)} {
         set expr [lindex $querylist $current]
         setdescription
@@ -886,17 +929,17 @@ proc setdescription {} {
     global descriptionframe topframe \
         description opts descriptionlist current butframe
 
-    # maak en vul frame indien nodig 
+    # maak en vul frame indien nodig
     if {[expr ! [info exists descriptionframe]]} {
         set descriptionframe [frame $topframe.descrframe]
-        
+
         set descrlabel [label $descriptionframe.descrlabel \
                             -text "Query description: "]
-        
+
         set descrentry [entry $descriptionframe.descrlentry \
                             -textvariable description]
 
-        # don't do the root window (".") bindings 
+        # don't do the root window (".") bindings
         bindtags $descrentry { $descrentry Entry all }
 
         pack $descrlabel -side left -padx 2
@@ -908,7 +951,7 @@ proc setdescription {} {
     # haal description op en maak frame actief indien nodig
     if {$opts(-file-query-pairs)} {
         set description [lindex $descriptionlist $current]
-        
+
         if {[string length $description]} {
             pack $descriptionframe -after $butframe  -fill x -pady 2 -expand yes
         } else {
@@ -921,7 +964,7 @@ proc setdescription {} {
 proc toggle-filelist {} {
     global listbox_width
     set is_shown  [expr [lsearch [.pane panes] .pane.listboxframe] >= 0]
-    
+
     if $is_shown {
         # -width opvragen werkt op de een of andere manier niet
         # we zetten daarom de sash positie
@@ -937,7 +980,7 @@ proc toggle-filelist {} {
 
 proc toggle-extd-attrs {} {
     global extended_attributes
-    
+
     set extended_attributes [expr ! $extended_attributes]
     .toggle-extd-attrs configure \
         -relief [lindex {raised sunken} $extended_attributes]
@@ -950,9 +993,9 @@ proc expand_and_add_to_filelist {arg} {
     if {[string match *.xml $arg]} {
         lappend filelist $arg
     } elseif {[string match *.data.dz $arg] || [string match *.index $arg]
-        || [file isdirectory $arg] 
+        || [file isdirectory $arg]
         || [file exists $arg.index] } {
-        
+
         set fh [open "|dtlist $arg" r]
 
         while {[gets $fh line] != -1} {
@@ -980,7 +1023,7 @@ OPTIONS:
 -s, --stdin                     Read the filenames from stdin
 -m, --maximize                  window is maximized
 --file-query-pairs              Read the filename, expression for
-                                highlighting, and description from 
+                                highlighting, and description from
                                 stdin, all separated by tabs.
 -d, --targetdir TARGETDIR       The destination directory for Move operations
 -h, --help                      This message
