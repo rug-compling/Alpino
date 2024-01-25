@@ -564,7 +564,7 @@ proc shellquote {s} {
 }
 
 proc show-tree {} {
-    global dtget cligsheet cligsheet2 env filelist current expr extended_attributes has_alto
+    global dtget cligsheet cligsheet2 env filelist current expr extended_attributes has_alto opts
     # laat de boom uit FILELIST op positie CURRENT zien mbv CLIGSHEET en EXPR
 
     # de boomstructuur op het canvas toveren
@@ -575,6 +575,9 @@ proc show-tree {} {
         append commandline [shellquote [lindex $filelist $current]]
         if {[expr [string length $expr] > 0]} {
             append commandline " fp:" [shellquote $expr]
+	    if {$opts(-2)} {
+                append commandline " -2"
+	    }
         }
         append commandline " ts:$cligsheet2"
         set output [exec sh -c $commandline]
@@ -1019,6 +1022,7 @@ set descriptionlist {}
 set usage "Usage: dtview \[OPTIONS] <files, directories, compact corpora>
 
 OPTIONS:
+-2                              Use XPath2
 -q, --query, --expr EXPR        The XPath expression for highlighting
 -s, --stdin                     Read the filenames from stdin
 -m, --maximize                  window is maximized
@@ -1029,7 +1033,7 @@ OPTIONS:
 -h, --help                      This message
 "
 
-array set opts {-q "" -s 0 -file-query-pairs 0 -d "" -h 0 -m 0}
+array set opts {-q "" -s 0 -file-query-pairs 0 -d "" -h 0 -m 0 -2 0}
 
 while {[string match -* [lindex $argv 0]]} {
     switch -regexp -- [lindex $argv 0] {
@@ -1037,6 +1041,7 @@ while {[string match -* [lindex $argv 0]]} {
         ^(-s|--?stdin)$         { set opts(-s) 1;}
         ^(-m|--?maximize)$      { set opts(-m) 1;}
         ^(-h|--?help)$          { set opts(-h) 1;}
+        ^-2$                    { set opts(-2) 1;}
         ^--?file-query-pairs$   { set opts(-file-query-pairs) 1;}
         ^--$                    { Pop argv ; break }
         default {

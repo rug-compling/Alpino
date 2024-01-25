@@ -172,6 +172,9 @@ def main():
     parser.add_argument("-q", "--query", "-e", "--expr", dest="query",
                         help="XPath expression to search for")
 
+    parser.add_argument("-2", action="store_true", dest="version2",
+                        help="Use XPath version 2")
+
     parser.add_argument("--statistics", "-l", action="store_true", dest="statistics",
                         help="print stats for values of rel,cat,pos labels in matching nodes")
 
@@ -227,7 +230,11 @@ def main():
                 opt = '-i '
             else:
                 opt = ''
-            command = 'alto ' + opt + ' '.join(args) + ' fp:' + shellquotedquery + ' tt:%f | dtview -s -query ' + shellquotedquery
+            if options.version2:
+                ver2 = '-2 '
+            else:
+                ver2 = ''
+            command = 'alto ' + opt + ver2 + ' '.join(args) + ' fp:' + shellquotedquery + ' tt:%f | dtview -s ' + ver2 + '-query ' + shellquotedquery
             if options.stdin:
                 fp = os.popen(command, "w")
                 for line in sys.stdin:
