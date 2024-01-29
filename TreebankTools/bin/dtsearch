@@ -231,10 +231,12 @@ def main():
             else:
                 opt = ''
             if options.version2:
-                ver2 = '-2 '
+                ver2 = '-2p '
+                dtver2 = '-2 '
             else:
                 ver2 = ''
-            command = 'alto ' + opt + ver2 + ' '.join(args) + ' fp:' + shellquotedquery + ' tt:%f | dtview -s ' + ver2 + '-query ' + shellquotedquery
+                dtver2 = ''
+            command = 'alto ' + opt + ver2 + ' '.join(args) + ' fp:' + shellquotedquery + ' tt:%f | dtview -s ' + dtver2 + '-query ' + shellquotedquery
             if options.stdin:
                 fp = os.popen(command, "w")
                 for line in sys.stdin:
