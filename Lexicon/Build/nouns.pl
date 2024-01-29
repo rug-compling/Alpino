@@ -6839,6 +6839,7 @@ n([pl('cafetaria\'s'),sg(cafetaria)],both,[]).
 
 n([pl(cafés),pl('café\'s'),sg(café)],het,[np_app_measure],
   [eet,
+   euro,
    internet,
    i(jong,jongeren),
    muziek,
@@ -27443,6 +27444,7 @@ n([pl(pleiters),sg(pleiter)],de,[],[straf]).
 
 n([pl(plekken),sg(plek)],de,
   [meas_mod,
+   measure,
    sbar,  % mijn zwakke plek is dat ...
    vp],
   [dim(plekje)]).
@@ -34922,6 +34924,11 @@ n([sg([talkshow,host]),pl([talkshow,hosts])],de,[]).
 
 %% is now a determiner
 %% n([pl(tallen),sg(tal)],het,[measure]).
+
+n([pl(talenten),sg(talent)],het,
+  [subject_sbar,
+   subject_vp],
+  []).
 
 n([pl(talenten),sg(talent)],het,[],
   [natuur,

@@ -1518,6 +1518,7 @@ foreign_word(casual).
 foreign_word(casuals).
 foreign_word(ce).
 foreign_word(center).
+foreign_word(centers).
 foreign_word(certains).
 foreign_word(ces).
 foreign_word('c\'est').
@@ -1987,6 +1988,7 @@ foreign_word(sind).
 foreign_word(single).
 foreign_word(singles).
 foreign_word(shall).
+foreign_word(shared).
 foreign_word(she).
 foreign_word(short).
 foreign_word(shot).
@@ -2182,23 +2184,23 @@ decap_foreign_word(X) :- decap_first(X,Xx), foreign_word(Xx).
 decap_foreign_word(X,X) :- foreign_word(X).
 decap_foreign_word(X,Xx) :- decap_first(X,Xx), foreign_word(Xx).
 
-decap_first_few(Capped,Small):-
-    atom(Capped),
-    atom_codes(Capped,Codes0),
-    decap_first_few_cs(Codes0,Codes),
-    atom_codes(Small,Codes).
+% decap_first_few(Capped,Small):-
+%     atom(Capped),
+%     atom_codes(Capped,Codes0),
+%     decap_first_few_cs(Codes0,Codes),
+%     atom_codes(Small,Codes).
 
-decap_first_few_cs([Upper|Codes0],[Lower|Codes]):-
-    isupper(Upper),
-    tolower(Upper,Lower),    
-    decap_first_few_cs0(Codes0,Codes).
+% decap_first_few_cs([Upper|Codes0],[Lower|Codes]):-
+%     isupper(Upper),
+%     tolower(Upper,Lower),    
+%     decap_first_few_cs0(Codes0,Codes).
 
-decap_first_few_cs0([Upper|Codes0],[Lower|Codes]):-
-    isupper(Upper),
-    !,
-    tolower(Upper,Lower),    
-    decap_first_few_cs0(Codes0,Codes).
-decap_first_few_cs0(C,C).
+% decap_first_few_cs0([Upper|Codes0],[Lower|Codes]):-
+%     isupper(Upper),
+%     !,
+%     tolower(Upper,Lower),    
+%     decap_first_few_cs0(Codes0,Codes).
+% decap_first_few_cs0(C,C).
 
 decap_first(Capped,Small) :-
     atom(Capped),
@@ -2977,6 +2979,7 @@ compound_part(scheeps,schip).
 compound_part(achteraf).
 compound_part(aller).
 compound_part(anti).
+compound_part(euro).
 compound_part(ex).
 compound_part(half).
 compound_part(her).

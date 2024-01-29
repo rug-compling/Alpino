@@ -9885,6 +9885,9 @@ a([e(equivalente),
 a([e(epische),
    no_e(episch)],adv,[],[]).
 
+%% hij moet/gaat/is eraan
+a([pred(eraan)],nonadv,[],[]).
+
 a([e(erbarmelijke),
    er(erbarmelijker),
    ere(erbarmelijkere),
@@ -14314,6 +14317,9 @@ a([ge_e(geplaatste),
 
 a([ge_e(geplakte),
    ge_no_e(geplakt)],adv,[],[]).
+
+a([ge_e(geplamuurde),
+   ge_no_e(geplamuurd)],adv,[ap_pred],[]).
 
 a([ge_e(geplande),
    ge_no_e(gepland)],adv,[],[]).
@@ -36981,7 +36987,7 @@ a([ge_e(verscheurde),
    ge_no_e(verscheurd)],adv,[],[]).
 
 a([e(verschillende),
-   no_e(verschillend)],adv,[],[]).
+   no_e(verschillend)],adv,[pp(van)],[]).
 
 a([ge_both(verscholen)],adv,[],[]).
 
@@ -42293,6 +42299,7 @@ stem(gepit,v_root(pit,pitten)).
 stem(geplaagd,v_root(plaag,plagen)).
 stem(geplaatst,v_root(plaats,plaatsen)).
 stem(geplakt,v_root(plak,plakken)).
+stem(geplamuurd,v_root(plamuur,plamuren)).
 stem(gepland,v_root(plan,plannen)).
 stem(geplant,v_root(plant,planten)).
 stem(geplast,v_root(plas,plassen)).

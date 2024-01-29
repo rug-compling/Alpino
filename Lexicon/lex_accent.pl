@@ -372,6 +372,9 @@ accent(essentiele,essentiële).
 accent(estuarien,estuariën).
 accent('Ethiopier','Ethiopiër').
 accent('Ethiopiers','Ethiopiërs').
+accent(eurocafe,eurocafé).
+accent('eurocafe\'s','eurocafé\'s').
+accent(eurocafes,eurocafés).
 accent(europarlementarier,europarlementariër).
 accent('Europarlementarier','Europarlementariër').
 accent(europarlementariers,europarlementariërs).

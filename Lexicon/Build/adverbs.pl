@@ -475,6 +475,7 @@ adverb([ten,tweede,male]).
 adverb([ten,tweeden,male]).
 adverb([ten,volle]).
 adverb([ten,voeten,uit]).
+adverb([ten,vroegste]).
 adverb([ten,zeerste]).
 adverb(tengevolge).
 adverb([ter,elfde,ure]).

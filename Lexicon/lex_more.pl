@@ -4374,6 +4374,8 @@ tel_digits(Atom) :-
     atom_codes(Atom,Codes),
     isdigits(Codes).
 
+tel_land --> [].
+
 tel_land -->
     n_word('('),
     tel_land,
@@ -4381,6 +4383,10 @@ tel_land -->
 
 tel_land -->
     n_word('+'),
+    n_word(Atom),
+    {  tel_digits(Atom) }.
+
+tel_land -->
     n_word(Atom),
     {  tel_digits(Atom) }.
 
