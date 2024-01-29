@@ -576,7 +576,7 @@ proc show-tree {} {
         if {[expr [string length $expr] > 0]} {
             append commandline " fp:" [shellquote $expr]
 	    if {$opts(-2)} {
-                append commandline " -2"
+                append commandline " -2p"
 	    }
         }
         append commandline " ts:$cligsheet2"
