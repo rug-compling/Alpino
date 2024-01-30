@@ -42276,7 +42276,7 @@ n([pl(zinnen),sg(zin)],de,
    pred_pp(naar),
    pred_pp(naar,subject_sbar),
    pred_pp_pl(bij),             % hij is weer bij zinnen gekomen
-   van_sbaro]).                  % in de zin van: buurman doodt buurman
+   van_sbar]).                  % in de zin van: buurman doodt buurman
 
 n([pl(zinnen),sg(zin)],de,
   [start_app_measure,
