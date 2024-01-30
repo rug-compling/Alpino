@@ -63,9 +63,9 @@ prolog/corpusreader.so: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpus
 	$(SPLFR) prolog/corpusreader.pl prolog/corpusreader.cpp \
 		--cflag="$(CXXFLAGS)" -O2 -LD -Wall \
                 $(EXTRACXXFLAGS) \
-		-Wl,-rpath,$(PWD) \
 		-L. -lcorpus -lboost_filesystem \
-		-lboost_system -lstdc++ -lz
+		-lboost_system -lstdc++ -lz \
+		-Wl,-rpath,$(PWD)
 ifeq "$(PROLOG)" "sicstus"
 	mv corpusreader.so $@
 endif
@@ -74,9 +74,9 @@ prolog/corpusreader.bundle prolog/corpusreader.dylib: prolog/corpusreader.pl pro
 	$(SPLFR) prolog/corpusreader.pl prolog/corpusreader.cpp \
 		--cflag="$(CXXFLAGS)" -O2 -LD -Wall \
                 $(EXTRACXXFLAGS) \
-		-Wl,-rpath,$(PWD) \
 		-L. -lcorpus -lboost_system-mt \
-		-lboost_filesystem-mt -lstdc++ -lz
+		-lboost_filesystem-mt -lstdc++ -lz\
+		-Wl,-rpath,$(PWD)
 ifeq "$(PROLOG)" "sicstus"
 	mv corpusreader.bundle $@
 endif
