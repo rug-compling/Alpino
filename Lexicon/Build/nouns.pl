@@ -33577,7 +33577,10 @@ n([sg(stamp),pl(stampen)],de,[]). % Vlaams
 n([sg(stamper),pl(stampers)],de,[]).
 
 n([pl(standen),sg(stand)],de,
-  [vp,
+  [pred_pp(beneden),
+   pred_pp(beneden,subject_vp),
+   pred_pp(beneden,subject_sbar),
+   vp,
    sbar]).
 
 n([pl(standen),sg(stand)],de,[],
@@ -42273,7 +42276,7 @@ n([pl(zinnen),sg(zin)],de,
    pred_pp(naar),
    pred_pp(naar,subject_sbar),
    pred_pp_pl(bij),             % hij is weer bij zinnen gekomen
-   van_sbar]).                  % in de zin van: buurman doodt buurman
+   van_sbaro]).                  % in de zin van: buurman doodt buurman
 
 n([pl(zinnen),sg(zin)],de,
   [start_app_measure,
