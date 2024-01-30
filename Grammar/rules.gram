@@ -9171,6 +9171,7 @@ grammar_rule(top_start_tag_np_tag_pp, Start, [Max,COMMA,Tag,PP]):-
     optcomma(COMMA),
     ind_max_pp(PP),
     pp_modifier(PP),
+    unify_mods(PP),
     PP:dt <=> PPDT,
     Tag:dt:mod <=> TAGMOD,
     unify_except(Tag,Tag2,dt:mod),

@@ -8,10 +8,10 @@
         <node begin="2" end="3" id="5" lemma="wel" pos="tag" postag="BW()" pt="bw" rel="mwp" root="wel" word="wel"/>
       </node>
       <node begin="3" cat="np" end="6" id="6" rel="tag">
-        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="Charles" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="Charles" word="Charles"/>
-        <node begin="4" cat="A" end="6" id="8" rel="mod">
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="Charles" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Charles" word="Charles"/>
+        <node begin="4" cat="pp" end="6" id="8" rel="mod">
           <node begin="4" end="5" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="Washington" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Washington" word="Washington"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="Washington" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Washington" word="Washington"/>
         </node>
       </node>
     </node>
