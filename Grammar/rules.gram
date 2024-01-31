@@ -1,4 +1,4 @@
-%%           -*-Mode: prolog;-*-
+%           -*-Mode: prolog;-*-
 
 :- expects_dialect(sicstus).
 
@@ -7446,7 +7446,7 @@ grammar_rule(pp_p_arg(start2), PP, [ P, QL, XP, OPTPUNCT, QR ]) :-
 grammar_rule(ques_dan,ROOT,[Ques, Dan]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     ROOT => max,
-    ROOT:max_type => t_dp,
+    ROOT:max_type => t_sv1,
     max_sv1(Ques),
     max_root(Dan), Dan:needs_dip => no,
     Dan:topic_hstem ==> dan,
@@ -7457,7 +7457,7 @@ grammar_rule(ques_dan,ROOT,[Ques, Dan]) :-
 grammar_rule(ques_comma_dan,ROOT,[Ques, COMMA, Dan]) :-
     comma(COMMA),
     ROOT => max,
-    ROOT:max_type => t_dp,
+    ROOT:max_type => t_sv1,
     max_sv1(Ques),
     max_root(Dan), Dan:needs_dip => no,
     % Waren het vorige week de Duitsers , deze week ...
@@ -7467,7 +7467,7 @@ grammar_rule(ques_comma_dan,ROOT,[Ques, COMMA, Dan]) :-
 grammar_rule(ques_ques,ROOT,[Ques, OPTC, Dan]) :-
     comma(OPTC),
     ROOT => max,
-    ROOT:max_type => t_dp,
+    ROOT:max_type => t_sv1,
     max_sv1(Ques),
     max_sv1(Dan),
     nucl_sat_structure(Dan,Ques,ROOT).
@@ -7476,7 +7476,7 @@ grammar_rule(ques_ques,ROOT,[Ques, OPTC, Dan]) :-
 grammar_rule(ques_imp,ROOT,[Ques, OPTC, Dan]) :-
     optcomma(OPTC),
     ROOT => max,
-    ROOT:max_type => t_dp,
+    ROOT:max_type => t_sv1,
     max_sv1(Ques),
     max_imp(Dan),
     nucl_sat_structure(Dan,Ques,ROOT).
@@ -7485,7 +7485,7 @@ grammar_rule(ques_imp,ROOT,[Ques, OPTC, Dan]) :-
 grammar_rule(ques_np,ROOT,[Ques, COMMA, NP]) :-
     comma(COMMA),
     ROOT => max,
-    ROOT:max_type => t_dp,
+    ROOT:max_type => t_sv1,
     max_sv1(Ques),
     ind_max_np(NP),
     nucl_sat_structure(Ques,NP,ROOT).
@@ -9108,7 +9108,7 @@ grammar_rule(top_adv_tag_start_sv1, Start, [Tag,COMMA,Max]):-
     COMMA:puncttype => (komma;dubb_punt;hellip;punt),
     unify_mods(Tag),
     Max => max,
-    Max:max_type => t_xp,
+    Max:max_type => (t_xp;t_sv1),
     Max:sv1 => yes,
     tag_max_structure(Max,Tag,Start).
 
@@ -9165,18 +9165,15 @@ grammar_rule(top_start_tag_np_tag, Start, [Max,COMMA,Tag]):-
     tag_np_tag_structure(Max,Tag,Start).
 
 %%EX%% dank je wel Charles in Washington
-grammar_rule(top_start_tag_np_tag_pp, Start, [Max,COMMA,Tag,PP]):-
-    Tag => tag, 
-    Tag:np => yes,
-    optcomma(COMMA),
+grammar_rule(top_start_tag_np_tag_pp, Start, [Max,COMMA,Tag0,PP]):-
+    Tag0 => pn,
+    Tag0:neclass => 'PER',
     ind_max_pp(PP),
     pp_modifier(PP),
-    unify_mods(PP),
-    PP:dt <=> PPDT,
-    Tag:dt:mod <=> TAGMOD,
-    unify_except(Tag,Tag2,dt:mod),
-    Tag2:dt:mod <=> [PPDT|TAGMOD],
-    tag_np_tag_structure(Max,Tag2,Start).
+    Tag => tag,
+    hd_mod_structure(Tag0,PP,Tag),
+    optcomma(COMMA),
+    tag_np_tag_structure(Max,Tag,Start).
 
 %%EX%% Charles dank je wel
 grammar_rule(top_start_np_tag_tag, Start, [Tag,COMMA,Max]):-
@@ -9346,10 +9343,15 @@ grammar_rule(top_start_etc, Start, [Tag]):-
     Tag => etc,
     top_max_structure(Tag,Start).
 
+    
+
 top_max_structure(XP,Max) :-
+    MaxType => t_xp,
+    top_max_structure(XP,Max,MaxType).
+
+top_max_structure(XP,Max,MaxType):-
     Max => max,
-    Max:max_type => t_xp,
-%    unify_mods(XP),
+    Max:max_type <=> MaxType,
     Max:sv1 => no,
     XP:sc =?> [],
     XP:slash =?> [],
@@ -9381,7 +9383,7 @@ xp_en_root_structure(Start,NP,CRD,ROOT) :-
 grammar_rule(xp_en_root,Start,[XP,OPTCOMMA,CRD,ROOT]) :-
     optcomma_end(OPTCOMMA),
     XP => max,
-    XP:max_type => (t_xp;t_dp),
+    XP:max_type => (t_xp;t_dp;t_sv1),
     ROOT => max,
     ROOT:max_type => (t_dp;t_root),
     xp_en_root_structure(Start,XP,CRD,ROOT).
@@ -9390,7 +9392,7 @@ grammar_rule(xp_en_root,Start,[XP,OPTCOMMA,CRD,ROOT]) :-
 grammar_rule(xp_ques,Start,[XP,COMMA,QUES]) :-
     comma(COMMA),
     XP => max,
-    XP:max_type => (t_xp;t_dp),
+    XP:max_type => (t_xp;t_dp;t_sv1),
     max_sv1(QUES),
     Start => max,
     Start:max_type => t_dp,
@@ -9401,7 +9403,7 @@ grammar_rule(xp_en_ques,Start,[XP,OPTCOMMA,CRD,ROOT]) :-
     optcomma_end(OPTCOMMA),
     XP => max,
     XP:cj => ncj,
-    XP:max_type => (t_xp;t_dp),
+    XP:max_type => (t_xp;t_dp;t_sv1),
     XP:sv1 => no,  % reduce spurious ambiguity with ordinary sv1 conjunction
     max_sv1(ROOT),
     xp_en_root_structure(Start,XP,CRD,ROOT).
@@ -9432,7 +9434,8 @@ grammar_rule(max_xp(adj),Max,[X]) :-
 %%EX%% Kom je ?
 grammar_rule(max_xp(sv1),Max,[X]) :-
     max_sv1(X),
-    top_max_structure(X,Max0),
+    MaxType => t_sv1,
+    top_max_structure(X,Max0,MaxType),
     overwrite(Max0,Max,sv1,yes),
     Max:dt:stype => ~declarative & ~topic_drop & ~whquestion,
     Max:puncttype => (punt;uitroep;dubb_punt;punt_komma;vraag;hellip).
@@ -9442,30 +9445,30 @@ grammar_rule(max_xp(dip_sv1),Max,[X0]) :-
     X0 => sv1, X => sv1,
     X0:can_be_max => yes,
     dip_scope_structure(X0,X),
-    Max:puncttype => (punt;uitroep;dubb_punt;punt_komma;vraag;hellip),
-    top_max_structure(X,Max).
+    MaxType => t_sv1,
+    top_max_structure(X,Max,MaxType),
+    Max:puncttype => (punt;uitroep;dubb_punt;punt_komma;vraag;hellip).
 
 %%EX%% Kom hier !
 grammar_rule(max_xp(imp),Max,[X]) :-
     max_imp(X),
-    top_max_structure(X,Max),
+    MaxType => t_sv1,
+    top_max_structure(X,Max,MaxType),
     Max:puncttype => (punt;uitroep;dubb_punt;punt_komma;hellip;vraag).
 
 %%EX%% Ik kom niet .
 grammar_rule(max_xp(root),Max,[X]) :-
     max_root(X),
-    top_max_structure(X,Max0),
-    overwrite(Max0,Max,max_type,t_root),
+    MaxType => t_root,
+    top_max_structure(X,Max,MaxType),
     Max:puncttype <=> X:puncttype,
-    X:needs_dip => no,
-    Max:max_type => t_root.  % reduce spurious amb for 'root want root'
+    X:needs_dip => no.
 
 %%EX%% En ik kom niet .
 grammar_rule(max_xp(rootbar),Max,[X]) :-
     X => rootbar,
-    top_max_structure(X,Max0),
-    overwrite(Max0,Max,max_type,t_rootbar),
-    Max:max_type => t_rootbar.
+    MaxType => t_rootbar,
+    top_max_structure(X,Max,MaxType).
 
 %%EX%% Omdat ik geen zin heb .
 grammar_rule(max_xp(sbar),Max,[X]) :-
@@ -9518,22 +9521,11 @@ max_xp_vp_struct(Max,X) :-
     X:haswh => no,
     top_max_structure(X,Max).
 
-%% Te bestellen bij ..
-%% Nog te zien tot ..
-%% now subsumed by max_xp(pred)
-%grammar_rule(max_xp(pass_te_vp),Max,[X]) :-
-%    X => a,
-%    X:deverbal => yes,
-%    X:avform => avform_ti,
-%    X:e_deps => [],
-%    top_max_structure(X,Max).
-
 %%EX%% Om gek van te worden !
 %%EX%% Die ik al heel lang ken ...
 %%EX%% Onder wie Brigitte Laan , uit Grootebroek
 grammar_rule(max_xp(om_rel),Max,[X]) :-
     X => rel,
-%    X:relform => ~relform_np,
     X:nform => norm,
     top_max_structure(X,Max).
 

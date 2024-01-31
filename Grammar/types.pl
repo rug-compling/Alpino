@@ -456,7 +456,7 @@ boolean_type(niet, [[niet_np,niet_pp]] ).
 boolean_type(mcat,[[mcat_pp,mcat_adv,mcat_vp,mcat_sbar,mcat_imp,
 		    mcat_redrel,mcat_rootbar,mcat_bracket,mcat_tag]]).
 
-boolean_type(max_type,[[t_dp,t_xp,t_root,t_rootbar,t_topic_drop,t_part]]).
+boolean_type(max_type,[[t_dp,t_xp,t_sv1,t_root,t_rootbar,t_topic_drop,t_part]]).
 
 %% verbal inflection form
 boolean_type(vform,[[fin,inf,wk_te,te,psp,om,aan_het,uit,op,pass_te]] ).
