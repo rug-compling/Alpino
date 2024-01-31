@@ -10490,6 +10490,7 @@ lemma_root(plachten,placht) .
 lemma_root(plagen,plaag) .
 lemma_root(plaggen,plag) .
 lemma_root(plakken,plak) .
+lemma_root(plamuren,plamuur) .
 lemma_root(plannen,plan) .
 lemma_root(planten,plant) .
 lemma_root(plassen,plas) .

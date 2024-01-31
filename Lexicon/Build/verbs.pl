@@ -8247,8 +8247,8 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	fixed([[ter,overweging],sbar],imp_passive),
 	fixed([[ter,overweging],sbar,dat],imp_passive),
 	fixed([[ter,overweging],sbar,dat_pp(aan)],imp_passive),
-        fixed([[toegang],pc(tot)],norm_passive),
-        fixed([[toegang],{[dat,pc(tot)]}],norm_passive),
+        fixed([acc(toegang),pc(tot)],norm_passive),
+        fixed([acc(toegang),{[dat,pc(tot)]}],norm_passive),
 	fixed([[partij],dat],imp_passive),
         fixed([vc(denk,pass_te,intransitive),sbar_subj],no_passive),
         fixed([vc(denk,pass_te,intransitive),dat,sbar_subj],no_passive),
@@ -12254,6 +12254,7 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
         fixed([svp_er_pp(door),acc],no_passive),  % we moeten die veranderingen erdoor krijgen
 	fixed([svp_er_pp(bij),acc],no_passive),	% we krijgen er een kindje / 10 procent / .. bij
 	part_np_pc_er_transitive(bij), % we hebben er een ton bijgekregen
+	fixed([als_pred,acc],no_passive),
 	fixed([als_pred,vp],no_passive),          % ik kreeg als opdracht om ..
 	fixed([als_pred,sbar],no_passive), % ik krijg als opdracht dat ..
 	part_fixed(mee,[als_pred,vp],no_passive),          % ik kreeg als opdracht mee om ..
@@ -12303,6 +12304,7 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
 	fixed([{[acc(bekomst),pc(van)]}],no_passive),
 	fixed([{[acc(beweging),pc(in)]}],no_passive),
 	fixed([{[acc(contact),pc(met)]}],no_passive),
+	fixed([{[acc(hulp),mod_pp(bij)]}],no_passive),
 	fixed([{[[gestalte],pc(in)]}],no_passive),
 	fixed([{[acc(lucht),pc(van)]}],no_passive),
 	fixed([[de,tijd],me],imp_passive),
@@ -13094,6 +13096,7 @@ v(leg,legt,leggen,gelegd,legde,legden,
 	fixed([[aan,de,dag],pc(voor),acc],norm_passive),
 	fixed([[aan,den,dag],pc(voor),acc],norm_passive),
         fixed([[de,hand],pc(op)],imp_passive),
+	fixed([pp_pred(in,as),acc],norm_passive),
 	fixed([[in,de,luren],acc],norm_passive),
 	fixed([{[pp_pred(in,hand),pc(van)]},acc],norm_passive),
 	fixed([[te,ruste],acc],norm_passive),
@@ -16979,6 +16982,12 @@ v(plak,plakt,plakken,geplakt,plakte,plakten,
 	pc_pp(aan),
 	part_np_ld_pp(vast)])]).
 
+v(plamuur,plamuurt,plamuren,geplamuurd,plamuurde,plamuurden,
+  [h([transitive,
+      instransitive,
+      ap_pred_np
+     ])]).
+
 v(plan,plant,plannen,gepland,plande,planden,
   [h([transitive,
       sbar,
@@ -20226,6 +20235,7 @@ v(sla,slaat,slaan,geslagen,sloeg,sloegen,
         fixed([[over,de,kop]],no_passive),
 	fixed([[overboord]],no_passive),
 	fixed([[te,pletter]],no_passive),
+	fixed([subj(vlam),svp_pp(in,pan)],no_passive),
 	part_ld_pp(aan),
 	part_ld_pp(af),
 	part_ld_pp(door),
@@ -25056,7 +25066,8 @@ v(verkommer,verkommert,verkommeren,verkommerd,verkommerde,verkommerden,
     [unacc([intransitive])]).
 
 v(verkondig,verkondigt,verkondigen,verkondigd,verkondigde,verkondigden,
-    [h([sbar,
+  [h([sbar,
+      np_mod_pp(over),
 	transitive,
 	vp])]).
 
@@ -29121,6 +29132,7 @@ v(zoom,zoomt,zoomen,gezoomd,zoomde,zoomden,
 v(zorg,zorgt,zorgen,gezorgd,zorgde,zorgden,
     [h([intransitive,
 	sbar,
+	pp_sbar_subj(voor),  % het zorgde voor veel oproer, dat ...
 	vp, % Vliegensvlug zorgden ze hier weg te komen
 	er_pp_sbar(voor),
 	er_pp_vp(voor),

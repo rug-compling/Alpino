@@ -5156,6 +5156,7 @@ m(alweer,           modal_adverb(noun),alweer).
 m('een beetje',     modal_adverb(noun),[een,beetje]).
 				% een beetje een aansteller is hij wel
 				% hij profileert zich als een beetje een linkse projectontwikkelaar
+m(echt,             modal_adverb(noun),echt). 
 m('every inch',     modal_adverb(noun),[every,inch]).
 m(gans,             modal_adverb(noun),gans). % gans het land
 m('naar schatting', modal_adverb(noun),[naar,schatting]). % bedragen
@@ -5220,6 +5221,8 @@ m(temeer,           modal_adverb(comp), temeer).  % temeer daar/omdat
 m('te veel',        modal_adverb(comp), [te,meer]).  % temeer daar/omdat
 
 
+%% todo: dichter bij elkaar [dan ...]!
+%% nog dieper in blessuretijd
 m(desnoods,         modal_adverb(prep),desnoods).
 m(centraal,         modal_adverb(prep),centraal). % centraal in het midden; op het veld
 m(dicht,            modal_adverb(prep),dicht).    % dicht tegen zich aan ; dicht bij de macht?
@@ -8888,6 +8891,7 @@ term([meet,and,greet],[meet,and,greets]).
 term([method,acting]).
 term([middle,class]).
 term([middle,of,the,road]).
+term(['mid-term','review']).
 term([mission,impossible]).
 term([monologue,intérieur]).
 term([money,time]).

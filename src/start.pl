@@ -1011,9 +1011,9 @@ result_hook(parse,_,o(Result,String,_),Flag) :-
     ;	Th==frames
     ->	format_frames_of_result(Result,Identifier)
     ;	Th==postags
-    ->	format_postags_of_result(Result,Identifier)
+    ->	format_postags_of_result(Result,String,Identifier)
     ;	Th==pts
-    ->	format_pts_of_result(Result,Identifier)
+    ->	format_pts_of_result(Result,String,Identifier)
     ;	Th==best_score
     ->	best_score_result_parse(Result,StringNoBrackets,No)
     ;	Th==best_score_check_tags
