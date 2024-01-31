@@ -25,6 +25,8 @@ stylesheetdir = os.path.join(ALPINO_HOME, 'TreebankTools', 'stylesheets')
 constituent_sheet = os.path.join(stylesheetdir, 'print-matched-constituents.xsl')
 constituent_root_sheet = os.path.join(stylesheetdir, 'print-matched-constituents.xsl')
 
+has_alto = os.system('which alto > /dev/null') == 0
+
 #----------------------------------------------------------------------
 
 
@@ -172,8 +174,9 @@ def main():
     parser.add_argument("-q", "--query", "-e", "--expr", dest="query",
                         help="XPath expression to search for")
 
-    parser.add_argument("-2", action="store_true", dest="version2",
-                        help="Use XPath version 2")
+    if has_alto:
+        parser.add_argument("-2", action="store_true", dest="version2",
+                            help="Use XPath version 2 (only in combination with --dtview)")
 
     parser.add_argument("--statistics", "-l", action="store_true", dest="statistics",
                         help="print stats for values of rel,cat,pos labels in matching nodes")
@@ -223,7 +226,7 @@ def main():
     if options.dtview:
         shellquotedquery = shellquote(options.query)
         dtview_fp = None
-        if os.getenv("HAS_ALTO") != "1":
+        if not has_alto:
             process_arguments(args, workhorse, options.stdin, 1, True)
         else:
             if options.stdin:

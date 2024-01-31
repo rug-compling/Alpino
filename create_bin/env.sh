@@ -61,13 +61,6 @@ then
 fi
 unset a
 
-if `which alto > /dev/null`
-then
-    export HAS_ALTO=1
-else
-    export HAS_ALTO=0
-fi
-
 ## note why we always set TK_LIBRARY and TCL_LIBRARAY:
 ## there are different versions of tcl/tk 8.6, therefore we must ensure
 ## we use the same one as we used for compiling Alpino (if we use 8.6)
