@@ -36,10 +36,9 @@ PROLOGLIBS=prolog/corpusreader$(MODULEEXT)
 endif
 
 
-PYTHONLIBS=python/indexedcorpus.touch
+PYTHONLIBS=../python-lib/IndexedCorpus-1.0.dist-info/RECORD
 
 all: libcorpus$(DYLIBEXT) libcorpus.a $(PROLOGLIBS) $(PYTHONLIBS)
-	cp python/indexedcorpus.touch ../python-lib
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
@@ -93,12 +92,12 @@ prolog/corpusreader.s.o: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpu
 		-lboost_filesystem -lboost_system -lstdc++ -lz
 	mv corpusreader.s.o $@
 
-python/indexedcorpus.touch: python/indexedcorpus.cpp libcorpus.a
+$(PYTHONLIBS): python/indexedcorpus.cpp libcorpus.a
 	rm -rf python/IndexedCorpus*.egg* python/build
 	if [ -x ${PLATFORM} = "darwin" ] ; then \
-		( cd python ; CFLAGS="$(CXXFLAGS)" ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=/usr python3 setup.py install --install-platlib=../../python-lib && touch indexedcorpus.touch ) \
+		( cd python ; CFLAGS="$(CXXFLAGS)" ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=/usr pip3 install -I -t ../../python-lib ) \
 	else \
-		( cd python ; CFLAGS="$(CXXFLAGS)" BOOST_HOME=/usr python3 setup.py install --install-platlib=../../python-lib && touch indexedcorpus.touch ) \
+		( cd python ; CFLAGS="$(CXXFLAGS)" BOOST_HOME=/usr pip3 install -I -t ../../python-lib . ) \
 	fi
 
 test/test: libcorpus.a test/test.cpp

@@ -122,14 +122,44 @@ static PyMethodDef IndexedCorpusReader_methods[] = {
 };
 
 static PyTypeObject IndexedCorpusReaderType = {
-    PyVarObject_HEAD_INIT(NULL, 0).tp_name =
-        "indexedcorpus.IndexedCorpusReader",
-    .tp_basicsize = sizeof(IndexedCorpusReader),
-    .tp_dealloc = (destructor)IndexedCorpusReader_dealloc,
-    .tp_flags = Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-    .tp_doc = "IndexedCorpusReader objects",
-    .tp_methods = IndexedCorpusReader_methods,
-    .tp_new = IndexedCorpusReader_new,
+    PyVarObject_HEAD_INIT(NULL,
+                          0) "indexedcorpus.IndexedCorpusReader", /* tp_name */
+    sizeof(IndexedCorpusReader),              /* tp_basicsize */
+    0,                                        /* tp_itemsize */
+    (destructor)IndexedCorpusReader_dealloc,  /* tp_dealloc */
+    0,                                        /* tp_print */
+    0,                                        /* tp_getattr */
+    0,                                        /* tp_setattr */
+    0,                                        /* tp_reserved */
+    0,                                        /* tp_repr */
+    0,                                        /* tp_as_number */
+    0,                                        /* tp_as_sequence */
+    0,                                        /* tp_as_mapping */
+    0,                                        /* tp_hash  */
+    0,                                        /* tp_call */
+    0,                                        /* tp_str */
+    0,                                        /* tp_getattro */
+    0,                                        /* tp_setattro */
+    0,                                        /* tp_as_buffer */
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE, /* tp_flags */
+    "IndexedCorpusReader objects",            /* tp_doc */
+    0,                                        /* tp_traverse */
+    0,                                        /* tp_clear */
+    0,                                        /* tp_richcompare */
+    0,                                        /* tp_weaklistoffset */
+    0,                                        /* tp_iter */
+    0,                                        /* tp_iternext */
+    IndexedCorpusReader_methods,              /* tp_methods */
+    0,                                        /* tp_members */
+    0,                                        /* tp_getset */
+    0,                                        /* tp_base */
+    0,                                        /* tp_dict */
+    0,                                        /* tp_descr_get */
+    0,                                        /* tp_descr_set */
+    0,                                        /* tp_dictoffset */
+    0,                                        /* tp_init */
+    0,                                        /* tp_alloc */
+    IndexedCorpusReader_new,                  /* tp_new */
 };
 
 /*
@@ -213,14 +243,45 @@ static PyMethodDef IndexedCorpusWriter_methods[] = {
 };
 
 static PyTypeObject IndexedCorpusWriterType = {
-    PyVarObject_HEAD_INIT(NULL, 0).tp_name =
-        "indexedcorpus.IndexedCorpusWriter",
-    .tp_basicsize = sizeof(IndexedCorpusWriter),
-    .tp_dealloc = (destructor)IndexedCorpusWriter_dealloc,
-    .tp_flags = Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-    .tp_doc = "IndexedCorpusWriter objects",
-    .tp_methods = IndexedCorpusWriter_methods,
-    .tp_new = IndexedCorpusWriter_new,
+    PyVarObject_HEAD_INIT(NULL, 0)
+
+        "indexedcorpus.IndexedCorpusWriter",  /* tp_name */
+    sizeof(IndexedCorpusWriter),              /* tp_basicsize */
+    0,                                        /* tp_itemsize */
+    (destructor)IndexedCorpusWriter_dealloc,  /* tp_dealloc */
+    0,                                        /* tp_print */
+    0,                                        /* tp_getattr */
+    0,                                        /* tp_setattr */
+    0,                                        /* tp_reserved */
+    0,                                        /* tp_repr */
+    0,                                        /* tp_as_number */
+    0,                                        /* tp_as_sequence */
+    0,                                        /* tp_as_mapping */
+    0,                                        /* tp_hash  */
+    0,                                        /* tp_call */
+    0,                                        /* tp_str */
+    0,                                        /* tp_getattro */
+    0,                                        /* tp_setattro */
+    0,                                        /* tp_as_buffer */
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE, /* tp_flags */
+    "IndexedCorpusWriter objects",            /* tp_doc */
+    0,                                        /* tp_traverse */
+    0,                                        /* tp_clear */
+    0,                                        /* tp_richcompare */
+    0,                                        /* tp_weaklistoffset */
+    0,                                        /* tp_iter */
+    0,                                        /* tp_iternext */
+    IndexedCorpusWriter_methods,              /* tp_methods */
+    0,                                        /* tp_members */
+    0,                                        /* tp_getset */
+    0,                                        /* tp_base */
+    0,                                        /* tp_dict */
+    0,                                        /* tp_descr_get */
+    0,                                        /* tp_descr_set */
+    0,                                        /* tp_dictoffset */
+    0,                                        /* tp_init */
+    0,                                        /* tp_alloc */
+    IndexedCorpusWriter_new,                  /* tp_new */
 };
 
 /*
@@ -292,13 +353,45 @@ static PyMethodDef CorpusReader_methods[] = {
 };
 
 static PyTypeObject CorpusReaderType = {
-    PyVarObject_HEAD_INIT(NULL, 0).tp_name = "indexedcorpus.CorpusReader",
-    .tp_basicsize = sizeof(CorpusReader),
-    .tp_dealloc = (destructor)CorpusReader_dealloc,
-    .tp_flags = Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-    .tp_doc = "CorpusReader objects",
-    .tp_methods = CorpusReader_methods,
-    .tp_new = CorpusReader_new,
+    PyVarObject_HEAD_INIT(NULL, 0)
+
+        "indexedcorpus.CorpusReader",         /* tp_name */
+    sizeof(CorpusReader),                     /* tp_basicsize */
+    0,                                        /* tp_itemsize */
+    (destructor)CorpusReader_dealloc,         /* tp_dealloc */
+    0,                                        /* tp_print */
+    0,                                        /* tp_getattr */
+    0,                                        /* tp_setattr */
+    0,                                        /* tp_reserved */
+    0,                                        /* tp_repr */
+    0,                                        /* tp_as_number */
+    0,                                        /* tp_as_sequence */
+    0,                                        /* tp_as_mapping */
+    0,                                        /* tp_hash  */
+    0,                                        /* tp_call */
+    0,                                        /* tp_str */
+    0,                                        /* tp_getattro */
+    0,                                        /* tp_setattro */
+    0,                                        /* tp_as_buffer */
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE, /* tp_flags */
+    "CorpusReader objects",                   /* tp_doc */
+    0,                                        /* tp_traverse */
+    0,                                        /* tp_clear */
+    0,                                        /* tp_richcompare */
+    0,                                        /* tp_weaklistoffset */
+    0,                                        /* tp_iter */
+    0,                                        /* tp_iternext */
+    CorpusReader_methods,                     /* tp_methods */
+    0,                                        /* tp_members */
+    0,                                        /* tp_getset */
+    0,                                        /* tp_base */
+    0,                                        /* tp_dict */
+    0,                                        /* tp_descr_get */
+    0,                                        /* tp_descr_set */
+    0,                                        /* tp_dictoffset */
+    0,                                        /* tp_init */
+    0,                                        /* tp_alloc */
+    CorpusReader_new,                         /* tp_new */
 };
 
 static PyMethodDef IndexedCorpusMethods[] = {{NULL, NULL, 0, NULL}};

@@ -20,7 +20,13 @@ set initial_width  1024
 set initial_height  786
 set listbox_width 150
 set extended_attributes 0
-set has_alto "$env(HAS_ALTO)"
+
+try {
+    exec which alto
+    set has_alto 1
+} trap CHILDSTATUS {} {
+    set has_alto 0
+}
 
 #----------------------------------------------------------------------
 ### PROCS
@@ -1022,7 +1028,6 @@ set descriptionlist {}
 set usage "Usage: dtview \[OPTIONS] <files, directories, compact corpora>
 
 OPTIONS:
--2                              Use XPath2
 -q, --query, --expr EXPR        The XPath expression for highlighting
 -s, --stdin                     Read the filenames from stdin
 -m, --maximize                  window is maximized
@@ -1032,6 +1037,10 @@ OPTIONS:
 -d, --targetdir TARGETDIR       The destination directory for Move operations
 -h, --help                      This message
 "
+
+if {"$has_alto" == 1} {
+    set usage "$usage-2                              Use XPath2\n"
+}
 
 array set opts {-q "" -s 0 -file-query-pairs 0 -d "" -h 0 -m 0 -2 0}
 
