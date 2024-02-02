@@ -50,6 +50,8 @@ debugcmd='set_flag(debug,undefined),set_flag(demo,undefined)'
 #gitversion=$(shell git log --oneline | wc -l)
 # that variant did not show full history for a recently checked out version
 
+GLIBC=$(shell getconf GNU_LIBC_VERSION | tr -d ' ')
+
 gitversion=$(shell git log -1 --format="%at" | xargs -I{} date -u -d @{} +%Y%m%d.%H%M%S)
 
 ifeq "$(PROLOG)" "sicstus"
@@ -62,7 +64,7 @@ include ../Hdrug/Makefile.hdrug
 endif
 
 state:
-	-echo "Alpino-$(PLATFORM)-git$(gitversion)-$(PROLOG)" > ../version
+	-echo "Alpino-$(PLATFORM)-git$(gitversion)-$(PROLOG)-$(GLIBC)" > ../version
 	-echo "use_module('../Hdrug/Prolog/hdrug_main'),\
                use_module(start),\
    version('Alpino (development), `cat ../version`-$(shell date "+%Y-%m-%dT%H:%M%z")'),\
