@@ -25136,7 +25136,7 @@ n([sg(oormerk),pl(oormerken)],het,[]).
 
 n([pl(oorschelpen),sg(oorschelp)],de,[]).
 
-n([pl(oorsprongen),sg(oorsprong)],de,[]).
+n([pl(oorsprongen),sg(oorsprong)],de,[pred_pp(van)]).
 
 n([mass(oorspronkelijkheid)],de,[]).
 

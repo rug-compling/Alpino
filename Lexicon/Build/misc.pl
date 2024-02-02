@@ -2898,7 +2898,6 @@ collocational_preposition([in,antwoord,op]).
 collocational_preposition([in,combinatie,met]).
 collocational_preposition([in,de,aanloop,naar]).
 %%% collocational_preposition([in,de,buurt,van]).        % compositional?
-collocational_preposition([in,de,geest,van]).
 collocational_preposition([in,de,hitte,van]).
 collocational_preposition([in,de,loop,van]).
 collocational_preposition([in,het,loop,van]).            % Vlaams?
