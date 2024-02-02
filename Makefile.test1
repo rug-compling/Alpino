@@ -50,6 +50,10 @@ extra_test1_options=-flag syntax_features cdb/px_weights
 ovistest_test1_options=-flag treebank ../Treebank/ovis
 Titaantjes-silver_test1_options=-flag treebank ../Treebank/Titaantjes
 Titaantjes-orig_test1_options=-flag treebank ../Treebank/Titaantjes
+g_suite_test1_options=filter_infrequent_rules=off
+h_suite_test1_options=filter_infrequent_rules=off
+i_suite_test1_options=filter_infrequent_rules=off
+j_suite_test1_options=filter_infrequent_rules=off
 
 job := job${shell echo $$$$}
 
@@ -99,7 +103,7 @@ test1rest:
 	cat $(dir)/scores                                     >> $(dir)/score
 	grep -e 'LM#' -e 'PT#' \
              -e 'Lexical analysis: ' $(dir)/log               > $(dir)/poslemma
-	$(MAKE) report
+	$(MAKE) report suite=$(dir)
 
 
 ## REPORTING STATISTICS ETC
@@ -108,25 +112,19 @@ test1rest:
 ### displays summarizing statistics of the last N runs for suite SUITE
 n=5
 report:
-	@if [ -f $(dir $(dir $(dir)))/times ]; then\
-         grep '^%XX' $(dir $(dir $(dir)))/times | tail -n $(n); fi
+	@if [ -f $(suite)/times ]; then\
+         grep '^%XX' $(suite)/times | tail -n $(n); fi
 	@echo "WORST	FIRST	BEST	TREES/SENT"
-	@if [ -f $(dir $(dir $(dir)))/bests ]; then\
+	@if [ -f $(suite)/bests ]; then\
           echo "----- recent:";\
-          paste <(grep 'readings/s'      $(dir $(dir $(dir)))/bests | tail -n $(n) | cut -d' ' -f 1)\
-                <(grep 'WORST: ca-score' $(dir $(dir $(dir)))/bests | tail -n $(n) | cut -d' ' -f 3)\
-                <(grep 'FIRST: ca-score' $(dir $(dir $(dir)))/bests | tail -n $(n) | cut -d' ' -f 3)\
-                <(grep 'BEST: ca-score'  $(dir $(dir $(dir)))/bests | tail -n $(n) | cut -d' ' -f 3);\
+          paste <(grep 'readings/s'      $(suite)/bests | tail -n $(n) | cut -d' ' -f 1)\
+                <(grep 'WORST: ca-score' $(suite)/bests | tail -n $(n) | cut -d' ' -f 3)\
+                <(grep 'FIRST: ca-score' $(suite)/bests | tail -n $(n) | cut -d' ' -f 3)\
+                <(grep 'BEST: ca-score'  $(suite)/bests | tail -n $(n) | cut -d' ' -f 3);\
         fi
-	@if [ -f $(dir $(dir $(dir)))/scores ]; then\
+	@if [ -f $(suite)/scores ]; then\
           echo "----- recent:";\
-          grep ca-score $(dir $(dir $(dir)))/scores | tail -n $(n); fi
-	@$(MAKE) -s reportcurrentscore
-
-reportcurrentscore:
-	@if [ -f $(dir $(dir $(dir)))/score ]; then\
-          echo "----- expected:";\
-          grep ca-score $(dir $(dir $(dir)))/score | head -n1; fi
+          grep ca-score $(suite)/scores | tail -n $(n); fi
 
 ### make ptf: compare finished tests wrt postag accuracy
 PTFS=$(sort $(wildcard */*/poslemma))
