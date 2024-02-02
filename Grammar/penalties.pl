@@ -710,10 +710,14 @@ syntactic_penalty_nl(vp_v_komma_arg(pp),_,[_,_,tree(PP,_,_,_)],s(ld_pp_extra)) :
 syntactic_penalty_nl(np_n,_,[N],np_n_bare(Surf)) :-
     rulename_surf(N,Surf).
 
+nth_syntactic_penalty(Id,N,D,r2l(Id,N)) :-
+    rulename(D,l),
+    !.
+
 nth_syntactic_penalty(Id,N,D,r2(Id,N,DId)) :-
     rulename(D,DId).
 
-nth_syntactic_penalty(Id,N,D,r2(Id,N,DId)) :-
+nth_syntactic_penalty(Id,N,D,r2l(Id,N,DId)) :-
     rulename_lex(D,DId).
 
 num(Agr,sg) :-
