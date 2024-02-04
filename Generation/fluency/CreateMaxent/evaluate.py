@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+import io
 import random
 import re
 import sys
@@ -165,8 +166,11 @@ if __name__ == "__main__":
     # Make results reproducable.
     random.seed(13)
 
-    sys.stdin.reconfigure(encoding='utf-8')
-    sys.stdout.reconfigure(encoding='utf-8')
+    # sys.stdin.reconfigure(encoding='utf-8')
+    # sys.stdout.reconfigure(encoding='utf-8')
+    sys.stdin = io.TextIOWrapper(sys.stdin.detach(), encoding='utf-8', newline=None)
+    sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8', newline=None, line_buffering=True)
+
 
     with open(options.features, encoding='utf-8') as featureFh:
         featureWeights = readFeatureWeights(featureFh)

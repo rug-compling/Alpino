@@ -7,7 +7,7 @@ import tempfile
 from urllib import parse
 
 #sys.stdin.reconfigure(encoding='utf-8')
-sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
+sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8', newline=None, line_buffering=True)
 form = {}
 for line in sys.stdin:
     for key, val in parse.parse_qsl(line,

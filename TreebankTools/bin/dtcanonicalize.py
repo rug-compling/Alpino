@@ -68,7 +68,7 @@
 
 from xml.dom import minidom
 from xml.parsers.expat import ExpatError
-import sys, os
+import io, os, sys
 import tempfile
 import html
 
@@ -204,13 +204,11 @@ class DTFile:
             print("comment:", comment)
 
 
-    def write_xml(self, outfile, encoding='UTF-8', version='1.5'):
-        """write the dependency structure to xml in encoding"""
-
-        outfile.reconfigure(encoding=encoding)
+    def write_xml(self, outfile, version='1.5'):
+        """write the dependency structure to xml"""
 
         # de xml-header
-        outfile.write('<?xml version="1.0" encoding="%s"?>\n' % encoding)
+        outfile.write('<?xml version="1.0" encoding="UTF-8"?>\n')
 
         # de root node
         if version == "":
@@ -766,12 +764,12 @@ if __name__ == '__main__':
         parser.print_help(sys.stderr)
         sys.exit(1)
 
-
     dtparser = DTParser()
 
     # de bestanden canoniek maken
     error_occurred = False
     if options.stdin:
+        sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8', newline=None, line_buffering=True)
         try:
             cn = Canonicalizer(dtparser, sys.stdin)
             cn.canonicalize()
@@ -796,7 +794,7 @@ if __name__ == '__main__':
                                                   os.path.dirname(file))
 
                 #  - we schrijven de nieuwe file naar die tempfile
-                tempfileobj = os.fdopen(tempfd, "w")
+                tempfileobj = os.fdopen(tempfd, "w", encoding="utf-8")
                 cn.write_xml(tempfileobj)
                 tempfileobj.close()
 
