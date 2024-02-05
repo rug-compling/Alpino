@@ -476,30 +476,44 @@ stream_or_open_file(stream(Stream0),Stream) :-
 stream_or_open_file(File,Stream) :-
     open(File,write,Stream).
 
-add_xml_entities([],[]).
-add_xml_entities([H|T],Chars) :-
-    add_xml_entity(H,T,Chars,Chars0),
-    add_xml_entities(T,Chars0).
+%% add_xml_entities
+%% ' needs to be escaped only if inside '
+%% " needs to be escaped only if inside "
+%% & < > are always escaped
 
-add_xml_entity(C,T,Chars,Chars0) :-
-    (	xml_entity(C,Enc,T)
+add_xml_entities(Chars0,Chars) :-
+    add_xml_entities(Chars0,Chars,[]).
+
+add_xml_entities([],[],_).
+add_xml_entities([H|T],Chars,Outer) :-
+    add_xml_entity(H,T,Chars,Chars0,Outer),
+    add_xml_entities(T,Chars0,Outer).
+
+add_xml_entity(C,T,Chars,Chars0,Outer) :-
+    (	xml_entity(C,Enc,T,Outer)
     ->	append(Enc,Chars0,Chars)
     ;	Chars=[C|Chars0]
     ).
 
-xml_entity(0'&,_,Chars) :-
+xml_entity(0'&,_,Chars,_) :-
     xml_entity_prefix(Chars,_,_),
     !,
     fail.
-xml_entity(C,Enc,_) :-
-    xml_entity(C,Enc).
+xml_entity(C,Enc,_,Outer) :-
+    xml_entity(C,Enc,Outer).
 
-% <
-xml_entity(0'","&quot;").   % "
-xml_entity(0'&,"&amp;").
-xml_entity(0'<,"&lt;").
-xml_entity(0'>,"&gt;").
-xml_entity(0'',"&apos;").
+xml_entity(0'",_,0'') :-  % "
+    !,
+    fail.
+xml_entity(0'',_,0'") :-  % "
+    !,
+    fail.
+
+xml_entity(0'","&quot;",_).   % "
+xml_entity(0'&,"&amp;",_).
+xml_entity(0'<,"&lt;",_).
+xml_entity(0'>,"&gt;",_).
+xml_entity(0'',"&apos;",_).
 
 xml_entity_prefix([38,113,117,111,116,59|T],T,0'").  % "
 xml_entity_prefix([38,35,51,52,59|T],       T,0'").  % "
@@ -970,21 +984,21 @@ deptree_xml_atts_format([Att-Val|T]) -->
 deptree_xml_att_format(word,Word) -->
     !,
     {  format_to_chars("~w",[Word],WordChars0),
-       add_xml_entities(WordChars0,WordChars)
+       add_xml_entities(WordChars0,WordChars,0'")   % "
     },
     format_to_chars(' word="~s"',[WordChars]).
 
 deptree_xml_att_format(lemma,Word) -->
     !,
     {  format_to_chars("~w",[Word],WordChars0),
-       add_xml_entities(WordChars0,WordChars)
+       add_xml_entities(WordChars0,WordChars,0'")   % "
     },
     format_to_chars(' lemma="~s"',[WordChars]).
 
 deptree_xml_att_format(root,Root) -->
     !,
     {  format_to_chars("~w",[Root],RootChars0),
-       add_xml_entities(RootChars0,RootChars)
+       add_xml_entities(RootChars0,RootChars,0'")   % "
     },
     format_to_chars(' root="~s"',[RootChars]).
 
@@ -998,7 +1012,7 @@ deptree_xml_att_format(root,Root) -->
 deptree_xml_att_format(sense,Sense) -->
     !,
     {  format_to_chars("~w",[Sense],SenseChars0),
-       add_xml_entities(SenseChars0,SenseChars)
+       add_xml_entities(SenseChars0,SenseChars,0'")   % "
     },
     format_to_chars(' sense="~s"',[SenseChars]).
 
@@ -1011,7 +1025,10 @@ deptree_xml_att_format(sense,Sense) -->
 
 deptree_xml_att_format(frame,Frame) -->
     !,
-    format_to_chars(' frame="~q"',[Frame]).
+    {  format_to_chars("~q",[Frame],FrameChars0),
+       add_xml_entities(FrameChars0,FrameChars,0'")   % "
+    },
+    format_to_chars(' frame="~s"',[FrameChars]).
 
 deptree_xml_att_format(Att,Val) -->
     format_to_chars(' ~w="~w"',[Att,Val]).
