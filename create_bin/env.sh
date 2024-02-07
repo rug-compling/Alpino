@@ -49,8 +49,8 @@ then
     fi
     SP_CSETLEN=212
     SP_CTYPE=utf8
-    TCL_LIBRARY=$a/create_bin/extralibs/tcl8.5
-    TK_LIBRARY=$a/create_bin/extralibs/tk8.5
+    TCL_LIBRARY=$a/create_bin/extralibs/tcl8.6
+    TK_LIBRARY=$a/create_bin/extralibs/tk8.6
     export TCL_LIBRARY
     export TK_LIBRARY
     export ALPINO_HOME
@@ -60,15 +60,4 @@ then
     export SP_CTYPE
 fi
 unset a
-
-## note why we always set TK_LIBRARY and TCL_LIBRARAY:
-## there are different versions of tcl/tk 8.6, therefore we must ensure
-## we use the same one as we used for compiling Alpino (if we use 8.6)
-## therefore we cannot rely on an existing tcltk installation :-(
-### example: our current one has (init.tcl):
-### package require -exact Tcl 8.6.5
-### whereas newer ones will have e.g.
-### package require -exact Tcl 8.6.10
-### and then it does no longer work
-## perhaps this does not apply to 8.5
 
