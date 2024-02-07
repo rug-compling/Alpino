@@ -94,6 +94,7 @@ prolog/corpusreader.s.o: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpu
 
 $(PYTHONLIBS): python/indexedcorpus.cpp libcorpus.a
 	rm -rf python/IndexedCorpus*.egg* python/build
+	rm -rf ../python-lib/IndexedCorpus* ../python-lib/indexedcorpus*
 	if [ -x ${PLATFORM} = "darwin" ] ; then \
 		( cd python ; CFLAGS="$(CXXFLAGS)" ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=/usr pip3 install -I -t ../../python-lib ) \
 	else \
