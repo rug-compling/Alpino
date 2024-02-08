@@ -29,7 +29,8 @@ Alpino.bin: ../src/Alpino.sav
         -o Alpino.bin \
         --resources=../src/Alpino.sav=/alpino.sav \
         -LD -Wall  -L../TreebankTools/IndexedCorpus   \
-         -L../fadd  
+        -L../fadd \
+        -Wl,-rpath=$(ALPINO_HOME)/TreebankTools/IndexedCorpus:$(ALPINO_HOME)/fadd
 
 ## I had to add a couple of libraries to spconfig
 ## cp the spconfig file from the distribution 
