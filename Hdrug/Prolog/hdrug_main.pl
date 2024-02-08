@@ -342,15 +342,16 @@ result_hook(ParGen,Mod,Obj,Start,CNo,UserOpt) :-
     try_hook(result_hook(ParGen,Mod,Obj,UserOpt)).
 
 % called after parser/generator fails (i.e., after all solutions are found)
-end_hook(ParGen,Mod,Obj,Start,Total,UserOpt) :-
-    try_hook(end_hook0(ParGen,Mod,Obj,UserOpt)),
+end_hook(ParGen,Mod,o(Node,Sent,Sem),Start,Total,UserOpt) :-
+    try_hook(end_hook0(ParGen,Mod,o(Node,Sent,Sem),UserOpt)),
     statistics(runtime,[End,_]),
     Total is (End - Start),
-    debug_message(1,"cputime total ~w msec~n",[Total]),
+    sentence_length(Sent,Len),
+    debug_message(1,"cputime total ~w msec ~w words~n",[Total,Len]),
     hdrug_flag(found_solutions,F),
     debug_message(1,"Found ~w solution(s)~n",[F]),
     try_hook(Mod:count),
-    try_hook(end_hook(ParGen,Mod,Obj,UserOpt)).
+    try_hook(end_hook(ParGen,Mod,o(Node,Sent,Sem),UserOpt)).
 
 init_object(parse,o(Node,Phon,_Sem)):-
     try_hook(phonology(Node,Phon)).
