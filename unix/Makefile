@@ -6,6 +6,8 @@ include $(ALPINO_HOME)/Makefile.include
 endif
 endif
 
+PWD:=${shell pwd}
+
 PRO_unix=unix$(MODULEEXT)
 
 PRO_unix_STATIC=unix.s.o

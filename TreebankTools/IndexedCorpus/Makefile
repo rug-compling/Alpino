@@ -6,6 +6,8 @@ include $(ALPINO_HOME)/Makefile.include
 endif
 endif
 
+PWD:=${shell pwd}
+
 DYLIBLINKFLAGS=-fPIC -shared -lz
 WARN=-Wno-unused-local-typedefs
 CXXFLAGS=-O3 -Wall -std=c++11 -I. -fPIC   $(WARN)
@@ -62,9 +64,8 @@ prolog/corpusreader.so: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpus
 	$(SPLFR) prolog/corpusreader.pl prolog/corpusreader.cpp \
 		--cflag="$(CXXFLAGS)" -O2 -LD -Wall \
                 $(EXTRACXXFLAGS) \
-		-L. -lcorpus -lboost_filesystem \
-		-lboost_system -lstdc++ -lz \
-		-Wl,-rpath=$(PWD)
+		-L$(PWD) -lcorpus -lboost_filesystem \
+		-lboost_system -lstdc++ -lz
 ifeq "$(PROLOG)" "sicstus"
 	mv corpusreader.so $@
 endif
@@ -73,9 +74,8 @@ prolog/corpusreader.bundle prolog/corpusreader.dylib: prolog/corpusreader.pl pro
 	$(SPLFR) prolog/corpusreader.pl prolog/corpusreader.cpp \
 		--cflag="$(CXXFLAGS)" -O2 -LD -Wall \
                 $(EXTRACXXFLAGS) \
-		-L. -lcorpus -lboost_system-mt \
-		-lboost_filesystem-mt -lstdc++ -lz\
-		-Wl,-rpath=$(PWD)
+		-L$(PWD) -lcorpus -lboost_system-mt \
+		-lboost_filesystem-mt -lstdc++ -lz
 ifeq "$(PROLOG)" "sicstus"
 	mv corpusreader.bundle $@
 endif
@@ -87,8 +87,7 @@ endif
 prolog/corpusreader.s.o: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpus$(DYLIBEXT)
 	splfr prolog/corpusreader.pl prolog/corpusreader.cpp \
 		 --static --cflag="$(CXXFLAGS) -fPIE" -O2 -LD -Wall \
-		-Wl,-rpath=$(PWD)  \
-		-L.  -lcorpus \
+		-L$(PWD)  -lcorpus \
 		-lboost_filesystem -lboost_system -lstdc++ -lz
 	mv corpusreader.s.o $@
 

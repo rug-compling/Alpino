@@ -17,7 +17,13 @@ if [ "$ALPINO_HOME" = "" ]
 then
     if [ "$BASH_VERSION" != "" ]
     then
+        a="$CDPATH"
+        unset CDPATH
         ALPINO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+        if [ "$a" != "" ]
+        then
+            export CDPATH="$a"
+        fi
     fi
 fi
 

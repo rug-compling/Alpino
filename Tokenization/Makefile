@@ -6,6 +6,8 @@ include $(ALPINO_HOME)/Makefile.include
 endif
 endif
 
+PWD:=${shell pwd}
+
 SHAREDLIB=tokenize$(MODULEEXT)
 STATICLIB=tokenize.s.o
 TOK=tok tok_no_breaks alp_escape partok lines entities
