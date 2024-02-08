@@ -25,7 +25,7 @@ realclean:clean
 
 suffix_array: main.c ssort.o 
 	$(CC) $(CFLAGS) -Wall -I$(FADD) -o suffix_array ssort.c main.c\
-         -L$(FADD) -lfadd -Wl,-rpath,$(FADD)
+         -L$(FADD) -lfadd -Wl,-rpath=$(FADD)
 
 suffix_array.exe: main.c ssort.c
 	cl /O2 /FD /TC /MD /W3 /nologo /c /Wp64 /Zi /errorReport:prompt \

@@ -41,7 +41,7 @@ libtok_no_breaks.o: libtok_no_breaks.c
 
 tokenize.so: pl_libtok.c libtok_no_breaks.o tokenize.pl
 	$(SPLFR) tokenize.pl pl_libtok.c libtok_no_breaks.o\
-             -LD  -Wl,-rpath,$(PWD) $(LDFLAGS)
+             -LD  -Wl,-rpath=$(PWD) $(LDFLAGS)
 
 #tokenize.bundle tokenize.dylib: pl_libtok.c libtok.o tokenize.pl
 #	$(SPLFR) tokenize.pl pl_libtok.c libtok.o\
@@ -55,7 +55,7 @@ tokenize.so: pl_libtok.c libtok_no_breaks.o tokenize.pl
 tokenize.s.o: tokenize.so pl_libtok.c libtok_no_breaks.o tokenize.pl
 	splfr -cflag -fPIE tokenize.pl pl_libtok.c libtok_no_breaks.o\
              --static\
-             -LD  -Wl,-rpath,$(PWD) $(LDFLAGS)
+             -LD  -Wl,-rpath=$(PWD) $(LDFLAGS)
 
 #tokenize.lib: pl_libtok.c libtok.obj tokenize.pl
 #	splfr tokenize.pl pl_libtok.c libtok.obj --static
