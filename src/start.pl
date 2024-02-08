@@ -3041,6 +3041,10 @@ dt_apply_stype(imparative,Dt) :-
 dt_apply_stype(topic_drop,Dt) :-
     alpino_data:topic_drop(Dt).
 
+option(compare_xml_files) -->
+    {  set_flag(batch_command,alpino_treebank:tree_comparison_pairs) }.
+				% actual files read from stdin
+
 hdrug_command(compare_xml_pair,tree_comparison_pair(File1,File2),[File1,File2]).
 option(compare_xml_pair) -->
     [File1],
