@@ -1,6 +1,8 @@
 # Makefile for xqclient
 # GJK Wed Jan 16 22:54:37 2008
 
+PWD:=${shell pwd}
+
 JAVA = java
 JAVAC = javac
 

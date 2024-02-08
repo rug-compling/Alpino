@@ -6,6 +6,8 @@ include $(ALPINO_HOME)/Makefile.include
 endif
 endif
 
+PWD:=${shell pwd}
+
 PRO_ZLIB=zlib$(MODULEEXT)
 
 PRO_ZLIB_STATIC=zlib.s.o
