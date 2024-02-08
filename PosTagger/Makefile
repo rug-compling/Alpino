@@ -35,13 +35,13 @@ alpino_pos.so: tagger.o guesser.o alpino_pos.pl prolog_pos.cc
 	$(SPLFR) alpino_pos.pl tagger.o guesser.o prolog_pos.cc\
                 --cflag="-fPIC -I../fadd $(CCDEBUG) -D_GNU_SOURCE"\
                 -LD -Wall -lstdc++ -L../fadd -lfadd\
-                 -Wl,-rpath,$(PWD)/../fadd
+                 -Wl,-rpath=$(PWD)/../fadd
 
 alpino_pos.bundle alpino_pos.dylib: tagger.o guesser.o alpino_pos.pl prolog_pos.cc
 	$(SPLFR) alpino_pos.pl tagger.o guesser.o prolog_pos.cc\
                 --cflag="-fPIC -I../fadd $(CCDEBUG) -D_GNU_SOURCE"\
                 -LD-Wall -lstdc++ -L../fadd -lfadd\
-                -Wl,-rpath,$(PWD)/../fadd
+                -Wl,-rpath=$(PWD)/../fadd
 	install_name_tool -change libfadd.dylib @rpath/libfadd.dylib $@
 
 alpino_pos.dll: tagger.obj guesser.obj alpino_pos.pl prolog_pos.cc
@@ -54,7 +54,7 @@ alpino_pos.s.o: tagger.o guesser.o alpino_pos.pl prolog_pos.cc
                 --cflag="-I../fadd $(CCDEBUG) -D_GNU_SOURCE -fPIE"\
                 --static\
                 -LD -Wall -lstdc++ -L../fadd -lfadd\
-                 -Wl,-rpath,$(PWD)/../fadd
+                 -Wl,-rpath=$(PWD)/../fadd
 
 alpino_pos.lib: tagger.obj guesser.obj alpino_pos.pl prolog_pos.cc
 	splfr alpino_pos.pl tagger.obj guesser.obj prolog_pos.cc \

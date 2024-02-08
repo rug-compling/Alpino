@@ -101,11 +101,11 @@ print_tuple.pl: print_tuple.pl.in
 
 pro_fadd.so: $(SHAREDLIB) fadd.h fsa.h pro_fadd.cc pro_fadd.pl
 	$(SPLFR) pro_fadd.pl pro_fadd.cc --cflag="${CPPFLAGS}" \
-             -LD  -Wl,-rpath,$(PWD) -L. -lfadd $(LDFLAGS) -lstdc++
+             -LD  -Wl,-rpath=$(PWD) -L. -lfadd $(LDFLAGS) -lstdc++
 
 pro_fadd.bundle pro_fadd.dylib: $(SHAREDLIB) fadd.h fsa.h pro_fadd.cc pro_fadd.pl
 	$(SPLFR) pro_fadd.pl pro_fadd.cc --cflag="${CPPFLAGS}" \
-             -LD  -Wl,-rpath,$(PWD) -L. -lfadd $(LDFLAGS) -lstdc++
+             -LD  -Wl,-rpath=$(PWD) -L. -lfadd $(LDFLAGS) -lstdc++
 	install_name_tool -change libfadd.dylib @rpath/libfadd.dylib $@
 
 pro_fadd.dll: fadd.lib fadd.h fsa.h pro_fadd.cc pro_fadd.pl
@@ -115,7 +115,7 @@ pro_fadd.dll: fadd.lib fadd.h fsa.h pro_fadd.cc pro_fadd.pl
 pro_fadd.s.o: $(SHAREDLIB) fadd.h fsa.h pro_fadd.cc pro_fadd.pl
 	splfr pro_fadd.pl pro_fadd.cc --cflag="${CPPFLAGS} -fPIE"\
               --static\
-             -LD -Wl,-rpath,$(PWD) -L. -lfadd $(LDFLAGS) -lstdc++
+             -LD -Wl,-rpath=$(PWD) -L. -lfadd $(LDFLAGS) -lstdc++
 
 pro_fadd.lib: fadd.obj fadd.h fsa.h pro_fadd.cc pro_fadd.pl
 	splfr pro_fadd.pl pro_fadd.cc fadd.obj $(LDFLAGS) --static
@@ -132,7 +132,7 @@ fadd.lib: fadd.obj
 	lib /OUT:"fadd.lib" /NOLOGO /LTCG fadd.obj
 
 test_fadd: $(SHAREDLIB) test_fadd.o
-	g++ test_fadd.o -Wl,-rpath,$(PWD) -L. -lfadd -o test_fadd
+	g++ test_fadd.o -Wl,-rpath=$(PWD) -L. -lfadd -o test_fadd
 
 acctuple: acctuple.o
 	g++ $(CPPFLAGS) acctuple.o -o acctuple -pg
@@ -144,7 +144,7 @@ test_fadd.o: fadd.h test_fadd.c
 	$(CC) $(CPPFLAGS) -c test_fadd.c
 
 test_guess: test_guess.o $(SHAREDLIB)
-	g++ $(CPPFLAGS) $< -Wl,-rpath,$(PWD) -L. -lfadd -o $@
+	g++ $(CPPFLAGS) $< -Wl,-rpath=$(PWD) -L. -lfadd -o $@
 
 test_guess.o: test_guess.c
 	$(CC) $(CPPFLAGS) -c $<
