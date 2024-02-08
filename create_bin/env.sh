@@ -49,8 +49,8 @@ then
     fi
     SP_CSETLEN=212
     SP_CTYPE=utf8
-    TCL_LIBRARY=$a/create_bin/extralibs/tcl8.5
-    TK_LIBRARY=$a/create_bin/extralibs/tk8.5
+    TCL_LIBRARY=$a/create_bin/extralibs/tcl8.6
+    TK_LIBRARY=$a/create_bin/extralibs/tk8.6
     export TCL_LIBRARY
     export TK_LIBRARY
     export ALPINO_HOME
