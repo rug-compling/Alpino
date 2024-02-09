@@ -239,7 +239,7 @@ def main():
             else:
                 ver2 = ''
                 dtver2 = ''
-            command = 'alto ' + opt + ver2 + ' '.join(args) + ' fp:' + shellquotedquery + ' tt:%f | dtview -s ' + dtver2 + '-query ' + shellquotedquery
+            command = 'alto ' + opt + ver2 + ' '.join(args) + ' fp:' + shellquotedquery + ' tt:%F | dtview -s ' + dtver2 + '-query ' + shellquotedquery
             if options.stdin:
                 fp = os.popen(command, "w")
                 for line in sys.stdin:
