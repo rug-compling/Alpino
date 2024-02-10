@@ -4597,6 +4597,10 @@ unlikely_name([A,',',B],P0,P) :-
     P2 is P1 + 1,
     tag(P2,P,_,_,_,B,normal(names_dictionary),_).    
 
+unlikely_name(['Staten',van,A],P0,P):-
+    P1 is P0 + 2,
+    tag(P1,P,_,_,_,A,normal(names_dictionary),_).
+
 %% name with comma: there should not be a larger name
 %% seperated by comma
 unlikely_name(List,P1,P) :-

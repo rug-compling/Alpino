@@ -2277,6 +2277,9 @@ ignore_roots([H0|T0],[H|T]) :-
 ignore_roots_(deprel(_/Hw/Hp,Rel,_/Dw/Dp), deprel(Hw/Hp,Rel,Dw/Dp) ).
 
 tree_comparison_pair(File1,File2) :-
+    tree_comparison_pair(File1,File2,_Ov,_X1,_X2).
+
+tree_comparison_pair(File1,File2,Ov,X1,X2) :-
     file2deprels(File1,Rels10,X1,Sent10),
     file2deprels(File2,Rels20,X2,Sent20),
     normalize_sent(Sent10,Sent1),
@@ -2285,7 +2288,48 @@ tree_comparison_pair(File1,File2) :-
     normalize_rels(Rels20,Rels2),
     compare_deprels(Rels1,Rels2,Sent1,Sent2,Ov,X1,X2),
     ca_score(Ov,X1,X2,Ca),
-    format("Dep Rel's: ~d/~d/~d CA: ~2f%~n",[Ov,X1,X2,Ca]).
+    format(user_error,"Dep Rel's: ~d/~d/~d CA: ~2f%~n",[Ov,X1,X2,Ca]).
+
+%% For Andreas
+:- public tree_comparison_pairs/0.
+tree_comparison_pairs :-
+    findall(F1/F2,xml_file_pairs(F1,F2),Pairs),
+    tree_comparison_pairs(Pairs,0,Ov,0,X1,0,X2),
+    report_fscore(Ov,X1,X2).
+
+tree_comparison_pairs([],Ov,Ov,X1,X1,X2,X2).
+tree_comparison_pairs([F1/F2|Tail],Ov0,Ov,X10,X1,X20,X2) :-
+    format(user_error,"comparing ~w with ~w ~n",[F1,F2]),
+    tree_comparison_pair(F1,F2,Ov1,X11,X21),
+    Ov2 is Ov0 + Ov1,
+    X12 is X10 + X11,
+    X22 is X20 + X21,
+    tree_comparison_pairs(Tail,Ov2,Ov,X12,X1,X22,X2).
+
+xml_file_pairs(File1,File2) :-
+    repeat,
+    read_line(Codes),
+    (   Codes == end_of_file
+    ->  !, fail
+    ;   (   on_exception(Exc,
+			 (   split_string(Codes," ",[File10,File20]),
+			     atom_codes(File1,File10),
+			     atom_codes(File2,File20)
+			 ),
+			 (  format(user_error,"exception: ~w~n",[Exc])
+			 ,  fail
+			 )
+			)
+	->  true
+	;   format(user_error,"not a pair of files separated by space: ~s~n",[Codes])
+	)
+    ).
+
+report_fscore(Ov,X1,X2) :-
+    Prec is Ov/X1,
+    Rec is Ov/X2,
+    F is (2*Prec*Rec)/(Prec+Rec),
+    format("fscore: ~w (~w ~w) (~w deps overlap, ~w deps in File1, ~w deps in File2)~n",[F,Prec,Rec,Ov,X1,X2]).
 
 normalize_sent([],[]).
 normalize_sent([H0|T0],[H|T]) :-
