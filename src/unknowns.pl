@@ -4608,6 +4608,10 @@ unlikely_name(List,P1,P) :-
     between(0,P1,P0),
     tag(P0,P2,_,_,_,_,name(_),_), P =< P2.
 
+unlikely_name(List,P0,P) :-
+    list_only_capitals(List),
+    majority_decap(List,P0,P,0,0).
+
 %% if all capitals then not proceeded or followed by another
 %% all capitals
 unlikely_name(List,P1,P2) :-
@@ -7055,3 +7059,28 @@ zaliger(generaal).
 
 zn(zn).
 zn(zoon).
+
+list_only_capitals([]).
+list_only_capitals([W|Ws]):-
+    only_capitals(W,_),
+    list_only_capitals(Ws).
+
+majority_decap([],P,P,NormalCount,TotalCount) :-
+    TotalCount > 2,
+    NormalCount > TotalCount/2.
+
+majority_decap([W|Ws],P0,P,C0,T0):-
+    \+ normal_decap(W,P0,_),
+    P1 is P0 +1,
+    T1 is T0 +1,
+    majority_decap(Ws,P1,P,C0,T1).
+
+majority_decap([W|Ws],P0,P,C0,T0):-
+    normal_decap(W,P0,P1),
+    C1 is C0 +1,
+    T1 is T0 +1,
+    majority_decap(Ws,P1,P,C1,T1).
+
+normal_decap(W,P0,P):-
+    tag(P0,P,_,_,_,W,special(decap(normal)),_).
+	       
