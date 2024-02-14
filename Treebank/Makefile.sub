@@ -15,28 +15,19 @@ texcommand=xsltproc $(ttdir)/stylesheets/dt2latex.xsl
 DEMO=5
 
 %.svg : %.xml
-	xsltproc $(ttdir)/stylesheets/dt2tree$(DEMO).xsl $< >$@
-
-# %.pdf : %.svg
-# 	inkscape $(INKSCAPE) --export-pdf=$*.pdf.uncrop $<
-# 	pdfcrop $*.pdf.uncrop $*.pdf
-
-# %.pdf : %.svg
-# 	java -jar ~/src/batik-1.7/batik-rasterizer.jar -m application/pdf -d uncrop $<
-#	pdfcrop uncrop/$*.pdf $*.pdf
-
+	xsltproc $(ttdir)/stylesheets/dt2tree$(DEMO).xsl ./$< >./$@
 
 # we have to go thru postscript, otherwise many problems
 # including error "PDF inclusion: multiple pdfs with page group included in a single page"
 # and chaotic output
 %.pdf : %.svg
-	rsvg-convert -f pdf -o $*.pdf $*.svg
-	pdf2ps $*.pdf
-	ps2pdf $*.ps
-	rm $*.ps
+	rsvg-convert -f pdf -o ./$*.pdf ./$*.svg
+	pdf2ps ./$*.pdf
+	ps2pdf ./$*.ps
+	rm ./$*.ps
 
 %.png : %.svg
-	inkscape $(INKSCAPE) --export-png=$*.png $<
+	inkscape $(INKSCAPE) --export-png=./$*.png ./$<
 
 css=http://www.let.rug.nl/~vannoord/vn.css
 
@@ -49,8 +40,7 @@ css=http://www.let.rug.nl/~vannoord/vn.css
 %.pdf : %.epsi
 	epstopdf $<
 
-files:=${basename ${shell ls -v *.xml}}
-
+files:=${addprefix ./,${basename ${shell ls -v -- *.xml}}}
 
 clean:
 	/bin/rm -f index.aux index.log index.tex
