@@ -22747,7 +22747,12 @@ n([pl(misselijkheden),sg(misselijkheid)],de,[]).
 
 n([pl(missers),sg(misser)],de,[]).
 
-n([pl(missies),pl(missiën),sg(missie)],de,[sbar,vp]).
+n([pl(missies),pl(missiën),sg(missie)],de,
+  [sbar,
+   vp,
+   subject_sbar,
+   subject_vp
+  ]).
 
 n([pl(missies),pl(missiën),sg(missie)],de,[],
   [s(handel),

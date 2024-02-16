@@ -1916,6 +1916,11 @@ spelling_variant31(Soc,'-',Dem, SocDem) :-
     atom(Dem), \+ parse_number_simple(Dem),
     hdrug_util:concat_all([Soc,Dem],SocDem,'-').
 
+spelling_variant31(Soc,'-',Dem, SocDem) :-
+    atom(Soc), \+ parse_number_simple(Soc),
+    atom(Dem), \+ parse_number_simple(Dem),
+    hdrug_util:concat_all([Soc,Dem],SocDem,'').
+
 spelling_variant31(van,te,voren,   vantevoren).
 spelling_variant31(of,te,wel,      oftewel).
 spelling_variant31(doe,het,zelf,   'doe-het-zelf').

@@ -6035,6 +6035,8 @@ v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
 	fixed([{[acc(aangifte),er_pp(van,A)]},extra_sbar(A)],imp_passive),
 	fixed([{[acc(aanval),pc(op)]}],norm_passive),
 	fixed([{[acc(afstand),pc(van)]}],imp_passive),
+	fixed([{[acc(alles),pc(voor)]}],norm_passive),
+	fixed([{[acc(alles),er_pp(voor,C)]},extra_vp(C)],norm_passive),
 	fixed([{[acc(beklag),pc(over)]}],norm_passive),
 	fixed([acc(beklag)],norm_passive),
 	fixed([{[acc(beroep),pc(op)]}],norm_passive),
@@ -8199,7 +8201,8 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	fixed([{[acc(moeite)]},refl],imp_passive),
 	fixed([{[acc(moeite),pc(voor)]},refl],imp_passive),
 	fixed([{[[opdracht],pc(tot)]}],imp_passive),
-        fixed([[present]],imp_passive),  % Vlaams
+        fixed([[present]],imp_passive),	% Vlaams
+	fixed([{[acc(recht),pc(op)]}],no_passive),
 	fixed([{[acc(rekenschap),pc(van)]},refl],imp_passive),
 	fixed([{[acc(rekenschap),er_pp(van,B)]},extra_sbar(B),refl],imp_passive),
 	fixed([{[acc(rekenschap),er_pp(van,B)]},extra_vp(B),refl],imp_passive),
@@ -13096,6 +13099,8 @@ v(leg,legt,leggen,gelegd,legde,legden,
 	fixed([[aan,de,dag],pc(voor),acc],norm_passive),
 	fixed([[aan,den,dag],pc(voor),acc],norm_passive),
         fixed([[de,hand],pc(op)],imp_passive),
+	fixed([[in,de,weg],[geen,strobreed],dat],imp_passive),
+	fixed([{[pc(voor),acc(fundament)]}],norm_passive),
 	fixed([pp_pred(in,as),acc],norm_passive),
 	fixed([[in,de,luren],acc],norm_passive),
 	fixed([{[pp_pred(in,hand),pc(van)]},acc],norm_passive),
@@ -28954,11 +28959,23 @@ v(zit,zit,zitten,gezeten,zat,zaten,
 	np_pc_pp(op),      % op de huid, op de hielen, op de kop; passivizes
 	norm_passive,        % er zitten spekjes door verwerkt
 
+	%%% klopt niet: woordvolgorde
+	%%% omdat hij zit ondergedoken
         part_intransitive(ondergedoken),
         part_intransitive(opgesloten),
         part_intransitive(gevangen),
+
+	%%% klopt ook niet: woordvolgorde with participles
+	%%% hij heeft ondergedoken gezeten (participle gezeten cannot select a participle)
+	%%% *hij heeft gezeten ondergedoken
+
+	fixed([vc(duik_onder,psp,part_intransitive(onder))],no_passive),
+	fixed([vc(sluit_op,psp,part_intransitive(op))],no_passive),
+	fixed([vc(vang,psp,intransitive)],no_passive),
+
+	%%% daarom beide opties tegelijks :-(
+	
         part_intransitive(klem),
-        
 	part_intransitive(in),
 	part_intransitive(neer),
         part_intransitive(mee),

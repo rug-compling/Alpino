@@ -2897,6 +2897,8 @@ second_part_english_compound(tag(_,_,_,_,L,_,_,Tag)):-
 
 second_part_lemma(elite,noun(_,_,_)).
 second_part_lemma(vormig,adjective(_)).
+second_part_lemma(school,noun(_,_,_)).
+second_part_lemma(deskundig,nominalized_adjective).
 
 first_alternative_to_compound(R0,R1) :-
     search_tag_r0(R0,tag(_,_,R0,R1,_,_,_,Tag)),
@@ -2956,6 +2958,8 @@ allowed_alt_tag(particle(_)).
 allowed_alt_tag(post_n_n).
 allowed_alt_tag(fixed_part(_)).
 allowed_alt_tag(post_adjective(no_e)).
+allowed_alt_tag(proper_name(_)).
+allowed_alt_tag(proper_name(_,_)).
 
 noun_tag(noun(_,_,_)).
 noun_tag(tmp_noun(_,_,_)).
