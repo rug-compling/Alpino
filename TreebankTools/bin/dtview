@@ -20,6 +20,7 @@ set initial_width  1024
 set initial_height  786
 set listbox_width 150
 set extended_attributes 0
+set macrofile ""
 
 try {
     exec which alto
@@ -570,7 +571,7 @@ proc shellquote {s} {
 }
 
 proc show-tree {} {
-    global dtget cligsheet cligsheet2 env filelist current expr extended_attributes has_alto opts
+    global dtget cligsheet cligsheet2 env filelist current expr extended_attributes has_alto macrofile opts
     # laat de boom uit FILELIST op positie CURRENT zien mbv CLIGSHEET en EXPR
 
     # de boomstructuur op het canvas toveren
@@ -580,7 +581,7 @@ proc show-tree {} {
         set commandline "alto -n -v extended-attributes=$extended_attributes "
         append commandline [shellquote [lindex $filelist $current]]
         if {[expr [string length $expr] > 0]} {
-            append commandline " fp:" [shellquote $expr]
+            append commandline " $macrofile fp:" [shellquote $expr]
 	    if {$opts(-2)} {
                 append commandline " -2p"
 	    }
@@ -1039,10 +1040,13 @@ OPTIONS:
 "
 
 if {"$has_alto" == 1} {
-    set usage "$usage-2                              Use XPath2\n"
+    set usage "$usage-2                              Use XPath2
+-a, --macrofile MACROFILE       Use macro definitions from this file
+                                (overrides env.var. ALTO_MACROFILE)
+"
 }
 
-array set opts {-q "" -s 0 -file-query-pairs 0 -d "" -h 0 -m 0 -2 0}
+array set opts {-q "" -s 0 -file-query-pairs 0 -d "" -h 0 -m 0 -2 0 -a ""}
 
 while {[string match -* [lindex $argv 0]]} {
     switch -regexp -- [lindex $argv 0] {
@@ -1051,6 +1055,7 @@ while {[string match -* [lindex $argv 0]]} {
         ^(-m|--?maximize)$      { set opts(-m) 1;}
         ^(-h|--?help)$          { set opts(-h) 1;}
         ^-2$                    { set opts(-2) 1;}
+	^(-a|--?macrofile)$     { set opts(-a) [Pop argv 1] }
         ^--?file-query-pairs$   { set opts(-file-query-pairs) 1;}
         ^--$                    { Pop argv ; break }
         default {
@@ -1065,6 +1070,11 @@ while {[string match -* [lindex $argv 0]]} {
 if $opts(-h) {
     puts $usage
     exit 0
+}
+
+if {$opts(-a) != ""} {
+    set m [shellquote $opts(-a)]
+    set macrofile "-m $m"
 }
 
 set expr $opts(-q)
