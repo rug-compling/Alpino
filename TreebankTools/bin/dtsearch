@@ -176,7 +176,7 @@ def main():
 
     if has_alto:
         parser.add_argument("-2", action="store_true", dest="version2",
-                            help="Use XPath version 2 (only in combination with --dtview)")
+                            help="Use XPath version 2 (default for dact files)")
 
     parser.add_argument("--statistics", "-l", action="store_true", dest="statistics",
                         help="print stats for values of rel,cat,pos labels in matching nodes")
@@ -223,31 +223,46 @@ def main():
     stylesheet = None
     parsedsheet = None
 
+    if has_alto:
+        if options.stdin:
+            opt = '-i '
+        else:
+            opt = ''
+        if options.version2:
+            ver2 = '-2p '
+            dtver2 = '-2 '
+        else:
+            ver2 = ''
+            dtver2 = ''
+        sqq = shellquote(options.query)
+        command = 'alto ' + opt + ver2 + ' '.join(args) + ' fp:' + sqq
+        if options.dtview:
+            command += ' tt:%F | dtview -s ' + dtver2 + '-query ' + sqq
+        elif options.rootlabels:
+            command += ' ac:word'
+        elif options.statistics:
+            command += ' ac:node'
+        elif options.bracketed_sentence:
+            command += ' tt:%F\\\\t%S'
+        elif options.constituents:
+            command += ' tt:%F\\\\t%w'
+        else:
+            command += ' tt:%F'
+
+        if options.stdin:
+            fp = os.popen(command, "w")
+            for line in sys.stdin:
+                fp.write(line)
+            fp.close()
+        else:
+            os.system(command)
+
+        sys.exit(0)
+
     if options.dtview:
         shellquotedquery = shellquote(options.query)
         dtview_fp = None
-        if not has_alto:
-            process_arguments(args, workhorse, options.stdin, 1, True)
-        else:
-            if options.stdin:
-                opt = '-i '
-            else:
-                opt = ''
-            if options.version2:
-                ver2 = '-2p '
-                dtver2 = '-2 '
-            else:
-                ver2 = ''
-                dtver2 = ''
-            command = 'alto ' + opt + ver2 + ' '.join(args) + ' fp:' + shellquotedquery + ' tt:%F | dtview -s ' + dtver2 + '-query ' + shellquotedquery
-            if options.stdin:
-                fp = os.popen(command, "w")
-                for line in sys.stdin:
-                    fp.write(line)
-                fp.close()
-            else:
-                os.system(command)
-            sys.exit(0)
+        process_arguments(args, workhorse, options.stdin, 1, True)
     elif options.rootlabels:
         counthash = {'root': {}, 'lemma': {}, 'word':{} }
         process_arguments(args, workhorse, options.stdin, 1, True)
