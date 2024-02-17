@@ -678,7 +678,7 @@ proc show-sentence {} {
     .sentencelabel configure -text "$sentid$sentence"
 
     if {"$has_alto" == "1"} {
-        set arglist "alto tt:%d "
+        set arglist "alto ts:$metasheet "
         lappend arglist [shellquote [lindex $filelist $current]]
     } else {
         set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
