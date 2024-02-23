@@ -15,19 +15,20 @@ texcommand=xsltproc $(ttdir)/stylesheets/dt2latex.xsl
 DEMO=5
 
 %.svg : %.xml
-	xsltproc $(ttdir)/stylesheets/dt2tree$(DEMO).xsl ./$< >./$@
+	@xsltproc $(ttdir)/stylesheets/dt2tree$(DEMO).xsl ./$< >./$@
 
-# we have to go thru postscript, otherwise many problems
-# including error "PDF inclusion: multiple pdfs with page group included in a single page"
-# and chaotic output
+# # we have to go thru postscript, otherwise many problems
+# # including error "PDF inclusion: multiple pdfs with page group included in a single page"
+# # and chaotic output
+### see https://tex.stackexchange.com/questions/76273/multiple-pdfs-with-page-group-included-in-a-single-page-warning
+### somewhat better to use the gs suggestion
 %.pdf : %.svg
-	rsvg-convert -f pdf -o ./$*.pdf ./$*.svg
-	pdf2ps ./$*.pdf
-	ps2pdf ./$*.ps
-	rm ./$*.ps
+	@rsvg-convert -f pdf -o ./$*.pdf.tmp ./$*.svg
+	@gs -q -o ./$*.pdf -sDEVICE=pdfwrite -dColorConversionStrategy=/sRGB -dProcessColorModel=/DeviceRGB ./$*.pdf.tmp
+	@rm -f ./$*.pdf.tmp
 
 %.png : %.svg
-	inkscape $(INKSCAPE) --export-png=./$*.png ./$<
+	inkscape ./$*.svg -o ./$*.png
 
 css=http://www.let.rug.nl/~vannoord/vn.css
 
@@ -51,6 +52,7 @@ clean:
 	/bin/rm -f $(files:%=%.out) 
 	/bin/rm -f $(files:%=%.tex) 
 	/bin/rm -f $(files:%=%.svg) 
+	/bin/rm -f $(files:%=%.pdf.tmp) 
 
 realclean: clean
 	/bin/rm -f $(files) 
@@ -66,10 +68,10 @@ doc: index.pdf index.html
 PDFLATEX=pdflatex
 
 index.pdf: index.tex
-	-$(PDFLATEX) -interaction nonstopmode index.tex
+	@-$(PDFLATEX) -interaction nonstopmode index.tex
 
 index.tex:  $(files:%=%.pdf)
-	dtxslt --stylesheet $(ttdir)/stylesheets/dt2sent_with_file.xsl $(files:%=%.xml)\
+	@dtxslt --stylesheet $(ttdir)/stylesheets/dt2sent_with_file.xsl $(files:%=%.xml)\
               | grep [.]| sed -e 's/[.]xml//g' |\
          $(thisdir)/create_tex -s $(suite) > index.tex
 
@@ -77,26 +79,26 @@ xmls.tar.gz: $(files:%=%.xml)
 	tar czf xmls.tar.gz -h $(files:%=%.xml)
 
 index.html: $(files:%=%.xml) $(files:%=%.svg) $(files:%=%.pdf) $(thisdir)/create_html 
-	dtxslt --stylesheet $(ttdir)/stylesheets/dt2sent_with_file.xsl $(files:%=%.xml)\
+	@dtxslt --stylesheet $(ttdir)/stylesheets/dt2sent_with_file.xsl $(files:%=%.xml)\
               | grep [.]| sed -e 's/[.]xml//g' |\
          $(thisdir)/create_html -s $(suite) -c $(css) > index.html
 
 treebank.html: $(files:%=%.xml) $(files:%=%.svg) $(thisdir)/create_simple_html 
-	dtxslt --stylesheet $(ttdir)/stylesheets/dt2sentid.xsl $(files:%=%.xml)\
+	@dtxslt --stylesheet $(ttdir)/stylesheets/dt2sentid.xsl $(files:%=%.xml)\
               | grep [.]| sed -e 's/[.]xml//g' |\
          $(thisdir)/create_simple_html -s $(suite) -c $(css) > treebank.html
 
 prefix="./"
 
-data=$(wildcard *.data.dz)
-htmls=$(data:%.dz=%.html)
+#data=$(wildcard *.data.dz)
+#htmls=$(data:%.dz=%.html)
 
-htmls:$(htmls)
+#htmls:$(htmls)
 
-%.data.html: %.data.dz $(thisdir)/create_act_html $(ttdir)/stylesheets/dt2sent_with_file.xsl
-	dtxslt --stylesheet $(ttdir)/stylesheets/dt2sent_with_file.xsl $< | grep [.]|\
-          sed -e 's/[.]xml//g' | $(thisdir)/create_act_html -p $(prefix) -s $< -c $(css) > $@
+#%.data.html: %.data.dz $(thisdir)/create_act_html $(ttdir)/stylesheets/dt2sent_with_file.xsl
+#	@dtxslt --stylesheet $(ttdir)/stylesheets/dt2sent_with_file.xsl $< | grep [.]|\
+#          sed -e 's/[.]xml//g' | $(thisdir)/create_act_html -p $(prefix) -s $< -c $(css) > $@
 
 
-%.dact: %.data.dz %.index
-	alpinocorpus-act -c $@ $*.data.dz
+#%.dact: %.data.dz %.index
+#	alpinocorpus-act -c $@ $*.data.dz

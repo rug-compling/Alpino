@@ -7,6 +7,7 @@ getopts('s:');
 $opt_s =~ s/_/\\_/g;
 
 print "\\documentclass{article}\\usepackage{a4wide}\n";
+print "\\pdfminorversion=7\n";
 print "\\usepackage[utf8]{inputenc}\\usepackage{graphicx}\n";
 print "\\usepackage[T1]{fontenc}\n";
 print "\\usepackage{newunicodechar}\n";
@@ -19,7 +20,9 @@ while (<>) {
   ($file,@words) = split;
   $sent = join(' ',@words);
   
-  $width = `awk '/MediaBox/ { if (\$4>400) {print 400} else {print \$4}}' $file.pdf`;
+  ##  $width = `awk '/MediaBox/ { if (\$4>400) {print 400} else {print \$4}}' $file.pdf`;
+  $width = `pdfinfo -box $file.pdf | awk '/MediaBox/ { if (\$4>400) {print 400} else {print \$4}}'`;
+  print "%% $width\n";
   chomp($width);
 
   $sent =~ s/_/\\_/g;
