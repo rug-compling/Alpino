@@ -189,6 +189,7 @@ lexical_analysisXXX(Input) :-
 	),
 	time(Debug,enforce_unique_match),
 	time(Debug,enforce_longest_match(UnbracketedInput,0,P)),
+	time(Debug,enforce_longest_match_simple),
 	%% add tags for unknown words:
 	(   Unk == on
 	->  time(Debug,guess_unknowns(Input,MaxPos)),
@@ -1116,6 +1117,7 @@ requires_longest_match(normal(spaced_letters)).
 requires_longest_match(name(not_begin)).
 requires_longest_match(name(begin)).
 requires_longest_match(normal(telephone)).
+requires_longest_match(normal(enumeration)).
 
 requires_unique_match(normal(date_year),np(year),normal(enumeration),_,_,_).
 requires_unique_match(name(not_begin),proper_name(sg,_),normal(enumeration),proper_name(both),_,_).
@@ -1148,6 +1150,33 @@ enforce_longest_match(Words,0,P) :-
     ;   true
     ).
 
+
+%% Kim Clijsters => *Kim and *Clijsters as separate names
+enforce_longest_match_simple :-
+    findall(Ref,person_names_erase(Ref),Refs0),
+    sort(Refs0,Refs),
+    erase_tags(Refs,_),
+    findall(R,enumeration_erase(R),Rs0),
+    sort(Rs0,Rs),
+    erase_tags(Rs,_).
+
+enumeration_erase(Ref) :-
+    tag(P0,P1,R0,R1,_,_,normal(enumeration),enumeration),
+    clause(tag(P0,P,R0,R,_,_,normal(enumeration),enumeration),_,Ref),
+    P1 > P, R1 > R.
+    
+
+person_names_erase(Ref) :-
+    tag(P0,P,R0,R,_,_,normal(names_dictionary),proper_name(sg,'PER')),
+    clause(tag(P0,P1,R0,R1,_,_,normal(names_dictionary),proper_name(sg,'PER')),_,Ref1),
+    clause(tag(P1,P, R1,R, _,_,normal(names_dictionary),proper_name(sg,'PER')),_,Ref2),
+    lists:member(Ref,[Ref1,Ref2]).
+
+person_names_erase(Ref) :-
+    tag(P0,P,R0,R,_,_,normal(gen(names_dictionary)),name_determiner(pron,'PER')),
+    clause(tag(P0,P1,R0,R1,_,_,normal(names_dictionary),proper_name(sg,'PER')),_,Ref1),
+    clause(tag(P1,P ,R1,R ,_,_,normal(gen(names_dictionary)),name_determiner(pron,'PER')),_,Ref2),
+    lists:member(Ref,[Ref1,Ref2]).
 
 enforce_unique_match :-    
     count_edges(tag(_,_,_,_,_,_,_,_),Edges0),

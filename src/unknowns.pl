@@ -3907,6 +3907,8 @@ is_start_sentence_(P) :-
 is_start_sentence_(P):-
     tag(_,P,_,_,_,_,_,punct(Dubb)),
     start_sentence_punct(Dubb).
+is_start_sentence_(P):-
+    tag(_,P,_,_,_,_,_,enumeration).
 
 is_start_sentence_(P):-
     tag(_,P,_,_,_,_,normal(enumeration),tag).
@@ -6122,6 +6124,9 @@ name_capital(W,P0) :-
 	isupper(N)
     ->  true                    % eBay, iPhone,  xBox
     ;   atom_concat('al-',_,W)
+    ->  true			% al-Qaida
+    ;   atom_concat('as-',Rest,W),
+	name_capital(Rest,P0)
     ->  true			% al-Qaida
     ).				
 
