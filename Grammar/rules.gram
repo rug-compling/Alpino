@@ -649,7 +649,9 @@ max_ap_pp_predm(X):-
 
 max_modifier(X) :-
     X => modifier,
-    max(X).
+    max(X),
+    X:hstem <=> HSTEM,
+    dif(HSTEM,er).
 
 max_redrel(X) :-
     redrel_modifier(X),
@@ -1475,7 +1477,7 @@ grammar_rule(vp_hellip_arg_v(adv),VP, [Punct, Arg, V] ) :-
 vp_arg_v_adv_structure(VP,Arg,V) :-
     Arg => adv,
     Arg:hstem <=> HSTEM,
-    Tmploc => (loc;ld_dir;me),
+    Tmploc => (loc;ld_dir;me;wk_er),
     Arg:tmploc <=> NormTmploc,
     when( ?=(HSTEM,graag),
 	  ( HSTEM == graag
@@ -5892,6 +5894,7 @@ grammar_rule(n_n_modroot(comma), N, [ N0, Cl, ROOT, Cr ]) :-
 %%EX%% Seedorf , niet getrouwd overigens , wilde niet langer in Rome blijven .
 grammar_rule(n_n_modroot_dp(comma), N, [ N0, Cl, MOD, Cr ]) :-
     comma(Cl),comma(Cr),
+    MOD => max,
     max(MOD),
     MOD:max_type => t_dp,
     n_post_mod_structure(N0,MOD,N).
@@ -6036,7 +6039,7 @@ a_adv_a_structure(AP,Adv,A0) :-
     Adv:wh <=> A:wh,
     Adv:wh_reltmploc <=> A:wh_reltmploc,
     AP:can_postv <=> Adv:adj_can_postv,
-    Adv:tmploc => (ntmploc;sent;tmp;tmp_n;loc;ld_dir),  % why was there wk_er???
+    Adv:tmploc => (ntmploc;sent;tmp;tmp_n;loc;ld_dir), % why was there wk_er???
     Adv:redrel => no,
     Adv:modifies_a => yes,
     haspreyes(A0),
@@ -6313,10 +6316,7 @@ grammar_rule(a_pp_comp_a, AP, [ PP, A]) :-
     AP => a, A => a, PP => pp,
     haspreyes(A),
     A:aform => (nattr;attr), 
-%%    PP:wh => nwh,  % hij vroeg wie waarvoor verantwoordelijk was
     PP:sel => to_left,
-%%    PP:slash => [],	% * dat hij daar_i altijd [ voor_i erg bang ] is
-                        %   dat hij daar_i druk [ mee_i bezig ] is
     hd_comp_structure(A,PP,AP).
 
 %%EX%% dit gezegd hebbende vertrok hij
@@ -6972,8 +6972,10 @@ grammar_rule(abs_p_np_mod_dir,PP,[Met,NP,MOD2,MOD]) :-
 %% in that case, don't allow all start types...
 %% dus moet het niet gebeuren
 %% spur.amb.; should not allow topic_drop start
+%% but these do occur "(Hij had zich wel aangemeld...) Maar kwam niet opdagen"
 
 %%EX%% Maar ik kom niet
+%%EX%% Maar kwam niet opdagen
 grammar_rule(sbar(want),SBAR, [ Comp, OPTCOMMA, ROOT ]) :-
     OPTCOMMA => optpunct,
     OPTCOMMA:cat <=> COMMA,
@@ -8163,6 +8165,8 @@ grammar_rule(start_mod_np,M,[MOD,NP]) :-
     M:max_type => t_dp,
     M:mod_np => yes,
     max_modifier(MOD),
+    MOD:hstem <=> HSTEM,
+    dif(HSTEM,er),
     MOD:mcat => (mcat_pp;mcat_adv;mcat_vp;mcat_sbar;mcat_redrel),
     MOD:wh => nwh,  % separate rule for wh case
     ind_max_np(NP),
@@ -8205,7 +8209,7 @@ grammar_rule(start_mod_np_np,M,[MOD1,NP,NP2]) :-
     M:mod_np => yes,
     max_dp_modifier(MOD1),
     ind_max_np(NP),
-    NP:subn => ~sub_indef_verb, 
+    NP:subn => ~sub_indef_verb & ~sub_indef_adj, 
     max_np(NP2),
     dp_dp_structure(MOD1,NP,NP2,M).
 
@@ -8749,6 +8753,7 @@ short_np(NP1,SUBN) :-
 %%EX%% Ik een held ?
 %%EX%% Ik een drankprobleem ?
 %%EX%% Zoetemelk tweede
+%%EX%% uitbreiding Philips
 %% abbr of "NP is/heeft NP"
 grammar_rule(np_np,START,[NP1,COMMA,NP2]) :-
     optcomma(COMMA),
@@ -9127,6 +9132,18 @@ grammar_rule(top_tag_start_xp, Start, [Tag,COMMA,Max]):-
     Tag => tag,
     Tag:adv => no,
     comma(COMMA),
+    unify_mods(Tag),
+    tag_max_structure(Max,Tag,Start).
+
+%%EX%% ( 3 ) Vanwege de grotere oppervlakte .
+%%EX%% (3) Vanwege de grotere oppervlakte .
+%%EX%% 3 . Vanwege de grotere oppervlakte
+grammar_rule(top_enum_start_xp, Start, [Tag,OPTCOMMA,Max]):-
+    Tag => enumeration,
+    OPTCOMMA => optpunct,
+    OPTCOMMA:cat <=> COMMA,
+    COMMA => punct,
+    COMMA:puncttype => (komma;dubb_punt;hellip;punt),
     unify_mods(Tag),
     tag_max_structure(Max,Tag,Start).
 
