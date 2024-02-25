@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" cat="mwu" end="3" id="2" rel="tag">
+        <node begin="0" end="1" id="3" lemma="(" pos="num" postag="LET()" pt="let" rel="mwp" root="(" special="enumeration" word="("/>
+        <node begin="1" end="2" id="4" lemma="3" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="3" special="enumeration" word="3"/>
+        <node begin="2" end="3" id="5" lemma=")" pos="num" postag="LET()" pt="let" rel="mwp" root=")" special="enumeration" word=")"/>
+      </node>
+      <node begin="3" cat="pp" end="7" id="6" rel="nucl">
+        <node begin="3" end="4" id="7" lemma="vanwege" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="vanwege" vztype="init" word="Vanwege"/>
+        <node begin="4" cat="np" end="7" id="8" rel="obj1">
+          <node begin="4" end="5" id="9" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node aform="compar" begin="5" buiging="met-e" end="6" graad="comp" id="10" infl="e" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="groot" vform="adj" word="grotere"/>
+          <node begin="6" end="7" gen="both" genus="zijd" getal="ev" graad="basis" id="11" lemma="oppervlakte" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="oppervlakte" word="oppervlakte"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>( 3 ) Vanwege de grotere oppervlakte .</sentence>
+</alpino_ds>

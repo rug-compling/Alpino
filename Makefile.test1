@@ -332,9 +332,9 @@ compare.mwu: test.mwu $(TREEBANK_MWU)
 
 ### STARTING TESTS
 
-tests: ts cgns lassy.test1 ovistest.test1 Titaantjes.test1
+tests: ts cgns lassy-doc.test1 ovistest.test1 Titaantjes.test1
 
-ltests: ts lassy.test1 Titaantjes.test1
+ltests: ts lassy-doc.test1 ovistest.test1 Titaantjes.test1
 
 ts: cdbt g_suite.test1 h_suite.test1 i_suite.test1 j_suite.test1 extra.test1\
     leuven_yellow_pages.test1 lot_test_suite1.test1 cgn_exs.test1\
