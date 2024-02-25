@@ -17,7 +17,7 @@ all:
 novel:
 	( cd fast; make -j i_suite.log extra.log j_suite.log )
 
-DIRECTORIES=cdb cgn_exs eans extra g_suite h_suite i_suite lassy leuven_yellow_pages lot_test_suite1 \
+DIRECTORIES=cdb cgn_exs eans extra g_suite h_suite i_suite lassy-doc leuven_yellow_pages lot_test_suite1 \
              novelsample_corrected ntv-suite qa Titaantjes wpspel j_suite
 
 %.doc:
@@ -40,12 +40,6 @@ transform:
 alpino.dact: $(DIRECTORIES:%=Enhanced/%/*.xml)
 	( cd Enhanced ; rm -f alpino.dact ; alto $(DIRECTORIES) -o alpino.dact )
 	mv Enhanced/alpino.dact alpino.dact
-
-
-#Enhanced/%.dact: Enhanced/%/*.xml
-#	alpinocorpus-create -d Enhanced/$*.dact.new Enhanced/$*
-#	chmod 644 Enhanced/$*.dact.new
-#	mv Enhanced/$*.dact.new Enhanced/$*.dact
 
 freq: $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq $(TMPDATA)
 	mkdir -p FREQ LP TRIPLES
@@ -184,8 +178,8 @@ sentspl: sents
 
 conllu: $(DIRECTORIES:%=../CONLLU/%.conllu)
 
-../CONLLU/%.conllu: Enhanced/%/*.xml $(ALUD)
-	ls -v ../Treebank/Enhanced/$*/*.xml | $(ALUD) $(ALUD_OPTIONS) > ../CONLLU/$*.conllu 2> ../CONLLU/$*.conllu.err
+../CONLLU/%.conllu: Enhanced/%/*.xml
+	ls -v ../Treebank/Enhanced/$*/*.xml | alud > ../CONLLU/$*.conllu 2> ../CONLLU/$*.conllu.err
 
 
 #	( cd fast; make eans.log BASE=/net/aistaff/vannoord/z/Alpino )
@@ -193,7 +187,7 @@ conllu: $(DIRECTORIES:%=../CONLLU/%.conllu)
 ## all steps for one suite only
 update:
 	$(MAKE) sql/$(suite).sqlite corpus=$(suite)
-	$(MAKE) enhanced corpus=$(suite)
+	$(MAKE) $(suite).enhanced
 	$(MAKE) POSLEMMA/$(suite).poslemma
 	$(MAKE) MWU/$(suite).mwu FREQ/mwu-tagged.freq
 	(  cd Enhanced/$(suite); $(MAKE) -s --no-print-directory -j 30 index.html )
