@@ -1779,6 +1779,8 @@ format_of_result(gen_suite,Result,Key) :-
     format_gen_suite(Result,Key).
 format_of_result(new_left_corners,Result,Key) :-
     alpino_format_syntax:format_new_left_corners_of_result(Result,Key).
+format_of_result(left_corners,Result,Key) :-
+    alpino_format_syntax:format_left_corners_of_result(Result,Key).
 format_of_result(dep_features,Result,Key) :-
     set_flag(dep_with_pos,on),
     format_dep_features(Result,Key),
