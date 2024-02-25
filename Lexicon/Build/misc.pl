@@ -2085,7 +2085,6 @@ m('u al',    determiner(pron),[uw,aller]).
 %m(u,            determiner(pron),uwer).
 m(u,             determiner(der),uwer).
 m(u,             determiner(der),uws).  % erg ouderwets
-m('van de',      determiner(der),vd).
 m(veel,          determiner(pron),veler).
 m(voldoende,     determiner(wat,nwh,mod,pro,yparg),voldoende).
 m(volop,         determiner(wat),volop).
@@ -3712,7 +3711,8 @@ m('aan\'t',         preposition(aan,[],nodet),  'aan\'t' ).
 m(te,               preposition(te, [],nodet),  te       ).
 m(te,               preposition(ten,[],nodet),  ten      ).
 m(te,               preposition(ter,[],nodet),  ter      ).
-m('v/d',            preposition(van,[],nodet),  'v/d'    ).
+m('van de',         preposition(van,[],nodet),  'v/d'    ).
+m('van de',         preposition(van,[],nodet),  vd       ).
 
 m(voor,             preposition(voor,[],voor_pred),voor).   
 % voor onmogelijk houden/verslijten
@@ -5236,8 +5236,9 @@ m(recht,            modal_adverb(prep),recht).    % recht tegenover ..
 m(recht,            modal_adverb(prep),recht).    % lijnrecht tegenover ..
 m(redelijk,         modal_adverb(prep),redelijk). % redelijk op tijd
 m(ster,             modal_adverb(prep),sterk).    % sterk in de minderheid
-m(volkomen,         modal_adverb(prep),volkomen). % with pp (predicative?)
-				% 'volkomen tegen mijn wil' / in de war
+m(volkomen,         modal_adverb(prep),volkomen). % with pp (predicative?) % 'volkomen tegen mijn wil' / in de war
+m(zwaar,            modal_adverb(prep),zwaar).    % zwaar onder druk staan
+				
 
 %% mede dankzij hem; mede omdat; mede om ..
 m(deels,            modal_adverb(comp_prep_verb), deels).
