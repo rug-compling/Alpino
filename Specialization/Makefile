@@ -61,7 +61,6 @@ echo:
 
 noparses: make_guide_vector
 	echo "some syntax errors for euro sign expected...(just ignore)"
-	sort -u *.ps > guides.t
 	cat guides.t |\
    ../src/Alpino cmdint=off debug=1 -notk -l to_predict_guides \
              -cmd "to_sguides(tpl_prefix)" | sort -u > guides.txt
