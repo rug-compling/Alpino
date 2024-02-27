@@ -4,9 +4,9 @@
     <node begin="6" end="7" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
     <node begin="7" end="8" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
     <node begin="0" cat="du" end="10" id="3" rel="--">
-      <node begin="0" cat="du" end="6" id="4" rel="tag">
-        <node begin="0" conjtype="neven" end="1" id="5" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
-        <node begin="1" cat="smain" end="6" id="6" rel="nucl">
+      <node begin="0" conjtype="neven" end="1" id="4" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+      <node begin="1" cat="du" end="10" id="5" rel="nucl">
+        <node begin="1" cat="smain" end="6" id="6" rel="tag">
           <node begin="2" end="3" id="7" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
           <node begin="1" cat="ppart" end="6" id="8" rel="vc">
             <node begin="1" end="2" getal="getal" id="9" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
@@ -15,10 +15,10 @@
             <node begin="5" buiging="zonder" end="6" id="12" lemma="op_staan" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="op_staan" word="opgestaan" wvorm="vd"/>
           </node>
         </node>
-      </node>
-      <node begin="8" cat="mwu" end="10" id="13" rel="nucl">
-        <node begin="8" end="9" id="14" lemma="nach" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="nach" spectype="vreemd" word="nach"/>
-        <node begin="9" end="10" id="15" lemma="Amsterdam" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Amsterdam" spectype="vreemd" word="Amsterdam"/>
+        <node begin="8" cat="mwu" end="10" id="13" rel="nucl">
+          <node begin="8" end="9" id="14" lemma="nach" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="nach" spectype="vreemd" word="nach"/>
+          <node begin="9" end="10" id="15" lemma="Amsterdam" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Amsterdam" spectype="vreemd" word="Amsterdam"/>
+        </node>
       </node>
     </node>
     <node begin="10" end="11" id="16" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>

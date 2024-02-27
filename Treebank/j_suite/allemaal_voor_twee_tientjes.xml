@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="du" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="dp" root="allemaal" special="predm" word="allemaal"/>
+      <node begin="1" cat="pp" end="4" id="3" rel="dp">
+        <node begin="1" end="2" id="4" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" infl="pl_num" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+          <node begin="3" end="4" gen="het" getal="mv" graad="dim" id="7" lemma="tien" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" rnum="pl" root="tien_DIM" word="tientjes"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>allemaal voor twee tientjes</sentence>
+</alpino_ds>

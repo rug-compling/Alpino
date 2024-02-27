@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+      <node begin="1" end="2" id="3" infl="sg1" lemma="proberen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="probeer" sc="vp" stype="declarative" tense="present" v_per="fir" word="probeer" wvorm="pv"/>
+      <node begin="0" cat="ti" end="14" id="4" rel="vc">
+        <node begin="6" end="7" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="14" id="6" rel="body">
+          <node begin="0" end="1" id="7" index="1" rel="su"/>
+          <node begin="3" cat="np" end="5" id="8" rel="mod">
+            <node begin="3" end="4" id="9" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="dag" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="dag" special="tmp" word="dag"/>
+          </node>
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="11" lemma="vrij" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vrij" word="vrij"/>
+          <node begin="7" buiging="zonder" end="8" id="12" infl="inf" lemma="vrij_nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem_vrij" sc="part_intransitive(vrij)" word="nemen" wvorm="inf"/>
+          <node begin="2" cat="ap" end="14" id="13" rel="mod">
+            <node aform="compar" begin="2" end="3" id="14" infl="no_e" lemma="liever" pos="adj" postag="BW()" pt="bw" rel="hd" root="lief" vform="adj" word="liever"/>
+            <node begin="8" cat="cp" end="14" id="15" rel="obcomp">
+              <node begin="8" conjtype="onder" end="9" id="16" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+              <node begin="9" cat="ti" end="14" id="17" rel="body">
+                <node begin="12" end="13" id="18" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+                <node begin="9" cat="inf" end="14" id="19" rel="body">
+                  <node begin="9" cat="np" end="11" id="20" rel="mod">
+                    <node begin="9" buiging="met-e" end="10" id="21" infl="elke" lemma="elk" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="elk" vwtype="onbep" wh="nwh" word="elke"/>
+                    <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="22" lemma="dag" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="dag" special="tmp" word="dag"/>
+                  </node>
+                  <node aform="compar" begin="11" buiging="zonder" end="12" graad="comp" id="23" infl="no_e" lemma="kort" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="kort" vform="adj" word="korter"/>
+                  <node begin="13" buiging="zonder" end="14" id="24" infl="inf" lemma="werken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="werk" sc="intransitive" word="werken" wvorm="inf"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik probeer liever een dag vrij te nemen dan elke dag korter te werken</sentence>
+</alpino_ds>

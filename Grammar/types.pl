@@ -40,7 +40,7 @@ top(				% first all categories %
        post_adv_adv, predm_adv, eenmaal_adv,predm_adv_num, pre_num_adv,
        post_adj_adv, post_wh_adv, pre_wh_adv, post_p_adv, post_loc_adv_adv,
        post_np_adv, post_n_adv, modal_adv, adv, dip_adv, denk_ik,
-       vandaar_adv,zo_van_adv, post_p,post_pp,
+       vandaar_adv,zo_van_adv, post_p,post_pp, post_pn_adv,
        root, sv1, sbar, redrel, rel, comp, start, tag, max, rootbar, iets_adv,
        score_cat, pre_np_adv, imp, etopic, ecomp, top_cat, within_word_conjunct,
        num_na,
@@ -180,7 +180,7 @@ cat_type(v2_vp,   [vslash,haswh,slash,subj,mf,tags]).
 cat_type(num,     [cj,n_meas,e_agr,agr,pro,app]).
 cat_type(pre_det_quant,[agr]).
 cat_type(pred,    [slash,exs,mexs,e_deps,wh,wh_reltmploc,subn,redrel,deverbal,
-                   avform,pcat,cform,hstem,nhstem,wkpro,sel,cj,niet]).
+                   adv,avform,pcat,cform,hstem,nhstem,wkpro,sel,cj,niet]).
 cat_type(conj,    [left_conj,cform]).
 cat_type(lconj,   [needs_right_cform]).
 cat_type(root,    [question,allows_root_imp,puncttype,
@@ -243,6 +243,7 @@ cat_type(post_n_n,   []).
 cat_type(pre_num_adv,[agr]).
 cat_type(post_n_adv, [cj]).
 cat_type(post_p_adv,   []).
+cat_type(post_pn_adv,  []).
 cat_type(post_p,       [sc]).
 cat_type(post_pp,      []).
 cat_type(post_wh_adv,  []).
@@ -455,7 +456,7 @@ boolean_type(niet, [[niet_np,niet_pp]] ).
 boolean_type(mcat,[[mcat_pp,mcat_adv,mcat_vp,mcat_sbar,mcat_imp,
 		    mcat_redrel,mcat_rootbar,mcat_bracket,mcat_tag]]).
 
-boolean_type(max_type,[[t_dp,t_xp,t_root,t_rootbar,t_topic_drop,t_part]]).
+boolean_type(max_type,[[t_dp,t_xp,t_sv1,t_root,t_rootbar,t_topic_drop,t_part]]).
 
 %% verbal inflection form
 boolean_type(vform,[[fin,inf,wk_te,te,psp,om,aan_het,uit,op,pass_te]] ).

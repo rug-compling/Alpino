@@ -8,11 +8,10 @@
 import sys
 import os
 import re
-import codecs
 from lxml import etree
 from glob import glob
 
-from compactcorpus import *
+import compactcorpus as cc
 from indexedcorpus import CorpusReader
 import numsort
 
@@ -20,7 +19,7 @@ import numsort
 #----------------------------------------------------------------------
 # initialisatie
 
-xml_re = re.compile('\.xml$')
+xml_re = re.compile(r'\.xml$')
 filereader = CorpusReader()
 
 
@@ -40,23 +39,23 @@ signal.signal(signal.SIGPIPE, signal.SIG_DFL)
 # functions
 
 def print_arg(arg):
-    print arg
+    print(arg)
 
-def extract_archives(args, targetdir, force=0):
+def extract_archives(args, targetdir, force=False):
     for arg in args:
         corpus_exists_or_die(arg)
-        extract_archive(arg, targetdir, force)
+        cc.extract_archive(arg, targetdir, force)
 
 
 def list_archives(archivelist):
     for archive in archivelist:
-        if (os.path.isdir(archive)):
+        if os.path.isdir(archive):
             xmlFiles = numsort.sorted_copy(glob(archive + '/*.xml'))
             for f in xmlFiles:
-                print f
+                print(f)
         else:
             corpus_exists_or_die(archive)
-            list_archive(archive)
+            cc.list_archive(archive)
 
 
 def corpus_exists_or_die(corpuspath):
@@ -64,7 +63,7 @@ def corpus_exists_or_die(corpuspath):
 
     # exceptions gebruiken?
     # Als we de check weglaten krijgen we vanzelf exceptions :-|
-    if not corpus_exists_p(corpuspath):
+    if not cc.corpus_exists_p(corpuspath):
         msg('Error: corpus file missing for "%s".  Exiting...' % (corpuspath))
         sys.exit(1)
 
@@ -74,7 +73,7 @@ def create_archives(directories, targetdir, force=0, only_newer=0, remove=0):
         if not os.path.isdir(directory):
             msg("Error: `%s' is not a directory.  Skipping..." % (directory))
             continue
-        create_archive(directory, targetdir, force, only_newer, remove)
+        cc.create_archive(directory, targetdir, force, only_newer, remove)
 
 
 def update_archives(directories, targetdir, only_newer=0, remove=0):
@@ -82,7 +81,7 @@ def update_archives(directories, targetdir, only_newer=0, remove=0):
         if not os.path.isdir(directory):
             msg("Error: `%s' is not a directory.  Skipping..." % (directory))
             continue
-        update_archive(directory, targetdir, only_newer, remove)
+        cc.update_archive(directory, targetdir, only_newer, remove)
 
 
 def recursive_create_archive(startdir, targetdir, update, only_newer=0, remove=0, force=0):
@@ -100,7 +99,7 @@ def recursive_create_archive(startdir, targetdir, update, only_newer=0, remove=0
 
     When FORCE is set, force overwriting of archives when UPDATE is not set
     """
-    
+
     # even een debug message
     if 0:
         msg("recursive_create_archive(%s, %s)" % (startdir, targetdir))
@@ -119,9 +118,9 @@ def recursive_create_archive(startdir, targetdir, update, only_newer=0, remove=0
             os.makedirs(targetdir)
 
         if update:
-            update_archive(startdir, targetdir, only_newer, remove)
+            cc.update_archive(startdir, targetdir, only_newer, remove)
         else:
-            create_archive(startdir, targetdir, force, only_newer, remove)
+            cc.create_archive(startdir, targetdir, force, only_newer, remove)
 
     # zo niet, dan herhalen we het kunstje voor alle subdirectories
     else:
@@ -135,22 +134,22 @@ def recursive_create_archive(startdir, targetdir, update, only_newer=0, remove=0
                     msg("WARNING: skipping symlink `%s'!" % (fullpath))
                 else:
                     subdirs.append(item)
-                        
+
         subdirs.sort()
-        for dir in subdirs:
+        for subdir in subdirs:
             # er zijn hier twee gevallen:
             #
-            # 1. "dir" bevat .xml files
-            #     --> "dir" is geen subdirectory onder "targetdir"
-            # 2. "dir" bevat geen .xml files
-            #    --> "dir" (mogelijk) wel een subdir onder "targetdir"
+            # 1. "subdir" bevat .xml files
+            #     --> "subdir" is geen subdirectory onder "targetdir"
+            # 2. "subdir" bevat geen .xml files
+            #    --> "subdir" (mogelijk) wel een subdir onder "targetdir"
 
             ## FIXME: we doen dubbel werk; 2x glob()
-            newstartdir = os.path.join(startdir, dir)
+            newstartdir = os.path.join(startdir, subdir)
             if glob(os.path.join(newstartdir, "*.xml")):
                 newtargetdir = targetdir
             else:
-                newtargetdir = os.path.join(targetdir, dir)
+                newtargetdir = os.path.join(targetdir, subdir)
 
             recursive_create_archive(newstartdir,
                                      newtargetdir,
@@ -160,8 +159,8 @@ def recursive_create_archive(startdir, targetdir, update, only_newer=0, remove=0
                                      force)
 
 
-def msg(str):
-    sys.stderr.write(os.path.basename(sys.argv[0]) + ": " + str + "\n")
+def msg(s):
+    sys.stderr.write(os.path.basename(sys.argv[0]) + ": " + s + "\n")
 
 
 def is_xml_file(file):
@@ -202,30 +201,29 @@ def process_argument(arg, function, recursive=0, passData = True, **keywords):
             # process.
             try:
                 data = filereader.data(arg)
-            except RuntimeError, e:
-                print >> sys.stderr, e.message
+            except RuntimeError as e:
+                print(e, file=sys.stderr)
             else:
                 if data:
-                    apply(function,(data, arg), keywords)
+                    function(*(data, arg), **keywords)
         else:
-            apply(function, (arg,), keywords)
+            function(*(arg,), **keywords)
 
-    elif is_corpus_file(arg):
-        process_compact_corpus(arg, function, passData, **keywords)
+    elif cc.is_corpus_file(arg):
+        cc.process_compact_corpus(arg, function, passData, **keywords)
 
     elif os.path.isdir(arg):
         process_directory(arg, function, recursive, passData, **keywords)
-    elif corpus_exists_p(arg):
-        process_compact_corpus(arg, function, passData, **keywords)
+    elif cc.corpus_exists_p(arg):
+        cc.process_compact_corpus(arg, function, passData, **keywords)
     elif os.path.exists(arg):
         # we willen hier ook files die niet op .xml eindigen kunnen verwerken
         if passData:
-            fp = open(arg)
-            data = fp.read()
-            apply(function,(data, arg), keywords)
-            fp.close()
+            with open(arg, encoding='utf-8') as fp:
+                data = fp.read()
+            function(*(data, arg), **keywords)
         else:
-            apply(function, (arg,), keywords)
+            function(*(arg,), **keywords)
     else:
         msg('Error: "%s": no such file, directory, or compact corpus' % (arg))
 
@@ -237,15 +235,16 @@ def process_from_stdin(function, recursive = 0, passData = True, **keywords):
 FUNCTION will be called with arguments DATA and FILENAME.
 
 Any extra keyword arguments will also be passed to FUNCTION.
-""" 
+"""
+
     # Moet hier een check op tty?
     processed_files = 0
     for line in sys.stdin:
         processed_files = 1
         process_argument(line.rstrip(), function, recursive, passData, **keywords)
     if not processed_files:
-        raise "no arguments found in stream!"
-    
+        raise RuntimeError("no arguments found in stream!")
+
 
 def process_arguments(args, function, use_stdin, recursive=0, passData = True, **keywords):
     """Wrapper function for `process_argument' and `process_from_stdin'."""
@@ -266,58 +265,57 @@ def get_arglist_from_stdin():
     return l
 
 
-def process_directory(dir, function, recursive = 0, passData = True, **keywords):
-    """Apply FUNCTION on the data of every .xml file in directory DIR.
+def process_directory(dirname, function, recursive = 0, passData = True, **keywords):
+    """Apply FUNCTION on the data of every .xml file in directory DIRNAME.
 
     FUNCTION will be called with arguments DATA and FILENAME and any
     optional keyword arguments
 
-    When RECURSIVE is *not* set, only the .xml files in DIR are
+    When RECURSIVE is *not* set, only the .xml files in DIRNAME are
     processed.
 
     When RECURSIVE is true, this function will also look for compact
     corpora and will dive into subdirectories.
 
-    When DIR contains .xml files, no further processing is done except
+    When DIRNAME contains .xml files, no further processing is done except
     for the .xml files.  (implied by the structure of compact corpora)
     """
 
     # xmlfiles
-    xmlfiles = glob(os.path.join(dir, "*.xml"))
+    xmlfiles = glob(os.path.join(dirname, "*.xml"))
     xmlfiles = numsort.sorted_copy(xmlfiles)
     for file in xmlfiles:
         if passData:
-            fp = open(file)
-            data = fp.read()
-            fp.close()
-            apply(function, (data, file), keywords)
+            with open(file, encoding='utf-8') as fp:
+                data = fp.read()
+            function(*(data, file), **keywords)
         else:
-            apply(function, (file,) , keywords)
+            function(*(file,), **keywords)
 
     # als we xmlfiles gevonden hebben hoeven niet verder te kijken
     if not recursive or xmlfiles:
         return
 
     # dictzip files
-    dictzip_files = glob(os.path.join(dir, "*.data.dz"))
+    dictzip_files = glob(os.path.join(dirname, "*.data.dz"))
     dictzip_files.sort()
 
     for file in dictzip_files:
         # alleen die compacte corpora waar geen directory voor is
-        dirname = get_corpus_noext(file)
-        if not os.path.isdir(dirname):
-            process_compact_corpus(file, function, passData, **keywords)
-    
+        dirname2 = cc.get_corpus_noext(file)
+        if not os.path.isdir(dirname2):
+            cc.process_compact_corpus(file, function, passData, **keywords)
+
     # directories
     # FIXME?: hier ook symlinks overslaan??  Nee toch??
-    subdirs = os.listdir(dir)
-    subdirs = map(lambda x: os.path.join(dir, x), subdirs)
-    subdirs = filter(os.path.isdir, subdirs)
+    subdirs = os.listdir(dirname)
+    subdirs = [os.path.join(dirname, x) for x in subdirs]
+    subdirs = list(filter(os.path.isdir, subdirs))
     subdirs.sort()
 
     for subdir in subdirs:
         process_directory(subdir, function, recursive, passData, **keywords)
-    
+
 
 def xmlmatch_from_mem(xmldata, filename, query=None, stylesheet=None, params=None):
     """Laat QUERY los op XMLDATA zoals bij xmlmatch
@@ -332,19 +330,25 @@ def xmlmatch_from_mem(xmldata, filename, query=None, stylesheet=None, params=Non
 
     """
 
+    if isinstance(xmldata, str):
+        xmldata = xmldata.encode('utf-8')
     try:
+        # fromstring werkt niet met string
         doc = etree.fromstring(xmldata)
-    except Exception, error:
-        print >> sys.stderr, "Could not parse %s: %s" % (filename, error)
+    except Exception as error:
+        print("Could not parse %s: %s" % (filename, error), file=sys.stderr)
         return
 
     if query:
-         xpathobj = doc.xpath(query)
+        xpathobj = doc.xpath(query)
     else:
-         xpathobj = True
+        xpathobj = True
 
     if xpathobj:
         if stylesheet:
+
+            if not params:
+                params = {}
 
             # de filename parameter zetten
             params["filename"] = xslt_quote_string(filename)
@@ -353,30 +357,31 @@ def xmlmatch_from_mem(xmldata, filename, query=None, stylesheet=None, params=Non
             result = stylesheet(doc, **params)
 
             # uitvoer naar stdout
-            codecs.getwriter('utf-8')(sys.stdout).write(unicode(result))
+            #codecs.getwriter('utf-8')(sys.stdout).write(str(result))
+            sys.stdout.buffer.write(str(result).encode('utf-8', 'xmlcharrefreplace'))
         else:
-            print filename
+            print(filename)
 
 
-def xslt_quote_string(str):
-    """Quote STR als string parameter als bij libxslt/xsltproc
+def xslt_quote_string(s):
+    """Quote S als string parameter als bij libxslt/xsltproc
 
     Dit is nodig ivm. een beperking van libxslt.
     (.i.e. de interface om stringparameters zonder quoting door te geven is
     nog niet beschikbaar in libxslt)
     """
 
-    if str.find('"') > -1:
-        if str.find("'") > -1:
-            raise "stringparam contains both quote and double quotes!: %.20s\n" \
-                  % (str)
-        str = "'" + str + "'"
+    if s.find('"') > -1:
+        if s.find("'") > -1:
+            raise RuntimeError("stringparam contains both quote and double quotes!: %.20s\n" \
+                % (s))
+        s = "'" + s + "'"
     else:
-        str = '"' + str + '"'
-    return str
+        s = '"' + s + '"'
+    return s
 
 
-def print_xmldata(xmldata, filename):
+def print_xmldata(xmldata, _):
     """Print XMLDATA naar stdout; bedoeld als argument voor `process_argument'"""
     sys.stdout.write(xmldata)
 

@@ -9,9 +9,9 @@
           <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
           <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="overvaller" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overvaller" word="overvaller"/>
           <node begin="3" cat="np" end="7" id="8" rel="mod">
-            <node begin="3" cat="mwu" end="5" id="9" rel="mod">
-              <node begin="3" end="4" id="10" lemma="naar" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="naar" vztype="init" word="naar"/>
-              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="schatting" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="schatting" word="schatting"/>
+            <node begin="3" cat="pp" end="5" id="9" rel="mod">
+              <node begin="3" end="4" id="10" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="schatting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="schatting" word="schatting"/>
             </node>
             <node begin="5" end="6" id="12" lemma="20" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="20" word="20"/>
             <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>

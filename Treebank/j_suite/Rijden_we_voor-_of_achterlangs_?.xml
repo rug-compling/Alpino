@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="sv1" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" infl="pl" lemma="rijden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="rijd" sc="ld_dir" stype="ynquestion" tense="present" v_per="fir" word="Rijden" wvorm="pv"/>
+      <node begin="1" case="nom" def="def" end="2" gen="de" getal="mv" id="3" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+      <node begin="2" cat="conj" end="5" id="4" rel="ld">
+        <node begin="2" end="3" id="5" lemma="voor-" pos="prefix" postag="SPEC(afgebr)" pt="spec" rel="cnj" root="voor-" spectype="afgebr" word="voor-"/>
+        <node begin="3" conjtype="neven" end="4" id="6" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+        <node begin="4" end="5" id="7" lemma="achterlangs" pos="adv" postag="BW()" pt="bw" rel="cnj" root="achterlangs" special="dir" word="achterlangs"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="8" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Rijden we voor- of achterlangs ?</sentence>
+</alpino_ds>

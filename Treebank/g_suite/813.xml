@@ -3,14 +3,14 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="5" end="6" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="0" cat="du" end="7" id="3" rel="--">
-      <node begin="3" cat="sv1" end="5" id="4" rel="tag">
-        <node begin="3" end="4" id="5" lemma="denken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="denk" word="dacht" wvorm="pv"/>
-        <node begin="4" end="5" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
-      </node>
-      <node begin="0" cat="cp" end="7" id="7" rel="nucl">
-        <node begin="0" conjtype="onder" end="1" id="8" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="Toen"/>
-        <node begin="1" cat="ssub" end="7" id="9" rel="body">
+    <node begin="0" cat="cp" end="7" id="3" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="4" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="Toen"/>
+      <node begin="1" cat="du" end="7" id="5" rel="body">
+        <node begin="3" cat="sv1" end="5" id="6" rel="tag">
+          <node begin="3" end="4" id="7" lemma="denken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="denk" word="dacht" wvorm="pv"/>
+          <node begin="4" end="5" getal="ev" id="8" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        </node>
+        <node begin="1" cat="ssub" end="7" id="9" rel="nucl">
           <node begin="1" end="2" genus="masc" getal="ev" id="10" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
           <node begin="6" end="7" id="11" lemma="slapen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="slaap" word="sliep" wvorm="pv"/>
         </node>

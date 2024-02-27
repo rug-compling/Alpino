@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """Example of using estimate to build MaxEnt classifiers."""
 
@@ -7,10 +7,9 @@ __date__ = "12 February 2004"
 __version__ = "$Revision: 1.2 $"
 
 import sys
-import os
-import optparse
+import argparse
 from maxent import *
-import cPickle
+import pickle
 
 try:
     import psyco
@@ -20,85 +19,79 @@ except:
 
 # process options
 
-parser = optparse.OptionParser()
-parser.add_option("-p", "--prior", type="float", default=0,
+parser = argparse.ArgumentParser()
+parser.add_argument("-p", "--prior", type=float, default=0,
                   help="use Gaussion prior with variance VAR",
                   metavar="VAR")
-parser.add_option("-l", "--lasso", type="float", default=0,
+parser.add_argument("-l", "--lasso", type=float, default=0,
                   help="use least absolute smoothing with variance VAR",
                   metavar="VAR")
-parser.add_option("-a", "--algorithm", choices=['MaxEnt','NaiveBayes'],
+parser.add_argument("-a", "--algorithm", choices=['MaxEnt','NaiveBayes'],
                   default='MaxEnt',
                   help="use learning algoritm ALG (MaxEnt (def), NaiveBayes)",
                   metavar="ALG")
-parser.add_option("-d", "--data-format", choices=['C45','Sparse','Rainbow'],
+parser.add_argument("-d", "--data-format", choices=['C45','Sparse','Rainbow'],
                   default='C45',
                   help="use data format FORM (C45 (def), Sparse, Rainbow)",
                   metavar="FORM")
-parser.add_option("-s", "--smooth", type="float", default=0,
+parser.add_argument("-s", "--smooth", type=float, default=0,
                   help="add EPS to all counts",
                   metavar="EPS")
-parser.add_option("-m", "--model", action="store", default='',
+parser.add_argument("-m", "--model", action="store", default='',
                   help="use model FILE",
                   metavar="FILE")
-parser.add_option("-f", "--train", action="store", default='',
+parser.add_argument("-f", "--train", action="store", default='',
                   help="read training data from FILE",
                   metavar="FILE")
-parser.add_option("-t", "--test", action="store", default='',
+parser.add_argument("-t", "--test", action="store", default='',
                   help="read test data from FILE",
                   metavar="FILE")
-parser.add_option("-q", "--quiet", action="store_true", default=False,
+parser.add_argument("-q", "--quiet", action="store_true", default=False,
                   help="be quiet")
-parser.add_option("-b", "--no-baseline", action="store_true", default=False,
+parser.add_argument("-b", "--no-baseline", action="store_true", default=False,
                   help="don't use a baseline category")
-parser.add_option("-c", "--confusion", action="store_true", default=False,
+parser.add_argument("-c", "--confusion", action="store_true", default=False,
                   help="print confusion matrix")
-parser.add_option("-w", "--write", action="store_true", default=False,
+parser.add_argument("-w", "--write", action="store_true", default=False,
                   help="write each class")
-parser.add_option("-y", "--display-parameters", action="store_true", default=False,
+parser.add_argument("-y", "--display-parameters", action="store_true", default=False,
                   help="display all parameters")
 
 
-(options, args) = parser.parse_args()
+options = parser.parse_args()
 
-if (not options.quiet):
-    print >> sys.stderr
-    print >> sys.stderr, 'Bayesian classifier'
-    print >> sys.stderr
+if not options.quiet:
+    sys.stderr.write('\nBayesian classifier\n\n')
 
 # Construct model
 
-if (options.train == ''):
+if options.train == '':
     # no training file, so check model file
-    if (options.model != ''):
-        if (not options.quiet):
-            print >> sys.stderr, 'Reading model from',options.model
-        file = open(options.model,'r')
-        cat = cPickle.load(file)
-        file.close()
+    if options.model != '':
+        if not options.quiet:
+            sys.stderr.write('Reading model from {}\n'.format(options.model))
+        with open(options.model,'rb') as file:
+            cat = pickle.load(file)
     else:
         raise Exception
 else:
-    if (options.data_format == 'Rainbow'):
-        if (not options.quiet):
-            print >> sys.stderr, 'Reading Rainbow training data from', \
-                  options.train
+    if options.data_format == 'Rainbow':
+        if not options.quiet:
+            sys.stderr.write('Reading Rainbow training data from {}\n'.format(options.train))
         source = RainbowSource(options.train,binary=True)
-    elif (options.data_format == 'C45'):
-        if (not options.quiet):
-            print >> sys.stderr, 'Reading C4.5 training data from', \
-                  options.train
+    elif options.data_format == 'C45':
+        if not options.quiet:
+            sys.stderr.write('Reading C4.5 training data from {}\n'.format(options.train))
         source = C4_5Source(options.train)
-    elif (options.data_format == 'Sparse'):
-        if (not options.quiet):
-            print >> sys.stderr, 'Reading Sparse Binary training data from', \
-                  options.train
+    elif options.data_format == 'Sparse':
+        if not options.quiet:
+            sys.stderr.write('Reading Sparse Binary training data from {}\n'.format(options.train))
         source = SparseSource(options.train)
     else:
         raise Exception
 
     if options.algorithm == 'MaxEnt':
-        print >>sys.stderr, 'Building MaxEnt model'
+        sys.stderr.write('Building MaxEnt model\n')
         cat = MaxEntInducer().train(source, \
                                     quiet=options.quiet, \
                                     eps=options.smooth, \
@@ -106,7 +99,7 @@ else:
                                     lasso=options.lasso, \
                                     use_baseline=not options.no_baseline)
     elif options.algorithm == 'NaiveBayes':
-        print >>sys.stderr, 'Building naive Bayes model'
+        sys.stderr.write('Building naive Bayes model\n')
         cat =  NaiveBayesInducer().train(source, \
                                          quiet=options.quiet, \
                                          eps=options.smooth)
@@ -114,29 +107,26 @@ else:
 # write model (if desired)
 
 if (options.train != '') and (options.model != ''):
-    if (not options.quiet):
-        print >> sys.stderr, 'Writing model to',options.model
-    file = open(options.model,'w')
-    cPickle.dump(cat,file,True)
+    if not options.quiet:
+        sys.stderr.write('Writing model to {}\n'.format(options.model))
+    file = open(options.model,'wb')
+    pickle.dump(cat,file,True)
     file.close()
 
 # evaluate model
 
-if (options.test != ''):
-    if (options.data_format == 'Rainbow'):
-        if (not options.quiet):
-            print >> sys.stderr, 'Reading Rainbow test data from', \
-                  options.test
+if options.test != '':
+    if options.data_format == 'Rainbow':
+        if not options.quiet:
+            sys.stderr.write('Reading Rainbow test data from {}\n'.format(options.test))
         source = RainbowSource(options.test,binary=True)
-    elif (options.data_format == 'C45'):
-        if (not options.quiet):
-            print >> sys.stderr, 'Reading C4.5 test data from', \
-                  options.test
+    elif options.data_format == 'C45':
+        if not options.quiet:
+            sys.stderr.write('Reading C4.5 test data from {}\n'.format(options.test))
         source = C4_5Source(options.test)
-    elif (options.data_format == 'Sparse'):
-        if (not options.quiet):
-            print >> sys.stderr, 'Reading Sparse Binary test data from', \
-                  options.test
+    elif options.data_format == 'Sparse':
+        if not options.quiet:
+            sys.stderr.write('Reading Sparse Binary test data from {}\n'.format(options.test))
         source = SparseSource(options.test)
     else:
         raise Exception
@@ -144,11 +134,11 @@ if (options.test != ''):
     acc = AccuracySink()
     cat.apply(source,acc,options.write)
 
-    if (not options.write):
-        print 'Accuracy =', acc.score() * 100.0
+    if not options.write:
+        sys.stdout.write('Accuracy = {}\n'.format(acc.score() * 100.0))
 
     if options.confusion:
         acc.confusion()
 
-if (options.display_parameters):
+if options.display_parameters:
     cat.dump()

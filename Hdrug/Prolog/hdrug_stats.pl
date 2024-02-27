@@ -147,10 +147,10 @@ print_table_total :-
     ->  MaxSpace='MaxSpace'
     ;	MaxSpace='TotalSpace'
     ),
-    format("%  ~t~w~14|~t~w~8+~t~w~t~16+~t~w~10+~t~w~10+~t~w~11+~t~w~10+~n",
+    format("%  ~t~w~16|~t~w~10+~t~w~t~16+~t~w~10+~t~w~10+~t~w~11+~t~w~10+~n",
 	   ['Time','#Objs','Parser/Gen','Time/Input',
 	    'Time/Unit',MaxSpace,'ProcessSize']),
-    format("%  ~t~w~14|~t~w~8+~t~w~t~16+~t~w~10+~t~w~10+~t~w~11+~t~w~10+~n",
+    format("%  ~t~w~16|~t~w~10+~t~w~t~16+~t~w~10+~t~w~10+~t~w~11+~t~w~10+~n",
 	   ['(msec)','','','(msec)','(msec)','','(megabytes)']),
     statistics(memory,[Process0|_]),
     Process is Process0//1000000,
@@ -158,7 +158,7 @@ print_table_total :-
     sort(Table0,Table),
     (	member(total(F1,F2,F3,F4,F5,F6),Table),
 	format(
-	  "%XX~t~w~14|~t~w~8+~t~w~t~16+~t~w~10+~t~w~10+~t~w~11+~t~w~10+~n",
+	  "%XX~t~w~16|~t~w~10+~t~w~t~16+~t~w~10+~t~w~10+~t~w~11+~t~w~10+~n",
 	  [F1,F2,F3,F4,F5,F6,Process]),
 	fail
     ;	true

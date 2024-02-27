@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="du" end="3" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="desondanks" pos="adv" postag="BW()" pt="bw" rel="dp" root="desondanks" word="desondanks"/>
+      <node aform="base" begin="2" end="3" id="4" infl="both" lemma="graag" pos="adj" postag="BW()" pt="bw" rel="dp" root="graag" vform="adj" word="graag"/>
+    </node>
+    <node begin="3" end="4" id="5" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+  </node>
+  <sentence>desondanks , graag !</sentence>
+</alpino_ds>

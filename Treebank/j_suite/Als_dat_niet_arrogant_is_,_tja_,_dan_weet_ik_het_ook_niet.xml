@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="du" end="14" id="3" rel="--">
+      <node begin="0" cat="cp" end="5" id="4" rel="sat">
+        <node begin="0" conjtype="onder" end="1" id="5" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="Als"/>
+        <node begin="1" cat="ssub" end="5" id="6" rel="body">
+          <node begin="1" end="2" getal="ev" id="7" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+          <node begin="2" end="3" id="8" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="9" infl="no_e" lemma="arrogant" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="arrogant" vform="adj" word="arrogant"/>
+          <node begin="4" end="5" id="10" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" v_per="thi" word="is" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="11" lemma="tja" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="tja" word="tja"/>
+      <node begin="8" cat="smain" end="14" id="12" rel="nucl">
+        <node begin="8" end="9" id="13" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
+        <node begin="9" end="10" id="14" infl="sg" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" sc="transitive" stype="declarative" tense="present" v_per="fir" word="weet" wvorm="pv"/>
+        <node begin="10" case="nom" def="def" end="11" gen="de" getal="ev" id="15" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+        <node begin="11" end="12" genus="onz" getal="ev" id="16" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+        <node begin="12" end="13" id="17" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="ook"/>
+        <node begin="13" end="14" id="18" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Als dat niet arrogant is , tja , dan weet ik het ook niet</sentence>
+</alpino_ds>

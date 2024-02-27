@@ -14,20 +14,20 @@
         <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="samenwerking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="samenwerking" word="samenwerking"/>
       </node>
       <node begin="5" end="6" id="12" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
-      <node begin="7" cat="du" end="22" id="13" rel="mod">
-        <node begin="9" cat="pp" end="13" id="14" rel="tag">
-          <node begin="9" end="10" id="15" lemma="aldus" pos="prep" postag="BW()" pt="bw" rel="hd" root="aldus" word="aldus"/>
-          <node begin="10" cat="np" end="13" id="16" rel="obj1">
-            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="17" lemma="voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="voorzitter"/>
-            <node begin="11" cat="mwu" end="13" id="18" rel="app">
-              <node begin="11" end="12" id="19" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
-              <node begin="12" end="13" id="20" lemma="Jong" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jong" spectype="deeleigen" word="Jong"/>
+      <node begin="7" cat="cp" end="22" id="13" rel="mod">
+        <node begin="7" conjtype="onder" end="8" id="14" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="omdat"/>
+        <node begin="9" cat="du" end="22" id="15" rel="body">
+          <node begin="9" cat="pp" end="13" id="16" rel="tag">
+            <node begin="9" end="10" id="17" lemma="aldus" pos="prep" postag="BW()" pt="bw" rel="hd" root="aldus" word="aldus"/>
+            <node begin="10" cat="np" end="13" id="18" rel="obj1">
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="voorzitter"/>
+              <node begin="11" cat="mwu" end="13" id="20" rel="app">
+                <node begin="11" end="12" id="21" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+                <node begin="12" end="13" id="22" lemma="Jong" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jong" spectype="deeleigen" word="Jong"/>
+              </node>
             </node>
           </node>
-        </node>
-        <node begin="7" cat="cp" end="22" id="21" rel="nucl">
-          <node begin="7" conjtype="onder" end="8" id="22" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="omdat"/>
-          <node begin="15" cat="ssub" end="22" id="23" rel="body">
+          <node begin="15" cat="ssub" end="22" id="23" rel="nucl">
             <node begin="15" end="16" getal="ev" id="24" lemma="zoiets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="zoiets" status="vol" vwtype="onbep" word="zoiets"/>
             <node begin="16" cat="advp" end="18" id="25" rel="mod">
               <node begin="16" end="17" id="26" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>

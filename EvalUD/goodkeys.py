@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import re
 
@@ -12,13 +14,13 @@ def add_keys(f):
         line = line.rstrip()
         m = reg_id.match(line)
         if m:
-            id = m.group(1)
-            keys.add(id)
+            ID = m.group(1)
+            keys.add(ID)
         m = reg_error.match(line)
         if m:
-            keys.remove(id)
+            keys.remove(ID)
     return keys
-    
+
 
 def copy_conllu(inf,keys):
     reg_id = re.compile('# sent_id = (.*)$')
@@ -32,8 +34,8 @@ def copy_conllu(inf,keys):
             continue
         m = reg_id.match(line)
         if m:
-            id = m.group(1)
-            if id in keys:
+            ID = m.group(1)
+            if ID in keys:
                 key_ok = True
             else:
                 print(line)
@@ -41,16 +43,15 @@ def copy_conllu(inf,keys):
                 key_ok = False
         if key_ok:
             print(line)
-            
-            
+
+
 def main():
     [_,f1,f2] = sys.argv
-    with open(f1,'r') as in1:
+    with open(f1,'r', encoding='utf-8') as in1:
         keys = add_keys(in1)
-    with open(f2,'r') as in2:
+    with open(f2,'r', encoding='utf-8') as in2:
         copy_conllu(in2,keys)
-    
+
 
 if __name__ == "__main__":
     main()
-

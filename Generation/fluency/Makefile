@@ -40,14 +40,14 @@ lm.o: lm.cpp lm.h
 pro_lm.so: pro_lm.cpp pro_lm.pl lm.o lm.h
 	$(SPLFR) pro_lm.pl pro_lm.cpp lm.o --cflag="${CXXFLAGS}" \
                 ${EXTRACXXFLAGS}\
-                -LD -Wall -lstdc++ -Wl,-rpath,$(ALPINO_HOME)/fadd \
+                -LD -Wall -lstdc++ -Wl,-rpath=$(ALPINO_HOME)/fadd \
 		-L$(FADD) -lfadd
 
 pro_lm.bundle pro_lm.dylib: pro_lm.cpp pro_lm.pl lm.o lm.h
 	$(SPLFR) pro_lm.pl pro_lm.cpp lm.o --cflag="${CXXFLAGS}" \
                 ${EXTRACXXFLAGS} \
                 ${CXXFLAGS} \
-		-LD -Wall -lstdc++ -Wl,-rpath,$(ALPINO_HOME)/fadd \
+		-LD -Wall -lstdc++ -Wl,-rpath=$(ALPINO_HOME)/fadd \
 		-L$(FADD) -lfadd
 	install_name_tool -change libfadd.dylib @rpath/libfadd.dylib $@
 
@@ -59,7 +59,7 @@ pro_lm.dll: pro_lm.cpp lm.cpp pro_lm.pl lm.h
 pro_lm.s.o: pro_lm.cpp pro_lm.pl lm.o lm.h
 	splfr pro_lm.pl pro_lm.cpp lm.o --cflag="${CXXFLAGS} -fPIE" \
 		--static \
-		-LD -Wall -lstdc++ -Wl,-rpath,$(ALPINO_HOME)/fadd \
+		-LD -Wall -lstdc++ -Wl,-rpath=$(ALPINO_HOME)/fadd \
 		-L$(FADD) -lfadd
 
 maxent_feature_weights.pl:maxent_feature_weights.t index.pl estimate2pl

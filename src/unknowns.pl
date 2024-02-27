@@ -1518,6 +1518,7 @@ foreign_word(casual).
 foreign_word(casuals).
 foreign_word(ce).
 foreign_word(center).
+foreign_word(centers).
 foreign_word(certains).
 foreign_word(ces).
 foreign_word('c\'est').
@@ -1546,6 +1547,7 @@ foreign_word(community).
 foreign_word(consent).
 foreign_word(consultant).
 foreign_word(consultants).
+foreign_word(contemporain).
 foreign_word(cool).
 foreign_word(corner).
 foreign_word(corporate).
@@ -1602,7 +1604,8 @@ foreign_word(dossier).
 foreign_word(dossiers).
 foreign_word(down).
 foreign_word(drink).
-foreign_word(du).
+foreign_word('d\'art').
+foreign_word('d\'Art').
 foreign_word('d\'amour').
 foreign_word('d\'une').
 foreign_word(e).
@@ -1833,6 +1836,7 @@ foreign_word(missing).
 foreign_word(mit).
 foreign_word(mode).
 foreign_word(model).
+foreign_word(moderne).
 foreign_word(module).
 foreign_word(mon).
 foreign_word(monde).
@@ -1984,6 +1988,7 @@ foreign_word(sind).
 foreign_word(single).
 foreign_word(singles).
 foreign_word(shall).
+foreign_word(shared).
 foreign_word(she).
 foreign_word(short).
 foreign_word(shot).
@@ -2179,6 +2184,23 @@ decap_foreign_word(X) :- decap_first(X,Xx), foreign_word(Xx).
 decap_foreign_word(X,X) :- foreign_word(X).
 decap_foreign_word(X,Xx) :- decap_first(X,Xx), foreign_word(Xx).
 
+% decap_first_few(Capped,Small):-
+%     atom(Capped),
+%     atom_codes(Capped,Codes0),
+%     decap_first_few_cs(Codes0,Codes),
+%     atom_codes(Small,Codes).
+
+% decap_first_few_cs([Upper|Codes0],[Lower|Codes]):-
+%     isupper(Upper),
+%     tolower(Upper,Lower),    
+%     decap_first_few_cs0(Codes0,Codes).
+
+% decap_first_few_cs0([Upper|Codes0],[Lower|Codes]):-
+%     isupper(Upper),
+%     !,
+%     tolower(Upper,Lower),    
+%     decap_first_few_cs0(Codes0,Codes).
+% decap_first_few_cs0(C,C).
 
 decap_first(Capped,Small) :-
     atom(Capped),
@@ -2957,6 +2979,7 @@ compound_part(scheeps,schip).
 compound_part(achteraf).
 compound_part(aller).
 compound_part(anti).
+compound_part(euro).
 compound_part(ex).
 compound_part(half).
 compound_part(her).
@@ -3136,12 +3159,12 @@ never_middle_compound_part(pi).
 exceptional_compound_part(Atom) :-
     alpino_lex:number_dash_number(Atom).   % 3-1-overwinning => 3-1_overwinning
 
-exceptional_compound_part('chi-square').
-exceptional_compound_part('human-interest').
-exceptional_compound_part('mid-market').
-exceptional_compound_part('plug-and-play').
-exceptional_compound_part('S-FOR').
-exceptional_compound_part('wild-west').
+%exceptional_compound_part('chi-square').
+%exceptional_compound_part('human-interest').
+%exceptional_compound_part('mid-market').
+%exceptional_compound_part('plug-and-play').
+%exceptional_compound_part('S-FOR').
+%exceptional_compound_part('wild-west').
 
 
 never_compound_part(L) :-
@@ -3149,9 +3172,10 @@ never_compound_part(L) :-
     !,
     fail.
 
-never_compound_part(L) :-
-    sub_atom(L,_,1,_,'-'),
-    \+ alpino_lex:lexicon(_,_,[L],[],_).
+%% "de EWI-Secretaris-generaal opende de bijeenkomst"
+%never_compound_part(L) :-
+%    sub_atom(L,_,1,_,'-'),
+%    \+ alpino_lex:lexicon(_,_,[L],[],_).
 
 never_compound_part(L) :-
     sub_atom(L,_,1,_,'/').
@@ -3644,6 +3668,21 @@ form_of_suffix_rule(eerde,eer/eren,verb(hebben,past(sg),transitive),[]).
 form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),intransitive),[]).
 form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),transitive),[]).
 
+form_of_suffix_rule(dderen,dder/dderen,verb(hebben,inf,intransitive),[]).
+form_of_suffix_rule(dderen,dder/dderen,verb(hebben,inf,transitive),[]).
+form_of_suffix_rule(dderen,dder/dderen,verb(hebben,pl,intransitive),[]).
+form_of_suffix_rule(dderen,dder/dderen,verb(hebben,pl,transitive),[]).
+form_of_suffix_rule(dder,dder/dderen,verb(hebben,sg1,intransitive),[]).
+form_of_suffix_rule(dder,dder/dderen,verb(hebben,sg1,transitive),[]).
+form_of_suffix_rule(ddert,dder/dderen,verb(hebben,sg3,intransitive),[]).
+form_of_suffix_rule(ddert,dder/dderen,verb(hebben,sg3,transitive),[]).
+form_of_suffix_rule(dderd,dder/dderen,verb(hebben,psp,intransitive),[]).
+form_of_suffix_rule(dderd,dder/dderen,verb(hebben,psp,transitive),[]).
+form_of_suffix_rule(dderde,dder/dderen,verb(hebben,past(sg),intransitive),[]).
+form_of_suffix_rule(dderde,dder/dderen,verb(hebben,past(sg),transitive),[]).
+form_of_suffix_rule(dderden,dder/dderen,verb(hebben,past(pl),intransitive),[]).
+form_of_suffix_rule(dderden,dder/dderen,verb(hebben,past(pl),transitive),[]).
+
 form_of_suffix_rule(achtigen,achtig,nominalized_adjective,[]).
 
 form_of_suffix_rule('\'s','',determiner(pron),capital).
@@ -3868,6 +3907,8 @@ is_start_sentence_(P) :-
 is_start_sentence_(P):-
     tag(_,P,_,_,_,_,_,punct(Dubb)),
     start_sentence_punct(Dubb).
+is_start_sentence_(P):-
+    tag(_,P,_,_,_,_,_,enumeration).
 
 is_start_sentence_(P):-
     tag(_,P,_,_,_,_,normal(enumeration),tag).
@@ -4144,7 +4185,9 @@ allow_verb_only_if_particle(verb(HZ,VF,SC),
     !,
     Parts = [Part],
     atomic(Part),
-    alpino_lex:lexicon(particle(_),_,[Part],[],_),
+    (   alpino_lex:lexicon(particle(_),_,[Part],[],_)
+    ;   more_particle(Part)
+    ),
     alpino_lex:concat_part_to_root(Stem,Part,NewStem),
     SC =.. [Fun0|Args],
     Fun0 \= ninv,   % otherwise we get ninv(ninv(...))
@@ -4169,6 +4212,8 @@ allow_verb_only_if_particle(Tag,Tag,[Noord],Stem0,Stem) :-
 allow_verb_only_if_particle(Tag,Tag,Parts,Stem,NewStem) :-
     lists:append(Parts,[Stem],PartsStem),
     alpino_lex:concat_stems(PartsStem,NewStem).
+
+more_particle(dooreen).
 
 noord('Noord-').
 noord('Zuid-').
@@ -4554,12 +4599,20 @@ unlikely_name([A,',',B],P0,P) :-
     P2 is P1 + 1,
     tag(P2,P,_,_,_,B,normal(names_dictionary),_).    
 
+unlikely_name(['Staten',van,A],P0,P):-
+    P1 is P0 + 2,
+    tag(P1,P,_,_,_,A,normal(names_dictionary),_).
+
 %% name with comma: there should not be a larger name
 %% seperated by comma
 unlikely_name(List,P1,P) :-
     member(',',List),
     between(0,P1,P0),
     tag(P0,P2,_,_,_,_,name(_),_), P =< P2.
+
+unlikely_name(List,P0,P) :-
+    list_only_capitals(List),
+    majority_decap(List,P0,P,0,0).
 
 %% if all capitals then not proceeded or followed by another
 %% all capitals
@@ -4590,6 +4643,10 @@ unlikely_name([_,_|_],P1,P2) :-
     Q1 < P2,
     per_or_loc_or_org(LAB),
     loc_list(LAB,Q1).
+
+unlikely_name(_,P0,P):-
+    tag(P0,P1,_,_,_,_,normal(names_dictionary),_),
+    tag(P1,P,_,_,_,_,_,punct(_)).
 
 next_one_special_decap(P0) :-
     tag(P0,_,_,_,_,_,special(decap(_)),_).
@@ -5432,7 +5489,15 @@ potential_name_fsa(not_begin(Flag),Pos0,Ws0,Ws,Ls0,Hs) :-
     potential_name_fsa_not_begin(Flag,Pos0,Ws0,Ws,Ls0,Hs).
 
 potential_name_fsa(begin,P0,[Word1|Words0],Words,[Word1|Used],[begin|His]) :-
-    \+ ( Word1 = 'De', Words0 = [Ini|_], \+ name_initial(Ini) ), % De K. had samen met een vriend een man lastig gevallen die ...
+    P1 is P0 + 1,
+    \+ (   Word1 = 'De',
+	   Words0 = [Ini|_],
+	   \+ (  name_initial(Ini)
+	      ;  name_vanhet(de,Ini)
+	      ;  starts_with_capital(Ini), name_unknown(Ini,P1)
+	      )
+       ), % De K. had samen met een vriend een man lastig gevallen die ...
+          % De la Rua had weinig keus
     Word1 \= 'Het',
     Word1 \= '\'t',
     %%
@@ -5505,9 +5570,11 @@ potential_name_fsa(2,_P0,[Junior|Words],Words,[Junior],[junior]) :-
 potential_name_fsa(2,_P0,[de,Rang|Words],Words,[de,Rang],[devijfde]) :-
     word_rang(Rang),
     !.
-potential_name_fsa(2,_P0,[Rang|Words],Words,[Rang],[devijfde]) :-
+potential_name_fsa(2,P0,[Rang|Words0],Words,[Rang|Rest],[devijfde|His]) :-
     roman_number(Rang),
-    !.
+    !,
+    P1 is P0 + 1,   % recursive for "Boulevard Léopold II 44"
+    potential_name_fsa(2,P1,Words0,Words,Rest,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],His) :-
     name_and(Word),
     foreign_word(Word),
@@ -6057,6 +6124,9 @@ name_capital(W,P0) :-
 	isupper(N)
     ->  true                    % eBay, iPhone,  xBox
     ;   atom_concat('al-',_,W)
+    ->  true			% al-Qaida
+    ;   atom_concat('as-',Rest,W),
+	name_capital(Rest,P0)
     ->  true			% al-Qaida
     ).				
 
@@ -6994,3 +7064,28 @@ zaliger(generaal).
 
 zn(zn).
 zn(zoon).
+
+list_only_capitals([]).
+list_only_capitals([W|Ws]):-
+    only_capitals(W,_),
+    list_only_capitals(Ws).
+
+majority_decap([],P,P,NormalCount,TotalCount) :-
+    TotalCount > 2,
+    NormalCount > TotalCount/2.
+
+majority_decap([W|Ws],P0,P,C0,T0):-
+    \+ normal_decap(W,P0,_),
+    P1 is P0 +1,
+    T1 is T0 +1,
+    majority_decap(Ws,P1,P,C0,T1).
+
+majority_decap([W|Ws],P0,P,C0,T0):-
+    normal_decap(W,P0,P1),
+    C1 is C0 +1,
+    T1 is T0 +1,
+    majority_decap(Ws,P1,P,C1,T1).
+
+normal_decap(W,P0,P):-
+    tag(P0,P,_,_,_,W,special(decap(normal)),_).
+	       

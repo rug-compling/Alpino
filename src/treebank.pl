@@ -476,30 +476,44 @@ stream_or_open_file(stream(Stream0),Stream) :-
 stream_or_open_file(File,Stream) :-
     open(File,write,Stream).
 
-add_xml_entities([],[]).
-add_xml_entities([H|T],Chars) :-
-    add_xml_entity(H,T,Chars,Chars0),
-    add_xml_entities(T,Chars0).
+%% add_xml_entities
+%% ' needs to be escaped only if inside '
+%% " needs to be escaped only if inside "
+%% & < > are always escaped
 
-add_xml_entity(C,T,Chars,Chars0) :-
-    (	xml_entity(C,Enc,T)
+add_xml_entities(Chars0,Chars) :-
+    add_xml_entities(Chars0,Chars,[]).
+
+add_xml_entities([],[],_).
+add_xml_entities([H|T],Chars,Outer) :-
+    add_xml_entity(H,T,Chars,Chars0,Outer),
+    add_xml_entities(T,Chars0,Outer).
+
+add_xml_entity(C,T,Chars,Chars0,Outer) :-
+    (	xml_entity(C,Enc,T,Outer)
     ->	append(Enc,Chars0,Chars)
     ;	Chars=[C|Chars0]
     ).
 
-xml_entity(0'&,_,Chars) :-
+xml_entity(0'&,_,Chars,_) :-
     xml_entity_prefix(Chars,_,_),
     !,
     fail.
-xml_entity(C,Enc,_) :-
-    xml_entity(C,Enc).
+xml_entity(C,Enc,_,Outer) :-
+    xml_entity(C,Enc,Outer).
 
-% <
-xml_entity(0'","&quot;").   % "
-xml_entity(0'&,"&amp;").
-xml_entity(0'<,"&lt;").
-xml_entity(0'>,"&gt;").
-xml_entity(0'',"&apos;").
+xml_entity(0'",_,0'') :-  % "
+    !,
+    fail.
+xml_entity(0'',_,0'") :-  % "
+    !,
+    fail.
+
+xml_entity(0'","&quot;",_).   % "
+xml_entity(0'&,"&amp;",_).
+xml_entity(0'<,"&lt;",_).
+xml_entity(0'>,"&gt;",_).
+xml_entity(0'',"&apos;",_).
 
 xml_entity_prefix([38,113,117,111,116,59|T],T,0'").  % "
 xml_entity_prefix([38,35,51,52,59|T],       T,0'").  % "
@@ -622,6 +636,7 @@ deptree_xml(Cat,String,Comments,Meta,Flag,Tags,HisList) -->
 
 
 %% version 1.3: added mwu_root attribute for mwu nodes / removed again, not used
+%% version 1.3 should be used for manual annotation
 %% version 1.4: metadata
 %% version 1.5: sentid
 %% currently, sentid only in output
@@ -969,21 +984,21 @@ deptree_xml_atts_format([Att-Val|T]) -->
 deptree_xml_att_format(word,Word) -->
     !,
     {  format_to_chars("~w",[Word],WordChars0),
-       add_xml_entities(WordChars0,WordChars)
+       add_xml_entities(WordChars0,WordChars,0'")   % "
     },
     format_to_chars(' word="~s"',[WordChars]).
 
 deptree_xml_att_format(lemma,Word) -->
     !,
     {  format_to_chars("~w",[Word],WordChars0),
-       add_xml_entities(WordChars0,WordChars)
+       add_xml_entities(WordChars0,WordChars,0'")   % "
     },
     format_to_chars(' lemma="~s"',[WordChars]).
 
 deptree_xml_att_format(root,Root) -->
     !,
     {  format_to_chars("~w",[Root],RootChars0),
-       add_xml_entities(RootChars0,RootChars)
+       add_xml_entities(RootChars0,RootChars,0'")   % "
     },
     format_to_chars(' root="~s"',[RootChars]).
 
@@ -997,7 +1012,7 @@ deptree_xml_att_format(root,Root) -->
 deptree_xml_att_format(sense,Sense) -->
     !,
     {  format_to_chars("~w",[Sense],SenseChars0),
-       add_xml_entities(SenseChars0,SenseChars)
+       add_xml_entities(SenseChars0,SenseChars,0'")   % "
     },
     format_to_chars(' sense="~s"',[SenseChars]).
 
@@ -1010,7 +1025,10 @@ deptree_xml_att_format(sense,Sense) -->
 
 deptree_xml_att_format(frame,Frame) -->
     !,
-    format_to_chars(' frame="~q"',[Frame]).
+    {  format_to_chars("~q",[Frame],FrameChars0),
+       add_xml_entities(FrameChars0,FrameChars,0'")   % "
+    },
+    format_to_chars(' frame="~s"',[FrameChars]).
 
 deptree_xml_att_format(Att,Val) -->
     format_to_chars(' ~w="~w"',[Att,Val]).
@@ -1761,6 +1779,8 @@ format_of_result(gen_suite,Result,Key) :-
     format_gen_suite(Result,Key).
 format_of_result(new_left_corners,Result,Key) :-
     alpino_format_syntax:format_new_left_corners_of_result(Result,Key).
+format_of_result(left_corners,Result,Key) :-
+    alpino_format_syntax:format_left_corners_of_result(Result,Key).
 format_of_result(dep_features,Result,Key) :-
     set_flag(dep_with_pos,on),
     format_dep_features(Result,Key),
@@ -1911,6 +1931,8 @@ converse_xml_files([File|Files]) :-
     converse_xml_files(Files).
 
 converse_xml_file(File) :-
+    set_flag(xml_format_frame,off),
+    set_flag(alpino_ds_version,'1.3'),
     xml_file_to_dt(File,DT0,Sentence0,Comments),
     string_to_words(Sentence0,Sentence),
     (   alpino_dt:apply_dt_transformations(DT0,DT,Sentence,Change)
@@ -1933,11 +1955,15 @@ canonical_xml_overwrite_files([File|Files]) :-
     canonical_xml_overwrite_files(Files).
 
 canonical_xml_overwrite_file(File) :-
+    set_flag(xml_format_frame,off),
+    set_flag(alpino_ds_version,'1.3'),
     xml_file_to_dt(File,DT,Sentence0,Comments,Meta),
     string_to_words(Sentence0,Sentence),
     xml_save(already_dt(DT),Sentence,Comments,Meta,File,normal).
 
 canonical_xml_file(File) :-
+    set_flag(xml_format_frame,off),
+    set_flag(alpino_ds_version,'1.3'),
     xml_file_to_dt(File,DT,Sentence0,Comments,Meta),
     string_to_words(Sentence0,Sentence),
     xml_save(already_dt(DT),Sentence,Comments,Meta,stream(user_output),normal).
@@ -2253,6 +2279,9 @@ ignore_roots([H0|T0],[H|T]) :-
 ignore_roots_(deprel(_/Hw/Hp,Rel,_/Dw/Dp), deprel(Hw/Hp,Rel,Dw/Dp) ).
 
 tree_comparison_pair(File1,File2) :-
+    tree_comparison_pair(File1,File2,_Ov,_X1,_X2).
+
+tree_comparison_pair(File1,File2,Ov,X1,X2) :-
     file2deprels(File1,Rels10,X1,Sent10),
     file2deprels(File2,Rels20,X2,Sent20),
     normalize_sent(Sent10,Sent1),
@@ -2261,7 +2290,48 @@ tree_comparison_pair(File1,File2) :-
     normalize_rels(Rels20,Rels2),
     compare_deprels(Rels1,Rels2,Sent1,Sent2,Ov,X1,X2),
     ca_score(Ov,X1,X2,Ca),
-    format("Dep Rel's: ~d/~d/~d CA: ~2f%~n",[Ov,X1,X2,Ca]).
+    format(user_error,"Dep Rel's: ~d/~d/~d CA: ~2f%~n",[Ov,X1,X2,Ca]).
+
+%% For Andreas
+:- public tree_comparison_pairs/0.
+tree_comparison_pairs :-
+    findall(F1/F2,xml_file_pairs(F1,F2),Pairs),
+    tree_comparison_pairs(Pairs,0,Ov,0,X1,0,X2),
+    report_fscore(Ov,X1,X2).
+
+tree_comparison_pairs([],Ov,Ov,X1,X1,X2,X2).
+tree_comparison_pairs([F1/F2|Tail],Ov0,Ov,X10,X1,X20,X2) :-
+    format(user_error,"comparing ~w with ~w ~n",[F1,F2]),
+    tree_comparison_pair(F1,F2,Ov1,X11,X21),
+    Ov2 is Ov0 + Ov1,
+    X12 is X10 + X11,
+    X22 is X20 + X21,
+    tree_comparison_pairs(Tail,Ov2,Ov,X12,X1,X22,X2).
+
+xml_file_pairs(File1,File2) :-
+    repeat,
+    read_line(Codes),
+    (   Codes == end_of_file
+    ->  !, fail
+    ;   (   on_exception(Exc,
+			 (   split_string(Codes," ",[File10,File20]),
+			     atom_codes(File1,File10),
+			     atom_codes(File2,File20)
+			 ),
+			 (  format(user_error,"exception: ~w~n",[Exc])
+			 ,  fail
+			 )
+			)
+	->  true
+	;   format(user_error,"not a pair of files separated by space: ~s~n",[Codes])
+	)
+    ).
+
+report_fscore(Ov,X1,X2) :-
+    Prec is Ov/X1,
+    Rec is Ov/X2,
+    F is (2*Prec*Rec)/(Prec+Rec),
+    format("fscore: ~w (~w ~w) (~w deps overlap, ~w deps in File1, ~w deps in File2)~n",[F,Prec,Rec,Ov,X1,X2]).
 
 normalize_sent([],[]).
 normalize_sent([H0|T0],[H|T]) :-

@@ -11,6 +11,8 @@ user_transformation(r(Rel,i(X,Cat)),A,B,
     user_transformation(r(Rel,Cat),A,B,
                         r(Rel2,Cat2),C,D,E,F).
 
+%user_transformation(X,_,_,_,_,_,_,_):-
+%    format(user_error,"~w~n",[X]),fail.
 
 user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag),Cat,W/[P0,P])),B,[],
 		    r(REL,l(read_from_treebank(Az,L1,Tag),Cat,W/[P0,P])),B,[],_,_) :-
@@ -60,6 +62,27 @@ user_transformation(r(REL,p(mwu)),B,Ds0,
     mwu_postag(Surfs,Tags,Lemmas),
     assign_tags(Lemmas,Tags,Ds0,Ds),
     \+ Ds0 = Ds.
+
+/*
+%user_transformation(REL,A,B,_,_,_,_,_) :-
+%   format(user_error,"~w~n",[REL]), fail.
+
+user_transformation(r(Rel,p(mwu)),B,[D1,D2],
+		    r(Rel,p(advp)),B,[E1,E2],_,_) :-
+    D1 = tree(r(mwp,l(read_from_treebank(_,alleen,D13),D14,D15)),D16,[]),
+    E1 = tree(r(hd,l(read_from_treebank(adv,alleen,D13),D14,D15)),D16,[]),
+    D2 = tree(r(mwp,l(read_from_treebank(_,al,D23),D24,D25)),D26,[]),
+    E2 = tree(r(mod,l(read_from_treebank(adv,al,D23),D24,D25)),D26,[]).
+
+
+user_transformation(r(app,p(mwu)),B,[N1,Dash1,N2],
+		    r(app,p(conj)),B,[C1,C2],_,_) :-
+    Dash1 = tree(r(mwp,l(read_from_treebank(_,'-','LET()'),_,_)),_,[]),
+    N1   = tree(r(mwp,l(read_from_treebank(num,A2,'TW(hoofd,vrij)'),A4,A5/A6)),_,[]),
+    N2   = tree(r(mwp,l(read_from_treebank(num,B2,'TW(hoofd,vrij)'),B4,B5/B6)),_,[]),
+    C1   = tree(r(cnj,l(read_from_treebank(num,A2,'TW(hoofd,vrij)'),A4,A5/A6)),_,[]),
+    C2   = tree(r(cnj,l(read_from_treebank(num,B2,'TW(hoofd,vrij)'),B4,B5/B6)),_,[]).
+*/
 
 /*
 user_transformation(r(obj1,p(ap)),B,Ds,

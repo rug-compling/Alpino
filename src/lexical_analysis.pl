@@ -189,6 +189,7 @@ lexical_analysisXXX(Input) :-
 	),
 	time(Debug,enforce_unique_match),
 	time(Debug,enforce_longest_match(UnbracketedInput,0,P)),
+	time(Debug,enforce_longest_match_simple),
 	%% add tags for unknown words:
 	(   Unk == on
 	->  time(Debug,guess_unknowns(Input,MaxPos)),
@@ -212,7 +213,7 @@ lexical_analysisXXX(Input) :-
 	    time(Debug,replace_per_tags),
 	    time(Debug,replace_dehet_tags),
 	    time(Debug,generalize_tags),
-	    time(Debug,filter_enumeration_tags),
+	    time(Debug,filter_more_tags),
 	    time(Debug,filter_bracketed_tags),
 	    time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for tagger
 	    count_edges(tag(_,_,_,_,_,_,_,_),Edges)
@@ -378,10 +379,21 @@ normal_lex2(Tag,Label,[Word|Input0],Input,P,normal(decap(His)),LC,Tags) :-
     \+ member(f(Tag,_,Input,_),Tags),
     \+ forbid_odd_normal_word(Word,Tag).
 
+/* does not work for mwu that start with full capitals "OP het gebied van"
 normal_lex2(Tag,Label,[Word|Input0],Input,P,special(decap(His)),LC,Tags) :-
     alpino_unknowns:special_capitalized_word(P,Word,Input0,Input1,DecapWord,Len),
     length(Consumed,Len),
     lists:append(Consumed,Input,[DecapWord|Input1]),
+    in_lexicon(Tag,Label,[DecapWord|Input1],Input,His,LC),
+    \+ His = chess,
+    \+ His = variant(variant(_,_),normal),
+    \+ member(f(Tag,_,Input,_),Tags).
+*/
+
+normal_lex2(Tag,Label,[Word|Input0],Input,P,special(decap(His)),LC,Tags) :-
+    alpino_unknowns:special_capitalized_word(P,Word,Input0,Input1,DecapWord,_Len),
+%    length(Consumed,Len),
+%    lists:append(Consumed,Input,[DecapWord|Input1]),
     in_lexicon(Tag,Label,[DecapWord|Input1],Input,His,LC),
     \+ His = chess,
     \+ His = variant(variant(_,_),normal),
@@ -850,10 +862,17 @@ unique(P0,P,Ref) :-
 		 ), [Ref]).
     
 
-filter_enumeration_tags :-
+filter_more_tags :-
     findall(Ref,enumeration_tag_with_wrong_neighbor(Ref),Refs),
     (   member(R,Refs),
 	erase_tag(R),
+	fail
+    ;   true
+    ),
+    (   tag(_,P,_,_,_,_,normal(date_expression),_),
+	P1 is P-1,
+	clause(tag(P1,P,_,_,_,_,normal(date_year),_),true,Ref),
+	erase_tag(Ref),
 	fail
     ;   true
     ).
@@ -1013,9 +1032,16 @@ add_skips_for_unknowns(Words) :-
 %% 1. this was actually correct, because this last tag was wrong, but we
 %%    should restore the correct alternative 
 %% 2. this was undesirable, restore licensing tag
+%%
+%% it is a mess, of course
+%% old version could remove *all* tags. Now do not throw away UNKNOWN
+%% yet, but assume this position is required to have a tag, so treat it
+%% as unknown / name (since this position was required earlier for connectness)
+%% BUT that sometimes leads to explosion of tags...
 check_connected(Words,MaxPos,_Erased,Filter) :-
     retractall(tag(_,_,_,_,_,_,'UNKNOWN','UNKNOWN')),
     (   unused_pos(P,MaxPos),
+	%%% ;   retract(tag(P,_,_,_,_,_,'UNKNOWN','UNKNOWN'))
         P1 is P+1,
         nth(P1,Words,W),
         debug_message(1,
@@ -1026,7 +1052,9 @@ check_connected(Words,MaxPos,_Erased,Filter) :-
 	R is R0 + 1,
 
 	%% treat it as unknown
+	alpino_unknowns:guess_names([W],[W],P,R0),
 	call_with_decreased_debug(guess_unknown_words(Words,[P])),
+
 
 	%% and known
 	add_lexical_types(W,P,P1,R0,R),
@@ -1088,6 +1116,8 @@ requires_longest_match(normal(names_dictionary)).
 requires_longest_match(normal(spaced_letters)).
 requires_longest_match(name(not_begin)).
 requires_longest_match(name(begin)).
+requires_longest_match(normal(telephone)).
+requires_longest_match(normal(enumeration)).
 
 requires_unique_match(normal(date_year),np(year),normal(enumeration),_,_,_).
 requires_unique_match(name(not_begin),proper_name(sg,_),normal(enumeration),proper_name(both),_,_).
@@ -1101,6 +1131,7 @@ requires_unique_match(normal(variant(wrong_quote_s,normal)),_,normal(variant(var
 requires_unique_match(normal(variant(wrong_quote_s,normal)),_,normal(variant(variant21('\'s','\'',s),variant)),_,0,0).
 requires_unique_match(normal(spaced_letters),_,normal(_),_,5,0).
 requires_unique_match(normal(bridge),_,normal(bridge),_,5,0).
+requires_unique_match(normal(telephone),_,normal(telephone),_,5,0).
 requires_unique_match(normal(number_sequence),_,normal(number_sequence),_,5,0).
 requires_unique_match(name(_),_,name(_),_,10,5).
 requires_unique_match(name(_),_,name_gen(_),_,10,4).
@@ -1119,6 +1150,33 @@ enforce_longest_match(Words,0,P) :-
     ;   true
     ).
 
+
+%% Kim Clijsters => *Kim and *Clijsters as separate names
+enforce_longest_match_simple :-
+    findall(Ref,person_names_erase(Ref),Refs0),
+    sort(Refs0,Refs),
+    erase_tags(Refs,_),
+    findall(R,enumeration_erase(R),Rs0),
+    sort(Rs0,Rs),
+    erase_tags(Rs,_).
+
+enumeration_erase(Ref) :-
+    tag(P0,P1,R0,R1,_,_,normal(enumeration),enumeration),
+    clause(tag(P0,P,R0,R,_,_,normal(enumeration),enumeration),_,Ref),
+    P1 > P, R1 > R.
+    
+
+person_names_erase(Ref) :-
+    tag(P0,P,R0,R,_,_,normal(names_dictionary),proper_name(sg,'PER')),
+    clause(tag(P0,P1,R0,R1,_,_,normal(names_dictionary),proper_name(sg,'PER')),_,Ref1),
+    clause(tag(P1,P, R1,R, _,_,normal(names_dictionary),proper_name(sg,'PER')),_,Ref2),
+    lists:member(Ref,[Ref1,Ref2]).
+
+person_names_erase(Ref) :-
+    tag(P0,P,R0,R,_,_,normal(gen(names_dictionary)),name_determiner(pron,'PER')),
+    clause(tag(P0,P1,R0,R1,_,_,normal(names_dictionary),proper_name(sg,'PER')),_,Ref1),
+    clause(tag(P1,P ,R1,R ,_,_,normal(gen(names_dictionary)),name_determiner(pron,'PER')),_,Ref2),
+    lists:member(Ref,[Ref1,Ref2]).
 
 enforce_unique_match :-    
     count_edges(tag(_,_,_,_,_,_,_,_),Edges0),
@@ -2841,8 +2899,8 @@ guess_english_compound(tag(P0,P,R0,R,Label,Used,normal(english_compound),Tag2)) 
     ;   first_compound_root(Label1,Used1),
 	search_tag_stem(Label1,tag(P0,P1,R0,R1,Label1,Used1,_His1,_Tag1))
     ),
-    search_tag_r0(R1,tag(P1,P, R1,R, Label2,Used2,_His2,Tag2)),
-    second_part_english_compound(tag(P1,P, R1,R, Label2,Used2,_His2,Tag2)),
+    search_tag_r0(R1,tag(P1,P, R1,R, Label2,Used2,His2,Tag2)),
+    second_part_english_compound(tag(P1,P, R1,R, Label2,Used2,His2,Tag2)),
     (   Label1 = v_root(Label1A,_)
     ->  true
     ;   Label1 = Label1A
@@ -2868,6 +2926,8 @@ second_part_english_compound(tag(_,_,_,_,L,_,_,Tag)):-
 
 second_part_lemma(elite,noun(_,_,_)).
 second_part_lemma(vormig,adjective(_)).
+second_part_lemma(school,noun(_,_,_)).
+second_part_lemma(deskundig,nominalized_adjective).
 
 first_alternative_to_compound(R0,R1) :-
     search_tag_r0(R0,tag(_,_,R0,R1,_,_,_,Tag)),
@@ -2927,6 +2987,8 @@ allowed_alt_tag(particle(_)).
 allowed_alt_tag(post_n_n).
 allowed_alt_tag(fixed_part(_)).
 allowed_alt_tag(post_adjective(no_e)).
+allowed_alt_tag(proper_name(_)).
+allowed_alt_tag(proper_name(_,_)).
 
 noun_tag(noun(_,_,_)).
 noun_tag(tmp_noun(_,_,_)).

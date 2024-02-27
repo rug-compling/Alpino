@@ -11,7 +11,7 @@ named_sents=$(wildcard *.named_sents)
 
 suites=$(sents:%.sents=%) $(named_sents:%.named_sents=%)
 
-all: $(suites:%=%.pl) tt tu
+all: $(suites:%=%.pl) 
 
 %.po : %.pl
 	echo "overrule_module('$*'), save_files('$*','$*')." | Alpino -notk cmdint=off 
@@ -21,7 +21,7 @@ install:
 clean:
 
 realclean:
-	/bin/rm -f $(suites:%=%.pl) tt tu tt.sents tu.sents
+	/bin/rm -f $(suites:%=%.pl) 
 
 init=1
 keyprefix=""
@@ -133,30 +133,7 @@ sentsfiles=g_suite.sents h_suite.sents m_suite.sents\
            leuven_yellow_pages.sents h_suite.sents\
            journaal.sents lot_test_suite1.sents ovis.sents\
            i_suite.sents 
-namedsentsfiles=cgn_exs.named_sents lassy.named_sents qa.named_sents
-
-ifeq "$(shell if [ -d Machine/ ]; then echo yes; fi)" "yes"
-include ../Makefile.include
-tt: $(namedsentsfiles) $(sentsfiles) 
-	awk -F\| '{ print $$2 }' $(namedsentsfiles) > tt.sents
-	cat $(sentsfiles) | grep -v -e '^[%]' -e '^--' >> tt.sents
-	cat tt.sents  | ./split_in_parts -p 500 -o tt
-	for file in tt_part*.sents.gz ; do if cmp -s $$file Machine/$$file; then true ; else cp -f $$file Machine/$$file; fi; done
-	touch tt
-
-tu: extra.sents
-	cat extra.sents | grep -v -e '^[%]' -e '^--' > tu.sents
-	cat tu.sents  | ./split_in_parts -p 200 -o tu
-	for file in tu_part*.sents.gz; do if cmp -s $$file Machine/$$file; then true ; else cp -f $$file Machine/$$file; fi; done
-	gzip -c extra.sents > Machine/extra.sents.gz
-	touch tu
-else
-
-tt:
-
-tu:
-
-endif
+namedsentsfiles=cgn_exs.named_sents lassy.named_sents qa.named_sents j_suite.named_sents
 
 u: nl_lassysmall-ud-dev.pl nl_lassysmall-ud-test.pl nl_lassysmall-ud-train.pl
 	gzip -c nl_lassysmall-ud-dev.named_sents > Machine/nl_lassysmall-ud-dev.sents.gz
@@ -171,3 +148,11 @@ nl_lassysmall-ud-test.named_sents: $(UNIVERSAL)/nl_lassysmall-ud-test.conllu
 nl_lassysmall-ud-train.named_sents: $(UNIVERSAL)/nl_lassysmall-ud-train.conllu
 	conllu2sent.py < $<  | sed -e 's/[.]xml//' > $@
 
+SHELL := /bin/bash
+j_suite.named_sents:../Grammar/rules.gram
+	grep '^%%EX%%' ../Grammar/rules.gram | sed -e 's/^%%EX%%  *//' > j_suite.named_sents0
+	paste -d '|' <(tr ' :' '_@' <j_suite.named_sents0 |\
+        sed -e "s/'/__Q1__/g" -e 's/"/__Q2__/g'   \
+            -e "s/[(]/__Q3__/g" -e 's/[)]/__Q4__/g' \
+            -e "s/;/__Q5__/g" ) j_suite.named_sents0 \
+          > j_suite.named_sents

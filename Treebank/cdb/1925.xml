@@ -35,9 +35,9 @@
             <node begin="13" end="14" getal="mv" graad="basis" id="27" lemma="macht_verhouding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="machtsverhouding" word="machtsverhoudingen"/>
           </node>
           <node begin="15" cat="conj" end="18" id="28" rel="mod">
-            <node begin="15" end="16" id="29" lemma="privé" pos="adj" postag="SPEC(vreemd)" pt="spec" rel="cnj" root="privé" spectype="vreemd" word="prive"/>
+            <node begin="15" buiging="zonder" end="16" graad="basis" id="29" lemma="privé" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="privé" word="prive"/>
             <node begin="16" conjtype="neven" end="17" id="30" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="politiek" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="politiek" word="politiek"/>
+            <node begin="17" buiging="zonder" end="18" graad="basis" id="31" lemma="politiek" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="politiek" word="politiek"/>
           </node>
           <node begin="19" cat="pp" end="32" id="32" rel="mod">
             <node begin="19" end="20" id="33" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>

@@ -1,13 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # $Id: dtsearch,v 1.11 2006-12-06 10:29:23 geertk Exp $
 
 import sys
 import os
-from optparse import OptionParser
-import types
+from argparse import ArgumentParser
 import re
-import string
 
 # pad naar de lokale modules zetten
 ALPINO_HOME = os.getenv("ALPINO_HOME")
@@ -26,6 +24,8 @@ stylesheetdir = os.path.join(ALPINO_HOME, 'TreebankTools', 'stylesheets')
 
 constituent_sheet = os.path.join(stylesheetdir, 'print-matched-constituents.xsl')
 constituent_root_sheet = os.path.join(stylesheetdir, 'print-matched-constituents.xsl')
+
+has_alto = os.system('which alto > /dev/null') == 0
 
 #----------------------------------------------------------------------
 
@@ -54,6 +54,9 @@ def workhorse(xmldata, filename, query=""):
 
     query = options.query
 
+    if isinstance(xmldata, str):
+        xmldata = xmldata.encode('utf-8')
+
     doc = etree.fromstring(xmldata)
 
     xpathres = doc.xpath(query)
@@ -65,7 +68,7 @@ def workhorse(xmldata, filename, query=""):
                 dtview_fp = os.popen("dtview -query %s -s" % (shellquotedquery), "w", 1)
 
             dtview_fp.write(filename + "\n")
-            
+
         elif options.bracketed_sentence:
             print_bracketed_sentence(doc, xpathres, filename)
 
@@ -73,21 +76,21 @@ def workhorse(xmldata, filename, query=""):
             verhoog_tellertjes(xpathres, counthash)
 
 
-def shellquote(str):
+def shellquote(s):
     """quote the string to make it safe for the shell"""
     # De string moet tussen enkele quotes, tussen dubbele quotes wordt
     # de string geinterpoleerd (door de shell)
 
-    if str == "":
+    if s == "":
         return "''"
 
-    elif (re.search(r'[^\w._\-/]', str)):
-          str = str.replace("'", r"'\''")
-          str = "'" + str + "'"
-          str = re.sub(r"^''", "", str)
-          str = re.sub(r"''$", "", str)
+    if re.search(r'[^\w._\-/]', s):
+        s = s.replace("'", r"'\''")
+        s = "'" + s + "'"
+        s = re.sub(r"^''", "", s)
+        s = re.sub(r"''$", "", s)
 
-    return str
+    return s
 
 
 def verhoog_tellertjes(xpathres, counthash):
@@ -97,38 +100,38 @@ def verhoog_tellertjes(xpathres, counthash):
     met voor ieder attribuut dat we willen bijhouden een hash.
     """
 
-    if type(xpathres) == types.ListType:
+    if isinstance(xpathres, list):
         for node in xpathres:
 
             if node.tag != 'node':
                 break
 
-            for attr in counthash.keys():
-                hash = counthash[attr]
+            for attr in list(counthash.keys()):
+                hsh = counthash[attr]
                 value = node.get(attr)
-                if value != None:
+                if value is not None:
                     try:
-                        hash[value] += 1
+                        hsh[value] += 1
                     except KeyError:
-                        hash[value] = 1
+                        hsh[value] = 1
 
 
 def print_statistics(counthash):
     """Print de waarden van counthash"""
 
-    for attr in counthash.keys():
-        hash = counthash[attr]
+    for attr in list(counthash.keys()):
+        hsh = counthash[attr]
 
         # keys sorteren op volgorde van value
-        key_list = [ (hash[key], key) for key in hash.keys() ]
+        key_list = [ (hsh[key], key) for key in list(hsh.keys()) ]
         key_list.sort()
         key_list = [x[1] for x in key_list]
         key_list.reverse()
 
-        print attr + ":"
+        print(attr + ":")
 
         for key in key_list:
-            print "%8d %s" % (hash[key], key)
+            print("%8d %s" % (hsh[key], key))
                                          ###.decode('utf8').encode('latin1')
 
 
@@ -140,7 +143,7 @@ def print_bracketed_sentence(doc, xpathres, filename):
     sentence = doc.xpath('/*/sentence')[0]
     words = sentence.text.split()
 
-    if type(xpathres) == types.ListType:
+    if isinstance(xpathres, list):
         for node in xpathres:
 
             if node.tag != 'node':
@@ -154,8 +157,8 @@ def print_bracketed_sentence(doc, xpathres, filename):
                 words[begin] = "[" + words[begin]
             if end:
                 words[int(end) - 1] += ']'
-        
-    print filename + "\t" + string.join(words, " ")
+
+    print(filename + "\t" + " ".join(words))
                                                    ##.decode('utf8').encode('latin1')
 
 
@@ -163,31 +166,41 @@ def main():
 
     global options, counthash, dtview_fp, shellquotedquery
 
-    parser = OptionParser("usage: %prog [options] <[-q] QUERY> <files, directories, ...>")
 
-    parser.add_option("-q", "--query", "-e", "--expr", dest="query",
-                      help="XPath expression to search for")
+    parser = ArgumentParser(os.path.basename(sys.argv[0]))
 
-    parser.add_option("--statistics", "-l", action="store_true", dest="statistics",
-                      help="print stats for values of rel,cat,pos labels in matching nodes")
+    parser.add_argument("name", type=str, nargs="*", help="file or directory")
 
-    parser.add_option("--root-labels", "-r", action="store_true", dest="rootlabels",
-                      help="print stats for values of root label in matching nodes")
+    parser.add_argument("-q", "--query", "-e", "--expr", dest="query",
+                        help="XPath expression to search for")
 
-    parser.add_option("--show-sentence", "-s", action="store_true", dest="bracketed_sentence",
-                      help="show sentences with matching phrases")
+    if has_alto:
+        parser.add_argument("-2", action="store_true", dest="version2",
+                            help="use XPath version 2")
+        parser.add_argument("-a", "--macrofile", dest="macrofile",
+                            help="file with macro definitions (overrides env.var. ALTO_MACROFILE)")
 
-    parser.add_option("--matching-constituents", "-c", action="store_true", dest="constituents",
-                      help="show matching constituents only, not the full sentence.")
+    parser.add_argument("--statistics", "-l", action="store_true", dest="statistics",
+                        help="print stats for values of rel,cat,pos labels in matching nodes")
 
-    parser.add_option("--dtview", "-d", "-v", action="store_true", dest="dtview",
-                      help="show matches using dtview.")
+    parser.add_argument("--root-labels", "-r", action="store_true", dest="rootlabels",
+                        help="print stats for values of root label in matching nodes")
 
-    parser.add_option("--stdin",  action="store_true", dest="stdin",
-                      help="read file arguments from stdin.  "
-                      "Any non-option arguments on the commandline will be ignored.")
+    parser.add_argument("--show-sentence", "-s", action="store_true", dest="bracketed_sentence",
+                        help="show sentences with matching phrases")
 
-    (options, args) = parser.parse_args()
+    parser.add_argument("--matching-constituents", "-c", action="store_true", dest="constituents",
+                        help="show matching constituents only, not the full sentence.")
+
+    parser.add_argument("--dtview", "-d", "-v", action="store_true", dest="dtview",
+                        help="show matches using dtview.")
+
+    parser.add_argument("--stdin",  action="store_true", dest="stdin",
+                        help="read file arguments from stdin.  "
+                        "Any non-option arguments on the commandline will be ignored.")
+
+    options = parser.parse_args()
+    args = options.name
 
 
     # the query is passed using -q, --query., or it's the first non-option argument
@@ -212,6 +225,48 @@ def main():
     stylesheet = None
     parsedsheet = None
 
+    if has_alto:
+        if options.stdin:
+            opt = '-i '
+        else:
+            opt = ''
+        if options.version2:
+            ver2 = '-2p '
+            dtver2 = '-2 '
+        else:
+            ver2 = ''
+            dtver2 = ''
+        if options.macrofile:
+            macros = '-m ' + shellquote(options.macrofile) + ' '
+            dtmacros = '-a ' + shellquote(options.macrofile) + ' '
+        else:
+            macros = ''
+            dtmacros = ''
+        sqq = shellquote(options.query)
+        command = 'alto ' + opt + ver2 + macros + ' '.join(args) + ' fp:' + sqq
+        if options.dtview:
+            command += ' tt:%F | dtview -s ' + dtver2 + dtmacros + '-query ' + sqq
+        elif options.rootlabels:
+            command += ' ac:word'
+        elif options.statistics:
+            command += ' ac:node'
+        elif options.bracketed_sentence:
+            command += ' tt:%F\\\\t%S'
+        elif options.constituents:
+            command += ' tt:%F\\\\t%w'
+        else:
+            command += ' tt:%F'
+
+        if options.stdin:
+            fp = os.popen(command, "w")
+            for line in sys.stdin:
+                fp.write(line)
+            fp.close()
+        else:
+            os.system(command)
+
+        sys.exit(0)
+
     if options.dtview:
         shellquotedquery = shellquote(options.query)
         dtview_fp = None
@@ -225,7 +280,7 @@ def main():
     elif options.bracketed_sentence:
         process_arguments(args, workhorse, options.stdin, 1, True)
     else:                               # de volgende opties moeten allemaal met een stylesheet
-        
+
 
         params = {}
         params["expr"] = xslt_quote_string(options.query)

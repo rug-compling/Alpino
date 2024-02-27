@@ -1891,7 +1891,7 @@ start_complementizer(C) :-
     C => comp,
     C:wh => nwh,
     C:ctype => c_compare_np,
-    comp(C,smain),
+    comp(C,cp),
     C:sc <=> [START],
     START => start,
     unify_mods(START).
@@ -2294,6 +2294,11 @@ postn_adverb(ADV) :-
     initialize_dt([],ADV),
     sign(ADV,advp).
 
+postpn_adverb(ADV) :-
+    ADV => post_pn_adv,
+    initialize_dt([],ADV),
+    sign(ADV,advp).
+
 postp_adverb(ADV) :-
     ADV => post_p_adv,
     initialize_dt([],ADV),
@@ -2467,6 +2472,7 @@ no_r_ld_prep(halfweg).
 no_r_ld_prep(halverwege).
 no_r_ld_prep(hartje).
 no_r_ld_prep([op,het,gebied,van]).
+no_r_ld_prep([tot,en,met]).
 no_r_ld_prep(richting).
 %no_r_ld_prep(rond).  % ?Vlaams wel +R
 no_r_ld_prep(rondom).
@@ -2691,6 +2697,7 @@ preposition_of_sbar(P) :-
 preposition_redrel(PREP,P) :-
     preposition_sbar(P0),
     overwrite(P0,P1,sc:h:ctype,c_redrel),
+    P1:sc:h:tmploc => ntmploc,
     unify_except(P1,P,prep),
     P:prep ==> PREP.
 
@@ -2935,7 +2942,7 @@ absolute_preposition(Sign) :-
     unify_mods(Obj1),
     Predc => pred,
     unify_mods(Predc),
-    instantiated_deprel(Sign,obj1,Obj1),
+    deprel(Sign,obj1,Obj1),  % not instantiated, for : "met als titel :"
     instantiated_deprel(Sign,predc,Predc),
     Sign:sc <=> [Obj1,Predc].
 
@@ -3067,6 +3074,7 @@ dependents_(V0,V,[X|Dependents],[Dep|Deps]) :-
 %% predc: keurig als we zijn veroordelen we racisme
 %% su, obj1, obj2: topic-drop
 %% vc: dip
+%% me: colon "de winst bedroeg :"
 dependent(DepRel/Dep,V0,V,Dep) :-
     (   DepRel == none
     ->  V0=V
@@ -3092,8 +3100,8 @@ dependent(DepRel/Dep,V0,V,Dep) :-
     ->  V0=V, instantiated_deprel(V,pc,Dep)
     ;   DepRel == ld
     ->  V0=V, instantiated_deprel(V,ld,Dep)
-    ;   DepRel == me
-    ->  V0=V, instantiated_deprel(V,me,Dep)
+%    ;   DepRel == me
+%    ->  V0=V, instantiated_deprel(V,me,Dep)
     ;   DepRel == se
     ->  V0=V, instantiated_deprel(V,se,Dep)
     ;   V0=V,

@@ -1,6 +1,8 @@
 # Makefile for saxon-wrap
 # GJK Thu Jan 17 22:12:52 2008
 
+PWD:=${shell pwd}
+
 SAXONJAR  = $(wildcard ~gosse/src/saxon8-8/saxon8.jar)
 CLASSPATH = $(SAXONJAR):$(PWD)
 

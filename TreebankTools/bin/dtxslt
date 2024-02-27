@@ -1,9 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import sys
 
-from optparse import OptionParser
+from argparse import ArgumentParser
 
 ALPINO_HOME = os.getenv("ALPINO_HOME")
 if not ALPINO_HOME:
@@ -12,40 +12,38 @@ if not ALPINO_HOME:
 
 sys.path.insert(0, os.path.join(ALPINO_HOME, "TreebankTools/python-lib"))
 
-from actlib import *
-
-def usage(progName):
-    print "Usage %s [OPTIONS] <dzcorpora|directories>" % progName
+import actlib as ac
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        usage(sys.argv[0])
-        sys.exit(1)
 
-    parser = OptionParser("%prog [OPTIONS] arguments")
+    parser = ArgumentParser(os.path.basename(sys.argv[0]))
 
-    parser.add_option("--param", dest="param", action="append",
+    parser.add_argument("name", type=str, nargs="*", help="dzcorpus or directory")
+
+    parser.add_argument("--param", dest="param", action="append",
         help="Parameter for stylesheet")
 
-    parser.add_option("-r", "--recursive", action="store_true", dest="recursive",
+    parser.add_argument("-r", "--recursive", action="store_true", dest="recursive",
         help="Recursively create or update archives")
 
-    parser.add_option("-q", "--query", "-e", "--expr", dest="query",
+    parser.add_argument("-q", "--query", "-e", "--expr", dest="query",
         help="XPath expression to search for")
 
-    parser.add_option("--stdin", action="store_true", dest="stdin",
+    parser.add_argument("--stdin", action="store_true", dest="stdin",
         help="Read file arguments from stdin.  Any non-option arguments on the commandline will be ignored.")
 
-    parser.add_option("--stringparam", dest="stringParam", action="append",
+    parser.add_argument("--stringparam", dest="stringParam", action="append",
         help="String-parameter for stylesheet")
 
-    parser.add_option("-s", "--stylesheet", dest="stylesheet",
-        help="stylesheet to use for output")
+    parser.add_argument("-s", "--stylesheet", dest="stylesheet",
+                        required=True,
+                        help="stylesheet to use for output")
 
-    (options, args) = parser.parse_args()
+    options = parser.parse_args()
+    args = options.name
 
     if not (args or options.stdin):
-        msg("Error: No arguments to process.  Exiting....")
+        parser.print_help(sys.stderr)
         sys.exit(1)
 
     # stylesheet alvast parsen indien nodig
@@ -57,32 +55,26 @@ if __name__ == "__main__":
     # A quick hack to use queries with accented characters (latin1 input assumed)
     if options.query:
     #    options.query = options.query.decode('latin1').encode('utf8')
-        params["expr"] = xslt_quote_string(options.query)
+        params["expr"] = ac.xslt_quote_string(options.query)
 
     if options.stringParam:
         for param in options.stringParam:
             if param.find('=') == -1:
-                raise(RuntimeError("Incorrect parameter value '%s', " % param +
-                    "should have form 'parameter=value'!"))
+                raise RuntimeError
             (p, v) = param.split('=', 1)
-            v = xslt_quote_string(v)
+            v = ac.xslt_quote_string(v)
             params[p] = v
 
     if options.param:
         for param in options.param:
             if param.find('=') == -1:
-                raise(RuntimeError("Incorrect parameter value '%s', " % param +
-                    "should have form 'parameter=value'!"))
+                raise RuntimeError
             (p, v) = param.split('=', 1)
             params[p] = v
 
-    if not options.stylesheet:
-        msg("Error: no stylesheet specified.")
-        sys.exit(1)
-
     # Compile the stylesheet
-    styledoc = etree.parse(options.stylesheet)
-    stylesheet = etree.XSLT(styledoc)
+    styledoc = ac.etree.parse(options.stylesheet)
+    stylesheet = ac.etree.XSLT(styledoc)
 
     if options.stdin:
         # args = get_arglist_from_stdin()
@@ -90,10 +82,10 @@ if __name__ == "__main__":
         args = []
 
     if options.query:
-        process_arguments(args, xmlmatch_from_mem, options.stdin,
+        ac.process_arguments(args, ac.xmlmatch_from_mem, options.stdin,
             options.recursive, True, params=params,
             query=options.query, stylesheet=stylesheet)
     else:
-        process_arguments(args, xmlmatch_from_mem, options.stdin,
+        ac.process_arguments(args, ac.xmlmatch_from_mem, options.stdin,
             options.recursive, True, params=params,
             stylesheet=stylesheet)

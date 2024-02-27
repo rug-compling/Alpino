@@ -6,6 +6,8 @@ include $(ALPINO_HOME)/Makefile.include
 endif
 endif
 
+PWD:=${shell pwd}
+
 PRO_unix=unix$(MODULEEXT)
 
 PRO_unix_STATIC=unix.s.o
@@ -18,11 +20,11 @@ endif
 
 unix.so: unix.c unix.pl
 	$(SPLFR) unix.pl unix.c \
-		-lz -LD -Wl,-rpath,$(PWD) $(LDFLAGS)
+		-lz -LD -Wl,-rpath=$(PWD) $(LDFLAGS)
 
 unix.bundle unix.dylib: unix.c unix.pl
 	$(SPLFR) unix.pl unix.c \
-		-lz -LD -Wl,-rpath,$(PWD) $(LDFLAGS)
+		-lz -LD -Wl,-rpath=$(PWD) $(LDFLAGS)
 
 unix.s.o: unix.c unix.pl
 	splfr unix.pl unix.c \

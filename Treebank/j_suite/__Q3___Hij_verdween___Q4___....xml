@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" special="haak_open" word="("/>
+    <node begin="1" cat="smain" end="3" id="2" rel="--">
+      <node begin="1" case="nom" def="def" end="2" gen="de" genus="masc" getal="ev" id="3" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="2" end="3" id="4" infl="sg" lemma="verdwijnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verdwijn" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="verdween" wvorm="pv"/>
+    </node>
+    <node begin="3" end="4" id="5" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" special="haak_sluit" word=")"/>
+    <node begin="4" end="5" id="6" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." special="hellip" word="..."/>
+  </node>
+  <sentence>( Hij verdween ) ...</sentence>
+</alpino_ds>

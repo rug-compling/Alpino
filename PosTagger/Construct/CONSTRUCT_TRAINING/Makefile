@@ -47,28 +47,92 @@ install_test:
 
 include $(ALPINO_HOME)/Makefile.errormining
 
-
-TTS=tt_part00001 tt_part00002 tt_part00003 tt_part00004 tt_part00005 tt_part00006 tt_part00007 tt_part00008 tt_part00009 tt_part00010 tt_part00011 tt_part00012 tt_part00013 tt_part00014 tt_part00015 tt_part00016 tt_part00017 tt_part00018 
-
-TUS=tu_part00001 tu_part00002 tu_part00003 tu_part00004 tu_part00005 tu_part00006 tu_part00007 tu_part00008 tu_part00009 tu_part00010 
-
 PS=p_part00001 p_part00002 p_part00003 p_part00004 p_part00005 p_part00006 p_part00007 p_part00008 p_part00009 p_part00010 p_part00011 p_part00012 p_part00013 p_part00014 p_part00015 p_part00016 p_part00017 p_part00018 p_part00019 p_part00020
 
 ps:
 	$(MAKE) -j $(J) $(PS:%=%.test.log.gz)
 
-tts:
-	$(MAKE) -j $(J) $(TTS:%=%.log.gz) 
-
-tus:
-	$(MAKE) -j $(J) $(TUS:%=%.tu.log.gz) 
-
 %.log.gz: ../../../Suites/Machine/%.sents.gz
 	$(MAKE) frames suite=$*
 
 %.test.log.gz: ../../../Suites/Machine/%.sents.gz
-	$(MAKE) frames suite=$* TRAIN_TEST=test &
+	$(MAKE) frames suite=$* TRAIN_TEST=test
 
-%.tu.log.gz: ../../../Suites/Machine/%.sents.gz
-	$(MAKE) frames suite=$* extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/extra end_hook=best_score\(frames\)"
+## usage e.g.: make -j 20 PATTERN=pei mores 
+MORE=$(basename $(basename $(notdir $(wildcard ../../../Suites/Machine/$(PATTERN)*.sents.gz))))
+mores:
+	$(MAKE) $(MORE:%=%.log.gz)
+
+
+alpino: cdb cgn_exs eans extra g_suite h_suite i_suite j_suite lassy-doc\
+        leuven_yellow_pages lot_test_suite1 novelsample_corrected ntv-suite qa Titaantjes wpspel
+
+lassysmall:
+	$(MAKE) mores PATTERN=lassysmall\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall end_hook=best_score\(frames\)"
+
+cdb:
+	$(MAKE) mores PATTERN=cdb\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/cdb end_hook=best_score\(frames\)"
+
+cgn_exs:
+	$(MAKE) mores PATTERN=cgn_exs\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/cgn_exs end_hook=best_score\(frames\)"
+
+eans:
+	$(MAKE) mores PATTERN=eans\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/eans end_hook=best_score\(frames\)"
+
+extra:
+	$(MAKE) mores PATTERN=extra_\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/extra end_hook=best_score\(frames\)"
+
+g_suite:
+	$(MAKE) mores PATTERN=g_suite\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/g_suite end_hook=best_score\(frames\)"
+
+h_suite:
+	$(MAKE) mores PATTERN=h_suite\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/h_suite end_hook=best_score\(frames\)"
+
+j_suite:
+	$(MAKE) mores PATTERN=j_suite\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/j_suite end_hook=best_score\(frames\)"
+
+i_suite:
+	$(MAKE) mores PATTERN=i_suite\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/i_suite end_hook=best_score\(frames\)"
+
+lassy-doc:
+	$(MAKE) mores PATTERN=lassy-doc\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/lassy-doc end_hook=best_score\(frames\)"
+
+leuven_yellow_pages:
+	$(MAKE) mores PATTERN=leuven_yellow_pages\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/leuven_yellow_pages end_hook=best_score\(frames\)"
+
+lot_test_suite1:
+	$(MAKE) mores PATTERN=lot_test_suite1\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/lot_test_suite1 end_hook=best_score\(frames\)"
+
+novelsample_corrected:
+	$(MAKE) mores PATTERN=novelsample_corrected\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/novelsample_corrected end_hook=best_score\(frames\)"
+
+ntv-suite:
+	$(MAKE) mores PATTERN=ntv-suite\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/ntv-suite end_hook=best_score\(frames\)"
+
+qa:
+	$(MAKE) mores PATTERN=qa\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/qa end_hook=best_score\(frames\)"
+
+Titaantjes:
+	$(MAKE) mores PATTERN=Titaantjes\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/Titaantjes end_hook=best_score\(frames\)"
+
+wpspel:
+	$(MAKE) mores PATTERN=wpspel\
+        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/wpspel end_hook=best_score\(frames\)"
+
 

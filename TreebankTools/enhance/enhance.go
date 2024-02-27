@@ -1,15 +1,16 @@
 package main
 
 import (
-	"github.com/pebbe/util"
-	"github.com/rug-compling/alpinods"
-	"github.com/rug-compling/alud/v2"
-
 	"encoding/xml"
 	"fmt"
+	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/pebbe/util"
+	"github.com/rug-compling/alpinods"
+	"github.com/rug-compling/alud/v2"
 )
 
 var (
@@ -129,7 +130,7 @@ Je kunt maar één set Metadata kiezen
 		}
 	}
 
-	files, err := os.ReadDir(dirname)
+	files, err := ioutil.ReadDir(dirname)
 	x(err)
 	for _, file := range files {
 		filename := filepath.Join(dirname, file.Name())
@@ -137,7 +138,7 @@ Je kunt maar één set Metadata kiezen
 			continue
 		}
 
-		data, err := os.ReadFile(filename)
+		data, err := ioutil.ReadFile(filename)
 		x(err)
 
 		var alpino alpinods.AlpinoDS

@@ -658,6 +658,10 @@ phrasal_entry(score_cat,score) -->
        parse_number_simple(Away)
     }.
 
+phrasal_entry(np,telephone) -->
+    { hdrug_util:debug_message(4,"telephone~n",[]) },
+    telephone.
+
 phrasal_entry(np,chess) -->
     { hdrug_util:debug_message(4,"chess_game~n",[]) },
     chess_game.
@@ -2156,7 +2160,7 @@ temporal_expression -->
     n_word(een),
     n_word(uur),
     n_word(of),
-    n_word(half),
+    half,
     tmp_voor_uur_num.
 
 temporal_expression -->
@@ -2187,20 +2191,30 @@ temporal_expression -->
     tmp_optional_half.
 
 temporal_expression -->
-    n_word(half),
+    half,
     tmp_voor_uur_num.
 
 temporal_expression -->
     halfvier.
 
 temporal_expression -->
-    n_word(kwart),
+    kwart,
     tmp_voor,
     tmp_voor_uur_num.
 
 temporal_expression -->
     n_word(NuN),
     {num_u_num(NuN)}.
+
+temporal_expression -->
+    n_word(TienVoorTwaalf),
+    {  alpino_util:split_atom(TienVoorTwaalf,"-",[Tien,Voor|Twaalf]),
+       (   tmp_minuut_num([Tien],[])
+       ;   kwart([Tien],[])
+       ),
+       tmp_voor([Voor],[]),
+       tmp_optional_half(Twaalf,[])
+    }.
 
 tmp_uur_num_u_conj -->
     date_conj,
@@ -2241,6 +2255,19 @@ halfvier(halfnegen).
 halfvier(halftien).
 halfvier(halfelf).
 halfvier(halftwaalf).
+
+halfvier('half-een').
+halfvier('half-twee').
+halfvier('half-drie').
+halfvier('half-vier').
+halfvier('half-vijf').
+halfvier('half-zes').
+halfvier('half-zeven').
+halfvier('half-acht').
+halfvier('half-negen').
+halfvier('half-tien').
+halfvier('half-elf').
+halfvier('half-twaalf').
 %% te middernacht
 halfvier(middernacht).
 
@@ -2259,15 +2286,21 @@ tmp_minuut(N) --> n_word(minuten), { N > 1 }.
 tmp_voor --> n_word(voor).
 tmp_voor --> n_word(over).
 
+half --> n_word(half).
+half --> n_word('HALF').
+
+kwart --> n_word(kwart).
+kwart --> n_word('KWART').
+
 tmp_optional_half -->
     tmp_voor_uur_num.
 tmp_optional_half -->
-    n_word(half),
+    half,
     tmp_voor_uur_num.
 tmp_optional_half -->
     halfvier.
 tmp_optional_half -->       % de trein van drie over half
-    n_word(half).
+    half.
 tmp_optional_half --> [].   % de trein van twaalf over
 
 tmp_voor_uur_num -->
@@ -2395,6 +2428,9 @@ num_u_num(Number) :-
 
 convert_number(Input,Number) :-
     simple_convert_number(Input,Number).
+convert_number(Input,Number) :-
+    alpino_unknowns:only_capitals(Input,Input1),
+    simple_convert_number(Input1,Number).
 %%%this is removed, because simple cases such as
 %%% "Vijfendertig kinderen moesten naar het ziekenhuis"
 %%% assigns wrong lemma to Vijfendertig
@@ -3719,7 +3755,7 @@ phrasal_entry(Tag,enumeration) -->
     enumeration,
     {  enumeration_tag(Tag) }.
 
-enumeration_tag(tag).
+%% enumeration_tag(tag).
 enumeration_tag(enumeration).
 enumeration_tag(proper_name(both)). % dat vind u in lid a ) t/m e )  
 
@@ -4345,3 +4381,55 @@ formula(Word) :-
     atom_concat(formula_,DigitAtom,Word),
     atom_codes(DigitAtom,Codes),
     number_codes_silent(_,Codes).
+
+telephone -->
+    tel_land,
+    tel_word(0,C1),
+    opt_dash,
+    tel_word(C1,C2),
+    telephone_rest(C2).
+
+opt_dash --> [].
+opt_dash --> n_word('-').
+
+telephone_rest(C) --> [], { C > 4 }.
+telephone_rest(C0) -->
+    tel_word(C0,C),
+    telephone_rest(C).
+
+tel_word(C0,C) -->
+    n_word(Atom),
+    {  tel_digits(Atom,C0,C) }.
+
+tel_digits(Atom,C0,C) :-
+    atom(Atom),
+    atom_codes(Atom,Codes),
+    isdigits(Codes,C0,C).
+
+tel_land --> [].
+
+tel_land -->
+    n_word('('),
+    tel_land,
+    n_word(')').
+
+tel_land -->
+    n_word('+'),
+    n_word(Atom),
+    {  tel_digits(Atom,0,_) }.
+
+tel_land -->
+    n_word(Atom),
+    {  tel_digits(Atom,0,_) }.
+
+tel_land -->
+    n_word(Atom),
+    {  atom_concat('+',Atom1,Atom),
+       tel_digits(Atom1,0,_)
+    }.
+
+isdigits([],N,N).
+isdigits([H|T],N0,N) :-
+    isdigit(H),
+    N1 is N0 + 1,
+    isdigits(T,N1,N).

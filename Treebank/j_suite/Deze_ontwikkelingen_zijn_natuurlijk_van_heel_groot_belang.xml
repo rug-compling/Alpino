@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="met-e" end="1" id="3" infl="de" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" wh="nwh" word="Deze"/>
+        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="ontwikkeling" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="ontwikkeling" word="ontwikkelingen"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="thi" word="zijn" wvorm="pv"/>
+      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="6" infl="no_e" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" vform="adj" word="natuurlijk"/>
+      <node begin="4" cat="pp" end="8" id="7" rel="predc">
+        <node begin="4" end="5" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="5" cat="np" end="8" id="9" rel="obj1">
+          <node begin="5" cat="ap" end="7" id="10" rel="mod">
+            <node begin="5" buiging="zonder" end="6" graad="basis" id="11" lemma="heel" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="heel" special="intensifier" word="heel"/>
+            <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="12" infl="no_e" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="hd" root="groot" vform="adj" word="groot"/>
+          </node>
+          <node begin="7" end="8" gen="het" genus="onz" getal="ev" graad="basis" id="13" lemma="belang" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="belang" sc="pred_pp(van)" word="belang"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Deze ontwikkelingen zijn natuurlijk van heel groot belang</sentence>
+</alpino_ds>

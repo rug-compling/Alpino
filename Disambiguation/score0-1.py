@@ -1,9 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Barbara, October 2010
+import os
 import sys
-import string
-from optparse import OptionParser
+from argparse import ArgumentParser
 
 numparses=0
 parses=[]
@@ -17,14 +17,13 @@ scoreBestWorstOnly=False
 osborne=True
 
 
-usage = "usage: %prog [options]"
-parser = OptionParser(usage=usage)
-parser.add_option("--no-osborne", dest='noOsborne',
+parser = ArgumentParser(os.path.basename(sys.argv[0]))
+parser.add_argument("--no-osborne", dest='noOsborne',
                                         action='store_true',
                                         default=False,
                                         help='does not keep marginal constant')
 
-(options, args) = parser.parse_args()
+options = parser.parse_args()
 
 if options.noOsborne:
     osborne=False
@@ -66,19 +65,19 @@ for line in sys.stdin:
         if len(parses) > 0: #thus we are not at first line
             # update parse scores: those parses with scoreBest get a 1
             parses = updateScores(scores,parses)
-            print len(parses)
+            print(len(parses))
             for i in parses:
-                print string.join(i)
+                print(' '.join(i))
         parses=[]
         scores=[]
     else:
         scores.append(c[0])
         c[0] = '0'
-        parses.append(c)  
+        parses.append(c)
 
 # don't forget last one
 if len(parses)> 0:
     parses = updateScores(scores,parses)
-    print len(parses)
+    print(len(parses))
     for i in parses:
-        print string.join(i)
+        print(' '.join(i))

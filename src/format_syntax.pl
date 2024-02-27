@@ -18,10 +18,8 @@
 				  result_to_frames/3,
 				  format_frames_of_result/1,
 				  format_frames_of_result/2,
-				  format_postags_of_result/1,
-				  format_postags_of_result/2,
-				  format_pts_of_result/1,
-				  format_pts_of_result/2,
+				  format_postags_of_result/3,
+				  format_pts_of_result/3,
 				  format_postags_of_obj/1,
 				  collect_postags_of_obj/3
 				]).
@@ -411,10 +409,10 @@ frames_to_postags(Frames,Result,PosTags) :-
     sort(PosTags0,PosTags1),
     add_missing_postags(PosTags1,PosTags,Result).
 
-frames_to_postags(Frames,Result,Words,PosTags) :-
-    frames_to_postags_(Frames,Result,Words,PosTags0,[]),
-    sort(PosTags0,PosTags1),
-    add_missing_postags(PosTags1,PosTags,Result).
+% frames_to_postags(Frames,Result,Words,PosTags) :-
+%     frames_to_postags_(Frames,Result,Words,PosTags0,[]),
+%     sort(PosTags0,PosTags1),
+%     add_missing_postags(PosTags1,PosTags,Result).
 
 add_missing_postags(PosTags0,PosTags,Result) :-
     alpino_data:result_term(_,Words0,_,_,_,Result),
@@ -461,10 +459,10 @@ add_postag(H,Tag,Lemma) :-
 	Lemma = H
     ).
 
-frames_to_postags_([],_,[]) --> [].
-frames_to_postags_([Frame|Frames],Result,[Word|Words]) -->
-    frame_to_postag(Frame,Result,Word),
-    frames_to_postags_(Frames,Result,Words).
+% frames_to_postags_([],_,[]) --> [].
+% frames_to_postags_([Frame|Frames],Result,[Word|Words]) -->
+%     frame_to_postag(Frame,Result,Word),
+%     frames_to_postags_(Frames,Result,Words).
 
 frames_to_postags_([],_) --> [].
 frames_to_postags_([Frame|Frames],Result) -->
@@ -474,26 +472,30 @@ frames_to_postags_([Frame|Frames],Result) -->
 frame_to_postag(_Context-frame(_P0,_P,Q0,Q,Stem,Frame,Surf,His),Result,Surf ) -->
     alpino_cgn_postags:cgn_postag(Frame,Stem,Surf,Q0,Q,Result,His).
 
-format_postags_of_result(Result) :-
-    result_to_frames(Result,Frames,_),
-    frames_to_postags(Frames,Result,Words,PosTags),
-    format_cgn_postags(PosTags,Words).
+% format_postags_of_result(Result) :-
+%     result_to_frames(Result,Frames,_),
+%     frames_to_postags(Frames,Result,Words,PosTags),
+%     format_cgn_postags(PosTags,Words).
 
-format_postags_of_result(Result,Key) :-
+format_postags_of_result(Result,Words0,Key) :-
     result_to_frames(Result,Frames,_),
-    frames_to_postags(Frames,Result,Words,PosTags),
+    frames_to_postags(Frames,Result,PosTags),
+    alpino_lexical_analysis:remove_brackets(Words0,Words1),
+    alpino_treebank:remove_phantoms(Words1,Words),
     format_cgn_postags(PosTags,Words,Key).
 
-format_pts_of_result(Result) :-
-    result_to_frames(Result,Frames,_),
-    frames_to_postags(Frames,Result,Words,PosTags),
-    postags_to_pts(PosTags,Pts),
-    format_cgn_postags(Pts,Words).
+% format_pts_of_result(Result) :-
+%     result_to_frames(Result,Frames,_),
+%     frames_to_postags(Frames,Result,Words,PosTags),
+%     postags_to_pts(PosTags,Pts),
+%     format_cgn_postags(Pts,Words).
 
-format_pts_of_result(Result,Key) :-
+format_pts_of_result(Result,Words0,Key) :-
     result_to_frames(Result,Frames,_),
-    frames_to_postags(Frames,Result,Words,PosTags),
+    frames_to_postags(Frames,Result,PosTags),
     postags_to_pts(PosTags,Pts),
+    alpino_lexical_analysis:remove_brackets(Words0,Words1),
+    alpino_treebank:remove_phantoms(Words1,Words),
     format_cgn_postags(Pts,Words,Key).
 
 postags_to_pts([],[]).

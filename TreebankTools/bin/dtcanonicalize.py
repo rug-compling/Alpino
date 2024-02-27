@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # canonicalize.py -- maak een dependency tree canoniek
 # GJK 2006-04-22
@@ -68,12 +68,11 @@
 
 from xml.dom import minidom
 from xml.parsers.expat import ExpatError
-import sys, os
-import string
+import io, os, sys
 import tempfile
-import cgi
+import html
 
-from optparse import OptionParser
+from argparse import ArgumentParser
 
 class TreeNode:
     """Represents a single node
@@ -106,40 +105,37 @@ class TreeNode:
     def __delitem__(self, key):
         del self.attributes[key]
 
-    def has_key(self, key):
-        return self.attributes.has_key(key)
-
     def keys(self):
-        return self.attributes.keys()
+        return list(self.attributes.keys())
 
     def has_children(self):
         return len(self.children) > 0
 
     def has_range(self):
         """returns True if the begin and end attributes are set"""
-        return self.begin != None  # and self.end != None
+        return self.begin is not None  # and self.end is not None
 
     def gettype(self):
-        if len(self.keys()) < 1:
-            raise 'node without attributes!'
+        if len(list(self.keys())) < 1:
+            raise RuntimeError('node without attributes!')
 
-        type = self.NORMAL
-        if self.has_key('index'):
-            if self.has_key('cat') or self.has_key('pos'):
-                type = self.INDEXED
+        t = self.NORMAL
+        if 'index' in self.attributes:
+            if 'cat' in self.attributes or 'pos' in self.attributes:
+                t = self.INDEXED
             else:
-                type = self.INDEX
-        return type
+                t = self.INDEX
+        return t
 
 
     def debug_print_node(self, outfile=sys.stdout, indent=''):
         outfile.write(indent)
         outfile.write('node[ ')
-        for key in self.attributes.keys():
-            outfile.write('%s="%s" ' % (key, self.attributes[key]))
+        for key, value in self.attributes.items():
+            outfile.write('%s="%s" ' % (key, value))
         outfile.write(']')
-        if self.begin != None:
-            outfile.write("begin=%d, end %d" % (self.begin, self.end))
+        if self.begin is not None:
+            outfile.write("begin=%d, end=%d" % (self.begin, self.end))
         outfile.write('\n')
         for node in self.children:
             node.debug_print_node(outfile, indent + '  ')
@@ -150,7 +146,7 @@ class TreeNode:
         has been set"""
         outfile.write(indent)
         outfile.write('<node')
-        attrs = self.attributes.keys()
+        attrs = list(self.attributes.keys())
         attrs.sort()
         for attr in attrs:
             outfile.write(' %s="' % attr)
@@ -191,12 +187,11 @@ class DTFile:
     def set_root_node(self, node):
         self.rootnode = node
 
-
     # quick hack: interface gelijk maken voor "container" operaties
     # in DTParser
     def add_child(self, node):
         if self.rootnode:
-            raise "already got a root node!"
+            raise RuntimeError("already got a root node!")
         self.rootnode = node
 
     # N.B. merk op dat wanneer we XML schrijven, wil er voor diff geen
@@ -204,21 +199,16 @@ class DTFile:
     # xml-escape regels moeten hanteren
     def dump_content(self):
         self.rootnode.debug_print_node()
-        print "sentence:", self.sentence
+        print("sentence:", self.sentence)
         for comment in self.commentlist:
-            print "comment:", comment
+            print("comment:", comment)
 
 
-    def write_xml(self, outfile, encoding='UTF-8', version='1.5'):
-        """write the dependency structure to xml in encoding"""
-
-        # FIXME?: moeten we ook wat doen met \u escapes?
-        import codecs
-        outfile = codecs.getwriter(encoding)(outfile)
+    def write_xml(self, outfile, version='1.5'):
+        """write the dependency structure to xml"""
 
         # de xml-header
-        outfile.write('<?xml version="1.0" encoding="%s"?>\n'
-                      % encoding)
+        outfile.write('<?xml version="1.0" encoding="UTF-8"?>\n')
 
         # de root node
         if version == "":
@@ -227,11 +217,12 @@ class DTFile:
             outfile.write('<alpino_ds version="%s">\n' % version)
 
         # metadata
-        if len(self.metalist):
+        if self.metalist and len(self.metalist) > 0:
             outfile.write('  <metadata>\n')
 
             for meta in self.metalist:
-                outfile.write('    <meta type="%s" name="%s" value="%s"/>\n' % (meta['type'], meta['name'], meta['value']))
+                outfile.write('    <meta type="%s" name="%s" value="%s"/>\n' %
+                    (meta['type'], meta['name'], meta['value']))
 
             outfile.write('  </metadata>\n')
 
@@ -247,7 +238,7 @@ class DTFile:
         outfile.write('</sentence>\n')
 
         # evt commentaar
-        if len(self.commentlist):
+        if self.commentlist and len(self.commentlist) > 0:
             outfile.write('  <comments>\n')
 
             for comment in self.commentlist:
@@ -269,7 +260,6 @@ class DTParser:
 
         self.version = ""
         # self.parsefile(xmlfile)
-        pass
 
     def parsefile(self, xmlfile):
         xmldoc = minidom.parse(xmlfile)
@@ -308,7 +298,6 @@ class DTParser:
 
     def parse_Text(self, node, container):
         """parse a text node"""
-        pass
 
     def parse_Element(self, node, container):
         """parse an element
@@ -327,7 +316,6 @@ class DTParser:
 
         The xml files can contain XML comments, but we ignore them
         """
-        pass
 
     def do_alpino_ds(self, xmlnode, container):
         """Deze moet z'n kinderen activeren"""
@@ -359,7 +347,7 @@ class DTParser:
         except:
             pass
         else:
-            container.set_sentid(cgi.escape(sentid, True))
+            container.set_sentid(html.escape(sentid, True))
 
     def do_metadata(self, xmlnode, container):
         for elem in xmlnode.childNodes:
@@ -369,8 +357,8 @@ class DTParser:
 
     def do_meta(self, xmlnode, container):
         a = {}
-        for attr in xmlnode.attributes.keys():
-            a[attr] = cgi.escape(xmlnode.attributes[attr].value, True)
+        for attr, value in xmlnode.attributes.items():
+            a[attr] = html.escape(value, True)
         container.add_meta(a)
 
     def do_comments(self, xmlnode, container):
@@ -386,12 +374,24 @@ class DTParser:
         if text:
             container.add_comment(text)
 
+    def do_parser(self, xmlnode, container):
+        sys.stderr.write("Skipping <parser>\n")
+
+    def do_ud(self, xmlnode, container):
+        sys.stderr.write("Skipping <ud>\n")
+
+    def do_root(self, xmlnode, container):
+        sys.stderr.write("Skipping <root>\n")
+
+    def do_conllu(self, xmlnode, container):
+        sys.stderr.write("Skipping <conllu>\n")
+
     def get_text(self, xmlnode):
         """Get the text nodes from an xml element node"""
         the_text = ""
         for elem in xmlnode.childNodes:
             if elem.nodeType != elem.TEXT_NODE:
-                raise 'unexpected element content!!!'
+                raise RuntimeError('unexpected element content!!!')
             the_text += elem.nodeValue
         return the_text
 
@@ -446,8 +446,9 @@ class Canonicalizer:
 
         if node.gettype() == node.INDEXED:
             index = node['index']
-            if self.indexed_nodes.has_key(index):
-                raise self.Error(self.filename, 'index "%s" is used more than once' % index.encode('utf-8'))
+            if index in self.indexed_nodes:
+                raise self.Error(self.filename,
+                                 'index "%s" is used more than once' % index.encode('utf-8'))
 
             node.original_index = index
             self.indexed_nodes[index] = node
@@ -455,7 +456,7 @@ class Canonicalizer:
         elif node.gettype() == node.INDEX:
             index = node['index']
 
-            if not self.index_nodes.has_key(index):
+            if index not in self.index_nodes:
                 self.index_nodes[index] = [node]
             else:
                 self.index_nodes[index].append(node)
@@ -470,8 +471,8 @@ class Canonicalizer:
         # zijn, we hernummeren later toch
 
         # is er voor elke indexed node een index node?
-        for index in self.indexed_nodes.keys():
-            if not self.index_nodes.has_key(index):
+        for index in self.indexed_nodes:
+            if index not in self.index_nodes:
                 # # okee dan, we kunnen de index weghalen:
                 #
                 # # uit de knoop zelf...
@@ -482,13 +483,15 @@ class Canonicalizer:
                 # del self.indexed_nodes[index]
 
                 # de anotatoren verkiezen hier een fatal error
-                raise self.Error(self.filename, 'no target node for index "%s"' % index.encode('utf-8'))
+                raise self.Error(self.filename,
+                                  'no target node for index "%s"' % index.encode('utf-8'))
 
         # en is er voor iedere index node wel een indexed node?
-        for index in self.index_nodes.keys():
-            if not self.indexed_nodes.has_key(index):
+        for index in self.index_nodes:
+            if index not in self.indexed_nodes:
                 # een kale verwijzing
-                raise self.Error(self.filename, 'no source node for index "%s"' % index.encode('utf-8'))
+                raise self.Error(self.filename,
+                                 'no source node for index "%s"' % index.encode('utf-8'))
 
 
     def calculate_ranges(self):
@@ -550,8 +553,8 @@ class Canonicalizer:
             indices_in_progress.remove(node['index'])
 
         # determine the range of this node
-        begin = min(map(lambda(x): x[0], childranges))
-        end   = max(map(lambda(x): x[1], childranges))
+        begin = min([x[0] for x in childranges])
+        end   = max([x[1] for x in childranges])
 
         # build a list of all the words dominated by this node
         # (by number)
@@ -580,12 +583,14 @@ class Canonicalizer:
         try:
             begin = int(node['begin'])
         except ValueError:
-            raise self.Error(self.filename, 'non-numeric begin position "%s"' % node['begin'].encode('utf-8'))
+            raise self.Error(self.filename,
+                             'non-numeric begin position "%s"' % node['begin'].encode('utf-8'))
 
         try:
             end = int(node['end'])
         except ValueError:
-            raise self.Error(self.filename, 'non-numeric end position "%s"' % node['end'].encode('utf-8'))
+            raise self.Error(self.filename,
+                             'non-numeric end position "%s"' % node['end'].encode('utf-8'))
 
         return begin, end
 
@@ -593,8 +598,9 @@ class Canonicalizer:
     def check_leaf_node(self, node):
         """Check for missing attributes"""
         for attr in 'begin', 'end', 'word', 'lemma', 'postag':
-            if not node.has_key(attr):
-                raise self.Error(self.filename, "leaf node without @%s : %s!" % (attr, node.attributes))
+            if attr not in node.attributes:
+                raise self.Error(self.filename,
+                                 "leaf node without @%s : %s!" % (attr, node.attributes))
 
 
     def reorder_tree(self, node, id=0):
@@ -616,10 +622,10 @@ class Canonicalizer:
             # voorzie de bijbehorende index nodes van de nieuwe index
             for indexnode in self.index_nodes[old_index]:
                  # set a marker
-                 indexnode.index = self.next_index
+                indexnode.index = self.next_index
 
-                 # update the real attribute
-                 indexnode['index'] = new_index
+                # update the real attribute
+                indexnode['index'] = new_index
 
             self.next_index += 1
 
@@ -638,10 +644,10 @@ class Canonicalizer:
             indexed_node['index'] = new_index
 
             for indexnode in self.index_nodes[old_index]:
-                 # set a marker
-                 indexnode.index = self.next_index
-                 # update the real attribute
-                 indexnode['index'] = new_index
+                # set a marker
+                indexnode.index = self.next_index
+                # update the real attribute
+                indexnode['index'] = new_index
 
             self.next_index += 1
 
@@ -677,13 +683,21 @@ class Canonicalizer:
         id += 1
 
         # sort the children
-        node.children.sort(self.node_cmp)
+        #node.children.sort(self.node_cmp)
+        node.children.sort(key=self.sort_key)
 
         for child in node.children:
             id = self.reorder_tree(child, id)
         # return the next id to use
         return id
 
+    def sort_key(self, node):
+        s = '{:4d}\t{}\t{}'.format(
+            node.end,
+            ''.join(['{:4d}'.format(x) for x in node.dominated_words]),
+            node['rel'])
+        # print(s, file=sys.stderr)
+        return s
 
     # moet deze hier gedefinieerd of onder TreeNode?
     def node_cmp(self, nodeA, nodeB):
@@ -697,9 +711,9 @@ class Canonicalizer:
             if sortval == 0:
                 sortval = cmp(nodeA['rel'], nodeB['rel'])
                 if sortval == 0:
-                    raise 'sorting conflict while sorting "%s"!' \
+                    raise RuntimeError('sorting conflict while sorting "%s"!' \
                           "\n%s \n%s\n" \
-                          % (self.filename, nodeA.attributes, nodeB.attributes)
+                          % (self.filename, nodeA.attributes, nodeB.attributes))
         return sortval
 
     def write_xml(self, outfile):
@@ -733,38 +747,41 @@ if __name__ == '__main__':
     progname = os.path.basename(sys.argv[0])
 
     # command line opties parsen
-    parser = OptionParser("usage: %prog [options] <alpino xml-file(s)>", prog=progname)
+    parser = ArgumentParser(progname)
 
-    parser.add_option("--verbose", "-v", action="store_true", dest="verbose",
+    parser.add_argument("name", type=str, nargs="*", help="alpino xml-file")
+
+    parser.add_argument("--verbose", "-v", action="store_true", dest="verbose",
                       help="tell which file is being worked on")
 
-    parser.add_option("--stdin", "-s", action="store_true", dest="stdin",
+    parser.add_argument("--stdin", "-s", action="store_true", dest="stdin",
                       help="process a single file as a filter")
 
-    (options, args) = parser.parse_args()
+    options = parser.parse_args()
+    args = options.name
 
     if not args and not options.stdin:
         parser.print_help(sys.stderr)
         sys.exit(1)
-
 
     dtparser = DTParser()
 
     # de bestanden canoniek maken
     error_occurred = False
     if options.stdin:
+        sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8', newline=None, line_buffering=True)
         try:
             cn = Canonicalizer(dtparser, sys.stdin)
             cn.canonicalize()
             cn.write_xml(sys.stdout)
-        except Canonicalizer.Error, err:
-            print >> sys.stderr, '%s: Error: %s' % (progname, err)
+        except Canonicalizer.Error as err:
+            print('%s: Error: %s' % (progname, err), file=sys.stderr)
             error_occurred = True
     else:
         for file in args:
             try:
                 if options.verbose:
-                    print >> sys.stderr, "making file", file, 'canonical'
+                    print("making file", file, 'canonical', file=sys.stderr)
                 cn = Canonicalizer(dtparser, file)
                 cn.canonicalize()
 
@@ -777,7 +794,7 @@ if __name__ == '__main__':
                                                   os.path.dirname(file))
 
                 #  - we schrijven de nieuwe file naar die tempfile
-                tempfileobj = os.fdopen(tempfd, "w")
+                tempfileobj = os.fdopen(tempfd, "w", encoding="utf-8")
                 cn.write_xml(tempfileobj)
                 tempfileobj.close()
 
@@ -791,11 +808,11 @@ if __name__ == '__main__':
                 # de tempfile had waarschijnlijk te strenge permissies
                 os.chmod(file, perm)
 
-            except Canonicalizer.Error, err:
-                print >> sys.stderr, '%s: Error: %s' % (progname, err)
+            except Canonicalizer.Error as err:
+                print('%s: Error: %s' % (progname, err), file=sys.stderr)
                 error_occurred = True
-            except ExpatError, err:
-                print >> sys.stderr, '%s: while parsing %s: %s' % (progname, file, err)
+            except ExpatError as err:
+                print('%s: while parsing %s: %s' % (progname, file, err), file=sys.stderr)
                 error_occurred = True
 
     sys.exit(error_occurred and 1 or 0)

@@ -6,6 +6,8 @@ include $(ALPINO_HOME)/Makefile.include
 endif
 endif
 
+PWD:=${shell pwd}
+
 DYLIBLINKFLAGS=-fPIC -shared -lz
 WARN=-Wno-unused-local-typedefs
 CXXFLAGS=-O3 -Wall -std=c++11 -I. -fPIC   $(WARN)
@@ -36,10 +38,9 @@ PROLOGLIBS=prolog/corpusreader$(MODULEEXT)
 endif
 
 
-PYTHONLIBS=python/indexedcorpus$(PYMODULEEXT)
+PYTHONLIBS=../python-lib/IndexedCorpus-1.0.dist-info/RECORD
 
 all: libcorpus$(DYLIBEXT) libcorpus.a $(PROLOGLIBS) $(PYTHONLIBS)
-	cp python/indexedcorpus$(PYMODULEEXT) ../python-lib
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
@@ -63,8 +64,7 @@ prolog/corpusreader.so: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpus
 	$(SPLFR) prolog/corpusreader.pl prolog/corpusreader.cpp \
 		--cflag="$(CXXFLAGS)" -O2 -LD -Wall \
                 $(EXTRACXXFLAGS) \
-		-Wl,-rpath,$(PWD) \
-		-L. -lcorpus -lboost_filesystem \
+		-L$(PWD) -lcorpus -lboost_filesystem \
 		-lboost_system -lstdc++ -lz
 ifeq "$(PROLOG)" "sicstus"
 	mv corpusreader.so $@
@@ -74,8 +74,7 @@ prolog/corpusreader.bundle prolog/corpusreader.dylib: prolog/corpusreader.pl pro
 	$(SPLFR) prolog/corpusreader.pl prolog/corpusreader.cpp \
 		--cflag="$(CXXFLAGS)" -O2 -LD -Wall \
                 $(EXTRACXXFLAGS) \
-		-Wl,-rpath,$(PWD) \
-		-L. -lcorpus -lboost_system-mt \
+		-L$(PWD) -lcorpus -lboost_system-mt \
 		-lboost_filesystem-mt -lstdc++ -lz
 ifeq "$(PROLOG)" "sicstus"
 	mv corpusreader.bundle $@
@@ -88,18 +87,17 @@ endif
 prolog/corpusreader.s.o: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpus$(DYLIBEXT)
 	splfr prolog/corpusreader.pl prolog/corpusreader.cpp \
 		 --static --cflag="$(CXXFLAGS) -fPIE" -O2 -LD -Wall \
-		-Wl,-rpath,$(PWD)  \
-		-L.  -lcorpus \
+		-L$(PWD)  -lcorpus \
 		-lboost_filesystem -lboost_system -lstdc++ -lz
 	mv corpusreader.s.o $@
 
-python/indexedcorpus$(PYMODULEEXT): python/indexedcorpus.cpp libcorpus.a
-	rm -f python/indexedcorpus$(PYMODULEEXT)
-	rm -rf python/build
+$(PYTHONLIBS): python/indexedcorpus.cpp libcorpus.a
+	rm -rf python/IndexedCorpus*.egg* python/build
+	rm -rf ../python-lib/IndexedCorpus* ../python-lib/indexedcorpus*
 	if [ -x ${PLATFORM} = "darwin" ] ; then \
-		( cd python ; CFLAGS="$(CXXFLAGS)" ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=/usr python setup.py install --install-platlib=. ) \
+		( cd python ; CFLAGS="$(CXXFLAGS)" ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=/usr pip3 install -I -t ../../python-lib ) \
 	else \
-		( cd python ; CFLAGS="$(CXXFLAGS)" BOOST_HOME=/usr python setup.py install --install-platlib=. ) \
+		( cd python ; CFLAGS="$(CXXFLAGS)" BOOST_HOME=/usr pip3 install -I -t ../../python-lib . ) \
 	fi
 
 test/test: libcorpus.a test/test.cpp
@@ -115,13 +113,15 @@ clean:
 realclean: clean
 	rm -f libcorpus$(DYLIBEXT)
 	rm -f prolog/corpusreader$(MODULEEXT) prolog/corpusreader_swi_glue.c
-	rm -f python/indexedcorpus$(DYLIBEXT) python/IndexedCorpus-1.0.egg-info
+	rm -f python/indexedcorpus.touch
+	rm -fr python/IndexedCorpus*.egg-info
 	rm -f libcorpus.a
 	rm -f test/test
-	rm -f ../python-lib/indexedcorpus$(PYMODULEEXT)
+	rm -f ../python-lib/indexedcorpus.*
+	rm -fr ../python-lib/IndexedCorpus-1.0.egg-info
 
 install: dtnext
 	cp dtnext dtprev ../../bin
 
 dtnext: dtnext.cc 
-	g++  $(CXXFLAGS) -o dtnext dtnext.cc -L. -lcorpus -Wl,-rpath,$(PWD) -lboost_system -lboost_filesystem -lz
+	g++  $(CXXFLAGS) -o dtnext dtnext.cc -L. -lcorpus -Wl,-rpath=$(PWD) -lboost_system -lboost_filesystem -lz

@@ -12,43 +12,34 @@ all:
 	$(MAKE) -j dtchecks novel
 	$(MAKE) -j prepare_enhanced_all
 	$(MAKE) -j enhanced_all poslemma
-	$(MAKE) -j freq trees_doc sents sentspl conllu pair dact
+	$(MAKE) -j 30 freq trees_doc sentspl conllu pair installsents alpino.dact
 
 novel:
-	( cd fast; make -j i_suite.log extra.log )
+	( cd fast; make -j i_suite.log extra.log j_suite.log )
 
-DIRECTORIES=cdb cgn_exs eans extra g_suite h_suite i_suite lassy leuven_yellow_pages lot_test_suite1 \
-             novelsample_corrected ntv-suite qa Titaantjes wpspel
+DIRECTORIES=cdb cgn_exs eans extra g_suite h_suite i_suite lassy-doc leuven_yellow_pages lot_test_suite1 \
+             novelsample_corrected ntv-suite qa Titaantjes wpspel j_suite
 
-trees_doc: 
-	for dir in $(DIRECTORIES); do\
-                   ( cd Enhanced/$$dir ;\
-                     echo Enhanced/$$dir;\
-                     $(MAKE)  -j 30 index.html );\
-                   done
+%.doc:
+	(  cd Enhanced/$*; $(MAKE) index.html )
 
-trees_realclean:
-	for dir in $(DIRECTORIES); do\
-                   ( cd Enhanced/$$dir ;\
-                     echo Enhanced/$$dir;\
-                     $(MAKE) realclean );\
-                   done
+trees_doc: $(DIRECTORIES:%=%.doc)
+
+%.realclean:
+	(  cd Enhanced/$*; $(MAKE) realclean )
 
 clean:
 
 install: 
 
-realclean: clean trees_realclean
+realclean: clean $(DIRECTORIES:%=%.realclean)
 
 transform:
 	find $(DIRECTORIES) -name '*.xml' | xargs Alpino -u -xml_converse
 
-dact: $(DIRECTORIES:%=Enhanced/%.dact) 
-
-Enhanced/%.dact: Enhanced/%/*.xml
-	alpinocorpus-create -d Enhanced/$*.dact.new Enhanced/$*
-	chmod 644 Enhanced/$*.dact.new
-	mv Enhanced/$*.dact.new Enhanced/$*.dact
+alpino.dact: $(DIRECTORIES:%=Enhanced/%/*.xml)
+	( cd Enhanced ; rm -f alpino.dact ; alto $(DIRECTORIES) -o alpino.dact )
+	mv Enhanced/alpino.dact alpino.dact
 
 freq: $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq $(TMPDATA)
 	mkdir -p FREQ LP TRIPLES
@@ -177,18 +168,18 @@ enhanced_all: $(DIRECTORIES:%=%.enhanced)
 sents: $(DIRECTORIES:%=../SENTS/%.sents)
 ../SENTS/%.sents: Enhanced/%/*.xml $(XSL)/dt2sent_with_sentid.xsl
 	( cd Enhanced/$* ;\
-             ls -v *.xml |\
-             xargs dtxslt -s\
+             ls -v ./*.xml |\
+             dtxslt --stdin -s\
              $(XSL)/dt2sent_with_sentid.xsl |\
              sed -e 's/\[/\\\[/g' \
                  -e 's/\]/\\\]/g') > $@
-sentspl:
+sentspl: sents
 	(  cd ../SENTS ; make )
 
 conllu: $(DIRECTORIES:%=../CONLLU/%.conllu)
 
-../CONLLU/%.conllu: Enhanced/%/*.xml $(ALUD)
-	ls -v ../Treebank/Enhanced/$*/*.xml | $(ALUD) $(ALUD_OPTIONS) > ../CONLLU/$*.conllu 2> ../CONLLU/$*.conllu.err
+../CONLLU/%.conllu: Enhanced/%/*.xml
+	ls -v ../Treebank/Enhanced/$*/*.xml | alud > ../CONLLU/$*.conllu 2> ../CONLLU/$*.conllu.err
 
 
 #	( cd fast; make eans.log BASE=/net/aistaff/vannoord/z/Alpino )
@@ -196,13 +187,12 @@ conllu: $(DIRECTORIES:%=../CONLLU/%.conllu)
 ## all steps for one suite only
 update:
 	$(MAKE) sql/$(suite).sqlite corpus=$(suite)
-	$(MAKE) enhanced corpus=$(suite)
+	$(MAKE) $(suite).enhanced
 	$(MAKE) POSLEMMA/$(suite).poslemma
 	$(MAKE) MWU/$(suite).mwu FREQ/mwu-tagged.freq
 	(  cd Enhanced/$(suite); $(MAKE) -s --no-print-directory -j 30 index.html )
 	$(MAKE) ../SENTS/$(suite).sents sentspl
 	$(MAKE) ../CONLLU/$(suite).conllu
-	$(MAKE) Enhanced/$(suite).dact
 
 TMPDATA:=$(DIRECTORIES:%=LP/%.lp) $(LASSYSMALL)/LP/*.lp
 
@@ -286,12 +276,16 @@ FREQ/POS-WORD-LEMMA.freq: FREQ/POS.freq FREQ/WORD-LEMMA-POS.freq
 
 suites: $(DIRECTORIES:%=Suites/%.sents)
 
-Suites/%.sents: Enhanced/%
+Suites/%.sents: Enhanced/%/*.xml
 	( cd Enhanced/$* ;\
-             ls -v *.xml |\
+             ls -v ./*.xml |\
              dtxslt --stdin -s\
              $(XSL)/dt2sent_with_key.xsl |\
              sed -e 's/\[/\\\[/g' \
                  -e 's/\]/\\\]/g') > $@
 
+installsents: $(DIRECTORIES:%=%.sents.gz)
+
+%.sents.gz: Suites/%.sents
+	cat $< | (cd $(ALPINO_HOME)/Suites/Machine ; ../split_in_parts -o $* -p 200 )
 

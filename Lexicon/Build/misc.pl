@@ -499,6 +499,8 @@ punct(',',komma).
 
 punct('·',ligg_streep).    % whatever
 punct('*',ligg_streep).    % whatever
+punct('**',ligg_streep).    % whatever
+punct('***',ligg_streep).    % whatever
 
 punct(-,ligg_streep).
 punct('',ligg_streep).
@@ -1137,6 +1139,7 @@ tag([o,nee]).
 tag([o,wee]).
 tag(och).
 tag(ocharme).
+tag([och,arme]).
 tag(oef).
 tag(oeh).
 tag(oei).
@@ -2082,7 +2085,6 @@ m('u al',    determiner(pron),[uw,aller]).
 %m(u,            determiner(pron),uwer).
 m(u,             determiner(der),uwer).
 m(u,             determiner(der),uws).  % erg ouderwets
-m('van de',      determiner(der),vd).
 m(veel,          determiner(pron),veler).
 m(voldoende,     determiner(wat,nwh,mod,pro,yparg),voldoende).
 m(volop,         determiner(wat),volop).
@@ -2321,6 +2323,20 @@ with_dt([van,zulke],
 		  mod=l(van,preposition(van,[]),pp,0,1)
 		])
        ).
+
+with_dt([één,en,dezelfde],
+	determiner(de,nwh,mod,pro,yparg),
+	dt(conj,[cnj=l(één,number(hoofd(sg_num)),detp,0,1),
+		 crd=l(en,conj(en),conj,1,2),
+		 cnj=l(dezelfde,determiner(de,nwh,mod,pro,yparg),detp,2,3)
+		])).
+
+with_dt([één,of,meerdere],
+	determiner(pl_num,nwh,nmod,pro,yparg),
+	dt(conj,[cnj=l(één,number(hoofd(sg_num)),detp,0,1),
+		 crd=l(of,conj(of),conj,1,2),
+		 cnj=l(meerdere,determiner(pl_num,nwh,nmod,pro,yparg),detp,2,3)
+		])).
 
 %m(welk,          determiner(pron,rwh), welks). parse_only_lex
 m(wiens,         determiner(pron,rwh), wiens).
@@ -2770,7 +2786,7 @@ preposition(per).  % per een bepaalde periode; per die datum; etc.
 preposition(staande).
 preposition(tegenover).
 preposition(tegen,[aan,in,op]).
-preposotion(tegenaan). % VL
+preposition(tegenaan). % VL
 preposition(tot,[toe,[aan,toe]]).
 preposition(tussen,[door,in,vandaan]).
 preposition(uit,[vandaan]).
@@ -2881,7 +2897,6 @@ collocational_preposition([in,antwoord,op]).
 collocational_preposition([in,combinatie,met]).
 collocational_preposition([in,de,aanloop,naar]).
 %%% collocational_preposition([in,de,buurt,van]).        % compositional?
-collocational_preposition([in,de,geest,van]).
 collocational_preposition([in,de,hitte,van]).
 collocational_preposition([in,de,loop,van]).
 collocational_preposition([in,het,loop,van]).            % Vlaams?
@@ -2944,6 +2959,7 @@ collocational_preposition([op,uitnodiging,van]).
 collocational_preposition([op,verdenking,van]).
 collocational_preposition([op,verzoek,van]).
 collocational_preposition([op,voet,van]).
+collocational_preposition([op,vraag,van]). % VL
 collocational_preposition([te,midden]).  % VL
 collocational_preposition([te,midden,van]).
 collocational_preposition([ten,aanzien,van]).
@@ -3695,7 +3711,8 @@ m('aan\'t',         preposition(aan,[],nodet),  'aan\'t' ).
 m(te,               preposition(te, [],nodet),  te       ).
 m(te,               preposition(ten,[],nodet),  ten      ).
 m(te,               preposition(ter,[],nodet),  ter      ).
-m('v/d',            preposition(van,[],nodet),  'v/d'    ).
+m('van de',         preposition(van,[],nodet),  'v/d'    ).
+m('van de',         preposition(van,[],nodet),  vd       ).
 
 m(voor,             preposition(voor,[],voor_pred),voor).   
 % voor onmogelijk houden/verslijten
@@ -4076,6 +4093,7 @@ m(Stem,conj(Stem),Surf) :-
     conj/2,
     conj/3.
 
+conj('&',              '&').
 conj(à,                à).
 conj(alsmede,          alsmede,   maar).
 conj(alsook,           alsook,    maar).
@@ -4163,6 +4181,7 @@ etc(enzo).
 etc([en,zo,voort]).
 etc([en,zo,voorts]).
 etc([en,dergelijke]).
+etc([en,dies,meer]).
 etc([en,wat,dies,meer,zij]).
 etc([en,wat,niet,al]).
 etc('e.a').
@@ -4698,9 +4717,6 @@ m(zo,               zo_mogelijk_zo,zo).
 m(mogelijk,         zo_mogelijk_mogelijk(no_e),mogelijk).
 m(mogelijk,         zo_mogelijk_mogelijk(e),mogelijke).
 
-%% postn_adverb: not with pronouns
-%% postnp_adverb: also with pronouns
-
 m(allerlei,         postn_adverb,allerlei). % Vlaams
 m(allerhande,       postn_adverb,allerhande). 
 m(apart,            postn_adverb,apart).  % verhaal, vak, paar, geval, klasse
@@ -4751,6 +4767,15 @@ with_dt([lange,baan],
 m(sprint,           postn_adverb,sprint).
 m(weltergewicht,    postn_adverb,weltergewicht).
 m(zwaargewicht,     postn_adverb,zwaargewicht).
+
+with_dt([alleen,al],
+	postp_adverb,
+	dt(advp,[hd=l(alleen,adverb,advp,0,1),
+		 mod=l(al,adverb,advp,1,2)
+		])).
+
+m(junior,           postpn_adverb,junior).
+m(senior,           postpn_adverb,senior).
 
 %% in principe althans
 %% volgens Piet althans
@@ -4822,8 +4847,13 @@ m(hemzelf,          postnp_adverb,hemzelve).
 m(opnieuw,          postnp_adverb,opnieuw).  % elke dag opnieuw
 m(weer,             postnp_adverb,weer).     % elke dag weer
 
+with_dt([alleen,al],
+	postnp_adverb,
+	dt(advp,[hd=l(alleen,adverb,advp,0,1),
+		 mod=l(al,adverb,advp,1,2)
+		])).
+
 m(al,               postnp_adverb,al).	%% tweehonderd mensen al hebben ..
-m('alleen al',      postnp_adverb,[alleen,al]).
 m(reeds,            postnp_adverb,reeds).
 m(inmiddels,        postnp_adverb,inmiddels).
 
@@ -4939,13 +4969,18 @@ modified_modal_mod_hd(alleen,maar,advp,adverb).
 
 modified_modal_hd_mod_mod(vooral,ook,weer).
 
+with_dt([alleen,al],
+	modal_adverb,
+	dt(advp,[hd=l(alleen,adverb,advp,0,1),
+		 mod=l(al,adverb,advp,1,2)
+		])).
+
 m(Stem, modal_adverb, Surf) :-
     modal_adverb(Surf),
     stem_from_surf(Surf,Stem).
 
 modal_adverb(al).
 modal_adverb(alleen).  
-modal_adverb([alleen,al]).
 modal_adverb([al,dan,niet]).
 modal_adverb([al,of,niet]).
 modal_adverb(allesbehalve).
@@ -5075,7 +5110,7 @@ m(krap,             modal_adverb(noun_prep),krap).
 m(liefst,           modal_adverb(noun_prep),liefst).
 % maar de helft van de aanwezigen had een kaartje
 % maar in twaalf procent van de gevallen ...
-m(maar,             modal_adverb(noun_prep),maar).
+m(maar,             modal_adverb(noun_prep),maar).    % also adv? "maar ternauwernood"
 m('maar liefst',    modal_adverb(noun_prep),[maar,liefst]).
 m('maar liefst',    modal_adverb(noun_prep),maarliefst).
 m(maximaal,         modal_adverb(noun_prep),maximaal).
@@ -5120,6 +5155,7 @@ m(alweer,           modal_adverb(noun),alweer).
 m('een beetje',     modal_adverb(noun),[een,beetje]).
 				% een beetje een aansteller is hij wel
 				% hij profileert zich als een beetje een linkse projectontwikkelaar
+m(echt,             modal_adverb(noun),echt). 
 m('every inch',     modal_adverb(noun),[every,inch]).
 m(gans,             modal_adverb(noun),gans). % gans het land
 m('naar schatting', modal_adverb(noun),[naar,schatting]). % bedragen
@@ -5147,6 +5183,18 @@ m(onmiddellijk,     modal_adverb(comp_prep),onmiddellijk).
 m(terstond,         modal_adverb(comp_prep),terstond).
 m(vlak,             modal_adverb(comp_prep),vlak). % vlak voor(dat)..
 
+with_dt([naar,schatting],
+	 modal_adverb(noun),
+	 dt(pp,[hd=l(naar,preposition(naar,[]),pp,0,1),
+		obj1=l(schatting,noun(de,count,sg),np,1,2)
+	       ])).
+
+with_dt([naar,schatting],
+	 adverb,
+	 dt(pp,[hd=l(naar,preposition(naar,[]),pp,0,1),
+		obj1=l(schatting,noun(de,count,sg),np,1,2)
+	       ])).
+
 with_dt([Ook,Al],
 	modal_adverb(comp_prep),
 	dt(Cat,[mod=l(Ook,adverb,advp,0,1),
@@ -5172,7 +5220,10 @@ m(temeer,           modal_adverb(comp), temeer).  % temeer daar/omdat
 m('te veel',        modal_adverb(comp), [te,meer]).  % temeer daar/omdat
 
 
+%% todo: dichter bij elkaar [dan ...]!
+%% nog dieper in blessuretijd
 m(desnoods,         modal_adverb(prep),desnoods).
+m(centraal,         modal_adverb(prep),centraal). % centraal in het midden; op het veld
 m(dicht,            modal_adverb(prep),dicht).    % dicht tegen zich aan ; dicht bij de macht?
 m(diep,             modal_adverb(prep),diep).     % diep in blessuretijd
 m(dwars,            modal_adverb(prep),dwars).    % dwars door
@@ -5184,8 +5235,10 @@ m(pal,              modal_adverb(prep),pal).      % pal naast/achter/..
 m(recht,            modal_adverb(prep),recht).    % recht tegenover ..
 m(recht,            modal_adverb(prep),recht).    % lijnrecht tegenover ..
 m(redelijk,         modal_adverb(prep),redelijk). % redelijk op tijd
-m(volkomen,         modal_adverb(prep),volkomen). % with pp (predicative?)
-				% 'volkomen tegen mijn wil' / in de war
+m(ster,             modal_adverb(prep),sterk).    % sterk in de minderheid
+m(volkomen,         modal_adverb(prep),volkomen). % with pp (predicative?) % 'volkomen tegen mijn wil' / in de war
+m(zwaar,            modal_adverb(prep),zwaar).    % zwaar onder druk staan
+				
 
 %% mede dankzij hem; mede omdat; mede om ..
 m(deels,            modal_adverb(comp_prep_verb), deels).
@@ -6361,6 +6414,7 @@ m(daarentegen,      postadv_adverb,daarentegen).
 m(derhalve,         postadv_adverb,derhalve).
 m(echter,           postadv_adverb,echter).
 m(dus,              postadv_adverb,dus).
+m(eerst,            postadv_adverb,eerst).   % dan eerst kan Pakistan een normaal land worden
 m(evenwel,          postadv_adverb,evenwel).
 m(immers,           postadv_adverb,immers).
 m(intussen,         postadv_adverb,intussen).
@@ -6604,12 +6658,12 @@ m(Stem,predm_adverb,Surf) :-
     predm_adverb(Surf),
     stem_from_surf(Surf,Stem).
 
-m(al,predm_adverb,alle).
-m(beide,predm_adverb,beiden).
+m(al,               predm_adverb,  alle).
+m(al,               predm_adverb,  allen).
+m(beide,            predm_adverb,  beiden).
 
 m('geen van alle',  predm_adverb,  [geen,van,alle]).
 m('geen van allen', predm_adverb,  [geen,van,allen]).
-m(al,               predm_adverb,  allen).
 m('geen van beide', predm_adverb,  [geen,van,beide]).
 m('geen van beide', predm_adverb,  [geen,van,beiden]).
 
@@ -7265,7 +7319,7 @@ with_dt([helemaal,niks],
 with_dt([zo,eentje],
 	pronoun(nwh,thi,sg,de,both,indef,strpro),
 	dt(np,[mod=l(zo,adverb,advp,0,1),
-	       hd=l(eentje,pronoun(nwh,thi,sg,de,both,indef,strpro),1,2)
+	       hd=l(één,pronoun(nwh,thi,sg,de,both,indef,strpro),1,2)
 	      ])).
 
 with_dt([niet,iedereen],
@@ -8837,6 +8891,7 @@ term([meet,and,greet],[meet,and,greets]).
 term([method,acting]).
 term([middle,class]).
 term([middle,of,the,road]).
+term(['mid-term','review']).
 term([mission,impossible]).
 term([monologue,intérieur]).
 term([money,time]).
@@ -9031,6 +9086,7 @@ term([welles,'-',nietes]).
 term([welles,'/',nietes]).
 term(['welles-nietes']).
 term(['welles/nietes']).
+term([wet,lease]).
 term([white,trash]).
 term([winner,takes,all]).
 term([winning,goal],       [winning,goals]).

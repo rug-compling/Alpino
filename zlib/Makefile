@@ -6,6 +6,8 @@ include $(ALPINO_HOME)/Makefile.include
 endif
 endif
 
+PWD:=${shell pwd}
+
 PRO_ZLIB=zlib$(MODULEEXT)
 
 PRO_ZLIB_STATIC=zlib.s.o
@@ -18,11 +20,11 @@ endif
 
 zlib.so: zlib.c zlib.pl
 	$(SPLFR) zlib.pl zlib.c \
-		-lz -LD -Wl,-rpath,$(PWD) $(LDFLAGS)
+		-lz -LD -Wl,-rpath=$(PWD) $(LDFLAGS)
 
 zlib.bundle zlib.dylib: zlib.c zlib.pl
 	$(SPLFR) zlib.pl zlib.c \
-		-lz -LD -Wl,-rpath,$(PWD) $(LDFLAGS)
+		-lz -LD -Wl,-rpath=$(PWD) $(LDFLAGS)
 
 zlib.s.o: zlib.c zlib.pl
 	splfr zlib.pl zlib.c \

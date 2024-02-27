@@ -14,7 +14,7 @@ KERNEL=$(shell uname -s)
 GLIBC=$(shell getconf GNU_LIBC_VERSION)
 PLATFORM=$(shell echo "$(HARDWARE) $(KERNEL) $(GLIBC)" | tr ' ' '-' )
 
-gitversion=$(shell git log --oneline | wc -l)
+gitversion=$(shell git log -1 --format="%at" | xargs -I{} date -u -d @{} +%Y%m%d.%H%M%S)
 TAR=Alpino-$(PLATFORM)-git$(gitversion)-$(PROLOG).tar.gz 
 
 

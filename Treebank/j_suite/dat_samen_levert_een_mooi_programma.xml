@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" getal="ev" id="3" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+        <node aform="base" begin="1" end="2" id="4" infl="pred" lemma="samen" pos="adj" postag="BW()" pt="bw" rel="mod" root="samen" vform="adj" word="samen"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg3" lemma="leveren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lever" sc="transitive" stype="declarative" tense="present" v_per="thi" word="levert" wvorm="pv"/>
+      <node begin="3" cat="np" end="6" id="6" rel="obj1">
+        <node begin="3" end="4" id="7" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="8" infl="no_e" lemma="mooi" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="mooi" vform="adj" word="mooi"/>
+        <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="9" lemma="programma" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="programma" word="programma"/>
+      </node>
+    </node>
+  </node>
+  <sentence>dat samen levert een mooi programma</sentence>
+</alpino_ds>

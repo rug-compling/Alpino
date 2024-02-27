@@ -14,23 +14,24 @@ check_connect(F,PREV) :-
 
 check_predict(F,PREV) :-
     create_index(g(F,[PREV]),Index),
-    bool_vector_member(Index).
+   bool_vector_member(Index).
+
 %%    format(user_error,"predict succeeds: ~w ~w~n",[g(F,[PREV]),Index]).
 
-%check_connect(F,PREV) :-
+% check_connect(F,PREV) :-
 %    create_index(g(F,PREV),Index),
 %    (   bool_vector_member(Index)
 %    ->  true
 %    ;   format(user_error,"connect failed: ~w ~w~n",[F,PREV]),
-%	fail
+% 	fail
 %    ).
-%
-%check_predict(F,PREV) :-
+
+% check_predict(F,PREV) :-
 %    create_index(g(F,[PREV]),Index),
 %    (   bool_vector_member(Index)
 %    ->  true
 %    ;   format(user_error,"predict failed: ~w ~w~n",[F,PREV]),
-%	fail
+% 	fail
 %    ).
 
 

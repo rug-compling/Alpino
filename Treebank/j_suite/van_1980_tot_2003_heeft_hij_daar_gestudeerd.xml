@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="4" end="5" id="2" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" v_per="thi" word="heeft" wvorm="pv"/>
+      <node begin="5" case="nom" def="def" end="6" gen="de" genus="masc" getal="ev" id="3" index="1" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="0" cat="ppart" end="8" id="4" rel="vc">
+        <node begin="0" cat="du" end="4" id="5" rel="mod">
+          <node begin="0" cat="pp" end="2" id="6" rel="dp">
+            <node begin="0" end="1" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="1" end="2" id="8" lemma="1980" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1980" word="1980"/>
+          </node>
+          <node begin="2" cat="pp" end="4" id="9" rel="dp">
+            <node begin="2" end="3" id="10" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+            <node begin="3" end="4" id="11" lemma="2003" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="2003" word="2003"/>
+          </node>
+        </node>
+        <node begin="5" end="6" id="12" index="1" rel="su"/>
+        <node begin="6" end="7" getal="getal" id="13" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="daar" special="er_loc" status="vol" vwtype="aanw" word="daar"/>
+        <node begin="7" buiging="zonder" end="8" id="14" infl="psp" lemma="studeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="studeer" sc="ld_adv" word="gestudeerd" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>van 1980 tot 2003 heeft hij daar gestudeerd</sentence>
+</alpino_ds>

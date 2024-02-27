@@ -52,7 +52,7 @@ all: weights tests
 	zcat $*.sgz\
         | $(ALPINO_HOME)/Disambiguation/count_features -f \
         | grep -v -f ignore_features \
-        | python filter_features.py $(filter_features_flags) > $*.counts
+        | python3 filter_features.py $(filter_features_flags) > $*.counts
 
 %.features: %.tcounts min_feature_freq
 	awk -F\| 'BEGIN { N=0 }\
@@ -76,7 +76,7 @@ all: weights tests
 	@echo "number of features: `wc -l $*.weights`"           > $*.test
 	@echo "min_feature_freq: $(MIN_FEATURE_FREQ)"            > $*.test
 	@echo "variances:        $(VARIANCES)"                   > $*.test
-	@zcat $*.gz | python evaluate.py -f $*.weights           > $*.test
+	@zcat $*.gz | python3 evaluate.py -f $*.weights           > $*.test
 
 N=1
 overview:

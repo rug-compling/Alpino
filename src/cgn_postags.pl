@@ -655,6 +655,7 @@ guess_lex(Q0,Q,Frame0,Surf,Stem) -->
 %% no longer necc?
 %% only used for parts of mwu that are not in lexicon without decap
 %% "Eerste Kamerfractie"
+%% "IJs en weder" dienende
 guess_lex(Q0,Q,_,Surf,Stem) -->
     {  alpino_unknowns:decap_first(Surf,Surf1),
        frequent_tag(Surf1,Stem,Frame)
@@ -1306,6 +1307,7 @@ exceptional_stem_tag(jongstleden,postn_adverb,                'ADJ(postnom,basis
 exceptional_stem_tag(jouwe,noun(both,count,both),             'VNW(bez,det,stan,vol,2v,ev,nom,met-e,zonder-n)',jou).
 exceptional_stem_tag(jouwe,noun(both,count,pl),               'VNW(bez,det,stan,vol,2v,ev,nom,met-e,mv-n)',jou).
 exceptional_stem_tag(junior,postn_adverb,                     'ADJ(postnom,basis,zonder)',junior).
+exceptional_stem_tag(junior,postpn_adverb,                    'ADJ(postnom,basis,zonder)',junior).
 exceptional_stem_tag(kortweg,_,                               'BW()',kortweg).
 exceptional_stem_tag(man,postn_adverb,                        'N(soort,mv,basis)',man).
 exceptional_stem_tag(mee,loc_adverb,                          'VZ(fin)',mee).
@@ -1317,6 +1319,7 @@ exceptional_stem_tag(over,adjective(_),                       'VZ(fin)',over).
 exceptional_stem_tag(overledene,noun(de,count,sg),            'WW(vd,nom,met-e,zonder-n)',overlijden).
 exceptional_stem_tag(overledenen,noun(de,count,pl),           'WW(vd,nom,met-e,mv-n)',overlijden).
 exceptional_stem_tag(senior,postn_adverb,                     'ADJ(postnom,basis,zonder)',senior).
+exceptional_stem_tag(senior,postpn_adverb,                    'ADJ(postnom,basis,zonder)',senior).
 exceptional_stem_tag(sprake,_,                                'N(soort,ev,basis,dat)',spraak).
 exceptional_stem_tag(stel,tag,                                'WW(pv,tgw,ev)',stellen).
 exceptional_stem_tag(streven,noun(het,mass,sg),               'WW(inf,nom,zonder,zonder-n)',streven).
@@ -1830,6 +1833,7 @@ exceptional_word_tag(kwoots,_,quote,_,'N(soort,mv,basis)').
 
 exceptional_word_tag(nl,_,'Nederland',noun(_,_,_),'SPEC(afk)').
 exceptional_word_tag(nl,_,namelijk,sentence_adverb,'SPEC(afk)').
+exceptional_word_tag('n.a.g.',_,'niet afzonderlijk genoemd',_,'SPEC(afk)').
 exceptional_word_tag(Word,_,Stem,Tag,'SPEC(afk)') :-
     afk(Word,Stem,Tag).
 
@@ -1878,7 +1882,6 @@ afk('max.',maximaal,_).
 afk('mln',miljoen,_).
 afk('mln.',miljoen,_).
 afk('m.n.','met name',_).
-afk('n.a.g.','niet afzonderlijk genoemd',_).
 afk('n.a.v.','naar aanleiding van',_).
 afk('N.B.','nota bene',_).
 afk('n.Chr.','na Christus',_).
@@ -2135,6 +2138,7 @@ cgn_postag_c(pre_wh_adverb,                   'BW()').
 cgn_postag_c(vandaar_adverb,                  'BW()').
 cgn_postag_c(postp_adverb,                    'BW()').
 cgn_postag_c(postn_adverb,                    'BW()').
+cgn_postag_c(postpn_adverb,                   'BW()').
 cgn_postag_c(zo_van_adverb,                   'BW()').
 cgn_postag_c(vp_adverb,                       'BW()').
 cgn_postag_c(wk_tmp_adverb,                   'BW()').

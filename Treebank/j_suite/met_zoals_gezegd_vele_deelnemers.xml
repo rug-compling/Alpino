@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="pp" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" sc="absolute" vztype="init" word="met"/>
+      <node begin="1" cat="cp" end="3" id="3" rel="mod">
+        <node begin="1" conjtype="onder" end="2" id="4" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" sc="zoals" word="zoals"/>
+        <node begin="2" buiging="zonder" end="3" id="5" infl="psp" lemma="zeggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="body" root="zeg" sc="tr_sbar" word="gezegd" wvorm="vd"/>
+      </node>
+      <node begin="3" cat="np" end="5" id="6" rel="obj1">
+        <node aform="base" begin="3" buiging="met-e" end="4" graad="basis" id="7" infl="e" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,agr,basis)" pt="vnw" rel="mod" root="veel" vform="adj" vwtype="onbep" word="vele"/>
+        <node begin="4" end="5" gen="de" getal="mv" graad="basis" id="8" lemma="deelnemer" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="deelnemer" word="deelnemers"/>
+      </node>
+    </node>
+  </node>
+  <sentence>met zoals gezegd vele deelnemers</sentence>
+</alpino_ds>

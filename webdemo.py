@@ -1,12 +1,25 @@
+#!/usr/bin/env python3
+
+import io
 import socket
-import cgi
-import cgitb
+import sys
 import tempfile
-cgitb.enable()
+from urllib import parse
 
-form = cgi.FieldStorage()
-words = form.getlist("words")
+#sys.stdin.reconfigure(encoding='utf-8')
+sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8', newline=None, line_buffering=True)
+form = {}
+for line in sys.stdin:
+    for key, val in parse.parse_qsl(line,
+                                    strict_parsing=False,
+                                    encoding='utf-8',
+                                    errors='replace',
+                                    max_num_fields=None):
+        if key not in form:
+            form[key] = []
+        form[key].append(val)
 
+words = form.get('words', '')
 
 examples = [
 "Leden van de Staten-Generaal,",
@@ -117,7 +130,7 @@ print("""
 <h1>Alpino: Automatic Syntactic Analysis of Dutch</h1>
 <img src=/~vannoord/alp/Alpino/mat2.gif align=left alt=Svejk title=Svejk width=150>
 <p>
-Sentences which take longer than 20 seconds to parse are ignored. 
+Sentences which take longer than 20 seconds to parse are ignored.
 The input is assumed to be a single sentence. Please type
 the sentence as you would do normally, with capitals at the beginning
 and for names etc. All sentences are logged and <a href="http://www.let.rug.nl/vannoord/bin/alpinods_dir?webdemo/">visible</a> for others.
@@ -137,7 +150,7 @@ For more info on the Alpino Parser visit the <a href="/~vannoord/alp/Alpino/">Al
 <input type="text" name=words size=120/>
 <input type="submit" value=" parse! "/>
 <p>
-<select name="example" onchange="this.form.words.value=options[options.selectedIndex].value" \>
+<select name="example" onchange="this.form.words.value=options[options.selectedIndex].value" />
 <option selected="selected" value="" >Examples</option>
 
 """)
@@ -165,19 +178,18 @@ else:
     port = 42424
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     s.connect((host,port))
-    s.sendall(data.encode())    
+    s.sendall(data.encode('utf-8'))
     total_xml=[]
     while True:
         xml = s.recv(8192)
         if not xml:
             break
-        total_xml.append(str(xml,encoding='utf8'))
-        
+        total_xml.append(xml.decode('utf-8'))
+
 
     xmlfile,filename = tempfile.mkstemp(suffix=".xml",prefix="alp",dir="../tmp")
-    xmlout = open(filename,"w")
-    print("".join(total_xml),file=xmlout)
-    xmlout.close()
+    with open(filename,"wt", encoding="utf-8") as xmlout:
+        xmlout.write("".join(total_xml) + "\n")
 
     print("""
 <br clear=all>
@@ -193,4 +205,3 @@ print("""
 </body>
 </html>
 """)
-

@@ -93,15 +93,15 @@ pl.gz: $(lgz)
 	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.xgz .
 
 %.dgz:$(ALPINODIR)/Suites/D/%.pl
-	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/dpc 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.dgz
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/LassySmall 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.dgz
 	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.dgz .
 
 %.pgz:$(ALPINODIR)/Suites/P/%.pl
-	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/PPH 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.pgz
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/LassySmall 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.pgz
 	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.pgz .
 
 %.wgz:$(ALPINODIR)/Suites/W/%.pl
-	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/WIKI 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.wgz
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/LassySmall 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.wgz
 	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.wgz .
 
 %.cgz:$(ALPINODIR)/Suites/C/%.pl
@@ -109,18 +109,18 @@ pl.gz: $(lgz)
 	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.cgz .
 
 %.igz: $(ALPINODIR)/Suites/I/%.pl
-	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/PPI 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.igz
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/LassySmall 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.igz
 	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.igz .
 
 %.ugz: $(ALPINODIR)/Suites/U/%.pl
-	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/WSU 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.ugz
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/LassySmall 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.ugz
 	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.ugz .
 
 %.egz: $(ALPINODIR)/Suites/E/%.pl
-	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/PE 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.egz
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/LassySmall 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.egz
 	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.egz .
 
 %.lgz: $(ALPINODIR)/Suites/L/%.pl
-	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/PL 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.lgz
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/LassySmall 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.lgz
 	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.lgz .
 

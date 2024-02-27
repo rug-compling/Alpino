@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="6" end="7" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="0" cat="smain" end="8" id="3" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="4" index="1" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="5" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="present" v_per="thi" word="moet" wvorm="pv"/>
+      <node begin="0" cat="inf" end="8" id="6" rel="vc">
+        <node begin="0" end="1" id="7" index="1" rel="su"/>
+        <node begin="2" end="3" id="8" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
+        <node aform="base" begin="3" end="4" id="9" infl="both" lemma="even" pos="adj" postag="BW()" pt="bw" rel="mod" root="even" vform="adj" word="even"/>
+        <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="10" infl="no_e" lemma="geduldig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="geduldig" vform="adj" word="geduldig"/>
+        <node begin="7" buiging="zonder" end="8" id="11" infl="inf" lemma="wachten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wacht" sc="intransitive" word="wachten" wvorm="inf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij moet dan even &quot; geduldig &quot; wachten</sentence>
+</alpino_ds>
