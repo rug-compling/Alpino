@@ -95,8 +95,24 @@ nodata: make_guide_vector
          ./make_guide_vector > ../src/guides_data.c.$(PROLOG)
 	cp guides_data.c ../src/guides_data.c.$(PROLOG)
 
-rules:
-	cat *.ps| grep finish |awk -F\| '{ printf "%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n",$$2,$$3,$$4,$$5,$$6,$$7,$$8,$$9,$$10,$$11,$$12,$$13,$$14,$$15,$$16,$$17,$$18,$$19 }' | grep -v 'lex(' | grep -v finish | grep . | sort | uniq -c | sort -nr | awk '{ printf "frequent_rule(%s,%s).\n",$$2,$$1 }' > rules
+psfiles=$(wildcard *.ps)
+used_rules.pl:
+	cat $(psfiles)| grep finish |awk -F\| '{ printf "%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n",$$2,$$3,$$4,$$5,$$6,$$7,$$8,$$9,$$10,$$11,$$12,$$13,$$14,$$15,$$16,$$17,$$18,$$19 }' | grep -v 'lex(' | grep -v finish | grep . | sort | uniq -c | sort -nr | awk '{ printf "frequent_rule(%s,%s).\n",$$2,$$1 }' > used_rules.pl
+
+all_rules.pl: ../Grammar/grammar_lc.pl
+	Alpino batch_command="list_rules" > all_rules.pl
+
+unused: used_rules.pl all_rules.pl
+	(  echo "[used_rules].";\
+           echo "[all_rules].";\
+           echo 'rule_id(Id), \+ ( frequent_rule(Id,_); frequent_rule(gap(Id),_) ), format("~w~n",[Id]), fail ; true.'\
+        )  | sicstus
+
+disappeared: used_rules.pl all_rules.pl
+	(  echo "[used_rules].";\
+           echo "[all_rules].";\
+           echo 'frequent_rule(Id,_), \+ ( rule_id(Id);  Id = gap(Id2), rule_id(Id2)), format("~w~n",[Id]), fail ; true.'\
+        )  | sicstus
 
 ## usage e.g.: make -j 20 PATTERN=pei mores 
 MORE=$(basename $(basename $(notdir $(wildcard ../Suites/Machine/$(PATTERN)*.sents.gz))))
