@@ -7,7 +7,7 @@ endif
 endif
 
 sents=$(wildcard *.sents)
-named_sents=$(wildcard *.named_sents)
+named_sents=$(wildcard *.named_sents) j_suite.named_sents
 
 suites=$(sents:%.sents=%) $(named_sents:%.named_sents=%)
 
@@ -154,5 +154,6 @@ j_suite.named_sents:../Grammar/rules.gram
 	paste -d '|' <(tr ' :' '_@' <j_suite.named_sents0 |\
         sed -e "s/'/__Q1__/g" -e 's/"/__Q2__/g'   \
             -e "s/[(]/__Q3__/g" -e 's/[)]/__Q4__/g' \
-            -e "s/;/__Q5__/g" ) j_suite.named_sents0 \
+            -e "s/;/__Q5__/g" \
+            -e "s/«/__Q6__/g" -e 's/»/__Q7__/g' ) j_suite.named_sents0 \
           > j_suite.named_sents
