@@ -25,7 +25,7 @@ def main():
             key = words[0]
             if key in scores:
                 if (scores[key] == "100.00"):
-                    print("GONE {}".format(line),file=sys.stderr)
+                    print("GONE {}".format(line))
                 else:
                     print("{}".format(line))
                 del scores[key]
