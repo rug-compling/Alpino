@@ -4,6 +4,10 @@ DATA_MAX_SENTENCE_LENGTH=1000
 POS_TAGGER=on
 USER_MAX=10000000
 
+include $(ALPINO_HOME)/Makefile.errormining
+LOGS=*.log
+cat=cat
+
 ### CONSTRUCTING THE ALPINO DATA
 
 TPARTS=px pp pd po pq pc pw pi pu pe pl
