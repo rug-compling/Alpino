@@ -400,8 +400,7 @@ veryfast_options :-
     fast_options,
     set_flag(use_guides,on),
     set_flag(parse_candidates_beam,1000),
-    set_flag(parse_mode,veryfast),
-    set_flag(filter_infrequent_rules,on).
+    set_flag(parse_mode,veryfast).
 
 disamb_options :-
     veryfast_options,
@@ -426,8 +425,7 @@ fast_options :-
     set_flag(use_guides,off),  
     set_flag(pos_tagger_n,-1),
     set_flag(pos_tagger_m,special),
-    set_flag(parse_mode,fast),
-    set_flag(filter_infrequent_rules,on).
+    set_flag(parse_mode,fast).
 
 slow_options :-
     set_flag(disambiguation,on),
@@ -439,8 +437,7 @@ slow_options :-
     set_flag(unpack_bestfirst,on),
     set_flag(use_guides,off),
     set_flag(pos_tagger,off),
-    set_flag(parse_mode,slow),
-    set_flag(filter_infrequent_rules,off).
+    set_flag(parse_mode,slow).
 
 %% NB: veryfast is now the default!
 :- veryfast_options.
@@ -463,8 +460,7 @@ testN_options :-
     set_flag(use_guides,off),
     set_flag(pos_tagger,off),
     set_flag(display_main_parts,off),
-    set_flag(display_quality,off),
-    set_flag(filter_infrequent_rules,off).
+    set_flag(display_quality,off).
 
 hdrug_command(ann,annotate_options,[]).
 hdrug_command(annot,annotate_options,[]).
