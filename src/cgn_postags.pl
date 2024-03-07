@@ -170,9 +170,10 @@ cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_) -->
     guess_tag_list(SurfEls,Frame,Q0,Q),
     !.
 
-cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_) -->
-    {  format(user_error,"warning: no cgn tag for ~w ~w ~w~n",[Surf,Stem,Frame]) },
-    guess_tags(Q0,Q,Frame,Surf).
+cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_,L0,L) :-
+    format(user_error,"warning: no cgn tag for ~w ~w ~w~n",[Surf,Stem,Frame]),
+    guess_tags(Q0,Q,Frame,Surf,L0,L),
+    report_tags(L0,L,Surf).
 
 add_tags([],Q,Q,_Tag) --> [].
 add_tags([Stem|Stems],Q0,Q,Tag) -->
@@ -6277,3 +6278,13 @@ simple_number(Num,Val) :-
 deeleigen([],[]).
 deeleigen([_|T],['SPEC(deeleigen)'|P]):-
     deeleigen(T,P).
+
+report_tags(L,[],Surf) :-
+    tags(L,Tags,Lems),
+    format(user_error,"~q.~n",[mwu_postag(Surf,Tags,Lems)]),
+    fail.  % undo unification of second parameter
+report_tags(_,_,_).
+
+tags([],[],[]).
+tags([cgn_postag(_,_,Lem,Tag)|T],[Tag|Tags],[Lem|Lems]):-
+    tags(T,Tags,Lems).

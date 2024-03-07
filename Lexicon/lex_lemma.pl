@@ -1877,6 +1877,7 @@ lemma_root(begeven,begeef) .
 lemma_root(begieten,begiet) .
 lemma_root(begiftigen,begiftig) .
 lemma_root(beginnen,begin) .
+lemma_root(beglazen,beglaas) .
 lemma_root(begluren,begluur) .
 lemma_root(begraven,begraaf) .
 lemma_root(begrazen,begraas) .

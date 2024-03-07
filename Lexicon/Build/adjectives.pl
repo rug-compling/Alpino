@@ -4140,7 +4140,7 @@ a([e(barokke),
    ere(barokkere),
    no_e(barok),
    st(barokst),
-   ste(barokste)],nonadv,[],[]).
+   ste(barokste)],adv,[],[]).
 
 a([e(barse),
    er(barser),
@@ -21439,7 +21439,9 @@ a([e(laakbare),
    ere(laakbaardere),
    no_e(laakbaar),
    st(laakbaarst),
-   ste(laakbaarste)],adv,[],[]).
+   ste(laakbaarste)],adv,
+  [subject_vp,
+   subject_sbar],[]).
 
 a([e(late),
    er(later),
@@ -38250,21 +38252,21 @@ a([pred([voor,de,hand])],nonadv,
    subject_vp],[]).
 
 a([pred([voor,het,eerst]),
-   pred([voor,'\'t',eerst])],adv,
+   pred([voor,'\'t',eerst])],tmpadv,
   [subject_sbar],[]).
 
 a([pred([voor,het,laatst]),
-   pred([voor,'\'t',laatst])],adv,
+   pred([voor,'\'t',laatst])],tmpadv,
   [subject_sbar],[]).
 
 a([stem('voor het aller_eerst'),
    pred([voor,het,allereerst]),
-   pred([voor,'\'t',allereerst])],adv,
+   pred([voor,'\'t',allereerst])],tmpadv,
   [subject_sbar],[]).
 
 a([stem('voor het aller_laatst'),
    pred([voor,het,allerlaatst]),
-   pred([voor,'\'t',allerlaatst])],adv,
+   pred([voor,'\'t',allerlaatst])],tmpadv,
   [subject_sbar],[]).
 
 a([pred(voor),

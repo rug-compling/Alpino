@@ -28059,7 +28059,7 @@ n([pl(premies),sg(premie)],de,[],
 n([pl(premiers),sg(premier)],de,[],
   [h(co),
    h(ex),
-   h(oud),
+   h(oud),f([oud]),
    h(vice),vice]).
 
 n([sg(premierschap),pl(premierschappen)],het,[]).
@@ -28372,6 +28372,11 @@ n([meas(percent),
 n([meas('%')],both,
   [meas_mod,
    measure],
+  []).
+
+%%% % kinderen met overgewicht
+n([sg('%')],both,
+  [measure],
   []).
 
 n([pl(processen),sg(proces)],het,
@@ -33786,6 +33791,7 @@ n([pl(stellingen),sg(stelling)],de,[],
    kandidaat,
    kleur,
    prijs,
+   [onder,bewind],
    dim(stellinkje)]).
 
 n([pl(stellingnames),sg(stellingname)],de,[sbar,vp]).

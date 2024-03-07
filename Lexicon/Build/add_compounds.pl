@@ -64,7 +64,11 @@ add_compound(s(Prefix),Stem0,Surf0,Stem,Surf) :-
     atom_concat(Prefix,'_',PrefixStem1),
     atom_concat(PrefixStem1,Stem0,Stem).
 %% "English compounds" software engineer => software engineer
-add_compound(f(Prefix),Stem0,Surf0,Stem,Surf) :-
+add_compound(f(Prefix0),Stem0,Surf0,Stem,Surf) :-
+    (   atomic(Prefix0)
+    ->  Prefix = [Prefix0]
+    ;   Prefix = Prefix0
+    ),
     lists:append(Prefix,[Surf0],Surf),
     concat_all(Prefix,StemPrefix,' '),
     atom_concat(StemPrefix,' ',StemPrefix1),

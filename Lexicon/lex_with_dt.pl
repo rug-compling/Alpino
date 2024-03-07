@@ -1937,6 +1937,7 @@ with_dt_all(man,[zijn]).
 with_dt_all(ma,[ons]).
 with_dt_all(meerdere,[of,één]).
 with_dt_all(men,[zie]).
+with_dt_all(meteen,[niet]).
 with_dt_all(meteen,[vrijwel]).
 with_dt_all(met,[negen,ons]).
 with_dt_all(met,[negentien,ons]).

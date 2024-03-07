@@ -4232,13 +4232,17 @@ phrasal_entry(proper_name(both),url) -->
 
 phrasal_entry(proper_name(both),url, Ws0, Ws) :-
     hdrug_util:debug_message(4,"url~n",[]),
-    n_word(URL,Ws0,Ws),
+    n_word(URL,Ws0,Ws1),
     (   atom(URL),
 	atom_concat('http://',URL1,URL)
     ;   URL=URL1
     ),
     atom_codes(URL1,Codes),
-    url_codes(Codes).
+    url_codes(Codes),
+    trailing_slash(Ws1,Ws).
+
+trailing_slash --> [].
+trailing_slash --> n_word('/').
 
 
 %% for wrongly tokenized URL in SONAR500
@@ -4387,7 +4391,15 @@ telephone -->
     tel_word(0,C1),
     opt_dash,
     tel_word(C1,C2),
-    telephone_rest(C2).
+    telephone_rest(C2),
+    optional_of.
+
+%% for
+%% Tel. : ( + 32 ) 2 533 14 76 of 77
+optional_of --> [].
+optional_of -->
+    n_word(of),
+    tel_word(0,_).
 
 opt_dash --> [].
 opt_dash --> n_word('-').
@@ -4433,3 +4445,19 @@ isdigits([H|T],N0,N) :-
     isdigit(H),
     N1 is N0 + 1,
     isdigits(T,N1,N).
+
+%% U1.2.1.3 etc from corpus WR-P-P-L*
+phrasal_entry(Tag,u_number) -->
+    n_word(Atom),
+    {  u_item(Atom),
+       u_tag(Tag)
+    }.
+
+u_tag(noun(both,both,sg)).
+u_tag(noun(both,both,sg,app_measure)).
+
+u_item(Atom) :-
+    atomic(Atom),
+    atom_codes(Atom,[85,Digit,46,Digit2|_]),
+    alpino_latin1:isdigit(Digit),
+    alpino_latin1:isdigit(Digit2).

@@ -497,6 +497,7 @@ punct('→',is_gelijk).
 
 punct(',',komma).
 
+punct('o',ligg_streep).    % whatever
 punct('·',ligg_streep).    % whatever
 punct('*',ligg_streep).    % whatever
 punct('**',ligg_streep).    % whatever
@@ -2541,6 +2542,7 @@ particle(schuldig).
 particle(stand).
 particle(stil).
 particle(stop).
+particle(storm).
 particle(stuk).
 particle(tegemoet).
 particle(tegenover).
@@ -4166,6 +4168,7 @@ m(of,               left_conj(of),of).
 m(ofwel,            left_conj(ofwel),ofwel).
 m(en,               left_conj(en),en).
 m(hetzij,           left_conj(hetzij),hetzij).
+m(hetzij,           left_conj(of),hetzij).
 m(respectievelijk,  left_conj(en),respectievelijk).
 
 m(Stem, etc, Surf):-
@@ -6543,6 +6546,7 @@ mod_hd_adverb(steeds,   opnieuw).
 mod_hd_adverb(telkens,  weer).
 mod_hd_adverb(telkens,  opnieuw).
 
+mod_hd_adverb(niet,     meteen).
 mod_hd_adverb(niet,     vaak).
 mod_hd_adverb(niet,     zelden).
 mod_hd_adverb(niet,     zozeer).  % CGN_R5/r2nl_03/fn0137__96.xml

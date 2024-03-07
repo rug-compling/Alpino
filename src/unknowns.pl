@@ -6152,6 +6152,9 @@ name_vanhet(van,der).
 name_vanhet('v.','d.').
 name_vanhet('v.','\'t').
 
+name_vanhet('In','\'t').
+name_vanhet(in,'\'t').
+
 name_vanhet_maybe(van,het).
 name_vanhet_maybe(van,de).
 
@@ -7088,4 +7091,4 @@ majority_decap([W|Ws],P0,P,C0,T0):-
 
 normal_decap(W,P0,P):-
     tag(P0,P,_,_,_,W,special(decap(normal)),_).
-	       
+

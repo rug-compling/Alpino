@@ -63,7 +63,9 @@ mwu_postag('4 x 100 meter vrije slag',['TW(hoofd,prenom,stan)','SPEC(symb)','TW(
 mwu_postag('50 meter vrije slag',['TW(hoofd,prenom,stan)','N(soort,ev,basis,zijd,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['50',meter,vrij,slag]).
 mwu_postag('aan banden',['VZ(init)','N(soort,mv,basis)'],[aan,band]).
 mwu_postag('aan de bal',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[aan,de,bal]).
+mwu_postag('aan de beurt',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[aan,de,beurt]).
 mwu_postag('aan de gang',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[aan,de,gang]).
+mwu_postag('aan de hand',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[aan,de,hand]).
 mwu_postag('aan de hand van',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[aan,de,hand,van]).
 mwu_postag('aan de vooravond van',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[aan,de,vooravond,van]).
 mwu_postag('aan het',['VZ(init)','LID(bep,stan,evon)'],[aan,het]).
@@ -93,6 +95,7 @@ mwu_postag('alleen dan',['BW()','BW()'],[alleen,dan]).
 mwu_postag('alleen maar',['BW()','BW()'],[alleen,maar]).
 mwu_postag('alleen niet',['BW()','BW()'],[niet,alleen]).
 mwu_postag('alles behalve',['VNW(onbep,pron,stan,vol,3o,ev)','VG(onder)'],[alles,behalve]).
+mwu_postag('al bij al',['BW()','VZ(init)','BW()'],[al,bij,al]).
 mwu_postag('al dan niet',['BW()','BW()','BW()'],[al,dan,niet]).
 mwu_postag('al met al',['BW()','VZ(init)','BW()'],[al,met,al]).
 mwu_postag('al naargelang',['BW()','VG(onder)'],[al,naargelang]).
@@ -313,6 +316,7 @@ mwu_postag('een soort',['LID(onbep,stan,agr)','N(soort,ev,basis,genus,stan)'],[e
 mwu_postag('één voor één',['TW(hoofd,prenom,stan)','VZ(init)','TW(hoofd,prenom,stan)'],[één,voor,één]).
 mwu_postag('een weinig',['LID(onbep,stan,agr)','VNW(onbep,grad,stan,vrij,zonder,basis)'],[een,weinig]).
 mwu_postag('een zulk',['LID(onbep,stan,agr)','VNW(aanw,det,stan,vrij,zonder)'],[zulk,een]).
+mwu_postag('eens en vooral',['BW()','VG(neven)','BW()'],[eens,en,vooral]).
 mwu_postag('eens niet',['BW()','BW()'],[niet,eens]).
 mwu_postag('Eerste en Tweede Kamer',['TW(rang,prenom,stan)','VG(neven)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[één,en,twee,kamer]).
 mwu_postag('Eerste Kamerlid',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)'],[één,kamer_lid]).
@@ -514,12 +518,14 @@ mwu_postag('Hulpkas voor Werkloosheidsuitkeringen',['N(eigen,ev,basis,zijd,stan)
 mwu_postag('Humalog Mix-producten',['SPEC(deeleigen)','N(soort,mv,basis)'],['Humalog','Mix_product']).
 mwu_postag('Humane Wetenschappen',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[humaan,wetenschap]).
 mwu_postag('IB-Groep Infolijn',['N(eigen,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)'],['IB-groep','Infolijn']).
+mwu_postag('ieder voor zich',['VNW(onbep,det,stan,vrij,zonder)','VZ(init)','VNW(refl,pron,obl,red,3,getal)'],[ieder,voor,zich]).
 mwu_postag('Immateriële Erfgoed van de Mensheid',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,onz,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[immaterieel,erfgoed,van,de,mensheid]).
 mwu_postag('import / export-inspectie',['N(soort,ev,basis,zijd,stan)','LET()','N(soort,ev,basis,zijd,stan)'],[import,/,export_inspectie]).
 mwu_postag('in acht',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,acht]).
 mwu_postag('in allerijl',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,allerijl]).
 mwu_postag('in antwoord op',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[in,antwoord,op]).
 mwu_postag('in combinatie met',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,combinatie,met]).
+mwu_postag('in contact',['VZ(init)','N(soort,ev,basis,onz,stan)'],[in,contact]).
 mwu_postag('in de aanloop naar',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,de,aanloop,naar]).
 mwu_postag('in de boeien',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[in,de,boei]).
 mwu_postag('in de eerste plaats',['VZ(init)','LID(bep,stan,rest)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[in,de,één,plaats]).
@@ -543,6 +549,7 @@ mwu_postag('in dezen',['VZ(init)','VNW(aanw,det,dat,nom,met-e,zonder-n)'],[in,de
 mwu_postag('Indonesische Volkscongres',['ADJ(prenom,basis,met-e,stan)','N(eigen,ev,basis,onz,stan)'],['Indonesisch','Volkscongres']).
 mwu_postag('in duigen',['VZ(init)','N(soort,mv,basis)'],[in,duig]).
 mwu_postag('Industriële Revolutie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[industrieel,revolutie]).
+mwu_postag('in elkaar',['VZ(init)','VNW(recip,pron,obl,vol,persoon,mv)'],[in,elkaar]).
 mwu_postag('in feite',['VZ(init)','N(soort,ev,basis,dat)'],[in,feit]).
 mwu_postag('in functie van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,functie,van]).
 mwu_postag('in gebreke',['VZ(init)','N(soort,ev,basis,dat)'],[in,gebrek]).
@@ -670,6 +677,7 @@ mwu_postag('let wel',['WW(pv,tgw,ev)','BW()'],[letten,wel]).
 mwu_postag('Limburgs Schutterstijdschrift',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['Limburgs',schutterstijdschrift]).
 mwu_postag('lucht- en ruimtevaarttechniek',['SPEC(afgebr)','VG(neven)','N(soort,ev,basis,zijd,stan)'],['lucht-',en,ruimtevaart_techniek]).
 mwu_postag('Luchthaven Zaventem',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,onz,stan)'],[luchthaven,'Zaventem']).
+mwu_postag('maar dan',['VG(neven)','BW()'],[maar,dan]).
 mwu_postag('maar liefst',['BW()','BW()'],[maar,liefst]).
 mwu_postag('makkelijk praten',['ADJ(vrij,basis,zonder)','WW(inf,vrij,zonder)'],[makkelijk,praten]).
 mwu_postag('Man bijt hond',['N(eigen,ev,basis,onz,stan)','WW(pv,tgw,ev)','N(soort,ev,basis,zijd,stan)'],['Man',bijten,hond]).
@@ -724,6 +732,7 @@ mwu_postag('Ministerie van Volksgezondheid , Welzijn en Sport',['N(soort,ev,basi
 mwu_postag('Ministerie van VROM',['N(soort,ev,basis,onz,stan)','VZ(init)','N(eigen,ev,basis,genus,stan)'],[ministerie,van,'VROM']).
 mwu_postag('Ministerie van Wapenproductie',['N(soort,ev,basis,onz,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)'],[ministerie,van,wapenproductie]).
 mwu_postag('min of meer',['BW()','VG(neven)','VNW(onbep,grad,stan,vrij,zonder,comp)'],[min,of,veel]).
+mwu_postag('moederziel alleen',['N(soort,ev,basis,zijd,stan)','BW()'],[moederziel,alleen]).
 mwu_postag('mogelijk zo',['BW()','ADJ(vrij,basis,zonder)'],[zo,mogelijk]).
 mwu_postag('min mogelijk zo',['BW()','BW()','ADJ(vrij,basis,zonder)'],[zo,min,mogelijk]).
 mwu_postag('mond- en klauwzeercrisis',['SPEC(afgebr)','VG(neven)','N(soort,ev,basis,zijd,stan)'],['mond-',en,klauwzeer_crisis]).
@@ -798,6 +807,7 @@ mwu_postag('nu eens',['BW()','BW()'],[nu,eens]).
 mwu_postag('nummer 1 hits',['N(soort,ev,basis,onz,stan)','TW(hoofd,vrij)','N(soort,mv,basis)'],[nummer,'1',hit]).
 mwu_postag('o ja',['TSW()','TSW()'],[o,ja]).
 mwu_postag('o nee',['TSW()','TSW()'],[o,nee]).
+mwu_postag('o zo',['TSW()','BW()'],[o,zo]).
 mwu_postag('och arme',['TSW()','ADJ(prenom,basis,met-e,stan)'],[och,arm]).
 mwu_postag('of dat',['VG(onder)','VG(onder)'],[of,dat]).
 mwu_postag('om het even',['VZ(init)','LID(bep,stan,evon)','BW()'],[om,het,even]).
@@ -1223,6 +1233,7 @@ mwu_postag('Vlaams structureel overleg voor Duurzame Ontwikkeling',['ADJ(vrij,ba
 mwu_postag('Vlaams Werkgelegenheidsakkoord',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['Vlaams',werkgelegenheidsakkoord]).
 mwu_postag('Vlaanderens Mooiste',['N(eigen,ev,basis,gen)','ADJ(nom,sup,met-e,zonder-n,stan)'],['Vlaanderen',mooi]).
 mwu_postag('Vliegveld Valkenburg',['N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,onz,stan)'],[vliegveld,'Valkenburg']).
+mwu_postag('volgens zeggen',['VZ(init)','WW(inf,nom,zonder,zonder-n)'],[volgens,zeggen]).
 mwu_postag('Volksfront voor de Bevrijding van Angola',['N(soort,ev,basis,onz,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[volksfront,voor,de,bevrijding,van,'Angola']).
 mwu_postag('Volksfront voor de Bevrijding van Palestina',['N(soort,ev,basis,onz,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[volksfront,voor,de,bevrijding,van,'Palestina']).
 mwu_postag('Volksgezondheid en Milieuhygiëne',['N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[volksgezondheid,en,milieuhygiëne]).

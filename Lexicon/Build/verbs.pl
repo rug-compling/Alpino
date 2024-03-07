@@ -2053,6 +2053,9 @@ v(begin,begint,beginnen,begonnen,begon,begonnen,
 	er_pp_sbar(met)  % het begon er mee dat ...
        ])]).
 
+v(beglaas,beglaast,beglazen,beglaasd,beglaasde,beglaasden,
+    [h([transitive])]).
+
 v(begluur,begluurt,begluren,begluurd,begluurde,begluurden,
     [h([transitive])]).
 
@@ -4691,6 +4694,7 @@ v(breng,brengt,brengen,gebracht,bracht,brachten,
         fixed([{[[voor,rekening],pc(van),acc]}],norm_passive),
 	part_np_ld_pp(aan),
 	part_np_ld_pp(door),
+	part_np_ld_adv(door),   % Napoleon bracht daar de winter door
 	part_np_ld_pp(groot),
 	part_np_ld_pp(onder),
 	part_np_ld_adv(onder),
@@ -8023,7 +8027,8 @@ v(gebeur,gebeurt,gebeuren,gebeurd,gebeurde,gebeurden,
 	    sbar_subj_so_np,	% het zal je maar gebeuren dat ..
 	    so_np,
 	    fixed([[waar]],no_passive),  % het is waar gebeurd
-            mod_pp(omheen),   % er gebeurde veel omheen
+            mod_pp(omheen),		 % er gebeurde veel omheen
+	    mod_pp(in),                  % daar moet nog veel in gebeuren
 	    pc_pp(aan),
 	    pc_pp(met),
             no_subj   % en zo gebeurde .
@@ -10972,6 +10977,7 @@ v(kijk,kijkt,kijken,gekeken,keek,keken,
 	part_sbar(toe),
 	part_sbar(uit),
 	part_vp(uit),
+	part_mod_pp(uit,met),       % daar moet je mee uitkijken
 	part_intransitive(aan),	% kijk eens aan ,
 	part_intransitive(weg),
 	part_transitive(aan),
@@ -12965,7 +12971,7 @@ v(leer,leert,leren,geleerd,leerde,leerden,
 	intransitive,
 	np_sbar,
 	np_vp_obj,            % ik heb hem geleerd om goed uit te kijken
-	obj_control(te_inf),  % ik heb hem leren fietsen
+	so_control(te_inf),   % ik heb hem leren fietsen
 	                      % not aci: * ik leer het sneeuwen
 	                      %     aci:   ik zie het sneeuwen
                               % omdat ik de kinderen beter heb leren uit te kijken
@@ -13250,6 +13256,7 @@ v(let,let,letten,gelet,lette,letten,
 	pc_pp(op),
 	er_pp_sbar(op),
 	er_pp_vp(op),
+	part_mod_pp(op,met),
 	part_pc_pp(op,op)])]).
 
 v(leuk,leukt,leuken,geleukt,leukte,leukten,
@@ -13817,8 +13824,8 @@ v(loop,loopt,lopen,gelopen,liep,liepen,
 	subj_control(wk_te),         % hij loopt te vervelen
 	part_transitive(op),         % we lopen hondenbeten op
 
-        fixed([acc(storm)],no_passive),  % het loopt nog geen storm
-        fixed([{[acc(storm),pc(tegen)]}],no_passive),
+        fixed([svp_acc(storm)],no_passive),  % het loopt nog geen storm
+        fixed([{[svp_acc(storm),pc(tegen)]}],no_passive),
                                 % het loopt nog geen storm
         
         part_intransitive(storm),    % het zal wel stormlopen
@@ -14172,6 +14179,7 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
         part_refl_pc_pp(druk,om),
         fixed([[schoon,schip],pc(met)],imp_passive),
         part_refl_pc_pp(schuldig,aan),
+	fixed([{[acc(sier),mod_pp(met)]}],norm_passive),  % hij maakte er goede sier mee ...
 	fixed([{[[staat],pc(op)]}],imp_passive),
 	fixed([[te,gelde],acc],norm_passive),
 	fixed([[te,niet],acc],norm_passive),
@@ -21617,9 +21625,10 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
         fixed([{[pp_pred(in,verhouding),pc(met)]}],no_passive),
         fixed([{[pp_pred(in,verhouding),pc(tot)]}],no_passive),
 	fixed([acc(man_DIM)],no_passive),
-	fixed([{[[onder,invloed],pc(van)]}],no_passive),
-	fixed([{[[onder,leiding],pc(van)]}],no_passive),
-	fixed([{[[onder,voorzitterschap],pc(van)]}],no_passive),
+	fixed([{[svp_pp(onder,gezag),pc(van)]}],no_passive),
+	fixed([{[svp_pp(onder,invloed),pc(van)]}],no_passive),
+	fixed([{[svp_pp(onder,leiding),pc(van)]}],no_passive),
+	fixed([{[svp_pp(onder,voorzitterschap),pc(van)]}],no_passive),
 	fixed([[op,wacht]],no_passive),
 	fixed([[blank]],no_passive),
 	fixed([[gereed]],no_passive),
@@ -23857,6 +23866,7 @@ v(val,valt,vallen,gevallen,viel,vielen,
         ld_dir,
         te_passive,
         sbar_subj_te_passive,
+	ld_adv,
         ld_pp,
 	mod_pp(bij), % daar zijn veel slachtoffers bij gevallen
         so_np_ld_pp,
@@ -26772,6 +26782,7 @@ v(vind,vindt,vinden,gevonden,vond,vonden,
 	fixed([er_pp(op),compar],no_passive),
 	np_mod_pp(over),  % ik vond daar niets over
 	part_np_mod_pp(terug,over),  % ik vond daar niets over terug
+	part_np_mod_pp(terug,van),  % ik vond daar niets over terug
 	np_mod_pp(voor),  % ik vond daar geen oplossing voor
         part_transitive(goed),
         part_sbar(goed),
@@ -28475,6 +28486,7 @@ v(zeg,zegt,zeggen,gezegd,zei,zeiden,zegge,
 	             % also obj-control in 'beveel' reading:
 	             % hij zei mij het boek te pakken
         so_pp_vp,
+	np_vp_obj, % hij zei me naast hem te gaan zitten
 	transitive,
 	np_np,
 	intransitive,   % ??
@@ -28500,7 +28512,6 @@ v(zeg,zegt,zeggen,gezegd,zei,zeiden,zegge,
         np_pc_pp(in),   % je hebt er niets in te zeggen
 	part_np_np(na),
 	part_transitive(na),
-	part_np_vp_obj,
 	%% np_pc_pp(op),  ??
 	part_transitive(op),
 	part_intransitive(op),  % zeg op , of ik knal je kop er af

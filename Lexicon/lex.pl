@@ -2388,6 +2388,8 @@ context_spelling_variant_context(de,_,_,wat,_,je_POSTV).
 context_spelling_variant_context(de,_,_,wie,_,je_POSTV).
 
 
+context_spelling_variant_context('Den','(',_,')',_,'Denemarken').   % Den is a location only if within ()
+
 context_spelling_variant_context(behoeven,ten,_,van,_,behoeve).
 context_spelling_variant_context(plaatst,in,_,van,_,plaats).
 context_spelling_variant_context(nog,kant,_,wal,_,noch).
@@ -4477,6 +4479,7 @@ impossible_subcat_infl_combination(aux_psp_zijn,psp).
 impossible_subcat_infl_combination(simple_aux_psp_zijn,psp).
 impossible_subcat_infl_combination(obj_control(te),psp).
 impossible_subcat_infl_combination(obj_control(te_inf),psp).
+impossible_subcat_infl_combination(so_control(te_inf),psp).
 impossible_subcat_infl_combination(passive,psp).
 impossible_subcat_infl_combination(dat_passive,psp).
 %impossible_subcat_infl_combination(norm_passive,psp).  % omdat het woonhuis behouden is gebleven
