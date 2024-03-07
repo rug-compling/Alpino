@@ -40,7 +40,7 @@ default: all
 
 all: 
 	make testing
-	( cd TRAINING ; make bin; make -j sfrs; make -j freqframes ; make all )
+	( cd TRAINING ; make bin; make -j sfrs; make -j frames.pl ; make all )
 	$(MAKE) tag2.tpl tag3.tpl tag4.tpl prefix2.tpl prefix3.tpl context3.tpl\
                 wordTag.tpl tagWord.tpl # wordTagLex.fsa lexicon_files
 	$(MAKE) logs
