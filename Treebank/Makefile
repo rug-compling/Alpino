@@ -134,7 +134,8 @@ gitversion=$(shell git log --oneline | wc -l)
 
 tars: $(DIRECTORIES:%=%.tar)
 
-tars-install: $(DIRECTORIES:%=%.tar-install)
+tars-install: $(DIRECTORIES:%=%.tar-install) alpino.dact
+	cp alpino.dact ~/public_html/treebanks
 
 %.tar:Enhanced/%
 	( cd Enhanced ; tar czf $*-$(gitversion).tar.gz $* )
@@ -284,8 +285,7 @@ Suites/%.sents: Enhanced/%/*.xml
              sed -e 's/\[/\\\[/g' \
                  -e 's/\]/\\\]/g') > $@
 
-installsents: $(DIRECTORIES:%=%.sents.gz)
+installsents: $(DIRECTORIES:%=$(ALPINO_HOME)/Suites/Machine/%_part00001.sents.gz)
 
-%.sents.gz: Suites/%.sents
-	cat $< | (cd $(ALPINO_HOME)/Suites/Machine ; ../split_in_parts -o $* -p 200 )
-
+$(ALPINO_HOME)/Suites/Machine/%_part00001.sents.gz: Suites/%.sents
+	cat $< | (cd $(ALPINO_HOME)/Suites/Machine ; $(ALPINO_HOME)/Suites/split_in_parts -o $* -p 200 )

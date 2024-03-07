@@ -5,9 +5,9 @@
       <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="preventie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="preventie" word="Preventie"/>
       <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="2" end="3" id="4" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
-      <node begin="3" cat="np" end="5" id="5" rel="predc">
-        <node begin="3" end="4" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-        <node begin="4" buiging="met-e" end="5" getal-n="zonder-n" graad="sup" id="7" lemma="belangrijk" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="hd" root="belangrijk" word="belangrijkste"/>
+      <node begin="3" cat="mwu" end="5" id="5" rel="predc">
+        <node begin="3" end="4" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+        <node begin="4" buiging="met-e" end="5" getal-n="zonder-n" graad="sup" id="7" lemma="belangrijkste" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="mwp" root="belangrijkste" word="belangrijkste"/>
       </node>
     </node>
   </node>

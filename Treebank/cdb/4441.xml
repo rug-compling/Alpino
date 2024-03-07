@@ -22,9 +22,9 @@
           <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="mate" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mate" word="mate"/>
         </node>
       </node>
-      <node begin="10" cat="mwu" end="12" id="17" rel="svp">
-        <node begin="10" end="11" id="18" lemma="onder" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="onder" vztype="init" word="onder"/>
-        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="invloed" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="invloed" word="invloed"/>
+      <node begin="10" cat="pp" end="12" id="17" rel="svp">
+        <node begin="10" end="11" id="18" lemma="onder" pos="fixed" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
+        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="invloed" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="invloed" word="invloed"/>
       </node>
       <node begin="12" cat="pp" end="28" id="20" rel="pc">
         <node begin="12" end="13" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>

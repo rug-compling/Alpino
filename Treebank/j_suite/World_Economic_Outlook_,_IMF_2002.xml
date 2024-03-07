@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="du" end="6" id="2" rel="--">
+      <node begin="0" cat="mwu" end="3" id="3" rel="dp">
+        <node begin="0" end="1" id="4" lemma="World" neclass="ORG" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="World" spectype="deeleigen" word="World"/>
+        <node begin="1" end="2" id="5" lemma="Economic" neclass="ORG" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Economic" spectype="deeleigen" word="Economic"/>
+        <node begin="2" end="3" id="6" lemma="Outlook" neclass="ORG" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Outlook" spectype="deeleigen" word="Outlook"/>
+      </node>
+      <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="IMF" naamval="stan" neclass="ORG" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="dp" rnum="sg" root="IMF" word="IMF"/>
+      <node begin="5" end="6" id="8" infl="pl_num" lemma="2002" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="dp" root="2002" word="2002"/>
+    </node>
+  </node>
+  <sentence>World Economic Outlook , IMF 2002</sentence>
+</alpino_ds>
