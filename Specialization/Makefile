@@ -84,18 +84,8 @@ guides_data.c: guides.txt make_guide_vector
 install: guides_data.c
 	cp guides_data.c ../src/guides_data.c.$(PROLOG)
 
-nodata: make_guide_vector
-	echo "Expect a few odd syntax errors with euro signs - just ignore~n"
-	cat guides.t |\
-         ../src/Alpino cmdint=off debug=1 -notk -l to_predict_guides \
-             -cmd "to_sguides(tpl_prefix)" |\
-         sort -u |\
-         awk -F\| '{ print $$1}' |\
-         ./make_guide_vector > ../src/guides_data.c.$(PROLOG)
-	cp guides_data.c ../src/guides_data.c.$(PROLOG)
-
-psfiles=$(wildcard *.ps)
-used_rules.pl:
+psfiles=$(DATA:%.log.gz=%.ps) 
+used_rules.pl: $(psfiles)
 	cat $(psfiles)| grep finish |awk -F\| '{ printf "%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n",$$2,$$3,$$4,$$5,$$6,$$7,$$8,$$9,$$10,$$11,$$12,$$13,$$14,$$15,$$16,$$17,$$18,$$19 }' | grep -v 'lex(' | grep -v finish | grep . | sort | uniq -c | sort -nr | awk '{ printf "frequent_rule(%s,%s).\n",$$2,$$1 }' > used_rules.pl
 
 all_rules.pl: ../Grammar/grammar_lc.pl
