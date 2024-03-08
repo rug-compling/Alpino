@@ -70,6 +70,7 @@ mwu_postag('aan de hand van',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,
 mwu_postag('aan de vooravond van',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[aan,de,vooravond,van]).
 mwu_postag('aan het',['VZ(init)','LID(bep,stan,evon)'],[aan,het]).
 mwu_postag('aan het adres van',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(init)'],[aan,het,adres,van]).
+mwu_postag('aan het hoofd',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[aan,het,hoofd]).
 mwu_postag('aan den lijve',['VZ(init)','LID(bep,dat,evmo)','N(soort,ev,basis,dat)'],[aan,de,lijf]).
 mwu_postag('aan t',['VZ(init)','LID(bep,stan,evon)'],[aan,het]).
 mwu_postag('aan toe',['VZ(fin)','VZ(fin)'],[aan,toe]).
@@ -1033,6 +1034,7 @@ mwu_postag('te water',['VZ(init)','N(soort,ev,basis,onz,stan)'],[te,water]).
 mwu_postag('te weten',['VZ(init)','WW(inf,vrij,zonder)'],[te,weten]).
 mwu_postag('te zamen',['VZ(init)','BW()'],[te,zamen]).
 mwu_postag('te zijner tijd',['VZ(init)','VNW(bez,det,dat,vol,3,ev,prenom,met-e,evf)','N(soort,ev,basis,zijd,stan)'],[te,zijn,tijd]).
+mwu_postag('tegen de',['VZ(init)','LID(bep,stan,rest)'],[tegen,de]).
 mwu_postag('ten aan zien van',['VZ(versm)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,aan,zien,van]).
 mwu_postag('ten aanzien van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,aanzien,van]).
 mwu_postag('ten aanzien',['VZ(versm)','N(soort,ev,basis,onz,stan)'],[te,aanzien]).
