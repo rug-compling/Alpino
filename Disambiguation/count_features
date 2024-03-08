@@ -64,9 +64,9 @@ if ($opt_a) {
         }
     
 	if ($opt_f) {
-	    (undef,$key,undef,undef,$features) = split/\#/;
+	    (undef,$key,undef,undef,$features) = split/\#/,$_,5;
 	} else {
-	    ($key,undef,undef,$features) = split/\#/;
+	    ($key,undef,undef,$features) = split/\#/,$_,4;
 	}
 
         if ($key ne $prevkey) {
@@ -87,7 +87,7 @@ if ($opt_a) {
             %seen=();
             $lcount++;
             foreach $pair (split/\|/,$features) {
-                ($count,$feature) = split/\@/,$pair;
+                ($count,$feature) = split/\@/,$pair,2;
                 $fs{$feature}++;
                 if (!$opt_s) {
                     $lgs{$feature}++;
