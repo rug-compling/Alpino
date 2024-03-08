@@ -18575,7 +18575,7 @@ a([e(holle),
    ste(holste)],adv,[],[]).
 
 a([e(holistische),
-   no_e(holistisch)],nonadv,[],[]).
+   no_e(holistisch)],adv,[],[]).
 
 a([e(homeopathische),
    e(homeopatische),

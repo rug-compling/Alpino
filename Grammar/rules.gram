@@ -5398,6 +5398,21 @@ grammar_rule(n_adj,N,[ AP ]) :-
     AP:adv => ~oadv & ~detadv,
     AP:agr => ~(indef & sg & het).  % only -e inflected adjectives
 
+%%EX%% Hij is de verantwoordelijke voor onderwijs
+grammar_rule(n_adj_pp,N, [ A, COMMA, PP ]) :-
+    optcomma(COMMA),
+    AP => a, A => a, PP => pp,
+    A:adv => ~detadv,
+    PP:sel => to_right,
+    hd_comp_structure(A,PP,AP),
+    n_adj_structure(N,AP),
+    N:subn => (sub_def_adj;sub_indef_adj),
+    AP:cform => ~rang,
+    AP:aform => attr,
+    AP:can_nominalize => yes,
+    AP:adv => ~oadv & ~detadv,
+    AP:agr => ~(indef & sg & het).  % only -e inflected adjectives
+
 grammar_rule(n_rang,N,[ AP ]) :-
     N => n,
     N:nform => norm,

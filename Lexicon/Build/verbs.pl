@@ -13813,7 +13813,8 @@ v(loop,loopt,lopen,gelopen,liep,liepen,
 	part_ld_pp(aan,achter),      % we hebben achter de feiten aangelopen
 	part_so_np(af),              % 
 	part_refl(dood),             % ik heb me doodgelopen
-	part_transitive(kapot),      % hij heeft zijn schoenen kapotgelopen
+	part_transitive(kapot),	% hij heeft zijn schoenen kapotgelopen
+	part_intransitive(school),   % VLAAMS ik heb school gelopen met hem
         part_intransitive(trap),
 	part_refl(vast),             % Robben liep zich weer vast
         part_refl(warm),
