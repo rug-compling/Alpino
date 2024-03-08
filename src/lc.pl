@@ -271,7 +271,7 @@ count_skip_his_seed(gap(_),C,C).
 count_skip_his_seed(call(_),C,C).
 count_skip_his_seed(i(_,_,_,Count),C0,C) :-
     C is C0 + Count.
-count_skip_his_seed(rule(Rule,List),C0,C) :-
+count_skip_his_seed(rule(_,List),C0,C) :-
     count_skip_his_seed_list(List,C0,C).
 count_skip_his_seed(lex([Count-_|_List]),C0,C) :-
     C is C0 + Count.
