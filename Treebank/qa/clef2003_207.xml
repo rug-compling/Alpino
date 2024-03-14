@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<alpino_ds version="1.3">
+<alpino_ds version="1.5">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="whq" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" index="1" rel="whd">
-        <node begin="0" end="1" id="3" lemma="hoeveel" naamval="stan" numtype="hoofd" pos="det" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="hoeveel" word="Hoeveel"/>
-        <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="Europees" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Europees" word="Europese"/>
-        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="land" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="land" word="landen"/>
+        <node begin="0" end="1" id="3" lemma="hoeveel" numtype="hoofd" pos="det" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="hoeveel" word="Hoeveel"/>
+        <node begin="1" end="2" id="4" lemma="Europees" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Europees" word="Europese"/>
+        <node begin="2" end="3" id="5" lemma="land" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="land" word="landen"/>
       </node>
       <node begin="0" cat="sv1" end="8" id="6" rel="body">
         <node begin="0" end="3" id="7" index="1" rel="su"/>
-        <node begin="3" end="4" id="8" lcat="p(sv1)" lemma="deel_nemen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="neem_deel" word="nemen" wvorm="pv"/>
-        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="deel" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="svp" root="deel" word="deel"/>
+        <node begin="3" end="4" id="8" lemma="deel_nemen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" rel="hd" root="neem_deel" word="nemen" wvorm="pv"/>
+        <node begin="4" end="5" id="9" lemma="deel" ntype="soort" pos="part" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="svp" root="deel" word="deel"/>
         <node begin="5" cat="pp" end="8" id="10" rel="pc">
           <node begin="5" end="6" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="6" cat="np" end="8" id="12" rel="obj1">
-            <node begin="6" end="7" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="G7" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="G7" word="G7"/>
+            <node begin="6" end="7" id="13" lemma="de" lwtype="bep" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" end="8" id="14" lemma="G7" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="G7" word="G7"/>
           </node>
         </node>
       </node>
