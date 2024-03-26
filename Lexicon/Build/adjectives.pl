@@ -6834,7 +6834,7 @@ a([e(brave),
    ere(bravere),
    no_e(braaf),
    st(braafst),
-   ste(braafste)],adv,[],[]).
+   ste(braafste)],padv,[],[]).
 
 a([stem(braak_liggen),
    ende(braakliggende),
@@ -6859,7 +6859,7 @@ a([ende(brandende),
    ere(brandendere),
    end(brandend),
    st(brandendst),
-   ste(brandendste)],adv,[],[]).
+   ste(brandendste)],padv,[],[]).
 
 a([e(branderige),
    er(branderiger),
@@ -7769,7 +7769,7 @@ a([e(dankbare),
    ere(dankbaardere),
    no_e(dankbaar),
    st(dankbaarst),
-   ste(dankbaarste)],adv,
+   ste(dankbaarste)],both,
   [object_sbar,
    er_pp_sbar(voor),
    pp(voor)],[]).
@@ -14874,6 +14874,9 @@ a([ge_both(gerezen)],adv,[],[]).
 a([e(geriatrische),
    no_e(geriatrisch)],nonadv,[],[]).
 
+a([e(geribbelde),
+   no_e(geribbeld)],nonadv,[],[]).
+
 a([ge_e(gerichte),
    er(gerichter),
    ere(gerichtere),
@@ -19453,7 +19456,7 @@ a([ge_e(ingeboete),
 a([ge_e(ingeboezemde),
    ge_no_e(ingeboezemd)],adv,[],[]).
 
-a([ge_both(ingebonden)],nonadv,[],[]).
+a([ge_both(ingebonden)],padv,[],[]).
 
 a([both(ingeboren)],nonadv,[],[]).
 
@@ -27364,7 +27367,7 @@ a([ge_e(onvoorbereide),
    ere(onvoorbereidere),
    ge_no_e(onvoorbereid),
    st(onvoorbereidst),
-   ste(onvoorbereidste)],adv,
+   ste(onvoorbereidste)],both,
   [pp(op)],[]).
 
 a([e(onvoorspelbare),
@@ -38306,7 +38309,7 @@ a([ge_both(voorbehouden)],adv,
    pp(aan)],[]).
 
 a([ge_e(voorbereide),
-   ge_no_e(voorbereid)],adv,
+   ge_no_e(voorbereid)],both,
   [pp(op),
    er_pp_sbar(op)],[]).
 

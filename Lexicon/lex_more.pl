@@ -429,6 +429,7 @@ number_rest(octies).
 number_rest(nonies).
 number_rest(decies).
 
+
 %% lijn 12B
 phrasal_entry(number(hoofd(both)),number_expression) -->
     { hdrug_util:debug_message(4,"number_expression lijn 12B~n",[]) },
@@ -3788,6 +3789,15 @@ enumeration -->
        stand_alone_enumeration(String)
     }.
 
+%% artikel 4 ii
+enumeration -->
+    number_expression(_),
+    n_word(W),
+    {  atom(W),
+       atom_codes(W,String),
+       stand_alone_enumeration(String)
+    }.
+
 enumeration_core -->
     n_word(W),
     {  atom(W),
@@ -4321,6 +4331,7 @@ tld_domain(gr).
 tld_domain(gov).
 tld_domain(hr).
 tld_domain(hu).
+tld_domain(id).   %% ??
 tld_domain(info).
 tld_domain(int).
 tld_domain(ir).

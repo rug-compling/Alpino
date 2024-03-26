@@ -897,6 +897,7 @@ a_lex(punct(aanhaal_both),Sign) :-
     Sign:puncttype => (aanhaal_links;aanhaal_rechts).
 a_lex(punct(Type),Sign) :-
     punct(Sign),
+    nonvar(Type),
     Sign:puncttype => Type.
 
 a_lex(conj(W),Sign) :-

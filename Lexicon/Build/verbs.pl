@@ -8199,6 +8199,8 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	fixed([sbar_subj_no_het,acc(doorslag)],no_passive),
 	fixed([[te,leen],{[acc,dat]}],norm_passive),
 	fixed([[te,leen],{[acc,dat_pp(aan)]}],norm_passive),
+	fixed([[de,tijd],me,dat],imp_passive),
+	fixed([[de,tijd],me,i(dat,X),obj_vp(X)],imp_passive),
 	fixed([[de,tijd],dat],imp_passive),
 	fixed([[de,tijd],i(dat,X),obj_vp(X)],imp_passive),
 	fixed([{[[gestalte],pc(in)]},dat],imp_passive),
@@ -8242,16 +8244,16 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	fixed([pp_pred(in,hand),{[acc,dat]}],norm_passive),
 	fixed([pp_pred(in,hand),{[acc,pc(van)]}],norm_passive),
 	fixed([[in,overweging],acc],norm_passive),
-	fixed([[in,overweging],vp],imp_passive),
-	fixed([[in,overweging],vp,dat],imp_passive),
-	fixed([[in,overweging],vp,dat_pp(aan)],imp_passive),
+	fixed([[in,overweging],vp_no_control],imp_passive),
+	fixed([[in,overweging],vp_no_control,dat],imp_passive),
+	fixed([[in,overweging],vp_no_control,dat_pp(aan)],imp_passive),
 	fixed([[in,overweging],sbar],imp_passive),
 	fixed([[in,overweging],sbar,dat],imp_passive),
 	fixed([[in,overweging],sbar,dat_pp(aan)],imp_passive),
 	fixed([[ter,overweging],acc],norm_passive),
-	fixed([[ter,overweging],vp],imp_passive),
-	fixed([[ter,overweging],vp,dat],imp_passive),
-	fixed([[ter,overweging],vp,dat_pp(aan)],imp_passive),
+	fixed([[ter,overweging],vp_no_control],imp_passive),
+	fixed([[ter,overweging],vp_no_control,dat],imp_passive),
+	fixed([[ter,overweging],vp_no_control,dat_pp(aan)],imp_passive),
 	fixed([[ter,overweging],sbar],imp_passive),
 	fixed([[ter,overweging],sbar,dat],imp_passive),
 	fixed([[ter,overweging],sbar,dat_pp(aan)],imp_passive),
@@ -11951,6 +11953,8 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
           fixed([[aan,de,leiding]],no_passive),
           fixed([[aan,het,licht]],no_passive),
           fixed([sbar_subj_no_het,[aan,het,licht]],no_passive),
+          fixed([[aan,het,daglicht]],no_passive),
+          fixed([sbar_subj_no_het,[aan,het,daglicht]],no_passive),
           fixed([[aan,het,rollen]],no_passive),
           fixed([[beschikbaar]],no_passive), %% predc?
           fixed([er_pp(af),ap_pred],no_passive),
@@ -11962,11 +11966,11 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
           fixed([pp_pred(in,contact)],no_passive),  % PP PREDC?
           fixed([[in,het,geweer],pc(tegen)],no_passive),
           fixed([[in,het,nieuws]],no_passive), % PP PREDC?
-          fixed([no_subj,[naar,voren],sbar],no_passive),
-          fixed([no_subj,[naar,voren],{[acc,pc(uit)]}],no_passive),
-          fixed([no_subj,[naar,voren],pc(uit),sbar],no_passive),
+          fixed([sbar_subj,[naar,voren]],no_passive),
+          fixed([{[[naar,voren],pc(uit)]}],no_passive),
+          fixed([sbar_subj,{[[naar,voren],pc(uit)]}],no_passive),
           fixed([[naar,voren],als_pred],no_passive),
-          fixed([[naar,voren],{[pc(uit),als_pred]}],no_passive),
+          fixed([{[[naar,voren],pc(uit),als_pred]}],no_passive),
           fixed([[om,het,leven]],no_passive),
           fixed([[onder,ogen],dat],no_passive),
           fixed([svp_pp(onder,vuur)],norm_passive),
@@ -13962,11 +13966,11 @@ v(lurk,lurkt,lurken,gelurkt,lurkte,lurkten,
     [h([intransitive])]).
 
 v(lust,lust,lusten,gelust,lustte,lustten,
-    [h([transitive,
-	fixed([[ervan]],no_passive),  % ze zullen ervan lusten!
-	fixed([subj(hond),er_pp(van),[geen,brood]],no_passive),
-	fixed([{[[pap],er_pp(van)]}],no_passive)
-       ])]).
+  [h([transitive,
+      fixed([er_pp(van)],no_passive), % ze zullen ervan lusten!
+      fixed([subj(hond),er_pp(van),[geen,brood]],no_passive),
+      fixed([{[[pap],er_pp(van)]}],no_passive)
+     ])]).
 
 v(luw,luwt,luwen,geluwd,luwde,luwden,
   [unacc([intransitive,
@@ -21036,6 +21040,7 @@ v(speel,speelt,spelen,gespeeld,speelde,speelden,
     [h([intransitive,           % hij speelt heel lief
 	transitive,             % we spelen tikkertje
 	np_np_ld_pp,            % ik speel hem een boek in handen
+	np_ld_pp,               % ik speel de bal de hoek in / de pannen van het dak
 	ap_pred_np,             % zoek spelen; kapot spelen
 	sbar_subj_no_het,       % hierbij speelt ook , dat ...
  	ld_pp,			% de film speelt in Venetie; (why is passive ruled out?)
@@ -23512,6 +23517,7 @@ v(trek,trekt,trekken,getrokken,trok,trokken,
 	part_intransitive(uit),
 	part_intransitive(voorbij),
 	part_intransitive(weg),
+	part_ld_pp(in), 
 	part_ld_pp(om), 
 	part_ld_pp(rond),
 	part_ld_adv(rond),

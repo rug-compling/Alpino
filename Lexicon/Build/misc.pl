@@ -497,11 +497,12 @@ punct('→',is_gelijk).
 
 punct(',',komma).
 
-punct('o',ligg_streep).    % whatever
-punct('·',ligg_streep).    % whatever
-punct('*',ligg_streep).    % whatever
-punct('**',ligg_streep).    % whatever
-punct('***',ligg_streep).    % whatever
+punct('#',symbol).    % whatever
+punct('o',symbol).    % whatever
+punct('·',symbol).    % whatever
+punct('*',symbol).    % whatever
+punct('**',symbol).    % whatever
+punct('***',symbol).    % whatever
 
 punct(-,ligg_streep).
 punct('',ligg_streep).
@@ -5232,7 +5233,8 @@ m(diep,             modal_adverb(prep),diep).     % diep in blessuretijd
 m(dwars,            modal_adverb(prep),dwars).    % dwars door
 m(elders,           modal_adverb(prep),elders).   % kerken elders in Nederland
 m(hoog,             modal_adverb(prep),hoog).     % hoog boven de wolken
-m(laag,             modal_adverb(prep),laag).     % hoog boven de wolken
+m(laag,             modal_adverb(prep),laag). % hoog boven de wolken
+m(lijnrecht,        modal_adverb(prep),lijnrecht).  % lijnrecht tegenover ..
 m(midden,           modal_adverb(prep),midden).   % midden in
 m(pal,              modal_adverb(prep),pal).      % pal naast/achter/..
 m(recht,            modal_adverb(prep),recht).    % recht tegenover ..

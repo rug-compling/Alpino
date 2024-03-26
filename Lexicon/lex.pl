@@ -650,6 +650,12 @@ lexicon_(NoordWord,proper_name(X,'LOC'),Name,Ws1,Ws,His,_LC) :-
     in_names_dictionary(proper_name(X,'LOC'),Word,RestStem,Ws1,Ws,His),
     hdrug_util:concat_all([NoordStem,RestStem],Name,'').
 
+lexicon_(Noord,proper_name(X,'LOC'),Name,[Angola|Ws1],Ws,His,_LC) :-
+    atom(Noord),
+    ind_loc_prefix(Noord),
+    in_names_dictionary(proper_name(X,'LOC'),Angola,_,Ws1,Ws,His),
+    hdrug_util:concat_all([Noord,Angola],Name,' ').
+
 lexicon_(Word,proper_name(X,'PER'),Name,Ws1,Ws,His,_LC) :-
     in_names_dictionary(proper_name(X,'PER'),Word,Name0,Ws1,Ws2,His),
     n_word(Next,Ws2,Ws),
@@ -4954,3 +4960,37 @@ loc_prefix('zuid-','Zuid-').
 loc_prefix('noord-','Noord-').
 loc_prefix('oost-','Oost-').
 loc_prefix('west-','West-').
+
+ind_loc_prefix(zuid).
+ind_loc_prefix(noord).
+ind_loc_prefix(oost).
+ind_loc_prefix(west).
+
+ind_loc_prefix('Zuid').
+ind_loc_prefix('Noord').
+ind_loc_prefix('Oost').
+ind_loc_prefix('West').
+
+ind_loc_prefix(zuidwest).
+ind_loc_prefix(noordwest).
+ind_loc_prefix(zuidoost).
+ind_loc_prefix(noordoost).
+
+ind_loc_prefix('Zuidwest').
+ind_loc_prefix('Noordwest').
+ind_loc_prefix('Zuidoost').
+ind_loc_prefix('Noordoost').
+
+ind_loc_prefix('Zuid-west').
+ind_loc_prefix('Noord-west').
+ind_loc_prefix('Zuid-oost').
+ind_loc_prefix('Noord-oost').
+
+ind_loc_prefix('Zuid-West').
+ind_loc_prefix('Noord-West').
+ind_loc_prefix('Zuid-Oost').
+ind_loc_prefix('Noord-Oost').
+
+
+
+

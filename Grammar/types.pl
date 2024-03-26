@@ -472,7 +472,7 @@ boolean_type(avform,[[avform_ap,        % de erg mooie oplossing
 boolean_type(pun,  [[punt,dubb_punt,komma,uitroep,ampersand,staand_streep,
 		     haak_open,haak_sluit,ligg_streep,hellip,schuin_streep,
 		     is_gelijk,vraag,maal,punt_komma,plus,aanhaal_links,
-		     aanhaal_rechts,begin_naam,end_naam]]).
+		     aanhaal_rechts,begin_naam,end_naam,symbol]]).
 
 boolean_type(case, [[nom,gen,obl,dat,acc]]).
 

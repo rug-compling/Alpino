@@ -523,6 +523,8 @@ n([pl('Duitsers'),sg('Duitser')],de,[],
    hh('Oost'),
    hh('West')]).
 
+n([sg('Edenaar'),pl('Edenaren')],de,[]).
+
 n([sg('Egyptenaar'),pl('Egyptenaren')],de,[]).
 
 n([mass('Egyptisch')],het,[]).
@@ -3242,7 +3244,9 @@ n([mass(autonomie)],de,[],
 
 n([mass(autopsie)],de,[]).
 
-n([pl(autoriteiten),sg(autoriteit)],de,[vp],[]).
+n([pl(autoriteiten),sg(autoriteit)],de,
+  [measure,
+   vp],[]).
 
 n([pl(autoriteiten),sg(autoriteit)],de,[],
   [beurs,
@@ -13349,6 +13353,9 @@ n([mass(gevangenneming)],de,[]).
 n([mass(gevangenschap)],both,[],
   [s(krijg)]).
 
+n([pl(gevechten),sg(gevecht)],het,[pred_pp(in)],
+  []).
+
 n([pl(gevechten),sg(gevecht)],het,[],
   [i(dier,dieren),
    i(stier,stieren),
@@ -15481,6 +15488,18 @@ n([mass(hoogbouw)],de,[]).
 n([pl(hooggerechtshoven),sg(hooggerechtshof)],het,[]).
 
 n([pl(hoogheden),sg(hoogheid)],de,[]).
+
+n([sg(['Zijne','Koninklijke','Hoogheid']),
+   sg([zijne,koninklijke,hoogheid])],de,[np_app_measure]).   % zijne koninklijke hoogheid de Prins van Oranje
+
+n([sg(['Zijne','Koninklijke',en,'Keizerlijke','Hoogheid']),
+   sg([zijne,koninklijke,en,keizerlijke,hoogheid])],de,[np_app_measure]).  
+
+n([sg(['Hare','Koninklijke','Hoogheid']),
+   sg([hare,koninklijke,hoogheid])],de,[np_app_measure]).   
+
+n([sg(['Hare','Koninklijke',en,'Keizerlijke','Hoogheid']),
+   sg([hare,koninklijke,en,keizerlijke,hoogheid])],de,[np_app_measure]).   
 
 n([pl(hooglanden),sg(hoogland)],het,[]).
 
@@ -18791,11 +18810,11 @@ n([pl(konijnen),sg(konijn)],het,[],
   [proef,
    dim(konijntje)]).
 
-n([pl(koningen),sg(koning)],de,[],
+n([pl(koningen),sg(koning),sg('Koning')],de,[],
   [i(boef,boeven),
    dim(koninkje)]).
 
-n([pl(koninginnen),sg(koningin)],de,[],[dim(koninginnetje)]).
+n([pl(koninginnen),sg(koningin),sg('Koningin')],de,[],[dim(koninginnetje)]).
 
 n([mass(koningschap)],het,[]).
 
@@ -21485,6 +21504,12 @@ n([sg([maitre,'d\'hotel'])],de,[]).
 n([mass(maizena)],de,[]).
 
 n([pl(majesteiten),sg(majesteit)],de,[]).
+
+n([sg(['Hare','Majesteit']),
+   sg([hare,majesteit])],de,[np_app_measure]).
+
+n([sg(['Zijne','Majesteit']),
+   sg([zijne,majesteit])],de,[np_app_measure]).
 
 n([mass(majeur)],both,[]).
 
@@ -39945,7 +39970,7 @@ n([pl(voyeurs),sg(voyeur)],de,[]).
 
 n([pl(vragen),sg(vraag)],de,
   [sbar,
-   subject_sbar,
+   subject_sbar_no_het,   % dan is de vraag of hij komt ; dan is de vraag : komt hij
    vp,
    start_app_measure],
   [bonus,
