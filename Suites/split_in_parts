@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 # © Gertjan van Noord, 1998.
 # mailto:vannoord@let.rug.nl
+# DONE: noew ensures the final file contains at least one sentence
 
 use Getopt::Std;
 
@@ -22,13 +23,17 @@ if ($opt_z) {
     $cmdprefix = "|gzip >"
 }
 
-$ofile = $opt_o."_part00001.sents$filesuffix";
-open(OUTPUT,"$cmdprefix$ofile") || 
-  die "cannot write to $ofile: $!\n";
-$part=2;
-$counter=0;
-while (<> )  {
+$closed=1;
+$part=1;
+while (<>) {
   if (/^[%]/) {
+    if ($closed) {
+       $ofile = sprintf "%s_part%05d.sents$filesuffix",$opt_o,$part;
+       open(OUTPUT,"$cmdprefix$ofile") || die "cannot write to $ofile: $!\n";
+       $part++;
+       $counter=0;
+       $closed=0;
+    }
     print OUTPUT $_;
     next;
   }
@@ -44,14 +49,17 @@ while (<> )  {
   $counter++;
   @words=split;
   if (@words < $opt_m) {
+    if ($closed) {
+       $ofile = sprintf "%s_part%05d.sents$filesuffix",$opt_o,$part;
+       open(OUTPUT,"$cmdprefix$ofile") || die "cannot write to $ofile: $!\n";
+       $part++;
+       $counter=0;
+       $closed=0;
+    }
     print OUTPUT "$_";
   }
   if ($counter >= $opt_p) {
-    $counter=0;
     close OUTPUT;
-    $ofile = sprintf "%s_part%05d.sents$filesuffix",$opt_o,$part;
-    open(OUTPUT,"$cmdprefix$ofile") || 
-      die "cannot write to $ofile: $!\n";
-    $part++;
+    $closed=1;
   }
 }
