@@ -13,6 +13,14 @@ def main():
             t = "adjective(ge_no_e(both),fixed([[tegemoet]]))"
         if t == "tag" and h == "normal(enumeration)":
             t = "enumeration"
+        if t == "adjective(no_e(adv))" and r == "dankbaar":
+            t = "adjective(no_e(both))"
+        if t == "adjective(er(adv))" and r == "dankbaarder":
+            t = "adjective(er(both))"
+        if t == "adjective(ge_no_e(adv))" and r == "voor_bereiden":
+            t = "adjective(ge_no_e(both))"
+        if t == "adjective(ge_no_e(adv))" and r == "onvoorbereid":
+            t = "adjective(ge_no_e(both))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
