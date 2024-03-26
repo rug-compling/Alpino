@@ -375,6 +375,15 @@ guess_unused_position(W,Ws,P1,R1,Words) :-
     ;	true
     ).
 
+%% van aartsen => van Aartsen
+unknown_word_heuristic(P1,R1,Aartsen,_,"name: van ~w => van ~w~n",[Aartsen,AartsenC],_,none) :-
+    debug_message(3,"trying heuristic van name => van Name~n",[]),
+    tag(P0,P1,R0,R1,van,van,normal(normal),preposition(van,_)),
+    cap_first(Aartsen,AartsenC),
+    P is P1 + 1, R is R1 + 1,
+    alpino_lex:lexicon(proper_name(Agr,'PER'),L,[van,AartsenC],[],names_dictionary),
+    assert_tag(P0,P,R0,R,L,van_name,proper_name(Agr,'PER')).
+
 %% op- en terugbellen
 unknown_word_heuristic(P0,R0,W,Ws,
 		       "part_verb_conjunct|~p|~p~n",[W,Tags],_,len(1)) :-
@@ -2287,6 +2296,7 @@ decap_only('Hoe').
 decap_only('Hoeveel').
 decap_only('Hoofdstuk').
 decap_only('Hun').
+decap_only('Iedereen').
 decap_only('Illustratie').
 decap_only('In').
 decap_only('Is').
@@ -2533,6 +2543,7 @@ function('Kamervoorzitster').
 function('Kampioen').
 function('Kanselier').
 function('Keniaan').
+function('Kolonel').
 function('Koploper').
 function('Kopman').
 function('Korpschef').
@@ -2540,6 +2551,9 @@ function('Kroonprins').
 function('Kroaat').
 function('Landskampioen').
 function('Lijsttrekker').
+function('Luitenant-Kolonel').
+function('Luitenant-Generaal').
+function('Luitenant').
 function('Madam').
 function('Mademoiselle').
 function('Makelaar').
@@ -2643,6 +2657,7 @@ function('Wethouder').
 function('Wielrenner').
 function('Winnaar').
 function('Woordvoerder').
+function('Woordvoerster').
 function('Woordvoerdster').
 function('Zanger').
 function('Zangeres').
@@ -5997,7 +6012,8 @@ potential_name_fsa(23,P0,[Open|Words],Ws,[Open|Prefix],[open|His]) :-
 
 unknown_foreign_word(Word) :-
     foreign_word(Word),
-    \+ common_dutch_word(Word).
+    \+ common_dutch_word(Word),
+    \+ function(Word).
 
 common_dutch_word(de).
 common_dutch_word(der).
@@ -6006,6 +6022,7 @@ common_dutch_word(had).
 common_dutch_word(in).
 common_dutch_word(is).
 common_dutch_word(je).
+common_dutch_word(man).
 common_dutch_word(me).
 common_dutch_word(men).
 common_dutch_word(of).
@@ -6154,6 +6171,9 @@ name_vanhet('v.','\'t').
 
 name_vanhet('In','\'t').
 name_vanhet(in,'\'t').
+
+name_vanhet('Op','\'t').
+name_vanhet(op,'\'t').
 
 name_vanhet_maybe(van,het).
 name_vanhet_maybe(van,de).

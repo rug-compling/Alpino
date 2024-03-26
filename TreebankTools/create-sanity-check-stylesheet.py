@@ -71,7 +71,7 @@ def sanity_checks():
 
     check('//node[@rel="app" and @begin < ../node[@rel="hd"]/@begin]','appos precedes head')
 
-    check('/alpino_ds[not(@version="1.3")]','alpino_ds version is not 1.3')
+    check('/alpino_ds[not(@version="1.5" or @version="1.3")]','alpino_ds version is not 1.3 or 1.5')
     check('//node[@lcat]','unexpected lcat attribute')
 
     check('//node[not(@cat) and node]','non-leaf node without cat?')

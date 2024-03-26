@@ -2924,6 +2924,7 @@ second_part_english_compound(tag(_,_,R1,R,_,_,_,Tag2)) :-
 second_part_english_compound(tag(_,_,_,_,L,_,_,Tag)):-
     second_part_lemma(L,Tag).
 
+second_part_lemma(man,noun(_,_,_)).
 second_part_lemma(elite,noun(_,_,_)).
 second_part_lemma(vormig,adjective(_)).
 second_part_lemma(school,noun(_,_,_)).
