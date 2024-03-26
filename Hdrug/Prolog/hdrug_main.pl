@@ -909,7 +909,11 @@ parse_compare_st1(Ref,Max,Sentence,Phon,Len,Parser):-
 %% sentence_length(Sentence,Len)
 sentence_length(Ws, Len) :-
     try_hook(exceptional_sentence_length(Ws,Len),
-	     length(Ws,Len)).
+	     (   nonvar(Ws)
+	     ->  length(Ws,Len)
+	     ;   Len=unknown
+	     )
+	    ).
 
 lf_length(Lf, Len) :-
     try_hook(exceptional_lf_length(Lf,Len),
