@@ -7396,8 +7396,9 @@ grammar_rule(start_comp_punct,SBAR, [ Comp, DUBB ]) :-
     hd_comp_structure(Comp,XP,SBAR).
 
 %%EX%% - De veiligheidsraad in spoed bijeenkomt
-grammar_rule(dash_ssub,START,[LIGG,VP]) :-
+grammar_rule(dash_ssub,START,[LIGG,VP,PUNCT]) :-
     START => top_cat,
+    optend_punct(PUNCT),
     dash_symbol(LIGG),
     ssub(VP),
     hd_structure(START,VP).
@@ -8030,6 +8031,12 @@ grammar_rule(adv_zo_van_sbar_dp,MAX,[ADV,SBAR]) :-
 %%%% various DP DP structs %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+flat(M,COMMA,A) :-
+    M:branch <=> COMMA:puncttype,
+    M:branch <=> MB,
+    A:branch <=> AB,
+    dif(MB,AB).
+
 %%EX%% De man kwam binnen ; hij opende de koelkast .
 grammar_rule(start_start_punt_komma,M,[A,COMMA,B]) :-
     A => start,
@@ -8039,9 +8046,8 @@ grammar_rule(start_start_punt_komma,M,[A,COMMA,B]) :-
     (   hdrug_util:hdrug_flag(parse_or_generate,generate),
 	COMMA:puncttype => punt_komma
     ;   hdrug_util:hdrug_flag(parse_or_generate,parse),
-	M:branch => yes,
-	A:branch => no,
-	B:branch => no
+	flat(M,COMMA,A),
+	flat(M,COMMA,B)
     ),
     M:puncttype <=> B:puncttype,
     dp_dp_structure(A,B,M).
@@ -8058,10 +8064,9 @@ grammar_rule(start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C]) :-
 	COMMA:puncttype => punt_komma,
 	COMMA2:puncttype => punt_komma
     ;   hdrug_util:hdrug_flag(parse_or_generate,parse),
-	M:branch => yes,
-	A:branch => no,
-	B:branch => no,
-	C:branch => no
+	flat(M,COMMA,A),
+	flat(M,COMMA,B),
+	flat(M,COMMA2,C)
     ),
     M:puncttype <=> B:puncttype,
     dp_dp_structure(A,B,C,M).
@@ -8081,10 +8086,9 @@ grammar_rule(start_start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C,COMMA3,D])
 	COMMA2:puncttype => punt_komma,
 	COMMA3:puncttype => punt_komma
     ;   hdrug_util:hdrug_flag(parse_or_generate,parse),
-	M:branch => yes,
-	A:branch => no,
-	B:branch => no,
-	C:branch => no
+	flat(M,COMMA,A),
+	flat(M,COMMA,B),
+	flat(M,COMMA2,C)
     ),
     M:puncttype <=> B:puncttype,
     dp_dp_structure(A,B,C,D,M).
@@ -8108,11 +8112,6 @@ grammar_rule(start_start_dubb_punt,M,[A,COMMA,B]) :-
     A => start,
     B => start,
     M => start,
-    (   hdrug_util:hdrug_flag(parse_or_generate,generate)
-    ;   hdrug_util:hdrug_flag(parse_or_generate,parse),
-	M:branch => yes,
-	A:branch => no		% for a;b;c;d only allow a;(b;(c;d))
-    ),
     M:puncttype <=> B:puncttype,
     nucl_sat_structure(A,B,M).
 
@@ -8364,13 +8363,11 @@ grammar_rule(start_mod_comma_np,M,[MOD,COMMA,NP]) :-
 %%EX%% Hij heeft een baard , zij heeft een tattoo
 %%EX%% Hij heeft een baard , kun je nagaan ...
 grammar_rule(dp_dp_root,ROOT,[ROOTA, COMMA, ROOTB]) :-
-    end_punct(COMMA,Punct),
-    Punct => ~punt_komma,
+    comma(COMMA),
     ROOT => max,
     ROOT:max_type => t_dp,
     ROOTA => max,
     ROOTA:max_type => (t_dp;t_root;t_rootbar;t_topic_drop),
-    ROOTA:puncttype <=> Punct,
     ROOTB => max,
     ROOTB:max_type => (t_dp;t_root;t_topic_drop),
     dp_dp_structure(ROOTA,ROOTB,ROOT).
