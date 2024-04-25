@@ -35,11 +35,6 @@ default_testN_options=-testN stop_if_optimal=off user_max=900000 max_sentence_le
 LassySmall_testN_options=suite_shortest_first=on max_sentence_length=20
 novelsample_corrected_testN_options=max_sentence_length=20
 cdb_testN_options=suite_shortest_first=on
-PPH_testN_options=suite_shortest_first=on
-PPI_testN_options=suite_shortest_first=on
-WSU_testN_options=suite_shortest_first=on
-dpc-ind_testN_options=suite_shortest_first=on -flag treebank ../Treebank/dpc
-dpc-rou_testN_options=suite_shortest_first=on -flag treebank ../Treebank/dpc
 cgn_exs_testN_options="number_analyses=5000"
 ovistrain_testN_options=-flag treebank ../Treebank/ovis
 oviswg_testN_options=-flag treebank ../Treebank/ovis

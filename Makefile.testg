@@ -36,10 +36,7 @@ debug=1
 default_test_options=debug=$(debug) use_fluency_model=on user_max=300000 generate_robustness=on
 cdb_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_c
 extra_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_x
-PPH_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_p
-PPI_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_i
 qa_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_q
-dpc-ind_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_d -flag treebank $(ALPINO_HOME)/Treebank/dpc
 
 
 test:
@@ -60,9 +57,9 @@ g3:
 g4:
 	$(MAKE) test suite=i_suite
 g5:
-	$(MAKE) test suite=lassy
+	$(MAKE) test suite=lassy-doc
 
-testgsl: g6 g7 g8 g9 g10 g11 g12
+testgsl: g6 g7 g8 g12
 
 g6:
 	$(MAKE) test suite=extra
@@ -70,12 +67,6 @@ g7:
 	$(MAKE) test suite=qa
 g8:
 	$(MAKE) test suite=cdb
-g9:
-	$(MAKE) test suite=dpc-ind
-g10:
-	$(MAKE) test suite=PPH
-g11:
-	$(MAKE) test suite=PPI
 g12:
 	$(MAKE) test suite=wpspel
 
