@@ -208,9 +208,9 @@ lexical_analysisXXX(Input) :-
 
 	(   Unk == on
 	->  time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for skipper
+	    time(Debug,replace_per_tags),
 	    time(Debug,skips),
 	    time(Debug,filter_te_tags),
-	    time(Debug,replace_per_tags),
 	    time(Debug,replace_dehet_tags),
 	    time(Debug,generalize_tags),
 	    time(Debug,filter_more_tags),
@@ -814,7 +814,10 @@ generalize_tags :-
 replace_per_tags :-
     (   clause(tag(P1,P,Q1,Q,W,L,His,proper_name(Num,'PER')),true,Ref),
 	unique(P1,P,Ref),
-	(   tag(_,P1,_,Q1,het,_,_,_)
+	(   (   tag(_,P1,_,Q1,het,_,_,_)
+	    ;   tag(P2,P1,Q2,Q1,_,_,_,adjective(e)),
+		tag(_,P2,_,Q2,het,_,_,_)
+	    )
 	->  erase_tag(Ref),
 	    assert_tag(P1,P,Q1,Q,W,L,replace_per(His),proper_name(Num)),
 	    debug_message(1,"ignore 'PER' after 'het' for ~w~n",[W])

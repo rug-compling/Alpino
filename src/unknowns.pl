@@ -2613,6 +2613,7 @@ function('Schaatser').
 function('Schaatsster').
 function('Scheidsrechter').
 function('Senator').
+function('Sergeant').
 function('Serviër').
 function('Spanjaard').
 function('Spits').
@@ -3907,6 +3908,7 @@ is_start_sentence(P) :-
     is_start_sentence_(P),
     !.
 
+start_sentence_punct(punt).
 start_sentence_punct(dubb_punt).
 start_sentence_punct(hellip).
 start_sentence_punct(vraag).
@@ -6281,6 +6283,12 @@ name_end_firma('N.V.').
 
 name_end_loc('län').
 name_end_loc('Län').
+name_end_loc(drive).
+name_end_loc(road).
+name_end_loc(street).
+name_end_loc('Drive').
+name_end_loc('Road').
+name_end_loc('Street').
 
 name_end_person('RA').  % register accountant
 name_end_person('BA').

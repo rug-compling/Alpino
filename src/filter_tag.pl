@@ -440,7 +440,8 @@ valid_sc(part_fixed_dep(Part,Frame), Root, Infl,
     atom_concat(part_,F,F2),
     Frame2 =.. [F2,Part|Args],
     valid_sc(Frame2,Root,Infl,Checks).
-valid_sc(ninv(Frame,_),Root,sg1,[check_stem(ik)|Conds]) :-
+valid_sc(ninv(Frame,_),Root,sg1,[or([check_stem(ik),
+				     check_stem(ikzelf)])|Conds]) :-
     \+ Frame = incorporated_subj_topic(_),
     !,
     valid_sc(Frame,Root,sg1,Conds).
