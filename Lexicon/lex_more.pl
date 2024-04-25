@@ -1667,8 +1667,8 @@ isa_number(Agr) -->
     { parse_number(W,Agr) },
     opt_breuk.
 
-% is an adjective?
-
+/*
+% is an adjective
 isa_number(Agr) -->
     n_word(W0),
     { atom(W0),
@@ -1680,6 +1680,7 @@ isa_number(Agr) -->
       ),
       parse_number(W,Agr)
     }.
+*/
 
 opt_breuk --> [].
 opt_breuk --> n_word(U),
@@ -4084,6 +4085,73 @@ phrasal_entry(adjective(e),enhalve) -->
 	atom_concat(Twee,ë,TweeAcc),
         number_expression(pl_num,[Twee],[])
     }.
+
+phrasal_entry(adjective(no_e(nonadv)),eneenhalf) -->
+    { hdrug_util:debug_message(4,"Neneenhalf~n",[]) },
+    number_expression(pl_num),
+    n_word(en),
+    n_word(een),
+    n_word(half).
+
+phrasal_entry(adjective(no_e(nonadv)),eneenhalf) -->
+    { hdrug_util:debug_message(4,"Neneenhalf~n",[]) },
+    n_word(ZesEnEenHalf),
+    {   atom(ZesEnEenHalf),
+	atom_concat(Zes,eneenhalf,ZesEnEenHalf),
+	\+ atom_concat(_,e,Zes),
+        number_expression(pl_num,[Zes],[])
+    }.
+
+phrasal_entry(adjective(no_e(nonadv)),eneenhalf) -->
+    { hdrug_util:debug_message(4,"Neneenhalf~n",[]) },
+    n_word(ZesEnEenHalf),
+    {   atom(ZesEnEenHalf),
+	atom_concat(Zes,'-en-een-half',ZesEnEenHalf), 
+        number_expression(pl_num,[Zes],[])
+    }.
+
+phrasal_entry(adjective(no_e(nonadv)),eneenhalf) -->
+    { hdrug_util:debug_message(4,"Neneenhalf~n",[]) },
+    n_word(TweeEnEenHalf),
+    {   atom(TweeEnEenHalf),
+	atom_concat(TweeAcc,neenhalf,TweeEnEenHalf),
+	atom_concat(Twee,ë,TweeAcc),
+        number_expression(pl_num,[Twee],[])
+    }.
+
+phrasal_entry(adjective(no_e(nonadv)),enhalf) -->
+    { hdrug_util:debug_message(4,"Nenhalf~n",[]) },
+    number_expression(pl_num),
+    n_word(en),
+    n_word(half).
+
+phrasal_entry(adjective(no_e(nonadv)),enhalf) -->
+    { hdrug_util:debug_message(4,"Nenhalf~n",[]) },
+    n_word(ZesEnEenHalf),
+    {   atom(ZesEnEenHalf),
+	atom_concat(Zes,enhalf,ZesEnEenHalf),
+	\+ atom_concat(_,e,Zes),
+        number_expression(pl_num,[Zes],[])
+    }.
+
+phrasal_entry(adjective(no_e(nonadv)),enhalf) -->
+    { hdrug_util:debug_message(4,"Nenhalf~n",[]) },
+    n_word(ZesEnEenHalf),
+    {   atom(ZesEnEenHalf),
+	atom_concat(Zes,'-en-half',ZesEnEenHalf),
+	\+ atom_concat(_,e,Zes),
+        number_expression(pl_num,[Zes],[])
+    }.
+
+phrasal_entry(adjective(no_e(nonadv)),enhalf) -->
+    { hdrug_util:debug_message(4,"Nenhalf~n",[]) },
+    n_word(TweeEnEenHalf),
+    {   atom(TweeEnEenHalf),
+	atom_concat(TweeAcc,nhalf,TweeEnEenHalf),
+	atom_concat(Twee,ë,TweeAcc),
+        number_expression(pl_num,[Twee],[])
+    }.
+
 
 never_compound_part(L) :-
     atom(L),

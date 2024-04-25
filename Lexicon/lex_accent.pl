@@ -415,7 +415,9 @@ accent(fotogalerieen,fotogalerieën).
 accent(fotografieen,fotografieën).
 accent(fotokopieen,fotokopieën).
 accent(fotoserien,fotoseriën).
+accent(francaise,française).
 accent('Francaise','Française').
+accent(francaises,françaises).
 accent('Francaises','Françaises').
 accent(frele,frêle).
 accent(frobelde,fröbelde).

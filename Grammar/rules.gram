@@ -7569,7 +7569,7 @@ root_nucl_sat_tag_structure(Dan,Max,TAG,ROOT) :-
 
 %%EX%% Piet , ik vind hem een vervelende vent
 grammar_rule(sat_nucl(np),ROOT,[Max, COMMA, Dan]) :-
-    comma(COMMA),
+    comma_hellip(COMMA),
     ind_max_np(Max1),
     Max:subn => ~sub_det,
     unify_except(Max1,Max,wh), %% welke minister , dat wist hij niet
@@ -8511,6 +8511,17 @@ grammar_rule(num_adv_dp,MAX,[XP,OPTCOMMA,ADV]) :-
     ind_max_np(XP),
     XP:subn => (sub_num ; sub_indef_adj ; sub_def_adj ; sub_rang ; sub_tmp ; sub_veel),
     dp_dp_structure(XP,ADV,MAX).
+
+%%EX%% zes vluchten , waarvan vijf 's nachts of in het weekend
+grammar_rule(num_mod_dp,MAX,[XP,OPTCOMMA,MOD]) :-
+    optcomma(OPTCOMMA),
+    MAX => max,
+    MAX:max_type => t_part,
+    MOD => modifier,
+    MOD:cj => one_crd,
+    ind_max_np(XP),
+    XP:subn => (sub_num ; sub_indef_adj ; sub_def_adj ; sub_rang ; sub_tmp ; sub_veel),
+    dp_dp_structure(XP,MOD,MAX).
 
 %%EX%% zestien gewonden waarvan drie met brandwonden en vier ernstig
 grammar_rule(num_pp_dp,MAX,[XP,OPTCOMMA,ADV]) :-

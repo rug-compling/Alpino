@@ -7877,6 +7877,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	part_intransitive(weg),
 	part_ld_pp(weg),
 
+	fixed([{[ap_pred('aan de gang'),pc(met)]}],no_passive),
 	part_er_pc_pp(vandoor,met), % hij ging er mee vandoor; as if "er" has two roles...
 	fixed([svp_er_pp(vandoor),pc(met)],no_passive), % hij ging er met de titel vandoor
 
@@ -7954,6 +7955,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	fixed([[in,zijn,werk]],no_passive),  % hoe gaat dat in zijn werk?
 	fixed([[naar,de,klote]],no_passive),
 	fixed([[te,lijf],acc],norm_passive),  % hij werd te lijf gegaan
+	fixed([[ten,aanval]],no_passive),
 	fixed([[ten,gronde]],no_passive),
 	fixed([[ten,gronde],pc(aan)],no_passive),
 	fixed([[ter,harte],dat],no_passive),
@@ -10295,7 +10297,7 @@ v(infiltreer,infiltreert,infiltreren,geïnfiltreerd,infiltreerde,infiltreerden,
 
 v(informeer,informeert,informeren,geïnformeerd,informeerde,informeerden,
     [h([sbar,
-        np_sbar,
+        acc_np_sbar,
 	transitive,
 	intransitive,
 	np_pc_pp(over),
@@ -14195,6 +14197,7 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	fixed([{[er_pp(bij),acc(tekening_DIM)]}],norm_passive),
 	fixed([{[er_pp(bij),acc(tekening_DIM)]},vp_no_control],norm_passive),
 	fixed([{[er_pp(bij),acc(tekening_DIM)]},sbar],norm_passive),
+	fixed([{[acc(tijd),mod_pp(voor)]}],norm_passive),
 	fixed([{[acc(toespeling),pc(op)]}],norm_passive),
 	fixed([[tot,voorwerp],{[acc,pc(van)]}],norm_passive),
 	fixed([[uit,de,voeten],refl],no_passive),
@@ -14754,6 +14757,7 @@ v(moet,moet,moeten,gemoeten,moest,moesten,
       nonp_copula,              % het boek moet af/kapot/weg/open...
       nonp_pred_np_ndev,  % ik moet een uniform aan / een pet op / etc
       part_pc_pp(af,van),
+      fixed([{[ap_pred('aan de gang'),pc(met)]}],no_passive),
       fixed([[van,het,hart],dat],no_passive),  % mij moet vanavond iets van het hart
       fixed([[van,het,hart],dat,sbar],no_passive),
       fixed([[te,lijf],acc],no_passive),
@@ -18987,6 +18991,7 @@ v(ruk,rukt,rukken,gerukt,rukte,rukten,
     [z([part_intransitive(aan),
 	part_intransitive(op),
 	part_ld_pp(op),
+	ld_dir,  % we zijn de stad binnen gerukt
 	part_pc_pp(los,op),
 	part_pc_pp(uit,naar),
 	part_pc_pp(uit,voor)]),
@@ -28592,6 +28597,7 @@ v(zend,zendt,zenden,gezonden,zond,zonden,
 	part_transitive(door),
 	part_np_ld_pp(door),
 	part_np_ld_pp(in),
+	part_np_ld_pp(uit),
 	part_transitive(in),
 	part_transitive(over),
 	part_transitive(toe),

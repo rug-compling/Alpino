@@ -210,7 +210,8 @@ iets_noun(N) :-
     initialize_dt([],N),
     N:aform => iets,
     N:wh => nwh,
-    N:agr => sg,
+    N:agr => sg,		% hm, this can also be plural:
+				% niets anders dan wijze mannen *woont/wonen in dit huis
     N:dt:num <=> N:agr.
 
 iets_anders_noun(N) :-

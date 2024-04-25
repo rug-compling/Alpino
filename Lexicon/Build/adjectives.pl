@@ -10105,6 +10105,8 @@ a([e(eksemplarische),
 a([e(existentiële),
    no_e(existentieel)],adv,[],[]).
 
+a([e(exogenen),no_e(exogeen)],adv,[],[]).
+
 a([e(exorbitante),
    no_e(exorbitant)],adv,[],[]).
 
@@ -22571,6 +22573,8 @@ a([e(malle),
 a([both(malafide),
    both([mala,fide])],nonadv,[],[]).
 
+a([both(maligne)],nonadv,[],[]).
+
 a([e(malse),
    er(malser),
    ere(malsere),
@@ -24621,7 +24625,7 @@ a([e(omrande),
    no_e(omrand)],nonadv,[],[]).
 
 a([ge_e(omringde),
-   ge_no_e(omringd)],adv,[],[]).
+   ge_no_e(omringd)],padv,[],[]).
 
 a([ge_both(omschreven)],adv,[],[]).
 
@@ -38173,7 +38177,7 @@ a([ge_e(volgepakte),
    ge_no_e(volgepakt)],padv,[],[]).
 
 a([ge_e(volgepropte),
-   ge_no_e(volgepropt)],adv,[],[]).
+   ge_no_e(volgepropt)],adv,[pp(met)],[]).
 
 a([e(volgzame),
    er(volgzamer),

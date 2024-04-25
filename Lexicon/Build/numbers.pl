@@ -27,7 +27,7 @@ number(voorlaatste,voor_laat,rang).	% we staan voorlaatste
 %% de letter l wordt ook vaak voor 1 gebruikt
 number(l,'1',hoofd(sg_num)).
 
-number(anderhalf,hoofd(both)).
+% number(anderhalf,hoofd(both)).
 
 number('¼',hoofd(both)).    % 1/4
 number('½',hoofd(both)).    % 1/2

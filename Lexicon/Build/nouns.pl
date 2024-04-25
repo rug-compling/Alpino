@@ -12041,6 +12041,9 @@ n([pl(frames),sg(frame)],het,[],[dim(framepje)]).
 
 n([meas(franc),pl(francs)],de,[meas_mod,measure]).
 
+n([sg(française),pl(françaises),
+   sg(francaise),pl(francaises)],de,[]).
+
 n([pl(franciscanen),sg(franciscaan)],de,[]).
 
 n([pl(franciskanen),sg(franciskaan)],de,[]).
@@ -17245,6 +17248,7 @@ n([pl(kaarten),sg(kaart)],de,[],
    menu,
    netwerk,
    h('OV'),
+   i('OV_student','OV-studenten'),
    pers,
    prijs,
    route,
@@ -23058,6 +23062,8 @@ n([pl(monumenten),sg(monument)],het,[],
   ]).
 
 n([mass(monumentenzorg)],de,[]).
+
+n([mass(mood)],de,[pred_pp(in)]).
 
 n([mass(moois)],het,[]).
 
@@ -29196,6 +29202,10 @@ n([pl(rapporteurs),sg(rapporteur)],de,[],[schaduw]).  % europarl
 %VL: haast
 n([sg(rapte)],de,[]).
 
+%% er bestaan vele rassen rijst
+n([pl(rassen),sg(ras)],het,[measure],
+  []).
+
 n([pl(rassen),sg(ras)],het,[app_measure],
   [i(hond,honden),
    i(kat,katten)]).
@@ -33949,6 +33959,10 @@ n([pl(steunen),sg(steun)],de,[],
    s(staat),
    dim(steuntje)]).
 
+n([pl(steunen),sg(steun)],de,[subject_sbar,
+			      subject_vp],
+  []).
+
 n([sg(steunbetuiging),pl(steunbetuigingen)],de,[]).
 
 n([pl(steunpilaren),sg(steunpilaar)],de,[]).
@@ -35592,6 +35606,7 @@ n([pl('thema\'s'),sg(thema)],het,
    app_measure,
    start_app_measure],
   [hoofd,
+   kern,
    neven]).
 
 n([mass(thematiek)],de,[]).

@@ -1726,6 +1726,10 @@ unknown_root_heuristic(noun,Root,_,Attr,noun(Gen,both,Num),_,Surf) :-
     add_morphology(noun(Gen,both,Num),Root,Surf0),
     realize_surf(Surf0,Surf).
 
+unknown_root_heuristic(prefix,Root,Root,_,within_word_conjunct,_,Root) :-
+    atom_concat(_,'-',Root),
+    !.
+
 unknown_root_heuristic(prefix,Root,Root,_,within_word_conjunct,_,RootDash) :-
     atom_concat(Root,'-',RootDash).
 
