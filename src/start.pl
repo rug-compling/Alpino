@@ -30,7 +30,7 @@ alpino_table_goal:unknown_predicate_handler(_,fail).
 :- set_flag(parser,alpino_lc).
 :- set_flag(generator,alpino_cg).
 :- set_flag(useful_try_check,off).
-:- set_flag(max_number_of_objects,250000).
+:- set_flag(max_number_of_objects,5000).
 :- initialize_flag(geneval,on).
 
 %% :- initialize_flag(application_type,news).
