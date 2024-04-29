@@ -5533,6 +5533,20 @@ grammar_rule(n_n_cp, NP, [ N, OPTCOMMA1, CP, OPTCOMMA2 ] ) :-
     N:rightm => no,
     n_post_mod_structure(N,CP,NP).
 
+%%EX%% het jaar voordat ik achttien werd was mijn mooiste jaar
+%%EX%% de maand nadat ik mijn rijbewijs had gehaald kocht ik een auto
+%%EX%% de periode voor ik je leerde kennen duurde te kort
+grammar_rule(tmp_n_n_cp, NP, [ N, CP ] ) :-
+    max_sbar(CP),
+    CP:ctype => c_mod,
+    CP:hstem <=> VOOR,
+    alpino_wappend:wwmember(VOOR,[voordat,nadat,voor]),
+    N:rightm => no,
+    N:hstem <=> JAAR,
+    stem_compound(JAAR,[jaar,maand,week,periode]),
+%%     N:nform => temp,  this does not work, because then it cannot become an argument 
+    n_post_mod_structure(N,CP,NP).
+
 n_mod_structure(N,MOD,NP) :-
     NP => n, N => n, 
     N:bmeas <=> NP:bmeas,
@@ -5609,13 +5623,14 @@ grammar_rule(n_n_rel, NP, [N, OPTCl, Rel, OPTCr ]) :-
 %    NP:haspre => no,
 %    hd_rel_structure(N,Rel,NP).
 
+%%EX%% op de hoek van de Tweede Helmerstraat en Constantijn Huygensstraat
 grammar_rule(n_pn,N,[PN]) :-
     PN => pn,
     N => n,
     N:pn => yes,
     PN:lex => yes,
     N:e_deps => [],
-    PN:cj => ncj,
+%    PN:cj => ncj,
     N:subn => sub_name,
     N:nform => norm,
     unify_except(N,N0,lex),
@@ -8965,13 +8980,16 @@ grammar_rule(np_np,START,[NP1,NP2]) :-
 
 %%EX%% Wilders en verantwoordelijkheid , een onmogelijkheid ?
 %%EX%% Brussel , 29 februari 2024
+%%EX%% De grote ommekeer van het socialisme , wat me lastig lijkt
 grammar_rule(np_c_np,START,[NP1,COMMA,NP2]) :-
     comma(COMMA),
     START => max,
     START:max_type => t_dp,
     START:mod_np => yes,
     dp_np(NP1),
-    dp_np_tmp(NP2),
+    ind_max_np(NP2),
+    NP2:nform => norm,
+    NP2:subn => (sub_num;sub_name;sub_noun;sub_tmp),
     dp_dp_structure(NP1,NP2,START).
 
 %%EX%% Jan Derks dit jaar scheidsrechter van het jaar
@@ -12371,3 +12389,13 @@ empty_np(NP) :-
     NP:subn => sub_noun,
     NP:case => (obl;acc;nom),
     NP:allows_drop => yes.
+
+stem_compound(Stem,Cands) :-
+    when(nonvar(Stem),
+	 (   atom(Stem),
+	     alpino_util:split_atom(Stem,"_",List),
+	     lists:last(List,El),
+	     lists:member(El,Cands)
+	 )).
+
+	 
