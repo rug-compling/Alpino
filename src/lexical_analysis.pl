@@ -1297,8 +1297,8 @@ enforce_longest_match(H,Words,0,Final) :-
     normal_base_cases(H),
     (	tag(Sf0,Sf,R0,R,_Surf0,_,H,Tag1),
 	R-R0 > 1,
-	connected(0,Sf0),
-	connected(Sf,Final),
+	is_connected(0,Sf0),
+	is_connected(Sf,Final),
 	longest_match_candidate(H,R0,R,Words,Type),
 
 	clause(tag(_,_,S0,S,_,Surf,H1,Tag2),true,Ref2),
@@ -3196,3 +3196,7 @@ new_pair(P0,P1,P0,P):-
     connected(P1,P).
 new_pair(P1,P,P0,P):-
     connected(P0,P1).
+
+is_connected(P,P).
+is_connected(P0,P):-
+    connected(P0,P).
