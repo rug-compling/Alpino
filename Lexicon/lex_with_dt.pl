@@ -1146,6 +1146,7 @@ with_dt_all(bij,[vijf,zes]).
 with_dt_all(bij,[vijf,zeven]).
 with_dt_all(bij,[zestig,zestig]).
 with_dt_all(bij,[zes,zes]).
+with_dt_all(bijzonder,[dicht]).
 with_dt_all(bijzonder,[heel,het,in]).
 with_dt_all(bijzonder,[het,in]).
 with_dt_all('bij zoverre',[zelfs]).
@@ -1378,6 +1379,7 @@ with_dt_all(deze,[miljard,paar]).
 with_dt_all(deze,[miljoen,paar]).
 with_dt_all(deze,[van]).
 with_dt_all(de,[zuster]).
+with_dt_all(dicht,[heel]).
 with_dt_all(die,[duizend,paar]).
 with_dt_all(die,[honderdduizend,paar]).
 with_dt_all(die,[honderd,paar]).
@@ -2634,6 +2636,7 @@ with_dt_root(dertig).
 with_dt_root('des te').
 with_dt_root(deze).
 with_dt_root(dezelfde).
+with_dt_root(dicht).
 with_dt_root(dichter).
 with_dt_root(die).
 with_dt_root(dien).

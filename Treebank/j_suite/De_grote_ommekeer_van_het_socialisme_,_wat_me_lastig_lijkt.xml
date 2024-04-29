@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="du" end="11" id="2" rel="--">
+      <node begin="0" cat="np" end="6" id="3" rel="dp">
+        <node begin="0" end="1" id="4" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node aform="base" begin="1" buiging="met-e" end="2" graad="basis" id="5" infl="e" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" vform="adj" word="grote"/>
+        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="ommekeer" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="ommekeer" word="ommekeer"/>
+        <node begin="3" cat="pp" end="6" id="7" rel="mod">
+          <node begin="3" end="4" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="4" cat="np" end="6" id="9" rel="obj1">
+            <node begin="4" end="5" id="10" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+            <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="socialisme" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="socialisme" word="socialisme"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" cat="whrel" end="11" id="12" rel="dp">
+        <node begin="7" case="both" def="indef" end="8" gen="het" getal="ev" id="13" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="wat"/>
+        <node begin="7" cat="ssub" end="11" id="14" rel="body">
+          <node begin="7" end="8" id="15" index="1" rel="su"/>
+          <node begin="8" case="dat_acc" def="def" end="9" gen="de" getal="ev" id="16" lemma="me" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" rnum="sg" root="me" special="wkpro" status="red" vwtype="pr" wh="nwh" word="me"/>
+          <node aform="base" begin="9" buiging="zonder" end="10" graad="basis" id="17" infl="no_e" lemma="lastig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="lastig" vform="adj" word="lastig"/>
+          <node begin="10" end="11" id="18" infl="sg3" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" sc="so_copula" tense="present" v_per="thi" word="lijkt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>De grote ommekeer van het socialisme , wat me lastig lijkt</sentence>
+</alpino_ds>

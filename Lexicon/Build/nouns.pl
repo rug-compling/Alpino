@@ -38523,7 +38523,7 @@ n([pl(versterkers),sg(versterker)],de,[]).
 n([pl(versterkingen),sg(versterking)],de,[],
   [dijk]).
 
-n([pl(verstoorders),sg(verstoorder)],de,[]).
+n([pl(verstoorders),sg(verstoorder)],de,[],[orde]).
 
 n([pl(verstoppingen),sg(verstopping)],de,[],
   [dim(verstoppinkje)]).

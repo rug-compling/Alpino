@@ -5205,6 +5205,15 @@ with_dt([Ook,Al],
 		 hd=l(Al,Pos,1,2)])) :-
     modified_modal_mod_hd_comp_prep(Ook,Al,Cat,Pos).
 
+with_dt([Ook,Al],
+	modal_adverb(prep),
+	dt(Cat,[mod=l(Ook,adverb,advp,0,1),
+		 hd=l(Al,Pos,1,2)])) :-
+    modified_modal_mod_hd_prep(Ook,Al,Cat,Pos).
+
+modified_modal_mod_hd_prep(bijzonder,dicht,ap,adjective(no_e(adv))).
+modified_modal_mod_hd_prep(heel,dicht,ap,adjective(no_e(adv))).
+
 modified_modal_mod_hd_comp_prep(vrijwel,direct,ap,adjective(no_e(adv))).
 modified_modal_mod_hd_comp_prep(vrijwel,meteen,advp,adverb).
 modified_modal_mod_hd_comp_prep(vrijwel,onmiddellijk,ap,adjective(no_e(adv))).
@@ -6978,6 +6987,7 @@ m(zijzelf,      pronoun(nwh,thi,both,de,nom,def),zijzelve).
 m(zoiets,       pronoun(nwh,thi,sg,het,both,indef,strpro),zoiets).
 m(zoiets,       pronoun(nwh,thi,sg,het,both,indef,strpro),[zo,iets]).
 m(zulk,         pronoun(nwh,thi,sg,het,both,indef),zulks).
+m('een en ander',pronoun(nwh,thi,sg,het,both,indef),[een,en,ander]).
 
 m('de een na de ander',     
                 pronoun(nwh,thi,sg,de,both,def,strpro),[de,een,na,de,ander]).

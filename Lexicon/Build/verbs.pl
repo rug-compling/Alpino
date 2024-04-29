@@ -22391,33 +22391,34 @@ v(storm,stormt,stormen,gestormd,stormde,stormden,
      h([het_subj])]).
 
 v(stort,stort,storten,gestort,stortte,stortten,
-    [z([nonp_copula,
-        ld_dir,  % hij stortte de diepte in
-	intransitive,
-	part_intransitive(in),
-	part_intransitive(ineen),
-	part_intransitive(neer),
-	part_ld_pp(in),
-	part_ld_pp(neer),
-	part_np_ld_pp(in),
-	part_np_ld_pp(neer),
-	part_np_ld_pp(uit)]),
-     h([transitive,
-	np_ld_pp,
-	np_np_ld_pp,  % hij kreeg alles over zich heen gestort
-	part_intransitive(over),
-        part_transitive(af),  % je kunt geld "af"storten blijkbaar
-	part_transitive(in),
-	part_transitive(neer),
-	part_transitive(terug),
-	part_transitive(door),
-	part_np_np(door),
-	part_so_pp_np(door),
-	part_transitive(over),
-	part_transitive(uit),
-	refl_ld_pp,
-	refl_ld_dir]),
-     b([ld_pp])]).
+  [z([nonp_copula,
+      ld_pp,			% hij is naar beneden gestort
+      ld_dir,			% hij stortte de diepte in
+      intransitive,
+      part_intransitive(in),
+      part_intransitive(ineen),
+      part_intransitive(neer),
+      part_ld_pp(in),
+      part_ld_pp(neer),
+      part_np_ld_pp(in),
+      part_np_ld_pp(neer),
+      part_np_ld_pp(uit)]),
+   h([transitive,
+      np_ld_pp,
+      np_np_ld_pp,	      % hij kreeg alles over zich heen gestort
+      part_intransitive(over),
+      part_transitive(af),	% je kunt geld "af"storten blijkbaar
+      part_transitive(in),
+      part_transitive(neer),
+      part_transitive(terug),
+      part_transitive(door),
+      part_np_np(door),
+      part_so_pp_np(door),
+      part_transitive(over),
+      part_transitive(uit),
+      refl_ld_pp,
+      refl_ld_dir]),
+   b([ld_pp])]).
 
 v(stortregen,stortregent,stortregenen,gestortregend,stortregende,stortregenden,
     [h([het_subj])]). %  het stortregent
