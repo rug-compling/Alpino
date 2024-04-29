@@ -183,7 +183,7 @@ lexical_analysisXXX(Input) :-
 
 	(   Unk == on
 	->  time(Debug,guess_names(Input)), % unknowns.pl
-	    time(Debug,guess_slash_pairs),  % unknowns.pl
+	    time(Debug,guess_slash_pairs),		% unknowns.pl
 	    time(Debug,guess_eng_compounds(Input))
 	;   true
 	),
@@ -1141,6 +1141,8 @@ requires_unique_match(name(_),_,name_gen(_),_,10,4).
 requires_unique_match(name_gen(_),_,name_gen(_),_,6,3).
 
 enforce_longest_match(Words,0,P) :-
+    retractall(connected(_,_)),
+    all_connected,
     count_edges(tag(_,_,_,_,_,_,_,_),Edges0),
     (   requires_longest_match(His),
 	enforce_longest_match(His,Words,0,P),
@@ -1284,12 +1286,19 @@ isa_normal_tag(H,normal(Sub)) :-
     Sub \= enumeration.
 isa_normal_tag(name(not_begin),name_adj(not_begin)).
 
-enforce_longest_match(H,Words,0,_Final) :-
+%%% connected
+%%% is added because otherwise longest_match removes tags because of
+%%% longer tags that are not connected. Example:
+%%% Zijne Koninklijke Hoogheid Prins Aymeric ; Prins van België
+
+enforce_longest_match(H,Words,0,Final) :-
     retractall(normal_tag(_,_)),
     \+ \+ tag(_,_,_,_,_,_,H,_),
     normal_base_cases(H),
-    (	tag(_Sf0,_Sf,R0,R,_Surf0,_,H,Tag1),
+    (	tag(Sf0,Sf,R0,R,_Surf0,_,H,Tag1),
 	R-R0 > 1,
+	connected(0,Sf0),
+	connected(Sf,Final),
 	longest_match_candidate(H,R0,R,Words,Type),
 
 	clause(tag(_,_,S0,S,_,Surf,H1,Tag2),true,Ref2),
@@ -3161,3 +3170,29 @@ remove_worse([path(Score,P,R,Path)|Ag0],P1,R1,Ag):-
 between_enumeration(P0,P) :-
     tag(_,P0,_,_,_,_,normal(enumeration),_),
     tag(P,_,_,_,_,_,normal(enumeration),_).
+
+
+all_connected :-
+    findall(P0/P,tag(P0,P,_,_,_,_,_,_),List0),
+    add_pairs(List0,List,[]),
+    all_connected(List).
+
+add_pairs([],List,List).
+add_pairs([P0/P|T],List0,List):-
+    (   connected(P0,P)
+    ->  List0 = List1
+    ;   noclp_assertz(connected(P0,P)),
+	List0 = [P0/P|List1]
+    ),
+    add_pairs(T,List1,List).
+
+all_connected([]).
+all_connected([P0/P|Tail]):-
+    findall(P1/P2,new_pair(P0,P,P1,P2),List),
+    add_pairs(List,ListNew,Tail),
+    all_connected(ListNew).
+
+new_pair(P0,P1,P0,P):-
+    connected(P1,P).
+new_pair(P1,P,P0,P):-
+    connected(P0,P1).
