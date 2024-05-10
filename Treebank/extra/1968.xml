@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="32" id="0" rel="top">
+    <node begin="20" end="21" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="31" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" end="1" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="president" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="president" word="President"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="Biden" naamval="stan" neclass="PER" ntype="eigen" num="both" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Biden" word="Biden"/>
+      </node>
+      <node begin="2" end="3" id="6" infl="sg" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" sc="tr_sbar" stype="declarative" tense="past" v_per="thi" word="zei" wvorm="pv"/>
+      <node begin="3" end="4" id="7" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" special="tmp" word="gisteren"/>
+      <node begin="4" cat="pp" end="12" id="8" rel="mod">
+        <node begin="4" cat="mwu" end="7" id="9" rel="hd">
+          <node begin="4" end="5" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="reactie" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="reactie" word="reactie"/>
+          <node begin="6" end="7" id="12" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+        </node>
+        <node begin="7" cat="np" end="12" id="13" rel="obj1">
+          <node begin="7" end="8" id="14" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+          <node begin="8" buiging="zonder" end="9" getal-n="zonder-n" id="15" lemma="ontmantelen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" rnum="sg" root="ontmantel" sc="intransitive" special="v_noun" word="ontmantelen" wvorm="inf"/>
+          <node begin="9" cat="pp" end="12" id="16" rel="mod">
+            <node begin="9" end="10" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="10" cat="np" end="12" id="18" rel="obj1">
+              <node begin="10" end="11" id="19" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="11" end="12" gen="het" getal="mv" graad="basis" id="20" lemma="protest" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="protest" word="protesten"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="12" cat="conj" end="31" id="21" rel="vc">
+        <node begin="12" cat="cp" end="20" id="22" rel="cnj">
+          <node begin="12" conjtype="onder" end="13" id="23" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="13" cat="ssub" end="20" id="24" rel="body">
+            <node begin="13" end="14" gen="both" getal="mv" graad="basis" id="25" lemma="mens" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" rnum="pl" root="mens" word="mensen"/>
+            <node begin="16" end="17" id="26" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" tense="present" v_per="thi" word="hebben" wvorm="pv"/>
+            <node begin="14" cat="np" end="20" id="27" rel="obj1">
+              <node begin="14" end="15" id="28" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+              <node begin="15" end="16" gen="het" genus="onz" getal="ev" graad="basis" id="29" lemma="recht" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="recht" sc="vp" word="recht"/>
+              <node begin="17" cat="oti" end="20" id="30" rel="vc">
+                <node begin="17" end="18" id="31" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" sc="om" vztype="init" word="om"/>
+                <node begin="18" cat="ti" end="20" id="32" rel="body">
+                  <node begin="18" end="19" id="33" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+                  <node begin="19" buiging="zonder" end="20" id="34" infl="inf" lemma="betogen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="betoog" sc="intransitive" word="betogen" wvorm="inf"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="21" conjtype="neven" end="22" id="35" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+        <node begin="22" cat="cp" end="31" id="36" rel="cnj">
+          <node begin="22" conjtype="onder" end="23" id="37" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="23" cat="ssub" end="31" id="38" rel="body">
+            <node begin="23" case="both" def="def" end="24" gen="de" getal="mv" id="39" index="1" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+            <node begin="29" end="30" id="40" infl="pl" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" tense="present" v_per="thi" word="moeten" wvorm="pv"/>
+            <node begin="23" cat="inf" end="31" id="41" rel="vc">
+              <node begin="23" end="24" id="42" index="1" rel="su"/>
+              <node begin="24" case="dat_acc" def="def" end="25" gen="de" getal="getal" id="43" lemma="zich" naamval="obl" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" rnum="sg" root="zich" special="wkpro" status="red" vwtype="refl" wh="nwh" word="zich"/>
+              <node aform="base" begin="25" end="26" id="44" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
+              <node begin="26" cat="pp" end="29" id="45" rel="pc">
+                <node begin="26" end="27" id="46" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                <node begin="27" cat="np" end="29" id="47" rel="obj1">
+                  <node begin="27" end="28" id="48" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="28" end="29" gen="de" genus="zijd" getal="ev" graad="basis" id="49" lemma="wet" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="wet" word="wet"/>
+                </node>
+              </node>
+              <node begin="30" buiging="zonder" end="31" id="50" infl="inf" lemma="houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" sc="np_pc_pp(aan)" word="houden" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="31" end="32" id="51" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>President Biden zei gisteren in reactie op het ontmantelen van de protesten dat mensen het recht hebben om te betogen , maar dat ze zich wel aan de wet moeten houden .</sentence>
+</alpino_ds>

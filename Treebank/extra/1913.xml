@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="conj" end="16" id="1" rel="--">
+      <node begin="0" cat="smain" end="6" id="2" rel="cnj">
+        <node begin="1" end="2" id="3" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" tense="present" v_per="thi" word="heeft" wvorm="pv"/>
+        <node begin="2" cat="np" end="4" id="4" index="1" rel="su">
+          <node begin="2" end="3" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="beveiliging" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="beveiliging" word="beveiliging"/>
+        </node>
+        <node begin="0" cat="ppart" end="6" id="7" rel="vc">
+          <node begin="0" end="1" id="8" index="2" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="Ook"/>
+          <node begin="2" end="4" id="9" index="1" rel="su"/>
+          <node begin="4" end="5" gen="het" getal="ev" id="10" lemma="niets" naamval="stan" num="sg" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" rnum="sg" root="niets" special="meas_mod" status="vol" vwtype="onbep" word="niets"/>
+          <node begin="5" buiging="zonder" end="6" id="11" infl="psp" lemma="horen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="hoor" sc="transitive_ndev_ndev" word="gehoord" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="6" conjtype="neven" end="7" id="12" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="smain" end="16" id="13" rel="cnj">
+        <node begin="0" end="1" id="14" index="2" rel="mod"/>
+        <node begin="7" end="8" id="15" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="intransitive" tense="present" v_per="thi" word="zijn" wvorm="pv"/>
+        <node begin="8" end="9" getal="getal" id="16" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="9" cat="np" end="16" id="17" rel="su">
+          <node begin="9" buiging="zonder" end="10" id="18" infl="geen" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" wh="nwh" word="geen"/>
+          <node begin="10" end="11" gen="both" getal="mv" graad="basis" id="19" lemma="getuige" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="getuige" word="getuigen"/>
+          <node begin="11" cat="rel" end="16" id="20" rel="mod">
+            <node begin="11" case="no_obl" end="12" gen="de" getal="getal" id="21" index="3" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="pl" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+            <node begin="11" cat="ssub" end="16" id="22" rel="body">
+              <node begin="11" end="12" id="23" index="3" rel="su"/>
+              <node begin="14" end="15" id="24" infl="pl" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" tense="present" v_per="thi" word="kunnen" wvorm="pv"/>
+              <node begin="11" cat="inf" end="16" id="25" rel="vc">
+                <node begin="11" end="12" id="26" index="3" rel="su"/>
+                <node begin="12" cat="np" end="14" id="27" rel="obj1">
+                  <node begin="12" end="13" id="28" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="13" end="14" gen="de" getal="mv" graad="basis" id="29" lemma="uitspraak" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="uitspraak" word="uitspraken"/>
+                </node>
+                <node begin="15" buiging="zonder" end="16" id="30" infl="inf" lemma="bevestigen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bevestig" sc="transitive" word="bevestigen" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Ook heeft de beveiliging niets gehoord en zijn er geen getuigen die de uitspraken kunnen bevestigen .</sentence>
+</alpino_ds>

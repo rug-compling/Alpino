@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="20" id="2" rel="--">
+      <node begin="0" cat="pp" end="5" id="3" rel="mod">
+        <node begin="0" end="1" id="4" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="Volgens"/>
+        <node begin="1" cat="np" end="5" id="5" rel="obj1">
+          <node begin="1" end="2" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="7" lemma="plan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="plan" word="plan"/>
+          <node begin="3" cat="pp" end="5" id="8" rel="mod">
+            <node begin="3" end="4" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="Israël" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Israël" word="Israël"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="11" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+      <node begin="6" end="7" getal="getal" id="12" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="7" cat="np" end="20" id="13" rel="su">
+        <node begin="7" end="8" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="8" buiging="zonder" end="9" graad="basis" id="15" lemma="tijdelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="tijdelijk" word="tijdelijk"/>
+        <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="staakt-het-vuren" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="staakt-het-vuren" word="staakt-het-vuren"/>
+        <node begin="11" cat="rel" end="20" id="17" rel="mod">
+          <node begin="11" end="12" id="18" index="1" lemma="waarbij" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarbij" word="waarbij"/>
+          <node begin="11" cat="conj" end="20" id="19" rel="body">
+            <node begin="11" cat="ssub" end="16" id="20" rel="cnj">
+              <node begin="11" end="12" id="21" index="1" rel="mod"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="Hamas" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Hamas" word="Hamas"/>
+              <node begin="13" cat="np" end="15" id="23" rel="obj1">
+                <node begin="13" buiging="met-e" end="14" graad="basis" id="24" lemma="Israëlisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Israëlisch" word="Israëlische"/>
+                <node begin="14" end="15" getal="mv" graad="basis" id="25" lemma="gijzelaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gijzelaar" word="gijzelaars"/>
+              </node>
+              <node begin="15" end="16" id="26" index="2" lemma="vrij_laten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="laat_vrij" word="vrijlaat" wvorm="pv"/>
+            </node>
+            <node begin="16" conjtype="neven" end="17" id="27" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="11" cat="ssub" end="20" id="28" rel="cnj">
+              <node begin="11" end="12" id="29" index="1" rel="mod"/>
+              <node begin="15" end="16" id="30" index="2" rel="hd"/>
+              <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="31" lemma="Israël" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Israël" word="Israël"/>
+              <node begin="18" cat="np" end="20" id="32" rel="obj1">
+                <node begin="18" buiging="met-e" end="19" graad="basis" id="33" lemma="Palestijns" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Palestijns" word="Palestijnse"/>
+                <node begin="19" buiging="met-e" end="20" getal-n="mv-n" id="34" lemma="vangen" pos="noun" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" root="vangen" word="gevangenen" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Volgens het plan van Israël komt er een tijdelijk staakt-het-vuren , waarbij Hamas Israëlische gijzelaars vrijlaat en Israël Palestijnse gevangenen .</sentence>
+</alpino_ds>

@@ -46,3 +46,4 @@ extra/./1736.xml	//node[node[@getal="mv" and @rel="hd"] and node[@rel="det" and 
 extra/./1760.xml	//node[@cat="smain" and not(node[@rel="su"]) and node[@rel="obj1"]]	no subject in smain?
 extra/./1821.xml	//node[@cat="smain" and not(node[@rel="su"]) and node[@rel="obj1"]]	no subject in smain?
 extra/./1822.xml	//node[@cat="smain" and not(node[@rel="su"]) and node[@rel="obj1"]]	no subject in smain?
+extra/./1924.xml	//node[ @cat and @rel="su" and not(@cat="np") and not(@cat="conj") and not(@cat="cp") and not(@cat="ti") and not(@cat="oti") and not(@cat="whrel") and not(@cat="whsub") and not(@cat="svan") and not(@cat="mwu")]	unexpected su-category.   Expected cats: np conj cp ti oti whrel whsub svan mwu

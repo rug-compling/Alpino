@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" index="1" lemma="Nederland" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" rnum="sg" root="Nederland" word="Nederland"/>
+      <node begin="1" end="2" id="3" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="11" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" cat="np" end="4" id="6" rel="mod">
+          <node aform="base" begin="2" buiging="zonder" end="3" id="7" infl="both" lemma="af_lopen" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="af_lopen" vform="psp" word="afgelopen" wvorm="vd"/>
+          <node begin="3" end="4" gen="het" genus="onz" getal="ev" graad="basis" id="8" lemma="jaar" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="jaar" special="tmp" word="jaar"/>
+        </node>
+        <node begin="4" buiging="zonder" end="5" id="9" infl="psp" lemma="stijgen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stijg" sc="ld_pp" word="gestegen" wvorm="vd"/>
+        <node begin="5" cat="pp" end="8" id="10" rel="mod">
+          <node begin="5" end="6" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="6" cat="np" end="8" id="12" rel="obj1">
+            <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lemma="plek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="plek" special="meas_mod" word="plek"/>
+            <node begin="7" end="8" id="14" infl="pl_num" lemma="6" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="6" word="6"/>
+          </node>
+        </node>
+        <node begin="8" cat="pp" end="11" id="15" rel="ld">
+          <node begin="8" end="9" id="16" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="9" cat="np" end="11" id="17" rel="obj1">
+            <node begin="9" end="10" gen="de" genus="zijd" getal="ev" graad="basis" id="18" lemma="plek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="plek" special="meas_mod" word="plek"/>
+            <node begin="10" end="11" id="19" infl="pl_num" lemma="4" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="4" word="4"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Nederland is afgelopen jaar gestegen van plek 6 naar plek 4 .</sentence>
+</alpino_ds>

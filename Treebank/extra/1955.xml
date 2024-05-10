@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="14" id="2" rel="--">
+      <node begin="1" end="2" id="3" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="4" index="1" rel="su">
+        <node begin="3" end="4" id="5" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="stuwdam" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="stuwdam" word="stuwdam"/>
+      </node>
+      <node begin="0" cat="ppart" end="14" id="7" rel="vc">
+        <node begin="0" end="1" id="8" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="Ook"/>
+        <node begin="2" end="3" getal="getal" id="9" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="3" end="5" id="10" index="1" rel="su"/>
+        <node begin="5" buiging="zonder" end="6" id="11" infl="psp" lemma="door_breken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breek_door" sc="part_intransitive(door)" word="doorgebroken" wvorm="vd"/>
+        <node begin="7" cat="whrel" end="14" id="12" rel="mod">
+          <node begin="7" end="8" id="13" index="2" lemma="waardoor" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waardoor" special="waar" word="waardoor"/>
+          <node begin="7" cat="ssub" end="14" id="14" rel="body">
+            <node begin="7" end="8" id="15" index="2" rel="mod"/>
+            <node begin="8" cat="np" end="11" id="16" rel="su">
+              <node begin="8" cat="detp" end="10" id="17" rel="det">
+                <node begin="8" buiging="zonder" end="9" id="18" infl="pl_indef" lemma="zo'n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="mod" root="zo'n" special="pre_num_adv" vwtype="aanw" word="zo'n"/>
+                <node begin="9" end="10" id="19" infl="pl_num" lemma="300.000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="300.000" word="300.000"/>
+              </node>
+              <node begin="10" end="11" gen="both" getal="mv" graad="basis" id="20" lemma="mens" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="mens" word="mensen"/>
+            </node>
+            <node begin="11" cat="pp" end="13" id="21" rel="pc">
+              <node begin="11" end="12" id="22" lemma="zonder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="zonder" vztype="init" word="zonder"/>
+              <node begin="12" end="13" gen="de" genus="zijd" getal="ev" graad="basis" id="23" lemma="stroom" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="stroom" word="stroom"/>
+            </node>
+            <node begin="13" end="14" id="24" infl="pl" lemma="zitten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zit" sc="pc_pp(zonder)" tense="present" v_per="thi" word="zitten" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Ook is er een stuwdam doorgebroken , waardoor zo&apos;n 300.000 mensen zonder stroom zitten .</sentence>
+</alpino_ds>

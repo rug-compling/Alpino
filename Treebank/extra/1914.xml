@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="1" end="2" id="2" infl="pl" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" sc="passive" stype="declarative" tense="present" v_per="thi" word="worden" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="3" index="1" rel="su">
+        <node begin="3" buiging="zonder" end="4" id="4" infl="geen" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" wh="nwh" word="geen"/>
+        <node begin="4" end="5" gen="de" getal="mv" graad="basis" id="5" lemma="betoger" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="betoger" word="betogers"/>
+      </node>
+      <node begin="0" cat="ppart" end="6" id="6" rel="vc">
+        <node begin="0" end="1" getal="getal" id="7" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="Er"/>
+        <node begin="2" end="3" id="8" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="mod" root="dus" special="sentence" word="dus"/>
+        <node begin="3" end="5" id="9" index="1" rel="obj1"/>
+        <node begin="5" buiging="zonder" end="6" id="10" infl="psp" lemma="vervolgen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vervolg" sc="transitive" word="vervolgd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Er worden dus geen betogers vervolgd .</sentence>
+</alpino_ds>

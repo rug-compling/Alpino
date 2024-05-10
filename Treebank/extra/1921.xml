@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node aform="compar" begin="0" buiging="met-e" end="1" graad="comp" id="3" infl="e" lemma="zwaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="zwaar" vform="adj" word="Zwaardere"/>
+        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="overtreding" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="overtreding" word="overtredingen"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="pl" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" sc="passive" stype="declarative" tense="present" v_per="thi" word="worden" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="5" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1"/>
+        <node aform="base" begin="3" end="4" id="8" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
+        <node begin="4" buiging="zonder" end="5" id="9" infl="psp" lemma="bestraffen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bestraf" sc="transitive" word="bestraft" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Zwaardere overtredingen worden wel bestraft .</sentence>
+</alpino_ds>

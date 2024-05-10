@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="0" cat="smain" end="22" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
+        <node begin="1" cat="mwu" end="3" id="4" rel="hd">
+          <node begin="1" end="2" id="5" lemma="Openbaar" neclass="ORG" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Openbaar" spectype="deeleigen" word="Openbaar"/>
+          <node begin="2" end="3" id="6" lemma="Ministerie" neclass="ORG" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Ministerie" spectype="deeleigen" word="Ministerie"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" v_per="thi" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="22" id="8" rel="vc">
+        <node begin="0" end="3" id="9" index="1" rel="su"/>
+        <node begin="6" buiging="zonder" end="7" id="10" infl="psp" lemma="vinden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vind" sc="transitive_ndev_ndev" word="gevonden" wvorm="vd"/>
+        <node begin="4" cat="np" end="22" id="11" rel="obj1">
+          <node begin="4" buiging="zonder" end="5" id="12" infl="geen" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" wh="nwh" word="geen"/>
+          <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="13" lemma="bewijs" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="bewijs" sc="sbar" word="bewijs"/>
+          <node begin="7" cat="cp" end="22" id="14" rel="vc">
+            <node begin="7" conjtype="onder" end="8" id="15" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+            <node begin="8" cat="ssub" end="22" id="16" rel="body">
+              <node begin="9" cat="np" end="11" id="17" index="2" rel="su">
+                <node aform="base" begin="9" buiging="met-e" end="10" graad="basis" id="18" infl="e" lemma="antisemitisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="antisemitisch" vform="adj" word="antisemitische"/>
+                <node begin="10" end="11" gen="de" getal="mv" graad="basis" id="19" lemma="leus" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="leus" word="leuzen"/>
+              </node>
+              <node begin="11" end="12" id="20" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="passive" tense="present" v_per="thi" word="zijn" wvorm="pv"/>
+              <node begin="8" cat="ppart" end="22" id="21" rel="vc">
+                <node begin="8" end="9" getal="getal" id="22" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+                <node begin="9" end="11" id="23" index="2" rel="obj1"/>
+                <node begin="12" buiging="zonder" end="13" id="24" infl="psp" lemma="roepen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="roep" sc="np_ld_pp" word="geroepen" wvorm="vd"/>
+                <node begin="13" cat="pp" end="22" id="25" rel="ld">
+                  <node begin="13" end="14" id="26" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                  <node begin="14" cat="np" end="22" id="27" rel="obj1">
+                    <node begin="14" end="15" id="28" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="15" end="16" gen="de" genus="zijd" getal="ev" graad="basis" id="29" lemma="opening" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="opening" word="opening"/>
+                    <node begin="16" cat="pp" end="22" id="30" rel="mod">
+                      <node begin="16" end="17" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="17" cat="np" end="22" id="32" rel="obj1">
+                        <node begin="17" end="18" id="33" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+                        <node begin="18" cat="mwu" end="20" id="34" rel="hd">
+                          <node begin="18" end="19" id="35" lemma="Nationaal" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Nationaal" spectype="deeleigen" word="Nationaal"/>
+                          <node begin="19" end="20" id="36" lemma="Holocaustmuseum" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Holocaustmuseum" spectype="deeleigen" word="Holocaustmuseum"/>
+                        </node>
+                        <node begin="20" cat="pp" end="22" id="37" rel="mod">
+                          <node begin="20" end="21" id="38" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                          <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="39" lemma="Amsterdam" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Amsterdam" word="Amsterdam"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Het Openbaar Ministerie heeft geen bewijs gevonden dat er antisemitische leuzen zijn geroepen bij de opening van het Nationaal Holocaustmuseum in Amsterdam .</sentence>
+</alpino_ds>
