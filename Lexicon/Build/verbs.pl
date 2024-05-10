@@ -3959,8 +3959,8 @@ v(blijf,blijft,blijven,gebleven,bleef,bleven,
 	copula_np,
 	copula_sbar,
 	copula_vp,
-	    intransitive,
-	    so_np,    % dan blijft er mij geen keus
+	intransitive,
+	so_np,    % dan blijft er mij geen keus
 	ld_adv,
         norm_passive,                % omdat .. blijft voorbehouden/aangewezen/behouden
 	te_passive,
@@ -3970,7 +3970,8 @@ v(blijf,blijft,blijven,gebleven,bleef,bleven,
         fixed([vc(lig,psp,intransitive),pc(aan),dat],no_passive),
         fixed([vc(lig,psp,intransitive),extra_obj_vp(A,B),er_pp(aan,A),i(dat,B)],no_passive),
         fixed([vc(lig,psp,intransitive),extra_sbar(A),er_pp(aan,A),dat],no_passive),
-	part_intransitive(aan),
+	    part_intransitive(aan),
+	    part_als_pred(aan),
 	part_intransitive(achter),
 	part_intransitive(binnen),
 	part_intransitive(bij),
@@ -14131,6 +14132,7 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	fixed([{[acc(aanspraak),pc(op)]}],norm_passive),
 	fixed([[afhandig],{[acc,dat]}],imp_passive),
 	fixed([[afhandig],{[acc,dat_pp(van)]}],imp_passive),
+	fixed([{[acc(afspraak),pc(over)]}],norm_passive),
 	fixed([{[acc(begin),pc(met)]}],norm_passive),
 	fixed([{[pc(tegen),acc(bezwaar)]}],imp_passive),
 	fixed([{[er_pp(tegen,C),acc(bezwaar)]},extra_vp(C)],imp_passive),
@@ -15004,6 +15006,7 @@ v(neem,neemt,nemen,genomen,nam,namen,neme,
 	part_transitive(terug),
 	part_transitive(uit),
 	part_transitive(waar),
+	part_als_pred_np(waar),
 	part_transitive(weg),
 	part_sbar(gewaar),
 	part_transitive(gewaar),
@@ -27349,6 +27352,7 @@ v(vraag,vraagt,vragen,gevraagd,vroeg,vroegen,
         fixed([{[dat_pp(aan),pc(naar)]}],imp_passive),
         fixed([{[dat_pp(aan),pc(over)]}],imp_passive),
 	pc_pp(om),
+	np_pc_pp(om), 
 	so_np_pc_pp(om),
         fixed([{[dat_pp(aan),pc(om)]}],imp_passive)])]).
 
@@ -28531,6 +28535,7 @@ v(zeg,zegt,zeggen,gezegd,zei,zeiden,zegge,
 	part_np_np(op),  % we zeggen hem de vriendschap op
 	np_mod_pp(over), % daar heeft hij nooit iets over gezegd
 	np_np_mod_pp(over), % daar heeft hij mij nooit iets over gezegd
+	fixed([{[mod_pp(over),sbar]}],imp_passive),   % ik vertrek niet , zei hij daar toen over
 	np_mod_pp(van),    % daar heeft hij nooit iets van gezegd
 	np_np_mod_pp(van), % daar heeft hij mij nooit iets van gezegd
 	fixed([er_pp(op),[donder]],imp_passive),

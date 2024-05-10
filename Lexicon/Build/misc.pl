@@ -5249,6 +5249,7 @@ m(pal,              modal_adverb(prep),pal).      % pal naast/achter/..
 m(recht,            modal_adverb(prep),recht).    % recht tegenover ..
 m(recht,            modal_adverb(prep),recht).    % lijnrecht tegenover ..
 m(redelijk,         modal_adverb(prep),redelijk). % redelijk op tijd
+m(schuin,           modal_adverb(prep),schuin).   % schuin naar voren
 m(ster,             modal_adverb(prep),sterk).    % sterk in de minderheid
 m(volkomen,         modal_adverb(prep),volkomen). % with pp (predicative?) % 'volkomen tegen mijn wil' / in de war
 m(zwaar,            modal_adverb(prep),zwaar).    % zwaar onder druk staan
