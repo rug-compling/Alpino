@@ -14,7 +14,7 @@ MIN_FEATURE_FREQ=$(shell cat min_feature_freq)
 default: 
 
 ##### to make new data:
-##### ( cd Data ; make realclean; make -j 25 ; make install )
+##### ( cd Data ; make realclean; make -j 25 data ; make install )
 
 ##### after that:
 ##### make tenfold
