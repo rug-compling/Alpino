@@ -236,7 +236,7 @@ else
                          END { print M/N }'
 endif
 
-PATTERNS=cdb extra fn fv f[nv] novel 
+PATTERNS=cdb extra f[nv] novel 
 
 SUITESDIR=.Suites/
 
