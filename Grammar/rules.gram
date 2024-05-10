@@ -5624,13 +5624,14 @@ grammar_rule(n_n_rel, NP, [N, OPTCl, Rel, OPTCr ]) :-
 %    hd_rel_structure(N,Rel,NP).
 
 %%EX%% op de hoek van de Tweede Helmerstraat en Constantijn Huygensstraat
+%% zie ook conjunction_cat(n,..)
 grammar_rule(n_pn,N,[PN]) :-
     PN => pn,
     N => n,
     N:pn => yes,
     PN:lex => yes,
     N:e_deps => [],
-%    PN:cj => ncj,
+    PN:cj => ncj,
     N:subn => sub_name,
     N:nform => norm,
     unify_except(N,N0,lex),
@@ -11903,12 +11904,12 @@ conjunction_cat(n,N,Crd,_) :-
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
 	Crd => ~ncj
     ),
-    N => n,
+    N => n.
     %% * de [ Nederlandse Antillen en Aruba ]
     %% * de [ Veluwe en Betuwe ]
     %% however:
     %% ok  de gsm of PDA
-    N:hdet <=> HDET,
+/*    N:hdet <=> HDET,
     YES => yes,
     NO => no,
     SUBN => ~sub_name,
@@ -11919,7 +11920,7 @@ conjunction_cat(n,N,Crd,_) :-
 	     NSUBN = SUBN
 	 )
 	).
-
+*/
 conjunction_cat(sbar,S,Crd,_) :-
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
