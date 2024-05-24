@@ -268,7 +268,7 @@ load_data_definitions :-
     ).
 
 hdrug_command(load,interpret_grammar,[g]).
-hdrug_command(load,(set_flag(suite,Suite),
+hdrug_command(load,(set_suite(Suite),
 		    set_flag(treebank,undefined),
 		    load_suite),[s,Suite]).
 hdrug_command(load,load_suite,[s]).
@@ -292,7 +292,7 @@ hdrug_command(list,list_sentences([Key]),[]) :-
 
 hdrug_command_help(load,"load g","to load grammar").
 hdrug_command_help(load,"load s","to load default suite").
-hdrug_command_help(load,"load s File","to load suite File").
+hdrug_command_help(load,"load s File","to load suite $(ALPINO_HOME)/Suites/File").
 hdrug_command_help(load,"load l","to load lexicon").
 hdrug_command_help(load,"load p","to load penalties").
 
