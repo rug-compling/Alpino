@@ -4793,7 +4793,8 @@ n([pl(besturingen),sg(besturing)],de,[]).
 
 n([pl(besturen),sg(bestuur)],both,  % VL: de bestuur
   [app_measure],
-  [beurs,
+  [s(afdeling),
+   beurs,
    s(bond),
    fractie,
    gemeente,
@@ -5329,7 +5330,7 @@ n([pl(bijzonderheden),sg(bijzonderheid)],de,
   [subject_sbar,
    sbar]).
 
-n([pl('bikini\'s'),sg(bikini)],de,[]).
+n([pl('bikini\'s'),sg(bikini)],de,[],[mini,h(mini)]).
 
 n([pl(billen),sg(bil)],de,[],[dim(billetje)]).
 
@@ -8536,7 +8537,9 @@ n([pl(culturen),sg(cultuur)],de,[],
    i(jong,jongeren),
    massa,
    mono,
-   pop]).
+   pop,
+   wieler
+  ]).
 
 n([mass([cum,laude])],both,[]).
 
@@ -11653,6 +11656,8 @@ n([pl(finales),sg(finale)],de,
 
 n([pl(finalisten),sg(finalist)],de,[]).
 
+n([pl(finalistes),sg(finaliste)],de,[]).
+
 n([pl(financiën)],de,[],[s(overheid)]).
 
 n([pl(financiers),sg(financier)],de,[]).
@@ -13593,7 +13598,7 @@ n([pl(gidsen),sg(gids)],de,[],
 
 n([sg(giechel),pl(giechels)],de,[]).
 
-n([mass(gier),pl(gieren),sg(gier)],de,[]).
+n([mass(gier),pl(gieren),sg(gier)],de,[],[aas]).
 
 n([mass(gierst)],de,[]).
 
@@ -19378,7 +19383,12 @@ n([pl(kundigheden),sg(kundigheid)],de,[sbar,vp]).
 
 n([mass([kung,fu])],de,[]).
 
-n([pl(kunsten),sg(kunst),ignore(m(kunst,noun(de,count,sg),kunst))],de,[sbar,vp],
+n([pl(kunsten),sg(kunst),ignore(m(kunst,noun(de,count,sg),kunst))],de,
+  [sbar,
+   vp,
+   subject_sbar,
+   subject_vp
+  ],
   [dim(kunstje)]).
 
 n([mass(kunst)],de,[],
@@ -21312,7 +21322,7 @@ n([sg(maandag),pl(maandagen)],de,
   [paas,
    pinkster]).
 
-n([pl(maarschalken),sg(maarschalk)],de,[]).
+n([pl(maarschalken),sg(maarschalk)],de,[],[veld]).
 
 n([sg(maart)],de,[temp_mod,sbar]).
 
@@ -30128,7 +30138,14 @@ n([pl('retorika\'s'),sg(retorika)],de,[]).
 n([pl(retouches),sg(retouche)],de,[]).
 
 %% een retourtje heelal
-n([pl(retours),sg(retour)],both,[app_measure],[dim(retourtje)]).
+n([pl(retours),sg(retour)],both,
+  [app_measure],
+  [dim(retourtje)]).
+
+%% hij is op zijn retour
+n([pl(retours),sg(retour)],both,
+  [pred_pp(op)],
+  []).
 
 n([pl(retrospectieven),sg(retrospectief)],het,[]).
 

@@ -1576,6 +1576,8 @@ number_expression_duizend -->
 number_expression_small_honderd -->
     number_expression_tien(_).
 number_expression_small_honderd -->
+    number_expression_honderd.
+number_expression_small_honderd -->
     n_word(honderd),
     number_expression_tien(_).
 number_expression_small_honderd -->
@@ -1650,6 +1652,12 @@ number_expression_large_honderd -->
        )},
     n_word(honderd),
     number_expression_tien(_).
+
+number_expression_honderd --> 
+    n_word(Twaalf),
+    { convert_number(Twaalf,TwaalfN),
+      TwaalfN < 1000
+    }.
 
 number_expression_tien(0) --> [].
 number_expression_tien(N) -->
@@ -2796,6 +2804,7 @@ is_chess_optional_comment --> ['?'].
 is_chess_optional_comment --> ['??'].
 is_chess_optional_comment --> ['!?'].
 is_chess_optional_comment --> ['?!'].
+is_chess_optional_comment --> ['('], [Atom], [')'], {  atom_codes(Atom,[D]), alpino_latin1:isdigit(D) }.
 is_chess_optional_comment --> [].
 
 is_chess_move(Move) :-

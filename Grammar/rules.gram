@@ -1419,6 +1419,7 @@ grammar_rule(vp_hellip_arg_v(np),VP, [Punct, Arg, V] ) :-
     vp_arg_v_np_structure(VP,Arg,V).
 
 grammar_rule(vp_arg_comma_v(np),VP, [Arg, COMMA, V] ) :-
+    V:eps3 => no, % no comma before only empty v
     vp_arg_v_np_structure(VP,Arg,V),
     Arg:redrel => yes,
     comma_hellip(COMMA).
@@ -1536,11 +1537,12 @@ grammar_rule(vp_v_komma_arg(pred_heavy),VP, [V, OPTCOMMA, Arg] ) :-
     V:eps2 => no.
 
 %%EX%% We moeten zijn zoals zij
+%%EX%% Een vriend is bedoeld om op te kunnen rekenen
 grammar_rule(vp_v_komma_arg(pred_als),VP, [V, OPTCOMMA, Arg] ) :-
     Arg => pred,
     Arg:sel => to_right,
     Arg:redrel => no,
-    Arg:pcat => (zoals_pred;als_pred),
+    Arg:pcat => (zoals_pred;als_pred;om_pred),
     vp_v_arg_structure(V,Arg,VP,OPTCOMMA),
     allow_wh_in_situ(Arg,VP),
     V:eps2 => no.
@@ -2198,7 +2200,7 @@ grammar_rule(vp_v_komma_mod, VP, [ V, COMMA, Mod ] ) :-
 	Mod:mcat => (mcat_sbar;mcat_redrel;mcat_imp)
     ),
     VP:mf <=> V:mf,
-    comma(COMMA),
+    comma_hellip(COMMA),
     Mod:wh => nwh,
     Mod:modifies_v => yes,
     Mod:sel => ~to_topic,
@@ -3007,7 +3009,7 @@ grammar_rule(deverbal_vp_arg_v(pred),VP, [Arg, V] ) :-
 grammar_rule(deverbal_vp_v_arg(pred),VP, [V, Arg] ) :-
     Arg => pred,
     Arg:sel => to_right,
-    Arg:pcat => (zoals_pred;als_pred),
+    Arg:pcat => (zoals_pred;als_pred;om_pred),
     Arg:wh => nwh,
     VP => vc_noun,
     V => vc_noun,
@@ -3911,6 +3913,18 @@ grammar_rule(adv_a,Adv,[Adj]) :-
     %%    Adj:agr => het & indef & sg, % should not have -e suffix!
     %% however: "Voorafgaande aan de visitatie moeten we ..."
     Adj:aform => nattr,  % was: (attr;nattr)
+    hd_structure(Adj,Adv).
+
+%%EX%% De lucht werd hoe langer hoe blauwer
+%%EX%% Het principe van hoe groter hoe wateriger
+grammar_rule(adv_hoe_a,Adv,[Adj]) :-
+    Adv => adv,
+    ap_arg(Adj),
+    Adv:subadv => subadv_adj,
+    Adv:wh_reltmploc => hoe_hoe,
+    Adj:cj => ncj, % reduce spurious amb.
+    Adj:adv => nadv,
+    Adj:aform => nattr,
     hd_structure(Adj,Adv).
 
 %%EX%% Gisteren immers kwam hij nog te laat
@@ -6096,10 +6110,11 @@ grammar_rule(a_cp_a,AP,[SBAR,COMMA,A]) :-
     hd_mod_structure(A,SBAR,AP).
 
 %%EX%% Hoe langer je nadenkt , hoe groter de problemen worden
+%%EX%% Hoe langer de bezetting doorgaat , hoe meer vernielingen worden aangericht
 grammar_rule(a_hoe_a,AP,[Adv,A]) :-
     AP => a, Adv => hoe_adv, A0=>a,
-    AP:adv => ~oadv & ~detadv,
-    unify_except_l(A0,A,[wh,wh_reltmploc,adv]),
+    %%AP:adv => ~oadv, % & ~detadv,   % mei 2024
+    unify_except_l(A0,A,[wh,wh_reltmploc]),
 				% ignore wh feature of adjectival head,
 				% instead use Adv's wh feature. Solely
 				% for the 'Hoe lief is Jan?' examples.
@@ -6238,6 +6253,7 @@ grammar_rule(a_pp_a, AP, [ PP, A ]) :-
 
 a_pp_a_structure(AP,PP,A) :-
     AP => a, A => a,
+    A:wh => nwh,
     pp_modifier(PP),
     A:aform => (attr;nattr;only_n),  % de ter dood veroordeelden
     A:adv => ~detadv,
@@ -6361,6 +6377,7 @@ grammar_rule(a_vb_a,AP, [VC, A]) :-
 %%EX%% hoeveel graden warmer wordt het ?
 grammar_rule(a_me_comp_a, AP, [ NP, A]) :-
     AP => a, A => a,
+    AP:wh_reltmploc => ~hoe_hoe,
     A:lex => yes,
     A:me_adj => yes,
     haspreyes(A),
@@ -7148,6 +7165,7 @@ grammar_rule(adj_te_v, AP, [ V ] ) :-
     AP:agr <=> V:adj_agr,  %% 'de te doorstane/*doorstaan proef
     AP:avform => avform_ti,
     AP:tmploc => ntmploc,
+    AP:wh_reltmploc => ~hoe_hoe,
     V0 => vb,
     V0:vform => te,
     V0:vslash => [],
@@ -8165,14 +8183,18 @@ np_omdat_structure(Start,N,SBAR) :-
     N:wh => nwh,
     SBAR:e_deps =?> [],
     max(N),
-    Start => start,
+    Start => max,
+    Start:max_type => t_dp,
+    %%Start => start,
     dp_dp_structure(N,SBAR,Start).
 
 np_omdat_structure(Start,N,ALLEMAAL,SBAR) :-
     N:wh => nwh,
     SBAR:e_deps =?> [],
     max(N),
-    Start => start,
+    Start => max,
+    Start:max_type => t_dp,
+    %%Start => start,
     dp_dp_structure(N,ALLEMAAL,SBAR,Start).
 
 %%EX%% Dit omdat er geen tijd meer was
@@ -8214,6 +8236,7 @@ grammar_rule(dit_vanwege,Start,[PRON,OPTCOMMA,SBAR]) :-
     dit_omdat_structure(Start,PRON,SBAR).
 
 %%EX%% Dit allemaal vanwege de tijd
+%%EX%% Je kunt de aankoop altijd ruilen en dit zonder kosten
 grammar_rule(dit_allemaal_vanwege,Start,[PRON,ALLEMAAL,OPTCOMMA,SBAR]) :-
     ind_max_pp(SBAR),
     max_predm(ALLEMAAL),

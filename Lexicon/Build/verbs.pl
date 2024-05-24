@@ -1893,6 +1893,7 @@ v(bedoel,bedoelt,bedoelen,bedoeld,bedoelde,bedoelden,
 	transitive,
 	intransitive, % "ik bedoel maar"
 	vp,
+	acc_np_om_vp_no_control,  % het speelkwartier is bedoeld om uit te rusten
 	np_pc_pp(met),
 	er_pp_sbar(met),
 	np_pc_pp(voor)])]).
@@ -2731,6 +2732,7 @@ v(bereid,bereidt,bereiden,bereid,bereidde,bereidden,
     [h([np_np,
 	transitive,
 	np_mod_pp(van),
+	np_mod_pp(met),
 	part_transitive(toe),
 	part_transitive(voor),
 	part_np_er_pp_sbar(voor,op),
@@ -3960,7 +3962,8 @@ v(blijf,blijft,blijven,gebleven,bleef,bleven,
 	copula_sbar,
 	copula_vp,
 	intransitive,
-	so_np,    % dan blijft er mij geen keus
+	so_np,		% dan blijft er mij geen keus
+	so_copula,      % ik blijf je trouw
 	ld_adv,
         norm_passive,                % omdat .. blijft voorbehouden/aangewezen/behouden
 	te_passive,
@@ -3977,7 +3980,7 @@ v(blijf,blijft,blijven,gebleven,bleef,bleven,
 	part_intransitive(bij),
 	part_intransitive(op),
 	part_intransitive(open),
-	part_intransitive(opzij), % VL, De voetballer bleeft geschorst opzij
+	part_intransitive(opzij), % VL, De voetballer bleef geschorst opzij
 	part_intransitive(over),
 	part_intransitive(thuis),
 	part_intransitive(uit),
@@ -11562,6 +11565,7 @@ v(knok,knokt,knokken,geknokt,knokte,knokten,
 	refl_ld_pp,        % hij knokte zich naar de overwinning
 	transitive,        % een stevig robbertje
 	pc_pp(om),
+	pc_pp(tegen),
 	pc_pp(voor)])]).
 
 v(knoop,knoopt,knopen,geknoopt,knoopte,knoopten,
@@ -17009,7 +17013,7 @@ v(plak,plakt,plakken,geplakt,plakte,plakten,
 
 v(plamuur,plamuurt,plamuren,geplamuurd,plamuurde,plamuurden,
   [h([transitive,
-      instransitive,
+      intransitive,
       ap_pred_np
      ])]).
 
@@ -22043,6 +22047,7 @@ v(stel,stelt,stellen,gesteld,stelde,stelden,
 	fixed([[kandidaat],refl],imp_passive),
 	fixed([[kandidaat],pc(voor),refl],imp_passive),
 	fixed([[in,beschuldiging],acc],norm_passive),
+	fixed([pp_pred(in,bewaring),acc],norm_passive),
 	fixed([[in,staat,van,beschuldiging],acc],norm_passive),
 	fixed([[in,de,gelegenheid],i(acc,A),obj_vp(A)],norm_passive),
 	fixed([[in,gebreke],acc],norm_passive),
@@ -22598,6 +22603,7 @@ v(stroom,stroomt,stromen,gestroomd,stroomde,stroomden,
     [z([ld_dir,
 	ld_pp,
 	part_intransitive(binnen),
+	part_intransitive(leeg),
 	part_intransitive(toe),
 	part_intransitive(over),
 	part_intransitive(uit),

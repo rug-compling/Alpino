@@ -341,7 +341,6 @@ adverb(nihil).
 adverb(nimmer).
 adverb(node).
 adverb(nog).
-adverb([nog,eens]).   % nog eens twintig mensen
 adverb(nogal).
 adverb(nogmaals).
 adverb(normaliter).

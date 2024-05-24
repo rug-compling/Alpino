@@ -707,6 +707,7 @@ adjective(A) :-
     A0:e_deps => [],
     A0:slash => [],
     A0:wh => nwh,
+    A0:wh_reltmploc => ~hoe_hoe,
     A0:deverbal => no,
     A0:aform => ~only_n,
     A:can_postv => no,
@@ -784,7 +785,8 @@ wh_adjective(A) :-
     A0:exs => [],
     A0:avform => avform_ap,
     adjective(A0),
-    overwrite(A0,A,wh,ywh),
+    unify_except_l(A0,A,[wh,wh_reltmploc]),
+    A:wh => ywh,
     A:avform => avform_ap,
     A:cform => base,
     A:adv => yadv,
@@ -2035,7 +2037,8 @@ adverb(ADV) :-
     ADV:subadv => subadv_adv,
     ADV:tmploc => ntmploc,
     ADV:redrel => no,
-    ADV:wh => nwh.
+    ADV:wh => nwh,
+    ADV:wh_reltmploc => ~hoe_hoe.
 
 sentence_adverb(ADV) :-
     adverb(ADV0),
@@ -2263,6 +2266,7 @@ iets_adverb(ADV) :-
     ADV => iets_adv,
     initialize_dt([],ADV),
     ADV:wh => nwh,
+    ADV:wh_reltmploc => ~hoe_hoe,
     sign(ADV,advp).
 
 wh_iets_adverb(ADV) :-
@@ -3136,7 +3140,7 @@ refl_np_arg(NP) :-
 refl_np_arg(NP,V) :-
     refl_np_arg(NP),
     V:subj:agr <?=?> NP:agr, % added GvN, 19 juni 2019
-    V:subj:prs <?=?> NP:prs.
+    V:subj:prs <?=?> NP:prs. 
 
 np_arg(NP) :-
     NP => np,
@@ -3217,7 +3221,7 @@ exp_amb_np_arg(NP) :-
 %    NP:redrel => no,  % wie zeurt krijgt niet betaald
     NP:case => (acc;dat),
     NP:hstem <=> STEM,
-    alpino_wappend:nomember(STEM,[alle,dat,datzelfde,deze,dezelfde,die,diezelfde,
+    alpino_wappend:nomember(STEM,[alle,dat,datzelfde,deze,dezelfde,diezelfde,
 				  dit,ditzelfde,genoeg,het,hetzelfde,paar,
 				  wat,welk,'zo\'n',zulk]),
     NP:subn => (sub_name;sub_noun;sub_def_pron;sub_indef_pron;
@@ -3352,7 +3356,8 @@ no_subj_vp_arg(VP) :-
     VP:subj:hstem => [],
     VP:subj:nform => norm,
     VP:subj:agr => sg,
-    VP:subj:prs => thi,
+%%%    VP:subj:prs => thi,   % het is veilig om je/u/zich te ergeren
+    VP:subj:prs => (thi;ninvje;u),
     VP:subj:subn => sub_noun.
 
 subj_control_vp_arg(VP,V) :-
@@ -5048,8 +5053,6 @@ np_vp_subj(V,C,C) :-
     dependents(V,[vc/VP,obj2/Obj]),
     instantiated_deprel(V,vc,VP).
 
-%% dat ik hem beloof te komen
-%% subject control, with an object
 np_vp_no_control(V,C,C) :-
     main_v(V),
     V:passive => imp_passive,
@@ -5060,6 +5063,16 @@ np_vp_no_control(V,C,C) :-
     no_subj_vp_arg(VP),
     VP:control => control_none,
     dependents(V,[vc/VP,obj2/Obj]),
+    instantiated_deprel(V,vc,VP).
+
+acc_np_om_vp_no_control(V,C,C) :-
+    main_v(V),
+    V:passive => norm_passive,
+    acc_np_arg(Obj),
+    no_subj_vp_arg(VP),
+    VP:control => control_none,
+    VP:vform => om,
+    dependents(V,[vc/VP,obj1/Obj]),
     instantiated_deprel(V,vc,VP).
 
 %% (indirect) object control

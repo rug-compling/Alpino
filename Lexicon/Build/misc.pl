@@ -1895,6 +1895,11 @@ een_groot_aantal_detp(Een,respectabel,aantal,pl_num) :-
 %% een groot aantal kinderen gaat niet --> gewoon
 %% een groot aantal kinderen gaan niet --> speciaal
 
+%% TODO
+%% "paar" is meas_mod_noun(het,count,meas)
+%% so we get the plural reading compositional too!
+
+
 een_aantal_detp(Een,aantal,pl_num) :- een(Een).
 een_aantal_detp(Een,boel,wat) :- een(Een).
 een_aantal_detp(Een,handvol,pl_num) :- een(Een).
@@ -5162,8 +5167,8 @@ m('een beetje',     modal_adverb(noun),[een,beetje]).
 m(echt,             modal_adverb(noun),echt). 
 m('every inch',     modal_adverb(noun),[every,inch]).
 m(gans,             modal_adverb(noun),gans). % gans het land
-m('naar schatting', modal_adverb(noun),[naar,schatting]). % bedragen
-m('nog eens',       modal_adverb(noun),[nog,eens]). % een dozijn etc
+%m('naar schatting', modal_adverb(noun),[naar,schatting]). % bedragen
+%m('nog eens',       modal_adverb(noun),[nog,eens]). % een dozijn etc
 m('nog geen',       modal_adverb(noun),[nog,geen]). % nog geen grammetje
 m('ook maar',       modal_adverb(noun),[ook,maar]).
 m(opnieuw,          modal_adverb(noun),opnieuw). 
@@ -5186,6 +5191,16 @@ m(meteen,           modal_adverb(comp_prep),meteen). % meteen na(dat)..
 m(onmiddellijk,     modal_adverb(comp_prep),onmiddellijk).
 m(terstond,         modal_adverb(comp_prep),terstond).
 m(vlak,             modal_adverb(comp_prep),vlak). % vlak voor(dat)..
+
+with_dt([nog,Eens],
+	modal_adverb(noun),
+	dt(advp,[mod=l(nog,adverb,advp,0,1),
+		 hd=l(eens,adverb,advp,1,2)
+		])) :-
+    eens(Eens).
+
+eens(eens).
+eens('\'ns').
 
 with_dt([naar,schatting],
 	 modal_adverb(noun),
@@ -5252,6 +5267,7 @@ m(redelijk,         modal_adverb(prep),redelijk). % redelijk op tijd
 m(schuin,           modal_adverb(prep),schuin).   % schuin naar voren
 m(ster,             modal_adverb(prep),sterk).    % sterk in de minderheid
 m(volkomen,         modal_adverb(prep),volkomen). % with pp (predicative?) % 'volkomen tegen mijn wil' / in de war
+m(vroeg,            modal_adverb(prep),vroeg).    % vroeg in de middag
 m(zwaar,            modal_adverb(prep),zwaar).    % zwaar onder druk staan
 				
 
@@ -6620,7 +6636,6 @@ mod_hd_adverb(liever,lief,    niet, adjective(er(adv)),         ap).
 % hd_mod_adverb(even,     maar, even,   maar).  % ,,
 
 hd_mod_adverb(niet,     eens, niet,   eens).
-
 hd_mod_adverb(misschien,zelfs, misschien,zelfs).
 
 %% wie is hoofd hier?

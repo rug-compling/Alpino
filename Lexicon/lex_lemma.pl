@@ -4432,6 +4432,7 @@ lemma_root(door_plaatsen,plaats_door) .
 lemma_root(door_plagen,plaag_door) .
 lemma_root(door_plaggen,plag_door) .
 lemma_root(door_plakken,plak_door) .
+lemma_root(door_plamuren,plamuur_door) .
 lemma_root(door_planten,plant_door) .
 lemma_root(door_plassen,plas_door) .
 lemma_root(door_plaveien,plavei_door) .
@@ -8528,6 +8529,7 @@ lemma_root(leeg_lopen,loop_leeg) .
 lemma_root(leeg_pompen,pomp_leeg) .
 lemma_root(leeg_roven,roof_leeg) .
 lemma_root(leeg_staan,sta_leeg) .
+lemma_root(leeg_stromen,stroom_leeg) .
 lemma_root(legaliseren,legaliseer) .
 lemma_root(legen,leeg) .
 lemma_root(legeren,leger) .
@@ -12024,6 +12026,7 @@ lemma_root(raak_pitten,pit_raak) .
 lemma_root(raak_plagen,plaag_raak) .
 lemma_root(raak_plaggen,plag_raak) .
 lemma_root(raak_plakken,plak_raak) .
+lemma_root(raak_plamuren,plamuur_raak) .
 lemma_root(raak_planten,plant_raak) .
 lemma_root(raak_plassen,plas_raak) .
 lemma_root(raak_plaveien,plavei_raak) .
@@ -17188,6 +17191,7 @@ lemma_root(uit_plaatsen,plaats_uit) .
 lemma_root(uit_plagen,plaag_uit) .
 lemma_root(uit_plaggen,plag_uit) .
 lemma_root(uit_plakken,plak_uit) .
+lemma_root(uit_plamuren,plamuur_uit) .
 lemma_root(uit_planten,plant_uit) .
 lemma_root(uit_plassen,plas_uit) .
 lemma_root(uit_plaveien,plavei_uit) .
@@ -22075,6 +22079,7 @@ lemma_root(voort_pitten,pit_voort) .
 lemma_root(voort_plagen,plaag_voort) .
 lemma_root(voort_plaggen,plag_voort) .
 lemma_root(voort_plakken,plak_voort) .
+lemma_root(voort_plamuren,plamuur_voort) .
 lemma_root(voort_planten,plant_voort) .
 lemma_root(voort_plassen,plas_voort) .
 lemma_root(voort_plaveien,plavei_voort) .

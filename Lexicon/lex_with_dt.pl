@@ -1483,6 +1483,7 @@ with_dt_all(een,[paar]).
 with_dt_all(een,[pak]).
 with_dt_all(een,[reeks]).
 with_dt_all(eens,[niet]).
+with_dt_all(eens,[nog]).
 with_dt_all(een,[soort]).
 with_dt_all(een,[stel]).
 with_dt_all(een,[stelletje]).

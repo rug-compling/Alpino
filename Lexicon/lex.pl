@@ -4444,9 +4444,9 @@ is_initial_codes_more([]).
 is_initial_codes_more([Upper,46|Tail]) :-
     isupper(Upper),
     is_initial_codes_more(Tail).
-is_initial_codes_more([84,104,46|Tail]) :-   % Th.
-    is_initial_codes_more(Tail).
-is_initial_codes_more([84,106,46|Tail]) :-   % Tj.
+is_initial_codes_more([Upper,Lower,46|Tail]) :-	% Th. Tj. Wm.
+    isupper(Upper),
+    islower(Lower),
     is_initial_codes_more(Tail).
 
 impossible_non_particle_form_cat(verb(_,_,SC)) :-

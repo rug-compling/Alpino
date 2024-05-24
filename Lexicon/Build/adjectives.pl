@@ -1133,6 +1133,9 @@ a([e('Londense'),
 a([e('Luikse'),
    no_e('Luiks')],nonadv,[],[]).
 
+a([e('Lutherse'),
+   no_e('Luthers')],nonadv,[],[]).
+
 a([e('Luxemburgse'),
    no_e('Luxemburgs')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
@@ -4287,7 +4290,7 @@ a([ge_e(bedoelde),
    ge_no_e(bedoeld)],padv,
   [pred,
    pp(voor),
-   object_vp],
+   subject_vp],
   [boven,
    onder]).
 

@@ -1137,6 +1137,7 @@ features_wh(ywh,Sign) :-
     Sign:wh => ywh,
     Sign:wh:relagr <=> Sign:agr.
 features_wh(nwh,Sign) :-
+    Sign:wh_reltmploc => ~hoe_hoe,
     Sign:wh => nwh.
 
 features_def(def,Sign) :-
