@@ -285,7 +285,14 @@ Suites/%.sents: Enhanced/%/*.xml
              sed -e 's/\[/\\\[/g' \
                  -e 's/\]/\\\]/g') > $@
 
-installsents: $(DIRECTORIES:%=$(ALPINO_HOME)/Suites/Machine/%_part00001.sents.gz)
+installsents: $(DIRECTORIES:%=Suites/Machine/%_part00001.sents.gz)
+	@for file in $(wildcard Suites/Machine/*.sents.gz);\
+        do if cmp -s $$file $(ALPINO_HOME)/$$file;\
+           then true;\
+           else echo cp -f $$file $(ALPINO_HOME)/Suites/Machine/ ;\
+                cp -f $$file $(ALPINO_HOME)/Suites/Machine/ ;\
+           fi;\
+        done
 
-$(ALPINO_HOME)/Suites/Machine/%_part00001.sents.gz: Suites/%.sents
-	cat $< | (cd $(ALPINO_HOME)/Suites/Machine ; $(ALPINO_HOME)/Suites/split_in_parts -o $* -p 200 )
+Suites/Machine/%_part00001.sents.gz: Suites/%.sents
+	cat $< | (cd Suites/Machine ; $(ALPINO_HOME)/Suites/split_in_parts -o $* -p 200 )

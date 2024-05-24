@@ -59,9 +59,9 @@
           </node>
         </node>
         <node begin="28" cat="np" end="31" id="44" rel="obj1">
-          <node begin="28" cat="mwu" end="30" id="45" rel="mod">
-            <node begin="28" end="29" id="46" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mwp" root="nog" word="nog"/>
-            <node begin="29" end="30" id="47" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mwp" root="eens" word="eens"/>
+          <node begin="28" cat="advp" end="30" id="45" rel="mod">
+            <node begin="28" end="29" id="46" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+            <node begin="29" end="30" id="47" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="hd" root="eens" word="eens"/>
           </node>
           <node begin="30" end="31" getal-n="zonder-n" graad="basis" id="48" lemma="twee" numtype="hoofd" pos="num" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="twee" word="twee"/>
         </node>

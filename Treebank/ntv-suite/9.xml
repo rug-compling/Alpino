@@ -16,22 +16,20 @@
             <node begin="4" buiging="met-e" end="5" id="12" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
             <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="week" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="week" word="week"/>
           </node>
-          <node begin="6" cat="advp" end="8" id="14" rel="mod">
-            <node begin="6" end="7" id="15" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
-            <node begin="7" end="8" id="16" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="hd" root="eens" word="eens"/>
-          </node>
-          <node begin="8" buiging="zonder" end="9" id="17" lemma="spreken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="spreken" wvorm="inf"/>
+          <node begin="6" end="7" id="14" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+          <node begin="7" end="8" id="15" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" word="eens"/>
+          <node begin="8" buiging="zonder" end="9" id="16" lemma="spreken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="spreken" wvorm="inf"/>
         </node>
       </node>
-      <node begin="10" conjtype="neven" end="11" id="18" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
-      <node begin="11" cat="smain" end="15" id="19" rel="cnj">
-        <node begin="11" end="12" id="20" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
-        <node begin="12" end="13" id="21" lemma="melden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="meld" word="meldde" wvorm="pv"/>
-        <node begin="13" end="14" genus="masc" getal="ev" id="22" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
-        <node begin="14" end="15" getal="getal" id="23" lemma="zichzelf" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,nadr,3,getal)" pt="vnw" rel="obj1" root="zichzelf" status="nadr" vwtype="refl" word="zichzelf"/>
+      <node begin="10" conjtype="neven" end="11" id="17" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="11" cat="smain" end="15" id="18" rel="cnj">
+        <node begin="11" end="12" id="19" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+        <node begin="12" end="13" id="20" lemma="melden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="meld" word="meldde" wvorm="pv"/>
+        <node begin="13" end="14" genus="masc" getal="ev" id="21" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="14" end="15" getal="getal" id="22" lemma="zichzelf" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,nadr,3,getal)" pt="vnw" rel="obj1" root="zichzelf" status="nadr" vwtype="refl" word="zichzelf"/>
       </node>
     </node>
-    <node begin="15" end="16" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="15" end="16" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De politie wilde hem deze week nog eens spreken , maar gisteren meldde hij zichzelf .</sentence>
 </alpino_ds>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="vriend" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="vriend" word="vriend"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="3" cat="ppart" end="9" id="6" rel="predc">
+        <node aform="base" begin="3" buiging="zonder" end="4" id="7" infl="no_e" lemma="bedoelen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bedoelen" sc="subject_vp" vform="psp" word="bedoeld" wvorm="vd"/>
+        <node begin="4" cat="oti" end="9" id="8" rel="vc">
+          <node begin="4" end="5" id="9" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" sc="om" vztype="init" word="om"/>
+          <node begin="5" cat="ti" end="9" id="10" rel="body">
+            <node begin="6" end="7" id="11" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+            <node begin="5" cat="inf" end="9" id="12" rel="body">
+              <node begin="7" buiging="zonder" end="8" id="13" infl="inf" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" sc="aux(inf)" word="kunnen" wvorm="inf"/>
+              <node begin="5" cat="inf" end="9" id="14" rel="vc">
+                <node begin="5" end="6" id="15" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="pc" root="op" vztype="fin" word="op"/>
+                <node begin="8" buiging="zonder" end="9" id="16" infl="inf" lemma="rekenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="reken" sc="pc_pp(op)" word="rekenen" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Een vriend is bedoeld om op te kunnen rekenen</sentence>
+</alpino_ds>
