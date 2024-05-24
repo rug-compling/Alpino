@@ -633,6 +633,7 @@ valid_sc(so_vp_subj,                  [prep(aan),check_vform(te)]).
 valid_sc(so_vp_no_control,            [prep(aan),check_vform(te)]).
 valid_sc(so_vp_obj,                   [prep(aan),check_vform(te)]).
 valid_sc(np_vp_no_control,            [check_vform(te)]).
+valid_sc(acc_np_om_vp_no_control,        [check_vform(te)]).
 valid_sc(np_vp_obj,                   [check_vform(te)]).
 valid_sc(np_vp_obj1,                  [check_vform(te)]).
 valid_sc(dip_sbar,                    []).                

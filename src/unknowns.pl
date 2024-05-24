@@ -299,7 +299,7 @@ lexical_analysis_name_(Words,P0,R0,All,Len,String,Args,Tag,Least) :-
     lexical_analysis_name__(Names,P0,P,History,R0,All,Len,String,Args,Tag,Least).
 
 lexical_analysis_name__(Names,P0,P,History,R0,All,Len,"name|~p|~p~n",
-			[Stem,NewTag],tag(P0,P,R0,R,Stem,name(Start),NewTag),Least) :-
+			[Stem,NewTag],tag(P0,P,R0,R,Stem,name(Start/*,History*/),NewTag),Least) :-
     \+ subsumed_by_dict(P0,P,Names,proper_name(both)),
     (	nonvar(Least)
     ->	P > Least
@@ -1424,6 +1424,7 @@ foreign_word(advisor).
 foreign_word(after).
 foreign_word(again).
 foreign_word(ainsi).
+foreign_word('ain\'t').
 foreign_word(air).
 foreign_word(airline).
 foreign_word(all).
@@ -1528,6 +1529,7 @@ foreign_word(casuals).
 foreign_word(ce).
 foreign_word(center).
 foreign_word(centers).
+foreign_word('CEO').
 foreign_word(certains).
 foreign_word(ces).
 foreign_word('c\'est').
@@ -1620,6 +1622,7 @@ foreign_word('d\'une').
 foreign_word(e).
 foreign_word(economic).
 foreign_word(economy).
+foreign_word(effect).
 foreign_word(ein).
 foreign_word(eine).
 foreign_word(einer).
@@ -1630,6 +1633,7 @@ foreign_word(elle).
 foreign_word(empire).
 foreign_word(encore).
 foreign_word(end).
+foreign_word(enfin).
 foreign_word(english).
 foreign_word(enterprise).
 foreign_word(entertainment).
@@ -1706,6 +1710,7 @@ foreign_word(gone).
 foreign_word(good).
 foreign_word(got).
 foreign_word(grand).
+foreign_word(grande).
 foreign_word(gum).
 foreign_word(gun).
 foreign_word(gut).
@@ -1877,6 +1882,7 @@ foreign_word(not).
 foreign_word(nothing).
 foreign_word(nous).
 foreign_word(now).
+foreign_word(nur).
 foreign_word(o).
 foreign_word(objective).
 foreign_word(of).
@@ -1894,6 +1900,8 @@ foreign_word(operator).
 foreign_word(operators).
 foreign_word(or).
 foreign_word(orchestre).
+foreign_word(order).
+foreign_word(orders).
 foreign_word(oriented).
 foreign_word(os).  % beginwoord voor rare botjes
 foreign_word(other).
@@ -2156,6 +2164,7 @@ foreign_word(what).
 foreign_word(whatever).
 foreign_word(when).
 foreign_word(where).
+foreign_word(while).
 foreign_word(white).
 foreign_word(who).
 foreign_word(why).
@@ -3426,14 +3435,16 @@ guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,intransitive),verb(_,ps
     psp_suffix(Suffix,StemSuffix),
     atom_concat(_,Suffix,Rest),
     atom_concat(Stem,StemSuffix,Rest),
-    \+ member(W,[gerard]).
+    \+ member(W,[geld,
+		 gerard]).
 
 guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,transitive),verb(_,psp,transitive)) :-
     atom_concat(ge,Rest,W),
     psp_suffix(Suffix,StemSuffix),
     atom_concat(_,Suffix,Rest),
     atom_concat(Stem,StemSuffix,Rest),
-    \+ member(W,[gerard]).
+    \+ member(W,[geld,
+		 gerard]).
 
 guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,intransitive),verb(_,psp,ninv(intransitive,part_intransitive(Af)))) :-
     atom_concat(Afge,Rest,W),
@@ -3442,7 +3453,8 @@ guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,intransitive),verb(_,ps
     psp_suffix(Suffix,StemSuffix),
     atom_concat(_,Suffix,Rest),
     atom_concat(Stem0,StemSuffix,Rest),
-    \+ member(W,[gerard]),
+    \+ member(W,[geld,
+		 gerard]),
     atom_concat(Stem0,'_',Stem1),
     atom_concat(Stem1,Af,Stem).
 
@@ -3453,7 +3465,8 @@ guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,transitive),verb(_,psp,
     psp_suffix(Suffix,StemSuffix),
     atom_concat(_,Suffix,Rest),
     atom_concat(Stem0,StemSuffix,Rest),
-    \+ member(W,[gerard]),
+    \+ member(W,[geld,
+		 gerard]),
     atom_concat(Stem0,'_',Stem1),
     atom_concat(Stem1,Af,Stem).
 
@@ -3484,10 +3497,13 @@ no_exceptional_suffix_rule(List,Root) :-
     atom_concat(_,Suffix,Root),
     !,
     fail.
-no_exceptional_suffix_rule(capital,Root):-
+no_exceptional_suffix_rule(capital/_,Root):-
     starts_with_capital(Root),
     !,
     fail.
+no_exceptional_suffix_rule(capital/List,Root):-
+    !,
+    no_exceptional_suffix_rule(List,Root).
 no_exceptional_suffix_rule(_,_).
 
 apply_suffix_rule(Suffix,RootSuffix,Tag,CompTag,Word) :-
@@ -3505,16 +3521,24 @@ form_of_suffix_rule(shalve,shalve,  adverb,[]).
 
 form_of_suffix_rule(aals,aals,adjective(no_e(adv)),[]).
 form_of_suffix_rule(aans,aans,adjective(no_e(adv)),[]).
-form_of_suffix_rule(aal,aal,adjective(no_e(adv)),[éénmaal,
+form_of_suffix_rule(aal,aal,adjective(no_e(adv)),[arsenaal,
+						  éénmaal,
 						  gemaal,
+						  generaal,
+						  hospitaal,
 						  journaal,
 						  kapitaal,
 						  kanaal,
+						  kathedraal,
 						  materiaal,
+						  metaal,
+						  schaal,
 						  schandaal,
+						  signaal,
 						  staal,
 						  tribunaal,
-						  verhaal]).
+						  verhaal,
+						  zaal]).
 form_of_suffix_rule(air,air,adjective(no_e(adv)),[]).
 form_of_suffix_rule(eerd,eerd,adjective(ge_no_e(adv)),[]).
 form_of_suffix_rule(ees,ees,adjective(no_e(adv)),[abonnees,
@@ -3525,7 +3549,8 @@ form_of_suffix_rule(ees,ees,post_adjective(no_e),[abonnes,
 						  trainees,
 						  vlees,
 						  vrees]).
-form_of_suffix_rule(end,en,adjective(end(both)),[eend]).
+form_of_suffix_rule(end,en,adjective(end(both)),[duizend,
+						 eend]).
 form_of_suffix_rule(esk,esk,adjective(no_e(adv)),[desk]).
 form_of_suffix_rule(eus,eus,adjective(no_e(adv)),[keus,
 						  reus]).
@@ -3535,29 +3560,45 @@ form_of_suffix_rule(ief,ief,adjective(no_e(adv)),[brief,
 						  chief, % archief
 						  dief,
 						  gerief,
+						  initiatief,
 						  motief,
 						  perspectief,
 						  tarief]).
-form_of_suffix_rule(iek,iek,adjective(no_e(adv)),[atletiek,
+form_of_suffix_rule(iek,iek,adjective(no_e(adv)),[acrobatiek,
+						  atletiek,
+						  basiliek,
 						  fabriek,
+						  gymnastiek,
+						  heuristiek,
 						  kliniek,
 						  linguïstiek,
 						  mozaiek,
 						  muziek,
+						  pathetiek,
 						  piek,
+						  problematiek,
 						  republiek,
 						  rubriek,
 						  tactiek,
-						  techniek]).
+						  techniek,
+						  thermiek
+						 ]).
 form_of_suffix_rule(ig,ig,adjective(no_e(adv)),['Dantzig',
+						dertig,
 						dértig,
+						twintig,
+						veertig,
+						vijftig,
+						zestig,
+						zeventig,
 						tuig]).
 form_of_suffix_rule(isch,isch,adjective(no_e(adv)),[]).
 form_of_suffix_rule(ïsch,ïsch,adjective(no_e(adv)),[]).
 form_of_suffix_rule(ischt,ischt,adjective(no_e(adv)),[]).
 form_of_suffix_rule(ïscht,ïscht,adjective(no_e(adv)),[]).
 form_of_suffix_rule(ïscht,ïscht,adjective(no_e(adv)),[]).
-form_of_suffix_rule(lijk,lijk,adjective(no_e(adv)),[babylijk]).
+form_of_suffix_rule(lijk,lijk,adjective(no_e(adv)),[babylijk,
+						    huwelijk]).
 form_of_suffix_rule(loos,loos,adjective(no_e(adv)),[]).
 form_of_suffix_rule(loos,loos,adjective(no_e(adv)),[]).
 form_of_suffix_rule(baar,baar,adjective(no_e(adv)),[]).
@@ -3571,7 +3612,7 @@ form_of_suffix_rule(tigste,  tig,     number(rang),[vergeetachtigste]).
 
 form_of_suffix_rule(aalse,   aals,    adjective(e),[]).
 form_of_suffix_rule(aanse,   aans,    adjective(e),[]).
-form_of_suffix_rule(aire,    air,     adjective(e),[]).
+form_of_suffix_rule(aire,    air,     adjective(e),[affaire]).
 form_of_suffix_rule(ale,     aal,     adjective(e),[centrale,
 						    finale,
 						    whale]).
@@ -3579,23 +3620,32 @@ form_of_suffix_rule(eerde,   eerd,    adjective(e),[]).
 form_of_suffix_rule(ende,    en,      adjective(ende(padv)),['Balkenende',
 							     bende,
 							     eende,
-							     oostende]).
+							     oostende,
+							     tiende
+							    ]).
 form_of_suffix_rule(eske,    esk,     adjective(e),[burleske]).
-form_of_suffix_rule(euze,    eus,     adjective(e),[]).
+form_of_suffix_rule(euze,    eus,     adjective(e),[keuze]).
 form_of_suffix_rule(ieke,    iek,     adjective(e),[]).
 form_of_suffix_rule(ieve,    ief,     adjective(e),[]).
-form_of_suffix_rule(ige,     ig,      adjective(e),[]).
+form_of_suffix_rule(ige,     ig,      adjective(e),[getuige]).
 form_of_suffix_rule(ische,   isch,    adjective(e),[]).
 form_of_suffix_rule(ïsche,   ïsch,    adjective(e),[]).
 form_of_suffix_rule(ischte,  isch,    adjective(e),[]).
 form_of_suffix_rule(ïschte,  ïsch,    adjective(e),[]).
-form_of_suffix_rule(ke,      k,       adjective(e),[]).
-form_of_suffix_rule(le,      l,       adjective(e),['Cercle',
-						    cercle,
-						    djingle,
-						    shuttle,
-						    jingle]).
-form_of_suffix_rule(ste,     st,      adjective(e),[extremiste]).
+form_of_suffix_rule(ke,      k,       adjective(e),capital/[]).
+form_of_suffix_rule(le,      l,       adjective(e),capital/
+		   ['Cercle',
+		    cercle,
+		    controle,
+		    djingle,
+		    shuttle,
+		    jingle,
+		    medaille
+		   ]).
+form_of_suffix_rule(ste,     st,      adjective(e),capital/
+		   [extremiste,
+		    piste
+		   ]).
 form_of_suffix_rule(bare,    'baar',  adjective(e),[]).
 form_of_suffix_rule(ere,     er,      adjective(e),[àndere,
 						    ándere]).
@@ -3622,13 +3672,13 @@ form_of_suffix_rule(aals,   aal,     post_adjective(no_e),[]).
 form_of_suffix_rule(aans,   aan,     post_adjective(no_e),[]).
 form_of_suffix_rule(airs,   air,     post_adjective(no_e),[]).
 form_of_suffix_rule(eerds,  eerd,    post_adjective(no_e),[]).
-form_of_suffix_rule(ends,   end,     post_adjective(no_e),[]).
+form_of_suffix_rule(ends,   end,     post_adjective(no_e),[trends]).
 form_of_suffix_rule(esks,   esk,     post_adjective(no_e),[]).
 form_of_suffix_rule(ieels,  ieel,    post_adjective(no_e),[]).
 form_of_suffix_rule(iefs,   ief,     post_adjective(no_e),[]).
 form_of_suffix_rule(ieks,   iek,     post_adjective(no_e),[]).
 form_of_suffix_rule(igs,    ig,      post_adjective(no_e),[]).
-form_of_suffix_rule(igers,  ig,      post_adjective(er),[]).
+form_of_suffix_rule(igers,  ig,      post_adjective(er),[reinigers]).
 form_of_suffix_rule(isch,   isch,    post_adjective(no_e),[]).
 form_of_suffix_rule(ïsch,   ïsch,    post_adjective(no_e),[]).
 form_of_suffix_rule(ischers,isch,    post_adjective(er),[]).
@@ -3638,7 +3688,14 @@ form_of_suffix_rule(lijkers,lijk,    post_adjective(er),[]).
 form_of_suffix_rule(loos,   loos,    post_adjective(no_e),[]).
 form_of_suffix_rule(lozers, loos,    post_adjective(er),[]).
 form_of_suffix_rule(baars,  baar,    post_adjective(no_e),[]).
-form_of_suffix_rule(ders,   der,     post_adjective(no_e),[]).
+form_of_suffix_rule(ders,   der,     post_adjective(no_e),[aanbieders,
+							   arbeiders,
+							   bereiders,
+							   bestuurders,
+							   leiders,
+							   ouders,
+							   spaarders,
+							   strijders]).
 form_of_suffix_rule(oirs,   oir,     post_adjective(no_e),[]).
 
 form_of_suffix_rule('-er','-er',     noun(de,count,sg),[]).
@@ -3649,30 +3706,64 @@ form_of_suffix_rule('iër','iër',    noun(de,count,sg),[]).
 form_of_suffix_rule('iërs','iër',   noun(de,count,pl),[]).
 form_of_suffix_rule(ist,ist,noun(de,count,sg),[]).
 form_of_suffix_rule(isten,ist,noun(de,count,pl),[]).
-form_of_suffix_rule('lander','lander',    noun(de,count,sg),[]).
-form_of_suffix_rule('landers','lander',   noun(de,count,pl),[]).
-form_of_suffix_rule('ees','ees',    noun(de,count,sg),[]).
-form_of_suffix_rule('ezen','ees',   noun(de,count,pl),[]).
+form_of_suffix_rule(lander,'lander',    noun(de,count,sg),[]).
+form_of_suffix_rule(landers,'lander',   noun(de,count,pl),[]).
+form_of_suffix_rule(ees,'ees',    noun(de,count,sg),[abonnees,
+						       trainees,
+						       vlees,
+						       vrees]).
+form_of_suffix_rule(ezen,'ees',   noun(de,count,pl),[]).
 %%% form_of_suffix_rule('aan','aan',    noun(de,count,sg),[]).
-form_of_suffix_rule('anen','aan',   noun(de,count,pl),[]).
-form_of_suffix_rule('aar','aar',    noun(de,count,sg),[]).
-form_of_suffix_rule('aars','aar',   noun(de,count,pl),[]).
+form_of_suffix_rule(anen,'aan',   noun(de,count,pl),[]).
+form_of_suffix_rule(aar,'aar',    noun(de,count,sg),[jaar,
+						     paar,
+						     gevaar]).
+form_of_suffix_rule(aars,'aar',   noun(de,count,pl),[paars]).
 
-form_of_suffix_rule('iteit','iteit',  noun(de,count,sg),[]).
-form_of_suffix_rule('iteiten','iteit',noun(de,count,pl),[]).
+form_of_suffix_rule(iteit,'iteit',  noun(de,count,sg),[]).
+form_of_suffix_rule(iteiten,'iteit',noun(de,count,pl),[]).
 
-form_of_suffix_rule('ingen','ing',noun(de,count,pl),[]).
+form_of_suffix_rule(ingen,'ing',noun(de,count,pl),[groningen]).
 
 form_of_suffix_rule(eert,eer/eren,verb(hebben,sg3,intransitive),[]).
 form_of_suffix_rule(eert,eer/eren,verb(hebben,sg3,transitive),[]).
-form_of_suffix_rule(eren,eer/eren,verb(hebben,pl,intransitive),[jongeren,
-							   kinderen]).
-form_of_suffix_rule(eren,eer/eren,verb(hebben,pl,transitive),[jongeren,
-							   kinderen]).
-form_of_suffix_rule(eren,eer/eren,verb(hebben,inf,intransitive),[jongeren,
-							   kinderen]).
-form_of_suffix_rule(eren,eer/eren,verb(hebben,inf,transitive),[jongeren,
-							   kinderen]).
+form_of_suffix_rule(eren,eer/eren,verb(hebben,pl,intransitive),[boeren,
+								dieren,
+								eieren,
+								goederen,
+								jongeren,
+								kinderen,
+								liederen,
+								papieren,
+								scholieren,
+								wonderen]).
+form_of_suffix_rule(eren,eer/eren,verb(hebben,pl,transitive),[boeren,
+							      dieren,
+							      goederen,
+							      jongeren,
+							      kinderen,
+							      liederen,
+							      papieren,
+							      scholieren,
+							      wonderen]).
+form_of_suffix_rule(eren,eer/eren,verb(hebben,inf,intransitive),[boeren,
+								 dieren,
+								 goederen,
+								 jongeren,
+								 kinderen,
+								 liederen,
+								 papieren,
+								 scholieren,
+								 wonderen]).
+form_of_suffix_rule(eren,eer/eren,verb(hebben,inf,transitive),[boeren,
+							       dieren,
+							       goederen,
+							       jongeren,
+							       kinderen,
+							       liederen,
+							       papieren,
+							       scholieren,
+							       wonderen]).
 form_of_suffix_rule(ëren,eer/ëren,verb(hebben,pl,intransitive),[]).
 form_of_suffix_rule(ëren,eer/ëren,verb(hebben,pl,transitive),[]).
 form_of_suffix_rule(ëren,eer/ëren,verb(hebben,inf,intransitive),[]).
@@ -3681,8 +3772,8 @@ form_of_suffix_rule(eerd,eer/eren,verb(hebben,psp,intransitive),[]).  % wrong ro
 form_of_suffix_rule(eerd,eer/eren,verb(hebben,psp,transitive),[]).    % wrong root
 form_of_suffix_rule(eerde,eer/eren,verb(hebben,past(sg),intransitive),[]).
 form_of_suffix_rule(eerde,eer/eren,verb(hebben,past(sg),transitive),[]).
-form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),intransitive),[]).
-form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),transitive),[]).
+form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),intransitive),[geleerden]).
+form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),transitive),[geleerden]).
 
 form_of_suffix_rule(dderen,dder/dderen,verb(hebben,inf,intransitive),[]).
 form_of_suffix_rule(dderen,dder/dderen,verb(hebben,inf,transitive),[]).
@@ -3701,7 +3792,13 @@ form_of_suffix_rule(dderden,dder/dderen,verb(hebben,past(pl),transitive),[]).
 
 form_of_suffix_rule(achtigen,achtig,nominalized_adjective,[]).
 
-form_of_suffix_rule('\'s','',determiner(pron),capital).
+%% the version with capital is generated elsewhere anyway
+%% otherwise almost never useful, almost always plural noun
+%form_of_suffix_rule('\'s','',determiner(pron),capital/['auto\'s',
+%						       'camera\'s',
+%						       'nota\'s',
+%						       'programma\'s'
+%						       ]).
 
 
 guess_using_suffix0(Word,Prefix,Suffix,MinLengthPrefix,MinLengthSuffix) :-
@@ -4361,7 +4458,8 @@ subsumed_by_dict(_,_,[Surf],_) :-
 %% whereas "van Name2" is not
 %% So we do allow combinations of known "Name1" + known "van Name2"
 subsumed_by_dict(P0,P,_,_) :-
-    tag(P0,P1,_,_,_,_,normal(names_dictionary),_), P1 < P,
+    tag(P0,P1,_,_,Lem,_,normal(names_dictionary),_), P1 < P,
+    \+ productive_name(Lem),
     tag(P1,P2,_,_,van,van,_,_),                    P2 < P,
     optional_de_het(P2,P3),                        P3 < P,
     tag(P3,P,_,_,_,_,normal(names_dictionary),_),
@@ -4457,6 +4555,8 @@ subsumed_by_dict(P0,P,_,_) :-
 subsumed_by_dict(_P0,_P,[Surf],_) :-
     name_koning(Surf).
 
+productive_name('Vrede').
+
 optional_de_het(P,P).
 optional_de_het(P0,P) :-
     tag(P0,P,_,_,de,de,_,_).
@@ -4541,7 +4641,8 @@ part_of_longest_match(Q) :-
     \+ normal_analysis(P0,Q),
     \+ normal_analysis(Q,P),
     \+ komma(P0,Q),
-    \+ komma(Q,P).
+    \+ komma(Q,P),
+    \+ tag(_,Q,_,_,en,en,_,_).
 
 komma(P0,P) :-
     P1 is P-1,
@@ -4602,6 +4703,10 @@ unlikely_name([H],_,_):-
 unlikely_name([A,B],_,_) :-
     unlikely_name_pair(A,B).
 
+unlikely_name([A,en,B],_,_):-
+    unlikely_name_lonely(A),
+    unlikely_name_lonely(B).
+
 unlikely_name([A,B,C|_],_,_) :-
     unlikely_name_triple(A,B,C).
 
@@ -4611,10 +4716,9 @@ unlikely_name(Input,_,_) :-
     append(_,[van|Geo],Rest),
     alpino_lex:lexicon(proper_name(both,'LOC'),_,Geo,[],names_dictionary).
 
-unlikely_name([A,',',B],P0,P) :-
-    tag(P0,P1,_,_,_,A,normal(names_dictionary),_),
-    P2 is P1 + 1,
-    tag(P2,P,_,_,_,B,normal(names_dictionary),_).    
+unlikely_name(_,P0,P) :-
+    tag(P0,P1,_,_,_,_,normal(names_dictionary),_),
+    unlikely_name_list(P1,P).
 
 unlikely_name(['Staten',van,A],P0,P):-
     P1 is P0 + 2,
@@ -4649,14 +4753,14 @@ unlikely_name(List,P1,P2) :-
 %%% looks like a list
 %%% case 1: list already started before this name:
 unlikely_name([_,_|_],P1,_P2) :-
-    tag(_,P1,_,_,_,_,normal(names_dictionary),proper_name(both,LAB)),
+    tag(_,P1,_,_,_,_,normal(names_dictionary),proper_name(_,LAB)),
     per_or_loc_or_org(LAB),
     loc_list(LAB,P1).
 
 %%% case 2: 
 unlikely_name([_,_|_],P1,P2) :-
     between(P1,P2,Q0),
-    tag(Q0,Q1,_,_,_,_,normal(names_dictionary),proper_name(both,LAB)),
+    tag(Q0,Q1,_,_,_,_,normal(names_dictionary),proper_name(_,LAB)),
     Q1 < P2,
     per_or_loc_or_org(LAB),
     loc_list(LAB,Q1).
@@ -4664,6 +4768,33 @@ unlikely_name([_,_|_],P1,P2) :-
 unlikely_name(_,P0,P):-
     tag(P0,P1,_,_,_,_,normal(names_dictionary),_),
     tag(P1,P,_,_,_,_,_,punct(_)).
+
+unlikely_name_list(P1,P) :-
+    tag(P1,P2,_,_,',',',',_,_),
+    tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
+    unlikely_name_list2(P3,P).
+unlikely_name_list(P1,P) :-
+    tag(P1,P2,_,_,en,en,_,_),
+    tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
+    unlikely_name_list2(P3,P).
+unlikely_name_list(P1,P) :-
+    tag(P1,P2,_,_,of,of,_,_),
+    tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
+    unlikely_name_list2(P3,P).
+
+unlikely_name_list2(P,P).
+unlikely_name_list2(P1,P) :-
+    tag(P1,P2,_,_,',',',',_,_),
+    tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
+    unlikely_name_list2(P3,P).
+unlikely_name_list2(P1,P) :-
+    tag(P1,P2,_,_,en,en,_,_),
+    tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
+    unlikely_name_list2(P3,P).
+unlikely_name_list2(P1,P) :-
+    tag(P1,P2,_,_,of,of,_,_),
+    tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
+    unlikely_name_list2(P3,P).
 
 next_one_special_decap(P0) :-
     tag(P0,_,_,_,_,_,special(decap(_)),_).
@@ -4690,21 +4821,21 @@ per_or_loc_or_org('ORG').
 %% for PER we require five, since personal names are more often
 %% combined to form personal names
 loc_list('ORG',P0) :-
-    tag(P0,P1,_,_,_,_,normal(names_dictionary),proper_name(both,'ORG')),
-    tag(P1,P2,_,_,_,_,normal(names_dictionary),proper_name(both,'ORG')),
-    tag(P2,_P3,_,_,_,_,normal(names_dictionary),proper_name(both,'ORG')).
+    tag(P0,P1,_,_,_,_,normal(names_dictionary),proper_name(_,'ORG')),
+    tag(P1,P2,_,_,_,_,normal(names_dictionary),proper_name(_,'ORG')),
+    tag(P2,_P3,_,_,_,_,normal(names_dictionary),proper_name(_,'ORG')).
 
 loc_list('LOC',P0) :-
-    tag(P0,P1,_,_,_,_,normal(names_dictionary),proper_name(both,'LOC')),
-    tag(P1,P2,_,_,_,_,normal(names_dictionary),proper_name(both,'LOC')),
-    tag(P2,_P3,_,_,_,_,normal(names_dictionary),proper_name(both,'LOC')).
+    tag(P0,P1,_,_,_,_,normal(names_dictionary),proper_name(_,'LOC')),
+    tag(P1,P2,_,_,_,_,normal(names_dictionary),proper_name(_,'LOC')),
+    tag(P2,_P3,_,_,_,_,normal(names_dictionary),proper_name(_,'LOC')).
 
 loc_list('PER',P0) :-
-    tag(P0,P1,_,_,_,_,normal(names_dictionary),proper_name(both,'PER')),
-    tag(P1,P2,_,_,_,_,normal(names_dictionary),proper_name(both,'PER')),
-    tag(P2,P3,_,_,_,_,normal(names_dictionary),proper_name(both,'PER')),
-    tag(P3,P4,_,_,_,_,normal(names_dictionary),proper_name(both,'PER')),
-    tag(P4,__,_,_,_,_,normal(names_dictionary),proper_name(both,'PER')).
+    tag(P0,P1,_,_,_,_,normal(names_dictionary),proper_name(_,'PER')),
+    tag(P1,P2,_,_,_,_,normal(names_dictionary),proper_name(_,'PER')),
+    tag(P2,P3,_,_,_,_,normal(names_dictionary),proper_name(_,'PER')),
+    tag(P3,P4,_,_,_,_,normal(names_dictionary),proper_name(_,'PER')),
+    tag(P4,__,_,_,_,_,normal(names_dictionary),proper_name(_,'PER')).
 
 all_special_decap(P,P).
 all_special_decap(P0,P) :-
@@ -4772,12 +4903,18 @@ unlikely_name_pair(set,had).
 unlikely_name_pair(team,had).
 unlikely_name_pair(van,den).
 unlikely_name_pair('De','EU').
+unlikely_name_pair('De','Stichting').
+unlikely_name_pair('De','Tweede').
 unlikely_name_pair('Dit',parlement).
 unlikely_name_pair('Dit','Parlement').
+unlikely_name_pair('Hoogheid','Prins').
+unlikely_name_pair('Hoogheid','Prinses').
 unlikely_name_pair('I',am).
 unlikely_name_pair('If',you).
 unlikely_name_pair('I',love).
+unlikely_name_pair('Koning','Albert').
 unlikely_name_pair('Originally',posted).
+unlikely_name_pair('v.','Chr').
 
 unlikely_name_triple(brand,in,'Volendam').
 unlikely_name_triple('Herfkens',voor,'Ontwikkelingssamenwerking').
@@ -4789,6 +4926,9 @@ unlikely_name_triple('Dat',was,alles).
 unlikely_name_triple('Dat',was,best).
 unlikely_name_triple('Dat',was,even).
 unlikely_name_triple('Dat',was,hard).
+unlikely_name_triple('De','Tweede','Kamer').
+unlikely_name_triple('De','Verenigde','Naties').
+unlikely_name_triple('De','Verenigde','Staten').
 unlikely_name_triple('Dit',is,alles).
 unlikely_name_triple('Dit',is,best).
 unlikely_name_triple('Dit',is,even).
@@ -4811,6 +4951,10 @@ unlikely_name_triple('Nu',is,alles).
 unlikely_name_triple('Nu',was,alles).
 unlikely_name_triple('Hij',is,even).
 unlikely_name_triple('Hij',was,even).
+unlikely_name_triple('Koninklijke','Hoogheid','Prins').
+unlikely_name_triple('Koninklijke','Hoogheid','Prinses').
+unlikely_name_triple('Hare','Koninklijke','Hoogheid').
+unlikely_name_triple('Zijne','Koninklijke','Hoogheid').
 unlikely_name_triple('Originally',posted,by).
 unlikely_name_triple('Verenigde','Staten',over).
 
@@ -4931,6 +5075,7 @@ unlikely_name_prefix('Tél',_).
 unlikely_name_prefix('Tél.',_).
 unlikely_name_prefix('Telefax',_).
 unlikely_name_prefix(u,_).
+unlikely_name_prefix(via,[de|_]).
 unlikely_name_prefix('Van',['de','Nederlanders'|_]).
 unlikely_name_prefix('Verdonk',[voor,'Vreemdelingenzaken'|_]).
 unlikely_name_prefix('Wallage',[van,'Groningen'|_]).
@@ -5010,7 +5155,9 @@ europarl('Voorzitterschap').
 europarl('Witboek').
 europarl('Zwartboek').
 
+unlikely_name_lonely('Afdeling').
 unlikely_name_lonely('Air').
+unlikely_name_lonely('Alcohol').
 unlikely_name_lonely('Algemeen').
 unlikely_name_lonely('Algemene').
 unlikely_name_lonely('Alles').
@@ -5019,7 +5166,11 @@ unlikely_name_lonely('Awards').
 unlikely_name_lonely('Baldakijn').
 unlikely_name_lonely('Bank').
 unlikely_name_lonely('Beach').
+unlikely_name_lonely('Begroting').
+unlikely_name_lonely('Beleid').
 unlikely_name_lonely('Bin').
+unlikely_name_lonely('Binnenlands').
+unlikely_name_lonely('Buitenlands').
 unlikely_name_lonely('Business').
 unlikely_name_lonely('Center').
 unlikely_name_lonely('Company').
@@ -5030,14 +5181,19 @@ unlikely_name_lonely('Demografie').
 unlikely_name_lonely('Den').
 unlikely_name_lonely('Derde').
 unlikely_name_lonely('Die').
+unlikely_name_lonely('Duurzame').
 unlikely_name_lonely('Economie').
 unlikely_name_lonely('Een').
 unlikely_name_lonely('Eerste').
+unlikely_name_lonely('Energie').
 unlikely_name_lonely('Ensemble').
 unlikely_name_lonely('Er').
+unlikely_name_lonely('Euro').
 unlikely_name_lonely('European').
 unlikely_name_lonely('Express').
+unlikely_name_lonely('Federale').
 unlikely_name_lonely('Financieel').
+unlikely_name_lonely('Financiele').
 unlikely_name_lonely('Galerie').
 unlikely_name_lonely('Grote').
 unlikely_name_lonely('Group').
@@ -5045,6 +5201,8 @@ unlikely_name_lonely('Formule').
 unlikely_name_lonely('Global').
 unlikely_name_lonely('Great').
 unlikely_name_lonely('Gouden').
+unlikely_name_lonely('Heilig').
+unlikely_name_lonely('Heilige').
 unlikely_name_lonely('Hij').
 unlikely_name_lonely('Holding').
 unlikely_name_lonely('Hotel').
@@ -5060,10 +5218,14 @@ unlikely_name_lonely('Je').
 unlikely_name_lonely('Jij').
 unlikely_name_lonely('Jou').
 unlikely_name_lonely('Juridische').
+unlikely_name_lonely('Katholiek').
+unlikely_name_lonely('Katholieke').
 unlikely_name_lonely('Kwartet').
 unlikely_name_lonely('La').
 unlikely_name_lonely('Laatste').
 unlikely_name_lonely('Le').
+unlikely_name_lonely('Liberaal').
+unlikely_name_lonely('Liberale').
 unlikely_name_lonely('Magazine').
 unlikely_name_lonely('Management').
 unlikely_name_lonely('Maritieme').
@@ -5078,12 +5240,16 @@ unlikely_name_lonely('National').
 unlikely_name_lonely('Nationale').
 unlikely_name_lonely('News').
 unlikely_name_lonely('Nieuwe').
+unlikely_name_lonely('Noordelijke').
 unlikely_name_lonely('Oké').
 unlikely_name_lonely('On').
+unlikely_name_lonely('Onafhankelijke').
 unlikely_name_lonely('Ons').
 unlikely_name_lonely('Ontwikkeling').
 unlikely_name_lonely('Onze').
 unlikely_name_lonely('Open').
+unlikely_name_lonely('Openbaar').
+unlikely_name_lonely('Openbare').
 unlikely_name_lonely('Oude').
 unlikely_name_lonely('Partnerschap').
 unlikely_name_lonely('Prijs').
@@ -5103,12 +5269,14 @@ unlikely_name_lonely('St').
 unlikely_name_lonely('St.').
 unlikely_name_lonely('Saint').
 unlikely_name_lonely('Sociaal').
+unlikely_name_lonely('Sociale').
 unlikely_name_lonely('Sport').
 unlikely_name_lonely('Studio').
 unlikely_name_lonely('Street').
 unlikely_name_lonely('Systems').
 unlikely_name_lonely('Te').
 unlikely_name_lonely('Team').
+unlikely_name_lonely('Techniek').
 unlikely_name_lonely('Technologies').
 unlikely_name_lonely('Ten').
 unlikely_name_lonely('Theatre').
@@ -5123,13 +5291,18 @@ unlikely_name_lonely('University').
 unlikely_name_lonely('Vader').
 unlikely_name_lonely('Vandaag').
 unlikely_name_lonely('Vanavond').
+unlikely_name_lonely('Verklaring').
 unlikely_name_lonely('Verschenen').
 unlikely_name_lonely('Via').
+unlikely_name_lonely('WAO\'er').
+unlikely_name_lonely('WAO\'ers').
 unlikely_name_lonely('We').
+unlikely_name_lonely('Wetenschap').
 unlikely_name_lonely('Wij').
 unlikely_name_lonely('World').
 unlikely_name_lonely('Zee').
 unlikely_name_lonely('Zelf').
+unlikely_name_lonely('Zuidelijke').
 unlikely_name_lonely('Zij').
 
 unlikely_name_lonely('Dr.').
@@ -5198,10 +5371,13 @@ unlikely_last_word_name(della).
 unlikely_last_word_name(dello).
 %unlikely_last_word_name(den).  parasolden
 unlikely_last_word_name(der).
+unlikely_last_word_name(des).
+unlikely_last_word_name('Deze').
 unlikely_last_word_name(die).
 unlikely_last_word_name('doesn\'t').
 unlikely_last_word_name('don\'t').
 unlikely_last_word_name(du).
+unlikely_last_word_name('Duurzame').
 unlikely_last_word_name(e).
 unlikely_last_word_name(el).
 unlikely_last_word_name(en).
@@ -5247,6 +5423,7 @@ unlikely_last_word_name(to).
 unlikely_last_word_name('TO').
 unlikely_last_word_name('Universele').
 unlikely_last_word_name(van).
+unlikely_last_word_name('Van').
 unlikely_last_word_name('VAN').
 unlikely_last_word_name('VOOR').
 unlikely_last_word_name(voor).
@@ -5273,6 +5450,7 @@ unlikely_last_word_name(Word) :-
 %% there is an obvious generalization missed here:
 unlikely_last_word_name('Arctisch').
 unlikely_last_word_name('Arctische').
+unlikely_last_word_name('Belgische').
 unlikely_last_word_name('Confederaal').
 unlikely_last_word_name('Confederale').
 unlikely_last_word_name('Constitutioneel').
@@ -5385,13 +5563,15 @@ potential_name_fsa_not_begin(_,P0,[Word|Words],Ws,[Word|Prefix],
     potential_name_fsa(22,P1,Words,Ws,Prefix,His).
 potential_name_fsa_not_begin(_,P0,[Word|Words],Ws,[Word|Prefix],
 		   [initial|His]) :-
-    name_initial(Word),!,
+    name_initial(Word),
+    !,
     P1 is P0 + 1,
     potential_name_fsa(2,P1,Words,Ws,Prefix,His).
 
 potential_name_fsa_not_begin(_,P0,[Word,Word2|Words],Ws,[Word,Word2|Prefix],
 		   [initial|His]) :-
-    name_initial(Word,Word2),!,
+    name_initial(Word,Word2),
+    !,
     P1 is P0 + 1,
     potential_name_fsa(2,P1,Words,Ws,Prefix,His).
 
@@ -5404,7 +5584,8 @@ potential_name_fsa_not_begin(_,P0,[Word|Words],Ws,[Word|Prefix],
     potential_name_fsa(23,P1,Words,Ws,Prefix,His).
 potential_name_fsa_not_begin(unknown,P0,[Word|Words],Ws,[Word|Prefix],
 		   [capital|His]) :-
-    name_capital(Word,P0),!,
+    name_capital(Word,P0),
+    !,
     P1 is P0 + 1,
     (   name_unknown(Word,P0),
         potential_name_fsa(23,P1,Words,Ws,Prefix,His)
@@ -5592,12 +5773,12 @@ potential_name_fsa(2,P0,[Rang|Words0],Words,[Rang|Rest],[devijfde|His]) :-
     !,
     P1 is P0 + 1,   % recursive for "Boulevard Léopold II 44"
     potential_name_fsa(2,P1,Words0,Words,Rest,His).
-potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],His) :-
+potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[and|His]) :-
     name_and(Word),
-    foreign_word(Word),
+    \+ ( Words=[Word2|_], name_vanhet(Word,Word2) ),
+    !,
     P1 is P0 + 1,
-    His=[and|His1],
-    potential_name_fsa(7,P1,Words,Ws,Prefix,His1).
+    potential_name_fsa(7,P1,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[foreign|His]) :-
     unknown_foreign_word(Word),
     P is P0 + 1,
@@ -5646,11 +5827,12 @@ potential_name_fsa(2,P0,[Word1,Word|Words],Ws,[Word1,Word|Prefix],
     P1 is P0 + 2,
     potential_name_fsa(33,P1,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[and|His]) :-
-    name_and(Word),!,
+    name_and(Word),
+    !,
     P is P0 + 1,
     potential_name_fsa(7,P,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[and|His]) :-
-    Word=voor,  % de Commissie voor X en Y
+    Word=voor,			% de Commissie voor X en Y
     !,
     P is P0 + 1,
     potential_name_fsa(2,P,Words,Ws,Prefix,His).
@@ -5796,6 +5978,7 @@ potential_name_fsa(8,P0,[Word|Words],Ws,[Word|Prefix],[foreign|His]) :-
     potential_name_fsa(23,P,Words,Ws,Prefix,His).
 
 %% second part of name...
+%% or just seen Capital after name_and
 potential_name_fsa(4,_P0,[et,'al.'|Words],Words,[et,'al.'],[etal]) :-
     !.
 potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[capital|His]) :-
@@ -5843,6 +6026,12 @@ potential_name_fsa(4,P0,[Word1,Word|Words],Ws,[Word1,Word|Prefix],[vanhet2|His])
     name_vanhet(Word1,Word),
     P is P0 + 2,
     potential_name_fsa(33,P,Words,Ws,Prefix,His).
+potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[foreign|His]) :-
+    foreign_word(Word),
+    !,
+    P is P0 + 1,
+    potential_name_fsa(23,P,Words,Ws,Prefix,His).
+
 potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[unknown|His]) :-
     name_unknown(Word,P0),
     P is P0 + 1,
@@ -5899,11 +6088,18 @@ potential_name_fsa(55,P0,[Word|Words],Ws,[Word|Prefix],[end_loc|His]) :-
     potential_name_fsa(5,P,Words,Ws,Prefix,His).
 
 potential_name_fsa(6,P0,[Word|Words],Ws,[Word|Prefix],[capital|His]) :-
-    name_capital(Word,P0),!,
+    name_capital(Word,P0),
+    !,
     P is P0 + 1,
     potential_name_fsa(6,P,Words,Ws,Prefix,His).
+potential_name_fsa(6,P0,[Word|Words],Ws,[Word|Prefix],[and|His]) :-
+    name_and(Word),
+    !,
+    P1 is P0 + 1,
+    potential_name_fsa(7,P1,Words,Ws,Prefix,His).
 potential_name_fsa(6,P0,[Word|Words],Ws,[Word|Prefix],[unknown|His]) :-
     name_unknown(Word,P0),
+    !,
     P is P0 + 1,
     potential_name_fsa(6,P,Words,Ws,Prefix,His).
 potential_name_fsa(6,P0,[Open|Words],Ws,[Open|Prefix],[open|His]) :-
@@ -5914,13 +6110,17 @@ potential_name_fsa(6,P0,[Open|Words],Ws,[Open|Prefix],[open|His]) :-
 
 %% just seen and
 potential_name_fsa(7,P0,[Word|Words],Ws,[Word|Prefix],[capital|His]) :-
-    name_capital(Word,P0),!,
+    name_capital(Word,P0),
     P is P0 + 1,
     potential_name_fsa(4,P,Words,Ws,Prefix,His).
 potential_name_fsa(7,P0,[Word|Words],Ws,[Word|Prefix],[unknown|His]) :-
     name_unknown(Word,P0),  % co; the
     P is P0 + 1,
     potential_name_fsa(6,P,Words,Ws,Prefix,His).
+potential_name_fsa(7,P0,[Word|Words],Ws,[Word|Prefix],[unknown|His]) :-
+    name_and(Word),  % die
+    P is P0 + 1,
+    potential_name_fsa(7,P,Words,Ws,Prefix,His).
 
 %% just seen unknown foreign word
 potential_name_fsa(22,P0,[The,Word|Words],Ws,[The,Word|Prefix],[foreign,foreign|His]) :-
@@ -5938,15 +6138,23 @@ potential_name_fsa(22,P0,[','|Words],Ws,[','|Prefix],[comma|His]) :-
     P is P0 + 1,
     potential_name_fsa(23,P,Words,Ws,Prefix,His).
 potential_name_fsa(22,P0,[Word|Words],Ws,[Word|Prefix],[unknown|His]) :-
-    name_unknown(Word,P0),!,
+    name_unknown(Word,P0),
+    !,
     P is P0 + 1,
     potential_name_fsa(222,P,Words,Ws,Prefix,His).
 potential_name_fsa(22,P0,[Word|Words],Ws,[Word|Prefix],[capital|His]) :-
-    name_capital(Word,P0),!,
+    name_capital(Word,P0),
+    !,
+    P is P0 + 1,
+    potential_name_fsa(222,P,Words,Ws,Prefix,His).
+potential_name_fsa(22,P0,[Word|Words],Ws,[Word|Prefix],[number|His]) :-
+    name_number(Word),
+    !,
     P is P0 + 1,
     potential_name_fsa(222,P,Words,Ws,Prefix,His).
 potential_name_fsa(22,P0,[Word|Words],Ws,[Word|Prefix],[and|His]) :-
-    name_and(Word),!,
+    name_and(Word),
+    !,
     P is P0 + 1,
     potential_name_fsa(7,P,Words,Ws,Prefix,His).
 %potential_name_fsa(22,P0,[Word|Words],Ws,[Word|Prefix],[normal|His]) :-
@@ -5981,6 +6189,10 @@ potential_name_fsa(23,P0,[Word|Words],Ws,[Word|Prefix],[foreign|His]) :-
     foreign_word(Word),!,
     P is P0 + 1,
     potential_name_fsa(23,P,Words,Ws,Prefix,His).
+potential_name_fsa(23,P0,[Word|Words],Ws,[Word|Prefix],[capital_foreign|His]) :-
+    decap_foreign_word(Word),!,
+    P is P0 + 1,
+    potential_name_fsa(222,P,Words,Ws,Prefix,His).
 potential_name_fsa(23,P0,[','|Words],Ws,[','|Prefix],[comma|His]) :-
     !,
     P is P0 + 1,
@@ -5988,15 +6200,11 @@ potential_name_fsa(23,P0,[','|Words],Ws,[','|Prefix],[comma|His]) :-
 potential_name_fsa(23,P0,[Word|Words],Ws,[Word|Prefix],[unknown|His]) :-
     name_unknown(Word,P0),!,
     P is P0 + 1,
-    potential_name_fsa(222,P,Words,Ws,Prefix,His).
+    potential_name_fsa(2,P,Words,Ws,Prefix,His).
 potential_name_fsa(23,P0,[Word|Words],Ws,[Word|Prefix],[capital|His]) :-
     name_capital(Word,P0),!,
     P is P0 + 1,
     potential_name_fsa(23,P,Words,Ws,Prefix,His).
-potential_name_fsa(23,P0,[Word|Words],Ws,[Word|Prefix],[capital_foreign|His]) :-
-    decap_foreign_word(Word),!,
-    P is P0 + 1,
-    potential_name_fsa(222,P,Words,Ws,Prefix,His).
 potential_name_fsa(23,_,['>',Word,Hellip|Ws],Ws,['>',Word,Hellip],['>']) :-
     hellip(Hellip),
     !.
@@ -6253,8 +6461,13 @@ name_and('&').
 name_and(and).
 name_and(et).
 name_and(und).
+name_and(le).
+name_and(la).
 name_and(en).
 name_and(of).
+name_and(die).
+name_and(der).
+name_and(das).
 
 name_end_firma('co').
 name_end_firma('co.').
@@ -6295,10 +6508,10 @@ name_end_person('BA').
 name_end_person('MA').
 name_end_person('Ph.D.').
 
+name_number('->').
 name_number(N) :-
     atom(N),
-    N \== '--',
-    N \== '...',
+    \+ alpino_lex:lexicon(punct(_),_,[N],[],normal),
     guess_number(N).
 
 name_title(Atom0) :-
@@ -7119,4 +7332,6 @@ majority_decap([W|Ws],P0,P,C0,T0):-
 
 normal_decap(W,P0,P):-
     tag(P0,P,_,_,_,W,special(decap(normal)),_).
+
+
 
