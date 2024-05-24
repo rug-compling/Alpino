@@ -1122,6 +1122,7 @@ requires_longest_match(name(begin)).
 requires_longest_match(normal(telephone)).
 requires_longest_match(normal(enumeration)).
 
+requires_unique_match(normal(score),score_cat,normal(chess),np,_,_).
 requires_unique_match(normal(date_year),np(year),normal(enumeration),_,_,_).
 requires_unique_match(name(not_begin),proper_name(sg,_),normal(enumeration),proper_name(both),_,_).
 requires_unique_match(normal(names_dictionary),proper_name(_),normal(enumeration),proper_name(both),_,_).
