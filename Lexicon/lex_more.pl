@@ -1407,6 +1407,14 @@ number_expression_breuk -->
       number_expression_tien_ne_or_een([Een],[])
     }.
 
+number_expression_breuk -->
+    n_word(Eenderde),
+    { atom(Eenderde),
+      alpino_util:split_atom(Eenderde,"-",[Een,Derde]),
+      word_rang_or_kwart(Derde),
+      number_expression_tien_ne_or_een([Een],[])
+    }.
+
 %% hij finishte een tiende achter de winnaar
 number_expression_breuk_tiende -->
     number_expression_tien_ne_or_een,
@@ -1418,6 +1426,15 @@ number_expression_breuk_tiende -->
     n_word(Eenderde),
     { atom(Eenderde),
       atom_concat(Een,Derde,Eenderde),
+      word_rang(Derde),
+      number_expression_tien_ne_or_een([Een],[])
+    }.
+
+%% hij finishte drie-tiende achter de winnaar
+number_expression_breuk_tiende -->
+    n_word(Eenderde),
+    { atom(Eenderde),
+      alpino_util:split_atom(Eenderde,"-",[Een,Derde]),
       word_rang(Derde),
       number_expression_tien_ne_or_een([Een],[])
     }.
