@@ -39,7 +39,7 @@ lexical_analysis:
 test:
 	$(MAKE) -s lexical_analysis suite=parool2001_test &
 	$(MAKE) ps
-	zcat $(PS:%=%.log.gz) > parool2001_test.log.gz
+	zcat $(PS:%=%.log.gz) | gzip > parool2001_test.log.gz
 #	$(MAKE) -s frames TRAIN_TEST=test &
 
 install_test:
