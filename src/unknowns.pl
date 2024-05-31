@@ -668,6 +668,7 @@ unknown_word_heuristic(P1,R1,W,_,"verb-ster|~p|~p|~p~n",
 
 unknown_word_heuristic(P1,R1,W,Ws,Msg,Args,Rest,none) :-
     decap_some(W,Wmin),
+    \+ tag(P1,_,_,_,_,_,slash(location),_),
     decap_some_word_heuristic(Wmin,P1,R1,W,Ws,Msg,Args,Rest).
 
 decap_some_word_heuristic(Wmin,P1,R1,W,Ws,
@@ -2286,6 +2287,7 @@ decap_only('Dankzij').
 decap_only('Denk').
 decap_only('Edoch').
 decap_only('Een').
+decap_only('Eigenlijk').
 decap_only('Eind').
 decap_only('En').
 decap_only('Evenals').
@@ -2361,6 +2363,7 @@ decap_only('Uw').
 decap_only('Vanwege').
 decap_only('Vanuit').
 decap_only('Veel').
+decap_only('Verder').
 decap_only('Vert.').
 decap_only('Vind').
 decap_only('Volgens').
@@ -3633,6 +3636,7 @@ form_of_suffix_rule(ïsche,   ïsch,    adjective(e),[]).
 form_of_suffix_rule(ischte,  isch,    adjective(e),[]).
 form_of_suffix_rule(ïschte,  ïsch,    adjective(e),[]).
 form_of_suffix_rule(ke,      k,       adjective(e),capital/[]).
+form_of_suffix_rule(lijke,   lijk,    adjective(e),[]).
 form_of_suffix_rule(le,      l,       adjective(e),capital/
 		   ['Cercle',
 		    cercle,
@@ -4465,6 +4469,11 @@ subsumed_by_dict(P0,P,_,_) :-
     tag(P3,P,_,_,_,_,normal(names_dictionary),_),
     \+ tag(P1,P,_,_,_,_,normal(names_dictionary),_).
 
+%% forbid (van) Onderwijs/Justitie Frank ...
+subsumed_by_dict(P1,_,[Onderwijs,_|_],_) :-
+    tag(_,P1,_,_,van,van,_,_),
+    lists:member(Onderwijs,['Defensie','Justitie','Onderwijs']).
+
 %% forbid: Name1 ( Name2 ) where Name1 is known person, and Name2 is known org
 subsumed_by_dict(P0,P,_,_) :-
     tag(P0,P1,_,_,_,_,normal(names_dictionary),proper_name(sg,'PER')),  P1 < P,
@@ -4620,7 +4629,7 @@ genitive_marker('x\'','\'').
 genitive_marker(s,'').   
 genitive_marker(sh,'').   
 genitive_marker(x,'').   
-genitive_marker(ic,'').   
+genitive_marker(ovic,'').
 genitive_marker(sch,''). 
 
 %% potential names are given by a finite automaton. Start node is 0
@@ -4717,6 +4726,9 @@ unlikely_name(Input,_,_) :-
     alpino_lex:lexicon(proper_name(both,'LOC'),_,Geo,[],names_dictionary).
 
 unlikely_name(_,P0,P) :-
+    tag(P0,P,_,_,_,_,slash(location),_).
+
+unlikely_name(_,P0,P) :-
     tag(P0,P1,_,_,_,_,normal(names_dictionary),_),
     unlikely_name_list(P1,P).
 
@@ -4726,10 +4738,14 @@ unlikely_name(['Staten',van,A],P0,P):-
 
 %% name with comma: there should not be a larger name
 %% seperated by comma
-unlikely_name(List,P1,P) :-
-    member(',',List),
-    between(0,P1,P0),
-    tag(P0,P2,_,_,_,_,name(_),_), P =< P2.
+
+%%%%% dit lijkt te algemeen, gaat fout voor
+%%%%% WR-P-P-C-0000000055.txt-266.1
+%%%%% Helpdesk Gezondheid , Werk en Verzekeringen
+% unlikely_name(List,P1,P) :-
+%    member(',',List),
+%    between(0,P1,P0),
+%    tag(P0,P2,_,_,_,_,name(_),_), P =< P2.
 
 unlikely_name(List,P0,P) :-
     list_only_capitals(List),
@@ -5222,6 +5238,7 @@ unlikely_name_lonely('III').
 unlikely_name_lonely('IV').
 unlikely_name_lonely('Ik').
 unlikely_name_lonely('Il').
+unlikely_name_lonely('Infrastructuur').
 unlikely_name_lonely('Internationaal').
 unlikely_name_lonely('International').
 unlikely_name_lonely('Internationale').
@@ -5310,6 +5327,7 @@ unlikely_name_lonely('University').
 unlikely_name_lonely('Vader').
 unlikely_name_lonely('Vandaag').
 unlikely_name_lonely('Vanavond').
+unlikely_name_lonely('Veiligheid').
 unlikely_name_lonely('Verklaring').
 unlikely_name_lonely('Verschenen').
 unlikely_name_lonely('Via').
@@ -5356,6 +5374,8 @@ unlikely_name_lonely('Zoon').
 unlikely_name_lonely('Excellentie').
 unlikely_name_lonely('Hoogheid').
 unlikely_name_lonely('Majesteit').
+
+unlikely_name_lonely(to).
 
 unlikely_name_lonely(W) :-
     decap_foreign_word(W).
@@ -5820,10 +5840,11 @@ potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[initial|His]) :-
     name_small_initial(Word),!,
     P1 is P0 + 1,
     potential_name_fsa(2,P1,Words,Ws,Prefix,His).
-potential_name_fsa(2,P0,[','|Words],Ws,[','|Prefix],[comma|His]) :-
+potential_name_fsa(2,P0,[',',Next|Words],Ws,[','|Prefix],[comma|His]) :-
+    \+ common_dutch_word(Next),
     !,
     P is P0 + 1,
-    potential_name_fsa(22,P,Words,Ws,Prefix,His).
+    potential_name_fsa(22,P,[Next|Words],Ws,Prefix,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[baron|His]) :-
     name_baron(Word),!,
     P1 is P0 + 1,
@@ -6158,10 +6179,11 @@ potential_name_fsa(22,P0,[Word|Words],Ws,[Word|Prefix],[foreign|His]) :-
     !,
     P is P0 + 1,
     potential_name_fsa(222,P,Words,Ws,Prefix,His).
-potential_name_fsa(22,P0,[','|Words],Ws,[','|Prefix],[comma|His]) :-
+potential_name_fsa(22,P0,[',',Next|Words],Ws,[','|Prefix],[comma|His]) :-
+    \+ common_dutch_word(Next),
     !,
     P is P0 + 1,
-    potential_name_fsa(23,P,Words,Ws,Prefix,His).
+    potential_name_fsa(23,P,[Next|Words],Ws,Prefix,His).
 potential_name_fsa(22,P0,[Word|Words],Ws,[Word|Prefix],[unknown|His]) :-
     name_unknown(Word,P0),
     !,
@@ -6218,10 +6240,11 @@ potential_name_fsa(23,P0,[Word|Words],Ws,[Word|Prefix],[capital_foreign|His]) :-
     decap_foreign_word(Word),!,
     P is P0 + 1,
     potential_name_fsa(222,P,Words,Ws,Prefix,His).
-potential_name_fsa(23,P0,[','|Words],Ws,[','|Prefix],[comma|His]) :-
+potential_name_fsa(23,P0,[',',Next|Words],Ws,[','|Prefix],[comma|His]) :-
+    \+ common_dutch_word(Next),
     !,
     P is P0 + 1,
-    potential_name_fsa(23,P,Words,Ws,Prefix,His).
+    potential_name_fsa(23,P,[Next|Words],Ws,Prefix,His).
 potential_name_fsa(23,P0,[Word|Words],Ws,[Word|Prefix],[unknown|His]) :-
     name_unknown(Word,P0),!,
     P is P0 + 1,
@@ -6254,6 +6277,7 @@ common_dutch_word(de).
 common_dutch_word(der).
 common_dutch_word(die).
 common_dutch_word(had).
+common_dutch_word(het).
 common_dutch_word(in).
 common_dutch_word(is).
 common_dutch_word(je).
