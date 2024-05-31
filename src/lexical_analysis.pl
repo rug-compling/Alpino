@@ -377,7 +377,7 @@ normal_lex2(Tag,Label,[Word|Input0],Input,P,normal(decap(His)),LC,Tags) :-
     alpino_unknowns:normal_capitalized_word(P,Word,Input0,Input1,DecapWord),
     in_lexicon(Tag,Label,[DecapWord|Input1],Input,His,LC),
     \+ member(f(Tag,_,Input,_),Tags),
-    \+ forbid_odd_normal_word(Word,Tag).
+    \+ forbid_odd_normal_word(Word,Input0,Tag).
 
 /* does not work for mwu that start with full capitals "OP het gebied van"
 normal_lex2(Tag,Label,[Word|Input0],Input,P,special(decap(His)),LC,Tags) :-
@@ -397,13 +397,26 @@ normal_lex2(Tag,Label,[Word|Input0],Input,P,special(decap(His)),LC,Tags) :-
     in_lexicon(Tag,Label,[DecapWord|Input1],Input,His,LC),
     \+ His = chess,
     \+ His = variant(variant(_,_),normal),
-    \+ member(f(Tag,_,Input,_),Tags).
+    \+ member(f(Tag,_,Input,_),Tags),
+    \+ forbid_odd_normal_word(Word,Input0,Tag).
 
+%% PARIJS/MOSKOU .....
+normal_lex2(Tag,Label,[Word|Input],Input,P,slash(location),LC,_):-
+    atom(Word),
+    alpino_util:split_atom(Word,"/",[Bonn,Moskou]),
+    alpino_unknowns:special_capitalized_word(P,Bonn,[],[],Decap1,_),
+    Tag = proper_name(_,'LOC'), 
+    in_lexicon(Tag,Label1,[Decap1],[],names_dictionary,LC),
+    alpino_unknowns:special_capitalized_word(P,Moskou,[],[],Decap2,_),
+    in_lexicon(Tag,Label2,[Decap2],[],names_dictionary,LC),
+    alpino_util:concat_all([Label1,Label2],Label,'_').
+    
 normal_lex2(Tag,Label,Input0,Input,_,special(His),LC,_) :-
     alpino_lex:special_lexicon(Tag,Label,Input0,Input,His,LC).
 
-forbid_odd_normal_word('A',conj(_)).
-forbid_odd_normal_word('A',preposition(_,_)).
+forbid_odd_normal_word('DEN',['HAAG'|_],_).
+forbid_odd_normal_word('A',_,conj(_)).
+forbid_odd_normal_word('A',_,preposition(_,_)).
 
 in_lexicon(Tag,Label,[Word|Input0],Input,His,LC) :-
     alpino_lex:lexicon(Tag,Label,[Word|Input0],Input,His,LC).
@@ -2043,7 +2056,7 @@ skip_tag(punct(schuin_streep)).
 skip_tag(punct(is_gelijk)).
 skip_tag(punct(haak_open)).
 skip_tag(punct(haak_sluit)).
-skip_tag(punct(komma)).
+%skip_tag(punct(komma)).
 skip_tag(punct(punt_komma)).
 skip_tag(punct(dubb_punt)).
 
@@ -2234,6 +2247,8 @@ garbage_atom('FIG').
 garbage_atom('FILE').
 garbage_atom('__').
 garbage_atom('__').
+garbage_atom('__NOTOC__').
+garbage_atom('[[,...,]]').
 garbage_atom(Atom) :-
     atom(Atom),
     sub_atom(Atom,_,_,_,'_____').
