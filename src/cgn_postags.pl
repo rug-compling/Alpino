@@ -187,8 +187,12 @@ tags(Q0,Q,Stem0,Surf,Tag,L0,L) :-
     Len is Q-Q0,
     (   Len =:= 1
     ->  L0 = [cgn_postag(Q0,Q,Stem,Tag)|L]
-    ;	atom(Stem),
-	alpino_util:split_atom(Stem," ",Stems),
+    ;   (   Stem = v_root(_,Stem2)
+	->  true
+	;   Stem = Stem2
+	),
+	atom(Stem2),
+	alpino_util:split_atom(Stem2," ",Stems),
 	length(Stems,Len2),
 	(   Len =:= Len2
 	->  new_tags(Stems,Surfs,Q0,Q,Tag,L0,L)
