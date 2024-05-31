@@ -54,7 +54,7 @@ install:
                  tag3.tpl  tag4.tpl  tagWord.tpl  wordTag.tpl\
                  context.fsa  tags.fsa  words.fsa usedContext;\
            do if cmp -s $$t $(TARGETDIR)/$$t; then true ; else cp -f $$t $(TARGETDIR)/$$t; fi; done
-	if cmp -s TRAINING/frames.pl ../../Grammar/frames.pl; then true ; else cp -f TRAINING/frames.pl ../../Grammar/frames.pl; fi
+	if cmp -s TRAINING/frames.pl ../../Grammar/frames.pl.$(PROLOG); then true ; else cp -f TRAINING/frames.pl ../../Grammar/frames.pl.$(PROLOG); fi
 
 include Makefile.patterns
 

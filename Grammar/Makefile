@@ -45,6 +45,9 @@ frames.po : frames.pl
               compile(frames),\
               save_files(frames,frames)." | $(HDRUG) -notk
 
+frames.pl: frames.pl.$(PROLOG)
+	cp frames.pl.$(PROLOG) frames.pl
+
 %.po : %.pl
 	echo "compile('$*'), save_files('$*','$*')." | $(HDRUG) -notk
 
