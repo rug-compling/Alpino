@@ -1356,9 +1356,20 @@ grammar_rule(rel_om_vpx,REL,[Comp1,V]):-
     unify_except(Comp,Comp1,hstem),   % hstem is used to percolate info of noun head to relative
     V:e_deps => [],
     V:slash <=> [NP],
+    no_subj(V),
     NP => np,
     NP:allows_drop => yes,
     NP:dt => [].
+
+no_subj(V) :-
+    V:subj => np,
+    V:subj:passivizes => no,	% * kinderen om te worden gegeven
+    V:subj:hstem => [],
+    V:subj:nform => norm,
+    V:subj:agr => sg,
+    V:subj:prs => (thi;ninvje;u),
+    V:subj:subn => sub_noun.
+
 
 %% geen touw aan vast te knopen
 %% geen beweging in te krijgen
@@ -2149,7 +2160,7 @@ mod_vp(Extra) :-
     no_missing_subj(Extra).
 
 no_missing_subj(Extra) :-
-    Extra:subj <=> SubjNP,        % unrealized SubjNP:
+    Extra:subj <=> SubjNP,	% unrealized SubjNP:
     SubjNP:mexs => [],
     SubjNP:hstem => [],
     SubjNP:nform => norm,
@@ -9940,12 +9951,8 @@ grammar_rule(np_red_rel_edep_vp,NP,[SBAR]) :-
     VP:slash => [],
     %% forbid clefts in contexts where subj is ignored:
     VP:cleft => no,
-    VP:subj => np,
-    VP:subj:hstem => [],
-    VP:subj:nform => norm,
-    VP:subj:agr => sg,
-    VP:subj:prs => thi,
-    VP:subj:subn => sub_noun.
+    no_subj(VP),
+    VP:subj:prs => thi.
 
 np_red_rel_structure(NP,SBAR) :-
     SBAR => redrel,

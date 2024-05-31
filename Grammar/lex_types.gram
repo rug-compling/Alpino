@@ -3349,9 +3349,11 @@ vp_arg(VP) :-
 
 no_subj_vp_arg(VP) :-
     vp_arg(VP),
+    VP:control => control_none,
     %% forbid clefts in contexts where subj is ignored:
     VP:cleft => no,
     VP:subj => np,
+%%    VP:subj:passivizes => no,   in rel_om_vp rule
 %%    VP:subj:dt => [], don't filter on dt
     VP:subj:hstem => [],
     VP:subj:nform => norm,
@@ -5061,7 +5063,6 @@ np_vp_no_control(V,C,C) :-
     %%
     dat_np_arg(Obj),
     no_subj_vp_arg(VP),
-    VP:control => control_none,
     dependents(V,[vc/VP,obj2/Obj]),
     instantiated_deprel(V,vc,VP).
 
@@ -5070,7 +5071,6 @@ acc_np_om_vp_no_control(V,C,C) :-
     V:passive => norm_passive,
     acc_np_arg(Obj),
     no_subj_vp_arg(VP),
-    VP:control => control_none,
     VP:vform => om,
     dependents(V,[vc/VP,obj1/Obj]),
     instantiated_deprel(V,vc,VP).
@@ -5102,7 +5102,6 @@ so_vp_no_control(V,C,C) :-
     pp_pc_arg(Obj,aan),
     %%   dative, because the object cannot passivize
     no_subj_vp_arg(VP),
-    VP:control => control_none,
     dependents(V,[vc/VP,obj2/Obj]),
     instantiated_deprel(V,vc,VP).
 
@@ -5201,7 +5200,7 @@ er_sbar(V,C,C) :-
 er_vp(V,C,C) :-
     main_v(V),
     V:passive => no_passive,
-    no_subj_vp_arg(SBAR),
+    vp_arg(SBAR),
     SBAR:control => control_subj,
     V:subj <=> Subj,
     control(SBAR,Subj),
@@ -6537,8 +6536,9 @@ map_dep(extra_vp(Cat),extra,Cat,V):-
     subj_control_vp_arg(Cat,V).
 map_dep(extra_vp_no_control(Cat),extra,Cat,_V):-
     Cat:slash => [],
-    vp_arg(Cat),
-    Cat:control => control_none,
+%%    vp_arg(Cat), replaced by:
+    no_subj_vp_arg(Cat),
+%%    Cat:control => control_none,
     Cat:sel => ~to_topic.
 map_dep(extra_obj_vp(Cat,Obj),extra,Cat,_V):-
     Cat:sel => ~to_topic,
