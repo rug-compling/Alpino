@@ -2176,6 +2176,10 @@ n([pl(afspraken),sg(afspraak)],de,
    subject_sbar,
    subject_vp]).
 
+n([pl(afspraken),sg(afspraak)],de,
+  [],
+  [prijs]).
+
 n([pl(afspraakjes),sg(afspraakje)],het,[]).
 
 n([sg(afsprong),pl(afsprongen)],de,[]).
@@ -2242,6 +2246,7 @@ n([sg(afvaart),pl(afvaarten)],de,[]).
 
 n([mass(afval)],both,[],
   [kern,
+   rest,
    slacht,
    tuin,
    zwerf]).
@@ -2763,6 +2768,8 @@ n([mass(apathie)],de,[]).
 
 n([mass(apatie)],de,[]).
 
+n([sg('Apeldoorner'),pl('Apeldoorners')],de,[]).
+
 n([pl(aperitieven),sg(aperitief)],both,[],[dim(aperitiefje)]).
 
 n([mass(apezuur)],both,[]).
@@ -3202,6 +3209,7 @@ n([pl('auto\'s'),sg(auto)],de,[],
    race,
    test,
    trap,
+   vlucht,
    vracht,
    vuilnis,
    i(ziek,zieken),
@@ -4413,8 +4421,6 @@ n([mass(beleid)],het,
    s(welzijn),
    s(werkgelegenheid)]).
 
-n([pl(beleidsmaatregelen),sg(beleidsmaatregel)],de,[]).
-
 n([pl(belemmeringen),sg(belemmering)],de,[sbar,subject_sbar,subject_vp,vp]).
 
 n([sg(belening),pl(beleningen)],de,[]).
@@ -5185,8 +5191,6 @@ n([pl(bezorgsters),sg(bezorgster)],de,[]).
 n([mass(bezorging)],de,[]).
 
 n([pl(bezuinigingen),sg(bezuiniging)],de,[]).
-
-n([pl(bezuinigingsmaatregelen),sg(bezuinigingsmaatregel)],de,[]).
 
 n([pl(bezwaren),sg(bezwaar)],het,[sbar,vp,subject_sbar,subject_vp]).
 
@@ -6996,7 +7000,9 @@ n([mass([carrier,select])],both,[]).
 n([pl(carrières),sg(carrière)],de,[],
   [interland,
    solo,
-   s(trainer)]).
+   s(trainer),
+   voetbal
+  ]).
 
 n([pl(carrosserieën),sg(carrosserie)],de,[]).
 
@@ -7168,6 +7174,7 @@ n([pl(centra),pl(centrums),sg(centrum)],het,
    confectie,
    controle,
    crisis,
+   cultuur,
    epi,
    expertise,
    s(gezondheid),
@@ -7262,6 +7269,7 @@ n([sg(chat)],de,[]).
 
 n([pl(chauffeurs),sg(chauffeur)],de,[],
   [bus,
+   taxi,
    i(vracht_wagen,vrachtwagen)]).
 
 n([sg(chauvinisme)],het,[]).
@@ -10708,6 +10716,7 @@ n([pl(eisen),sg(eis)],de,[],
    loon,
    h(milieu),
    minimum,
+   straf,
    s(toelating),
    s(veiligheid),
    s(zorgvuldigheid)]).
@@ -12280,6 +12289,7 @@ n([pl(gangen),pl(gangs),sg(gang)],de,[],
    martel,
    s(ontwikkeling),
    s(recht),
+   stembus,
    wandel,
    zij,
    dim(gangetje)]).
@@ -13458,6 +13468,7 @@ n([sg(gewei),pl(geweien)],het,[],
 n([mass(geweld)],het,[],
   [natuur,
    s(oorlog),
+   politie,
    straat,
    s(supporter)]).
 
@@ -15671,6 +15682,7 @@ n([pl(houders),sg(houder)],de,[],
    café,
    galerie,
    i(giro_rekening,girorekening),
+   melkvee,
    obligatie,
    pluimvee,
    polis,
@@ -15679,7 +15691,10 @@ n([pl(houders),sg(houder)],de,[],
    praktijk,
    rekening,
    restaurant,
+   stal,
    stand,
+   status,
+   sterk,
    s(varken),
    vee]).
 
@@ -17850,7 +17865,9 @@ n([mass(kaviaar)],de,[]).
 
 n([sg(kayak),pl(kayaks)],de,[]).
 
-n([pl(kazernen),pl(kazernes),sg(kazerne)],de,[],[woon]).
+n([pl(kazernen),pl(kazernes),sg(kazerne)],de,[],
+  [brandweer,
+   woon]).
 
 n([sg('KB')],het,[]).  % VLAAMS: koninklijk besluit
 
@@ -18719,7 +18736,9 @@ n([sg(kogelstoter),pl(kogelstoters)],de,[]).
 
 n([sg(kogelstootster),pl(kogelstootsters)],de,[]).
 
-n([pl(koks),sg(kok)],de,[],[thuis]).
+n([pl(koks),sg(kok)],de,[],
+  [h(chef),
+   xthuis]).
 
 n([pl(kokers),sg(koker)],de,[],
   [water,
@@ -20690,6 +20709,7 @@ n([pl(lijnen),sg(lijn)],de,
 n([pl(lijnen),sg(lijn)],de,[],
   [achter,
    breuk,
+   bus,
    doel,
    finish,
    front,
@@ -21342,9 +21362,15 @@ n([pl(maats),pl(maten),sg(maat)],de,[],
 
 n([pl(maatregelen),pl(maatregels),sg(maatregel)],de,[sbar,vp],
   [antidumping,
+   s(beleid),
+   s(bezuiniging),
    steun,
+   straf,
    tegen,
-   s(verkeer)]).
+   s(veiligheid),
+   s(verkeer),
+   s(voorzorg)
+  ]).
 
 n([pl(maatregelen),pl(maatregels),sg(maatregel)],de,[],
   [loon]).
@@ -21900,6 +21926,7 @@ n([mass(mat)],het,[],[schaak]).
 n([pl(matchen),pl(matches),sg(match)],de,[temp_mod],
   [heen,
    i(kandidaat,kandidaten),
+   oefen,
    sleutel,
    terug,
    thuis]).
@@ -25916,7 +25943,12 @@ n([mass(overeenstemming),pl(overeenstemmingen),sg(overeenstemming)],de,
    pred_pp(in,subject_sbar),
    sbar]).
 
-n([pl(overgangen),sg(overgang)],de,[subject_sbar,subject_vp]).
+n([pl(overgangen),sg(overgang)],de,
+  [subject_sbar,
+   subject_vp]).
+
+n([pl(overgangen),sg(overgang)],de,[],
+  [spoorweg]).
 
 n([mass(overgave)],de,[]).
 
@@ -26001,7 +26033,8 @@ n([mass(overmoed)],de,[]).
 
 n([pl(overnachtingen),sg(overnachting)],de,[]).
 
-n([pl(overnames),pl(overnamen),sg(overname)],de,[]).
+n([pl(overnames),pl(overnamen),sg(overname)],de,[],
+  [s(macht)]).
 
 n([sg(overnamesom),pl(overnamesommen)],de,[]).
 
@@ -26701,7 +26734,7 @@ n([pl(patronen),sg(patroon)],het,[],
    s(gedrag),
    dim(patroontje)]).
 
-n([pl(patrouilles),sg(patrouille)],de,[]).
+n([pl(patrouilles),sg(patrouille)],de,[],[politie]).
 
 n([pl(patstellingen),sg(patstelling)],de,[]).
 
@@ -27336,6 +27369,7 @@ n([pl(plannen),sg(plan)],both,
    s(bestemming),
    s(bezuiniging),
    bouw,
+   business,
    fusie,
    grond,
    herstel,
@@ -29422,7 +29456,9 @@ n([pl(rechters),sg(rechter)],de,[],
    jeugd,
    i(kind,kinder),
    s(onderzoek),
-   opper]).
+   opper,
+   straf
+  ]).
 
 n([pl(rechterkanten),sg(rechterkant)],de,[]).
 
@@ -29826,6 +29862,7 @@ n([pl(rekeningen),sg(rekening)],de,[sbar,vp,pred_pp(voor)],[]).
 
 n([pl(rekeningen),sg(rekening)],de,[],
   [betaal,
+   energie,
    reserve,
    spaar]).
 
@@ -30365,7 +30402,8 @@ n([pl('risico\'s'),sg(risico)],het,[pred_pp(zonder)],
 n([sg(rist)],de,[measure]). % Vlaams
 
 n([pl(ritten),sg(rit)],de,[temp_mod],
-  [i(koningin,koninginne),
+  [berg,
+   i(koningin,koninginne),
    slot,
    test,
    veld,
@@ -31869,6 +31907,7 @@ n([pl(selecties),sg(selectie),
   [h('A'),
    h('B'),
    markt,
+   voor,
    wedstrijd
   ]).
 
@@ -33237,7 +33276,7 @@ n([sg([split,screen]),pl([split,screens])],both,[]).
 
 n([sg(splits),pl(splitsen)],de,[]).
 
-n([pl(splitsingen),sg(splitsing)],de,[]).
+n([pl(splitsingen),sg(splitsing)],de,[],[h('T')]).
 
 n([mass(spoed)],de,[]).
 
@@ -33655,6 +33694,7 @@ n([pl(standen),sg(stand)],de,[],
    slot,
    totaal,
    vis,
+   h('WK'),
    wild,
    dim(standje)]).
 
@@ -35057,6 +35097,7 @@ n([pl(tarieven),sg(tarief)],het,[app_measure],
    bodem,
    douane,
    i(geld_markt,geldmarkt),
+   import,
    maximum,
    piek,
    rente,
@@ -35514,6 +35555,7 @@ n([pl(terreinen),sg(terrein)],het,[],
    s(beleid),
    bouw,
    exercitie,
+   festival,
    industrie,
    kampeer,
    oefen,
@@ -35911,6 +35953,7 @@ n([pl(tochten),sg(tocht)],de,[],
    speur,
    triomf,
    s(verkenning),
+   wandel,
    zege,
    zoek,
    zwerf,
@@ -36168,6 +36211,7 @@ n([pl(toosten),sg(toost)],de,[]).
 n([pl(toppen),sg(top)],de,[],
   [berg,
    heuvel,
+   klimaat,
    landmacht,
    leger,
    partij,
@@ -36668,7 +36712,8 @@ n([pl(tulbanden),sg(tulband)],de,[]).
 
 n([pl(tulpen),sg(tulp)],de,[]).
 
-n([pl(tumoren),pl(tumors),sg(tumor)],de,[]).
+n([pl(tumoren),pl(tumors),sg(tumor)],de,[],
+  [hersen]).
 
 n([pl(tumulten),sg(tumult)],het,[]).
 
@@ -37012,7 +37057,7 @@ n([sg(uitprint),pl(uitprinten)],de,[]).  % VL?
 
 n([mass(uitputting)],de,[]).
 
-n([pl(uitreikingen),sg(uitreiking)],de,[]).
+n([pl(uitreikingen),sg(uitreiking)],de,[],[prijs]).
 
 n([sg(uitreis)],de,[]).
 
@@ -37512,8 +37557,6 @@ n([pl(veiligheden),sg(veiligheid)],de,[],
    s(verkeer),
    voedsel]).
 
-n([pl(veiligheidsmaatregelen),pl(veiligheidsmaatregels),sg(veiligheidsmaatregel)],de,[vp]).
-
 n([pl(veiligheidstroepen)],de,[]).
 
 n([pl(veilingen),sg(veiling)],de,[],
@@ -37589,7 +37632,8 @@ n([pl(veranderingen),sg(verandering)],de,
   [s(gedrag),
    klimaat,
    s(mentaliteit),
-   naam]).
+   s(naam),naam
+  ]).
 
 n([pl(verantwoordelijkheden),
    sg(verantwoordelijkheid)],de,
@@ -37628,7 +37672,8 @@ n([pl(verbindingen),sg(verbinding)],de,
   [pred_pp(in)]).
 
 n([pl(verbindingen),sg(verbinding)],de,[],
-  [oever]).
+  [internet,
+   oever]).
 
 n([pl(verbintenissen),sg(verbintenis)],de,[sbar,vp]).
 
@@ -37756,6 +37801,7 @@ n([mass(verdraagzaamheid)],de,[]).
 
 n([pl(verdragen),sg(verdrag)],het,[],
   [h('ABM'),
+   associatie,
    kernstop,
    vrijhandel]).
 
@@ -39927,8 +39973,6 @@ n([pl(voorzomers),sg(voorzomer)],de,[]).
 
 n([pl(voorzorgen),sg(voorzorg)],de,[sbar,vp]).
 
-n([pl(voorzorgsmaatregelen),pl(voorzorgsmaatregels),sg(voorzorgsmaatregel)],de,[sbar,vp]).
-
 n([pl(vorderingen),sg(vordering)],de,[sbar,vp]).
 
 n([sg(vore),pl(voren)],de,[]).
@@ -41663,6 +41707,8 @@ n([pl(woonkeukens),sg(woonkeuken)],de,[]).
 n([pl(woonlasten)],de,[]).
 
 n([mass(woonomgeving)],de,[]).
+
+n([sg(woonst),pl(woonsten)],de,[]).  % VL
 
 n([pl(woorden),sg(woord)],het,
   [pred_pp(aan)],

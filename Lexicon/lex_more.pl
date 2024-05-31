@@ -1313,6 +1313,13 @@ number_expressionXX(pl_num) -->
        number_expression_tien(_,[X],[])
     }.
 
+%% 1 miljoen 380 duizend
+number_expressionXX(pl_num) -->
+    n_word(Drie),
+    { parse_number(Drie,_) },
+    n_word(miljoen),
+    number_expressionXX(pl_num).
+
 %% driekwart van de mensen heeft/hebben geen geld
 number_expressionXX(both) -->
     number_expression_breuk.

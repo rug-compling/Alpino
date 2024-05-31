@@ -1357,6 +1357,8 @@ accent(verkeerssituatien,verkeerssituatiën).
 accent(vetoen,vetoën).
 accent(vliegtuigindustrieen,vliegtuigindustrieën).
 accent(voedingsindustrieen,voedingsindustrieën).
+accent(voetbalcarrieres,voetbalcarrières).
+accent(voetbalcarriere,voetbalcarrière).
 accent(voila,voilà).
 accent(volieres,volières).
 accent(voliere,volière).

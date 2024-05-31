@@ -664,8 +664,7 @@ lexicon_(Word,proper_name(X,'PER'),Name,Ws1,Ws,His,_LC) :-
 
 %% one word genetive names
 lexicon_(Word,Cat,Stem,Ws,Ws,gen(His),_LC) :-
-    Word \== 'Wiens',
-    Word \== 'Ons',
+    \+ not_a_genitive_name(Word),
     genitive_s(Word,Name),
     in_names_dictionary(Cat0,Name,Stem,[],[],His),
     determiner_from_name(Cat0,Cat).
@@ -759,6 +758,7 @@ genitive_s(Word,Name) :-	% Ajax' opstelling
     atom(Word),
     atom_concat(Name,'\'',Word),
     remove_s(Name).
+
 determiner_from_name(proper_name(_),name_determiner(pron)).
 determiner_from_name(proper_name(_,TYPE),name_determiner(pron,TYPE)).
 
@@ -1393,7 +1393,7 @@ s_atom(s).
 s_atom(sch).
 s_atom(che).
 s_atom(x).
-s_atom(ic).
+s_atom(ovic).
 
 identical_verbal_infl(Cat,Cat,_,_).
 identical_verbal_infl(verb(HZ,inf,Sc),verb(HZ,pl,Sc),Word,Label) :-
@@ -3532,6 +3532,7 @@ parse_only_lex('\'',  '\'s morgens',   tmp_adverb, [sMorgens|X],   X).
 parse_only_lex('\'',  '\'s nachts',    tmp_adverb, [sNachts|X],    X).
 parse_only_lex('\'',  '\'s ochtends',  tmp_adverb, [sOchtends|X],  X).
 
+parse_only_lex('DEN','Den Haag',proper_name(sg,'LOC'),['HAAG'|X],  X).
 
 %% meta-commentaar in Mediargus
 parse_only_lex(kranteregel,krant_regel,noun(de,count,sg)).
@@ -3913,6 +3914,7 @@ abbreviation('no.',    nummer).
 abbreviation('ong.',   ongeveer).
 abbreviation('prov.',  provincie).
 abbreviation(pta,      peseta).
+abbreviation(ptn,      punten).
 abbreviation('reg.',   regering).
 abbreviation('m.',     meter).
 abbreviation('min.',   minuut).
@@ -4991,6 +4993,22 @@ ind_loc_prefix('Noord-West').
 ind_loc_prefix('Zuid-Oost').
 ind_loc_prefix('Noord-Oost').
 
-
-
+not_a_genitive_name('Alex').
+not_a_genitive_name('Charles').
+not_a_genitive_name('Chris').
+not_a_genitive_name('Els').
+not_a_genitive_name('Frans').
+not_a_genitive_name('Hans').
+not_a_genitive_name('Jacques').
+not_a_genitive_name('Joris').
+not_a_genitive_name('Jos').
+not_a_genitive_name('Kees').
+not_a_genitive_name('Klaas').
+not_a_genitive_name('Kris').
+not_a_genitive_name('Louis').
+not_a_genitive_name('Lukas').
+not_a_genitive_name('Ons').
+not_a_genitive_name('Thomas').
+not_a_genitive_name('Wiens').
+not_a_genitive_name('Yves').
 
