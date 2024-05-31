@@ -15,7 +15,7 @@ hdrug.sav: $(PLS)
 else
 
 hdrug: $(PLS) swi.pl
-	swipl -o hdrug --goal=hdrug_main -c swi.pl
+	$(PROLOG) -o hdrug --goal=hdrug_main -c swi.pl
 
 endif
 
