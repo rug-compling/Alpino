@@ -71,6 +71,9 @@ survives_bigram(kort,korte,adjective(e),termijn,termijn,tmp_noun(de,count,sg)).
 survives_bigram(lang,lange,adjective(e),termijn,termijn,tmp_noun(de,count,sg)).
 %% dat soort is mwu too
 survives_bigram(dat,_,determiner(het,nwh,nmod,pro,nparg),soort,_,noun(both,count,sg,_)).
+%% Achteraf gezien
+survives_bigram(achteraf,_,loc_adverb,zien,gezien,adjective(ge_no_e(both))).
+
 
 %% because "dames en heren" is also tag
 survives_trigram(dame,_,noun(de,count,pl),en,_,conj(en),heer,_,noun(de,count,pl)).
