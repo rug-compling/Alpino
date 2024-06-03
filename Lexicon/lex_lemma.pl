@@ -8537,6 +8537,7 @@ lemma_root(leggen,leg) .
 lemma_root(legitimeren,legitimeer) .
 lemma_root(leiden,leid) .
 lemma_root(lekken,lek) .
+lemma_root(lek_rijden,rijd_lek) .
 lemma_root(lek_slaan,sla_lek) .
 lemma_root(lenen,leen) .
 lemma_root(lengen,leng) .

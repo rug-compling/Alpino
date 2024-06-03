@@ -18581,6 +18581,7 @@ v([rijd,rij],rijdt,rijden,gereden,reed,reden,
 	part_transitive(weg),
 	pc_pp(op)]),   % op benzine
      b([ld_pp,
+	part_intransitive(lek), % VL
 	part_intransitive(mee), % NB dat ik mee naar huis rijd
 	part_intransitive(om),
 	part_intransitive(rond),
@@ -20921,7 +20922,8 @@ v(soleer,soleert,soleren,gesoleerd,soleerde,soleerden,
     [h([intransitive])]).
 
 v(solliciteer,solliciteert,solliciteren,gesolliciteerd,solliciteerde,solliciteerden,
-    [h([intransitive,
+  [h([intransitive,
+      transitive, % VL We worden druk gesolliciteerd
 	pc_pp(op),
 	pc_pp(naar)])]).
 
@@ -27788,7 +27790,7 @@ v(weersta,weerstaat,inflected(weerstaan,weerstane),weerstaan,weerstond,weerstond
 	pc_pp(aan)])]).  % aan de verleiding weerstaan
 
 v(weet,weet,weten,geweten,wist,wisten,
-    [h([pred_refl,  % omdat hij zich gesteund weet ...
+  [h([refl_passive,             % omdat hij zich weet gesteund / gesteund weet...
 	tr_sbar,
 	transitive,
 	aci_simple, % VL: je weet me wonen, je weet het staan

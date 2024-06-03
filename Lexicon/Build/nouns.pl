@@ -17869,7 +17869,7 @@ n([pl(kazernen),pl(kazernes),sg(kazerne)],de,[],
   [brandweer,
    woon]).
 
-n([sg('KB')],het,[]).  % VLAAMS: koninklijk besluit
+n([sg('KB'),sg(kb)],het,[]).  % VLAAMS: koninklijk besluit
 
 n([meas(kcal),meas(kCal)],de,[meas_mod,measure]).
 
@@ -35962,6 +35962,9 @@ n([pl(tochten),sg(tocht)],de,[],
 n([mass(toebehoren),pl(toebehoren)],het,[]).
 
 n([mass(toediening),pl(toedieningen),sg(toediening)],de,[]).
+
+%% door eigen toedoen; "eigen" is nonadv, cannot combine with v_noun
+n([mass(toedoen)],het,[]).
 
 n([mass(toedracht)],de,[]).
 
