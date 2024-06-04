@@ -196,7 +196,7 @@ tags(Q0,Q,Stem0,Surf,Tag,L0,L) :-
 	length(Stems,Len2),
 	(   Len =:= Len2
 	->  new_tags(Stems,Surfs,Q0,Q,Tag,L0,L)
-	;   alpino_util:split_atom(Stem,"_",Stems2),
+	;   alpino_util:split_atom(Stem2,"_",Stems2),
 	    length(Stems2,Len3),
 	    (   Len =:= Len3
 	    ->  new_tags(Stems2,Surfs,Q0,Q,Tag,L0,L)
@@ -1337,8 +1337,10 @@ exceptional_stem_tag(verder,particle(verder),                 'ADJ(vrij,comp,zon
 exceptional_stem_tag(verdenken,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',verdenken).
 exceptional_stem_tag(verdenken,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',verdenken).
 exceptional_stem_tag(Verdenken,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',Verdenken) :-
+    atom(Verdenken),
     atom_concat(_,'_verdenken',Verdenken).
-exceptional_stem_tag(Verdenken,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',Verdenken):- 
+exceptional_stem_tag(Verdenken,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',Verdenken):-
+    atom(Verdenken),
     atom_concat(_,'_verdenken',Verdenken).
 exceptional_stem_tag(vrouw,postn_adverb,                      'N(soort,mv,basis)',vrouw).
 exceptional_stem_tag(weg,adjective(_),                        'BW()',weg).
@@ -3493,16 +3495,17 @@ mwu_postag_frame_stem_surf(name_determiner(pron,_),_Stem,Surf,PosList) :-
     gen_name_parts(Parts,PosList).
 
 mwu_postag_frame_stem_surf(adjective(het_st(_)),Stem,Surf,['LID(bep,stan,evon)',TweedePos]) :-
+    atom(Stem),atom(Surf),
     atom_concat('het ',_,Stem),
     atom_concat(_,Gek,Surf),
     st(Gek,TweedePos),
     !.
 mwu_postag_frame_stem_surf(adjective(het_st(_)),Stem,Surf,['LID(bep,stan,evon)','ADJ(vrij,sup,zonder)']) :-
-    atom(Stem),
+    atom(Stem),atom(Surf),
     atom_concat('het ',_,Stem),
     atom_concat(_,st,Surf).
 mwu_postag_frame_stem_surf(adjective(het_st(_)),Stem,Surf,['LID(bep,stan,evon)','ADJ(nom,sup,met-e,zonder-n,stan)']) :-
-    atom(Stem),
+    atom(Stem),atom(Surf),
     atom_concat('het ',_,Stem),
     atom_concat(_,ste,Surf).
 mwu_postag_frame_stem_surf(adjective(het_st(_)),_,Surf,['VZ(init)',Pron,Tag]) :-
@@ -6260,6 +6263,7 @@ meer_lemma(meer,veel).
 meer_lemma(minder,weinig).
 
 phone(Atom) :-
+    atom(Atom),
     atom_codes(Atom,[48|Tail]),
     alpino_lex:number_codes_silent(Num,Tail),
     integer(Num).
