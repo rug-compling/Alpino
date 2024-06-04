@@ -4274,7 +4274,7 @@ n([sg(beklimmer),pl(beklimmers)],de,[],
 
 n([pl(beklimmingen),sg(beklimming)],de,[]).
 
-n([pl(bekommernissen),sg(bekommernis)],de,[vp]).
+n([pl(bekommernissen),sg(bekommernis)],de,[sbar,vp,subject_sbar,subject_vp]).
 
 n([mass(bekomst)],both,[]).
 
@@ -12282,7 +12282,8 @@ n([sg([gamma,ray,waarde]),pl([gamma,ray,waardes]),
 
 n([sg(gammel),pl(gammels)],de,[]).
 
-n([pl(gangen),pl(gangs),sg(gang)],de,[pred_pp(in)]).  % in volle gang
+n([pl(gangen),pl(gangs),sg(gang)],de,[pred_pp(op),   % we trekken de sprint op gang
+				      pred_pp(in)]). % in volle gang
 
 n([pl(gangen),pl(gangs),sg(gang)],de,[],
   [gal,
@@ -32340,6 +32341,7 @@ n([pl(slachthuizen),sg(slachthuis)],het,[]).
 
 n([pl(slachtingen),sg(slachting)],de,[]).
 
+%% VL: ook "de slachtoffer"?
 n([pl(slachtoffers),sg(slachtoffer)],het,[],
   [asbest,
    burger,

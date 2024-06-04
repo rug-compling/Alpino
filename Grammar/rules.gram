@@ -10683,6 +10683,15 @@ grammar_rule(start_coord(np_np_pp),M,[XP,Clist,PP]) :-
     start_coord_name_en_structure(np,M0,XP,Clist),
     hd_mod_structure(M0,PP,M).
 
+%%EX%% het christelijke ACV en het socialistische ABVV die bestaan uit verschillende vakgroepen
+grammar_rule(start_coord(np_np_rel),M,[XP,Clist,OPTCOMMA,REL]) :-
+    M => np,
+    M0 => np,
+    REL => rel,
+    optcomma(OPTCOMMA),
+    start_coord_name_en_structure(np,M0,XP,Clist),
+    hd_rel_structure(M0,REL,M).
+
 %%EX%% Zowel boeken als de platen op mijn werkkamer
 grammar_rule(start_coord(zowel_np_np_pp),M,[ConjL,XP,Clist,PP]) :-
     M => np,
@@ -12116,18 +12125,35 @@ grammar_rule(comparative(sbar), CompP, [ Comp, XP ]) :-
 %%EX%% Ik rust zoveel als ik maar kan
 %%EX%% Ik ga vaker naar de winkel om fruit te kopen dan om snoep te halen
 %%EX%% Ik probeer liever een dag vrij te nemen dan elke dag korter te werken
+%% EXAMPLE: ik kam mijn haren even vaak als om te berge te rijzen
+%% otherwise variable cat in dt
+%%% therefore, the original rule comparative(vp) is split into two rules for
+%%% finite and infinite case respectively
 grammar_rule(comparative(vp), CompP, [ Comp, XP ]) :-
     XP => vp,
-    XP:vform => (om;fin;te),
+    XP:vform => (om;te),
+    XP:subj => np,
+    XP:subj:allows_drop => yes,
+    XP:e_deps => [],
+    comparative_structure(Comp,XP,CompP).
+
+grammar_rule(comparative(fin_vp), CompP, [ Comp, XP ]) :-
+    XP => vp,
+    XP:vform => fin,
     XP:e_deps => [],
     comparative_structure(Comp,XP,CompP).
 
 %%EX%% Ik heb vaker gewandeld dan gefietst
 %%EX%% Ik zou liever willen wandelen dan willen fietsen
+%% SUBJ should allow drop
+%% EXAMPLE: ik kam mijn haren even vaak als te berge rijzen
+%% otherwise variable cat in dt
 grammar_rule(comparative(vpx), CompP, [ Comp, XP ]) :-
     XP => vpx,
     XP:vform => (inf;psp),
     no_vslash(XP),
+    XP:subj => np,
+    XP:subj:allows_drop => yes,
     XP:e_deps => [],
     comparative_structure(Comp,XP,CompP).
 

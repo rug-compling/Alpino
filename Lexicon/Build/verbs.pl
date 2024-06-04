@@ -9595,6 +9595,9 @@ v(herschik,herschikt,herschikken,herschikt,herschikte,herschikten,
 v(herschrijf,herschrijft,herschrijven,herschreven,herschreef,herschreven,
     [h([transitive])]).
 
+v(herspeel,herspeelt,herspelen,herspeeld,herspeelde,herspeelden,
+    [h([transitive])]).
+
 v(herstart,herstart,herstarten,herstart,herstartte,herstartten,
     [h([transitive]),
      z([intransitive])
@@ -17537,6 +17540,7 @@ v(primeer,primeert,primeren,geprimeerd,primeerde,primeerden,
 
 v(print,print,printen,geprint,printte,printten,
     [h([intransitive,
+	part_transitive(af),
 	part_transitive(uit),
 	transitive])]).
 
@@ -23299,7 +23303,9 @@ v(toost,toost,toosten,getoost,toostte,toostten,
 	pc_pp(op)])]).
 
 v(top,topt,toppen,getopt,topte,topten,
-    [h([transitive])]).
+  [h([transitive,
+      part_transitive(af)
+     ])]).
 
 v(toren,torent,torenen,getorend,torende,torenden,
     [h([ld_pp,

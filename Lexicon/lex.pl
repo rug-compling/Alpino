@@ -4471,6 +4471,12 @@ impossible_subcat_infl_combination(adjective(E,Sc)) :-
     adjective_e(E),
     non_e_sc(Sc).
 
+impossible_subcat_infl_combination(adjective(ende(_),fixed(List))) :-
+    lists:member(het_pobj1(vp), List).
+
+impossible_subcat_infl_combination(adjective(end(_),fixed(List))) :-
+    lists:member(het_pobj1(vp), List).
+
 impossible_subcat_infl_combination(verb(_,INFL,SC)) :-
     impossible_subcat_infl_combination(SC,INFL).
 
@@ -4593,6 +4599,7 @@ third_person_sg_sc(sbar_subj_np).
 third_person_sg_sc(sbar_subj_np_np).
 third_person_sg_sc(sbar_subj_no_het).
 third_person_sg_sc(sbar_subj_so_np).
+third_person_sg_sc(sbar_subj_so_pp).
 third_person_sg_sc(sbar_subj_so_np_no_het).
 third_person_sg_sc(sbar_subj_so_np_opt_het).
 third_person_sg_sc(sbar_subj_refl).
@@ -4630,6 +4637,7 @@ third_person_sg_sc(vp_subj_meas).
 third_person_sg_sc(vp_subj_dat_meas).
 third_person_sg_sc(np_vp_subj).
 third_person_sg_sc(vp_subj_so_np).
+third_person_sg_sc(vp_subj_so_pp).
 third_person_sg_sc(vp_subj_np).
 third_person_sg_sc(vp_subj_np_np).
 third_person_sg_sc(vp_subj_adv_meas).

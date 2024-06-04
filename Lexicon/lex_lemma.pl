@@ -1377,6 +1377,7 @@ lemma_root(af_priemen,priem_af) .
 lemma_root(af_prijken,prijk_af) .
 lemma_root(af_prijzen,prijs_af) .
 lemma_root(af_prikken,prik_af) .
+lemma_root(af_printen,print_af) .
 lemma_root(af_promoveren,promoveer_af) .
 lemma_root(af_pronken,pronk_af) .
 lemma_root(af_proppen,prop_af) .
@@ -1588,6 +1589,7 @@ lemma_root(af_toeren,toer_af) .
 lemma_root(af_toetsen,toets_af) .
 lemma_root(af_toeven,toef_af) .
 lemma_root(af_tollen,tol_af) .
+lemma_root(af_toppen,top_af) .
 lemma_root(af_torenen,toren_af) .
 lemma_root(af_tornen,torn_af) .
 lemma_root(af_toveren,tover_af) .
@@ -6707,6 +6709,7 @@ lemma_root(herroepen,herroep) .
 lemma_root(herscheppen,herschep) .
 lemma_root(herschikken,herschik) .
 lemma_root(herschrijven,herschrijf) .
+lemma_root(herspelen,herspeel) .
 lemma_root(herstarten,herstart) .
 lemma_root(herstellen,herstel) .
 lemma_root(herstructureren,herstructureer) .
