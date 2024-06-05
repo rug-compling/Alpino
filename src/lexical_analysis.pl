@@ -3209,9 +3209,11 @@ all_connected([P0/P|Tail]):-
     all_connected(ListNew).
 
 new_pair(P0,P1,P0,P):-
-    connected(P1,P).
+    connected(P1,P),
+    \+ connected(P0,P).
 new_pair(P1,P,P0,P):-
-    connected(P0,P1).
+    connected(P0,P1),
+    \+ connected(P0,P).
 
 is_connected(P,P).
 is_connected(P0,P):-
