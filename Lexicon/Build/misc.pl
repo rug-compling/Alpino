@@ -5749,7 +5749,8 @@ sentence_adverb([alles,met,mekaar]).
 sentence_adverb(altijd).
 sentence_adverb(bijna). 
 sentence_adverb(bijvoorbeeld). 
-sentence_adverb(bovendien). 
+sentence_adverb(bovendien).
+sentence_adverb([cum,grano,salis]).
 sentence_adverb(derhalve). 
 sentence_adverb(ditmaal). 
 sentence_adverb(doorgaans). 
