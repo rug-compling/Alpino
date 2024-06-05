@@ -8,11 +8,17 @@
 %%%         separated by a single space
 
 macro( words_afkortingen,
-       	cap_words([
+       cap_words([
+		  %% these were in words_afkortingen_after before, but that led to too many sentence breaks
+                  %% aug already was here anyway
+		  %% jan is now in words_afkorting_with_number since it is often followed by a day or year
+		  apr,dec,feb,febr,jul,jun,maa,okt,nov,sep,sept,
+
+		  
    acad,acc,adm,'Am',adr,adv,afb,afd,afgel,afk,afl,aggl,alc,ald,ambas,ann,ant,
-                 antr,amerik,'Arab',arr,artill,aug,av,'Ave',
+                 antr,amerik,'Arab',arr,artill,artt,aug,av,'Ave',
    beg,beh,'Bel',beleidsmedew,bep,ber,bew,bijg,bijv,bijz,
-                 biol,bl,blvd,bldz,blz,bn,br,'Brab','Bros','Bulg',bvb,
+                 biol,bl,blvd,bladz,bldz,blz,bn,br,'Brab','Bros','Bulg',bvb,
    ca,'Can',cat,caval,centr,cf,cfr,ch,chem,'Chin',chor,'Chr',chr,'Cic',cie,cit,cl,'Col',
                  commerc,comp,'Conn',cons,corp,cq,cs,ct,
    'D.C',dbl,dd,decb,decemb,'Del','Den',dep,dept,'Deut',di,dir,diss,distr,div,dl,dld,dln,dmv,doct,
@@ -35,7 +41,7 @@ macro( words_afkortingen,
           'Matt','Matth',mbt,'Md',med,medew,meerv,mg,mgr,'Mich',mil,milj,'Miss',ml,mld,mln,
 	   mnl,mog,mrg,mrt,ms,mt,mtr,muz,mv,
    'niet-chr','niet-Chr','Nat.Lab',
-                   nation,nav,'NB',nbr,ned,nederl,'Neh',niem,nl,nmd,nml,
+                   nation,nav,'NB',nbr,ndl,ned,nederl,'Neh',niem,nl,nmd,nml,
 		 nr,nrs,'Num',nvdr,
    oa,octb,octob,ol,olv,ondertit,onderz,oneig,ong,ongeh,oorspr,'Opb',openb,opn,opp,'oud-dir',oudfr,oudholl,
 		 ouderl,ov,overl,
@@ -57,24 +63,26 @@ macro( words_afkortingen,
 
 macro(words_titel,cap_words([bc,dhr,dipl,dr,ds,drs,ir,jhr,mgr,mrs,mw,mej,mevr,mr,hr,prof])).
 
-macro(words_afkorting_with_number,cap_words([art,no,op,zo])).
+macro(words_afkorting_with_number,cap_words([art,no,op,zo,jan])).
 
 macro(words_afkorting_after,cap_words(
-  [ apr,
+  [ %apr,
     bv,bw,
     'n.Chr', 'v.Chr','v.C','n.C',
     cm,co,
-    dec,
+    %dec,
    'e.a','e.d','e.v','e.v.a',
     enz,etc,
-    feb,febr,
-    'Jap',jl,'j.l',jr,jul,jun,
+    %feb,febr,
+    'Jap',jl,'j.l',jr,%jul,jun,
     kg,km,
-    m,maa,mm,
-    nov,
-    'o.i.d',okt,
+    m,	%maa,
+    mm,
+    % nov,
+    'o.i.d', %okt,
     pag,
-    sec,sep,sept,sr,
+    sec,%sep,sept,
+    sr,
     tek
     ])).
 
@@ -93,7 +101,8 @@ macro(words_ambiguous_afkorting_after,cap_words(
    geest,
    ha,herz,
    infant,
-   jan,'Jap',
+   % jan,
+   'Jap',
    kap,kon,kwal,
    lat,
    min,
