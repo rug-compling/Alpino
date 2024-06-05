@@ -555,6 +555,13 @@ guess_tags(Q0,Q,Frame,Stem) -->
     guess_stags(Stems,Q0,Q,Frame).
 
 guess_stags([],Q,Q,_) --> [].
+guess_stags([_|Ws],Q0,Q,Tag) -->   %% ADDED GvN June 5, 2024
+    {  alpino_lexical_analysis:user_skips(List),
+       lists:member(phantom_skip(Q0),List),
+       !
+    },
+    guess_stags(Ws,Q0,Q,Tag).
+    
 guess_stags([_|Sts],Q0,Q,fixed_part([H|T])) -->
     {  Q1 is Q0 + 1 },
     guess_tag(H,fixed_part(H),Q0,Q1),
