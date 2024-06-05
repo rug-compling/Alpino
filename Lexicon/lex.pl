@@ -1393,7 +1393,7 @@ s_atom(s).
 s_atom(sch).
 s_atom(che).
 s_atom(x).
-s_atom(ovic).
+s_atom(vic).
 
 identical_verbal_infl(Cat,Cat,_,_).
 identical_verbal_infl(verb(HZ,inf,Sc),verb(HZ,pl,Sc),Word,Label) :-

@@ -4629,7 +4629,7 @@ genitive_marker('x\'','\'').
 genitive_marker(s,'').   
 genitive_marker(sh,'').   
 genitive_marker(x,'').   
-genitive_marker(ovic,'').
+genitive_marker(vic,'').
 genitive_marker(sch,''). 
 
 %% potential names are given by a finite automaton. Start node is 0
