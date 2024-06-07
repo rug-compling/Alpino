@@ -1355,6 +1355,8 @@ with_dt_all(dertien,[wij]).
 with_dt_all(dertien,[zij]).
 with_dt_all(dertig,[en,tussen,twintig]).
 with_dt_all(dertig,[en,tussen,veertig]).
+with_dt_all(de,[schrijver]).
+with_dt_all(de,[staat]).
 with_dt_all('des te',[veel]).
 with_dt_all(de,[stief_moeder]).
 with_dt_all(de,[stief_vader]).
@@ -1363,6 +1365,7 @@ with_dt_all(de,[tijd]).
 with_dt_all(de,[vader]).
 with_dt_all(de,[vaderland]).
 with_dt_all(de,[veld]).
+with_dt_all(de,[vijand]).
 with_dt_all(de,[volk]).
 with_dt_all(de,[vriend]).
 with_dt_all(de,[vriendin]).
@@ -2952,6 +2955,7 @@ with_dt_root(ruste).
 with_dt_root(samen).
 with_dt_root(schatting).
 with_dt_root(schiet).
+with_dt_root(schrijver).
 with_dt_root(secundair).
 with_dt_root(seizoen).
 with_dt_root(sinds).
@@ -2961,6 +2965,7 @@ with_dt_root('soft drugs').
 with_dt_root(soort).
 with_dt_root(soortgelijk).
 with_dt_root(soortgelijks).
+with_dt_root(staat).
 with_dt_root(staatswege).
 with_dt_root(stand).
 with_dt_root(sta_op).
@@ -3044,6 +3049,7 @@ with_dt_root('vice versa').
 with_dt_root(vier).
 with_dt_root(vierde).
 with_dt_root(vier_DIM).
+with_dt_root(vijand).
 with_dt_root(vijf).
 with_dt_root(vijf_DIM).
 with_dt_root(vijfentwintig).

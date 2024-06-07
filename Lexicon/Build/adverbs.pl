@@ -12,6 +12,7 @@ m('te veel',    adverb, [te,meer]).
 
 m('zijn in_zien',adverb,[zijns,inziens]).
 m('zijn ondanks',adverb,[zijns,ondanks]).
+m('haar ondanks',adverb,[haars,ondanks]).
 m('hun in_zien',adverb,[huns,inziens]).
 m('hun in_zien',adverb,[huns,ondanks]).
 m('mijn in_zien',adverb,[mijns,inziens]).
@@ -483,6 +484,7 @@ adverb(terdege).
 adverb(ternauwernood).
 adverb(terstond).
 adverb(terwijl).
+adverb([ter,woon]).  % ouderwets "ter woon vestigen"
 adverb(terzelfdertijd).
 adverb(terzijde).
 adverb(tevens).

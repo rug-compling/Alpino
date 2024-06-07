@@ -656,6 +656,9 @@ m(v_root(heb,hebben),
 	fixed([{[acc(lol),pc(in)]}],no_passive),
 	fixed([{[acc(lol),er_pp(in,C)]},extra_vp(C)],no_passive),
 	fixed([{[acc(lol),er_pp(in,C)]},extra_sbar(C)],no_passive),
+	fixed([{[acc(lust),pc(tot)]}],no_passive),
+	fixed([{[acc(lust),er_pp(tot,C)]},extra_vp(C)],no_passive),
+	fixed([{[acc(lust),er_pp(tot,C)]},extra_sbar(C)],no_passive),
 	fixed([{[acc(macht),pc(over)]}],no_passive),
 	fixed([{[acc(mandaat),pc(voor)]}],no_passive),
 	fixed([{[acc(medelijden),pc(met)]}],no_passive),
@@ -4589,6 +4592,7 @@ v(breng,brengt,brengen,gebracht,bracht,brachten,
 	part_transitive(rond),
 	part_transitive(samen),
         part_np_pc_pp(terecht,van),
+        part_transitive('ten onder'),
 	part_transitive(terug),
 	part_transitive(teweeg),
 	part_transitive(thuis),
@@ -8509,7 +8513,8 @@ v(geur,geurt,geuren,gegeurd,geurde,geurden,
 	pc_pp(naar)])]).
 
 v(geval,gevalt,gevallen,gevallen,geviel,gevielen,
-  [h([part_transitive(wel),
+  [h([sbar_subj,   % ouderwets "toen geviel het dat ..."
+      part_transitive(wel),
       part_fixed_dep(wel,intransitive)])]).
 
 v(gevoel,gevoelt,gevoelen,gevoeld,gevoelde,gevoelden,

@@ -1982,7 +1982,7 @@ m('de ene na de andere',determiner(de,nwh,nmod,pro,yparg), [de,een,na,de,andere]
 
 m(al,          determiner(alle,nwh,mod,pro,nparg), alle).
 m(al,          determiner(der),                aller).
-%%m(al,          determiner(pron),               aller). ??
+m(al,          determiner(pron),               aller). % op aller lippen (ouderwets)
 m(allerlei,      determiner(wat,nwh,mod,pro,yparg),                allerlei).
 m(andermans,     determiner(pron),               andermans).
 m(dat,           determiner(het,nwh,nmod,pro,nparg),      dat).
@@ -2155,6 +2155,7 @@ m('\'s liefde', determiner(pron), ['\'s',liefdes]).
 m('\'s man',    determiner(pron), ['\'s',mans]).
 m('\'s mens',   determiner(pron), ['\'s',mensen]).
 m('\'s rijk',   determiner(pron), ['\'s',rijks]).
+m('\'s vijand', determiner(pron), ['\'s',vijands]).
 m('\'s wereld', determiner(pron), ['\'s',werelds]).
 
 m(god,          determiner(pron), gods).
@@ -4120,6 +4121,7 @@ conj(en,               en).
 conj('en/of',          'en/of').
 conj('en/of',          [en,/,of]).
 conj('en/of',          'e/o').
+conj('en/of',          [en,'(',of,')']).
 conj(hetzij,           hetzij).
 conj('laat staan',     [laat,staan]).
 conj(maal,             maal).
@@ -5538,10 +5540,12 @@ waar_adverb([van,waaruit],vanuit).
 
 waar_adverb(vanwaar,van).
 
+er_adverb(derwaarts,naar).
 er_adverb(daarheen,naar).
 er_adverb(erheen,naar).
 er_adverb(hierheen,naar).
 waar_adverb(waarheen,naar).
+waar_adverb(werwaarts,naar).
 
 er_adverb(langsdaar,langs).
 er_adverb(langshier,langs).
@@ -6087,7 +6091,6 @@ dir_adverb(bergaf).
 dir_adverb(bergop).
 dir_adverb(binnendoor).
 dir_adverb(buitenom).
-dir_adverb(derwaarts).
 dir_adverb([heen,en,weer]).
 dir_adverb('heen-en-weer').
 dir_adverb(herwaarts).
@@ -6897,6 +6900,7 @@ m(datgeen,      pronoun(nwh,thi,sg,het,both,def,strpro),datgene).
 m(degeen,       pronoun(nwh,thi,sg,de,both,def,strpro),degeen).
 m(degeen,       pronoun(nwh,thi,sg,de,both,def,strpro),degene).
 m(degeen,       pronoun(nwh,thi,pl,de,both,def,strpro),degenen).
+m(deze,         pronoun(nwh,thi,both,both,gen,def),dezer).
 m(deze,         pronoun(nwh,thi,both,both,gen,def),dezes).
 m(deze,         pronoun(nwh,thi,pl,de,both,def,strpro),dezen).
 m(diegene,      pronoun(nwh,thi,sg,de,both,def,strpro),diegene).
@@ -7015,6 +7019,35 @@ m('de een na de ander',
 m('wat voor één',
   pronoun(ywh,thi,sg,both,both,indef),[wat,voor,Een]) :- een1(Een).
 
+
+with_dt([zijns,vaders],
+  pronoun(nwh,thi,both,both,gen,def),
+  dt(np,[det=l(zijn,pronoun(nwh,thi,sg,both,gen,def),detp,0,1),
+	 hd =l(vader,determiner(pron),np,1,2)
+	])).
+
+%% het huis des schrijvers: ok (although plural for schrijvers)
+%% des schrijvers huis: use this one
+with_dt([des,schrijvers],
+  determiner(pron),
+  dt(np,[det=l(de,determiner(des),detp,0,1),
+	 hd =l(schrijver,determiner(pron),np,1,2)
+	])).
+
+%% de oude wetten des staats
+with_dt([des,staats],
+  pronoun(nwh,thi,both,both,gen,def),
+  dt(np,[det=l(de,determiner(des),detp,0,1),
+	 hd =l(staat,determiner(pron),np,1,2)
+	])).
+
+%% dat is niet des staats
+%% dat zijn des staats
+with_dt([des,staats],
+  determiner(pron),
+  dt(np,[det=l(de,determiner(des),detp,0,1),
+	 hd =l(staat,determiner(pron),np,1,2)
+	])).
 
 with_dt([de,beiden],
 	pronoun(nwh,thi,pl,both,both,def),
@@ -7290,6 +7323,7 @@ genitive_noun(rijks).
 genitive_noun(tijds).
 genitive_noun(vaderlands).
 genitive_noun(velds).
+genitive_noun(vijands).
 genitive_noun(volks).
 genitive_noun(woords).
 

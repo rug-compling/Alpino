@@ -1262,6 +1262,8 @@ n([pl('a\'s'),sg(a)],de,[],[dim('a\'tje')]).
 
 n([mass([a,capella])],het,[]).
 
+n([sg(aa)],de,[]).
+
 n([pl(aaien),sg(aai)],de,[]).
 
 n([pl(alen),sg(aal)],de,[],[dim(aaltje)]).
@@ -4764,6 +4766,9 @@ n([sg(bestemming),pl(bestemmingen)],de,[],
    reis,
    vakantie,
    zon]).
+
+%% bestuur / het bestieren
+n([sg(bestier)],het,[]).
 
 n([pl(bestormingen),sg(bestorming)],de,[]).
 
@@ -10487,6 +10492,9 @@ n([pl(educaties),sg(educatie)],de,[]).
 
 n([pl(eden),sg(eed)],de,[]).
 
+%% de ee is een klinker
+n([sg(ee)],de,[]).
+
 n([sg(eedaflegging),pl(eedafleggingen)],de,[]).
 
 n([pl(eekhoorns),sg(eekhoorn)],de,[],[dim(eekhoorntje)]).
@@ -12234,7 +12242,7 @@ n([pl(gaanderijen),sg(gaanderij)],de,[]).
 
 n([sg(gaap),pl(gapen)],de,[]).
 
-n([sg(gaard),pl(gaarden)],de,[]).
+n([sg(gaard),sg(gaarde),pl(gaarden)],de,[]).
 
 n([pl(gaarkeukens),sg(gaarkeuken)],de,[]).
 
@@ -25120,6 +25128,8 @@ n([sg(onzevader),pl(onzevaders)],het,[]).
 
 n([mass(onzin)],de,[subject_sbar,subject_vp]).
 
+n([sg(oo)],de,[]).
+
 n([pl(ogen),sg(oog)],het,[sbar,vp],[dim(oogje)]).
 
 n([pl(ogen),sg(oog)],het,[],
@@ -37288,6 +37298,8 @@ n([pl(utopieën),sg(utopie)],de,[subject_vp,subject_sbar]).
 
 n([pl(utopisten),sg(utopist)],de,[]).
 
+n([sg(uu)],de,[]).
+
 n([meas(uur),pl(uren)],het,[temp_mod,measure,sbar],
   [les,
    mentor,
@@ -38705,6 +38717,8 @@ n([pl(vervangingen),sg(vervanging)],de,[]).
 
 n([mass(verveling)],de,[]).
 
+n([sg(verver),pl(ververs)],de,[]).   
+
 n([pl(vervloekingen),sg(vervloeking)],de,[sbar,vp]).
 
 n([mass(vervoer)],het,[],
@@ -39343,6 +39357,8 @@ n([sg('VN-soldaat'),pl('VN-soldaten')],de,[]).
 n([pl('VN-troepen')],both,[]).
 
 n([sg(vo)],het,[]).  % voortgezet onderwijs...
+
+n([sg(vocaal),pl(vocalen)],de,[]).
 
 n([pl(vocabulaires),sg(vocabulaire)],both,[]).   % celex: het
 
@@ -40472,6 +40488,8 @@ n([sg(wake),pl(wakes)],de,[]).
 
 n([pl(wallen),sg(wal)],de,[]).
 
+n([mass(walg)],de,[]).
+
 n([mass(walging)],de,[]).
 
 n([pl(walkers),sg(walker)],de,[]).
@@ -40580,6 +40598,8 @@ n([mass(wartaal)],de,[]).
 n([mass(was)],de,[]).
 
 n([pl(wasbakken),sg(wasbak)],de,[]).
+
+n([sg(wasem)],de,[]).
 
 n([mass(wasgoed)],het,[]).
 

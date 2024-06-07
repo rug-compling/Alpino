@@ -3951,6 +3951,7 @@ abbreviation('p.',     'pagina\'s').
 abbreviation(tzt,      tezijnertijd).
 abbreviation('t.z.t.', tezijnertijd).
 abbreviation(v,        versus).
+abbreviation('vs.',    vers).
 abbreviation('vs.',    versus).
 abbreviation('verm.',  vermoedelijk).
 abbreviation('verm.',  vermoedelijke).
