@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" cat="ppres" end="3" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="daaromtrent" pos="pp" postag="BW()" pt="bw" rel="mod" root="daaromtrent" special="er" word="daaromtrent"/>
+          <node aform="base" begin="2" buiging="met-e" end="3" id="6" infl="e" lemma="bestaan" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="besta" vform="gerund" word="bestaande" wvorm="od"/>
+        </node>
+        <node begin="3" end="4" gen="het" getal="mv" graad="basis" id="7" lemma="voorschrift" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="voorschrift" word="voorschriften"/>
+      </node>
+      <node begin="4" end="5" id="8" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="thi" word="zijn" wvorm="pv"/>
+      <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="9" infl="no_e" lemma="voortreffelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="voortreffelijk" vform="adj" word="voortreffelijk"/>
+    </node>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De daaromtrent bestaande voorschriften zijn voortreffelijk .</sentence>
+</alpino_ds>
