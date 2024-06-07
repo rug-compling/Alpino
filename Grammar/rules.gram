@@ -11286,10 +11286,15 @@ grammar_rule(mid_coord(Name,conj),Blist,[OPTCOMMA, Conj, A, Clist]) :-
     Conj:left_conj <=> Clist:left_conj.
 
 %%EX%% Peren en druiven
+%%EX%% Peren en : druiven
+%%EX%% Peren en ... druiven
+%%EX%% Een heleboel werk , en weinig resultaat
+%%EX%% Een heleboel werk en : veel voldoening
+%%EX%% Een heleboel werk maar ... veel winst
 grammar_rule(end_coord(Name,conj), Blist,
-             [ OPTCOMMA_DASH, Conj, OPTDUBB, A, OPTCOMMA_DASH2 ]):-
-    optcomma_end(OPTCOMMA_DASH),
-    optcomma_dash(OPTCOMMA_DASH2),
+             [ OPTCOMMA_END, Conj, OPTDUBB, A, OPTCOMMA_DASH ]):-
+    optcomma_end(OPTCOMMA_END),
+    optcomma_dash(OPTCOMMA_DASH),
     % OPTCOMMA_DASH:cat:puncttype <=> OPTCOMMA_DASH2:cat:puncttype,
     optdubb(OPTDUBB),
     end_coord_conj_structure(Name,Blist,Conj,A,[]).
@@ -11333,10 +11338,12 @@ end_coord_conj_structure(Name,Blist,Conj,A,ModList) :-
     A:dt <=> DtA.
 
 %%EX%% Appels en vooral peren
+%%EX%% Zes flessen wijn en ... voor de kinderen appelsap
 grammar_rule(end_coord(Name,conj,mod), Blist,
-             [ OPTCOMMA_DASH, Conj, MOD, A, OPTCOMMA_DASH2]) :-
-    optcomma_end(OPTCOMMA_DASH),
-    optcomma_dash(OPTCOMMA_DASH2),
+             [ OPTCOMMA_END, Conj, OPTCOMMA_HELLIP, MOD, A, OPTCOMMA_DASH]) :-
+    optcomma_end(OPTCOMMA_END),
+    optcomma_dash(OPTCOMMA_DASH),
+    optcomma_hellip(OPTCOMMA_HELLIP),
     end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A),
     \+ lists:member(Name,[enumeration,max]). /* NOT USED */
 

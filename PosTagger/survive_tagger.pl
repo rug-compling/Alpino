@@ -74,7 +74,6 @@ survives_bigram(dat,_,determiner(het,nwh,nmod,pro,nparg),soort,_,noun(both,count
 %% Achteraf gezien
 survives_bigram(achteraf,_,loc_adverb,zien,gezien,adjective(ge_no_e(both))).
 
-
 %% because "dames en heren" is also tag
 survives_trigram(dame,_,noun(de,count,pl),en,_,conj(en),heer,_,noun(de,count,pl)).
 
@@ -101,9 +100,11 @@ surviving_root('om het even').
 surviving_root('heel wat').       % temp
 surviving_root(maand).            % temp
 surviving_root(tal).
+surviving_root('vader zijn').     % "zijns vaders" GCRAMP
+surviving_root('de staat').       % "des staats"   GCRAMP
 
-surviving_root(_):-
-    fail.
+%surviving_root(_):-
+%    fail.
 
 surviving_word_tag(zorgen,noun(de,count,pl)).
 
