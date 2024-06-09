@@ -2666,7 +2666,7 @@ collect_cgn_tags_of_label_rest(l(read_from_treebank(_,_,Lemma,CGN),_Cat,_Root/[P
 
 
 compare_treebank_cgn_result(File,Result,Identifier) :-
-    alpino_format_syntax:result_to_frames(Result,Frames,_),
+    alpino_format_syntax:result_to_frames(Result,_,_,Frames),
     alpino_format_syntax:frames_to_postags(Frames,Result,SysTags),
     compare_treebank_cgn_continue(File,SysTags,Identifier),
     !.
