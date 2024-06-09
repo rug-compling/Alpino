@@ -256,7 +256,7 @@ graphic_path(dt,Result,Tree) :-
     promote_tags(Tree0,Tree).
 graphic_path(dt,Result,Tree) :-
     result_to_dt(Result,Tree0), % dt.pl
-    alpino_format_syntax:result_to_frames(Result,Frames,_),
+    alpino_format_syntax:result_to_frames(Result,_,_,Frames),
     alpino_format_syntax:frames_to_postags(Frames,Result,SysTags),
     replace_tags(Tree0,Tree,SysTags).
 
@@ -299,7 +299,7 @@ graphic_path(user(dt),Result,Tree) :-
     promote_tags(Tree0,Tree).
 graphic_path(user(dt),Result,Tree) :-
     result_to_dt(Result,Tree0), % dt.pl
-    alpino_format_syntax:result_to_frames(Result,Frames,_),
+    alpino_format_syntax:result_to_frames(Result,_,_,Frames),
     alpino_format_syntax:frames_to_postags(Frames,Result,SysTags),
     replace_tags(Tree0,Tree,SysTags).
 

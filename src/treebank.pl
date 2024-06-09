@@ -451,7 +451,7 @@ xml_save__(already_dt(Result),String,Comments,Meta,File,Flag) :-
     close(Stream),
     debug_message(1,"xml saved in ~w~n",[File]).
 xml_save__(Result,String,Comments,Meta,File,Flag) :-
-    alpino_format_syntax:result_to_frames(Result,Frames,_),
+    alpino_format_syntax:result_to_frames(Result,_,_,Frames),
     alpino_format_syntax:frames_to_postags(Frames,Result,SysTags),
     frames_to_his(Frames,HisList,[]),
     deptree_xml(Result,String,Comments,Meta,Flag,SysTags,HisList,Chars,[]),
@@ -1835,7 +1835,7 @@ format_score_with_penalties(Result) :-
 
 compare_cgn_string_of_result(Item,Result,CgnString) :-
     xml_filename(File,Item),
-    alpino_format_syntax:result_to_frames(Result,Frames,_),
+    alpino_format_syntax:result_to_frames(Result,_,_,Frames),
     alpino_format_syntax:frames_to_postags(Frames,Result,SysTags),
     hdrug_flag(current_input_sentence,Words0),
     user:ignore_brackets(Words0,Words),
