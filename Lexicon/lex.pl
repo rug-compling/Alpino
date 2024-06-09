@@ -1472,6 +1472,7 @@ non_adj_fixed(vp).
 non_adj_fixed(extra_sbar(_)).
 non_adj_fixed(extra_vp(_)).
 non_adj_fixed(vc(_,_,_)).
+non_adj_fixed(het_pobj1(vp)).
 non_adj_fixed({L}) :-
     lists:member(El,L),
     non_adj_fixed(El).
@@ -4471,12 +4472,6 @@ non_e_sc(refl_er_pp_vp(van)).
 impossible_subcat_infl_combination(adjective(E,Sc)) :-
     adjective_e(E),
     non_e_sc(Sc).
-
-impossible_subcat_infl_combination(adjective(ende(_),fixed(List))) :-
-    lists:member(het_pobj1(vp), List).
-
-impossible_subcat_infl_combination(adjective(end(_),fixed(List))) :-
-    lists:member(het_pobj1(vp), List).
 
 impossible_subcat_infl_combination(verb(_,INFL,SC)) :-
     impossible_subcat_infl_combination(SC,INFL).
