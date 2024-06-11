@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="13" id="2" rel="--">
+      <node begin="0" cat="smain" end="10" id="3" rel="cnj">
+        <node begin="0" cat="pp" end="3" id="4" rel="mod">
+          <node begin="0" end="1" id="5" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="Op"/>
+          <node begin="1" cat="np" end="3" id="6" rel="obj1">
+            <node begin="1" end="2" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" end="3" getal="mv" graad="basis" id="8" lemma="straf_dag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="straf_dag" word="strafdagen"/>
+          </node>
+        </node>
+        <node begin="3" end="4" id="9" lemma="zitten" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="zit" word="zaten" wvorm="pv"/>
+        <node begin="4" end="5" id="10" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="5" cat="np" end="10" id="11" rel="su">
+          <node begin="5" buiging="met-e" end="6" getal-n="mv-n" id="12" lemma="straffen" pos="adj" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" root="straffen" word="gestraften" wvorm="vd"/>
+          <node begin="6" cat="pp" end="10" id="13" rel="mod">
+            <node begin="6" end="7" id="14" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+            <node begin="7" cat="np" end="10" id="15" rel="obj1">
+              <node begin="7" end="8" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="8" buiging="met-e" end="9" graad="basis" id="17" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
+              <node begin="9" end="10" getal="mv" graad="basis" id="18" lemma="klas" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="klas" word="klassen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="11" conjtype="neven" end="12" id="19" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="12" buiging="zonder" end="13" graad="comp" id="20" lemma="zelden" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="cnj" root="zelden" word="zeldener"/>
+    </node>
+    <node begin="13" end="14" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Op de strafdagen zaten ook gestraften uit de andere klassen , maar zeldener .</sentence>
+</alpino_ds>

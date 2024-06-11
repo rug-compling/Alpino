@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="3" lemma="zij" naamval="nomin" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="hd" rnum="pl" root="zij" status="vol" vwtype="pers" wh="nwh" word="Zij"/>
+        <node begin="1" end="2" id="4" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" special="postnp" word="toch"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="pl" lemma="schrijven" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="schrijf" sc="np_pc_pp(over)" stype="declarative" tense="past" v_per="thi" word="schreven" wvorm="pv"/>
+      <node begin="3" cat="pp" end="6" id="6" rel="mod">
+        <node begin="3" end="4" id="7" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="4" cat="np" end="6" id="8" rel="obj1">
+          <node begin="4" end="5" id="9" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+          <node begin="5" end="6" gen="both" genus="onz" getal="ev" graad="basis" id="10" lemma="Juni_nummer" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="Juni_nummer" special="meas_mod" word="Juni-nummer"/>
+        </node>
+      </node>
+      <node begin="6" cat="pp" end="8" id="11" rel="pc">
+        <node begin="6" end="7" id="12" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+        <node begin="7" case="dat_acc" def="def" end="8" gen="de" getal="ev" id="13" lemma="mij" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" rnum="sg" root="mij" status="vol" vwtype="pr" wh="nwh" word="mij"/>
+      </node>
+      <node begin="8" cat="np" end="10" id="14" rel="obj1">
+        <node begin="8" end="9" id="15" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+        <node aform="base" begin="9" buiging="met-e" end="10" getal-n="zonder-n" id="16" infl="e" lemma="volgen" pos="adj" positie="nom" postag="WW(od,nom,met-e,zonder-n)" pt="ww" rel="hd" rnum="sg" root="volg" vform="gerund" word="volgende" wvorm="od"/>
+      </node>
+    </node>
+    <node begin="10" end="11" id="17" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" special="dubb_punt" word=":"/>
+  </node>
+  <sentence>Zij toch schreven in het Juni-nummer over mij het volgende :</sentence>
+</alpino_ds>
