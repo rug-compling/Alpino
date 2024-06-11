@@ -1047,6 +1047,8 @@ noun_features(De,MC,Num,Sign) :-
     features_mass_count(MC,Sign),
     features_number(Num,Sign).
 
+features_rel_case(no_nom,Sign) :-
+    Sign:case => ~gen & ~nom.
 features_rel_case(both,Sign) :-
     Sign:case => ~gen.
 features_rel_case(obl,Sign) :-

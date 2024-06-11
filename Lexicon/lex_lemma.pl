@@ -3432,6 +3432,7 @@ lemma_root(door_doneren,doneer_door) .
 lemma_root(door_doodslaan,doodslaan_door) .
 lemma_root(door_dooien,dooi_door) .
 lemma_root(door_doorlezen,doorlees_door) .
+lemma_root(door_doorlichten,doorlicht_door) .
 lemma_root(door_doppen,dop_door) .
 lemma_root(door_doseren,doseer_door) .
 lemma_root(door_dotteren,dotter_door) .
@@ -4118,6 +4119,7 @@ lemma_root(door_leveren,lever_door) .
 lemma_root(doorlezen,doorlees) .
 lemma_root(door_lezen,lees_door) .
 lemma_root(door_liberaliseren,liberaliseer_door) .
+lemma_root(doorlichten,doorlicht) .
 lemma_root(door_lichten,licht_door) .
 lemma_root(door_liegen,lieg_door) .
 lemma_root(door_liften,lift_door) .
@@ -8676,6 +8678,7 @@ lemma_root(mauwen,mauw) .
 lemma_root(maximaliseren,maximaliseer) .
 lemma_root(meanderen,meander) .
 lemma_root(mechaniseren,mechaniseer) .
+lemma_root(mede_brengen,breng_mede) .
 lemma_root(mede_delen,deel_mede) .
 lemma_root(mediteren,mediteer) .
 lemma_root(mee_beslissen,beslis_mee) .
@@ -11084,6 +11087,7 @@ lemma_root(raak_donderen,donder_raak) .
 lemma_root(raak_doneren,doneer_raak) .
 lemma_root(raak_doodslaan,doodslaan_raak) .
 lemma_root(raak_doorlezen,doorlees_raak) .
+lemma_root(raak_doorlichten,doorlicht_raak) .
 lemma_root(raak_doppen,dop_raak) .
 lemma_root(raak_doseren,doseer_raak) .
 lemma_root(raak_dotteren,dotter_raak) .
@@ -16290,6 +16294,7 @@ lemma_root(uit_dompelen,dompel_uit) .
 lemma_root(uit_donderen,donder_uit) .
 lemma_root(uit_doneren,doneer_uit) .
 lemma_root(uit_doorlezen,doorlees_uit) .
+lemma_root(uit_doorlichten,doorlicht_uit) .
 lemma_root(uit_doppen,dop_uit) .
 lemma_root(uit_doseren,doseer_uit) .
 lemma_root(uit_dossen,dos_uit) .
@@ -21138,6 +21143,7 @@ lemma_root(voort_donderen,donder_voort) .
 lemma_root(voort_doneren,doneer_voort) .
 lemma_root(voort_doodslaan,doodslaan_voort) .
 lemma_root(voort_doorlezen,doorlees_voort) .
+lemma_root(voort_doorlichten,doorlicht_voort) .
 lemma_root(voort_doppen,dop_voort) .
 lemma_root(voort_doseren,doseer_voort) .
 lemma_root(voort_dotteren,dotter_voort) .

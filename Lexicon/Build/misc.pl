@@ -1999,6 +1999,7 @@ m(dezelve,       determiner(de,nwh,nmod,pro,yparg),       dezelve).
 m(dezelfde,      determiner(de,nwh,mod,pro,yparg),   dezelfde).
 m(deze,          determiner(der),                dezer).
 m(deze,          determiner(pron),               dezer).
+m(deze,          determiner(pron),               dezes).
 m(die,           determiner(de,nwh,nmod,pro,nparg),       die).
 m(die,           determiner(der),                dier).
 %m(die,           determiner(de,nwh,nmod,pro,nparg),       dieje).  % vlaams
@@ -3384,6 +3385,34 @@ pp('tot-nu-toe').
 pp([tot,voor,kort]).
 pp(uitelkaar,uit).
 pp(vantevoren).
+
+pp([te,Onzen,Noun]):-
+    onzen(Onzen),
+    noun3(Noun).
+
+onzen(onzen).
+onzen(mijnen).
+onzen(haren).
+onzen(hunnen).
+onzen(uwen).
+
+noun3(behoeve).
+noun3(opzichte).
+noun3(gunste).
+noun3(gerieve).
+noun3(koste).
+noun3(tijde).
+noun3(bate).
+noun3(aanzien).
+noun3(voordele).
+noun3(nadele).
+noun3(laste).
+noun3(huize).
+noun3(genoegen).
+noun3(huize).
+noun3(eer).
+noun3(gevalle).
+
 %% todo: if required, these should be with_dt
 %% 
 pp([van,dag,tot,dag]).
@@ -4836,6 +4865,7 @@ m(pas,              postnp_adverb,pas).  % twee weken pas
 m(slechts,          postnp_adverb,slechts).
 m(tenslotte,        postnp_adverb,tenslotte).
 m('ten slotte',     postnp_adverb,[ten,slotte]).
+m(toch,             postnp_adverb,toch).
 m('tot en met',     postnp_adverb,[tot,en,met]).
 m(trouwens,         postnp_adverb,[trouwens]).
 m('wel te verstaan',postnp_adverb,[wel,te,verstaan]).
@@ -5680,8 +5710,8 @@ er_adverb_prep(tussen,door,tussendoor).
 er_adverb_prep(tussen,in,tussenin).
 er_adverb_prep(tussen,uit,tussenuit).
 
-
-
+waar_adverb([ten,wiens,Noun],te) :-
+    noun3(Noun).
 
 waar_adverb(Form,Prep) :-
     er_adverb_prep(Prep),
@@ -6017,6 +6047,7 @@ loc_adverb(retour).
 loc_adverb([te,bestemder,plaatse]).
 loc_adverb([te,bestemder,plekke]).
 loc_adverb(tegenover).
+loc_adverb([ten,achteren]).
 loc_adverb([ter,perse]).
 loc_adverb([ter,plaatse]).  % not pp: 'ter plaatse waar ...'; cf also postnp_adverb
 loc_adverb(terplaatse).
@@ -6458,6 +6489,7 @@ m(nu,               postadv_adverb,nu).
 m(pas,              postadv_adverb,pas). % in december pas
 m(tenslotte,        postadv_adverb,tenslotte).
 m('ten slotte',     postadv_adverb,[ten,slotte]).
+m(toch,             postadv_adverb,toch).
 m(trouwens,         postadv_adverb,trouwens).
 m('wel te verstaan',postadv_adverb,welteverstaan).
 m('wel te verstaan',postadv_adverb,[wel,te,verstaan]).
@@ -6500,6 +6532,7 @@ m(nu,               postadj_adverb,nu).
 m(ook,              postadj_adverb,ook).
 m(tenslotte,        postadj_adverb,tenslotte).
 m('ten slotte',     postadj_adverb,[ten,slotte]).
+m(toch,             postadj_adverb,toch).
 m('wel te verstaan',postadj_adverb,welteverstaan).
 m('wel te verstaan',postadj_adverb,[wel,te,verstaan]).
 m(weliswaar,        postadj_adverb,weliswaar).
@@ -7091,6 +7124,20 @@ with_dt([wie,of,wat],
                  cnj=l(wat,pronoun(ywh,thi,sg,het,both,indef,nparg),np,2,3)
                 ])).
 
+with_dt([wien,en,wat],
+	pronoun(ywh,thi,both,both,both,indef),
+	dt(conj,[cnj=l(wie,pronoun(ywh,thi,both,de,dat_acc,indef),np,0,1),
+                 crd=l(en,conj(en),vg,1,2),
+                 cnj=l(wat,pronoun(ywh,thi,sg,het,both,indef,nparg),np,2,3)
+                ])).
+
+with_dt([wien,of,wat],
+	pronoun(ywh,thi,both,both,both,indef),
+	dt(conj,[cnj=l(wie,pronoun(ywh,thi,both,de,dat_acc,indef),np,0,1),
+                 crd=l(of,conj(en),vg,1,2),
+                 cnj=l(wat,pronoun(ywh,thi,sg,het,both,indef,nparg),np,2,3)
+                ])).
+
 with_dt([je,en,jij],
 	noun(both,mass,sg),
 	dt(conj,[cnj=l(je,pronoun(nwh,je,sg,de,both,def,wkpro),np,0,1),
@@ -7631,6 +7678,7 @@ m(wat,          rel_pronoun(het,   both),   wat).
 m(welk,         rel_pronoun(both,     obl), welke). % een vereniging, voor welke nog hoop bestaat
 m(welk,         rel_pronoun(both,     obl), [de,welke]). %VL
 m(wie,          rel_pronoun(both,     obl), wie). % het moedertje voor wie dat belangrijk is
+m(wie,          rel_pronoun(both,  no_nom), wien).
 
 m('hetgeen dat',rel_pronoun(het,   both),   [hetgeen,dat]). % dat is hetgeen dat ze zoeken
 
@@ -7762,6 +7810,7 @@ end_nominalized_adjective(hulp_zoeken,hulpzoekenden).
 end_nominalized_adjective(leiding_geven,leidinggevenden).
 end_nominalized_adjective(slecht_horen,slechthorenden).
 end_nominalized_adjective(slecht_zien,slechtzienden).
+end_nominalized_adjective(spreken,sprekenden).
 end_nominalized_adjective(werk_zoeken,werkzoekenden).
 end_nominalized_adjective(woning_zoeken,woningzoekenden).
 
@@ -7794,6 +7843,7 @@ ge_nominalized_adjective(betrekken,betrokkenen).
 ge_nominalized_adjective(bevoegen,bevoegden).
 ge_nominalized_adjective(bevoordelen,bevoordeelden).
 ge_nominalized_adjective(bevragen,bevraagden).
+ge_nominalized_adjective(bezielen,bezielden).
 ge_nominalized_adjective(bezoldigd,bezoldigden).
 ge_nominalized_adjective(bezwaren,bezwaarden).
 ge_nominalized_adjective(delegeren,gedelegeerden).
@@ -7817,7 +7867,8 @@ ge_nominalized_adjective(nomineren,genomineerden).
 ge_nominalized_adjective(onderdrukken,onderdrukten).
 ge_nominalized_adjective(ondervragen,ondervraagden).
 ge_nominalized_adjective(onderzoeken,onderzochten).
-ge_nominalized_adjective(onteigend,onteigenden).
+ge_nominalized_adjective(onteigenen,onteigenden).
+ge_nominalized_adjective(onterven,onterfden).
 ge_nominalized_adjective(ontsnappen,ontsnapten).
 ge_nominalized_adjective(ontvoeren,ontvoerden).
 ge_nominalized_adjective(ontwikkelen,ontwikkelden).
@@ -7847,6 +7898,7 @@ ge_nominalized_adjective(verontrusten,verontrusten).
 ge_nominalized_adjective(verontwaardigen,verontwaardigden).
 ge_nominalized_adjective(veroordelen,veroordeelden).
 ge_nominalized_adjective(verpauperen,verpauperden).
+ge_nominalized_adjective(verplegen,verpleegden).
 ge_nominalized_adjective(verslaven,verslaafden,
 			 [alcohol,
 			  drug,
@@ -7877,6 +7929,7 @@ nominalized_adjective(belasting_plichtig,belastingplichtigen).
 nominalized_adjective('BTW_belasting_plichtig','BTW-belastingplichtigen').
 nominalized_adjective('niet_belasting_plichtig','niet-belastingplichtigen').
 nominalized_adjective(beroemd,beroemden).
+nominalized_adjective(beschaafd,beschaafden).
 nominalized_adjective(bevoorrecht,bevoorrechten).
 nominalized_adjective(blank,blanken).
 nominalized_adjective(blind,blinden).

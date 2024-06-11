@@ -3795,6 +3795,7 @@ abbreviation(Word, FullWord) :-
     abbreviation_b(Word,FullWord).
 
 abbreviation('WB',     wereldbeker).
+abbreviation('aant.',  aantekeningen).
 abbreviation('adr.',   adres).
 abbreviation('adr.',   adressen).
 abbreviation('afgel.', afgelast).
@@ -3846,6 +3847,7 @@ abbreviation('\'k',    ik).
 abbreviation(idd,      inderdaad).
 abbreviation('inf.',   infanterie).
 abbreviation('inl.',   inlichtingen).
+abbreviation('inl.',   inleiding).
 abbreviation('geb.',   geboren).
 abbreviation('imp.',   importeur).
 abbreviation('inw.',   inwoners).
