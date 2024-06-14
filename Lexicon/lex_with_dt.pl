@@ -983,6 +983,7 @@ with_dt_all(allemaal,[vrijwel]).
 with_dt_all(allemaal,[wij]).
 with_dt_all(allemaal,[zij]).
 with_dt_all(allemaal,[zowat]).
+with_dt_all(allen,[kante,ten]).
 with_dt_all(allen,[prijze,te]).
 with_dt_all(allen,[prijze,ten]).
 with_dt_all(alles,[lang,niet]).
@@ -2781,6 +2782,7 @@ with_dt_root(jongs).
 with_dt_root(jongsaf).
 with_dt_root(jou).
 with_dt_root(jullie).
+with_dt_root(kante).
 with_dt_root(kap).
 with_dt_root(keer).
 with_dt_root(keizer).

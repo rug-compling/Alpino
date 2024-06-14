@@ -864,7 +864,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"dt|~p|~p~n",[W,Tags],_,_) :-
     \+ \+ alpino_lex:lexicon___(Alt,_Tag,_,[],[],_),
     P is P1 +1,
     R is R1 +1,
-    !,
+%%%    !,
     findall(Tag1,
 	    (  alpino_lex:lexicon___(Alt,Tag1,Stem1,[],[],_),
 	       assert_tag(P1,P,R1,R,Stem1,dt,Tag1)
@@ -886,7 +886,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"ninv_dt|~p|~p~n",[W,Tags],_,_) :-
     alpino_lex:lexicon___(W,verb(_,sg1,ninv(_,_)),_,[],[],'part-V'),
     P is P1 +1,
     R is R1 +1,
-    !,
+%%%    !,
     findall(verb(H1,sg3,ninv(Sc1,Sc2)), 
 	    (  alpino_lex:lexicon___(W,verb(H1,sg1,ninv(Sc1,Sc2)),Stem1,[],[],'part-V'),
 	       assert_tag(P1,P,R1,R,Stem1,ninv_dt,verb(H1,sg3,ninv(Sc1,Sc2)))

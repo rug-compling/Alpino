@@ -3561,6 +3561,7 @@ lemma_root(door_flikkeren,flikker_door) .
 lemma_root(door_flippen,flip_door) .
 lemma_root(door_flipperen,flipper_door) .
 lemma_root(door_flirten,flirt_door) .
+lemma_root(doorflitsen,doorflits) .
 lemma_root(door_flitsen,flits_door) .
 lemma_root(door_floepen,floep_door) .
 lemma_root(door_flonkeren,flonker_door) .
@@ -4949,6 +4950,7 @@ lemma_root(door_starten,start_door) .
 lemma_root(door_stationeren,stationeer_door) .
 lemma_root(door_steggelen,steggel_door) .
 lemma_root(door_steigeren,steiger_door) .
+lemma_root(doorsteken,doorsteek) .
 lemma_root(door_steken,steek_door) .
 lemma_root(door_stekken,stek_door) .
 lemma_root(door_stelen,steel_door) .

@@ -11657,6 +11657,8 @@ n([pl(filmhuizen),sg(filmhuis)],het,[]).
 
 n([pl(filologen),sg(filoloog)],de,[]).
 
+n([sg(filologie)],de,[]).
+
 n([pl(filosofieën),sg(filosofie)],de,[sbar],[dim(filosofietje)]).
 
 n([pl(filosofen),sg(filosoof)],de,[]).
@@ -13334,6 +13336,8 @@ n([pl(getuigschriften),sg(getuigschrift)],het,[]).
 
 n([mass(getut)],het,[]).
 
+n([mass(getwist)],het,[]).
+
 n([pl(geulen),sg(geul)],de,[],[dim(geultje)]).
 
 n([pl(geuren),sg(geur)],de,[],
@@ -13793,7 +13797,7 @@ n([pl(goedkeuringen),sg(goedkeuring)],de,[sbar,vp]).
 
 n([mass(goeds)],het,[]).
 
-n([mass(goedvinden)],het,[]).
+%% n([mass(goedvinden)],het,[]).
 
 n([pl(goeroes),sg(goeroe)],de,[]).
 
@@ -31431,6 +31435,8 @@ n([pl(schimmen),sg(schim)],de,[]).
 
 n([pl(schimmels),sg(schimmel)],de,[]).
 
+n([sg(schimp)],de,[]).
+
 n([pl(schepen),sg(schip)],het,[np_app_measure],
   [container,
    cruise,
@@ -33575,6 +33581,8 @@ n([pl(staten),sg(staat)],de,[],
    stad,
    s(verzorging),
    s(welvaart)]).
+
+n([sg(staatkunde)],de,[]).
 
 n([sg(state)],de,[]).
 
@@ -35976,7 +35984,7 @@ n([mass(toebehoren),pl(toebehoren)],het,[]).
 n([mass(toediening),pl(toedieningen),sg(toediening)],de,[]).
 
 %% door eigen toedoen; "eigen" is nonadv, cannot combine with v_noun
-n([mass(toedoen)],het,[]).
+%% n([mass(toedoen)],het,[]).
 
 n([mass(toedracht)],de,[]).
 

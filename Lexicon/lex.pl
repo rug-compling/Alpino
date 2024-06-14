@@ -3770,6 +3770,7 @@ abbreviation_b(theel,    theelepel).
 abbreviation_b(tl,       theelepel).
 abbreviation_b(theel,    theelepels).
 abbreviation_b(tl,       theelepels).
+abbreviation_b(bl,       bladzij).
 abbreviation_b(blz,      bladzij).
 abbreviation_b(bladz,    bladzij).
 abbreviation_b(sec,      seconden).
@@ -4057,7 +4058,6 @@ abbreviation(tw,              [te,weten]).
 abbreviation('v.a.',          [vanaf]).
 abbreviation('v.a.',          [vanaf]).
 abbreviation('z.i.',          [zijns,inziens]).
-
 
 abbreviation('d\'rdoor', erdoorheen,              [heen|Ws],Ws).
 abbreviation('d\'r',     erdoorheen,              [doorheen|Ws],Ws).

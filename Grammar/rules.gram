@@ -5243,6 +5243,7 @@ marked_n_adj_n_structure(N,AP,NP) :-
 %%EX%% de beeldend kunstenaars
 %%EX%% de maatschappelijk werkers
 %%EX%% de economisch specialisten
+%%EX%% door eigen toedoen en door eigen nadenken heb ik het dorstige hunkeren kunnen voorkomen
 grammar_rule(n_adj_n_marked, NP, [ AP, N ] ) :-
     marked_n_adj_n_structure(N,AP,NP).
 
@@ -5254,7 +5255,8 @@ grammar_rule(n_comma_adj_n_marked, NP, [ COMMA, AP, N ] ) :-
 
 n_adj_n_structure(N,AP,NP) :-
     NP => n, AP => a, N => n,
-    NP:subn => ~sub_indef_verb, % reduce spur amb in 'ziek zijn'
+%%%    NP:subn => ~sub_indef_verb, % reduce spur amb in 'ziek zijn'
+                                %% wrong for "door eigen toedoen/nadenken/..." because eigen is nonadv
     ap_arg(AP),
     N:wh => nwh,
     NP:wh <=> AP:wh,  % de hoeveelste overwinning was dat?

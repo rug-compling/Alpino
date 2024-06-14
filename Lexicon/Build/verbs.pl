@@ -1852,7 +1852,7 @@ v(bedelf,bedelft,bedelven,bedolven,bedolf,bedolven,
 	np_pc_pp(met),
 	np_pc_pp(onder)])]).
 
-v(bedenk,bedenkt,bedenken,bedacht,bedacht,bedachten,
+v(bedenk,bedenkt,bedenken,bedacht,bedacht,bedachten,bedenke,
     [h([refl,
 	sbar,
 	refl_np,   % de grootste eer die ik me kan bedenken
@@ -3957,7 +3957,7 @@ v(blief,blieft,blieven,gebliefd,bliefde,bliefden,
 v(blief,bliept,bliepen,gebliept,bliepte,bliepten,
     [h([intransitive])]).
 
-v(blijf,blijft,blijven,gebleven,bleef,bleven,
+v(blijf,blijft,blijven,gebleven,bleef,bleven,blijve,
     [unacc([aan_het,
 	cleft,
 	copula,
@@ -5640,7 +5640,7 @@ v(dender,dendert,denderen,gedenderd,denderde,denderden,
         part_intransitive(na)
        ])]).
 
-v(denk,denkt,denken,gedacht,dacht,dachten,
+v(denk,denkt,denken,gedacht,dacht,dachten,denke,
     [h([intransitive,
 	tr_sbar,
 	van_sbar,
@@ -6269,6 +6269,9 @@ v(doordring,doordringt,doordringen,doordrongen,doordrong,doordrongen,
 v(doorgroef,doorgroeft,doorgroeven,doorgroefd,doorgroefde,doorgroefden,
     [h([transitive])]).
 
+v(doorflits,doorflitst,doorflitsen,doorflitst,doorflitste,doorflitsten,
+    [h([transitive])]).
+
 v(doorgrond,doorgrondt,doorgronden,doorgrond,doorgrondde,doorgrondden,
     [h([transitive])]).
 
@@ -6315,6 +6318,9 @@ v(doorspek,doorspekt,doorspekken,doorspekt,doorspekte,doorspekten,
 	np_pc_pp(met)])]).
 
 v(doorsta,doorstaat,inflected(doorstaan,doorstane),doorstaan,doorstond,doorstonden,
+    [h([transitive])]).
+
+v(doorsteek,doorsteekt,doorsteken,doorstoken,doorstak,doorstaken,
     [h([transitive])]).
 
 v(doorstroom,doorstroomt,doorstromen,doorstroomd,doorstroomde,doorstroomden,
@@ -9230,7 +9236,8 @@ v(hang,hangt,hangen,gehangen,hing,hingen,
 	part_np_ld_pp(op),
 	part_pp_sbar_subj(af,van),  % het hangt van jou af of hij komt 
 	part_pc_pp(af,van),
-	part_pc_pp(samen,met)]),
+	part_pc_pp(samen,met),
+	part_fixed(samen,[pc(met),sbar],no_passive)]),
      b([part_ld_pp(uit)])]).
 
 v(hannes,hannest,hannesen,gehannest,hanneste,hannesten,
@@ -13036,7 +13043,7 @@ v(leer,leert,leren,geleerd,leerde,leerden,
 	pc_pp(van),
 	pc_pp(voor)])]).
 
-v(lees,leest,lezen,gelezen,las,lazen,
+v(lees,leest,lezen,gelezen,las,lazen,leze,
     [h([np_np,
 	intransitive,
 	sbar,
@@ -24746,7 +24753,7 @@ v(vergeef,vergeeft,vergeven,vergeven,vergaf,vergaven,
 v(vergeel,vergeelt,vergelen,vergeeld,vergeelde,vergeelden,
     [unacc([intransitive])]).
 
-v(vergeet,vergeet,vergeten,vergeten,vergat,vergaten,
+v(vergeet,vergeet,vergeten,vergeten,vergat,vergaten,vergete,
     [b([sbar,
 	vp,			% omdat ze vergeten dat te zeggen
 	fixed([mod_pp(bij),sbar],no_passive),  % VL
@@ -25292,7 +25299,7 @@ v(verlicht,verlicht,verlichten,verlicht,verlichtte,verlichtten,
 	transitive,
 	vp_subj_so_np])]).
 
-v(verlies,verliest,verliezen,verloren,verloor,verloren,
+v(verlies,verliest,verliezen,verloren,verloor,verloren,verlieze,
     [h([np_pc_pp(aan),		% veel geld verliezen aan deze crisis
         np_pc_pp(op),		% veel geld verliezen op
 	pc_pp(aan),		% aan invloed verliezen
@@ -27048,6 +27055,7 @@ v(voeg,voegt,voegen,gevoegd,voegde,voegden,
 	np_ld_pp,
         refl_ld_pp,      % daar heeft zich ook SU bij gevoegd
 	er_pp_sbar(bij), % hij voegde erbij dat ...
+	part_sbar(bij),  % er wordt bijgevoegd
 	part_transitive(toe),
         part_intransitive(toe),
 	part_sbar(toe),
@@ -28296,7 +28304,7 @@ v(woon,woont,wonen,gewoond,woonde,woonden,
 	part_ld_pp(adv),
 	part_pc_pp(samen,met)])]).
 
-v(word,wordt,worden,geworden,werd,werden,
+v(word,wordt,worden,geworden,werd,werden,worde,
   [unacc([passive,
 	  te_passive,           % de bron wordt steeds moeilijker te traceren
 	    copula,

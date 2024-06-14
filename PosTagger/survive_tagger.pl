@@ -102,6 +102,9 @@ surviving_root(maand).            % temp
 surviving_root(tal).
 surviving_root('vader zijn').     % "zijns vaders" GCRAMP
 surviving_root('de staat').       % "des staats"   GCRAMP
+surviving_root('ten achteren').   % GCRAMP
+surviving_root(daar_laten).	  % Daargelaten dat ...
+surviving_root(toedoen).          % Door het toedoen van; door toedoen der
 
 %surviving_root(_):-
 %    fail.

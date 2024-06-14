@@ -6333,16 +6333,18 @@ map_dep(vp_subj_no_het,sbar_subj_no_het,Sbar,_V) :-
     Sbar:slash => [].
 map_dep(refl,se,NP,V) :-
     refl_np_arg(NP,V).
-map_dep(pc(Prep),pc,PP,_):-
+map_dep(pc(Prep),pc,PP,Head):-
     pp_arg(PP,Prep),
     PP:ld_pc => (ld_pp;pc_pp),
     PP:nnform => ~refl,
-    PP:haspart => no.
-map_dep(mod_pp(Prep),mod,PP,_) :-
+    PP:haspart => no,
+    e_slash_if_adj(Head,PP).
+map_dep(mod_pp(Prep),mod,PP,Head) :-
     pp_pc_arg(PP,Prep),
     PP:pp_er => yes,
     PP:wh => nwh,
-    PP:sel => ~to_topic.
+    PP:sel => ~to_topic,
+    e_slash_if_adj(Head,PP).
 map_dep(nor_mod_pp(Prep),mod,PP,_) :-
     pp_pc_arg(PP,Prep),
     PP:pp_er => no,
@@ -6411,10 +6413,11 @@ map_dep(pp_pred(IN,AS),predc,Pred,_) :-
     Pred:slash => [],
     Pred:pcat => pp_pred,
     Pred:e_deps => [].
-map_dep(ap_pred(STEM),predc,Pred,_) :-
+map_dep(ap_pred(STEM),predc,Pred,Head) :-
     pred_arg(Pred),
     Pred:dt => dt,
-%    Pred:slash => [],  % ik bracht hem er toen van op de hoogte
+				%    Pred:slash => [],  % ik bracht hem er toen van op de hoogte
+    e_slash_if_adj(Head,Pred),
     Pred:hstem ==> STEM,
     Pred:pcat => ap_pred,
     Pred:e_deps => [].
@@ -6449,8 +6452,9 @@ map_dep(rang,predc,Pred,_) :-
     Pred:pcat => ap_pred,
     Pred:cform => rang,
     Pred:e_deps => [].
-map_dep(acc,obj1,NP,_) :-
-    acc_np_arg(NP).
+map_dep(acc,obj1,NP,Head) :-
+    acc_np_arg(NP),
+    e_slash_if_adj(Head,NP).
 map_dep(inv_pron_acc,REL,NP,V) :-
     map_dep(inv(acc),REL,NP,V),
     NP:subn => (sub_def_pron;sub_indef_pron;sub_det).
@@ -6488,8 +6492,9 @@ map_dep(nsl_inv(El),REL,CAT,V) :-
     CAT:passivizes =?> no.
 map_dep(me,me,NP,_) :-
     np_me_arg(NP).
-map_dep(dat,obj2,NP,_) :-
-    dat_np_arg(NP).
+map_dep(dat,obj2,NP,Head) :-
+    dat_np_arg(NP),
+    e_slash_if_adj(Head,NP).
 map_dep(dat_pp(Prep),obj2,PP,_) :-
     so_pp_arg(PP,Prep).
 map_dep(svp_pp(Voor,Rekening),svp,PP,_) :-
@@ -8215,3 +8220,8 @@ select_all([H|T],L0,L):-
     ),
     select_all(T,L1,L).
 
+e_slash_if_adj(Head,PP):-
+    (   Head => a,
+	PP:slash =?> []
+    ;   Head /=> a
+    ).

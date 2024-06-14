@@ -2148,6 +2148,7 @@ with_dt([niet,eentje],
 	dt(detp,[mod=l(niet,adverb,advp,0,1),
 		 hd=l(één,pronoun(nwh,thi,sg,de,both,indef),1,2)])).
 
+m('\'s dichter',determiner(pron), ['\'s',dichters]).
 m('\'s koning', determiner(pron), ['\'s',konings]).
 m('\'s koning', determiner(pron), ['\'s',keizers]).
 m('\'s land',   determiner(pron), ['\'s',lands]).
@@ -3192,6 +3193,7 @@ p_det_n_pp(in,den,beginne).
 p_det_n_pp(in,den,lande).
 p_det_n_pp(in,den,vreemde).
 p_det_n_pp(te,allen,prijze).
+p_det_n_pp(ten,allen,kante).
 p_det_n_pp(ten,allen,prijze).
 p_det_n_pp(te,dien,aanzien).
 p_det_n_pp(te,dien,einde).
@@ -3912,6 +3914,7 @@ m('als en slechts als',              complementizer(als),  [als,en,slechts,als])
 m('dan en slechts dan',              complementizer(als),  [dan,en,slechts,dan]).
 m('dan en slechts dan als',              complementizer(als),  [dan,en,slechts,dan,als]).
 
+m(evenals,          complementizer(zoals),evenals).
 m(gelijk,           complementizer(zoals),gelijk).
 m(inzover,          complementizer(zoals),inzover).
 m(inzoverre,        complementizer(zoals),inzoverre).
@@ -3957,7 +3960,6 @@ m(benevens,         complementizer(pp),benevens).
 m('dat wil zeggen', complementizer(pp),[dat,wil,zeggen]).
 m(echter,           complementizer(pp),echter). % echter zonder resultaat
 m('en wel',         complementizer(pp),[en,wel]).
-m(evenals,          complementizer(pp),evenals).
 m(evenwel,          complementizer(pp),evenwel).
 m(hoewel,           complementizer(pp),hoewel).
 m('in casu',        complementizer(pp),[in,casu]).
@@ -4016,7 +4018,6 @@ m(behoudens,        complementizer(np),behoudens).
 m(benevens,         complementizer(np),benevens).
 m('dat wil zeggen', complementizer(np),[dat,wil,zeggen]).
 m('en wel',         complementizer(np),[en,wel]).
-m(evenals,          complementizer(np),evenals).
 m('in casu',        complementizer(np),[in,casu]).
 m(inclusief,        complementizer(np),inclusief).
 m('laat staan',     complementizer(np),[laat,staan]).
@@ -4057,7 +4058,6 @@ m(alsook,           complementizer(adv),alsook).
 m(behalve,          complementizer(adv),behalve).
 m('dat wil zeggen', complementizer(adv),[dat,wil,zeggen]).
 m('en wel',         complementizer(adv),[en,wel]).
-m(evenals,          complementizer(adv),evenals).
 m('laat staan',     complementizer(adv),[laat,staan]).
 m('maar dan',       complementizer(adv),[maar,dan]).
 m('te weten',       complementizer(adv),[te,weten]).

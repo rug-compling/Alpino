@@ -8972,6 +8972,9 @@ a([ge_both(doorzien)],adv,[],[]).
 a([ge_e(doorzochte),
    ge_no_e(doorzocht)],adv,[],[]).
 
+a([ge_e(doorzonde),
+   ge_no_e(doorzond)],adv,[],[]).
+
 a([ge_both(doorzopen)],padv,[],[]).
 
 a([ge_both(doorzwommen)],adv,[],[]).
