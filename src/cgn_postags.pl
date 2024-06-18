@@ -171,7 +171,7 @@ cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_) -->
     !.
 
 cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_,L0,L) :-
-    format(user_error,"warning: no cgn tag for ~w ~w ~w~n",[Surf,Stem,Frame]),
+    hdrug_util:debug_message(2,"warning: no cgn tag for ~w ~w ~w~n",[Surf,Stem,Frame]),
     guess_tags(Q0,Q,Frame,Surf,L0,L),
     report_tags(L0,L,Surf).
 
