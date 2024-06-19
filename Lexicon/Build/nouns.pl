@@ -12930,6 +12930,7 @@ n([pl(geluiden),sg(geluid)],het,[sbar,vp]).
 n([pl(geluiden),sg(geluid)],het,[],
   [achtergrond,
    motor,
+   stem,
    dim(geluidje)]).
 
 n([pl(geluidsbanden),sg(geluidsband)],de,[]).
@@ -16334,6 +16335,8 @@ n([pl(ingenieurs),sg(ingenieur)],de,
 
 n([sg(ingeland),pl(ingelanden)],de,[]).
 
+n([sg(ingenomenheid)],de,[]).
+
 n([pl(ingevingen),sg(ingeving)],de,[vp]).
 
 n([pl(ingewanden),sg(ingewand)],het,[]).
@@ -19432,6 +19435,7 @@ n([mass(kunst)],de,[],
    kook,
    media,
    schilder,
+   spraak,
    video]).
 
 n([mass(['kunst-',en,vliegwerk]),
@@ -29621,7 +29625,9 @@ n([pl(reddingen),sg(redding)],de,
 
 n([pl(reden),pl(redes),sg(rede)],de,[],
   [s(afscheid),
-   troon]).
+   troon,
+   voor  % ouderwets =inleiding?
+  ]).
 
 n([mass(redelijkheid)],de,[]).
 
@@ -34599,7 +34605,8 @@ n([sg(studente),pl(studentes)],de,[measure]).
 n([pl(studies),pl(studiën),sg(studie)],de,[app_measure]).
 
 n([pl(studies),pl(studiën),sg(studie)],de,[],
-  [bijbel,
+  [avond,
+   bijbel,
    s(haalbaarheid),
    zelf]).
 
@@ -34935,6 +34942,7 @@ n([pl(talen),sg(taal)],de,[app_measure],
    moeder,
    s(omgang),
    programmeer,
+   schrijf,
    spreek,
    standaard,
    straat,
@@ -37071,6 +37079,8 @@ n([pl(uitlokkingen),sg(uitlokking)],de,[]).
 n([pl(uitlopen),sg(uitloop)],de,[]).
 
 n([pl(uitlopers),sg(uitloper)],de,[]).
+
+n([sg(uitnemendheid)],de,[]).
 
 n([pl(uitnodigingen),sg(uitnodiging)],de,[vp]).
 
@@ -42041,6 +42051,7 @@ n([pl(zalen),sg(zaal)],de,[np_app_measure],
    muziek,
    parochie,
    slaap,
+   studie,
    toon,
    troon,
    dim(zaaltje)]).

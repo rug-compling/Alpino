@@ -2754,8 +2754,10 @@ spelling_variant(an,aan).
 spelling_variant(astublieft,alstublieft).
 spelling_variant(bakkie,bakje).
 spelling_variant(bieb,bibliotheek).
+spelling_variant(blijve,blijven).
 spelling_variant(daaro,daar).
 spelling_variant(datte,dat).
+spelling_variant(denke,denken).
 spelling_variant(eergister,eergisteren).
 spelling_variant(fietsie,fietsje).
 spelling_variant(gister,gisteren).
@@ -2782,8 +2784,11 @@ spelling_variant('`tzelfde',hetzelfde).
 spelling_variant('`tgeen',hetgeen).
 spelling_variant(veels,veel).
 spelling_variant(verders,verder).
+spelling_varaint(verlieze,verliezen).
 spelling_variant(wadde,wat).
 spelling_variant(watte,wat).
+spelling_variant(wete,weten).
+spelling_variatn(worde,worden).
 spelling_variant(zekers,zeker).
 
 %% OpenSubTitles

@@ -74,6 +74,7 @@ accent(autobiografieen,autobiografieën).
 accent('auto-industrieen','auto-industrieën').
 accent(autoindustrieen,autoindustrieën).
 accent(automobielindustrieen,automobielindustrieën).
+accent(avondstudien,avondstudiën).
 accent(bacterien,bacteriën).
 accent(bandoneon,bandoneón).
 accent(bandoneons,bandoneóns).

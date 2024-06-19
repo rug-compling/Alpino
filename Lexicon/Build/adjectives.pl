@@ -10589,6 +10589,8 @@ a([e(foetale),
 a([e(folkloristische),
    no_e(folkloristisch)],nonadv,[],[]).
 
+a([e(fonologische),no_e(fonologisch)],nonadv,[],[]).
+
 a([e(forensische),
    both(forensisch)],nonadv,[],[]).
 
@@ -15168,6 +15170,9 @@ a([ge_e(gescheurde),
 
 a([ge_e(geschiede),
    ge_no_e(geschied)],adv,[],[]).
+
+a([e(geschiedkundige),
+   no_e(geschiedkundig)],adv,[],[]).
 
 a([ge_e(geschifte),
    ge_no_e(geschift),
