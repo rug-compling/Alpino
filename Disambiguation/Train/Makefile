@@ -14,6 +14,7 @@ MIN_FEATURE_FREQ=$(shell cat min_feature_freq)
 default: 
 
 ##### to make new data:
+##### perhaps: make renew in $(ALPINO_HOME)/Suites/X 
 ##### ( cd Data ; make realclean; make -j 25 data ; make install )
 
 ##### after that:
