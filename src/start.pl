@@ -449,7 +449,7 @@ no_heur_options:-
 
 testN_options :-
     set_flag(compare_cgn,off),
-    set_flag(after_timeout_options,off),
+    set_flag(after_timeout_options,testN),
     set_flag(end_hook,best_score),
     set_flag(disambiguation,off),
     set_flag(disambiguation_beam,0),
@@ -2586,12 +2586,19 @@ compressed_sentence([_-remove|T],NewT) :-
 
 %% TODO: take threads into account here
 %% TODO: this is a mess
-after_timeout_options(alpino_lc:parse(_)) :-
-    hdrug_flag(current_input_sentence,Sentence0),
-    ignore_brackets(Sentence0,Sentence),
-    concat_all(Sentence,StringAtom,' '),
-    format(user_error,"timeout|~w~n",[StringAtom]),
-    hdrug_flag(after_timeout_options,on),
+
+after_timeout_options_(testN):-
+    hdrug_flag(use_guides,off),
+    hdrug_flag(pos_tagger,off),
+    hdrug_flag(parse_candidates_beam,0),
+    set_flag(use_guides,on),
+    set_flag(pos_tagger,on),
+    set_flag(parse_candidates_beam,1000),
+    set_flag(last_one_timeout,on).
+
+after_timeout_options_(off).
+
+after_timeout_options_(on) :-
     hdrug_flag(parse_candidates_beam,Beam),
     (  Beam =:= 0 ; Beam > 100 ),
     set_flag(save_parse_candidates_beam,Beam),
@@ -2601,6 +2608,14 @@ after_timeout_options(alpino_lc:parse(_)) :-
     set_flag(save_disambiguation_beam,Beam2),
     set_flag(disambiguation_beam,2),
     set_flag(last_one_timeout,on).
+
+after_timeout_options(alpino_lc:parse(_)) :-
+    hdrug_flag(current_input_sentence,Sentence0),
+    ignore_brackets(Sentence0,Sentence),
+    concat_all(Sentence,StringAtom,' '),
+    format(user_error,"timeout|~w~n",[StringAtom]),
+    hdrug_flag(after_timeout_options,Val),
+    after_timeout_options_(Val).
 
 after_timeout_options(alpino_cg:generate(_)) :-
     hdrug_flag(after_timeout_options,on),
@@ -2623,6 +2638,12 @@ undo_timeout_options(alpino_cg:generate(_)) :-
     set_flag(filter_local_trees,on),
     set_flag(generate_failsafe,off),
     set_flag(after_timeout_options,on).
+
+undo_timeout_options(alpino_lc:parse(_)) :-
+    hdrug_flag(after_timeout_options,testN),
+    set_flag(use_guides,off),
+    set_flag(pos_tagger,off),
+    set_flag(parse_candidates_beam,0).
 
 undo_timeout_options(alpino_lc:parse(_)) :-
     hdrug_flag(after_timeout_options,on),
