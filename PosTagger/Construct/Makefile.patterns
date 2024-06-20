@@ -44,9 +44,9 @@
         | awk -F\| '{ print $$2 }'\
         | $(ALPINO_HOME)/PosTagger/Construct/tag_mapper >$@
 
-PROLOG              = $(ALPINO_HOME)/Hdrug/hdrug -notk
+HDRUG=$(ALPINO_HOME)/Hdrug/hdrug -notk
 
 %.tmo: %.tmi $(ALPINO_HOME)/PosTagger/tr_tag.pl $(ALPINO_HOME)/PosTagger/Construct/tr.pl
 	$(ALPINO_HOME)/PosTagger/Construct/tag2pl $< \
-        | $(PROLOG) -l $(ALPINO_HOME)/PosTagger/Construct/tr >$@
+        | $(HDRUG) -l $(ALPINO_HOME)/PosTagger/Construct/tr >$@
 

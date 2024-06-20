@@ -20,13 +20,17 @@ tr_tag(Tag,Tag).
 % ignore hebben/zijn
 t(verb(_,B0,C0),            verb(B,C)) :-
     (   B0 = inf(no_e)
-    ->  B  = inf
-    ;   B0 = imp(_)  % tmp
-    ->  B  = imp     % tmp
+    ->  B  = inf_pl
+%    ;   B0 = imp(_)  % tmp
+%    ->  B  = imp     % tmp
     ;   B0 = past(Agr)
     ->  B  = Agr
-    ;   B0 = both(Agr)
-    ->  B  = Agr
+    ;   B0 = both(pl)
+    ->  B  = pl
+    ;   B0 = pl
+    ->  B  = inf_pl
+    ;   B0 = inf
+    ->  B  = inf_pl
     ;   B0 = B
     ),
     t_subcat(C0,C).
@@ -128,7 +132,8 @@ ignore_noun_subcat(pred_pp_pl(_)).
 ignore_noun_subcat(pred_pp_pl(_,_)).
 
 % ignore subcat
-t(v_noun(_),              v_noun).
+t(v_noun(C0),              v_noun(C)) :-
+    t_subcat(C0,C).
 
 % ignore subtype of conjunctions
 t(left_conj(_),           left_conj).
