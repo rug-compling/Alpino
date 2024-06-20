@@ -39,7 +39,7 @@ left_corners:
 %.ps: %.lc.gz
 	zcat $< \
         | grep '^LEFTCORNER#' \
-        | sed -e 's/^LEFTCORNER#//'\
+        | sed -e 's/^LEFTCORNER#[^|]*[|]//'\
         | sort -u \
         | ./generate_prefixes \
         | sort -u > $@

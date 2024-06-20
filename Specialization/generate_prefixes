@@ -3,7 +3,7 @@ while (<>) {
     chomp;
     @all = split/\|/;
 
-    shift @all;           #key
+#    shift @all;           #key
     $goal = shift @all;
 
     push(@all,'finish');
