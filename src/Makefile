@@ -84,7 +84,7 @@ endif
 	echo "export SP_CTYPE=utf8"                >>Alpino
 	echo "export SP_CSETLEN=212"               >>Alpino
 	echo "export ALPINO_HOME=$(ALPINO_HOME)"   >>Alpino
-	echo 'echo using Alpino from directory $$ALPINO_HOME ... >&2'>>Alpino
+	echo 'echo using Alpino from directory $(DISK) ... >&2'>>Alpino
 	echo sicstus  -r '$(DISK)/Alpino.sav' -a\
    debug=0 $(HDRUGFLAGS) $(ALPINOFLAGS)\
   $(DEFAULT_ALPINO_OPTIONS)\
@@ -113,7 +113,7 @@ endif
 	echo '    echo "$0: Error: Please set your ALPINO_HOME environment variable" 1>&2'>>Alpino
 	echo '    exit 1'                        >>Alpino
 	echo 'fi'                                >>Alpino
-	echo 'echo using Alpino from directory $$ALPINO_HOME ... >&2'>>Alpino
+	echo 'echo using Alpino from directory $(DISK) ... >&2'>>Alpino
 	echo $(PROLOG) -x $(DISK)/Alpino.sav --\
    debug=0 $(HDRUGFLAGS) $(ALPINOFLAGS)\
   $(DEFAULT_ALPINO_OPTIONS)\
