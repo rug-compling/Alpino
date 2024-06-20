@@ -3749,6 +3749,7 @@ lemma_root(door_hernemen,herneem_door) .
 lemma_root(door_heropleven,heropleeft_door) .
 lemma_root(door_herrijzen,herrijs_door) .
 lemma_root(door_herroepen,herroep_door) .
+lemma_root(door_herscheppen,herschep_door) .
 lemma_root(door_herstarten,herstart_door) .
 lemma_root(door_herstellen,herstel_door) .
 lemma_root(door_herstructureren,herstructureer_door) .
@@ -4616,6 +4617,7 @@ lemma_root(door_retourneren,retourneer_door) .
 lemma_root(door_retweeten,retweet_door) .
 lemma_root(door_reutelen,reutel_door) .
 lemma_root(door_revalideren,revalideer_door) .
+lemma_root(door_reviseren,reviseer_door) .
 lemma_root(door_revitaliseren,revitaliseer_door) .
 lemma_root(door_revolteren,revolteer_door) .
 lemma_root(door_richten,richt_door) .
@@ -11392,6 +11394,7 @@ lemma_root(raak_hernemen,herneem_raak) .
 lemma_root(raak_heropleven,heropleeft_raak) .
 lemma_root(raak_herrijzen,herrijs_raak) .
 lemma_root(raak_herroepen,herroep_raak) .
+lemma_root(raak_herscheppen,herschep_raak) .
 lemma_root(raak_herstarten,herstart_raak) .
 lemma_root(raak_herstellen,herstel_raak) .
 lemma_root(raak_herstructureren,herstructureer_raak) .
@@ -12201,6 +12204,7 @@ lemma_root(raak_retourneren,retourneer_raak) .
 lemma_root(raak_retweeten,retweet_raak) .
 lemma_root(raak_reutelen,reutel_raak) .
 lemma_root(raak_revalideren,revalideer_raak) .
+lemma_root(raak_reviseren,reviseer_raak) .
 lemma_root(raak_revitaliseren,revitaliseer_raak) .
 lemma_root(raak_revolteren,revolteer_raak) .
 lemma_root(raak_richten,richt_raak) .
@@ -13268,6 +13272,7 @@ lemma_root(reutelen,reutel) .
 lemma_root(revalideren,revalideer) .
 lemma_root(revancheren,revancheer) .
 lemma_root(revatiliseren,revatiliseer) .
+lemma_root(reviseren,reviseer) .
 lemma_root(revitaliseren,revitaliseer) .
 lemma_root(revolteren,revolteer) .
 lemma_root(richten,richt) .
@@ -16593,6 +16598,7 @@ lemma_root(uit_hernemen,herneem_uit) .
 lemma_root(uit_heropleven,heropleeft_uit) .
 lemma_root(uit_herrijzen,herrijs_uit) .
 lemma_root(uit_herroepen,herroep_uit) .
+lemma_root(uit_herscheppen,herschep_uit) .
 lemma_root(uit_herstellen,herstel_uit) .
 lemma_root(uit_herstructureren,herstructureer_uit) .
 lemma_root(uit_hertellen,hertel_uit) .
@@ -17376,6 +17382,7 @@ lemma_root(uit_retourneren,retourneer_uit) .
 lemma_root(uit_retweeten,retweet_uit) .
 lemma_root(uit_reutelen,reutel_uit) .
 lemma_root(uit_revalideren,revalideer_uit) .
+lemma_root(uit_reviseren,reviseer_uit) .
 lemma_root(uit_revitaliseren,revitaliseer_uit) .
 lemma_root(uit_revolteren,revolteer_uit) .
 lemma_root(uit_richten,richt_uit) .
@@ -21448,6 +21455,7 @@ lemma_root(voort_hernemen,herneem_voort) .
 lemma_root(voort_heropleven,heropleeft_voort) .
 lemma_root(voort_herrijzen,herrijs_voort) .
 lemma_root(voort_herroepen,herroep_voort) .
+lemma_root(voort_herscheppen,herschep_voort) .
 lemma_root(voort_herstarten,herstart_voort) .
 lemma_root(voort_herstellen,herstel_voort) .
 lemma_root(voort_herstructureren,herstructureer_voort) .
@@ -22258,6 +22266,7 @@ lemma_root(voort_retourneren,retourneer_voort) .
 lemma_root(voort_retweeten,retweet_voort) .
 lemma_root(voort_reutelen,reutel_voort) .
 lemma_root(voort_revalideren,revalideer_voort) .
+lemma_root(voort_reviseren,reviseer_voort) .
 lemma_root(voort_revitaliseren,revitaliseer_voort) .
 lemma_root(voort_revolteren,revolteer_voort) .
 lemma_root(voort_richten,richt_voort) .

@@ -10066,6 +10066,9 @@ a([e(evidente),
    ste(evidentste)],adv,
   [subject_sbar],[]).
 
+a([e(evolutionaire),
+   no_e(evolutionair)],adv,[],[]).
+
 a([both([ex,vivo])],adv,[],[]).
 
 a([e(exacte),
@@ -25004,7 +25007,7 @@ a([e(onbenullige),
 
 a([stem(on_benutten),
    ge_e(onbenutte),
-   no_ge_e(onbenut)],nonadv,[],[]).
+   ge_no_e(onbenut)],nonadv,[],[]).
 
 a([stem(on_bepalen),
    ge_e(onbepaalde),
@@ -35471,7 +35474,7 @@ a([e(veeleisende),
   [pp(voor)],[]).
 
 a([ge_e(veelgehoorde),
-   no_ge_e(veelgehoord)],padv,[],[]).
+   ge_no_e(veelgehoord)],padv,[],[]).
 
 a([ge_both(veelgeprezen)],nonadv,[],[]).
 

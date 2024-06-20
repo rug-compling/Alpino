@@ -7153,6 +7153,7 @@ v(erger,ergert,ergeren,geërgerd,ergerde,ergerden,
 	vp_subj_so_np,
 	np_pc_pp(door),
 	refl_pc_pp(aan),
+	refl_pc_pp(over),  % is dat grammaticaal?
 	fixed([ap_pred,refl],no_passive),
 	%% hij ergert zich dood / groen en geel
 	fixed([{[pc(aan),ap_pred]},refl],no_passive),
@@ -9617,7 +9618,8 @@ v(herroep,herroept,herroepen,herroepen,herriep,herriepen,
 v(herschep,herschept,herscheppen,herschapen,herschiep,herschiepen,
     [h([als_pred_np,
 	transitive,
-	pc_pp(in)])]).
+	pc_pp(in),
+	intransitive])]).
 
 v(herschik,herschikt,herschikken,herschikt,herschikte,herschikten,
     [h([transitive])]).
@@ -18516,6 +18518,10 @@ v(revatiliseer,revatiliseert,revatiliseren,gerevatiliseerd,revatiliseerde,
   revatiliseerden,
     [h([transitive])]).
 
+v(reviseer,reviseert,reviseren,gereviseerd,reviseerde,reviseerden,
+    [h([transitive,
+	intransitive])]).
+
 v(revitaliseer,revitaliseert,revitaliseren,gerevitaliseerd,revitaliseerde,
   revitaliseerden,
     [h([transitive,
@@ -24769,7 +24775,7 @@ v(vergeld,vergeldt,vergelden,vergolden,vergold,vergolden,
         np_np % de heer zal het u vergelden
        ])]).
 
-v(vergelijk,vergelijkt,vergelijken,vergeleken,vergeleek,vergeleken,
+v(vergelijk,vergelijkt,vergelijken,vergeleken,vergeleek,vergeleken,vergelijke,
     [h([transitive,
         intransitive,
 	np_pc_pp(met),

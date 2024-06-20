@@ -5296,7 +5296,8 @@ n([pl(bijlen),sg(bijl)],de,[],
   [strijd,
    dim(bijltje)]).
 
-n([pl(bijlagen),sg(bijlage)],de,[]).
+n([pl(bijlagen),sg(bijlage)],de,[],
+  [i(boek,boeken)]).
 
 n([pl(bijnamen),sg(bijnaam)],de,[np_app_measure]).
 
@@ -7871,6 +7872,8 @@ n([mass(compassie)],de,[]).
 n([pl(compartimenten),sg(compartiment)],het,[]).
 
 n([pl(compensaties),sg(compensatie)],de,[sbar]).
+
+n([pl(compensaties),sg(compensatie)],de,[],[prijs]).
 
 n([pl(competenties),sg(competentie)],de,[vp]).
 
@@ -11432,7 +11435,7 @@ n([pl(fascinaties),sg(fascinatie)],de,[]).
 
 n([mass(fascisme)],het,[]).
 
-n([pl(fascisten),sg(fascist)],de,[],[h(neo)]).
+n([pl(fascisten),sg(fascist)],de,[],[h(neo),neo]).
 
 n([stem(fase),pl(fasen),pl(fases),sg(fase),
    sg(faze),pl(fazen)],de,[sbar,temp_mod],
@@ -12980,6 +12983,7 @@ n([pl(gemeenten),pl(gemeentes),sg(gemeente)],de,[],
    deel,
    fusie,
    land,
+   rand,
    wijk]).
 
 n([pl(gemeentehuizen),sg(gemeentehuis)],het,[]).
@@ -14219,6 +14223,7 @@ n([pl(groepen),sg(groep)],de,[app_measure,np_app_measure],
    hoofd,
    s(inkomen),
    s(jongen),
+   kern,
    kop,
    s(leeftijd),
    lobby,
@@ -14433,7 +14438,7 @@ n([pl(haarspelden),sg(haarspeld)],de,[]).
 
 n([mass(haaruitval)],de,[]).
 
-n([pl(hazen),sg(haas)],de,[]).
+n([pl(hazen),sg(haas)],de,[],[dim(haasje)]).
 
 n([mass(haast)],de,
   [vp]).
@@ -20218,7 +20223,8 @@ n([pl(lessen),sg(les)],de,
    vp,
    subject_sbar
   ],
-  [dim(lesje)]).
+  [s(leven),
+   dim(lesje)]).
 
 n([pl(lessen),sg(les)],de,
   [app_measure],
@@ -24005,6 +24011,7 @@ n([pl(niveaus),sg(niveau)],het,[],
   [s(deelnemer),
    s(dreiging),
    s(geluid),
+   prijs,
    zee]).
 
 n([pl(nivelleringen),sg(nivellering)],de,[]).
@@ -25997,6 +26004,8 @@ n([pl(overheden),sg(overheid)],de,[],[s(rijk)]).
 
 n([pl(overhemden),sg(overhemd)],het,[]).
 
+n([sg(overheveling),pl(overhevelingen)],de,[]).
+
 n([sg(overhoring),pl(overhoringen)],de,[app_measure]).
 
 n([pl(overjassen),sg(overjas)],de,[]).
@@ -26571,6 +26580,7 @@ n([sg(partij),pl(partijen),
    college,
    markt,
    s(meerderheid),
+   s(oorlog),
    oppositie,
    i(oud,ouderen),
    s(regering),
@@ -27810,6 +27820,7 @@ n([mass(politiek)],de,[],
    s(macht),
    i(nederzetting,nederzettingen),
    partij,
+   s(vrede),
    wereld]).
 
 n([sg(politieker),pl(politiekers)],de,[]).
@@ -31688,7 +31699,8 @@ n([sg(schrijven)],het,[]). % ik heb een schrijven ontvangen van ...x
 n([pl(schrijvers),sg(schrijver)],de,[],
   [scenario,
    sciencefiction,'science-fiction',f([science,fiction]),
-   s(sprookje)
+   s(sprookje),
+   toneel
   ]).
 
 n([mass(schrijverschap)],het,[]).
@@ -31887,7 +31899,11 @@ n([pl(segmenten),sg(segment)],het,[app_measure]).
 
 n([mass(segregatie)],de,[]).
 
-n([pl(seinen),sg(sein)],het,[sbar,vp],[dim(seintje)]).
+n([pl(seinen),sg(sein)],het,[sbar,vp],
+  [dim(seintje)]).
+
+n([pl(seinen),sg(sein)],het,[],
+  [start]).
 
 n([pl(seinpalen),sg(seinpaal)],de,[]).
 
@@ -38396,6 +38412,8 @@ n([pl(vernieuwers),sg(vernieuwer)],de,[]).
 
 n([pl(vernieuwingen),sg(vernieuwing)],de,[sbar,vp]).
 
+n([pl(vernieuwingen),sg(vernieuwing)],de,[],[s(stad)]).
+
 n([pl(vernissen),sg(vernis)],both,[sbar,vp]).  % celex:het???
 
 n([pl(vernuften),sg(vernuft)],het,[vp]).
@@ -38688,7 +38706,7 @@ n([pl(vertoningen),sg(vertoning)],de,[],[dim(vertoninkje)]).
 
 n([pl(vertogen),sg(vertoog)],het,[]).
 
-n([mass(vertoon)],het,[]).
+n([mass(vertoon)],het,[],[s(macht)]).
 
 n([pl(vertragingen),sg(vertraging)],de,[],
   [groei]).
@@ -42482,6 +42500,9 @@ n([pl(zittingen),sg(zitting)],de,[],
    s(recht)]).
 
 n([pl(zitvlakken),sg(zitvlak)],het,[]).
+
+%% zelfstandig naamwoord (GCRAMP)
+n([sg(zn)],het,[]).
 
 n([pl(zoden),sg(zode)],de,[]).
 
