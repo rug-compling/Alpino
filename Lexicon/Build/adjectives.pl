@@ -30627,6 +30627,9 @@ a([e(regenteske),
 a([e(regionale),
    no_e(regionaal)],adv,[],[]).
 
+a([e(reglementaire),
+   no_e(reglementair)],adv,[],[]).
+
 a([e(reguliere),
    no_e(regulier)],adv,[],[]).
 
@@ -30660,7 +30663,7 @@ a([e(relaxte),
    ere(relaxtere),
    no_e(relaxed),
    e(relaxe),
-   no_e(relax)],padv,[],[]).
+   no_e(relax)],both,[],[]).
 
 a([e(relevante),
    er(relevanter),

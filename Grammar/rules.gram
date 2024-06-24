@@ -698,6 +698,10 @@ max_pp(PP) :-
     PP:nnform => ~refl,
     max(PP).
 
+max_post_pp(PP):-
+    PP => post_pp,
+    max(PP).
+
 max_vp(X) :-
     X0 => vp,
     max(X0),
@@ -6999,8 +7003,7 @@ grammar_rule(abs_p_np_dir,PP,[Met,NP,MOD]) :-
 
 %%EX%% met Kris het huis uit
 grammar_rule(abs_p_np_post_pp,PP,[Met,NP,MOD]) :-
-    MOD => post_pp,
-    max(MOD),
+    max_post_pp(MOD),
     abs_p_mod_structure(Met,NP,MOD,PP).
 
 %%EX%% met de duim natuurlijk omhoog
@@ -7168,6 +7171,7 @@ te_v_structure(VP,Te,V) :-
 %%EX%% De te doorstane proef
 %%EX%% De bij de offerte te voegen benodigheden
 %%EX%% De van de Duitsers te vorderen fietsen
+%%%%%% TODO: De fietsen , te vorderen van de Duitsers , zullen worden verkocht
 grammar_rule(adj_te_v, AP, [ V ] ) :-
     AP => a,
     AP:adv => nadv,
@@ -7798,8 +7802,7 @@ grammar_rule(nucl_sat(np),ROOT,[Dan, COMMA, Max]) :-
 %%EX%% Hij zou een rondje lopen , het bos in
 grammar_rule(nucl_sat(post_pp),ROOT,[Dan, COMMA, Max]) :-
     comma_dash(COMMA),
-    Max => post_pp,
-    max(Max),
+    max_post_pp(Max),
     root_nucl_sat_structure(Dan,Max,ROOT).
 
 %%EX%% Het is een vervelende vent , haha , die kerel
@@ -7917,6 +7920,14 @@ grammar_rule(predm_adv_ap_dp,MAX,[ADV,XP]) :-
     max_predm(ADV),
     max_nadv_ap(XP),
     XP:adv => nboth,
+    dp_dp_structure(ADV,XP,MAX).
+
+%%EX%% allemaal de prullenbak in
+grammar_rule(predm_adv_post_pp_dp,MAX,[ADV,XP]) :-
+    MAX => max,
+    MAX:max_type => t_xp,
+    max_predm(ADV),
+    max_post_pp(XP),
     dp_dp_structure(ADV,XP,MAX).
 
 %%EX%% leuk voor later , allemaal
@@ -8308,6 +8319,16 @@ grammar_rule(start_mod_mod_pp,M,[MOD1,MOD2,PP]) :-
     ind_max_pp(PP),
     dp_dp_structure(MOD1,MOD2,PP,M).
 
+%%EX%% Daarom volgend jaar het huis uit
+grammar_rule(start_mod_mod_post_pp,M,[MOD1,MOD2,PP]) :-
+    M => max,
+    M:max_type => t_dp,
+    M:mod_np => yes,
+    max_dp_modifier(MOD1),
+    max_dp_modifier(MOD2),
+    max_post_pp(PP),
+    dp_dp_structure(MOD1,MOD2,PP,M).
+
 %%EX%% Toch niet om een krant te kopen ?
 grammar_rule(start_mod_mod_oti,M,[MOD1,MOD2,OTI]) :-
     M => max,
@@ -8396,6 +8417,19 @@ grammar_rule(start_np_pred_mod,M,[NP,MOD1,COMMA,MOD2]) :-
     max_pred(MOD1),
     MOD1:pcat => ap_pred,
     MOD1:adv => ~yadv,
+    max_dp_modifier(MOD2),
+    ind_max_np(NP),
+    NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"
+    dp_dp_structure(NP,MOD1,MOD2,M).
+
+%%EX%% Niemand de deur uit dus !
+%%EX%% Niemand de deur uit , dus
+grammar_rule(start_np_post_pp_mod,M,[NP,MOD1,COMMA,MOD2]) :-
+    optcomma(COMMA),
+    M => max,
+    M:max_type => t_dp,
+    M:mod_np => yes,
+    max_post_pp(MOD1),
     max_dp_modifier(MOD2),
     ind_max_np(NP),
     NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"
@@ -9092,6 +9126,16 @@ grammar_rule(np_ap,START,[NP,AP]) :-
     max_nadv_ap(AP),
     dp_dp_structure(NP,AP,START).
 
+%%EX%% Wegenwerker de gracht in
+grammar_rule(np_post_pp,START,[NP,POSTPP]) :-
+    START => max,
+    START:max_type => t_dp,
+    START:mod_np => yes,
+    SUBN => (sub_def_pron;sub_name;sub_noun;sub_indef_verb),
+    short_np(NP,SUBN),
+    max_post_pp(POSTPP),
+    dp_dp_structure(NP,POSTPP,START).
+
 %%EX%% Opbrengst parkeerautomaten verdubbeld
 %%EX%% 1. Opbrengst parkeerautomaten verdubbeld
 grammar_rule(np_np_ap,START,[NP1,NP2,AP]) :-
@@ -9104,6 +9148,18 @@ grammar_rule(np_np_ap,START,[NP1,NP2,AP]) :-
     short_np(NP2,SUBN2),
     max_ap(AP), % no nadv because no competing rule
     dp_dp_structure(NP1,NP2,AP,START).
+
+%%EX%% Auto brandweer de sloot in
+grammar_rule(np_np_post_pp,START,[NP1,NP2,POSTPP]) :-
+    START => max,
+    START:max_type => t_dp,
+    SUBN1 => sub_noun,
+    short_np(NP1,SUBN1),
+    NP1:meas => no,
+    SUBN2 => (sub_noun;sub_name),
+    short_np(NP2,SUBN2),
+    max_post_pp(POSTPP), % no nadv because no competing rule
+    dp_dp_structure(NP1,NP2,POSTPP,START).
 
 %%%% TV-programma START
 %%%% HOW to ensure that START starts with capital

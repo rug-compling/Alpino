@@ -4169,7 +4169,8 @@ n([pl(behandelingen),sg(behandeling)],de,[pred_pp(in),
 					  pred_pp(onder)]).
 
 n([pl(behandelingen),sg(behandeling)],de,[],
-  [dag,
+  [s(begroting),
+   dag,
    dwang,
    klacht,
    s(voorkeur)]).
@@ -7151,6 +7152,10 @@ n([meas(cent),
    euro,
    dim(centje)]).
 
+%% de vijftig centiemen opslag
+n([sg(centiem),
+   pl(centiemen)],de,[measure]).
+
 n([pl(centrales),sg(centrale)],de,[],
   [alarm,
    i(elektriciteit,electriciteit),
@@ -7304,6 +7309,7 @@ n([pl(chefs),sg(chef)],de,[],
    pers,
    s(personeel),
    politie,
+   staf,
    s(station)]).
 
 n([sg([chef,de,bureau]),pl([chefs,de,bureau])],de,[]).
@@ -8045,7 +8051,8 @@ n([pl(confederaties),sg(confederatie)],de,[]).
 
 n([pl(conferenties),sg(conferentie)],de,[],
   [donor,
-   klimaat]).
+   klimaat,
+   top]).
 
 n([pl(configuraties),sg(configuratie)],de,[]).
 
@@ -12726,7 +12733,9 @@ n([pl(gegevens),sg(gegeven)],het,[],
    klant,
    netwerk,
    s(passagier),
-   s(persoon)]).
+   s(persoon),
+   programma
+  ]).
 
 n([pl(gegevenselementen),sg(gegevenselement)],het,[]).
 
@@ -14797,7 +14806,9 @@ n([mass(have)],de,[]).
 n([sg('have-not'),pl('have-not\'s'),
    sg([have,not]),pl([have,nots])],de,[]).
 
-n([pl(havens),sg(haven)],de,[],[dim(haventje)]).
+n([pl(havens),sg(haven)],de,[],
+  [thuis,
+   dim(haventje)]).
 
 n([mass(haver)],de,[]).
 
@@ -17044,7 +17055,13 @@ n([pl(japonnen),sg(japon)],de,[],
 
 n([pl(jargons),sg(jargon)],het,[]).
 
-n([pl(jassen),sg(jas)],de,[],[dim(jasje)]).
+n([pl(jassen),sg(jas)],de,[],
+  [kamer,
+   ochtend,
+   regen,
+   winter,
+   zomer,
+   dim(jasje)]).
 
 n([pl(jasmijnen),sg(jasmijn)],de,[]).
 
@@ -17502,8 +17519,6 @@ n([pl(kamers),sg(kamer)],de,[],
 n([pl(kameraads),pl(kameraden),sg(kameraad)],de,[],[dim(kameraadje)]).
 
 n([mass(kameraadschap)],de,[]).
-
-n([pl(kamerjassen),sg(kamerjas)],de,[]).
 
 n([pl(kamermeisjes),sg(kamermeisje)],het,[]).
 
@@ -19762,6 +19777,7 @@ n([pl(landen),sg(land)],het,[],
    industrie,
    i(laag_loon,'lage-lonen'),i(laag_loon,'lagelonen'),
    h(kandidaat),
+   moeder,
    moslim,
    h('EU'),
    h('G7'),
@@ -20042,7 +20058,8 @@ n([sg(legionair),pl(legionairs)],de,[]).
 
 n([mass(legionella)],de,[]).
 
-n([mass(legislatuur)],de,[]).
+n([mass(legislatuur)],de,[temp_mod]).   % VL De voorbije legislatuur zetelde de VLD in de oppositie .
+
 
 n([pl(legitimaties),sg(legitimatie)],de,[]).
 
@@ -24275,7 +24292,7 @@ n([pl(observaties),sg(observatie)],de,[sbar]).
 
 n([pl(obsessies),sg(obsessie)],de,[sbar,vp]).
 
-n([pl(obstakels),sg(obstakel)],het,[sbar,vp]).
+n([pl(obstakels),sg(obstakel)],het,[sbar,vp,subject_sbar,subject_vp]).
 
 n([mass(obstipatie)],de,[]).
 
@@ -24296,8 +24313,6 @@ n([sg(ochtend),pl(ochtenden)],de,[temp_mod,sbar,measure],
    dim(ochtendje)]).
 
 n([mass(ochtendgloren)],het,[]).
-
-n([pl(ochtendjassen),sg(ochtendjas)],de,[]).
 
 n([sg(ochtendspits),pl(ochtendspitsen)],de,[]).
 
@@ -24898,7 +24913,7 @@ n([mass(onkunde)],de,[]).
 
 n([pl(onlusten),sg(onlust)],de,[]).
 
-n([mass(onmacht)],de,[]).
+n([mass(onmacht)],de,[vp]).
 
 n([mass(onmin)],de,[pred_pp(in)]).
 
@@ -25204,7 +25219,9 @@ n([pl(oordelen),sg(oordeel)],het,
    vp,
    subject_sbar,
    subject_vp],
-  [i(deskundig,deskundigen)]).
+  [i(deskundig,deskundigen),
+   eind
+  ]).
 
 n([pl(oorkonden),pl(oorkondes),sg(oorkonde)],de,[]).
 
@@ -25242,7 +25259,7 @@ n([mass(oorspronkelijkheid)],de,[]).
 
 n([pl(oorvijgen),sg(oorvijg)],de,[]).
 
-n([pl(oorzaken),sg(oorzaak)],de,[sbar],
+n([pl(oorzaken),sg(oorzaak)],de,[sbar,subject_sbar],
   [hoofd]).
 
 n([pl(oorzaken),sg(oorzaak)],de,[],
@@ -26618,6 +26635,7 @@ n([pl(partners),sg(partner)],de,[],
    coalitie,
    fusie,
    s(handel),
+   s(leven),
    f(['non-airline']),
    f([sparring]),
    i(zaak,zaken)]).
@@ -33137,6 +33155,7 @@ n([pl(spelen),pl(spellen),sg(spel)],het,[app_measure],
   [bal,
    bord,
    computer,
+   eind,
    kaart,
    i(kind,kinder),
    simulatie,
@@ -33753,7 +33772,10 @@ n([sg([standing,force]),pl([standing,forces])],de,[]).
 
 n([pl(standaarden),pl(standaards),sg(standaard)],de,[measure,sbar,vp]).
 
-n([pl(standaarden),pl(standaards),sg(standaard)],de,[],[goud]).
+n([pl(standaarden),pl(standaards),sg(standaard)],de,[],
+  [goud,
+   s(leven)
+  ]).
 
 n([mass(standaardisatie),mass(standaardizatie)],de,[]).
 
@@ -34266,6 +34288,7 @@ n([pl(stokken),sg(stok)],de,[measure],
 
 n([pl(stokken),sg(stok)],de,[],
   [tover,
+   wapen,
    zuur]).
 
 n([pl(stokers),sg(stoker)],de,[]).
@@ -38706,7 +38729,8 @@ n([pl(vertoningen),sg(vertoning)],de,[],[dim(vertoninkje)]).
 
 n([pl(vertogen),sg(vertoog)],het,[]).
 
-n([mass(vertoon)],het,[],[s(macht)]).
+n([mass(vertoon)],het,[],
+  [s(macht)]).
 
 n([pl(vertragingen),sg(vertraging)],de,[],
   [groei]).
@@ -40360,7 +40384,7 @@ n([mass(vwo),pl(vwo)],het,[]).
 
 n([mass('vwo/havo'),pl('vwo/havo')],both,[]).
 
-n([sg(vzw)],de,[]). % VL
+n([sg(vzw)],de,[np_app_measure]). % VL
 
 n([pl('w\'s'),sg(w)],de,[],[dim('w\'tje')]).
 
