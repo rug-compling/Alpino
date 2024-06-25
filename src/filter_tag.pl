@@ -245,7 +245,7 @@ filter_tag_rule(cleft_het_noun,        [or([check_verb_sc(cleft),
 					    check_verb_sc(simple_cleft)])]).
 filter_tag_rule(particle(PART),        [check_part_required(PART)]).
 filter_tag_rule(num_na,                []).
-filter_tag_rule(complementizer,        []).
+filter_tag_rule(complementizer,        [check_comp]).
 filter_tag_rule(complementizer(datti),  []).
 filter_tag_rule(complementizer(start),  []).
 filter_tag_rule(complementizer(root),   []).
@@ -1193,6 +1193,23 @@ check_tag_particle_left(Part,Q) :-
 check_tag_particle_left(Part,Q) :-
     once(alpino_lexical_analysis:search_tag_tag(particle(_),tag(_,_,Q0,Q,_,_,_,particle(_)))),
     check_tag_particle_left(Part,Q0).
+
+%% there should be a finite verb to the right
+check_comp(_,P) :-
+    check_tag_finite_right(P).
+
+check_tag_finite_right(P) :-
+    hdrug_flag(parse_or_generate,PG),
+    check_tag_finite_right(PG,P).
+
+check_tag_finite_right(generate,_).
+check_tag_finite_right(parse,P):-
+    alpino_lexical_analysis:search_tag_tag(verb(_,Fin,_),tag(_,_,_,Q,_,_,_,verb(_,Fin,_))),
+    Q > P,
+    finite(Fin).
+check_tag_finite_right(parse,P):-
+    alpino_lexical_analysis:search_tag_r0(P,tag(_,_,P,_,_,_,_,punct(Punct))),
+    lists:member(Punct,[hellip,dubb_punt]).
 
 check_ld_prep(Prep,P0,P) :-
     check_prep(Prep,P0,P).

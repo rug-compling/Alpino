@@ -224,6 +224,7 @@ adverb([god,betere,'\'t']).
 adverb(['God',betert]).
 adverb(['God',betere,het]).
 adverb(['God',betere,'\'t']).
+adverb(goddorie).
 adverb(godverdorie).
 adverb(goeddeels).
 adverb(grofweg).

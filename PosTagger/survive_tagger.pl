@@ -52,10 +52,12 @@ survives(tag(_,_,R1,_,Root2,Word2,_,Tag2)) :-
     alpino_lexical_analysis:tag(_,_,_,R1,Root1,Word1,_,Tag1),
     format(user_error,"survives bigram ~w ~w ~n",[Word1,Word2]).
 
-% :- use_module(surv_big).
-
-% survives_bigram(_,W1,T1,_,W2,T2) :-
-%     surv_big(W1,W2,T1,T2).
+survives(tag(_,_,_,R1,Voor,_,_,complementizer)) :-
+    lists:member(Voor,[voor,tot]),
+    lists:member(Diff,[2,3,4]),
+    R2 is R1 + Diff,
+    alpino_lexical_analysis:tag(_,_,R2,_,_,_,_,verb(_,Fin,_)),
+    finite(Fin).
 
 %% because "naar voren" is also fixed_part, it is often filtered out
 survives_bigram(naar,_,preposition(naar,[toe],loc_adv),voren,_,loc_adverb).
@@ -124,6 +126,10 @@ surviving_root(wie,pronoun(ywh,thi,both,de,dat_acc,def)).
 
 surviving_root_tag(_,_):-
     fail.
+
+%% often wrongly removed if followed by NP
+%surviving_root_tag(tot,complementizer).
+%surviving_root_tag(voor,complementizer).
 
 %% De ref wees terecht naar de stip en de strafschop werd omgezet
 surviving_root_tag(terecht,adjective(_)).

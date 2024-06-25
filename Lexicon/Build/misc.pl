@@ -1524,6 +1524,17 @@ tag(zak).
 
 tag(stel).
 
+%%% Riddle, hesitations
+
+tag(ah).
+tag(ehm).
+tag(hm).
+tag(hmm).
+tag(hmmm).
+tag(huh).
+tag(mmmm).
+tag(uh).
+
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 with_dt(['Dames',en,'Heren','Goedenavond'],
@@ -5853,6 +5864,7 @@ sentence_adverb([op,de,koop,toe]).
 sentence_adverb([op,den,duur]).
 sentence_adverb([op,tijd,en,stond]).  % VL soms
 sentence_adverb(opeens).
+sentence_adverb(opzij).
 sentence_adverb([out,of,court]).
 sentence_adverb([out,of,the,blue]).
 sentence_adverb(overigens).

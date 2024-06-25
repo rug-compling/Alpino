@@ -1944,6 +1944,9 @@ a([ge_e(aangeknoopte),
 a([ge_e(aangekochte),
    ge_no_e(aangekocht)],adv,[],[]).
 
+a([ge_e(aangekoekte),
+   ge_no_e(aangekoekt)],adv,[],[]).
+
 a([ge_both(aangekomen)],adv,[],[]).
 
 a([ge_e(aangekondigde),
@@ -19416,6 +19419,9 @@ a([e(inefficiënte),
 a([e(inerte),
    no_e(inert)],adv,[],[]).
 
+a([e(infame),
+   no_e(infaam)],adv,[],[]).
+
 a([e(infantiele),
    er(infantieler),
    ere(infantielere),
@@ -25260,7 +25266,17 @@ a([stem(on_bewonen),
 a([e(onbewuste),
    er(onbewuster),
    ere(onbewustere),
-   no_e(onbewust)],both,[],[]).
+   no_e(onbewust)],both,
+  [refl,
+   refl_np,
+   refl_sbar,
+   refl_vp,
+   refl_pp(van),
+   refl_er_pp_sbar(van),
+   refl_er_pp_vp(van),
+   er_pp_sbar(van),
+   er_pp_vp(van),
+   pp(van)],[]).
 
 a([stem(on_bezetten),
    ge_e(onbezette),
@@ -27984,6 +28000,9 @@ a([ge_e(opgekrikte),
 
 a([ge_e(opgekropte),
    ge_no_e(opgekropt)],adv,[],[]).
+
+a([ge_e(opgekrulde),
+   ge_no_e(opgekruld)],padv,[],[]).
 
 a([ge_e(opgekweekte),
    ge_no_e(opgekweekt)],adv,[],[]).
@@ -40715,6 +40734,7 @@ stem(aangekleed,v_root(kleed_aan,aan_kleden)).
 stem(aangekleefd,v_root(kleef_aan,aan_kleven)).
 stem(aangeknoopt,v_root(knoop_aan,aan_knopen)).
 stem(aangekocht,v_root(koop_aan,aan_kopen)).
+stem(aangekoekt,v_root(koek_aan,aan_koeken)).
 stem(aangekomen,v_root(kom_aan,aan_komen)).
 stem(aangekondigd,v_root(kondig_aan,aan_kondigen)).
 stem(aangekweekt,v_root(kweek_aan,aan_kweken)).

@@ -226,6 +226,7 @@ lemma_root(aan_knopen,knoop_aan) .
 lemma_root(aan_koeken,koek_aan) .
 lemma_root(aan_koersen,koers_aan) .
 lemma_root(aan_kogelen,kogel_aan) .
+lemma_root(aan_kolken,kolk_aan) .
 lemma_root(aan_komen,kom_aan) .
 lemma_root(aan_kondigen,kondig_aan) .
 lemma_root(aan_kopen,koop_aan) .
@@ -463,6 +464,7 @@ lemma_root(aan_spartelen,spartel_aan) .
 lemma_root(aan_spatelen,spatel_aan) .
 lemma_root(aan_spatten,spat_aan) .
 lemma_root(aan_spelen,speel_aan) .
+lemma_root(aan_spieden,spied_aan) .
 lemma_root(aan_spijkeren,spijker_aan) .
 lemma_root(aan_spoelen,spoel_aan) .
 lemma_root(aan_sporen,spoor_aan) .
@@ -774,6 +776,7 @@ lemma_root(achterna_knikkeren,knikker_achterna) .
 lemma_root(achterna_knokken,knok_achterna) .
 lemma_root(achterna_knuffelen,knuffel_achterna) .
 lemma_root(achterna_koersen,koers_achterna) .
+lemma_root(achterna_kolken,kolk_achterna) .
 lemma_root(achterna_komen,kom_achterna) .
 lemma_root(achterna_koppen,kop_achterna) .
 lemma_root(achterna_krabbelen,krabbel_achterna) .
@@ -869,6 +872,7 @@ lemma_root(achterna_smokkelen,smokkel_achterna) .
 lemma_root(achterna_snellen,snel_achterna) .
 lemma_root(achterna_sodemieteren,sodemieter_achterna) .
 lemma_root(achterna_sommeren,sommeer_achterna) .
+lemma_root(achterna_spieden,spied_achterna) .
 lemma_root(achterna_spoeden,spoed_achterna) .
 lemma_root(achterna_spoelen,spoel_achterna) .
 lemma_root(achterna_springen,spring_achterna) .
@@ -1246,6 +1250,7 @@ lemma_root(af_knuffelen,knuffel_af) .
 lemma_root(af_koelen,koel_af) .
 lemma_root(af_koersen,koers_af) .
 lemma_root(af_kogelen,kogel_af) .
+lemma_root(af_kolken,kolk_af) .
 lemma_root(af_kolven,kolf_af) .
 lemma_root(af_komen,kom_af) .
 lemma_root(af_kondigen,kondig_af) .
@@ -1511,6 +1516,7 @@ lemma_root(af_spatten,spat_af) .
 lemma_root(af_spelen,speel_af) .
 lemma_root(af_spetteren,spetter_af) .
 lemma_root(af_speuren,speur_af) .
+lemma_root(af_spieden,spied_af) .
 lemma_root(af_spijkeren,spijker_af) .
 lemma_root(af_splitsen,splits_af) .
 lemma_root(af_spoeden,spoed_af) .
@@ -2375,6 +2381,7 @@ lemma_root(binnen_knikkeren,knikker_binnen) .
 lemma_root(binnen_knokken,knok_binnen) .
 lemma_root(binnen_knuffelen,knuffel_binnen) .
 lemma_root(binnen_koersen,koers_binnen) .
+lemma_root(binnen_kolken,kolk_binnen) .
 lemma_root(binnen_komen,kom_binnen) .
 lemma_root(binnen_koppen,kop_binnen) .
 lemma_root(binnen_krabbelen,krabbel_binnen) .
@@ -2472,6 +2479,7 @@ lemma_root(binnen_sneeuwen,sneeuw_binnen) .
 lemma_root(binnen_snellen,snel_binnen) .
 lemma_root(binnen_sodemieteren,sodemieter_binnen) .
 lemma_root(binnen_sommeren,sommeer_binnen) .
+lemma_root(binnen_spieden,spied_binnen) .
 lemma_root(binnen_spoeden,spoed_binnen) .
 lemma_root(binnen_spoelen,spoel_binnen) .
 lemma_root(binnen_springen,spring_binnen) .
@@ -6268,6 +6276,7 @@ lemma_root(heen_knikkeren,knikker_heen) .
 lemma_root(heen_knopen,knoop_heen) .
 lemma_root(heen_koersen,koers_heen) .
 lemma_root(heen_kogelen,kogel_heen) .
+lemma_root(heen_kolken,kolk_heen) .
 lemma_root(heen_komen,kom_heen) .
 lemma_root(heen_kopiëren,kopieer_heen) .
 lemma_root(heen_koppen,kop_heen) .
@@ -6475,6 +6484,7 @@ lemma_root(heen_spartelen,spartel_heen) .
 lemma_root(heen_spatelen,spatel_heen) .
 lemma_root(heen_spatten,spat_heen) .
 lemma_root(heen_spelen,speel_heen) .
+lemma_root(heen_spieden,spied_heen) .
 lemma_root(heen_spijkeren,spijker_heen) .
 lemma_root(heen_spoelen,spoel_heen) .
 lemma_root(heen_sporen,spoor_heen) .
@@ -7081,6 +7091,7 @@ lemma_root(in_knuffelen,knuffel_in) .
 lemma_root(in_koersen,koers_in) .
 lemma_root(in_kogelen,kogel_in) .
 lemma_root(in_koken,kook_in) .
+lemma_root(in_kolken,kolk_in) .
 lemma_root(in_komen,kom_in) .
 lemma_root(in_kopen,koop_in) .
 lemma_root(in_kopiëren,kopieer_in) .
@@ -7342,6 +7353,7 @@ lemma_root(in_spatelen,spatel_in) .
 lemma_root(in_spatten,spat_in) .
 lemma_root(inspecteren,inspecteer) .
 lemma_root(in_spelen,speel_in) .
+lemma_root(in_spieden,spied_in) .
 lemma_root(in_spijkeren,spijker_in) .
 lemma_root(inspireren,inspireer) .
 lemma_root(in_spoeden,spoed_in) .
@@ -8117,6 +8129,7 @@ lemma_root(langs_knopen,knoop_langs) .
 lemma_root(langs_knuffelen,knuffel_langs) .
 lemma_root(langs_koersen,koers_langs) .
 lemma_root(langs_kogelen,kogel_langs) .
+lemma_root(langs_kolken,kolk_langs) .
 lemma_root(langs_komen,kom_langs) .
 lemma_root(langs_kopiëren,kopieer_langs) .
 lemma_root(langs_koppen,kop_langs) .
@@ -8329,6 +8342,7 @@ lemma_root(langs_spartelen,spartel_langs) .
 lemma_root(langs_spatelen,spatel_langs) .
 lemma_root(langs_spatten,spat_langs) .
 lemma_root(langs_spelen,speel_langs) .
+lemma_root(langs_spieden,spied_langs) .
 lemma_root(langs_spijkeren,spijker_langs) .
 lemma_root(langs_spoeden,spoed_langs) .
 lemma_root(langs_spoelen,spoel_langs) .
@@ -8914,6 +8928,7 @@ lemma_root(na_papegaaien,papegaai_na) .
 lemma_root(na_pluizen,pluis_na) .
 lemma_root(na_praten,praat_na) .
 lemma_root(na_pruttelen,pruttel_na) .
+lemma_root(na_reizen,reis_na) .
 lemma_root(na_rekenen,reken_na) .
 lemma_root(na_roepen,roep_na) .
 lemma_root(na_sakkeren,sakker_na) .
@@ -9139,6 +9154,7 @@ lemma_root(om_knikkeren,knikker_om) .
 lemma_root(om_knokken,knok_om) .
 lemma_root(om_knuffelen,knuffel_om) .
 lemma_root(om_koersen,koers_om) .
+lemma_root(om_kolken,kolk_om) .
 lemma_root(om_komen,kom_om) .
 lemma_root(om_kopen,koop_om) .
 lemma_root(om_koppen,kop_om) .
@@ -9255,6 +9271,7 @@ lemma_root(om_sodemieteren,sodemieter_om) .
 lemma_root(om_sommeren,sommeer_om) .
 lemma_root(omspannen,omspan) .
 lemma_root(omspelen,omspeel) .
+lemma_root(om_spieden,spied_om) .
 lemma_root(om_spitten,spit_om) .
 lemma_root(om_spoeden,spoed_om) .
 lemma_root(omspoelen,omspoel) .
@@ -9725,6 +9742,7 @@ lemma_root(op_knippen,knip_op) .
 lemma_root(op_knokken,knok_op) .
 lemma_root(op_knuffelen,knuffel_op) .
 lemma_root(op_koersen,koers_op) .
+lemma_root(op_kolken,kolk_op) .
 lemma_root(op_komen,kom_op) .
 lemma_root(op_kopen,koop_op) .
 lemma_root(op_koppen,kop_op) .
@@ -9890,6 +9908,7 @@ lemma_root(op_spatten,spat_op) .
 lemma_root(op_spelden,speld_op) .
 lemma_root(op_spelen,speel_op) .
 lemma_root(op_speuren,speur_op) .
+lemma_root(op_spieden,spied_op) .
 lemma_root(op_splitsen,splits_op) .
 lemma_root(op_spoeden,spoed_op) .
 lemma_root(op_spoelen,spoel_op) .
@@ -10164,6 +10183,7 @@ lemma_root(over_knuffelen,knuffel_over) .
 lemma_root(overkoepelen,overkoepel) .
 lemma_root(over_koersen,koers_over) .
 lemma_root(over_koken,kook_over) .
+lemma_root(over_kolken,kolk_over) .
 lemma_root(over_komen,kom_over) .
 lemma_root(overkomen,overkom) .
 lemma_root(over_kopen,koop_over) .
@@ -10297,6 +10317,7 @@ lemma_root(over_sommeren,sommeer_over) .
 lemma_root(overspannen,overspan) .
 lemma_root(overspelen,overspeel) .
 lemma_root(over_spelen,speel_over) .
+lemma_root(over_spieden,spied_over) .
 lemma_root(over_spoeden,spoed_over) .
 lemma_root(overspoelen,overspoel) .
 lemma_root(over_spoelen,spoel_over) .
@@ -13410,6 +13431,7 @@ lemma_root(rond_knikkeren,knikker_rond) .
 lemma_root(rond_knokken,knok_rond) .
 lemma_root(rond_knuffelen,knuffel_rond) .
 lemma_root(rond_koersen,koers_rond) .
+lemma_root(rond_kolken,kolk_rond) .
 lemma_root(rond_komen,kom_rond) .
 lemma_root(rond_koppen,kop_rond) .
 lemma_root(rond_krabbelen,krabbel_rond) .
@@ -13509,6 +13531,7 @@ lemma_root(rond_smokkelen,smokkel_rond) .
 lemma_root(rond_snellen,snel_rond) .
 lemma_root(rond_sodemieteren,sodemieter_rond) .
 lemma_root(rond_sommeren,sommeer_rond) .
+lemma_root(rond_spieden,spied_rond) .
 lemma_root(rond_spoeden,spoed_rond) .
 lemma_root(rond_spoelen,spoel_rond) .
 lemma_root(rond_spoken,spook_rond) .
@@ -14215,6 +14238,7 @@ lemma_root(tegemoet_knikkeren,knikker_tegemoet) .
 lemma_root(tegemoet_knokken,knok_tegemoet) .
 lemma_root(tegemoet_knuffelen,knuffel_tegemoet) .
 lemma_root(tegemoet_koersen,koers_tegemoet) .
+lemma_root(tegemoet_kolken,kolk_tegemoet) .
 lemma_root(tegemoet_komen,kom_tegemoet) .
 lemma_root(tegemoet_koppen,kop_tegemoet) .
 lemma_root(tegemoet_krabbelen,krabbel_tegemoet) .
@@ -14311,6 +14335,7 @@ lemma_root(tegemoet_smokkelen,smokkel_tegemoet) .
 lemma_root(tegemoet_snellen,snel_tegemoet) .
 lemma_root(tegemoet_sodemieteren,sodemieter_tegemoet) .
 lemma_root(tegemoet_sommeren,sommeer_tegemoet) .
+lemma_root(tegemoet_spieden,spied_tegemoet) .
 lemma_root(tegemoet_spoeden,spoed_tegemoet) .
 lemma_root(tegemoet_spoelen,spoel_tegemoet) .
 lemma_root(tegemoet_springen,spring_tegemoet) .
@@ -14811,6 +14836,7 @@ lemma_root(toe_knikkeren,knikker_toe) .
 lemma_root(toe_knopen,knoop_toe) .
 lemma_root(toe_koersen,koers_toe) .
 lemma_root(toe_kogelen,kogel_toe) .
+lemma_root(toe_kolken,kolk_toe) .
 lemma_root(toe_komen,kom_toe) .
 lemma_root(toe_kopiëren,kopieer_toe) .
 lemma_root(toe_koppen,kop_toe) .
@@ -15026,6 +15052,7 @@ lemma_root(toe_spartelen,spartel_toe) .
 lemma_root(toe_spatelen,spatel_toe) .
 lemma_root(toe_spatten,spat_toe) .
 lemma_root(toe_spelen,speel_toe) .
+lemma_root(toe_spieden,spied_toe) .
 lemma_root(toe_spijkeren,spijker_toe) .
 lemma_root(toe_spitsen,spits_toe) .
 lemma_root(toe_spoelen,spoel_toe) .
@@ -15493,6 +15520,7 @@ lemma_root(tussen_knikkeren,knikker_tussen) .
 lemma_root(tussen_knopen,knoop_tussen) .
 lemma_root(tussen_koersen,koers_tussen) .
 lemma_root(tussen_kogelen,kogel_tussen) .
+lemma_root(tussen_kolken,kolk_tussen) .
 lemma_root(tussen_komen,kom_tussen) .
 lemma_root(tussen_kopiëren,kopieer_tussen) .
 lemma_root(tussen_koppen,kop_tussen) .
@@ -15699,6 +15727,7 @@ lemma_root(tussen_spartelen,spartel_tussen) .
 lemma_root(tussen_spatelen,spatel_tussen) .
 lemma_root(tussen_spatten,spat_tussen) .
 lemma_root(tussen_spelen,speel_tussen) .
+lemma_root(tussen_spieden,spied_tussen) .
 lemma_root(tussen_spijkeren,spijker_tussen) .
 lemma_root(tussen_spoelen,spoel_tussen) .
 lemma_root(tussen_sporen,spoor_tussen) .
@@ -18434,6 +18463,7 @@ lemma_root(vanaf_knopen,knoop_vanaf) .
 lemma_root(vanaf_knuffelen,knuffel_vanaf) .
 lemma_root(vanaf_koersen,koers_vanaf) .
 lemma_root(vanaf_kogelen,kogel_vanaf) .
+lemma_root(vanaf_kolken,kolk_vanaf) .
 lemma_root(vanaf_komen,kom_vanaf) .
 lemma_root(vanaf_kopiëren,kopieer_vanaf) .
 lemma_root(vanaf_koppen,kop_vanaf) .
@@ -18646,6 +18676,7 @@ lemma_root(vanaf_spartelen,spartel_vanaf) .
 lemma_root(vanaf_spatelen,spatel_vanaf) .
 lemma_root(vanaf_spatten,spat_vanaf) .
 lemma_root(vanaf_spelen,speel_vanaf) .
+lemma_root(vanaf_spieden,spied_vanaf) .
 lemma_root(vanaf_spijkeren,spijker_vanaf) .
 lemma_root(vanaf_spoeden,spoed_vanaf) .
 lemma_root(vanaf_spoelen,spoel_vanaf) .
@@ -19038,6 +19069,7 @@ lemma_root(vandaan_knikkeren,knikker_vandaan) .
 lemma_root(vandaan_knopen,knoop_vandaan) .
 lemma_root(vandaan_koersen,koers_vandaan) .
 lemma_root(vandaan_kogelen,kogel_vandaan) .
+lemma_root(vandaan_kolken,kolk_vandaan) .
 lemma_root(vandaan_komen,kom_vandaan) .
 lemma_root(vandaan_kopiëren,kopieer_vandaan) .
 lemma_root(vandaan_koppen,kop_vandaan) .
@@ -19244,6 +19276,7 @@ lemma_root(vandaan_spartelen,spartel_vandaan) .
 lemma_root(vandaan_spatelen,spatel_vandaan) .
 lemma_root(vandaan_spatten,spat_vandaan) .
 lemma_root(vandaan_spelen,speel_vandaan) .
+lemma_root(vandaan_spieden,spied_vandaan) .
 lemma_root(vandaan_spijkeren,spijker_vandaan) .
 lemma_root(vandaan_spoelen,spoel_vandaan) .
 lemma_root(vandaan_sporen,spoor_vandaan) .
@@ -19629,6 +19662,7 @@ lemma_root(vandoor_knikkeren,knikker_vandoor) .
 lemma_root(vandoor_knopen,knoop_vandoor) .
 lemma_root(vandoor_koersen,koers_vandoor) .
 lemma_root(vandoor_kogelen,kogel_vandoor) .
+lemma_root(vandoor_kolken,kolk_vandoor) .
 lemma_root(vandoor_komen,kom_vandoor) .
 lemma_root(vandoor_kopiëren,kopieer_vandoor) .
 lemma_root(vandoor_koppen,kop_vandoor) .
@@ -19835,6 +19869,7 @@ lemma_root(vandoor_spartelen,spartel_vandoor) .
 lemma_root(vandoor_spatelen,spatel_vandoor) .
 lemma_root(vandoor_spatten,spat_vandoor) .
 lemma_root(vandoor_spelen,speel_vandoor) .
+lemma_root(vandoor_spieden,spied_vandoor) .
 lemma_root(vandoor_spijkeren,spijker_vandoor) .
 lemma_root(vandoor_spoelen,spoel_vandoor) .
 lemma_root(vandoor_sporen,spoor_vandoor) .
