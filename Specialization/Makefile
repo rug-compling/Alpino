@@ -180,3 +180,5 @@ wpspel:
         extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/wpspel end_hook=best_score\(left_corners\) max_sentence_length=25"
 
 
+#### random subset of SoNaR:
+#### find -name '*.sents.gz' | xargs zcat | $A/Suites/random_lines -p 0.01 | ( cd /dev/shm ; $A/Suites/split_in_parts -p 5000 -o ll )
