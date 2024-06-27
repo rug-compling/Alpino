@@ -716,6 +716,8 @@ accent(hartpatiente,hartpatiënte).
 accent(hartpatienten,hartpatiënten).
 accent(hartpatientes,hartpatiëntes).
 accent(hartpatient,hartpatiënt).
+accent('Hawaiaanse','Hawaïaanse').
+accent('Hawaiaans','Hawaïaans').
 accent(he,hé).
 accent(he,hè).
 accent(hehe,hèhè).
@@ -1126,6 +1128,8 @@ accent(protege,protegé).
 accent(proteges,protegés).
 accent(protestactien,protestactiën).
 accent(protestaktien,protestaktiën).
+accent('Provencaalse','Provençaalse').
+accent('Provencaals','Provençaals').
 accent(provincien,provinciën).
 accent(prozaische,prozaïsche).
 accent(prozaisch,prozaïsch).

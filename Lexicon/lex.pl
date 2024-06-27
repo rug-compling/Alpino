@@ -1498,7 +1498,11 @@ nominalization(verb(_,InfVal,Frame0), v_noun(Frame),Word) :-
     drop_inv(Frame0,Frame1),
     possible_nominalization(Frame1,Frame2),
     optionally_drop_np_complement(Frame2,Frame),
+    \+ check_exception(Word,Frame),  
     check_already_het_noun(Frame,Word).
+
+check_exception(maken,ap_copula). % subsumed by copula
+check_exception(leren,transitive_ndev_ndev).  % subsumed
 
 check_already_het_noun(Intransitive,Word) :-
     (   Intransitive == intransitive

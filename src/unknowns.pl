@@ -329,9 +329,11 @@ lexical_analysis_name__(Names0,P0,P,History,R0,All,Len,"genitive_name|~p|~p~n",
     R is R0 + Len.
 
 lexical_analysis_name__(Names0,P0,P,_History,R0,_All,1,"adjective_name|~p|~p~n",
-		      [Stem,adjective(E)],tag(P0,P,R0,R,Stem,name_adj(Start),adjective(E)),Least) :-
+		      [Names0,adjective(E)],tag(P0,P,R0,R,Stem,name_adj(Start),adjective(E)),Least) :-
     P is P0 + 1,   % !
     ends_with_adjective_marker(Names0,Names,E),
+    \+ not_an_adjective_name(Names),
+    \+ tag(P0,P,_,_,_,_,normal(gen(names_dictionary)),_),
     \+ subsumed_by_dict(P0,P,Names0,adjective(E)),
     (	nonvar(Least)
     ->	P > Least
@@ -4597,20 +4599,19 @@ ends_with_adjective_marker(List,List2,E) :-
 %    atom_concat(_,Marker,Gene),
     adjective_marker(Gene,E,Gen),
     lists:append(Pref,[Gen],List2).
-    
 
 %%% Utrechtse
 adjective_marker(Gene,e,Gen) :-
     atom_concat(_,se,Gene),
     atom_concat(Gen,e,Gene).
-%%% Utrechts
-adjective_marker(Gen,no_e(nonadv),Gen):-
-    atom_concat(_,XS,Gen),
-    char_code(s,S),
-    atom(XS),
-    atom_codes(XS,[NotQuote,S]),
-    char_code('\'',Quote),
-    NotQuote \== Quote.
+%%% Utrechts too many false hits
+%adjective_marker(Gen,no_e(nonadv),Gen):-
+%    atom_concat(_,XS,Gen),
+%    char_code(s,S),
+%    atom(XS),
+%    atom_codes(XS,[NotQuote,S]),
+%    char_code('\'',Quote),
+%    NotQuote \== Quote.
 
 ends_with_genitive_marker(List0,List) :-
     append(Prefix,[Gen0],List0),
@@ -7382,5 +7383,16 @@ majority_decap([W|Ws],P0,P,C0,T0):-
 normal_decap(W,P0,P):-
     tag(P0,P,_,_,_,W,special(decap(normal)),_).
 
+not_an_adjective_name(List):-
+    lists:append(_,[Name],List),
+    not_an_adjective_name0(Name).
 
+not_an_adjective_name0(Name) :-
+    atom_concat(_,gasse,Name).
 
+not_an_adjective_name0('Bijbels').
+not_an_adjective_name0('Hedendaags').
+not_an_adjective_name0('Links').
+not_an_adjective_name0('Middeleeuws').
+not_an_adjective_name0('Oosters').
+not_an_adjective_name0('Paars').

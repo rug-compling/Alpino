@@ -8278,7 +8278,8 @@ with_dt([een,dezer],
 	       mod=l(deze,determiner(der),detp,1,2)
 	      ])).
 
-%% geloof in eigen kunnen
+/*
+%% geloof in eigen kunnen	%
 %% not produced because n->adj n forbids deverbal n, to reduce spur.amb. in
 %% 'ziek zijn' etc.
 with_dt([eigen,kunnen],
@@ -8292,6 +8293,7 @@ with_dt([eigen,zeggen],
 	dt(np,[mod=l(eigen,adjective(no_e(nonadv)),ap,0,1),
 	       hd=l(zeggen,v_noun(intransitive),1,2)
 	      ])).
+*/
 
 with_dt([slapen,gaan],
 	noun(het,mass,sg),

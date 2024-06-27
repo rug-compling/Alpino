@@ -422,15 +422,6 @@ a([prefix('noord-zuid')],nonadv,[],[]).
 
 a([prefix('oost-west')],nonadv,[],[]).
 
-a([e('Aalsmeerse'),
-   no_e('Aalsmeers')],nonadv,[],[]).
-
-a([e('Achterhoekse'),
-   no_e('Achterhoeks')],nonadv,[],[]).
-
-a([e('Afghaanse'),
-   no_e('Afghaans')],nonadv,[],[]).
-
 a([e('Afrikaanse'),
    er('Afrikaanser'),
    ere('Afrikaansere'),
@@ -456,12 +447,6 @@ a([e('Algerijnse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Alkmaarse'),
-   no_e('Alkmaars')],nonadv,[],[]).
-
-a([e('Almeerse'),
-   no_e('Almeers')],nonadv,[],[]).
-
 a([e('Almelose'),
    no_e('Almeloos')],nonadv,[],[]).
 
@@ -484,12 +469,6 @@ a([e('Amerikaanse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Amersfoortse'),
-   no_e('Amersfoorts')],nonadv,[],[]).
-
-a([e('Amstelveense'),
-   no_e('Amstelveens')],nonadv,[],[]).
-
 a([e('Amsterdamse'),
    no_e('Amsterdams')],adv,[],[]).
 
@@ -507,12 +486,6 @@ a([e('Antilliaanse'),
    no_e('Antilliaans'),
    e('Antiliaanse'),
    no_e('Antiliaans')],nonadv,[],[]).
-
-a([e('Antwerpse'),
-   no_e('Antwerps')],nonadv,[],[]).
-
-a([e('Apeldoornse'),
-   no_e('Apeldoorns')],nonadv,[],[]).
 
 a([e('Arabische'),
    er('Arabischer'),
@@ -550,12 +523,6 @@ a([e('Armeense'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Arnhemse'),
-   no_e('Arnhems')],nonadv,[],[]).
-
-a([e('Arubaanse'),
-   no_e('Arubaans')],nonadv,[],[]).
-
 a([e('Atlantische'),
    no_e('Atlantisch')],adv,[],[]).  % adv: "de Atlantisch gezinde bondgenoot"
 
@@ -579,27 +546,7 @@ a([e('Aziatische'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Baarnse'),no_e('Baarns')],nonadv,[],[]).
-
-a([e('Babylonische'),
-   no_e('Babylonisch')],nonadv,[],[]).
-
 a([e('Balinese'),no_e('Balinees')],nonadv,[],[]).
-
-a([e('Baltische'),
-   no_e('Baltisch')],nonadv,[],[]).
-
-a([e('Baskische'),
-   no_e('Baskisch')],nonadv,[],[]).
-
-a([e('Bataafse'),
-   no_e('Bataafs')],nonadv,[],[]).
-
-a([e('Bazelse'),
-   no_e('Bazels')],nonadv,[],[]).
-
-a([e('Beierse'),
-   no_e('Beiers')],nonadv,[],[]).
 
 a([e('Belgische'),
    er('Belgischer'),
@@ -614,14 +561,8 @@ a([e('Belgische'),
 a([e('Belgradose'),
    no_e('Belgradoos')],nonadv,[],[]).
 
-a([e('Bengaalse'),
-   no_e('Bengaals')],nonadv,[],[]).
-
 a([e('Bengalese'),
    no_e('Bengalees')],nonadv,[],[]).
-
-a([e('Berberse'),
-   no_e('Berbers')],nonadv,[],[]).
 
 a([e('Berlijnse'),
    no_e('Berlijns')],nonadv,[],[hh('Zuid'),
@@ -629,20 +570,8 @@ a([e('Berlijnse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Beverwijkse'),
-   no_e('Beverwijks')],nonadv,[],[]).
-
 a([e('Birmese'),
    no_e('Birmees')],nonadv,[],[]).
-
-a([e('Birmaanse'),
-   no_e('Birmaans')],nonadv,[],[]).
-
-a([e('Boheemse'),
-   no_e('Boheems')],nonadv,[],[]).
-
-a([e('Bossche'),
-   no_e('Bossch')],nonadv,[],[]).
 
 a([stem('Bourgondisch'),
    e('Boergondische'),
@@ -650,23 +579,11 @@ a([stem('Bourgondisch'),
    no_e('Boergondisch'),
    no_e('Bourgondisch')],adv,[],[]).
 
-a([e('Boliviaanse'),
-   no_e('Boliviaans')],nonadv,[],[]).
-
-a([e('Bosnische'),
-   no_e('Bosnisch')],adv,[],[]).
-
 a([e('Brabantse'),
    no_e('Brabants')],nonadv,[],[h('Vlaams')]).
 
-a([e('Braziliaanse'),
-   no_e('Braziliaans')],nonadv,[],[]).
-
 a([e('Bredase'),
    no_e('Bredaas')],nonadv,[],[]).
-
-a([e('Bretonse'),
-   no_e('Bretons')],nonadv,[],[]).
 
 a([e('Britse'),
    er('Britser'),
@@ -681,41 +598,14 @@ a([e('Britse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Brugse'),no_e('Brugs')],nonadv,[],[]).
-
-a([e('Brusselse'),
-   no_e('Brussels')],nonadv,[],[]).
-
-a([e('Bulgaarse'),
-   no_e('Bulgaars')],nonadv,[],[]).
-
 a([e('Burundese'),
    no_e('Burundees')],nonadv,[],[]).
-
-a([e('Byzantijnse'),
-   no_e('Byzantijns')],nonadv,[],[]).
-
-a([e('Californische'),
-   no_e('Californisch')],nonadv,[],[]).
-
-a([e('Cambodjaanse'),
-   no_e('Cambodjaans')],nonadv,[],[]).
 
 a([e('Canadese'),
    no_e('Canadees')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-%% both forms are ok
-a([e('Caraïbische'),
-   no_e('Caraïbisch')],nonadv,[],[]).
-
-a([no_e('Caribisch'),
-   e('Caribische')],nonadv,[],[]).
-
-a([e('Catalaanse'),
-   no_e('Catalaans')],nonadv,[],[]).
 
 a([e('Chileense'),
    no_e('Chileens')],nonadv,[],[hh('Zuid'),
@@ -729,20 +619,11 @@ a([e('Chinese'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Colombiaanse'),
-   no_e('Colombiaans')],nonadv,[],[]).
-
 a([e('Congolese'),
    no_e('Congolees')],nonadv,[],[]).
 
 a([e(['Costa','Ricaanse']),
    no_e(['Costa','Ricaans'])],nonadv,[],[]).
-
-a([e('Cubaanse'),
-   no_e('Cubaans')],nonadv,[],[]).
-
-a([e('Curaçaose'),
-   no_e('Curaçaos')],nonadv,[],[]).
 
 a([e('Cypriotische'),
    no_e('Cypriotisch')],nonadv,[],
@@ -756,28 +637,7 @@ a([e('Cyprische'),
    h('Turks')
   ]).
 				   
-a([e('Deense'),
-   no_e('Deens')],nonadv,[],[]).
-
-a([e('Delftse'),
-   no_e('Delfts')],nonadv,[],[]).
-
-a([e('Democratische'),
-   no_e('Democratisch')],adv,[],[]).
-
 a([both('Deventer')],nonadv,[],[]).
-
-a([e('Dietse'),
-   no_e('Diets')],nonadv,[],[]).
-
-a([e('Dionysische'),
-   no_e('Dionysisch')],nonadv,[],[]).
-
-a([e('Dordtse'),
-   no_e('Dordts')],nonadv,[],[]).
-
-a([e('Drentse'),
-   no_e('Drents')],nonadv,[],[]).
 
 a([both('Dubliner')],nonadv,[],[]).
 
@@ -788,12 +648,6 @@ a([e('Duitse'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('Egyptische'),
-   no_e('Egyptisch')],nonadv,[],[]).
-
-a([e('Eindhovense'),
-   no_e('Eindhovens')],nonadv,[],[]).
 
 a([both('Emmer')],nonadv,[],[]).
 
@@ -809,12 +663,6 @@ a([e('Enschedese'),
 a([e('Eritrese'),
    no_e('Eritrees')],nonadv,[],[]).
 
-a([e('Estse'),
-   no_e('Ests')],nonadv,[],[]).
-
-a([e('Ethiopische'),
-   no_e('Ethiopisch')],nonadv,[],[]).
-
 a([e('Europese'),
    no_e('Europees'),
    er('Europeser'),
@@ -827,18 +675,6 @@ a([e('Europese'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Filipijnse'),
-   no_e('Filipijns')],nonadv,[],[]).
-
-a([e('Filippijnse'),
-   no_e('Filippijns')],nonadv,[],[]).
-
-a([e('Finse'),
-   no_e('Fins')],nonadv,[],[]).
-
-a([e('Frankische'),
-   no_e('Frankisch')],nonadv,[],[]).
-
 a([e('Franse'),
    no_e('Frans')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
@@ -850,21 +686,6 @@ a([e('Friese'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('Gelderse'),
-   no_e('Gelders')],nonadv,[],[]).
-
-a([e('Geneefse'),
-   no_e('Geneefs')],nonadv,[],[]).
-
-a([e('Gentse'),
-   no_e('Gents')],nonadv,[],[]).
-
-a([e('Georgische'),
-   no_e('Georgisch')],nonadv,[],[]).
-
-a([e('Geraardsbergse'),
-   no_e('Geraardsbergs')],nonadv,[],[]).
 
 a([e('Germaanse'),
    er('Germaanser'),
@@ -884,9 +705,6 @@ a([e('Gorinchemse'),
    e('Gorcumse'),
    no_e('Gorcums')],nonadv,[],[]).
 
-a([e('Goudse'),
-   no_e('Gouds')],nonadv,[],[]).
-
 a([e('s-Gravendeelse'),
    no_e('s-Gravendeels')],nonadv,[],[]).
 
@@ -896,9 +714,6 @@ a([e('Griekse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Groenlandse'),
-   no_e('Groenlands')],nonadv,[],[]).
-
 a([both('Groninger')],nonadv,[],[]).
 
 a([e('Groningse'),
@@ -907,39 +722,10 @@ a([e('Groningse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Haagse'),
-   no_e('Haags')],nonadv,[],[]).
-
 a([both('Haarlemmer')],nonadv,[],[]).
-
-a([e('Haarlemse'),
-   no_e('Haarlems')],nonadv,[],[]).
-
-a([e('Hasseltse'),no_e('Hasselts')],nonadv,[],[]).
-
-a([e('Hawaiiaanse'),
-   no_e('Hawaiiaans')],nonadv,[],[]).
-
-a([e('Haïtiaanse'),
-   no_e('Haïtiaans')],nonadv,[],[]).
-
-a([e('Hebreeuwse'),
-   no_e('Hebreeuws')],nonadv,[],[]).
-
-a([e('Heerlense'),
-   no_e('Heerlens')],nonadv,[],[]).
-
-a([e('Helderse'),
-   no_e('Helders')],nonadv,[],[]).
-
-a([e('Helmondse'),
-   no_e('Helmonds')],nonadv,[],[]).
 
 a([e('Hengelose'),
    no_e('Hengeloos')],nonadv,[],[]).
-
-a([e('Hilversumse'),
-   no_e('Hilversums')],nonadv,[],[]).
 
 a([e('Hollandse'),
    no_e('Hollands'),
@@ -950,23 +736,11 @@ a([e('Hollandse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Hongaarse'),
-   no_e('Hongaars')],nonadv,[],[]).
-
-a([e('Hongkongse'),
-   no_e('Hongkongs')],nonadv,[],[]).
-
-a([e('Iberische'),
-   no_e('Iberisch')],nonadv,[],[]).
-
 a([e('Ierse'),
    no_e('Iers')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('IJslandse'),
-   no_e('IJslands')],nonadv,[],[]).
 
 a([e('Indiaanse'),
    no_e('Indiaans'),
@@ -1018,21 +792,6 @@ a([e('Italiaanse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Ivoriaanse'),
-   no_e('Ivoriaans')],nonadv,[],[]).
-
-a([e('Jamaicaanse'),
-   no_e('Jamaicaans')],nonadv,[],[]).
-
-a([e('Japanse'),
-   no_e('Japans')],nonadv,[],[]).
-
-a([e('Javaanse'),
-   no_e('Javaans')],nonadv,[],[]).
-
-a([e('Jemenitische'),
-   no_e('Jemenitisch')],nonadv,[],[]).
-
 a([e('Joegoslavische'),
    no_e('Joegoslavisch')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
@@ -1048,16 +807,10 @@ a([e(joodse),
 a([e('Jordaanse'),
    no_e('Jordaans')],nonadv,[],[]).
 
-a([e('Keltische'),
-   no_e('Keltisch')],nonadv,[],[]).
-
 a([e('Kenyaanse'),
    no_e('Kenyaans'),
    e('Keniaanse'),
    no_e('Keniaans')],nonadv,[],[]).
-
-a([e('Keulse'),
-   no_e('Keuls')],nonadv,[],[]).
 
 a([e('Koerdische'),
    no_e('Koerdisch'),
@@ -1076,18 +829,6 @@ a([e('Koreaanse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Kortrijkse'),
-   no_e('Kortrijks')],nonadv,[],[]).
-
-a([e('Kosovaarse'),
-   no_e('Kosovaars')],nonadv,[],[]).
-
-a([e('Kroatische'),
-   no_e('Kroatisch')],nonadv,[],[]).
-
-a([e('Latemse'),
-   no_e('Latems')],nonadv,[],[]).
-
 a([e('Latijnse'),
    er('Latijnser'),
    ere('Latijnsere'),
@@ -1096,21 +837,6 @@ a([e('Latijnse'),
    ste('Latijnste')],nonadv,[],[]).
 
 a([both('Leeuwarder')],nonadv,[],[]).
-
-a([e('Leidse'),
-   no_e('Leids')],nonadv,[],[]).
-
-a([e('Letse'),
-   no_e('Lets')],nonadv,[],[]).
-
-a([e('Leuvense'),
-   no_e('Leuvens')],nonadv,[],[]).
-
-a([e('Liberiaanse'),
-   no_e('Liberiaans')],nonadv,[],[]).
-
-a([e('Libische'),
-   no_e('Libisch')],nonadv,[],[]).
 
 a([e('Libanese'),
    no_e('Libanees')],nonadv,[],[]).
@@ -1121,38 +847,17 @@ a([e('Limburgse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Litouwse'),
-   no_e('Litouws')],nonadv,[],[]).
-
 a([e('Londense'),
    no_e('Londens')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Luikse'),
-   no_e('Luiks')],nonadv,[],[]).
-
-a([e('Lutherse'),
-   no_e('Luthers')],nonadv,[],[]).
-
 a([e('Luxemburgse'),
    no_e('Luxemburgs')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('Maastrichtse'),
-   no_e('Maastrichts')],nonadv,[],[]).
-
-a([e('Macedonische'),
-   no_e('Macedonisch')],nonadv,[],[]).
-
-a([e('Madrileense'),
-   no_e('Madrileens')],nonadv,[],[]).
-
-a([e('Maleisische'),
-   no_e('Maleisisch')],nonadv,[],[]).
 
 a([both('Maltezer')],nonadv,[],[]).
 
@@ -1162,41 +867,14 @@ a([e('Marokkaanse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Mechelse'),
-   no_e('Mechels')],nonadv,[],[]).
-
-a([e('Messiaanse'),
-   no_e('Messiaans')],nonadv,[],[]).
-
-a([e('Mexicaanse'),
-   no_e('Mexicaans')],nonadv,[],[]).
-
 a([e('Milanese'),
    no_e('Milanees')],nonadv,[],[]).
-
-a([e('Moldavische'),
-   no_e('Moldavisch')],nonadv,[],[]).
 
 a([e('Molukse'),
    no_e('Moluks')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('Mongoolse'),
-   no_e('Mongools')],nonadv,[],[]).
-
-a([e('Montenegrijnse'),
-   no_e('Montenegrijns')],nonadv,[],[]).
-
-a([e('Moorse'),
-   no_e('Moors')],nonadv,[],[]).
-
-a([e('Moskouse'),
-   no_e('Moskous')],nonadv,[],[]).
-
-a([e('Nederduitse'),
-   no_e('Nederduits')],adv,[],[]). % de Nederduits Gereformeerde kerk
 
 a([e('Nederlandse'),
    er('Nederlandser'),
@@ -1212,9 +890,6 @@ a([e('Nederlandse'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('Nedersaksische'),
-   no_e('Nedersaksisch')],adv,[],[]).
 
 a([e('Nepalese'),
    no_e('Nepalees')],nonadv,[],[]).
@@ -1237,9 +912,6 @@ a([e('Nigeriaanse'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('Nijmeegse'),
-   no_e('Nijmeegs')],nonadv,[],[]).
 
 a([e('Noordafrikaanse'),
    no_e('Noord-Afrikaans'),
@@ -1282,17 +954,8 @@ a([e('Noordkoreaanse'),
 a([e('Noord-Limburgse'),
    no_e('Noord-Limburgs')],nonadv,[],[]).
 
-a([e('Noorse'),
-   no_e('Noors')],nonadv,[],[]).
-
-a([e('Oekraïense'),
-   no_e('Oekraïens')],nonadv,[],[]).
-
 a([e('Oegandese'),
    no_e('Oegandees')],nonadv,[],[]).
-
-a([e('Oezbeekse'),
-   no_e('Oezbeeks')],nonadv,[],[]).
 
 a([e('Oostafrikaanse'),
    no_e('Oost-Afrikaans'),
@@ -1303,12 +966,6 @@ a([e('Oostduitse'),
    no_e('Oost-Duits'),
    no_e('Oostduits'),
    e('Oost-Duitse')],nonadv,[],[]).
-
-a([e('Oostendse'),
-   no_e('Oostends')],nonadv,[],[]).
-
-a([e('Oostenrijkse'),
-   no_e('Oostenrijks')],nonadv,[],[]).
 
 a([e('Oosteuropese'),
    no_e('Oost-Europees'),
@@ -1352,20 +1009,11 @@ a([e('Palestijnse'),
 a([e('Panamese'),
    no_e('Panamees')],nonadv,[],[]).
 
-a([e('Papendrechtse'),
-   no_e('Papendrechts')],nonadv,[],[]).
-
 a([e('Parijse'),
    no_e('Parijs')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('Parmezaanse'),
-   no_e('Parmezaans')],nonadv,[],[]).
-
-a([e('Pathaanse'),
-   no_e('Pathaans')],nonadv,[],[]).
 
 a([e('Peruaanse'),
    no_e('Peruaans')],nonadv,[],[hh('Zuid'),
@@ -1391,31 +1039,19 @@ a([e('Portugese'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Praagse'),
-   no_e('Praags')],nonadv,[],[]).
-
 a([e('Pruisische'),
    no_e('Pruisisch')],adv,[],[]).
-
-a([e('Pyreneese'),
-   no_e('Pyrenees')],nonadv,[],[]).
 
 a([e('Republikeinse'),
    no_e('Republikeins'),
    e('Republiekeinse'),
    no_e('Republiekeins')],adv,[],[]).
 
-a([e('Rijswijkse'),
-   no_e('Rijswijks')],nonadv,[],[]).
-
 a([e('Roemeense'),
    no_e('Roemeens')],adv,[],[hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('Romaanse'),
-   no_e('Romaans')],nonadv,[],[]).
 
 a([e('Romeinse'),
    no_e('Romeins')],nonadv,[],[hh('Zuid'),
@@ -1440,9 +1076,6 @@ a([e('Rwandese'),
    e('Ruandese'),
    no_e('Ruandees')],nonadv,[],[]).
 
-a([e('Saksische'),
-   no_e('Saksisch')],nonadv,[],[]).
-
 a([e('Saoedische'),
    no_e('Saoedisch'),
    e('Saudische'),
@@ -1455,12 +1088,6 @@ a([e('Scandinavische'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('Scheveningse'),
-   no_e('Schevenings')],nonadv,[],[]).
-
-a([e('Schiedamse'),
-   no_e('Schiedams')],nonadv,[],[]).
 
 a([e('Schotse'),
    no_e('Schots')],nonadv,[],[hh('Zuid'),
@@ -1490,6 +1117,9 @@ a([e('Siberische'),
    hh('Oost'),
    hh('West')]).
 
+a([e('Siciliaanse'),
+   no_e('Siciliaans')],nonadv,[],[]).
+
 a([e('Singaporese'),
    no_e('Singaporees')],nonadv,[],[]).
 
@@ -1498,9 +1128,6 @@ a([e('Slavische'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('Sliedrechtse'),
-   no_e('Sliedrechts')],nonadv,[],[]).
 
 a([e('Sloveense'),
    no_e('Sloveens')],nonadv,[],[hh('Zuid'),
@@ -1559,34 +1186,13 @@ a([e('Syrische'),
 a([e('Taiwanese'),
    no_e('Taiwanees')],nonadv,[],[]).
 
-a([e('Tanzaniaanse'),
-   no_e('Tanzaniaans')],nonadv,[],[]).
-
-a([e('Texaanse'),
-   no_e('Texaans')],nonadv,[],[]).
-
 a([e('Thaise'),
    no_e('Thais'),
    e('Taise'),
    no_e('Tais')],nonadv,[],[]).
 
-a([e('Tibetaanse'),
-   no_e('Tibetaans')],nonadv,[],[]).
-
-a([e('Tilburgse'),
-   no_e('Tilburgs')],nonadv,[],[]).
-
 a([e('Togolese'),
    no_e('Togolees')],nonadv,[],[]).
-
-a([e('Trojaanse'),
-   no_e('Trojaans')],nonadv,[],[]).
-
-a([e('Tsjechische'),
-   no_e('Tsjechisch')],nonadv,[],[]).
-
-a([e('Tsjetsjeense'),
-   no_e('Tsjetsjeens')],nonadv,[],[]).
 
 a([e('Tunesische'),
    no_e('Tunesisch')],nonadv,[],[hh('Zuid'),
@@ -1594,47 +1200,20 @@ a([e('Tunesische'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Tukkerse'),
-   no_e('Tukkers')],nonadv,[],[]).
-
 a([e('Turkse'),
    no_e('Turks')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Turkmeense'),
-   no_e('Turkmeens')],nonadv,[],[]).
-
-a([e('Twentse'),
-   no_e('Twents')],adv,[],[]).
-
 a([e('Ugandese'),
    no_e('Ugandees')],nonadv,[],[]).
-
-a([e('Utrechtse'),
-   no_e('Utrechts')],nonadv,[],[]).
-
-a([e('Vaticaanse'),
-   no_e('Vaticaans')],nonadv,[],[]).
-
-a([e('Veluwse'),
-   no_e('Veluws')],nonadv,[],[]).
-
-a([e('Venetiaanse'),
-   no_e('Venetiaans')],nonadv,[],[]).
-
-a([e('Venezolaanse'),
-   no_e('Venezolaans')],nonadv,[],[]).
 
 a([e('Vietnamese'),
    no_e('Vietnamees')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
-
-a([e('Victoriaanse'),
-   no_e('Victoriaans')],nonadv,[],[]).
 
 a([e('Vlaamse'),
    no_e('Vlaams')],nonadv,[],
@@ -1643,28 +1222,10 @@ a([e('Vlaamse'),
    hh('Oost'),
    hh('West')]).
 
-a([e('Vlaardingse'),
-   no_e('Vlaardings')],nonadv,[],[]).
-
 a([both('Volendammer')],nonadv,[],[]).
 
 a([e('Volendamse'),
    no_e('Volendams')],nonadv,[],[]).
-
-a([e('Waalse'),
-   no_e('Waals')],nonadv,[],[]).
-
-a([e('Waalwijkse'),
-   no_e('Waalwijks')],nonadv,[],[]).
-
-a([e('Wageningse'),
-   no_e('Wagenings')],nonadv,[],[]).
-
-a([e('Washingtonse'),
-   no_e('Washingtons')],nonadv,[],[]).
-
-a([e('Weense'),
-   no_e('Weens')],nonadv,[],[]).
 
 a([no_e('Westafrikaans'),
    e('West-Afrikaanse'),
@@ -1699,27 +1260,13 @@ a([e('Wit-Russische'),
    e('Witrussische'),
    no_e('Witrussisch')],nonadv,[],[]).
 
-a([e('Wolderse'),no_e('Wolders')],nonadv,[],[]).
-
-a([e('Zaanse'),
-   no_e('Zaans')],nonadv,[],[]).
-
-a([e('Zaandamse'),
-   no_e('Zaandams')],nonadv,[],[]).
-
 a([e('Zaïrese'),
    no_e('Zaïrees')],nonadv,[],[]).
-
-a([e('Zeeuwse'),
-   no_e('Zeeuws')],nonadv,[],[]).
 
 a([e('Zimbabwaanse'),
    no_e('Zimbabwaans'),
    e('Zimbabweaanse'),
    no_e('Zimbabweaans')],nonadv,[],[]).
-
-a([e('Zoetermeerse'),
-   no_e('Zoetermeers')],nonadv,[],[]).
 
 a([e('Zuidafrikaanse'),
    no_e('Zuid-Afrikaans'),
@@ -1755,13 +1302,6 @@ a([e('Zuidlimburgse'),
    no_e('Zuid-Limburgs'),
    no_e('Zuidlimburgs'),
    e('Zuid-Limburgse')],nonadv,[],[]).
-
-a([e('Zweedse'),
-   no_e('Zweeds')],nonadv,[],[]).
-
-a([e('Zwitserse'),
-   no_e('Zwitsers')],nonadv,[],[]).
-
 a([e('Zwolse'),
    no_e('Zwols')],nonadv,[],[]).
 
@@ -40690,6 +40230,288 @@ a([e(zwoele),
    no_e(zwoel),
    st(zwoelst),
    ste(zwoelste)],adv,[],[]).
+
+a([e(Aanse),
+   no_e(Aans)],nonadv,[],[]):-
+    name_adj(Aans),
+    atom_concat(Aans,'e',Aanse).
+
+a([e(Aanse),
+   no_e(Aans)],nonadv,[],[]):-
+    name_adj(Aans,Aanse).
+
+
+name_adj('Eekloos','Eeklose').
+name_adj('Hondurees','Hondurese').
+name_adj('Malinees','Malinese').
+name_adj('Maltees','Maltese').
+name_adj('Myanmarees','Myanmarese').
+name_adj('Qatarees','Qatarese').
+name_adj('Venloos','Venlose').
+
+name_adj('Aalsmeers').
+name_adj('Aalsters').
+name_adj('Aalters').
+name_adj('Aarschots').
+name_adj('Achterhoeks').
+name_adj('Afghaans').
+name_adj('Alkmaars').
+name_adj('Almeers').
+name_adj('Alphens').
+name_adj('Amersfoorts').
+name_adj('Amstelveens').
+name_adj('Anderlechts').
+name_adj('Anglicaans').
+name_adj('Antwerps').
+name_adj('Apeldoorns').
+name_adj('Ardens').
+name_adj('Arnhems').
+name_adj('Arubaans').
+name_adj('Atheens').
+name_adj('Azerbeidzjaans').
+name_adj('Azteeks').
+name_adj('Baarns').
+name_adj('Babylonisch').
+name_adj('Baltisch').
+name_adj('Baskisch').
+name_adj('Bataafs').
+name_adj('Bazels').
+name_adj('Beiers').
+name_adj('Bengaals').
+name_adj('Berbers').
+name_adj('Bergens').
+name_adj('Bergs').
+name_adj('Bevers').
+name_adj('Beverwijks').
+name_adj('Birmaans').
+name_adj('Blankenbergs').
+name_adj('Boheems').
+name_adj('Boliviaans').
+name_adj('Booms').
+name_adj('Bornems').
+name_adj('Bosnisch').
+name_adj('Bossch').
+name_adj('Brandenburgs').
+name_adj('Braziliaans').
+name_adj('Bretons').
+name_adj('Brugs').
+name_adj('Brussels').
+name_adj('Buggenhouts').
+name_adj('Bulgaars').
+name_adj('Byzantijns').
+name_adj('Californisch').
+name_adj('Cambodjaans').
+name_adj('Caraïbisch').
+name_adj('Caribisch').
+name_adj('Catalaans').
+name_adj('Colombiaans').
+name_adj('Corsicaans').
+name_adj('Cubaans').
+name_adj('Curaçaos').
+name_adj('Dams').
+name_adj('Deens').
+name_adj('Delfts').
+name_adj('Democratisch').
+name_adj('Dendermonds').
+name_adj('Dessels').
+name_adj('Diests').
+name_adj('Diets').
+name_adj('Diksmuids').
+name_adj('Dilbeeks').
+name_adj('Dionysisch').
+name_adj('Dominicaans').
+name_adj('Dordts').
+name_adj('Drents').
+name_adj('Duffels').
+name_adj('Ecuadoraans').
+name_adj('Egyptisch').
+name_adj('Einhovens').
+name_adj('Ests').
+name_adj('Ethiopisch').
+name_adj('Evergems').
+name_adj('Filipijns').
+name_adj('Filippijns').
+name_adj('Fins').
+name_adj('Florentijns').
+name_adj('Frankisch').
+name_adj('Gambiaans').
+name_adj('Geels').
+name_adj('Gelders').
+name_adj('Geneefs').
+name_adj('Genks').
+name_adj('Gents').
+name_adj('Georgisch').
+name_adj('Geraardsbergs').
+name_adj('Gistels').
+name_adj('Goois').
+name_adj('Gouds').
+name_adj('Groenlands').
+name_adj('Guatemalteeks').
+name_adj('Haags').
+name_adj('Haarlems').
+name_adj('Habsburgs').
+name_adj('Hagelands').
+name_adj('Haïtiaans').
+name_adj('Hamburgs').
+name_adj('Hams').
+name_adj('Harelbeeks').
+name_adj('Haspengouws').
+name_adj('Hasselts').
+name_adj('Hawaïaans').
+name_adj('Hawaiiaans').
+name_adj('Hebreeuws').
+name_adj('Heerlens').
+name_adj('Heists').
+name_adj('Helders').
+name_adj('Helmonds').
+name_adj('Henegouws').
+name_adj('Herentals').
+name_adj('Hilversums').
+name_adj('Hindoestaans').
+name_adj('Hongaars').
+name_adj('Hongkongs').
+name_adj('Iberisch').
+name_adj('Iepers').
+name_adj('IJslands').
+name_adj('Ivoriaans').
+name_adj('Izegems').
+name_adj('Jamaicaans').
+name_adj('Japans').
+name_adj('Javaans').
+name_adj('Jemenitisch').
+name_adj('Kaaps').
+name_adj('Kameroens').
+name_adj('Kapels').
+name_adj('Kazachs').
+name_adj('Keltisch').
+name_adj('Kempens').
+name_adj('Keuls').
+name_adj('Knoks').
+name_adj('Koeweits').
+name_adj('Kortrijks').
+name_adj('Kosovaars').
+name_adj('Kroatisch').
+name_adj('Latems').
+name_adj('Leeuws').
+name_adj('Leids').
+name_adj('Lets').
+name_adj('Leuvens').
+name_adj('Liberiaans').
+name_adj('Libisch').
+name_adj('Litouws').
+name_adj('Lokers').
+name_adj('Lommels').
+name_adj('Luiks').
+name_adj('Luthers').
+name_adj('Maastrichts').
+name_adj('Macedonisch').
+name_adj('Madrileens').
+name_adj('Maldegems').
+name_adj('Maleis').
+name_adj('Maleisisch').
+name_adj('Mechels').
+name_adj('Messiaans').
+name_adj('Mexicaans').
+name_adj('Middelburgs').
+name_adj('Moldavisch').
+name_adj('Mols').
+name_adj('Mongools').
+name_adj('Montenegrijns').
+name_adj('Moors').
+name_adj('Moskous').
+name_adj('Myceens').
+name_adj('Naams').
+name_adj('Napolitaans').
+name_adj('Nederduits').
+name_adj('Nedersaksisch').
+name_adj('Nieuwpoorts').
+name_adj('Nijmeegs').
+name_adj('Ninoofs').
+name_adj('Noords').
+name_adj('Noors').
+name_adj('Oekraïens').
+name_adj('Oezbeeks').
+name_adj('Oostends').
+name_adj('Oostenrijks').
+name_adj('Opwijks').
+name_adj('Oudenaards').
+name_adj('Papendrechtse').
+name_adj('Paraguayaans').
+name_adj('Parmezaans').
+name_adj('Pathaans').
+name_adj('Peruviaans').
+name_adj('Poperings').
+name_adj('Praags').
+name_adj('Provençaals').
+name_adj('Puttens').
+name_adj('Puurs').
+name_adj('Pyrenees').
+name_adj('Rijswijks').
+name_adj('Roermonds').
+name_adj('Roeselaars').
+name_adj('Romaans').
+name_adj('Roosendaals').
+name_adj('Saksisch').
+name_adj('Schevenings').
+name_adj('Schiedams').
+name_adj('Siciliaans').
+name_adj('Sliedrechts').
+name_adj('Slovaaks').
+name_adj('Tanzaniaans').
+name_adj('Ternats').
+name_adj('Texaans').
+name_adj('Texels').
+name_adj('Tibetaans').
+name_adj('Tielts').
+name_adj('Tiens').
+name_adj('Tilburgs').
+name_adj('Tongers').
+name_adj('Torhouts').
+name_adj('Toscaans').
+name_adj('Trojaans').
+name_adj('Truiens').
+name_adj('Tsjechisch').
+name_adj('Tsjechoslowaaks').
+name_adj('Tsjetsjeens').
+name_adj('Tukkers').
+name_adj('Turkmeens').
+name_adj('Turnhouts').
+name_adj('Twents').
+name_adj('Uruguayaans').
+name_adj('Utrechts').
+name_adj('Vaticaans').
+name_adj('Veluws').
+name_adj('Venetiaans').
+name_adj('Venezolaans').
+name_adj('Veurns').
+name_adj('Vicoriaans').
+name_adj('Vilvoords').
+name_adj('Vlaardings').
+name_adj('Vlissings').
+name_adj('Waals').
+name_adj('Waalwijks').
+name_adj('Wagenings').
+name_adj('Waregems').
+name_adj('Washingtons').
+name_adj('Wassenaars').
+name_adj('Weens').
+name_adj('Westels').
+name_adj('Wetters').
+name_adj('Wevelgems').
+name_adj('Willebroks').
+name_adj('Wolders').
+name_adj('Xeebrugs').
+name_adj('Zaandams').
+name_adj('Zaans').
+name_adj('Zambiaans').
+name_adj('Zeels').
+name_adj('Zeeuws').
+name_adj('Zelzaats').
+name_adj('Zoetermeers').
+name_adj('Zottegems').
+name_adj('Zweeds').
+name_adj('Zwitsers').
+name_adj('Zwols').
 
 stem(aanbeden,v_root(aanbid,aanbidden)).
 stem(aanbevolen,v_root(beveel_aan,aan_bevelen)).

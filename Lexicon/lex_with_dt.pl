@@ -1518,9 +1518,7 @@ with_dt_all(eeuwig,[voor]).
 with_dt_all(eigen,[elkaar,en]).
 with_dt_all(eigen,[elkaar,of]).
 with_dt_all(eigen,[ik]).
-with_dt_all(eigen,[kunnen]).
 with_dt_all(eigenlijk,[niet,waarom]).
-with_dt_all(eigen,[zeggen]).
 with_dt_all(elf,[en,tien,tussen]).
 with_dt_all(elf,[en,tussen,twaalf]).
 with_dt_all(elf,[gij]).
@@ -2807,7 +2805,6 @@ with_dt_root(kooi).
 with_dt_root(kort).
 with_dt_root(kraak).
 with_dt_root(krom).
-with_dt_root(kunnen).
 with_dt_root(kwaad).
 with_dt_root(laag).
 with_dt_root(laat).
@@ -3108,7 +3105,6 @@ with_dt_root(zacht).
 with_dt_root(zal).
 with_dt_root(zeer).
 with_dt_root(zeg).
-with_dt_root(zeggen).
 with_dt_root(zeker).
 with_dt_root(zelden).
 with_dt_root(zelf).

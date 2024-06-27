@@ -5139,6 +5139,16 @@ grammar_rule(n_n_vp, NP, [ N, OPTCOMMA1, VP, OPTCOMMA2 ]) :-
 grammar_rule(n_adj_n, NP, [ AP, N ] ) :-
     unmarked_n_adj_n_structure(N,AP,NP).
 
+%% door eigen toedoen
+grammar_rule(n_adj_n_deverbal, NP, [ AP, N] ):-
+    unmarked_n_adj_n_structure(N0,AP,NP0),
+    AP:adv => nadv,
+    AP:agr => indef,
+    unify_except(N0,N,subn),
+    N:subn => sub_indef_verb,
+    unify_except(NP0,NP,subn),
+    NP:subn => sub_indef_verb.
+
 %%EX%% Een grote ( lelijke ) foto
 grammar_rule(n_bracketed_adj_n,NP, [ OPEN, AP, OPTPUNCT, CLOSE, N ] ) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
@@ -5259,7 +5269,7 @@ grammar_rule(n_comma_adj_n_marked, NP, [ COMMA, AP, N ] ) :-
 
 n_adj_n_structure(N,AP,NP) :-
     NP => n, AP => a, N => n,
-%%%    NP:subn => ~sub_indef_verb, % reduce spur amb in 'ziek zijn'
+    NP:subn => ~sub_indef_verb, % reduce spur amb in 'ziek zijn'
                                 %% wrong for "door eigen toedoen/nadenken/..." because eigen is nonadv
     ap_arg(AP),
     N:wh => nwh,
@@ -6964,6 +6974,7 @@ abs_p_mod_structure(Met,NP,MOD,PP) :-
     nwh_np_arg(NP),
     NP:sel => ~to_topic,
     NP:wkpro => ~weakpro,
+    NP:redrel => no,
     Met => abs_p,
     PP0 => pp,
     PP => pp,
@@ -8390,6 +8401,7 @@ grammar_rule(start_np_mod_np,M,[NP,MOD1,NP2]) :-
     M:mod_np => yes,
     max_dp_modifier(MOD1),
     ind_max_np(NP),
+    NP:redrel => no,
     NP:subn => ~sub_indef_verb & ~sub_indef_adj, 
     max_np(NP2),
     dp_dp_structure(NP,MOD1,NP2,M).
@@ -8404,6 +8416,7 @@ grammar_rule(start_np_mod_mod,M,[NP,MOD1,MOD2]) :-
     max_dp_modifier(MOD2),
     ind_max_np(NP),
     NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"
+    NP:redrel => no,
     dp_dp_structure(NP,MOD1,MOD2,M).
 
 %%EX%% Niemand ziek dus
@@ -8419,6 +8432,7 @@ grammar_rule(start_np_pred_mod,M,[NP,MOD1,COMMA,MOD2]) :-
     MOD1:adv => ~yadv,
     max_dp_modifier(MOD2),
     ind_max_np(NP),
+    NP:redrel => no,
     NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"
     dp_dp_structure(NP,MOD1,MOD2,M).
 
@@ -8433,6 +8447,7 @@ grammar_rule(start_np_post_pp_mod,M,[NP,MOD1,COMMA,MOD2]) :-
     max_dp_modifier(MOD2),
     ind_max_np(NP),
     NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"
+    NP:redrel => no,
     dp_dp_structure(NP,MOD1,MOD2,M).
 
 %%EX%% voor wie hem kent , een verrassing
