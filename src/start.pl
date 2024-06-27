@@ -2611,9 +2611,10 @@ after_timeout_options_(on) :-
 
 after_timeout_options(alpino_lc:parse(_)) :-
     hdrug_flag(current_input_sentence,Sentence0),
+    hdrug_flag(current_ref,Key),
     ignore_brackets(Sentence0,Sentence),
     concat_all(Sentence,StringAtom,' '),
-    format(user_error,"timeout|~w~n",[StringAtom]),
+    format(user_error,"timeout|~w|~w~n",[Key,StringAtom]),
     hdrug_flag(after_timeout_options,Val),
     after_timeout_options_(Val).
 
