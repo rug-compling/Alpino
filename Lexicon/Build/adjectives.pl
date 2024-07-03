@@ -12529,6 +12529,7 @@ a([ge_e(geklede),
   [pp(in)],
   [goed,
    on,
+   fixed([in,het,nieuw]),
    schaars]).
 
 a([ge_e(gekleefde),

@@ -102,6 +102,7 @@ guess_slash_pairs :-
     (   member(t(R1,R2,Slash),Rs),
 	tag(P0,_P1,R0,R1,Label1,Used1,His1,TagL),
         tag(_P2,P, R2,R, Label2,Used2,His2,TagR),
+	similar_form(Used1,Used2),
         similar_tags(Slash,TagL,TagR,Tag),
 	P-P0 < 8,
 	\+ tag(P0,P,R0,R,_,_,normal(_),_),
@@ -111,6 +112,18 @@ guess_slash_pairs :-
 	assert_tag(P0,P,R0,R,Label,slash(His1,His2),Tag),
 	fail
     ;   true
+    ).
+
+similar_form(Used1,Used2) :-
+    atom(Used1), atom(Used2),
+    atom_codes(Used1,[Code1|_]),
+    atom_codes(Used2,[Code2|_]),
+    (   isupper(Code1)
+    ->  isupper(Code2)
+    ;   islower(Code1)
+    ->  islower(Code2)
+    ;   isdigit(Code1)
+    ->  isdigit(Code2)
     ).
 
 similar_tags(_,punct(_),_,_) :- !, fail.
@@ -4833,17 +4846,17 @@ unlikely_name_list2(P,P).
 unlikely_name_list2(P1,P) :-
     tag(P1,P2,_,_,',',',',_,_),
     tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
-    P3 < P.
+    P3 =< P.
 %    unlikely_name_list2(P3,P).
 unlikely_name_list2(P1,P) :-
     tag(P1,P2,_,_,en,en,_,_),
     tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
-    P3 < P.
+    P3 =< P.
 %    unlikely_name_list2(P3,P).
 unlikely_name_list2(P1,P) :-
     tag(P1,P2,_,_,of,of,_,_),
     tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
-    P3 < P.
+    P3 =< P.
 %    unlikely_name_list2(P3,P).
 
 next_one_special_decap(P0) :-
@@ -7391,6 +7404,9 @@ zaliger(generaal).
 
 zn(zn).
 zn(zoon).
+zn(co).
+zn('Co').
+zn('Co.').
 
 list_only_capitals([]).
 list_only_capitals([W|Ws]):-

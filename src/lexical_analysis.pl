@@ -885,10 +885,14 @@ filter_more_tags :-
 	fail
     ;   true
     ),
-    (   tag(_,P,_,_,_,_,normal(date_expression),_),
+    (   tag(P0,P,_,_,_,_,normal(date_expression),_),
 	P1 is P-1,
 	clause(tag(P1,P,_,_,_,_,normal(date_year),_),true,Ref),
 	erase_tag(Ref),
+	clause(tag(P0,P1,_,_,_,_,normal(date_expression),_),true,Ref2),
+	erase_tag(Ref2),
+	clause(tag(P1,P,_,_,_,_,normal(number_expression),_),true,Ref3),
+	erase_tag(Ref3),
 	fail
     ;   true
     ).

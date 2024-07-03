@@ -2588,6 +2588,11 @@ spelling_variant(Word1,    Word) :-
     sub_atom(Word1,Before2,After,_,Suffix),
     hdrug_util:concat_all([Prefix,'\'',Suffix],Word).
 
+spelling_variant(Word1, Word) :-
+    atom(Word1),
+    atom_concat('ge-e',Rest,Word1),
+    atom_concat('geë',Rest,Word).
+
 spelling_variant('.?',     '.').
 spelling_variant('Eén',    één).
 spelling_variant('eén',    één).

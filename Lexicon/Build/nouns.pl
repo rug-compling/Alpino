@@ -23963,8 +23963,6 @@ n([mass(nietsdoen)],het,[]).
 
 n([pl(nietsnutten),sg(nietsnut)],de,[]).
 
-n([mass(nieuw)],het,[]).
-
 n([mass(nieuwbouw)],de,[]).
 
 n([pl(nieuwelingen),sg(nieuweling)],de,[]).
