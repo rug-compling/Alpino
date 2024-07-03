@@ -207,7 +207,7 @@ cat_type(uit_comp,[]).
 cat_type(te_comp, []).
 cat_type(pn,      [lex,neclass,agr,cj]).
 cat_type(np,      [agr,e_agr,prs,case,wh,wh_reltmploc,meas,nform,parg,
-                   wkpro,redrel,can_mod,hdet,
+                   wkpro,redrel,can_mod,hdet,lex,
                    neclass,cleft_has_rel,allows_drop,
                    sel,exs,mexs,e_deps,passivizes,subn,has_app,has_app2,pred,
                    hstem,bmeas,cj,niet]).

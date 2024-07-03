@@ -858,11 +858,7 @@ add_me(A0,A) :-
     A:sc <=> [NP|Asc],
     A0:sc <=> Asc,
     adj_np_me_arg(NP),
-    NP:subn => ~sub_def_verb & ~sub_indef_adj & ~sub_def_adj
-             & ~sub_rang
-             & ~sub_def_pron & ~sub_indef_pron & ~sub_det,
-                                % veel teveel ==> me, because
-                                % it is me in [veel te] veel...
+    NP:subn => ~sub_name,  % added ~sub_name 3/7/2024             
     NP:exs => [],
     instantiated_deprel(A,me,NP).
 
@@ -3170,7 +3166,7 @@ np_me_arg(NP) :-
 
 adj_np_me_arg(NP) :-
     np_me_arg(NP),
-    NP:subn => ~sub_det.
+    NP:subn => (sub_noun;sub_tmp;sub_num;sub_veel).
 
 het_np_subj(NP) :-
     NP => np,
@@ -7806,20 +7802,14 @@ opt_add_compar_to_obj_if_cform(A) :-
 %%    A:cform =?> compar,
     A:dt:fwrd:lexical <=> zoveel,
     adj_np_me_arg(NP),
-    NP:subn => ~sub_def_verb,
-    NP:subn => ~sub_def_adj & ~sub_indef_adj & ~sub_rang,
-    NP:subn => ~sub_def_pron & ~sub_indef_pron & ~sub_det & ~sub_veel,
-                                % veel mooier ==> only mod
+    NP:subn => ~sub_veel,       % veel mooier ==> only mod
     deprel(A,me,NP).
 opt_add_compar_to_obj_if_cform(A) :-
     A:sc <=> [NP],
     A:me_adj => yes,
     A:cform =?> compar,
     adj_np_me_arg(NP),
-    NP:subn => ~sub_def_verb,
-    NP:subn => ~sub_def_adj & ~sub_indef_adj & ~sub_rang,
-    NP:subn => ~sub_def_pron & ~sub_indef_pron & ~sub_det & ~sub_veel,
-                                % veel mooier ==> only mod
+    NP:subn => ~sub_veel,       % veel mooier ==> only mod
     deprel(A,me,NP).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

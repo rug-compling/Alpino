@@ -4693,7 +4693,9 @@ np_n_structure(NP,N) :-
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
     ),
     hd_structure(N,NP0,np),
-    add_rel(NP0,NP).
+    add_rel(NP0,NP1),
+    unify_except(NP1,NP,lex),
+    NP:lex <=> N:lex.
 
 %%EX%% De nieuwe ramen kosten zo'n 4000 euro
 grammar_rule(np_zoon_n,NP,[ ADV, N ]) :-
@@ -4859,26 +4861,29 @@ grammar_rule(n_n_napp, NP, [ APP_N, N ]) :-
     hd_mod_structure(APP_N,N,NP).
 
 %%EX%% Drie keer een applaus voor de winnaars is wel op zijn plaats
+%%EX%% Drie keer juichen voor de koning is een merkwaardige traditie
 grammar_rule(n_n_npapp, NP, [ APP_N, N ]) :-
     NP => n, APP_N => app_np_mod, N => np,
     NP:wh => nwh,
     NP:nform <=> N:nform,  % tientallen keren
     N:e_deps => [],
     N:pred => npred,
-    N:subn => ~sub_num,
+    N:subn => ~sub_name & ~sub_num & ~sub_def_verb,
     NP:subn => sub_noun,
-    N:subn => ~sub_def_verb & ~sub_name & ~sub_indef_verb,
+    N:subn => ~sub_name,
     hd_mod_structure(APP_N,N,NP).
 
 %%EX%% het woord fietsen
 %%EX%% de maand juni
+%%EX%% het wereldrecord hoogspringen staat erg scherp
+%%EX%% het kaartspel klaverjassen
 grammar_rule(n_n_napp_app, NP, [ APP_N, N ]) :-
     NP => n, APP_N => app_n_app, N => n,
     NP:wh => nwh,
     NP:nform => ~meas_mod & ~temp_meas_mod,
     N:e_deps => [],
     N:pred => npred,
-    N:subn => ~sub_name & ~sub_num,  % we'll get that one anyway
+    N:subn => ~sub_name & ~sub_num & ~sub_def_verb,
     NP:subn => sub_noun,
     hd_app_structure(APP_N,N,NP).
 
@@ -5068,6 +5073,7 @@ grammar_rule(n_year_n, NP, [ YEAR, N ]) :-
     NP => n, N => n, YEAR => np,
     YEAR:nform => year,
     YEAR:redrel => no,
+    YEAR:lex => yes, % * de 1993 - een mooi jaar editie
     N:lex => yes,    % * de 1993 mooie editie
     N:subn => sub_noun,
     N:cj => ncj,
@@ -5698,7 +5704,8 @@ grammar_rule(n_pn,N,[PN]) :-
     N:subn => sub_name,
     N:nform => norm,
     unify_except(N,N0,lex),
-    hd_structure(PN,N0).
+    hd_structure(PN,N0),
+    N:lex => yes.
 
 %% n --> n adv
 %% adv in closed class {aanstaande,daar,hier,indoor,junior,.....}
