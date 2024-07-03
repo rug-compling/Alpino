@@ -403,7 +403,9 @@ m(v_root(ben,zijn),
 	    fixed([{[pc(van),np_pred(oorzaak)]}],no_passive),
 	    fixed([{[er_pp(van,C),np_pred(oorzaak)]},extra_sbar(C)],no_passive),
 	    fixed([pc(over),subj(overeenstemming)],no_passive),
-	    fixed([vc(schrijf,psp,intransitive),[op,het,lijf],dat],no_passive), 
+	    fixed([vc(schrijf,psp,intransitive),[op,het,lijf],dat],no_passive),
+	    fixed([pc(van),ap_pred(op)],no_passive), % hij zou op van de zenuwen zijn / op zijn van de zenuwen
+	    fixed([pc(aan),ap_pred(na)],no_passive), % hij was na aan de waarheid 
 	    fixed([pc(voor),subj(plaats)],no_passive),
 	    fixed([pc(tegen),subj(protest)],no_passive),
 	    fixed([pc(voor),subj(reden)],no_passive),
@@ -4117,6 +4119,8 @@ v(blijk,blijkt,blijken,gebleken,bleek,bleken,
 	    fixed([[in,gebreke]],no_passive),
 	    fixed([[in,gebreke],vp],no_passive),
 	    %% daar is geen discussie/twijfel over mogelijk
+	    fixed([pc(van),ap_pred(op)],no_passive), % hij zou op van de zenuwen zijn / op zijn van de zenuwen
+	    fixed([pc(aan),ap_pred(na)],no_passive), % hij was na aan de waarheid 
 	    fixed([{[pc(over),ap_pred(mogelijk)]}],no_passive),
 	    fixed([{[er_pp(over,A),ap_pred(mogelijk)]},extra_sbar(A)],
 		  no_passive),
@@ -11912,6 +11916,8 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
           fixed([[op,andere,gedachten]],norm_passive),
           fixed([[op,de,proppen],pc(met)],no_passive),
           fixed([[naar,buiten],sbar_subj_no_het],no_passive),
+	  fixed([pc(van),ap_pred(op)],no_passive), % hij zou op van de zenuwen zijn / op zijn van de zenuwen
+	  fixed([pc(aan),ap_pred(na)],no_passive), % hij was na aan de waarheid 
           fixed([[te,koop]],no_passive),
           fixed([[ten,ijs],ap_pred(beslaan)],no_passive),
           fixed([[tot,leven]],norm_passive),
@@ -13600,9 +13606,10 @@ v(lijk,lijkt,lijken,geleken,leek,leken,
 	fixed([[af],subj(kous)],no_passive),
         fixed([{[pc(van),np_pred(illustratie)]}],no_passive),
 	    %% daar is geen discussie/twijfel over mogelijk
-	    fixed([{[pc(over),ap_pred(mogelijk)]}],no_passive),
-	    fixed([{[er_pp(over,A),ap_pred(mogelijk)]},extra_sbar(A)],
-		  no_passive),
+	fixed([{[pc(over),ap_pred(mogelijk)]}],no_passive),
+	fixed([{[er_pp(over,A),ap_pred(mogelijk)]},extra_sbar(A)],no_passive),
+	fixed([pc(van),ap_pred(op)],no_passive), % hij zou op van de zenuwen zijn / op zijn van de zenuwen
+	fixed([pc(aan),ap_pred(na)],no_passive), % hij was na aan de waarheid 
         fixed([vc(schrijf,psp,intransitive),[op,het,lijf],dat],no_passive), 
         fixed([vc(schrijf,psp,intransitive),{[[op,het,lijf],pc(van)]}],no_passive), 
         fixed([pc(tot),subj(reden)],no_passive),
@@ -19668,6 +19675,8 @@ v(schijn,schijnt,schijnen,geschenen,scheen,schenen,
 	fixed([{[np_pred(dupe),pc(van)]}],no_passive),
 	fixed([{[np_pred(dupe),er_pp(van,C)]},extra_sbar(C)],no_passive),
         fixed([pp_pred(in,hand),pc(van)],no_passive),
+	fixed([pc(van),ap_pred(op)],no_passive), % hij zou op van de zenuwen zijn / op zijn van de zenuwen
+	fixed([pc(aan),ap_pred(na)],no_passive),
 	fixed([[in,omloop]],no_passive),
 	    %% daar is geen discussie/twijfel over mogelijk
 	    fixed([{[pc(over),ap_pred(mogelijk)]}],no_passive),

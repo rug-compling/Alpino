@@ -21700,7 +21700,7 @@ a([e(logistieke),
    no_e(logistiek)],nonadv,[],[]).
 
 a([e(lokale),
-   no_e(lokaal)],padv,[],[]).
+   no_e(lokaal)],adv,[],[]).
 
 a([e(lollige),
    er(lolliger),
