@@ -1278,6 +1278,7 @@ adjective_features(stof,Sign) :-
 adjective_features(prefix,Sign) :-
     Sign:cj => yes, % to prevent conjunction of prefix adj...
     Sign:adv => ~oadv & ~detadv,
+    Sign:can_prev => no,
     Sign:can_postn => no,
     Sign:can_nominalize => no,
     Sign:avform => avform_ap,
