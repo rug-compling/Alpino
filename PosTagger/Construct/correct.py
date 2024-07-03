@@ -21,6 +21,8 @@ def main():
             t = "adjective(ge_no_e(both))"
         if t == "adjective(ge_no_e(adv))" and r == "onvoorbereid":
             t = "adjective(ge_no_e(both))"
+        if t == "noun(de,count,sg)" and r == "vlucht":
+            t = "tmp_noun(de,count,sg)"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
