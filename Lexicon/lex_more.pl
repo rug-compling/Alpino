@@ -2908,6 +2908,8 @@ is_chess_optional_short_position_transition -->
 is_chess_optional_short_position_transition --> [].
 
 is_checkers_position -->
+    "0".     % this one is actually added for tennis  "6-0 6-3 6-3"
+is_checkers_position -->
     is_chess_number.
 
 is_chess_optional_piece --> "T".
