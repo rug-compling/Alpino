@@ -2881,6 +2881,8 @@ illegal_compound_pattern(meter,[kilo]).
 illegal_compound_pattern(meters,[kilo]).
 illegal_compound_pattern(positie,[ex]).
 illegal_compound_pattern(posities,[ex]).
+illegal_compound_pattern(rijd,[veel]).  % meestrijden =/= meest-rijden
+illegal_compound_pattern(rijden,[veel]).
 illegal_compound_pattern(strijd,[wed]).
 illegal_compound_pattern(strijden,[wed]).
 illegal_compound_pattern(tent,[as,sis]).
@@ -3081,14 +3083,42 @@ open_class_stem_tag_pair(Final,W,Stem,Cat) :-
     ;   alpino_lex:simple_convert_number(W,_),
         Cat0 = number(hoofd(pl_num)),
         Stem=W
-    ;   alpino_lex:xl(W,Cat0,Stem0,[],[]),
+    ;   alpino_lex:xl(W,Cat0,v_root(Stem1,Stem2),[],[]),
 	Cat0 = verb(_,_,_),
 	(   Final == non_final,
-	    Stem0 = v_root(Stem,_)
-	;   Stem0 = Stem
+	    Stem = Stem1
+	;   \+ unlikely_final_verbal_compound(Stem1),
+	    Stem = v_root(Stem1,Stem2)
 	)
     ),
     open_class_tag_or_name(Final,Cat0,Cat).
+
+unlikely_final_verbal_compound(bedrijven).
+unlikely_final_verbal_compound(beroepen).
+unlikely_final_verbal_compound(bomen).
+unlikely_final_verbal_compound(brieven).
+unlikely_final_verbal_compound(bussen).
+unlikely_final_verbal_compound(dagen).
+unlikely_final_verbal_compound(eren).
+unlikely_final_verbal_compound(gebieden).
+unlikely_final_verbal_compound(groepen).
+unlikely_final_verbal_compound(kaarten).
+unlikely_final_verbal_compound(kosten).
+unlikely_final_verbal_compound(landen).
+unlikely_final_verbal_compound(leven).
+unlikely_final_verbal_compound(middelen).
+unlikely_final_verbal_compound(paren).
+unlikely_final_verbal_compound(ploegen).
+unlikely_final_verbal_compound(prijzen).
+unlikely_final_verbal_compound(punten).
+unlikely_final_verbal_compound(regelen).
+unlikely_final_verbal_compound(schepen).
+unlikely_final_verbal_compound(verhalen).
+unlikely_final_verbal_compound(vermogen).
+unlikely_final_verbal_compound(verschillen).
+unlikely_final_verbal_compound(wagen).
+unlikely_final_verbal_compound(waren).
+unlikely_final_verbal_compound(wonden).
 
 exc_stem(_,StemDim,Stem):-
     atom(StemDim),
@@ -4803,15 +4833,18 @@ unlikely_name_list2(P,P).
 unlikely_name_list2(P1,P) :-
     tag(P1,P2,_,_,',',',',_,_),
     tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
-    unlikely_name_list2(P3,P).
+    P3 < P.
+%    unlikely_name_list2(P3,P).
 unlikely_name_list2(P1,P) :-
     tag(P1,P2,_,_,en,en,_,_),
     tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
-    unlikely_name_list2(P3,P).
+    P3 < P.
+%    unlikely_name_list2(P3,P).
 unlikely_name_list2(P1,P) :-
     tag(P1,P2,_,_,of,of,_,_),
     tag(P2,P3,_,_,_,_,normal(names_dictionary),_),
-    unlikely_name_list2(P3,P).
+    P3 < P.
+%    unlikely_name_list2(P3,P).
 
 next_one_special_decap(P0) :-
     tag(P0,_,_,_,_,_,special(decap(_)),_).
