@@ -720,6 +720,10 @@ nth_syntactic_penalty(Id,N,D,r2(Id,N,DId)) :-
 nth_syntactic_penalty(Id,N,D,r2l(Id,N,DId)) :-
     rulename_lex(D,DId).
 
+nth_syntactic_penalty(Id,N,tree(Sign,_,_,_),r_stem(Id,N,Hstem)):-
+    alpino_data:hstem(Sign,Hstem),
+    nonvar(Hstem).    
+
 num(Agr,sg) :-
     \+ alpino_data:pl(Agr).
 num(Agr,pl) :-
