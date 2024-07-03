@@ -107,15 +107,15 @@
           <node begin="52" cat="ssub" end="60" id="83" rel="body">
             <node begin="52" end="53" genus="masc" getal="ev" id="84" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,red,3,ev,masc)" pt="vnw" rel="su" root="hij" status="red" vwtype="pers" word="-ie"/>
             <node begin="53" end="54" getal="getal" id="85" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" status="vol" vwtype="aanw" word="daar"/>
-            <node begin="54" cat="ap" end="59" id="86" rel="predc">
+            <node begin="54" cat="ap" end="56" id="86" rel="predc">
               <node begin="54" buiging="zonder" end="55" graad="basis" id="87" lemma="heel" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="heel" word="heel"/>
               <node begin="55" end="56" id="88" lemma="na" pos="adj" postag="VZ(fin)" pt="vz" rel="hd" root="na" vztype="fin" word="na"/>
-              <node begin="56" cat="pp" end="59" id="89" rel="mod">
-                <node begin="56" end="57" id="90" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
-                <node begin="57" cat="np" end="59" id="91" rel="obj1">
-                  <node begin="57" end="58" id="92" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="58" end="59" genus="zijd" getal="ev" graad="basis" id="93" lemma="waarheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="waarheid" word="waarheid"/>
-                </node>
+            </node>
+            <node begin="56" cat="pp" end="59" id="89" rel="pc">
+              <node begin="56" end="57" id="90" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+              <node begin="57" cat="np" end="59" id="91" rel="obj1">
+                <node begin="57" end="58" id="92" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="58" end="59" genus="zijd" getal="ev" graad="basis" id="93" lemma="waarheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="waarheid" word="waarheid"/>
               </node>
             </node>
             <node begin="59" end="60" id="94" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
