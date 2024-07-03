@@ -519,7 +519,7 @@ default_features([d(lex,no),d(niet,no)]).
 head_features([agr,e_agr,subj,prep,preptype,adv,question,pron,
 	       tense,vform,adj_agr,hdet,fixed_dep,pp_role,n_meas,
 	       case,aform, modf,pro,wkpro,pcat,amount,allows_drop,
-	       subn,inv,tpart,modifies_a,avform,sel,haswh,can_mod,
+	       subn,inv,tpart,modifies_a,avform,sel,haswh,can_mod,can_prev,
 	       nform,wh_reltmploc,vframe,sv1_mod,subadv,cleft,veps,vhasmod,
 	       app,hebben_zijn,compar_form,neclass,can_postv,adj_can_postv,
 	       vslash,ctype,deverbal,ppost,passive,nagr,nhstem,nnform,ndt,
@@ -601,11 +601,6 @@ np_arg(NP) :-
     NP:pred => npred,
     NP:nform => (norm;meas_mod),
     NP:case => (dat;acc;obl).
-
-np_me_arg(NP) :-
-    nwh_np_arg(NP),
-    NP:wkpro => ~weakpro,
-    NP:subn => (sub_noun;sub_num;sub_tmp).
 
 gen_np_arg(NP) :-
     np_arg(NP0),
@@ -711,6 +706,7 @@ max_vp(X) :-
 
 ind_max_np(X) :-
     max_np(X),
+    X:redrel => no,
     X:sel => ~to_topic.
 
 max_np(X) :-
@@ -4931,6 +4927,7 @@ grammar_rule(np_n_napp_app, NP, [ APP_N, N ]) :-
     N:agr => def,  % reduce spurious ambiguities "Mevrouw Sanders"
     N:e_deps => [],
     N:pred => npred,
+    N:redrel => no,
     NP:has_app2 => yes,
     N:has_app2 => no,
     N:has_app => no,
@@ -4950,6 +4947,7 @@ grammar_rule(n_n_tmpnapp, ADV, [ APP_N, N ]) :-
     N:nform => (temp;year),
     N:pred => npred,
     N:subn => (sub_noun;sub_tmp),
+    N:redrel => no,
     hd_mod_structure(APP_N,N,ADV).
 
 %%EX%% de begin jaren tachtig
@@ -4965,6 +4963,7 @@ grammar_rule(np_n_tmpnapp, NP, [ DET, APP_N, N ]) :-
     N:nform => (temp;year),
     N:pred => npred,
     N:subn => sub_noun,
+    N:redrel => no,
     hd_mod_structure(APP_N,N,NP0),
     hd_det_structure(DET,NP0,NP,np).
 
@@ -5068,6 +5067,7 @@ grammar_rule(app_n_pn_app_n, NP, [ PN, N ]) :-
 grammar_rule(n_year_n, NP, [ YEAR, N ]) :-
     NP => n, N => n, YEAR => np,
     YEAR:nform => year,
+    YEAR:redrel => no,
     N:lex => yes,    % * de 1993 mooie editie
     N:subn => sub_noun,
     N:cj => ncj,
@@ -5117,7 +5117,9 @@ grammar_rule(n_n_sbar, NP, [ N, OPTCOMMA1, SBAR, OPTCOMMA2 ]) :-
     optcomma(OPTCOMMA1),
     optcomma(OPTCOMMA2),
     NP => np, N => np, SBAR => sbar,
-    SBAR:slash => [], SBAR:tags => [], SBAR:wh => nwh,
+    SBAR:slash => [],
+    SBAR:tags => [],
+    SBAR:wh => nwh,
     hd_extra_structure(N,SBAR,NP).
 
 %%EX%% De angst om op te vallen
@@ -5144,6 +5146,8 @@ grammar_rule(n_adj_n_deverbal, NP, [ AP, N] ):-
     unmarked_n_adj_n_structure(N0,AP,NP0),
     AP:adv => nadv,
     AP:agr => indef,
+    AP:can_prev => yes,
+    AP:avform => avform_ap,
     unify_except(N0,N,subn),
     N:subn => sub_indef_verb,
     unify_except(NP0,NP,subn),
@@ -5206,9 +5210,14 @@ grammar_rule(n_comma_adj_comma_n, NP, [ COMMA1, AP, COMMA2, N ] ) :-
     COMMA2 => punct,
     COMMA2:puncttype => komma.
 
+%%EX%% Een heel geleerd persoon met een nochtans teleurstellend palmares opende de conferentie
 marked_n_adj_n_structure(N,AP,NP) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     n_adj_n_structure(N,AP,NP),
+
+%%%    AP:lex => yes,  % een heel groot geleerde, zijn nochtans schitterend palmares
+    AP:hstem <=> ADJ_STEM,
+    dif(ADJ_STEM,naar),  % remove ambiguiteit [[van A] naar] B 
     NP:hstem <=> STEM,
     NP:hdet <=> HDET,
     YES => yes,
@@ -5238,7 +5247,7 @@ marked_n_adj_n_structure(N,AP,NP) :-
     AP:can_marked_attr => yes,% reduce spur amb in 'de reuze gitarist'
                               % but: 'een groter man'
     AP:agr => sg&het&indef,   % i.e. zonder -e
-    N:agr => (~(sg&het&indef)). % sg,de | sg,het,def
+    N:agr => (~(sg&het&indef)). % sg,de | sg,het,def | pl
 
 %%EX%% het volgend jaar
 %%EX%% het vorig jaar
@@ -5249,6 +5258,8 @@ marked_n_adj_n_structure(N,AP,NP) :-
 %%EX%% de algemeen directeur
 %%EX%% de Europees kampioen
 %%EX%% een bekend groot man heeft dat eens gezegd
+%%     *een bekende groot man
+%%     *een groot bekende gitarist
 %%EX%% de wetenschappelijk begeleider
 %%EX%% de beeldend kunstenaar
 %%EX%% de maatschappelijk werker
@@ -5278,6 +5289,17 @@ n_adj_n_structure(N,AP,NP) :-
     AP:aform => attr,
     AP:adv => ~oadv & ~detadv,
     N:haspre => yes,
+
+    NP:subn <=> SUBN,
+    INDEF => sub_def_verb,
+    AP:avform <=> AVFORM,
+    NOT_TI => ~avform_ti,
+    when(?=(SUBN,INDEF),
+	 (   SUBN=INDEF,
+	     AVFORM=NOT_TI
+	 ;   dif(SUBN,INDEF)
+	 )),
+    
 %%    N:bmeas <=> NP:bmeas,
 %% no: volgend jaar; vorig jaar etc.
     unify_except_l(NP,NP0,[wh,wh_reltmploc]),
@@ -5832,8 +5854,9 @@ n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
 	N0:cj => ~no_crd, % improved HACK reduce ambiguities in pn, pn, .. seqs
 	N:has_app => yes, % ,,
 	NP:has_app => no, % ,,
-	N0:has_app2 => no
-    %%    N:has_app2 => yes,
+	N0:has_app2 => no % ,,
+    %%%	N0:has_app => no  % ,,
+    %%% N:has_app2 => yes,
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
     ),
     NP:subn => ~sub_indef_adj, 
@@ -5857,6 +5880,7 @@ grammar_rule(pn_n_modpn(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	NP:cj => ncj, % improved HACK reduce ambiguities in pn, pn, .. seqs
 	N0:cj => ncj, % improved HACK reduce ambiguities in pn, pn, .. seqs
+	%% NP:has_app => no,
 	N:has_app => yes,	% ,,
 	N0:has_app => no	% ,,
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
@@ -6033,7 +6057,7 @@ grammar_rule(n_n_mod_a, NP, [ N, MOD ]) :-
     unify_except(MOD0,MOD,adv),
     n_post_mod_structure(N,MOD,NP),
     N:rightm => no,
-    N:subn => ~sub_num,
+    N:subn => ~sub_num & ~sub_indef_verb,
 %%    NP:rightm => yes,  'kleding bestemd voor Polen uit de achterse wagen ..'
     MOD:adv => ~oadv & ~detadv,
     MOD:tmploc => ~wk_er & ~str_er & ~tmp & ~tmp_n & ~ld_dir & ~me, % use np_np_tmp in those cases
@@ -6059,6 +6083,24 @@ grammar_rule(n_n_mod_adv(komma), N, [ N0, Cl, MOD, OPTCr ]) :-
 %% every head of [xp a] has yes
 %% every mother of [a xp] has no
 
+%% adjs which are also prep
+%% aan af in na om op over tegen uit voor
+%% na aan de waarheid zijn
+
+not_postp(ADJ) :-
+    ADJ:hstem <=> STEM,
+    dif(STEM,aan),
+    dif(STEM,af),
+    dif(STEM,in),
+    dif(STEM,na),
+    dif(STEM,om),
+    dif(STEM,op),
+    dif(STEM,over),
+    dif(STEM,tegen),
+    dif(STEM,uit),
+    dif(STEM,voor).
+
+%% 
 %% adj --> adv adj
 %%EX%% Hij is erg boos
 grammar_rule(a_adv_a,AP,[Adv,A]):-
@@ -6127,6 +6169,7 @@ grammar_rule(a_er_a,AP,[ER,A]) :-
 %%EX%% Roland Holst , evenals zijn vrouw , socialistisch ingesteld , had een andere opvatting
 grammar_rule(a_cp_a,AP,[SBAR,COMMA,A]) :-
     AP => a, SBAR => sbar, A => a,
+    not_postp(A),
     haspreyes(A),
     optcomma(COMMA),
     SBAR => sbar,
@@ -6163,7 +6206,8 @@ grammar_rule(a_int_adv_a,AP,[Adv,A]):-
 %    A:exs => [],  % *des te leuker dan ik dacht
                    % ok:  iets veel mooiers dan jij
                    %      iets heel anders dan gisteren
-    Adv:agr <=> A:agr,  
+    Adv:agr <=> A:agr,
+    not_postp(A),
     hd_mod_structure(A,Adv,AP).
 
 %%EX%% De ( te ) hete curry ging lang niet op
@@ -6175,6 +6219,7 @@ grammar_rule(a_bracketed_int_adv_a,AP,[OPEN,Adv,OPTPUNCT,CLOSE,A]):-
     CLOSE => punct, CLOSE:puncttype => haak_sluit,
     haspreyes(A),
     A:exs => [],
+    not_postp(A),
     Adv:agr <=> A:agr,  
     hd_mod_structure(A,Adv,AP).
 
@@ -6183,6 +6228,7 @@ grammar_rule(a_int_me_adv_a,AP,[NP,Adv,A]):-
     AP0 => a, Adv => int_adv, A=>a, Adv1 => adv,
     haspreyes(A),
     A:exs => [],
+    not_postp(A),
     NP => np,
     NP:sel => ~to_topic,
     NP:wh => nwh,
@@ -6201,6 +6247,7 @@ grammar_rule(a_a_pp, AP, [ A, COMMA, PP ]) :-
     pp_modifier(PP),
     PP:sel => to_right,
     haspreno(AP),
+    not_postp(AP),
     A:hasextra => no,           % bang dat je komt ervoor 
     A:aform => nattr,		% *de bang voor muizen man
 				%  gebouwd van goedkoop materiaal voldoet dit
@@ -6214,6 +6261,7 @@ grammar_rule(a_a_modcp,AP,[A,SBAR]) :-
     AP => a, A => a, max_sbar(SBAR),
     haspreno(AP),
     AP:hasextra => yes,
+    not_postp(AP),
     A:aform => nattr,
     A:adv => ~detadv,
     SBAR:ctype => (c_compare_np;c_alsof),
@@ -6229,6 +6277,7 @@ grammar_rule(a_a_modcp_pred,AP1,[A,SBAR]) :-
     AP => a, A => a, max_sbar(SBAR),
     haspreno(AP),
     AP:hasextra => yes,
+    not_postp(AP),
     A:aform => nattr,
     A:adv => ~detadv & ~padv,
     SBAR:ctype => (c_compare_np;c_alsof),
@@ -6245,6 +6294,7 @@ grammar_rule(a_a_bracketed_mod,AP,[A,OPEN,MOD,OPTPUNCT,CLOSE]) :-
     CLOSE => punct, CLOSE:puncttype => haak_sluit,
     haspreno(AP),
     AP:hasextra => yes,
+    not_postp(AP),
     A:aform => nattr,
     A:adv => ~detadv,
     hd_mod_structure(A,MOD,AP).
@@ -6258,6 +6308,7 @@ grammar_rule(a_a_lig_mod,AP,[A,OPEN,MOD,OPTPUNCT,CLOSE]) :-
     CLOSE => punct, CLOSE:puncttype => ligg_streep,
     haspreno(AP),
     AP:hasextra => yes,
+    not_postp(AP),
     A:aform => nattr,
     A:adv => ~detadv,
     hd_mod_structure(A,MOD,AP).
@@ -6280,6 +6331,7 @@ grammar_rule(a_pp_a, AP, [ PP, A ]) :-
 
 a_pp_a_structure(AP,PP,A) :-
     AP => a, A => a,
+    not_postp(A),
     A:wh => nwh,
     pp_modifier(PP),
     A:aform => (attr;nattr;only_n),  % de ter dood veroordeelden
@@ -6472,6 +6524,7 @@ grammar_rule(a_a_np_comp, AP1, [ A, NP ]) :-
     NP:wh => nwh,
     NP:nform => norm,
     NP:subn => (sub_noun;sub_name),
+    NP:redrel => no,
     hd_comp_structure(A,NP,AP).
 
 %%EX%% IJs en weder dienende is de volgende vergadering op 1 april 2024
@@ -6596,7 +6649,9 @@ grammar_rule(pp_np_p, PP, [NP,P ]) :-
     NP:nform => ~er,
     NP:parg => yes,
     NP:pred => npred,
+    NP:redrel => no,
     NP:subn => ~sub_indef_verb,
+    NP:wh => nwh,
     hd_comp_structure(P,NP,PP).
 
 %%EX%% daar heb ik niet aan gedacht
@@ -6832,6 +6887,7 @@ grammar_rule(pred_van_belang,PRED,[VAN,BELANG]) :-
     VAN:dt:hdf => [],
     VAN:pp_role => pp_obj1,
     nwh_np_arg(BELANG0),
+    BELANG0:redrel => no,
     unify_except_l(BELANG0,BELANG,[pred,e_deps]),
     BELANG:sel => ~to_topic,
     BELANG:pred:predp <=> VAN:prep,
@@ -6945,6 +7001,7 @@ abs_p_np_predc_structure(Met,NP,PRED,PP):-
     nwh_np_arg(NP),
     NP:sel => ~to_topic,
     NP:wkpro => ~weakpro,
+    NP:redrel => no,
     abs_p_predc_structure(Met,NP,PRED,PP).
 
 abs_p_predc_structure(Met,ARG,PRED,PP) :-
@@ -7066,6 +7123,7 @@ grammar_rule(sbar_want_tag,SBAR, [ Comp, COMMA1, TAG, COMMA2, ROOT ]) :-
     comma(COMMA2),
     nwh_np_arg(TAG),
     TAG:sel => ~to_topic,
+    TAG:redrel => no,
     SBAR => rootbar,
     unify_except(SBAR0,SBAR,dt),
     nucl_tag_structure(SBAR0,TAG,SBAR),
@@ -8216,6 +8274,7 @@ dit_omdat_structure(Start,PRON,ALLEMAAL,SBAR) :-
 
 np_omdat_structure(Start,N,SBAR) :-
     N:wh => nwh,
+    N:redrel =?> no,
     SBAR:e_deps =?> [],
     max(N),
     Start => max,
@@ -8225,6 +8284,7 @@ np_omdat_structure(Start,N,SBAR) :-
 
 np_omdat_structure(Start,N,ALLEMAAL,SBAR) :-
     N:wh => nwh,
+    N:redrel =?> no,
     SBAR:e_deps =?> [],
     max(N),
     Start => max,
@@ -8305,9 +8365,16 @@ max_dp_modifier(MOD) :-
     MOD:wh => nwh,
     MOD:wh_reltmploc => ~meas_n.
 
+max_dp_modifier_rr(MOD) :-
+    max_modifier(MOD),
+    MOD:mcat => (mcat_pp;mcat_adv;mcat_vp;mcat_sbar;mcat_redrel),
+    MOD:wh => nwh,
+    MOD:wh_reltmploc => ~meas_n.
+
 %%EX%% daarom hierbij een opmerking
 %%EX%% daarom omdat het zo leuk is een herhaling
 %%EX%% In onze serie over voetbalclubs , vandaag Feyenoord
+%%EX%% Ondanks deze kritiek wat mij betreft een geweldig optreden
 grammar_rule(start_mod_mod_np,M,[MOD1,OPTCOMMA1,MOD2,OPTCOMMA2,NP]) :-
     optcomma(OPTCOMMA1),
     optcomma(OPTCOMMA2),
@@ -8315,28 +8382,30 @@ grammar_rule(start_mod_mod_np,M,[MOD1,OPTCOMMA1,MOD2,OPTCOMMA2,NP]) :-
     M:max_type => t_dp,
     M:mod_np => yes,
     max_dp_modifier(MOD1),
-    max_dp_modifier(MOD2),
+    max_dp_modifier_rr(MOD2),
     ind_max_np(NP),
     NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"
     dp_dp_structure(MOD1,MOD2,NP,M).
 
 %%EX%% Daarom vandaag naar Assen
+%%EX%% Daarom wat mij betreft naar Assen
 grammar_rule(start_mod_mod_pp,M,[MOD1,MOD2,PP]) :-
     M => max,
     M:max_type => t_dp,
     M:mod_np => yes,
     max_dp_modifier(MOD1),
-    max_dp_modifier(MOD2),
+    max_dp_modifier_rr(MOD2),
     ind_max_pp(PP),
     dp_dp_structure(MOD1,MOD2,PP,M).
 
 %%EX%% Daarom volgend jaar het huis uit
+%%EX%% Daarom wat mij betreft de laan uit
 grammar_rule(start_mod_mod_post_pp,M,[MOD1,MOD2,PP]) :-
     M => max,
     M:max_type => t_dp,
     M:mod_np => yes,
     max_dp_modifier(MOD1),
-    max_dp_modifier(MOD2),
+    max_dp_modifier_rr(MOD2),
     max_post_pp(PP),
     dp_dp_structure(MOD1,MOD2,PP,M).
 
@@ -8585,10 +8654,29 @@ grammar_rule(np_adv_dp,MAX,[XP,OPTCOMMA,ADV]) :-
     MAX => max,
     MAX:max_type => t_dp,
     max_advp(ADV),
-    ADV:redrel => no,
+    ADV:redrel => no,   
     ind_max_np(XP),
     XP:subn => ~sub_indef_adj & ~sub_def_adj & ~sub_rang & ~sub_tmp & ~sub_veel,
     dp_dp_structure(XP,ADV,MAX).
+
+%%EX%% De grote ommekeer van het socialisme , wat me lastig lijkt
+grammar_rule(np_redrel_dp,MAX,[XP,COMMA,REDREL]):-
+    comma(COMMA),
+    MAX => max,
+    MAX:max_type => t_dp,
+    redrel_modifier(REDREL),
+    ind_max_np(XP),
+    XP:subn => ~sub_indef_adj & ~sub_def_adj & ~sub_rang & ~sub_tmp & ~sub_veel,
+    dp_dp_structure(XP,REDREL,MAX).
+    
+%%EX%% Zonder hulp van de overheid , wat me lastig lijkt
+grammar_rule(pp_redrel_dp,MAX,[XP,COMMA,REDREL]):-
+    comma(COMMA),
+    MAX => max,
+    MAX:max_type => t_dp,
+    redrel_modifier(REDREL),
+    ind_max_pp(XP),
+    dp_dp_structure(XP,REDREL,MAX).    
 
 %%EX%% niemand ziek ?
 grammar_rule(np_pred_dp,MAX,[XP,OPTCOMMA,ADV]) :-
@@ -9066,7 +9154,6 @@ grammar_rule(np_np,START,[NP1,NP2]) :-
 
 %%EX%% Wilders en verantwoordelijkheid , een onmogelijkheid ?
 %%EX%% Brussel , 29 februari 2024
-%%EX%% De grote ommekeer van het socialisme , wat me lastig lijkt
 grammar_rule(np_c_np,START,[NP1,COMMA,NP2]) :-
     comma(COMMA),
     START => max,
@@ -9834,8 +9921,10 @@ grammar_rule(root_en_dp,Start,[XP,OPTCOMMA,CRD,ROOT]) :-
     xp_en_root_structure(Start,XP,CRD,ROOT).
 
 %%EX%% Schoenendozen .
+%%EX%% Wie de schoen past ...
 grammar_rule(max_xp(np),Max,[X]) :-
-    ind_max_np(X),
+    max_np(X),
+    X:sel => ~to_topic,
     X:subn => ~sub_indef_adj,
     top_max_structure(X,Max).
 

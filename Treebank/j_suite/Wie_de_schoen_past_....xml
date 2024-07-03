@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="whrel" end="4" id="1" rel="--">
+      <node begin="0" case="both" def="indef" end="1" gen="de" getal="getal" id="2" index="1" lemma="wie" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="rhd" rnum="sg" root="wie" status="vol" vwtype="vb" wh="ywh" word="Wie"/>
+      <node begin="0" cat="ssub" end="4" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="su"/>
+        <node begin="1" cat="np" end="3" id="5" rel="obj1">
+          <node begin="1" end="2" id="6" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lemma="schoen" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="schoen" word="schoen"/>
+        </node>
+        <node begin="3" end="4" id="8" infl="sg3" lemma="passen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="pas" sc="transitive" tense="present" v_per="thi" word="past" wvorm="pv"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="9" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." special="hellip" word="..."/>
+  </node>
+  <sentence>Wie de schoen past ...</sentence>
+</alpino_ds>
