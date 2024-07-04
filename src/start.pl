@@ -2736,26 +2736,39 @@ reset_cgn_numbers :-
 
 :- initialize_flag(print_suite,"").
 
+compare_cgn_quiet(A,B,C,D,E,F,G,H,I) :-
+    compare_cgn(A,B,C,D,E,F,G,H,I,_,_).
+
+compare_cgn(A,B,C,D,E,F,G,H,I) :-
+    compare_cgn(A,B,C,D,E,F,G,H,I,Messages,[]),
+    format_messages(Messages).
+
+format_messages([]).
+format_messages([String-Vars|L]):-
+    format(user_error,String,Vars),
+    format_messages(L).
+
+
 %% sorted, so in order
 %% complete
-compare_cgn([],[],_,[],C,C,L,L,_).
+compare_cgn([],[],_,[],C,C,L,L,_,Msg,Msg).
 compare_cgn([cgn_postag(P0,P,LemmaA,H)|T],
-	    [cgn_postag(P0,P,LemmaB0,H2)|T2],P0,[W|Words],C0,C,L0,L,Ident) :-
+	    [cgn_postag(P0,P,LemmaB0,H2)|T2],P0,[W|Words],C0,C,L0,L,Ident,Msg0,Msg) :-
     hdrug_flag(print_suite,SuiteStr),
     alpino_treebank:get_lemma_or_word(LemmaB0,LemmaB,W),
     (   H == H2
-    ->  C1 is C0 + 1
-    ;   format(user_error,"~w~t~40+~w~t~40+~w~t~40+ #PT# ~w ~s~n",[W,H,H2,Ident,SuiteStr]),
+    ->  C1 is C0 + 1,
+	Msg0 = Msg1
+    ;   Msg0 = ["~w~t~40+~w~t~40+~w~t~40+ #PT# ~w ~s~n"-[W,H,H2,Ident,SuiteStr]|Msg1],
 	C1 = C0
     ),
     (   LemmaA == LemmaB
-    ->  L1 is L0 + 1
-    ;   format(user_error,"~w~t~40+~w~t~40+~w~t~40+ #LM# ~w ~s~n",[W,LemmaA,LemmaB,Ident,SuiteStr]),
+    ->  L1 is L0 + 1,
+	Msg1 = Msg2
+    ;   Msg1 = ["~w~t~40+~w~t~40+~w~t~40+ #LM# ~w ~s~n"-[W,LemmaA,LemmaB,Ident,SuiteStr]|Msg2],
 	L1 = L0
     ),
-    compare_cgn(T,T2,P,Words,C1,C,L1,L,Ident).
-
-    
+    compare_cgn(T,T2,P,Words,C1,C,L1,L,Ident,Msg2,Msg).
 
 :- public lex_without_context_options/0.
 lex_without_context_options :-

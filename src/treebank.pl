@@ -1841,7 +1841,7 @@ compare_cgn_string_of_result(Item,Result,CgnString) :-
     user:ignore_brackets(Words0,Words),
     user:collect_treebank_cgn(File,GoldTags),
     length(GoldTags,Len),
-    user:compare_cgn(GoldTags,SysTags,0,Words,0,Correct,0,CorrectL,Item),
+    user:compare_cgn_quiet(GoldTags,SysTags,0,Words,0,Correct,0,CorrectL,Item),
     CorrectT is Correct + CorrectL,
     LenT is 2 * Len,
     format_to_chars("|~w|~w",[CorrectT,LenT],CgnString).
