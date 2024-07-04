@@ -22855,7 +22855,7 @@ a([e(modderige),
    st(modderigst),
    ste(modderigste)],nonadv,[],[]).
 
-a([both(model)],adv,[],[]).
+%% a([both(model)],adv,[],[]).
 
 a([e(moderne),
    er(moderner),

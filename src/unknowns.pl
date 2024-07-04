@@ -3268,6 +3268,11 @@ never_compound_part(Atom) :-
     never_compound_part_sub(Sym),
     sub_atom(Atom,_,_,_,Sym).
 
+never_compound_part(Atom):-
+    atom(Atom),
+    atom_codes(Atom,Codes),
+    alpino_lex:roman_number(Codes).
+
 never_compound_part('Kinder').  
 never_compound_part('Pro').  % but pro is ok
 

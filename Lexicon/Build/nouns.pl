@@ -40959,9 +40959,6 @@ n([pl(weeshuizen),sg(weeshuis)],het,[]).
 
 n([pl(weeskinderen),sg(weeskind)],het,[]).
 
-%% (geen) weet hebben van
-n([mass(weet)],both,[]).
-
 n([pl(weetjes),sg(weetje)],het,[sbar,vp]).
 
 n([pl(wegen),sg(weg)],de,
