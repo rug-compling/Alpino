@@ -1245,7 +1245,8 @@ adjective_features(anders,Sign) :-
     Sign:avform => avform_ap,
     Sign:adv => yadv,
     Sign:cform => compar,
-    Sign:aform => nattr.
+    Sign:aform => nattr,
+    Sign:me_adj => no.
 adjective_features(both(ADV),Sign) :-
     features_adjective_adv(ADV,Sign),
     Sign:avform => avform_ap,
