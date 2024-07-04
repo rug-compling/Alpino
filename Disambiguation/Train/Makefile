@@ -14,7 +14,7 @@ MIN_FEATURE_FREQ=$(shell cat min_feature_freq)
 default: 
 
 ##### to make new data:
-##### perhaps: make renew in $(ALPINO_HOME)/Suites/X 
+##### perhaps: make redo in $(ALPINO_HOME)/Suites/X 
 ##### ( cd Data ; make realclean; make -j 25 data ; make install )
 
 ##### after that:
@@ -68,10 +68,10 @@ test:
                            100*(XTS/XTC-XFS/XFC)/(XBS/XBC-XFS/XFC);\
                         } ' $(TESTPARTS:%=%.test) >>tenfold.log
 	-wc -l *.weights >>tenfold.log
-	-echo out of memory `cat Data/p*.log | grep -c 'out of memory'` >>tenfold.log
-	-echo timed out `cat Data/p*.log | grep -c 'timed out'`         >>tenfold.log
-	-echo sentences `cat Data/p*.log | grep -c 'Done parser'`       >>tenfold.log
-	-cat Data/p*.log | grep '^Found [0-9][0-9]* solution[(]s[)]$$' |\
+	-echo out of memory `cat Data/*.log | grep -c 'out of memory'` >>tenfold.log
+	-echo timed out `cat Data/*.log | grep -c 'timed out'`         >>tenfold.log
+	-echo sentences `cat Data/*.log | grep -c 'Done parser'`       >>tenfold.log
+	-cat Data/*.log | grep '^Found [0-9][0-9]* solution[(]s[)]$$' |\
               awk '{ N=N+$$2 } END {print N,"parses in total"} '   >>tenfold.log
 	( mv parses parses0 ; $(MAKE) -s parses )
 	grep -w score *.test >>tenfold.log
@@ -85,7 +85,17 @@ test:
         sed -e 's/MAXENT#//' |\
         $(ALPINO_HOME)/Disambiguation/kleiweg/eval -w $*.weights $(TESTDEBUG) > $@
 
-tenfold.analyse:
+SHELL := /bin/bash
+MEANF=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9 } END { printf "first %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9}'
+MEANB=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9 } END { printf " best %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9}'
+MEANT=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9 } END { printf " test %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9}'
+MEANP=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9 } END { printf "  phi %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9}'
+analyse:
+	@echo "        LATEST       LATEST-1       LATEST-2"
+	@paste <(grep first-score log |tail -n 9) <(grep first-score log|tail -n 18 |head -n 9 ) <(grep first-score log |tail -n 27 |head -n 9 ) | $(MEANF)
+	@paste <(grep best-score log |tail -n 9) <(grep best-score log|tail -n 18 |head -n 9 ) <(grep best-score log |tail -n 27 |head -n 9 ) | $(MEANB)
+	@paste <(grep test-score log |tail -n 9) <(grep test-score log|tail -n 18 |head -n 9 ) <(grep test-score log |tail -n 27 |head -n 9 ) | $(MEANT)
+	@paste <(grep phi-score log |tail -n 9) <(grep phi-score log|tail -n 18 |head -n 9 ) <(grep phi-score log |tail -n 27 |head -n 9 ) | $(MEANP)
 
 parses:
 	-cat Data/p*.log | grep '^T#' > parses
