@@ -1178,7 +1178,7 @@ find_missing_positions([H|T],Ps0,P,Ns0,Ns,Flag,Frames) :-
 	skip_positions(P,P1,T,T2),
 	guess_tag(Tag0,Tag,Hstem0,H,Hstem,P,P1),
         Ns0=[tree(r('--',l(Tag,Cat,Hstem/[P,P1])),_,[])|Ns1],
-        missing_node_message(Flag,Tag0,Tag,Cat,H)
+        missing_node_message(Flag,Tag0,Cat,H)
     ),
     find_missing_positions(T2,Ps1,P1,Ns1,Ns,Flag,Frames).
 
@@ -1222,13 +1222,13 @@ skip_positions(I,List0,List) :-
 	skip_positions(I2,List1,List)
     ).
 
-missing_node_message(ignore,_,_,'--',_).
-missing_node_message(normal,Tag0,Tag,Cat,W) :-
+missing_node_message(ignore,_,'--',_).
+missing_node_message(normal,Tag0,Cat,W) :-
     (   Tag0 == skip
     ->  Cat = '--'
     ;   Tag0 == robust_skip
     ->  Cat = '--'
-    ;   missing_node_message(Tag,Cat,W)
+    ;   missing_node_message(Tag0,Cat,W)
     ).
 
 %% part of derivation, but not a dt?
@@ -1236,8 +1236,8 @@ missing_node_message(normal,Tag0,Tag,Cat,W) :-
 %% warning for other tags
 missing_node_message(punct(_),punct,_) :-
     !.
-missing_node_message(_,'--',H) :-
-    debug_message(1,"warning: missing dt node for ~w~n",[H]).
+missing_node_message(Tag,'--',H) :-
+    debug_message(1,"warning: missing dt node for ~w (~w)~n",[H,Tag]).
 
 select_all_positions(DT,Pos,File) :-
     findall(P,select_a_position(DT,P),Pos0),
