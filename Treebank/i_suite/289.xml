@@ -6,12 +6,10 @@
       <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="goed" word="goedddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"/>
     </node>
-    <node begin="3" cat="mwu" end="7" id="5" rel="--">
-      <node begin="3" end="4" id="6" lemma="!" pos="punct" postag="LET()" pt="let" rel="mwp" root="!" word="!"/>
-      <node begin="4" end="5" id="7" lemma="!" pos="punct" postag="LET()" pt="let" rel="mwp" root="!" word="!"/>
-      <node begin="5" end="6" id="8" lemma="!" pos="punct" postag="LET()" pt="let" rel="mwp" root="!" word="!"/>
-      <node begin="6" end="7" id="9" lemma="!" pos="punct" postag="LET()" pt="let" rel="mwp" root="!" word="!"/>
-    </node>
+    <node begin="3" end="4" id="5" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+    <node begin="4" end="5" id="6" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+    <node begin="5" end="6" id="7" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+    <node begin="6" end="7" id="8" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
   </node>
   <sentence>dat is goedddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd ! ! ! !</sentence>
 </alpino_ds>

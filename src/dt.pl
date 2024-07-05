@@ -1167,12 +1167,16 @@ find_missing_positions([H|T],Ps0,P,Ns0,Ns,Flag,Frames) :-
     ->  Ns0=Ns1
     ;   Ps1=Ps0,
 	(   nonvar(Frames),
-	    member(_-frame(_,_,P,P1,Hstem0,Tag0,_,_),Frames)
+	    member(_-frame(_,_,P,P1,Hstem0,Tag0,_,_),Frames),
+	    \+ Tag0 = punct(_),
+	    \+ (   Tag0 = robust_skip,
+		   alpino_lexical_analysis:tag(P,P1,_,_,_,_,_,punct(_))
+	       )
 	->  true
 	;   P1 is P + 1
 	),
 	skip_positions(P,P1,T,T2),
-	guess_tag(Tag0,Tag,Hstem0,H,Hstem,P,P1),       %MAKE EXCEPTION here for mwu punctuation???
+	guess_tag(Tag0,Tag,Hstem0,H,Hstem,P,P1),
         Ns0=[tree(r('--',l(Tag,Cat,Hstem/[P,P1])),_,[])|Ns1],
         missing_node_message(Flag,Tag0,Tag,Cat,H)
     ),
