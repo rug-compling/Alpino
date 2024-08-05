@@ -998,7 +998,7 @@ proc toggle-extd-attrs {} {
 }
 
 proc expand_and_add_to_filelist {arg} {
-    global filelist
+    global filelist has_alto
 
     if {[string match *.xml $arg]} {
         lappend filelist $arg
@@ -1006,7 +1006,11 @@ proc expand_and_add_to_filelist {arg} {
         || [file isdirectory $arg]
         || [file exists $arg.index] } {
 
-        set fh [open "|dtlist $arg" r]
+	if {"$has_alto" == 1} {
+	    set fh [open "|alto tt:%F $arg" r]
+	} else {
+	    set fh [open "|dtlist $arg" r]
+        }
 
         while {[gets $fh line] != -1} {
 
