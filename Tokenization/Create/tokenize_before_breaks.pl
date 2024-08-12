@@ -189,7 +189,8 @@ macro(afkorting_with_number,file('words_afkorting_with_number.m')).
 
 %% no preceding sep required
 macro(naam_afkorting,
-      words(['Ch',
+      words(['Alb',
+	     'Ch',
 	     'Ed',
 	     'Hub',
              'Im','Is',

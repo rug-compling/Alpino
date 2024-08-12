@@ -12,7 +12,7 @@ macro( words_afkortingen,
 		  %% these were in words_afkortingen_after before, but that led to too many sentence breaks
                   %% aug already was here anyway
 		  %% jan is now in words_afkorting_with_number since it is often followed by a day or year
-		  apr,dec,feb,febr,jul,jun,maa,okt,nov,sep,sept,
+		  apr,dec,feb,febr,jul,jun,maa,oct,okt,nov,sep,sept,
 
 		  
    aant,acad,acc,adm,'Am',adr,adv,afb,afd,afgel,afk,afl,aggl,alc,ald,ambas,ann,ant,
@@ -23,15 +23,15 @@ macro( words_afkortingen,
                  commerc,comp,'Conn',cons,corp,cq,cs,ct,
    'D.C',dbl,dd,decb,decemb,deelw,'Del','Den',dep,dept,'Deut',dgl,di,dir,diss,distr,div,dl,dld,dln,dmv,doct,
                  doelp,doopsgez,dtsl,'Du',dui,duitsl,dwz,
-   echtgen,econ,ed,edd,eds,eendr,eetl,eff,eig,eigenn,el,
-                   elektr,electr,'em.pred',
+   echtgen,econ,ed,edd,eds,eendr,eerw,eetl,eff,eig,eigenn,el,
+                   elektr,electr,'em.pred','Em',
                    'Eng','Ex',enkv,ent,enw,ev,evang,
 		 evt,exec, excl,exx,
-   fa,fam,feat,ffrs,fig,fin,fiz,fl,'FL',fr,frs,'Fra',ft,
+   fa,fam,feat,ffrs,fig,fin,fiz,fl,'FL',fol,fr,frs,'Fra',ft,
    'Gal',geb,gebr,ged,geïll,geill,'g.mv',
                    gelijkn,geh,gem,'Gen',gepens,gepubl,geref,gereform,
                    gespr,gest,gew,gl,gld,gr,
-   'Had','Hand','Hebr',herh,herv,hfd,hon,'Hong',hoofdtelw,hoogl,hs,hss,hst,huisvr,huw,hyp,hz,'Hz',
+   'Had','Hand','Hebr',herh,herv,hfd,hist,hon,'Hong',hoofdtelw,hoogl,hs,hss,hst,huisvr,huw,hyp,hz,'Hz',
    icm,idd,ill,incl,inc,ind,indiv,inf,infant,ing,ingel,inl,inst,inspect,
                    instell,int,intend,inv,inw,inz,ipv,'Isr','It','Ital',ivm,
    'Jak','Jer','Jes',jg,'Joeg',jrg,
@@ -51,19 +51,19 @@ macro( words_afkortingen,
 		   rijksuniv,'r.-k','Rom','Russ',
    'S.A',samenst,samenw,'Sanskr',sc,scen,schr,sp,spec,spr,st,'ST','Ste',str,subsp,subst,symf,syn,
 		  
-   'Tac',techn,tek,tel,'tel.nr',temp,th,theel,tl,toegel,toep,toez,tov,
+   'Tac',techn,tek,tel,'tel.nr',temp,'Tg',th,theel,tl,toegel,toep,toez,tov,
                    'Tsj','Tu','TV-uitz','tv-uitz',
    'U',uitg,uitk,ult,'vakantie-uitk',uitdr,uitgeg,uitz,univ,
-   'V.S',var,vb,vbb,'Ver',verd,verl,verm,vert,vervr,verz,vgl,vlg,vlgg,'vice-vrz',vlp,
-		 vm,vml,vnl,vnw,vols,volw,voorh,voorm,vr,vriendsch,
+   'V.S',var,vb,vbb,'Ver',verd,verl,verm,vert,vervr,verz,vgl,'Vl',vlg,vlgg,'vice-vrz',vlp,
+		 vm,vml,vnl,vnw,vols,volw,voorh,voorm,voorsz,vr,vriendsch,
                  vrijg,vrijw,vrz,vs,vt,vz,'vice-vz','fr.vz',
-   wd,wdb,wed,weled,werkw,werkz,wetensch,weth,wijkgem,wnd,wo,
+   wb,wd,wdb,wed,weled,werkw,werkz,wetensch,weth,wijkgem,wnd,wo,
    za,zach,zelfst,zg,zgn,zn,znw,zr,zw,'z.mv'
    ]) ).
 
 macro(words_titel,cap_words([bc,dhr,dipl,dr,ds,drs,ir,jhr,mgr,mrs,mw,mej,mevr,mr,hr,prof])).
 
-macro(words_afkorting_with_number,cap_words([art,no,op,zo,jan])).
+macro(words_afkorting_with_number,cap_words([art,hfdst,hoofdst,no,op,pag,zo,jan,vss])).
 
 macro(words_afkorting_after,cap_words(
   [ %apr,
@@ -80,7 +80,6 @@ macro(words_afkorting_after,cap_words(
     mm,
     % nov,
     'o.i.d', %okt,
-    pag,
     sec,%sep,sept,
     sr,
     tek
