@@ -922,7 +922,7 @@ unknown_word_heuristic(P1,R1,W,_,"prefix_name|~p|~p|~p~n",
 	    [Th|Tt]).
 
 unknown_word_heuristic(P1,R1,W,_Ws,"suffix_name|~p|~p|~p~n",
-		       [W,Wmin,[proper_name(both,'LOC')]],_,len(1)) :-
+		       [W,Wmin,[Tag]],_,len(1)) :-
     debug_message(3,"trying heuristic suffix_name~n",[]),
     \+ tag(P1,_,_,_,_,_,decap(_),_),
     \+ tag(P1,_,_,_,_,_,special(decap(_)),_),
@@ -949,7 +949,8 @@ unknown_word_heuristic(P1,R1,W,Ws,"double_compound|~p|~p|~p~n",
 		       [Surf0,W,[Th|Tt]],Words,none) :-
     debug_message(3,"trying heuristic double_compound~n",[]),
     atom(W),
-    once(atom_split(W,'-',Fiction,Schrijver)),
+    dash(Dash),
+    once(atom_split(W,Dash,Fiction,Schrijver)),
     
     append(Prefix,[W|Ws],Words),
     append(_,[X0|Xn],Prefix),
@@ -1018,7 +1019,8 @@ unknown_word_heuristic(P1,R1,W,[WsH|WsT],"compound_double|~p|~p ...|~p~n",
 		       [W,Rock,[Th|Tt]],_Words,HIS) :-
     debug_message(3,"trying heuristic compound_double~n",[]),
     atom(W),
-    once(atom_split(W,'-',Oer,Rock)),
+    dash(Dash),
+    once(atom_split(W,Dash,Oer,Rock)),
     atom_length(Oer,Length), Length < 15,
     atom_length(Rock,Length2), Length2 < 30,
     findall(Tag,
@@ -1116,7 +1118,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"suffix|~p|~p|~p~n",[W,Suffix,Tag],_,len(1)) 
     \+ tag(P1,_,_,_,_,_,prefix_name,_),
     \+ tag(P1,_,_,_,_,_,compar_adj,_),
     \+ tag(P1,_,_,_,_,_,wo_dia,_),
-    guess_form_of_suffix(W,Root,Suffix,Tag,CompTag),
+    guess_form_of_suffix(W,Root,Suffix,Tag,CompTag,P1),
     \+ (   comp_tag(CompTag,CheckTag),
 	   tag(P1,_,_,_,_,_,_,CheckTag)
        ),
@@ -1288,7 +1290,8 @@ unknown_word_heuristic(P1,R1,W,_,"lonely-name|~p~n",[W],_,len(1)) :-
 unknown_word_heuristic(P1,R1,W,Ws,"dash|~p|~p~n",[W,[Th|Tt]],_,HIS) :-
     debug_message(3,"trying heuristic dash~n",[]),
     atom(W),
-    atom_concat('-',Word,W),
+    dash(Dash),
+    atom_concat(Dash,Word,W),
     findall(Tag,alternative([Word|Ws],P1,_,R1,_,dash,Tag,HIS),[Th|Tt]).
 
 unknown_word_heuristic(P1,R1,W,Ws,"spaced|~p|~p~n",[W,[Th|Tt]],_,HIS) :-
@@ -2714,7 +2717,8 @@ decap_only_suffix('\'er').  % de PvdA'er Jansen
 decap_only_suffix('\'ers').  % de PvdA'ers Jansen en Jansen
 decap_only_suffix(DashNoun) :-  % Feyenoord-verdediger
     atom(DashNoun),
-    atom_concat('-',Noun,DashNoun),
+    dash(Dash),
+    atom_concat(Dash,Noun,DashNoun),
     \+ never_final_compound_part(Noun),
     alpino_lex:lexicon(noun(_,_,_),_,[Noun],[],_).
 
@@ -2780,12 +2784,15 @@ guess_number__([H|T]) :-
 guess_left_headed_compound(W,Ws,Wmin,Stem,Surf,SurfLength) :-
     atom(W),
     atom_codes(W,Codes),
-    char_code('-',Hyphen),
+    dash(Dash),
+    char_code(Dash,Hyphen),
     append([FirstH1,FirstH2|First],[Hyphen,RestH1,RestH2|RestT],Codes),
 %    isupper(RestH1),		% verslag-van Noord
     islower(FirstH1),
     atom_codes(Wmin,[FirstH1,FirstH2|First]),
+    format(user_error,"~w~n",[Wmin]),
     \+ compound_part(Wmin,_),
+    \+ lists:member(Wmin,[bonus,drop,dubbel,el,ere,es,mini,non,privé,school,solo,spin,thuis,top]),
     atom_codes(W1,[RestH1,RestH2|RestT]),
     hdrug_util:debug_message(5,"try lhc: ~w~n",[[W1|Ws]]),
     (   alpino_lex:lexicon(_,Stem,[W1|Ws],Remains,names_dictionary),
@@ -2802,7 +2809,8 @@ guess_left_headed_compound(W,Ws,Wmin,Stem,Surf,SurfLength) :-
 
 guess_prefix_compound(W,Wfirst,WLast) :-
     atom(W),
-    once(atom_split(W,'-',Wfirst,WLast)),
+    dash(Dash),
+    once(atom_split(W,Dash,Wfirst,WLast)),
     \+ Wfirst = 'Sint',  % Sint-X is often not a PER but a LOC or ORG
     (   %% oost-Frankrijk; ex-Ajax
         compound_part(Wfirst,_)
@@ -2814,14 +2822,16 @@ guess_prefix_compound(W,Wfirst,WLast) :-
 %% Groningen-centrum
 guess_suffix_compound(W,Wfirststem,WLast,proper_name(both,'LOC'),suffix_name) :-
     atom(W),
-    once(atom_split(W,'-',Wfirst,WLast)),
+    dash(Dash),
+    once(atom_split(W,Dash,Wfirst,WLast)),
     loc_suffix(WLast),
     alpino_lex:lexicon(_,Wfirststem,[Wfirst],[],names_dictionary).
 
 %% het comité-generaal
 guess_suffix_compound(W,Wfirststem,WLast,noun(A,B,C),suffix_noun) :-
     atom(W),
-    once(atom_split(W,'-',Wfirst,WLast)),
+    dash(Dash),
+    once(atom_split(W,Dash,Wfirst,WLast)),
     noun_suffix(WLast),
     alpino_lex:lexicon(noun(A,B,C),Wfirststem,[Wfirst],[],_).
 
@@ -2868,7 +2878,8 @@ guess_compoundXX(W,WLast,[WfirstStem],0) :-
 %% Word-Word compounds IS THIS STILL USEFUL?
 guess_compoundXX(W,WLast,[WfirstStem],1) :-
     atom(W),
-    once(atom_split(W,'-',Wfirst,WLast)),
+    dash(Dash),
+    once(atom_split(W,Dash,Wfirst,WLast)),
     \+ never_compound_part(Wfirst),
     \+ never_compound_part(WLast),
     (   compound_part(first,Wfirst,WfirstStem)
@@ -2918,7 +2929,8 @@ guess_compound__(W,W,L,L,[Wstem],_,_) :-
     compound_part(final,W,Wstem).
 guess_compound__(SW,FinalPart,L0,L,Parts,Prev,PrevPrefix) :-
     atom(SW),
-    (   atom_concat('-',W,SW)
+    dash(Dash),
+    (   atom_concat(Dash,W,SW)
     ;   atom_concat('/',W,SW)
     ;   atom_concat(s,W,SW),
         W \= schap, % no -s- with schap
@@ -3001,7 +3013,8 @@ compound_part(first,W0,W) :-
     compound_part(W1,W).
 compound_part(first,WD,W) :-
     atom(WD),
-    atom_concat(W0,'-',WD),
+    dash(Dash),
+    atom_concat(W0,Dash,WD),
     compound_part(W0,W).
 
 compound_part(middle,W,Stem) :-
@@ -3464,7 +3477,7 @@ remove_longer_compounds_with_same_suffix_([I-R-Parts|T],R0,List) :-
 
 %% TODO: add proper stems!!
 
-guess_form_of_suffix(W,Label,'/',Tag,Tag) :-
+guess_form_of_suffix(W,Label,'/',Tag,Tag,_) :-
     atom(W),
     once(atom_split(W,'/',Left,Right)),
     alpino_lex:lexicon(Tag1,LabelL,[Left],[],normal),
@@ -3472,18 +3485,18 @@ guess_form_of_suffix(W,Label,'/',Tag,Tag) :-
     similar_tags('/',Tag1,Tag2,Tag),
     alpino_lex:concat_stems([LabelL,LabelR],Label,'_').
 
-guess_form_of_suffix(W,Root,Suffix,Tag,CompTag) :-
+guess_form_of_suffix(W,Root,Suffix,Tag,CompTag,Pos) :-
     guess_using_suffix0(W,_,Suffix,2,1),  % generate in decreasing length
-    findall(Suffix-RootSuffix-Tag-CompTag,apply_suffix_rule(Suffix,RootSuffix,Tag,CompTag,W),[H|T]),
+    findall(Suffix-RootSuffix-Tag-CompTag-Root,apply_suffix_rule(Suffix,RootSuffix,Tag,CompTag,W,Root,Pos),[H|T]),
     !,
-    member(Suffix-RootSuffix-Tag-CompTag,[H|T]),
-    construct_root(Tag,Suffix,RootSuffix,W,Root).
+    member(Suffix-RootSuffix-Tag-CompTag-Root,[H|T]).
+%    construct_root(Tag,Suffix,RootSuffix,W,Root).
 %    atom_concat(Pref0,Suffix,W),
 %    remove_ge_if_psp(Tag,Pref0,Pref),
 %    atom_concat(Pref,RootSuffix,Root0),
 %    decap(Root0,Root).
 
-guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,intransitive),verb(_,psp,intransitive)) :-
+guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,intransitive),verb(_,psp,intransitive),_) :-
     atom_concat(ge,Rest,W),
     psp_suffix(Suffix,StemSuffix),
     atom_concat(_,Suffix,Rest),
@@ -3491,7 +3504,7 @@ guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,intransitive),verb(_,ps
     \+ member(W,[geld,
 		 gerard]).
 
-guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,transitive),verb(_,psp,transitive)) :-
+guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,transitive),verb(_,psp,transitive),_) :-
     atom_concat(ge,Rest,W),
     psp_suffix(Suffix,StemSuffix),
     atom_concat(_,Suffix,Rest),
@@ -3499,7 +3512,7 @@ guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,transitive),verb(_,psp,
     \+ member(W,[geld,
 		 gerard]).
 
-guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,intransitive),verb(_,psp,ninv(intransitive,part_intransitive(Af)))) :-
+guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,intransitive),verb(_,psp,ninv(intransitive,part_intransitive(Af))),_) :-
     atom_concat(Afge,Rest,W),
     atom_concat(Af,ge,Afge),
     alpino_lex:xl(Af,particle(_),_,[],[]),
@@ -3511,7 +3524,7 @@ guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,intransitive),verb(_,ps
     atom_concat(Stem0,'_',Stem1),
     atom_concat(Stem1,Af,Stem).
 
-guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,transitive),verb(_,psp,ninv(transitive,part_transitive(Af)))) :-
+guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,transitive),verb(_,psp,ninv(transitive,part_transitive(Af))),_) :-
     atom_concat(Afge,Rest,W),
     atom_concat(Af,ge,Afge),
     alpino_lex:xl(Af,particle(_),_,[],[]),
@@ -3524,7 +3537,7 @@ guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,transitive),verb(_,psp,
     atom_concat(Stem1,Af,Stem).
 
 %% not a suffix of course, but ok
-guess_form_of_suffix(W,W,'i.v.m.',preposition(W,[]),preposition(_,_)) :-
+guess_form_of_suffix(W,W,'i.v.m.',preposition(W,[]),preposition(_,_),_) :-
     atom(W),
     atom_codes(W,[A,46,B,46,C|Tail]),
     (  Tail = []
@@ -3545,106 +3558,166 @@ psp_suffix(pt,t).
 psp_suffix(rd,d).
 psp_suffix(st,t).
 
-no_exceptional_suffix_rule(List,Root) :-
+no_exceptional_suffix_rule(_,Root,_) :-
+    atom_concat(http,_,Root),
+    !,
+    fail.
+
+no_exceptional_suffix_rule(List,Root,_) :-
+    member(prefix(Pref),List),
+    atom(Pref),
+    atom_concat(Pref,_,Root),
+    !,
+    fail.
+
+no_exceptional_suffix_rule(List,Root,_) :-
     member(Suffix,List),
+    atom(Suffix),
     atom_concat(_,Suffix,Root),
     !,
     fail.
-no_exceptional_suffix_rule(capital/_,Root):-
+no_exceptional_suffix_rule(capital/_,Root,Pos):-
     starts_with_capital(Root),
+    \+ is_start_sentence(Pos),
     !,
     fail.
-no_exceptional_suffix_rule(capital/List,Root):-
+no_exceptional_suffix_rule(capital/List,Root,Pos):-
     !,
-    no_exceptional_suffix_rule(List,Root).
-no_exceptional_suffix_rule(_,_).
+    no_exceptional_suffix_rule(List,Root,Pos).
+no_exceptional_suffix_rule(_,_,_).
 
-apply_suffix_rule(Suffix,RootSuffix,Tag,CompTag,Word) :-
+apply_suffix_rule(Suffix,RootSuffix,Tag,CompTag,Word,Root,Pos) :-
     form_of_suffix_rule(Suffix,RootSuffix,Tag,CompTag,Exceptions),
-    no_exceptional_suffix_rule(Exceptions,Word).
+    no_exceptional_suffix_rule(Exceptions,Word,Pos),
+    construct_root(Tag,Suffix,RootSuffix,Word,Root).
 
 form_of_suffix_rule(A,B,C,C,D) :-
     form_of_suffix_rule(A,B,C,D).
+
 form_of_suffix_rule('\'s','',noun(both,count,pl),noun(_,count,pl),[]).
 
 % here, Tag and CompTag (competing tag that must not exist) are same
-form_of_suffix_rule(erwijs,erwijs,  adverb,[onderwijs]).
+form_of_suffix_rule(erwijs,erwijs,  adverb,[onderwijs,'Onderwijs']).
 form_of_suffix_rule(erwijze,erwijze, adverb,[]).
 form_of_suffix_rule(shalve,shalve,  adverb,[]).
 
-form_of_suffix_rule(aals,aals,adjective(no_e(adv)),[]).
-form_of_suffix_rule(aans,aans,adjective(no_e(adv)),[]).
-form_of_suffix_rule(aal,aal,adjective(no_e(adv)),[arsenaal,
-						  éénmaal,
-						  gemaal,
-						  generaal,
-						  hospitaal,
-						  journaal,
-						  kapitaal,
-						  kanaal,
-						  kathedraal,
-						  materiaal,
-						  metaal,
-						  schaal,
-						  schandaal,
-						  signaal,
-						  staal,
-						  tribunaal,
-						  verhaal,
-						  zaal]).
-form_of_suffix_rule(air,air,adjective(no_e(adv)),[]).
-form_of_suffix_rule(eerd,eerd,adjective(ge_no_e(adv)),[]).
+form_of_suffix_rule(aals,aals,adjective(no_e(adv)),[admiraals,
+						    dimensionaals,
+						    generaals,'Generaals',
+						    hospitaals,
+						    journaals,
+						    koeterwaals,
+						    muzikaals,
+						    nogmaals]).
+form_of_suffix_rule(aans,aans,adjective(no_e(adv)),[baans]).
+form_of_suffix_rule(aal,aal,adjective(no_e(adv)), capital/[admiraal,
+							   areaal,
+							   arsenaal,
+							   éénmaal,
+							   gemaal,
+							   generaal,'Generaal',
+							   hospitaal,
+							   journaal,'Journaal',
+							   kapitaal,
+							   kanaal,
+							   kardinaal,
+							   kathedraal,
+							   koraal,
+							   lineaal,
+							   materiaal,
+							   metaal,
+							   pedaal,
+							   portaal,
+							   potentiaal,
+							   schaal,
+							   schandaal,
+							   signaal,
+							   spiraal,
+							   staal,
+							   tribunaal,
+							   vandaal,
+							   verhaal,
+							   zaal]).
+form_of_suffix_rule(air,air,adjective(no_e(adv)),capital/['au-pair',
+							  meubilair,
+							  militair,
+							  miljonair
+							 ]).
+form_of_suffix_rule(eerd,eerd,adjective(ge_no_e(adv)),capital/[]).
 form_of_suffix_rule(ees,ees,adjective(no_e(adv)),[abonnees,
+						  koolmees,
+						  pimpelmees,
 						  trainees,
 						  vlees,
 						  vrees]).
-form_of_suffix_rule(ees,ees,post_adjective(no_e),[abonnes,
-						  trainees,
-						  vlees,
-						  vrees]).
-form_of_suffix_rule(end,en,adjective(end(both)),[duizend,
-						 eend]).
+%form_of_suffix_rule(ees,ees,post_adjective(no_e),[abonnes,
+%						  trainees,
+%						  vlees,
+%						  vrees]).
+form_of_suffix_rule(end,en,adjective(end(both)),capital/[bediend,
+							 duizend,
+							 eend,
+							 friend,
+							 getekend,
+							 jugend,
+							 trend,
+							 vriend,
+							 weekend]). 
 form_of_suffix_rule(esk,esk,adjective(no_e(adv)),[desk]).
-form_of_suffix_rule(eus,eus,adjective(no_e(adv)),[keus,
-						  reus]).
-form_of_suffix_rule(ieel,ieel,adjective(no_e(adv)),[]).
+form_of_suffix_rule(eus,eus,adjective(no_e(adv)),capital/[aeneus,
+							  keus,
+							  nucleus,
+							  reus,
+							  wijsneus]).
+form_of_suffix_rule(ieel,ieel,adjective(no_e(adv)),[ceremonieel,
+						    materieel]).
 form_of_suffix_rule(iële,ieel,adjective(e),[]).
 form_of_suffix_rule(ief,ief,adjective(no_e(adv)),[brief,
+						  'Chief', % Editor-in-Chief
 						  chief, % archief
+						  datief,
 						  dief,
+						  genitief,
 						  gerief,
+						  imperatief,
+						  infinitief, 
 						  initiatief,
+						  massief,
 						  motief,
 						  perspectief,
 						  tarief]).
-form_of_suffix_rule(iek,iek,adjective(no_e(adv)),[acrobatiek,
-						  atletiek,
-						  basiliek,
-						  fabriek,
-						  gymnastiek,
-						  heuristiek,
-						  kliniek,
-						  linguïstiek,
-						  mozaiek,
-						  muziek,
-						  pathetiek,
-						  piek,
-						  problematiek,
-						  republiek,
-						  rubriek,
-						  tactiek,
-						  techniek,
-						  thermiek
-						 ]).
-form_of_suffix_rule(ig,ig,adjective(no_e(adv)),['Dantzig',
-						dertig,
-						dértig,
-						twintig,
-						veertig,
-						vijftig,
-						zestig,
-						zeventig,
-						tuig]).
+% form_of_suffix_rule(iek,iek,adjective(no_e(adv)),[acoustiek,
+% 						  acrobatiek,
+% 						  atletiek,
+% 						  basiliek,
+% 						  fabriek,
+% 						  gymnastiek,
+% 						  heuristiek,
+% 						  komiek,
+% 						  kliniek,
+% 						  kroniek,
+% 						  linguïstiek,
+% 						  mozaiek,
+% 						  muziek,
+% 						  pathetiek,
+% 						  piek,
+% 						  problematiek,
+% 						  republiek,
+% 						  rubriek,
+% 						  tactiek,
+% 						  techniek,
+% 						  thermiek
+% 						 ]).
+form_of_suffix_rule(ig,ig,adjective(no_e(adv)),capital/[
+							config,
+							dertig,
+							dértig,
+							twintig,
+							veertig,
+							vijftig,
+							zestig,
+							zeventig,
+							tuig]).
 form_of_suffix_rule(isch,isch,adjective(no_e(adv)),[]).
 form_of_suffix_rule(ïsch,ïsch,adjective(no_e(adv)),[]).
 form_of_suffix_rule(ischt,ischt,adjective(no_e(adv)),[]).
@@ -3652,12 +3725,12 @@ form_of_suffix_rule(ïscht,ïscht,adjective(no_e(adv)),[]).
 form_of_suffix_rule(ïscht,ïscht,adjective(no_e(adv)),[]).
 form_of_suffix_rule(lijk,lijk,adjective(no_e(adv)),[babylijk,
 						    huwelijk]).
-form_of_suffix_rule(loos,loos,adjective(no_e(adv)),[]).
-form_of_suffix_rule(loos,loos,adjective(no_e(adv)),[]).
+%%%form_of_suffix_rule(loos,loos,adjective(no_e(adv)),[]).
+%%%form_of_suffix_rule(loos,loos,adjective(no_e(padv)),[]).
+form_of_suffix_rule(loos,loos,adjective(no_e(both)),[]).
 form_of_suffix_rule(baar,baar,adjective(no_e(adv)),[]).
-form_of_suffix_rule(oir,oir,adjective(no_e(adv)),[reservoir]).
+form_of_suffix_rule(oir,oir,adjective(no_e(adv)),capital/[reservoir]).
 form_of_suffix_rule(gewijs,gewijs,adjective(no_e(adv)),[]).
-form_of_suffix_rule(loos,loos,adjective(no_e(padv)),[]).
 form_of_suffix_rule(zaam,zaam,adjective(no_e(adv)),[]).
 
 
@@ -3665,60 +3738,131 @@ form_of_suffix_rule(tigste,  tig,     number(rang),[vergeetachtigste]).
 
 form_of_suffix_rule(aalse,   aals,    adjective(e),[]).
 form_of_suffix_rule(aanse,   aans,    adjective(e),[]).
-form_of_suffix_rule(aire,    air,     adjective(e),[affaire]).
-form_of_suffix_rule(ale,     aal,     adjective(e),[centrale,
-						    finale,
-						    whale]).
-form_of_suffix_rule(eerde,   eerd,    adjective(e),[]).
+form_of_suffix_rule(aire,    air,     adjective(e),capital/[affaire]).
+form_of_suffix_rule(ale,     aal,     adjective(e),capital/[centrale,
+							    female,
+							    finale,
+							    whale]).
+form_of_suffix_rule(eerde,   eerd,    adjective(e),[resideerde,
+						    verordoneerde]).
 form_of_suffix_rule(ende,    en,      adjective(ende(padv)),['Balkenende',
+							     bediende,
 							     bende,
 							     eende,
+							     legende,
 							     oostende,
 							     tiende
 							    ]).
 form_of_suffix_rule(eske,    esk,     adjective(e),[burleske]).
 form_of_suffix_rule(euze,    eus,     adjective(e),[keuze]).
 form_of_suffix_rule(ieke,    iek,     adjective(e),[]).
-form_of_suffix_rule(ieve,    ief,     adjective(e),[]).
+form_of_suffix_rule(ieve,    ief,     adjective(e),[believe]).
 form_of_suffix_rule(ige,     ig,      adjective(e),[getuige]).
 form_of_suffix_rule(ische,   isch,    adjective(e),[]).
 form_of_suffix_rule(ïsche,   ïsch,    adjective(e),[]).
 form_of_suffix_rule(ischte,  isch,    adjective(e),[]).
 form_of_suffix_rule(ïschte,  ïsch,    adjective(e),[]).
-form_of_suffix_rule(ke,      k,       adjective(e),capital/[]).
+form_of_suffix_rule(ke,      k,       adjective(e),capital/[manneke,
+ 							    alike,
+ 							    bike,
+							    bloemke,
+							    boerke,
+							    boermarke,
+							    bolleke,
+ 							    cake,
+							    intake,
+							    invoke,
+							    janneke,
+							    jerommeke,
+							    kanneke,
+							    kapelleke,
+							    karaoke,
+							    kercke,
+							    kerke,
+							    kindeke,
+							    klokke,
+							    kopeke, 
+							    '-like',
+							    mistake,
+							    ollekebolleke, 
+							    remake,
+							    shake,
+							    snake, 
+							    strike,
+							    wake,
+							    wrake]).
 form_of_suffix_rule(lijke,   lijk,    adjective(e),[]).
 form_of_suffix_rule(le,      l,       adjective(e),capital/
-		   ['Cercle',
-		    cercle,
+		   [ambule,
+		    capsule,
+		    centrale,
+		    clausule,
 		    controle,
-		    djingle,
-		    shuttle,
-		    jingle,
-		    medaille
-		   ]).
-form_of_suffix_rule(ste,     st,      adjective(e),capital/
-		   [extremiste,
-		    piste
-		   ]).
+		    delle,
+		    'd\'Isabelle',
+		    file,
+		    fille,
+		    finale,
+		    formule,
+		    gazelle,
+		    medaille,
+		    missile,
+		    mobile,
+		    module,
+		    molecule,
+		    molle,
+		    poule,
+		    scale,
+		    smile,
+		    style]).
+% form_of_suffix_rule(ste,     st,      adjective(e),capital/
+% 		   [accordeoniste,
+% 		    achtste,'Achtste',
+% 		    activiste,
+% 		    eerste,'Eerste',
+% 		    extremiste,
+% 		    gymnaste,
+% 		    journaliste,
+% 		    laatste,
+% 		    oudste,
+% 		    piste
+% 		   ]).
 form_of_suffix_rule(bare,    'baar',  adjective(e),[]).
-form_of_suffix_rule(ere,     er,      adjective(e),[àndere,
-						    ándere]).
-form_of_suffix_rule(ese,     ees,     adjective(e),[]).
-form_of_suffix_rule(ïde,     ïde,     adjective(both(adv)),[]).
-form_of_suffix_rule(oire,    oir,     adjective(e),[]).
+form_of_suffix_rule(ere,     er,      adjective(e),capital/[àndere,
+							    ándere]).
+form_of_suffix_rule(ese,     ees,     adjective(e),[hypothese,
+						    prothese,
+						    synthese
+						   ]).
+form_of_suffix_rule(ïde,     ïde,     adjective(both(adv)),capital/[]).
+form_of_suffix_rule(oire,    oir,     adjective(e),capital/[histoire,
+							    memoire,mémoire,
+							    repertoir
+							   ]).
 form_of_suffix_rule(gewijze, gewijs,  adjective(e),[]).
 form_of_suffix_rule(loze,    loos,    adjective(e),[]).
 form_of_suffix_rule(zame,    zaam,    adjective(e),[]).
 
-form_of_suffix_rule(iger,    ig,      adjective(er(adv)),[verdediger,
-							  reiziger,
-							  vertegenwoordiger
-							 ]).
+% form_of_suffix_rule(iger,    ig,      adjective(er(adv)),capital/[armiger,  % bio name
+% 								  begunstiger,
+% 								  belediger,
+% 								  misdadiger,
+% 								  reiger,
+% 								  reiziger,
+% 								  spiniger, % bio name
+% 								  squamiger, % bio name
+% 								  steiger,
+% 								  verdediger,
+% 								  vernietiger,
+% 								  vertegenwoordiger,
+% 								  zuiger
+% 								 ]).
 form_of_suffix_rule(ischer,  isch,    adjective(er(adv)),[]).
 form_of_suffix_rule(ïscher,  ïsch,    adjective(er(adv)),[]).
-form_of_suffix_rule(lijker,  lijk,    adjective(er(adv)),[]).
+form_of_suffix_rule(lijker,  lijk,    adjective(er(adv)),[vergelijker]).
 form_of_suffix_rule(lozer,   loos,    adjective(er(adv)),[]).
-form_of_suffix_rule(ender,   end,     adjective(er(adv)),[]).
+form_of_suffix_rule(ender,   end,     adjective(er(adv)),capital/[kalender,
+								  zender]).
 form_of_suffix_rule(baarder, baar,    adjective(er(adv)),[]).
 
 
@@ -3726,31 +3870,48 @@ form_of_suffix_rule(aals,   aal,     post_adjective(no_e),[]).
 form_of_suffix_rule(aans,   aan,     post_adjective(no_e),[]).
 form_of_suffix_rule(airs,   air,     post_adjective(no_e),[]).
 form_of_suffix_rule(eerds,  eerd,    post_adjective(no_e),[]).
-form_of_suffix_rule(ends,   end,     post_adjective(no_e),[trends]).
+form_of_suffix_rule(ends,   end,     post_adjective(no_e),capital/[friends,
+								   ochtends,
+								   trends]).
 form_of_suffix_rule(esks,   esk,     post_adjective(no_e),[]).
 form_of_suffix_rule(ieels,  ieel,    post_adjective(no_e),[]).
 form_of_suffix_rule(iefs,   ief,     post_adjective(no_e),[]).
 form_of_suffix_rule(ieks,   iek,     post_adjective(no_e),[]).
-form_of_suffix_rule(igs,    ig,      post_adjective(no_e),[]).
-form_of_suffix_rule(igers,  ig,      post_adjective(er),[reinigers]).
+form_of_suffix_rule(igs,    ig,      post_adjective(no_e),capital/[]).
+% form_of_suffix_rule(igers,  ig,      post_adjective(er),[reinigers]).
 form_of_suffix_rule(isch,   isch,    post_adjective(no_e),[]).
 form_of_suffix_rule(ïsch,   ïsch,    post_adjective(no_e),[]).
 form_of_suffix_rule(ischers,isch,    post_adjective(er),[]).
 form_of_suffix_rule(ïschers,ïsch,    post_adjective(er),[]).
 form_of_suffix_rule(lijks,  lijk,    post_adjective(no_e),[]).
 form_of_suffix_rule(lijkers,lijk,    post_adjective(er),[]).
-form_of_suffix_rule(loos,   loos,    post_adjective(no_e),[]).
-form_of_suffix_rule(lozers, loos,    post_adjective(er),[]).
-form_of_suffix_rule(baars,  baar,    post_adjective(no_e),[]).
-form_of_suffix_rule(ders,   der,     post_adjective(no_e),[aanbieders,
-							   arbeiders,
-							   bereiders,
-							   bestuurders,
-							   leiders,
-							   ouders,
-							   spaarders,
-							   strijders]).
-form_of_suffix_rule(oirs,   oir,     post_adjective(no_e),[]).
+form_of_suffix_rule(loos,   loos,    post_adjective(no_e),capital/[]).
+%form_of_suffix_rule(lozers, loos,    post_adjective(er),[]).
+%% form_of_suffix_rule(baars,  baar,    post_adjective(no_e),[]).
+% form_of_suffix_rule(ders,   der,     post_adjective(no_e),capital/[aanbieders,
+% 								   aanmelders,
+% 								   aanranders,
+% 								   arbeiders,
+% 								   bekleders,
+% 								   bereiders,
+% 								   bestuurders,
+% 								   broeders,
+% 								   cilinders,
+% 								   huurders,
+% 								   kelders,
+% 								   leiders,
+% 								   orders,
+% 								   ouders,
+% 								   recorders,
+% 								   rijders,
+% 								   schilders,
+% 								   spaarders,
+% 								   strijders,
+% 								   studeerders,
+% 								   zenders
+% 								  ]).
+
+%%% form_of_suffix_rule(oirs,   oir,     post_adjective(no_e),[]).
 
 form_of_suffix_rule('-er','-er',     noun(de,count,sg),[]).
 form_of_suffix_rule('-ers','-er',   noun(de,count,pl),[]).
@@ -3758,7 +3919,7 @@ form_of_suffix_rule('\'er','\'er',   noun(de,count,sg),[]).
 form_of_suffix_rule('\'ers','\'er',  noun(de,count,pl),[]).
 form_of_suffix_rule('iër','iër',    noun(de,count,sg),[]).
 form_of_suffix_rule('iërs','iër',   noun(de,count,pl),[]).
-form_of_suffix_rule(ist,ist,noun(de,count,sg),[]).
+form_of_suffix_rule(ist,ist,noun(de,count,sg),capital/[]).
 form_of_suffix_rule(isten,ist,noun(de,count,pl),[]).
 form_of_suffix_rule(lander,'lander',    noun(de,count,sg),[]).
 form_of_suffix_rule(landers,'lander',   noun(de,count,pl),[]).
@@ -3766,66 +3927,70 @@ form_of_suffix_rule(ees,'ees',    noun(de,count,sg),[abonnees,
 						       trainees,
 						       vlees,
 						       vrees]).
-form_of_suffix_rule(ezen,'ees',   noun(de,count,pl),[]).
+form_of_suffix_rule(ezen,'ees',   noun(de,count,pl),[iezen]).
 %%% form_of_suffix_rule('aan','aan',    noun(de,count,sg),[]).
 form_of_suffix_rule(anen,'aan',   noun(de,count,pl),[]).
-form_of_suffix_rule(aar,'aar',    noun(de,count,sg),[jaar,
+form_of_suffix_rule(aar,'aar',    noun(de,count,sg),[altaar,
+						     commentaar,
+						     exemplaar,
+						     jaar,
+						     klaar,
 						     paar,
-						     gevaar]).
-form_of_suffix_rule(aars,'aar',   noun(de,count,pl),[paars]).
+						     gevaar,
+						     zwaar]).
+form_of_suffix_rule(aars,'aar',   noun(de,count,pl),['Hongaars',
+						     paars]).
 
 form_of_suffix_rule(iteit,'iteit',  noun(de,count,sg),[]).
 form_of_suffix_rule(iteiten,'iteit',noun(de,count,pl),[]).
 
 form_of_suffix_rule(ingen,'ing',noun(de,count,pl),[groningen]).
 
-form_of_suffix_rule(eert,eer/eren,verb(hebben,sg3,intransitive),[]).
-form_of_suffix_rule(eert,eer/eren,verb(hebben,sg3,transitive),[]).
-form_of_suffix_rule(eren,eer/eren,verb(hebben,pl,intransitive),[boeren,
-								dieren,
-								eieren,
-								goederen,
-								jongeren,
-								kinderen,
-								liederen,
-								papieren,
-								scholieren,
-								wonderen]).
-form_of_suffix_rule(eren,eer/eren,verb(hebben,pl,transitive),[boeren,
-							      dieren,
-							      goederen,
-							      jongeren,
-							      kinderen,
-							      liederen,
-							      papieren,
-							      scholieren,
-							      wonderen]).
-form_of_suffix_rule(eren,eer/eren,verb(hebben,inf,intransitive),[boeren,
-								 dieren,
-								 goederen,
-								 jongeren,
-								 kinderen,
-								 liederen,
-								 papieren,
-								 scholieren,
-								 wonderen]).
-form_of_suffix_rule(eren,eer/eren,verb(hebben,inf,transitive),[boeren,
-							       dieren,
-							       goederen,
-							       jongeren,
-							       kinderen,
-							       liederen,
-							       papieren,
-							       scholieren,
-							       wonderen]).
+form_of_suffix_rule(eert,eer/eren,verb(hebben,sg3,intransitive),capital/[]).
+form_of_suffix_rule(eert,eer/eren,verb(hebben,sg3,transitive),capital/[]).
+form_of_suffix_rule(eren,eer/eren,verb(hebben,Form,Sc),[beenderen,
+							'Beieren',
+							bladeren,
+							boeren,
+							dieren,
+							eieren,
+							formulieren,
+							geweren,
+							goederen,
+							jongeren,
+							kalveren,
+							kinderen,
+							klieren,
+							liederen,
+							mortieren,
+							officieren,
+							papieren,
+							populieren,
+							rivieren,
+							scholieren,
+							spieren,
+							laanderen, % vV
+							veren,
+							vloeren,
+							volkeren,
+							wieren,
+							wonderen]) :-
+    lists:member(Form,[pl,inf]),
+    lists:member(Sc,[transitive,intransitive]).
 form_of_suffix_rule(ëren,eer/ëren,verb(hebben,pl,intransitive),[]).
 form_of_suffix_rule(ëren,eer/ëren,verb(hebben,pl,transitive),[]).
 form_of_suffix_rule(ëren,eer/ëren,verb(hebben,inf,intransitive),[]).
 form_of_suffix_rule(ëren,eer/ëren,verb(hebben,inf,transitive),[]).
-form_of_suffix_rule(eerd,eer/eren,verb(hebben,psp,intransitive),[]).  % wrong root
-form_of_suffix_rule(eerd,eer/eren,verb(hebben,psp,transitive),[]).    % wrong root
-form_of_suffix_rule(eerde,eer/eren,verb(hebben,past(sg),intransitive),[]).
-form_of_suffix_rule(eerde,eer/eren,verb(hebben,past(sg),transitive),[]).
+form_of_suffix_rule(eerd,eer/eren,verb(hebben,psp,intransitive),capital/[prefix(onge),
+									 prefix('niet-ge')]). % wrong root
+form_of_suffix_rule(eerd,eer/eren,verb(hebben,psp,transitive),capital/[prefix(onge),
+								       prefix('niet-ge')]). % wrong root
+form_of_suffix_rule(eerde,eer/eren,verb(hebben,past(sg),intransitive),[prefix(ge),
+								       prefix(onge),
+								       prefix('niet-ge')]).
+form_of_suffix_rule(eerde,eer/eren,verb(hebben,past(sg),transitive),[prefix(ge),
+								     prefix(onge),
+								     prefix('niet-ge')]).
 form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),intransitive),[geleerden]).
 form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),transitive),[geleerden]).
 
@@ -3833,10 +3998,14 @@ form_of_suffix_rule(dderen,dder/dderen,verb(hebben,inf,intransitive),[]).
 form_of_suffix_rule(dderen,dder/dderen,verb(hebben,inf,transitive),[]).
 form_of_suffix_rule(dderen,dder/dderen,verb(hebben,pl,intransitive),[]).
 form_of_suffix_rule(dderen,dder/dderen,verb(hebben,pl,transitive),[]).
-form_of_suffix_rule(dder,dder/dderen,verb(hebben,sg1,intransitive),[]).
-form_of_suffix_rule(dder,dder/dderen,verb(hebben,sg1,transitive),[]).
-form_of_suffix_rule(ddert,dder/dderen,verb(hebben,sg3,intransitive),[]).
-form_of_suffix_rule(ddert,dder/dderen,verb(hebben,sg3,transitive),[]).
+form_of_suffix_rule(dder,dder/dderen,verb(hebben,sg1,intransitive),capital/[ladder,
+									    redder,
+									    ridder]).
+form_of_suffix_rule(dder,dder/dderen,verb(hebben,sg1,transitive),  capital/[ladder,
+									    redder,
+									    ridder]).
+form_of_suffix_rule(ddert,dder/dderen,verb(hebben,sg3,intransitive),capital/[]).
+form_of_suffix_rule(ddert,dder/dderen,verb(hebben,sg3,transitive),capital/[]).
 form_of_suffix_rule(dderd,dder/dderen,verb(hebben,psp,intransitive),[]).
 form_of_suffix_rule(dderd,dder/dderen,verb(hebben,psp,transitive),[]).
 form_of_suffix_rule(dderde,dder/dderen,verb(hebben,past(sg),intransitive),[]).
@@ -3856,16 +4025,11 @@ form_of_suffix_rule(achtigen,achtig,nominalized_adjective,[]).
 
 
 guess_using_suffix0(Word,Prefix,Suffix,MinLengthPrefix,MinLengthSuffix) :-
-    \+ guess_using_suffix_exception(Word),
     atom(Word),
     between(MinLengthSuffix,8,SuffixLength,'-'),
     sub_atom(Word,_,SuffixLength,0,Suffix),
     atom_concat(Prefix,Suffix,Word),
     atom_length(Prefix,A), A>MinLengthPrefix.
-
-guess_using_suffix_exception(Word) :-
-    atom(Word),
-    atom_concat(_,mogelijkheden,Word).
 
 strip_accents(Word0,Word) :-
     atom(Word0),
@@ -4592,7 +4756,8 @@ subsumed_by_dict(P0,P,_,_) :-
 %% forbid: Brits-Nederlanse
 subsumed_by_dict(_,_,[Surf],_) :-
     atom(Surf),
-    once(atom_split(Surf,'-',Brits,Nederlands)),
+    dash(Dash),
+    once(atom_split(Surf,Dash,Brits,Nederlands)),
     alpino_lex:xl(Brits,adjective(no_e(_)),_,[],[]),
     alpino_lex:xl(Nederlands,adjective(_),_,[],[]).
 
@@ -5541,8 +5706,9 @@ unlikely_last_word_name('*').
 unlikely_last_word_name(Init) :-
     name_small_initial(Init).
 unlikely_last_word_name(Word) :-
+    dash(Dash),
     atom(Word),
-    atom_concat(_,'-',Word).
+    atom_concat(_,Dash,Word).
 
 %% there is an obvious generalization missed here:
 unlikely_last_word_name('Arctisch').
@@ -7330,7 +7496,8 @@ construct_root(verb(_,Inf,_),Suffix,Eer/Eren,W,v_root(Prefeer,Preferen)) :-
     atom_concat(Pref,Eer,Prefeer0),
     atom_concat(Pref,Eren,Preferen0),
     decap(Prefeer0,Prefeer),
-    decap(Preferen0,Preferen).
+    decap(Preferen0,Preferen),
+    allowed_root(Prefeer).
 construct_root(_,Suffix,RootSuffix,W,Root) :-
     atom_concat(Pref,Suffix,W),
     atom_concat(Pref,RootSuffix,Root0),
@@ -7339,8 +7506,9 @@ construct_root(_,Suffix,RootSuffix,W,Root) :-
     ;   alpino_lex:in_names_dictionary(_,Pref,_,[],[],_)
     ->  Root0 = Root
     ;   decap_first(Root0,Root)
-    ->  true
-    ;   Root0 = Root
+    ->  allowed_root(Root)
+    ;   Root0 = Root,
+	allowed_root(Root)
     ).
 
 remove_ge_if_psp(psp,Stem0,Stem) :-
@@ -7450,3 +7618,38 @@ not_an_adjective_name0('Links').
 not_an_adjective_name0('Middeleeuws').
 not_an_adjective_name0('Oosters').
 not_an_adjective_name0('Paars').
+
+dash('-').  % codepoint 45, #o55, #x2d
+dash('­').  % codepoint 173, #o255, #xad
+
+allowed_root(Atom) :-
+    atom(Atom),
+    illegal_root_end(End),
+    atom_concat(_,End,Atom),
+    !,
+    fail.
+allowed_root(_).
+
+%% -le
+illegal_root_end(bl).
+illegal_root_end(cl).
+illegal_root_end(dl).
+illegal_root_end(fl).
+illegal_root_end(gl).
+illegal_root_end(kl).
+illegal_root_end(ml).
+illegal_root_end(nl).
+illegal_root_end(pl).
+illegal_root_end(rl).
+illegal_root_end(sl).
+illegal_root_end(tl).
+illegal_root_end(vl).
+illegal_root_end(wl).
+illegal_root_end(zl).
+
+%% -ke
+
+illegal_root_end(fk).
+illegal_root_end(kk).
+illegal_root_end(mk).
+illegal_root_end(sk).

@@ -140,23 +140,23 @@ m(v_root(ben,zijn),
 m(v_root(ben,zijn),
   verb(weest,unacc,imp(modal_u),[copula])).
 
-m(v_root(heb,hebben),
-  verb(heb,hebben,sg1,[ninv(incorporated_subj_topic(aux_psp_hebben),
-			    incorporated_subj_topic(aux_psp_hebben)),
-		       ninv(incorporated_subj_topic(transitive_ndev),
-			    incorporated_subj_topic(transitive_ndev)),
-		       ninv(incorporated_subj_topic(nonp_pred_np_ndev),
-			    incorporated_subj_topic(nonp_pred_np_ndev))
-		      ])).
+% m(v_root(heb,hebben),
+%   verb(heb,hebben,sg1,[ninv(incorporated_subj_topic(aux_psp_hebben),
+% 			    incorporated_subj_topic(aux_psp_hebben)),
+% 		       ninv(incorporated_subj_topic(transitive_ndev),
+% 			    incorporated_subj_topic(transitive_ndev)),
+% 		       ninv(incorporated_subj_topic(nonp_pred_np_ndev),
+% 			    incorporated_subj_topic(nonp_pred_np_ndev))
+% 		      ])).
 
-m(v_root(heb,hebben),
-  verb(had,hebben,past(sg),[ninv(incorporated_subj_topic(aux_psp_hebben),
-				 incorporated_subj_topic(aux_psp_hebben)),
-			    ninv(incorporated_subj_topic(transitive_ndev),
-				 incorporated_subj_topic(transitive_ndev)),
-			    ninv(incorporated_subj_topic(nonp_pred_np_ndev),
-				 incorporated_subj_topic(nonp_pred_np_ndev))
-			    ])).
+% m(v_root(heb,hebben),
+%   verb(had,hebben,past(sg),[ninv(incorporated_subj_topic(aux_psp_hebben),
+% 				 incorporated_subj_topic(aux_psp_hebben)),
+% 			    ninv(incorporated_subj_topic(transitive_ndev),
+% 				 incorporated_subj_topic(transitive_ndev)),
+% 			    ninv(incorporated_subj_topic(nonp_pred_np_ndev),
+% 				 incorporated_subj_topic(nonp_pred_np_ndev))
+% 			    ])).
 
 m(v_root(heb,hebben),
   verb(hebde,hebben,sg2,[incorporated_subj(aux_psp_hebben)])).
@@ -164,22 +164,22 @@ m(v_root(heb,hebben),
 %% topic drop is not allowed for prs=1 in the grammar
 %% therefore special frame for "vraag" to get
 %% "vraag me af of hij komt"
-m(v_root(vraag,vragen),
-  verb(vraag,hebben,sg1,[ninv(part_incorporated_subj_topic(af,refl_sbar),
-			      incorporated_subj_topic(refl_sbar))])).
+% m(v_root(vraag,vragen),
+%   verb(vraag,hebben,sg1,[ninv(part_incorporated_subj_topic(af,refl_sbar),
+% 			      incorporated_subj_topic(refl_sbar))])).
 
-m(v_root(vraag,vragen),
-  verb(vroeg,hebben,past(sg),[ninv(part_incorporated_subj_topic(af,refl_sbar),
-			      incorporated_subj_topic(refl_sbar))])).
+% m(v_root(vraag,vragen),
+%   verb(vroeg,hebben,past(sg),[ninv(part_incorporated_subj_topic(af,refl_sbar),
+% 			      incorporated_subj_topic(refl_sbar))])).
 
 %% "kom/kwam er net achter dat hij .."
-m(v_root(kom,komen),
-  verb(kom,hebben,sg1,[ninv(incorporated_subj_topic(er_pp_sbar(achter)),
-			    incorporated_subj_topic(er_pp_sbar(achter)))])).
+% m(v_root(kom,komen),
+%   verb(kom,hebben,sg1,[ninv(incorporated_subj_topic(er_pp_sbar(achter)),
+% 			    incorporated_subj_topic(er_pp_sbar(achter)))])).
 
-m(v_root(kom,komen),
-  verb(kwam,hebben,past(sg),[ninv(incorporated_subj_topic(er_pp_sbar(achter)),
-				  incorporated_subj_topic(er_pp_sbar(achter)))])).
+% m(v_root(kom,komen),
+%   verb(kwam,hebben,past(sg),[ninv(incorporated_subj_topic(er_pp_sbar(achter)),
+% 				  incorporated_subj_topic(er_pp_sbar(achter)))])).
 
 %% kvind
 m(v_root(vind,vinden),
@@ -206,49 +206,53 @@ m(v_root(vind,vinden),
 
 
 
-%% "voel me kut"
 %% "kvoel mijn benen"
-m(v_root(voel,voelen),
-  verb(voel,hebben,sg1,[ninv(incorporated_subj_topic(pred_refl),
-			     incorporated_subj_topic(pred_refl)),
-			ninv(incorporated_subj_topic(transitive),
-			     incorporated_subj_topic(transitive))])).
-
 m(v_root(voel,voelen),
   verb(kvoel,hebben,sg1,[ninv(incorporated_subj_topic(pred_refl),
 			      incorporated_subj_topic(pred_refl)),
 			ninv(incorporated_subj_topic(transitive),
 			     incorporated_subj_topic(transitive))])).
 
-m(v_root(voel,voelen),
-  verb(voelde,hebben,past(sg),[ninv(incorporated_subj_topic(pred_refl),
-				     incorporated_subj_topic(pred_refl)),
-				ninv(incorporated_subj_topic(transitive),
-				     incorporated_subj_topic(transitive))])).
+%% WHY not simply use the topic_drop analysis???
+%% "voel me kut"
+% m(v_root(voel,voelen),
+%   verb(voel,hebben,sg1,[ninv(incorporated_subj_topic(pred_refl),
+% 			     incorporated_subj_topic(pred_refl)),
+% 			ninv(incorporated_subj_topic(transitive),
+% 			     incorporated_subj_topic(transitive))])).
+
+% m(v_root(voel,voelen),
+%   verb(voelde,hebben,past(sg),[ninv(incorporated_subj_topic(pred_refl),
+% 				     incorporated_subj_topic(pred_refl)),
+% 				ninv(incorporated_subj_topic(transitive),
+% 				     incorporated_subj_topic(transitive))])).
 
 %% "heb me verslapen"
 %% "heb een kater"
-m(v_root(heb,hebben),
-  verb(heb,hebben,sg1,[ninv(incorporated_subj_topic(aux_psp_hebben),
-			    incorporated_subj_topic(aux_psp_hebben)),
-		       ninv(incorporated_subj_topic(transitive_ndev),
-			    incorporated_subj_topic(transitive_ndev))
-		      ])).
+%% WHY not simply use the topic_drop analysis???
+% m(v_root(heb,hebben),
+%   verb(heb,hebben,sg1,[ninv(incorporated_subj_topic(aux_psp_hebben),
+% 			    incorporated_subj_topic(aux_psp_hebben)),
+% 		       ninv(incorporated_subj_topic(transitive_ndev),
+% 			    incorporated_subj_topic(transitive_ndev))
+% 		      ])).
 
-m(v_root(heb,hebben),
-  verb(had,hebben,past(sg),[ninv(incorporated_subj_topic(aux_psp_hebben),
-				  incorporated_subj_topic(aux_psp_hebben)),
-			     ninv(incorporated_subj_topic(transitive_ndev),
-				  incorporated_subj_topic(transitive_ndev))
-			    ])).
+% m(v_root(heb,hebben),
+%   verb(had,hebben,past(sg),[ninv(incorporated_subj_topic(aux_psp_hebben),
+% 				  incorporated_subj_topic(aux_psp_hebben)),
+% 			     ninv(incorporated_subj_topic(transitive_ndev),
+% 				  incorporated_subj_topic(transitive_ndev))
+% 			    ])).
 
-m(v_root(schrik,schrikken),
-  verb(schrok,unacc,past(sg),[ninv(incorporated_subj_topic(pred_refl),
-				   incorporated_subj_topic(pred_refl))])).
-
-m(v_root(schrik,schrikken),
-  verb(schrik,unacc,sg1,[ninv(incorporated_subj_topic(pred_refl),
-			      incorporated_subj_topic(pred_refl))])).
+%% schrok me dood
+%% WHY not simply use the topic_drop analysis???
+%m(v_root(schrik,schrikken),
+%  verb(schrok,unacc,past(sg),[ninv(incorporated_subj_topic(pred_refl),
+%				   incorporated_subj_topic(pred_refl))])).
+%
+%m(v_root(schrik,schrikken),
+%  verb(schrik,unacc,sg1,[ninv(incorporated_subj_topic(pred_refl),
+%			      incorporated_subj_topic(pred_refl))])).
 
 %% doesn't fit in general scheme for verbs:
 %%   ik ben vissen
@@ -516,7 +520,8 @@ m(v_root(heb,hebben),
         part_fixed(nodig,[{[acc,mod_pp(bij)]}],no_passive),
 
 	subj_control(pass_te),         % je hebt maar te luisteren ??pass_te??
-        obj_control(pass_te),          % de paus heeft daklozen te eten gehad
+        obj_control(pass_te),	       % de paus heeft daklozen te eten gehad
+	                               % ALLOWS *de paus heeft daklozen gehad te eten
                                        % te eten, slapen, logeren, 
         np_er_pc_pp(bij),              % we hebben er een kindje bij
 	np_pc_pp_refl(bij),            % hij heeft een boek bij zich
@@ -1324,8 +1329,13 @@ v(acclimatiseer,acclimatiseert,acclimatiseren,geacclimatiseerd,acclimatiseerde,a
    h([transitive  % de vogels moeten geacclimatiseerd worden
      ])]).
 
+m(v_root(acht,achten),
+  verb(geacht,hebben,psp,[np_vp_obj1])).
+
 v(acht,acht,achten,geacht,achtte,achtten,
-    [h([np_vp_obj1,             % verplicht passief?
+  [h([%% np_vp_obj1,		% verplicht passief? Kunnen we niet afdwingen, maar daarom dit frame alleen als participle
+      %% verb raiser? TODO "omdat ik het boek geacht wordt te lezen"
+      %% LassySmall: En dat terwijl Egypte het sterkste leger in het Midden-Oosten werd geacht te hebben .
 	pred_np,
 	pred_np_sbar,		% we achten het bewezen dat ..
 	pred_np_vp,
@@ -9207,7 +9217,13 @@ v(hang,hangt,hangen,gehangen,hing,hingen,
         ld_dir,  % omlaag hangen
 	np_ld_pp,
 	np_ld_adv,
-	subj_control(pass_te), % het wasgoed heeft daar te drogen gehangen
+	subj_control(pass_te),	% ?omdat het wasgoed hangt te drogen
+	                        % omdat het wasgoed te drogen hangt
+				% het wasgoed heeft daar te drogen gehangen
+	obj_control(pass_te),   % ik hang het wasgoed te drogen
+	                        % TODO het wasgoed wordt te drogen gehangen
+%	                        % ALLOWS *omdat ik het wasgoed hang te drogen
+%	                        % omdat ik het wasgoed te drogen hang
 	fixed([ap_pred('te kijk')],no_passive), % VL
 	fixed([ap_pred('te kijk'),acc],norm_passive), % VL
 	fixed([ap_pred('halfstok')],no_passive), 
@@ -12358,7 +12374,8 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
 	part_transitive(terug),
         part_transitive(toe),
 	subj_control(pass_te),
-        obj_control(pass_te),   % de paus heeft daklozen te eten gekregen
+        obj_control(pass_te), % de paus heeft daklozen te eten gekregen
+	                      % ALLOWS *de paus heeft daklozen gekregen te eten
         sbar_obj_opt_het,       % dan krijg je (het) al snel dat 
 	fixed([[in],[de,pest]],no_passive), % hij heeft de pest in
 	fixed([[in],[de,smoor]],no_passive),
@@ -13114,8 +13131,10 @@ v(leg,legt,leggen,gelegd,legde,legden,
 	np_ld_pp,
 	np_np_ld_pp,
 	np_ld_adv,		% opzij boven onder buiten  ...
-	np_vp_obj1,		% ik leg de appels te rijpen
-	                        % de appels worden te rijpen gelegd
+%%% TODO
+%%% ik leg de appels te rijpen
+%%% de appels worden te rijpen gelegd
+	obj_control(pass_te),
 	part_np_np(aan),
 	part_np_np(op),
 	part_np_np(uit),
@@ -23930,7 +23949,7 @@ v(upgrade,upgradet,upgraden,geüpgraad,[upgrade,upgradede],[upgraden,upgradeden]
 	transitive,
 	ld_pp])]).
 
-v(upload,uploadt,uploaden,geüpload,uploadde,uploadden,
+v(upload,uploadt,uploaden,[geüpload,'ge-upload'],uploadde,uploadden,
     [h([transitive,
         intransitive,
         np_ld_pp])]).

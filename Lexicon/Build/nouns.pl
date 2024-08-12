@@ -1101,6 +1101,8 @@ n([sg('Tamil'),pl('Tamils')],de,[]).
 
 n([mass('Tamil')],het,[]).
 
+n([mass('Tataars')],het,[]).
+
 n([sg('Thai'),pl('Thai'),pl('Thais')],de,[]).
 
 n([mass('Thais'),
@@ -2897,7 +2899,10 @@ n([pl(arealen),sg(areaal)],het,[measure]).
 
 n([pl('arena\'s'),sg(arena)],de,[]).
 
-n([pl(arenden),sg(arend)],de,[]).
+n([pl(arenden),sg(arend)],de,[],[dwerg,
+				 i(slang,slangen),
+				 vis,
+				 zee]).
 
 n([mass(argeloosheid)],de,[]).
 
@@ -4124,7 +4129,7 @@ n([pl(begeleidingen),sg(begeleiding)],de,[]).
 
 n([pl(begijnen),sg(begijn)],de,[]).
 
-n([sg(begin)],het,[temp_mod,sbar]).
+n([sg(begin)],het,[temp_mod,sbar],[dim(beginnetje)]).
 
 n([pl(beginfasen),pl(beginfases),sg(beginfase)],de,[]).
 
@@ -19540,7 +19545,9 @@ n([mass(kwaadheid)],de,[]).
 n([mass(kwaads)],het,[]).
 
 n([pl(kwalen),sg(kwaal)],de,[],
-  [s(oudedag),
+  [hart,
+   maag,
+   s(oudedag),
    dim(kwaaltje)]).
 
 n([sg(kwab),pl(kwabben)],de,[]).
@@ -20204,7 +20211,8 @@ n([pl(lelies),pl(leliën),sg(lelie)],de,[],[dim(lelietje)]).
 
 n([mass(lelijkheid)],de,[]).
 
-n([sg(lemma),pl('lemma\'s')],het,[np_app_measure]).
+n([sg(lemma),pl('lemma\'s')],het,[app_measure,
+				  np_app_measure]).
 
 n([pl(lemmeten),sg(lemmet)],het,[]).
 
@@ -22167,7 +22175,11 @@ n([pl(meelopers),sg(meeloper)],de,[]).
 n([sg(meent),pl(meenten)],de,[]).
 
 n([pl(meren),sg(meer)],het,[],
-  [zee,
+  [berg,
+   binnen,
+   zee,
+   i(zoet_water,zoetwater),
+   zout,
    dim(meertje)]).
 
 n([pl(meerderheden),sg(meerderheid)],de,[],
@@ -23893,7 +23905,9 @@ n([pl(neurotici),sg(neuroticus)],de,[]).
 
 n([sg(neurotransmitter),pl(neurotransmitters)],de,[]).
 
-n([pl(neuzen),sg(neus)],de,[],[dim(neusje)]).
+n([pl(neuzen),sg(neus)],de,[],
+  [loop,
+   dim(neusje)]).
 
 n([pl(neusgaten),sg(neusgat)],het,[]).
 
@@ -23966,6 +23980,8 @@ n([pl(nietsnutten),sg(nietsnut)],de,[]).
 n([mass(nieuwbouw)],de,[]).
 
 n([pl(nieuwelingen),sg(nieuweling)],de,[]).
+
+n([mass('Nieuwgrieks')],het,[]).
 
 n([pl(nieuwigheden),sg(nieuwigheid)],de,[sbar,vp]).
 
@@ -25915,6 +25931,8 @@ n([mass(ouderschap)],het,[]).
 
 n([sg(oudgediende),pl(oudgedienden)],de,[]).
 
+n([mass('Oudgrieks')],het,[]).
+
 n([pl(oudheden),sg(oudheid)],de,[]).
 
 n([sg(oudjaar),sg(oudejaar)],het,[temp_mod,sbar]).
@@ -26212,9 +26230,13 @@ n([sg(paai)],de,[]).
 n([pl(palen),sg(paal)],de,[],
   [dim(paaltje),
    flits,
+   grens,
+   kilometer,
    laad,
    piket,
-   telefoon]).
+   praat,
+   telefoon,
+   totem]).
 
 n([meas(paar),pl(paren)],het,[meas_mod,measure]).
 
@@ -26974,7 +26996,8 @@ n([pl(percelen),sg(perceel)],het,[measure],[dim(perceeltje)]).
 n([pl(percentages),sg(percentage)],het,[measure]).
 
 n([pl(percentages),sg(percentage)],het,[],
-  [groei,
+  [alcohol,
+   groei,
    opkomst,
    rente,
    h(rsi),h('RSI'),
@@ -27997,14 +28020,13 @@ n([pl(posen),pl(poses),sg(pose)],de,[vp]).
 
 n([pl(posities),sg(positie)],de,
   [sbar,
-   vp],
+   vp,
+   meas_mod], % hij zakte een positie op de wereldranglijst
   []).
 
-n([pl(posities),sg(positie)],de,
-  [meas_mod],  % hij zakte een positie op de wereldranglijst
-  []).
-
-n([pl(posities),sg(positie)],de,
+n([pl(posities),sg(positie),
+   ignore_stem(positie)
+   ],de,
   [],
   [i(arbeid_markt,arbeidsmarkt),
    concurrentie,
@@ -29709,6 +29731,8 @@ n([pl(rederijen),sg(rederij)],de,[]).
 
 n([pl(redevoeringen),sg(redevoering)],de,[]).
 
+n([sg(redirect),pl(redirects)],de,[]).
+
 n([mass([reduced,instruction,set,computing])],both,[]).
 
 n([pl(reducties),sg(reductie)],de,[],[tekort]).
@@ -29890,7 +29914,10 @@ n([mass(regulering),pl(reguleringen),sg(regulering)],de,[],
 
 n([pl(rehabilitaties),sg(rehabilitatie)],de,[]).
 
-n([pl(reigers),sg(reiger)],de,[],[dim(reigertje)]).
+n([pl(reigers),sg(reiger)],de,[],
+  [dim(reigertje),
+   purper,
+   zilver]).
 
 n([mass(reine)],het,[]).
 
@@ -31218,7 +31245,10 @@ n([pl(schapen),sg(schaap)],het,[],[dim(schaapje)]).
 
 n([pl(schaapherders),sg(schaapherder)],de,[]).
 
-n([pl(scharen),sg(schaar)],de,[],[dim(schaartje)]).
+n([pl(scharen),sg(schaar)],de,[],
+  [nagel,
+   ploeg,
+   dim(schaartje)]).
 
 n([mass(schaarste)],de,[],
   [water]).
@@ -32298,7 +32328,7 @@ n([pl('siësta\'s'),sg(siësta)],de,[]).
 
 n([pl(sjaals),sg(sjaal)],de,[],[dim(sjaaltje)]).
 
-n([pl(sjablonen),sg(sjabloon)],de,[]).
+n([pl(sjablonen),sg(sjabloon)],both,[]).
 
 n([pl(sjahs),sg(sjah)],de,[]).
 
@@ -32921,6 +32951,9 @@ n([mass(soja)],de,[]).
 n([pl(sokken),sg(sok)],de,[]).
 
 n([sg(sokkel),pl(sokkels)],de,[]).
+
+%% wikipedia: Een sokpop is de benaming voor een kloon of tweede identiteit of account op een site of forum van één gebruiker.
+n([sg(sokpop),pl(sokpoppen)],de,[]).
 
 n([pl(sols),sg(sol)],de,[]).
 
@@ -33796,7 +33829,13 @@ n([sg([stand,up,comedian]),pl([stand,up,comedians]),
 
 n([sg([standing,force]),pl([standing,forces])],de,[]).
 
-n([pl(standaarden),pl(standaards),sg(standaard)],de,[measure,sbar,vp]).
+n([pl(standaarden),pl(standaards),sg(standaard)],de,
+  [measure,
+   sbar,
+   vp,
+   subject_sbar,
+   subject_vp
+  ]).
 
 n([pl(standaarden),pl(standaards),sg(standaard)],de,[],
   [goud,
@@ -35009,18 +35048,46 @@ n([pl(taakstellingen),sg(taakstelling)],de,[]).
 
 n([pl(talen),sg(taal)],de,[app_measure],
   [beeld,
+   brabbel,
+   bron,
+   cultuur,
+   doel,
    i(gebaar,gebaren),
+   hulp,
+   'jip-en-janneke',
+   h('Jip-en-Janneke'),
+   i(jong,jongeren),
+   kerk,
+   kinder,
+   klank,
+   krom,
+   kunst,
    s(land),
    s(lichaam),
+   machine,
+   marketing,
+   h(markup),
+   i(mens,mensen),
    s(minderheid),
+   h(msn),
+   h('MSN'),
    moeder,
+   muziek,
+   oer,
    s(omgang),
+   opmaak,
    programmeer,
+   promo,h(promo),
    schrijf,
+   schutting,
    spreek,
    standaard,
    straat,
    streek,
+   toon,
+   turbo,
+   tussen,
+   vak,
    voer,
    s(volk),
    dim(taaltje)]).
@@ -38421,6 +38488,10 @@ n([pl(vermeldingen),sg(vermelding)],de,
    start_app_measure,
    sbar]).
 
+n([pl(vermeldingen),sg(vermelding)],de,
+  [],
+  [bron]).
+
 n([pl(vermengingen),sg(vermenging)],de,[]).
 
 n([pl(vermenigvuldigingen),sg(vermenigvuldiging)],de,[]).
@@ -40652,6 +40723,8 @@ n([sg(want),pl(wanten)],de,[]).
 n([pl(wantoestanden),sg(wantoestand)],de,[]).
 
 n([mass(wantrouwen)],het,[]).
+
+n([sg(wants),pl(wantsen)],de,[]).
 
 n([sg('wao\'er'),pl('wao\'ers')],de,[]).
 

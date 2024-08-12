@@ -2,18 +2,18 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="daarom" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarom" special="er" word="Daarom"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="aan_bevelen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="beveel_aan" sc="part_np_np(aan)" stype="declarative" tense="present" v_per="fir" word="bevelen" wvorm="pv"/>
-      <node begin="2" case="nom" def="def" end="3" gen="de" getal="mv" id="4" lemma="wij" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" rnum="pl" root="wij" status="vol" vwtype="pers" wh="nwh" word="wij"/>
-      <node begin="3" end="4" genus="onz" getal="ev" id="5" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj2" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
-      <node begin="4" cat="np" end="6" id="6" rel="obj1">
-        <node begin="4" end="5" id="7" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="5" end="6" gen="both" genus="zijd" getal="ev" graad="basis" id="8" lemma="wonder_middel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="wonder_middel" word="wondermiddel"/>
+      <node begin="0" end="1" id="2" lemma="daarom" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarom" word="Daarom"/>
+      <node begin="1" end="2" id="3" lemma="aan_bevelen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="beveel_aan" word="bevelen" wvorm="pv"/>
+      <node begin="2" end="3" getal="mv" id="4" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+      <node begin="3" end="4" genus="onz" getal="ev" id="5" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj2" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="4" cat="np" end="7" id="6" rel="obj1">
+        <node begin="4" end="5" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="wonder_middel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wonder_middel" word="wondermiddel"/>
+        <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="9" lemma="WC-Eend" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="WC-Eend" word="WC-Eend"/>
       </node>
-      <node aform="base" begin="6" buiging="zonder" end="7" id="9" infl="no_e" lemma="WC-Een" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="mod" root="WC-Een" vform="gerund" word="WC-Eend" wvorm="od"/>
       <node begin="7" end="8" id="10" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
     </node>
-    <node begin="8" end="9" id="11" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+    <node begin="8" end="9" id="11" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
   </node>
   <sentence>Daarom bevelen wij het de wondermiddel WC-Eend aan !</sentence>
 </alpino_ds>

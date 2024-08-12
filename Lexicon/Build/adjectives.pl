@@ -709,7 +709,10 @@ a([e('s-Gravendeelse'),
    no_e('s-Gravendeels')],nonadv,[],[]).
 
 a([e('Griekse'),
-   no_e('Grieks')],nonadv,[],[hh('Zuid'),
+   no_e('Grieks')],nonadv,[],
+  [hh(oud),hh('Oud'),
+   hh(nieuw),hh('Nieuw'),
+   hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
@@ -1185,6 +1188,9 @@ a([e('Syrische'),
 
 a([e('Taiwanese'),
    no_e('Taiwanees')],nonadv,[],[]).
+
+a([e('Tataarse'),
+   no_e('Tataars')],nonadv,[],[]).
 
 a([e('Thaise'),
    no_e('Thais'),
@@ -22009,7 +22015,7 @@ a([e(maandagse),
    no_e(maandags)],adv,[],[]).
 
 a([e(maandelijkse),
-   no_e(maandelijks)],adv,[],[]).
+   no_e(maandelijks)],adv,[],[twee,drie,vier,vijf,zes]).
 
 a([e(maartse),no_e(maarts)],nonadv,[],[]).
 
@@ -23673,6 +23679,9 @@ a([e(nieuwsgierige),
   [er_pp_sbar(naar),
    object_sbar,
    pp(naar)],[]).
+
+a([e('Nieuwgriekse'),
+   no_e('Nieuwgrieks')],nonadv,[],[]).
 
 a([e(nihilistische),
    er(nihilistischer),
@@ -28124,6 +28133,9 @@ a([e(ordinaire),
    st(ordinairst),
    ste(ordinairste)],adv,[],[]).
 
+a([e(organieke),
+   no_e(organiek)],adv,[],[]).
+
 a([e(organisatorische),
    e(organizatorische),
    no_e(organisatorisch),
@@ -28200,6 +28212,9 @@ a([e(ouderwetse),
    no_e(ouderwets),
    st(ouderwetst),
    ste(ouderwetste)],adv,[],[]).
+
+a([e('Oudgriekse'),
+   no_e('Oudgrieks')],nonadv,[],[]).
 
 a([e(oudtestamentische),
    no_e(oudtestamentisch)],nonadv,[],[]).
@@ -31369,7 +31384,8 @@ a([e(schuldige),
    transitive,
    object_sbar,
    object_vp],
-  [hoofd]).
+  [hoofd,
+   mede]).
 
 a([e(schunnige),
    er(schunniger),
@@ -36209,6 +36225,9 @@ a([ge_e(vermelde),
 a([e(vermeldingswaarde),
    no_e(vermeldingswaard)],adv,[object_sbar],[]).
 
+a([e(vermeldenswaardige),
+   no_e(vermeldenswaardig)],adv,[object_sbar],[]).
+
 a([e(vermeldingswaardige),
    no_e(vermeldingswaardig)],adv,[object_sbar],[]).
 
@@ -39016,7 +39035,7 @@ a([e(weidse),
 a([no_e(weinig),e(weinige)],odet_adv,[],[]).
 
 a([e(wekelijkse),
-   no_e(wekelijks)],adv,[],[]).
+   no_e(wekelijks)],adv,[],[twee,drie,vier,vijf,zes]).
 
 a([pred(wel)],adv,[],[]).
 

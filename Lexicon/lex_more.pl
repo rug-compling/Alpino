@@ -4297,6 +4297,15 @@ phrasal_entry(Tag,'Nx') -->
        nx_tag(Tag)
     }.
 
+phrasal_entry(Tag,'Nmaal') -->
+    { hdrug_util:debug_message(4,"Nmaal~n",[]) },
+    n_word(Nx),
+    {  atom(Nx),
+       atom_concat(NAtom,maal,Nx),
+       simple_convert_number(NAtom,_),
+       nx_tag(Tag)
+    }.
+
 nx_tag(tmp_noun(both,count,bare_meas)).
 nx_tag(tmp_noun(both,count,bare_meas,measure)).
 

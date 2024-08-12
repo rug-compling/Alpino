@@ -1024,6 +1024,7 @@ plural_suffix(ramones).
 plural_suffix(rangers).
 plural_suffix(reds).
 plural_suffix(residents).
+plural_suffix(rijders).
 plural_suffix(rockers).
 plural_suffix(roots).
 plural_suffix(roses).
@@ -3085,6 +3086,7 @@ spelling_variant(wanner,      wanneer).
 spelling_variant(waneer,      wanneer).
 spelling_variant(weing,       weinig).
 spelling_variant(weining,     weinig).
+spelling_variant(welliswaar,  weliswaar).
 spelling_variant(wende,       wendde).
 spelling_variant(wilen,       willen).
 spelling_variant(woren,       worden).
@@ -3505,6 +3507,7 @@ parse_only_lex(Word,Root,Tag,Ws0,Ws,_LC) :-
     parse_only_lex(Word,Root,Tag,Ws0,Ws).
 
 %% 5
+
 parse_only_lex(de,     hoeveel,wh_adjective(odet_adv),                  [hoeveel|X],X).
 
 parse_only_lex(de,     gij,    pronoun(nwh,inv,sg,both,both,def),       [gij|X],   X).
@@ -3894,6 +3897,7 @@ abbreviation('pred.',  predikant).
 abbreviation('prot.',  protestant).
 abbreviation('prot.',  protestants).
 abbreviation('red.',   redactie).
+abbreviation(redir,    redirect).
 abbreviation('r.k.',   'rooms-katholiek').
 abbreviation('r.k.',   'rooms-katholieke').
 abbreviation('r.-k.',   'rooms-katholiek').

@@ -6975,6 +6975,7 @@ m(henzelf,      pronoun(nwh,thi,pl,de,dat_acc,def),henzelf).
 m(hetgeen,      pronoun(ywh,thi,sg,het,both,def),hetgeen).
 m(hetgeen,      pronoun(nwh,thi,sg,het,both,def,strpro),hetgene).
 m(hetwelk,      pronoun(ywh,thi,sg,het,both,def),hetwelk).
+m(hetwelk,      pronoun(ywh,thi,sg,het,both,def),hetwelke).
 m(hij,          pronoun(nwh,thi,sg,de,nom,def),hij).
 m('hij_zij',    pronoun(nwh,thi,sg,de,nom,def),'hij/zij').
 m('hij_zij',    pronoun(nwh,thi,sg,de,nom,def),[hij,'/',zij]).
@@ -7686,6 +7687,7 @@ m(dat,          rel_pronoun(het,   no_obl), dat).
 m(die,          rel_pronoun(de,    no_obl), die).
 m(hetgeen,      rel_pronoun(both,  no_obl), hetgeen).
 m(hetwelk,      rel_pronoun(both,  no_obl), hetwelk).
+m(hetwelk,      rel_pronoun(both,  no_obl), hetwelke).
 m(wat,          rel_pronoun(het,   both),   wat).
 m(welk,         rel_pronoun(both,     obl), welke). % een vereniging, voor welke nog hoop bestaat
 m(welk,         rel_pronoun(both,     obl), [de,welke]). %VL
