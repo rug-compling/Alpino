@@ -164,6 +164,7 @@ triple_to_feature(on,deprel(HdPos: Hd/HdP,Rel,ArgPos: Arg  /ArgP),dep35(Arg/ArgP
 
 triple_member([TrH|TrT],Triple) :-
     member(Triple,[TrH|TrT]).
+%%% het boek dat ik lees => boek hd/obj1 less
 triple_member([TrH|TrT],deprel(verb:Head,Rel,noun:Noun)) :-
     member(deprel(noun:Noun,hd/mod,pron(rel):Pron/Ps), [TrH|TrT]),
     die_rel_pron(Pron),
@@ -172,15 +173,22 @@ triple_member([TrH|TrT],deprel(verb(SC):Head,Rel,noun:Noun)) :-
     member(deprel(noun:Noun,hd/mod,pron(rel):Pron/Ps), [TrH|TrT]),
     die_rel_pron(Pron),
     member(deprel(verb(SC):Head,Rel,pron(rel):Pron/Ps),[TrH|TrT]).
+%%% ik eet appels en peren => eet hd/obj1 appel, eet hd/obj1 peer
 triple_member([TrH|TrT],deprel(HD,REL,CNJ)) :-
     member(deprel(HD,REL,VG:En/EnPs), [TrH|TrT]),
     vg(VG),
     member(deprel(VG:En/EnPs,crd/cnj,CNJ),[TrH|TrT]).
+%%% appels en peren => peer cnj/cnj appel
 triple_member([TrH|TrT],deprel(CNJ1,cnj/cnj,CNJ2)) :-
     select(deprel(VG:En/EnPs,crd/cnj,CNJ1),[TrH|TrT],Triples1),
     vg(VG),
     member(deprel(VG:En/EnPs,crd/cnj,CNJ2),Triples1),
     ordered(CNJ1,CNJ2).
+%%% hij is gek => gek predc/su hij
+triple_member([TrH|TrT],deprel(Pred,predc/su,Su)):-
+    member(deprel(verb:Cop/Pos,hd/predc,Pred),[TrH|TrT]),
+    member(deprel(verb:Cop/Pos,hd/su,Su),[TrH|TrT]),
+    \+ member(deprel(verb:Cop/Pos,hd/obj1,_),[TrH|TrT]).
 
 /*
 - too infrequent?
@@ -991,12 +999,13 @@ lexical_penalty_frame(His,A,B,C,D,E,Feature) :-
     !,
     lexical_penalty_frame_skip(His,A,B,C,D,E,Feature).
     
-lexical_penalty_frame(_,Noun,_,noun(Lid,count,sg),noun,_,bal(Noun,Lid)).
+%% lexical_penalty_frame(_,Noun,_,noun(Lid,count,sg),noun,_,bal(Noun,Lid)).
 lexical_penalty_frame(_,Stem,_,_,_,_,stem_best(Stem)).
-lexical_penalty_frame(_,_,Surf,verb(_,subjunctive,_),_,_,subjunctive(Surf)).
+%% lexical_penalty_frame(_,_,Surf,verb(_,subjunctive,_),_,_,subjunctive(Surf)).
 lexical_penalty_frame(_,_,Surf,_,Frame,_,f2(Surf,Frame)) :-
     prettyvars(Frame).
 lexical_penalty_frame(_,_,_,_,Frame,_,f1(Frame)).
+lexical_penalty_frame(_,v_root(_,Stem),_,_,verb(Frame,_),_,verb_frame(Stem,Frame)).
 lexical_penalty_frame(_,_,Surf,_,Frame,_,z_f2-Score) :-
     z_f2(Surf,Frame,Score).
 lexical_penalty_frame(His,_,_,_,Tag,Len,Feature):-
@@ -1009,7 +1018,7 @@ lexical_penalty_frame_his(His,_,Len,h1(His)) :-
 lexical_penalty_frame_his(compound(_),Tag,_,compound(Fun)) :-
     functor(Tag,Fun,_).
 lexical_penalty_frame_his(form_of_suffix(_),_,_,form_of_suffix).
-lexical_penalty_frame_his(form_of_suffix(X),_,_,form_of_suffix(X)).
+%% lexical_penalty_frame_his(form_of_suffix(X),_,_,form_of_suffix(X)).
 
 %lexical_penalty_frame(gen,Stem,Surf,Frame,_,_,para) :- 
 %    alpino_paraphrase:add_lex(Stem,Surf,Frame).

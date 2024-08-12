@@ -21,6 +21,9 @@ S_FSA_PREFIX=/net/aps/haytabo/src/s_fsa-0.51/fsa_prefix
 ls:
 	ls -lhS $(sorted)
 
+lsm:
+	ls -lhS $(sorted:%.sorted=%.marginals)
+
 ## all except NLWIKI20110804 and EUROPARL, for which there are extended
 ## versions in $(LLE)
 LLSORTED=$(LL)/EINDHOVEN/COMPACT.sorted \
@@ -67,7 +70,7 @@ LLESORTED=$(LLE)/Books/COMPACT.sorted \
  $(LLE)/ParaCrawl/COMPACT.sorted \
  $(LLE)/Tatoeba/COMPACT.sorted \
  $(LLE)/TED2013/COMPACT.sorted \
- $(LLE)/wiki2017/COMPACT.sorted \
+ $(LLE)/wiki2024/COMPACT.sorted \
  $(LLE)/OpenSubtitles2018/COMPACT.sorted \
 
 LLRSORTED=$(LLR)/CGN/COMPACT.sorted \
