@@ -9533,6 +9533,7 @@ lemma_root(onttrekken,onttrek) .
 lemma_root(onttronen,onttroon) .
 lemma_root(ontvallen,ontval) .
 lemma_root(ontvangen,ontvang) .
+lemma_root(ontveinzen,ontveins) .
 lemma_root(ontvellen,ontvel) .
 lemma_root(ontvlammen,ontvlam) .
 lemma_root(ontvluchten,ontvlucht) .

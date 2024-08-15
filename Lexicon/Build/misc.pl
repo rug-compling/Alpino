@@ -2984,6 +2984,7 @@ collocational_preposition([op,voet,van]).
 collocational_preposition([op,vraag,van]). % VL
 collocational_preposition([te,midden]).  % VL
 collocational_preposition([te,midden,van]).
+collocational_preposition([ten,aanschouwen,van]).
 collocational_preposition([ten,aanzien,van]).
 collocational_preposition([ten,behoeve,van]).
 collocational_preposition([ten,belope,van]).   % addition GvN VL?
@@ -5369,6 +5370,8 @@ m('hoe dat zo',      wh_adverb,[hoe,dat,zo]).
 %%  m(vanwaar,          wh_adverb,vanwaar).  % meaning: why?
 %%  m(waarom,           wh_adverb,waarom).
 
+m(weshalve,wh_adverb,weshalve).
+
 with_dt([vanwaar,dan],
         wh_adverb,
         dt(advp,[hd=l(vanwaar,wh_adverb,0,1),
@@ -6947,6 +6950,7 @@ m(datgeen,      pronoun(nwh,thi,sg,het,both,def,strpro),datgene).
 m(degeen,       pronoun(nwh,thi,sg,de,both,def,strpro),degeen).
 m(degeen,       pronoun(nwh,thi,sg,de,both,def,strpro),degene).
 m(degeen,       pronoun(nwh,thi,pl,de,both,def,strpro),degenen).
+m(degeen,       pronoun(nwh,thi,pl,de,gen,def,strpro),dergenen).
 m(deze,         pronoun(nwh,thi,both,both,gen,def),dezer).
 m(deze,         pronoun(nwh,thi,both,both,gen,def),dezes).
 m(deze,         pronoun(nwh,thi,pl,de,both,def,strpro),dezen).
@@ -7372,6 +7376,7 @@ genitive_noun(huizes,huis).
 genitive_noun(aanschijns).
 genitive_noun(dichters).
 genitive_noun(doods).
+genitive_noun(geloofs).
 genitive_noun(heelals).
 genitive_noun(hemels).
 genitive_noun(jaars).  % ouderwets

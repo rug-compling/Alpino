@@ -16133,6 +16133,12 @@ v(ontvang,ontvangt,ontvangen,ontvangen,ontving,ontvingen,
         np_pc_pp(van),  % iets ontvangen van
 	fixed([{[acc(reactie),pc(op)]}],norm_passive)])]).
 
+v(ontveins,ontveinst,ontveinzen,ontveinsd,ontveinsde,ontveinsden,
+  [h([transitive,
+      np_np,
+      refl_sbar,
+      np_sbar])]).
+
 v(ontvel,ontvelt,ontvellen,ontveld,ontvelde,ontvelden,
   [h([transitive])]).
 

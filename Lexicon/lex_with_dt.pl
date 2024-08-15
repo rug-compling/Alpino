@@ -1299,6 +1299,7 @@ with_dt_all(de,[en,tussen,vijf,zeven]).
 with_dt_all(de,[en,tussen,zestig,zeventig]).
 with_dt_all(de,[en,tussen,zes,zeven]).
 with_dt_all(degelijk,[wel]).
+with_dt_all(de,[geloof]).
 with_dt_all(de,[god,vader]).
 with_dt_all(de,[grootmoeder]).
 with_dt_all(de,[grootvader]).

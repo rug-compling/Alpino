@@ -7408,7 +7408,7 @@ sbar_comp_behalve_xp_structure(Comp,XP,SBAR,Mod) :-
     sbar_comp_xp_structure(Comp,XP,SBAR0),
     hd_mod_structure(SBAR0,Mod,SBAR),
     Comp:hstem <=> Stem,
-    alpino_wappend:wwmember(Stem,[behalve,'zij het',tenzij]).
+    alpino_wappend:wwmember(Stem,[behalve,behoudens,'zij het',tenzij]).
 
 %%EX%% Die winkel is altijd open , laat staan , natuurlijk , op vrijdag
 grammar_rule(sbar(mod_pp),SBAR,[ Comp, COMMA, MOD, COMMA2, XP ]) :-

@@ -891,6 +891,8 @@ accent(levenssituatien,levenssituatiën).
 accent('Libier','Libiër').
 accent('Libiers','Libiërs').
 accent(lieren,liëren).
+accent(linguistische,linguïstische).
+accent(linguistisch,linguïstisch).
 accent(linkerknieen,linkerknieën).
 accent(litanieen,litanieën).
 accent(liturgieen,liturgieën).
@@ -1066,12 +1068,15 @@ accent(persfotografieen,persfotografieën).
 accent(personifieren,personifiëren).
 accent(petitien,petitiën).
 accent(piece,pièce).
+accent(pieteiten,piëteiten).
+accent(pieteit,piëteit).
 accent(planetoiden,planetoïden).
 accent(planetoide,planetoïde).
 accent(platenindustrieen,platenindustrieën).
 accent(poeet,poëet).
 accent(poesie,poésie).
 accent(poeten,poëten).
+accent(poetica,poëtica).
 accent(poetische,poëtische).
 accent(poetischere,poëtischere).
 accent(poetischer,poëtischer).
@@ -1291,8 +1296,10 @@ accent('Syrier','Syriër').
 accent(systeemtheorieen,systeemtheorieën).
 accent(taalcoordinatoren,taalcoördinatoren).
 accent(taalcoordinator,taalcoördinator).
+accent(taalstudien,taalstudiën).
 accent(taaltechnologieen,taaltechnologieën).
 accent(tabaksindustrieen,tabaksindustrieën).
+accent(talenstudien,talenstudiën).
 accent(tatoeeerden,tatoeëerden).
 accent(tatoeeerde,tatoeëerde).
 accent(tatoeeer,tatoeëer).

@@ -59,6 +59,8 @@ survives(tag(_,_,_,R1,Voor,_,_,complementizer)) :-
     alpino_lexical_analysis:tag(_,_,R2,_,_,_,_,verb(_,Fin,_)),
     finite(Fin).
 
+survives_bigram(dan,'Dan',tmp_adverb,eerst,eerst,postadv_adverb).
+
 %% because "naar voren" is also fixed_part, it is often filtered out
 survives_bigram(naar,_,preposition(naar,[toe],loc_adv),voren,_,loc_adverb).
 %% wat later

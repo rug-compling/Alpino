@@ -2050,6 +2050,7 @@ spelling_variant21(voor,zover,    voorzover).
 spelling_variant21(vuurwerk,ramp, vuurwerkramp).
 spelling_variant21(waar,toe,      waartoe).
 spelling_variant21(tegen,partij,  tegenpartij).
+spelling_variant21(te,gelijkertijd,     tegelijkertijd).
 spelling_variant21(te,gemoed,     tegemoet).
 spelling_variant21(te,gemoet,     tegemoet).
 spelling_variant21(te,zamen,      samen).

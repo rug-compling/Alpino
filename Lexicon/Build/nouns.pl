@@ -10906,6 +10906,8 @@ n([pl(enkelingen),sg(enkeling)],de,[]).
 
 n([pl(enkelspelen),sg(enkelspel)],het,[]).
 
+n([sg(enkelvoud),pl(enkelvouden)],het,[]).
+
 n([pl(enquêtes),sg(enquête)],de,[app_measure],[h('Bijlmer')]).
 
 n([pl(ensceneringen),sg(enscenering)],de,[]).
@@ -11919,6 +11921,10 @@ n([pl(fondsen),sg(fonds)],het,[app_measure],
    telecom,
    vastgoed]).
 
+n([mass(fonetiek)],de,[]).
+
+n([mass(fonologie)],de,[]).
+
 n([pl(fonteinen),sg(fontein)],de,[],[dim(fonteintje)]).
 
 n([sg(foodprocessor),pl(foodprocessors)],de,[]).
@@ -12597,7 +12603,9 @@ n([pl(gebruiken),sg(gebruik)],het,
 n([pl(gebruikers),sg(gebruiker)],de,[],
   [drug,s(drug),
    eind,
-   internet]).
+   internet,
+   taal
+  ]).
 
 n([mass(gebruikmaking)],de,[]).
 
@@ -13279,6 +13287,8 @@ n([pl(geschillen),sg(geschil)],het,
   ]).
 
 n([pl(geschillen),sg(geschil)],het,[],[dim(geschilletje)]).
+
+n([mass(geschrevene)],het,[]).
 
 n([pl(geschriften),sg(geschrift)],het,[],[dim(geschriftje)]).
 
@@ -14280,6 +14290,7 @@ n([pl(groepen),sg(groep)],de,[app_measure,np_app_measure],
    wereld,
    werk,
    woon,
+   woord,
    zang,
    i(zelf_hulp,zelfhulp),
    dim(groepje)]).
@@ -17807,7 +17818,11 @@ n([pl(karabijnen),sg(karabijn)],de,[],[dim(karabijntje)]).
 
 n([pl(karaffen),sg(karaf)],de,[measure]).
 
-n([pl(karakters),sg(karakter)],het,[sbar,vp],[dim(karaktertje)]).
+n([pl(karakters),sg(karakter)],het,[sbar,vp],
+  [dim(karaktertje)]).
+
+n([pl(karakters),sg(karakter)],het,[],
+  [s(volk)]).
 
 n([mass(karakterisering),pl(karakteriseringen),sg(karakterisering)],de,[]).
 
@@ -19482,6 +19497,7 @@ n([mass(kunst)],de,[],
    media,
    schilder,
    spraak,
+   toon,
    video]).
 
 n([mass(['kunst-',en,vliegwerk]),
@@ -19493,6 +19509,8 @@ n([pl(kunstenaars),sg(kunstenaar)],de,[],
   []).
 
 n([pl(kunstenaressen),sg(kunstenares)],de,[]).
+
+n([sg(kunstenaarschap),pl(kunstenaarschappen)],het,[]).
 
 n([pl(kunstgebitten),sg(kunstgebit)],het,[]).
 
@@ -20354,6 +20372,7 @@ n([sg(leven),pl(levens),
   [],
   [i(boer,boeren),
    buiten,
+   s(gemoed),
    s(gezin),
    s(liefde),
    muziek,
@@ -20453,6 +20472,8 @@ n([mass(lexicografie)],de,[]).
 n([sg(lexicoloog),pl(lexicologen)],de,[]).
 
 n([mass(lexicologie)],de,[]).
+
+n([sg(lexicon),pl(lexicons),pl(lexica)],het,[]).
 
 n([pl(lezers),sg(lezer)],de,[],[dim(lezertje)]).
 
@@ -21279,6 +21300,9 @@ n([pl(luiken),sg(luik)],het,[],
    veel]).
 
 n([sg(luilekkerland)],het,[]).
+
+n([mass(luim)],de,[pred_pp(in),
+		   pred_pp(van)],[]).
 
 n([pl(luipaarden),sg(luipaard)],both,[],
   [jacht  % met dank aan Vincent Vandeghinste, en niet jacht_lieden_paard
@@ -23592,6 +23616,8 @@ n([pl(nagelen),pl(nagels),sg(nagel)],de,[],
 
 n([pl(nageslachten),sg(nageslacht)],het,[]).
 
+n([mass(naijver)],de,[]).
+
 n([sg(najaar),pl(najaren)],het,[temp_mod,sbar]).
 
 n([pl(nakomelingen),sg(nakomeling)],de,[],
@@ -23637,6 +23663,8 @@ n([pl(narigheden),sg(narigheid)],de,[sbar,vp]).
 n([sg(narratief),pl(narratieven)],het,[]).
 
 n([mass(nasleep)],de,[]).
+
+n([sg(nasporing),pl(nasporingen)],de,[]).
 
 n([mass(nat)],het,[],[dim(natje)]).
 
@@ -27198,6 +27226,8 @@ n([mass(pies)],de,[]).
 
 n([sg(piet),pl(pieten)],de,[]). % zwarte
 
+n([sg(piëteit),pl(piëteiten)],de,[]).
+
 n([pl(pietjes),sg(pietje)],het,[]).
 
 n([sg(pietsje)],het,[measure,mod]).
@@ -27790,6 +27820,8 @@ n([mass(poep)],de,[],
 n([pl(poesen),pl(poezen),sg(poes)],de,[],[dim(poesje)]).
 
 n([mass(poespas)],de,[]).
+
+n([mass(poëtica)],de,[]).
 
 n([sg(poets),pl(poetsen)],de,[]).
 
@@ -28806,6 +28838,8 @@ n([mass(pronk)],de,[]).
 
 n([pl(pronkstukken),sg(pronkstuk)],het,[]).
 
+n([sg(pronomen),pl(pronomina)],het,[]).
+
 n([pl(prooien),sg(prooi)],de,[],[dim(prooitje)]).
 
 n([sg(proosdij)],de,[]).
@@ -29540,6 +29574,7 @@ n([mass(recht),pl(rechten),sg(recht)],het,[],
    s(verschoning),
    veto,
    voetbal,
+   i(volk,volken),
    i(volk,volkeren),
    i(vreemdeling,vreemdelingen),
    i(vrouw,vrouwen),
@@ -32034,6 +32069,8 @@ n([pl(selecties),sg(selectie),
 n([sg(selfie),pl(selfies)],de,[]).
 
 n([sg(semafoon),pl(semafoons)],de,[]).
+
+n([mass(semantiek)],de,[]).
 
 n([sg(semester),pl(semesters)],het,[temp_mod]).
 
@@ -34729,6 +34766,8 @@ n([pl(studies),pl(studiën),sg(studie)],de,[],
   [avond,
    bijbel,
    s(haalbaarheid),
+   taal,
+   i(taal,talen),
    zelf]).
 
 n([mass(studiefinanciering)],de,[]).
@@ -34775,6 +34814,7 @@ n([pl(stukken),sg(stuk),
    hamer,
    post,
    puzzel,
+   meester,
    staart,
    theater,
    top,
@@ -34940,6 +34980,8 @@ n([pl(supporters),sg(supporter)],de,[]).
 
 n([mass(suprematie)],de,[]).
 
+n([mass(surrealisme)],het,[]).
+
 n([pl(surrogaten),sg(surrogaat)],het,[]).
 
 n([sg(surseance),sg(surséance)],both,[]).
@@ -34955,6 +34997,8 @@ n([sg(swing),pl(swings)],de,[]).
 n([sg(switch),pl(switches)],de,[]).
 
 n([mass(syfilis)],de,[]).
+
+n([sg(syllabe),pl(syllabes)],de,[]).
 
 n([pl(syllogismen),sg(syllogisme)],het,[]).
 
@@ -37415,7 +37459,7 @@ n([pl(unies),sg(unie)],de,[],
    munt,
    wielren]).
 
-n([pl(uniformen),pl(uniforms),sg(uniform)],het,[]).
+n([pl(uniformen),pl(uniforms),sg(uniform)],both,[]).
 
 n([mass(uniformiteit)],de,[]).
 
@@ -38376,6 +38420,8 @@ n([pl(verledens),sg(verleden)],het,[],
    s(oorlog),
    slavernij
   ]).
+
+n([mass(verledene)],het,[],[]).  % ouderwets
 
 n([mass(verlegenheid)],de,[pred_pp(in)]).
 
@@ -39980,6 +40026,8 @@ n([pl(voortanden),sg(voortand)],de,[]).
 
 % already nominalized verb
 %n([mass(voortbestaan)],het,[]).
+
+n([sg(voortbrenging),pl(voortbrengingen)],de,[]).
 
 n([pl(voortbrengselen),pl(voortbrengsels),sg(voortbrengsel)],het,[]).
 

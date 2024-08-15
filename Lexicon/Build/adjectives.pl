@@ -6434,6 +6434,9 @@ a([e(breedgeschouderde),
    st(breedgeschouderdst),
    ste(breedgeschouderdste)],nonadv,[],[]).
 
+a([e(breedvoerige),
+   no_e(breedvoerig)],adv,[],[]).
+
 a([e(breekbare),
    er(breekbaarder),
    ere(breekbaardere),
@@ -7559,6 +7562,9 @@ a([e(denkbeeldige),
    st(denkbeeldigst),
    ste(denkbeeldigste)],nonadv,
   [subject_sbar],[]).
+
+a([e(denkelijke),
+   no_de(denkelijk)],adv,[],[]).
 
 a([e(deontologische),
    no_e(deontologisch)],adv,[],[]).
@@ -14251,6 +14257,9 @@ a([ge_e(gerecyclede),
 
 a([ge_e(geredde),
    ge_no_e(gered)],adv,[],[]).
+
+a([e(geredelijke),
+   no_e(geredelijk)],adv,[],[]).
 
 a([ge_both(gereden)],adv,[],[]).
 
@@ -21638,6 +21647,9 @@ a([e(lineaire),
    st(lineairst),
    ste(lineairste)],both,[],[]).
 
+a([e(linguïstische),
+   no_e(linguïstisch)],adv,[],[]).
+
 a([e(linke),
    er(linker),
    ere(linkere),
@@ -28592,9 +28604,6 @@ a([ge_both(overvallen)],adv,[],[]).
 
 a([e(oververhitte),
    no_e(oververhit)],padv,[],[]).
-
-a([e(oververmoeide),
-   no_e(oververmoeid)],padv,[],[]).
 
 a([ge_e(overvleugelde),
    ge_no_e(overvleugeld)],adv,[],[]).
@@ -36271,7 +36280,8 @@ a([ge_e(vermoeide),
    ere(vermoeidere),
    ge_no_e(vermoeid),
    st(vermoeidst),
-   ste(vermoeidste)],both,[],[]).
+   ste(vermoeidste)],both,[],[on,
+			      over]).
 
 a([ende(vermoeiende),
    er(vermoeiender),
@@ -37794,7 +37804,7 @@ a([both(volkomen),
    er(volkomener),
    ere(volkomenere),
    st(volkomenst),
-   ste(volkomenste)],adv,[],[]).
+   ste(volkomenste)],adv,[],[on]).
 
 a([e(volkse),
    er(volkser),
