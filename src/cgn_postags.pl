@@ -1464,6 +1464,7 @@ exceptional_stem_tag(daarom, _,                                     'BW()').
 exceptional_stem_tag(datgeen,_,                                     'VNW(aanw,det,stan,nom,met-e,zonder-n)').
 exceptional_stem_tag(degeen,pronoun(nwh,thi,sg,de,both,def,strpro), 'VNW(aanw,det,stan,nom,met-e,zonder-n)').
 exceptional_stem_tag(degeen,pronoun(nwh,thi,pl,de,both,def,strpro), 'VNW(aanw,det,stan,nom,met-e,mv-n)').
+exceptional_stem_tag(degeen,pronoun(nwh,thi,pl,de,gen,def,strpro),  'VNW(aanw,det,stan,gen,met-e,mv-n)').
 exceptional_stem_tag(denk, denk_ik,                                 'WW(pv,tgw,ev)').
 exceptional_stem_tag(deskundig,noun(de,count,pl),                   'ADJ(nom,basis,met-e,mv-n)').
 exceptional_stem_tag(deskundig,noun(de,count,sg),                   'ADJ(nom,basis,met-e,zonder-n,stan)').
