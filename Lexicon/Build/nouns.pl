@@ -1579,6 +1579,8 @@ n([pl(aanwassen),sg(aanwas)],de,[]).
 
 n([pl(aanwendingen),sg(aanwending)],de,[]).
 
+n([mass(aanwezen)],het,[]).   % ouderwets
+
 n([mass(aanwezigheid)],de,[]).
 
 n([pl(aanwijzingen),sg(aanwijzing)],de,[sbar,subject_sbar,vp]).
@@ -9465,6 +9467,8 @@ n([pl(diplomaten),sg(diplomaat)],de,[],
 
 n([mass(diplomatie)],de,[]).
 
+n([mass(diplomatiek)],de,[]).
+
 n([sg(diplomering)],de,[]).
 
 n([pl(directeuren),pl(directeurs),sg(directeur)],de,[app_measure],
@@ -15217,6 +15221,8 @@ n([sg(heteroseksueel),pl(heteroseksuelen),
    sg(heterosexueel),pl(heterosexuelen)],de,[]).
 
 n([pl(hetzes),sg(hetze)],de,[]).
+
+n([mass(heul)],both,[]).  % ouderwets (hulp), "heul en troost"
 
 n([pl(heupen),sg(heup)],de,[]).
 
@@ -23666,7 +23672,7 @@ n([sg(naturalisatie),pl(naturalisaties)],de,[]).
 
 n([mass(naturalisme)],het,[]).
 
-n([sg(naturel)],het,[]).
+n([sg(naturel)],both,[]).  % de natural=>ouderwets
 
 n([pl(naturen),sg(natuur)],de,[]).
 
@@ -31771,7 +31777,8 @@ n([sg(schrijn),pl(schrijnen)],both,[]).
 n([sg(schrijven)],het,[]). % ik heb een schrijven ontvangen van ...x
 
 n([pl(schrijvers),sg(schrijver)],de,[],
-  [scenario,
+  [roman,
+   scenario,
    sciencefiction,'science-fiction',f([science,fiction]),
    s(sprookje),
    toneel
@@ -33218,6 +33225,7 @@ n([pl(spelen),pl(spellen),sg(spel)],het,[app_measure],
    kaart,
    i(kind,kinder),
    simulatie,
+   treur,
    h(tv),
    video,
    voetbal,

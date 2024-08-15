@@ -123,9 +123,10 @@ m(v_root(geschied,geschieden),
 
 %% het zij zo
 m(v_root(ben,zijn),
-  verb(zij,unacc,subjunctive,[copula,    % het zij zo
-			      passive,   % dit zij hen vergeven
-			      pc_pp(van) % wat er ook van zij
+  verb(zij,unacc,subjunctive,[copula,       % het zij zo
+			      passive,      % dit zij hen vergeven
+			      pc_pp(van),   % wat er ook van zij
+			      aux_psp_zijn  % ouderwets
 			     ])).
 
 m(v_root(ben,zijn),
@@ -2688,7 +2689,9 @@ v(bepaal,bepaalt,bepalen,bepaald,bepaalde,bepaalden,
 	np_pc_pp(tot),
 	np_pc_pp(op),
 	refl_pc_pp(bij),
-	refl_pc_pp(tot)
+	refl_er_pp_vp(bij),
+	refl_pc_pp(tot),
+	refl_er_pp_vp(tot)
        ])]).
 
 v(beperk,beperkt,beperken,beperkt,beperkte,beperkten,
@@ -3346,9 +3349,10 @@ v(betrouw,betrouwt,betrouwen,betrouwd,betrouwde,betrouwden,
     [h([transitive])]).
 
 v(betuig,betuigt,betuigen,betuigd,betuigde,betuigden,
-    [h([np_np,
-	so_pp_np,
-	transitive])]).
+  [h([np_np,
+      sbar,   % dbnl
+      so_pp_np,
+      transitive])]).
 
 v(betuttel,betuttelt,betuttelen,betutteld,betuttelde,betuttelden,
     [h([transitive])]).
@@ -20644,7 +20648,7 @@ v(slorp,slorpt,slorpen,geslorpt,slorpte,slorpten,
 	part_transitive(op)])]).
 
 v(sluimer,sluimert,sluimeren,gesluimerd,sluimerde,sluimerden,
-    [h([intransitive,
+    [b([intransitive,
         part_intransitive(in),
 	ld_pp,
 	ld_adv])]).
@@ -24785,7 +24789,7 @@ v(vergaar,vergaart,vergaren,vergaard,vergaarde,vergaarden,
     [h([transitive])]).
 
 v(vergader,vergadert,vergaderen,vergaderd,vergaderde,vergaderden,
-    [h([intransitive,
+    [b([intransitive,  % waren vergaderd -> ouderwets
         mod_pp(met),
         mod_pp(over)])]).
 
@@ -25485,7 +25489,7 @@ v(vermeerder,vermeerdert,vermeerderen,vermeerderd,vermeerderde,vermeerderden,
 	refl,
 	transitive])]).
 
-v(vermei,vermeit,vermeien,vermeid,vermeid,vermeide,vermeiden,
+v(vermei,vermeit,vermeien,vermeid,vermeide,vermeiden,
     [h([refl,
 	refl_ld_pp])]).
   

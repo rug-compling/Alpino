@@ -33116,6 +33116,8 @@ a([stof(tempex)],nonadv,[],[]).
 a([e(temporiserende),
    no_e(temporiserend)],padv,[],[]).
 
+a([pred([ten,achter])],nonadv,[],[]).
+
 a([pred([ten,onrechte])],adv,
   [subject_sbar,
    subject_vp],[]).
@@ -36435,6 +36437,9 @@ a([ge_e(verpande),
 a([ge_e(verpauperde),
    ge_no_e(verpauperd)],padv,[],[]).
 
+a([ge_e(verpersoonlijkte),
+   ge_no_e(verpersoonlijkt)],adv,[],[]).
+
 a([ge_e(verpeste),
    ge_no_e(verpest)],adv,[],[]).
 
@@ -38064,6 +38069,8 @@ a([ge_e(vooropgezette),
 
 a([e(voorradige),
    no_e(voorradig)],nonadv,[],[]).
+
+a([ge_both(voorschreven)],adv,[],[]).  % ouderwets
 
 a([e(voorspelbare),
    er(voorspelbaarder),

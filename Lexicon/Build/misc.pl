@@ -2159,17 +2159,15 @@ with_dt([niet,eentje],
 	dt(detp,[mod=l(niet,adverb,advp,0,1),
 		 hd=l(één,pronoun(nwh,thi,sg,de,both,indef),1,2)])).
 
-m('\'s dichter',determiner(pron), ['\'s',dichters]).
-m('\'s koning', determiner(pron), ['\'s',konings]).
-m('\'s koning', determiner(pron), ['\'s',keizers]).
-m('\'s land',   determiner(pron), ['\'s',lands]).
-m('\'s lezer',  determiner(pron), ['\'s',lezers]).
-m('\'s liefde', determiner(pron), ['\'s',liefdes]).
-m('\'s man',    determiner(pron), ['\'s',mans]).
-m('\'s mens',   determiner(pron), ['\'s',mensen]).
-m('\'s rijk',   determiner(pron), ['\'s',rijks]).
-m('\'s vijand', determiner(pron), ['\'s',vijands]).
-m('\'s wereld', determiner(pron), ['\'s',werelds]).
+m(Stem,determiner(pron),['\'s',Dichters]) :-
+    genitive_noun(Dichters,Dichter),
+    hdrug_util:concat_all([de,Dichter],Stem,' ').
+
+m('de lezer',  determiner(pron), ['\'s',lezers]).
+m('de liefde', determiner(pron), ['\'s',liefdes]).
+m('de man',    determiner(pron), ['\'s',mans]).
+m('de mens',   determiner(pron), ['\'s',mensen]).
+m('de wereld', determiner(pron), ['\'s',werelds]).
 
 m(god,          determiner(pron), gods).
 m(god,          determiner(pron), 'Gods').
@@ -2178,7 +2176,7 @@ m(grootvader,   determiner(pron), grootvaders).
 m(stief_moeder, determiner(pron), stiefmoeders).
 m(stief_vader,  determiner(pron), stiefvaders).
 m(land,         determiner(pron), slands).
-m('\'s land',   determiner(pron), ['\'',slands]).
+m('de land',    determiner(pron), ['\'',slands]).
 m(mam,          determiner(pron), mams).
 m(meester,      determiner(pron), meesters).
 m(moeder,       determiner(pron), moeders).
@@ -2220,8 +2218,10 @@ with_dt([Mijn,Vaders],
 
 mijn_vaders_mijn(je,je).
 mijn_vaders_mijn(mijn,mijn).
+mijn_vaders_mijn(mijns,mijn).  %ouderwets
 mijn_vaders_mijn('m\'n',mijn).
 mijn_vaders_mijn(zijn,zijn).
+mijn_vaders_mijn(zijns,zijn).  %ouderwets
 mijn_vaders_mijn('z\'n',zijn).
 mijn_vaders_mijn(haar,haar).
 mijn_vaders_mijn(haars,haar).  %ouderwets
@@ -3883,6 +3883,7 @@ m(niettegenstaande, complementizer,niettegenstaande).
 m(nou,              complementizer,nou).  % nou je het zegt
 m(nu,               complementizer,nu).
 m(ofschoon,         complementizer,ofschoon).
+m(schoon,         complementizer,schoon). % ouderwets
 m(omdat,            complementizer,omdat).
 m(ondanks,          complementizer,ondanks).  % regionaal?
 				              % Ondanks ik Pino ontzettend waardeer .
@@ -5927,6 +5928,7 @@ sentence_adverb([uit,arrenmoede]).
 sentence_adverb(uiteraard).
 sentence_adverb([van,langs,om]).  % VL
 sentence_adverb([van,meetaf,aan]).
+sentence_adverb([van,stonden,aan]).  %VL of ouderwets?
 sentence_adverb([van,tijd,tot,tijd]).
 sentence_adverb([van,lieverlee]).
 sentence_adverb([van,lieverlede]).
@@ -7352,25 +7354,30 @@ with_dt([des,Doods],
 	dt(np,[ hd=l(Dood,noun(both,both,both),1,2),
 		det=l(de,determiner(des),detp,0,1)
 	      ])) :-
-    genitive_noun(Doods),
-    atom_concat(Dood,s,Doods).
+    genitive_noun(Doods,Dood).
 
 with_dt([des,Doods],
 	pronoun(nwh,thi,sg,both,gen,def),
 	dt(np,[ hd=l(Dood,noun(both,both,both),1,2),
 		det=l(de,determiner(des),detp,0,1)
 	      ])) :-
+    genitive_noun(Doods,Dood).
+
+genitive_noun(Doods,Dood) :-
     genitive_noun(Doods),
     atom_concat(Dood,s,Doods).
+genitive_noun(huizes,huis).
+
 
 genitive_noun(aanschijns).
 genitive_noun(dichters).
 genitive_noun(doods).
 genitive_noun(heelals).
 genitive_noun(hemels).
-genitive_noun(huizes).
+genitive_noun(jaars).  % ouderwets
 genitive_noun(keizers).
 genitive_noun(konings).
+genitive_noun(kunstenaars).
 genitive_noun(kwaads).
 genitive_noun(lands).
 genitive_noun(levens).
@@ -7379,6 +7386,7 @@ genitive_noun(onderscheids).
 genitive_noun(oordeels).
 genitive_noun(overvloeds).
 genitive_noun(persoons).
+genitive_noun(rechters).
 genitive_noun(rijks).
 genitive_noun(tijds).
 genitive_noun(vaderlands).
@@ -7392,7 +7400,7 @@ m(god,            pronoun(nwh,thi,sg,de,gen,def),gods).
 m('God',            pronoun(nwh,thi,sg,de,gen,def),'Gods').
 
 %% 28 miljard mark 's jaars
-m('\'s jaar',            pronoun(nwh,thi,sg,de,gen,def),['\'s',jaars]).
+m('des jaar',            pronoun(nwh,thi,sg,de,gen,def),['\'s',jaars]).
 
 with_dt([de,één],
 	pronoun(nwh,thi,sg,de,both,def),

@@ -3888,6 +3888,7 @@ abbreviation('Ned.',   'Nederlands').
 abbreviation('Ned.',   'Nederlandse').
 abbreviation(nl,       'Nederland').
 abbreviation('nl.',    namelijk).
+abbreviation('n.l.',    namelijk).
 abbreviation('overl.', overleden).
 abbreviation('plm.',   plusminus).
 abbreviation('plus-minus',   plusminus).
@@ -3905,6 +3906,7 @@ abbreviation('r.-k.',   'rooms-katholieke').
 abbreviation('rk',     'rooms-katholiek').
 abbreviation('rk',     'rooms-katholieke').
 abbreviation('samenst.', samenstelling).
+abbreviation('schr.',   schrijver).
 abbreviation('staatssecr.', staatssecretaris).
 abbreviation('wijkgem.',wijkgemeente).
 abbreviation('zg.',    zogenaamd).

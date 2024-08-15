@@ -1309,12 +1309,14 @@ with_dt_all(de,[hemel]).
 with_dt_all(de,[hij]).
 with_dt_all(de,[honderdduizend,paar]).
 with_dt_all(de,[honderd,paar]).
-with_dt_all(de,[huize]).
+with_dt_all(de,[huis]).
 with_dt_all(de,[ik]).
 with_dt_all(de,[in,laatst,niet,plaats]).
+with_dt_all(de,[jaar]).
 with_dt_all(de,[keizer]).
 with_dt_all(de,[klok,rond]).
 with_dt_all(de,[koning]).
+with_dt_all(de,[kunstenaar]).
 with_dt_all(de,[kwaad]).
 with_dt_all(de,[land]).
 with_dt_all(de,[leven]).
@@ -1337,6 +1339,7 @@ with_dt_all(de,[overvloed]).
 with_dt_all(de,[persoon]).
 with_dt_all(derde,[klas]).
 with_dt_all(derde,[klasse]).
+with_dt_all(de,[rechter]).
 with_dt_all(dergelijks,[iets,of]).
 with_dt_all(dergelijk,[zelfs]).
 with_dt_all(de,[rijk]).
@@ -2755,6 +2758,7 @@ with_dt_root(honderdvijftig).
 with_dt_root(hoog).
 with_dt_root(hoop).
 with_dt_root(hoor).
+with_dt_root(huis).
 with_dt_root(huize).
 with_dt_root(huizen).
 with_dt_root(hun).
@@ -2805,6 +2809,7 @@ with_dt_root(kooi).
 with_dt_root(kort).
 with_dt_root(kraak).
 with_dt_root(krom).
+with_dt_root(kunstenaar).
 with_dt_root(kwaad).
 with_dt_root(laag).
 with_dt_root(laat).
@@ -2940,6 +2945,7 @@ with_dt_root(punt).
 with_dt_root(raad).
 with_dt_root(rade).
 with_dt_root(recht).
+with_dt_root(rechter).
 with_dt_root(rechterzijde).
 with_dt_root(rechtswege).
 with_dt_root(reden).
