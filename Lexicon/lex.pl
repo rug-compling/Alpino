@@ -3819,6 +3819,7 @@ abbreviation('WB',     wereldbeker).
 abbreviation('aant.',  aantekeningen).
 abbreviation('adr.',   adres).
 abbreviation('adr.',   adressen).
+abbreviation('afb.',   afbeelding).
 abbreviation('afgel.', afgelast).
 abbreviation('alc.',   alcohol).
 abbreviation('alg.',   algemeen).
