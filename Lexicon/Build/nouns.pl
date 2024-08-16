@@ -1393,6 +1393,8 @@ n([sg(aangooi)],de,[]).
 
 n([mass(aangroei)],de,[]).
 
+n([sg(aanhaling),pl(aanhalingen)],de,[]).
+
 n([pl(aanhalingstekens),sg(aanhalingsteken)],het,[]).
 
 n([mass(aanhang)],de,[]).
@@ -4294,6 +4296,8 @@ n([pl(bekoringen),sg(bekoring)],de,[vp]).
 n([sg(bekostiging),pl(bekostigingen)],de,[]).
 
 n([mass(bekrachtiging)],de,[],[stuur]).
+
+n([sg(bekrompenheid),pl(bekrompenheden)],de,[]).
 
 n([pl(bekroningen),sg(bekroning)],de,[]).
 
@@ -13586,6 +13590,8 @@ n([pl(gewoonten),pl(gewoontes),sg(gewoonte)],de,[],
 n([pl(gewrichten),sg(gewricht)],het,[],
   [s(tijd)]).
 
+n([pl(gewrochten),sg(gewrocht)],het,[],[]).
+
 n([mass(gewroet)],het,[]).
 
 n([pl(gezagen),sg(gezag)],het,[sbar,vp]).
@@ -16333,6 +16339,8 @@ n([pl(infecties),sg(infectie),pl(infekties),sg(infektie)],de,[],
 n([sg(infiltrant),pl(infiltranten)],de,[]).
 
 n([pl(infiltraties),sg(infiltratie)],de,[]).
+
+n([sg(infinitief),pl(infinitieven)],de,[]).
 
 n([pl(inflaties),sg(inflatie)],de,[]).
 
@@ -20381,6 +20389,7 @@ n([sg(leven),pl(levens),
    s(stad),
    s(vereniging),
    i(zaak,zaken),
+   i(ziel,ziele),
    dim(leventje)]).
 
 n([mass(levendigheid)],de,[]).
@@ -33103,6 +33112,8 @@ n([pl(souterrains),sg(souterrain)],het,[]).
 
 n([pl(souvenirs),sg(souvenir)],het,[],[dim(sourveniertje)]).
 
+n([mass(souvereiniteit)],de,[]).
+
 n([stem('Sovjet'),
    pl(sovjets),sg(sovjet),
    pl(sowjets),sg(sowjet),
@@ -38233,6 +38244,10 @@ n([mass(verheldering)],de,[]).
 
 n([pl(verhemelten),pl(verhemeltes),sg(verhemelte)],het,[]).
 
+n([mass(verhevene)],het,[]).
+
+n([sg(verhevenheid),pl(verhevenheden)],de,[]).
+
 n([sg(verhindering),pl(verhinderingen)],de,[]).
 
 n([mass(verhitting)],de,[]).
@@ -40248,6 +40263,7 @@ n([pl(vormen),sg(vorm)],de,[],
   [boek,
    dans,			% niet dan_vorm
    s(beleid),
+   s(regering),
    tussen,
    dim(vormpje)]).
 
@@ -41335,6 +41351,7 @@ n([pl(werken),sg(werk)],het,[],
    bouw,
    brei,
    broddel,
+   dicht,
    druk,
    glas,
    hek,

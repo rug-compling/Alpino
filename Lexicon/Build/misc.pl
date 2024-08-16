@@ -2704,6 +2704,7 @@ preposition([naar,gelang,van]).
 preposition([naargelang,van]).
 preposition(namens).
 preposition(niettegenstaande).
+preposition(nopens).  % ouderwets
 preposition(omstreeks).
 preposition(omtrent).
 preposition(ondanks).

@@ -23794,6 +23794,9 @@ a([e(noodlottige),
    st(noodlottigst),
    ste(noodlottigste)],nonadv,[],[]).
 
+a([e(noodwendige),
+   no_e(noodwendig)],nonadv,[],[]).  % ouderwets
+
 a([e(noodzakelijke),
    er(noodzakelijker),
    ere(noodzakelijkere),
@@ -33126,6 +33129,10 @@ a([e(temporiserende),
    no_e(temporiserend)],padv,[],[]).
 
 a([pred([ten,achter])],nonadv,[],[]).
+
+a([pred([ten,bewijze])],adv,
+  [object_sbar,
+   pp(van)],[]).
 
 a([pred([ten,onrechte])],adv,
   [subject_sbar,
