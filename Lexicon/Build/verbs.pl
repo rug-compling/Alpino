@@ -3258,7 +3258,8 @@ v(betaal,betaalt,betalen,betaald,betaalde,betaalden,
 
 v(betaam,betaamt,betamen,betaamd,betaamde,betaamden,
     [h([intransitive,
-	transitive,      %% mis(?)-used in 'zoals het hem betaamt'
+	transitive, %% mis(?)-used in 'zoals het hem betaamt'
+	sbar_subj,
 	sbar_subj_so_np
        ])]).
 
@@ -6098,7 +6099,8 @@ v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
         fixed([{[acc(concessie),dat_pp(aan)]}],norm_passive),
 	part_fixed(uit,[[de,deur],acc],norm_passive),
 	fixed([[de,ronde]],no_passive),
-        fixed([[gestand],acc],norm_passive),
+        fixed([[gestand],dat],norm_passive),
+        fixed([[gestand],dat_pp(aan)],norm_passive),
 	fixed([{[acc(mededeling),pc(over)]}],imp_passive),
 	fixed([{[acc(melding),pc(over)]}],imp_passive),
 	fixed([{[acc(melding),pc(van)]}],imp_passive),
@@ -10065,6 +10067,8 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	% Het wordt ervoor gehouden dat vervolgens de doorgang is versperd ... (VL?)
         fixed([[in,het,zeil],[een,oogje]],imp_passive),
         fixed([[in,het,zeil],[geen,oogje]],imp_passive),
+        fixed([[gestand],dat],norm_passive),
+        fixed([[gestand],dat_pp(aan)],norm_passive),
         fixed([[gestand],acc],norm_passive),
 	fixed([[gezelschap],acc],norm_passive),
 	fixed([{[acc(huis),pc(met)]}],norm_passive),
