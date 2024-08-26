@@ -2778,7 +2778,13 @@ check_variant_frozen([PREV-_ITEM|T0],PREV,T,_Bool0,Bool) :-
 check_variant_frozen([NEXT-ITEM|T0],_PREV,[ITEM|T],Bool0,Bool) :-
     check_variant_frozen(T0,NEXT,T,Bool0,Bool).
 
-add_word_forms([]).
+add_word_forms([]) :-
+    alpino_lexical_analysis:user_skips(List),
+    (   member(mwu_alt(_,_,Word),List),
+	add_word_form(Word),
+	fail
+    ;   true
+    ).
 add_word_forms([W|Ws]) :-
     add_word_form(W),
     add_word_forms(Ws).
