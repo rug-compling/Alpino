@@ -115,7 +115,7 @@ bestall0:
 ## displays summarizing statistics of the last N runs for suite SUITE
 n=5
 report:
-	@echo "     TotalTime #Parses      Parser     Time/sent Time/word      Edges    Mbytes"
+	@echo "       TotalTime   #Parses      Parser     Time/sent Time/word      Edges    Mbytes"
 	@if [ -f $(suite)/times ]; then\
          grep '^%XX' $(suite)/times | tail -n $(n); fi
 	@echo " TREES   WORST   FIRST    BEST"
