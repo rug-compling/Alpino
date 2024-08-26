@@ -2596,7 +2596,8 @@ after_timeout_options_(testN):-
     set_flag(parse_candidates_beam,1000),
     set_flag(last_one_timeout,on).
 
-after_timeout_options_(off).
+after_timeout_options_(off) :-
+    fail.
 
 after_timeout_options_(on) :-
     hdrug_flag(parse_candidates_beam,Beam),
@@ -2638,20 +2639,24 @@ after_timeout_options(alpino_cg:generate(_)) :-
 undo_timeout_options(alpino_cg:generate(_)) :-
     set_flag(filter_local_trees,on),
     set_flag(generate_failsafe,off),
-    set_flag(after_timeout_options,on).
+    set_flag(after_timeout_options,on),
+    !.
 
 undo_timeout_options(alpino_lc:parse(_)) :-
     hdrug_flag(after_timeout_options,testN),
     set_flag(use_guides,off),
     set_flag(pos_tagger,off),
-    set_flag(parse_candidates_beam,0).
+    set_flag(parse_candidates_beam,0),
+    !.
 
 undo_timeout_options(alpino_lc:parse(_)) :-
     hdrug_flag(after_timeout_options,on),
     hdrug_flag(save_parse_candidates_beam,Beam),
     set_flag(parse_candidates_beam,Beam),
     hdrug_flag(save_disambiguation_beam,Beam2),
-    set_flag(disambiguation_beam,Beam2).
+    set_flag(disambiguation_beam,Beam2),
+    !.
+undo_timeout_options(_).
 
 show_treebank_cgn(File) :-
     alpino_treebank:xml_file_to_dt(File,DT,Sent,_),
