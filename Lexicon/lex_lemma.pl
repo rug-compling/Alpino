@@ -7672,6 +7672,7 @@ lemma_root(keffen,kef) .
 lemma_root(kegelen,kegel) .
 lemma_root(kelderen,kelder) .
 lemma_root(kelen,keel) .
+lemma_root(kenbaar_maken,maak_kenbaar) .
 lemma_root(kenmerken,kenmerk) .
 lemma_root(kennen,ken) .
 lemma_root(kennis_maken,maak_kennis) .
@@ -13690,6 +13691,7 @@ lemma_root(savoureren,savoureer) .
 lemma_root(scanderen,scandeer) .
 lemma_root(scannen,scan) .
 lemma_root(schaatsen,schaats) .
+lemma_root(schadeloos_stellen,stel_schadeloos) .
 lemma_root(schaden,schaad) .
 lemma_root(schaduwen,schaduw) .
 lemma_root(schaffen,schaf) .

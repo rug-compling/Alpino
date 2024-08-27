@@ -2501,6 +2501,7 @@ particle([in,de,plaats]).
 particle(kaal).
 particle(kaart).
 particle(kapot).
+particle(kenbaar).
 particle(kennis).
 particle(klaar).
 particle(klein).
@@ -2554,6 +2555,7 @@ particle(recht).
 particle(rechtsaf).
 particle(rond).
 particle(samen).
+particle(schadeloos).
 particle(scheep).
 particle(school).
 particle(schoon).
@@ -4832,59 +4834,52 @@ with_dt([alleen,al],
 m(junior,           postpn_adverb,junior).
 m(senior,           postpn_adverb,senior).
 
-%% in principe althans
-%% volgens Piet althans
-m(al,               postp_adverb,al). %% In januari al, voor zijn geboorte al,
-m(althans,          postp_adverb,althans).
-m(bijvoorbeeld,     postp_adverb,bijvoorbeeld).
-m(daarentegen,      postp_adverb,daarentegen).
-m(derhalve,         postp_adverb,derhalve).
-m(echter,           postp_adverb,echter).
-m(dus,              postp_adverb,dus).
-m(evenwel,          postp_adverb,evenwel).
-m(immers,           postp_adverb,immers).
-m(intussen,         postp_adverb,intussen).
-m(nog,              postp_adverb,nog). % cdb/2535 in december nog
-m(nu,               postp_adverb,nu).
-m(ook,              postp_adverb,ook).
-m(pas,              postp_adverb,pas). % in december pas
-m(tenslotte,        postp_adverb,tenslotte).
-m('ten slotte',     postp_adverb,[ten,slotte]).
-m('wel te verstaan',postp_adverb,welteverstaan).
-m('wel te verstaan',postp_adverb,[wel,te,verstaan]).
-m(weliswaar,        postp_adverb,weliswaar).
 
-%% these appear only in topic (?), or within comma's/brackets etc.
-%% these take also PP and ADVP
-%% they are modifiers since the category remains intact (?)
-%% op Piet althans wacht ik nooit
-%% TODO: pronouns like "niemand" can do this too
-%% niemand echter/overigens die iets deed
-m(althans,          postnp_adverb,althans).
-m(bijvoorbeeld,     postnp_adverb,bijvoorbeeld).
-m(daarentegen,      postnp_adverb,daarentegen).
-m(derhalve,         postnp_adverb,derhalve).
-m(dus,              postnp_adverb,dus).
-m(echter,           postnp_adverb,echter).
-m(evenwel,          postnp_adverb,evenwel).
-m(immers,           postnp_adverb,immers).
-m(intussen,         postnp_adverb,intussen).
-m(namelijk,         postnp_adverb,namelijk).
-m(nog,              postnp_adverb,nog).  % drie jaar nog
-m(nu,               postnp_adverb,nu).
-m(ondertussen,      postnp_adverb,ondertussen).
-m(onderwijl,        postnp_adverb,onderwijl).
-m(ook,              postnp_adverb,ook).
-m(overigens,        postnp_adverb,overigens).
-m(pas,              postnp_adverb,pas).  % twee weken pas
-m(slechts,          postnp_adverb,slechts).
-m(tenslotte,        postnp_adverb,tenslotte).
-m('ten slotte',     postnp_adverb,[ten,slotte]).
-m(toch,             postnp_adverb,toch).
-m('tot en met',     postnp_adverb,[tot,en,met]).
-m(trouwens,         postnp_adverb,[trouwens]).
-m('wel te verstaan',postnp_adverb,[wel,te,verstaan]).
-m(weliwaar,         postnp_adverb,weliswaar).
+m(Stem,postp_adverb,Word) :-
+    post_adverb(Stem,Word).
+m(Stem,postnp_adverb,Word) :-
+    post_adverb(Stem,Word).
+m(Stem,postadv_adverb,Word) :-
+    post_adverb(Stem,Word).
+m(Stem,postadj_adverb,Word) :-
+    post_adverb(Stem,Word).
+
+post_adverb(Stem,Word) :-
+    post_adverb(Word),
+    stem_from_surf(Word,Stem).
+post_adverb('ten slotte',[ten,slotte]).
+post_adverb('wel te verstaan',welteverstaan).
+post_adverb('wel te verstaan',[wel,te,verstaan]).
+
+post_adverb(al).
+post_adverb(althans).
+post_adverb(bijvoorbeeld).
+post_adverb(daarentegen).
+post_adverb(derhalve).
+post_adverb(dus).
+post_adverb(eigenlijk).
+post_adverb(echter).
+post_adverb(evenwel).
+post_adverb(immers).
+post_adverb(intussen).
+post_adverb(juist).
+post_adverb(misschien).
+post_adverb(namelijk).
+post_adverb(nog).
+post_adverb(nu).
+post_adverb(ondertussen).
+post_adverb(onderwijl).
+post_adverb(ook).
+post_adverb(overigens).
+post_adverb(pas).
+post_adverb(reeds).
+post_adverb(slechts).
+post_adverb(tenslotte).
+post_adverb(toch).
+post_adverb(trouwens).
+post_adverb(weliswaar).
+post_adverb(wellicht).
+post_adverb(zelfs).
 
 %% ?? voor een ogenblik maar, want ...
 %% eentje maar...
@@ -4894,13 +4889,12 @@ m(alleen,           postnp_adverb,alleen).
 m('an sich',        postnp_adverb,[an,sich]).
 m('over en weer',   postnp_adverb,[over,en,weer]).
 m(persoonlijk,      postnp_adverb,persoonlijk). % Ik persoonlijk
-%m(samen,            postnp_adverb,samen).
 m(zelf,             postnp_adverb,zelf).
 m(zelve,            postnp_adverb,zelve).
 m(haarzelf,         postnp_adverb,haarzelve).
 m(hemzelf,          postnp_adverb,hemzelve).
-
 m(opnieuw,          postnp_adverb,opnieuw).  % elke dag opnieuw
+m('tot en met',     postnp_adverb,[tot,en,met]).
 m(weer,             postnp_adverb,weer).     % elke dag weer
 
 with_dt([alleen,al],
@@ -4909,8 +4903,6 @@ with_dt([alleen,al],
 		 mod=l(al,adverb,advp,1,2)
 		])).
 
-m(al,               postnp_adverb,al).	%% tweehonderd mensen al hebben ..
-m(reeds,            postnp_adverb,reeds).
 m(inmiddels,        postnp_adverb,inmiddels).
 
 m(anderzijds,       postnp_adverb,anderzijds).
@@ -6493,39 +6485,16 @@ m(zo,               dip_sbar_adverb,zo).  % we gaan , zo constateert hij , ..
                                            % zo saturates sbar slash, if
                                            % there is a DIP
 
-m(althans,          postadv_adverb,althans).
-m(bijvoorbeeld,     postadv_adverb,bijvoorbeeld).
-m(daarentegen,      postadv_adverb,daarentegen).
-m(derhalve,         postadv_adverb,derhalve).
-m(echter,           postadv_adverb,echter).
-m(dus,              postadv_adverb,dus).
 m(eerst,            postadv_adverb,eerst).   % dan eerst kan Pakistan een normaal land worden
-m(evenwel,          postadv_adverb,evenwel).
-m(immers,           postadv_adverb,immers).
-m(intussen,         postadv_adverb,intussen).
-m(nog,              postadv_adverb,nog). % cdb/2535 in december nog
-m(nu,               postadv_adverb,nu).
-m(pas,              postadv_adverb,pas). % in december pas
-m(tenslotte,        postadv_adverb,tenslotte).
-m('ten slotte',     postadv_adverb,[ten,slotte]).
-m(toch,             postadv_adverb,toch).
-m(trouwens,         postadv_adverb,trouwens).
-m('wel te verstaan',postadv_adverb,welteverstaan).
-m('wel te verstaan',postadv_adverb,[wel,te,verstaan]).
-m(weliswaar,        postadv_adverb,weliswaar).
 
-
-m(al,               postadv_adverb,al).      % meteen al
 m(alweer,           postadv_adverb,alweer).  % twee jaar geleden alweer
 m(ineens,           postadv_adverb,ineens).  % toen ineens
 m(laat,             postadv_adverb,laat).    % gisteravond laat
 m(maar,             postadv_adverb,maar).    % eventjes maar
 m(veel,             postadv_adverb,meer).    % niet meer ; nooit meer
-m(ook,              postadv_adverb,ook).
 m(ongeveer,         postadv_adverb,ongeveer).
 m(opeens,           postadv_adverb,opeens).  % dan opeens; nu opeens
 m(precies,          postadv_adverb,precies).
-m(reeds,            postadv_adverb,reeds).
 m(vroeg,            postadv_adverb,vroeg).   % morgenochtend vroeg
 m(weer,             postadv_adverb,weer).    % ook nu weer ; dan weer
 m(zowat,            postadv_adverb,zowat).   % een uur geleden zowat kwam hij voorbij
@@ -6535,27 +6504,7 @@ m(zat,              postadj_adverb,zat).     % makkelijk zat
 
 m(genoeg,           om_postadj_adverb,genoeg). % gek genoeg om
 
-m(althans,          postadj_adverb,althans).
-m(bijvoorbeeld,     postadj_adverb,bijvoorbeeld).
-m(daarentegen,      postadj_adverb,daarentegen).
-m('dan ook',        postadj_adverb,[dan,ook]).
-m(derhalve,         postadj_adverb,derhalve).
-m(dus,              postadj_adverb,dus).        % logisch dus , dat
-m(echter,           postadj_adverb,echter).
-m(eigenlijk,        postadj_adverb,eigenlijk).  % vreemd eigenlijk , dat
-m(evenwel,          postadj_adverb,evenwel).
-m(immers,           postadj_adverb,immers).
-m(intussen,         postadj_adverb,intussen).
-m(nog,              postadj_adverb,nog). % wat bleekjes nog ...
-m(nu,               postadj_adverb,nu).
-m(ook,              postadj_adverb,ook).
-m(tenslotte,        postadj_adverb,tenslotte).
-m('ten slotte',     postadj_adverb,[ten,slotte]).
-m(toch,             postadj_adverb,toch).
-m('wel te verstaan',postadj_adverb,welteverstaan).
-m('wel te verstaan',postadj_adverb,[wel,te,verstaan]).
-m(weliswaar,        postadj_adverb,weliswaar).
-
+m('dan ook',        postadj_adverb,[dan,ook]).  %  ??
 
 %% jammer genoeg is adverbial, but jammer is not..
 

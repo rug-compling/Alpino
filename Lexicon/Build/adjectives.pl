@@ -1751,7 +1751,8 @@ a([ge_e(aangewende),
    ge_no_e(aangewend)],adv,[],[]).
 
 a([ge_both(aangewezen)],adv,
-  [er_pp_sbar(op),
+  [so_np,
+   er_pp_sbar(op),
    subject_vp,subject_sbar,
    pp(op)],[]).
 
@@ -3839,7 +3840,9 @@ a([ge_e(bedoelde),
    ge_no_e(bedoeld)],padv,
   [pred,
    pp(voor),
-   subject_vp],
+   subject_vp,  % bedoeld om te lezen (missing obj)
+   object_vp    % bedoeld om ladingen op te sporen (no missing obj)
+  ],
   [boven,
    onder]).
 
@@ -14784,7 +14787,8 @@ a([ge_both(gescholen)],adv,[],[]).
 
 a([ge_both(geschonden)],both,[],[on]).
 
-a([ge_both(geschonken)],adv,[],[]).
+a([ge_both(geschonken)],adv,[so_np,
+			     so_pp(aan)],[]).
 
 a([ge_e(geschoolde),
    er(geschoolder),

@@ -3835,6 +3835,8 @@ abbreviation('svp',    alstublieft).
 abbreviation('ber.',   beroepen).
 abbreviation('b.v.',   bijvoorbeeld).
 abbreviation('bv.',    bv).
+abbreviation('bijv.',  bijvoeglijke).
+abbreviation('bz.',    bijzin).
 abbreviation(cb,       consultatieburo).
 abbreviation('Chr.',   christelijk).
 abbreviation('Chr.',   christelijke).

@@ -5838,6 +5838,8 @@ n([pl(boeren),sg(boer)],de,[],
    wijn,
    dim(boertje)]).
 
+n([sg(boerde)],de,[]).  % klucht?
+
 n([pl(boerderijen),sg(boerderij)],de,[],[dim(boerderijtje)]).
 
 n([pl(boerinnen),sg(boerin)],de,[],[dim(boerinnetje)]).
@@ -21340,6 +21342,8 @@ n([pl(lummels),sg(lummel)],de,[]).
 
 n([pl(lunchen),pl(lunches),sg(lunch)],de,[]).
 
+n([sg(lunch)],het,[]).  % "het lunch" ouderwets?
+
 n([mass(lurex)],de,[]).
 
 n([pl(lussen),sg(lus)],de,[],[dim(lusje)]).
@@ -29755,13 +29759,20 @@ n([pl(reden),pl(redes),sg(rede)],de,[],
 
 n([mass(redelijkheid)],de,[]).
 
-%% todo: sbar + subject_sbar at the same time!
+%% sbar + subject_sbar at the same time!
 %% de enige reden dat hij komt is , dat ...
+%% de enige reden om te komen is , dat ...
+%% de enige reden dat hij komt is , om ...
+%% de enige reden om te komen is , om ...
 n([pl(redenen),sg(reden)],de,
   [sbar,
+   vp,
    subject_sbar,
    subject_vp,
-   vp],
+   subject_sbar_sbar,
+   subject_sbar_vp,
+   subject_vp_sbar,
+   subject_vp_vp],
   [drog,
    hoofd]).
 
