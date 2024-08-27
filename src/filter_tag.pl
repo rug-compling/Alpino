@@ -415,6 +415,10 @@ valid_noun_sc(sbar,                   [check_of_dat_whsub_sbar]).
 valid_noun_sc(van_sbar,               [check_tag(complementizer(van))]).
 valid_noun_sc(subject_sbar,           []).   % een schande , natuurlijk , dat hij komt
 valid_noun_sc(subject_sbar_no_het,    []).   % een probleem , natuurlijk , dat hij de grootste werd
+valid_noun_sc(subject_sbar_sbar,      [check_of_dat_whsub_sbar]).
+valid_noun_sc(subject_sbar_vp,        [check_vform(te)]).
+valid_noun_sc(subject_vp_sbar,        [check_vform(te),check_of_dat_whsub_sbar]).
+valid_noun_sc(subject_vp_vp,          [check_vform(te)]).
 valid_noun_sc(measure,                []).
 valid_noun_sc(np_measure,             []).
 valid_noun_sc(app_measure,            []).
