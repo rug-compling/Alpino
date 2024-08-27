@@ -22,7 +22,7 @@ frames:
         $(ALPINO) $(extra) -flag suite undefined -parse\
               2>> $(DISK)/$(suite)-fr.log
 	gzip $(DISK)/$(suite)-fr.log
-	mv $(DISK)/$(suite)-fr.log.gz $(suite).log.gz
+	mv $(DISK)/$(suite)-fr.log.gz $(TARGET)/$(suite).log.gz
 
 lexical_analysis:
 	zcat $(SUITES)/$(suite).sents.gz | \
@@ -50,19 +50,18 @@ include $(ALPINO_HOME)/Makefile.errormining
 PS=p_part00001 p_part00002 p_part00003 p_part00004 p_part00005 p_part00006 p_part00007 p_part00008 p_part00009 p_part00010 p_part00011 p_part00012 p_part00013 p_part00014 p_part00015 p_part00016 p_part00017 p_part00018 p_part00019 p_part00020
 
 ps:
-	$(MAKE) -j $(J) $(PS:%=%.test.log.gz)
+	$(MAKE) -j $(J) $(PS:%=%.test.log.gz) 
 
-%.log.gz: ../../../Suites/Machine/%.sents.gz
+$(TARGET)/%.log.gz: ../../../Suites/Machine/%.sents.gz
 	$(MAKE) frames suite=$*
 
 %.test.log.gz: ../../../Suites/Machine/%.sents.gz
-	$(MAKE) frames suite=$* TRAIN_TEST=test
+	$(MAKE) frames suite=$* TRAIN_TEST=test TARGET=.
 
 ## usage e.g.: make -j 20 PATTERN=pei mores 
 MORE=$(basename $(basename $(notdir $(wildcard ../../../Suites/Machine/$(PATTERN)*.sents.gz))))
 mores:
-	$(MAKE) $(MORE:%=%.log.gz)
-
+	$(MAKE) $(MORE:%=../TRAINING/%.log.gz) TARGET=../TRAINING
 
 alpino: cdb cgn_exs eans extra g_suite h_suite i_suite j_suite lassy-doc\
         leuven_yellow_pages lot_test_suite1 novelsample_corrected ntv-suite qa Titaantjes wpspel
