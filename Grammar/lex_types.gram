@@ -274,6 +274,9 @@ tmp_app_noun(N) :-
 
 verbal_arg_noun(N,VerbalArg) :-
     noun(N0),
+    verbal_arg_noun(N0,N,VerbalArg).
+
+verbal_arg_noun(N0,N,VerbalArg) :-
     unify_except_l(N0,N,[exs,dt:vc]),
     N:exs <=> [VerbalArg],
     VerbalArg:slash => [],
@@ -315,6 +318,30 @@ van_sbar_noun(N) :-
 vp_noun(N) :-
     no_subj_vp_arg(VP),
     verbal_arg_noun(N,VP).
+
+subject_sbar_sbar_noun(N) :-
+    subject_sbar_noun(N0),
+    Sbar => sbar,
+    Sbar:ctype => (c_of;c_of_short;c_redrel;c_dat;c_als),
+    Sbar:e_deps => [],
+    verbal_arg_noun(N0,N,Sbar).
+
+subject_sbar_vp_noun(N) :-
+    subject_sbar_noun(N0),
+    no_subj_vp_arg(VP),
+    verbal_arg_noun(N0,N,VP).
+
+subject_vp_sbar_noun(N) :-
+    subject_vp_noun(N0),
+    Sbar => sbar,
+    Sbar:ctype => (c_of;c_of_short;c_redrel;c_dat;c_als),
+    Sbar:e_deps => [],
+    verbal_arg_noun(N0,N,Sbar).
+
+subject_vp_vp_noun(N) :-
+    subject_vp_noun(N0),
+    no_subj_vp_arg(VP),
+    verbal_arg_noun(N0,N,VP).
 
 subject_sbar_noun(N) :-
     Sbar => sbar,

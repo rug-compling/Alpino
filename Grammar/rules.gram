@@ -12238,8 +12238,10 @@ comparative_structure(Comp,XP,CompP) :-
 
 %%EX%% Hij is groter dan ik
 %%EX%% Hij is groter dan mij
+%%EX%% Dat is minder dan wat klassieke zonnecellen doen .
 grammar_rule(comparative(np), CompP, [ Comp, XP ]) :-
-    ind_max_np(XP),
+    max_np(XP),
+    XP:sel => ~to_topic,
     XP:subn => ~sub_indef_verb,
     comparative_structure(Comp,XP,CompP).
 
@@ -12561,8 +12563,6 @@ no_conjoined_vslash(M) :-
     VSLASH1 => vslash,
     VSLASH1:cj => ncj,
     VSLASH1:vslashparts => [],
-%    VSLASH1:vslashhwrd <=> SOME,
-%    dif(SOME,[]),
     when(?=(VSLASH,[]),
 	 (  VSLASH=[]
 	 ;  VSLASH=VSLASH1
