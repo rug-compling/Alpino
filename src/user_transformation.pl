@@ -337,6 +337,9 @@ adj(_):-fail.
 %% niet- en niet_
 %% non- en non_
 
+/*
+surf_lemma(neer,svp,_,'BW()',neer,neer).
+
 surf_lemma(W,'ADJ(prenom,basis,met-e,stan)','WW(od,prenom,met-e)',_,L):-
     ende(W,_,L).
 
@@ -363,6 +366,7 @@ surf_lemma(W,_,'WW(vd,nom,met-e,mv-n)',_,L) :-
 
 surf_lemma(X,_,'SPEC(symb)',_,X) :-
     symb(X).
+*/
 
 ende(_,_,_) :-
     fail.
