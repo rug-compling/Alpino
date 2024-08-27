@@ -381,6 +381,8 @@ undefined_options :-
     set_flag(suite,undefined),
     set_flag(lexicon,undefined),
     set_flag(penalties,undefined),
+    set_flag(syntax_features,undefined),
+    set_flag(ngram_model_dir,undefined),
     set_flag(pos_tagger,off).
 
 test1_options :-
