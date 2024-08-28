@@ -1,8 +1,6 @@
 package main
 
 import (
-	"github.com/pebbe/util"
-
 	"bytes"
 	"encoding/hex"
 	"flag"
@@ -15,6 +13,8 @@ import (
 	"path/filepath"
 	"regexp"
 	"strings"
+
+	"github.com/pebbe/util"
 )
 
 const (
@@ -25,24 +25,25 @@ const (
 var (
 	// foute entities, gedefinieerd in Tokenization/Create/entities.pl
 	specials = map[string][]rune{
-		"&lsquor;": []rune{'é'},
-		"&ldquor;": []rune{'ä'},
-		"&circ;":   []rune{'ê'},
-		"&caron;":  []rune{},
-		"&gcirc;":  []rune{'g', 'e'},
+		"&lsquor;": {'é'},
+		"&ldquor;": {'ä'},
+		"&circ;":   {'ê'},
+		"&caron;":  {},
+		"&gcirc;":  {'g', 'e'},
 	}
 
 	x = util.CheckErr
 
 	opt_b = flag.Bool("b", false, "raw byte count")
 	opt_c = flag.Bool("c", false, "don't recognise comments")
+	opt_d = flag.String("d", "", "initial value for %D")
 	opt_e = flag.Bool("e", false, "don't process Alpino escapes")
+	opt_i = flag.String("i", itemRegexp, "item regexp")
+	opt_j = flag.Bool("j", false, "strip item regexp")
 	opt_l = flag.Bool("l", false, "don't recognise labels")
 	opt_m = flag.Bool("m", false, "don't recognise metadata")
-	opt_v = flag.Bool("v", false, "verbose")
 	opt_t = flag.String("t", labelTemplate, "label template")
-	opt_i = flag.String("i", itemRegexp, "item regexp")
-	opt_d = flag.String("d", "", "initial value for %D")
+	opt_v = flag.Bool("v", false, "verbose")
 
 	reComment = regexp.MustCompile(`(?m:^%.*?$)`)
 	reMeta    = regexp.MustCompile(`(?mi:^##meta.*?$)`)
@@ -82,6 +83,7 @@ Opties:
   -e        : tekens die voor Alpino speciaal zijn worden niet ge-escaped
   -i string : reguliere expresie waarmee item in een lijst wordt herkend,
                 default: %s
+  -j        : verwijder de markering van item in een lijst (zie: -i)
   -l        : behandel labels als gewone tekst
   -m        : behandel metadata als gewone tekst
   -t string : template voor label,
@@ -132,7 +134,6 @@ Je kunt dit helemaal uitzetten met optie: -i ""
 }
 
 func main() {
-
 	flag.Usage = usage
 	flag.Parse()
 	if !(flag.NArg() == 0 && !util.IsTerminal(os.Stdin) || flag.NArg() == 1) {
@@ -298,6 +299,10 @@ func main() {
 				}
 				fmt.Fprintln(inp, lbl+" "+hex.EncodeToString([]byte(line)))
 			} else if *opt_i != "" && item.MatchString(line) {
+				if *opt_j {
+					s := item.FindString(line)
+					line = strings.TrimSpace(line[len(s):])
+				}
 				fmt.Fprint(inp, "\n", line, " ")
 				inline = true
 			} else {
@@ -489,30 +494,30 @@ TOP:
 		}
 
 		for _, pair := range [][2]int{
-			[2]int{0, 1},
-			[2]int{1, 0},
+			{0, 1},
+			{1, 0},
 
-			[2]int{1, 1},
-			[2]int{0, 2},
-			[2]int{2, 0},
+			{1, 1},
+			{0, 2},
+			{2, 0},
 
-			[2]int{1, 2},
-			[2]int{2, 1},
-			[2]int{0, 3},
-			[2]int{3, 0},
+			{1, 2},
+			{2, 1},
+			{0, 3},
+			{3, 0},
 
-			[2]int{2, 2},
-			[2]int{1, 3},
-			[2]int{3, 1},
-			[2]int{0, 4},
-			[2]int{4, 0},
+			{2, 2},
+			{1, 3},
+			{3, 1},
+			{0, 4},
+			{4, 0},
 
-			[2]int{2, 3},
-			[2]int{3, 2},
-			[2]int{1, 4},
-			[2]int{4, 1},
-			[2]int{0, 5},
-			[2]int{5, 0},
+			{2, 3},
+			{3, 2},
+			{1, 4},
+			{4, 1},
+			{0, 5},
+			{5, 0},
 		} {
 			if t+pair[0] < len(text) &&
 				bytePos2+pair[1] < len(posData) &&
@@ -532,7 +537,6 @@ TOP:
 				t += pair[0]
 				for i := 0; i < pair[1]; i++ {
 					bytePos2, linePos2, columnPos2 = nextPos(bytePos2, linePos2, columnPos2)
-
 				}
 				continue TOP
 			}
