@@ -15,6 +15,7 @@ train_options=user_max=120000 use_guides=off max_sentence_length=25 after_timeou
 test_options=user_max=1000000 use_guides=on max_sentence_length=30 after_timeout_options=off
 
 HPCTARGET=frames
+TARGET=.
 
 frames:
 	date > $(DISK)/$(suite)-fr.log
