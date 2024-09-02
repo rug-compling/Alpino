@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="ap" end="3" id="2" rel="mod">
+        <node begin="0" cat="np" end="2" id="3" rel="me">
+          <node begin="0" end="1" id="4" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+          <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="5" lemma="jaar" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="jaar" special="tmp" word="jaar"/>
+        </node>
+        <node aform="compar" begin="2" buiging="zonder" end="3" graad="comp" id="6" infl="no_e" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="laat" vform="adj" word="later"/>
+      </node>
+      <node begin="3" end="4" id="7" infl="sg" lemma="spelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="speel" sc="pc_pp(op)" stype="declarative" tense="past" v_per="thi" word="speelde" wvorm="pv"/>
+      <node begin="4" case="nom" def="def" end="5" gen="de" genus="masc" getal="ev" id="8" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="5" cat="pp" end="12" id="9" rel="pc">
+        <node begin="5" end="6" id="10" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="6" cat="np" end="12" id="11" rel="obj1">
+          <node begin="6" end="7" id="12" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+          <node aform="base" begin="7" buiging="zonder" end="8" graad="basis" id="13" infl="no_e" lemma="Europees" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="Europees" vform="adj" word="Europees"/>
+          <node begin="8" end="9" gen="het" genus="onz" getal="ev" graad="basis" id="14" lemma="jeugd_kampioenschap" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="jeugd_kampioenschap" sc="app_measure" word="jeugdkampioenschap"/>
+          <node begin="9" end="10" gen="het" genus="onz" getal="ev" graad="basis" id="15" lemma="schaken" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="app" rnum="sg" root="schaken" word="schaken"/>
+          <node begin="10" cat="pp" end="12" id="16" rel="mod">
+            <node begin="10" end="11" id="17" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="18" lemma="Budva" naamval="stan" neclass="LOC" ntype="eigen" num="both" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Budva" word="Budva"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Een jaar later speelde hij op het Europees jeugdkampioenschap schaken in Budva .</sentence>
+</alpino_ds>
