@@ -147,6 +147,7 @@ adverb(desalniettemin).
 adverb(desgevraagd).
 adverb(desnoods).
 adverb(desondanks).
+adverb(destijds).
 adverb(dienovereenkomstig).
 adverb(dientengevolge).
 adverb([dien,tengevolge]).

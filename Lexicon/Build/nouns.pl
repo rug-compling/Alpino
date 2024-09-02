@@ -8747,6 +8747,9 @@ n([sg(dalit),pl(dalits)],de,[]).  % kastelozen/onaanraakbaren in India etc
 
 n([pl(dammen),sg(dam)],de,[],[dim(dammetje)]).
 
+%% het damspel:
+n([mass(dammen)],het,[]).
+
 n([pl(dames),sg(dame)],de,[],[dim(dametje)]).
 
 n([pl([dames,dubbelspelen]),sg([dames,dubbelspel])],het,[]).

@@ -834,6 +834,7 @@ number_both(['Filippijnen']).
 number_both(['FNV-Bondgenoten']).
 number_both(['G.S.']).
 number_both(['GS']).
+number_both(['Hazara']).
 number_both(['Hoogovens']).
 number_both(['Indiana','Pacers']).
 number_both(['Jackson','5']).

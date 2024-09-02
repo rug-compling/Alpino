@@ -4316,6 +4316,9 @@ open_class_tag(nominalized_adjective_sg).
 open_class_tag(ge_nominalized_adjective).
 open_class_tag(end_nominalized_adjective).
 
+%% 19de-20ste eeuw
+open_class_tag(number(rang)).
+
 non_part_sc([],[]).
 non_part_sc([H0|T0],T1) :-
     non_part_sc_el(H0,T1,T),

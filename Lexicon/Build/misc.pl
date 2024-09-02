@@ -6229,7 +6229,7 @@ tmp_adverb(daarstraks).
 tmp_adverb(dan).
 tmp_adverb([dan,en,slechts,dan]).
 tmp_adverb(dato).
-tmp_adverb(destijds).
+%% tmp_adverb(destijds).  now adverb because of wikipedia "de destijds drie landelijke hitlijsten"
 tmp_adverb(dinsdags).
 tmp_adverb(donderdags).
 tmp_adverb(eens).

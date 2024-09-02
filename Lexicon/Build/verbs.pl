@@ -6690,12 +6690,13 @@ v(drink,drinkt,drinken,gedronken,dronk,dronken,
 	intransitive,
 	transitive,
 	np_pc_pp(op),
+	np_pc_pp(uit),   % dit glas is om cognac uit te drinken
 	np_pc_pp(van),
 	part_intransitive(in),
 	part_transitive(in),  % wij dronken zijn woorden in als nectar
 	part_refl_np(in),  % hij drinkt zich moed in
 	np_mod_pp(bij),
-	mod_pp(uit),       % dit glas is om uit te drinken
+	pc_pp(uit),       % dit glas is om uit te drinken
 	part_intransitive(tee),
 	part_intransitive(thee),
 	part_transitive(leeg),
@@ -7070,6 +7071,7 @@ v(eigen,eigent,eigenen,geëigend,eigende,eigenden,
 v(eindig,eindigt,eindigen,geëindigd,eindigde,eindigden,
     [z([intransitive,
 	fixed([rang],no_passive), % VL we eindigden derde
+	als_copula,      % ze eindigde als derde
 	np_pc_pp(met),
 	er_pp_sbar(met),
 	er_pp_vp(met),
@@ -14274,7 +14276,7 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	part_np_np(kenbaar),
 	part_np_sbar(kenbaar),
 	part_vp(kenbaar),
-	part_np_vp(kenbaar),
+	part_np_vp_subj(kenbaar),
 	part_sbar(kenbaar),
 	part_so_pp_sbar(kenbaar),
 	part_so_pp_vp(kenbaar),
