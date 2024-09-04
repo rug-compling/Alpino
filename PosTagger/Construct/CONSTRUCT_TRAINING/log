@@ -298,6 +298,20 @@ time_out:   46440
 failure:   7126
 out_of_memory:   91
 
+----------------
+
+Sept 2024
+
+NRC 1994+1995
+total:    1759033
+ok:       1651548
+coverage: 0.938895404463702
+coverage: 0.991234893335062 (ignoring time_out)
+out_of_memory:   3
+failure:   14112
+time_out:   92881
+
+
 -------------------------------------------------------
 
 NRC 1998
@@ -1142,6 +1156,17 @@ coverage: 0.943829772128758
 coverage: 0.988062030987623 (ignoring time_out)
 time_out:   20178
 failure:   4830
+
+sep 2024
+4 sets (5000 zinnen) timeout; fouten vanwege fout in woordenboek
+total:    434136
+ok:       410130
+coverage: 0.944703963734867
+coverage: 0.988906062001635 (ignoring time_out)
+failure:   4323
+time_out:   19405
+
+
 
 -------------------------------------------------------
 
