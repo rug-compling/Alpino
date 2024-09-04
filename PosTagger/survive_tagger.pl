@@ -95,6 +95,10 @@ surviving_word('collega \' s').
 surviving_word(_):-
     fail.
 
+%% temp
+surviving_root('op zoek').
+surviving_root('opzoek').
+
 surviving_root('aantal een').
 surviving_root('aantal een groot').
 surviving_root('dat soort').
