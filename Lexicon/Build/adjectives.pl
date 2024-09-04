@@ -14915,7 +14915,7 @@ a([ge_e(gesettelde),
 
 a([ge_e(geshockeerde),
    ge_no_e(geshockeerd)],adv,
-  [subject_sbar],[]).
+  [object_sbar],[]).
 
 a([ge_e(gesidderde),
    ge_no_e(gesidderd)],adv,[],[]).
@@ -24248,6 +24248,9 @@ a([both(omstreden)],nonadv,
 a([ge_e(omstrengelde),
    ge_no_e(omstrengeld)],adv,[],[]).
 
+a([ge_e(omstuwde),
+   ge_no_e(omstuwd)],both,[],[]).
+
 a([e(omvangrijke),
    er(omvangrijker),
    ere(omvangrijkere),
@@ -27308,8 +27311,9 @@ a([pred([op,til])],nonadv,[],[]).
 a([pred([op,weg])],dir_locadv,
   [object_vp],[]).
 
-a([pred([op,zoek]),
-   pred(opzoek)],padv,
+a([postn_pred([op,zoek]),
+   postn_pred(opzoek)
+  ],padv,
   [pp(naar)],[]).
 
 a([e(opdringerige),
@@ -29485,7 +29489,11 @@ a([stem(prijs_winnen),
    ende(prijswinnende)],padv,[],[]).
 
 a([e(prijzige),
-   no_e(prijzig)],adv,[],[]).
+   no_e(prijzig),
+   er(prijziger),
+   ere(prijzigere),
+   st(prijzigst),
+   ste(prijzigste)],adv,[],[]).
 
 a([e(prikkelbare),
    er(prikkelbaarder),

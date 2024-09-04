@@ -9098,6 +9098,7 @@ lemma_root(om_flikkeren,flikker_om) .
 lemma_root(om_flipperen,flipper_om) .
 lemma_root(om_frutselen,frutsel_om) .
 lemma_root(om_gaan,ga_om) .
+lemma_root(om_gespen,gesp_om) .
 lemma_root(omgeven,omgeef) .
 lemma_root(om_gidsen,gids_om) .
 lemma_root(om_glibberen,glibber_om) .
@@ -12912,6 +12913,7 @@ lemma_root(raak_verstikken,verstik_raak) .
 lemma_root(raak_verstillen,verstil_raak) .
 lemma_root(raak_verstoffen,verstof_raak) .
 lemma_root(raak_verstommen,verstom_raak) .
+lemma_root(raak_verstoppen,verstop_raak) .
 lemma_root(raak_verstoren,verstoor_raak) .
 lemma_root(raak_verstrakken,verstrak_raak) .
 lemma_root(raak_verstrijken,verstrijk_raak) .
@@ -22990,6 +22992,7 @@ lemma_root(voort_verstikken,verstik_voort) .
 lemma_root(voort_verstillen,verstil_voort) .
 lemma_root(voort_verstoffen,verstof_voort) .
 lemma_root(voort_verstommen,verstom_voort) .
+lemma_root(voort_verstoppen,verstop_voort) .
 lemma_root(voort_verstoren,verstoor_voort) .
 lemma_root(voort_verstrakken,verstrak_voort) .
 lemma_root(voort_verstrijken,verstrijk_voort) .

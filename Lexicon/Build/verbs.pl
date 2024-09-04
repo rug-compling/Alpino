@@ -8541,6 +8541,8 @@ v(gesel,geselt,geselen,gegeseld,geselde,geselden,
 v(gesp,gespt,gespen,gegespt,gespte,gespten,
     [h([intransitive,
 	transitive,
+	part_transitive(om),
+	part_np_np(om),  % hij gespte de wandelaars een hartslagmeter om
 	np_ld_pp,
 	part_transitive(aan),
 	part_transitive(af),
@@ -13536,8 +13538,8 @@ v(lig,ligt,liggen,gelegen,lag,lagen,
 	fixed([[aan,het,hart],ap_pred(na),dat],no_passive),  % also "te na"
 	fixed([[aan,het,hart],ap_pred(nauw),dat],no_passive),  % VL
 	fixed([[aan,het,hart],dat],no_passive),
-        fixed([{[[vingerdik],er_pp(op)]}],no_passive),
-        fixed([{[[vingerdik],er_pp(op,A)]},extra_sbar(A)],no_passive),
+        fixed([er_pp(op),[vingerdik]],no_passive),
+        fixed([er_pp(op,A),[vingerdik],extra_sbar(A)],no_passive),
 	fixed([sbar_subj,[aan,het,hart],ap_pred(na),dat],no_passive), % also "te na"
 	fixed([sbar_subj,[aan,het,hart],dat],no_passive),
 	fixed([sbar_subj,pc(aan)],no_passive),
@@ -13560,7 +13562,7 @@ v(lig,ligt,liggen,gelegen,lag,lagen,
 	fixed([[op,de,loer]],no_passive),
         fixed([[voor,anker]],no_passive),
 	fixed([[wakker],pc(van)],no_passive),
-	fixed([[wakker],er_pp(van,C),extra_sbar(C)],no_passive),
+	fixed([er_pp(van,C),[wakker],extra_sbar(C)],no_passive),
         part_intransitive(stil),
 	part_ld_pp(vast),
 	part_pc_pp(overhoop,met),
@@ -26200,7 +26202,9 @@ v(verstop,verstopt,verstoppen,verstopt,verstopte,verstopten,
     [h([transitive,
         sbar, % VL hij kon niet verstoppen dat...
 	np_ld_pp,
-	np_ld_adv])]).
+	np_ld_adv,
+	intransitive  % de Randstad dreigt te verstoppen = verstopt te raken
+       ])]).
 
 v(verstouw,verstouwt,verstouwen,verstouwd,verstouwde,verstouwden,
     [h([transitive])]).

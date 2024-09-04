@@ -6442,7 +6442,8 @@ m(oming,            intensifier,oming).
 m(te,               intensifier,te).
 m('veel te',        intensifier,veelste).
 m('verre van',      intensifier,[verre,van]).
-m(verrekte,         intensifier,verrekte).
+m(verdommen,        intensifier,verdomde).
+m(verrekken,        intensifier,verrekte).
 
 m(te,               vp_om_intensifier,te).
 

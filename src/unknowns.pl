@@ -3815,18 +3815,18 @@ form_of_suffix_rule(le,      l,       adjective(e),capital/
 		    scale,
 		    smile,
 		    style]).
-% form_of_suffix_rule(ste,     st,      adjective(e),capital/
-% 		   [accordeoniste,
-% 		    achtste,'Achtste',
-% 		    activiste,
-% 		    eerste,'Eerste',
-% 		    extremiste,
-% 		    gymnaste,
-% 		    journaliste,
-% 		    laatste,
-% 		    oudste,
-% 		    piste
-% 		   ]).
+form_of_suffix_rule(ste,     st,      adjective(e),capital/
+ 		   [accordeoniste,
+ 		    achtste,'Achtste',
+ 		    activiste,
+ 		    eerste,'Eerste',
+ 		    extremiste,
+ 		    gymnaste,
+ 		    journaliste,
+ 		    laatste,
+ 		    oudste,
+ 		    piste
+ 		   ]).
 form_of_suffix_rule(bare,    'baar',  adjective(e),[]).
 form_of_suffix_rule(ere,     er,      adjective(e),capital/[àndere,
 							    ándere]).

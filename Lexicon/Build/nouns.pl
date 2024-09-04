@@ -9447,7 +9447,11 @@ n([sg(diner)],de,[]).           % engels
 
 n([sg([diner,dansant]),pl([diners,dansants])],het,[]).
 
-n([pl(dingen),sg(ding)],het,[sbar],[dim(dingetje)]).
+n([pl(dingen),sg(ding)],het,
+  [sbar,
+   subject_sbar  % dat te herkennen is één ding
+  ],
+  [dim(dingetje)]).
 
 n([sg(dinges),pl(dinges),sg(dinge),pl(dinge)],both,[]).
 
@@ -10442,7 +10446,8 @@ n([mass('e-commerce')],de,[]).
 n([stem('e-mail'),
    pl(emails),sg(email),
    pl('e-mails'),sg('e-mail'),
-   pl('E-mails'),sg('E-mail')],de,[],
+   pl('E-mails'),sg('E-mail')],de,
+  [sbar],
   [dim(emailtje),
    dim('e-mailtje'),
    dim('E-mailtje')]).
@@ -39830,13 +39835,11 @@ n([pl(voltrekkingen),sg(voltrekking)],de,[]).
 
 n([pl(volumen),pl(volumes),sg(volume),
    sg(vol),sg('vol.'),
-   pl(vols),pl('vols.')],het,[]).
+   pl(vols),pl('vols.')],het,[measure]).
 
 n([stem(volwassen),pl(volwassenen),sg(volwassene)],de,[]).
 
 n([mass(volwassenheid)],de,[]).
-
-n([pl(volzinnen),sg(volzin)],de,[]).
 
 n([pl(vondelingen),sg(vondeling)],de,[]).
 
@@ -42693,6 +42696,7 @@ n([pl(zinnen),sg(zin)],de,
    bij,
    hoofd,
    slot,
+   vol,
    dim(zinnetje)]).
 
 n([sg(zin)],de,[],
