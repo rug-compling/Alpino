@@ -4974,6 +4974,8 @@ grammar_rule(np_n_tmpnapp, NP, [ DET, APP_N, N ]) :-
 
 %%EX%% de familie Beerta
 %%EX%% minister van justitie Hirsch Ballin
+%%TODO de Kamer van Koophandel Amsterdam
+%%TODO de Kamer van Koophandel ( KVK ) Amsterdam
 grammar_rule(n_n_pnapp, NP, [ N, PN ]) :-
     n_n_pnapp_structure(NP,N,PN).
 
