@@ -35,7 +35,7 @@ tokenized/$(basename $(file)).sents.gz:	correct_escaped_entities all.xsl\
                $(file) treat_specifics number_sents $(FILTER)\
                $(TOK)/tok $(TOK)/tokenize.sh $(TOK)/recognize_enumerations\
                $(TOK)/entities $(TOK)/tokenize_more
-	if   `head -n1 $(file)| grep -q utf-8`;\
+	if   `head -n1 $(file)| grep -qi utf-8`;\
         then sed -e 's/CO\&amp;inf2;/CO2/g' $(file) \
            | ./correct_escaped_entities\
              >$(file).temp;\
