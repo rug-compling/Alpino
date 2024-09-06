@@ -2790,7 +2790,7 @@ guess_left_headed_compound(W,Ws,Wmin,Stem,Surf,SurfLength) :-
 %    isupper(RestH1),		% verslag-van Noord
     islower(FirstH1),
     atom_codes(Wmin,[FirstH1,FirstH2|First]),
-    format(user_error,"~w~n",[Wmin]),
+%%    format(user_error,"~w~n",[Wmin]),
     \+ compound_part(Wmin,_),
     \+ lists:member(Wmin,[bonus,drop,dubbel,el,ere,es,mini,non,privé,school,solo,spin,thuis,top]),
     atom_codes(W1,[RestH1,RestH2|RestT]),
@@ -3613,6 +3613,8 @@ form_of_suffix_rule(aans,aans,adjective(no_e(adv)),[baans]).
 form_of_suffix_rule(aal,aal,adjective(no_e(adv)), capital/[admiraal,
 							   areaal,
 							   arsenaal,
+							   bokaal,
+							   doelpaal,
 							   éénmaal,
 							   gemaal,
 							   generaal,'Generaal',
@@ -3938,7 +3940,8 @@ form_of_suffix_rule(aar,'aar',    noun(de,count,sg),[altaar,
 						     paar,
 						     gevaar,
 						     zwaar]).
-form_of_suffix_rule(aars,'aar',   noun(de,count,pl),['Hongaars',
+form_of_suffix_rule(aars,'aar',   noun(de,count,pl),[baars,
+						     'Hongaars',
 						     paars]).
 
 form_of_suffix_rule(iteit,'iteit',  noun(de,count,sg),[]).
