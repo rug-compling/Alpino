@@ -2728,7 +2728,6 @@ preposition(tijdens).
 preposition(wijlens).
 preposition([tot,en,met]).
 preposition([t,/,m]).
-preposition(vanachter).
 %preposition(vanaf).
 preposition(vanonder).
 preposition(vanop).		% vlaams?
@@ -2818,6 +2817,7 @@ preposition(tussen,[door,in,vandaan]).
 preposition(uit,[vandaan]).
 preposition(van,[af,uit,vandaan,[af,aan]]).
 preposition(vanaf,[[af,aan]]).   % VL vanaf het begin af aan
+preposition(vanachter,[vandaan]).   % alsof hij vanonder de douche vandaan komt
 preposition(vanonder,[vandaan]).   % alsof hij vanonder de douche vandaan komt
 preposition(vanop).  % vlaams
 preposition(vlakbij).

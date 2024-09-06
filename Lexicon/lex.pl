@@ -3013,6 +3013,9 @@ spelling_variant(onbraken,    ontbraken).
 spelling_variant(ondere,      onder).
 spelling_variant(ongever,     ongeveer).
 spelling_variant(onmiddelijk, onmiddellijk).
+spelling_variant(onoorbaar,   onoirbaar).
+spelling_variant(onoorbare,   onoirbare).
+spelling_variant(onoorbaars,  onoirbaars).
 spelling_variant(onstaan,     ontstaan).
 spelling_variant(onstaat,     ontstaat).
 spelling_variant(onstane,     ontstane).

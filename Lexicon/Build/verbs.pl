@@ -6478,6 +6478,7 @@ v(draag,draagt,dragen,gedragen,droeg,droegen,
 	part_np_pc_pp(voor,ter),
 	part_pc_pp(bij,aan),
 	part_er_pp_sbar(bij,aan),
+	part_pp_sbar_subj(bij,aan),  % dat het zo rustig bleef heeft bijgedragen aan ...
 	part_pc_pp(bij,tot),
 	part_er_pp_sbar(bij,tot),
 	part_er_pp_vp_no_control(bij,tot),
@@ -7179,7 +7180,8 @@ v(erf,erft,erven,geërfd,erfde,erfden,
 	part_transitive(over)])]).
 
 v(erger,ergert,ergeren,geërgerd,ergerde,ergerden,
-    [h([refl,
+  [h([refl,
+      refl_sbar,  % hij ergerde zich dat de zaak nog niet geregeld was
 	sbar_subj_so_np,
 	transitive, %% ? of obj2?
 	vp_subj_so_np,
@@ -11047,7 +11049,8 @@ v(kijk,kijkt,kijken,gekeken,keek,keken,
 	transitive,
 	ld_pp,
 	ld_dir,  % hij kijkt de weg af
-	np_ld_pp,  % haar in de ogen / hem in de rug
+	np_ld_pp,		% haar in de ogen / hem in de rug
+	np_np_ld_pp,  % Ze keken je de kleren van het lijf .
 	mod_pp(bij),
 	part_np_np(af),
 	part_intransitive(af),

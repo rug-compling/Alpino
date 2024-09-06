@@ -3383,6 +3383,7 @@ n([pl(baarmoeders),sg(baarmoeder)],de,[]).
 
 n([pl(baarzen),sg(baars)],de,[],
   [kardinaal,
+   nijl,
    snoek]).
 
 n([pl(bazen),sg(baas)],de,[],
@@ -9167,7 +9168,7 @@ n([pl(detectives),sg(detective)],de,[],
 n([sg(detector),pl(detectoren)],de,[],
   [leugen]).
 
-n([mass(detentie)],de,[]).
+n([mass(detentie)],de,[],[jeugd]).
 
 n([pl(determinanten),sg(determinant)],de,[]).
 
@@ -19735,7 +19736,7 @@ n([sg(laagte),pl(laagtes)],de,[]).
 
 n([pl(lanen),sg(laan)],de,[],[dim(laantje)]).
 
-n([pl(laarzen),sg(laars)],de,[]).
+n([pl(laarzen),sg(laars)],de,[],[rijg]).
 
 n([pl(laatstejaars),sg(laatstejaars)],de,[]).
 
@@ -34070,6 +34071,8 @@ n([pl(steigers),sg(steiger)],de,[],
 n([pl(stekken),sg(stek)],de,[]).
 
 n([pl(stekels),sg(stekel)],de,[],[dim(stekeltje)]).
+
+n([sg(stekelbaars),pl(stekelbaarzen)],de,[]).
 
 n([pl(stekkers),sg(stekker)],de,[],[dim(stekkertje)]).
 

@@ -10926,6 +10926,9 @@ a([ge_e(gebromde),
 a([ge_e(gebronsde),
    ge_no_e(gebronsd)],adv,[],[]).
 
+a([ge_e(gebrouilleerde),
+   ge_no_e(gebrouilleerd)],adv,[],[]).
+
 a([ge_both(gebrouwen)],adv,[],[]).
 
 a([e(gebruikelijke),
@@ -15512,7 +15515,7 @@ a([ge_e(gestroopte),
 a([ge_e(gestructureerde),
    ge_e(gestruktureerde),
    ge_no_e(gestructureerd),
-   ge_no_e(gestruktureerd)],padv,[],[on]).
+   ge_no_e(gestruktureerd)],both,[],[on]).
 
 a([ge_e(gestruikelde),
    ge_no_e(gestruikeld)],adv,[],[]).
@@ -25814,6 +25817,9 @@ a([e(onnozele),
    st(onnozelst),
    ste(onnozelste)],adv,[],[]).
 
+a([e(onoirbare),
+   no_e(onoirbaar)],adv,[],[]).
+
 a([e(onomkeerbare),
    no_e(onomkeerbaar)],adv,[],[]).
 
@@ -32964,7 +32970,7 @@ a([e(tastbare),
    ere(tastbaardere),
    no_e(tastbaar),
    st(tastbaarst),
-   ste(tastbaarste)],adv,[],[]).
+   ste(tastbaarste)],adv,[],[on]).
 
 a([both(taxfree),
    both('tax-free'),
@@ -35054,7 +35060,7 @@ a([e(vatbare),
    no_e(vatbaar),
    st(vatbaarst),
    ste(vatbaarste)],nonadv,
-  [pp(voor)],[]).
+  [pp(voor)],[on]).
 
 a([e(vederlichte),
    no_e(vederlicht)],adv,[],[]).
@@ -41468,6 +41474,7 @@ stem(gebroken,v_root(breek,breken)).
 stem(gebrokkeld,v_root(brokkel,brokkelen)).
 stem(gebromd,v_root(brom,brommen)).
 stem(gebronsd,v_root(brons,bronzen)).
+stem(gebrouilleerd,v_root(brouilleer,brouilleren)).
 stem(gebrouwen,v_root(brouw,brouwen)).
 stem(gebruikt,v_root(gebruik,gebruiken)).
 stem(gebruind,v_root(bruin,bruinen)).
