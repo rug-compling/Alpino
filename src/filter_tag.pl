@@ -246,6 +246,7 @@ filter_tag_rule(cleft_het_noun,        [or([check_verb_sc(cleft),
 filter_tag_rule(particle(PART),        [check_part_required(PART)]).
 filter_tag_rule(num_na,                []).
 filter_tag_rule(complementizer,        [check_comp]).
+filter_tag_rule(complementizer(datje),  []).
 filter_tag_rule(complementizer(datti),  []).
 filter_tag_rule(complementizer(start),  []).
 filter_tag_rule(complementizer(root),   []).

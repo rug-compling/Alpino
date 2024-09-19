@@ -706,6 +706,10 @@ a_lex(complementizer(datti),Sign) :-
     datti_complementizer(Sign),
     hstem(Sign).
 
+a_lex(complementizer(datje),Sign) :-
+    datje_complementizer(Sign),
+    hstem(Sign).
+
 a_lex(complementizer(vp),Sign) :-
     vp_complementizer(Sign),
     hstem(Sign).

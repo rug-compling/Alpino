@@ -9246,6 +9246,8 @@ m(datti,complementizer(datti),'dat-ie').
 m(datti,complementizer(datti),dattie).
 m(datti,complementizer(datti),datie).
 
+m(datje,complementizer(datje),datje).
+
 %%% these are the most frequent productive with_dt phrases.
 %%% they are included here for the sole purpose of generation
 %%% these productive with_dt cases otherwise cannot be generated

@@ -12131,7 +12131,10 @@ a([ge_e(gehaakte),
 
 a([ge_e(gehaalde),
    ge_no_e(gehaald)],adv,
-  [part(leeg)],[leeg]).
+  [part(leeg),
+   part(overhoop)],
+  [leeg,
+   overhoop]).
 
 a([ge_e(gehaaste),
    er(gehaaster),
@@ -33343,6 +33346,11 @@ a([both(tevreden),
    pp(met),
    pp(over)],[]).
 
+a([stem(tevreden_stellen),
+   ge_e(tevredengestelde),
+   ge_no_e(tevredengesteld)],padv,
+  [],[]).
+
 a([ge_e(teweeggebrachte),
    ge_no_e(teweeggebracht)],adv,[],[]).
 
@@ -34492,6 +34500,8 @@ a([ge_both(uitgescheiden)],adv,[],[]).
 a([ge_both(uitgescholden)],adv,[],[]).
 
 a([ge_both(uitgeschoten)],adv,[],[]).
+
+a([ge_both(uitgeschoven)],adv,[],[]).
 
 a([ge_e(uitgeschreeuwde),
    ge_no_e(uitgeschreeuwd)],adv,[],[]).

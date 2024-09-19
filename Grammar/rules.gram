@@ -4929,7 +4929,8 @@ grammar_rule(n_n_napp_app_start2, NP, [APP_N,DL,START,OPTPUNCT,DR ]) :-
 grammar_rule(np_n_napp_app, NP, [ APP_N, N ]) :-
     NP => n, APP_N => app_np, N => np,
     NP:nform => ~meas_mod & ~temp & ~temp_meas_mod,
-    N:agr => def,  % reduce spurious ambiguities "Mevrouw Sanders"
+    %%    N:agr => def,  % reduce spurious ambiguities "Mevrouw Sanders"
+    %%    no: "meneer pastoor"                            
     N:e_deps => [],
     N:pred => npred,
     N:redrel => no,
@@ -8885,6 +8886,17 @@ grammar_rule(adv_adv_dp,MAX,[XP,COMMA,ADV]) :-
     XP:redrel => no,
     dp_dp_structure(XP,ADV,MAX).
 
+%%EX%% Voor zover ik weet niet
+grammar_rule(sbar_adv_dp,MAX,[XP,COMMA,ADV]) :-
+    optcomma(COMMA),
+    MAX => max,
+    MAX:max_type => t_dp,
+    max_advp(ADV),
+    ADV:redrel => no,
+    max_sbar(XP),
+    XP:ctype => c_mod,
+    dp_dp_structure(XP,ADV,MAX).
+    
 %% van - naar -
 %%EX%% van Assen naar Groningen
 %%EX%% van 1989 tot 1993
@@ -9854,7 +9866,12 @@ grammar_rule(top_start_etc, Start, [Tag]):-
     Tag => etc,
     top_max_structure(Tag,Start).
 
-    
+%% max --> ComplexEtc
+%%EX%% En daarmee uit !
+%% this creates crd/cnj whereas dlink would be more appropriate
+grammar_rule(top_start_complex_etc, Start, [Tag]):-
+    Tag => complex_etc,
+    top_max_structure(Tag,Start).
 
 top_max_structure(XP,Max) :-
     MaxType => t_xp,

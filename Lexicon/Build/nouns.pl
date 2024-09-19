@@ -10826,7 +10826,8 @@ n([pl(elementen),sg(element)],het,
   [app_measure,
    subject_sbar]).  % een nieuw element in de besprekingen is dat ...
 
-n([pl(elfen),pl(elven),sg(elf)],de,[]).
+n([pl(elfen),pl(elven),sg(elf)],de,[],
+  [half]). % halfelven zijn sprookjesfiguren blijkbaar
 
 n([sg(elfmeter),pl(elfmeters)],de,[]).
 
@@ -11030,6 +11031,8 @@ n([mass(erotiek)],de,[]).
 n([sg(error),pl(errors)],de,[]).
 
 n([pl(ertsen),sg(erts)],both,[]).
+
+n([sg(erudiet),pl(erudieten)],de,[]).
 
 n([mass(eruditie)],de,[]).
 
@@ -31449,7 +31452,7 @@ n([pl(schelpen),sg(schelp)],de,[]).
 
 n([pl('schema\'s'),pl(schemata),sg(schema)],het,[],[dim(schemaatje)]).
 
-n([mass(schemer)],de,[]).
+n([mass(schemer)],both,[]).
 
 n([mass(schemerdonker)],het,[]).
 
@@ -32770,7 +32773,7 @@ n([sg(smartlap),pl(smartlappen)],de,[]).
 
 n([pl(smeekbeden),pl(smeekbedes),sg(smeekbede)],de,[vp]).
 
-n([mass(smeer)],het,[]).  % VL?
+n([mass(smeer)],both,[]).  % VL?
 
 n([pl(smeerlappen),sg(smeerlap)],de,[]).
 
@@ -42385,6 +42388,8 @@ n([pl(zeehonden),sg(zeehond)],de,[]).
 n([mass(zeelucht)],de,[]).
 
 n([pl(zeelieden),pl(zeelui),sg(zeeman)],de,[]).
+
+n([sg(zeem),pl(zemen)],de,[]).
 
 n([pl(zeemeerminnen),sg(zeemeermin)],de,[]).
 

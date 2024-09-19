@@ -1696,6 +1696,20 @@ datti_complementizer(C) :-
     NP:prs => thi,
     comp(C,cp).
 
+datje_complementizer(C) :-
+    C => comp,
+    C:wh => nwh,
+    VP => vp,
+    VP:vform => fin,
+    C:sc <=> [VP],
+    VP:e_deps => [],
+    C:slash => [],
+    VP:slash <=> [NP],
+    NP:wh => nwh,
+    NP:case => nom,
+    %NP:prs => ninvje,
+    comp(C,cp).
+
 xp_complementizer(C,XP) :-
     C => comp,
     C:ctype => c_mod,
