@@ -881,6 +881,7 @@ lemma_root(achterna_spoelen,spoel_achterna) .
 lemma_root(achterna_springen,spring_achterna) .
 lemma_root(achterna_sprinten,sprint_achterna) .
 lemma_root(achterna_spuiten,spuit_achterna) .
+lemma_root(achterna_spurten,spurt_achterna) .
 lemma_root(achterna_spuwen,spuw_achterna) .
 lemma_root(achterna_staan,sta_achterna) .
 lemma_root(achterna_stampen,stamp_achterna) .
@@ -1534,6 +1535,7 @@ lemma_root(af_springen,spring_af) .
 lemma_root(af_sprinten,sprint_af) .
 lemma_root(af_spugen,spuug_af) .
 lemma_root(af_spuiten,spuit_af) .
+lemma_root(af_spurten,spurt_af) .
 lemma_root(af_spuwen,spuw_af) .
 lemma_root(af_staan,sta_af) .
 lemma_root(af_stammen,stam_af) .
@@ -2493,6 +2495,7 @@ lemma_root(binnen_spoelen,spoel_binnen) .
 lemma_root(binnen_springen,spring_binnen) .
 lemma_root(binnen_sprinten,sprint_binnen) .
 lemma_root(binnen_spuiten,spuit_binnen) .
+lemma_root(binnen_spurten,spurt_binnen) .
 lemma_root(binnen_spuwen,spuw_binnen) .
 lemma_root(binnen_staan,sta_binnen) .
 lemma_root(binnen_stampen,stamp_binnen) .
@@ -7378,6 +7381,7 @@ lemma_root(in_springen,spring_in) .
 lemma_root(in_sprinten,sprint_in) .
 lemma_root(in_spugen,spuug_in) .
 lemma_root(in_spuiten,spuit_in) .
+lemma_root(in_spurten,spurt_in) .
 lemma_root(in_spuwen,spuw_in) .
 lemma_root(in_staan,sta_in) .
 lemma_root(installeren,installeer) .
@@ -8367,6 +8371,7 @@ lemma_root(langs_springen,spring_langs) .
 lemma_root(langs_sprinten,sprint_langs) .
 lemma_root(langs_spugen,spuug_langs) .
 lemma_root(langs_spuiten,spuit_langs) .
+lemma_root(langs_spurten,spurt_langs) .
 lemma_root(langs_spuwen,spuw_langs) .
 lemma_root(langs_staan,sta_langs) .
 lemma_root(langs_stampen,stamp_langs) .
@@ -9297,6 +9302,7 @@ lemma_root(om_spoelen,spoel_om) .
 lemma_root(om_springen,spring_om) .
 lemma_root(om_sprinten,sprint_om) .
 lemma_root(om_spuiten,spuit_om) .
+lemma_root(om_spurten,spurt_om) .
 lemma_root(om_spuwen,spuw_om) .
 lemma_root(om_staan,sta_om) .
 lemma_root(om_stampen,stamp_om) .
@@ -9937,6 +9943,7 @@ lemma_root(op_sporen,spoor_op) .
 lemma_root(op_springen,spring_op) .
 lemma_root(op_sprinten,sprint_op) .
 lemma_root(op_spuiten,spuit_op) .
+lemma_root(op_spurten,spurt_op) .
 lemma_root(op_spuwen,spuw_op) .
 lemma_root(op_staan,sta_op) .
 lemma_root(op_stampen,stamp_op) .
@@ -10349,6 +10356,7 @@ lemma_root(over_springen,spring_over) .
 lemma_root(over_sprinten,sprint_over) .
 lemma_root(overspuiten,overspuit) .
 lemma_root(over_spuiten,spuit_over) .
+lemma_root(over_spurten,spurt_over) .
 lemma_root(over_spuwen,spuw_over) .
 lemma_root(over_staan,sta_over) .
 lemma_root(over_stampen,stamp_over) .
@@ -13568,6 +13576,7 @@ lemma_root(rond_spoken,spook_rond) .
 lemma_root(rond_springen,spring_rond) .
 lemma_root(rond_sprinten,sprint_rond) .
 lemma_root(rond_spuiten,spuit_rond) .
+lemma_root(rond_spurten,spurt_rond) .
 lemma_root(rond_spuwen,spuw_rond) .
 lemma_root(rond_staan,sta_rond) .
 lemma_root(rond_stampen,stamp_rond) .
@@ -14375,6 +14384,7 @@ lemma_root(tegemoet_spoelen,spoel_tegemoet) .
 lemma_root(tegemoet_springen,spring_tegemoet) .
 lemma_root(tegemoet_sprinten,sprint_tegemoet) .
 lemma_root(tegemoet_spuiten,spuit_tegemoet) .
+lemma_root(tegemoet_spurten,spurt_tegemoet) .
 lemma_root(tegemoet_spuwen,spuw_tegemoet) .
 lemma_root(tegemoet_staan,sta_tegemoet) .
 lemma_root(tegemoet_stampen,stamp_tegemoet) .
@@ -18726,6 +18736,7 @@ lemma_root(vanaf_springen,spring_vanaf) .
 lemma_root(vanaf_sprinten,sprint_vanaf) .
 lemma_root(vanaf_spugen,spuug_vanaf) .
 lemma_root(vanaf_spuiten,spuit_vanaf) .
+lemma_root(vanaf_spurten,spurt_vanaf) .
 lemma_root(vanaf_spuwen,spuw_vanaf) .
 lemma_root(vanaf_staan,sta_vanaf) .
 lemma_root(vanaf_stampen,stamp_vanaf) .

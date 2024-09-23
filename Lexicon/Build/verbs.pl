@@ -10300,7 +10300,7 @@ v(ijver,ijvert,ijveren,geijverd,ijverde,ijverden,
 	pc_pp(tegen),
         pc_pp(met),
 	pc_pp(voor),
-	er_pp_vp(voor)
+	er_pp_vp(voor),
 	er_pp_sbar(voor)
        ])]).
 
