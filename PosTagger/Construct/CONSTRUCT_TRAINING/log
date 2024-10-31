@@ -368,6 +368,15 @@ coverage: 0.989847715736041 (ignoring time_out)
 failure:   3619
 time_out:   18649
 
+sep 2024
+
+total:    389797
+ok:       367658
+coverage: 0.943203770167549
+coverage: 0.990698175743041 (ignoring time_out)
+failure:   3340
+time_out:   18687
+
 -------------------------------------------------------
 
 NRC 2000
@@ -481,6 +490,16 @@ coverage: 0.989593728127012 (ignoring time_out)
 time_out:   37654
 failure:   7208
 out_of_memory:   1
+
+sep 2024
+
+total:    749148
+ok:       705842
+coverage: 0.942192997912295
+coverage: 0.990578972851219 (ignoring time_out)
+out_of_memory:   1
+failure:   6545
+time_out:   36593
 
 -------------------------------------------------------
 
@@ -1530,3 +1549,17 @@ coverage: 0.987235072991859
 coverage: 0.992603155832261 (ignoring time_out)
 failure:   1660
 time_out:   1407
+
+
+------------------------------------------------------------
+
+sep 2024
+random 10% of Dutch Book Corpus (7000 novels via A. )
+
+total:    5288037
+ok:       5078809
+coverage: 0.960433711034927
+coverage: 0.982150830701886 (ignoring time_out)
+failure:   88544
+time_out:   116928
+out_of_memory:   7
