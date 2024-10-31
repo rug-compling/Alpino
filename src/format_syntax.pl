@@ -56,20 +56,41 @@ result_to_bracketed_string(Result,S0,S):-
 tree_to_bracketed_string(tree(Node,_,Ds,_),S0,S) :-
     Node == robust,
     !,
-    tree_to_bracketed_string_ds(Ds,S0,S).
+    hdrug_flag(syntax_format,Format),
+    tree_to_bracketed_string_ds(Format,Ds,S0,S).
 
-tree_to_bracketed_string(tree(Node,_,Ds,_),S0,S) :-
+:- initialize_flag(syntax_format,traditional).
+
+tree_to_bracketed_string(Tree,S0,S):-
+    hdrug_flag(syntax_format,Format),
+    tree_to_bracketed_string(Format,Tree,S0,S).
+
+tree_to_bracketed_string(traditional,tree(Node,_,Ds,_),S0,S) :-
     functor(Node,Cat,_),
     format_to_chars(" [ @~w",[Cat],S0,S1),
-    tree_to_bracketed_string_ds(Ds,S1,S2),
+    tree_to_bracketed_string_ds_traditional(Ds,S1,S2),
     format_to_chars(" ]",[],S2,S).
 
-tree_to_bracketed_string_ds(lex(ref(_,_,_,Surf,_,_,_,_,_,_,_)),S0,S) :-
+tree_to_bracketed_string_ds_(traditional,lex(ref(_,_,_,Surf,_,_,_,_,_,_,_)),S0,S) :-
     format_to_chars(" ~w",[Surf],S0,S).
-tree_to_bracketed_string_ds([],S,S).
-tree_to_bracketed_string_ds([H|T],S0,S) :-
-    tree_to_bracketed_string(H,S0,S1),
-    tree_to_bracketed_string_ds(T,S1,S).
+tree_to_bracketed_string_ds_(traditional,[],S,S).
+tree_to_bracketed_string_ds_(traditional,[H|T],S0,S) :-
+    tree_to_bracketed_string(traditional,H,S0,S1),
+    tree_to_bracketed_string_ds_(traditional,T,S1,S).
+
+tree_to_bracketed_string(python,tree(Node,_,Ds,_),S0,S) :-
+    functor(Node,Cat,_),
+    format_to_chars(" ('~w',[",[Cat],S0,S1),
+    tree_to_bracketed_string_ds(python,Ds,S1,S2),
+    format_to_chars(" ])",[],S2,S).
+
+tree_to_bracketed_string_ds(python,lex(ref(_,_,_,Surf,_,_,_,_,_,_,_)),S0,S) :-
+    format_to_chars("('~w',[]),",[Surf],S0,S).
+tree_to_bracketed_string_ds(python,[],S,S).
+tree_to_bracketed_string_ds(python,[H|T],S0,S) :-
+    tree_to_bracketed_string(python,H,S0,S1),
+    format_to_chars(",",[],S1,S2),
+    tree_to_bracketed_string_ds(python,T,S2,S).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%% some syntax %%%%%%%%%
