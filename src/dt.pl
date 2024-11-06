@@ -1380,18 +1380,30 @@ lexical_feature_val_(Sc,Sc).
 
 converse_phantom(Tree0,Tree) :-
     get_phantoms(Ps),
-    converse_phantom(Tree0,Tree1,Ps,_,Is,[]),
+    converse_phantom_ps(Ps,Tree0,Tree).
+
+converse_phantom(Tree0,P,Tree) :-
+    converse_phantom(Tree0,Tree1,P,Is,[]),
     remove_removed_is(Tree1,Tree,Is).
 
-converse_phantom(tree(Rel/Node,IX,Ds0),tree(Rel/Node,IX,Ds),Ps0,Ps,Is0,Is):-
-    converse_phantom_ds(Ds0,Ds,Ps0,Ps,Is0,Is).
+
+converse_phantom_ps([],Tree,Tree).
+converse_phantom_ps([P|Ps],Tree0,Tree) :-
+    converse_phantom(Tree0,P,Tree1),
+    converse_phantom_ps(Ps,Tree1,Tree).
+
+converse_phantom(tree(Rel/Node,IX,Ds0),tree(Rel/Node,IX,Ds),P,Is0,Is):-
+    converse_phantom_ds(Ds0,Ds,P,Is0,Is).
 
 remove_removed_is(tree(Node,Ix,Ds0), tree(Node,Ix,Ds), Is) :-
     remove_removed_is_ds(Ds0,Ds,Is).
 
 remove_removed_is_ds(Ds0,Ds,Is) :-
     lists:select(D,Ds0,Ds1),
-    D = tree(_,i(I),_),
+    D = tree(_,NONVAR,_),
+    nonvar(NONVAR),
+    NONVAR = i(I),
+    nonvar(I),
     lists:member(I,Is),
     !,
     remove_removed_is_ds(Ds1,Ds,Is).
@@ -1403,24 +1415,22 @@ remove_removed_is_ds_ds([H0|T0],[H|T],Is) :-
     remove_removed_is(H0,H,Is),
     remove_removed_is_ds_ds(T0,T,Is).
 
-converse_phantom_ds(Ds0,Ds,Ps0,Ps,[I|Is0],Is) :-
-    select(P0,Ps0,Ps1),
+converse_phantom_ds(Ds0,Ds,P0,[I|Is0],Is) :-
     select(D,Ds0,Ds1),
     starts_with(D,P0,I),
     !,
-    converse_phantom_ds(Ds1,Ds,Ps1,Ps,Is0,Is).
-
-converse_phantom_ds(Ds0,Ds,Ps0,Ps,Is0,Is) :-
-    select(P0,Ps0,Ps1),
+    Is0 = Is,
+    Ds1 = Ds.
+converse_phantom_ds(Ds0,Ds,P0,Is0,Is) :-
     select(D,Ds0,Ds1),
     is_part(D,D1,P0),
     !,
-    converse_phantom_ds([D1|Ds1],Ds,Ps1,Ps,Is0,Is).
-
-converse_phantom_ds([],[],Ps,Ps,Is,Is).
-converse_phantom_ds([H0|T0],[H|T],Ps0,Ps,Is0,Is) :-
-    converse_phantom(H0,H,Ps0,Ps1,Is0,Is1),
-    converse_phantom_ds(T0,T,Ps1,Ps,Is1,Is).
+    Ds = [D1|Ds1],
+    Is0 = Is.
+converse_phantom_ds([H0|T],[H|T],P,Is0,Is) :-
+    converse_phantom(H0,H,P,Is0,Is).
+converse_phantom_ds([H|T0],[H|T],P,Is0,Is) :-
+    converse_phantom_ds(T0,T,P,Is0,Is).
 
 starts_with(tree(_Rel/(_Pos:_Word/[Pos,_]),i(Ix,_),[]),Pos,Ix).
 starts_with(tree(_,_,[Daughter]),Pos,Ix) :-
