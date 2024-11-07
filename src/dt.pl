@@ -308,7 +308,9 @@ converse_dependency_structure(Tree0,Tree) :-
     hdrug_flag(converse_dependency,OnOff),
     if(converse_dependency_structure0(OnOff,Tree0,Tree),
        true,
-       raise_exception('converse_dependency_structure fails!')
+       (   format(user_error,"ERROR: converse_dependency_structure/2 failed!~n",[]),
+	   fail
+       )
       ).
 
 converse_dependency_structure0(off,Tree,Tree).
@@ -1246,7 +1248,7 @@ select_all_positions(DT,Pos,File) :-
     length(Pos,L),
     (   L0 =\= L
     ->  find_duplicates(Pos0,Duplicates),
-	format(user_error,"error: the positions overlap: ~w ~w~n",[Duplicates,File])
+	format(user_error,"ERROR: the positions overlap: ~w ~w~n",[Duplicates,File])
     ;   true
     ).
 
@@ -1384,8 +1386,10 @@ converse_phantom(Tree0,Tree) :-
 
 converse_phantom(Tree0,P,Tree) :-
     converse_phantom(Tree0,Tree1,P,Is,[]),
+    !,
     remove_removed_is(Tree1,Tree,Is).
-
+%% apparantly, the word is not used in the dep. structure (e.g. skipped)
+converse_phantom(Tree,_,Tree).
 
 converse_phantom_ps([],Tree,Tree).
 converse_phantom_ps([P|Ps],Tree0,Tree) :-
