@@ -1406,9 +1406,9 @@ remove_removed_is(tree(Node,Ix,Ds0), tree(Node,Ix,Ds), Is) :-
 
 remove_removed_is_ds(Ds0,Ds,Is) :-
     lists:select(D,Ds0,Ds1),
-    D = tree(_,NONVAR,_),
+    D = tree(NONVAR,_,_),
     nonvar(NONVAR),
-    NONVAR = i(I),
+    NONVAR = _/i(I),
     nonvar(I),
     lists:member(I,Is),
     !,
@@ -1439,8 +1439,8 @@ converse_phantom_ds([H|T0],[H|T],P,Is0,Is) :-
     converse_phantom_ds(T0,T,P,Is0,Is).
 
 starts_with(tree(_Rel/(_Pos:_Word/[Pos,_]),i(Ix,_),[]),Pos,Ix).
-starts_with(tree(_,_,[Daughter]),Pos,Ix) :-
-    starts_with(Daughter,Pos,Ix).
+starts_with(tree(_,i(Ix,_),[Daughter]),Pos,Ix) :-
+    starts_with(Daughter,Pos,_).
 
 is_part(tree(Rel/(Tag:Word/[Pos0,Pos]),Ix,[]),Tree,Pos1) :-
     Pos0 < Pos1,
