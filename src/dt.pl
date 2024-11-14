@@ -114,6 +114,8 @@ dt_canonical_dt(off,Tree0,Tree) :-
     order_somewhat(Tree0,Tree1),
     dt_canonical_dt_indices(Tree1,Tree),
     prettyvars(Tree).
+dt_canonical_dt(none,Tree,Tree) :-
+    prettyvars(Tree).
 
 rewrite_labels(tree(Rel/L,i(I,R),Ds0),tree(r(Rel,Label),_,Ds)) :-
     rest_label(R,I,L,Label),
@@ -1512,14 +1514,18 @@ check_variable_cat_ds([H|T]):-
     check_variable_cat(H),
     check_variable_cat_ds(T).
 
+check_variable_cat_node(Cat) :-
+    Cat = '$VAR'('_'),
+    !,
+    debug_message(1,"warning: variable node in dt~n",[]).
+check_variable_cat_node(p(Cat)) :-
+    (   Cat = '$VAR'('_')
+    ->  debug_message(1,"warning: variable cat in dt p(_)~n",[])
+    ;   true
+    ).
 check_variable_cat_node(l(A,Cat,B)) :-
     (   Cat = '$VAR'('_')
     ->  debug_message(1,"warning: variable cat in dt (~w ~w)~n",[A,B])
-    ;   true
-    ).
-check_variable_cat_node(p(Cat)) :-
-    (   Cat = '$VAR'('_')
-    ->  debug_message(1,"warning: variable cat in dt~n",[])
     ;   true
     ).
 check_variable_cat_node(i(_)).

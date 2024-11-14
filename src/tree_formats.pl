@@ -229,6 +229,7 @@ graphic_label_rest(p(X),Rel,L) :- extract_cat(X,Y), short_pair(Rel,Y,L).
 graphic_label_rest(l(_,_,_),Rel,Rel).
 graphic_label_rest(i(I,p(X)),Rel,L) :- extract_cat(X,Y), short_pair(Rel,I:Y,L).
 graphic_label_rest(i(I,l(_,_,_)),Rel,L) :- short_pair(Rel,I,L).
+graphic_label_rest('$VAR'('_'),Rel,L) :- short_pair(Rel,'_',L).
 
 extract_cat(Term,F) :-
     (   var(Term)
