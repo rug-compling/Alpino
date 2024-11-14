@@ -1103,6 +1103,7 @@ end_hook(parse,_,_,String) :-
     hdrug_flag(current_ref,Key),
     hdrug_flag(hdrug_status,Status0),
     hdrug_flag(last_one_timeout,LastOneTimeOut),
+    ignore_brackets(String,StringNoBrackets),
     (   LastOneTimeOut == on
     ->  Status = time_out/Status0
     ;   Status = Status0
@@ -1130,7 +1131,7 @@ end_hook(parse,_,_,String) :-
 	retractall(alpino_gen_suite:lf(Key,_)),
 	assertz(alpino_gen_suite:lf(Key,Adt))
     ;   Th==joost
-    ->  hook(user:vraag_joost(String)) % external
+    ->  hook(user:vraag_joost(StringNoBrackets)) % external
     ;	true	
     ),
     (   Demo==on,
@@ -1150,7 +1151,7 @@ end_hook(parse,_,_,String) :-
     ),
     (   Q==on,
 	NumberOfSolutions < 1
-    ->  concat_all(String,StringAtom,' '),
+    ->  concat_all(StringNoBrackets,StringAtom,' '),
 	alpino_format_syntax:escape_b(StringAtom,StringString),
 	format(user_error,"Q#~w|~s|~w|-1|-1~n",[Key,StringString,Status])
     ;   true
@@ -1159,16 +1160,16 @@ end_hook(parse,_,_,String) :-
         Th == xml,
         hdrug_flag(xml_format_failed_parse,on)
     ->  format_to_chars("~w",[Status],StatusChars),
-        ignore_current_ref(Key,String,[StatusChars])
+        ignore_current_ref(Key,StringNoBrackets,[StatusChars])
     ;   true
     ),
     (   NumberOfSolutions < 1,
         ( Th == xml_dump ; Th == dump_xml )
     ->  format_to_chars("~w",[Status],StatusChars),
-        ignore_current_ref_dump(Key,String,[StatusChars])
+        ignore_current_ref_dump(Key,StringNoBrackets,[StatusChars])
     ;   true
     ),
-    try_hook(alpino_end_hook(Key,String,Status,NumberOfSolutions)),
+    try_hook(alpino_end_hook(Key,StringNoBrackets,Status,NumberOfSolutions)),
     % used by Gosse a.o.
     if_gui(update_buttons),
     flush_output.    
