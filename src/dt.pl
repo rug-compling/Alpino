@@ -1421,26 +1421,39 @@ remove_removed_is_ds_ds([H0|T0],[H|T],Is) :-
     remove_removed_is(H0,H,Is),
     remove_removed_is_ds_ds(T0,T,Is).
 
-converse_phantom_ds(Ds0,Ds,P0,[I|Is0],Is) :-
-    select(D,Ds0,Ds1),
-    starts_with(D,P0,I),
-    !,
-    Is0 = Is,
-    Ds1 = Ds.
 converse_phantom_ds(Ds0,Ds,P0,Is0,Is) :-
     select(D,Ds0,Ds1),
     is_part(D,D1,P0),
     !,
     Ds = [D1|Ds1],
     Is0 = Is.
+converse_phantom_ds(Ds0,Ds,P0,[I|Is0],Is) :-
+    select(D,Ds0,Ds1),
+    starts_with(D,P0,I),
+    !,
+    Is0 = Is,
+    Ds1 = Ds.
 converse_phantom_ds([H0|T],[H|T],P,Is0,Is) :-
     converse_phantom(H0,H,P,Is0,Is).
 converse_phantom_ds([H|T0],[H|T],P,Is0,Is) :-
     converse_phantom_ds(T0,T,P,Is0,Is).
 
-starts_with(tree(_Rel/(_Pos:_Word/[Pos,_]),i(Ix,_),[]),Pos,Ix).
+starts_with(tree(_Rel/(_Pos:_Word/[Pos,Pos1]),i(Ix,_),[]),Pos,Ix) :-
+    Pos1 is Pos + 1.
 starts_with(tree(_,i(Ix,_),[Daughter]),Pos,Ix) :-
     starts_with(Daughter,Pos,_).
+
+is_part(tree(Rel/(Tag:Word/[Pos1,Pos]),Ix,[]),Tree,Pos1) :-
+    Pos2 is Pos1 +1,
+    Pos2 < Pos,
+    !,
+    Tree = tree(Rel/(Tag:Word/[Pos2,Pos]),Ix,[]).
+
+is_part(tree(Rel/(Tag:Word/[Pos0,Pos]),Ix,[]),Tree,Pos) :-
+    Pos2 is Pos - 1,
+    Pos2 > Pos0,
+    !,
+    Tree = tree(Rel/(Tag:Word/[Pos0,Pos2]),Ix,[]).
 
 is_part(tree(Rel/(Tag:Word/[Pos0,Pos]),Ix,[]),Tree,Pos1) :-
     Pos0 < Pos1,
