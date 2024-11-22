@@ -1449,12 +1449,6 @@ is_part(tree(Rel/(Tag:Word/[Pos1,Pos]),Ix,[]),Tree,Pos1) :-
     !,
     Tree = tree(Rel/(Tag:Word/[Pos2,Pos]),Ix,[]).
 
-is_part(tree(Rel/(Tag:Word/[Pos0,Pos]),Ix,[]),Tree,Pos) :-
-    Pos2 is Pos - 1,
-    Pos2 > Pos0,
-    !,
-    Tree = tree(Rel/(Tag:Word/[Pos0,Pos2]),Ix,[]).
-
 is_part(tree(Rel/(Tag:Word/[Pos0,Pos]),Ix,[]),Tree,Pos1) :-
     Pos0 < Pos1,
     Pos1 < Pos,
