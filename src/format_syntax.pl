@@ -71,18 +71,18 @@ tree_to_bracketed_string(traditional,tree(Node,_,Ds,_),S0,S) :-
     tree_to_bracketed_string_ds_traditional(Ds,S1,S2),
     format_to_chars(" ]",[],S2,S).
 
+tree_to_bracketed_string(python,tree(Node,_,Ds,_),S0,S) :-
+    functor(Node,Cat,_),
+    format_to_chars(" ('~w',[",[Cat],S0,S1),
+    tree_to_bracketed_string_ds(python,Ds,S1,S2),
+    format_to_chars(" ])",[],S2,S).
+
 tree_to_bracketed_string_ds_(traditional,lex(ref(_,_,_,Surf,_,_,_,_,_,_,_)),S0,S) :-
     format_to_chars(" ~w",[Surf],S0,S).
 tree_to_bracketed_string_ds_(traditional,[],S,S).
 tree_to_bracketed_string_ds_(traditional,[H|T],S0,S) :-
     tree_to_bracketed_string(traditional,H,S0,S1),
     tree_to_bracketed_string_ds_(traditional,T,S1,S).
-
-tree_to_bracketed_string(python,tree(Node,_,Ds,_),S0,S) :-
-    functor(Node,Cat,_),
-    format_to_chars(" ('~w',[",[Cat],S0,S1),
-    tree_to_bracketed_string_ds(python,Ds,S1,S2),
-    format_to_chars(" ])",[],S2,S).
 
 tree_to_bracketed_string_ds(python,lex(ref(_,_,_,Surf,_,_,_,_,_,_,_)),S0,S) :-
     format_to_chars("('~w',[]),",[Surf],S0,S).
@@ -578,11 +578,13 @@ ignore_phantoms_([],[],_).
 ignore_phantoms_([FH0|FT0],Frames,Pos) :-
     ignore_phantom(FH0,FT0,Frames,Pos).
 
-ignore_phantom(_-frame(_,_,Q0,_,_,_,_,_),FT,Frames,Pos) :-
-    Pos =:= Q0, !,
+ignore_phantom(_-frame(_,_,Q0,Q,_,_,_,_),FT,Frames,Pos) :-
+    Pos =:= Q0,
+    Q is Q0 + 1,
+    !,
     renumber_frames(FT,Frames).
 ignore_phantom(A0-frame(P0,P,Q0,Q,A3,A4,A5,A6),FT,[Frame|Frames],Pos) :-
-    Pos > Q0,
+    Pos >= Q0,
     Pos < Q, !,
     Q1 is Q -1,
     P1 is P -1,
