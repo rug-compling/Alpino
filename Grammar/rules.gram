@@ -7246,22 +7246,16 @@ te_v_structure(VP,Te,V) :-
     VP:dt:predm => [],
     xy_dep_dt_nostype(Te,V,VP,ti,cmp,body).
 
-%%EX%% De door ons te nemen maatregelen
-%%EX%% De te doorstane proef
-%%EX%% De bij de offerte te voegen benodigheden
-%%EX%% De van de Duitsers te vorderen fietsen
-%%%%%% TODO: De fietsen , te vorderen van de Duitsers , zullen worden verkocht
-grammar_rule(adj_te_v, AP, [ V ] ) :-
+adj_te_struct(AP,V) :-
     AP => a,
-    AP:adv => nadv,
     AP:aform => (attr;nattr),
     AP:deverbal => yes,
     AP:slash => [],
     AP:exs => [],
     AP:agr <=> V:adj_agr,  %% 'de te doorstane/*doorstaan proef
-    AP:avform => avform_ti,
+    AP:avform => avform_aan_ti,
     AP:tmploc => ntmploc,
-    AP:wh_reltmploc => ~hoe_hoe,
+    AP:sc <=> Tail,        %% now inherits remaining subcat elements; 
     V0 => vb,
     V0:vform => te,
     V0:vslash => [],
@@ -7272,42 +7266,40 @@ grammar_rule(adj_te_v, AP, [ V ] ) :-
     V0:subj:subn => sub_noun,
     hd_structure(V0,AP),
     unify_except(V0,V,sc),
-    AP:sc <=> Tail,        %% now inherits remaining subcat elements; 
     V:sc <=> [NP|Tail],	%% except for an NP; perhaps this should be select rather than the first one???
     NP => np,
     NP:dt => [],
     NP:allows_drop => yes,
     NP:case => acc.
 
+%%EX%% De door ons te nemen maatregelen
+%%EX%% De te doorstane proef
+%%EX%% De bij de offerte te voegen benodigheden
+%%EX%% De van de Duitsers te vorderen fietsen
+%%%%%% TODO: De fietsen , te vorderen van de Duitsers , zullen worden verkocht
+grammar_rule(adj_te_v, AP, [ V ] ) :-
+    adj_te_struct(AP,V),
+    AP:adv => nadv,
+    AP:wh_reltmploc => ~hoe_hoe.
+
+adj_te_special_struct(AP,V) :-
+    adj_te_struct(AP,V),
+    AP:adv => yadv.
+
 %%EX%% Aan het weerbericht te zien komt er sneeuw
 grammar_rule(adj_te_zien, AP, [ V ] ) :-
-    AP => a,
-    AP:adv => yadv,
-    AP:aform => (attr;nattr),
-    AP:deverbal => yes,
-    AP:slash => [],
-    AP:exs => [],
-    AP:sc <=> Tail,
-    AP:agr <=> V:adj_agr,  %% 'de te doorstane/*doorstaan proef
-    AP:avform => avform_aan_ti,
-    AP:tmploc => ntmploc,
-    V0 => vb,
-    V0:vform => te,
-    V0:vslash => [],
-    % forbid clefts etc.
-    V0:cleft => no,
-    V0:subj => np,
-    V0:subj:nform => norm,
-    V0:subj:subn => sub_noun,
-    hd_structure(V0,AP),
-    unify_except(V0,V,sc),
-    V:sc <=> [NP|Tail],
+    adj_te_special_struct(AP, V),
+    V:sc <=> [_,PP],
     V:hstem <=> STEM,
     alpino_wappend:wwmember(STEM,[zie,hoor,merk,oordeel,voel]),
-    NP => np,
-    NP:dt => [],
-    NP:allows_drop => yes,
-    NP:case => acc.
+    PP => pp,
+    PP:prep ==> aan.
+
+%%EX%% De kernwapens moeten de wereld uit , te beginnen in Nederland
+grammar_rule(adj_te_begin, AP, [ V ] ) :-
+    adj_te_special_struct(AP, V),
+    V:hstem <=> STEM,
+    alpino_wappend:wwmember(STEM,[begin]).
 
 %%EX%% Ze zeiden van we hebben geen tijd
 grammar_rule(sbar(van), SBAR, [ COMP, OPTDUBB, ROOT ]) :-
