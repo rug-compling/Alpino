@@ -820,6 +820,9 @@ m(v_root(heb,hebben),
 	fixed([[tengevolge],acc],no_passive),
 	fixed([[tengevolge],vp],no_passive),
 	fixed([[tengevolge],sbar],no_passive),
+	fixed([[ten,gevolge],acc],no_passive),
+	fixed([[ten,gevolge],vp],no_passive),
+	fixed([[ten,gevolge],sbar],no_passive),
 	fixed([[ten,doel],vp],no_passive),
 	fixed([[tot,doel],vp],no_passive),
 	fixed([svp_pp(tot,gevolg),acc],no_passive),
@@ -1821,6 +1824,7 @@ v(bebouw,bebouwt,bebouwen,bebouwd,bebouwde,bebouwden,
 v(becijfer,becijfert,becijferen,becijferd,becijferde,becijferden,
     [h([sbar,
 	transitive,
+	part_transitive(uit),
 	part_transitive(weg),
 	np_pc_pp(op)])]).
 
@@ -12507,7 +12511,10 @@ v(krijs,krijst,krijsen,[gekresen,gekrijst],[krijste,krees],[krijsten,kresen],
 	sbar])]).
 
 v(krijt,krijt,krijten,gekreten,kreet,kreten,
-    [h([intransitive])]).
+  [h([intransitive,
+      part_transitive(uit),
+      part_sbar(uit)
+     ])]).
 
 v(krik,krikt,krikken,gekrikt,krikte,krikten,
     [h([part_transitive(op),
@@ -18798,8 +18805,9 @@ v(rijt,rijt,rijten,gereten,reet,reten,
 	part_transitive(open)])]).
 
 v(ril,rilt,rillen,gerild,rilde,rilden,
-    [h([intransitive,
-	transitive])]).
+  [h([intransitive,
+      pc_pp(van),
+      transitive])]).
 
 v(rimpel,rimpelt,rimpelen,gerimpeld,rimpelde,rimpelden,
     [unacc([intransitive]),
@@ -19465,6 +19473,10 @@ v(scheid,scheidt,scheiden,gescheiden,scheidde,scheidden,
 v(scheit,scheit,scheiten,gescheten,scheet,scheten,
     [h([intransitive])]).
 
+%% bellen
+v(schel,schelt,schellen,gescheld,schelde,schelden,
+    [h([intransitive])]).
+
 v(scheld,scheldt,schelden,gescholden,schold,scholden,
     [h([intransitive,
         part_transitive(kwijt),
@@ -19734,7 +19746,7 @@ v(schijn,schijnt,schijnen,geschenen,scheen,schenen,
 	so_copula_sbar,
 	so_copula_vp,
 	so_copula_np,
-	part_sbar_subj_so_np(toe),   % het schijnt mij toe dat ...
+	part_dip_sbar_subj_so_np(toe),   % het schijnt mij toe dat ...; we moeten weg , naar het mij toeschijnt
         part_so_copula(toe),         % de flora schijnt mij rijker toe
 	pc_pp(met),
         pc_pp(aan),
@@ -20691,9 +20703,10 @@ v(slok,slokt,slokken,geslokt,slokte,slokten,
 	part_transitive(op)])]).
 
 v(sloof,slooft,sloven,gesloofd,sloofde,sloofden,
-    [h([intransitive,
-	part_refl(uit),
-	part_refl_pc_pp(uit,voor)])]).
+  [h([intransitive,
+      part_refl(af),
+      part_refl(uit),
+      part_refl_pc_pp(uit,voor)])]).
 
 v(sloop,sloopt,slopen,gesloopt,sloopte,sloopten,
     [h([transitive,
@@ -23393,7 +23406,8 @@ v(toast,toast,toasten,getoast,toastte,toastten,
 	pc_pp(op)])]).
 
 v(tob,tobt,tobben,getobd,tobde,tobden,
-    [h([intransitive,
+  [h([intransitive,
+      part_refl(af),
 	pc_pp(met),
 	pc_pp(over)])]).
 
@@ -25738,8 +25752,9 @@ v(veroorloof,veroorlooft,veroorloven,veroorloofd,veroorloofde,veroorloofden,
        ])]).
 
 v(veroorzaak,veroorzaakt,veroorzaken,veroorzaakt,veroorzaakte,veroorzaakten,
-    [h([sbar,
-	transitive])]).
+  [h([sbar,
+      np_np,			% ik heb u leed veroorzaakt
+      transitive])]).
 
 v(verorber,verorbert,verorberen,verorberd,verorberde,verorberden,
     [h([transitive])]).
@@ -26247,6 +26262,12 @@ v(verstop,verstopt,verstoppen,verstopt,verstopte,verstopten,
 	np_ld_adv,
 	intransitive  % de Randstad dreigt te verstoppen = verstopt te raken
        ])]).
+
+v(verstout,verstout,verstouten,verstoutte,verstoutten,verstouwt,
+  [h([refl,
+      refl_vp,
+      refl_sbar
+     ])]).
 
 v(verstouw,verstouwt,verstouwen,verstouwd,verstouwde,verstouwden,
     [h([transitive])]).

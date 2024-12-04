@@ -465,10 +465,12 @@ adverb([ten,eigen,bate]).
 adverb([ten,enenmale]).
 adverb([ten,ene,male]).
 adverb([ten,enen,male]).
+adverb([ten,gevolge]).
 adverb([ten,gronde]).
 adverb([ten,halve]).
 adverb([ten,hele]).
 adverb([ten,hoogste]).
+adverb([ten,laatst]).
 adverb([ten,overvloede]).
 adverb([ten,principale]).
 adverb([ten,spoedigste]).

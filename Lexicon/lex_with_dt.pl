@@ -1337,6 +1337,7 @@ with_dt_all(de,[onheil]).
 with_dt_all(de,[oordeel]).
 with_dt_all(de,[opa]).
 with_dt_all(de,[overvloed]).
+with_dt_all(de,[paus]).
 with_dt_all(de,[persoon]).
 with_dt_all(derde,[klas]).
 with_dt_all(derde,[klasse]).
@@ -1372,6 +1373,7 @@ with_dt_all(de,[vaderland]).
 with_dt_all(de,[veld]).
 with_dt_all(de,[vijand]).
 with_dt_all(de,[volk]).
+with_dt_all(de,[vorst]).
 with_dt_all(de,[vriend]).
 with_dt_all(de,[vriendin]).
 with_dt_all(de,[woord]).
@@ -2932,6 +2934,7 @@ with_dt_root(paar).
 with_dt_root(paard).
 with_dt_root(pak).
 with_dt_root(pap).
+with_dt_root(paus).
 with_dt_root(per).
 with_dt_root(persoon).
 with_dt_root(plaats).
@@ -3076,6 +3079,7 @@ with_dt_root(voorbedacht).
 with_dt_root(voorheen).
 with_dt_root(voren).
 with_dt_root(vorig).
+with_dt_root(vorst).
 with_dt_root(vraag).
 with_dt_root(vreemde).
 with_dt_root(vrees).

@@ -5533,7 +5533,7 @@ a([ge_e(bewaakte),
    ge_no_e(bewaakt)],adv,[],[]).
 
 a([ge_e(bewaarde),
-   ge_no_e(bewaard)],adv,[],[]).
+   ge_no_e(bewaard)],adv,[so_np],[]).
 
 a([ge_e(bewaarheide),
    ge_no_e(bewaarheid)],adv,[],[]).
@@ -6577,7 +6577,7 @@ a([e(buigzame),
    st(buigzaamst),
    ste(buigzaamste)],nonadv,[],[]).
 
-a([pred([buiten,kijf])],nonadv,
+a([pred([buiten,kijf])],adv,
   [subject_sbar],[]).
 
 a([e(buitenaardse),
@@ -11184,6 +11184,7 @@ a([ge_e(gedane),
    ge_no_e(gedaan)],adv,
   [pp(door),
    pp(met),
+   so_np, % de ons gedane beloftes
    subject_sbar,
    subject_vp
   ],[]).
@@ -17979,6 +17980,9 @@ a([e(heroïsche),
    st(heroïscht),
    ste(heroïschte)],adv,[],[]).
 
+a([ge_e(herontdekte),
+   ge_no_e(herontdekt)],adv,[],[]).
+
 a([ge_e(heropende),
    ge_no_e(heropend)],nonadv,[],[]).
 
@@ -18807,6 +18811,9 @@ a([pred([in,het,spel])],nonadv,[],[]).
 a([pred([in,kannen,en,kruiken])],nonadv,[],[]).
 
 a([pred([in,orde])],nonadv,[],[]).
+
+a([pred([in,overeenstemming])],adv,
+  [pp(met)],[]).
 
 a([pred([in,reactie])],adv,
   [pp(op)],[]).
@@ -26263,7 +26270,7 @@ a([stem(ontgoochelen),
    object_sbar],[]).
 
 a([ge_e(ontgroeide),
-   ge_no_e(ontgroeid)],adv,[],[]).
+   ge_no_e(ontgroeid)],adv,[pp(aan)],[]).
 
 a([ge_e(onthaalde),
    ge_no_e(onthaald)],adv,[],[]).
@@ -32924,7 +32931,7 @@ a([e(tactische),
    ste(taktischte)],adv,[],[]).
 
 a([e(talige),
-   no_e(talig)],nonadv,[],
+   no_e(talig)],adv,[],
   [anders,
    'Nederlands',h('Nederlands'),i('Nederlands',nederlands),
    'Engels',h('Engels'),i('Engels',engels),
@@ -40946,7 +40953,6 @@ stem(beetgepakt,v_root(pak_beet,beet_pakken)).
 stem(begaan,v_root(bega,begaan)).
 stem(begeerd,v_root(begeer,begeren)).
 stem(begeleid,v_root(begeleid,begeleiden)).
-stem(begenadigd,v_root(begenadig,begenadigen)).
 stem(begiftigd,v_root(begiftig,begiftigen)).
 stem(begluurd,v_root(begluur,begluren)).
 stem(begonnen,v_root(begin,beginnen)).

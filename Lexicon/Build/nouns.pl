@@ -1161,6 +1161,8 @@ n([mass('Vaticaan')],het,[]).
 
 n([mass('Venetiaans')],het,[]).
 
+n([mass('Venloos')],het,[]).
+
 n([sg('Vietnamees'),pl('Vietnamezen')],de,[]).
 
 n([mass('Vietnamees')],het,[]).
@@ -8913,6 +8915,8 @@ n([pl(decors),sg(decor)],het,[]).
 
 n([pl(decoraties),sg(decoratie)],de,[]).
 
+n([mass(decoratief)],het,[]).
+
 n([pl(decreten),sg(decreet),
    pl(dekreten),sg(dekreet)],het,[]).
 
@@ -13018,6 +13022,9 @@ n([mass(gember)],de,[]).
 
 n([mass(gemeengoed)],het,[]).
 
+%% in het gemeen
+n([mass(gemeen)],het,[]).
+
 n([pl(gemeenheden),sg(gemeenheid)],de,[vp]).
 
 n([pl(gemeenplaatsen),sg(gemeenplaats)],de,[]).
@@ -13783,6 +13790,8 @@ n([mass(gloed)],de,[]).
 n([pl(gloeilampen),sg(gloeilamp)],de,[]).
 
 n([pl(glooiingen),sg(glooiing)],de,[]).
+
+n([mass(gloor)],de,[]). % ouderwets
 
 n([pl('gloria\'s'),sg(gloria)],de,[]).
 
@@ -15022,7 +15031,7 @@ n([pl(hekserijen),sg(hekserij)],de,[]).
 
 n([pl(hektaren),pl(hektares),sg(hektare)],de,[measure]).
 
-n([mass(hel)],de,[]).
+n([mass(hel),pl(hellen)],de,[]).
 
 n([pl(helden),sg(held)],de,[],
   [sport,
@@ -29763,6 +29772,8 @@ n([pl(redders),sg(redder)],de,[]).
 n([pl(reddingen),sg(redding)],de,
   [subject_sbar]).
 
+n([pl(redetwisten),sg(redetwist)],de,[]).
+
 n([pl(reden),pl(redes),sg(rede)],de,[],
   [s(afscheid),
    troon,
@@ -35587,6 +35598,7 @@ n([pl(tekenaars),sg(tekenaar)],de,[],
 
 n([pl(tekeningen),sg(tekening)],de,[],
   [rots,
+   wh([naar,het,leven]),
    dim(tekeningetje)]).
 
 n([pl(tekkels),sg(tekkel),

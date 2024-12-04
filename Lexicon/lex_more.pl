@@ -4584,3 +4584,16 @@ u_item(Atom) :-
     atom_codes(Atom,[85,Digit,46,Digit2|_]),
     alpino_latin1:isdigit(Digit),
     alpino_latin1:isdigit(Digit2).
+
+%% de tentoonstelling opent te tien uren (ouderwets)
+phrasal_entry(with_dt(pp(te),dt(pp,[hd=l(te,preposition(te,[],nodet),pp,0,1),
+				    obj1=dt(mwu,[mwp=l(Negen,number(hoofd(pl_num)),np,1,2),
+						 mwp=l(uur,tmp_noun(het,count,meas),np,2,3)])
+				   ])),
+	      te_tien_uren) -->
+    n_word(te),
+    n_word(Negen),
+    n_word(uren),
+    {  simple_convert_number(Negen,N),
+       N < 13
+    }.

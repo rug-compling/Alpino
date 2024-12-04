@@ -2074,6 +2074,7 @@ m(jou,           determiner(pron),jouw).
 m(jullie,        determiner(pron),jullie).
 m(meerdere,      determiner(pl_num,nwh,nmod,pro,yparg),meerdere).
 m(menig,         determiner(een),menig).
+m('menig een',   determiner(een),[menig,een]). % ouderwets
 m(menig,         determiner(sg_num),menige).
 m(mijn,          determiner(pron),mijn).
 %m(mijn,          determiner(pron),mijne).  % mijne heren, ,mijne..
@@ -2706,6 +2707,7 @@ preposition([naar,gelang,van]).
 preposition([naargelang,van]).
 preposition(namens).
 preposition(niettegenstaande).
+preposition([niet,tegenstaande]).
 preposition(nevens).  % ouderwets
 preposition(nopens).  % ouderwets
 preposition(omstreeks).
@@ -3655,6 +3657,7 @@ m(eer,              preposition(eer,[],sbar),              eer).
 m(buiten,           preposition(buiten,[],sbar),           buiten).
 m(naast,            preposition(naast,[],sbar),            naast).
 m(niettegenstaande, preposition(niettegenstaande,[],sbar), niettegenstaande).
+m(niettegenstaande, preposition(niettegenstaande,[],sbar), [niet,tegenstaande]).
 m(ondanks,          preposition(ondanks,[],sbar),          ondanks).
 m(vanaf,            preposition(vanaf,[],sbar),            vanaf).
 m(zonder,           preposition(zonder,[],sbar),           zonder).
@@ -3885,6 +3888,7 @@ m('al gelang',      complementizer,[al,gelang]).
 m(naarmate,         complementizer,naarmate).
 m(nadat,            complementizer,nadat).
 m(niettegenstaande, complementizer,niettegenstaande).
+m(niettegenstaande, complementizer,[niet,tegenstaande]).
 m(nou,              complementizer,nou).  % nou je het zegt
 m(nu,               complementizer,nu).
 m(ofschoon,         complementizer,ofschoon).
@@ -7323,7 +7327,8 @@ genitive_noun(Doods,Dood) :-
     genitive_noun(Doods),
     atom_concat(Dood,s,Doods).
 genitive_noun(huizes,huis).
-
+genitive_noun(pausen,paus).
+genitive_noun(vorsten,vorst).
 
 genitive_noun(aanschijns).
 genitive_noun(dichters).
@@ -7747,7 +7752,9 @@ m(spreken,     end_nominalized_adjective(transitive),             sprekenden).
 m(veroordelen, ge_nominalized_adjective(fixed([[ter,dood]])),    veroordeelden).
 
 %% always participles
+nominalized_adjective_both(aan_slaan,aangeslagene,aangeslagenen).
 nominalized_adjective_both(aan_wijzen,aangewezene,aangewezenen).
+nominalized_adjective_both(bespreken,besprokene,besprokenen).
 nominalized_adjective_both(betrekken,betrokkene,betrokkenen).
 nominalized_adjective_both(bezeten,bezetene,bezetenen).
 nominalized_adjective_both(bieden,gebodene,gebodenen).
@@ -7853,6 +7860,7 @@ ge_nominalized_adjective(ontvoeren,ontvoerden).
 ge_nominalized_adjective(ontwikkelen,ontwikkelden).
 ge_nominalized_adjective(ontwortelen,ontwortelden).
 ge_nominalized_adjective(op_leiden,opgeleiden).
+ge_nominalized_adjective(op_heersten,overheersten).
 ge_nominalized_adjective(overtuigen,overtuigden).
 ge_nominalized_adjective(pensioneren,gepensioneerden).
 ge_nominalized_adjective(plaatsen,geplaatsten).
@@ -7864,6 +7872,7 @@ ge_nominalized_adjective(veinzen,geveinsden).
 ge_nominalized_adjective(verblinden,verblinden).
 ge_nominalized_adjective(verdoemen,verdoemden).
 ge_nominalized_adjective(verdrukken,verdrukten).
+ge_nominalized_adjective(vergaderen,vergaderden).
 ge_nominalized_adjective(verhoren,verhoorden).
 ge_nominalized_adjective(verkiezen,verkozenen).
 ge_nominalized_adjective(verkommeren,verkommerden).
@@ -7872,6 +7881,7 @@ ge_nominalized_adjective(verlossen,verlosten).
 ge_nominalized_adjective(verminken,verminkten).
 ge_nominalized_adjective(vermoeien,vermoeiden).
 ge_nominalized_adjective(vermoorden,vermoorden).
+ge_nominalized_adjective(vernederen,vernederden).
 ge_nominalized_adjective(verongelukken,verongelukten).
 ge_nominalized_adjective(verontrusten,verontrusten).
 ge_nominalized_adjective(verontwaardigen,verontwaardigden).
@@ -7902,6 +7912,7 @@ nominalized_adjective(afvallig,afvalligen).
 nominalized_adjective(afwezig,afwezigen).
 nominalized_adjective(arbeidsongeschikt,arbeidsongeschikten).
 nominalized_adjective(arm,armen).
+nominalized_adjective(begenadigd,begenadigden).
 nominalized_adjective(bejaard,bejaarden).
 nominalized_adjective(bekend,bekenden).
 nominalized_adjective(belasting_plichtig,belastingplichtigen).

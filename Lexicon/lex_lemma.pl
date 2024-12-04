@@ -1495,6 +1495,7 @@ lemma_root(af_slippen,slip_af) .
 lemma_root(af_slobberen,slobber_af) .
 lemma_root(af_sloffen,slof_af) .
 lemma_root(af_slopen,sloop_af) .
+lemma_root(af_sloven,sloof_af) .
 lemma_root(af_sluimeren,sluimer_af) .
 lemma_root(af_sluipen,sluip_af) .
 lemma_root(af_sluiten,sluit_af) .
@@ -1598,6 +1599,7 @@ lemma_root(af_tijgen,tijg_af) .
 lemma_root(af_tikken,tik_af) .
 lemma_root(af_tillen,til_af) .
 lemma_root(af_timmeren,timmer_af) .
+lemma_root(af_tobben,tob_af) .
 lemma_root(af_toeren,toer_af) .
 lemma_root(af_toetsen,toets_af) .
 lemma_root(af_toeven,toef_af) .
@@ -4726,6 +4728,7 @@ lemma_root(door_scheiden,scheid_door) .
 lemma_root(door_scheiten,scheit_door) .
 lemma_root(door_schelden,scheld_door) .
 lemma_root(door_schelen,scheel_door) .
+lemma_root(door_schellen,schel_door) .
 lemma_root(door_schemeren,schemer_door) .
 lemma_root(door_schenken,schenk_door) .
 lemma_root(door_schepen,scheep_door) .
@@ -12346,6 +12349,7 @@ lemma_root(raak_scheiden,scheid_raak) .
 lemma_root(raak_scheiten,scheit_raak) .
 lemma_root(raak_schelden,scheld_raak) .
 lemma_root(raak_schelen,scheel_raak) .
+lemma_root(raak_schellen,schel_raak) .
 lemma_root(raak_schemeren,schemer_raak) .
 lemma_root(raak_schenken,schenk_raak) .
 lemma_root(raak_scheren,scheer_raak) .
@@ -13753,6 +13757,7 @@ lemma_root(scheien,schei) .
 lemma_root(scheiten,scheit) .
 lemma_root(schelden,scheld) .
 lemma_root(schelen,scheel) .
+lemma_root(schellen,schel) .
 lemma_root(schemeren,schemer) .
 lemma_root(schenden,schend) .
 lemma_root(schenken,schenk) .
@@ -16044,6 +16049,7 @@ lemma_root(uit_baten,baat_uit) .
 lemma_root(uit_bazelen,bazel_uit) .
 lemma_root(uit_bazuinen,bazuin_uit) .
 lemma_root(uit_beamen,beaam_uit) .
+lemma_root(uit_becijferen,becijfer_uit) .
 lemma_root(uit_beconcurreren,beconcurreer_uit) .
 lemma_root(uit_bedanken,bedank_uit) .
 lemma_root(uit_bedelen,bedel_uit) .
@@ -17544,6 +17550,7 @@ lemma_root(uit_scheien,schei_uit) .
 lemma_root(uit_scheiten,scheit_uit) .
 lemma_root(uit_schelden,scheld_uit) .
 lemma_root(uit_schelen,scheel_uit) .
+lemma_root(uit_schellen,schel_uit) .
 lemma_root(uit_schemeren,schemer_uit) .
 lemma_root(uit_schenken,schenk_uit) .
 lemma_root(uit_schepen,scheep_uit) .
@@ -20546,6 +20553,7 @@ lemma_root(verstommen,verstom) .
 lemma_root(verstoppen,verstop) .
 lemma_root(verstoren,verstoor) .
 lemma_root(verstoten,verstoot) .
+lemma_root(verstouten,verstout) .
 lemma_root(verstouwen,verstouw) .
 lemma_root(verstrakken,verstrak) .
 lemma_root(verstrekken,verstrek) .
@@ -22440,6 +22448,7 @@ lemma_root(voort_scheiden,scheid_voort) .
 lemma_root(voort_scheiten,scheit_voort) .
 lemma_root(voort_schelden,scheld_voort) .
 lemma_root(voort_schelen,scheel_voort) .
+lemma_root(voort_schellen,schel_voort) .
 lemma_root(voort_schemeren,schemer_voort) .
 lemma_root(voort_schenken,schenk_voort) .
 lemma_root(voort_scheren,scheer_voort) .
