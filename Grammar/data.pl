@@ -596,8 +596,9 @@ precedes_subject_cat(Arg,Dep) ::-
     Arg:sel => to_left, % reduce spur amb
     Dep:sel => to_left, % reduce spur amb
     Dep:prs => ~invje,
-    Dep:subn => ~sub_def_pron, % sub_det ok: omdat zich dat wreekt..
-                               % indef_pron: omdat zich niemand daarvoor schaamt
+%    Dep:subn => ~sub_def_pron, % sub_det ok: omdat zich dat wreekt..
+%                               % indef_pron: omdat zich niemand daarvoor schaamt
+%                               % def_pron:   omdat zich menigeen/iedereen schaamt voor ..
     Arg:nform => (refl;er).
 
 %% datives 
