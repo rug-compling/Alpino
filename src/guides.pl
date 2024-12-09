@@ -107,6 +107,14 @@ tr_tag(preposition(A,_,Sc),Tag) :-
     ;   Tag = preposition(Sc)
     ).
 
+tr_tag(er_adverb([_|_]),Tag) :-
+    !,
+    Tag = er_adverb(complex).
+
+tr_tag(waar_adverb([_|_]),Tag) :-
+    !,
+    Tag = waar_adverb(complex).
+
 tr_tag(adjective(Infl0),adjective(Infl)) :-
     !,
     adj_infl(Infl0,Infl).

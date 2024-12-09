@@ -1639,6 +1639,7 @@ foreign_word('d\'Art').
 foreign_word('d\'amour').
 foreign_word('d\'une').
 foreign_word(e).
+foreign_word('école').
 foreign_word(economic).
 foreign_word(economy).
 foreign_word(effect).
@@ -1885,6 +1886,7 @@ foreign_word(myself).
 foreign_word(naõ).
 foreign_word(name).
 foreign_word(national).
+foreign_word(nationale).
 foreign_word(ne).
 foreign_word('n\'est').
 foreign_word(never).
@@ -2086,6 +2088,7 @@ foreign_word(subtitles).
 foreign_word(such).
 foreign_word(suis).
 foreign_word(sum).
+foreign_word(supérieure).
 foreign_word(sur).
 foreign_word(sustainable).
 foreign_word(table).
