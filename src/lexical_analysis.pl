@@ -894,6 +894,11 @@ filter_more_tags :-
 	clause(tag(P1,P,_,_,_,_,normal(number_expression),_),true,Ref3),
 	erase_tag(Ref3),
 	fail
+    ;   tag(P0,P,R0,R,_,Surf,normal(Normal),Tag),
+	lists:member(Normal,[normal,names_dictionary]),
+	clause(tag(P0,P,R0,R,_,Surf,normal(spaced_letters),Tag),true,Ref4),
+	erase_tag(Ref4),
+	fail
     ;   true
     ).
 
@@ -1365,6 +1370,7 @@ longest_match_survivor(_,S0,S,Surf,List,Ref) :-
        ).
 
 competing_tag(normal(spaced_letters),normal(spaced_letters),_,_,_).
+competing_tag(normal(spaced_letters),normal(names_dictionary),_,_,_).
 competing_tag(normal(spaced_letters),normal(normal),_,tag,_).
 competing_tag(normal(names_dictionary),normal(normal),_,tag,_).
 competing_tag(normal(spaced_letters),normal(_),_,enumeration,_).
