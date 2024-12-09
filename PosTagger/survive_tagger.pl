@@ -151,6 +151,13 @@ surviving_root_tag(alsjeblieft,adverb).
 surviving_root_tag(alstublieft,adverb).
 surviving_root_tag(allemachtig,adjective(no_e(adv))).
 
+surviving_root_tag(na,complementizer(inf)).
+surviving_root_tag(door,complementizer(inf)).
+
+surviving_root_tag(voor,complementizer).
+surviving_root_tag(sinds,complementizer).
+surviving_root_tag(tot,complementizer).
+
 surviving_tag(_):-
     fail.
 

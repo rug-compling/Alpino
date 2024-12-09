@@ -2837,6 +2837,10 @@ preposition([wat,betreft]).
 
 preposition(hartje).  % hij woont hartje centrum
 
+%% in Wikipedia vaak zonder "van"...
+preposition(tengevolge).
+preposition([ten,gevolge]).
+
 %mwu heads not supported in with_dt
 with_dt([op,grond,echter,van],
 	preposition([op,grond,van],[]),

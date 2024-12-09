@@ -7780,7 +7780,9 @@ v(fungeer,fungeert,fungeren,gefungeerd,fungeerde,fungeerden,
 
 v(fuseer,fuseert,fuseren,gefuseerd,fuseerde,fuseerden,
   [z([intransitive,
-	pc_pp(met)])]).
+      pc_pp(met)]),
+   h([transitive])
+  ]).
 
 v(fusilleer,fusilleert,fusilleren,gefusilleerd,fusilleerde,fusilleerden,
     [h([transitive])]).

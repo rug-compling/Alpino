@@ -5765,8 +5765,8 @@ a([ge_e(beïnvloede),
 a([e(bibliografische),
    no_e(bibliografisch)],nonadv,[],[]).
 
-a([e(bijbehorende),
-   no_e(bijbehorend)],nonadv,[],[]).
+a([ende(bijbehorende),
+   end(bijbehorend)],nonadv,[],[]).
 
 a([e(bijbelse),
    er(bijbelser),
@@ -5865,6 +5865,9 @@ a([ge_e(bijgewoonde),
 
 a([ge_e(bijgezette),
    ge_no_e(bijgezet)],adv,[],[]).
+
+a([ende(bijhorende),
+   end(bijhorend)],nonadv,[],[]).
 
 a([e(bijkomstige),
    no_e(bijkomstig)],nonadv,[],[]).

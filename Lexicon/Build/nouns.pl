@@ -305,7 +305,11 @@ n([pl('Afrikanen'),sg('Afrikaan')],de,[],
    hh('West'), i('West-',west),  i('west-',west)
   ]).
 
-n([mass('Afrikaans')],het,[]).
+n([mass('Afrikaans')],het,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 n([sg('Afrikaner'),pl('Afrikaners')],de,[]).
 
@@ -314,13 +318,21 @@ n([sg('Ajacied'),pl('Ajacieden'),
 
 n([sg('Albanees'),pl('Albanezen')],de,[],[h('Kosovo')]).
 
-n([mass('Albanees')],het,[]).
+n([mass('Albanees')],het,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 n([sg('Alphenaar'),pl('Alphenaren')],de,[]).
 
 n([sg('Algerijn'),pl('Algerijnen')],de,[]).
 
-n([mass('Algerijns')],het,[]).
+n([mass('Algerijns')],het,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 n([sg('Alkmaarder'),pl('Alkmaarders')],de,[]).
 
@@ -357,13 +369,21 @@ n([pl('Arabieren'),sg('Arabier'),
 
 n([mass('Arabisch')],het,[]).
 
-n([mass('Aramees')],het,[]).
+n([mass('Aramees')],het,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 n([sg('Argentijn'),pl('Argentijnen')],de,[]).
 
 n([sg('Armeniër'),pl('Armeniërs')],de,[]).
 
-n([mass('Armeens')],het,[]).
+n([mass('Armeens')],het,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 n([sg('Arnhemmer'),pl('Arnhemmers')],de,[]).
 
@@ -379,7 +399,7 @@ n([mass('Babylonisch')],het,[]).
 
 n([sg('Balinees'),pl('Balinezen')],de,[]).
 
-n([mass('Baltisch')],het,[]).
+n([mass('Baltisch')],het,[],[]).
 
 n([sg('Bask'),pl('Basken')],de,[]).
 
@@ -644,7 +664,11 @@ n([mass('Georgisch')],het,[]).
 
 n([pl('Germanen'),sg('Germaan')],de,[]).
 
-n([mass('Germaans')],het,[]).
+n([mass('Germaans')],het,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 n([sg('Ghanees'),pl('Ghanezen')],de,[]).
 
