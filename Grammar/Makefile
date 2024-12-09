@@ -13,7 +13,7 @@ endif
 ifeq "$(PROLOG)" "sicstus"
 POS=penalty_weights.po grammar_lc.po frames.po penalties.po $(EXTRA:%.t=%.po)
 else
-POS=penalty_weights.pl grammar_lc.pl $(EXTRA:%.t=%.pl)
+POS=penalty_weights.pl grammar_lc.pl frames.pl $(EXTRA:%.t=%.pl)
 endif
 
 all: $(POS)
