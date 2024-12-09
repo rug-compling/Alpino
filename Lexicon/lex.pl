@@ -2651,6 +2651,7 @@ spelling_variant(burgelijke,burgerlijke).
 spelling_variant(honderste,honderdste).
 spelling_variant(hondertal,honderdtal).
 spelling_variant(laaste,   laatste).
+spelling_variant(lauter,   louter).
 spelling_variant(meerde,   meerdere).
 spelling_variant(moelijk,  moeilijk).
 spelling_variant(moelijke, moeilijke).

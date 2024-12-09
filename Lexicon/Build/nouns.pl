@@ -672,7 +672,7 @@ n([pl('Hagenaren'),pl('Hagenaars'),sg('Hagenaar')],de,[]).
 
 n([sg('Haïtiaan'),pl('Haïtianen')],de,[]).
 
-n([sg('Hazara'),pl('Hazara\'s')],de,[]).
+n([sg('Hazara'),pl('Hazara'),pl('Hazara\'s')],de,[]).
 
 n([mass('Hebreeuws')],het,[]).
 
@@ -812,6 +812,8 @@ n([sg('Liberiaan'),pl('Liberianen')],de,[]).
 
 n([sg('Libiër'),pl('Libiërs')],de,[]).
 
+n([mass('Liers')],het,[]).
+
 n([sg('Limburger'),pl('Limburgers')],de,[],
   [hh('Zuid'),
    hh('Noord'),
@@ -847,6 +849,8 @@ n([sg('Madrileen'),pl('Madrilenen')],de,[]).
 n([sg('Magyaar'),pl('Magyaren')],de,[]).
 
 n([mass('Maleis')],het,[]).
+
+n([mass('Maltees')],het,[]).
 
 n([sg('Maltezer'),pl('Maltezers')],de,[]).
 
@@ -1004,6 +1008,8 @@ n([sg('Roemeen'),pl('Roemenen')],de,[]).
 n([mass('Roemeens')],het,[]).
 
 n([pl('Roma'),pl('Roma\'s')],de,[]).
+
+n([mass('Romaans')],het,[]).
 
 n([pl('Romeinen'),sg('Romein')],de,[]).
 
@@ -1261,6 +1267,8 @@ n([sg('Zulu'),pl('Zulu\'s')],de,[]).
 n([pl('Zwitsers'),sg('Zwitser')],de,[]).
 
 n([sg('Zwollenaar'),pl('Zwollenaren')],de,[]).
+
+n([mass('Zwols')],het,[]).
 
 n([pl('a\'s'),sg(a)],de,[],[dim('a\'tje')]).
 
@@ -34015,7 +34023,7 @@ n([sg(stationwagon),pl(stationwagons)],de,[]).
 n([pl(statistieken),sg(statistiek)],de,[]).
 
 %% dat heeft de status rijksmonument
-n([mass(status)],de,[app_measure],
+n([mass(status)],de,[app_measure,np_app_measure],
   []).
 
 n([mass(status)],de,[],

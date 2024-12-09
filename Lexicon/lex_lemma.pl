@@ -1368,6 +1368,7 @@ lemma_root(af_plaggen,plag_af) .
 lemma_root(af_plakken,plak_af) .
 lemma_root(af_planten,plant_af) .
 lemma_root(af_plassen,plas_af) .
+lemma_root(af_platten,plat_af) .
 lemma_root(af_plenzen,plens_af) .
 lemma_root(af_pleuren,pleur_af) .
 lemma_root(af_ploegen,ploeg_af) .
@@ -1504,6 +1505,7 @@ lemma_root(af_slurpen,slurp_af) .
 lemma_root(af_smakken,smak_af) .
 lemma_root(af_smeden,smeed_af) .
 lemma_root(af_smeken,smeek_af) .
+lemma_root(af_smelten,smelt_af) .
 lemma_root(af_smeren,smeer_af) .
 lemma_root(af_smijten,smijt_af) .
 lemma_root(af_smokkelen,smokkel_af) .
@@ -10569,6 +10571,7 @@ lemma_root(plat_bombarderen,bombardeer_plat) .
 lemma_root(plat_branden,brand_plat) .
 lemma_root(plat_drukken,druk_plat) .
 lemma_root(plat_leggen,leg_plat) .
+lemma_root(platten,plat) .
 lemma_root(plat_trappen,trap_plat) .
 lemma_root(plaveien,plavei) .
 lemma_root(playbacken,playback) .

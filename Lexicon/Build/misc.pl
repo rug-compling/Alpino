@@ -4224,6 +4224,7 @@ m(behalve,          left_conj(en),behalve).
 m(noch,             left_conj(noch),noch).
 m(of,               left_conj(of),of).
 m(ofwel,            left_conj(ofwel),ofwel).
+m(ofwel,            left_conj(of),ofwel).
 m(en,               left_conj(en),en).
 m(hetzij,           left_conj(hetzij),hetzij).
 m(hetzij,           left_conj(of),hetzij).

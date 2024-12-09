@@ -3119,6 +3119,7 @@ v(besta,bestaat,inflected(bestaan,bestane),bestaan,bestond,bestonden,
 	fixed([subj(verschil),pc(over)],no_passive), % verschil van mening over ..
         fixed([subj(verklaring),pc(voor)],no_passive),
         fixed([subj(verplichting),pc(tot)],no_passive),
+        fixed([subj(visie),pc(op)],no_passive),
 	fixed([subj(vraag),pc(naar)],no_passive),
 	fixed([subj(weerstand),pc(tegen)],no_passive),
 	fixed([subj(weerzin),pc(tegen)],no_passive),
@@ -5557,6 +5558,7 @@ v(deel,deelt,delen,gedeeld,deelde,deelden,
 	part_transitive(rond),
 	part_transitive(uit),
 	part_np_np(toe),
+	part_so_pp_np(toe),
 	part_vp(mede),
 	part_vp(mee),
 	pc_pp(door),
@@ -17202,6 +17204,11 @@ v(plas,plast,plassen,geplast,plaste,plasten,
 	np_ld_pp,
 	pc_pp(met)])]).
 
+v(plat,plat,platten,geplat,platte,platten,
+  [unacc([part_intransitive(af)]),
+   h([part_transitive(af)])
+  ]).
+
 v(plavei,plaveit,plaveien,geplaveid,plaveide,plaveiden,
     [h([intransitive,
 	transitive])]).
@@ -18441,6 +18448,7 @@ v(reken,rekent,rekenen,gerekend,rekende,rekenden,
 	part_transitive(uit),
 	part_sbar(voor),
 	part_np_sbar(voor),
+	part_transitive(voor),
 	part_np_np(voor),
 	pc_pp(in),
 	pc_pp(met),
@@ -20849,6 +20857,7 @@ v(smeer,smeert,smeren,gesmeerd,smeerde,smeerden,
 
 v(smelt,smelt,smelten,gesmolten,smolt,smolten,
     [unacc([intransitive,
+	part_intransitive(af),
 	part_intransitive(samen),
 	part_intransitive(weg),
 	part_pc_pp(samen,met)]),
@@ -21382,6 +21391,7 @@ v(spijker,spijkert,spijkeren,gespijkerd,spijkerde,spijkerden,
 	intransitive,
         part_transitive(aan),
 	part_transitive(bij),
+	part_np_np(bij),
 	np_ld_pp,
 	np_ld_pp])]).
 
@@ -22782,8 +22792,8 @@ v(strooi,strooit,strooien,gestrooid,strooide,strooiden,
 	part_transitive(uit),
 	pc_pp(met),
 	np_ld_pp,
+	np_np_ld_pp,
 	np_ld_dir,
-	fixed([[in,de,ogen],acc(zand),dat],imp_passive),
 	part_np_ld_pp(uit)])]).
 
 v(strook,strookt,stroken,gestrookt,strookte,strookten,
@@ -23619,7 +23629,8 @@ v(trap,trapt,trappen,getrapt,trapte,trapten,
 	nonp_pred_np,
 	transitive,
 	part_intransitive(af),  % Feyenoord trapt af
-	part_intransitive(binnen),  % VL scoren
+	part_intransitive(binnen), % VL scoren
+	part_transitive(binnen),   % een strafschop binnentrappen
 	part_intransitive(na),
 	part_intransitive(over),
 	part_intransitive(mis),

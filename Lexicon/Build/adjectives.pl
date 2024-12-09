@@ -844,6 +844,9 @@ a([both('Leeuwarder')],nonadv,[],[]).
 a([e('Libanese'),
    no_e('Libanees')],nonadv,[],[]).
 
+a([e('Lierse'),
+   no_e('Liers')],nonadv,[],[]).
+
 a([e('Limburgse'),
    no_e('Limburgs')],nonadv,[],[hh('Zuid'),
    hh('Noord'),
@@ -17904,6 +17907,9 @@ a([both(herboren)],padv,[],[]).
 a([ge_e(herbouwde),
    ge_no_e(herbouwd)],adv,[],[]).
 
+a([ge_e(herbruikte),
+   ge_no_e(herbruikt)],adv,[],[]).
+
 a([ge_e(herdachte),
    ge_no_e(herdacht)],adv,[],[]).
 
@@ -34948,9 +34954,9 @@ a([pred([van,dik,hout,zaagt,men,planken])],nonadv,[],[]).
 a([pred([van,hetzelfde,laken,een,pak]),
    pred([van,het,zelfde,laken,een,pak])],nonadv,[],[]).
 
-a([pred([van,kwaad,naar,erger])],nonadv,[],[]).
+a([pred([van,kwaad,naar,erger])],adv,[],[]).
 
-a([pred([van,kwaad,tot,erger])],nonadv,[],[]).
+a([pred([van,kwaad,tot,erger])],adv,[],[]).
 
 a([pred([van,hetzelfde,laken,een,pak])],nonadv,[],[]).
 
