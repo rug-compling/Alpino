@@ -55,21 +55,6 @@ bool_vector_member(Int) :-
 
 :- load_foreign_resource(guides).
 
-%tr_tag(X,Y) :-
-%    (   tr_tag_(X,Y)
-%    ->  true
-%    ;   format(user_error,"error: tr_tag(~w,~w) fails~n",[X,Y])
-%    ).
-	      
-
-tr_tag(Tag0-__N,Tag) :-
-    !,
-    tr_tag(Tag0,Tag).
-
-%tr_tag(Tag0-N,Tag-N) :-
-%    !,
-%    tr_tag(Tag0,Tag).
-
 tr_tag(with_dt(A,_X),B) :-
     !,
     tr_tag(A,B).

@@ -643,7 +643,7 @@ lookup_tag(P0,P,Used,Syn,Ref) :-
     alpino_data:separate(Cat,Syn),
     Ref=ref(Class,Tag1,Label,Used,P0,P,R0,R,His,N,GuidesTag),
     alpino_tr_tag:tr_tag(Tag1,Class),
-    alpino_guides:tr_tag(Tag1-N,GuidesTag),
+    alpino_guides:tr_tag(Tag1,GuidesTag),
     assertz(syn_sem_lex_analysis(Tag1,Label,Used,P0,P,R0,R,His,N,Cat)),
     debug_message(4,"found feature structure ~w for ~w (~w)~n",[N,Tag1,Used]).
 
