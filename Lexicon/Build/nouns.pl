@@ -431,6 +431,12 @@ n([sg('Berlijner'),pl('Berlijners')],de,[],
    hh('Oost'),
    hh('West')]).
 
+n([mass('Berlijns')],het,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
+
 n([sg('Birmees'),pl('Birmezen')],het,[]).
 
 n([mass('Birmees')],het,[]).
@@ -504,6 +510,8 @@ n([sg('Colombiaan'),pl('Colombianen')],de,[]).
 
 n([pl('Congolezen'),sg('Congolees')],de,[]).
 
+n([mass('Corsicaans')],het,[]).
+
 n([pl('Cubanen'),sg('Cubaan')],de,[]).
 
 n([sg('Cyprioot'),pl('Cyprioten')],de,[],
@@ -523,6 +531,8 @@ n([pl('Democraten'),sg('Democraat')],de,[]).
 n([pl('Denen'),sg('Deen')],de,[]).
 
 n([mass('Deens')],het,[]).
+
+n([mass('Deventers')],het,[]).
 
 n([sg('Doetinchemmer'),
    pl('Doetinchemmers')],de,[]).
@@ -675,6 +685,8 @@ n([sg('Ghanees'),pl('Ghanezen')],de,[]).
 n([mass('Godsrijk')],het,[]).
 
 n([sg('Goot'),pl('Goten')],de,[]).
+
+n([mass('Gotisch')],het,[]).
 
 n([pl('Grieken'),sg('Griek')],de,[]).
 
@@ -1075,6 +1087,8 @@ n([mass('Servisch')],het,[]).
 
 n([pl('Siamezen'),sg('Siamees')],de,[]).
 
+n([mass('Siciliaans')],het,[]).
+
 n([pl('Silvaners'),sg('Silvaner')],de,[]).
 
 n([sg('Singaporees'),pl('Singaporezen')],de,[]).
@@ -1132,6 +1146,8 @@ n([sg('Tamil'),pl('Tamils')],de,[]).
 n([mass('Tamil')],het,[]).
 
 n([mass('Tataars')],het,[]).
+
+n([mass('Tegels')],het,[]).
 
 n([sg('Thai'),pl('Thai'),pl('Thais')],de,[]).
 
@@ -5733,7 +5749,9 @@ n([mass(blubber)],de,[]).
 
 n([pl([blue,chips])],de,[]).
 
-n([mass(blues)],de,[]).
+n([mass(blues)],de,[],
+  [f(delta),
+   f(talking)]).
 
 n([mass(bluf)],de,[]).
 
@@ -6723,6 +6741,8 @@ n([pl(bundels),sg(bundel)],de,
    feest,
    i(verhaal,verhalen),
    dim(bundeltje)]).
+
+n([sg(bundeling),pl(bundelingen)],de,[app_measure],[]).
 
 n([sg(bundeling),pl(bundelingen)],de,[],
   [i(kracht,krachten)]).

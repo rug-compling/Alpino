@@ -4704,6 +4704,12 @@ subsumed_by_dict(P0,P,_,_) :-
     tag(P2,P3,_,_,_,_,normal(names_dictionary),proper_name(_,'ORG')),   P3 < P,
     tag(P3,P,_,_,')',')',_,_).
 
+%% forbid: Frans , Turks
+subsumed_by_dict(P0,P,_,_) :-
+    tag(P0,P1,_,_,_,_,normal(normal),_),
+    tag(P1,P2,_,_,_,_,_,punct(komma)),
+    tag(P2,P ,_,_,_,_,normal(normal),_).
+
 %% forbid: Bosnische Serviërs
 subsumed_by_dict(P0,P,_,_) :-
     tag(P0,P1,_,_,_,_,normal(normal),adjective(_)), P1 < P,
@@ -5991,9 +5997,13 @@ potential_name_fsa(1,P0,[Word|Words],Ws,[Word|Prefix],[title|His]) :-
     P1 is P0 + 1,
     potential_name_fsa(1,P1,Words,Ws,Prefix,His).
 potential_name_fsa(1,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
-    name_vanhet_maybe(Word),
+    Word = van,
     P1 is P0 + 1,
     potential_name_fsa(3,P1,Words,Ws,Prefix,His).
+potential_name_fsa(1,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
+    Word = de,
+    P1 is P0 + 1,
+    potential_name_fsa(33,P1,Words,Ws,Prefix,His).
 potential_name_fsa(1,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
     name_vanhet(Word),
     P1 is P0 + 1,
@@ -6077,13 +6087,19 @@ potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[baron|His]) :-
     P1 is P0 + 1,
     potential_name_fsa(2,P1,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
-    name_vanhet_maybe(Word),
+    Word = van,
     P1 is P0 + 1,
     potential_name_fsa(3,P1,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
-    name_vanhet(Word),
+    Word = de,
     P1 is P0 + 1,
     potential_name_fsa(33,P1,Words,Ws,Prefix,His).
+potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
+    name_vanhet(Word),
+    \+ Word = van,
+    \+ Word = de,
+    P1 is P0 + 1,
+    potential_name_fsa(3,P1,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[de,'\''|Words],Ws,[de,'\''|Prefix],[de_quote|His]) :-
     %% Italiaanse namen Bastida de' Dossi
     %% mistokenized as  Bastida de ' Dossi
@@ -6284,9 +6300,13 @@ potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[end_person|His]) :-
     P is P0 + 1,
     potential_name_fsa(8,P,Words,Ws,Prefix,His).
 potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
-    name_vanhet_maybe(Word),
+    Word = van,
     P is P0 + 1,
     potential_name_fsa(3,P,Words,Ws,Prefix,His).
+potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
+    Word = de,
+    P is P0 + 1,
+    potential_name_fsa(33,P,Words,Ws,Prefix,His).
 potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
     name_vanhet(Word),
     P is P0 + 1,

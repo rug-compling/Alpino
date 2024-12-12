@@ -2122,7 +2122,6 @@ with_dt_all('\'n',[reeks]).
 with_dt_all('\'n',[soort]).
 with_dt_all('\'n',[stel]).
 with_dt_all('\'n',[stelletje]).
-with_dt_all(nummer,[positie,één]).
 with_dt_all(nu,[waarom,weer]).
 with_dt_all(of,[omgekeerd]).
 with_dt_all(of,[veel,één]).
@@ -2895,7 +2894,6 @@ with_dt_root(nog).
 with_dt_root(nogal).
 with_dt_root(nooit).
 with_dt_root(nu).
-with_dt_root(nummer).
 with_dt_root(of).
 with_dt_root(om).
 with_dt_root(oma).
@@ -2941,7 +2939,6 @@ with_dt_root(plaats).
 with_dt_root(plekke).
 with_dt_root(plezant).
 with_dt_root(politiek).
-with_dt_root(positie).
 with_dt_root(prettig).
 with_dt_root(prijze).
 with_dt_root(pronk).

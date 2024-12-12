@@ -101,6 +101,7 @@ surviving_root('opzoek').
 
 surviving_root('aantal een').
 surviving_root('aantal een groot').
+surviving_root(circa).
 surviving_root('dat soort').
 surviving_root('high tech').      % temp
 surviving_root('naar schatting').
@@ -153,10 +154,13 @@ surviving_root_tag(allemachtig,adjective(no_e(adv))).
 
 surviving_root_tag(na,complementizer(inf)).
 surviving_root_tag(door,complementizer(inf)).
+surviving_root_tag(voor,complementizer(inf)).
 
-surviving_root_tag(voor,complementizer).
 surviving_root_tag(sinds,complementizer).
 surviving_root_tag(tot,complementizer).
+
+surviving_root_tag(dat,complementizer(dat)).
+surviving_root_tag(of,complenetizer(of)).
 
 surviving_tag(_):-
     fail.

@@ -705,6 +705,9 @@ a([e('Gorinchemse'),
    e('Gorcumse'),
    no_e('Gorcums')],nonadv,[],[]).
 
+a([e('Gotische'),
+   no_e('Gotisch')],nonadv,[],[]).
+
 a([e('s-Gravendeelse'),
    no_e('s-Gravendeels')],nonadv,[],[]).
 
@@ -1381,6 +1384,8 @@ a([ge_both(aangebeden)],adv,[],[]).
 
 a([ge_e(aangeblafte),
    ge_no_e(aangeblaft)],padv,[],[]).
+
+a([ge_both(aangeblazen)],adv,[],[]).
 
 a([ge_no_e(aangebeld),
    ge_e(aangebelde)],adv,[],[]).
@@ -2486,6 +2491,10 @@ a([ge_e(afgepakte),
 
 a([ge_e(afgepaste),
    ge_no_e(afgepast)],adv,[],[]).
+
+a([stem(af_persen),
+   ge_e(afgeperste),
+   ge_no_e(afgeperst)],adv,[],[]).
 
 a([ge_e(afgepeigerde),
    ge_no_e(afgepeigerd)],padv,[],[]).
@@ -5398,6 +5407,9 @@ a([ge_e(bevatte),
 
 a([ge_e(beveiligde),
    ge_no_e(beveiligd)],adv,[],[zwaar]).
+
+a([ge_e(bevederde),
+   ge_no_e(bevederd)],adv,[],[zwaar]).
 
 a([stem(bevel_voeren),
    ende(bevelvoerende),
@@ -14913,6 +14925,9 @@ a([ge_e(geseculariseerde),
 
 a([ge_e(geseinde),
    ge_no_e(geseind)],adv,[],[]).
+
+a([ge_e(gesekste),
+   ge_no_e(gesekst)],nonadv,[],[]).
 
 a([ge_e(geselecteerde),
    ge_no_e(geselecteerd)],adv,[],[]).
@@ -27174,7 +27189,7 @@ a([e(onwillige),
    ere(onwilligere),
    no_e(onwillig),
    st(onwilligst),
-   ste(onwilligste)],adv,[],[]).
+   ste(onwilligste)],adv,[object_vp],[]).
 
 a([e(onwrikbare),
    er(onwrikbaarder),

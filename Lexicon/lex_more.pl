@@ -605,7 +605,7 @@ phrasal_entry(Tag,num_meter_num) -->
 
 %% de nummer 1 hit
 %% de top 10 notering
-%% should this be its own category instead of score_cat?
+%% TODO: de top zes geklasseerde renner ...
 phrasal_entry(pre_np_adverb,pre_np_adverb) -->
     { hdrug_util:debug_message(4,"nummer 1 hit~n",[]) },
     n_word(nummer),

@@ -316,11 +316,11 @@ m(zorg,with_dt(
 	       det=l('zo\'n',determiner(een),detp,0,1)])),
 	       ['zo\'n',zorgen]).
 
-with_dt([nummer,één,positie],
-	noun(de,count,sg),
-	dt(np,[hd=l(positie,noun(de,count,sg),2,3),
-	       mod=dt(np,[hd=l(nummer,noun(both,count,sg),0,1),
-			  app=l(één,number(hoofd(sg_num)),detp,1,2)])])).
+% with_dt([nummer,één,positie],
+% 	noun(de,count,sg),
+% 	dt(np,[hd=l(positie,noun(de,count,sg),2,3),
+% 	       mod=dt(np,[hd=l(nummer,noun(both,count,sg),0,1),
+% 			  app=l(één,number(hoofd(sg_num)),detp,1,2)])])).
 
 with_dt([de,heb],
 	np,
@@ -3843,7 +3843,8 @@ m('in plaats van',  complementizer(inf),[inplaats,van]).  % prep
 m(met,              complementizer(inf),met).             % VL "Met ouder te worden voel ik me milder worden"
 m(na,               complementizer(inf),na).              % prep
 m(teneinde,         complementizer(inf),teneinde).        % cmp
-m('ten einde',      complementizer(inf),[ten,einde]).        % cmp
+m('ten einde',      complementizer(inf),[ten,einde]).     % cmp
+m(voor,             complementizer(inf),voor).            % prep
 m(vooraleer,        complementizer(inf),vooraleer).       % not in CGN
 m(zonder,           complementizer(inf),zonder).          % prep
 
