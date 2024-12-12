@@ -1057,8 +1057,8 @@ alpino_ds_file_to_xml_terms(FN,Terms) :-
     alpino_ds_file_to_xml_terms(Val,FN,Terms).
 
 %% not available on hpc (never carefully checked why)
-:- initialize_flag(get_treebank_file,clib).
-:- use_module('../TreebankTools/IndexedCorpus/prolog/corpusreader').
+%:- initialize_flag(get_treebank_file,clib).
+%:- use_module('../TreebankTools/IndexedCorpus/prolog/corpusreader').
 
 :- initialize_flag(get_treebank_file,file).
 
