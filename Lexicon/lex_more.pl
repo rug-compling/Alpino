@@ -3636,7 +3636,8 @@ num_meter_loper_entry(noun(A,B,C),MStem,[Number,MeterLoper|L],L,Sep) :-
     Meter \== kilom, % 25 kilometer =/= 25 kilom-eter
     \+ never_compound_part(Loper),
     meter_loper_meter(Meter,MeterStem),
-    xl(Loper,noun(A,B,C),LoperStem,[],[]),
+    is_noun(Loper,A,B,C,LoperStem),
+%    xl(Loper,noun(A,B,C),LoperStem,[],[]),
     concat_stems([Number,Sep,MeterStem,'_',LoperStem],MStem,'').
 
 num_meter_loper_entry(noun(A,B,C),MStem,[Number1,NumberMeterLoper|L],L,Sep) :-
@@ -3651,8 +3652,15 @@ num_meter_loper_entry(noun(A,B,C),MStem,[Number1,NumberMeterLoper|L],L,Sep) :-
     Meter \== kilom, % 25 kilometer =/= 25 kilom-eter
     \+ never_compound_part(Loper),
     meter_loper_meter(Meter,MeterStem),
-    xl(Loper,noun(A,B,C),LoperStem,[],[]),
+    is_noun(Loper,A,B,C,LoperStem),
+%    xl(Loper,noun(A,B,C),LoperStem,[],[]),
     concat_stems([Number1,Sep,Number,Sep,MeterStem,'_',LoperStem],MStem,'').
+
+is_noun(Loper,A,B,C,LoperStem) :-
+    xl(Loper,noun(A,B,C),LoperStem,[],[]).
+%% op het 600 meterpunt
+is_noun(Loper,A,B,C,LoperStem) :-
+    xl(Loper,meas_mod_noun(A,B,C),LoperStem,[],[]).
 
 meter_loper_meter(letter,letter).  % een drie letterwoord; een vijf lettercode
 meter_loper_meter(punten,punt).

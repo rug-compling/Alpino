@@ -4044,6 +4044,7 @@ m(behoudens,        complementizer(np),behoudens).
 m(benevens,         complementizer(np),benevens).
 m('dat wil zeggen', complementizer(np),[dat,wil,zeggen]).
 m('en wel',         complementizer(np),[en,wel]).
+m(hoewel,           complementizer(np),hoewel).       % Hoewel kleinzoon van een dominee had hij veel belangstelling voor het boeddhisme .
 m('in casu',        complementizer(np),[in,casu]).
 m(inclusief,        complementizer(np),inclusief).
 m('laat staan',     complementizer(np),[laat,staan]).
@@ -5176,9 +5177,9 @@ m(minimaal,         modal_adverb(noun_prep),minimaal).
 m(minstens,         modal_adverb(noun_prep),minstens).
 m(misschien,        modal_adverb(noun_prep),misschien).
 m('om en bij',      modal_adverb(noun_prep),[om,en,bij]). % VL
-m('om en nabij',    modal_adverb(noun_prep),[om,en,bij]). % VL
+m('om en nabij',    modal_adverb(noun_prep),[om,en,nabij]). % VL
 m('om en bij de',   modal_adverb(noun_prep),[om,en,bij,de]). % VL
-m('om en nabij de', modal_adverb(noun_prep),[om,en,bij,de]). % VL
+m('om en nabij de', modal_adverb(noun_prep),[om,en,nabij,de]). % VL
 m('om en rond',     modal_adverb(noun_prep),[om,en,rond]). % VL
 m('om en rond de',  modal_adverb(noun_prep),[om,en,rond,de]). % VL
 %m(ongeveer,         modal_adverb(noun_prep),ongeveer). % also adv now

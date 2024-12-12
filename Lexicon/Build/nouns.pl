@@ -393,6 +393,8 @@ n([sg('Atjeeër'),pl('Atjeeërs')],de,[]).
 
 n([sg('Australiër'),pl('Australiërs')],de,[]).
 
+n([mass('Azerbeidzjaans')],het,[]).
+
 n([pl('Aziaten'),sg('Aziaat')],de,[]).
 
 n([mass('Babylonisch')],het,[]).
@@ -34113,7 +34115,9 @@ n([pl(stenen),sg(steen)],both,[],
    lego,
    maal,
    molen,
-   natuur]).
+   natuur,
+   zand
+  ]).
 
 n([sg([steen,des,aanstoots]),
    pl([stenen,des,aanstoots])],de,[subject_sbar]).
@@ -37789,7 +37793,7 @@ n([pl(varens),sg(varen)],de,[],[dim(varentje)]).
 
 n([sg(variabele),pl(variabelen)],de,[]).
 
-n([pl(varianten),sg(variant)],de,[]).
+n([pl(varianten),sg(variant)],de,[subject_sbar, subject_vp]).
 
 n([pl(variaties),sg(variatie)],de,[pred_pp(op)]).
 
@@ -42408,8 +42412,6 @@ n([mass(zand),pl(zanden),sg(zand)],het,[],
    drijf]).
 
 n([pl(zandbakken),sg(zandbak)],de,[]).
-
-n([mass(zandsteen)],het,[]).
 
 n([pl(zangen),sg(zang)],de,[],
   [achtergrond,f([achtergrond]),

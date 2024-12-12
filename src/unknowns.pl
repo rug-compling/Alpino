@@ -6711,6 +6711,7 @@ name_vanhet_start(W) :-
     name_vanhet(W).
 
 name_vanhet_start(W0) :-
+    W0 \= 'Ben',
     decap_some(W0,W),
     name_vanhet(W).
 
@@ -6734,6 +6735,7 @@ name_vanhet('d.').
 name_vanhet(der).
 name_vanhet(di).
 name_vanhet(al).
+name_vanhet(ben).
 name_vanhet(el).
 name_vanhet(het).
 name_vanhet(ten).

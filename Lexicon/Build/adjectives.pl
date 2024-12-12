@@ -26064,7 +26064,7 @@ a([e(onreine),
    ste(onreinste)],adv,[],[]).
 
 a([e(onrendabele),
-   no_e(onrendabel)],adv,[],[]).
+   no_e(onrendabel)],adv,[subject_vp],[]).
 
 a([e(onrijpe),
    er(onrijper),
@@ -29754,6 +29754,9 @@ a([e(prozaïsche),
 a([e(prudente),
    no_e(prudent)],adv,[],[]).
 
+a([e(pseudonieme),
+   no_e(pseudoniem)],nonadv,[],[]).
+
 a([e(psychiatrische),
    no_e(psychiatrisch)],adv,[],[]).
 
@@ -30331,7 +30334,7 @@ a([e(rendabele),
    ere(rendabelere),
    no_e(rendabel),
    st(rendabelst),
-   ste(rendabelste)],adv,[],[]).
+   ste(rendabelste)],adv,[subject_vp],[]).
 
 a([stem(rente_dragen),
    ende(rentedragende),

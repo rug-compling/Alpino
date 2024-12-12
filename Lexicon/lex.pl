@@ -2049,7 +2049,6 @@ spelling_variant21(voor,dat,      voordat).
 spelling_variant21(vóór,dat,      voordat).
 spelling_variant21(voor,zover,    voorzover).
 spelling_variant21(vuurwerk,ramp, vuurwerkramp).
-spelling_variant21(waar,toe,      waartoe).
 spelling_variant21(tegen,partij,  tegenpartij).
 spelling_variant21(te,gelijkertijd,     tegelijkertijd).
 spelling_variant21(te,gemoed,     tegemoet).
@@ -2064,6 +2063,7 @@ spelling_variant21(ter,zake,      terzake).
 spelling_variant21(tussen,uur,    tussenuur).
 spelling_variant21(voor,avond,    vooravond).
 spelling_variant21(waar,toe,      waartoe).
+spelling_variant21(waar,vanuit,   waarvanuit).
 spelling_variant21(wereld,wijd,   wereldwijd).
 spelling_variant21(wereld,wijde,  wereldwijde).
 spelling_variant21(zich,zelf,     zichzelf).
