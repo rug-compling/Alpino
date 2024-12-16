@@ -4715,9 +4715,13 @@ grammar_rule(np_zoon_n,NP,[ ADV, N ]) :-
 %%EX%% Groene kerstbomen zijn mooier dan rode
 %%EX%% Enige wat ik niet begrijp is zijn aarzeling
 %%EX%% Laatste wat ik zou doen is fietsen
+%%EX%% Er viel één dode
+%%EX%% We vonden daar één dode en één gewonde
+%%EX%% Omdat er toen maarliefst 1 gewonde viel werd het feest afgelast
+%% TODO: "één dode" cannot be parsed into max_cat.
+
 grammar_rule(np_adjn, NP,  [ N ] ) :-
     NP0 => np, N => n,
-%    NP0:agr => indef,   
     NP0:subn => sub_indef_adj,
     NP0:case => ~gen,
     N:hdet => no,
