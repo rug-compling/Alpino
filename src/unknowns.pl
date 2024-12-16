@@ -237,9 +237,9 @@ a_eng_compound(Word,Word2,P0,P,R0,R,tag(P0,P,R0,R,Label,english_compound(normal)
     atom_concat(Word,Word2,WordWord2),
     alpino_lex:lexicon(Tag,Label,[WordWord2],[],normal),
     atomic(Label), % only nouns anyway
-    atom_concat(Word,UWord2,Label),
-    atom_concat('_',NOTDIM,UWord2),
-    NOTDIM \= 'DIM',
+%    atom_concat(_Word,UWord2,Label),
+%    atom_concat('_',NOTDIM,UWord2),
+%    NOTDIM \= 'DIM',
     noun_tag_plus(Tag),
     debug_message(1,"mis-spelled compound|~w ~w|~w~n",[Word,Word2,Tag]).
 
@@ -1634,10 +1634,9 @@ foreign_word(dossier).
 foreign_word(dossiers).
 foreign_word(down).
 foreign_word(drink).
-foreign_word('d\'art').
-foreign_word('d\'Art').
-foreign_word('d\'amour').
-foreign_word('d\'une').
+foreign_word(Atom) :-
+    atom(Atom),
+    atom_concat('d\'',_,Atom).
 foreign_word(e).
 foreign_word('école').
 foreign_word(economic).
@@ -1887,6 +1886,8 @@ foreign_word(naõ).
 foreign_word(name).
 foreign_word(national).
 foreign_word(nationale).
+foreign_word(naturel).
+foreign_word(naturelle).
 foreign_word(ne).
 foreign_word('n\'est').
 foreign_word(never).
@@ -3040,6 +3041,7 @@ compound_part(scheeps,schip).
 compound_part(achteraf).
 compound_part(aller).
 compound_part(anti).
+compound_part(eco).
 compound_part(euro).
 compound_part(ex).
 compound_part(half).
@@ -4592,8 +4594,11 @@ add_number('PER',Agr,Stem) :-
     Agr = sg,
     atom(Stem),
     \+ atom_concat(_,i,Stem),
+    \+ atom_concat(_,idea,Stem),
+    \+ atom_concat(_,idia,Stem),
     \+ atom_concat(_,ae,Stem),
     \+ atom_concat(_,en,Stem),
+    \+ atom_concat(_,ën,Stem),
     \+ atom_concat(_,s,Stem),
     !.
 add_number(_,both,_).
