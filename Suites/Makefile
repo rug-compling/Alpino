@@ -155,5 +155,6 @@ j_suite.named_sents:../Grammar/rules.gram
         sed -e "s/'/__Q1__/g" -e 's/"/__Q2__/g'   \
             -e "s/[(]/__Q3__/g" -e 's/[)]/__Q4__/g' \
             -e "s/;/__Q5__/g" \
-            -e "s/«/__Q6__/g" -e 's/»/__Q7__/g' ) j_suite.named_sents0 \
+            -e "s/«/__Q6__/g" -e 's/»/__Q7__/g' \
+            -e "s/é/__Q7__/g" ) j_suite.named_sents0 \
           > j_suite.named_sents

@@ -5170,8 +5170,7 @@ m(liefst,           modal_adverb(noun_prep),liefst).
 % maar de helft van de aanwezigen had een kaartje
 % maar in twaalf procent van de gevallen ...
 m(maar,             modal_adverb(noun_prep),maar).    % also adv? "maar ternauwernood"
-m('maar liefst',    modal_adverb(noun_prep),[maar,liefst]).
-m('maar liefst',    modal_adverb(noun_prep),maarliefst).
+m(maarliefst,       modal_adverb(noun_prep),maarliefst).
 m(maximaal,         modal_adverb(noun_prep),maximaal).
 m(minimaal,         modal_adverb(noun_prep),minimaal).
 m(minstens,         modal_adverb(noun_prep),minstens).

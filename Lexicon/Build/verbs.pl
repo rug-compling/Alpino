@@ -3048,7 +3048,8 @@ v(bespoedig,bespoedigt,bespoedigen,bespoedigd,bespoedigde,bespoedigden,
     [h([transitive])]).
 
 v(bespot,bespot,bespotten,bespot,bespotte,bespotten,
-    [h([transitive])]).
+  [h([transitive,
+      np_pc_pp(om)])]).
 
 v(bespreek,bespreekt,bespreken,besproken,besprak,bespraken,
     [h([sbar,
@@ -9028,6 +9029,10 @@ v(grond,grondt,gronden,gegrond,grondde,grondden,
     [h([transitive,
 	np_ld_pp])]).
 
+%%% wat sommige eenden doen:
+v(grondel,grondelt,grondelen,gegrondeld,grondelde,grondelden,
+    [h([intransitive])]).
+
 v(grondvest,grondvest,grondvesten,gegrondvest,grondvestte,grondvestten,
     [h([transitive,
 	np_ld_pp])]).
@@ -9242,7 +9247,8 @@ v(handel,handelt,handelen,gehandeld,handelde,handelden,
 
 v(handhaaf,handhaaft,handhaven,gehandhaafd,handhaafde,handhaafden,
     [h([%refl,
-	transitive
+	transitive,
+	intransitive  % ik zal handhaven
 	%refl_pc_pp(tegen)
        ])]).
 
@@ -16593,8 +16599,9 @@ v(overstijg,overstijgt,overstijgen,overstegen,oversteeg,overstegen,
 	transitive])]).
 
 v(overstroom,overstroomt,overstromen,overstroomd,overstroomde,overstroomden,
-    [h([transitive,
-	np_pc_pp(met)])]).
+  [b([transitive,
+      intransitive,
+      np_pc_pp(met)])]).
 
 %% een beursemissie overtekenen
 v(overteken,overtekent,overtekenen,overtekend,overtekende,overtekenden,
@@ -21467,6 +21474,7 @@ v(spoel,spoelt,spoelen,gespoeld,spoelde,spoelden,
 	ld_pp,
 	part_intransitive(aan),
 	part_intransitive(af),
+	part_intransitive(uit),
 	part_intransitive(weg),
 	part_ld_pp(aan)]),
      h([np_np,
@@ -22283,7 +22291,7 @@ v(stel,stelt,stellen,gesteld,stelde,stelden,
 	fixed([[ten,doel],refl,vp],no_passive),
 	fixed([[tot,doel],refl,vp],no_passive),
 	fixed([[ter,discussie],acc],norm_passive),
-	fixed([[ter,discussie],sbar_obj],norm_passive),
+	fixed([[ter,discussie],sbar],norm_passive),
 	fixed([[teweer],refl],imp_passive),
 	fixed([[teweer],pc(tegen),refl],imp_passive),
 	fixed([[te,weer],refl],no_passive),
@@ -26029,6 +26037,7 @@ v(verschil,verschilt,verschillen,verschild,verschilde,verschilden,
 %	pc_pp(in),
 	pc_pp(met),
 %	pc_pp(over),  % daar verschillen de meningen/inzichten over
+	mod_pp(over), % daar verschillen de meningen/inzichten over
 %	pc_pp(per),
 	pc_pp(van)
        ])]).
@@ -26357,8 +26366,9 @@ v(vertaal,vertaalt,vertalen,vertaald,vertaalde,vertaalden,
 	refl_pc_pp(in)])]).
 
 v(vertak,vertakt,vertakken,vertakt,vertakte,vertakten,
-    [h([refl,
-	transitive])]).
+  [h([refl,
+      intransitive,
+      transitive])]).
 
 v(verteder,vertedert,vertederen,vertederd,vertederde,vertederden,
     [h([sbar_subj_so_np,
@@ -26670,7 +26680,7 @@ v(verwen,verwent,verwennen,verwend,verwende,verwenden,
 v(verwens,verwenst,verwensen,verwenst,verwenste,verwensten,
     [h([transitive])]).
 
-v(verwerf,verwerft,verwerven,verworven,verwierf,verwierven,
+v(verwerf,verwerft,verwerven,verworven,[verwierf,verworf],[verwierven,verworven],
     [h([refl_np,
 	fixed([{[pc(in),acc(aandeel)]}],norm_passive),
 	transitive,
@@ -27223,6 +27233,7 @@ v(vlucht,vlucht,vluchten,gevlucht,vluchtte,vluchtten,
 v(voed,voedt,voeden,gevoed,voedde,voedden,
     [h([intransitive,
 	transitive,
+	np_np,
 	part_transitive(op),
         part_intransitive(op),
 %	refl_pc_pp(met),
@@ -28667,7 +28678,8 @@ v(zaag,zaagt,zagen,gezaagd,zaagde,zaagden,
 	transitive,
 	np_ld_pp,
 	np_np,  % de oren van het lijf
-        part_transitive(weg), % de poten onder X stoel
+        part_transitive(weg),	% de poten onder X stoel
+	part_transitive(uit),
 	part_transitive(af),
 	part_transitive(door),
         part_np_pc_pp(door,over), %% iemand doorzagen over ..

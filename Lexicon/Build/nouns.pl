@@ -888,6 +888,8 @@ n([sg('Magyaar'),pl('Magyaren')],de,[]).
 
 n([mass('Maleis')],het,[]).
 
+n([mass('Maleisisch')],het,[]).
+
 n([mass('Maltees')],het,[]).
 
 n([sg('Maltezer'),pl('Maltezers')],de,[]).
@@ -1143,6 +1145,8 @@ n([pl('T-shirts'),sg('T-shirt'),pl('t-shirts'),sg('t-shirt')],both,[],
 
 n([sg('Taiwanees'),pl('Taiwanezen')],de,[]).
 
+n([mass('Taiwanees')],het,[]).
+
 n([sg('Tamil'),pl('Tamils')],de,[]).
 
 n([mass('Tamil')],het,[]).
@@ -1279,6 +1283,8 @@ n([stem('WK_veldrijden'),
 
 n([stem('WK_voetbal'),
    sg('WK-voetbal')],both,[]).
+
+n([mass('Zaans')],het,[]).
 
 n([sg('Zaïrees'),pl('Zaïrezen')],de,[]).
 
@@ -2790,6 +2796,8 @@ n([stem(anti_oxidant),
 n([pl(antipathieën),sg(antipathie)],de,[]).
 
 n([pl(antipatieën),sg(antipatie)],de,[]).
+
+n([pl(antipsychotica)],de,[]).
 
 n([pl(antiquairs),sg(antiquair)],de,[]).
 
@@ -17751,7 +17759,7 @@ n([sg(kangoeroe),pl(kangoeroes),
 
 n([pl(kanjers),sg(kanjer)],de,[]).
 
-n([mass(kanker)],de,[],
+n([mass(kanker),pl(kankers)],de,[],
   [baarmoederhals,
    borst,
    darm,
@@ -27234,7 +27242,7 @@ n([pl(perziken),sg(perzik)],de,[]).
 
 n([pl('peseta\'s'),meas(peseta)],de,[meas_mod,measure]).
 
-n([meas(peso),pl(pesos)],de,[meas_mod,measure]).
+n([meas(peso),pl(pesos),pl('peso\'s')],de,[meas_mod,measure]).
 
 n([mass(pessimisme)],het,[]).
 
@@ -29866,6 +29874,8 @@ n([pl(redeneringen),sg(redenering)],de,[sbar,subject_sbar]).
 n([pl(reders),sg(reder)],de,[]).
 
 n([pl(rederijen),sg(rederij)],de,[]).
+
+n([sg(rederijker),pl(rederijkers)],de,[]).
 
 n([pl(redevoeringen),sg(redevoering)],de,[]).
 

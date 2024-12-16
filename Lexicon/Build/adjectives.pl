@@ -1063,10 +1063,13 @@ a([e('Roemeense'),
    hh('West')]).
 
 a([e('Romeinse'),
-   no_e('Romeins')],nonadv,[],[hh('Zuid'),
+   no_e('Romeins')],adv,[],
+  [hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
-   hh('West')]).
+   hh('West'),
+   hh('Grieks')  % worstelen
+  ]).
 
 a([e('Rotterdamse'),
    no_e('Rotterdams')],adv,[],[hh('Zuid'),
@@ -11028,6 +11031,9 @@ a([ge_e(gecharterde),
 
 a([ge_e(gecheckte),
    ge_no_e(gecheckt)],adv,[],[]).
+
+a([ge_e(gechipte),
+   ge_no_e(gechipt)],adv,[],[]).
 
 a([ge_e(gechoqueerde),
    ge_no_e(gechoqueerd)],adv,[],[]).
@@ -23067,7 +23073,7 @@ a([e(monochrome),
    no_e(monochroom)],adv,[],[]).
 
 a([e(monogame),
-   no_e(monogaam)],nonadv,[],[]).
+   no_e(monogaam)],adv,[],[]).
 
 a([e(monomane),
    no_e(monomaan)],adv,[],[]).
@@ -30723,7 +30729,7 @@ a([e(roodachtige),
    ere(roodachtigere),
    no_e(roodachtig),
    st(roodachtigst),
-   ste(roodachtigste)],nonadv,[],[]).
+   ste(roodachtigste)],adv,[],[]).
 
 a([e(roodbruine),
    er(roodbruiner),

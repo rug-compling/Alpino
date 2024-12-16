@@ -888,6 +888,8 @@ number_both_last(Atom) :-
 
 %% Biologische soorten:
 plural_suffix(ae).
+plural_suffix(idea).
+plural_suffix(idia).
 
 plural_suffix(admirals).
 plural_suffix(alpen).
@@ -1059,6 +1061,7 @@ plural_suffix(thunderbugs).
 plural_suffix(tijgers).
 plural_suffix(trammps).
 plural_suffix(tramps).
+plural_suffix(tubbies).
 plural_suffix(underwolves).
 plural_suffix(viewers).
 plural_suffix(walkabouts).
@@ -2014,6 +2017,7 @@ spelling_variant21(kijk,plezier,  kijkplezier).
 spelling_variant21(langs,daar,    daarlangs).  % VL
 spelling_variant21(langzaam,aan,  langzaamaan).
 spelling_variant21(lees,plezier,  leesplezier).
+spelling_variant21(maar,liefst,   maarliefst).
 spelling_variant21(menig,een,     menigeen).
 spelling_variant21(middag,uur,    middaguur).
 spelling_variant21(na,dat,        nadat).

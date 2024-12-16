@@ -3717,6 +3717,7 @@ lemma_root(door_groeten,groet_door) .
 lemma_root(doorgroeven,doorgroef) .
 lemma_root(door_grollen,grol_door) .
 lemma_root(door_grommen,grom_door) .
+lemma_root(door_grondelen,grondel_door) .
 lemma_root(doorgronden,doorgrond) .
 lemma_root(door_gronden,grond_door) .
 lemma_root(door_grondvesten,grondvest_door) .
@@ -3739,6 +3740,7 @@ lemma_root(door_hameren,hamer_door) .
 lemma_root(door_hamsteren,hamster_door) .
 lemma_root(door_handballen,handbal_door) .
 lemma_root(door_handelen,handel_door) .
+lemma_root(door_handhaven,handhaaf_door) .
 lemma_root(door_handwerken,handwerken_door) .
 lemma_root(door_hangen,hang_door) .
 lemma_root(door_haperen,haper_door) .
@@ -4391,6 +4393,7 @@ lemma_root(door_overlijden,overlijd_door) .
 lemma_root(door_overmogen,overmag_door) .
 lemma_root(door_overnachten,overnacht_door) .
 lemma_root(door_overschilderen,overschilder_door) .
+lemma_root(door_overstromen,overstroom_door) .
 lemma_root(door_overtuigen,overtuig_door) .
 lemma_root(door_overvoeren,overvoer_door) .
 lemma_root(door_overvragen,overvraag_door) .
@@ -5375,6 +5378,7 @@ lemma_root(door_verstoren,verstoor_door) .
 lemma_root(door_verstrakken,verstrak_door) .
 lemma_root(door_verstrijken,verstrijk_door) .
 lemma_root(door_versuffen,versuf_door) .
+lemma_root(door_vertakken,vertak_door) .
 lemma_root(door_vertalen,vertaal_door) .
 lemma_root(door_vertederen,verteder_door) .
 lemma_root(door_vertekenen,verteken_door) .
@@ -6046,6 +6050,7 @@ lemma_root(groeperen,groepeer) .
 lemma_root(groeten,groet) .
 lemma_root(grollen,grol) .
 lemma_root(grommen,grom) .
+lemma_root(grondelen,grondel) .
 lemma_root(gronden,grond) .
 lemma_root(grondvesten,grondvest) .
 lemma_root(groot_brengen,breng_groot) .
@@ -11404,6 +11409,7 @@ lemma_root(raak_groeperen,groepeer_raak) .
 lemma_root(raak_groeten,groet_raak) .
 lemma_root(raak_grollen,grol_raak) .
 lemma_root(raak_grommen,grom_raak) .
+lemma_root(raak_grondelen,grondel_raak) .
 lemma_root(raak_gruwelen,gruwel_raak) .
 lemma_root(raak_gruwen,gruw_raak) .
 lemma_root(raak_gulpen,gulp_raak) .
@@ -11422,6 +11428,7 @@ lemma_root(raak_hameren,hamer_raak) .
 lemma_root(raak_hamsteren,hamster_raak) .
 lemma_root(raak_handballen,handbal_raak) .
 lemma_root(raak_handelen,handel_raak) .
+lemma_root(raak_handhaven,handhaaf_raak) .
 lemma_root(raak_handwerken,handwerken_raak) .
 lemma_root(raak_hangen,hang_raak) .
 lemma_root(raak_haperen,haper_raak) .
@@ -12033,6 +12040,7 @@ lemma_root(raak_overlijden,overlijd_raak) .
 lemma_root(raak_overmogen,overmag_raak) .
 lemma_root(raak_overnachten,overnacht_raak) .
 lemma_root(raak_overschilderen,overschilder_raak) .
+lemma_root(raak_overstromen,overstroom_raak) .
 lemma_root(raak_overtuigen,overtuig_raak) .
 lemma_root(raak_overvoeren,overvoer_raak) .
 lemma_root(raak_overvragen,overvraag_raak) .
@@ -12957,6 +12965,7 @@ lemma_root(raak_verstoren,verstoor_raak) .
 lemma_root(raak_verstrakken,verstrak_raak) .
 lemma_root(raak_verstrijken,verstrijk_raak) .
 lemma_root(raak_versuffen,versuf_raak) .
+lemma_root(raak_vertakken,vertak_raak) .
 lemma_root(raak_vertalen,vertaal_raak) .
 lemma_root(raak_vertederen,verteder_raak) .
 lemma_root(raak_vertekenen,verteken_raak) .
@@ -16635,6 +16644,7 @@ lemma_root(uit_groeperen,groepeer_uit) .
 lemma_root(uit_groeten,groet_uit) .
 lemma_root(uit_grollen,grol_uit) .
 lemma_root(uit_grommen,grom_uit) .
+lemma_root(uit_grondelen,grondel_uit) .
 lemma_root(uit_gronden,grond_uit) .
 lemma_root(uit_grondvesten,grondvest_uit) .
 lemma_root(uit_gruwelen,gruwel_uit) .
@@ -16654,6 +16664,7 @@ lemma_root(uit_hameren,hamer_uit) .
 lemma_root(uit_hamsteren,hamster_uit) .
 lemma_root(uit_handballen,handbal_uit) .
 lemma_root(uit_handelen,handel_uit) .
+lemma_root(uit_handhaven,handhaaf_uit) .
 lemma_root(uit_hangen,hang_uit) .
 lemma_root(uit_haperen,haper_uit) .
 lemma_root(uit_happen,hap_uit) .
@@ -17226,6 +17237,7 @@ lemma_root(uit_overleven,overleef_uit) .
 lemma_root(uit_overmogen,overmag_uit) .
 lemma_root(uit_overnachten,overnacht_uit) .
 lemma_root(uit_overschilderen,overschilder_uit) .
+lemma_root(uit_overstromen,overstroom_uit) .
 lemma_root(uit_overtuigen,overtuig_uit) .
 lemma_root(uit_overvoeren,overvoer_uit) .
 lemma_root(uit_overvragen,overvraag_uit) .
@@ -18059,6 +18071,7 @@ lemma_root(uit_verspreiden,verspreid_uit) .
 lemma_root(uit_verspringen,verspring_uit) .
 lemma_root(uit_verstoppen,verstop_uit) .
 lemma_root(uit_verstoren,verstoor_uit) .
+lemma_root(uit_vertakken,vertak_uit) .
 lemma_root(uit_vertalen,vertaal_uit) .
 lemma_root(uit_vertederen,verteder_uit) .
 lemma_root(uit_vertekenen,verteken_uit) .
@@ -21502,6 +21515,7 @@ lemma_root(voort_groeperen,groepeer_voort) .
 lemma_root(voort_groeten,groet_voort) .
 lemma_root(voort_grollen,grol_voort) .
 lemma_root(voort_grommen,grom_voort) .
+lemma_root(voort_grondelen,grondel_voort) .
 lemma_root(voort_gruwelen,gruwel_voort) .
 lemma_root(voort_gruwen,gruw_voort) .
 lemma_root(voort_gulpen,gulp_voort) .
@@ -21520,6 +21534,7 @@ lemma_root(voort_hameren,hamer_voort) .
 lemma_root(voort_hamsteren,hamster_voort) .
 lemma_root(voort_handballen,handbal_voort) .
 lemma_root(voort_handelen,handel_voort) .
+lemma_root(voort_handhaven,handhaaf_voort) .
 lemma_root(voort_handwerken,handwerken_voort) .
 lemma_root(voort_hangen,hang_voort) .
 lemma_root(voort_haperen,haper_voort) .
@@ -22132,6 +22147,7 @@ lemma_root(voort_overlijden,overlijd_voort) .
 lemma_root(voort_overmogen,overmag_voort) .
 lemma_root(voort_overnachten,overnacht_voort) .
 lemma_root(voort_overschilderen,overschilder_voort) .
+lemma_root(voort_overstromen,overstroom_voort) .
 lemma_root(voort_overtuigen,overtuig_voort) .
 lemma_root(voort_overvoeren,overvoer_voort) .
 lemma_root(voort_overvragen,overvraag_voort) .
@@ -23057,6 +23073,7 @@ lemma_root(voort_verstoren,verstoor_voort) .
 lemma_root(voort_verstrakken,verstrak_voort) .
 lemma_root(voort_verstrijken,verstrijk_voort) .
 lemma_root(voort_versuffen,versuf_voort) .
+lemma_root(voort_vertakken,vertak_voort) .
 lemma_root(voort_vertalen,vertaal_voort) .
 lemma_root(voort_vertederen,verteder_voort) .
 lemma_root(voort_vertekenen,verteken_voort) .
