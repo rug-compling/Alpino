@@ -844,23 +844,25 @@ dehet(het,de).
 
 replace_dehet_tags :-
     (   clause(tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg)),true,Ref),
+	\+ His = english_compound(_),
 	dehet(De,Het),
 	\+ non_noun_tag(P1,P),
 	(   tag(_,P1,_,Q1,Het,_,_,_)
 	->  erase_tag(Ref),
 	    \+ tag(P1,P,Q1,Q,W,L,_,noun(Het,_,sg)),
 	    assert_tag(P1,P,Q1,Q,W,L,replace_dehet(His),noun(both,Count,sg)),
-	    debug_message(1,"ignore ~w after ~w for ~w~n",[Het,De,W])
+	    debug_message(1,"ignore ~w after ~w for ~w ~w~n",[Het,De,W,His])
 	),
 	fail
     ;   clause(tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg,SC)),true,Ref),
+	\+ His = english_compound(_),
 	dehet(De,Het),
 	\+ non_noun_tag(P1,P),
 	(   tag(_,P1,_,Q1,Het,_,_,_)
 	->  erase_tag(Ref),
 	    \+ tag(P1,P,Q1,Q,W,L,_,noun(Het,_,sg)),
 	    assert_tag(P1,P,Q1,Q,W,L,replace_dehet(His),noun(both,Count,sg,SC)),
-	    debug_message(1,"ignore ~w after ~w for ~w~n",[Het,De,W])
+	    debug_message(1,"ignore ~w after ~w for ~w ~w~n",[Het,De,W,His])
 	),
 	fail
     ;   true

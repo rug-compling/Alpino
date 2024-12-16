@@ -30876,7 +30876,7 @@ n([mass('rood-groen')],het,[]).
 
 n([pl(roodkapjes),sg(roodkapje)],het,[]).
 
-n([mass(roof)],de,[],[straat]).
+n([mass(roof),pl(roven)],de,[],[straat]).
 
 n([pl(roofdieren),sg(roofdier)],het,[]).
 
@@ -34534,6 +34534,8 @@ n([sg(stolling),pl(stollingen)],de,[],[bloed]).
 
 n([pl(stolpen),sg(stolp)],de,[]).
 
+n([sg('Stolperstein'),pl('Stolpersteine')],de,[]).
+
 n([sg(stolsel),pl(stolsels)],both,[],[bloed]).
 
 n([pl(stomheden),sg(stomheid)],de,[sbar,vp]).
@@ -36270,8 +36272,6 @@ n([pl(titelhouders),sg(titelhouder)],de,[app_measure]).
 n([sg(titelrol),pl(titelrollen)],de,[]).
 
 n([sg(titelstrijd),pl(titelstrijden)],de,[measure]).
-
-n([pl(titelverdedigers),sg(titelverdediger)],de,[]).
 
 n([pl(toasten),sg(toast)],de,[]).
 
@@ -42503,7 +42503,7 @@ n([mass(zegen)],de,[subject_sbar]).
 
 n([pl(zegeningen),sg(zegening)],de,[sbar,vp]).
 
-n([sg(zegge)],de,[]).
+n([sg(zegge),pl(zeggen),pl(zegges)],de,[]).
 
 n([mass(zeggenschap)],de,[]).
 

@@ -3627,6 +3627,7 @@ lemma_root(door_functioneren,functioneer_door) .
 lemma_root(door_fungeren,fungeer_door) .
 lemma_root(door_fuseren,fuseer_door) .
 lemma_root(door_gaan,ga_door) .
+lemma_root(door_gakken,gak_door) .
 lemma_root(door_galmen,galm_door) .
 lemma_root(door_galopperen,galoppeer_door) .
 lemma_root(door_gamen,game_door) .
@@ -4630,6 +4631,7 @@ lemma_root(door_renoveren,renoveer_door) .
 lemma_root(door_rentenieren,rentenier_door) .
 lemma_root(door_reorganiseren,reorganiseer_door) .
 lemma_root(door_repareren,repareer_door) .
+lemma_root(door_repatriëren,repatrieer_door) .
 lemma_root(door_repeteren,repeteer_door) .
 lemma_root(door_reserveren,reserveer_door) .
 lemma_root(door_resetten,reset_door) .
@@ -5909,6 +5911,7 @@ lemma_root(fuseren,fuseer) .
 lemma_root(fusilleren,fusilleer) .
 lemma_root(gaan,ga) .
 lemma_root(gade_slaan,sla_gade) .
+lemma_root(gakken,gak) .
 lemma_root(galmen,galm) .
 lemma_root(galopperen,galoppeer) .
 lemma_root(gamen,game) .
@@ -11322,6 +11325,7 @@ lemma_root(raak_functioneren,functioneer_raak) .
 lemma_root(raak_fungeren,fungeer_raak) .
 lemma_root(raak_fuseren,fuseer_raak) .
 lemma_root(raak_gaan,ga_raak) .
+lemma_root(raak_gakken,gak_raak) .
 lemma_root(raak_galmen,galm_raak) .
 lemma_root(raak_galopperen,galoppeer_raak) .
 lemma_root(raak_gamen,game_raak) .
@@ -12258,6 +12262,7 @@ lemma_root(raak_renoveren,renoveer_raak) .
 lemma_root(raak_rentenieren,rentenier_raak) .
 lemma_root(raak_reorganiseren,reorganiseer_raak) .
 lemma_root(raak_repareren,repareer_raak) .
+lemma_root(raak_repatriëren,repatrieer_raak) .
 lemma_root(raak_repeteren,repeteer_raak) .
 lemma_root(raak_reserveren,reserveer_raak) .
 lemma_root(raak_resetten,reset_raak) .
@@ -16561,6 +16566,7 @@ lemma_root(uit_fulmineren,fulmineer_uit) .
 lemma_root(uit_functioneren,functioneer_uit) .
 lemma_root(uit_fungeren,fungeer_uit) .
 lemma_root(uit_gaan,ga_uit) .
+lemma_root(uit_gakken,gak_uit) .
 lemma_root(uit_galmen,galm_uit) .
 lemma_root(uit_galopperen,galoppeer_uit) .
 lemma_root(uit_gamen,game_uit) .
@@ -16668,6 +16674,7 @@ lemma_root(uit_handhaven,handhaaf_uit) .
 lemma_root(uit_hangen,hang_uit) .
 lemma_root(uit_haperen,haper_uit) .
 lemma_root(uit_happen,hap_uit) .
+lemma_root(uit_harden,hard_uit) .
 lemma_root(uit_harken,hark_uit) .
 lemma_root(uit_harmoniëren,harmonieer_uit) .
 lemma_root(uit_harsen,hars_uit) .
@@ -17465,6 +17472,7 @@ lemma_root(uit_renoveren,renoveer_uit) .
 lemma_root(uit_rentenieren,rentenier_uit) .
 lemma_root(uit_reorganiseren,reorganiseer_uit) .
 lemma_root(uit_repareren,repareer_uit) .
+lemma_root(uit_repatriëren,repatrieer_uit) .
 lemma_root(uit_repeteren,repeteer_uit) .
 lemma_root(uit_reserveren,reserveer_uit) .
 lemma_root(uit_resetten,reset_uit) .
@@ -21428,6 +21436,7 @@ lemma_root(voort_functioneren,functioneer_voort) .
 lemma_root(voort_fungeren,fungeer_voort) .
 lemma_root(voort_fuseren,fuseer_voort) .
 lemma_root(voort_gaan,ga_voort) .
+lemma_root(voort_gakken,gak_voort) .
 lemma_root(voort_galmen,galm_voort) .
 lemma_root(voort_galopperen,galoppeer_voort) .
 lemma_root(voort_gamen,game_voort) .
@@ -22365,6 +22374,7 @@ lemma_root(voort_renoveren,renoveer_voort) .
 lemma_root(voort_rentenieren,rentenier_voort) .
 lemma_root(voort_reorganiseren,reorganiseer_voort) .
 lemma_root(voort_repareren,repareer_voort) .
+lemma_root(voort_repatriëren,repatrieer_voort) .
 lemma_root(voort_repeteren,repeteer_voort) .
 lemma_root(voort_reserveren,reserveer_voort) .
 lemma_root(voort_resetten,reset_voort) .

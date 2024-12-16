@@ -3845,6 +3845,9 @@ a([ge_e(bediende),
    ge_no_e(bediend)],padv,
   [pp(door)],[]).
 
+a([ge_e(bedijkte),
+   ge_no_e(bedijkt)],nonadv,[],[]).
+
 a([ge_e(bediscussieerde),
    ge_no_e(bediscussieerd)],nonadv,[],[]).
 
@@ -8925,7 +8928,11 @@ a([e(eclatante),
    no_e(eclatant)],nonadv,[],[]).
 
 a([e(ecologische),
-   no_e(ecologisch)],adv,[],[]).
+   no_e(ecologisch),
+   er(ecologischer),
+   ere(ecologischere),
+   st(ecologischt),
+   ste(ecologischte)],adv,[],[]).
 
 a([e(economische),
    e(ekonomische),
@@ -15310,7 +15317,11 @@ a([ge_e(gestaafde),
 a([ge_e(gestaalde),
    ge_no_e(gestaald)],adv,[],[]).
 
-a([e(gestage),
+a([er(gestager),
+   ere(gestagere),
+   st(gestaagst),
+   ste(gestaagste),
+   e(gestage),
    no_e(gestaag)],adv,[],[]).
 
 a([ge_e(gestaakte),
@@ -26131,6 +26142,11 @@ a([e(onschuldige),
   [subject_sbar,
    subject_vp],[]).
 
+a([stem(onsite),
+   both(onsite),
+   both([on,site]),
+   both('on-site')],adv,[],[]).
+
 a([e(onsmakelijke),
    er(onsmakelijker),
    ere(onsmakelijkere),
@@ -28107,6 +28123,9 @@ a([e(optionele),
 
 a([e(optische),
    no_e(optisch)],adv,[],[]).
+
+a([e(opulente),
+   no_e(opulent)],nonadv,[],[]).
 
 a([stem(op_vallen),
    ende(opvallende),

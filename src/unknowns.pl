@@ -231,16 +231,21 @@ a_eng_compound(Wouw,Effect,P0,P,R0,R,tag(P0,P,R0,R,Label,wouw_compound(normal),T
     hdrug_util:concat_all([Wouw,EffectLabel],Label,' '),
     debug_message(1,"wouw compound|~w ~w|~w~n",[Wouw,Effect,Tag]).
 
+%% not to be confused with the productive english compounds added in lexical_analysis.pl
 a_eng_compound(Word,Word2,P0,P,R0,R,tag(P0,P,R0,R,Label,english_compound(normal),Tag)) :-
     \+ tag(P0,P,R0,R,_,_,_,_),
     atom(Word),atom(Word2),
     atom_concat(Word,Word2,WordWord2),
     alpino_lex:lexicon(Tag,Label,[WordWord2],[],normal),
     atomic(Label), % only nouns anyway
-%    atom_concat(_Word,UWord2,Label),
-%    atom_concat('_',NOTDIM,UWord2),
-%    NOTDIM \= 'DIM',
+    atom_concat(_,UWord2,Label),
+    atom_concat('_',NOTDIM,UWord2),
+    NOTDIM \= 'DIM',
     noun_tag_plus(Tag),
+    \+ \+ (   tag(P0,P1,R0,R1,_,_,_,_),
+	      tag(P1,P,R1,R,NOTDIM,_,_,Tag2),
+	      noun_tag(Tag2)
+	  ),
     debug_message(1,"mis-spelled compound|~w ~w|~w~n",[Word,Word2,Tag]).
 
 wouw(wauw).
@@ -1085,12 +1090,13 @@ similar_endings(P1,R1,W,Wmin,Tags) :-
     ;   findall(f(Wmin,Tags),similar_endingsXX(W,Wmin,Tags),List),
 	noclp_assertz(guessed_similar(W,List))
     ),
-    lists:member(f(Wmin,Tags),List),
+    lists:member(f(Wmin,Tags0),List),
+    sort(Tags0,Tags),
     assert_tags(Tags,P1,R1,W,Wmin).
 
 similar_endingsXX(W,Wmin,[TagH|TagT]) :-
     guess_using_suffix0(W,Prefix,Wmin,3,5),
-    findall(Stem/Tag,alternative_open_class_suffix(Wmin,Prefix,Stem,Tag),[TagH|TagT]),
+    findall(Stem/Wmin/Tag,alternative_open_class_suffix(Wmin,Prefix,Stem,Tag),[TagH|TagT]),
     !.  % don't try shorter suffixes
     
 unknown_word_heuristic(P1,R1,W,_,"anti-W|~p|adjective(both(nonadv))~n",
@@ -4402,10 +4408,10 @@ lexical_analysis_add_space(Input,P0,R0,Name,Tag,len(Consumed)):-
     assert_tag(P0,P,R0,R,Stem,Name,Tag).
 
 assert_tags([],_P0,_R0,_W,_Wmin).
-assert_tags([Stem/Tag|Tags],P0,R0,W,Wmin) :-
+assert_tags([Stem/Suffix/Tag|Tags],P0,R0,W,Wmin) :-
     P is P0 + 1,
     R is R0 + 1,
-    assert_tag(P0,P,R0,R,Stem,suffix,Tag),
+    assert_tag(P0,P,R0,R,Stem,suffix(Suffix),Tag),
     assert_tags(Tags,P0,R0,W,Wmin).
 
 alternative_open_class_suffix(Word,Prefix,NewStem,Tag):-
@@ -4472,30 +4478,48 @@ shorter_tag(P0,P,R0,R,Tag,compound(Int)) :-
     integer(Name),
     Name < Int.
 
+de_determiner(P0) :-
+    search_tag_stem(de,tag(_,P0,_,_,de,_,_,determiner(de))).
+de_determiner(P0) :-
+    search_tag_stem(deze,tag(_,P0,_,_,deze,_,_,determiner(de,_,_,_,_))).
+
+het_determiner(P0) :-
+    search_tag_stem(het,tag(_,P0,_,_,het,_,_,determiner(het))).
+het_determiner(P0) :-
+    search_tag_stem(dit,tag(_,P0,_,_,dit,_,_,determiner(het,_,_,_,_))).
+het_determiner(P0) :-
+    search_tag_stem(dat,tag(_,P0,_,_,dat,_,_,determiner(het,_,_,_,_))).
+
+sg_het_noun(noun(het,_,sg)).
+sg_het_noun(noun(het,_,sg,_)).
+sg_het_noun(tmp_noun(het,_,sg)).
+sg_het_noun(tmp_noun(het,_,sg,_)).
+sg_het_noun(mod_noun(het,_,sg)).
+sg_het_noun(mod_noun(het,_,sg,_)).
+sg_het_noun(meas_mod_noun(het,_,sg)).
+sg_het_noun(meas_mod_noun(het,_,sg,_)).
+
+sg_de_noun(noun(de,_,sg)).
+sg_de_noun(noun(de,_,sg,_)).
+sg_de_noun(tmp_noun(de,_,sg)).
+sg_de_noun(tmp_noun(de,_,sg,_)).
+sg_de_noun(mod_noun(de,_,sg)).
+sg_de_noun(mod_noun(de,_,sg,_)).
+sg_de_noun(meas_mod_noun(de,_,sg)).
+sg_de_noun(meas_mod_noun(de,_,sg,_)).
+
 check_de_het(P0,Tag) :-
-    Tag=noun(het,_,sg),
+    sg_het_noun(Tag),
     !,
-    \+ search_tag_stem(de,tag(_,P0,_,_,de,_,_,determiner(de))).
-check_de_het(P0,Tag) :-
-    Tag=noun(het,_,sg,_),
-    !,
-    \+ search_tag_stem(de,tag(_,P0,_,_,de,_,_,determiner(de))).
-check_de_het(P0,Tag) :-
-    Tag=tmp_noun(het,_,sg),
-    !,
-    \+ search_tag_stem(de,tag(_,P0,_,_,de,_,_,determiner(de))).
-check_de_het(P0,Tag) :-
-    Tag=mod_noun(het,_,sg),
-    !,
-    \+ search_tag_stem(de,tag(_,P0,_,_,de,_,_,determiner(de))).
-check_de_het(P0,Tag) :-
-    Tag=meas_mod_noun(het,_,sg),
-    !,
-    \+ search_tag_stem(de,tag(_,P0,_,_,de,_,_,determiner(de))).
+    \+ de_determiner(P0). 
 check_de_het(P0,Tag) :-
     Tag=v_noun(_),
     !,
-    \+ search_tag_stem(de,tag(_,P0,_,_,de,_,_,determiner(de))).
+    \+ de_determiner(P0).
+check_de_het(P0,Tag) :-
+    sg_de_noun(Tag),
+    !,
+    \+ het_determiner(P0).
 check_de_het(_,_).
 
 %% as previous, but no compound should already be asserted
@@ -4594,8 +4618,8 @@ add_number('PER',Agr,Stem) :-
     Agr = sg,
     atom(Stem),
     \+ atom_concat(_,i,Stem),
-    \+ atom_concat(_,idea,Stem),
-    \+ atom_concat(_,idia,Stem),
+    \+ atom_concat(_,ea,Stem),
+    \+ atom_concat(_,ia,Stem),
     \+ atom_concat(_,ae,Stem),
     \+ atom_concat(_,en,Stem),
     \+ atom_concat(_,ën,Stem),

@@ -3437,7 +3437,7 @@ v(bevecht,bevecht,bevechten,bevochten,bevocht,bevochten,
 	np_np  % zij bevechten elkaar de overwinning
        ])]).
 
-v(beveel,beveelt,bevelen,bevolen,beval,bevalen,
+v(beveel,beveelt,bevelen,bevolen,beval,[bevalen,bevolen],
     [h([np_np,
 	intransitive,
 	np_sbar,
@@ -8078,6 +8078,9 @@ v(gaap,gaapt,gapen,gegaapt,gaapte,gaapten,
 v(gaar,gaart,garen,gegaart,gaarde,gaarden,
     [h([transitive])]).
 
+v(gak,gakt,gakken,gegakt,gakte,gakten,
+    [h([intransitive])]).
+
 v(galm,galmt,galmen,gegalmd,galmde,galmden,
     [h([intransitive,
 	transitive,
@@ -8548,6 +8551,7 @@ v(geraak,geraakt,geraken,geraakt,geraakte,geraakten,
             part_transitive(in),
 	    part_intransitive(bekend),
 	    part_sbar_subj_no_het(bekend),
+            fixed([[in,de,vergetelheid]],no_passive),
 	    nonp_copula,
             ld_adv,
             ld_pp])]).
@@ -9338,7 +9342,9 @@ v(haper,hapert,haperen,gehaperd,haperde,haperden,
 	pc_pp(aan)])]).
 
 v(hard,hardt,harden,gehard,hardde,hardden,
-    [unacc([intransitive]),
+  [unacc([intransitive,
+	  part_intransitive(uit) % van lijm
+	 ]),
      h([transitive,
 	np_pc_pp(tegen)])]).
 
@@ -10592,7 +10598,8 @@ v(jaag,jaagt,jagen,gejaagd,[joeg,jaagde],[joegen,jaagden],
 	part_np_np(aan),
 	part_sbar_subj_so_np(op),
 	part_sbar_subj_so_np(weg),
-	part_transitive(aan),
+ 	part_transitive(aan),
+ 	part_transitive(achterna),
 	part_transitive(af),
 	part_transitive(na),
 	part_transitive(op),
@@ -18552,7 +18559,8 @@ v(repareer,repareert,repareren,gerepareerd,repareerde,repareerden,
 	transitive])]).
 
 v(repatrieer,repatrieert,repatriëren,gerepatrieerd,repatrieerde,repatrieerden,
-    [h([transitive])]).
+  [h([intransitive,
+      transitive])]).
 
 v(repeteer,repeteert,repeteren,gerepeteerd,repeteerde,repeteerden,
     [h([intransitive,
@@ -20865,6 +20873,7 @@ v(smeer,smeert,smeren,gesmeerd,smeerde,smeerden,
 	transitive,
 	np_ld_pp,
 	part_transitive(door),
+	part_transitive(aan),
 	part_np_np(aan),
 	part_transitive(in),
 	part_np_pc_pp(in,met),
@@ -25615,6 +25624,7 @@ v(vermeld,vermeldt,vermelden,vermeld,vermeldde,vermeldden,
 	transitive,
         als_pred_np,
 	np_mod_pp(over),
+	np_mod_pp(in),
 	np_pc_pp(bij),  % maar dat wordt er niet bij vermeld
 	pp_sbar(bij),   % hij vermeldde er niet bij, dat..
 	vp])]).
