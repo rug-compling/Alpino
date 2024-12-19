@@ -679,6 +679,7 @@ m(v_root(heb,hebben),
 	fixed([{[acc(moeite),er_pp(met,C),extra_sbar(C)]}],no_passive),
 	fixed([{[acc(moeite),er_pp(met,C),extra_vp(C)]}],no_passive),
         fixed([{[acc(nominalization(kijk_om)),pc(naar)]}],no_passive),
+	fixed([{[acc(mogelijkheid),pc(tot)]}],no_passive),
 	fixed([[om,het,lijf],acc],no_passive),
 	fixed([[om,handen],acc],no_passive),
 	fixed([[omhanden],acc],no_passive),
@@ -1364,8 +1365,9 @@ v(acteer,acteert,acteren,geacteerd,acteerde,acteerden,
 	sbar])]).
 
 v(activeer,activeert,activeren,geactiveerd,activeerde,activeerden,
-    [h([transitive,
-	np_pc_pp(tot)])]).
+  [h([transitive,
+      intransitive,
+      np_pc_pp(tot)])]).
 
 v(actualiseer,actualiseert,actualiseren,geactualiseerd,actualiseerde,actualiseerden,
     [h([transitive,
@@ -6016,7 +6018,7 @@ v(documenteer,documenteert,documenteren,gedocumenteerd,documenteerde,documenteer
     [h([transitive])]).
 
 v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
-    [h([transitive_ndev,
+    [h([transitive_ndev,        % BUT: "tuinieren wordt alleen recreatief gedaan"
 	aci,
 	aci_no_obj,
 	np_ld_pp,		% ik deed suiker in de koffie
@@ -11391,20 +11393,21 @@ v(klingel,klingelt,klingelen,geklingeld,klingelde,klingelden,
      ])]).
 
 v(klink,klinkt,klinken,geklonken,klonk,klonken,
-    [h([intransitive,
-	transitive,
-	nonp_copula,  % dat klinkt aannemelijk; als onzin
-        so_nonp_copula, % dat klink mij onaannemelijk in de oren
-        mod_pp(doorheen),
-	part_ld_pp(door),
-	part_transitive(door),
-	part_intransitive(na),
-	pc_pp(op),   % daar moet op geklonken worden
-	part_transitive(vast),  % spijkeren
-        part_np_ld_pp(vast),    % ,,
-        part_sbar_subj_no_het(door),  % toen klonk al door dat ...
-	sbar, % dip
-	alsof_sbar])]).
+  [z([part_intransitive(in)]),
+   h([intransitive,
+      transitive,
+      nonp_copula,	      % dat klinkt aannemelijk; als onzin
+      so_nonp_copula,	      % dat klink mij onaannemelijk in de oren
+      mod_pp(doorheen),
+      part_ld_pp(door),
+      part_transitive(door),
+      part_intransitive(na),
+      pc_pp(op),		     % daar moet op geklonken worden
+      part_transitive(vast),	     % spijkeren
+      part_np_ld_pp(vast),	     % ,,
+      part_sbar_subj_no_het(door),   % toen klonk al door dat ...
+      sbar,			     % dip
+      alsof_sbar])]).
 
 v(klis,klist,klissen,geklist,kliste,klisten,
     [h([transitive])]).
@@ -14895,7 +14898,8 @@ v(mix,mixt,mixen,gemixt,mixte,mixten,
       part_transitive(in)])]).
 
 v(mobiliseer,mobiliseert,mobiliseren,gemobiliseerd,mobiliseerde,mobiliseerden,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive])]).
 
 v(modder,moddert,modderen,gemodderd,modderde,modderden,
     [h([intransitive,
@@ -16613,6 +16617,9 @@ v(overstroom,overstroomt,overstromen,overstroomd,overstroomde,overstroomden,
 %% een beursemissie overtekenen
 v(overteken,overtekent,overtekenen,overtekend,overtekende,overtekenden,
     [h([transitive])]).
+
+v(overtij,overtijt,overtijen,overtijd,overtijdde,overtijdden,
+    [h([intransitive])]).
 
 v(overtreed,overtreedt,overtreden,overtreden,overtrad,overtraden,
     [h([transitive])]).
@@ -28702,6 +28709,7 @@ v(zaai,zaait,zaaien,gezaaid,zaaide,zaaiden,
 	part_intransitive(in),
 	part_transitive(in),
 	part_refl(uit),
+	part_intransitive(uit),
 	part_transitive(uit)])]).
 
 v(zadel,zadelt,zadelen,gezadeld,zadelde,zadelden,

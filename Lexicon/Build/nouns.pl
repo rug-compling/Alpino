@@ -7513,7 +7513,9 @@ n([pl(cijfers),sg(cijfer)],het,[],
    winst,
    dim(cijfertje)]).
 
-n([pl(cilinders),sg(cilinder)],de,[],[dim(cilindertje)]).
+n([pl(cilinders),sg(cilinder)],de,
+  [measure],   % 5000 cilinders chloorgas
+  [dim(cilindertje)]).
 
 n([pl(cineasten),sg(cineast)],de,[]).
 
@@ -9846,6 +9848,8 @@ n([pl(dolken),sg(dolk)],de,[]).
 n([meas(dollar),pl(dollars)],de,[meas_mod,measure],
   [f(['US'])]).
 
+n([sg(dolmen),pl(dolmens)],de,[]).
+
 n([mass(dom)],de,[]).
 
 n([pl(domeinen),sg(domein)],het,[],
@@ -11501,11 +11505,17 @@ n([mass(falen)],het,[],[hart]).
 
 n([mass([fall,out])],de,[]).
 
-n([pl(families),sg(familie)],de,[app_measure],
+n([pl(families),sg(familie)],de,
+  [],
+  [schoon]).
+
+n([pl(families),sg(familie)],de,
+  [app_measure],
   [i(gras,grassen),
+   onder,
    i(plant,planten),
-   schoon,
-   taal]).                          % encyc
+   taal
+  ]).
 
 n([pl(fans),sg(fan)],de,[],[voetbal]).
 
@@ -12292,10 +12302,14 @@ n([sg([full,prof]),pl([full,profs])],de,[]).
 n([mass(fun)],de,[]).
 
 n([pl(functies),sg(functie),
-   pl(funkties),sg(funktie)],de,[pred_pp(in)],[]).
+   pl(funkties),sg(funktie)],de,
+  [pred_pp(in),
+   subject_vp
+  ],[]).
 
 n([pl(functies),sg(functie),
-   pl(funkties),sg(funktie)],de,[app_measure],
+   pl(funkties),sg(funktie)],de,
+  [app_measure],
   [s(bestuur),
    top,
    neven]).
@@ -12378,7 +12392,7 @@ n([mass(gading)],de,[]).
 
 n([pl(gages),sg(gage)],de,[]).
 
-n([mass(gal)],de,[]).
+n([mass(gal)],both,[]).
 
 n([sg(gala),pl('gala\'s')],het,[],
   [boks,			% niet bok_gala
@@ -19695,7 +19709,11 @@ n([pl(kwalificaties),sg(kwalificatie),
   [],
   [h('WK')]).
 
-n([pl(kwaliteiten),sg(kwaliteit)],de,[sbar,vp,pred_pp(van)],[]).
+n([pl(kwaliteiten),sg(kwaliteit)],de,
+  [sbar,
+   vp,
+   measure,  % de hoogste kwaliteit koffiebonen krijg je door ...
+   pred_pp(van)],[]).
 
 n([pl(kwaliteiten),sg(kwaliteit)],de,[],
   [s(geluid),
@@ -26813,7 +26831,8 @@ n([pl(partners),sg(partner)],de,[],
 
 n([sg(partnerschap),pl(partnerschappen)],het,[]).
 
-n([pl('party\'s'),sg(party)],de,[]).
+n([pl('party\'s'),sg(party)],de,[],
+  [f([cocktail])]).
 
 n([pl(passen),sg(pas)],both,[],
   [betaal,
@@ -30790,7 +30809,9 @@ n([pl(rokers),sg(roker)],de,[],
    f(niet),
    h(niet)]).
 
-n([pl(rollen),sg(rol)],de,[measure],
+n([pl(rollen),sg(rol)],de,
+  [measure,
+   subject_vp],
   [dim(rolletje)]).
 
 n([pl(rollen),sg(rol)],de,[],
@@ -34414,7 +34435,7 @@ n([pl(stijlen),sg(stijl)],de,[],
 
 n([pl(stikkers),sg(stikker)],de,[]).
 
-n([mass(stikstof)],de,[]).
+n([mass(stikstof)],both,[]).
 
 n([pl(stillevens),sg(stilleven)],het,[]).
 
@@ -40353,7 +40374,8 @@ n([mass([vory,v,zakone]),
 n([pl(vorken),sg(vork)],de,[]).
 
 n([pl(vormen),sg(vorm)],de,
-  [pred_pp(uit)]).
+  [measure, % verschillende vormen voelsprieten
+   pred_pp(uit)]).
 
 n([pl(vormen),sg(vorm)],de,
   [pred_pp(in)],
@@ -43238,6 +43260,8 @@ measure_noun('µg').
 measure_noun('£').
 
 measure_noun('$').
+
+measure_noun(ppm).  % parts per million
 
 measure_noun(tpm).
 

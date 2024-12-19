@@ -2091,7 +2091,7 @@ m(ons,           determiner(der),onzes).
 %m(ons,           determiner(pron),onzer).
 m('ons al',   determiner(pron),[ons,aller]).
 m(onvoldoende,   determiner(wat,nwh,mod,pro,yparg),onvoldoende).
-m(sommig,        determiner(pl_num,nwh,nmod,pro,yparg),sommige).
+m(sommig,        determiner(pl_num,nwh,nmod,pro,yparg),sommige).   % TODO: sommige wijn/muziek/... (de mass nouns)
 %m(tal,           determiner(wat),tal).  % ja dat zeggen mensen echt
 %m('tal van',     determiner(wat),[tal,van]).
 m(tal,           determiner(wat,nwh,mod,pro,yparg),tal).
@@ -5236,10 +5236,11 @@ m('zegge en schrijve', modal_adverb(noun_prep),[zeggen,en,schrijven]).
 %% even voor/na het einde; even voordat ..
 m(even,             modal_adverb(comp_prep),even).
 m(direct,           modal_adverb(comp_prep),direct).
-m(meteen,           modal_adverb(comp_prep),meteen). % meteen na(dat)..
+m(meteen,           modal_adverb(comp_prep),meteen). % meteen na(dat) ..
 m(onmiddellijk,     modal_adverb(comp_prep),onmiddellijk).
+m(snel,             modal_adverb(comp_prep),snel). % snel na(dat) ..
 m(terstond,         modal_adverb(comp_prep),terstond).
-m(vlak,             modal_adverb(comp_prep),vlak). % vlak voor(dat)..
+m(vlak,             modal_adverb(comp_prep),vlak). % vlak voor(dat) ..
 
 with_dt([nog,Eens],
 	modal_adverb(noun),

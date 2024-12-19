@@ -1510,6 +1510,9 @@ check_stem(generate,Stem,_,_,_) :-
     alpino_cg:lex(_,{List},_,_,_,_),
     lists:member(Stem,List).
 
+check_tag(Tag,Tag,P0,P,Q0,Q):-
+    check_tag(Tag,P0,P,Q0,Q).
+
 check_tag(Tag,P0,P) :-
     check_tag(Tag,P0,P,_,_).
 check_tag(Tag,Tag,P0,P) :-
@@ -1600,11 +1603,13 @@ check_part_required(parse,Part,Tag,P0,P) :-
 check_part_required(parse,Part,Tag,P0,P) :-
     check_tag(adjective(_,part(Part,_)),Tag,P0,P).
 check_part_required(parse,Part,Tag,P0,P) :-
-    check_tag(preposition(_,List),Tag,P0,P),
-    memberchk(Part,List).
+    check_tag(preposition(_,List),Tag,P0,P,Q0,_),
+    memberchk(Part,List),
+    Q0 < P0.
 check_part_required(parse,Part,Tag,P0,P) :-
-    check_tag(preposition(_,List,_),Tag,P0,P),
-    memberchk(Part,List).
+    check_tag(preposition(_,List,_),Tag,P0,P,Q0,_),
+    memberchk(Part,List),
+    Q0 < P0.
 
 check_np_adjective(P0,P) :-
     (  check_tag(np_adjective,P0,P)

@@ -662,6 +662,14 @@ lexicon_(Word,proper_name(X,'PER'),Name,Ws1,Ws,His,_LC) :-
     per_suffix(Next),
     hdrug_util:concat_all([Name0,Next],Name,' ').
 
+lexicon_(Word,proper_name(both,'PER'),Name,Ws1,Ws,His,_LC) :-
+    in_names_dictionary(proper_name(_,'PER'),Word,Name0,Ws1,Ws2,His),
+    n_word(et,Ws2,Ws3),
+    (  n_word(al,Ws3,Ws)
+    ;  n_word('al.',Ws3,Ws)
+    ),
+    hdrug_util:concat_all([Name0,et,al],Name,' ').
+
 %% one word genetive names
 lexicon_(Word,Cat,Stem,Ws,Ws,gen(His),_LC) :-
     \+ not_a_genitive_name(Word),
@@ -3278,7 +3286,7 @@ spelling_variant(eigenlijks,eigenlijk).
 spelling_variant(eigelijks,eigenlijk).
 spelling_variant(enne,    en).
 spelling_variant(enso,    enzo).
-spelling_variant(et,      '\'t').
+%%% spelling_variant(et,      '\'t').
 spelling_variant(facking, fucking).
 spelling_variant(fakking, fucking).
 spelling_variant(focking, fucking).

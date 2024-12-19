@@ -3964,12 +3964,19 @@ digit_dot_digit([H|T]) :-
     isdigit(H),
     digit_dot_digit0(T).
 
-digit_dot_digit0([]).  % only digits is also tag now
 digit_dot_digit0([46|T]) :-
     digits(T).
 digit_dot_digit0([H|T]) :-
     isdigit(H),
     digit_dot_digit0(T).
+
+%% short number is also tag now
+digit_dot_digit([A,B]) :-
+    isdigit(A),
+    isdigit(B).
+
+digit_dot_digit([A]) :-
+    isdigit(A).
 
 digits([H|T]) :-
     isdigit(H),

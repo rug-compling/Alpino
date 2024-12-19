@@ -52,12 +52,14 @@ survives(tag(_,_,R1,_,Root2,Word2,_,Tag2)) :-
     alpino_lexical_analysis:tag(_,_,_,R1,Root1,Word1,_,Tag1),
     format(user_error,"survives bigram ~w ~w ~n",[Word1,Word2]).
 
-survives(tag(_,_,_,R1,Voor,_,_,complementizer)) :-
-    lists:member(Voor,[voor,tot]),
-    lists:member(Diff,[2,3,4]),
-    R2 is R1 + Diff,
-    alpino_lexical_analysis:tag(_,_,R2,_,_,_,_,verb(_,Fin,_)),
-    finite(Fin).
+survives(tag(_,_,_,R1,_,_,_,adjective(ge_no_e(_)))) :-
+    alpino_lexical_analysis:tag(_,_,_,R2,v_root(raak,raken),_,_,_),
+    R2 < R1,
+    R1 - R2 < 6.
+survives(tag(_,_,_,R1,_,_,_,adjective(ge_both(_)))) :-
+    alpino_lexical_analysis:tag(_,_,_,R2,v_root(raak,raken),_,_,_),
+    R2 < R1,
+    R1 - R2 < 6.
 
 survives_bigram(dan,'Dan',tmp_adverb,eerst,eerst,postadv_adverb).
 
@@ -158,6 +160,7 @@ surviving_root_tag(voor,complementizer(inf)).
 
 surviving_root_tag(sinds,complementizer).
 surviving_root_tag(tot,complementizer).
+surviving_root_tag(voor,complementizer).
 
 surviving_root_tag(dat,complementizer(dat)).
 surviving_root_tag(of,complenetizer(of)).

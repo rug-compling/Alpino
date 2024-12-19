@@ -3002,6 +3002,7 @@ lemma_root(door_accepteren,accepteer_door) .
 lemma_root(door_acclimatiseren,acclimatiseer_door) .
 lemma_root(door_achtervolgen,achtervolg_door) .
 lemma_root(door_acteren,acteer_door) .
+lemma_root(door_activeren,activeer_door) .
 lemma_root(door_actualiseren,actualiseer_door) .
 lemma_root(door_adelen,adel_door) .
 lemma_root(door_ademen,adem_door) .
@@ -4248,6 +4249,7 @@ lemma_root(door_missen,mis_door) .
 lemma_root(door_misstaan,missta_door) .
 lemma_root(door_misten,mist_door) .
 lemma_root(door_mixen,mix_door) .
+lemma_root(door_mobiliseren,mobiliseer_door) .
 lemma_root(door_modderen,modder_door) .
 lemma_root(door_modderworstelen,modderworstelen_door) .
 lemma_root(door_moderniseren,moderniseer_door) .
@@ -4395,6 +4397,7 @@ lemma_root(door_overmogen,overmag_door) .
 lemma_root(door_overnachten,overnacht_door) .
 lemma_root(door_overschilderen,overschilder_door) .
 lemma_root(door_overstromen,overstroom_door) .
+lemma_root(door_overtijen,overtij_door) .
 lemma_root(door_overtuigen,overtuig_door) .
 lemma_root(door_overvoeren,overvoer_door) .
 lemma_root(door_overvragen,overvraag_door) .
@@ -7102,6 +7105,7 @@ lemma_root(in_kletteren,kletter_in) .
 lemma_root(in_kleuren,kleur_in) .
 lemma_root(in_kleven,kleef_in) .
 lemma_root(in_klimmen,klim_in) .
+lemma_root(in_klinken,klink_in) .
 lemma_root(in_kloppen,klop_in) .
 lemma_root(in_klotsen,klots_in) .
 lemma_root(in_kluisteren,kluister_in) .
@@ -10401,6 +10405,7 @@ lemma_root(over_sukkelen,sukkel_over) .
 lemma_root(over_takelen,takel_over) .
 lemma_root(overtekenen,overteken) .
 lemma_root(over_tekenen,teken_over) .
+lemma_root(overtijen,overtij) .
 lemma_root(over_tikken,tik_over) .
 lemma_root(over_tillen,til_over) .
 lemma_root(over_toeren,toer_over) .
@@ -10726,6 +10731,7 @@ lemma_root(raak_accepteren,accepteer_raak) .
 lemma_root(raak_acclimatiseren,acclimatiseer_raak) .
 lemma_root(raak_achtervolgen,achtervolg_raak) .
 lemma_root(raak_acteren,acteer_raak) .
+lemma_root(raak_activeren,activeer_raak) .
 lemma_root(raak_actualiseren,actualiseer_raak) .
 lemma_root(raak_adelen,adel_raak) .
 lemma_root(raak_ademen,adem_raak) .
@@ -11904,6 +11910,7 @@ lemma_root(raak_mislukken,misluk_raak) .
 lemma_root(raak_missen,mis_raak) .
 lemma_root(raak_misstaan,missta_raak) .
 lemma_root(raak_mixen,mix_raak) .
+lemma_root(raak_mobiliseren,mobiliseer_raak) .
 lemma_root(raak_modderen,modder_raak) .
 lemma_root(raak_modderworstelen,modderworstelen_raak) .
 lemma_root(raak_moderniseren,moderniseer_raak) .
@@ -12045,6 +12052,7 @@ lemma_root(raak_overmogen,overmag_raak) .
 lemma_root(raak_overnachten,overnacht_raak) .
 lemma_root(raak_overschilderen,overschilder_raak) .
 lemma_root(raak_overstromen,overstroom_raak) .
+lemma_root(raak_overtijen,overtij_raak) .
 lemma_root(raak_overtuigen,overtuig_raak) .
 lemma_root(raak_overvoeren,overvoer_raak) .
 lemma_root(raak_overvragen,overvraag_raak) .
@@ -16000,6 +16008,7 @@ lemma_root(uit_accentueren,accentueer_uit) .
 lemma_root(uit_accepteren,accepteer_uit) .
 lemma_root(uit_achtervolgen,achtervolg_uit) .
 lemma_root(uit_acteren,acteer_uit) .
+lemma_root(uit_activeren,activeer_uit) .
 lemma_root(uit_actualiseren,actualiseer_uit) .
 lemma_root(uit_adelen,adel_uit) .
 lemma_root(uit_ademen,adem_uit) .
@@ -17128,6 +17137,7 @@ lemma_root(uit_misleiden,misleid_uit) .
 lemma_root(uit_missen,mis_uit) .
 lemma_root(uit_misstaan,missta_uit) .
 lemma_root(uit_mixen,mix_uit) .
+lemma_root(uit_mobiliseren,mobiliseer_uit) .
 lemma_root(uit_modderen,modder_uit) .
 lemma_root(uit_moderniseren,moderniseer_uit) .
 lemma_root(uit_moeten,moet_uit) .
@@ -17245,6 +17255,7 @@ lemma_root(uit_overmogen,overmag_uit) .
 lemma_root(uit_overnachten,overnacht_uit) .
 lemma_root(uit_overschilderen,overschilder_uit) .
 lemma_root(uit_overstromen,overstroom_uit) .
+lemma_root(uit_overtijen,overtij_uit) .
 lemma_root(uit_overtuigen,overtuig_uit) .
 lemma_root(uit_overvoeren,overvoer_uit) .
 lemma_root(uit_overvragen,overvraag_uit) .
@@ -20836,6 +20847,7 @@ lemma_root(voort_accepteren,accepteer_voort) .
 lemma_root(voort_acclimatiseren,acclimatiseer_voort) .
 lemma_root(voort_achtervolgen,achtervolg_voort) .
 lemma_root(voort_acteren,acteer_voort) .
+lemma_root(voort_activeren,activeer_voort) .
 lemma_root(voort_actualiseren,actualiseer_voort) .
 lemma_root(voort_adelen,adel_voort) .
 lemma_root(voort_ademen,adem_voort) .
@@ -22015,6 +22027,7 @@ lemma_root(voort_mislukken,misluk_voort) .
 lemma_root(voort_missen,mis_voort) .
 lemma_root(voort_misstaan,missta_voort) .
 lemma_root(voort_mixen,mix_voort) .
+lemma_root(voort_mobiliseren,mobiliseer_voort) .
 lemma_root(voort_modderen,modder_voort) .
 lemma_root(voort_modderworstelen,modderworstelen_voort) .
 lemma_root(voort_moderniseren,moderniseer_voort) .
@@ -22157,6 +22170,7 @@ lemma_root(voort_overmogen,overmag_voort) .
 lemma_root(voort_overnachten,overnacht_voort) .
 lemma_root(voort_overschilderen,overschilder_voort) .
 lemma_root(voort_overstromen,overstroom_voort) .
+lemma_root(voort_overtijen,overtij_voort) .
 lemma_root(voort_overtuigen,overtuig_voort) .
 lemma_root(voort_overvoeren,overvoer_voort) .
 lemma_root(voort_overvragen,overvraag_voort) .

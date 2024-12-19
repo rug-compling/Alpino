@@ -28460,6 +28460,9 @@ a([ge_e(overgemaakte),
 
 a([ge_both(overgenomen)],adv,[],[]).
 
+a([ge_e(overgeschilderde),
+   ge_no_e(overgeschilderd)],adv,[],[]).
+
 a([ge_both(overgeschoten)],adv,[],[]).
 
 a([ge_both(overgeschreven)],adv,[],[]).

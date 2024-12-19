@@ -1536,6 +1536,7 @@ foreign_word(brand).
 foreign_word(break).
 foreign_word(breeds).
 foreign_word(bug).
+foreign_word(bureau).
 foreign_word(business).
 foreign_word(but).
 foreign_word(by).
@@ -1597,8 +1598,6 @@ foreign_word(credit).
 foreign_word(crew).
 foreign_word(crime).
 foreign_word(culture).
-foreign_word('d\'un').
-foreign_word('d\'une').
 foreign_word(daily).
 foreign_word(dance).
 foreign_word(dansant).
@@ -1640,9 +1639,6 @@ foreign_word(dossier).
 foreign_word(dossiers).
 foreign_word(down).
 foreign_word(drink).
-foreign_word(Atom) :-
-    atom(Atom),
-    atom_concat('d\'',_,Atom).
 foreign_word(e).
 foreign_word('école').
 foreign_word(economic).
@@ -1806,9 +1802,6 @@ foreign_word(kid).
 foreign_word(killer).
 foreign_word(know).
 foreign_word(község).  % Hongaarse plaats, frequent in Wikipedia
-foreign_word('l\'amour').
-foreign_word('l\'avenir').
-foreign_word('l\'homme').
 foreign_word(la).
 foreign_word(ladies).
 foreign_word(lady).
@@ -2225,6 +2218,12 @@ foreign_word('PIC').
 foreign_word('FIG').
 foreign_word('FILE').
 
+foreign_word(Atom) :-
+    atom(Atom),
+    atom_codes(Atom,[DL,39,L|_]),
+    (  DL = 100 ; DL = 108 ), % d' l'
+    islower(L).
+	
 decap_foreign_word(X) :- foreign_word(X).
 decap_foreign_word(X) :- decap_first(X,Xx), foreign_word(Xx).
 
@@ -4739,6 +4738,14 @@ subsumed_by_dict(P0,P,_,_) :-
     tag(P1,P2,_,_,_,_,_,punct(komma)),
     tag(P2,P ,_,_,_,_,normal(normal),_).
 
+%% forbid: Frans , Turks en Italiaans
+subsumed_by_dict(P0,P,_,_) :-
+    tag(P0,P1,_,_,_,_,normal(normal),_),
+    tag(P1,P2,_,_,_,_,_,punct(komma)),
+    tag(P2,P3,_,_,_,_,normal(normal),_),
+    tag(P3,P4,_,_,_,_,_,conj(en)),
+    tag(P4,P ,_,_,_,_,normal(normal),_).
+
 %% forbid: Bosnische Serviërs
 subsumed_by_dict(P0,P,_,_) :-
     tag(P0,P1,_,_,_,_,normal(normal),adjective(_)), P1 < P,
@@ -6498,6 +6505,8 @@ potential_name_fsa(23,_P0,['&',Zn|Words],Words,['&',Zn],[end_firma]) :-
     zn(Zn),
     !.
 potential_name_fsa(23,_P0,[et,'al.'|Words],Words,[et,'al.'],[etal]) :-
+    !.
+potential_name_fsa(23,_P0,[et,al|Words],Words,[et,al],[etal]) :-
     !.
 potential_name_fsa(23,P0,[The,Word|Words],Ws,[The,Word|Prefix],[foreign,foreign|His]) :-
     (   The == the ; The == 'The'  ),
