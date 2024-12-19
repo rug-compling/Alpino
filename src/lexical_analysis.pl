@@ -211,7 +211,6 @@ lexical_analysisXXX(Input) :-
 	    time(Debug,replace_per_tags),
 	    time(Debug,skips),
 	    time(Debug,filter_te_tags),
-	    time(Debug,replace_dehet_tags),
 	    time(Debug,generalize_tags),
 	    time(Debug,filter_more_tags),
 	    time(Debug,filter_bracketed_tags),
@@ -234,6 +233,7 @@ lexical_analysisXXX(Input) :-
 	
 	alpino_unknowns:retract_wikipedia_list,
 	
+	time(Debug,replace_dehet_tags),
 	%% some tags are removed, so we re-do filter_tags
 	%% example: Een storm van beschuldigingen aan het adres van Weinreb
 	%%                brak los (pos_tager=on)
@@ -843,24 +843,22 @@ dehet(de,het).
 dehet(het,de).
 
 replace_dehet_tags :-
-    (   clause(tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg)),true,Ref),
+    (   tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg)),
 	\+ His = english_compound(_),
 	dehet(De,Het),
 	\+ non_noun_tag(P1,P),
 	(   tag(_,P1,_,Q1,Het,_,_,_)
-	->  erase_tag(Ref),
-	    \+ tag(P1,P,Q1,Q,W,L,_,noun(Het,_,sg)),
-	    assert_tag(P1,P,Q1,Q,W,L,replace_dehet(His),noun(both,Count,sg)),
+	->  \+ tag(P1,P,Q1,Q,W,L,_,noun(Het,_,sg)),
+	    assert_tag(P1,P,Q1,Q,W,L,replace_dehet,noun(both,Count,sg)),
 	    debug_message(1,"ignore ~w after ~w for ~w ~w~n",[Het,De,W,His])
 	),
 	fail
-    ;   clause(tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg,SC)),true,Ref),
+    ;   tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg,SC)),
 	\+ His = english_compound(_),
 	dehet(De,Het),
 	\+ non_noun_tag(P1,P),
 	(   tag(_,P1,_,Q1,Het,_,_,_)
-	->  erase_tag(Ref),
-	    \+ tag(P1,P,Q1,Q,W,L,_,noun(Het,_,sg)),
+	->  \+ tag(P1,P,Q1,Q,W,L,_,noun(Het,_,sg)),
 	    assert_tag(P1,P,Q1,Q,W,L,replace_dehet(His),noun(both,Count,sg,SC)),
 	    debug_message(1,"ignore ~w after ~w for ~w ~w~n",[Het,De,W,His])
 	),
