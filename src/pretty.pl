@@ -555,7 +555,8 @@ add_weights([H|T0],[W1-W2-Count-Feature|T]) :-
        -> true
        ;  ParseOrGen = generate
        -> alpino_fluency_weights:feature_weight(Feature,W1)
-       ;  alpino_disambiguation_weights:feature_weight(Feature,W1)
+       ;  alpino_penalties:get_feature_weight(Feature,W1),
+	  W1 =\= 0.0
        )
     -> true
     ;  W1 = 0
