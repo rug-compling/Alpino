@@ -477,6 +477,12 @@ penalty_weights([P|Ps],S0,S) :-
     S1 is S0 + Weight,
     penalty_weights(Ps,S1,S).
 
+get_feature_weight(h1(replace_dehet),W) :-
+    !,
+    W = 1.0.
+get_feature_weight(p1(very_strict_par),W) :-
+    !,
+    W = -0.2.
 get_feature_weight(weight(Weight),W) :-
     !,
     Weight=W.
@@ -490,6 +496,7 @@ get_feature_weight(Feature,Weight) :-
 %    try_additional_weight(Feature,S2),
     Weight is S1.  %+S2.
 
+    
 try_penalty_weight(P,S1) :-
     (   alpino_disambiguation_weights:feature_weight(P,S)
     ->  S=S1
@@ -946,7 +953,12 @@ determine_parallel(List,pardepth):-
     % generate as many penalties as the difference is big
 
 determine_parallel([H|T],strict_par) :-
-   strict_parallel([H|T]).
+    strict_parallel([H|T]),
+    member(_,[H|T]).  % generate more for longer conjunctions
+
+determine_parallel([H|T],very_strict_par) :-
+    very_strict_parallel([H|T]),
+    member(_,[H|T]).   % generate more for longer conjunctions
 
 parallel([H|T]) :-
     rulename(H,His),
@@ -961,6 +973,16 @@ parallel([H|T],His0) :-
 strict_parallel([H|T]) :-
     deriv(H,His),
     strict_parallel(T,His).
+
+very_strict_parallel([H|T]) :-
+    deriv_with_tags(H,His),
+    very_strict_parallel(T,His).
+
+very_strict_parallel([],_).
+very_strict_parallel([H|T],His0) :-
+    deriv_with_tags(H,His1),
+    ppp(His0,His1,His),
+    very_strict_parallel(T,His).
 
 strict_parallel([],_).
 strict_parallel([H|T],His0) :-
@@ -982,6 +1004,19 @@ deriv_ds([],[]).
 deriv_ds([H|T],[NH|NT]) :-
     deriv(H,NH),
     deriv_ds(T,NT).
+
+deriv_with_tags(tree(_,Name,Ds,_),Deriv) :-
+    deriv_with_tags_ds(Ds,Name,Deriv).
+
+deriv_with_tags_ds(lex(ref(Tag,_,_,_,_,_,_,_,_,_,_)),_,l(Tag)).
+deriv_with_tags_ds([],Name,d(Name,[])).
+deriv_with_tags_ds([H|T],Name,d(Name,DsDeriv)) :-
+    deriv_with_tags_ds([H|T],DsDeriv).
+
+deriv_with_tags_ds([],[]).
+deriv_with_tags_ds([H|T],[NH|NT]) :-
+    deriv_with_tags(H,NH),
+    deriv_with_tags_ds(T,NT).
 
 %% lexical_penalty_frame(gen,Stem,Word,_,_,_,lexical_choice(Stem,Word)).
 
