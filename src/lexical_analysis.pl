@@ -2935,7 +2935,7 @@ guess_english_compounds :-
     ;   true
     ).
 
-guess_english_compound(tag(P0,P,R0,R,Label,Used,normal(english_compound),Tag2)) :-
+guess_english_compound(tag(P0,P,R0,R,Label,Used,normal(english_compound),Tag3)) :-
     (   noun_tag(Tag1),
 	search_tag_tag(Tag1,tag(P0,P1,R0,R1,Label1,Used1,His1,Tag1)),
 	His1 \= add_space,
@@ -2944,7 +2944,7 @@ guess_english_compound(tag(P0,P,R0,R,Label,Used,normal(english_compound),Tag2)) 
 	search_tag_stem(Label1,tag(P0,P1,R0,R1,Label1,Used1,_His1,_Tag1))
     ),
     search_tag_r0(R1,tag(P1,P, R1,R, Label2,Used2,His2,Tag2)),
-    second_part_english_compound(tag(P1,P, R1,R, Label2,Used2,His2,Tag2)),
+    second_part_english_compound(tag(P1,P, R1,R, Label2,Used2,His2,Tag2),Tag3),
     (   Label1 = v_root(Label1A,_)
     ->  true
     ;   Label1 = Label1A
@@ -2956,17 +2956,22 @@ guess_english_compound(tag(P0,P,R0,R,Label,Used,normal(english_compound),Tag2)) 
 	   Z0 =< P0,
 	   P =< Z
        ),
-    debug_message(1,"english compound|~w|~w|~w~n",[Used1,Used2,Tag2]).
+    debug_message(1,"english compound|~w|~w|~w~n",[Used1,Used2,Tag3]).
 
 first_part_english_compound(R0,R1) :-
     \+ alternative_to_compound(R0,R1,l),
     \+ first_alternative_to_compound(R0,R1).
 
-second_part_english_compound(tag(_,_,R1,R,_,_,_,Tag2)) :-
+second_part_english_compound(tag(_,_,R1,R,_,_,_,Tag2),Tag2) :-
     noun_tag(Tag2),
     \+ alternative_to_compound(R1,R,r).
-second_part_english_compound(tag(_,_,_,_,L,_,_,Tag)):-
-    second_part_lemma(L,Tag).
+second_part_english_compound(tag(_,_,_,_,L,_,_,Tag1),Tag):-
+    second_part_lemma(L,Tag1,Tag).
+
+second_part_lemma(D,proper_name(both),noun(both,both,both)) :-
+    atom_concat('d\'',_,D).
+second_part_lemma(D,Tag,Tag):-
+    second_part_lemma(D,Tag).
 
 second_part_lemma(man,noun(_,_,_)).
 second_part_lemma(elite,noun(_,_,_)).
