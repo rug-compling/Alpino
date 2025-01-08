@@ -4338,6 +4338,8 @@ xl(Word,proper_name(sg),Word,Ws,Ws) :-
     qtleap_hide_it_prefix(Prefix),
     atom_concat(Prefix,_,Word).
 
+qtleap_hide_it_prefix('_MATH_').   % for recent Wikipedia dump
+
 qtleap_hide_it_prefix('XXXCMDXXX').
 qtleap_hide_it_prefix('xxxURLxxx').
 qtleap_hide_it_prefix('xxxMAILxxx').
