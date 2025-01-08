@@ -4904,7 +4904,8 @@ m(zelf,             postnp_adverb,zelf).
 m(zelve,            postnp_adverb,zelve).
 m(haarzelf,         postnp_adverb,haarzelve).
 m(hemzelf,          postnp_adverb,hemzelve).
-m(opnieuw,          postnp_adverb,opnieuw).  % elke dag opnieuw
+m(opnieuw,          postnp_adverb,opnieuw). % elke dag opnieuw
+m(sec,              postnp_adverb,sec).
 m('tot en met',     postnp_adverb,[tot,en,met]).
 m(weer,             postnp_adverb,weer).     % elke dag weer
 

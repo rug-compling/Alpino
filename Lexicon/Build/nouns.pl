@@ -14077,7 +14077,19 @@ n([sg(gps)],de,[]).
 %% hij behaalde zijn graad/*graden medicijnen
 n([meas(graad),
    meas(graden),
-   pl(graden)],de,[meas_mod,measure],[dim(graadje)]).
+   pl(graden)],
+  de,
+  [meas_mod,
+   measure],
+  [dim(graadje)]).
+
+n([meas([graad,'Celsius']),
+   meas([graden,'Celsius']),
+   pl([graden,'Celsius'])
+  ],de,
+  [meas_mod,
+   measure],
+  [dim(graadje)]).
 
 n([sg(graad),pl(graden),
    ignore_stem(graad)],de,[],
@@ -43278,27 +43290,54 @@ measure_noun('USD').
 
 measure_noun('°').
 measure_noun('°C').
+measure_noun('°F').
+measure_noun(['°','Celsius']).
 measure_noun(['°','C']).
 measure_noun(['°','C.']).
 measure_noun(['°','C','.']).
+measure_noun(['°','F']).
+measure_noun(['°','Fahrenheit']).
+measure_noun(['°','F.']).
+measure_noun(['°','F','.']).
 measure_noun(['°','NB']).
 measure_noun(['°','OL']).
 measure_noun(['°','WL']).
 measure_noun(['°','ZB']).
+
 measure_noun([o,'C']).
 measure_noun([o,'C.']).
+
+%% these are different characters (?):
+
 measure_noun('˚').
 measure_noun('˚C').
+measure_noun('˚F').
+measure_noun(['˚','Celsius']).
 measure_noun(['˚','C']).
 measure_noun(['˚','C.']).
+measure_noun(['˚','C','.']).
+measure_noun(['˚','Fahrenheit']).
+measure_noun(['˚','F']).
+measure_noun(['˚','F.']).
+measure_noun(['˚','F','.']).
 measure_noun(['˚','NB']).
 measure_noun(['˚','OL']).
 measure_noun(['˚','WL']).
 measure_noun(['˚','ZB']).
+
+%% these are different characters (?):
+
 measure_noun('&#730;').
 measure_noun('&#730;C').
+measure_noun('&#730;F').
+measure_noun(['&#730;','Celsius']).
 measure_noun(['&#730;','C']).
 measure_noun(['&#730;','C.']).
+measure_noun(['&#730;','C','.']).
+measure_noun(['&#730;','Fahrenheit']).
+measure_noun(['&#730;','F']).
+measure_noun(['&#730;','F.']).
+measure_noun(['&#730;','F','.']).
 measure_noun(['&#730;','NB']).
 measure_noun(['&#730;','OL']).
 measure_noun(['&#730;','WL']).

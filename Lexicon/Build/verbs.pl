@@ -16692,7 +16692,9 @@ v(overwin,overwint,overwinnen,overwonnen,overwon,overwonnen,
 	transitive])]).
 
 v(overwinter,overwintert,overwinteren,overwinterd,overwinterde,overwinterden,
-    [h([intransitive])]).
+  [h([intransitive,
+      transitive  % deze plant moet overwinterd worden bij temperaturen van ...
+     ])]).
 
 v(overwoeker,overwoekert,overwoekeren,overwoekerd,overwoekerde,overwoekerden,
     [h([transitive,

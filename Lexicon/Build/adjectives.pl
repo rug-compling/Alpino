@@ -12507,6 +12507,8 @@ a([ge_e(gekeelde),
 a([ge_e(gekeerde),
    ge_no_e(gekeerd)],adv,[],[]).
 
+a([ge_both(gekeken)],adv,[],[]).
+
 a([ge_e(gekelderde),
    ge_no_e(gekelderd)],nonadv,[],[]).
 
@@ -28924,6 +28926,9 @@ a([e(pedante),
 a([e(pedofiele),
    no_e(pedofiel)],nonadv,[],[]).
 
+a([both([peer,reviewed]),
+   both('peer-reviewed')],nonadv,[],[]).		% een peer reviewed tijdschrift
+
 a([e(peilloze),
    no_e(peilloos)],adv,[],[]).
 
@@ -41992,6 +41997,7 @@ stem(gekastreerd,v_root(kastreer,kastreren)).
 stem(gekauwd,v_root(kauw,kauwen)).
 stem(gekeeld,v_root(keel,kelen)).
 stem(gekeerd,v_root(keer,keren)).
+stem(gekeken,v_root(kijk,kijken)).   % over tien jaar gekeken, is de ...
 stem(gekelderd,v_root(kelder,kelderen)).
 stem(gekend,v_root(ken,kennen)).
 stem(gekenmerkt,v_root(kenmerk,kenmerken)).

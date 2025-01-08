@@ -1001,6 +1001,7 @@ plural_suffix(molukken).
 plural_suffix(monkees).
 plural_suffix(motions).
 plural_suffix(movies).
+plural_suffix(mountains).
 plural_suffix(murphys).
 plural_suffix(nationals).
 plural_suffix(navigators).
