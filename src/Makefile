@@ -109,12 +109,9 @@ ifneq "$(wildcard Alpino)" ""
 endif
 	echo "#!/bin/sh"                          >Alpino
 	echo "ulimit -s unlimited"                >>Alpino
-	echo 'if [ -z "$$ALPINO_HOME" ]; then'    >>Alpino
-	echo '    echo "$0: Error: Please set your ALPINO_HOME environment variable" 1>&2'>>Alpino
-	echo '    exit 1'                        >>Alpino
-	echo 'fi'                                >>Alpino
-	echo 'echo using Alpino from directory $(DISK) ... >&2'>>Alpino
-	echo $(PROLOG) -x $(DISK)/Alpino.sav --\
+	echo "export ALPINO_HOME=$(ALPINO_HOME)"   >>Alpino
+	echo "echo using Alpino from directory $(DISK) ... >&2">>Alpino
+	echo `which $(PROLOG)` -x $(DISK)/Alpino.sav --\
    debug=0 $(HDRUGFLAGS) $(ALPINOFLAGS)\
   $(DEFAULT_ALPINO_OPTIONS)\
   '$$DEFAULT_ALPINO_OPTIONS'\
