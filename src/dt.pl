@@ -57,7 +57,8 @@ result_to_dt(already_canonical_dt(Tree),_,Result) :-
 result_to_dt(Result0,Flag,SortedTree) :-
     (   result_to_dt__(Result0,Flag,SortedTree)
     ->  true
-    ;   format(user_error,"ERROR: result_to_dt/3 failed!~n",[]),
+    ;   hdrug_flag(current_ref,Key),
+	format(user_error,"ERROR: result_to_dt/3 failed for ~w!~n",[Key]),
 	fail
     ).
 
