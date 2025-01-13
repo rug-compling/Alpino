@@ -2505,6 +2505,10 @@ a([ge_e(afgepeigerde),
 a([ge_e(afgeplakte),
    ge_no_e(afgeplakt)],adv,[],[]).
 
+a([stem(af_platten),
+   ge_e(afgeplatte),
+   ge_no_e(afgeplat)],adv,[],[]).
+
 a([ge_both(afgeraden)],adv,[],[]).
 
 a([ge_e(afgeranselde),
@@ -11404,6 +11408,9 @@ a([ge_e(gedetermineerde),
 a([ge_e(gedeukte),
    ge_no_e(gedeukt)],adv,[],[]).
 
+a([ge_e(gedeutereerde),
+   ge_no_e(gedeutereerd)],nonadv,[],[]).
+
 a([ge_e(gedevalueerde),
    ge_no_e(gedevalueerd)],adv,[],[]).
 
@@ -15593,6 +15600,9 @@ a([ge_e(gesublimeerde),
 
 a([ge_e(gesubsidieerde),
    ge_no_e(gesubsidieerd)],adv,[],[on]).
+
+a([ge_e(gesubstitueerde),
+   ge_no_e(gesubstitueerd)],adv,[],[]).
 
 a([ge_no_e(gesudderd),
    ge_e(gesudderde)],adv,[],[]).
@@ -36284,6 +36294,9 @@ a([ge_e(verloste),
 a([ge_e(verluchtigde),
    ge_no_e(verluchtigd)],padv,[],[]).
 
+a([ge_e(verluchte),
+   ge_no_e(verlucht)],padv,[],[]).
+
 a([ge_e(verluide),
    ge_no_e(verluid)],adv,[],[]).
 
@@ -37476,6 +37489,10 @@ a([ge_e(verzilte),
 
 a([ge_e(verzilverde),
    ge_no_e(verzilverd)],adv,[],[]).
+
+a([stem(verzinken),
+   ge_e(verzinkte),
+   ge_no_e(verzinkt)],adv,[],[]).
 
 a([ge_e(verzochte),
    ge_no_e(verzocht)],adv,[],[]).

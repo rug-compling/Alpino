@@ -2426,6 +2426,7 @@ context_spelling_variant_context(te,uit,_,doeken,_,de).
 
 context_spelling_variant_context(zij,hij,_,zij,_,zei).
 
+context_spelling_variant(eindigden,te,_,eindigen).
 context_spelling_variant(de,zijt,_,je_POSTV).
 
 %% hij verrichte hij --> hij verrichtte

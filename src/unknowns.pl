@@ -1562,6 +1562,7 @@ foreign_word('c\'est').
 foreign_word(cette).
 foreign_word(challenge).
 foreign_word(change).
+foreign_word(chanson).
 foreign_word(chant).
 foreign_word(check).
 foreign_word('check-in').

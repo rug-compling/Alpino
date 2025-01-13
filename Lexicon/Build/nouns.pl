@@ -858,7 +858,10 @@ n([sg('Limburger'),pl('Limburgers')],de,[],
    hh('Oost'),
    hh('West')]).
 
-n([mass('Limburgs')],het,[]).
+n([mass('Limburgs')],het,[],[h('West'),
+			     h('Zuid'),
+			     h('Noord'),
+			     h('Oost')]).
 
 n([sg('Litouwer'),pl('Litouwers')],de,[]).
 
@@ -1467,7 +1470,7 @@ n([mass(aanhef)],de,[]).
 
 n([pl(aanhoudingen),sg(aanhouding)],de,[]).
 
-n([pl(aanklachten),sg(aanklacht)],de,[sbar]).
+n([pl(aanklachten),sg(aanklacht)],de,[sbar,subject_sbar]).
 
 %% betaald voetbal
 n([pl(aanklagers),sg(aanklager),
@@ -1884,7 +1887,10 @@ n([mass(actief)],het,[]).
 
 n([pl(acties),pl(actiën),sg(actie),
    pl(akties),pl(aktiën),sg(aktie)],de,
-  [pred_pp(in)]).
+  [pred_pp(in),
+   subject_sbar,
+   subject_vp
+  ]).
 
 n([pl(acties),pl(actiën),sg(actie),
    pl(akties),pl(aktiën),sg(aktie)],de,
@@ -2498,6 +2504,11 @@ n([mass(alcoholisme),mass(alkoholisme)],het,[]).
 n([pl(alcoholisten),sg(alcoholist),pl(alkoholisten),sg(alkoholist)],de,[]).
 
 n([mass(alcoholvrij)],het,[]).  % ik wil een alcoholvrij
+
+n([sg(ale)],de,[],
+  [f(pale),
+   f(special)
+  ]).
 
 n([sg(alert),pl(alerts)],de,[]).
 
@@ -7931,6 +7942,8 @@ n([pl(commoties),sg(commotie)],de,[]).
 
 n([pl(communes),sg(commune)],de,[]).
 
+n([sg([commune,nouvelle]),pl([communes,nouvelles])],de,[]).
+
 n([pl(communicaties),sg(communicatie)],de,[],
   [s(bedrijf),
    marketing]).
@@ -8711,7 +8724,10 @@ n([pl(cypressen),sg(cypres)],de,[]).
 
 n([pl('d\'s'),sg(d)],de,[],[dim('d\'tje')]).
 
-n([pl(daden),sg(daad)],de,[],[terreur]).
+n([pl(daden),sg(daad)],de,
+  [subject_sbar,
+   subject_vp],
+  [terreur]).
 
 n([sg(daadkracht)],de,[]).
 
@@ -19956,6 +19972,7 @@ n([pl(landen),sg(land)],het,[],
    s(ontwikkeling),
    remigratie,h(remigratie),
    h('Schengen'),'Schengen',
+   thuis,
    tussen,
    wintersport,
    dim(landje)]).
@@ -20197,7 +20214,9 @@ n([mass(leg)],de,[pred_pp(aan),pred_pp(van)]).
 
 n([sg(leg),pl(legs)],de,[]).  % dart
 
-n([pl(legaten),sg(legaat)],het,[]).
+%% notarieel: het
+%% pauselijk vertegenwoordiger: de
+n([pl(legaten),sg(legaat)],both,[]).
 
 n([pl(legaliseringen),sg(legalisering)],de,[]).
 
@@ -21359,7 +21378,7 @@ n([stem(lp),
    pl('lp\'s'),
    sg('LP'),
    pl('LP\'s')
-  ],de,[]).
+  ],de,[],['12"']).  % "
 
 n([mass(lts)],both,[]).
 
@@ -23751,7 +23770,8 @@ n([pl(nakomelingen),sg(nakomeling)],de,[],
 
 n([pl(nakomelinges),sg(nakomelinge)],de,[],[]).
 
-n([pl(nalatenschappen),sg(nalatenschap)],both,[]).
+n([pl(nalatenschappen),sg(nalatenschap)],both,
+  [subject_sbar]).
 
 n([pl(nalatigheden),sg(nalatigheid)],de,[]).
 
@@ -25321,6 +25341,8 @@ n([mass(onveiligheid)],de,[]).
 n([mass(onveranderlijkheid)],de,[]).
 
 n([mass(onverdraagzaamheid)],de,[]).
+
+n([sg(onverhard)],het,[]). % VLaams? "Op het onverhard nam hij een grote voorsprong" "van het asfalt naar het onverhard"
 
 n([pl(onvermijdelijkheden),sg(onvermijdelijkheid)],de,[sbar,vp]).
 
@@ -32456,7 +32478,10 @@ n([sg(sinecure)],de,[vp]).
 
 n([pl(singels),sg(singel)],de,[],[dim(singeltje)]).
 
-n([pl(singles),sg(single)],de,[],[dim(singletje)]).
+n([pl(singles),sg(single)],de,[],
+  ['7"',             % "
+   dim(singletje)
+  ]).
 
 n([sg([single,malt]),pl([single,malts])],de,[]).
 
@@ -36032,6 +36057,8 @@ n([pl(theedoeken),sg(theedoek)],de,[]).
 n([pl('thema\'s'),sg(thema)],het,
   [sbar,
    vp,
+   subject_sbar,
+   subject_vp,
    app_measure,
    start_app_measure],
   [hoofd,
@@ -38380,7 +38407,7 @@ n([mass(verheldering)],de,[]).
 
 n([pl(verhemelten),pl(verhemeltes),sg(verhemelte)],het,[]).
 
-n([mass(verhevene)],het,[]).
+n([mass(verhevene),pl(verhevenen)],both,[]).
 
 n([sg(verhevenheid),pl(verhevenheden)],de,[]).
 

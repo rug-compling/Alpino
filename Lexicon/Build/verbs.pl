@@ -5818,6 +5818,12 @@ v(deuk,deukt,deuken,gedeukt,deukte,deukten,
 	part_transitive(in),
 	part_transitive(uit)])]).
 
+%% iets chemisch
+v(deutereer,deutereert,deutereren,deutereerde,deutereerden,
+    [h([intransitive,
+	transitive
+       ])]).
+
 v(devalueer,devalueert,devalueren,gedevalueerd,devalueerde,devalueerden,
     [z([intransitive]),
      h([transitive])]).
@@ -6238,8 +6244,10 @@ v(dol,dolt,dollen,gedold,dolde,dolden,
 	pc_pp(met)])]).
 
 v(domineer,domineert,domineren,gedomineerd,domineerde,domineerden,
-    [h([intransitive,
-	transitive])]).
+  [h([intransitive,
+      mod_pp(in),
+      mod_pp(bij),
+      transitive])]).
 
 v(dommel,dommelt,dommelen,gedommeld,dommelde,dommelden,
     [z([intransitive,
@@ -26740,6 +26748,7 @@ v(verwijder,verwijdert,verwijderen,verwijderd,verwijderde,verwijderden,
 v(verwijs,verwijst,verwijzen,verwezen,verwees,verwezen,
     [h([transitive,
 	pc_pp(naar),
+	er_pp_sbar(naar),
 	np_pc_pp(naar),
 	part_transitive(door),
 	part_pc_pp(door,naar),

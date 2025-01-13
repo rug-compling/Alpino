@@ -299,6 +299,11 @@ phrasal_entry(tmp_np,temporal_expression) -->
     temporal_expression,
     opt_temporal_expression_suffix.
 
+phrasal_entry(tmp_np,temporal_expression) -->
+    { hdrug_util:debug_message(4,"temporal_expression~n",[]) },
+    four_digits,
+    temporal_expression_suffix.
+
 phrasal_entry(tmp_np,date_expression) -->
     { hdrug_util:debug_message(4,"date_expression~n",[]) },
     date_expression.
@@ -2099,11 +2104,16 @@ date_year -->
 
 %% too many false hits; only if part of larger
 %% date expression
+%% 15 juni 72
+%% acht mei eenenzestig
+%% op 25 juni 841 versloegen Karel en Lodewijk hun tegenstanders bij Fontenoy
 date_year_part -->
     n_word(Negenennegentig),
-    { simple_convert_number(Negenennegentig,N),
+    { (   simple_convert_number(Negenennegentig,N)
+      ;   parse_number_simple(Negenennegentig,N)
+      ),
       N > 20,  % arbitrary?
-      N < 100
+      N < 1000
     }.
 
 date_double_year -->
@@ -2166,14 +2176,27 @@ tmp_uur_uur(ure).
 
 opt_temporal_expression_suffix --> [].
 opt_temporal_expression_suffix -->
+    temporal_expression_suffix.
+
+temporal_expression_suffix -->
     n_word('GMT').
-opt_temporal_expression_suffix -->
+temporal_expression_suffix -->
     n_word('CEST').
-opt_temporal_expression_suffix -->
+temporal_expression_suffix -->
     n_word('CET').
-opt_temporal_expression_suffix -->
+temporal_expression_suffix -->
     n_word('UTC').
 %% there are many more, of course...
+
+four_digits -->
+    n_word(Atom),
+    {  atom(Atom),
+       (   atom_codes(Atom,[A,B,C,D]),
+	   digits([A,B,C,D])
+       ;   atom_codes(Atom,[A,B,104,C,D]),
+	   digits([A,B,C,D])
+       )
+    }.
 
 temporal_expression -->
     tmp_uur_num,
@@ -3853,6 +3876,10 @@ enumeration_core -->
 %% these don't need additional punctuation
 %% in order to be analyzed as enumeration
 
+%% ^6
+stand_alone_enumeration([94|Digits]):-
+    digits(Digits).
+
 %% (XXX)
 stand_alone_enumeration([40|String]) :-
     lists:append(String1,[41],String),
@@ -3960,13 +3987,13 @@ roman_number("XVIII").
 roman_number("XIX").
 roman_number("XX").
 
-digit_dot_digit([H|T]) :-
-    isdigit(H),
-    digit_dot_digit0(T).
-
 digit_dot_digit0([46|T]) :-
     digits(T).
 digit_dot_digit0([H|T]) :-
+    isdigit(H),
+    digit_dot_digit0(T).
+
+digit_dot_digit([H|T]) :-
     isdigit(H),
     digit_dot_digit0(T).
 
