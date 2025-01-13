@@ -845,16 +845,18 @@ dehet(het,de).
 replace_dehet_tags :-
     (   tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg)),
 	\+ His = english_compound(_),
+	\+ His = skip(_,_,_,_),
 	dehet(De,Het),
 	\+ non_noun_tag(P1,P),
 	(   tag(_,P1,_,Q1,Het,_,_,_)
-	->  \+ tag(P1,P,Q1,Q,W,L,_,noun(Het,_,sg)),
+	->  \+ tag(P1,P,Q1,Q,W,L,His,noun(Het,_,sg)),
 	    assert_tag(P1,P,Q1,Q,W,L,replace_dehet,noun(both,Count,sg)),
 	    debug_message(1,"ignore ~w after ~w for ~w ~w~n",[Het,De,W,His])
 	),
 	fail
     ;   tag(P1,P,Q1,Q,W,L,His,noun(De,Count,sg,SC)),
 	\+ His = english_compound(_),
+	\+ His = skip(_,_,_,_),
 	dehet(De,Het),
 	\+ non_noun_tag(P1,P),
 	(   tag(_,P1,_,Q1,Het,_,_,_)
@@ -1164,8 +1166,8 @@ requires_unique_match(name(_),_,name_gen(_),_,10,4).
 requires_unique_match(name_gen(_),_,name_gen(_),_,6,3).
 
 enforce_longest_match(Words,0,P) :-
-    retractall(connected(_,_)),
-    all_connected,
+%    retractall(connected(_,_)),
+%    all_connected,   % terribly slow for very long sentences
     count_edges(tag(_,_,_,_,_,_,_,_),Edges0),
     (   requires_longest_match(His),
 	enforce_longest_match(His,Words,0,P),
@@ -1314,14 +1316,14 @@ isa_normal_tag(name(not_begin),name_adj(not_begin)).
 %%% longer tags that are not connected. Example:
 %%% Zijne Koninklijke Hoogheid Prins Aymeric ; Prins van België
 
-enforce_longest_match(H,Words,0,Final) :-
+enforce_longest_match(H,Words,0,_Final) :-
     retractall(normal_tag(_,_)),
     \+ \+ tag(_,_,_,_,_,_,H,_),
     normal_base_cases(H),
-    (	tag(Sf0,Sf,R0,R,_Surf0,_,H,Tag1),
+    (	tag(_,_,R0,R,_Surf0,_,H,Tag1),
 	R-R0 > 1,
-	is_connected(0,Sf0),
-	is_connected(Sf,Final),
+	% is_connected(0,Sf0),
+	% is_connected(Sf,Final),
 	longest_match_candidate(H,R0,R,Words,Type),
 
 	clause(tag(_,_,S0,S,_,Surf,H1,Tag2),true,Ref2),
