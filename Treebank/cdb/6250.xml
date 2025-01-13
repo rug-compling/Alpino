@@ -9,7 +9,7 @@
     <node begin="1" cat="du" end="24" id="6" rel="--">
       <node begin="6" cat="sv1" end="10" id="7" rel="tag">
         <node begin="6" end="7" id="8" lemma="uit_leggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="legde" word="legde" wvorm="pv"/>
-        <node begin="7" buiging="zonder" end="8" id="9" lemma="dame_licht_groen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="su" root="groen" word="damelichtgroen" wvorm="inf"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="9" lemma="dame_licht_groen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="groen" word="damelichtgroen"/>
         <node begin="8" buiging="zonder" end="9" graad="basis" id="10" lemma="omstandig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="omstandig" word="omstandig"/>
         <node begin="9" end="10" id="11" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
       </node>

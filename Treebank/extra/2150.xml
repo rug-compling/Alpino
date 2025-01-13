@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="predc">
+        <node begin="0" case="both" def="indef" end="1" gen="de" getal-n="zonder-n" graad="basis" id="3" lemma="één" num="sg" numtype="hoofd" per="thi" pos="pron" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" rnum="sg" root="één" special="strpro" wh="nwh" word="Een"/>
+        <node begin="1" cat="pp" end="5" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="2" cat="np" end="5" id="6" rel="obj1">
+            <node begin="2" buiging="zonder" end="3" getal="ev" id="7" infl="pron" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="haar" status="vol" vwtype="bez" word="haar"/>
+            <node aform="base" begin="3" buiging="met-e" end="4" graad="basis" id="8" infl="e" lemma="opmerkelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="opmerkelijk" vform="adj" word="opmerkelijke"/>
+            <node begin="4" end="5" gen="het" getal="mv" graad="dim" id="9" lemma="trek" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" rnum="pl" root="trek_DIM" word="trekjes"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula_sbar" stype="declarative" tense="past" v_per="thi" word="was" wvorm="pv"/>
+      <node begin="6" end="7" id="11" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="ook"/>
+      <node begin="7" cat="cp" end="14" id="12" rel="su">
+        <node begin="7" conjtype="onder" end="8" id="13" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="8" cat="ssub" end="14" id="14" rel="body">
+          <node begin="8" case="both" def="def" end="9" gen="de" genus="fem" getal="ev" id="15" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" rnum="sg" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+          <node begin="10" end="11" id="16" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula" tense="past" v_per="thi" word="was" wvorm="pv"/>
+          <node begin="9" cat="ap" end="14" id="17" rel="predc">
+            <node aform="base" begin="9" buiging="zonder" end="10" graad="basis" id="18" infl="no_e" lemma="verslingerd" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="verslingerd" sc="pp(aan)" vform="adj" word="verslingerd"/>
+            <node begin="11" cat="pp" end="14" id="19" rel="pc">
+              <node begin="11" end="12" id="20" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+              <node begin="12" cat="np" end="14" id="21" rel="obj1">
+                <node begin="12" end="13" id="22" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="13" end="14" gen="de" genus="zijd" getal="ev" graad="basis" id="23" lemma="jacht" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="jacht" word="jacht"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Een van haar opmerkelijke trekjes was ook dat ze verslingerd was aan de jacht .</sentence>
+</alpino_ds>
