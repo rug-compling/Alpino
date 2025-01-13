@@ -4752,6 +4752,51 @@ grammar_rule(np_pron, NP,  [ PRON ] ) :-
                       %  otherwise many false parses using this possibility
     add_rel(NP0,NP).
 
+%%EX%% Een van de zaken die opvielen was dat hij sliep
+grammar_rule(np_pron_een_sbar, NP,  [ PRON ] ) :-
+    NP => np,
+    NP:hstem ==> één,
+    NP:wkpro => strongpro,
+    np_pron_structure(PRON,NP0),
+                      % new: extraposition now only for sub-class of pronouns
+                      %  otherwise many false parses using this possibility
+    add_rel(NP0,NP1),
+    unify_except(NP1,NP,e_deps),
+    Sbar => sbar,
+    Sbar:ctype => (c_of;c_of_short;c_redrel;c_dat;c_dip),  % hij komt wel , was de gedachte
+    NP:e_deps <=> [Sbar],
+    Sbar:slash => [],
+    Sbar:e_deps => [],
+    unify_mods(Sbar).
+
+%%EX%% Een van zijn taken was de eenheid te herstellen
+grammar_rule(np_pron_een_vp, NP,  [ PRON ] ) :-
+    NP => np,
+    NP:hstem ==> één,
+    NP:wkpro => strongpro,
+    np_pron_structure(PRON,NP0),
+                      % new: extraposition now only for sub-class of pronouns
+                      %  otherwise many false parses using this possibility
+    add_rel(NP0,NP1),
+    unify_except(NP1,NP,e_deps),
+    NP:e_deps <=> [VP],
+    VP => vp,
+    VP:slash => [],
+    VP:e_deps => [],
+    VP:ctype => ~c_mod,
+    VP:vform => (om;te),
+    VP:control => control_none,
+    VP:cleft => no,
+    VP:subj => np,
+    VP:subj:hstem => [],
+    VP:subj:nform => norm,
+    VP:subj:agr => sg,
+    VP:subj:prs => (thi;ninvje;u),
+    VP:subj:subn => sub_noun,
+    unify_mods(VP).
+
+
+
 %%EX%% Hij is gek
 grammar_rule(np_pron_weak, NP,  [ PRON ] ) :-
     np_pron_structure(PRON,NP),
@@ -7060,6 +7105,27 @@ abs_p_mod_structure(Met,NP,MOD,PP) :-
     hd_comp_structure(Met,NP,PP0),
     hd_mod_structure(PP0,MOD,PP).
 
+abs_p_mod_mod_structure(Met,NP,MOD,PREDM,PP) :-
+    nwh_np_arg(NP),
+    NP:sel => ~to_topic,
+    NP:wkpro => ~weakpro,
+    NP:redrel => no,
+    Met => abs_p,
+    PP0 => pp,
+    PP1 => pp,
+    PP => pp,
+    PP:preptype => no_ld_prep,
+    PP:preptype => no_r_prep,
+    PP:e_deps => [],
+    PP:wh => nwh,
+    PP:nnform => ~refl,
+    PP:prep ==> absolute,
+    PP:veps:in <=> PP:veps:out,
+    PP:pp_er => no,
+    hd_comp_structure(Met,NP,PP0),
+    hd_mod_structure(PP0,MOD,PP1),
+    hd_mod_structure(PP1,PREDM,PP).
+
 %% met andermaal/opnieuw/altijd NP
 %% met behalve NP NP
 %%EX%% met zoals gezegd vele deelnemers
@@ -7070,6 +7136,22 @@ grammar_rule(abs_p_mod_np,PP,[Met,MOD,OPTDUBB,NP]) :-
     max_modifier(MOD),
     MOD:mcat => (mcat_pp;mcat_adv;mcat_sbar),
     abs_p_mod_structure(Met,NP,MOD,PP).
+
+%%EX%% met op zijn hoofd natuurlijk een feestmuts
+%%EX%% met op hun hoofd ieder een feestmuts
+grammar_rule(abs_p_mod_predm_np,PP,[Met,MOD,PREDM,OPTDUBB,NP]) :-
+    optdubb(OPTDUBB),
+    max_modifier(MOD),
+    max_predm(PREDM),
+    MOD:mcat => (mcat_pp;mcat_adv;mcat_sbar),
+    abs_p_mod_mod_structure(Met,NP,MOD,PREDM,PP).
+
+grammar_rule(abs_p_mod_mod_np,PP,[Met,MOD,MOD2,OPTDUBB,NP]) :-
+    optdubb(OPTDUBB),
+    max_modifier(MOD),
+    max_modifier(MOD2),
+    MOD:mcat => (mcat_pp;mcat_adv;mcat_sbar),
+    abs_p_mod_mod_structure(Met,NP,MOD,MOD2,PP).
 
 %%EX%% Met de kinderen thuis
 grammar_rule(abs_p_np_mod,PP,[Met,NP,MOD]) :-
@@ -10446,6 +10528,9 @@ rel_arg_structure(Pro,VP,Rel) :-
     VP:haswh => nwh,
     VP:ccat0 <=> VP:ccat,
     unify_except(Rel0,Rel,hstem).
+
+%%% todo: rel_arg met : ipv VP
+%%% nlwiki  "In 2002 bedroeg de totale oppervlakte van gemeente Laszki 137,85 km² , waarvan :"
 
 %%EX%% De buurman die ik bedankte
 grammar_rule(rel_arg(np), Rel, [Pro, VP]) :-
