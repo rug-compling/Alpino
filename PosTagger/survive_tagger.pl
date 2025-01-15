@@ -29,12 +29,6 @@ survives(tag(_,_,_,_,W,_,_,T)) :-
 survives(tag(_,_,_,_,_,W,_,T)) :-
     surviving_word_tag(W,T).
 
-%% a year can always be a "normal" number
-%% motivated by examples such as
-%% "De Wereldkampioenschappen kunstschaatsen 1964 werden gevormd door ..."
-survives(tag(P0,P,R0,R,Root,Word,normal(number_expression),number(hoofd(pl_num)))) :-
-    alpino_lexical_analysis:tag(P0,P,R0,R,Root,Word,normal(date_year),np(year)).
-
 survives(tag(_,_,_,R1,Root1,Word1,_,Tag1)) :-
     survives_trigram(Root1,Word1,Tag1,Root2,Word2,Tag2,Root3,Word3,Tag3),
     alpino_lexical_analysis:tag(_,_,R1,R2,Root2,Word2,_,Tag2),
