@@ -4286,6 +4286,28 @@ phrasal_entry(proper_name(both,'ORG'),vvv(H0,H1),Ws0,Ws) :-
     in_names_dictionary(proper_name(both,'LOC'),Urk,_,Ws3,Ws,H1),
     \+ in_names_dictionary(_,VVV,_,Ws1,Ws,_).
 
+%% "Rothe kwam bij de club uit de wijk St. Pauli in de onder 15 terecht"
+phrasal_entry(noun(de,count,sg),jeugdteam) -->
+    n_word(onder),
+    jeugdleeftijd.
+
+jeugdleeftijd -->
+    n_word(Zeventien),
+    {   jeugdleeftijd(Zeventien)   }.
+
+jeugdleeftijd('12').
+jeugdleeftijd('13').
+jeugdleeftijd('14').
+jeugdleeftijd('15').
+jeugdleeftijd('16').
+jeugdleeftijd('17').
+jeugdleeftijd('18').
+jeugdleeftijd('19').
+jeugdleeftijd('20').
+jeugdleeftijd('21').
+jeugdleeftijd('22').
+jeugdleeftijd('23').
+
 phrasal_entry(np,toonsoort) -->
     { hdrug_util:debug_message(4,"toonsoort~n",[]) },
     toon,

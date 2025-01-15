@@ -5819,7 +5819,7 @@ v(deuk,deukt,deuken,gedeukt,deukte,deukten,
 	part_transitive(uit)])]).
 
 %% iets chemisch
-v(deutereer,deutereert,deutereren,deutereerde,deutereerden,
+v(deutereer,deutereert,deutereren,gedeutereerd,deutereerde,deutereerden,
     [h([intransitive,
 	transitive
        ])]).

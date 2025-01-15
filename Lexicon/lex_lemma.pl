@@ -2899,6 +2899,7 @@ lemma_root(detineren,detineer) .
 lemma_root(detoneren,detoneer) .
 lemma_root(deugen,deug) .
 lemma_root(deuken,deuk) .
+lemma_root(deutereren,deutereer) .
 lemma_root(devalueren,devalueer) .
 lemma_root(diagnosticeren,diagnosticeer) .
 lemma_root(diagnostiseren,diagnostiseer) .
@@ -3415,6 +3416,7 @@ lemma_root(door_detineren,detineer_door) .
 lemma_root(door_detoneren,detoneer_door) .
 lemma_root(door_deugen,deug_door) .
 lemma_root(door_deuken,deuk_door) .
+lemma_root(door_deutereren,deutereer_door) .
 lemma_root(door_devalueren,devalueer_door) .
 lemma_root(door_diagnostiseren,diagnostiseer_door) .
 lemma_root(door_dichten,dicht_door) .
@@ -11125,6 +11127,7 @@ lemma_root(raak_detineren,detineer_raak) .
 lemma_root(raak_detoneren,detoneer_raak) .
 lemma_root(raak_deugen,deug_raak) .
 lemma_root(raak_deuken,deuk_raak) .
+lemma_root(raak_deutereren,deutereer_raak) .
 lemma_root(raak_devalueren,devalueer_raak) .
 lemma_root(raak_diagnostiseren,diagnostiseer_raak) .
 lemma_root(raak_dichten,dicht_raak) .
@@ -16372,6 +16375,7 @@ lemma_root(uit_detineren,detineer_uit) .
 lemma_root(uit_detoneren,detoneer_uit) .
 lemma_root(uit_deugen,deug_uit) .
 lemma_root(uit_deuken,deuk_uit) .
+lemma_root(uit_deutereren,deutereer_uit) .
 lemma_root(uit_diagnostiseren,diagnostiseer_uit) .
 lemma_root(uit_dichten,dicht_uit) .
 lemma_root(uit_dicteren,dicteer_uit) .
@@ -21242,6 +21246,7 @@ lemma_root(voort_detineren,detineer_voort) .
 lemma_root(voort_detoneren,detoneer_voort) .
 lemma_root(voort_deugen,deug_voort) .
 lemma_root(voort_deuken,deuk_voort) .
+lemma_root(voort_deutereren,deutereer_voort) .
 lemma_root(voort_devalueren,devalueer_voort) .
 lemma_root(voort_diagnostiseren,diagnostiseer_voort) .
 lemma_root(voort_dichten,dicht_voort) .

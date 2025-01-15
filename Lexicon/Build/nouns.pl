@@ -455,7 +455,11 @@ n([pl('Brabanders'),sg('Brabander')],de,[],
    hh('Oost'),
    hh('West')]).
 
-n([mass('Brabants')],het,[]).
+n([mass('Brabants')],het,[],
+  [hh('Zuid'),
+   hh('Noord'),
+   hh('Oost'),
+   hh('West')]).
 
 n([pl('Brazilianen'),sg('Braziliaan')],de,[]).
 
@@ -41121,6 +41125,9 @@ n([mass(wedijver)],de,[]).
 n([pl(wedlopen),sg(wedloop)],de,[],
   [wapen]).
 
+n([sg([heen,'-en',terugwedstrijd]),
+   pl([heen,'-en',terugwedstrijden])],de,[]).
+
 n([sg(wedstrijd),pl(wedstrijden)],de,
   [temp_mod,
    measure, % twee wedstrijden schorsing
@@ -41323,6 +41330,9 @@ n([sg(weggebruiker),pl(weggebruikers)],de,[]).
 n([mass(weging)],de,[]).
 
 n([mass(wegligging)],de,[]).
+
+%% Later maakte hij de overstap naar het wegrace
+n([sg(wegrace)],het,[]).
 
 n([sg(wegval)],de,[]). % VL
 
