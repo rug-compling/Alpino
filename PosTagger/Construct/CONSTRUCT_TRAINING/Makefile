@@ -136,3 +136,6 @@ wpspel:
         extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/wpspel end_hook=best_score\(frames\)"
 
 
+na:
+	$(MAKE) mores PATTERN=na
+
