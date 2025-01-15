@@ -7,6 +7,7 @@ Alpino user_max=300000 \
        generate_robustness=off\
        paraphrase_nderiv=unknowns\
        demo=on -notk\
+       -l src/simplify\
        copy_input_if_no_parse=msg\(noparse\)\
        copy_input_if_paraphrase_failed=msg\(noparaphrase\)\
        copy_input_if_no_transformation=off  $*
