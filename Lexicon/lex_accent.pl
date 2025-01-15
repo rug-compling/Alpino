@@ -259,6 +259,7 @@ accent(coordineert,coördineert).
 accent(coordineren,coördineren).
 accent(copieen,copieën).
 accent(copieren,copiëren).
+accent(coronapandemieen,coronapandemieën).
 accent(corticosteroide,corticosteroïde).
 accent(corticosteroiden,corticosteroïden).
 accent(coryfeeen,coryfeeën).
@@ -1043,6 +1044,7 @@ accent(overheidsfinancien,overheidsfinanciën).
 accent(overlegeconomieen,overlegeconomieën).
 accent(pacificatien,pacificatiën).
 accent(pacifikatien,pacifikatiën).
+accent(pandemieen,pandemieën).
 accent(paranoide,paranoïde).
 accent(parlementarier,parlementariër).
 accent(parlementariers,parlementariërs).
