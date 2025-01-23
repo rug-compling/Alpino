@@ -2566,6 +2566,7 @@ function('Grootaandeelhouder').
 function('Hoofdcommissaris').
 function('Hoofdredacteur').
 function('Hoofdredactrice').
+function('Hoogheid').
 function('Hoogleraar').
 function('Initiatiefnemer').
 function('Inspecteur').

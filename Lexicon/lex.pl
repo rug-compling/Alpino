@@ -2038,6 +2038,7 @@ spelling_variant21(non,actief,    'non-actief').
 spelling_variant21(plus,minus,    plusminus).
 spelling_variant21(score,verloop, scoreverloop).
 spelling_variant21(sinds,dien,    sindsdien).
+spelling_variant21(te,gelijk,     tegelijk).
 spelling_variant21(te,kort,       tekort).
 spelling_variant21(te,weeg,       teweeg).
 spelling_variant21(tegen,op,      tegenop).
@@ -2812,11 +2813,11 @@ spelling_variant('`tzelfde',hetzelfde).
 spelling_variant('`tgeen',hetgeen).
 spelling_variant(veels,veel).
 spelling_variant(verders,verder).
-spelling_varaint(verlieze,verliezen).
+spelling_variant(verlieze,verliezen).
 spelling_variant(wadde,wat).
 spelling_variant(watte,wat).
 spelling_variant(wete,weten).
-spelling_variatn(worde,worden).
+spelling_variant(worde,worden).
 spelling_variant(zekers,zeker).
 
 %% OpenSubTitles

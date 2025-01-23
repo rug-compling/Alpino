@@ -1312,10 +1312,10 @@ isa_normal_tag(H,normal(Sub)) :-
 isa_normal_tag(name(not_begin),name_adj(not_begin)).
 
 %%% connected
-%%% is added because otherwise longest_match removes tags because of
+%%% was added because otherwise longest_match removes tags because of
 %%% longer tags that are not connected. Example:
 %%% Zijne Koninklijke Hoogheid Prins Aymeric ; Prins van België
-
+%%% However, this is extremely slow for long inputs...
 enforce_longest_match(H,Words,0,_Final) :-
     retractall(normal_tag(_,_)),
     \+ \+ tag(_,_,_,_,_,_,H,_),
