@@ -400,6 +400,14 @@ normal_lex2(Tag,Label,[Word|Input0],Input,P,special(decap(His)),LC,Tags) :-
     \+ member(f(Tag,_,Input,_),Tags),
     \+ forbid_odd_normal_word(Word,Input0,Tag).
 
+%% Frank VANDENBROUCKE = Frank Vandenbroucke
+normal_lex2(Tag,Label,[Frank,VANDEN|Input],Input,_P,special(decap(His)),LC,_Tags) :-
+    alpino_unknowns:only_capitals(VANDEN,_),
+    alpino_unknowns:decap_some(VANDEN,Vanden),
+    in_lexicon(Tag,Label,[Frank,Vanden],[],His,LC),
+    \+ His = chess,
+    \+ His = variant(variant(_,_),normal).
+
 %% PARIJS/MOSKOU .....
 normal_lex2(Tag,Label,[Word|Input],Input,P,slash(location),LC,_):-
     atom(Word),
