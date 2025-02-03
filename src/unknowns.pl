@@ -59,11 +59,14 @@ special_capitalized_word(P,Word,Rest0,Rest,DecapWord,Length) :-
 
 %% if it is written in full capitals, and the word is unknown
 %% remove all but the first capital
+%% or a prefix of full capitals
+%% IB-GROEP --> IB-Groep
 %% AMSTERDAM --> Amsterdam
 %% SAO PAULO --> Sao Paulo
 %% but not VARA --> Vara (is another name)
 special_capitalized_word(P0,Word,Rest0,Rest,DecapWord,Length) :-
-    only_capitals_but_one(Word,DecapWord),
+    %%     only_capitals_but_one(Word,DecapWord),
+    decap_prefix(Word,DecapWord),
     P1 is P0 + 1,
     only_capitals_but_one_prefix(Rest0,Rest,P1,P,0,4),
     \+ tag(P0,P,_,_,_,_,normal(_),_),
@@ -1640,6 +1643,7 @@ foreign_word(dossier).
 foreign_word(dossiers).
 foreign_word(down).
 foreign_word(drink).
+foreign_word(du).
 foreign_word(e).
 foreign_word('école').
 foreign_word(economic).
@@ -7724,3 +7728,19 @@ illegal_root_end(fk).
 illegal_root_end(kk).
 illegal_root_end(mk).
 illegal_root_end(sk).
+
+%% FRANSE -> Franse
+%% IB-GROEP -> IB-Groep
+decap_prefix(Word,New) :-
+    atom(Word),
+    atom_codes(Word,[U,Next|Codes]),
+    isupper(U),
+    decap_prefix_chars([Next|Codes],News),
+    atom_codes(New,[U|News]).
+
+decap_prefix_chars([C0|T0],[C|T]):-
+    isupper(C0),
+    tolower(C0,C),
+    decap_all_chars(T0,T).
+decap_prefix_chars([C|T0],[C|T]) :-
+    decap_prefix_chars(T0,T).
