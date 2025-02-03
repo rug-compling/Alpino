@@ -589,6 +589,7 @@ loc('col ').
 loc(county).
 loc(dreef).
 loc(eiland).
+loc(fort).
 loc(galerie).
 loc(galery).
 loc(gallerie).
