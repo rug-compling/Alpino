@@ -1175,7 +1175,13 @@ grammar_rule(vp_mod_v_en_mod,VP,[MOD,V,OPTCOMMA,CLIST]) :-
 %%%% cdb/2544 "omdat er geen geld meer is voor de scholen maar wel veel geld voor wapens"
 %%%% left NP sometimes already conjunction cdb/7076
 %%EX%% Omdat ik platen heb gekocht en boeken
-grammar_rule(vp_np_v_en_np,VP, [NP, V, OPTCOMMA, CLIST]) :-
+%%EX%% Omdat ik boeken en platen heb gekocht en een kamerplant
+%%EX%% Omdat ik deze boeken en platen heb gekocht en een kamerplant
+grammar_rule(vp_np_v_en_np,VP, [NP1, V, OPTCOMMA, CLIST]) :-
+    NP1 => np,
+    NP => np,
+    unify_except_l(NP,NP1,[subn,cj]),
+
     optcomma(OPTCOMMA),
     vp_arg_v_np_structure(VP,NPS,V1),
     vproj_vc_structure(V1,V),
@@ -1194,7 +1200,12 @@ grammar_rule(vp_np_v_en_np,VP, [NP, V, OPTCOMMA, CLIST]) :-
 
 %% cdb/359 cdb/5689
 %%EX%% Omdat ik een doorzetter ben en een volhouder .
-grammar_rule(vp_pred_v_en_pred,VP, [NP, V, OPTCOMMA, CLIST]) :-
+%%EX%% Omdat ik bedroefd en ongelukkig ben en verdrietig .
+%%EX%% Omdat ik erg bedroefd en ongelukkig ben en verdrietig .
+grammar_rule(vp_pred_v_en_pred,VP, [NP1, V, OPTCOMMA, CLIST]) :-
+    NP1 => pred,
+    NP => pred,
+    unify_except(NP,NP1,cj),
     optcomma(OPTCOMMA),
     vp_arg_v_pred_structure(VP,NPS,V1),
     vproj_vc_structure(V1,V),
@@ -1209,7 +1220,11 @@ grammar_rule(vp_pred_v_en_pred,VP, [NP, V, OPTCOMMA, CLIST]) :-
 %    CLIST:etc => no.
 
 %%EX%% omdat ik van spruitjes houd en van spinazie
-grammar_rule(vp_pp_v_en_pp,VP, [NP, V, OPTCOMMA, CLIST]) :-
+%%EX%% omdat ik van spruitjes en van andijvie houd en van spinazie
+grammar_rule(vp_pp_v_en_pp,VP, [NP1, V, OPTCOMMA, CLIST]) :-
+    NP1 => pp,
+    NP => pp,
+    unify_except(NP,NP1,cj),
     optcomma(OPTCOMMA),
     vp_arg_v_pp_structure(VP,NPS,V1),
     vproj_vc_structure(V1,V),
@@ -4387,6 +4402,21 @@ grammar_rule(xp_modal_xp(adv),X,[Adv,Y]):-
     X:haspre => yes,
     xp_modal_xp_structure(Y,Adv,X).
 
+%%EX%% Ik ga ( bijna ) nooit meer met de bus
+grammar_rule(xp_bracketed_modal_xp(adv),X,[OPEN,Adv,CLOSE,Y]):-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    OPEN => punct, OPEN:puncttype => haak_open,
+    CLOSE => punct, CLOSE:puncttype => haak_sluit,
+    X => adv,
+    Y => adv,
+    Y:tmploc => ~postp & ~wk_er & ~hoe_hoe,
+    Y:subadv => ~subadv_noun,  % reduce spur amb in 'bijna drie weken'
+    Y:subadv => ~subadv_adj,   % use normal adverb in that case; all modal_adv are adv?
+    X:redrel => no,
+    Adv:modal_adv_arg => adv_adv,
+    X:haspre => yes,
+    xp_modal_xp_structure(Y,Adv,X).
+
 %%EX%% vooral om indruk te maken heeft zij de positie geaccepteerd
 grammar_rule(xp_modal_xp(vp_modifier),X,[Adv,Y]) :-
     X => modifier,
@@ -4748,8 +4778,6 @@ grammar_rule(np_pron, NP,  [ PRON ] ) :-
     NP => np,
     NP:wkpro => strongpro,
     np_pron_structure(PRON,NP0),
-                      % new: extraposition now only for sub-class of pronouns
-                      %  otherwise many false parses using this possibility
     add_rel(NP0,NP).
 
 %%EX%% Een van de zaken die opvielen was dat hij sliep
@@ -4758,8 +4786,6 @@ grammar_rule(np_pron_een_sbar, NP,  [ PRON ] ) :-
     NP:hstem ==> één,
     NP:wkpro => strongpro,
     np_pron_structure(PRON,NP0),
-                      % new: extraposition now only for sub-class of pronouns
-                      %  otherwise many false parses using this possibility
     add_rel(NP0,NP1),
     unify_except(NP1,NP,e_deps),
     Sbar => sbar,
@@ -4775,8 +4801,6 @@ grammar_rule(np_pron_een_vp, NP,  [ PRON ] ) :-
     NP:hstem ==> één,
     NP:wkpro => strongpro,
     np_pron_structure(PRON,NP0),
-                      % new: extraposition now only for sub-class of pronouns
-                      %  otherwise many false parses using this possibility
     add_rel(NP0,NP1),
     unify_except(NP1,NP,e_deps),
     NP:e_deps <=> [VP],
@@ -4795,12 +4819,19 @@ grammar_rule(np_pron_een_vp, NP,  [ PRON ] ) :-
     VP:subj:subn => sub_noun,
     unify_mods(VP).
 
-
-
 %%EX%% Hij is gek
 grammar_rule(np_pron_weak, NP,  [ PRON ] ) :-
     np_pron_structure(PRON,NP),
+    PRON:hstem <=> STEM,
+    dif(STEM,wat),
     NP:wkpro => ~strongpro.
+
+%%EX%% Wat heeft hij dat ik niet heb
+grammar_rule(np_pron_weak_wat, NP,  [ PRON ] ) :-
+    np_pron_structure(PRON,NP0),
+    PRON:hstem ==> wat,
+    NP0:wkpro => ~strongpro,
+    add_rel(NP0,NP).
 
 %%EX%% Die is gek
 grammar_rule(pron_det, PRON, [ DET ] ) :-
@@ -5733,6 +5764,13 @@ grammar_rule(n_n_rel, NP, [N, OPTCl, Rel, OPTCr ]) :-
     optcomma_dash(OPTCr),
 
     haspreno(NP),   %%%    NP:haspre => no, % for generation we can't have this
+    hd_rel_structure(N,Rel,NP).
+
+%%EX%% het parlementslid Robert-Kilroy Silk , die de show al 17 jaar presenteerde
+grammar_rule(pn_pn_rel, NP, [N, OPTCl, Rel, OPTCr ]) :-
+    NP => pn,  N => pn,  Rel => rel,
+    optcomma_dash(OPTCl),
+    optcomma_dash(OPTCr),
     hd_rel_structure(N,Rel,NP).
 
 % subsumed by n_n_modroot()
@@ -9992,6 +10030,17 @@ grammar_rule(xp_en_root,Start,[XP,OPTCOMMA,CRD,ROOT]) :-
     XP:max_type => (t_xp;t_dp;t_sv1),
     ROOT => max,
     ROOT:max_type => (t_dp;t_root),
+    xp_en_root_structure(Start,XP,CRD,ROOT).
+
+%%EX%% Leuk idee , maar voor wie ?
+%%EX%% Wonen in Brussel , maar zonder papieren
+grammar_rule(xp_maar_pp,Start,[XP,OPTCOMMA,CRD,ROOT]) :-
+    optcomma_end(OPTCOMMA),
+    XP => max,
+    XP:max_type => (t_xp;t_dp;t_sv1),
+    CRD:cform ==> maar,
+    ind_max_pp(ROOT0),
+    unify_except(ROOT0,ROOT,wh),
     xp_en_root_structure(Start,XP,CRD,ROOT).
 
 %%EX%% Absurd , is dat geen vergissing ?

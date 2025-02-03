@@ -532,7 +532,8 @@ tmp_np(NP) :-
     NP:can_mod => yes,
     NP:meas => no,
 %%    NP:hdet => nhdet,  % het is geen vijf voor twaalf (meer)
-    NP:agr => sg&indef,
+    NP:agr => indef,		% removed sg (Jan 29, 2025) because of
+                                % 3 en 4 juni waren mooie dagen
     NP:agr <=> NP:e_agr,
     NP:nform => (norm;temp).
 
@@ -7885,7 +7886,15 @@ construct_dt_(Deriv,Sign,Word,F,Dt0) :-
                       ModRest,Svp,[],
                       Pms,PmRest,Cn,[],Cr,[],Mwp,[],F,Dp,[],Dt0,
                       InitList,[]),
-    initialize_dt(InitList,Sign).
+    initialize_dt(InitList,Sign),
+    (   Dt:hwrd:lexical <=> LEX,
+	var(LEX)
+    ->  Dt:hwrd:lexical <=> Dt:fwrd:lexical,        % initialize hwrd:lexical otherwise hstem will remain uninstantiated
+	Dt:hwrd:surface <=> Dt:fwrd:surface,
+	Dt:hwrd:his <=> Dt:fwrd:his,
+	Dt:hwrd:lemma <=> Dt:fwrd:lemma
+    ;   true
+    ).
 
 /* percolation features: should go somewhere, perhaps allow for cat=du
    nodes that these become all dp daughters;
@@ -7945,7 +7954,7 @@ first_att(Path,First) :-
 
 construct_dt_cat_without_hwrd(Pat,DT,Orig) :-
     construct_dt_cat(Pat,DT,Orig,Val),
-    (   lists:member(Val,[du,whq,rel,whrel,whsub,ahi,cp,conj,ti,oti]),
+    (   lists:member(Val,[du,whq,rel,whrel,whsub,ahi,cp,conj,ti,oti]),    % why???
         DT:hwrd => [],
 	!
     ;   true   % fall back for other relations, but also for "als volgt", "dat het kraakt"
@@ -8014,6 +8023,7 @@ construct_pos_list([Rh|Rt],[Sh|St],P0) :-
 
 construct_dt_list([],_,_,D,D,A,A,M,M,Sv,Sv,Pm,Pm,Cn,Cn,Cr,Cr,Mwp,Mwp,_F,
                   Dp,Dp,_,Init,Init).
+
 construct_dt_list([Rel=Patt|Tail],Dt,P0,D0,D,A0,A,M0,M,Sv0,Sv,Pm0,Pm,
 		  Cn0,Cn,Cr0,Cr,Mwp0,Mwp,F,Dp0,Dp,Dt0,Init0,Init) :-
     construct_dt_rel(Rel,Patt,Dt,P0,D0,D1,A0,A1,M0,M1,Sv0,Sv1,Pm0,Pm1,
