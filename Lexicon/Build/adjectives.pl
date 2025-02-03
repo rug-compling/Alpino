@@ -10790,7 +10790,7 @@ a([ge_e(gebliksemde),
    ge_no_e(gebliksemd)],adv,[],[]).
 
 a([ge_e(geblinddoekte),
-   ge_no_e(geblinddoekt)],adv,[],[]).
+   ge_no_e(geblinddoekt)],padv,[],[]).
 
 a([ge_e(geblindeerde),
    ge_no_e(geblindeerd)],nonadv,[],[]).

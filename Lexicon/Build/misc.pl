@@ -5030,6 +5030,7 @@ modified_modal_hd_mod(ook,al).
 modified_modal_hd_mod(zo,ongeveer).
 modified_modal_hd_mod(vooral,niet).
 modified_modal_hd_mod(vooral,ook).
+modified_modal_hd_mod(alleen,maar).
 
 modified_modal_hd_mod_noun_prep(misschien,wel).
 
@@ -5037,7 +5038,6 @@ modified_modal_hd_mod_noun_prep(misschien,wel).
 modified_modal_mod_hd(bijna,uitsluitend,ap,adjective(no_e(adv))).
 modified_modal_mod_hd(haast,uitsluitend,ap,adjective(no_e(adv))).
 modified_modal_mod_hd(vrijwel,uitsluitend,ap,adjective(no_e(adv))).
-modified_modal_mod_hd(alleen,maar,advp,adverb).
 
 modified_modal_hd_mod_mod(vooral,ook,weer).
 
@@ -5858,6 +5858,7 @@ sentence_adverb(kortom).
 sentence_adverb(laatst).
 sentence_adverb(langzamerhand).
 sentence_adverb([liefst,van,al]).
+sentence_adverb([meer,dan]).   % de investeringen moeten meer dan renderen
 sentence_adverb([meerderheid,tegen,minderheid]).
 sentence_adverb(meestal). 
 sentence_adverb(merkwaardigerwijs). 
