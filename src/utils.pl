@@ -44,6 +44,7 @@
 			   split_string/3,
 
 			   split_atom/3,
+			   replace_sub_atom/4,
 
 			   thread_flag/2, thread_flag/3, initialize_thread_flag/2, set_thread_flag/2
 			
@@ -827,6 +828,23 @@ list_atoms([],[]).
 list_atoms([Codes|T0],[Atom|T]) :-
     atom_codes(Atom,Codes),
     list_atoms(T0,T).
+
+%% replace_sub_atom(Atom0,Atom,Sub0,Sub)
+%% replace sub_atom Sub0 by Sub in Atom0 yielding Atom
+%% e.g.
+%% replace_sub_atom(eigenljik,eigenlijk,ji,ij).
+
+replace_sub_atom(Word1, Word, Sub0, Sub) :-
+    atom(Word1),
+    atom(Sub0),
+    atom(Sub),
+    atom_length(Sub0,SubL),
+    sub_atom(Word1,Before,SubL,_After,Sub0),
+    sub_atom(Word1,0,Before,_,Prefix),
+    NBefore is Before + SubL,
+    sub_atom(Word1,NBefore,_,0,Suffix),
+    hdrug_util:concat_all([Prefix,Sub,Suffix],Word).
+
 
 %% split_string(+Chars,+Sep,-List)
 %% Chars is a list of character codes

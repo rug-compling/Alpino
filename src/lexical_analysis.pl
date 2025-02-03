@@ -402,8 +402,7 @@ normal_lex2(Tag,Label,[Word|Input0],Input,P,special(decap(His)),LC,Tags) :-
 
 %% Frank VANDENBROUCKE = Frank Vandenbroucke
 normal_lex2(Tag,Label,[Frank,VANDEN|Input],Input,_P,special(decap(His)),LC,_Tags) :-
-    alpino_unknowns:only_capitals(VANDEN,_),
-    alpino_unknowns:decap_some(VANDEN,Vanden),
+    alpino_unknowns:only_capitals_but_one(VANDEN,Vanden),
     in_lexicon(Tag,Label,[Frank,Vanden],[],His,LC),
     \+ His = chess,
     \+ His = variant(variant(_,_),normal).
@@ -2935,6 +2934,7 @@ first_compound_root(v_root(slank_af,af_slanken),afslank).
 first_compound_root(v_root(schrijf_in,in_schrijven),inschrijf).
 first_compound_root(v_root(vraag_aan,aan_vragen),aanvraag).
 first_compound_root(taal,taal).
+first_compound_root(rijst,rijst).
 
 guess_english_compounds :-
     findall(Tag, guess_english_compound(Tag), Tags0),
