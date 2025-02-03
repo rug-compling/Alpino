@@ -273,51 +273,23 @@ next_word__(NW,[Word|Ws],Ws,ignore_internal_brackets,_) :-
 
 %% zo\'n --> zo'n
 next_word__(Word,[Word0|Ws],Ws,wrong_quote,_) :-
-    atom(Word0),
-    sub_atom(Word0,Before1,2,_,'\\\''),
-    atom_length(Word0,Len),
-    SuffixLength is Len - 1 - Before1,
-    sub_atom(Word0,0,Before1,_,Prefix),
-    sub_atom(Word0,_,SuffixLength,0,Suffix),
-    atom_concat(Prefix,Suffix,Word).
+    alpino_util:replace_sub_atom(Word0,Word,'\\\'','\'').
 
 %% i¨  -> ï
 next_word__(Word,[Word0|Ws],Ws,wrong_trema,_) :-
-    atom(Word0),
-    sub_atom(Word0,Before1,2,_,'i¨'),
-    sub_atom(Word0,0,Before1,_,Prefix),
-    Before3 is Before1 + 2,
-    sub_atom(Word0,Before3,_,0,Suffix),
-    atom_concat(Prefix,ï,Prefix1),
-    atom_concat(Prefix1,Suffix,Word).
+    alpino_util:replace_sub_atom(Word0,Word,'i¨','ï').
 
 %% i´  -> í
 next_word__(Word,[Word0|Ws],Ws,wrong_accent,_) :-
-    atom(Word0),
-    sub_atom(Word0,Before1,2,_,'i´'),
-    sub_atom(Word0,0,Before1,_,Prefix),
-    Before3 is Before1 + 2,
-    sub_atom(Word0,Before3,_,0,Suffix),
-    atom_concat(Prefix,í,Prefix1),
-    atom_concat(Prefix1,Suffix,Word).
+    alpino_util:replace_sub_atom(Word0,Word,'i´','í').
 
 %% zo&apos;n --> zo'n
 next_word__(Word,[Word0|Ws],Ws,xml_entity,_) :-
-    atom(Word0),
-    sub_atom(Word0,_,6,_,'&apos;'),
-    atom_concat(Prefix,Rest,Word0),
-    atom_concat('&apos;',Suffix,Rest),
-    atom_concat(Prefix,'\'',Mid),
-    atom_concat(Mid,Suffix,Word).
+    alpino_util:replace_sub_atom(Word0,Word,'&apos;','\'').
 
 %% ĳ --> ij
 next_word__(Word,[Word0|Ws],Ws,lange_ij,_) :-
-    atom(Word0),
-    sub_atom(Word0,_,1,_,'ĳ'),
-    atom_concat(Prefix,Rest,Word0),
-    atom_concat('ĳ',Suffix,Rest),
-    atom_concat(Prefix,ij,Mid),
-    atom_concat(Mid,Suffix,Word).
+    alpino_util:replace_sub_atom(Word0,Word,'ĳ',ij).
 
 %% treat ( ex- ) medewerker as ex-medewerker
 next_word__(Medewerker,['(',Ex,')',Medewerker|Ws],Ws,repair_tokenize_brackets,_) :-
@@ -649,6 +621,13 @@ lexicon_(NoordWord,proper_name(X,'LOC'),Name,Ws1,Ws,His,_LC) :-
     atom_concat(Noord,Word,NoordWord),
     in_names_dictionary(proper_name(X,'LOC'),Word,RestStem,Ws1,Ws,His),
     hdrug_util:concat_all([NoordStem,RestStem],Name,'').
+
+lexicon_('Slag',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
+    (  n_word(bij,Ws1,[L|Ws2])
+    ;  n_word('Bij',Ws1,[L|Ws2])
+    ),
+    in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
+    hdrug_util:concat_all(['Slag',bij,Stem],Name,' ').
 
 lexicon_(Noord,proper_name(X,'LOC'),Name,[Angola|Ws1],Ws,His,_LC) :-
     atom(Noord),
@@ -1599,6 +1578,9 @@ optionally_drop_np_complement(np_vp_subj,vp).
 optionally_drop_np_complement(np_vp_obj1,vp).
 optionally_drop_np_complement(fixed(List0,Passive), fixed(List,Passive)) :-
     lists:select(acc,List0,List).
+optionally_drop_np_complement(fixed(List0,Passive), fixed(List,Passive)) :-
+    select({Sub0},List0,{Sub},List),
+    lists:select(acc,Sub0,Sub).
 
 possible_nominalization(het_subj,intransitive).
 possible_nominalization(Fr0,Fr0) :-
@@ -2610,6 +2592,9 @@ spelling_variant(Word1, Word) :-
     atom_concat('ge-e',Rest,Word1),
     atom_concat('geë',Rest,Word).
 
+spelling_variant(Word1, Word) :-
+    alpino_util:replace_sub_atom(Word1,Word,ji,ij).
+
 spelling_variant('.?',     '.').
 spelling_variant('Eén',    één).
 spelling_variant('eén',    één).
@@ -2875,6 +2860,7 @@ spelling_variant(brachtten,   brachten).
 spelling_variant(buitenlanse, buitenlandse).
 spelling_variant(centimer,    centimeter).
 spelling_variant(conlusie,    conclusie).
+spelling_variant(continue,    continu).
 spelling_variant(creeër,      creëer).
 spelling_variant(creeërt,     creëert).
 spelling_variant(creëeren,    creëren).
@@ -5065,3 +5051,6 @@ not_a_genitive_name('Thomas').
 not_a_genitive_name('Wiens').
 not_a_genitive_name('Yves').
 
+select(A,[A|T],B,[B|T]).
+select(A,[H|T0],B,[H|T]):-
+    select(A,T0,B,T).

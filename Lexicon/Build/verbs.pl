@@ -649,6 +649,7 @@ m(v_root(heb,hebben),
 	fixed([[in,het,verschiet],acc],no_passive),
 
         fixed([acc(indruk),yt(sbar)],no_passive), % dat is voorbij, heb ik de indruk
+	fixed([{[acc(iets),pc(met)]}],no_passive),  % daar heeft hij iets mee
 	fixed([{[acc(informatie),pc(over)]}],no_passive),
 	fixed([{[acc(inspraak),pc(bij)]}],no_passive),
 	fixed([{[acc(inspraak),pc(in)]}],no_passive),
@@ -5352,9 +5353,10 @@ v(crepeer,crepeert,creperen,gecrepeerd,crepeerde,crepeerden,
     [z([intransitive])]).
 
 v(creëer,creëert,creëren,gecreëerd,creëerde,creëerden,
-    [h([transitive,
-	np_np,        % de Paus creeerde hem kardinaal
-	refl_np])]).  % Feyenoord creeerde zich talloze kansen
+  [h([transitive,
+      np_mod_pp(voor),
+      np_np,		      % de Paus creeerde hem kardinaal
+      refl_np])]).	      % Feyenoord creeerde zich talloze kansen
 
 v(cricket,cricket,cricketten,gecricket,crickette,cricketten,
     [h([intransitive])]).
@@ -10109,7 +10111,7 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	er_pp_vp(van),
 	er_pp_sbar(van),
 	%% spelling
-	fixed([[boven,het,hoofd],acc(hand),dat],imp_passive),
+	fixed([[boven,het,hoofd],{[acc(hand),dat]}],imp_passive),
 	fixed([{[[boek],pc(van)]}],imp_passive),
 	fixed([{[acc(contact),pc(met)]}],norm_passive),
         fixed([{[pc(aan),[de,hand]]}],imp_passive),
@@ -12427,7 +12429,9 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
 	fixed([als_pred,vp],no_passive),          % ik kreeg als opdracht om ..
 	fixed([als_pred,sbar],no_passive), % ik krijg als opdracht dat ..
 	part_fixed(mee,[als_pred,vp],no_passive),          % ik kreeg als opdracht mee om ..
-	part_fixed(mee,[als_pred,sbar],no_passive),        % ik krijg als opdracht mee dat ..
+	part_fixed(mee,[als_pred,sbar],no_passive), % ik krijg als opdracht mee dat ..
+	part_intransitive(gelijk),
+	part_pc_pp(gelijk,van),
 	np_pc_pp(van),
 	np_pc_pp(voor),
         np_pc_pp(op),  % we krijgen mensen op bezoek/de koffie
@@ -14464,7 +14468,8 @@ v(mag,mag,mogen,gemogen,mocht,mochten,moge,
 	part_transitive(terug),
         nonp_pred_np_ndev,       % ik mag een uniform aan / een pet op / etc
 	modifier(aux(inf)),
-        passive,   % daar mag niet aan getornd (VLAAMS?)
+        passive,		% daar mag niet aan getornd (VLAAMS?)
+	pc_pp(van),  % dat mag niet van de directeur
 	ld_adv,
 	ld_pp])]).
 
@@ -18987,6 +18992,7 @@ v(roep,roept,roepen,geroepen,riep,riepen,
 	fixed([[ach,en,wee]],imp_passive),
 	fixed([{[acc(hoera),pc(tegen)]}],imp_passive),
 	fixed([[te,hulp],acc],norm_passive),
+	part_fixed(in,[{[acc(hulp),pc(van)]}],norm_passive),
 	part_fixed(op,[{[acc(associatie),pc(met)]}],norm_passive),
 	part_fixed(toe,[{[acc(halt),pc(aan)]}],norm_passive),
 	part_np_ld_pp(terug),
@@ -23210,7 +23216,9 @@ v(taxi,taxiet,taxiën,getaxied,taxiede,taxieden,
      ])]).  
 
 v(teel,teelt,telen,geteeld,teelde,teelden,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive  % de smokkel teelde welig
+     ])]).
 
 v(teem,teemt,temen,geteemd,teemde,teemden,
     [h([intransitive,
@@ -23813,9 +23821,8 @@ v(trek,trekt,trekken,getrokken,trok,trokken,
 	part_ld_pp(op),  % optrekken naar
 	part_pc_pp(samen,tot),
 	part_ld_pp(weg),
-	part_pc_pp(uit,op),  % erop uittrekken
-	part_refl_pc_pp(aan,van),
-	part_fixed(aan,[{[pc(van),acc]},refl],no_passive)]),
+	part_pc_pp(uit,op)	% erop uittrekken
+       ]),
      h([np_np,
 	intransitive,
 	np_ld_dir,
@@ -23875,6 +23882,7 @@ v(trek,trekt,trekken,getrokken,trok,trokken,
 	part_np_pc_pp(toe,naar),
 	part_np_pc_pp(uit,voor),
 	part_refl_ld_pp(terug),
+	part_fixed(aan,[{[pc(van),acc]},refl],no_passive),
 	part_refl_pc_pp(aan,van),
 	part_refl_pc_pp(op,aan)]),
      b([part_intransitive(rond),
@@ -24664,7 +24672,8 @@ v(verdien,verdient,verdienen,verdiend,verdiende,verdienden,
 	vp,
 	vp_obj,
 	sbar_obj,
-	fixed([sbar_subj,acc(lof)],no_passive),  % het verdient alle lof, dat...
+	fixed([sbar_subj,acc(lof)],no_passive),	% het verdient alle lof, dat...
+	fixed([vp_subj,acc(aanbeveling)],no_passive), % het verdient aanbeveling om altijd ...
 	part_intransitive(bij),
 	part_transitive(bij),
 	part_transitive(in),
@@ -28995,6 +29004,7 @@ v(zet,zet,zetten,gezet,zette,zetten,
         fixed([[in,lichterlaaie],acc],norm_passive),
         fixed([[in,lichterlaaien],acc],norm_passive),
 	fixed([[op,het,spel],acc],norm_passive),
+	fixed([[op,het,spoor],acc],norm_passive),
 	fixed([[op,losse,schroeven],acc],norm_passive),
 	fixed([[op,poten],acc],norm_passive),
 	fixed([[op,punt],acc],norm_passive),  % Vlaams

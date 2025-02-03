@@ -7042,7 +7042,7 @@ n([sg(cantate),pl(cantates)],de,[]).
 
 n([pl(cantines),sg(cantine)],de,[]).
 
-n([mass(canvas)],het,[]).
+n([mass(canvas)],both,[]).
 
 n([sg('CAO'),sg(cao),pl('cao\'s'),
    pl('CAO\'s')],de,[app_measure]).
@@ -16501,6 +16501,8 @@ n([sg([inflight,magazine]),
 
 n([mass(info)],de,[]).
 
+n([sg(infolijn),pl(infolijnen)],de,[]).
+
 n([pl(informanten),sg(informant)],de,[]).
 
 n([pl(informateurs),sg(informateur)],de,[]).
@@ -24430,7 +24432,7 @@ n([sg('note-book'),pl('note-books'),
 
 n([pl(noteringen),sg(notering)],de,[]).
 
-n([pl(noties),sg(notie)],de,[sbar,vp]).
+n([pl(noties),sg(notie)],de,[sbar,vp,app_measure]).
 
 n([sg(notificatie),pl(notificaties)],de,[]).
 
@@ -34771,7 +34773,7 @@ n([pl(strafvorderingen),sg(strafvordering)],de,[]).
 
 n([pl(stralingen),sg(straling)],de,[]).
 
-n([mass(stramien)],het,[]).
+n([mass(stramien)],het,[subject_sbar]).
 
 n([pl(stranden),sg(strand)],het,[],
   [naakt,
@@ -41508,6 +41510,8 @@ n([mass(wereldvrede)],de,[]).
 
 n([pl(werven),sg(werf)],de,[],
   [bouw]).
+
+n([sg([werk,aan,de,winkel])],het,[],[]).
 
 n([pl(werken),sg(werk)],het,[pred_pp(aan)],[]).
 

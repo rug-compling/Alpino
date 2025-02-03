@@ -5095,6 +5095,7 @@ lemma_root(door_tegelen,tegel_door) .
 lemma_root(door_tekenen,teken_door) .
 lemma_root(door_telefoneren,telefoneer_door) .
 lemma_root(door_teleleren,teleleren_door) .
+lemma_root(door_telen,teel_door) .
 lemma_root(door_telewerken,telewerken_door) .
 lemma_root(door_tellen,tel_door) .
 lemma_root(door_temen,teem_door) .
@@ -5948,6 +5949,7 @@ lemma_root(gelieven,gelief) .
 lemma_root(gelijken,gelijk) .
 lemma_root(gelijk_hebben,heb_gelijk) .
 lemma_root(gelijk_komen,kom_gelijk) .
+lemma_root(gelijk_krijgen,krijg_gelijk) .
 lemma_root(gelijk_maken,maak_gelijk) .
 lemma_root(gelijk_spelen,speel_gelijk) .
 lemma_root(gelijk_staan,sta_gelijk) .
@@ -12707,6 +12709,7 @@ lemma_root(raak_tegelen,tegel_raak) .
 lemma_root(raak_tekenen,teken_raak) .
 lemma_root(raak_telefoneren,telefoneer_raak) .
 lemma_root(raak_teleleren,teleleren_raak) .
+lemma_root(raak_telen,teel_raak) .
 lemma_root(raak_telewerken,telewerken_raak) .
 lemma_root(raak_tellen,tel_raak) .
 lemma_root(raak_temen,teem_raak) .
@@ -17905,6 +17908,7 @@ lemma_root(uit_taxiën,taxi_uit) .
 lemma_root(uit_tegelen,tegel_uit) .
 lemma_root(uit_tekenen,teken_uit) .
 lemma_root(uit_telefoneren,telefoneer_uit) .
+lemma_root(uit_telen,teel_uit) .
 lemma_root(uit_tellen,tel_uit) .
 lemma_root(uit_temen,teem_uit) .
 lemma_root(uit_temporiseren,temporiseer_uit) .
@@ -22828,6 +22832,7 @@ lemma_root(voort_tegelen,tegel_voort) .
 lemma_root(voort_tekenen,teken_voort) .
 lemma_root(voort_telefoneren,telefoneer_voort) .
 lemma_root(voort_teleleren,teleleren_voort) .
+lemma_root(voort_telen,teel_voort) .
 lemma_root(voort_telewerken,telewerken_voort) .
 lemma_root(voort_tellen,tel_voort) .
 lemma_root(voort_temen,teem_voort) .

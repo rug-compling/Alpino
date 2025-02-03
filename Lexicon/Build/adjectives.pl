@@ -38021,8 +38021,8 @@ a([stem(vooraf_gaan),
    ende(voorafgaande),
    end(voorafgaand)],adv,[pp(aan)],[]).
 
-a([ge_e(voorafgegane),
-   ge_no_e(voorafgegaan)],adv,[],[]).
+a([ge_e(voorafgegane),ge_e([vooraf,gegane]),
+   ge_no_e(voorafgegaan), ge_no_e([vooraf,gegaan])],adv,[],[]).
 
 a([e(voorbarige),
    er(voorbariger),

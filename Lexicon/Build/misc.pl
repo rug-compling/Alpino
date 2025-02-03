@@ -4777,6 +4777,18 @@ m('tweede-klas',postnp_adverb,'tweede-klas').
 m('derde-klas', postnp_adverb,'derde-klas' ).
 m('vierde-klas',postnp_adverb,'vierde-klas').
 
+with_dt([misschien,wel], postnp_adverb,dt(advp,[mod=l(wel,adverb,advp,1,2),
+						hd=l(misschien,adverb,0,1)])).
+
+with_dt([misschien,wel], postp_adverb,dt(advp,[mod=l(wel,adverb,advp,1,2),
+					       hd=l(misschien,adverb,0,1)])).
+
+with_dt([misschien,wel], postadv_adverb,dt(advp,[mod=l(wel,adverb,advp,1,2),
+						 hd=l(misschien,adverb,0,1)])).
+
+with_dt([misschien,wel], postadj_adverb,dt(advp,[mod=l(wel,adverb,advp,1,2),
+						 hd=l(misschien,adverb,0,1)])).
+
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% ADVERBS %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -6655,6 +6667,7 @@ mod_hd_adverb(liever,lief,    niet, adjective(er(adv)),         ap).
 
 hd_mod_adverb(niet,     eens, niet,   eens).
 hd_mod_adverb(misschien,zelfs, misschien,zelfs).
+hd_mod_adverb(misschien,wel, misschien,wel).
 
 %% wie is hoofd hier?
 hd_mod_adverb(dan,      ineens, dan, ineens).

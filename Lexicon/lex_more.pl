@@ -4590,6 +4590,7 @@ optional_of -->
 
 opt_dash --> [].
 opt_dash --> n_word('-').
+opt_dash --> n_word('/').
 
 telephone_rest(C) --> [], { C > 4 }.
 telephone_rest(C0) -->
