@@ -1,14 +1,10 @@
 include $(ALPINO_HOME)/Makefile.errormining
+include ../Makefile.patterns
+
 LOGS=$(wildcard *.log.gz)
 cat=zcat
 
 freqframes=$(LOGS:%.log.gz=%.freqframes)
-
-%.freqframes: %.log.gz %.ftm
-	zcat $< | ./to_freq $*.ftm \
-      | LANG=POSIX LC_ALL=POSIX sort -t\| -k1,1 -k2,2 \
-      | $(ALPINO_HOME)/Disambiguation/Triples/uniq-c \
-      > $@
 
 frames.pl: $(freqframes) ./cnt-frames
 	echo ':- module(alpino_frames, [ z_f2/3 ]).' > frames.pl
@@ -16,8 +12,6 @@ frames.pl: $(freqframes) ./cnt-frames
 	LANG=POSIX LC_ALL=POSIX sort -m -t\| -k2,2 $(freqframes) \
       | ./cnt-frames\
       | Alpino debug=0 cmdint=off -u -notk -l frames2pl  >> frames.pl
-
-include ../Makefile.patterns
 
 OUTDIR=..
 OPTPRE=-c 1
