@@ -1801,23 +1801,6 @@ m(enkel,    adj_number(enkele), enkele).
 m(ettelijk, adj_number(pl_num), ettelijke).
 %% according to ANS, this should also include "verscheidene, verschillende"
 
-m('meer als',         intensifier, [meer,als]).
-m('meer dan',         intensifier, [meer,dan]).
-m('minder als',       intensifier, [minder,als]).
-m('minder dan',       intensifier, [minder,dan]).
-m('niet meer als',    intensifier, [niet,meer,als]).
-m('niet meer dan',    intensifier, [niet,meer,dan]).
-m('niet minder als',  intensifier, [niet,minder,als]).
-m('niet minder dan',  intensifier, [niet,minder,dan]).
-
-m('meer als',         pre_num_adv(both), [meer,als]).
-m('meer dan',         pre_num_adv(both), [meer,dan]).
-m('minder als',       pre_num_adv(both), [minder,als]).
-m('minder dan',       pre_num_adv(both), [minder,dan]).
-m('niet meer als',    pre_num_adv(both), [niet,meer,als]).
-m('niet meer dan',    pre_num_adv(both), [niet,meer,dan]).
-m('niet minder als',  pre_num_adv(both), [niet,minder,als]).
-m('niet minder dan',  pre_num_adv(both), [niet,minder,dan]).
 
 %% pre_det_quant
 %% quantifiers that may precede determiner in NP
@@ -1971,6 +1954,16 @@ m('tegen de',        pre_num_adv(pl_indef),     [tegen,de]).
 m('zo\'n',           pre_num_adv(pl_indef),     'zo\'n').
 m('zo\'n kleine',    pre_num_adv(pl_indef),     ['zo\'n',kleine]).
 m('zo\'n slordige',  pre_num_adv(pl_indef),     ['zo\'n',slordige]).
+
+m('meer als',         pre_num_adv(both), [meer,als]).
+m('meer dan',         pre_num_adv(both), [meer,dan]).
+m('minder als',       pre_num_adv(both), [minder,als]).
+m('minder dan',       pre_num_adv(both), [minder,dan]).
+m('niet meer als',    pre_num_adv(both), [niet,meer,als]).
+m('niet meer dan',    pre_num_adv(both), [niet,meer,dan]).
+m('niet minder als',  pre_num_adv(both), [niet,minder,als]).
+m('niet minder dan',  pre_num_adv(both), [niet,minder,dan]).
+
 
 %% TODO: add meer/minder dan/als here too?
 
@@ -5113,6 +5106,10 @@ m(gemiddeld,        modal_adverb(adv_noun_prep),gemiddeld).
 m(nagenoeg,         modal_adverb(adv_noun_prep),nagenoeg).
 m(haast,            modal_adverb(adv_noun_prep),haast).
 m(ongeveer,         modal_adverb(adv_noun_prep),ongeveer).
+m(uiterlijk,        modal_adverb(adv_noun_prep),misschien).
+m(uiterlijk,        modal_adverb(adv_noun_prep),wellicht).
+m(uiterlijk,        modal_adverb(adv_noun_prep),uiterlijk).
+m(waarschijnlijk,   modal_adverb(adv_noun_prep),waarschijnlijk).
 
 m(heel,             modal_adverb(adv_noun_prep),heel).
 %% heel de wereld; heel Nederland
@@ -5187,7 +5184,6 @@ m(maarliefst,       modal_adverb(noun_prep),maarliefst).
 m(maximaal,         modal_adverb(noun_prep),maximaal).
 m(minimaal,         modal_adverb(noun_prep),minimaal).
 m(minstens,         modal_adverb(noun_prep),minstens).
-m(misschien,        modal_adverb(noun_prep),misschien).
 m('om en bij',      modal_adverb(noun_prep),[om,en,bij]). % VL
 m('om en nabij',    modal_adverb(noun_prep),[om,en,nabij]). % VL
 m('om en bij de',   modal_adverb(noun_prep),[om,en,bij,de]). % VL
@@ -5206,13 +5202,10 @@ m(ruwweg,           modal_adverb(noun_prep),ruwweg).
 m('ten hoogste',    modal_adverb(noun_prep),[ten,hoogste]).
 m(tenminste,        modal_adverb(noun_prep),tenminste).
 m('ten minste',        modal_adverb(noun_prep),[ten,minste]).
-m(uiterlijk,        modal_adverb(noun_prep),uiterlijk).
 m(ver,              modal_adverb(noun_prep),ver).
 m(verreweg,         modal_adverb(noun_prep),verreweg).  % with superlative
 				% verreweg in de meeste gevallen
 m(veruit,           modal_adverb(noun_prep),veruit).
-m(wellicht,         modal_adverb(noun_prep),wellicht).
-m(waarschijnlijk,   modal_adverb(noun_prep),waarschijnlijk).
 m('zo\'n beetje',   modal_adverb(noun_prep),['zo\'n',beetje]).
 
 m(kort,             modal_adverb(adv_comp_prep),kort).
@@ -5794,6 +5787,15 @@ m(Stem, sentence_adverb, Sub) :-
     sentence_adverb(Sub),
     stem_from_surf(Sub,Stem).
 
+m('meer als',         sentence_adverb, [meer,als]).
+m('meer dan',         sentence_adverb, [meer,dan]).
+m('minder als',       sentence_adverb, [minder,als]).
+m('minder dan',       sentence_adverb, [minder,dan]).
+m('niet meer als',    sentence_adverb, [niet,meer,als]).
+m('niet meer dan',    sentence_adverb, [niet,meer,dan]).
+m('niet minder als',  sentence_adverb, [niet,minder,als]).
+m('niet minder dan',  sentence_adverb, [niet,minder,dan]).
+
 :- discontiguous
     sentence_adverb/1.
 
@@ -5858,7 +5860,6 @@ sentence_adverb(kortom).
 sentence_adverb(laatst).
 sentence_adverb(langzamerhand).
 sentence_adverb([liefst,van,al]).
-sentence_adverb([meer,dan]).   % de investeringen moeten meer dan renderen
 sentence_adverb([meerderheid,tegen,minderheid]).
 sentence_adverb(meestal). 
 sentence_adverb(merkwaardigerwijs). 

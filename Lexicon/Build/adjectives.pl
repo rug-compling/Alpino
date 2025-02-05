@@ -27761,7 +27761,7 @@ a([ge_e(opgerichte),
 a([ge_both(opgeroepen)],adv,[],[]).
 
 a([ge_e(opgerolde),
-   ge_no_e(opgerold)],adv,[],[]).
+   ge_no_e(opgerold)],both,[],[]).
 
 a([ge_e(opgeruimde),
    er(opgeruimder),

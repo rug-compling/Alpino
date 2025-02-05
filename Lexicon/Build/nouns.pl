@@ -29218,6 +29218,21 @@ n([bare_meas(punt),pl(punten)],both,
 n([sg(punt),pl(punten),
    ignore(m(punt,noun(both,count,sg),punt)),
    ignore(m(punt,noun(both,count,pl),punten))],both,
+  [pred_pp(op)
+  ],
+  [diepte,
+   hoogte,
+   omslag,
+   top
+  ]
+ ).
+
+n([sg(punt),pl(punten),
+   ignore(m(punt,noun(both,count,sg),punt)),
+   ignore(m(punt,noun(both,count,pl),punten)),
+   ignore(m(punt,noun(both,count,sg,pred_pp(op)),punt)),
+   ignore(m(punt,noun(both,count,pl,pred_pp(op)),punten))
+  ],both,
   [sbar,
    subject_sbar,
    subject_vp

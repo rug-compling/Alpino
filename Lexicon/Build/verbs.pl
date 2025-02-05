@@ -3082,7 +3082,8 @@ v(besta,bestaat,inflected(bestaan,bestane),bestaan,bestond,bestonden,
     [h([intransitive,
 	part_intransitive(voort),
 	sbar_subj,   % hoe bestaat het dat ..
-	vp_obj,    % hij bestond het om ..
+	vp_obj,	     % hij bestond het om ..
+	meas,        % de vereniging bestaat 10 jaar
 	fixed([subj(aandacht),pc(voor)],no_passive),
         fixed([pc(tot),subj(aanleiding)],no_passive),
         fixed([pc(voor),subj(aanleiding)],no_passive),
@@ -21489,6 +21490,7 @@ v(splits,splitst,splitsen,gesplitst,splitste,splitsten,
         intransitive,
 	fixed([[in,de,maag],{[acc,dat]}],norm_passive),
 	part_transitive(af),
+	part_transitive(in),
 	part_transitive(op),
 	part_transitive(uit),
 	part_np_pc_pp(uit,in),

@@ -7392,6 +7392,7 @@ lemma_root(in_spelen,speel_in) .
 lemma_root(in_spieden,spied_in) .
 lemma_root(in_spijkeren,spijker_in) .
 lemma_root(inspireren,inspireer) .
+lemma_root(in_splitsen,splits_in) .
 lemma_root(in_spoeden,spoed_in) .
 lemma_root(in_spoelen,spoel_in) .
 lemma_root(in_sporen,spoor_in) .
