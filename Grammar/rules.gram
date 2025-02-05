@@ -2129,7 +2129,9 @@ grammar_rule(vp_v_inf, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP:eps3 <=> V:eps3,
     V:cj => ncj,
     VP:mf <=> V:mf,
-    VP:rightm => no, %% hack to reduce ambiguities
+    VP:rightm => no, % hack to reduce ambiguities, further modifiers to the right are part of Extra
+    %% counter example WR-P-E-H-0000000062.p.41.s.3
+    %% Zij moet de mogelijkheden scheppen om deze te benutten , op basis van een gedegen kennisbeleid .
     VP:rightx => yes,
     mod_vp(Extra),
     optcomma(OPTCOMMA),

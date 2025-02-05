@@ -2081,6 +2081,7 @@ adverb(ADV) :-
 sentence_adverb(ADV) :-
     adverb(ADV0),
     overwrite(ADV0,ADV,tmploc,sent),
+    not_right_adverb(ADV),
     not_topic_adverb(ADV).
 
 not_topic_adverbs(['±',
@@ -2108,6 +2109,31 @@ not_topic_adverb(ADV) :-
 	 ;   true
 	 )
 	).
+
+
+not_right_adverbs(['meer dan',
+		   'meer als',
+		   'minder dan',
+		   'minder als',
+		   'niet meer dan',
+		   'niet meer als',
+		   'niet minder dan',
+		   'niet minder als'
+		   ]).
+
+not_right_adverb(ADV) :-
+    ADV:hstem <=> H,
+    not_right_adverbs(List),
+    ADV:sel <=> SEL,
+    NTT => ~to_right,
+    when(nonvar(H),
+	 (   lists:member(H,List)
+	 ->  SEL=NTT
+	 ;   true
+	 )
+	).
+
+
 
 hoe_adv(ADV) :-
     ADV => hoe_adv,
