@@ -32,9 +32,7 @@ include $(ALPINO_HOME)/Makefile.test
 default_testN_options=-testN stop_if_optimal=off user_max=900000 max_sentence_length=25 
 
 ## defaults per suite for testN target
-LassySmall_testN_options=suite_shortest_first=on max_sentence_length=20
 novelsample_corrected_testN_options=max_sentence_length=20
-cdb_testN_options=suite_shortest_first=on
 cgn_exs_testN_options="number_analyses=5000"
 ovistrain_testN_options=-flag treebank ../Treebank/ovis
 oviswg_testN_options=-flag treebank ../Treebank/ovis
@@ -43,6 +41,43 @@ g_suite_options=robustness=off
 h_suite_options=robustness=off
 i_suite_options=robustness=off
 j_suite_options=robustness=off
+
+lassysmall_part00001_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00002_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00003_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00004_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00005_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00006_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00007_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00008_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00009_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00010_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00011_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00012_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00013_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00014_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00015_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00016_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00017_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00018_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00019_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00020_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00021_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00022_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00023_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00024_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+lassysmall_part00025_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
+
+cdb_part00001_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
+cdb_part00002_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
+cdb_part00003_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
+cdb_part00004_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
+cdb_part00005_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
+cdb_part00006_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
+cdb_part00007_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
+cdb_part00008_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
+cdb_part00009_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
+cdb_part00010_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
 
 job := job${shell echo $$$$}
 
@@ -157,7 +192,41 @@ shorts: j_suite.testN i_suite.testN h_suite.testN g_suite.testN leuven_yellow_pa
        novelsample_corrected.testN eans.testN Titaantjes.testN ovistrain.testN
 
 
-longs: cdb.testN LassySmall.testN
+longs: cdb lassy
+
+lassy=lassysmall_part00001 lassysmall_part00002 lassysmall_part00003 lassysmall_part00004 lassysmall_part00005 lassysmall_part00006 lassysmall_part00007 lassysmall_part00008 lassysmall_part00009 lassysmall_part00010 lassysmall_part00011 lassysmall_part00012 lassysmall_part00013 lassysmall_part00014 lassysmall_part00015 lassysmall_part00016 lassysmall_part00017 lassysmall_part00018 lassysmall_part00019 lassysmall_part00020 lassysmall_part00021 lassysmall_part00022 lassysmall_part00023 lassysmall_part00024 lassysmall_part00025
+
+lassy:$(lassy:%=%.testN)
+
+cdb=cdb_part00001 cdb_part00002 cdb_part00003 cdb_part00004 cdb_part00005 cdb_part00006 cdb_part00007 cdb_part00008 cdb_part00009 cdb_part00010 
+
+cdb:$(cdb:%=%.testN)
+
+diffs: errors $(cdb:%=%.diff) $(lassy:%=%.diff)
+
+%.diff: %.errors
+	@-diff <(make $*.err) $*.errors
+
+errors:l_errors c_errors
+
+l_errors: $(lassy:%=%.l_errors)
+c_errors: $(cdb:%=%.c_errors) 
+
+%.l_errors:K/%.keys LassySmall.errors
+	@python3 K/errors.py LassySmall.errors < $< >$*.errors
+
+%.c_errors:K/%.keys cdb.errors
+	@python3 K/errors.py cdb.errors < $< >$*.errors
+
+K/%.keys: ../Suites/%.named_sents
+	@awk -F\| '{ print $$1 }' $< >$@
+
+%.err: %.errors
+	@for file in $*/job*/log;\
+         do if [ -f $$file ]; then $(ALPINO_HOME)/compare_errors.py <(grep '^BEST SCORE' $$file | awk '{ print $$3, $$11 }') $*.errors;\
+	    else cat $*.errors;\
+	    fi; \
+         done
 
 SCORES=$(sort $(wildcard */*/bests))
 bf:
@@ -181,12 +250,5 @@ endif
 	@echo `grep 'BEST: ca-score' $< | awk '{ print $$3 }' `"	"`if [ -f $(dir $(dir $*))/best ]; then grep 'BEST: ca-score' $(dir $(dir $*))/best | tail -n 2 | head -n 1 | awk '{ print $$3 }'; fi`"	"`grep readings/sentence $< | awk '{ print $$1 }'`"	"`if [ -f $(dir $(dir $*))/best ]; then grep 'readings/sentence' $(dir $(dir $*))/best | tail -n 2 |head -n 1 | awk '{ print $$1 }'; fi`"	"$(dir $(dir $*))"	"`grep extra= $(dir $(dir $*))/times |tail -n 1|sed -e 's/extra=//' | tr ' ' ',' `
 
 ORDERED=-rt
-
-errors: cdb.err LassySmall.err
-
-%.err: %.errors
-	@for file in $*/job*/log;\
-         do $(ALPINO_HOME)/compare_errors.py <(grep '^BEST SCORE' $$file | awk '{ print $$3, $$11 }') $*.errors;\
-         done
 
 
