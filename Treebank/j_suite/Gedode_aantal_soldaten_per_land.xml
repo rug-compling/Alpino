@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node aform="base" begin="0" buiging="met-e" end="1" id="2" infl="e" lemma="doden" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="doden" vform="psp" word="Gedode" wvorm="vd"/>
+      <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="3" lemma="aantal" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="aantal" sc="measure" word="aantal"/>
+      <node begin="2" end="3" gen="de" getal="mv" graad="basis" id="4" lemma="soldaat" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" rnum="pl" root="soldaat" word="soldaten"/>
+      <node begin="3" cat="pp" end="5" id="5" rel="mod">
+        <node begin="3" end="4" id="6" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+        <node begin="4" end="5" gen="het" genus="onz" getal="ev" graad="basis" id="7" lemma="land" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="land" word="land"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Gedode aantal soldaten per land</sentence>
+</alpino_ds>
