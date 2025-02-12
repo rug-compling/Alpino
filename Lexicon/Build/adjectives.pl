@@ -4998,7 +4998,7 @@ a([both(bescheiden),
 a([ge_both(beschenen)],adv,[],[]).
 
 a([ge_e(beschermde),
-   ge_no_e(beschermd)],both,[],[]).
+   ge_no_e(beschermd)],both,[pp(tegen)],[]).
 
 a([both(bescheten)],adv,[],[]).
 
@@ -6741,7 +6741,7 @@ a([stof(cementen)],nonadv,[],[]).
 a([e(centrale),
    er(centraler),
    ere(centralere),
-   no_e(centraal),
+   postn_no_e(centraal),
    st(centraalst),
    ste(centraalste)],adv,[],[]).
 
@@ -9705,7 +9705,7 @@ a([e(eksemplarische),
 a([e(existentiële),
    no_e(existentieel)],adv,[],[]).
 
-a([e(exogenen),no_e(exogeen)],adv,[],[]).
+a([e(exogene),no_e(exogeen)],adv,[],[]).
 
 a([e(exorbitante),
    no_e(exorbitant)],adv,[],[]).
@@ -12999,7 +12999,7 @@ a([ge_both(gelegen),
    ere(gelegenere),
    st(gelegenst),
    ste(gelegenste)],adv,
-  [],[naast]).
+  [ld_pp],[naast]).
 
 a([ge_e(gelegerde),
    ge_no_e(gelegerd)],adv,[],[]).
@@ -15273,7 +15273,7 @@ a([ge_both(gespleten),
    ste(gespletenste)],adv,[],[]).
 
 a([ge_e(gesplitste),
-   ge_no_e(gesplitst)],adv,[],[]).
+   ge_no_e(gesplitst)],adv,[pp(in)],[]).
 
 a([ge_e(gespoede),
    ge_no_e(gespoed)],adv,[],[]).
@@ -16875,7 +16875,7 @@ a([ge_e(geïrriteerde),
    ere(geïrriteerdere),
    st(geïrriteerdst),
    ste(geïrriteerdste),
-   ge_no_e(geïrriteerd)],padv,
+   ge_no_e(geïrriteerd)],both,
   [er_pp_sbar(over),
    pp(over)],[]).
 
@@ -17617,6 +17617,8 @@ a([e(harde),
    knoeper,
    knoert,
    snoei]).
+
+a([both([hard,tegen,hard])],adv,[],[]).
 
 a([e(hardhandige),
    er(hardhandiger),
@@ -18858,6 +18860,8 @@ a([pred([in,de,weer])],padv,
 
 %% Niet in geschil is dat ..
 a([pred([in,geschil])],nonadv,[subject_sbar],[]).
+
+a([pred([in,het,ongewisse])],nonadv,[],[]).
 
 a([pred([in,het,oog])],nonadv,[],[]). %% alleen lexicaal geselecteerd?
 
@@ -21254,6 +21258,10 @@ a([e(lastige),
    ste(lastigste)],adv,
   [subject_sbar,
    subject_vp],[]).
+
+a([both([last,minute]),
+   both('last-minute'),
+   both(lastminute)],nonadv,[],[]).
 
 a([e(latente),
    er(latenter),
@@ -27825,7 +27833,7 @@ a([ge_e(opgespatte),
    ge_no_e(opgespat)],adv,[],[]).
 
 a([ge_e(opgesplitste),
-   ge_no_e(opgesplitst)],adv,[],[]).
+   ge_no_e(opgesplitst)],adv,[pp(in)],[]).
 
 a([ge_e(opgespoorde),
    ge_no_e(opgespoord)],adv,[],[]).
@@ -33207,7 +33215,8 @@ a([e(telepathische),
 
 a([ge_e(teleurgestelde),
    ge_no_e(teleurgesteld)],padv,
-  [object_sbar],[]).
+  [object_sbar,
+   pp(in)],[]).
 
 a([stem(teleur_stellen),
    ende(teleurstellende),
@@ -42140,7 +42149,6 @@ stem(geleegd,v_root(leeg,legen)).
 stem(geleend,v_root(leen,lenen)).
 stem(gelegaliseerd,v_root(legaliseer,legaliseren)).
 stem(gelegd,v_root(leg,leggen)).
-stem(gelegen,v_root(lig,liggen)).
 stem(gelegerd,v_root(leger,legeren)).
 stem(gelegitimeerd,v_root(legitimeer,legitimeren)).
 stem(geleid,v_root(leid,leiden)).

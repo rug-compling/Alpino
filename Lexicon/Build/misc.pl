@@ -1199,6 +1199,7 @@ tag(pff).
 tag(pfff).
 tag(pffff).
 tag(pfffff).
+tag(plof).
 tag(ppf).
 tag(ppff).
 tag(ppfff).
@@ -2351,6 +2352,13 @@ with_dt([één,of,meerdere],
 	dt(conj,[cnj=l(één,number(hoofd(sg_num)),detp,0,1),
 		 crd=l(of,conj(of),conj,1,2),
 		 cnj=l(meerdere,determiner(pl_num,nwh,nmod,pro,yparg),detp,2,3)
+		])).
+
+with_dt([één,of,meer],
+	determiner(pl_num,nwh,nmod,pro,yparg),
+	dt(conj,[cnj=l(één,number(hoofd(sg_num)),detp,0,1),
+		 crd=l(of,conj(of),conj,1,2),
+		 cnj=l(meer,adjective(meer),ap,2,3)
 		])).
 
 %m(welk,          determiner(pron,rwh), welks). parse_only_lex
@@ -4171,7 +4179,10 @@ conj('en/of',          'en/of').
 conj('en/of',          [en,/,of]).
 conj('en/of',          'e/o').
 conj('en/of',          [en,'(',of,')']).
+conj(evenals,          evenals).
 conj(hetzij,           hetzij).
+conj('in plaats van',  [inplaats,van]).
+conj('in plaats van',  [in,plaats,van]).
 conj('laat staan',     [laat,staan]).
 conj(maal,             maal).
 conj(maar,             maar).
@@ -4804,6 +4815,7 @@ m(laatstleden,      postn_adverb,laatstleden).
 m(light,            postn_adverb,light).  % cola light
 m('om niet',        postn_adverb,[om,niet]).
 m(netto,            postn_adverb,netto).
+m(ooit,             postn_adverb,ooit).  % het beste resultaat ooit werd behaald door ...
 m('pur sang',       postn_adverb,[pur,sang]).
 m(senior,           postn_adverb,senior).
 m(tegelijk,         postn_adverb,tegelijk).
@@ -5223,7 +5235,15 @@ m(echt,             modal_adverb(noun),echt).
 m('every inch',     modal_adverb(noun),[every,inch]).
 m(gans,             modal_adverb(noun),gans). % gans het land
 %m('naar schatting', modal_adverb(noun),[naar,schatting]). % bedragen
-%m('nog eens',       modal_adverb(noun),[nog,eens]). % een dozijn etc
+				%m('nog eens',       modal_adverb(noun),[nog,eens]). % een dozijn etc
+m('meer dan',       modal_adverb(noun),[meer,dan]).
+m('minder dan',     modal_adverb(noun),[minder,dan]).
+m('meer als',       modal_adverb(noun),[meer,als]).
+m('minder als',     modal_adverb(noun),[minder,als]).
+m('niet meer dan',       modal_adverb(noun),[niet,meer,dan]).
+m('niet minder dan',     modal_adverb(noun),[niet,minder,dan]).
+m('niet meer als',       modal_adverb(noun),[niet,meer,als]).
+m('niet minder als',     modal_adverb(noun),[niet,minder,als]).
 m('nog geen',       modal_adverb(noun),[nog,geen]). % nog geen grammetje
 m('ook maar',       modal_adverb(noun),[ook,maar]).
 m(opnieuw,          modal_adverb(noun),opnieuw). 
@@ -6740,7 +6760,8 @@ predm_adverb(allevier).
 predm_adverb(allevijf).
 predm_adverb(beide).
 predm_adverb([Een,voor,Een2]) :- een1(Een), een1(Een2).
-predm_adverb([Een,na,Een2]) :- een1(Een), een1(Een2).  % VL
+predm_adverb([Een,na,  Een2]) :- een1(Een), een1(Een2).  % VL
+predm_adverb([Een,per, Een2]) :- een1(Een), een1(Een2).  % VL?
 predm_adverb(elk).
 predm_adverb([elk,voor,zich]).
 predm_adverb([en,bloc]).
@@ -7612,6 +7633,14 @@ with_dt([deze,en,nog,andere],
         dt(conj,[crd=l(en,conj(en),vg,1,2),
                  cnj=l(deze,determiner(de,nwh,nmod,pro,nparg),detp,0,1),
                  cnj=dt(ap,[mod=l(nog,adverb,advp,2,3),
+			    hd=l(ander,adjective(ere),ap,3,4)
+			   ])])).
+
+with_dt([deze,en,vele,andere],
+        adjective(e),
+        dt(conj,[crd=l(en,conj(en),vg,1,2),
+                 cnj=l(deze,determiner(de,nwh,nmod,pro,nparg),detp,0,1),
+                 cnj=dt(ap,[mod=l(veel,adjective(e),ap,2,3),
 			    hd=l(ander,adjective(ere),ap,3,4)
 			   ])])).
 

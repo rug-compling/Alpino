@@ -5451,6 +5451,7 @@ lemma_root(door_verzuipen,verzuip_door) .
 lemma_root(door_verzuren,verzuur_door) .
 lemma_root(door_verzwakken,verzwak_door) .
 lemma_root(door_verzwaren,verzwaar_door) .
+lemma_root(door_verzwinden,verzwind_door) .
 lemma_root(door_vestigen,vestig_door) .
 lemma_root(door_vetoën,veto_door) .
 lemma_root(door_vibreren,vibreer_door) .
@@ -13047,6 +13048,7 @@ lemma_root(raak_verzuipen,verzuip_raak) .
 lemma_root(raak_verzuren,verzuur_raak) .
 lemma_root(raak_verzwakken,verzwak_raak) .
 lemma_root(raak_verzwaren,verzwaar_raak) .
+lemma_root(raak_verzwinden,verzwind_raak) .
 lemma_root(raak_vetoën,veto_raak) .
 lemma_root(raak_vibreren,vibreer_raak) .
 lemma_root(raak_vieren,vier_raak) .
@@ -16718,7 +16720,6 @@ lemma_root(uit_heropleven,heropleeft_uit) .
 lemma_root(uit_herrijzen,herrijs_uit) .
 lemma_root(uit_herroepen,herroep_uit) .
 lemma_root(uit_herscheppen,herschep_uit) .
-lemma_root(uit_herstellen,herstel_uit) .
 lemma_root(uit_herstructureren,herstructureer_uit) .
 lemma_root(uit_hertellen,hertel_uit) .
 lemma_root(uit_hervatten,hervat_uit) .
@@ -20252,6 +20253,7 @@ lemma_root(verdenken,verdenk) .
 lemma_root(verder_fietsen,fiets_verder) .
 lemma_root(verder_gaan,ga_verder) .
 lemma_root(verder_kuieren,kuier_verder) .
+lemma_root(verder_kunnen,kan_verder) .
 lemma_root(verder_lullen,lul_verder) .
 lemma_root(verder_rijden,rijd_verder) .
 lemma_root(verderven,verderf) .
@@ -20723,6 +20725,7 @@ lemma_root(verzwaren,verzwaar) .
 lemma_root(verzwelgen,verzwelg) .
 lemma_root(verzwijgen,verzwijg) .
 lemma_root(verzwikken,verzwik) .
+lemma_root(verzwinden,verzwind) .
 lemma_root(vestigen,vestig) .
 lemma_root(vet_mesten,mest_vet) .
 lemma_root(vetoën,veto) .
@@ -23170,6 +23173,7 @@ lemma_root(voort_verzuipen,verzuip_voort) .
 lemma_root(voort_verzuren,verzuur_voort) .
 lemma_root(voort_verzwakken,verzwak_voort) .
 lemma_root(voort_verzwaren,verzwaar_voort) .
+lemma_root(voort_verzwinden,verzwind_voort) .
 lemma_root(voort_vetoën,veto_voort) .
 lemma_root(voort_vibreren,vibreer_voort) .
 lemma_root(voort_vieren,vier_voort) .

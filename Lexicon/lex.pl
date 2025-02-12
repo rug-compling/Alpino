@@ -2662,6 +2662,8 @@ spelling_variant(ouwer,    ouder).
 spelling_variant(ouwere,   oudere).
 spelling_variant(stief,    stierf).
 spelling_variant(stiekum,  stiekem).
+spelling_variant(gecancelled, gecanceld).
+spelling_variant(gecanceled, gecanceld).
 spelling_variant(geraced,  geracet).
 spelling_variant('ge-uit', geuit).
 spelling_variant(goeie,    goede).
@@ -2931,6 +2933,7 @@ spelling_variant(geruimte,    geruime).
 spelling_variant(geschikst,   geschiktst).
 spelling_variant(geschikste,  geschiktste).
 spelling_variant(gestichtte,  gestichte).
+spelling_variant(gevangen,    gevangenen).
 spelling_variant(geworde,     geworden).
 spelling_variant(gezamelijk,  gezamenlijk).
 spelling_variant(haden,       hadden).
@@ -2962,6 +2965,7 @@ spelling_variant(interressante,interessante).
 spelling_variant(jute,        juten).
 spelling_variant(keeg,        kreeg).
 spelling_variant(kijgen,      krijgen).
+spelling_variant(krijgsgevangen,    krijgsgevangenen).
 spelling_variant(kijgt,       krijgt).
 spelling_variant(knieen,      knieën).
 spelling_variant(kunsstof,    kunststof).

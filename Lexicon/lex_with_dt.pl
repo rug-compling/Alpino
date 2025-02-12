@@ -1046,6 +1046,7 @@ with_dt_all(ander,[ben,plezant]).
 with_dt_all(ander,[ben,prettig]).
 with_dt_all(ander,[deze,en]).
 with_dt_all(ander,[deze,en,nog]).
+with_dt_all(ander,[deze,en,veel]).
 with_dt_all(ander,[en,niet]).
 with_dt_all(ander,[ik]).
 with_dt_all(andermans,[eigen,en]).
@@ -1947,6 +1948,7 @@ with_dt_all(man,[u]).
 with_dt_all(man,[zijn]).
 with_dt_all(ma,[ons]).
 with_dt_all(meerdere,[of,één]).
+with_dt_all(meer,[of,één]).
 with_dt_all(men,[zie]).
 with_dt_all(meteen,[niet]).
 with_dt_all(meteen,[vrijwel]).
@@ -2845,6 +2847,7 @@ with_dt_root(makkelijk).
 with_dt_root(mam).
 with_dt_root(man).
 with_dt_root(me).
+with_dt_root(meer).
 with_dt_root(meerdere).
 with_dt_root(men).
 with_dt_root(met).

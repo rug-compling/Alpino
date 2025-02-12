@@ -1352,6 +1352,9 @@ number_continue(_,both) -->
 duizend(duizend).
 duizend('000').
 duizend('500').
+duizend(miljoen).
+duizend(miljard).
+
 
 n_word_x(x).
 n_word_x(-).
@@ -1844,7 +1847,9 @@ isa_number__(List) :-
 
 isa_number__([]).
 isa_number__([H|T]) :-
-    \+ isalpha(H),
+    (  [H] == "x"                % 1.5x1.5 cm
+    ;  \+ isalpha(H)
+    ),
     isa_number__(T).
 
 date_expression -->
@@ -4620,13 +4625,20 @@ tel_land -->
 
 tel_land -->
     n_word(Atom),
-    {  tel_digits(Atom,0,_) }.
+    {  tel_digits(Atom,0,_) },
+    more_tel_land.
 
 tel_land -->
     n_word(Atom),
     {  atom_concat('+',Atom1,Atom),
        tel_digits(Atom1,0,_)
     }.
+
+more_tel_land --> [].
+more_tel_land -->
+    n_word('-'),
+    n_word(Atom),
+    {  tel_digits(Atom,0,_) }.
 
 isdigits([],N,N).
 isdigits([H|T],N0,N) :-

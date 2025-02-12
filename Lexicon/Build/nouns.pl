@@ -4039,6 +4039,8 @@ n([pl(bedrijven),sg(bedrijf)],het,[],
    omroep,
    f([openbaar,vervoer]),
    [openbaar,vervoer],
+   f([openbaar,vervoers]),
+   [openbaar,vervoers],
    s(overheid),
    overslag,
    pluimvee,
@@ -20098,7 +20100,7 @@ n([pl(lasten),sg(last)],de,
   [],
   [pensioen]).
 
-n([sg([last,minute]),sg('last-minute')],de,[]).
+n([sg([last,minute]),sg('last-minute'),sg(lastminute)],de,[]).
 
 n([mass(laster)],de,[]).
 
@@ -22390,6 +22392,9 @@ n([pl(meerderheden),sg(meerderheid)],de,[],
   [kamer,
    'Kamer']).
 
+n([pl(meerderheden),sg(meerderheid)],de,[pred_pp(in)],
+  []).
+
 n([pl(meerderheidsbelangen),sg(meerderheidsbelang)],het,[]).
 
 n([pl(meerjarenramingen),sg(meerjarenraming)],de,[]).
@@ -24230,6 +24235,8 @@ n([pl(nieuwslezers),sg(nieuwslezer)],de,[]).
 n([sg(nieuwszender),pl(nieuwszenders)],de,[]).
 
 n([pl(nieuwtjes),sg(nieuwtje)],het,[sbar]).
+
+n([mass(nihil)],both,[]).
 
 n([mass(nihilisme)],het,[]).
 
@@ -31942,6 +31949,8 @@ n([pl(schoten),sg(schoot)],de,[]).
 
 n([pl(schoppen),sg(schop)],de,[measure]).
 
+n([pl(schoppen),sg(schop)],de,[pred_pp(op)],[]).
+
 n([pl(schoppen),sg(schop)],de,[],[vrij]).
 
 n([pl(schoppen),pl(schoppens),sg(schoppen)],de,[]).
@@ -32864,7 +32873,8 @@ n([pl(sloepen),sg(sloep)],de,[]).
 
 n([pl(sloffen),sg(slof)],de,[measure]).
 
-n([pl(slogans),sg(slogan)],de,[sbar,start_app_measure]).
+n([pl(slogans),sg(slogan)],de,[sbar,start_app_measure],
+  [s(verkiezing)]).
 
 n([pl(slokken),sg(slok)],de,[measure],[dim(slokje)]).
 
