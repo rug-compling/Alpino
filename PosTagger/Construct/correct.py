@@ -5,6 +5,12 @@ import sys
 def main():
     for line in sys.stdin:
         (w,t,k,i,j,h,p,r,c,s) = line.rstrip().split("|")
+        if t == "adjective(ge_no_e(padv))" and r == "geïrriteerd":
+            t = "adjective(ge_no_e(both))"
+        if t == "adjective(er(padv))" and r == "geïrriteerder":
+            t = "adjective(er(both))"
+        if t == "adjective(no_e(adv))" and r == "centraal":
+            t = "adjective(postn_no_e(adv))"
         if t == "modal_adverb(noun_prep)" and r == "waarschijnlijk":
             t = "modal_adverb(adv_noun_prep)"
         if t == "modal_adverb(noun_prep)" and r == "wellicht":
