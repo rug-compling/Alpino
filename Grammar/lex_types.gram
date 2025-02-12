@@ -1792,8 +1792,7 @@ als_complementizer(C) :-
     % +wh: "als wie ga jij naar het carnaval?
     comp(C,cp),
     unify_mods(ComparativeArg),
-    (   comparative_arg(ComparativeArg),
-        (   ComparativeArg => adv, % als gisteren
+    (   (   ComparativeArg => adv, % als gisteren
             ComparativeArg:wh => nwh,
             ComparativeArg:subadv => subadv_adv,
             C:wh => nwh,
@@ -1802,15 +1801,20 @@ als_complementizer(C) :-
                                  % als wie
         ;   ComparativeArg => pp, % als in Amsterdam
             ComparativeArg:wh => nwh,
+	    ComparativeArg:pp_role => pp_obj1,
             C:wh => nwh,
             C:ctype => ~c_als
         ;   ComparativeArg => a % als genoegzaam bekend ...
                                 % als hoe belangrijk beschouw jij hem?
         ;   ComparativeArg => vp,
+	    comparative_arg(ComparativeArg),
             C:wh => nwh,
             ComparativeArg:slash => [],
             C:ctype => c_mod,
             ComparativeArg:vform => (om;psp;fin)
+	;   ComparativeArg => rel,
+	    ComparativeArg:relform => relform_inf,
+	    C:ctype => c_als
         )
     ;				% bescheiden als we zijn
 	                        % todo: should be PADV!
@@ -3226,11 +3230,12 @@ np_me_arg(NP) :-
     %%     Wat wegen die appels? (but "wegen" is transitive too)
     %%    *Wat duurt een wedstrijd?
     NP:subn => (sub_noun;sub_tmp;sub_num;sub_indef_pron;
-                   sub_det;sub_veel;sub_def_adj;sub_name).
+                   sub_det;sub_veel;sub_def_adj;sub_name;sub_adj_pl).
 				% flo X is a num now too
                                 % sub_adj: dit kost "het dubbele"
 				% sub_indef_pron: wat kost een ...
 				% sub_name: dit kost me de Spelen / de Tour
+                                % sub_adj_pl: deze oorlog kostte de USSR 100.000 doden en vele gewonden
 
 adj_np_me_arg(NP) :-
     np_me_arg(NP),
@@ -4745,6 +4750,9 @@ pp_so_pred_np(V,C,C) :-
     ).
 
 %% zij maakten het ons aantrekkelijk om te blijven
+%% no control
+%% we maakten het hun duidelijk/aannemelijk snel weg te moeten (both options)
+%% but other adjs su-control is almost oblig? "aantrekkelijk" "mogelijk"
 so_pred_vp(V,C0,C) :-
     so_pred(V,vp,_VP,_OBJ2,C0,C).
 

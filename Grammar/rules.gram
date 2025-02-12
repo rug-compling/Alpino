@@ -509,6 +509,7 @@ default_head_features([d(meas,no),
                        d(adj_can_postv,no),
 		       d(can_nominalize,no),
 		       d(can_marked_attr,no),
+		       d(can_inv_marked_attr,no),
 		       d(hstem,[]),
 		       m_path(e_agr,agr)
 		      ]).
@@ -524,7 +525,8 @@ head_features([agr,e_agr,subj,prep,preptype,adv,question,pron,
 	       app,hebben_zijn,compar_form,neclass,can_postv,adj_can_postv,
 	       vslash,ctype,deverbal,ppost,passive,nagr,nhstem,nnform,ndt,
 	       tmploc,ld_pc,vtype,pro_deps,sv1,rightx,pp_er,
-               allows_root_imp,has_obcomp,modifies_v
+               allows_root_imp,has_obcomp,modifies_v,can_marked_attr,
+	       can_inv_marked_attr
 	      ]).
 
 %% if head does not have this feature, then assign default value to
@@ -801,7 +803,7 @@ optcomma_hellip(OPTCOMMA) :-
 comma_hellip(COMMA) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct,
-    COMMA:puncttype => (komma;hellip;schuin_streep).
+    COMMA:puncttype => (komma;hellip;schuin_streep;ligg_streep).
 
 comma_hellip(COMMA) :-
     hdrug_util:hdrug_flag(parse_or_generate,generate),
@@ -1865,10 +1867,20 @@ grammar_rule(vp_c_mod_c_v, VP, [ CommaL, Mod, CommaR, V ] ) :-
     optcomma(CommaR),
     vp_mod_v_structure(VP,Mod,V).
 
+%%EX%% Hij heeft - op twaalfjarige leeftijd - het juniorenrecord gebroken
+grammar_rule(vp_d_mod_d_v, VP, [ CommaL, Mod, CommaR, V ] ) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    Mod:sel => ~to_topic, % otherwise we cannot generate the same thing
+    dash(CommaL),
+    dash(CommaR),
+    vp_mod_v_structure(VP,Mod,V).
+
 %%EX%% Hij werd , en dat getuigen zijn werken , een pessimist
+%%EX%% Hij werd - en dat getuigen zijn werken - een pessimist
 grammar_rule(vp_c_rootbar_c_v, VP, [ CommaL, Mod, CommaR, V ] ) :-
-    comma(CommaL),
-    comma(CommaR),
+    comma_dash(CommaL),
+    comma_dash(CommaR),
+    CommaL:puncttype <=> CommaR:puncttype,
     Mod => rootbar,
     vp_mod_xp_v_structure(VP,Mod,V).
 
@@ -5080,7 +5092,8 @@ n_n_app_structure(NP,N,PN) :-
     haspreno(NP),  %%%    NP:haspre => no, % for generation we can't have this
     NP:nform => ~meas_mod & ~temp & ~temp_meas_mod,
     N:rightm => no,
-    N:subn => (sub_noun;sub_adj_pl),  % Real miste de geblesseerden Gareth Bale en Toni Kroos
+    N:subn => (sub_noun;sub_adj_pl), % Real miste de geblesseerden Gareth Bale en Toni Kroos
+                                     % sub_name: de Vereniging van Effectenbezitters VEB
     N:cj => ~no_crd,    % Gerlof: de dichter en schrijver Jan Wolkers
     hd_app_structure(N,PN,NP).
 
@@ -5335,10 +5348,8 @@ marked_n_adj_n_structure(N,AP,NP) :-
     %%% TODO only allow sub_name if "het" is present
 
     AP:deverbal => no,        % reduce spur amb in 'te kloppen tegenstander'
-    AP:can_marked_attr => yes,% reduce spur amb in 'de reuze gitarist'
+    AP:can_marked_attr => yes.% reduce spur amb in 'de reuze gitarist'
                               % but: 'een groter man'
-    AP:agr => sg&het&indef,   % i.e. zonder -e
-    N:agr => (~(sg&het&indef)). % sg,de | sg,het,def | pl
 
 %%EX%% het volgend jaar
 %%EX%% het vorig jaar
@@ -5361,13 +5372,29 @@ marked_n_adj_n_structure(N,AP,NP) :-
 %%EX%% de economisch specialisten
 %%EX%% door eigen toedoen en door eigen nadenken heb ik het dorstige hunkeren kunnen voorkomen
 grammar_rule(n_adj_n_marked, NP, [ AP, N ] ) :-
-    marked_n_adj_n_structure(N,AP,NP).
+    marked_n_adj_n_structure(N,AP,NP),
+    AP:agr => sg&het&indef,	% i.e. zonder -e
+    N:agr => (~(sg&het&indef)). % sg,de | sg,het,def | pl
+
 
 %%EX%% een beroemd , groot man heeft eens gezegd...
 grammar_rule(n_comma_adj_n_marked, NP, [ COMMA, AP, N ] ) :-
     marked_n_adj_n_structure(N,AP,NP),
     COMMA => punct,
-    COMMA:puncttype => komma.
+    COMMA:puncttype => komma,
+    AP:agr => sg&het&indef,	% i.e. zonder -e
+    N:agr => (~(sg&het&indef)). % sg,de | sg,het,def | pl
+
+%% vooral in krantenkoppen etc
+%%EX%% Gedode aantal soldaten per land
+%%EX%% Laatste paarse wetsvoorstel ?
+%%EX%% Sombere weer leidt tot depressies
+grammar_rule(n_adj_n_inv_marked, NP, [ AP, N ] ) :-
+    marked_n_adj_n_structure(N,AP,NP),
+    N:cj => ncj,
+    AP:can_inv_marked_attr => yes,
+    AP:agr => (~(sg&het&indef)), % sg,de | sg,het,def | pl
+    N:agr => sg&het&indef.	% i.e. zonder -e
 
 n_adj_n_structure(N,AP,NP) :-
     NP => n, AP => a, N => n,
@@ -7594,6 +7621,14 @@ grammar_rule(sbar(vp),SBAR,[ Comp, XP ]) :-
     XP:tags => [],
     sbar_comp_xp_structure(Comp,XP,SBAR).
 
+%%EX%% Hij zag eruit als om door een ringetje te halen .
+grammar_rule(sbar(rel_om),SBAR, [Comp, XP] ) :-
+    XP => rel,
+    XP:relform => relform_inf,
+    XP:tmploc => non_adv,
+    Comp:ctype => c_als,
+    sbar_comp_xp_structure(Comp,XP,SBAR).
+
 %%EX%% Ik ga niet , behalve dan om even de deur uit te zijn
 grammar_rule(sbar(behalve_vp),SBAR,[ Comp, Mod, XP ]) :-
     XP => vp,
@@ -8918,6 +8953,17 @@ grammar_rule(a_advp_dp,MAX,[A,COMMA,XP]) :-
     A:avform => (avform_ap;avform_aan_ti;avform_ppart),
     max_advp(XP),
     dp_dp_structure(A,XP,MAX).
+
+%%EX%% Volgens mij om indruk op de meisjes te maken
+grammar_rule(pp_vp_dp,MAX,[PP,COMMA,XP]):-
+    optcomma(COMMA),
+    MAX => max,
+    MAX:max_type => t_dp,
+    max_pp(PP),
+    max_vp(XP),
+    XP:e_deps => [],
+    XP:vform => om, % otherwise adv normally is modifier of VP
+    dp_dp_structure(PP,XP,MAX).
 
 %%EX%% Wederom om wakker te blijven
 grammar_rule(adv_vp_dp,MAX,[ADV,COMMA,XP]) :-

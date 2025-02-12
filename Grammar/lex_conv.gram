@@ -1341,6 +1341,7 @@ adjective_features(er(ADV),Sign) :-
     Sign:avform => avform_ap,
     Sign:can_nominalize => no,
     Sign:can_marked_attr => yes,
+    Sign:can_inv_marked_attr => no,
     %% Sign:agr => indef & sg & het,  % very often not required:
 				% in vroeger tijden
 				% naar veiliger oorden
