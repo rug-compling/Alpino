@@ -5,11 +5,12 @@
 
 use Getopt::Std;
 
-getopts('m:p:o:uz');
+getopts('s:m:p:o:uz');
 
 $opt_p ||= 5000;
 $opt_m ||= 1000;
 $opt_o ||= "output";
+$opt_s ||= "sents";
 
 if ($opt_u){
     %seen=();
@@ -28,7 +29,7 @@ $part=1;
 while (<>) {
   if (/^[%]/) {
     if ($closed) {
-       $ofile = sprintf "%s_part%05d.sents$filesuffix",$opt_o,$part;
+       $ofile = sprintf "%s_part%05d.%s$filesuffix",$opt_o,$part,$opt_s;
        open(OUTPUT,"$cmdprefix$ofile") || die "cannot write to $ofile: $!\n";
        $part++;
        $counter=0;
@@ -50,7 +51,7 @@ while (<>) {
   @words=split;
   if (@words < $opt_m) {
     if ($closed) {
-       $ofile = sprintf "%s_part%05d.sents$filesuffix",$opt_o,$part;
+       $ofile = sprintf "%s_part%05d.%s$filesuffix",$opt_o,$part,$opt_s;
        open(OUTPUT,"$cmdprefix$ofile") || die "cannot write to $ofile: $!\n";
        $part++;
        $counter=0;
