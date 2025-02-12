@@ -56,8 +56,7 @@ qa_application_type_text=":- hdrug_util:set_flag(application_type,qa)."
 	echo >> $*.pl
 	cat $< |\
         tr -d '' |\
-	sed -e "s/| /|/" \
-            -e "s/  *$$//" \
+	sed -e "s/  *$$//" \
         | awk -F\| '{ if (NF>1 && $$2 ~ /./) print $$0 }' \
         | $(HDRUG) -notk -l $(ALPINO_HOME)/src/utils -l $(ALPINO_HOME)/Suites/create_pl_suite \
                  -cmd "to_suite(key)" >>$*.pl
