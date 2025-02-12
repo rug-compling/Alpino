@@ -1439,6 +1439,7 @@ foreign_word(bracket(_)) :-
     !,
     fail.
 
+foreign_word('\'s').
 foreign_word(a).
 foreign_word(à).
 foreign_word(abnormale).  % in scientific names
@@ -1462,6 +1463,7 @@ foreign_word(am).
 foreign_word(amant).
 foreign_word(amants).
 foreign_word(ami).
+foreign_word(amis).
 foreign_word(amour).
 foreign_word(an).
 foreign_word(anale).  % in scientific names
@@ -1666,6 +1668,8 @@ foreign_word(entertainment).
 foreign_word(entre).
 foreign_word(ergo).
 foreign_word(error).
+foreign_word(essay).
+foreign_word(essays).
 foreign_word(est).
 foreign_word(et).
 foreign_word(été).
@@ -1869,6 +1873,8 @@ foreign_word(merchandising).
 foreign_word(mich).
 foreign_word(military).
 foreign_word(mind).
+foreign_word(mineur).
+foreign_word(mineurs).
 foreign_word(missing).
 foreign_word(mit).
 foreign_word(mode).
@@ -1904,6 +1910,7 @@ foreign_word(node).
 foreign_word(non).
 foreign_word(north).
 foreign_word(northern).
+foreign_word(nos).
 foreign_word(not).
 foreign_word(nothing).
 foreign_word(nous).
