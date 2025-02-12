@@ -18,9 +18,9 @@
             <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="psychiater" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="psychiater" word="psychiater"/>
           </node>
         </node>
-        <node begin="6" cat="pp" end="8" id="15" rel="predc">
-          <node begin="6" end="7" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="17" lemma="contact" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="contact" word="contact"/>
+        <node begin="6" cat="mwu" end="8" id="15" rel="predc">
+          <node begin="6" end="7" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="17" lemma="contact" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="contact" word="contact"/>
         </node>
         <node begin="8" buiging="zonder" end="9" id="18" lemma="komen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom" word="gekomen" wvorm="vd"/>
         <node begin="10" cat="cp" end="22" id="19" rel="mod">

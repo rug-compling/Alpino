@@ -18,9 +18,9 @@
         </node>
         <node begin="7" end="8" id="13" lemma="geleden" pos="adj" postag="BW()" pt="bw" rel="hd" root="geleden" word="geleden"/>
       </node>
-      <node begin="8" cat="pp" end="10" id="14" rel="predc">
-        <node begin="8" end="9" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-        <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="contact" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="contact" word="contact"/>
+      <node begin="8" cat="mwu" end="10" id="14" rel="predc">
+        <node begin="8" end="9" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+        <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="contact" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="contact" word="contact"/>
       </node>
       <node begin="10" cat="pp" end="13" id="17" rel="pc">
         <node begin="10" end="11" id="18" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
