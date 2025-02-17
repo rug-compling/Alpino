@@ -32,8 +32,6 @@ include $(ALPINO_HOME)/Makefile.test
 default_testN_options=-testN stop_if_optimal=off user_max=900000 max_sentence_length=25 
 
 ## defaults per suite for testN target
-novelsample_corrected_testN_options=max_sentence_length=20
-cgn_exs_testN_options="number_analyses=5000"
 ovistrain_testN_options=-flag treebank ../Treebank/ovis
 oviswg_testN_options=-flag treebank ../Treebank/ovis
 wpspel_testN_options=-flag treebank ../Treebank/wpspel
