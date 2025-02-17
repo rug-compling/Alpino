@@ -5,6 +5,8 @@ import sys
 def main():
     for line in sys.stdin:
         (w,t,k,i,j,h,p,r,c,s) = line.rstrip().split("|")
+        if t == "adverb" and r = "nagenoeg":
+            t = "sentence_adverb"
         if t == "adjective(ge_no_e(padv))" and r == "geïrriteerd":
             t = "adjective(ge_no_e(both))"
         if t == "adjective(er(padv))" and r == "geïrriteerder":
