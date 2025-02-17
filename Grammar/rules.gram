@@ -1098,6 +1098,19 @@ grammar_rule(vp_np_v_ap, VP, [ NP0, V, COMMA, Extra1 ]) :-
     vp_arg_v_np_structure(VP,NP,VP1),
     V:eps1 => no.
 
+%%EX%% Omdat het om bandieten gaat , afkomstig uit Venlo
+grammar_rule(vp_pp_v_ap, VP, [ PP0, V, COMMA, Extra1 ]) :-
+    Extra1 => a,
+    Extra1:tmploc => ~wk_er & ~str_er & ~tmp & ~tmp_n & ~ld_dir & ~me, 
+    unify_except_l(Extra1,Extra,[hstem,agr,tmploc]),
+    vp_v_m_extra_ap_structure(VP,VP1,COMMA,Extra),
+    PP0 => pp,
+    PP => pp,
+    hd_m_extra_structure(PP0,Extra,PP),
+    vproj_vc_structure(VP1,V),
+    vp_arg_v_pp_structure(VP,PP,VP1),
+    V:eps1 => no.
+
 vp_v_m_extra_ap_structure(VP, V, COMMA, Extra  ) :-
     VP => vproj,
     VP:rightx => yes,
@@ -1614,6 +1627,8 @@ grammar_rule(vp_v_komma_arg(sbar),VP, [V, OPTCOMMA, Arg] ) :-
 
 %%% for er_er only
 %%EX%% Er zijn er ook geweest die dat niet deden
+%%EX%% Dat water wordt gebruikt om te drinken
+%%EX%% Die term werd gebruikt om tegenstanders mee aan te duiden
 grammar_rule(vp_v_komma_arg(rel),VP, [V, OPTCOMMA, Arg] ) :-
     Arg => rel,
     Arg:sel => to_right,
@@ -6151,16 +6166,16 @@ np_np_mod_structure(N0,MOD,N) :-
 
 %% np --> np , MOD ,
 %%EX%% Jan , uit Amsterdam , ..
+%%EX%% Die verhoging - per 1 februari - is schandalig
 grammar_rule(n_n_mod(komma), N, [ N0, Cl, MOD, OPTCr ]) :-
-    Cl => punct,
-    optcomma(OPTCr),
+    comma_dash(Cl),
+    optcomma_dash(OPTCr),
     np_np_modmod_structure(N0,MOD,N),
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	MOD:mcat => ~mcat_adv, % use the following two rules in that case
 	MOD:mcat => ~mcat_redrel % use normal relative in that case
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
-    ),
-    Cl:puncttype => komma.
+    ).
 
 %%EX%% De kinderen , leergierig , vertrokken
 grammar_rule(n_n_mod_a(komma), N, [ N0, Cl, MOD, OPTCr ]) :-

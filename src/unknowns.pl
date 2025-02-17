@@ -676,6 +676,14 @@ unknown_word_heuristic(P1,R1,W,Ws,"wrong_diacritics|~p|~p|~p~n",
 	    alternative([Wmin|Ws],P1,_,R1,_,wr_dia,Tag,HIS),
 	    [Th|Tt]).
 
+unknown_word_heuristic(P1,R1,W,Ws,"wrong_diacritics|~p|~p|~p~n",
+		       [W,Wmin,[Th|Tt]],_,HIS) :-
+    debug_message(3,"trying heuristic wrong_diacritics~n",[]),
+    replace_accent(W,Wmin),
+    findall(Tag,
+	    alternative([Wmin|Ws],P1,_,R1,_,wr_dia,Tag,HIS),
+	    [Th|Tt]).
+
 unknown_word_heuristic(P1,R1,W,_,"diminutive|~p|~p|~p~n",
 		       [W,Stam,Tag],_,len(1)) :-
     debug_message(3,"trying heuristic diminutive~n",[]),
@@ -7751,3 +7759,17 @@ decap_prefix_chars([C0|T0],[C|T]):-
     decap_all_chars(T0,T).
 decap_prefix_chars([C|T0],[C|T]) :-
     decap_prefix_chars(T0,T).
+
+replace_accent(Atom,AtomNew) :-
+    atom(Atom),
+    atom_codes(Atom,Codes),
+    lists:append(Pref,[34,V|Rest],Codes),
+    trema(V,NV),
+    lists:append(Pref,[NV|Rest],Codes2),
+    atom_codes(AtomNew,Codes2).
+
+trema(97,228).
+trema(101,235).
+trema(105,239).
+trema(111,246).
+trema(117,252).

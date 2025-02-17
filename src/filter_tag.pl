@@ -899,6 +899,7 @@ check_fixed_el(yt(Cat),Cs0,Cs) :-
     check_fixed_el(Cat,Cs0,Cs).
 check_fixed_el(nt(Cat),Cs0,Cs) :-
     check_fixed_el(Cat,Cs0,Cs).
+check_fixed_el(rel_om,             [check_tag(complementizer(om))|Cs],Cs).
 
 check_fixed_part(Ws,P0,P) :-
     hdrug_flag(ignore_fixed_parts,OnOff),

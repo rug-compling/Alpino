@@ -982,6 +982,7 @@ plural_suffix(motions).
 plural_suffix(movies).
 plural_suffix(mountains).
 plural_suffix(murphys).
+plural_suffix(landen).
 plural_suffix(nationals).
 plural_suffix(navigators).
 plural_suffix(necks).
@@ -1235,6 +1236,13 @@ lexicon__(Word,Cat,Label,Ws,Ws,variant(His),LC) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     parse_only_variant(Word,Word1,Cat),
     lexicon__(Word1,Cat,Label,Ws,Ws,His,LC).
+
+%% binnen followed by '-' followed by "en" of "of" can be within_word_conjunct
+lexicon__(Word1,within_word_conjunct,Word1,['-',EnOf|Ws],['-',EnOf|Ws],variant(within_word_conjunct),_) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    atom(Word1),
+    \+ alpino_unknowns:starts_with_capital(Word1),
+    lists:member(EnOf,[en,of]).
 
 %% op m'n eentje
 lexicon__(op,TAG,Label1,Ws0,Ws,'op mijn eentje',_) :-
@@ -1954,6 +1962,13 @@ spelling_variant31('sji-','\'',itisch,'sji\'itisch').
 spelling_variant31('sji-','\'',itische,'sji\'itische').
 spelling_variant31('sji-','\'',iet,'sji\'iet').
 spelling_variant31('sji-','\'',ieten,'sji\'ieten').
+
+spelling_variant21_context(W,'-',Word,en) :-
+    atom(W),
+    atom_concat(W,'-',Word).
+spelling_variant21_context(W,'-',Word,of) :-
+    atom(W),
+    atom_concat(W,'-',Word).
 
 %% 2 --> 1 word
 %% repair tokenization errors:

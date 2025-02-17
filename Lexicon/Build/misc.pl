@@ -4615,6 +4615,10 @@ np_me_adjective(dik,dikke,adv         ). % een 300 blz dik boek
 np_me_adjective(koud,koude,adv).
 np_me_adjective(warm,warme,adv).
 
+np_me_adjective(westelijk,westelijke,adv).
+np_me_adjective(oostelijk,oostelijke,adv).
+np_me_adjective(zuidelijk,zuidelijke,adv).
+np_me_adjective(noordelijk,noordelijke,adv).
 
 %% np_me_adjective(duur,dure,adv         ).  only false hits
 np_me_adjective(groot,grote,adv       ).   % een 2 ha groot ..
@@ -5889,6 +5893,7 @@ sentence_adverb(mogelijkerwijs).
 sentence_adverb(mogelijkerwijze).
 sentence_adverb([mutatis,mutandis]).
 sentence_adverb(naderhand). 
+sentence_adverb(nagenoeg). 
 sentence_adverb(namelijk). 
 sentence_adverb(niettemin). 
 sentence_adverb(nochtans). 
@@ -6569,6 +6574,15 @@ with_dt([niet,alleen],
 	modal_adverb,
 	dt(advp,[hd=l(alleen,adverb,advp,1,2),
 		 mod=l(niet,adverb,advp,0,1)
+		])).
+
+%% ook en vooral in de winter
+%% ook en vooral bij vrouwen
+with_dt([ook,en,vooral],
+	modal_adverb,
+	dt(conj,[cnj=l(ook,modal_adverb,advp,0,1),
+		 crd=l(en,conj(en),vg,1,2),
+		 cnj=l(vooral,modal_adverb,advp,2,3)
 		])).
 
 %% for

@@ -1307,6 +1307,20 @@ number_expressionXX(pl_num) -->
 number_expressionXX(pl_num) -->
     n_word(Xduizend),
     {  atom(Xduizend),
+       atom_concat(X,'-miljoen',Xduizend),
+       number_expression_small_honderd([X],[])
+    }.
+
+number_expressionXX(pl_num) -->
+    n_word(Xduizend),
+    {  atom(Xduizend),
+       atom_concat(X,'-miljard',Xduizend),
+       number_expression_small_honderd([X],[])
+    }.
+
+number_expressionXX(pl_num) -->
+    n_word(Xduizend),
+    {  atom(Xduizend),
        atom_concat(X,'-duizend',Xduizend),
        number_expression_small_honderd([X],[])
     }.

@@ -333,7 +333,6 @@ adverb(mitsgaders).
 adverb(mogelijks). % Vlaams
 adverb(mondjesmaat).
 adverb(mordicus).   % + (op) tegen
-adverb(nagenoeg).
 adverb(nauwelijks).
 adverb(neer). % loc dir pred?
 adverb(netzomin).

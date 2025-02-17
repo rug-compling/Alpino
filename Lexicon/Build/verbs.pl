@@ -4613,6 +4613,7 @@ v(breng,brengt,brengen,gebracht,bracht,brachten,
 	obj_np_er_pp_vp(tot),
 	part_np_np(bij),
 	part_np_np(over),
+	part_np_ld_transitive(over),  % ik breng hem de grens over
 	part_np_np(toe),
 	part_so_pp_np(toe),
 	part_so_pp_np(over),
@@ -8165,6 +8166,7 @@ v(gebruik,gebruikt,gebruiken,gebruikt,gebruikte,gebruikten,
     [h([als_pred_np,
 	intransitive,
 	transitive,
+	fixed([acc,rel_om],norm_passive),
 	np_pc_pp(voor),
 	np_mod_pp(bij),  % daar kunt u wel wat hulp bij gebruiken
 	np_mod_pp(van),  % daar heb ik nog niets van gebruikt
@@ -9981,7 +9983,8 @@ v(hoop,hoopt,hopen,gehoopt,hoopte,hoopten,
 	part_refl(op),
 	part_transitive(op),
         er_pp_sbar(op),
-	pc_pp(op)])]).
+	pc_pp(op)
+       ])]).
 
 v(hoor,hoort,horen,gehoord,hoorde,hoorden,
     [h([aci,
@@ -10506,7 +10509,7 @@ v(institutionaliseer,institutionaliseert,institutionaliseren,geïnstitutionalise
 
 v(instrueer,instrueert,instrueren,geïnstrueerd,instrueerde,instrueerden,
     [h([transitive,
-	np_vp_obj,
+	np_vp_obj1,
 	vp])]).
 
 v(integreer,integreert,integreren,geïntegreerd,integreerde,integreerden,
@@ -13243,6 +13246,7 @@ v(leg,legt,leggen,gelegd,legde,legden,
  	part_intransitive(vast),
 	part_intransitive(voor),
 	part_ld_pp(terug),
+	part_np_ld_pp(terug),
 	part_np_sbar(uit),
 	part_pred_np(uit),
 	part_refl(vast),   % different sense
@@ -15162,7 +15166,7 @@ v(neem,neemt,nemen,genomen,nam,namen,neme,
     [z([part_intransitive(af),
         part_pc_pp(af,tot),  % de wind neemt af tot matig
         part_pc_pp(toe,tot), % de wind neemt toe tot krachtig
-	part_mod_pp(af,door),  % maar de problemen nemen er niet door af
+	part_mod_pp(af,door), % maar de problemen nemen er niet door af
 	part_fixed(toe,[[hand,over,hand]],no_passive),
 	part_intransitive(toe)]),
      h([nonp_pred_np,
@@ -16046,6 +16050,9 @@ v(ontmenselijk,ontmenselijkt,ontmenselijken,ontmenselijkt,ontmenselijkte,ontmens
   [unacc([intransitive]),
    h([transitive])]
  ).
+
+v(ontmijn,ontmijnt,ontmijnen,ontmijnd,ontmijnde,ontmijnden,
+    [h([transitive])]).
 
 v(ontmoedig,ontmoedigt,ontmoedigen,ontmoedigd,ontmoedigde,ontmoedigden,
     [h([sbar_subj_np,
@@ -21815,6 +21822,7 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
 	er_pp_sbar(op),
 	er_pp_vp(op),
 	fixed([vc(kijk,te,intransitive),er_pp(van,C),extra_sbar(C)],no_passive),
+	pc_pp(tegenover),
 	fixed([pc(tegenover),sbar_subj_no_het],no_passive),
 	fixed([pc(tegenover),ap_pred],no_passive),
 	fixed([er_pp(tegenover,C),ap_pred,extra_sbar(C)],no_passive),
@@ -28253,6 +28261,7 @@ v(werk,werkt,werken,gewerkt,werkte,werkten,
 	np_ld_dir, % hij werkt de bal de achterlijn over
         fixed([[in,de,hand],acc],norm_passive),
         fixed([[in,de,hand],sbar],imp_passive),
+	fixed([ap_pred,vp_subj],no_passive),   % het werkt goed om naar de jongeren toe te gaan
 	part_intransitive(af),  % voetbal, afwerken op doel
         part_intransitive(mee),
 	part_intransitive(over),
@@ -29835,5 +29844,6 @@ psp_only(verschuldigd,
 	 verschuldigd,
          unacc,
          [transitive,
+	  so_pp_np,
 	  np_np]).
 

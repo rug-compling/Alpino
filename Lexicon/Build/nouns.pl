@@ -8582,7 +8582,8 @@ n([pl(crises),pl(crisissen),sg(crisis)],de,[],
 n([mass('crisis-interventie')],de,[]).
 
 n([pl(criteria),pl(criteriums),sg(criterium)],het,
-  [subject_sbar,
+  [app_measure,
+   subject_sbar,
    subject_vp,
    sbar,
    vp]).
@@ -11741,6 +11742,7 @@ n([pl(fietsen),sg(fiets)],de,[],
   [i(kind,kinder),		% niet kin_derf_iets
    motor,
    race,
+   snor,
    s(stad),
    vouw,
    dim(fietsje)]).
@@ -15242,6 +15244,12 @@ n([pl(hengelaars),sg(hengelaar)],de,[],[dim(hengelaartje)]).
 n([pl(hengsels),sg(hengsel)],het,[],[dim(hengseltje)]).
 
 n([pl(hengsten),sg(hengst)],de,[],[dek]).
+
+n([sg(hepatitis),
+   sg([hepatitis,'A']),
+   sg([hepatitis,'B']),
+   sg([hepatitis,'E'])
+  ],both,[]).
 
 n([pl(herauten),sg(heraut)],de,[]).
 

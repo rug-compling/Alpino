@@ -6657,6 +6657,11 @@ map_dep(subj(Stem),none,none,V) :-
     V:subj:subn => sub_noun,
     V:cj => ncj,
     V:subj:hstem <=> Stem.
+map_dep(rel_om,vc,VP,_) :-
+    VP => rel,
+    VP:relform => relform_inf,
+    VP:tmploc => non_adv,
+    unify_mods(VP).
 map_dep(vc(Stem,Vform,Frame),svp,VP,V0,V) :-
     unify_except(V0,V,parts),
     VP => vc,
@@ -6672,6 +6677,7 @@ map_dep(vc(Stem,Vform,Frame),svp,VP,V0,V) :-
     VP:fixed_dep => yes,
     assign_vform_of_vc(Vform,VP),
     VP:hstem ==> Stem.
+
 
 %% auxiliary stuff for analysis of fixed phrases
 fixed_arg(Sign,Cat,Words) :-

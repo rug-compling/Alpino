@@ -9540,6 +9540,7 @@ lemma_root(ontmannen,ontman) .
 lemma_root(ontmantelen,ontmantel) .
 lemma_root(ontmaskeren,ontmasker) .
 lemma_root(ontmenselijken,ontmenselijk) .
+lemma_root(ontmijnen,ontmijn) .
 lemma_root(ontmoedigen,ontmoedig) .
 lemma_root(ontmoeten,ontmoet) .
 lemma_root(ontnemen,ontneem) .

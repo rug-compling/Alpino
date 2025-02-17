@@ -27407,6 +27407,9 @@ a([e(opdringerige),
    st(opdringerigst),
    ste(opdringerigste)],adv,[],[]).
 
+a([ge_e(opeengestapelde),
+   ge_no_e(opeengestapeld)],padv,[],[]).
+
 a([ge_e(opeengevolgde),
    ge_no_e(opeengevolgd)],adv,[],[]).
 
@@ -27931,7 +27934,7 @@ a([ge_e(opgevoede),
    ge_no_e(opgevoed)],adv,[],[]).
 
 a([ge_e(opgevoerde),
-   ge_no_e(opgevoerd)],adv,[],[]).
+   ge_no_e(opgevoerd)],padv,[],[]).
 
 a([ge_e(opgevolgde),
    ge_no_e(opgevolgd)],adv,[],[]).
@@ -28013,7 +28016,7 @@ a([ge_e(opgezochte),
 a([ge_both(opgezogen)],adv,[],[]).
 
 a([ge_e(opgezweepte),
-   ge_no_e(opgezweept)],adv,[],[]).
+   ge_no_e(opgezweept)],padv,[],[]).
 
 a([ge_e(opgezwelde),
    ge_no_e(opgezweld)],padv,[],[]).

@@ -1571,6 +1571,7 @@ with_dt_all(en,['niet zo\'n beetje ook']).
 with_dt_all(en,[nieuw,oud]).
 with_dt_all(en,[omgekeerd]).
 with_dt_all(en,[onder,ons,zeg,zwijg]).
+with_dt_all(en,[ook,vooral]).
 with_dt_all(en,[terecht]).
 with_dt_all(en,[tien,tussen,twintig]).
 with_dt_all(en,[tien,tussen,vijf]).
