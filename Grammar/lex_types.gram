@@ -6976,6 +6976,19 @@ aux(VP,HZ,V,C,C) :-
     VP:subj <=> V:subj,
     VP:hebben_zijn <=> HZ.
 
+aux_pc_pp(Vform,Prep,V,C,C) :-
+    assign_vform_of_vc(Vform,VP),
+    aux_v(V,VP),
+    pp_pc_arg(PP,Prep),
+    imper(V),
+    V:vtype => vaux,
+    V:act => act,
+    dependents(V,[vc/VP,pc/PP]),
+    VP:predms <=> VP:cpredms,
+    VP:dets <=> VP:cdets,
+    VP:apps <=> VP:capps,
+    VP:subj <=> V:subj.
+
 so_aux(VP,HZ,V,C,C) :-
     aux_v(V,VP),
     imper(V),

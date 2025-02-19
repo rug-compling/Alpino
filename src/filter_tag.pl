@@ -538,6 +538,7 @@ valid_sc(so_pp_refl,                  [check_refl,prep(aan)]).
 valid_sc(np_meas,                     []).
 valid_sc(refl,                        [check_refl]).
 valid_sc(np_pc_pp(Prep),              [prep(Prep)]).
+valid_sc(aux_pc_pp(_,Prep),           [prep(Prep)]).
 valid_sc(refl_np_pc_pp(Prep),         [check_refl,
                                        prep(Prep)]).
 valid_sc(meas_pc_pp(Prep),            [prep(Prep)]).

@@ -14543,6 +14543,9 @@ n([pl(grossen),sg(grosse)],de,[]).
 
 n([pl(grotten),sg(grot)],de,[]).
 
+n([sg(['Grote','Keurvorst']),
+   sg([grote,keurvorst])],de,[np_app_measure]).
+
 n([sg(groupie),pl(groupies)],de,[]).
 
 n([mass(gruis)],het,[]).

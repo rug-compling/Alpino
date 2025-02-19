@@ -6426,6 +6426,8 @@ a([stem(braak_liggen),
    ende(braakliggende),
    end(braakliggend)],padv,[],[]).
 
+a([prefix(braille)],nonadv,[],[]).
+
 a([e(brakke),
    er(brakker),
    ere(brakkere),

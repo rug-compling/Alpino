@@ -9912,6 +9912,7 @@ v(hoef,hoeft,hoeven,[gehoefd,gehoeven],hoefde,hoefden,
 	fixed([sbar_subj,acc(betoog)],no_passive),
         %% Het hoeft niet gezegd dat ..
         fixed([vc(zeg,psp,intransitive),sbar_subj_opt_het],no_passive),
+	aux_pc_pp(te_inf,van),     % ik hoef niet te trainen van mijn trainer
 	aux(te_inf)
        ])]).
 
@@ -13486,6 +13487,7 @@ v(lever,levert,leveren,geleverd,leverde,leverden,
 	fixed([{[acc(kritiek),pc(op)]}],norm_passive),
         fixed([{[pc(van),np_pred(illustratie)]}],no_passive),
 	part_np_np(aan),
+	part_so_pp_np(aan),
 	part_np_np(op),
 	part_np_np(over),
 	part_intransitive(in),
@@ -14482,10 +14484,10 @@ v(mag,mag,mogen,gemogen,mocht,mochten,moge,
 	part_transitive(terug),
         nonp_pred_np_ndev,       % ik mag een uniform aan / een pet op / etc
 	modifier(aux(inf)),
+	aux_pc_pp(inf,van),     % ik mag niet zeuren van mijn vrouw
         passive,		% daar mag niet aan getornd (VLAAMS?)
 	pc_pp(van),		% dat mag niet van de directeur
 	np_pc_pp(van),          % ik mag dat niet van de directeur
-	%% TODO mogen VC van-PC 
 	ld_adv,
 	ld_pp])]).
 
@@ -14953,10 +14955,10 @@ v(moei,moeit,moeien,gemoeid,moeide,moeiden,
 	refl_pc_pp(met)])]).
 
 v(moet,moet,moeten,gemoeten,moest,moesten,
-  [b([modifier(aux(inf))]),     % VL: hij is diep moeten gaan
+  [b([modifier(aux(inf)),
+      aux_pc_pp(inf,van)]),	% VL: hij is diep moeten gaan
                                 %     hij heeft diep moeten gaan
 				% vind je het erg moest je dochter thuiskomen met...
-   %% TODO moeten VC van-PC 
 
    h([intransitive,
       transitive_ndev_ndev,
