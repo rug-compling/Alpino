@@ -1722,10 +1722,10 @@ best_score_result_parse(Result,_String,No) :-
 	set_flag(best_score_object_no,No),
 	bb_put(best_score_object,Result),
 	bb_put(best_score_message,EvalMessage),
-	debug_message(2,
+	debug_message(1,
 	       "IMPROVED SCORE: ~2f item ~w; solution ~w~n",
 	       [CaScore,Item,No]),
-	debug_message(2,"~s",[EvalMessage])
+	debug_message(1,"~s",[EvalMessage])
     ;	true
     ),
     hdrug_flag(worst_score_current,val(WCaScore0,_,_,_,_)),
