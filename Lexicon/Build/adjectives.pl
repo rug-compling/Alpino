@@ -3402,6 +3402,8 @@ a([e(arrogante),
    st(arrogantst),
    ste(arrogantste)],adv,[],[]).
 
+a([prefix([art,deco])],nonadv,[],[]).
+
 a([e(artificiële),
    er(artificiëler),
    ere(artificielere),

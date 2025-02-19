@@ -14485,6 +14485,7 @@ v(mag,mag,mogen,gemogen,mocht,mochten,moge,
         passive,		% daar mag niet aan getornd (VLAAMS?)
 	pc_pp(van),		% dat mag niet van de directeur
 	np_pc_pp(van),          % ik mag dat niet van de directeur
+	%% TODO mogen VC van-PC 
 	ld_adv,
 	ld_pp])]).
 
@@ -14954,7 +14955,9 @@ v(moei,moeit,moeien,gemoeid,moeide,moeiden,
 v(moet,moet,moeten,gemoeten,moest,moesten,
   [b([modifier(aux(inf))]),     % VL: hij is diep moeten gaan
                                 %     hij heeft diep moeten gaan
-                           % vind je het erg moest je dochter thuiskomen met...
+				% vind je het erg moest je dochter thuiskomen met...
+   %% TODO moeten VC van-PC 
+
    h([intransitive,
       transitive_ndev_ndev,
       ld_pp,
