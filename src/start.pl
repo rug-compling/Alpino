@@ -2593,11 +2593,10 @@ compressed_sentence([_-remove|T],NewT) :-
 after_timeout_options_(testN):-
     hdrug_flag(use_guides,off),
     hdrug_flag(pos_tagger,off),
-    hdrug_flag(parse_candidates_beam,0),
     set_flag(use_guides,on),
     set_flag(pos_tagger,on),
-    set_flag(parse_candidates_beam,1000),
-    set_flag(last_one_timeout,on).
+    set_flag(last_one_timeout,on),
+    best_score_new_parse.
 
 after_timeout_options_(off) :-
     fail.
