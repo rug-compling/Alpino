@@ -2620,6 +2620,7 @@ after_timeout_options(alpino_lc:parse(_)) :-
     format(user_error,"timeout|~w|~w~n",[Key,StringAtom]),
     hdrug_flag(after_timeout_options,Val),
     after_timeout_options_(Val),
+    hdrug:retractall(object(_,_)),
     clear_additional_lexical_entries,
     lexical_analysis(Sentence0).
 
