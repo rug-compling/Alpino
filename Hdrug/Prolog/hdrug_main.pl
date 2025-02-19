@@ -231,14 +231,16 @@ translate_result_hook_loop(Mod:Call,Max,Status,ParGen,Obj,Start,CNo,UserOpt):-
 
 %%% NEW: time-out "doens't work" once it has found a single solution.
 %%% therefore we check here ourselves...
-
+%%% this is more complicated than I thought, since it that case
+%%% Call is already instantiated. Therefore copy_term
 translate_timelimit(Call,Max,Status) :-
+    copy_term(Call,Call2),
     current_output(OutputStream),
     (	Max =:= 0
     ->	translate_memlimit(Call,Status)
     ;   statistics(runtime,[Start,_]),
         time_out(
-          translate_memlimit(Call,StatusMem),
+          translate_memlimit(Call2,StatusMem),
           Max,
           StatusTimeOut0),
         statistics(runtime,[End,_]),
@@ -255,7 +257,8 @@ translate_timelimit(Call,Max,Status) :-
 	->   call_cleanup(translate_timelimit(Call,Max,Status),try_hook(undo_timeout_options(Call)))
 	;    Status = time_out
 	)
-    ;   Status = StatusMem
+    ;   Status = StatusMem,
+	Call=Call2
     ),
     current_output(OutputStreamChanged),  % bug in charsio/timeout
     (   OutputStream == OutputStreamChanged
