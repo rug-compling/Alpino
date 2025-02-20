@@ -2639,6 +2639,79 @@ simple_convert_number(tweehonderdvijftig,250).
 
 simple_convert_number(duizend,1000).
 
+simple_convert_number('een-en-twintig',21).
+simple_convert_number('twee-en-twintig',22).
+simple_convert_number('drie-en-twintig',23).
+simple_convert_number('vier-en-twintig',24).
+simple_convert_number('vijf-en-twintig',25).
+simple_convert_number('zes-en-twintig',26).
+simple_convert_number('zeven-en-twintig',27).
+simple_convert_number('acht-en-twintig',28).
+simple_convert_number('negen-en-twintig',29).
+simple_convert_number('een-en-dertig',31).
+simple_convert_number('twee-en-dertig',32).
+simple_convert_number('drie-en-dertig',33).
+simple_convert_number('vier-en-dertig',34).
+simple_convert_number('vijf-en-dertig',35).
+simple_convert_number('zes-en-dertig',36).
+simple_convert_number('zeven-en-dertig',37).
+simple_convert_number('acht-en-dertig',38).
+simple_convert_number('negen-en-dertig',39).
+simple_convert_number('een-en-veertig',41).
+simple_convert_number('twee-en-veertig',42).
+simple_convert_number('drie-en-veertig',43).
+simple_convert_number('vier-en-veertig',44).
+simple_convert_number('vijf-en-veertig',45).
+simple_convert_number('zes-en-veertig',46).
+simple_convert_number('zeven-en-veertig',47).
+simple_convert_number('acht-en-veertig',48).
+simple_convert_number('negen-en-veertig',49).
+simple_convert_number('een-en-vijftig',51).
+simple_convert_number('twee-en-vijftig',52).
+simple_convert_number('drie-en-vijftig',53).
+simple_convert_number('vier-en-vijftig',54).
+simple_convert_number('vijf-en-vijftig',55).
+simple_convert_number('zes-en-vijftig',56).
+simple_convert_number('zeven-en-vijftig',57).
+simple_convert_number('acht-en-vijftig',58).
+simple_convert_number('negen-en-vijftig',59).
+simple_convert_number('een-en-zestig',61).
+simple_convert_number('twee-en-zestig',62).
+simple_convert_number('drie-en-zestig',63).
+simple_convert_number('vier-en-zestig',64).
+simple_convert_number('vijf-en-zestig',65).
+simple_convert_number('zes-en-zestig',66).
+simple_convert_number('zeven-en-zestig',67).
+simple_convert_number('acht-en-zestig',68).
+simple_convert_number('negen-en-zestig',69).
+simple_convert_number('een-en-zeventig',71).
+simple_convert_number('twee-en-zeventig',72).
+simple_convert_number('drie-en-zeventig',73).
+simple_convert_number('vier-en-zeventig',74).
+simple_convert_number('vijf-en-zeventig',75).
+simple_convert_number('zes-en-zeventig',76).
+simple_convert_number('zeven-en-zeventig',77).
+simple_convert_number('acht-en-zeventig',78).
+simple_convert_number('negen-en-zeventig',79).
+simple_convert_number('een-en-tachtig',81).
+simple_convert_number('twee-en-tachtig',82).
+simple_convert_number('drie-en-tachtig',83).
+simple_convert_number('vier-en-tachtig',84).
+simple_convert_number('vijf-en-tachtig',85).
+simple_convert_number('zes-en-tachtig',86).
+simple_convert_number('zeven-en-tachtig',87).
+simple_convert_number('acht-en-tachtig',88).
+simple_convert_number('negen-en-tachtig',89).
+simple_convert_number('een-en-negentig',91).
+simple_convert_number('twee-en-negentig',92).
+simple_convert_number('drie-en-negentig',93).
+simple_convert_number('vier-en-negentig',94).
+simple_convert_number('vijf-en-negentig',95).
+simple_convert_number('zes-en-negentig',96).
+simple_convert_number('zeven-en-negentig',97).
+simple_convert_number('acht-en-negentig',98).
+simple_convert_number('negen-en-negentig',99).
+
 complex_convert_number(Atomic,Number) :-
     (	atom(Atomic)
     ->	parse_number_simple(Atomic,Number)
@@ -2660,7 +2733,10 @@ complex_convert_number(Tweehonderd,Number) :-
 %% has been broken for a long time !?!?!?
 complex_convert_number(TweehonderdTachtig,Number) :-
     atom(TweehonderdTachtig),
-    alpino_unknowns:atom_split(TweehonderdTachtig,honderd,Twee,Tachtig),
+    (   alpino_unknowns:atom_split(TweehonderdTachtig,honderd,Twee,Tachtig)
+    ;   alpino_unknowns:atom_split(TweehonderdTachtig,'honderd-',Twee,Tachtig)
+    ;   alpino_unknowns:atom_split(TweehonderdTachtig,'-honderd-',Twee,Tachtig)
+    ),
     convert_number(Twee,TweeN),
     TweeN < 100,
     (   integer(TweeN)

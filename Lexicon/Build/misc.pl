@@ -4230,7 +4230,6 @@ m(dan,              right_conj(eerder_dan),  dan).
 m(zowel,            left_conj(en),zowel).
 
 m(achtereenvolgens, left_conj(en),achtereenvolgens).
-m(behalve,          left_conj(en),behalve).
 m(noch,             left_conj(noch),noch).
 m(of,               left_conj(of),of).
 m(ofwel,            left_conj(ofwel),ofwel).

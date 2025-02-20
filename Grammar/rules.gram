@@ -4474,6 +4474,22 @@ grammar_rule(adv_adv_pps, AdvP,[ Adv, OPTCl, PP ] ) :-
     PP:vc => yes,
     hd_mod_structure(Adv,PP,AdvP).
 
+%%EX%% Overal behalve in Duitsland kun je met pin betalen
+%%EX%% Nergens binnen Europa behalve in Noorwegen is de gemiddelde werktijd zo laag
+grammar_rule(adv_adv_cps, AdvP,[ Adv, OPTCl, CP ] ) :-
+    AdvP => adv, Adv => adv, 
+    optcomma(OPTCl),
+    Adv:wk => no,
+    Adv:tmploc => (loc;tmp), 
+    Adv:haspre => no,
+    % Adv:wh => nwh,
+    Adv:subadv => ~subadv_adj,
+    Adv:redrel => no,
+    Adv:modifies_a => no,
+    max_sbar(CP),
+    CP:ctype => c_mod,
+    hd_mod_structure(Adv,CP,AdvP).
+
 %%EX%% Vandaag woensdag gaan we uit
 %% ???
 grammar_rule(vandaag_woensdag, AdvP,[ Adv, TEMP ] ) :-

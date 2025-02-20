@@ -8146,8 +8146,8 @@ v(gebeur,gebeurt,gebeuren,gebeurd,gebeurde,gebeurden,
 	    fixed([[waar]],no_passive),  % het is waar gebeurd
             mod_pp(omheen),		 % er gebeurde veel omheen
 	    mod_pp(in),                  % daar moet nog veel in gebeuren
-	    pc_pp(aan),
-	    pc_pp(met),
+	    pc_pp(aan),                  % ?
+	    pc_pp(met),                  % ?
             no_subj   % en zo gebeurde .
            ])]).
 
@@ -9267,6 +9267,8 @@ v(handel,handelt,handelen,gehandeld,handelde,handelden,
     [h([intransitive,
 	part_transitive(af),
 	pc_pp(in),
+	pc_pp(naar),	      % we moeten handelen naar onze principes
+	                      % als .. dan moeten we daar ook naar handelen
 	pc_pp(met),
 	pc_pp(op),
 	pc_pp(over)])]).
