@@ -15,22 +15,22 @@
         <node begin="4" end="5" getal="mv" graad="basis" id="11" lemma="zomer_beeld" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="predc" root="beelden" word="zomerbeelden"/>
       </node>
       <node begin="6" cat="smain" end="17" id="12" rel="dp">
-        <node begin="13" end="14" id="13" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
-        <node begin="14" end="15" getal="getal" id="14" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
-        <node begin="6" cat="np" end="17" id="15" rel="su">
-          <node begin="6" end="7" getal="mv" graad="basis" id="16" lemma="winter_landschap" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="landschappen" word="winterlandschappen"/>
-          <node begin="8" cat="ap" end="12" id="17" rel="mod">
-            <node begin="8" cat="np" end="10" id="18" rel="obj2">
-              <node begin="8" end="9" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="9" end="10" getal="mv" graad="basis" id="20" lemma="winter_sport_liefhebber" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="liefhebbers" word="wintersportliefhebbers"/>
+        <node begin="6" cat="np" end="12" id="13" rel="su">
+          <node begin="6" end="7" getal="mv" graad="basis" id="14" lemma="winter_landschap" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="landschappen" word="winterlandschappen"/>
+          <node begin="8" cat="ap" end="12" id="15" rel="mod">
+            <node begin="8" cat="np" end="10" id="16" rel="obj2">
+              <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="9" end="10" getal="mv" graad="basis" id="18" lemma="winter_sport_liefhebber" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="liefhebbers" word="wintersportliefhebbers"/>
             </node>
-            <node begin="10" end="11" id="21" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
-            <node begin="11" buiging="zonder" end="12" graad="basis" id="22" lemma="dierbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="dierbaar" word="dierbaar"/>
+            <node begin="10" end="11" id="19" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+            <node begin="11" buiging="zonder" end="12" graad="basis" id="20" lemma="dierbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="dierbaar" word="dierbaar"/>
           </node>
-          <node begin="15" cat="detp" end="17" id="23" rel="det">
-            <node begin="15" end="16" id="24" lemma="slechts" pos="adv" postag="BW()" pt="bw" rel="mod" root="slechts" word="slechts"/>
-            <node begin="16" buiging="met-e" end="17" id="25" lemma="enkel" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="hd" root="enkel" vwtype="onbep" word="enkele"/>
-          </node>
+        </node>
+        <node begin="13" end="14" id="21" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="14" end="15" getal="getal" id="22" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="15" cat="np" end="17" id="23" rel="predm">
+          <node begin="15" end="16" id="24" lemma="slechts" pos="adv" postag="BW()" pt="bw" rel="mod" root="slechts" word="slechts"/>
+          <node begin="16" buiging="met-e" end="17" id="25" lemma="enkel" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="hd" root="enkel" vwtype="onbep" word="enkele"/>
         </node>
       </node>
     </node>
