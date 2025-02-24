@@ -5,28 +5,28 @@
     <node begin="6" end="7" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="9" end="10" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="13" end="14" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="0" cat="conj" end="17" id="5" rel="--">
-      <node begin="0" cat="np" end="3" id="6" rel="cnj">
+    <node begin="0" cat="du" end="17" id="5" rel="--">
+      <node begin="0" cat="np" end="3" id="6" rel="dp">
         <node begin="0" end="1" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
         <node begin="1" buiging="met-e" end="2" graad="basis" id="8" lemma="ruim" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ruim" word="ruime"/>
         <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="mess_room" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="room" word="messroom"/>
       </node>
-      <node begin="4" cat="np" end="6" id="10" rel="cnj">
+      <node begin="4" cat="np" end="6" id="10" rel="dp">
         <node begin="4" end="5" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
         <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="bar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bar" word="bar"/>
       </node>
-      <node begin="7" cat="np" end="9" id="13" rel="cnj">
+      <node begin="7" cat="np" end="9" id="13" rel="dp">
         <node begin="7" buiging="met-e" end="8" graad="basis" id="14" lemma="centraal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="centraal" word="centrale"/>
         <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="verwarming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verwarming" word="verwarming"/>
       </node>
-      <node begin="10" cat="np" end="13" id="16" rel="cnj">
+      <node begin="10" cat="np" end="13" id="16" rel="dp">
         <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="17" lemma="gelegenheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gelegenheid" word="gelegenheid"/>
         <node begin="11" cat="pp" end="13" id="18" rel="mod">
           <node begin="11" end="12" id="19" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
           <node begin="12" buiging="zonder" end="13" id="20" lemma="douchen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="obj1" root="douch" word="douchen" wvorm="inf"/>
         </node>
       </node>
-      <node begin="14" cat="np" end="17" id="21" rel="cnj">
+      <node begin="14" cat="np" end="17" id="21" rel="dp">
         <node begin="14" end="15" getal="mv" graad="basis" id="22" lemma="compartiment" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="compartiment" word="compartimenten"/>
         <node begin="15" cat="pp" end="17" id="23" rel="mod">
           <node begin="15" end="16" id="24" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>

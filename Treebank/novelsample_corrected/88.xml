@@ -3,8 +3,8 @@
   <node begin="0" cat="top" end="15" id="0" rel="top">
     <node begin="4" end="5" id="1" lemma="," pos="let" postag="LET()" pt="let" rel="--" root="NA" word=","/>
     <node begin="9" end="10" id="2" lemma="," pos="let" postag="LET()" pt="let" rel="--" root="NA" word=","/>
-    <node begin="0" cat="conj" end="14" id="3" rel="--">
-      <node begin="0" cat="ap" end="4" id="4" rel="cnj">
+    <node begin="0" cat="du" end="14" id="3" rel="--">
+      <node begin="0" cat="ap" end="4" id="4" rel="dp">
         <node begin="0" buiging="zonder" end="1" graad="comp" id="5" lemma="lang" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="NA" word="Langer"/>
         <node begin="1" cat="cp" end="4" id="6" rel="obcomp">
           <node begin="1" conjtype="onder" end="2" id="7" lemma="dan" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" root="NA" word="dan"/>
@@ -14,7 +14,7 @@
           </node>
         </node>
       </node>
-      <node begin="5" cat="ap" end="9" id="11" rel="cnj">
+      <node begin="5" cat="ap" end="9" id="11" rel="dp">
         <node begin="5" buiging="zonder" end="6" graad="comp" id="12" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="NA" word="vaker"/>
         <node begin="6" cat="cp" end="9" id="13" rel="obcomp">
           <node begin="6" conjtype="onder" end="7" id="14" lemma="dan" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" root="NA" word="dan"/>
@@ -24,7 +24,7 @@
           </node>
         </node>
       </node>
-      <node begin="10" cat="ap" end="14" id="18" rel="cnj">
+      <node begin="10" cat="ap" end="14" id="18" rel="dp">
         <node begin="10" buiging="zonder" end="11" graad="comp" id="19" lemma="veel" naamval="stan" pdtype="grad" pos="vnw" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="NA" vwtype="onbep" word="meer"/>
         <node begin="11" cat="cp" end="14" id="20" rel="obcomp">
           <node begin="11" conjtype="onder" end="12" id="21" lemma="dan" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" root="NA" word="dan"/>

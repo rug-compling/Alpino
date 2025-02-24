@@ -4,16 +4,16 @@
     <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="5" end="6" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="10" end="11" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="0" cat="conj" end="15" id="4" rel="--">
-      <node begin="0" cat="np" end="2" id="5" rel="cnj">
+    <node begin="0" cat="du" end="15" id="4" rel="--">
+      <node begin="0" cat="np" end="2" id="5" rel="dp">
         <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="olie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="olie" word="olie"/>
       </node>
-      <node begin="3" cat="np" end="5" id="8" rel="cnj">
+      <node begin="3" cat="np" end="5" id="8" rel="dp">
         <node begin="3" end="4" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
         <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="Suezkanaal" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="kanaal" word="Suezkanaal"/>
       </node>
-      <node begin="6" cat="np" end="15" id="11" rel="cnj">
+      <node begin="6" cat="np" end="15" id="11" rel="dp">
         <node begin="6" end="7" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="7" end="8" getal="mv" graad="basis" id="13" lemma="weg" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="weg" word="wegen"/>
         <node begin="8" cat="pp" end="10" id="14" rel="mod">

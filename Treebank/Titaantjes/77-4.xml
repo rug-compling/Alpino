@@ -75,21 +75,19 @@
           </node>
         </node>
       </node>
-      <node begin="36" cat="du" end="41" id="57" rel="dp">
-        <node begin="36" end="37" id="58" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="dp" root="allemaal" word="allemaal"/>
-        <node begin="37" cat="np" end="41" id="59" rel="dp">
-          <node begin="37" end="38" getal="mv" graad="basis" id="60" lemma="ding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ding" word="dingen"/>
-          <node begin="38" cat="pp" end="41" id="61" rel="mod">
-            <node begin="38" end="39" id="62" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
-            <node begin="39" cat="np" end="41" id="63" rel="obj1">
-              <node begin="39" buiging="met-e" end="40" graad="basis" id="64" lemma="duur" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="duur" word="dure"/>
-              <node begin="40" end="41" getal="mv" graad="basis" id="65" lemma="bazar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bazar" word="bazars"/>
-            </node>
+      <node begin="36" cat="np" end="41" id="57" rel="dp">
+        <node begin="36" end="37" id="58" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="det" root="allemaal" word="allemaal"/>
+        <node begin="37" end="38" getal="mv" graad="basis" id="59" lemma="ding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ding" word="dingen"/>
+        <node begin="38" cat="pp" end="41" id="60" rel="mod">
+          <node begin="38" end="39" id="61" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="39" cat="np" end="41" id="62" rel="obj1">
+            <node begin="39" buiging="met-e" end="40" graad="basis" id="63" lemma="duur" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="duur" word="dure"/>
+            <node begin="40" end="41" getal="mv" graad="basis" id="64" lemma="bazar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bazar" word="bazars"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="41" end="42" id="66" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="41" end="42" id="65" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Zijn gordijnen waren van pluche , z&apos;n stoelen bekleed met geel moquette , op den schoorsteen stond een zwarte pendule met candelabres en ik meen dat ik ook nog ergens een bronzen paard heb gezien , allemaal dingen uit dure bazars .</sentence>
 </alpino_ds>

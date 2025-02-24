@@ -4,11 +4,11 @@
     <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="3" end="4" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="5" end="6" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="0" cat="conj" end="8" id="4" rel="--">
-      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="5" lemma="rook_vlees" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="vlees" word="rookvlees"/>
-      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="rosbief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="rosbief" word="rosbief"/>
-      <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="pekel_vlees" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="vlees" word="pekelvlees"/>
-      <node begin="6" cat="np" end="8" id="8" rel="cnj">
+    <node begin="0" cat="du" end="8" id="4" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="5" lemma="rook_vlees" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="dp" root="vlees" word="rookvlees"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="rosbief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="dp" root="rosbief" word="rosbief"/>
+      <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="pekel_vlees" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="dp" root="vlees" word="pekelvlees"/>
+      <node begin="6" cat="np" end="8" id="8" rel="dp">
         <node begin="6" end="7" getal="mv" graad="basis" id="9" lemma="portie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="porties" word="porties"/>
         <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="10" lemma="lever_worst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="worst" word="leverworst"/>
       </node>
