@@ -4700,6 +4700,7 @@ np_det_n_structure(NP,Det,N) :-
     Det:case <=> NP0:case,
     Det:agr <=> N:agr,
     Det:nsubn <=> N:subn,
+    N:subn => ~sub_indef_verb,  % this was never there...??? 24/2/2025
     add_rel(NP1,NP).
 
 %%EX%% We trotseren ' een klachtenregen ' van rechtse populisten
@@ -6074,6 +6075,8 @@ grammar_rule(pn_n_modpn(komma), N, [ N0, Cl, NP, OPTCr ]) :-
 %%EX%% Jan , meestal een dappere strijder , vertrok vol moed
 grammar_rule(n_n_modified_np,N,[N0,Cl,MOD,NP0,OPTCr]) :-
     np_np_modmod_structure(NP0,MOD,NP),
+    NP0:cj => ~no_crd,
+    NP0:has_app => no,
     n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr).
 
 %%EX%% Jan , zelf een dappere strijder , ergerde zich aan de deserteurs
@@ -9394,19 +9397,29 @@ short_np(NP1,SUBN) :-
     NP1:redrel => no,
     NP1:cj => ncj.
 
+seq_dp_np(NP) :-
+    ind_max_np(NP),
+    NP:cj => ~no_crd,
+    NP:nform => norm,
+    NP:subn => (sub_num;sub_name;sub_noun;sub_def_verb;sub_indef_verb).
+
+seq_dp_np_tmp(NP) :-
+    ind_max_np(NP),
+    NP:cj => ~no_crd,
+    NP:nform => norm,
+    NP:subn => (sub_num;sub_name;sub_noun;sub_def_verb;sub_indef_verb;sub_tmp).
+
 dp_np(NP) :-
     ind_max_np(NP),
     NP:cj => ~no_crd,
     NP:nform => norm,
-    NP:subn => (sub_num;sub_name;sub_noun),
-    NP:redrel => no.
+    NP:subn => (sub_num;sub_name;sub_noun).
 
 dp_np_tmp(NP) :-
     ind_max_np(NP),
     NP:nform => norm,
     NP:cj => ~no_crd,
-    NP:subn => (sub_num;sub_name;sub_noun;sub_tmp),
-    NP:redrel => no.
+    NP:subn => (sub_num;sub_name;sub_noun;sub_tmp).
 
 %%EX%% Staking Franse verkeersleiders
 %% abbr of "NP van NP", "ben/heb NP NP"
@@ -9462,8 +9475,8 @@ grammar_rule(np_np_c_np,START,[NP1,NP2,COMMA,NP3]) :-
     SUBN1 => (sub_def_pron;sub_noun;sub_name),
     short_np(NP1,SUBN1),
     NP1:meas => no,
-    dp_np(NP2),
-    dp_np_tmp(NP3),
+    seq_dp_np(NP2),
+    seq_dp_np_tmp(NP3),
     dp_dp_structure(NP1,NP2,NP3,START).
 
 %%EX%% Niets , niets , niets
@@ -9475,12 +9488,14 @@ grammar_rule(np_c_np_c_np,START,[NP1,COMMA1,NP2,COMMA2,NP3]) :-
     START => max,
     START:max_type => t_dp,
     START:mod_np => yes,
-    dp_np(NP1),
-    dp_np(NP2),
-    dp_np_tmp(NP3),
+    seq_dp_np(NP1),
+    seq_dp_np(NP2),
+    seq_dp_np_tmp(NP3),
     dp_dp_structure(NP1,NP2,NP3,START).
 
 %%EX%% Dagbladen , tijdschriften , school- en studielectuur , romans .
+%%EX%% Roken , drinken , slechte nachtrust
+%%EX%% Het zwemmen , het schaatsen , wielrennen
 grammar_rule(np_c_np_c_np_c_np,START,[NP1,COMMA1,NP2,COMMA2,NP3,COMMA3,NP4]) :-
     comma(COMMA1),
     comma(COMMA2),
@@ -9488,10 +9503,10 @@ grammar_rule(np_c_np_c_np_c_np,START,[NP1,COMMA1,NP2,COMMA2,NP3,COMMA3,NP4]) :-
     START => max,
     START:max_type => t_dp,  % was missing here???
     START:mod_np => yes,
-    dp_np(NP1),
-    dp_np(NP2),
-    dp_np(NP3),
-    dp_np_tmp(NP4),
+    seq_dp_np(NP1),
+    seq_dp_np(NP2),
+    seq_dp_np(NP3),
+    seq_dp_np_tmp(NP4),
     dp_dp_structure(NP1,NP2,NP3,NP4,START).
 
 %%EX%% Provinciezetel te koop

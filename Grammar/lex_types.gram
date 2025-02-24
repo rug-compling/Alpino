@@ -5984,6 +5984,7 @@ er_pc_pp(Prep,V,VP,C0,C) :-
 np_er_pc_pp(Prep,V,VP,ACC,C0,C) :-
     er_pc_pp(Prep,V,VP,PP,C0,C),
     initialize_dt([su,sup,pc,obj1],V),
+    V:passive => norm_passive,
     acc_np_arg(ACC),
     V:deps <=> [PP,ACC,VP],
     VP:sel => ~to_topic,
@@ -5994,6 +5995,7 @@ np_er_pc_pp(Prep,V,VP,ACC,C0,C) :-
     unify_except(V0,V,e_deps),
     acc_np_arg(ACC),
     initialize_dt([su,sup,pc,obj1],V),
+    V:passive => norm_passive,
     V:deps <=> [PP,ACC],
     deprel(V,obj1,ACC),
     V:e_deps <=> [VP],
