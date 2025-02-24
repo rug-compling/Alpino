@@ -214,6 +214,28 @@ dp_dp_structure(L,R,Q,S,M) :-
     initialize_dt([dp],M),
     MDt:hwrd => [].
 
+dp_dp_seq_structure(L,S,M) :-
+    non_hd_structure([L,S],M,du),
+    alpino_data:dt(L,LDt),
+    S:dt:dp <=> SDt,
+    alpino_data:dt(M,MDt),
+    MDt:dp <=> [LDt|SDt],
+    MDt:stype => declarative,
+    initialize_dt([dp],M),
+    MDt:hwrd => [].
+
+dp_dp_seq_structure(L,R,Q,S,M) :-
+    non_hd_structure([L,R,Q,S],M,du),
+    alpino_data:dt(L,LDt),
+    alpino_data:dt(R,RDt),
+    alpino_data:dt(Q,QDt),
+    S:dt:dp <=> SDt,
+    alpino_data:dt(M,MDt),
+    MDt:dp <=> [LDt,RDt,QDt|SDt],
+    MDt:stype => declarative,
+    initialize_dt([dp],M),
+    MDt:hwrd => [].
+
 unify_except_dt(M0,M) :-
     unify_except_l(M0,M,[dt,ccat0,ccat,cmods,mods,capps,apps,cdets,dets,
                          cpredms,predms]).
@@ -6187,6 +6209,7 @@ grammar_rule(n_n_mod(komma), N, [ N0, Cl, MOD, OPTCr ]) :-
     comma_dash(Cl),
     optcomma_dash(OPTCr),
     np_np_modmod_structure(N0,MOD,N),
+    N0:cj => ~no_crd,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	MOD:mcat => ~mcat_adv, % use the following two rules in that case
 	MOD:mcat => ~mcat_redrel % use normal relative in that case
@@ -6199,6 +6222,7 @@ grammar_rule(n_n_mod_a(komma), N, [ N0, Cl, MOD, OPTCr ]) :-
     optcomma(OPTCr),
     Cl => punct, 
     np_np_modadj_structure(N0,MOD,N),
+    N0:cj => ~no_crd,
     Cl:puncttype => komma.
 
 %%EX%% De kleding bestemd voor Polen werd opgehaald
@@ -8139,6 +8163,8 @@ grammar_rule(np_is_np,START,[NPA,EQUALS,NPB]) :-
     dp_dp_structure(NPA,NPB,START).
 
 %%EX%% allemaal gelul
+%% this "allemaal gelul" example is now analysed differently with allemaal as determiner
+%%EX%% allemaal de schuld van de communisten
 grammar_rule(predm_adv_np_dp,MAX,[ADV,XP]) :-
     MAX => max,
     MAX:max_type => t_xp,
@@ -8393,26 +8419,52 @@ grammar_rule(start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C]) :-
     dp_dp_structure(A,B,C,M).
 
 %%EX%% De man kwam binnen ; hij opende de koelkast ; de koelkast is leeg ; crisis ...
-grammar_rule(start_start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C,COMMA3,D]) :-
+%%EX%% 1.75 meter lang , blauwe ogen , tenger postuur , donkerblond haar , geen bril .
+grammar_rule(start_start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C,D]) :-
     A => start,
     B => start,
     C => start,
-    D => start,
+    D => start_seq,
     M => start,
-    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep),
-    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep),
-    COMMA3 => punct, COMMA3:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep),
+    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma),
+    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma),
     (   hdrug_util:hdrug_flag(parse_or_generate,generate),
 	COMMA:puncttype => punt_komma,
-	COMMA2:puncttype => punt_komma,
-	COMMA3:puncttype => punt_komma
+	COMMA2:puncttype => punt_komma
     ;   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	flat(M,COMMA,A),
 	flat(M,COMMA,B),
 	flat(M,COMMA2,C)
     ),
     M:puncttype <=> B:puncttype,
-    dp_dp_structure(A,B,C,D,M).
+    dp_dp_seq_structure(A,B,C,D,M).
+
+grammar_rule(start_dp_dp_seq,M,[COMMA,El,List]) :-
+    M => start_seq,
+    List => start_seq,
+    COMMA => punct,
+    El => start,
+    El:branch => no,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	COMMA:puncttype => punt_komma
+    ),
+    dp_dp_seq_structure(El,List,M).
+    
+grammar_rule(start_dp_seq,M,[COMMA,El]):-
+    M => start_seq,
+    COMMA => punct,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	COMMA:puncttype => punt_komma
+    ),
+    El => start,
+    El:branch => no,
+    El:dt <=> DT,
+    M:dt:dp <=> [DT],
+    non_hd_structure([El],M,du).
 
 %%EX%% De man kwam binnen - hij gebruikte de achterdeur .
 grammar_rule(start_start_ligg_streep,M,[A,COMMA,B]) :-
@@ -8550,6 +8602,7 @@ grammar_rule(start_mod_np,M,[MOD,NP]) :-
     MOD:mcat => (mcat_pp;mcat_adv;mcat_vp;mcat_sbar;mcat_redrel),
     MOD:wh => nwh,  % separate rule for wh case
     ind_max_np(NP),
+    NP:cj => ~no_crd,
     NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"
     dp_dp_structure(MOD,NP,M).
 
@@ -8654,7 +8707,9 @@ grammar_rule(start_mod_np_np,M,[MOD1,NP,COMMA,NP2]) :-
     max_dp_modifier(MOD1),
     ind_max_np(NP),
     NP:subn => ~sub_indef_verb & ~sub_indef_adj, 
+    NP:cj => ~no_crd,
     max_np(NP2),
+    NP2:cj => ~no_crd,
     dp_dp_structure(MOD1,NP,NP2,M).
 
 %%EX%% Vogelpest in Azie volgend jaar gevaar voor Europa
@@ -8722,6 +8777,7 @@ grammar_rule(start_mod_comma_np,M,[MOD,COMMA,NP]) :-
     MOD:wh => nwh,  % separate rule for wh case
     ind_max_np(NP),
     NP:subn => ~sub_indef_verb & ~sub_det,
+    NP:cj => ~no_crd,
     dp_dp_structure(MOD,NP,M).
 
 %%EX%% Hij heeft een baard , zij heeft een tattoo
@@ -8817,6 +8873,7 @@ grammar_rule(adv_np_dp,MAX,[ADV,COMMA,XP]) :-
     ind_max_np(XP0),
     unify_except(XP0,XP,wh),
     XP:subn => ~sub_indef_verb & ~sub_det,
+    XP:cj => ~no_crd,
     dp_dp_structure(ADV,XP,MAX).
 
 %%EX%% ongelooflijk , nietwaar , wat een weelde
@@ -9339,6 +9396,7 @@ short_np(NP1,SUBN) :-
 
 dp_np(NP) :-
     ind_max_np(NP),
+    NP:cj => ~no_crd,
     NP:nform => norm,
     NP:subn => (sub_num;sub_name;sub_noun),
     NP:redrel => no.
@@ -9346,6 +9404,7 @@ dp_np(NP) :-
 dp_np_tmp(NP) :-
     ind_max_np(NP),
     NP:nform => norm,
+    NP:cj => ~no_crd,
     NP:subn => (sub_num;sub_name;sub_noun;sub_tmp),
     NP:redrel => no.
 
@@ -9377,6 +9436,7 @@ grammar_rule(np_c_np,START,[NP1,COMMA,NP2]) :-
     START:mod_np => yes,
     dp_np(NP1),
     ind_max_np(NP2),
+    NP2:cj => ~no_crd,
     NP2:nform => norm,
     NP2:subn => (sub_num;sub_name;sub_noun;sub_tmp),
     dp_dp_structure(NP1,NP2,START).

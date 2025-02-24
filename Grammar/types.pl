@@ -41,7 +41,7 @@ top(				% first all categories %
        post_adj_adv, post_wh_adv, pre_wh_adv, post_p_adv, post_loc_adv_adv,
        post_np_adv, post_n_adv, modal_adv, adv, dip_adv, denk_ik,
        vandaar_adv,zo_van_adv, post_p,post_pp, post_pn_adv,
-       root, sv1, sbar, redrel, rel, comp, start, tag, max, rootbar, iets_adv,
+       root, sv1, sbar, redrel, rel, comp, start, start_seq, tag, max, rootbar, iets_adv,
        score_cat, pre_np_adv, imp, etopic, ecomp, top_cat, within_word_conjunct,
        num_na,
        part,
@@ -186,6 +186,7 @@ cat_type(lconj,   [needs_right_cform]).
 cat_type(root,    [question,allows_root_imp,puncttype,
                    subj,needs_dip,cj,tags,topic_hstem,niet]).
 cat_type(start,   [sv1,branch,puncttype]).
+cat_type(start_seq,[]).
 cat_type(max,     [cj,sv1,max_type,mod_np,puncttype]).
 cat_type(top_cat, []).
 cat_type(sv1,     [iexs,imexs,subj,haswh,slash,tense,cj,sv1_mod,tags,can_be_max]).
