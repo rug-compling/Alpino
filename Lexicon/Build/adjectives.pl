@@ -226,10 +226,6 @@ a([both([één,op,één]),
 a([prefix('eerste-fase'),
    prefix([eerste,fase])],nonadv,[],[]).
 
-a([prefix('eerste-klas'),
-   prefix([eerste,klas]),
-   prefix(['1e',klas])],adv,[],[]).
-
 a([prefix('fiber-optic'),
    prefix([fiber,optic])],nonadv,[],[]).
 
@@ -363,10 +359,6 @@ a([prefix(tering)],nonadv,[],[]).
 
 a([prefix('tweede-fase'),
    prefix([tweede,fase])],nonadv,[],[]).
-
-a([prefix('tweede-klas'),
-   prefix([tweede,klas]),
-   prefix(['2e',klas])],adv,[],[]).
 
 a([prefix('vader-kind'),
    prefix([vader,kind]),
@@ -7617,10 +7609,6 @@ a([e(depressieve),
    no_e(depressief),
    st(depressiefst),
    ste(depressiefste)],padv,[],[]).
-
-a([prefix('derde-klas'),
-   prefix([derde,klas]),
-   prefix(['3e',klas])],adv,[],[]).
 
 a([e(dergelijke),
    no_e(dergelijk)],adv,[],[]).
@@ -21795,9 +21783,7 @@ a([e(logische),
    st(logischt),
    ste(logischte)],adv,
   [subject_sbar,
-   subject_vp,
-   pp(in),
-   pp(voor)],[]).
+   subject_vp],[]).
 
 a([e(logistieke),
    no_e(logistiek)],nonadv,[],[]).
@@ -36893,7 +36879,7 @@ a([ge_e(verspreide),
    ere(verspreidere),
    ge_no_e(verspreid),
    st(verspreidst),
-   ste(verspreidste)],adv,
+   ste(verspreidste)],both,
   [pp(over)],[]).
 
 a([ge_both(versprongen)],adv,[],[]).
@@ -37605,10 +37591,6 @@ a([e(vicieuze),
    ste(vicieuste)],nonadv,[],[]).
 
 a([e(vieve),no_e(vief)],adv,[],[]).
-
-a([prefix('vierde-klas'),
-   prefix([vierde,klas]),
-   prefix(['4e',klas])],nonadv,[],[]).
 
 a([e(vierkante),
    no_e(vierkant),

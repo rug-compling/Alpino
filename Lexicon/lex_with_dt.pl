@@ -384,8 +384,6 @@ with_dt_all('1999',['2000']).
 with_dt_all('1999',['2001']).
 with_dt_all('1999',['2002']).
 with_dt_all('1999',['2003']).
-with_dt_all('1e',[klas]).
-with_dt_all('1e',[klasse]).
 with_dt_all('200.000',['300.000',de,en,tussen]).
 with_dt_all('200.000',['400.000',de,en,tussen]).
 with_dt_all('20.000',['25.000',de,en,tussen]).
@@ -574,8 +572,6 @@ with_dt_all('28',['30',de,en,tussen]).
 with_dt_all('28',['32',de,en,tussen]).
 with_dt_all('28',['35',de,en,tussen]).
 with_dt_all('2',['9',en,tussen]).
-with_dt_all('2e',[klas]).
-with_dt_all('2e',[klasse]).
 with_dt_all('300.000',['400.000',de,en,tussen]).
 with_dt_all('300.000',['500.000',de,en,tussen]).
 with_dt_all('30.000',['40.000',de,en,tussen]).
@@ -650,8 +646,6 @@ with_dt_all('37',['38,8',de,en,tussen]).
 with_dt_all('37',['38,8',en,tussen]).
 with_dt_all('3',['7',en,tussen]).
 with_dt_all('3',['8',en,tussen]).
-with_dt_all('3e',[klas]).
-with_dt_all('3e',[klasse]).
 with_dt_all('400.000',['500.000',de,en,tussen]).
 with_dt_all('400.000',['500.000',en,tussen]).
 with_dt_all('40.000',['50.000',de,en,tussen]).
@@ -698,8 +692,6 @@ with_dt_all('480',['854',bij]).
 with_dt_all('4',['8',bij]).
 with_dt_all('4',['8',de,de,en,tussen]).
 with_dt_all('4',['8',en,tussen]).
-with_dt_all('4e',[klas]).
-with_dt_all('4e',[klasse]).
 with_dt_all('500.000',['600.000',de,en,tussen]).
 with_dt_all('500.000',['700.000',de,en,tussen]).
 with_dt_all('500.000',['800.000',de,en,tussen]).
@@ -1340,8 +1332,6 @@ with_dt_all(de,[opa]).
 with_dt_all(de,[overvloed]).
 with_dt_all(de,[paus]).
 with_dt_all(de,[persoon]).
-with_dt_all(derde,[klas]).
-with_dt_all(derde,[klasse]).
 with_dt_all(de,[rechter]).
 with_dt_all(dergelijks,[iets,of]).
 with_dt_all(dergelijk,[zelfs]).
@@ -1519,8 +1509,6 @@ with_dt_all(eerder,[vanmiddag]).
 with_dt_all(eerder,[vanmorgen]).
 with_dt_all(eerder,[vannacht]).
 with_dt_all(eerder,[vanochtend]).
-with_dt_all(eerste,[klas]).
-with_dt_all(eerste,[klasse]).
 with_dt_all(eeuwig,[voor]).
 with_dt_all(eigen,[elkaar,en]).
 with_dt_all(eigen,[elkaar,of]).
@@ -1911,10 +1899,6 @@ with_dt_all(jullie,[zuster]).
 with_dt_all(ken,[ons,ons]).
 with_dt_all(kindsaf,[sinds]).
 with_dt_all(kindsaf,[van]).
-with_dt_all(klasse,[tweede]).
-with_dt_all(klasse,[vierde]).
-with_dt_all(klas,[tweede]).
-with_dt_all(klas,[vierde]).
 with_dt_all(kleinsaf,[sinds]).
 with_dt_all(kleinsaf,[van]).
 with_dt_all(koets,[te]).
@@ -2390,7 +2374,6 @@ with_dt_root('1996').
 with_dt_root('1997').
 with_dt_root('1998').
 with_dt_root('1999').
-with_dt_root('1e').
 with_dt_root('2').
 with_dt_root('20').
 with_dt_root('200').
@@ -2439,7 +2422,6 @@ with_dt_root('27').
 with_dt_root('270').
 with_dt_root('28').
 with_dt_root('29').
-with_dt_root('2e').
 with_dt_root('3').
 with_dt_root('30').
 with_dt_root('300').
@@ -2464,7 +2446,6 @@ with_dt_root('37').
 with_dt_root('38').
 with_dt_root('38,8').
 with_dt_root('39').
-with_dt_root('3e').
 with_dt_root('4').
 with_dt_root('\'40').
 with_dt_root('40').
@@ -2482,7 +2463,6 @@ with_dt_root('450').
 with_dt_root('45.000').
 with_dt_root('480').
 with_dt_root('49').
-with_dt_root('4e').
 with_dt_root('5').
 with_dt_root('50').
 with_dt_root('500').
@@ -2638,7 +2618,6 @@ with_dt_root(degeen).
 with_dt_root(degelijk).
 with_dt_root(den).
 with_dt_root(denk).
-with_dt_root(derde).
 with_dt_root(dergelijk).
 with_dt_root(dergelijks).
 with_dt_root(dermate).
@@ -2677,7 +2656,6 @@ with_dt_root(eens).
 with_dt_root(eerder).
 with_dt_root(eerlijk).
 with_dt_root(eerst).
-with_dt_root(eerste).
 with_dt_root(eeuwig).
 with_dt_root(eigen).
 with_dt_root(eigenlijk).
@@ -2798,8 +2776,6 @@ with_dt_root(kinds).
 with_dt_root(kindsaf).
 with_dt_root(kindsbeen).
 with_dt_root(klaar).
-with_dt_root(klas).
-with_dt_root(klasse).
 with_dt_root(klein).
 with_dt_root(kleins).
 with_dt_root(kleinsaf).
@@ -3018,7 +2994,6 @@ with_dt_root(tussen).
 with_dt_root(twaalf).
 with_dt_root(twaalfhonderd).
 with_dt_root(twee).
-with_dt_root(tweede).
 with_dt_root(twee_DIM).
 with_dt_root(tweeduizend).
 with_dt_root(tweehonderd).
@@ -3057,7 +3032,6 @@ with_dt_root(verrast).
 with_dt_root(verwachting).
 with_dt_root('vice versa').
 with_dt_root(vier).
-with_dt_root(vierde).
 with_dt_root(vier_DIM).
 with_dt_root(vijand).
 with_dt_root(vijf).

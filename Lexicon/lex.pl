@@ -2476,6 +2476,8 @@ context_spelling_variant(HerinnerDDen,Werd,More,HerinnerDen) :-
         atom_concat(Herinner,den,HerinnerDen)
     ;   atom_concat(Herinner,tten,HerinnerDDen),
 	atom_concat(Herinner,ten,HerinnerDen)
+    ;   atom_concat(Herinner,t,HerinnerDDen),
+	atom_concat(Herinner,d,HerinnerDen)
     ),
     lexicon___(HerinnerDen,verb(_,psp,_),_,[],[],_).
 

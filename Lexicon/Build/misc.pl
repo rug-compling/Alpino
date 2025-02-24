@@ -1985,9 +1985,10 @@ m('het eerste het beste',  determiner(het,nwh,nmod,pro,yparg),
 m('de ene na de andere',determiner(de,nwh,nmod,pro,yparg), [de,ene,na,de,andere]).
 m('de ene na de andere',determiner(de,nwh,nmod,pro,yparg), [de,een,na,de,andere]).
 
-m(al,          determiner(alle,nwh,mod,pro,nparg), alle).
-m(al,          determiner(der),                aller).
-m(al,          determiner(pron),               aller). % op aller lippen (ouderwets)
+m(al,            determiner(alle,nwh,mod,pro,nparg), alle).
+m(al,            determiner(der),                aller).
+m(al,            determiner(pron),               aller). % op aller lippen (ouderwets)
+m(allemaal,      determiner(wat,nwh,mod,pro,yparg),                allemaal).
 m(allerlei,      determiner(wat,nwh,mod,pro,yparg),                allerlei).
 m(andermans,     determiner(pron),               andermans).
 m(dat,           determiner(het,nwh,nmod,pro,nparg),      dat).
@@ -4759,12 +4760,10 @@ with_dt([vrije,stijl],
 	dt(np,[mod=l(vrij,adjective(e),ap,0,1),
 	       hd=l(stijl,noun(de,count,sg),1,2)])).
 
-with_dt([Eerste,Klas],
-	postnp_adverb,
-	dt(np,[det=l(Eerste,number(rang),detp,0,1),
-	       hd=l(Klas,noun(de,count,sg),1,2)])) :-
+m(Stem,postnp_adverb,[Eerste,Klas]):-
     eerste_klas_eerste(Eerste),
-    eerste_klas_klas(Klas).
+    eerste_klas_klas(Klas),
+    stem_from_surf([Eerste,Klas],Stem).
 
 eerste_klas_eerste(eerste).
 eerste_klas_eerste(tweede).
@@ -6723,11 +6722,17 @@ with_dt([eens,te,meer],
 
 %%% predm_adverbs
 
-with_dt([Haast,Allemaal],
+with_dt([ook,zelf],
 	predm_adverb,
+	dt(advp,[hd=l(ook,adverb,1,2),
+		 mod=l(zelf,predm_adverb,advp,0,1)])).
+
+with_dt([Haast,Allemaal],
+	Cat,
 	dt(advp,[hd=l(Allemaal,adverb,1,2),
 		 mod=l(Haast,predm_adverb,advp,0,1)])) :-
-    haast_allemaal(Haast,Allemaal).
+    haast_allemaal(Haast,Allemaal),
+    allemaal_cat(Cat).
 
 haast_allemaal(bijna,allemaal).
 haast_allemaal(haast,allemaal).
@@ -6735,14 +6740,18 @@ haast_allemaal(niet,allemaal).
 haast_allemaal(vrijwel,allemaal).
 haast_allemaal(zowat,allemaal).
 
-haast_allemaal(ook,zelf).
+allemaal_cat(predm_adverb).	                      % we gaan bijna allemaal naar huis
+                                                      % de kinderen, allemaal voorzien van een lunchpakket, ...
+allemaal_cat(pronoun(nwh,thi,pl,de,both,indef)).      % de kinderen , bijna allemaal van dezelfde school , ...
+allemaal_cat(determiner(wat,nwh,mod,pro,yparg)).      % de overlevenden, bijna allemaal kinderen, ....
 
 with_dt([lang,niet,allemaal],
-	predm_adverb,
+	Cat,
 	dt(np,[mod=dt(advp,[mod=l(lang,adverb,advp,0,1),
 			    hd=l(niet,adverb,1,2)]),
 	       hd=l(allemaal,pronoun(nwh,thi,pl,de,both,indef),np,2,3)
-	      ])).
+	      ])) :-
+    allemaal_cat(Cat).
 
 with_dt([lang,niet,altijd],
 	sentence_adverb,
@@ -6953,7 +6962,6 @@ m(alletwee,     pronoun(nwh,thi,pl,de,both,indef),alletwee).
 m(alledrie,     pronoun(nwh,thi,pl,de,both,indef),alledrie).
 m(allevier,     pronoun(nwh,thi,pl,de,both,indef),allevier).
 m(allevijf,     pronoun(nwh,thi,pl,de,both,indef),allevijf).
-m(allemaal,     pronoun(nwh,thi,pl,de,both,indef),allemaal).
 m(al,           pronoun(nwh,thi,pl,de,both,indef),allen).
 m(beide,        pronoun(nwh,thi,pl,de,both,indef),beide).
 m(beide,        pronoun(nwh,thi,pl,de,both,indef),beiden).
@@ -7487,13 +7495,6 @@ with_dt([lang,niet,iedereen],
 	dt(np,[mod=dt(advp,[mod=l(lang,adverb,advp,0,1),
 			    hd=l(niet,adverb,1,2)]),
 	       hd=l(iedereen,pronoun(nwh,thi,sg,de,both,def,strpro),2,3)
-	      ])).
-
-with_dt([lang,niet,allemaal],
-	pronoun(nwh,thi,pl,de,both,indef),
-	dt(np,[mod=dt(advp,[mod=l(lang,adverb,advp,0,1),
-			    hd=l(niet,adverb,1,2)]),
-	       hd=l(allemaal,pronoun(nwh,thi,pl,de,both,indef),2,3)
 	      ])).
 
 with_dt([niet,alles],

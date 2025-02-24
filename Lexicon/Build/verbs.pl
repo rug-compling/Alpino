@@ -703,8 +703,11 @@ m(v_root(heb,hebben),
 	fixed([{[acc(probleem),er_pp(met,C)]},extra_vp(C)],no_passive),
 	%% recht, het recht, geen recht, het volste recht, ..
 	fixed([{[acc(recht),pc(op)]}],no_passive),
+	fixed([{[acc(recht),er_pp(op,C)]},extra_vp(C)],no_passive),
         %% daar hebben wij het volste recht toe
 	fixed([{[acc(recht),pc(tot)]}],no_passive),
+	fixed([{[acc(recht),er_pp(tot,C)]},extra_vp(C)],no_passive),
+	fixed([{[acc(recht),er_pp(tot,C)]},extra_sbar(C)],no_passive),
         fixed([{[pc(tot),acc(reden)]}],no_passive),
         fixed([{[er_pp(tot,C),acc(reden)]},extra_sbar(C)],no_passive),
         fixed([{[er_pp(tot,C),acc(reden)]},extra_vp(C)],no_passive),
@@ -12418,7 +12421,8 @@ v(kriebel,kriebelt,kriebelen,gekriebeld,kriebelde,kriebelden,
 	np_ld_adv])]).
 
 v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
-    [h([ap_pred_np,
+  [h([ap_pred_np,
+      fixed([acc,{[ap_pred,pc(voor)]}],no_passive),
         pp_pred_np(onder,controle),
         pp_pred_np(onder,hoede),
         pp_pred_np(aan,slag),
@@ -12426,7 +12430,7 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
         pp_pred_np(in,bezit),
         pp_pred_np(in,eigendom),
         pp_pred_np(op,peil),
-        %% fixed([ap_pred,het_obj1],no_passive), ???
+        %% fixed([ap_pred,het_obj1],no_passive), ??? ik krijg het warm, zie ap_pred_np
 	np_aan_het,
 	so_passive,
 	obj1_passive,     % ik krijg dat allemaal niet gedaan, ik krijg het niet op tijd opgeruimd
@@ -20057,6 +20061,7 @@ v(schrei,schreit,schreien,geschreid,schreide,schreiden,
 
 v(schrijd,schrijdt,schrijden,geschreden,schreed,schreden,
   [b([intransitive,
+      ld_pp,
       ld_dir])]).
 
 v(schrijf,schrijft,schrijven,geschreven,schreef,schreven,

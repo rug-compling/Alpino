@@ -38784,7 +38784,7 @@ n([pl(verlovingen),sg(verloving)],de,[]).
 
 n([mass(vermaan)],het,[]).
 
-n([pl(vermaken),sg(vermaak)],het,[sbar,vp]).
+n([pl(vermaken),sg(vermaak)],het,[sbar,vp,pred_pp(ter)]).
 
 n([mass(vermaatschappelijking)],de,[]).
 

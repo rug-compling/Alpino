@@ -1189,6 +1189,11 @@ amount -->
     { mid_amount(Amount) },
     number_expression(_).
 
+%% 28.649 ,-
+amount -->
+    number_expression(_),
+    n_word(',-').
+
 amount -->
     n_word(Word),
     { atom(Word),

@@ -412,6 +412,7 @@ lemma_root(aan_schoppen,schop_aan) .
 lemma_root(aanschouwen,aanschouw) .
 lemma_root(aan_schouwen,schouw_aan) .
 lemma_root(aan_schrappen,schrap_aan) .
+lemma_root(aan_schrijden,schrijd_aan) .
 lemma_root(aan_schrijven,schrijf_aan) .
 lemma_root(aan_schroeven,schroef_aan) .
 lemma_root(aan_schrokken,schrok_aan) .
@@ -6468,6 +6469,7 @@ lemma_root(heen_schikken,schik_heen) .
 lemma_root(heen_schilderen,schilder_heen) .
 lemma_root(heen_schoppen,schop_heen) .
 lemma_root(heen_schrappen,schrap_heen) .
+lemma_root(heen_schrijden,schrijd_heen) .
 lemma_root(heen_schrijven,schrijf_heen) .
 lemma_root(heen_schroeven,schroef_heen) .
 lemma_root(heen_schrokken,schrok_heen) .
@@ -15084,6 +15086,7 @@ lemma_root(toe_schikken,schik_toe) .
 lemma_root(toe_schoppen,schop_toe) .
 lemma_root(toe_schrappen,schrap_toe) .
 lemma_root(toe_schreeuwen,schreeuw_toe) .
+lemma_root(toe_schrijden,schrijd_toe) .
 lemma_root(toe_schrijven,schrijf_toe) .
 lemma_root(toe_schroeven,schroef_toe) .
 lemma_root(toe_schrokken,schrok_toe) .
@@ -15761,6 +15764,7 @@ lemma_root(tussen_schieten,schiet_tussen) .
 lemma_root(tussen_schikken,schik_tussen) .
 lemma_root(tussen_schoppen,schop_tussen) .
 lemma_root(tussen_schrappen,schrap_tussen) .
+lemma_root(tussen_schrijden,schrijd_tussen) .
 lemma_root(tussen_schrijven,schrijf_tussen) .
 lemma_root(tussen_schroeven,schroef_tussen) .
 lemma_root(tussen_schrokken,schrok_tussen) .
@@ -19328,6 +19332,7 @@ lemma_root(vandaan_schieten,schiet_vandaan) .
 lemma_root(vandaan_schikken,schik_vandaan) .
 lemma_root(vandaan_schoppen,schop_vandaan) .
 lemma_root(vandaan_schrappen,schrap_vandaan) .
+lemma_root(vandaan_schrijden,schrijd_vandaan) .
 lemma_root(vandaan_schrijven,schrijf_vandaan) .
 lemma_root(vandaan_schroeven,schroef_vandaan) .
 lemma_root(vandaan_schrokken,schrok_vandaan) .
@@ -19921,6 +19926,7 @@ lemma_root(vandoor_schieten,schiet_vandoor) .
 lemma_root(vandoor_schikken,schik_vandoor) .
 lemma_root(vandoor_schoppen,schop_vandoor) .
 lemma_root(vandoor_schrappen,schrap_vandoor) .
+lemma_root(vandoor_schrijden,schrijd_vandoor) .
 lemma_root(vandoor_schrijven,schrijf_vandoor) .
 lemma_root(vandoor_schroeven,schroef_vandoor) .
 lemma_root(vandoor_schrokken,schrok_vandoor) .
