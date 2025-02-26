@@ -43,6 +43,8 @@ OUTS=$(OUTDIR)/context3 $(OUTDIR)/tag4 $(OUTDIR)/tag3 $(OUTDIR)/tag2\
 
 all: bin $(OUTS) frames.pl
 
+outs: $(OUTS)
+
 $(OUTS): $(OBJS) 
 	./getngdpost -d $(OUTDIR) $(OPTPOST) $(OBJS)
 

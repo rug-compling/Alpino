@@ -43,6 +43,7 @@ test:
 	zcat $(PS:%=%.log.gz) | gzip > parool2001_test.log.gz
 #	$(MAKE) -s frames TRAIN_TEST=test &
 
+suite=parool2001_test
 install_test:
 	cp $(suite).la $(suite).log.gz ..
 
