@@ -800,7 +800,7 @@ optcomma_end(OPTCOMMA) :-
 comma_end(COMMA) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct,
-    COMMA:puncttype => (komma;schuin_streep;uitroep;vraag;punt;ligg_streep).
+    COMMA:puncttype => (komma;schuin_streep;uitroep;vraag;punt;ligg_streep;hellip).
 
 comma_end(COMMA) :-
     hdrug_util:hdrug_flag(parse_or_generate,generate),
@@ -9422,6 +9422,10 @@ grammar_rule(max_np_wh_adv_mod_adv,MAX,[WH,MOD,ADVP]) :-
     dp_dp_structure(MOD,ADVP,Tussen),
     max_np_wh_xp_structure(WH,Tussen,MAX).
 
+short_np(NP) :-
+    SUBN => (sub_def_pron;sub_noun;sub_name),
+    short_np(NP,SUBN).
+
 short_np(NP1,SUBN) :-
     ind_max_np(NP1),
     NP1:hdet => no,
@@ -9487,12 +9491,36 @@ grammar_rule(np_np_np,START,[NP1,NP2,NP3]) :-
     START => max,
     START:max_type => t_dp,
     START:mod_np => yes,
-    SUBN1 => (sub_def_pron;sub_noun;sub_name),
-    short_np(NP1,SUBN1),
+    short_np(NP1),
     NP1:meas => no,
     dp_np(NP2),
     dp_np(NP3),
     dp_dp_structure(NP1,NP2,NP3,START).
+
+%%EX%% Griekenland Portugal Spanje Andorra Frankrijk Luxemburg Ierland Verenigd Koninkrijk Polen
+%%EX%% Griekenland Portugal Spanje Andorra Frankrijk Luxemburg Ierland Verenigd Koninkrijk Polen Nederland
+grammar_rule(np_np_np_npseq,START,[NP1,NP2,NP3,NPS]) :-
+    START => max,
+    START:max_type => t_dp,
+    START:mod_np => yes,
+    short_np(NP1),
+    short_np(NP2),
+    short_np(NP3),
+    NPS => np_seq,
+    dp_dp_seq_structure(NP1,NP2,NP3,NPS,START).
+
+grammar_rule(np_seq_np_np_seq,M,[El,List]) :-
+    M => np_seq,
+    List => np_seq,
+    short_np(El),
+    dp_dp_seq_structure(El,List,M).
+
+grammar_rule(np_seq_np,M,[El]):-
+    M => np_seq,
+    short_np(El),
+    El:dt <=> DT,
+    M:dt:dp <=> [DT],
+    non_hd_structure([El],M,du).
 
 %%EX%% Foto Jan Pietersen , IMF
 grammar_rule(np_np_c_np,START,[NP1,NP2,COMMA,NP3]) :-
@@ -11775,6 +11803,7 @@ grammar_rule(mid_coord(Name,conj),Blist,[OPTCOMMA, Conj, A, Clist]) :-
 %%EX%% Peren en druiven
 %%EX%% Peren en : druiven
 %%EX%% Peren en ... druiven
+%%EX%% Peren ... en druiven
 %%EX%% Een heleboel werk , en weinig resultaat
 %%EX%% Een heleboel werk en : veel voldoening
 %%EX%% Een heleboel werk maar ... veel winst

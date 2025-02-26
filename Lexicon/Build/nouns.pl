@@ -29444,7 +29444,7 @@ n([sg(rabbinaat),pl(rabbinaten)],het,[]).
 
 n([mass(rabiës)],de,[]).
 
-n([pl(races),sg(race)],de,[measure,temp_mod,sbar],
+n([pl(races),sg(race)],de,[measure,temp_mod,sbar,pred_pp(in)],
   []).
 
 n([pl(races),sg(race),
@@ -40055,9 +40055,7 @@ n([pl(voltooiingen),sg(voltooiing)],de,[]).
 
 n([pl(voltrekkingen),sg(voltrekking)],de,[]).
 
-n([pl(volumen),pl(volumes),sg(volume),
-   sg(vol),sg('vol.'),
-   pl(vols),pl('vols.')],het,[measure]).
+n([pl(volumen),pl(volumes),sg(volume)],het,[measure]).
 
 n([stem(volwassen),pl(volwassenen),sg(volwassene)],de,[]).
 

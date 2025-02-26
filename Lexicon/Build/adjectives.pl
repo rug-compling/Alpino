@@ -7947,6 +7947,15 @@ a([e(discrete),
    st(discreetst),
    ste(discreetste)],adv,[],[]).
 
+a([end(discriminerend),
+   ende(discriminerende),
+   stem(discrimineren)],padv,
+  [pp(naar),
+   transitive,
+   subject_sbar,
+   subject_vp
+  ],[]).
+
 a([e(discutabele),
    er(discutabeler),
    ere(discutabelere),

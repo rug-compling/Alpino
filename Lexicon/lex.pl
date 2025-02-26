@@ -4007,6 +4007,10 @@ abbreviation('p.',     'pagina\'s').
 abbreviation(tzt,      tezijnertijd).
 abbreviation('t.z.t.', tezijnertijd).
 abbreviation(v,        versus).
+abbreviation(vol,      volume).
+abbreviation('vol.',   volume).
+abbreviation(vols,      volume).
+abbreviation('vols.',   volume).
 abbreviation('vs.',    vers).
 abbreviation('vs.',    versus).
 abbreviation('verm.',  vermoedelijk).
