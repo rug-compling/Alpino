@@ -7079,6 +7079,24 @@ grammar_rule(pred_van_belang,PRED,[VAN,BELANG]) :-
     unify_except_l(PRED0,PRED,[hstem,e_deps]),
     hd_comp_structure(VAN,BELANG,PRED0).
 
+%%EX%% Dat was ter vermaak van de elite
+%% "ter" expects N, not NP
+grammar_rule(pred_ter_vermaak,PRED,[VAN,BELANG]) :-
+    PRED:deverbal => no,
+    PRED:redrel => no,
+    PRED:pcat => pp_pred,
+    PRED:hstem <=> VAN:prep,
+    PRED:nhstem <=> BELANG:hstem,
+    VAN => p,
+    VAN:dt:hdf => [],
+    VAN:pp_role => pp_obj1,
+    BELANG0 => n,
+    unify_except_l(BELANG0,BELANG,[pred,e_deps]),
+    BELANG:pred:predp <=> VAN:prep,
+    BELANG:e_deps <=> PRED:e_deps, % het is van groot belang dat je komt
+    unify_except_l(PRED0,PRED,[hstem,e_deps]),
+    hd_comp_structure(VAN,BELANG,PRED0).
+
 
 %% bij ons thuis
 %% NB: "bij ons in de garage" is perhaps similar, but hard to distinguish
@@ -8715,6 +8733,22 @@ grammar_rule(start_mod_np_np,M,[MOD1,NP,COMMA,NP2]) :-
     NP2:cj => ~no_crd,
     dp_dp_structure(MOD1,NP,NP2,M).
 
+%%EX%% Uit het Oosten , het rode gevaar , de communisten .
+%%EX%% Volgens de commissie , een schandaal , deze beslissing
+grammar_rule(start_c_mod_np_np,M,[MOD1,COMMA1,NP,COMMA2,NP2]) :-
+    comma(COMMA1),
+    comma(COMMA2),
+    M => max,
+    M:max_type => t_dp,
+    M:mod_np => yes,
+    max_dp_modifier(MOD1),
+    ind_max_np(NP),
+    NP:subn => ~sub_indef_verb & ~sub_indef_adj, 
+    NP:cj => ~no_crd,
+    max_np(NP2),
+    NP2:cj => ~no_crd,
+    dp_dp_structure(MOD1,NP,NP2,M).
+
 %%EX%% Vogelpest in Azie volgend jaar gevaar voor Europa
 grammar_rule(start_np_mod_np,M,[NP,MOD1,NP2]) :-
     M => max,
@@ -9401,12 +9435,6 @@ seq_dp_np(NP) :-
     ind_max_np(NP),
     NP:cj => ~no_crd,
     NP:nform => norm,
-    NP:subn => (sub_num;sub_name;sub_noun;sub_def_verb;sub_indef_verb).
-
-seq_dp_np_tmp(NP) :-
-    ind_max_np(NP),
-    NP:cj => ~no_crd,
-    NP:nform => norm,
     NP:subn => (sub_num;sub_name;sub_noun;sub_def_verb;sub_indef_verb;sub_tmp).
 
 dp_np(NP) :-
@@ -9476,12 +9504,15 @@ grammar_rule(np_np_c_np,START,[NP1,NP2,COMMA,NP3]) :-
     short_np(NP1,SUBN1),
     NP1:meas => no,
     seq_dp_np(NP2),
-    seq_dp_np_tmp(NP3),
+    seq_dp_np(NP3),
     dp_dp_structure(NP1,NP2,NP3,START).
 
 %%EX%% Niets , niets , niets
 %%EX%% World Economic Outlook , IMF 2002
 %%EX%% 1921 - « Een ontgoocheling » , novelle
+%%EX%% Dagbladen , tijdschriften , school- en studielectuur , romans .
+%%EX%% Roken , drinken , slechte nachtrust
+%%EX%% Het zwemmen , het schaatsen , wielrennen
 grammar_rule(np_c_np_c_np,START,[NP1,COMMA1,NP2,COMMA2,NP3]) :-
     comma_dash(COMMA1),
     optcomma(COMMA2),
@@ -9490,24 +9521,8 @@ grammar_rule(np_c_np_c_np,START,[NP1,COMMA1,NP2,COMMA2,NP3]) :-
     START:mod_np => yes,
     seq_dp_np(NP1),
     seq_dp_np(NP2),
-    seq_dp_np_tmp(NP3),
-    dp_dp_structure(NP1,NP2,NP3,START).
-
-%%EX%% Dagbladen , tijdschriften , school- en studielectuur , romans .
-%%EX%% Roken , drinken , slechte nachtrust
-%%EX%% Het zwemmen , het schaatsen , wielrennen
-grammar_rule(np_c_np_c_np_c_np,START,[NP1,COMMA1,NP2,COMMA2,NP3,COMMA3,NP4]) :-
-    comma(COMMA1),
-    comma(COMMA2),
-    comma(COMMA3),
-    START => max,
-    START:max_type => t_dp,  % was missing here???
-    START:mod_np => yes,
-    seq_dp_np(NP1),
-    seq_dp_np(NP2),
     seq_dp_np(NP3),
-    seq_dp_np_tmp(NP4),
-    dp_dp_structure(NP1,NP2,NP3,NP4,START).
+    dp_dp_structure(NP1,NP2,NP3,START).
 
 %%EX%% Provinciezetel te koop
 grammar_rule(np_ap,START,[NP,AP]) :-

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="6" end="7" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="du" end="9" id="3" rel="--">
+      <node begin="0" cat="pp" end="3" id="4" rel="dp">
+        <node begin="0" end="1" id="5" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="Volgens"/>
+        <node begin="1" cat="np" end="3" id="6" rel="obj1">
+          <node begin="1" end="2" id="7" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lemma="commissie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="commissie" word="commissie"/>
+        </node>
+      </node>
+      <node begin="4" cat="np" end="6" id="9" rel="dp">
+        <node begin="4" end="5" id="10" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="schandaal" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="schandaal" word="schandaal"/>
+      </node>
+      <node begin="7" cat="np" end="9" id="12" rel="dp">
+        <node begin="7" buiging="met-e" end="8" id="13" infl="de" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" wh="nwh" word="deze"/>
+        <node begin="8" end="9" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lemma="beslissing" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="beslissing" word="beslissing"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Volgens de commissie , een schandaal , deze beslissing</sentence>
+</alpino_ds>
