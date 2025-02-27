@@ -4739,6 +4739,7 @@ v(breng,brengt,brengen,gebracht,bracht,brachten,
 	fixed([[telast],acc],norm_passive),
 	fixed([{[[telast],pc(van)]},acc],norm_passive),
 	fixed([[ten,onder],acc],norm_passive),
+	part_transitive('ten onder'),
 	part_transitive(tenonder),
 	fixed([[ten,tonele],acc],norm_passive),
 	fixed([[ten,uitvoer],acc],norm_passive),
@@ -8046,11 +8047,15 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	fixed([[te,werk]],imp_passive),
         part_intransitive(tewerk),
 
+
         fixed([[ten,onder]],no_passive),
         fixed([[ten,onder],pc(aan)],no_passive),
 
         part_intransitive(tenonder),
         part_pc_pp(tenonder,aan),
+
+        part_intransitive('ten onder'),
+        part_pc_pp('ten onder',aan),
 
 	fixed([[ter,perse]],no_passive),
 	fixed([[uit,de,weg],acc],norm_passive),
@@ -26149,7 +26154,7 @@ v(verschuif,verschuift,verschuiven,verschoven,verschoof,verschoven,
     [unacc([intransitive]),
      h([refl,
 	transitive,
-	np_pc_pp(naar)])]).
+	np_ld_pp])]).
 
 v(verschuil,verschuilt,verschuilen,verscholen,[verschuilde,verschool],[verschuilden,verscholen],
     [h([refl,

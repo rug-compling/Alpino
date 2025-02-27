@@ -12379,7 +12379,7 @@ a([ge_e(gehuisde),
 
 a([ge_e(gehuisveste),
    ge_no_e(gehuisvest)],adv,
-  [pp(in)],[]).
+  [ld_pp],[]).
 
 a([ge_e(gehulde),
    ge_no_e(gehuld)],padv,[],[]).
