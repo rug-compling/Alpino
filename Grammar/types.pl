@@ -185,7 +185,7 @@ cat_type(conj,    [left_conj,cform]).
 cat_type(lconj,   [needs_right_cform]).
 cat_type(root,    [question,allows_root_imp,puncttype,
                    subj,needs_dip,cj,tags,topic_hstem,niet]).
-cat_type(start,   [sv1,branch,puncttype]).
+cat_type(start,   [sv1,branch,mod_np,cj,puncttype]).
 cat_type(start_seq,[]).
 cat_type(np_seq,[]).
 cat_type(max,     [cj,sv1,max_type,mod_np,puncttype]).
@@ -254,7 +254,7 @@ cat_type(post_adv_adv, []).
 cat_type(post_loc_adv_adv, []).
 cat_type(hoe_adv,      []).
 cat_type(post_adj_adv, [exs]).
-cat_type(predm_adv,    []).
+cat_type(predm_adv,    [eenmaal]).
 cat_type(eenmaal_adv,  []).
 cat_type(predm_adv_num,[]).
 cat_type(zom_adv,      []).
