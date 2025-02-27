@@ -14558,8 +14558,7 @@ lemma_root(tengoede_komen,kom_tengoede) .
 lemma_root(teniet_doen,doe_teniet) .
 lemma_root(teniet_gaan,ga_teniet) .
 lemma_root(tennissen,tennis) .
-lemma_root('ten onder_brengen','breng_ten onder') .
-lemma_root('ten onder_gaan','ga_ten onder') .
+lemma_root(tenonder_brengen,breng_tenonder) .
 lemma_root(tenonder_gaan,ga_tenonder) .
 lemma_root(tentoon_hangen,hang_tentoon) .
 lemma_root(tentoon_spreiden,spreid_tentoon) .
