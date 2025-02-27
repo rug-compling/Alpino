@@ -5,6 +5,10 @@ import sys
 def main():
     for line in sys.stdin:
         (w,t,k,i,j,h,p,r,c,s) = line.rstrip().split("|")
+        if r == "verspreiden"  and t == "adjective(er(adv))":
+            t = "adjective(er(both))"
+        if r == "verspreiden"  and t == "adjective(ge_no_e(adv))":
+            t = "adjective(ge_no_e(both))"
         if t == "adverb" and r == "nagenoeg":
             t = "sentence_adverb"
         if t == "adjective(ge_no_e(padv))" and r == "geïrriteerd":
