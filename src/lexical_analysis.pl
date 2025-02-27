@@ -1328,6 +1328,8 @@ enforce_longest_match(H,Words,0,_Final) :-
     \+ \+ tag(_,_,_,_,_,_,H,_),
     normal_base_cases(H),
     (	tag(_,_,R0,R,_Surf0,_,H,Tag1),
+	tag(_,_,_,R0,_,_,_,_),	% poor man's version of is_connected
+	tag(_,_,R,_,_,_,_,_),	% poor man's version of is_connected
 	R-R0 > 1,
 	% is_connected(0,Sf0),
 	% is_connected(Sf,Final),
