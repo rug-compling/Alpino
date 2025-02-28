@@ -6436,6 +6436,8 @@ map_dep(op_een_v,svp,Fixed,_) :-
     fixed_arg(Fixed,pred,op_een_v).
 map_dep(sbar,vc,Sbar,_) :-
     sbar_arg(Sbar).
+map_dep(alsof_sbar,vc,Sbar,_) :-
+    alsof_sbar_arg(Sbar).
 map_dep(dat_sbar,vc,Sbar,_) :-
     sbar_arg(Sbar),
     Sbar:ctype => c_dat.
