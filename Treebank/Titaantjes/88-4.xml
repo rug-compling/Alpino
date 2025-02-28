@@ -3,12 +3,14 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
-      <node begin="1" end="2" id="3" lemma="uit_zien" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zie_uit" word="zag" wvorm="pv"/>
-      <node begin="2" end="3" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="svp" root="er" status="red" vwtype="aanw" word="er"/>
-      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="goed" word="goed"/>
-      <node begin="4" end="5" id="6" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+      <node begin="1" end="2" id="3" lemma="zien" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zie_uit" word="zag" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="4" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="goed" word="goed"/>
+      <node begin="2" cat="pp" end="5" id="5" rel="svp">
+        <node begin="2" end="3" getal="getal" id="6" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="4" end="5" id="7" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="hd" root="uit" vztype="fin" word="uit"/>
+      </node>
     </node>
-    <node begin="5" end="6" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ik zag er goed uit .</sentence>
 </alpino_ds>

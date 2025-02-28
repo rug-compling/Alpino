@@ -3,20 +3,22 @@
   <node begin="0" cat="top" end="10" id="0" rel="top">
     <node begin="0" cat="du" end="10" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" rel="sat">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" wh="nwh" word="dat"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="dat"/>
         <node begin="1" cat="mwu" end="4" id="4" rel="hd">
-          <node begin="1" end="2" id="5" lemma="Hard" neclass="ORG" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Hard" spectype="deeleigen" word="Hard"/>
-          <node begin="2" end="3" id="6" lemma="Rock" neclass="ORG" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Rock" spectype="deeleigen" word="Rock"/>
-          <node begin="3" end="4" id="7" lemma="Café" neclass="ORG" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Café" spectype="deeleigen" word="Café"/>
+          <node begin="1" end="2" id="5" lemma="Hard" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hard" spectype="deeleigen" word="Hard"/>
+          <node begin="2" end="3" id="6" lemma="Rock" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rock" spectype="deeleigen" word="Rock"/>
+          <node begin="3" end="4" id="7" lemma="Café" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Café" spectype="deeleigen" word="Café"/>
         </node>
       </node>
       <node begin="4" cat="smain" end="10" id="8" rel="nucl">
-        <node begin="4" end="5" getal="ev" id="9" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
-        <node begin="5" end="6" id="10" infl="sg3" lemma="uit_zien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zie_uit" sc="part_fixed(uit,[nonp_pred,svp_er],no_passive)" stype="declarative" tense="present" word="ziet" wvorm="pv"/>
-        <node begin="6" end="7" getal="getal" id="11" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="svp" root="er" special="er" status="red" vwtype="aanw" word="er"/>
-        <node aform="base" begin="7" end="8" id="12" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
-        <node aform="base" begin="8" buiging="zonder" end="9" graad="basis" id="13" infl="no_e" lemma="mooi" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="mooi" vform="adj" word="mooi"/>
-        <node begin="9" end="10" id="14" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+        <node begin="4" end="5" getal="ev" id="9" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="5" end="6" id="10" lemma="zien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zie_uit" word="ziet" wvorm="pv"/>
+        <node begin="7" end="8" id="11" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+        <node begin="8" buiging="zonder" end="9" graad="basis" id="12" lemma="mooi" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="mooi" word="mooi"/>
+        <node begin="6" cat="pp" end="10" id="13" rel="svp">
+          <node begin="6" end="7" getal="getal" id="14" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="9" end="10" id="15" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="hd" root="uit" vztype="fin" word="uit"/>
+        </node>
       </node>
     </node>
   </node>

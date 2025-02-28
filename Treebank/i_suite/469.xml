@@ -11,10 +11,12 @@
           <node begin="2" end="3" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="toorts" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toorts" word="toorts"/>
         </node>
-        <node begin="4" end="5" id="9" lemma="uit_zien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zie_uit" word="ziet" wvorm="pv"/>
-        <node begin="5" end="6" getal="getal" id="10" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="svp" root="er" status="red" vwtype="aanw" word="er"/>
-        <node begin="6" end="7" id="11" lemma="anders" pos="adj" postag="BW()" pt="bw" rel="predc" root="anders" word="anders"/>
-        <node begin="7" end="8" id="12" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+        <node begin="4" end="5" id="9" lemma="zien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zie_uit" word="ziet" wvorm="pv"/>
+        <node begin="6" end="7" id="10" lemma="anders" pos="adj" postag="BW()" pt="bw" rel="predc" root="anders" word="anders"/>
+        <node begin="5" cat="pp" end="8" id="11" rel="svp">
+          <node begin="5" end="6" getal="getal" id="12" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="7" end="8" id="13" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="hd" root="uit" vztype="fin" word="uit"/>
+        </node>
       </node>
     </node>
   </node>
