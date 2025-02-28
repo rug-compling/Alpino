@@ -29254,6 +29254,9 @@ a([e(plompe),
    st(plompst),
    ste(plompste)],adv,[],[]).
 
+a([e(plooibare),
+   no_e(plooibaar)],adv,[],[]).
+
 a([both(plompverloren)],adv,[],[]).
 
 a([no_e(plots),

@@ -4591,11 +4591,12 @@ v(brei,breit,breien,gebreid,breide,breiden,
 v(breid,breidt,breiden,gebreid,breidde,breidden,
     [h([part_intransitive(uit),
 	part_pc_pp(uit,met),
-	part_pc_pp(uit,tot),
+	part_ld_pp(uit),
 	part_transitive(uit),
-	part_refl(uit),  % word order: refl<su
+	part_refl(uit),		% word order: refl<su
+	part_refl_ld_pp(uit),
 	part_np_pc_pp(uit,met),
-	part_np_pc_pp(uit,tot)])]).
+	part_np_ld_pp(uit)])]).
 
 v(breng,brengt,brengen,gebracht,bracht,brachten,
     [h([np_np,
@@ -29245,6 +29246,9 @@ v(zie,ziet,inflected(zien,ziene),gezien,zag,zagen,
 	part_pc_pp(terug,op),
 	part_pc_pp(toe,op),
 	part_pc_pp(uit,naar),
+	fixed([svp_er_pp(uit)],no_passive),
+	fixed([svp_er_pp(uit),nonp_pred],no_passive),
+	fixed([svp_er_pp(uit),alsof_sbar],no_passive),
 	part_intransitive(eruit), % zoals hij eruitziet /
 	part_fixed(eruit,[nonp_pred],no_passive), % hoe hij eruitziet /
 	                                          % die eruitziet als..
@@ -29367,7 +29371,7 @@ v(zit,zit,zitten,gezeten,zat,zaten,
 	%%% daarom beide opties tegelijks :-(
 	
         part_intransitive(klem),
-	part_intransitive(in),
+%	part_intransitive(in),
 	part_intransitive(neer),
         part_intransitive(mee),
 	part_intransitive(op),

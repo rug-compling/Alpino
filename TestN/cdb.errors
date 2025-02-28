@@ -118,6 +118,7 @@
 1574	np appos without comma
 1595	quotes
 1598	nonadv adj modifier: een gesprek *smal* opzetten
+1631	unexpected "." within quotes of name
 1637	'een , zo niet twee' coordination of 'een' and numbers
 1654	ungrammatical: agreement error 'het verspringen leverden resultaten op'
 1659	crickettaal?
@@ -158,7 +159,6 @@
 2037	"nieuwe 8-procent 15-jarige obligaties"
 2045	spelling samenDvattend
 2086	extraposition of subject
-2089	coordination of vproj with extraposed element
 2105	conjunction NP, NP en PP
 2106	gapping (2 conjuncts)
 2114	gapping
@@ -269,6 +269,7 @@
 3457	timeout
 3477	coord 'het is 1881 en 13 jaar geleden dat ...'
 3484	modified second conjunct 'kon (en volgens haarzelf moest)'
+3502	tagger: gewond is a verb here
 3506	gapping
 3508	double topic
 3508	"om en langs hen heen"
@@ -483,7 +484,6 @@
 5493	gapping
 5498	NP-APP < REL "Ischa Meyer, de recensent, die .."
 5530    complex name "nota provinciaal kapittel 1970"
-5531	recursive coordination
 5544	timeout
 5557	'(een dag) langer hebben (om)'
 5582	difficult coordination 'opgezet en bestemd voor' PC/MOD
@@ -632,4 +632,3 @@
 3278	tagger: met name adv or modal_adv
 4351	guides: bracketed mod after PP mod
 2245    AFGELOPEN? out of X?
-2587	AFGELOPEN

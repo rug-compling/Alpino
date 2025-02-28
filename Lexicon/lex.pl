@@ -4518,6 +4518,8 @@ impossible_non_particle_form_cat(verb(_,_,SC)) :-
 
 impossible_non_particle_form_cat_sc(part_ld_er_transitive(_)).
 impossible_non_particle_form_cat_sc(part_np_ld_er_transitive(_)).
+impossible_non_particle_form_cat_sc(part_fixed(_,List,_)) :-
+    lists:member(svp_er,List).
 
 adjective_e(e).
 adjective_e(ere).

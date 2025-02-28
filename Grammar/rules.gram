@@ -8424,9 +8424,9 @@ flat(M,COMMA,A) :-
 
 %%EX%% De man kwam binnen ; hij opende de koelkast .
 grammar_rule(start_start_punt_komma,M,[A,COMMA,B]) :-
-    A => start,
-    B => start,
-    M => start,
+    A => start, A:cj => ~no_crd,
+    B => start, B:cj => ~no_crd,
+    M => start, 
     COMMA => punct, COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep),
     (   hdrug_util:hdrug_flag(parse_or_generate,generate),
 	COMMA:puncttype => punt_komma
@@ -8439,10 +8439,10 @@ grammar_rule(start_start_punt_komma,M,[A,COMMA,B]) :-
 
 %%EX%% De man kwam binnen ; hij opende de koelkast ; de koelkast is leeg .
 grammar_rule(start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C]) :-
-    A => start,
-    B => start,
-    C => start,
-    M => start,
+    A => start, A:mod_np => no, A:cj => ~no_crd,
+    B => start, B:mod_np => no, B:cj => ~no_crd,
+    C => start, C:mod_np => no, C:cj => ~no_crd,
+    M => start, M:mod_np => yes,
     COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma),
     COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma),
     (   hdrug_util:hdrug_flag(parse_or_generate,generate),
@@ -8755,7 +8755,7 @@ grammar_rule(start_mod_np_np,M,[MOD1,NP,COMMA,NP2]) :-
     M:mod_np => yes,
     max_dp_modifier(MOD1),
     ind_max_np(NP),
-    NP:subn => ~sub_indef_verb & ~sub_indef_adj & ~sub_def_adj & ~sub_def_verb, 
+    NP:subn => ~sub_indef_verb & ~sub_indef_adj & ~sub_def_adj, 
     NP:cj => ~no_crd,
     max_np(NP2),
     NP2:cj => ~no_crd,
@@ -8771,7 +8771,7 @@ grammar_rule(start_c_mod_np_np,M,[MOD1,COMMA1,NP,COMMA2,NP2]) :-
     M:mod_np => yes,
     max_dp_modifier(MOD1),
     ind_max_np(NP),
-    NP:subn => ~sub_indef_verb & ~sub_indef_adj & ~sub_def_adj & ~sub_def_verb, 
+    NP:subn => ~sub_indef_verb & ~sub_indef_adj & ~sub_def_adj, 
     NP:cj => ~no_crd,
     max_np(NP2),
     NP2:cj => ~no_crd,
@@ -8785,7 +8785,7 @@ grammar_rule(start_np_mod_np,M,[NP,MOD1,NP2]) :-
     max_dp_modifier(MOD1),
     ind_max_np(NP),
     NP:redrel => no,
-    NP:subn => ~sub_indef_verb & ~sub_indef_adj & ~sub_def_adj & ~sub_def_verb, 
+    NP:subn => ~sub_indef_verb & ~sub_indef_adj & ~sub_def_adj, 
     max_np(NP2),
     dp_dp_structure(NP,MOD1,NP2,M).
 
@@ -8799,7 +8799,7 @@ grammar_rule(start_np_mod_mod,M,[NP,MOD1,MOD2]) :-
     max_dp_modifier(MOD2),
     ind_max_np(NP),
     NP:cj => ~no_crd,
-    NP:subn => ~sub_indef_verb & ~sub_def_adj & ~sub_def_verb & ~sub_indef_adj, %  & ~sub_det,   "en nu dit, maar eerst even dit"
+    NP:subn => ~sub_indef_verb & ~sub_def_adj & ~sub_indef_adj, %  & ~sub_det,   "en nu dit, maar eerst even dit"
     NP:redrel => no,
     NP:has_app => no,
     dp_dp_structure(NP,MOD1,MOD2,M).
@@ -8818,7 +8818,7 @@ grammar_rule(start_np_pred_mod,M,[NP,MOD1,COMMA,MOD2]) :-
     max_dp_modifier(MOD2),
     ind_max_np(NP),
     NP:redrel => no,
-    NP:subn => ~sub_indef_verb & ~sub_def_adj & ~sub_def_verb & ~sub_indef_adj, %  & ~sub_det,   "en nu dit, maar eerst even dit"
+    NP:subn => ~sub_indef_verb & ~sub_def_adj & ~sub_indef_adj, %  & ~sub_det,   "en nu dit, maar eerst even dit"
     dp_dp_structure(NP,MOD1,MOD2,M).
 
 %%EX%% Niemand de deur uit dus !
@@ -8831,7 +8831,7 @@ grammar_rule(start_np_post_pp_mod,M,[NP,MOD1,COMMA,MOD2]) :-
     max_post_pp(MOD1),
     max_dp_modifier(MOD2),
     ind_max_np(NP),
-    NP:subn => ~sub_indef_verb & ~sub_def_adj & ~sub_def_verb & ~sub_indef_adj, %  & ~sub_det,   "en nu dit, maar eerst even dit"
+    NP:subn => ~sub_indef_verb & ~sub_def_adj & ~sub_indef_adj, %  & ~sub_det,   "en nu dit, maar eerst even dit"
     NP:redrel => no,
     dp_dp_structure(NP,MOD1,MOD2,M).
 
@@ -8843,7 +8843,7 @@ grammar_rule(start_mod_comma_np,M,[MOD,COMMA,NP]) :-
     MOD:mcat => (mcat_pp;mcat_adv;mcat_vp),
     MOD:wh => nwh,  % separate rule for wh case
     ind_max_np(NP),
-    NP:subn => ~sub_indef_verb & ~sub_det & ~sub_def_adj & ~sub_def_verb & ~sub_indef_adj,
+    NP:subn => ~sub_indef_verb & ~sub_det & ~sub_def_adj & ~sub_indef_adj,
     NP:cj => ~no_crd,
     dp_dp_structure(MOD,NP,M).
 
@@ -8873,7 +8873,7 @@ grammar_rule(np_dp_root,ROOT,[NP, COMMA, MAX]) :-
     max_np(NP),
     MAX => max,
     MAX:max_type => t_dp,
-    MAX:mod_np => no,
+%%     MAX:mod_np => no,   % Evelyne Huytebroeck ( Ecolo ) , leefmilieu , energie , waterbeleid
     MAX:cj => ~no_crd,
     dp_dp_structure(NP,MAX,ROOT).
 
@@ -8952,7 +8952,7 @@ grammar_rule(adv_np_dp,MAX,[ADV,COMMA,XP]) :-
     ADV:redrel => no,
     ind_max_np(XP0),
     unify_except(XP0,XP,wh),
-    XP:subn => ~sub_indef_verb & ~sub_det & ~sub_def_adj & ~sub_def_verb & ~sub_indef_adj,
+    XP:subn => ~sub_indef_verb & ~sub_det & ~sub_def_adj & ~sub_indef_adj,
     XP:cj => ~no_crd,
     dp_dp_structure(ADV,XP,MAX).
 
@@ -8964,7 +8964,7 @@ grammar_rule(adv_tag_np_dp,MAX,[ADV,OPTCOMMA,TAG,COMMA,XP]) :-
     max_advp(ADV),
     ADV:redrel => no,
     ind_max_np(XP),
-    XP:subn => ~sub_indef_verb & ~sub_det & ~sub_def_adj & ~sub_def_verb & ~sub_indef_adj,
+    XP:subn => ~sub_indef_verb & ~sub_det & ~sub_def_adj & ~sub_indef_adj,
     dp_tag_dp_structure(ADV,TAG,XP,MAX).
 
 %%EX%% onzin , derhalve
@@ -10250,6 +10250,9 @@ top_max_structure(XP,Max,MaxType):-
     hd_structure(XP,Max).
 
 %% start --> np en/want smain
+%% maybe start should be max too:
+%% WR-P-E-I-0000086197.p.1.s.49
+%% Het werkte , de bisschoppen waren onder de indruk en de paus al helemaal .
 xp_en_root_structure(Start,NP,CRD,ROOT) :-
     Start => start,
     CRD => conj,
