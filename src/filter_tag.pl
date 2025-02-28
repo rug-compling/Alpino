@@ -865,6 +865,7 @@ check_fixed_el(meas,              Cs,Cs).
 check_fixed_el(ld_adv,                [check_loc_adv|Cs],Cs).
 check_fixed_el(sbar,                  Cs,Cs).
 check_fixed_el(dat_sbar,              [check_tag(complementizer(dat))|Cs],Cs).
+check_fixed_el(alsof_sbar,            [check_alsof|Cs],Cs).
 check_fixed_el(dip_sbar,              Cs,Cs).
 check_fixed_el(van_sbar,              [check_tag(complementizer(van))|Cs],Cs).
 check_fixed_el(extra_sbar(_),         Cs,Cs).

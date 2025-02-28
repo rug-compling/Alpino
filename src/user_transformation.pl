@@ -64,6 +64,19 @@ user_transformation(r(REL,p(mwu)),B,Ds0,
     \+ Ds0 = Ds.
 
 /*
+user_transformation(r(Rel,Cat),B,Ds0,
+		    r(Rel,Cat),B,[Hd,ErUit|Ds],_,_) :-
+    Er = tree(r(svp,l(read_from_treebank(Er1,er,Er2),Er3,Er4)),Er5,[]),
+    Uit = tree(r(svp,l(read_from_treebank(Uit1,uit,Uit2),Uit3,Uit4)),Uit5,[]),
+    Zien = tree(r(hd,l(read_from_treebank(Zie1,uit_zien,Zie2),Zie3,Zie4)),Zie5,[]),
+    lists:select(Er,Ds0,Ds1),
+    lists:select(Uit,Ds1,Ds2),
+    lists:select(Zien,Ds2,Ds),
+    Hd = tree(r(hd,l(read_from_treebank(Zie1,zien,Zie2),Zie3,Zie4)),Zie5,[]),
+    ErUit = tree(r(svp,p(pp)),_,[tree(r(obj1,l(read_from_treebank(Er1,er,Er2),Er3,Er4)),Er5,[]),
+				 tree(r(hd,l(read_from_treebank(Uit1,uit,Uit2),Uit3,Uit4)),Uit5,[])]).
+*/
+/*
 %user_transformation(REL,A,B,_,_,_,_,_) :-
 %   format(user_error,"~w~n",[REL]), fail.
 
