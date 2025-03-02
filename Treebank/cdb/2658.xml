@@ -5,12 +5,12 @@
       <node begin="0" end="1" id="2" lemma="binnenkort" pos="adv" postag="BW()" pt="bw" rel="mod" root="binnenkort" word="Binnenkort"/>
       <node begin="1" end="2" id="3" lemma="uit_komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
       <node begin="2" end="3" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
-      <node begin="5" end="6" id="5" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
-      <node begin="3" cat="np" end="8" id="6" rel="su">
-        <node begin="3" cat="pp" end="5" id="7" rel="mod">
-          <node begin="3" end="4" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="Rob" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Rob" word="Rob"/>
-        </node>
+      <node begin="3" cat="pp" end="5" id="5" rel="mod">
+        <node begin="3" end="4" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="Rob" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Rob" word="Rob"/>
+      </node>
+      <node begin="5" end="6" id="8" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+      <node begin="6" cat="np" end="8" id="9" rel="su">
         <node begin="6" end="7" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
         <node begin="7" end="8" genus="onz" getal="ev" graad="dim" id="11" lemma="grammofoon_plaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="plaatje" word="grammofoonplaatje"/>
       </node>
