@@ -8423,9 +8423,10 @@ flat(M,COMMA,A) :-
     dif(MB,AB).
 
 %%EX%% De man kwam binnen ; hij opende de koelkast .
+%%EX%% Kim Clijsters - Justine Henin-Hardenne : 3-6 , 7-5 , 1-6
 grammar_rule(start_start_punt_komma,M,[A,COMMA,B]) :-
-    A => start, A:cj => ~no_crd,
-    B => start, B:cj => ~no_crd,
+    A => start, 
+    B => start, 
     M => start, 
     COMMA => punct, COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep),
     (   hdrug_util:hdrug_flag(parse_or_generate,generate),
@@ -8438,10 +8439,11 @@ grammar_rule(start_start_punt_komma,M,[A,COMMA,B]) :-
     dp_dp_structure(A,B,M).
 
 %%EX%% De man kwam binnen ; hij opende de koelkast ; de koelkast is leeg .
+%%EX%% halve finale : Kim Clijsters - Justine Henin-Hardenne : 3-6 , 7-5 , 1-6
 grammar_rule(start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C]) :-
-    A => start, A:mod_np => no, A:cj => ~no_crd,
-    B => start, B:mod_np => no, B:cj => ~no_crd,
-    C => start, C:mod_np => no, C:cj => ~no_crd,
+    A => start, A:mod_np => no, 
+    B => start, B:mod_np => no, 
+    C => start, C:mod_np => no, 
     M => start, M:mod_np => yes,
     COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma),
     COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma),

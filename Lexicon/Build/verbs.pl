@@ -27132,8 +27132,8 @@ v(vind,vindt,vinden,gevonden,vond,vonden,
 	np_mod_pp(voor),        % een oplossing/remedie/... vinden voor
         % ik vind het niet kunnen dat ...
         fixed([{[acc(antwoord),pc(op)]}],norm_passive),
-	fixed([{[acc(begrip),pc(voor)]}],no_passive),
-	fixed([{[acc(begrip),er_pp(voor,X)]},extra_sbar(X)],no_passive),
+	fixed([{[acc(begrip),pc(voor)]}],norm_passive),
+	fixed([{[acc(begrip),er_pp(voor,X)]},extra_sbar(X)],norm_passive),
         fixed([vc(kan,inf,intransitive),het_pobj1(sbar)],no_passive),
         fixed([vc(ben,psp,intransitive),ap_pred(mooi),het_obj1],no_passive),
         fixed([[in,gebreke],acc],norm_passive),
