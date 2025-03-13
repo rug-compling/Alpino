@@ -57,17 +57,17 @@
           </node>
         </node>
         <node begin="25" end="26" id="43" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
-        <node begin="26" cat="np" end="33" id="44" rel="obj1">
+        <node begin="26" cat="np" end="29" id="44" rel="obj1">
           <node begin="26" end="27" id="45" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="27" buiging="met-e" end="28" graad="basis" id="46" lemma="zeker" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zeker" word="zekere"/>
           <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="47" lemma="invloed" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="invloed" word="invloed"/>
-          <node begin="29" cat="pp" end="33" id="48" rel="mod">
-            <node begin="29" end="30" id="49" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-            <node begin="30" cat="np" end="33" id="50" rel="obj1">
-              <node begin="30" end="31" id="51" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-              <node begin="31" buiging="met-e" end="32" graad="basis" id="52" lemma="politiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="politiek" word="politieke"/>
-              <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="53" lemma="leven" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="leven" word="leven"/>
-            </node>
+        </node>
+        <node begin="29" cat="pp" end="33" id="48" rel="pc">
+          <node begin="29" end="30" id="49" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="30" cat="np" end="33" id="50" rel="obj1">
+            <node begin="30" end="31" id="51" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="31" buiging="met-e" end="32" graad="basis" id="52" lemma="politiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="politiek" word="politieke"/>
+            <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="53" lemma="leven" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="leven" word="leven"/>
           </node>
         </node>
         <node begin="33" buiging="zonder" end="34" id="54" lemma="hebben" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="heb" word="gehad" wvorm="vd"/>
