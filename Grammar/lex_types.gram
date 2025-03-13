@@ -3510,9 +3510,16 @@ ndev(Obj) :-
 
 transitive_ndev(V,C,C) :-
     main_v(V),
+    V:passive => norm_passive,
     acc_np_arg(Obj),
     ndev(Obj),
-%    V:passive => norm_passive,  % no: Dansen kan worden geleerd op een dansschool
+    dependents(V,[obj1/Obj]).
+
+transitive_ndev_npas(V,C,C) :-
+    main_v(V),
+    V:passive => no_passive,
+    acc_np_arg(Obj),
+    ndev(Obj),
     dependents(V,[obj1/Obj]).
 
 transitive_ndev_ndev(V,C0,C) :-
@@ -3520,10 +3527,10 @@ transitive_ndev_ndev(V,C0,C) :-
     V:subj <=> Subj,
     Subj:subn => ~sub_indef_verb.
 
-%% *de oplossing wordt door ons gekund
 transitive_ndev_ndev_npas(V,C0,C) :-
-    transitive_ndev_ndev(V0,C0,C),
-    overwrite(V0,V,passive,no_passive).
+    transitive_ndev_npas(V,C0,C),
+    V:subj <=> Subj,
+    Subj:subn => ~sub_indef_verb.
 
 %% for "dat wordt lachen geblazen"
 transitive_ydev(V,C,C) :-
@@ -4873,7 +4880,8 @@ pred_np_ndev(V,Obj2,C,C) :-
 */
 
 nonp_pred_np_ndev(V,C0,C) :-
-    pred_np_ndev(V,PCAT,C0,C),
+    pred_np_ndev(V0,PCAT,C0,C),
+    overwrite(V0,V,passive,no_passive),
     PCAT:pcat => ~np_pred & ~voor_pred_np & ~voor_pred_ap.
 
 nonp_pred_np(V,C0,C) :-
@@ -6926,7 +6934,7 @@ aux_simple(inf,Sign,C0,C) :-
          lists:member(FRAME,[intransitive,   % we zijn fietsen
                              ld_pp,          % we zijn wezen duiken naar...
                              transitive,     % we zijn kersen plukken
-                             transitive_ndev % we zijn boodschappen doen
+                             transitive_ndev % we zijn vluchtelingen helpen
                             ])).
 
 so_aux(Vform,Sign,C0,C) :-
