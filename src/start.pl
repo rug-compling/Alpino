@@ -2591,6 +2591,7 @@ compressed_sentence([_-remove|T],NewT) :-
 %% TODO: this is a mess
 
 after_timeout_options_(testN):-
+    alpino_lc:clean,
     hdrug_flag(use_guides,off),
     hdrug_flag(pos_tagger,off),
     set_flag(use_guides,on),
@@ -2602,6 +2603,7 @@ after_timeout_options_(off) :-
     fail.
 
 after_timeout_options_(on) :-
+    alpino_lc:clean,
     hdrug_flag(parse_candidates_beam,Beam),
     (  Beam =:= 0 ; Beam > 100 ),
     set_flag(save_parse_candidates_beam,Beam),
@@ -2613,6 +2615,7 @@ after_timeout_options_(on) :-
     set_flag(last_one_timeout,on).
 
 after_timeout_options(alpino_lc:parse(_)) :-
+    alpino_lc:clean,
     hdrug_flag(current_input_sentence,Sentence0),
     hdrug_flag(current_ref,Key),
     ignore_brackets(Sentence0,Sentence),
