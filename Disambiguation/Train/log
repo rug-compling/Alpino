@@ -3336,3 +3336,75 @@ px.test:phi-score    83.26  81.73
 px.test:lemma/pos-score   98.31
 0.0 81.89777777777778 80.31555555555556 
 END RUN
+START RUN
+total result after 9 tests
+first 74.57
+best  94.40
+test  90.81
+rate  81.90
+p/s-first 77.73
+p/s-best  96.44
+p/s-test  92.75
+p/s-rate  80.27
+   3823 pc.weights
+   3885 pd.weights
+   4117 pe.weights
+   3825 pi.weights
+   4018 pl.weights
+   3905 pp.weights
+   4163 pu.weights
+   3990 pw.weights
+   4068 px.weights
+   3845 pZ.weights
+  39639 total
+out of memory 0
+timed out 1
+sentences 68317
+33148402 parses in total
+pc.test:first-score  74.71  76.85
+pc.test:best-score   94.34  96.31
+pc.test:test-score   90.55  92.56
+pc.test:phi-score    80.66  80.73
+pc.test:lemma/pos-score   97.99
+pd.test:first-score  74.68  76.68
+pd.test:best-score   95.18  96.68
+pd.test:test-score   91.54  93.01
+pd.test:phi-score    82.24  81.63
+pd.test:lemma/pos-score   97.97
+pe.test:first-score  73.78  78.07
+pe.test:best-score   92.83  95.60
+pe.test:test-score   89.20  91.55
+pe.test:phi-score    80.97  76.93
+pe.test:lemma/pos-score   97.74
+pi.test:first-score  74.88  76.77
+pi.test:best-score   94.80  96.59
+pi.test:test-score   91.44  93.31
+pi.test:phi-score    83.13  83.48
+pi.test:lemma/pos-score   98.63
+pl.test:first-score  72.94  76.56
+pl.test:best-score   93.53  96.12
+pl.test:test-score   89.95  92.69
+pl.test:phi-score    82.62  82.45
+pl.test:lemma/pos-score   98.09
+pp.test:first-score  76.01  78.31
+pp.test:best-score   95.95  97.32
+pp.test:test-score   92.51  93.89
+pp.test:phi-score    82.77  81.96
+pp.test:lemma/pos-score   98.76
+pu.test:first-score  75.71  77.31
+pu.test:best-score   96.52  97.31
+pu.test:test-score   93.19  93.92
+pu.test:phi-score    84.02  83.07
+pu.test:lemma/pos-score   98.59
+pw.test:first-score  74.72  80.61
+pw.test:best-score   93.81  96.45
+pw.test:test-score   89.53  91.99
+pw.test:phi-score    77.59  71.82
+pw.test:lemma/pos-score   97.06
+px.test:first-score  78.81  79.44
+px.test:best-score   96.48  96.86
+px.test:test-score   93.57  93.75
+px.test:phi-score    83.56  82.18
+px.test:lemma/pos-score   98.26
+0.0 81.9511111111111 80.47222222222223 
+END RUN
