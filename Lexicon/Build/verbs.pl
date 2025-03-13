@@ -496,13 +496,13 @@ m(v_root(ben,zijn),
 m(v_root(heb,hebben),
   verb_heb(heb,hebt,heeft,hebben,gehad,had,hadden,hebben,
        [
-	aux_psp_hebben,                % ik heb geslapen
-	transitive_ndev,               % ik heb al een boek
-                                       % SU can be dev: 'vissen heeft voordelen'
-	nonp_pred_np_ndev,             % klaar, af, gereed, nodig
-			               % beschikbaar, gemeenschappelijk
-				% iets hebben als vervanging
-	part_transitive_ndev(uit),  % omdat ik het boek uitheb
+	aux_psp_hebben,                 % ik heb geslapen
+	transitive_ndev_npas,	        % ik heb al een boek
+                                        % SU can be dev: 'vissen heeft voordelen'
+	nonp_pred_np_ndev,              % klaar, af, gereed, nodig
+			                % beschikbaar, gemeenschappelijk
+				        % iets hebben als vervanging
+	part_transitive_ndev_npas(uit),	% omdat ik het boek uitheb
         fixed([ap_pred(nodig),adv_meas],no_passive),
                                 % ik had niet lang nodig
         fixed([ap_pred(nodig),adv_meas,vp],no_passive),
@@ -877,12 +877,12 @@ m(v_root(kan,kunnen),
 m(v_root(kan,kunnen),
   verb_modal(kan,kun,kunt,kunnen,gekund,kon,konden,hebben,
        [
-	intransitive,            % ik kan niet
-	transitive_ndev_ndev,    % ik kan de tango
-	ld_pp,                   % je kunt niet naar Amsterdam
-	ld_dir,                  % ik kan niet verder omhoog
+	intransitive,              % ik kan niet
+	transitive_ndev_ndev_npas, % ik kan de tango
+	ld_pp,			   % je kunt niet naar Amsterdam
+	ld_dir,			   % ik kan niet verder omhoog
         uit,
-	sbar_subj,               % het zou kunnen dat ..
+	sbar_subj,		   % het zou kunnen dat ..
 	pp_copula(aan,slag),
 	pp_copula(aan,werk),
         %% done: copula (stuk,af,aan,...)
@@ -1001,7 +1001,7 @@ m(v_root(wil,willen),
        [
 	modifier(aux(inf)),      % hij wil niet slapen;
                                  % ik moet opschieten , wil ik op op tijd komen
-	transitive_ndev_ndev,    % ik wil Bolletje
+	transitive_ndev_ndev_npas,    % ik wil Bolletje
 	modifier(tr_sbar),       % wie wilde hij dat de opening zou doen?
                                  % ik moet opschieten , wil ik dat we op tijd k
 	ld_pp,                   % ik wil naar huis
@@ -6038,7 +6038,7 @@ v(documenteer,documenteert,documenteren,gedocumenteerd,documenteerde,documenteer
     [h([transitive])]).
 
 v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
-    [h([transitive_ndev,        % BUT: "tuinieren wordt alleen recreatief gedaan"
+    [h([transitive,     
 	aci,
 	aci_no_obj,
 	np_ld_pp,		% ik deed suiker in de koffie
@@ -6124,8 +6124,8 @@ v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
 	pc_pp(tegen),
 	alsof_sbar,                   % omdat hij deed alsof ...
 	                              % omdat hij deed alsof .
-	fixed([{[acc(aangifte),pc(van)]}],imp_passive),
-	fixed([{[acc(aangifte),er_pp(van,A)]},extra_sbar(A)],imp_passive),
+	fixed([{[acc(aangifte),pc(van)]}],norm_passive),
+	fixed([{[acc(aangifte),er_pp(van,A)]},extra_sbar(A)],norm_passive),
 	fixed([{[acc(aanval),pc(op)]}],norm_passive),
 	fixed([{[acc(afstand),pc(van)]}],imp_passive),
 	fixed([{[acc(alles),pc(voor)]}],norm_passive),
@@ -7845,7 +7845,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	ld_dir,                         % het bos uit, achteruit
         uit,
 	intransitive,                   % ik ga!
-	transitive_ndev_ndev,		% hij gaat zijn eigen weg
+	transitive_ndev_ndev_npas,		% hij gaat zijn eigen weg
 
 	fixed([pc(om),dat],no_passive), % het gaat ons om de knikkers
 	pc_pp(om),		        % het gaat om de knikkers
@@ -12946,7 +12946,7 @@ v(laat,laat,laten,gelaten,liet,lieten,
 	vp_obj,		        % hij kan het niet laten om haar te plagen
         part_np_vp_obj(toe),    % PPI 03.p.1.s.4
 	part_np_np(toe),        % we laten het hem niet toe...
-	transitive_ndev_ndev,	% laat dat !
+	transitive_ndev_ndev_npas,	% laat dat !
         intransitive,           % laat maar ...
 	inverted_aux(inf),	% laten we gaan; * we laten gaan
 	np_ld_pp,               % ik liet hem binnen / in de kamer
@@ -13178,7 +13178,7 @@ v(leer,leert,leren,geleerd,leerde,leerden,
 	subj_control(te_inf), % ik heb leren fietsen
                               % ik moet het leren toe te laten
 	sbar,
-	transitive_ndev_ndev, % hack, is not ok: "wonen bij Schiphol valt te leren"
+	transitive,
 	vp,
 	np_pc_pp(uit),
 	np_pc_pp(van),
@@ -14492,7 +14492,7 @@ v(mag,mag,mogen,gemogen,mocht,mochten,moge,
         part_intransitive(aan),
         part_intransitive(af),
         part_intransitive(uit),  % de Dijk: mag de muziek uit?
-	transitive_ndev_ndev,
+	transitive_ndev_ndev_npas,
 	part_intransitive(terug),
 	part_ld_pp(terug),
 	part_transitive(terug),
@@ -14975,7 +14975,7 @@ v(moet,moet,moeten,gemoeten,moest,moesten,
 				% vind je het erg moest je dochter thuiskomen met...
 
    h([intransitive,
-      transitive_ndev_ndev,
+      transitive_ndev_ndev_npas,
       ld_pp,
       ld_adv,
       ld_dir,
@@ -20917,6 +20917,7 @@ v(smak,smakt,smakken,gesmakt,smakte,smakten,
 v(smeed,smeedt,smeden,gesmeed,smeedde,smeedden,
     [h([transitive,
 	part_transitive(om),
+	np_pc_pp(tot),
 	np_ld_pp])]).
 
 v(smeek,smeekt,smeken,gesmeekt,smeekte,smeekten,

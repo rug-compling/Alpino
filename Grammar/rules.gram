@@ -8445,8 +8445,8 @@ grammar_rule(start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C]) :-
     B => start, B:mod_np => no, 
     C => start, C:mod_np => no, 
     M => start, M:mod_np => yes,
-    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma),
-    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma),
+    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;ligg_streep),
+    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;ligg_streep),
     (   hdrug_util:hdrug_flag(parse_or_generate,generate),
 	COMMA:puncttype => punt_komma,
 	COMMA2:puncttype => punt_komma
@@ -8466,8 +8466,8 @@ grammar_rule(start_start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C,D]) :-
     C => start, C:mod_np => no, C:cj => ~no_crd,
     D => start_seq,
     M => start, M:mod_np => yes,
-    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma),
-    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma),
+    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;ligg_streep),
+    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;ligg_streep),
     (   hdrug_util:hdrug_flag(parse_or_generate,generate),
 	COMMA:puncttype => punt_komma,
 	COMMA2:puncttype => punt_komma
@@ -9526,7 +9526,7 @@ grammar_rule(np_c_np,START,[NP1,COMMA,NP2]) :-
     START:mod_np => yes,
     dp_np(NP1),
     ind_max_np(NP2),
-    NP2:cj => ~no_crd,
+    NP2:cj => ~no_crd,   % but: wiki-832.p.2.s.1; WR-P-E-C-0000000004.p.6.s.1
     NP2:nform => norm,
     NP2:subn => (sub_num;sub_name;sub_noun;sub_tmp),
     dp_dp_structure(NP1,NP2,START).

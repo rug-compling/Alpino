@@ -4009,8 +4009,8 @@ abbreviation('t.z.t.', tezijnertijd).
 abbreviation(v,        versus).
 abbreviation(vol,      volume).
 abbreviation('vol.',   volume).
-abbreviation(vols,      volume).
-abbreviation('vols.',   volume).
+abbreviation(vols,      volumes).
+abbreviation('vols.',   volumes).
 abbreviation('vs.',    vers).
 abbreviation('vs.',    versus).
 abbreviation('verm.',  vermoedelijk).
