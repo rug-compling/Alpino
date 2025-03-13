@@ -237,7 +237,7 @@ translate_timelimit(Call,Max,Status) :-
     copy_term(Call,Call2),
     current_output(OutputStream),
     (	Max =:= 0
-    ->	translate_memlimit(Call,Status)
+    ->	translate_memlimit(Call,StatusMem)
     ;   statistics(runtime,[Start,_]),
         time_out(
           translate_memlimit(Call2,StatusMem),
@@ -251,8 +251,10 @@ translate_timelimit(Call,Max,Status) :-
         ;   StatusTimeOut = StatusTimeOut0
         )
     ),
-    (	StatusTimeOut == time_out
-    ->	format(user_error,"timed out after ~w msec~n",[Max]),
+    (	(   StatusTimeOut == time_out
+	;   StatusMem == out_of_memory
+	)
+    ->	format(user_error,"~w ~w after ~w msec~n",[StatusMem,StatusTimeOut,Max]),
 	(    hook(after_timeout_options(Call))
 	->   call_cleanup(translate_timelimit(Call,Max,Status),try_hook(undo_timeout_options(Call)))
 	;    Status = time_out
