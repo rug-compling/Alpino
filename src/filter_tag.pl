@@ -497,6 +497,8 @@ valid_sc(intransitive,                []).
 valid_sc(transitive,                  []).
 valid_sc(transitive_ndev,             []).
 valid_sc(transitive_ndev_ndev,        []).
+valid_sc(transitive_ndev_npas,        []).
+valid_sc(transitive_ndev_ndev_npas,   []).
 valid_sc(transitive_ydev,             [check_tag(v_noun(_))]).
 valid_sc(num_pred,                    [check_tag(number(hoofd(_)))]).
 valid_sc(ld_transitive,               []).
