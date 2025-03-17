@@ -6032,7 +6032,7 @@ potential_name_fsa(begin,P0,[Word1|Words0],Words,[Word1|Used],[begin|His]) :-
        ), % De K. had samen met een vriend een man lastig gevallen die ...
           % De la Rua had weinig keus
     Word1 \= 'Het',
-    Word1 \= '\'t',
+%    Word1 \= '\'t',
     %%
     %% Kommer 't Mannetje
     %% Ton Sondergaard
