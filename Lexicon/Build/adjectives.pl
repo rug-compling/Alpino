@@ -7278,7 +7278,9 @@ a([e(culturele),
    ste(cultureelste)],adv,[],
   [inter,
    multi,h(multi),
-   h(sociaal)]).
+   socio,h(socio),
+   sociaal,h(sociaal)
+  ]).
 
 a([e(cumulatieve),
    er(cumulatiever),
