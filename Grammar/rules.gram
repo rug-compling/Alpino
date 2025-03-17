@@ -11053,6 +11053,7 @@ grammar_rule(num_num_haak, NUMP, [ NUM, Cl, MOD, OptQm, Cr ]) :-
 %% "de belijdende of de volwassen leden"
 %% "een anoniem of een publiek bestaan"
 %% "de gele of de rode bal"
+%% "geen groene maar een rode bal"
 grammar_rule(det_adj_crd_det_adj_n,NP,[Det1,Adj1,En,Det2,Adj2,N2]) :-
     np_det_n_structure(Conj1,Det1,NP1),
     np_det_n_structure(Conj2,Det2,NP2),
