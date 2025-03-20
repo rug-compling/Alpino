@@ -19129,7 +19129,7 @@ v(rond,rondt,ronden,gerond,rondde,rondden,
 	transitive,
 	part_intransitive(af),
 	part_transitive(af),
-	part_pc_pp(met),  % Bakellende: ik rond af met u even mee terug te nemen ...
+	part_pc_pp(af,met),  % Bakellende: ik rond af met u even mee terug te nemen ...
 	part_np_pc_pp(af,naar),
 	part_np_pc_pp(af,op)])]).
 

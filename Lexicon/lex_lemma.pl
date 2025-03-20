@@ -8830,7 +8830,6 @@ lemma_root(mergen,merge) .
 lemma_root(merken,merk) .
 lemma_root(mesten,mest) .
 lemma_root(meten,meet) .
-lemma_root(met_ronden,rond_met) .
 lemma_root(metselen,metsel) .
 lemma_root(meubileren,meubileer) .
 lemma_root(miauwen,miauw) .
