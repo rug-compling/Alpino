@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="3" infl="sg" lemma="spelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="speel" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="speelde" wvorm="pv"/>
+      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="4" infl="no_e" lemma="slecht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="slecht" vform="adj" word="slecht"/>
+      <node begin="2" cat="advp" end="8" id="5" rel="mod">
+        <node begin="2" comparative="als" end="3" id="6" lemma="even" pos="adv" postag="BW()" pt="bw" rel="hd" root="even" special="comp" word="even"/>
+        <node begin="4" cat="cp" end="8" id="7" rel="obcomp">
+          <node begin="4" conjtype="onder" end="5" id="8" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+          <node begin="5" cat="du" end="8" id="9" rel="body">
+            <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="zaterdag" naamval="stan" ntype="eigen" num="sg" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="dp" rnum="sg" root="zaterdag" special="tmp" word="zaterdag"/>
+            <node begin="6" cat="pp" end="8" id="11" rel="dp">
+              <node begin="6" end="7" id="12" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+              <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="Feyenoord" naamval="stan" neclass="ORG" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Feyenoord" word="Feyenoord"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij speelde even slecht als zaterdag tegen Feyenoord</sentence>
+</alpino_ds>

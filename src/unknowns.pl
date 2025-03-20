@@ -5037,8 +5037,9 @@ unlikely_name(List,P0,P) :-
     list_only_capitals(List),
     majority_decap(List,P0,P,0,0).
 
-%% if all capitals then not proceeded or followed by another
-%% all capitals
+% %% if all capitals then not proceeded or followed by another
+% %% all capitals
+% does not make sense for eg.: TEKST : TATJANA CHODORJEVA LEIDT één ORGANISATIE DIE DE UIT DE SEKSSLAVERNIJ TERUGKERENDE MEISJES OPVANGT IN SINT PETERSBURG 
 unlikely_name(List,P1,P2) :-
     \+ capitalized_name(P1,P2),
     no_lower_case(List),
@@ -5164,24 +5165,33 @@ no_lower_case_codes([H|T]) :-
     \+ islower(H),
     no_lower_case_codes(T).
 
-capitalized_name(P,P).
+capitalized_name(P0,P) :-
+    P0 == P,
+    !.
 capitalized_name(P0,P) :-
     tag(P0,P1,_,_,_,_,special(decap(names_dictionary)),_),
+    P1 =< P,
     !,
     capitalized_name(P1,P).
 capitalized_name(P0,P) :-
     tag(P0,P1,_,_,_,_,normal(names_dictionary),_),
+    P1 =< P,
+    !,
+    capitalized_name(P1,P).
+capitalized_name(P0,P) :-
+    P1 is P0 + 1,
+    \+ tag(P0,P1,_,_,_,_,special(decap(_)),_),
     !,
     capitalized_name(P1,P).
 capitalized_name(P0,P) :-
     tag(P0,P1,_,_,_,VAN,_,_),
+    P1 =< P,
     only_capitals(VAN,V),
     (  name_vanhet_maybe(V)
     ;  name_vanhet(V)
     ),
     name_vanhet_start(VAN),
     capitalized_name(P1,P).
-
 
 unlikely_name_pair(alles,best).
 unlikely_name_pair(alles,even).
