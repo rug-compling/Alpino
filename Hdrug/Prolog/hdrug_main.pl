@@ -251,6 +251,9 @@ translate_timelimit(Call,Max,Status) :-
         ;   StatusTimeOut = StatusTimeOut0
         )
     ),
+
+    redo_if_status(StatusTimeOut,StatusMem,Call,Call2,Max,Status),
+/*    
     (	(   StatusTimeOut == time_out
 	;   StatusMem == out_of_memory
 	)
@@ -262,12 +265,31 @@ translate_timelimit(Call,Max,Status) :-
     ;   Status = StatusMem,
 	Call=Call2
     ),
+*/
     current_output(OutputStreamChanged),  % bug in charsio/timeout
     (   OutputStream == OutputStreamChanged
     ->  true
     ;   set_output(OutputStream),
 	close(OutputStreamChanged)
     ).
+
+redo_if_status(StatusTimeOut,_StatusMem,Call,_Call2,Max,Status) :-
+    StatusTimeOut == time_out,
+    !,
+    format(user_error,"~w after ~w msec~n",[StatusTimeOut,Max]),
+    (    hook(after_timeout_options(Call))
+    ->   call_cleanup(translate_timelimit(Call,Max,Status),try_hook(undo_timeout_options(Call)))
+    ;    Status = time_out
+    ).
+redo_if_status(_StatusTimeOut,StatusMem,Call,_Call2,Max,Status) :-
+    StatusMem == out_of_memory,
+    !,
+    (    hook(after_timeout_options(Call))
+    ->   call_cleanup(translate_timelimit(Call,Max,Status),try_hook(undo_timeout_options(Call)))
+    ;    Status = out_of_memory
+    ).
+redo_if_status(_StatusTimeOut,Status,Call,Call,_Max,Status).
+    
 
 :- if(current_prolog_flag(language,sicstus)).
 
