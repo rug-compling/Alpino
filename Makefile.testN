@@ -249,4 +249,32 @@ endif
 
 ORDERED=-rt
 
+j:
+	make tjob command=cdb_part00001.testN
+	make tjob command=cdb_part00002.testN
+	make tjob command=cdb_part00003.testN
+	make tjob command=cdb_part00004.testN
+	make tjob command=cdb_part00005.testN
+	make tjob command=cdb_part00006.testN
+	make tjob command=cdb_part00007.testN
+	make tjob command=cdb_part00008.testN
+	make tjob command=cdb_part00009.testN
+	make tjob command=cdb_part00010.testN
 
+tjob:
+	(  \
+   echo "#!/bin/sh" ;\
+   echo "#SBATCH --nodes=1" ;\
+   echo "#SBATCH --ntasks=1" ;\
+   echo "#SBATCH --time=24:00:00" ;\
+   echo "#SBATCH --mem=20G";\
+   echo "module load Python/3.10.4-GCCcore-11.3.0";\
+   echo "module load lxml/4.9.1-GCCcore-11.3.0";\
+   echo "module load Boost/1.79.0-GCC-11.3.0";\
+   echo "module load Tk/8.6.12-GCCcore-11.3.0";\
+   echo "export PROLOGMAXSIZE=15000M";\
+   echo "hostname -f " ;\
+   echo "echo $(command) " ;\
+   echo "cd `pwd`";\
+   echo "$(MAKE) $(command)";\
+       ) | sbatch --job-name=$(suite)
