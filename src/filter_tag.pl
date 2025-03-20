@@ -333,6 +333,7 @@ valid_adj_sc(ld_pp(Prep),             [prep(Prep)]).
 valid_adj_sc(pp(Prep),                [prep(Prep)]).
 valid_adj_sc(mod_pp(Prep),            [prep(Prep)]).
 valid_adj_sc(so_pp(Prep),             [prep(Prep)]).
+valid_adj_sc(so_pp_np(Prep),          [prep(Prep)]).
 valid_adj_sc(ld,                      []).
 valid_adj_sc(np_ld,                   []).
 valid_adj_sc(refl_ld,                 [check_refl]).
@@ -550,6 +551,7 @@ valid_sc(so_np_pc_pp(Prep),           [prep(Prep)]).
 valid_sc(amb_so_np_pass_pc_pp(Prep),  [prep(Prep)]).
 valid_sc(np_er_pc_pp(Prep),           [er_prep(Prep)]).
 valid_sc(np_mod_pp(Prep),             [prep(Prep)]).
+valid_sc(so_np_mod_pp(Prep),          [prep(Prep)]).
 valid_sc(np_np_mod_pp(Prep),          [prep(Prep)]).
 valid_sc(refl_er_pc_pp(Prep),         [check_refl,er_prep(Prep)]).
 valid_sc(refl_pc_pp(Prep),            [prep(Prep),check_refl]).
