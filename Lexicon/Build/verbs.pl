@@ -4033,6 +4033,7 @@ v(blijf,blijft,blijven,gebleven,bleef,bleven,blijve,
 	part_intransitive(achter),
 	part_intransitive(binnen),
 	part_intransitive(bij),
+	part_intransitive(na),    % op school
 	part_intransitive(op),
 	part_intransitive(open),
 	part_intransitive(opzij), % VL, De voetballer bleef geschorst opzij
@@ -10252,7 +10253,9 @@ v(huil,huilt,huilen,gehuild,huilde,huilden,
 v(huis,huist,huizen,gehuisd,huisde,huisden,
     [h([ld_adv,
 	ld_pp,
-	intransitive])]).
+	intransitive,
+	transitive
+       ])]).
 
 v(huisvest,huisvest,huisvesten,gehuisvest,huisvestte,huisvestten,
     [h([transitive,
@@ -14237,6 +14240,8 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	fixed([er_pp(op),compar,acc],norm_passive),
 	% hij heeft het zichzelf er niet makkelijker op gemaakt
 	fixed([er_pp(op),compar,{[acc,dat]}],norm_passive),
+	% de resultaten maken het er (voor) Berlusconi niet gemakkelijk(er) op
+	fixed([er_pp(op),ap_pred,{[acc,dat_pp(voor)]}],norm_passive),
 	fixed([[sterk],refl,sbar],no_passive),  % ik maak me sterk dat...
 	fixed([[sterk],refl,vp],no_passive),  % VL ik maak me sterk om...
 	part_np_np(bekend),
@@ -19124,6 +19129,7 @@ v(rond,rondt,ronden,gerond,rondde,rondden,
 	transitive,
 	part_intransitive(af),
 	part_transitive(af),
+	part_pc_pp(met),  % Bakellende: ik rond af met u even mee terug te nemen ...
 	part_np_pc_pp(af,naar),
 	part_np_pc_pp(af,op)])]).
 
@@ -19363,6 +19369,7 @@ v(scan,scant,scannen,gescand,scande,scanden,
 	intransitive,
 	pc_pp(op),
 	np_pc_pp(op),
+	part_transitive(af),
         part_transitive(in)])]).
 
 v(scandeer,scandeert,scanderen,gescandeerd,scandeerde,scandeerden,
@@ -22379,6 +22386,7 @@ v(stel,stelt,stellen,gesteld,stelde,stelden,
 	fixed([{[acc(prijs),pc(op)]}],norm_passive),
 	fixed([er_pp(op,C),acc(prijs),extra_sbar(C)],imp_passive),
 	fixed([er_pp(op,C),acc(prijs),extra_vp(C)],imp_passive),
+	fixed([{[pc(in),acc(vertrouwen)]}],norm_passive),
 	fixed([{[pc(aan),acc(voorwaarde)]}],norm_passive),
         fixed([ap_pred('ter beschikking'),acc],norm_passive),
         fixed([ap_pred('ter beschikking'),{[acc,dat]}],norm_passive),
@@ -26486,10 +26494,13 @@ v(vertel,vertelt,vertellen,verteld,vertelde,vertelden,
 	np_pc_pp(bij),	    % dat vertelde hij er niet bij
 	pp_sbar(bij),       % hij vertelde er niet bij dat ...
         mod_pp(over),	    % en hij vertelt daar zelf over
-        np_mod_pp(over),    % hij heeft me daar nooit over verteld ...
+	
+        so_np_mod_pp(over), % hij heeft me daar nooit over verteld ...
+	np_mod_pp(over),    % hij heeft daar niets geks over verteld ...
         np_np_mod_pp(over), % hij heeft me daar nooit het fijne over verteld ...
 	mod_pp(van),	    % daar heeft hij nooit van verteld
-	np_mod_pp(van),	    % daar heeft hij mij nooit van verteld
+	np_mod_pp(van),     % hij heeft daar niets geks van verteld ...
+	so_np_mod_pp(van),  % daar heeft hij mij nooit van verteld
 	np_np_mod_pp(van),  % daar heeft hij mij nooit het fijne van verteld
 	refl,		    % fout tellen ....
 	sbar,
@@ -29022,6 +29033,7 @@ v(zet,zet,zetten,gezet,zette,zetten,
 	part_transitive(klem),
 	part_transitive(neer),
         part_np_ld_pp(neer),
+	part_als_pred_np(neer),
 	part_transitive(om),
 	np_pc_pp(op),   % ik zet hem op stil
  	part_transitive(op),

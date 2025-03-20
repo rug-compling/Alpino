@@ -33313,7 +33313,7 @@ a([ge_both(terneergeslagen),
 a([prefix(terracotta)],nonadv,[],[]).
 
 a([e(territoriale),
-   no_e(territoriaal)],nonadv,[],[]).
+   no_e(territoriaal)],adv,[],[]).
 
 a([e(terroristische),
    er(terroristischer),
@@ -36782,6 +36782,7 @@ a([stem(verschuldigen),
    ge_e(verschuldigde),
    ge_no_e(verschuldigd)],nonadv,
   [so_pp(aan),
+   so_pp_np(aan),
    np_np,
    pp(voor),
    pp(op),

@@ -2001,6 +2001,36 @@ grammar_rule(vp_predm_v, VP, [ Mod, CommaR, V ] ) :-
     Mod => predm_adv,
     vp_predm_comma_v_structure(VP,Mod,CommaR,V).
 
+%%EX%% Ze moesten allemaal , ook Jan , nablijven
+grammar_rule(vp_predm_mod_v, VP, [ PREDM0, CommaL, MOD, CommaR, V ] ) :-
+    comma(CommaL),
+    comma(CommaR),
+    PREDM0 => predm_adv,
+    PREDM => predm_adv,
+    ind_max_np(MOD),
+    hd_mod_structure(PREDM0,MOD,PREDM),
+    vp_predm_v_structure(VP,PREDM,V).
+
+%%EX%% Ze moesten allemaal - ook Jan - nablijven
+grammar_rule(vp_predm_dash_mod_v, VP, [ PREDM0, CommaL, MOD, CommaR, V ] ) :-
+    dash(CommaL),
+    dash(CommaR),
+    PREDM0 => predm_adv,
+    PREDM => predm_adv,
+    ind_max_np(MOD),
+    hd_mod_structure(PREDM0,MOD,PREDM),
+    vp_predm_v_structure(VP,PREDM,V).
+
+%%EX%% Ze moesten allemaal ( zowel Jan als Piet ) nablijven
+grammar_rule(vp_predm_bracket_mod_v, VP, [ PREDM0, CommaL, MOD, CommaR, V ] ) :-
+    haak_open(CommaL),
+    haak_sluit(CommaR),
+    PREDM0 => predm_adv,
+    PREDM => predm_adv,
+    ind_max_np(MOD),
+    hd_mod_structure(PREDM0,MOD,PREDM),
+    vp_predm_v_structure(VP,PREDM,V).
+
 %grammar_rule(vp_predm_adj_v, VP, [ Mod, CommaR, V ] ) :-
 %    predm_adj(Mod),
 %    vp_predm_comma_v_structure(VP,Mod,CommaR,V).
@@ -5371,6 +5401,7 @@ grammar_rule(n_comma_adj_comma_n, NP, [ COMMA1, AP, COMMA2, N ] ) :-
     COMMA2:puncttype => komma.
 
 %%EX%% Een heel geleerd persoon met een nochtans teleurstellend palmares opende de conferentie
+%%EX%% Het systematisch , creatief ontwerpen is ons handelsmerk
 marked_n_adj_n_structure(N,AP,NP) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     n_adj_n_structure(N,AP,NP),
@@ -5392,7 +5423,8 @@ marked_n_adj_n_structure(N,AP,NP) :-
               ~sub_adj_pl &   % reduce spur amb in 'de direct betrokkenen'
               ~sub_rang &
               ~sub_num  &     % *half tien
-              ~sub_def_verb & % reduce spur amb in 'het ziek zijn'
+%    ~sub_def_verb &	      % reduce spur amb in 'het ziek zijn'
+                              % however: "het creatief ontwerpen"
 %%              ~sub_name &   % ,, ,,              'een geweldig Feyenoord'
                               %  but het Scandinavisch Hoogland
                               %          Democratisch Blok
@@ -5766,8 +5798,8 @@ grammar_rule(n_n_cp, NP, [ N, OPTCOMMA1, CP, OPTCOMMA2 ] ) :-
     optcomma(OPTCOMMA1),
     optcomma(OPTCOMMA2),
     CP:ctype => (c_compare_np;c_alsof;c_mod_np),
-%    NP:rightm => yes,
-    N:rightm => no,
+    NP:rightm => yes,
+%    N:rightm => no,
     n_post_mod_structure(N,CP,NP).
 
 %%EX%% het jaar voordat ik achttien werd was mijn mooiste jaar
@@ -5841,10 +5873,11 @@ grammar_rule(n_n_comparative,NP,[N,Extra]) :-
     hd_extra_structure(N,Extra,NP).
 
 %%EX%% de wijn die Elvis gedronken zou hebben
+%%EX%% Bekijk de gebouwen die zich daar bevinden zoals garages en schuren .
 grammar_rule(n_n_rel, NP, [N, OPTCl, Rel, OPTCr ]) :-
     NP => n,  N => n,  Rel => rel,
     NP:rightm => yes,
-    N:rightm => no,
+%    N:rightm => no,
     optcomma_dash(OPTCl),
     optcomma_dash(OPTCr),
 
@@ -8094,13 +8127,13 @@ grammar_rule(sat_tag_nucl(sbar_ques),ROOT,[Max, OPTCOMMA, TAG, COMMA, Dan]) :-
 
 %%EX%% wat je ook zegt , ik kom niet
 grammar_rule(sat_nucl(redrel),ROOT,[Max, COMMA, Dan]) :-
-    COMMA => punct, COMMA:puncttype => komma,
+    COMMA => punct, COMMA:puncttype => (komma;hellip;dubb_punt),
     max_redrel(Max),
     root_nucl_sat_structure(Dan,Max,ROOT).
 
 %%EX%% wat je ook zegt , ja , ik kom niet
 grammar_rule(sat_tag_nucl(redrel),ROOT,[Max, OPTCOMMA, TAG, COMMA, Dan]) :-
-    COMMA => punct, COMMA:puncttype => komma,
+    COMMA => punct, COMMA:puncttype => (komma;hellip;dubb_punt),
     optcomma(OPTCOMMA),
     max_redrel(Max),
     root_nucl_sat_tag_structure(Dan,Max,TAG,ROOT).
@@ -12675,10 +12708,11 @@ grammar_rule(comparative(pp), CompP, [ Comp, XP ]) :-
     comparative_structure(Comp,XP,CompP).
 
 %%EX%% Hij speelt even slecht als destijds tegen Feyenoord
+%%EX%% Hij speelde even slecht als zaterdag tegen Feyenoord
 grammar_rule(comparative(adv_pp), CompP, [ Comp, MOD, XP ]) :-
-    max_advp(MOD),
+    max_advp_np(MOD),
     MOD:subadv => ~subadv_adj,
-    MOD:subadv => ~subadv_noun,
+%    MOD:subadv => ~subadv_noun,
     ind_max_pp(XP),
     XP1 => pp,
     XP1:sel => ~to_topic,

@@ -35180,7 +35180,7 @@ n([sg(summum)],het,[]).
 
 n([mass(super)],de,[]).		% benzine
 
-n([sg(super),pl(supers)],de,[]).  % winkels
+n([sg(super),pl(supers)],de,[],[buurt]).  % winkels
 
 n([sg([super,audio,cd]),
    pl([super,audio,'cd\'s'])],de,[]).
@@ -35211,7 +35211,9 @@ n([mass(superioriteit)],de,[]).
 
 n([sg(superlatief),pl(superlatieven)],both,[]).
 
-n([sg(supermarkt),pl(supermarkten)],de,[]).
+n([sg(supermarkt),pl(supermarkten)],de,[],
+  [f(service),
+   f(discount)]).
 
 n([mass(supervisie)],de,[]).
 

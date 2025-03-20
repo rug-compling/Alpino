@@ -1437,6 +1437,7 @@ lemma_root(af_ruilen,ruil_af) .
 lemma_root(af_ruimen,ruim_af) .
 lemma_root(af_rukken,ruk_af) .
 lemma_root(af_rusten,rust_af) .
+lemma_root(af_scannen,scan_af) .
 lemma_root(af_schaatsen,schaats_af) .
 lemma_root(af_schaffen,schaf_af) .
 lemma_root(af_schakelen,schakel_af) .
@@ -8829,6 +8830,7 @@ lemma_root(mergen,merge) .
 lemma_root(merken,merk) .
 lemma_root(mesten,mest) .
 lemma_root(meten,meet) .
+lemma_root(met_ronden,rond_met) .
 lemma_root(metselen,metsel) .
 lemma_root(meubileren,meubileer) .
 lemma_root(miauwen,miauw) .
@@ -8939,6 +8941,7 @@ lemma_root(na_beschilderen,beschilder_na) .
 lemma_root(na_beven,beef_na) .
 lemma_root(na_bibberen,bibber_na) .
 lemma_root(na_blaten,blaat_na) .
+lemma_root(na_blijven,blijf_na) .
 lemma_root(na_blussen,blus_na) .
 lemma_root(na_bootsen,boots_na) .
 lemma_root(na_bouwen,bouw_na) .
