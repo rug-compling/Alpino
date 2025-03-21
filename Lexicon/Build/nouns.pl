@@ -26927,6 +26927,9 @@ n([pl('party\'s'),sg(party)],de,[],
   [f([cocktail])]).
 
 n([pl(passen),sg(pas)],both,[],
+  [meas_mod]).   % we liepen steeds twee passen achter
+
+n([pl(passen),sg(pas)],both,[],
   [betaal,
    dans,
    pin,
@@ -32694,7 +32697,7 @@ n([pl(skiërs),sg(skiër)],de,[]).
 
 n([sg(skip),pl(skips)],de,[]).  % iets van aanvoerder bij curling
 
-n([sg(skipper),pl(skippers)],de,[]).  % iets van aanvoerder bij curling
+n([sg(skipper),pl(skippers)],de,[],['Belgacom']).  % iets van aanvoerder bij curling/zeilen
 
 n([pl(skisters),sg(skister)],de,[]).
 

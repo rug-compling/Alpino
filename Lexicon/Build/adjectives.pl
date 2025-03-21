@@ -14028,6 +14028,9 @@ a([ge_e(gepompte),
 a([ge_e(geponeerde),
    ge_no_e(geponeerd)],adv,[],[]).
 
+a([ge_e(gepoogde),
+   ge_no_e(gepoogd)],adv,[],[]).
+
 a([ge_e(geporde),
    ge_no_e(gepord)],adv,[],[]).
 
