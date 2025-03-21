@@ -277,4 +277,4 @@ tjob:
    echo "echo $(command) " ;\
    echo "cd `pwd`";\
    echo "$(MAKE) $(command)";\
-       ) | sbatch --job-name=$(suite)
+       ) | sbatch --job-name=$(command)
