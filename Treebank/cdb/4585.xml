@@ -9,16 +9,16 @@
       <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
       <node begin="0" cat="ppart" end="29" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
-        <node begin="12" buiging="zonder" end="13" id="8" lemma="geven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geef" word="gegeven" wvorm="vd"/>
-        <node begin="3" cat="np" end="29" id="9" rel="obj1">
-          <node begin="3" cat="pp" end="7" id="10" rel="mod">
-            <node begin="3" end="4" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-            <node begin="4" cat="np" end="7" id="12" rel="obj1">
-              <node begin="4" end="5" getal="ev" graad="basis" id="13" lemma="Strawinsky" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Strawinsky" word="Strawinsky&apos;s"/>
-              <node begin="5" buiging="met-e" end="6" graad="basis" id="14" lemma="vier_delig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vierdelige" word="vierdelige"/>
-              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="15" lemma="compositie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="compositie" word="compositie"/>
-            </node>
+        <node begin="3" cat="pp" end="7" id="8" rel="mod">
+          <node begin="3" end="4" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="4" cat="np" end="7" id="10" rel="obj1">
+            <node begin="4" end="5" getal="ev" graad="basis" id="11" lemma="Strawinsky" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Strawinsky" word="Strawinsky&apos;s"/>
+            <node begin="5" buiging="met-e" end="6" graad="basis" id="12" lemma="vier_delig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vierdelige" word="vierdelige"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="compositie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="compositie" word="compositie"/>
           </node>
+        </node>
+        <node begin="12" buiging="zonder" end="13" id="14" lemma="geven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geef" word="gegeven" wvorm="vd"/>
+        <node begin="7" cat="np" end="29" id="15" rel="obj1">
           <node begin="7" end="8" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="8" cat="conj" end="11" id="17" rel="mod">
             <node begin="8" buiging="met-e" end="9" graad="basis" id="18" lemma="indringend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="indringend" word="indringende"/>
