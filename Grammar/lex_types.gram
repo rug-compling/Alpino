@@ -1096,7 +1096,8 @@ subject_vp_sbar_adjective(A) :-
 subject_vp_adjective(A,Inf) :-
     A0 => a,
     A0:aform => (attr;nattr;iets),
-    A0:me_adj => no, % ...
+    %%    A0:me_adj => no, % ...
+    %% commented out because of "Het wereldwijde web maakt het een stuk makkelijker om te zoeken ."
     adjective(A0),
     (  vp_adj_e_deps(A0,A,Inf)
     ;  vp_adj_exs(A0,A)

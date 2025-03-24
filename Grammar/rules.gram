@@ -5793,6 +5793,7 @@ grammar_rule(n_n_q_pp_q, NP, [ N, QL, PP, QR ] ) :-
 %%EX%% problemen zoals voornoemd kunnen we dus makkelijk vermijden
 %%EX%% Het gaat om problemen zoals vermeld in artikel 23
 %%EX%% Clubs als Feyenoord die meestal winnen willen geen ander systeem
+%%but% Dat leek op stervende sterren voor die in een zwart gat veranderen
 grammar_rule(n_n_cp, NP, [ N, OPTCOMMA1, CP, OPTCOMMA2 ] ) :-
     max_sbar(CP),
     optcomma(OPTCOMMA1),
@@ -6008,6 +6009,7 @@ grammar_rule(np_np_year,Np,[Np1,Year]) :-
 %% np[-wh] --> np[+wh] adv[dan,ook]
 %% adv in {ook-maar,ook,dan-ook}
 %%EX%% We kunnen welke hulp dan ook goed gebruiken
+%%BUT% Wie dan ook van de huidige VVD-top
 grammar_rule(np_wh_np_adv,NP,[N,Adv]):-
     NP => np,
     N => np,
@@ -8141,16 +8143,42 @@ grammar_rule(sat_tag_nucl(redrel),ROOT,[Max, OPTCOMMA, TAG, COMMA, Dan]) :-
 %%EX%% Het is een vervelende vent , die kerel
 %%EX%% Wat een rothond is dat toch geworden , die van de buren
 %%EX%% Ze moeten ook het laatste offensief stoppen , dat op de Golan-hoogvlakte
+%%EX%% Hier hebben we op gewacht ... de pizza-automaat
 grammar_rule(nucl_sat(np),ROOT,[Dan, COMMA, Max]) :-
-    comma_dash(COMMA),
+    comma_hellip(COMMA),
     ind_max_np(Max),
 %    Max:subn => ~sub_det,
     Max:redrel => no,
     root_nucl_sat_structure(Dan,Max,ROOT).
 
+%%EX%% Ik heb daar al vaak gegeten , meestal pannenkoeken
+grammar_rule(nucl_sat(mod_np),ROOT,[Dan, COMMA, MOD, NP]) :-
+    comma_hellip(COMMA),
+    start_mod_np_struct(Max,MOD,NP),
+    root_nucl_sat_structure(Dan,Max,ROOT).
+
+%%EX%% Ik heb daar al vaak gegeten , meestal met vrienden
+grammar_rule(nucl_sat(mod_pp),ROOT,[Dan, COMMA, MOD, PP]) :-
+    comma_hellip(COMMA),
+    start_mod_pp_struct(Max,MOD,PP),
+    root_nucl_sat_structure(Dan,Max,ROOT).
+
+start_mod_pp_struct(M,MOD,PP) :-
+    M => max,
+    M:max_type => t_dp,
+    max_modifier(MOD),
+    MOD:hstem <=> HSTEM,
+    dif(HSTEM,er),
+    MOD:mcat => (mcat_pp;mcat_adv;mcat_vp;mcat_sbar;mcat_redrel),
+    MOD:wh => nwh,  
+    ind_max_pp(PP),
+    PP:cj => ~no_crd,
+    dp_dp_structure(MOD,PP,M).
+
+
 %%EX%% Hij zou een rondje lopen , het bos in
 grammar_rule(nucl_sat(post_pp),ROOT,[Dan, COMMA, Max]) :-
-    comma_dash(COMMA),
+    comma_hellip(COMMA),
     max_post_pp(Max),
     root_nucl_sat_structure(Dan,Max,ROOT).
 
@@ -8673,6 +8701,9 @@ grammar_rule(dit_allemaal_vanwege,Start,[PRON,ALLEMAAL,OPTCOMMA,SBAR]) :-
 %% redrel: wat mij betreft een goede ontwikkeling
 %%EX%% wat mij betreft een goede ontwikkeling
 grammar_rule(start_mod_np,M,[MOD,NP]) :-
+    start_mod_np_struct(M,MOD,NP).
+
+start_mod_np_struct(M,MOD,NP) :-
     M => max,
     M:max_type => t_dp,
 %    M:mod_np => yes,

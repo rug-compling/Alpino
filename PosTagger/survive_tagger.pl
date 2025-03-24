@@ -117,6 +117,8 @@ surviving_root('ten achteren').   % GCRAMP
 surviving_root(daar_laten).	  % Daargelaten dat ...
 surviving_root(toedoen).          % Door het toedoen van; door toedoen der
 
+surviving_root('meer dan').
+
 %surviving_root(_):-
 %    fail.
 
