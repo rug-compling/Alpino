@@ -5,38 +5,39 @@
     <node begin="11" end="12" id="2" lemma="," pos="let" postag="LET()" pt="let" rel="--" root="NA" word=","/>
     <node begin="0" cat="du" end="17" id="3" rel="--">
       <node begin="0" cat="smain" end="5" id="4" rel="tag">
-        <node begin="0" end="1" genus="masc" getal="ev" id="5" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="NA" status="vol" vwtype="pers" word="Hij"/>
+        <node begin="0" end="1" genus="masc" getal="ev" id="5" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="NA" status="vol" vwtype="pers" word="Hij"/>
         <node begin="1" end="2" id="6" lemma="zullen" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="NA" word="zou" wvorm="pv"/>
-        <node begin="2" cat="inf" end="5" id="7" rel="vc">
-          <node begin="2" end="3" genus="onz" getal="ev" id="8" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="NA" status="red" vwtype="pers" word="het"/>
-          <node begin="3" end="4" id="9" lemma="zo" pos="bw" postag="BW()" pt="bw" rel="mod" root="NA" word="zo"/>
-          <node begin="4" buiging="zonder" end="5" id="10" lemma="zien" pos="ww" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="NA" word="zien" wvorm="inf"/>
+        <node begin="0" cat="inf" end="5" id="7" rel="vc">
+          <node begin="0" end="1" id="8" index="1" rel="su"/>
+          <node begin="2" end="3" genus="onz" getal="ev" id="9" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="NA" status="red" vwtype="pers" word="het"/>
+          <node begin="3" end="4" id="10" lemma="zo" pos="bw" postag="BW()" pt="bw" rel="mod" root="NA" word="zo"/>
+          <node begin="4" buiging="zonder" end="5" id="11" lemma="zien" pos="ww" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="NA" word="zien" wvorm="inf"/>
         </node>
       </node>
-      <node begin="6" cat="du" end="17" id="11" rel="nucl">
-        <node begin="6" cat="cp" end="11" id="12" rel="sat">
-          <node begin="6" conjtype="onder" end="7" id="13" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" root="NA" word="als"/>
-          <node begin="7" cat="ssub" end="11" id="14" rel="body">
-            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="Tony" naamval="stan" ntype="eigen" pos="n" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="NA" word="Tony"/>
-            <node begin="8" cat="np" end="10" id="16" rel="predc">
-              <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="NA" word="de"/>
-              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="hoofd_rol_speler" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="NA" word="hoofdrolspeler"/>
+      <node begin="6" cat="du" end="17" id="12" rel="nucl">
+        <node begin="6" cat="cp" end="11" id="13" rel="sat">
+          <node begin="6" conjtype="onder" end="7" id="14" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" root="NA" word="als"/>
+          <node begin="7" cat="ssub" end="11" id="15" rel="body">
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="16" lemma="Tony" naamval="stan" ntype="eigen" pos="n" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="NA" word="Tony"/>
+            <node begin="8" cat="np" end="10" id="17" rel="predc">
+              <node begin="8" end="9" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="NA" word="de"/>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="hoofd_rol_speler" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="NA" word="hoofdrolspeler"/>
             </node>
-            <node begin="10" end="11" id="19" lemma="zijn" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="NA" word="was" wvorm="pv"/>
+            <node begin="10" end="11" id="20" lemma="zijn" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="NA" word="was" wvorm="pv"/>
           </node>
         </node>
-        <node begin="12" cat="smain" end="17" id="20" rel="nucl">
-          <node begin="12" end="13" id="21" lemma="dan" pos="bw" postag="BW()" pt="bw" rel="mod" root="NA" word="dan"/>
-          <node begin="13" end="14" id="22" lemma="zijn" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="NA" word="was" wvorm="pv"/>
-          <node begin="14" end="15" getal="ev" id="23" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="NA" status="vol" vwtype="pers" word="ik"/>
-          <node begin="15" cat="np" end="17" id="24" rel="predc">
-            <node begin="15" end="16" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="NA" word="de"/>
-            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="26" lemma="regisseur" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="NA" word="regisseur"/>
+        <node begin="12" cat="smain" end="17" id="21" rel="nucl">
+          <node begin="12" end="13" id="22" lemma="dan" pos="bw" postag="BW()" pt="bw" rel="mod" root="NA" word="dan"/>
+          <node begin="13" end="14" id="23" lemma="zijn" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="NA" word="was" wvorm="pv"/>
+          <node begin="14" end="15" getal="ev" id="24" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="NA" status="vol" vwtype="pers" word="ik"/>
+          <node begin="15" cat="np" end="17" id="25" rel="predc">
+            <node begin="15" end="16" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="NA" word="de"/>
+            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="27" lemma="regisseur" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="NA" word="regisseur"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="17" end="18" id="27" lemma="." pos="let" postag="LET()" pt="let" rel="--" root="NA" word="."/>
+    <node begin="17" end="18" id="28" lemma="." pos="let" postag="LET()" pt="let" rel="--" root="NA" word="."/>
   </node>
   <sentence>Hij zou het zo zien : als Tony de hoofdrolspeler was , dan was ik de regisseur .</sentence>
   <comments>

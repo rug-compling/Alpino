@@ -7848,7 +7848,8 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	ld_dir,                         % het bos uit, achteruit
         uit,
 	intransitive,                   % ik ga!
-	transitive_ndev_ndev_npas,		% hij gaat zijn eigen weg
+	transitive_ndev_ndev,		% hij gaat zijn eigen weg
+	                                % er is nog een lange weg te gaan
 
 	fixed([pc(om),dat],no_passive), % het gaat ons om de knikkers
 	pc_pp(om),		        % het gaat om de knikkers
@@ -8014,7 +8015,6 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	fixed([[aan,het,hart],dat,sbar],no_passive),
         fixed([[dagga]],no_passive), % in tweets "ik ga dagga" = ik ga slapen/naar huis?
         fixed([[door,het,leven],nonp_pred],no_passive),
-        fixed([[door,het,stof]],no_passive),
 	fixed([[hand,in,hand]],no_passive),
 	fixed([{[[hand,in,hand],pc(met)]}],no_passive),
 	fixed([svp_pp(in,beroep)],no_passive),
@@ -10075,7 +10075,7 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	voor_pred_np_vp,
 	np_vp_obj1, % we zijn gehouden de begroting uit te voeren
 	part_intransitive(aan),
-	part_dip_sbar(aan),
+	part_sbar(aan),
 	part_intransitive(af),
 	part_intransitive(halt),
 	part_intransitive(huis),
@@ -14496,6 +14496,8 @@ v(mag,mag,mogen,gemogen,mocht,mochten,moge,
 	ld_dir,
         uit,
         sbar_subj, % VL: het mag niet dat de zakken zo vlug scheuren
+	pp_copula(aan,slag),
+	pp_copula(aan,werk),
         part_intransitive(aan),
         part_intransitive(af),
         part_intransitive(uit),  % de Dijk: mag de muziek uit?
@@ -18989,6 +18991,7 @@ v(roei,roeit,roeien,geroeid,roeide,roeiden,
 v(roem,roemt,roemen,geroemd,roemde,roemden,
     [h([intransitive,
 	transitive,
+	als_pred_np,
 	pc_pp(op),
 	pc_pp(over)])]).
 
@@ -21397,6 +21400,7 @@ v(speel,speelt,spelen,gespeeld,speelde,speelden,
 	fixed([[geen,parten],dat],no_passive),
 	fixed([[quitte]],imp_passive),
 	fixed([sbar_subj_opt_het,acc(rol)],no_passive),
+	fixed([sbar_subj_opt_het,{[acc(rol),mod_pp(bij)]}],no_passive),
         fixed([{[acc(rol),mod_pp(bij)]}],no_passive),
 	part_np_ld_pp(af),
 	part_np_ld_pp(door),
@@ -26163,10 +26167,11 @@ v(verschrompel,verschrompelt,verschrompelen,verschrompeld,verschrompelde,verschr
      h([transitive])]).
 
 v(verschuif,verschuift,verschuiven,verschoven,verschoof,verschoven,
-    [unacc([intransitive]),
-     h([refl,
-	transitive,
-	np_ld_pp])]).
+  [unacc([intransitive,
+	  ld_pp]),
+   h([refl,
+      transitive,
+      np_ld_pp])]).
 
 v(verschuil,verschuilt,verschuilen,verscholen,[verschuilde,verschool],[verschuilden,verscholen],
     [h([refl,
@@ -28505,7 +28510,8 @@ v([win,gewin],[wint,gewint],[winnen,gewinnen],gewonnen,[won,gewon],wonnen,
 	part_transitive(in),
 	part_transitive(terug),
 	pc_pp(aan),
-	fixed([{[mod_pp(door),pc(aan)]}],no_passive),  % het verslag zou er aan geloofwaardigheid door winnen
+	fixed([{[mod_pp(door),pc(aan)]}],no_passive), % het verslag zou er aan geloofwaardigheid door winnen
+	pc_pp(aan), % winnen aan kracht
 	pc_pp(op),
 	pc_pp(van),
 	part_np_ld_pp(in)])]).

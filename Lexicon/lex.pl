@@ -2560,8 +2560,6 @@ context_spelling_variant(waarschijnlijk,alle,['Naar'|_],waarschijnlijkheid).
 context_spelling_variant(zijde,beide,_,zijden).
 context_spelling_variant(een,lijst,_,één).
 context_spelling_variant(een,'Lijst',_,één).
-context_spelling_variant(een,dan,[meer|_],één).
-context_spelling_variant(een,dan,['Meer'|_],één).
 context_spelling_variant(een,nummer,_,één).
 context_spelling_variant(een,'Nummer',_,één).
 context_spelling_variant(een,nummers,_,één).
@@ -2576,6 +2574,12 @@ context_spelling_variant(dok,de,_,dokter).
 context_spelling_variant(vind,plaats,_,vindt).
 context_spelling_variant(vraagt,de,_,vraag).
 context_spelling_variant(vraagt,'De',_,vraag).
+
+context_spelling_variant_context(een,dan,[meer|_],M,_,één) :-
+    \+ lists:member(M,[miljard,miljoen]).
+context_spelling_variant_context(een,dan,['Meer'|_],M,_,één) :-
+    \+ lists:member(M,[miljard,miljoen]).
+
 
 context_spelling_variant_context(eerst,de,_,keer,_,eerste).
 context_spelling_variant_context(eerst,de,_,plaats,_,eerste).

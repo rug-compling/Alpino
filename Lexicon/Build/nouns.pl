@@ -11825,6 +11825,9 @@ n([pl(filosofieën),sg(filosofie)],de,[sbar],[dim(filosofietje)]).
 
 n([pl(filosofen),sg(filosoof)],de,[]).
 
+%% rijkeluiszoontjex
+n([sg([fils,à,papa])],de,[]).
+
 n([pl(filters),sg(filter)],both,[],[dim(filtertje)]).
 
 n([pl(finales),sg(finale)],de,
@@ -21251,6 +21254,9 @@ n([pl(lokalen),sg(lokaal)],het,[np_app_measure],
 n([pl(lokazen),sg(lokaas)],het,[]).
 
 n([pl(loketten),sg(loket)],het,[]).
+
+n([sg(lokker),pl(lokkers)],de,[],
+  [i(kinder,kind)]).
 
 n([pl(lokomotieven),sg(lokomotief)],de,[]).
 
