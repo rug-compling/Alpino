@@ -6072,8 +6072,8 @@ n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
 	N0:cj => ~no_crd, % improved HACK reduce ambiguities in pn, pn, .. seqs
 	N:has_app => yes, % ,,
 	NP:has_app => no, % ,,
-	N0:has_app2 => no % ,,
-    %%%	N0:has_app => no  % ,,
+	N0:has_app2 => no,% ,,
+    	N0:has_app => no  % ,,
     %%% N:has_app2 => yes,
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
     ),
@@ -6098,7 +6098,7 @@ grammar_rule(pn_n_modpn(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	NP:cj => ncj, % improved HACK reduce ambiguities in pn, pn, .. seqs
 	N0:cj => ncj, % improved HACK reduce ambiguities in pn, pn, .. seqs
-	%% NP:has_app => no,
+	NP:has_app => no,
 	N:has_app => yes,	% ,,
 	N0:has_app => no	% ,,
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
@@ -8514,7 +8514,10 @@ grammar_rule(start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C]) :-
     ;   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	flat(M,COMMA,A),
 	flat(M,COMMA,B),
-	flat(M,COMMA2,C)
+	flat(M,COMMA2,C),
+	A:cj => ~no_crd,
+	B:cj => ~no_crd,
+	C:cj => ~no_crd
     ),
     M:puncttype <=> B:puncttype,
     dp_dp_structure(A,B,C,M).
@@ -8522,9 +8525,9 @@ grammar_rule(start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C]) :-
 %%EX%% De man kwam binnen ; hij opende de koelkast ; de koelkast is leeg ; crisis ...
 %%EX%% 1.75 meter lang , blauwe ogen , tenger postuur , donkerblond haar , geen bril .
 grammar_rule(start_start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C,D]) :-
-    A => start, A:mod_np => no, A:cj => ~no_crd,
-    B => start, B:mod_np => no, B:cj => ~no_crd,
-    C => start, C:mod_np => no, C:cj => ~no_crd,
+    A => start, A:mod_np => no,
+    B => start, B:mod_np => no,
+    C => start, C:mod_np => no,
     D => start_seq,
     M => start, M:mod_np => yes,
     COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;ligg_streep),
@@ -8535,7 +8538,10 @@ grammar_rule(start_start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C,D]) :-
     ;   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	flat(M,COMMA,A),
 	flat(M,COMMA,B),
-	flat(M,COMMA2,C)
+	flat(M,COMMA2,C),
+	A:cj => ~no_crd,
+	B:cj => ~no_crd,
+	C:cj => ~no_crd
     ),
     M:puncttype <=> B:puncttype,
     dp_dp_seq_structure(A,B,C,D,M).
@@ -11811,6 +11817,7 @@ start_coord_structure(Name1,ConjDt,M,XP,Dts,Clist) :-
 start_coord_struct_all(Name,ConjDt,M,XP,Dts,Clist) :-
     structure,
     Clist:etc <=> ETC,
+    Clist:cat:cj <=> CnjType,
     conjunction_cat(Name,M0,CnjType,ETC),
     slash_edeps(M0),
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
@@ -11858,7 +11865,8 @@ mid_coord_structure(Name,Blist,A,Clist) :-
     Blist:cform <=> Clist:cform,
     Blist:etc <=> Clist:etc,
     Clist:etc <=> ETC,
-    nonfinal_coord_daughter(Name,A,BlistCat,_,[],ETC),
+    Blist:cat:cj <=> Type,
+    nonfinal_coord_daughter(Name,A,BlistCat,Type,[],ETC),
     (   A => within_word_conjunct,
 	Blist:within_word => yes
     ;   A /=> within_word_conjunct,
@@ -12552,11 +12560,27 @@ conjunction_cat(pp,M,Crd,ETC) :-
     M:slash => [],
     M:nnform => ~refl.
 
-conjunction_cat(np,Np,_,_) :-
+conjunction_cat(np,Np,Crd,_) :-
     Np => np,
 %    Np:subn => ~sub_indef_verb, % to reduce ambiguities
-    Np:wkpro => ~weakpro.	     % block coordination with weak pronouns..
+    Np:wkpro => ~weakpro,    % block coordination with weak pronouns..
 
+    %% spur.amb. long pn sequences: %
+    Np:has_app <=> APP,
+    No => no,
+    Yes => yes,
+    NoCrd => ~no_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	when(nonvar(APP),
+	     (  APP = No
+	     ;  APP = Yes,
+		Crd = NoCrd
+	     )
+	    )
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ).
+
+    
 conjunction_cat(rel,Rel,Crd,ETC) :-
     ETC => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
