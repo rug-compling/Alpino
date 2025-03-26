@@ -3113,7 +3113,16 @@ p_adv_pp(tot,zo).
 p_adv_pp(anno,nu).
 p_adv_pp(per,direct).
 p_adv_pp(per,onmiddellijk).
-p_adv_pp(van,oudsher).
+
+with_dt([P,Adv],
+	sentence_adverb,
+	dt(pp,[hd=l(P,preposition(P,[]),0,1),
+	       obj1=l(Adv,adverb,advp,1,2)
+	      ])) :-
+    p_adv_adv(P,Adv).
+
+p_adv_adv(van,oudsher).
+
 
 with_dt([in,tegenstelling,tot,vroeger],
 	pp([in,tegenstelling,tot]),

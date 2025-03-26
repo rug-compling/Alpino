@@ -6059,16 +6059,14 @@ grammar_rule(adv_wh_adv_adv,ADVP,[ADV,MOD]):-
     unify_except_l(ADV,ADV1,[wh_reltmploc,wh]),
     hd_mod_structure(ADV1,MOD,ADVP).
 
+% %%EX%% Ik ben er met mr. Derk Schortinghuis , wadloper , kenner van de expressionisten , geweest . %
+% grammar_rule(n_n_modnp_modnp, N, [ N0,  Cl, N1, Cm, NP, OPTCr ]) :-
+%     n_n_modnp_komma_structure(Nmid0,N0,  Cl,N1,OPTCr),
+%     unify_except(Nmid0,Nmid,has_app),
+%     n_n_modnp_komma_structure(N,   Nmid,Cm,NP,OPTCr).
+
 %%EX%% Jan , een dappere strijder , ging op pad
 %%EX%% de minister van buitenlandse zaken , Genscher , is inmiddels in de vergetelheid geraakt
-/*
-%%EX%% Ik ben er met mr. Derk Schortinghuis , wadloper , kenner van de expressionisten , geweest . %
-grammar_rule(n_n_modnp_modnp, N, [ N0,  Cl, N1, Cm, NP, OPTCr ]) :-
-    n_n_modnp_komma_structure(Nmid0,N0,  Cl,N1,OPTCr),
-    unify_except(Nmid0,Nmid,has_app),
-    n_n_modnp_komma_structure(N,   Nmid,Cm,NP,OPTCr).
-*/
-
 grammar_rule(n_n_modnp(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr).
 
@@ -6097,6 +6095,9 @@ n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
 %%% the has_app features imply that a pn-modified pn cannot itself modify a pn
 %%% (as in the Dr Denker example)
 grammar_rule(pn_n_modpn(komma), N, [ N0, Cl, NP, OPTCr ]) :-
+    pn_n_modpn_struct(N,N0,Cl,NP,OPTCr).
+
+pn_n_modpn_struct(N,N0,Cl,NP,OPTCr) :-
     N => np, N0 => np,
     nwh_np_arg(NP),
     NP:sel => ~to_topic,
@@ -6120,6 +6121,11 @@ grammar_rule(pn_n_modpn(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     N0:subn => sub_name,
     NP:subn => sub_name,
     hd_mod_structure(N0,NP,N).
+
+%% grammar_rule(pn_n_modpn_modpn,N, [ N0, Cl, N1, Cm, N2, OPTCr ]) :-
+%%    pn_n_modpn_struct(NP0,N1,Cm,N2,OPTCr),
+%%    unify_except(NP0,NP,has_app),
+%%    pn_n_modpn_struct(N,N0,Cl,NP,OPTCr).
 
 %%EX%% Jan , meestal een dappere strijder , vertrok vol moed
 grammar_rule(n_n_modified_np,N,[N0,Cl,MOD,NP0,OPTCr]) :-

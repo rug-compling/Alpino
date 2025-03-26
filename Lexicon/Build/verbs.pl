@@ -8132,13 +8132,15 @@ v(gap,gapt,gappen,gegapt,gapte,gapten,
     [h([transitive])]).
 
 v(garandeer,garandeert,garanderen,gegarandeerd,garandeerde,garandeerden,
-    [h([np_np,
-	np_sbar,
-	np_vp_subj,
-	sbar_subj_so_np,
-	sbar,
-	transitive,
-	vp])]).
+  [h([np_np,
+      so_pp_np,
+      np_sbar,
+      so_pp_sbar,
+      np_vp_subj,
+      sbar_subj_so_np,
+      sbar,
+      transitive,
+      vp])]).
 
 v(garneer,garneert,garneren,gegarneerd,garneerde,garneerden,
     [h([transitive,
@@ -8500,6 +8502,7 @@ v(geld,geldt,gelden,gegolden,gold,golden,
 	sbar_subj_no_het,
         dip_sbar_subj_no_het,  % ook hier geldt: bla bla
 	so_np,
+	fixed([sbar_subj_no_het,als_pred],no_passive),
         als_copula,
 	pc_pp(voor),
 	pp_sbar_subj_no_het(voor)
@@ -11127,8 +11130,10 @@ v(kijf,kijft,kijven,[gekijfd,gekeven],[kijfde,keef],[kijfden,keven],
     [h([intransitive])]).
 
 v(kijk,kijkt,kijken,gekeken,keek,keken,
-    [h([intransitive,
-	sbar,
+  [z([	part_pc_pp(uit,op)     % omdat we daar snel op zijn uitgekeken (order suggests this is a VC)
+     ]),
+   h([  intransitive,
+        sbar,
 	transitive,
 	ld_pp,
 	ld_dir,  % hij kijkt de weg af
@@ -27681,6 +27686,7 @@ v(vraag,vraagt,vragen,gevraagd,vroeg,vroegen,
 	np_vp_obj,   % mij werd gevraagd te komen
 	np_vp_obj1,  % ik werd gevraagd te komen
 	so_vp_obj,   % +aan
+	vp_subj_np,  % het vraagt een flinke investering om ...
 	fixed([{[pc(van),vp]}],imp_passive),
 		     % van mij werd gevraagd om .. (lijkt wel een obj2)
 	             % ik werd te eten gevraagd =/= ik werd gevraagd te eten

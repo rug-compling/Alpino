@@ -31023,6 +31023,8 @@ a([e(sadistische),
    st(sadistischt),
    ste(sadistischte)],adv,[],[]).
 
+a([both(safe)],nonadv,[],[]).
+
 a([no_e(saillant),
    e(saillante)],nonadv,
   [subject_sbar],[]).
@@ -37909,7 +37911,9 @@ a([both(voldoende)],adv,
   [object_sbar,
    object_vp,
    subject_sbar,
-   subject_vp],[]).
+   subject_vp
+%   subject_sbar_object_vp  TODO
+  ],[]). % dat hij komt is voldoende om ons de stuipen op het lijf te jagen
 
 a([both(voldongen)],nonadv,[],[]).
 
