@@ -6061,7 +6061,14 @@ grammar_rule(adv_wh_adv_adv,ADVP,[ADV,MOD]):-
 
 %%EX%% Jan , een dappere strijder , ging op pad
 %%EX%% de minister van buitenlandse zaken , Genscher , is inmiddels in de vergetelheid geraakt
-%%
+/*
+%%EX%% Ik ben er met mr. Derk Schortinghuis , wadloper , kenner van de expressionisten , geweest . %
+grammar_rule(n_n_modnp_modnp, N, [ N0,  Cl, N1, Cm, NP, OPTCr ]) :-
+    n_n_modnp_komma_structure(Nmid0,N0,  Cl,N1,OPTCr),
+    unify_except(Nmid0,Nmid,has_app),
+    n_n_modnp_komma_structure(N,   Nmid,Cm,NP,OPTCr).
+*/
+
 grammar_rule(n_n_modnp(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr).
 
@@ -6072,8 +6079,8 @@ n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
 	N0:cj => ~no_crd, % improved HACK reduce ambiguities in pn, pn, .. seqs
 	N:has_app => yes, % ,,
 	NP:has_app => no, % ,,
-	N0:has_app2 => no,% ,,
-    	N0:has_app => no  % ,,
+	%%  N0:has_app2 => no,  % immaterial?
+    	N0:has_app => no  % ,, this hurts
     %%% N:has_app2 => yes,
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
     ),
@@ -6084,7 +6091,8 @@ n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
     Cl:puncttype => (komma;ligg_streep).
 
 %%EX%% Paris , Texas
-%%EX%% Dr. Denker , Nieuwsblad van het Noorden , Groningen
+%%%%% %%EX%% Dr. Denker , Nieuwsblad van het Noorden , Groningen
+%%% no longer allowed in order to limit number of readings for long sequences of PNs
 grammar_rule(pn_n_modpn(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     N => np, N0 => np,
     nwh_np_arg(NP),
@@ -6098,7 +6106,7 @@ grammar_rule(pn_n_modpn(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	NP:cj => ncj, % improved HACK reduce ambiguities in pn, pn, .. seqs
 	N0:cj => ncj, % improved HACK reduce ambiguities in pn, pn, .. seqs
-	NP:has_app => no,
+	NP:has_app => no,       % ,, this hurts
 	N:has_app => yes,	% ,,
 	N0:has_app => no	% ,,
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
@@ -6130,7 +6138,7 @@ grammar_rule(n_n_modnp(dubb_punt), N, [ N0, Cl, NP, OPTCr ]) :-
     Cl => punct,
     Cl:puncttype => dubb_punt,
     optcomma(OPTCr),
-    N0:has_app2 => no,
+    %% N0:has_app2 => no,
     np_np_modnp_structure(N0,NP,N).
 
 %%EX%% Zondag 26 december , een prachtige dag , vertrokken we naar Ibiza
@@ -8514,10 +8522,7 @@ grammar_rule(start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C]) :-
     ;   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	flat(M,COMMA,A),
 	flat(M,COMMA,B),
-	flat(M,COMMA2,C),
-	A:cj => ~no_crd,
-	B:cj => ~no_crd,
-	C:cj => ~no_crd
+	flat(M,COMMA2,C)
     ),
     M:puncttype <=> B:puncttype,
     dp_dp_structure(A,B,C,M).
