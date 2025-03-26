@@ -1375,13 +1375,25 @@ lexical_feature(List,Val,RelFeats) :-
  
 lexical_feature_val(sc,Term,Sc) :-
     !,
-    lexical_feature_val_(Term,Sc).
+    lexical_feature_sc(Term,Sc).
 lexical_feature_val(_,Val,Val).
 
-lexical_feature_val_(ninv(_,Sc0),Sc) :-
+lexical_feature_sc(ninv(_,Sc0),Sc) :-
     !,
-    Sc0=Sc.
-lexical_feature_val_(Sc,Sc).
+    lexical_feature_sc(Sc0,Sc).
+lexical_feature_sc(transitive_ndev,Sc) :-
+    !,
+    Sc = transitive.
+lexical_feature_sc(transitive_ndev_ndev,Sc) :-
+    !,
+    Sc = transitive.
+lexical_feature_sc(transitive_ndev_npas,Sc) :-
+    !,
+    Sc = transitive.
+lexical_feature_sc(transitive_ndev_ndev_npas,Sc) :-
+    !,
+    Sc = transitive.
+lexical_feature_sc(Sc,Sc).
 
 converse_phantom(Tree0,Tree) :-
     get_phantoms(Ps),
