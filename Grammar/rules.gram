@@ -6072,6 +6072,7 @@ grammar_rule(n_n_modnp_modnp, N, [ N0,  Cl, N1, Cm, NP, OPTCr ]) :-
 grammar_rule(n_n_modnp(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr).
 
+%% the has_app feature implies that there is atmost a single comma-seperated app per N
 n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
     np_np_modnp_structure(N0,NP,N),
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
@@ -6093,6 +6094,8 @@ n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
 %%EX%% Paris , Texas
 %%%%% %%EX%% Dr. Denker , Nieuwsblad van het Noorden , Groningen
 %%% no longer allowed in order to limit number of readings for long sequences of PNs
+%%% the has_app features imply that a pn-modified pn cannot itself modify a pn
+%%% (as in the Dr Denker example)
 grammar_rule(pn_n_modpn(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     N => np, N0 => np,
     nwh_np_arg(NP),
@@ -6138,7 +6141,7 @@ grammar_rule(n_n_modnp(dubb_punt), N, [ N0, Cl, NP, OPTCr ]) :-
     Cl => punct,
     Cl:puncttype => dubb_punt,
     optcomma(OPTCr),
-    %% N0:has_app2 => no,
+    %% N0:has_app2 => no,  immaterial?
     np_np_modnp_structure(N0,NP,N).
 
 %%EX%% Zondag 26 december , een prachtige dag , vertrokken we naar Ibiza
@@ -8514,8 +8517,8 @@ grammar_rule(start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C]) :-
     B => start, B:mod_np => no, 
     C => start, C:mod_np => no, 
     M => start, M:mod_np => yes,
-    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;ligg_streep),
-    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;ligg_streep),
+    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;ligg_streep),
+    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;ligg_streep),
     (   hdrug_util:hdrug_flag(parse_or_generate,generate),
 	COMMA:puncttype => punt_komma,
 	COMMA2:puncttype => punt_komma
@@ -8525,6 +8528,18 @@ grammar_rule(start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C]) :-
 	flat(M,COMMA2,C)
     ),
     M:puncttype <=> B:puncttype,
+    dp_dp_structure(A,B,C,M).
+
+grammar_rule(start_start_start_komma,M,[A,COMMA,B,COMMA2,C]) :-
+    A => start, A:mod_np => no, A:cj => ~no_crd,
+    B => start, B:mod_np => no, B:cj => ~no_crd,
+    C => start, C:mod_np => no, C:cj => ~no_crd,
+    M => start, M:mod_np => yes,
+    comma(COMMA),
+    comma(COMMA2),
+    flat(M,COMMA,A),
+    flat(M,COMMA,B),
+    flat(M,COMMA2,C),
     dp_dp_structure(A,B,C,M).
 
 %%EX%% De man kwam binnen ; hij opende de koelkast ; de koelkast is leeg ; crisis ...
