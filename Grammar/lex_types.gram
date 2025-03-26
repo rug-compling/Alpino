@@ -5686,7 +5686,6 @@ sbar_subj_het(V,C,C) :-
     Subj:e_deps => [],
     unify_mods(Subj),
     Sdat => sbar,
-    Sdat:e_deps => [],
     Sdat:ctype => (c_dat;c_of),
     Sdat:sel => ~to_topic,
     Sdat:e_deps => [],
