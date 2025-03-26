@@ -1483,6 +1483,7 @@ foreign_word(après).
 foreign_word(application).
 foreign_word(applications).
 foreign_word(are).
+foreign_word(area).
 foreign_word(arms).
 foreign_word(army).
 foreign_word(art).
@@ -1687,6 +1688,7 @@ foreign_word(evens).
 foreign_word(ever).
 foreign_word(evil).
 foreign_word(explosion).
+foreign_word(face).
 foreign_word(factor).
 foreign_word(fair).
 foreign_word(fait).
