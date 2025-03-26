@@ -1,5 +1,12 @@
 THIS=$(ALPINO_HOME)/PosTagger/Construct
-correct_pipe=grep '^FRAME\#' | sed -e 's/v_root(\([^,]*\),[^)]*)/\1/g' | sed -e 's/FRAME\#//' | python3 $(THIS)/correct.py 
+correct_pipe=grep '^FRAME\#' |\
+             sed -e 's/v_root(\([^,]*\),[^)]*)/\1/g'\ |\
+	     sed -e 's/FRAME\#//' |\
+	     sed -e 's/transitive_ndev_ndev/transitive/g'       \
+	         -e 's/transitive_ndev/transitive/g'            \
+		 -e 's/transitive_ndev_npas/transitive/g'       \
+		 -e 's/transitive_ndev_ndev_npas/transitive/g' |\
+	     python3 $(THIS)/correct.py 
 
 %.ftm: %.ftmi %.ftmo
 	paste -d\| $*.ftmi $*.ftmo >$@

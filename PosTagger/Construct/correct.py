@@ -59,6 +59,10 @@ def main():
             t = "sentence_adverb"
         if t == "intensifier" and r == "niet minder als":
             t = "sentence_adverb"
+        if r == "oudsher van" and t == "with_dt(pp(van),dt(pp,[hd=l(van,preposition(van,[]),0,1),obj1=l(oudsher,adverb,advp,1,2)]))":
+            t = "with_dt(sentence_adverb,dt(pp,[hd=l(van,preposition(van,[]),0,1),obj1=l(oudsher,adverb,advp,1,2)]))"
+        if r == "hebben" and t == "verb(hebben,sg_heeft,transitive_ndev)":
+            t = "verb(hebben,sg_heeft,transitive_ndev_npas)"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
