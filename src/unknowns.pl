@@ -1712,6 +1712,7 @@ foreign_word(fits).
 foreign_word(fix).
 foreign_word(focus).
 foreign_word(for).
+foreign_word(forever).
 foreign_word(force).
 foreign_word(format).
 foreign_word(formats).
@@ -2066,6 +2067,9 @@ foreign_word(slip).
 foreign_word(small).
 foreign_word(smart).
 foreign_word(smog).
+foreign_word(snow).
+foreign_word(snows).
+foreign_word(snowing).
 foreign_word(so).
 foreign_word(society).
 foreign_word(soft).
@@ -2076,6 +2080,8 @@ foreign_word(sollen).
 foreign_word(solution).
 foreign_word(solutions).
 foreign_word(some).
+foreign_word(sometime).
+foreign_word(sometimes).
 foreign_word(son).
 foreign_word(song).
 foreign_word(songs).
