@@ -85,6 +85,7 @@ adverb(almaar).
 adverb(alras).
 adverb([als,het,ware]).
 adverb(alsdan).
+adverb(asjeblief).
 adverb(alsjeblieft).
 adverb(alsmaar).
 adverb(alsnog).

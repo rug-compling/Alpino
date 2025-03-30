@@ -692,6 +692,7 @@ m(v_root(heb,hebben),
 	fixed([{[acc(oog_DIM),pc(voor)]}],no_passive),
         fixed([{[acc(oor),pc(naar)]}],no_passive),
         fixed([[op,de,been],acc],no_passive),
+	fixed([svp_pp(op,naam),acc],no_passive),
         part_fixed(op,[{[acc(pet),pc(van)]}],no_passive),
                                 % we hadden er geen hoge pet van op
         fixed([{[acc(plezier),er_pp(van,C)]},extra_sbar(C)],no_passive),
@@ -7960,6 +7961,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	part_intransitive(toe),
 	part_intransitive(uit),
 	part_ld_pp(uit),
+	part_so_pp(uit),   % er gaan brieven uit aan alle betrokkenen
 	part_pc_pp(uit,naar),
 	part_pc_pp(uit,op),
 	part_pc_pp(uit,van),
@@ -8277,6 +8279,9 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	part_so_pp_np(terug),
 	np_pc_pp(van),    % overzicht, definitie, schets, voorbeeld, ...
 	np_np_pc_pp(van), % ik geef jullie een voorbeeld van ... 
+	part_fixed(uit,[{[pc(aan),acc(belasting_geld)]}],norm_passive),
+	part_fixed(uit,[{[pc(voor),acc(belasting_geld)]}],norm_passive),
+	part_fixed(uit,[{[pc(aan),acc(geld)]}],norm_passive),
 	part_fixed(uit,[{[pc(voor),acc(geld)]}],norm_passive),
 	part_fixed(uit,[{[er_pp(voor,X),acc(geld)]},extra_vp(X)],norm_passive),
 	part_so_np(toe),
@@ -18026,6 +18031,7 @@ v(push,pusht,pushen,gepusht,pushte,pushten,
 v(put,put,putten,geput,putte,putten,
     [h([intransitive,
 	transitive,
+	pc_pp(uit),
 	np_pc_pp(uit),
 	part_sbar_subj_so_np(uit),
 	part_transitive(uit),
@@ -20934,6 +20940,8 @@ v(smak,smakt,smakken,gesmakt,smakte,smakten,
 v(smeed,smeedt,smeden,gesmeed,smeedde,smeedden,
     [h([transitive,
 	part_transitive(om),
+	part_transitive(samen),
+	part_np_pc_pp(samen,tot),
 	np_pc_pp(tot),
 	np_ld_pp])]).
 
@@ -23601,6 +23609,8 @@ v(toom,toomt,tomen,getoomd,toomde,toomden,
 v(toon,toont,tonen,getoond,toonde,toonden,
     [h([np_np,
 	np_sbar,
+	vp,	      % Henin toonde onverslaanbaar te zijn
+	np_vp_subj,   % Henin toonde het publiek onverslaanbaar te zijn op gravel
 	pred_refl,
 	refl,  % daar toont zich de meester
         refl_pc_pp(in), % daar toonde hij zich een (groot)meester in
@@ -24718,6 +24728,7 @@ v(verdenk,verdenkt,verdenken,verdacht,verdacht,verdachten,
     [h([transitive,
 	np_er_pp_sbar(van),
 	np_pc_pp(van),
+	np_vp_obj1,  % hij werd verdacht een spion te zijn
 	obj_np_er_pp_vp(van),
 	np_er_pp_sbar(van)])]).
 
@@ -27704,6 +27715,7 @@ v(vraag,vraagt,vragen,gevraagd,vroeg,vroegen,
 	vp_no_control,          % je zou moeten vragen om deze berichten te verwijderen
 	np_pc_pp(ten),
 	np_pc_pp(van),
+	als_pred_np,
 	fixed([{[acc(aandacht),pc(voor)]}],norm_passive),
 	fixed([svp_pp(van,lijf),[de,hemd],dat],imp_passive),
 	fixed([svp_pp(van,lijf),[het,hemd],dat],imp_passive),
@@ -28477,6 +28489,7 @@ v(wijt,wijt,wijten,geweten,[weet,wijtte],[weten,wijtten],
 
 v(wijzig,wijzigt,wijzigen,gewijzigd,wijzigde,wijzigden,
   [h([transitive,
+      refl,           % meteen wijzigt zich zijn thematiek
       np_mod_pp(aan), % er kunnen nog dingen aan gewijzigd worden
       intransitive])]).
 

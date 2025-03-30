@@ -13519,7 +13519,7 @@ n([pl(getuigen),sg(getuige)],both,[sbar]).
 
 n([pl(getuigenissen),sg(getuigenis)],both,[sbar]).
 
-n([pl(getuigschriften),sg(getuigschrift)],het,[]).
+n([pl(getuigschriften),sg(getuigschrift)],het,[app_measure]).
 
 n([mass(getut)],het,[]).
 
@@ -32625,6 +32625,8 @@ n([pl(sjaals),sg(sjaal)],de,[],[dim(sjaaltje)]).
 n([pl(sjablonen),sg(sjabloon)],both,[]).
 
 n([pl(sjahs),sg(sjah)],de,[]).
+
+n([sg(sjarief),sg(sjarif),sg(sharif)],de,[]).
 
 n([pl(sjalotten),sg(sjalot)],de,[],[dim(sjalotje)]).
 

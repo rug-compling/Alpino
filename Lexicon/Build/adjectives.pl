@@ -27024,7 +27024,7 @@ a([ge_e(onverzorgde),
    ere(onverzorgdere),
    ge_no_e(onverzorgd),
    st(onverzorgdst),
-   ste(onverzorgdste)],nonadv,[],[]).
+   ste(onverzorgdste)],both,[],[]).
 
 a([e(onvindbare),
    no_e(onvindbaar)],nonadv,
@@ -37544,7 +37544,7 @@ a([ge_e(verzorgde),
    ere(verzorgdere),
    ge_no_e(verzorgd),
    st(verzorgdst),
-   ste(verzorgdste)],adv,[],[]).
+   ste(verzorgdste)],both,[],[]).
 
 a([e(verzotte),
    er(verzotter),

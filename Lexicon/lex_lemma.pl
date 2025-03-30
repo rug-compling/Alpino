@@ -13756,6 +13756,7 @@ lemma_root(samen_komen,kom_samen) .
 lemma_root(samen_leven,leef_samen) .
 lemma_root(samen_pakken,pak_samen) .
 lemma_root(samen_persen,pers_samen) .
+lemma_root(samen_smeden,smeed_samen) .
 lemma_root(samen_smelten,smelt_samen) .
 lemma_root(samen_spannen,span_samen) .
 lemma_root(samen_spelen,speel_samen) .

@@ -5068,6 +5068,8 @@ m(Stem, modal_adverb, Surf) :-
     modal_adverb(Surf),
     stem_from_surf(Surf,Stem).
 
+m(veel, modal_adverb, meest).
+
 modal_adverb(al).
 modal_adverb(alleen).  
 modal_adverb([al,dan,niet]).
