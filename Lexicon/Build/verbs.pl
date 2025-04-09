@@ -528,7 +528,8 @@ m(v_root(heb,hebben),
 	np_pc_pp_refl(bij),            % hij heeft een boek bij zich
 	np_pc_pp(aan),                 % een hekel, de pest, voldoende, genoeg
         fixed([er_pp(uit),acc],no_passive),  % we hadden de kosten er snel uit
-	np_er_pp_sbar(aan),            % ik heb er een hekel aan, dat...
+	np_er_pp_sbar(aan),	       % ik heb er een hekel aan, dat...
+	np_er_pp_vp(aan),              % ik heb er een hekel/de pest aan om ...
 	np_pc_pp(van),                 % dat heb ik van mijn moeder
 	                               % we moeten het hebben van onze opslag
 	obj_er_er,                     % je hebt er ook die ...
@@ -2972,7 +2973,7 @@ v(beslecht,beslecht,beslechten,beslecht,beslechtte,beslechtten,
     [h([transitive])]).
 
 v(beslis,beslist,beslissen,beslist,besliste,beslisten,
-    [h([sbar,
+  [h([sbar,
 	transitive,
 	intransitive, % anders, tijdig
         part_intransitive(mee),
@@ -4533,6 +4534,7 @@ v(brand,brandt,branden,gebrand,brandde,brandden,
     [z([part_intransitive(aan),
 	part_intransitive(af),
 	part_intransitive(door),
+	part_intransitive(los),
 	part_intransitive(op),
 	part_intransitive(uit)]),
      h([intransitive,
@@ -4617,6 +4619,7 @@ v(breng,brengt,brengen,gebracht,bracht,brachten,
 	np_ld_pp,
 	np_ld_adv,  % ik bracht haar thuis ...
 	obj_np_er_pp_vp(tot),
+	np_er_pp_sbar(tot),
 	part_np_np(bij),
 	part_np_np(over),
 	part_np_ld_transitive(over),  % ik breng hem de grens over
@@ -5086,7 +5089,7 @@ v(citeer,citeert,citeren,geciteerd,citeerde,citeerden,
     [h([transitive,
 	intransitive,
 	sbar,    % dip...
-	np_sbar, % dip...
+	acc_np_dip_sbar, % dip...
 	pc_pp(uit)])]).
 
 v(claim,claimt,claimen,geclaimd,claimde,claimden,
@@ -6177,8 +6180,8 @@ v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
         fixed([{[acc(toezegging),dat_pp(aan)]}],norm_passive),
         fixed([[uit,de,doeken],acc],norm_passive),
         fixed([[uit,de,doeken],{[acc,dat]}],norm_passive),
-        fixed([[uit,de,doeken],sbar],no_passive),
-        fixed([[uit,de,doeken],dat,sbar],no_passive),
+        fixed([[uit,de,doeken],sbar],imp_passive),
+        fixed([[uit,de,doeken],dat,sbar],imp_passive),
         fixed([{[acc(verzoek),dat]}],norm_passive),
         fixed([{[acc(verzoek),dat_pp(aan)]}],norm_passive),
 	fixed([[van,de,hand],acc],norm_passive),
@@ -7151,7 +7154,7 @@ v(elimineer,elimineert,elimineren,geëlimineerd,elimineerde,elimineerden,
     [h([transitive])]).
 
 v(emancipeer,emancipeert,emanciperen,geëmancipeerd,emancipeerde,emancipeerden,
-    [h([%refl,
+    [h([refl,
 	sbar_subj_so_np,  %% ?? het emancipeert ons dat ..
         intransitive,
 	transitive])]).
@@ -12446,25 +12449,28 @@ v(kriebel,kriebelt,kriebelen,gekriebeld,kriebelde,kriebelden,
 v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
   [h([ap_pred_np,
       fixed([acc,{[ap_pred,pc(voor)]}],no_passive),
-        pp_pred_np(onder,controle),
-        pp_pred_np(onder,hoede),
-        pp_pred_np(aan,slag),
-        pp_pred_np(aan,werk),
-        pp_pred_np(in,bezit),
-        pp_pred_np(in,eigendom),
-        pp_pred_np(op,peil),
-        %% fixed([ap_pred,het_obj1],no_passive), ??? ik krijg het warm, zie ap_pred_np
-	np_aan_het,
-	so_passive,
-	obj1_passive,     % ik krijg dat allemaal niet gedaan, ik krijg het niet op tijd opgeruimd
-	                  % treated as obj1_passive, because obj1 "dat" "het" are obligatory
-	transitive,
-	np_ld_pp,
-	np_ld_adv,
-	np_ld_dir,
-        np_mod_pp(bovenop),
-        pc_pp(met),  % met de wapenstok
-	% pc_pp(op),  % op mijn donder/flikker/...
+      pp_pred_np(onder,controle),
+      pp_pred_np(onder,hoede),
+      pp_pred_np(aan,slag),
+      pp_pred_np(aan,werk),
+      pp_pred_np(in,bezit),
+      pp_pred_np(in,eigendom),
+      pp_pred_np(op,peil),
+      %% fixed([ap_pred,het_obj1],no_passive), ??? ik krijg het warm, zie ap_pred_np
+      np_aan_het,
+      so_passive,
+      obj1_passive, % ik krijg dat allemaal niet gedaan, ik krijg het niet op tijd opgeruimd
+				% treated as obj1_passive, because obj1 "dat" "het" are obligatory
+      transitive,
+      np_ld_pp,
+      np_ld_adv,
+      np_ld_dir,
+      np_mod_pp(bovenop),
+      pc_pp(met),	    % met de wapenstok
+				% pc_pp(op),  % op mijn donder/flikker/...
+      np_pc_pp(aan),		% ik krijg een hekel/de pest aan
+      np_er_pp_sbar(aan),
+      np_er_pp_vp(aan),
         fixed([svp_er_pp(door),acc],no_passive),  % we moeten die veranderingen erdoor krijgen
 	fixed([svp_er_pp(bij),acc],no_passive),	% we krijgen er een kindje / 10 procent / .. bij
 	part_np_pc_er_transitive(bij), % we hebben er een ton bijgekregen
@@ -14248,6 +14254,7 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	np_pc_pp(van),
 	fixed([{[acc(gebruik),er_pp(van,C)]},extra_sbar(C)],norm_passive),
 	fixed([{[acc(misbruik),er_pp(van,C)]},extra_sbar(C)],norm_passive),	
+	fixed([{[acc(punt),er_pp(van,C)]},extra_sbar(C)],norm_passive),	
 	% ik maak het er niet beter op
 	fixed([er_pp(op),compar,acc],norm_passive),
 	% hij heeft het zichzelf er niet makkelijker op gemaakt
@@ -21979,8 +21986,8 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
 	fixed([[hun,mannetje]],no_passive),
 	fixed([[mijn,mannetje]],no_passive),
 	fixed([[je,mannetje]],no_passive),
-        fixed([[model]],no_passive),
-        fixed([[model],pc(voor)],no_passive),
+        fixed([np_pred(model)],no_passive),
+        fixed([np_pred(model),pc(voor)],no_passive),
 	fixed([[op,de,nominatie]],no_passive),
 	fixed([[op,de,nominatie],vp],no_passive),
 	fixed([[onder,contract]],no_passive),
@@ -22410,6 +22417,7 @@ v(stel,stelt,stellen,gesteld,stelde,stelden,
         fixed([ap_pred('ter beschikking'),acc],norm_passive),
         fixed([ap_pred('ter beschikking'),{[acc,dat]}],norm_passive),
         fixed([{[ap_pred('ter beschikking'),acc,dat_pp(aan)]}],norm_passive),
+	fixed([{[acc(vertrouwen),pc(in)]}],no_passive),
 	part_np_pc_pp(aan,tot),
         part_als_pred_np(aan),
 	part_np_pc_pp(af,op),
@@ -22654,7 +22662,8 @@ v(stook,stookt,stoken,gestookt,stookte,stookten,
 	part_np_pc_pp(op,tegen)])]).
 
 v(stoom,stoomt,stomen,gestoomd,stoomde,stoomden,
-    [z([ld_pp,
+  [z([ld_pp,
+      ld_adv,
 	part_ld_pp(door),
 	part_ld_pp(op),
 	part_intransitive(op),
@@ -23959,7 +23968,7 @@ v(trek,trekt,trekken,getrokken,trok,trokken,
 	part_np_pc_pp(op,uit),
 	part_np_pc_pp(toe,naar),
 	part_np_pc_pp(uit,voor),
-	part_refl_ld_pp(terug),
+%	part_refl_ld_pp(terug),
 	part_fixed(aan,[{[pc(van),acc]},refl],no_passive),
 	part_refl_pc_pp(aan,van),
 	part_refl_pc_pp(op,aan)]),
@@ -26497,7 +26506,9 @@ v(verteder,vertedert,vertederen,vertederd,vertederde,vertederden,
 v(verteer,verteert,verteren,verteerd,verteerde,verteerden,
     [unacc([intransitive]),
      h([transitive,
-	sbar_obj])]).  % ik kan het niet verteren dat ..
+	sbar_obj,  % ik kan het niet verteren dat ..
+	sbar       
+       ])]).			
 
 v(vertegenwoordig,vertegenwoordigt,vertegenwoordigen,vertegenwoordigd,vertegenwoordigde,vertegenwoordigden,
     [h([transitive])]).
@@ -26578,7 +26589,9 @@ v(vertrap,vertrapt,vertrappen,vertrapt,vertrapte,vertrapten,
     [h([transitive])]).
 
 v(vertrek,vertrekt,vertrekken,vertrokken,vertrok,vertrokken,
-    [unacc([ld_pp]),
+  [unacc([ld_pp,
+	  ld_adv  % vertrekken op weg naar X
+	 ]),
      z([intransitive]),         % VL: er wordt vertrokken vanaf het plein
      h([transitive])]).		% hij vertrekt zijn gezicht/geen spier
 

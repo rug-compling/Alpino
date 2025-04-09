@@ -2795,7 +2795,8 @@ preposition(door,[heen]).
 preposition(doorheen).   % Vlaams
 preposition(in).
 preposition(langs,[heen]).  % langs elkaar heen..
-preposition(langsheen).  % Vlaams
+preposition(langsheen).	    % Vlaams
+preposition(langszij).
 preposition(met,[mee,[en,al]]).
 preposition(naar,[toe]).
 preposition(naast).
@@ -5284,8 +5285,15 @@ m(vlak,             modal_adverb(comp_prep),vlak). % vlak voor(dat) ..
 
 with_dt([nog,Eens],
 	modal_adverb(noun),
-	dt(advp,[mod=l(nog,adverb,advp,0,1),
-		 hd=l(eens,adverb,advp,1,2)
+	dt(advp,[hd=l(nog,adverb,advp,0,1),
+		 mod=l(eens,adverb,advp,1,2)
+		])) :-
+    eens(Eens).
+
+with_dt([nog,Eens],
+	adverb,
+	dt(advp,[hd=l(nog,adverb,advp,0,1),
+		 mod=l(eens,adverb,advp,1,2)
 		])) :-
     eens(Eens).
 

@@ -629,6 +629,27 @@ lexicon_('Slag',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
     in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
     hdrug_util:concat_all(['Slag',bij,Stem],Name,' ').
 
+lexicon_('Verdrag',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
+    (  n_word(van,Ws1,[L|Ws2])
+    ;  n_word('Van',Ws1,[L|Ws2])
+    ),
+    in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
+    hdrug_util:concat_all(['Verdrag',van,Stem],Name,' ').
+
+lexicon_('Overeenkomst',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
+    (  n_word(van,Ws1,[L|Ws2])
+    ;  n_word('Van',Ws1,[L|Ws2])
+    ),
+    in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
+    hdrug_util:concat_all(['Overeenkomst',van,Stem],Name,' ').
+
+lexicon_('Verbond',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
+    (  n_word(van,Ws1,[L|Ws2])
+    ;  n_word('Van',Ws1,[L|Ws2])
+    ),
+    in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
+    hdrug_util:concat_all(['Verbond',van,Stem],Name,' ').
+
 lexicon_(Noord,proper_name(X,'LOC'),Name,[Angola|Ws1],Ws,His,_LC) :-
     atom(Noord),
     ind_loc_prefix(Noord),
@@ -1217,11 +1238,11 @@ lexicon__(om,adverb,Label,['`t',STE|Ws],Ws,'om het Asuper'(His),_) :-
 lexicon__(Word0,Tag,Label,Ws1,Ws,abbreviation(His),LC) :-
     abbreviation(Word0,Abb,Ws1,Ws),
     atom(Abb),
-    lexicon__(Abb,Tag,Label,[],[],His,LC).
+    lexicon_(Tag,Label,[Abb],[],His,LC).
 
 lexicon__(Word0,Tag,Label,Ws1,Ws,abbreviation(His),LC) :-
     abbreviation(Word0,[Word|Words],Ws1,Ws),
-    lexicon__(Word,Tag0,Label,Words,[],His,LC),
+    lexicon_(Tag0,Label,[Word|Words],[],His,LC),
     (   Tag0 = with_dt(Tag,_)
     ->  true
     ;   Tag0 = Tag
@@ -1579,6 +1600,7 @@ optionally_drop_np_complement(nonp_pred_np,nonp_copula).
 optionally_drop_np_complement(nonp_pred_np_ndev,nonp_copula).
 optionally_drop_np_complement(ap_pred_np,ap_copula).
 optionally_drop_np_complement(pp_pred_np,pp_copula).
+optionally_drop_np_complement(als_pred_np,als_copula).
 optionally_drop_np_complement(part_transitive(X),part_intransitive(X)).
 optionally_drop_np_complement(part_pred_np(X),part_copula(X)).
 optionally_drop_np_complement(np_vp_obj,vp).
@@ -2236,6 +2258,8 @@ l_requires_pl(jullie).
 l_requires_pl('We').
 l_requires_pl('Wij').
 l_requires_pl('Jullie').
+
+spelling_variant_context(ieder,ander,_,iedere).
 
 spelling_variant_context(as,ge,_,als).
 spelling_variant_context(zijde,gij,_,bent).
@@ -3921,6 +3945,7 @@ abbreviation('Ned.',   'Nederland').
 abbreviation('Ned.',   'Nederlands').
 abbreviation('Ned.',   'Nederlandse').
 abbreviation(nl,       'Nederland').
+abbreviation(nl,       namelijk).
 abbreviation('nl.',    namelijk).
 abbreviation('n.l.',    namelijk).
 abbreviation('overl.', overleden).

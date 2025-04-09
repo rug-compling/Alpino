@@ -8669,6 +8669,7 @@ lemma_root(loodsen,loods) .
 lemma_root(looien,looi) .
 lemma_root(lopen,loop) .
 lemma_root(los_barsten,barst_los) .
+lemma_root(los_branden,brand_los) .
 lemma_root(los_breken,breek_los) .
 lemma_root(los_gooien,gooi_los) .
 lemma_root(los_hangen,hang_los) .

@@ -7870,7 +7870,9 @@ n([pl(commandeurs),sg(commandeur)],de,[]).
 n([pl('commando\'s'),sg(commando)],de,[],[moord]).
 
 n([pl('commando\'s'),sg(commando)],het,[start_app_measure,
-					sbar,vp]).
+					pred_pp(op),
+					sbar,
+					vp]).
 
 n([sg([commedia,'dell\'arte'])],both,[]).
 
@@ -14732,6 +14734,7 @@ n([pl(handen),sg(hand)],de,
   [measure,
    pred_pp_pl(in),
    pred_pp_pl(uit),
+   pred_pp(van),   % van de hand van
    pred_pp(aan)],                           % aan de (winnende) hand
   [dim(handje)]). 
 
@@ -26932,8 +26935,8 @@ n([sg(partnerschap),pl(partnerschappen)],het,[]).
 n([pl('party\'s'),sg(party)],de,[],
   [f([cocktail])]).
 
-n([pl(passen),sg(pas)],both,[],
-  [meas_mod]).   % we liepen steeds twee passen achter
+n([pl(passen),sg(pas)],both,[meas_mod],
+  []).   % we liepen steeds twee passen achter
 
 n([pl(passen),sg(pas)],both,[],
   [betaal,
@@ -34158,7 +34161,8 @@ n([pl(stangen),sg(stang)],de,[],[dim(stangetje)]).
 n([pl(stanken),sg(stank)],de,[]).
 
 n([pl(stappen),sg(stap)],de,
-  [vp,
+  [meas_mod,
+   vp,
    subject_sbar],
   [dim(stapje)]).
 
@@ -36513,7 +36517,7 @@ n([pl(toeristen),sg(toerist)],de,[],
    drug,s(drug),
    wieler]).
 
-n([pl(toernees),sg(toernee)],de,[]).
+n([pl(toernees),sg(toernee)],de,[pred_pp(op)]).
 
 n([pl(toernooien),sg(toernooi),
    pl(tornooien),sg(tornooi)],both,
@@ -36771,7 +36775,7 @@ n([pl(tours),sg(tour)],de,[]).
 
 n([sg(touringcar),pl(touringcars)],de,[]).
 
-n([pl(tournees),sg(tournee)],de,[],[dim(tourneetje)]).
+n([pl(tournees),sg(tournee)],de,[pred_pp(op)],[dim(tourneetje)]).
 
 n([pl(tournooien),sg(tournooi)],het,[],[dim(tournooitje)]).
 
@@ -38606,7 +38610,7 @@ n([pl(verkiezingsuitslagen),sg(verkiezingsuitslag)],de,[]).
 n([pl(verklaringen),sg(verklaring)],de,
   [sbar,
    vp,
-   subject_sbar,
+   subject_sbar_no_het,
    subject_vp],
   [s(detachering),
    i(getuige,getuigen),

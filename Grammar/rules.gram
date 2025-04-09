@@ -2217,13 +2217,14 @@ grammar_rule(vp_v_inf, VP, [ V, OPTCOMMA, Extra ] ) :-
     hd_extra_structure(V,Extra,VP).
 
 %%EX%% Toen heb ik de kinderen ontmoet die door de buurvrouw waren opgevoed
+%%EX%% Stap nooit bij iemand in de auto die gedronken heeft , al is het je vriendin
 grammar_rule(vp_v_m_extra, VP, [ V, OPTCOMMA, Extra ] ) :-
     VP => vpx, V => vpx, Extra => rel,
     VP:eps3 <=> V:eps3,
     V:cj => ncj,
     VP:mf <=> V:mf,
     VP:rightx => yes,
-    VP:rightm => no, %% hack to reduce ambiguities
+%%    VP:rightm => no, %% hack to reduce ambiguities, but see example above with "Stap nooit..."
     optcomma(OPTCOMMA),
     hd_m_extra_structure(V,Extra,VP).
 
@@ -3025,7 +3026,7 @@ grammar_rule(deverbal_vp_arg_v(np),VP, [Arg, V] ) :-
                               & ~sub_def_adj & ~sub_indef_adj
                               & ~sub_rang
                               & ~sub_det & ~sub_veel,
-                        
+			      %% sub_veel: Jarenlang te veel drinken kan leiden tot hersenschade
     Arg:wh => nwh,
     Arg:pred => npred,
     VP => vc_noun,
@@ -3114,6 +3115,9 @@ grammar_rule(deverbal_vp_arg_v(pred),VP, [Arg, V] ) :-
 
 %%EX%% Je leeftijd gebruiken als excuus is flauw
 grammar_rule(deverbal_vp_v_arg(pred),VP, [V, Arg] ) :-
+    deverbal_vp_v_arg_pred_right_struct(VP,V,Arg).
+
+deverbal_vp_v_arg_pred_right_struct(VP,V,Arg) :-
     Arg => pred,
     Arg:sel => to_right,
     Arg:pcat => (zoals_pred;als_pred;om_pred),
@@ -3123,7 +3127,9 @@ grammar_rule(deverbal_vp_v_arg(pred),VP, [V, Arg] ) :-
     hd_comp_structure(V,Arg,VP). 
 
 %%EX%% Hard fietsen wordt wielrennen genoemd
-grammar_rule(deverbal_vp_mod_v,VP, [MOD, V] ) :-
+%%EX%% Na lang , moeizaam onderhandelen vertrokken de Russen
+grammar_rule(deverbal_vp_mod_v,VP, [MOD, COMMA, V] ) :-
+    optcomma(COMMA),
     MOD => modifier,
     MOD:wh => nwh,
     MOD:sel => to_left,
@@ -3141,8 +3147,9 @@ grammar_rule(deverbal_vp_mod_v,VP, [MOD, V] ) :-
 %% level. One exception: if the modifier PP is followed
 %% by a complement PP:
 %%EX%% Het wachten tijdens slecht weer op je vrouw is vervelend
-%% There is a special combined rule for this:
-%% deverbal_vp_modpp_argpp
+%%EX%% Het classificeren van subsidies als handelsverstorend is gevaarlijk
+%% There are special combined rules for this:
+%% deverbal_vp_modpp_arg*
 %%EX%% Winkelen zonder de deur uit te gaan is modern
 %%EX%% Verliezen omdat je partner een troefje was vergeten is irritant
 grammar_rule(deverbal_vp_v_mod,VP, [V, MOD] ) :-
@@ -3152,7 +3159,6 @@ grammar_rule(deverbal_vp_v_mod,VP, [V, MOD] ) :-
 deverbal_vp_v_mod_struct(VP,V,MOD) :-
     MOD => modifier,
     MOD:wh => nwh,
-%%%    MOD:sel => to_left,  % mistake?
     MOD:sel => to_right,
     VP => vc_noun,
     V => vc_noun,
@@ -3164,6 +3170,11 @@ grammar_rule(deverbal_vp_modpp_argpp,VP,[V,MOD,ARG]) :-
     deverbal_vp_v_mod_struct(VP1,V,MOD),
     MOD:mcat => mcat_pp,
     deverbal_vp_v_arg_pp_struct(VP,VP1,ARG).
+
+grammar_rule(deverbal_vp_modpp_argpred,VP,[V,MOD,ARG]) :-
+    deverbal_vp_v_mod_struct(VP1,V,MOD),
+    MOD:mcat => mcat_pp,
+    deverbal_vp_v_arg_pred_right_struct(VP,VP1,ARG).
 
 %%EX%% Zelf appelbeignets bakken is een mooie traditie
 grammar_rule(deverbal_vp_predm_v,VP, [MOD, V] ) :-
@@ -6059,28 +6070,22 @@ grammar_rule(adv_wh_adv_adv,ADVP,[ADV,MOD]):-
     unify_except_l(ADV,ADV1,[wh_reltmploc,wh]),
     hd_mod_structure(ADV1,MOD,ADVP).
 
-% %%EX%% Ik ben er met mr. Derk Schortinghuis , wadloper , kenner van de expressionisten , geweest . %
-% grammar_rule(n_n_modnp_modnp, N, [ N0,  Cl, N1, Cm, NP, OPTCr ]) :-
-%     n_n_modnp_komma_structure(Nmid0,N0,  Cl,N1,OPTCr),
-%     unify_except(Nmid0,Nmid,has_app),
-%     n_n_modnp_komma_structure(N,   Nmid,Cm,NP,OPTCr).
-
 %%EX%% Jan , een dappere strijder , ging op pad
 %%EX%% de minister van buitenlandse zaken , Genscher , is inmiddels in de vergetelheid geraakt
+%%EX%% Ik ben er met mr. Derk Schortinghuis , wadloper , kenner van de expressionisten , geweest .
 grammar_rule(n_n_modnp(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr).
 
-%% the has_app feature implies that there is atmost a single comma-seperated app per N
 n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
     np_np_modnp_structure(N0,NP,N),
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	NP:cj => ~no_crd, % improved HACK reduce ambiguities in pn, pn, .. seqs
 	N0:cj => ~no_crd, % improved HACK reduce ambiguities in pn, pn, .. seqs
 	N:has_app => yes, % ,,
-	NP:has_app => no, % ,,
-	%%  N0:has_app2 => no,  % immaterial?
-    	N0:has_app => no  % ,, this hurts
-    %%% N:has_app2 => yes,
+	NP:has_app => no  % ,,
+    %%  N0:has_app2 => no,  % immaterial?
+    %% N0:has_app => no  % ,, this hurts too much, this would mean only a single comma separated APP per noun
+    %% N:has_app2 => yes,
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
     ),
     NP:subn => ~sub_indef_adj, 
@@ -6090,7 +6095,7 @@ n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
     Cl:puncttype => (komma;ligg_streep).
 
 %%EX%% Paris , Texas
-%%%%% %%EX%% Dr. Denker , Nieuwsblad van het Noorden , Groningen
+%%% %%EX%% Dr. Denker , Nieuwsblad van het Noorden , Groningen
 %%% no longer allowed in order to limit number of readings for long sequences of PNs
 %%% the has_app features imply that a pn-modified pn cannot itself modify a pn
 %%% (as in the Dr Denker example)
@@ -8169,16 +8174,36 @@ grammar_rule(nucl_sat(np),ROOT,[Dan, COMMA, Max]) :-
     root_nucl_sat_structure(Dan,Max,ROOT).
 
 %%EX%% Ik heb daar al vaak gegeten , meestal pannenkoeken
-grammar_rule(nucl_sat(mod_np),ROOT,[Dan, COMMA, MOD, NP]) :-
+grammar_rule(nucl_sat(mod_np),ROOT,[Dan, COMMA, MOD, NP,OPTCOMMA]) :-
+    optcomma(OPTCOMMA),
     comma_hellip(COMMA),
     start_mod_np_struct(Max,MOD,NP),
     root_nucl_sat_structure(Dan,Max,ROOT).
 
 %%EX%% Ik heb daar al vaak gegeten , meestal met vrienden
-grammar_rule(nucl_sat(mod_pp),ROOT,[Dan, COMMA, MOD, PP]) :-
+grammar_rule(nucl_sat(mod_pp),ROOT,[Dan, COMMA, MOD, OPTCOMMA, PP]) :-
+    optcomma(OPTCOMMA),
     comma_hellip(COMMA),
     start_mod_pp_struct(Max,MOD,PP),
     root_nucl_sat_structure(Dan,Max,ROOT).
+
+%%EX%% De uitnodiging kwam laat , namelijk gistermiddag
+grammar_rule(nucl_sat(mod_adv),ROOT,[Dan, COMMA, MOD, OPTCOMMA, ADV]) :-
+    optcomma(OPTCOMMA),
+    comma_hellip(COMMA),
+    start_mod_adv_struct(Max,MOD,ADV),
+    root_nucl_sat_structure(Dan,Max,ROOT).
+
+start_mod_adv_struct(M,MOD,ADV) :-
+    M => max,
+    M:max_type => t_dp,
+    max_modifier(MOD),
+    MOD:hstem <=> HSTEM,
+    dif(HSTEM,er),
+    MOD:mcat => (mcat_pp;mcat_adv;mcat_vp;mcat_sbar;mcat_redrel),
+    MOD:wh => nwh,  
+    max_advp_np(ADV),
+    dp_dp_structure(MOD,ADV,M).
 
 start_mod_pp_struct(M,MOD,PP) :-
     M => max,
@@ -11462,6 +11487,7 @@ start_coord_name_en_structure(Name,M,XP,Clist) :-
 %%EX%% vervolgens vertrok hij, en liep naar huis
 %% todo: also allow DIP here
 %% todo: across the board of topicalized constituent?
+%%   no: om tien uur vertrok hij en arriveerde om half elf
 grammar_rule(start_coord(root_imp,en),M,[XP,ImpList]) :-
     start_coord_name_en_structure(root,M,XP,RootList),
     RootList => clist,

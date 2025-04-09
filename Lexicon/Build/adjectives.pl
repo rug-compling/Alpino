@@ -18643,6 +18643,7 @@ a([e(ideale),
    ste(ideaalste)],adv,
   [subject_vp,
    subject_sbar,
+   object_vp,
    pp(voor)],[]).
 
 a([e(idealistische),
@@ -20255,6 +20256,9 @@ a([e(kersverse),
    no_e(kersvers),
    st(kersverst),
    ste(kersverste)],adv,[],[]).
+
+a([e(ketogene),
+   no_e(ketogeen)],nonadv,[],[]).
 
 a([e(ketterse),
    er(ketterser),
@@ -22371,6 +22375,8 @@ a([e(matige),
    st(matigst),
    ste(matigste)],adv,[],[]).
 
+a([pred(matjes)],adv,[],[]).
+
 a([both(mauve)],nonadv,[],[]).
 
 a([e(maximale),
@@ -24243,6 +24249,8 @@ a([ge_e(omgewoelde),
 
 a([ge_e(omgezette),
    ge_no_e(omgezet)],adv,[],[]).
+
+a([ge_both(omhangen)],both,[],[]).
 
 a([ge_e(omheinde),
    ge_no_e(omheind)],adv,[],[]).
