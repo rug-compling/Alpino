@@ -564,6 +564,8 @@ Alpino supports brackets in the input to indicate:
 - include phantom words
  * @phantom
 - pass on identifier of words
+ * @no_tagger
+- locally disallow tagger to remove lexical categories
 
 Warning: bracketed input is not supported in case Alpino tokenizes the 
 input sentences on the fly.
@@ -757,6 +759,24 @@ notation *precedes* the word for which it is meant.
 [ @id w1 ] [ @folia subtiel ADJ(vrij,basis,zonder) Subtiel ] was het niet
 --------------------------------------
 
+
+The @no_tagger meta notation can be used to instruct the tagger not to
+remove lexical categories for particular parts of the sentence. For
+instance, in a particalur version of Alpino, the sentence
+
+-------------------------------------
+Toch was Betjemans geloof in het verlangen van de stille meerderheid van de stad om deze terminus te behouden niet onterecht .
+-------------------------------------
+
+could not be parsed with pos_tagger=on since the frame for "verlangen" which
+subcategorizes for a VP complement was filtered out by the tagger. On the other
+hand, switching off the postagger completely would lead to extreme parsing times.
+Using the @no_tagger meta notation, however, makes it possible to find the
+correct parse:
+
+-------------------------------------
+Toch was Betjemans geloof in het [ @no_tagger verlangen ] van de stille meerderheid van de stad om deze terminus te behouden niet onterecht .
+-------------------------------------
 
 
 
