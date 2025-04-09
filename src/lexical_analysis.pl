@@ -34,6 +34,7 @@
     syn_lex_analysis/4, syn_lex_analysis/6, syn_sem_lex_analysis/10,
     tag_nr/2,
     user_skips/1,
+    no_tagger/1,
     skips/3,
     reachable/1,
     co_reachable/1,
@@ -54,6 +55,7 @@
     syn_lex_analysis/4, syn_lex_analysis/6, syn_sem_lex_analysis/10,
     tag_nr/2,
     user_skips/1,
+    no_tagger/1,
     skips/3,
     index_tag_r0/2,
     index_tag_tag/2,
@@ -77,6 +79,7 @@ lexical_analysis_cleanup :-
     retractall(index_tag_stem(_,_)),
     retractall(index_tag_r0(_,_)),
     retractall(skips(_,_,_)),
+    retractall(no_tagger(_)),
     retractall(open_bracket(_,_,_)),
     retractall(close_bracket(_,_,_)),
     retractall(reachable(_)),
@@ -1864,7 +1867,14 @@ add_user_skip(mwu(P0,P)) :-
 add_user_skip(mwu_alt(P0,P,Alt)) :-
     !,
     remove_alternatives_to_mwu_alt(P0,P,Alt).
-
+add_user_skip(no_tagger(P0,P1)) :-
+    !,
+    P is P1 - 1,
+    (   hdrug_util:between(P0,P,N),
+	assertz(no_tagger(N)),
+	fail
+    ;   true
+    ).
 add_user_skip(_).
 
 %% compare_alternatives_for_cgn(P0,P,CgnTag,Ref) :-
@@ -2668,6 +2678,17 @@ extract_skip_positions([H|T],Rest0,Rest,P0,
     append(Surf,[_],Surf0),
     extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
 */
+%% no_tagger: indicates that tagger should not remove any tags here
+extract_skip_positions([H|T],Rest0,Rest,P0,[no_tagger(P0,P)|SkipIntervals]) :-
+    start_no_tagger_skip([H|T],Input0),
+    !,
+    find_end_skip(Input0,Input,Rest0,Rest1,P0,P),
+    (   P0 =:= P
+    ->  format(user_error,"error: empty no_tagger sequence!~n",[]),
+        raise_exception(alpino_error(unbalanced_brackets))
+    ;   true
+    ),
+    extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
 extract_skip_positions([H|T],Rest0,Rest,P0,[posflt(P0,P,Tag)|SkipIntervals]) :-
     start_posflt_skip([H|T],Input0,Tag),
     !,
@@ -2743,6 +2764,8 @@ start_alt_skip(['[','@add_lex',Tag|L],L,Tag).
 
 start_posflt_skip(['[','@posflt',Tag0|L],L,Tag) :-
     atom_term(Tag0,Tag).
+
+start_no_tagger_skip(['[','@no_tagger'|L],L).
 
 start_mwu_alt_skip(['[','@mwu_alt',Word|L],L,Word).
 
