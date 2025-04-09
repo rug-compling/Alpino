@@ -1964,7 +1964,9 @@ skippable(tag(P0,P1,R0,R1,de,de,skip,skip)):-
 skippable(tag(P0,P1,R0,R1,de,de,skip,skip)):-
     tag(P0,P1,R0,R1,de,de,normal(normal),determiner(de)),
     tag(P1,_,R1,_,degeen,degene,normal(normal),pronoun(nwh,thi,sg,de,both,def,strpro)).
-
+skippable(tag(P0,P,R0,R,Surf,Surf,skip,skip)):-
+    tag(P0,P,R0,R,Surf,Surf,noun,noun(both,both,both)),
+    atom_length(Surf,1).
 
 part_of_longpunct([H|T],P0,P) :-
     lists:member(Q0/Q,[H|T]),
