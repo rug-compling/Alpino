@@ -63,6 +63,11 @@ def main():
             t = "with_dt(sentence_adverb,dt(pp,[hd=l(van,preposition(van,[]),0,1),obj1=l(oudsher,adverb,advp,1,2)]))"
         if r == "hebben" and t == "verb(hebben,sg_heeft,transitive_ndev)":
             t = "verb(hebben,sg_heeft,transitive_ndev_npas)"
+        if r == "nog eens" and t == "modal_adverb(noun)":
+            t = "with_dt(modal_adverb(noun),dt(advp,[hd=l(nog,adverb,advp,0,1),mod=l(eens,adverb,advp,1,2)]))"
+        if r == "eens nog" and t == "with_dt(modal_adverb(noun),dt(advp,[mod=l(nog,adverb,advp,0,1),hd=l(eens,adverb,advp,1,2)]))":
+            r = "nog eens"
+            t = "with_dt(modal_adverb(noun),dt(advp,[hd=l(nog,adverb,advp,0,1),mod=l(eens,adverb,advp,1,2)]))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
