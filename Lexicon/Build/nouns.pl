@@ -5148,7 +5148,7 @@ n([pl(beweringen),sg(bewering)],de,
 
 n([pl(bewerkingen),sg(bewerking)],de,[]).
 
-n([pl(bewijzen),sg(bewijs)],het,[sbar]).
+n([pl(bewijzen),sg(bewijs)],het,[sbar,subject_sbar]).
 
 n([pl(bewijzen),sg(bewijs)],het,[],
   [kenteken,
@@ -25756,7 +25756,8 @@ n([pl(oplossingen),sg(oplossing)],de,
   [sbar,
    vp,
    subject_vp,
-   subject_sbar]).
+   subject_sbar,
+   subject_vp_vp]).
 
 n([pl(oplossingen),sg(oplossing)],de,[],
   [internet,
@@ -35948,7 +35949,8 @@ n([pl(tendenties),sg(tendentie)],de,[sbar,vp]).
 
 n([mass(teneur)],de,[subject_sbar,subject_vp,sbar]).
 
-n([sg(tenlastelegging),pl(tenlasteleggingen)],de,[]).
+n([sg(tenlastelegging),pl(tenlasteleggingen),
+   sg([ten,lastelegging]),pl([ten,lasteleggingen])],de,[]).
 
 n([mass(tennis)],both,[],[i(vrouw,vrouwen)]).
 
@@ -38010,6 +38012,8 @@ n([sg(vector),pl(vectoren)],de,[]).
 n([pl(vedetten),pl(vedettes),sg(vedette)],de,[]).
 
 n([mass(vee)],het,[],[]).
+
+n([sg(veejay),pl(veejays)],de,[]).
 
 n([mass(veestapel)],de,[]).
 

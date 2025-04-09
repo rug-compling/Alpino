@@ -12040,7 +12040,17 @@ grammar_rule(end_coord(Name,conj,mod), Blist,
     optcomma_dash(OPTCOMMA_DASH),
     optcomma_hellip(OPTCOMMA_HELLIP),
     end_coord_conj_mod_structure(Name,Blist,Conj,MOD,A),
-    \+ lists:member(Name,[enumeration,max]). /* NOT USED */
+    \+ lists:member(Name,[enumeration,max]). 
+
+%%EX%% Zes flessen wijn en voor de kinderen ... appelsap
+%%EX%% Zes flessen wijn en voor de kinderen : appelsap
+grammar_rule(end_coord(np,conj,hellip,mod), Blist,
+             [ OPTCOMMA_END, Conj, MOD, HELLIP, A, OPTCOMMA_DASH]) :-
+    optcomma_end(OPTCOMMA_END),
+    optcomma_dash(OPTCOMMA_DASH),
+    HELLIP => punct,
+    HELLIP:puncttype => (hellip;dubb_punt),
+    end_coord_conj_mod_structure(np,Blist,Conj,MOD,A).
 
 %%EX%% Appels ( en vooral peren )
 grammar_rule(bracketed_end_coord(Name,conj,mod), Blist,

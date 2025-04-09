@@ -32289,20 +32289,20 @@ a([e(spreekwoordelijke),
 a([ende(sprekende),
    end(sprekend),
    ere(sprekendere),
-   er(sprekender)],padv,
-  [transitive,
-   subject_sbar],[]).
+   er(sprekender)],adv,  % hij lijkt sprekend op de paus =/= hij lijkt op de paus als hij spreekt
+  [subject_sbar],[]).
 
 a([ende(sprekende),
    end(sprekend),
    ere(sprekendere),
    er(sprekender)],padv,
-  [],['Nederlands',h('Nederlands'),nederlands,
-      'Engels',h('Engels'),
-      'Spaans',h('Spaans'),
-      'Duits',h('Duits'),
-      'Frans',h('Frans')]).
-
+  [transitive],
+  ['Nederlands',h('Nederlands'),nederlands,
+   'Engels',h('Engels'),
+   'Spaans',h('Spaans'),
+   'Duits',h('Duits'),
+   'Frans',h('Frans')]).
+  
 a([e(springlevende),
    no_e(springlevend)],padv,[],[]).
 

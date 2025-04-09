@@ -322,6 +322,11 @@ a_lex(clause_np_adjective,Sign) :-
     clause_np_adjective(Sign),
     hstem(Sign).
 
+%% this is wrong?
+%% ok: we zijn het met elkaar eens  PP via sc
+%% ok: omdat we het eens zijn met elkaar PP via extra
+%% problem: omdat het het met elkaar [VP-modifiers] eens zijn
+%% we can only get these by attaching modifiers to "eens"
 a_lex(np_adjective(Sc),Sign) :-
     adjective_features(no_e(padv),Sign0),
     adjective_sc(Sc,Sign0),
