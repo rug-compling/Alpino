@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 10.2.0" />
+<meta name="generator" content="AsciiDoc 10.1.2" />
 <title>Alpino User Guide</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -1494,6 +1494,18 @@ include phantom words
 <p>
 pass on identifier of words
 </p>
+<div class="ulist"><ul>
+<li>
+<p>
+@no_tagger
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+locally disallow tagger to remove lexical categories
+</p>
 </li>
 </ul></div>
 <div class="paragraph"><p>Warning: bracketed input is not supported in case Alpino tokenizes the
@@ -1664,6 +1676,22 @@ notation <strong>precedes</strong> the word for which it is meant.</p></div>
 <div class="content">
 <pre><code>[ @id w1 ] ik [ @id w2 ] besta
 [ @id w1 ] [ @folia subtiel ADJ(vrij,basis,zonder) Subtiel ] was het niet</code></pre>
+</div></div>
+<div class="paragraph"><p>The @no_tagger meta notation can be used to instruct the tagger not to
+remove lexical categories for particular parts of the sentence. For
+instance, in a particalur version of Alpino, the sentence</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Toch was Betjemans geloof in het verlangen van de stille meerderheid van de stad om deze terminus te behouden niet onterecht .</code></pre>
+</div></div>
+<div class="paragraph"><p>could not be parsed with pos_tagger=on since the frame for "verlangen" which
+subcategorizes for a VP complement was filtered out by the tagger. On the other
+hand, switching off the postagger completely would lead to extreme parsing times.
+Using the @no_tagger meta notation, however, makes it possible to find the
+correct parse:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Toch was Betjemans geloof in het [ @no_tagger verlangen ] van de stille meerderheid van de stad om deze terminus te behouden niet onterecht .</code></pre>
 </div></div>
 </div>
 </div>
@@ -1961,7 +1989,7 @@ such keys correctly.</p></div>
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2023-12-20 19:07:42 CET
+ 2025-04-09 16:14:47 CEST
 </div>
 </div>
 </body>
