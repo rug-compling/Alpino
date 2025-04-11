@@ -2181,6 +2181,7 @@ lemma_root(bewaken,bewaak) .
 lemma_root(bewandelen,bewandel) .
 lemma_root(bewapenen,bewapen) .
 lemma_root(bewaren,bewaar) .
+lemma_root(bewateren,bewater) .
 lemma_root(bewegen,beweeg) .
 lemma_root(bewenen,beween) .
 lemma_root(beweren,beweer) .
@@ -3185,6 +3186,7 @@ lemma_root(door_bevrienden,bevriend_door) .
 lemma_root(door_bevriezen,bevries_door) .
 lemma_root(door_bevrijden,bevrijd_door) .
 lemma_root(door_bewaren,bewaar_door) .
+lemma_root(door_bewateren,bewater_door) .
 lemma_root(door_bewegen,beweeg_door) .
 lemma_root(door_beweren,beweer_door) .
 lemma_root(door_bewolken,bewolk_door) .
@@ -10918,6 +10920,7 @@ lemma_root(raak_bevreemden,bevreemd_raak) .
 lemma_root(raak_bevrienden,bevriend_raak) .
 lemma_root(raak_bevriezen,bevries_raak) .
 lemma_root(raak_bewaren,bewaar_raak) .
+lemma_root(raak_bewateren,bewater_raak) .
 lemma_root(raak_bewegen,beweeg_raak) .
 lemma_root(raak_beweren,beweer_raak) .
 lemma_root(raak_bewolken,bewolk_raak) .
@@ -16191,6 +16194,7 @@ lemma_root(uit_bevreemden,bevreemd_uit) .
 lemma_root(uit_bevrienden,bevriend_uit) .
 lemma_root(uit_bevrijden,bevrijd_uit) .
 lemma_root(uit_bewaren,bewaar_uit) .
+lemma_root(uit_bewateren,bewater_uit) .
 lemma_root(uit_bewegen,beweeg_uit) .
 lemma_root(uit_beweren,beweer_uit) .
 lemma_root(uit_bewonderen,bewonder_uit) .
@@ -21052,6 +21056,7 @@ lemma_root(voort_bevreemden,bevreemd_voort) .
 lemma_root(voort_bevrienden,bevriend_voort) .
 lemma_root(voort_bevriezen,bevries_voort) .
 lemma_root(voort_bewaren,bewaar_voort) .
+lemma_root(voort_bewateren,bewater_voort) .
 lemma_root(voort_bewegen,beweeg_voort) .
 lemma_root(voort_beweren,beweer_voort) .
 lemma_root(voort_bewolken,bewolk_voort) .
@@ -23619,7 +23624,6 @@ lemma_root(weg_wandelen,wandel_weg) .
 lemma_root(weg_wegen,weeg_weg) .
 lemma_root(weg_werken,werk_weg) .
 lemma_root(weg_werpen,werp_weg) .
-lemma_root(weg_weten,weet_weg) .
 lemma_root(weg_wimpelen,wimpel_weg) .
 lemma_root(weg_wuiven,wuif_weg) .
 lemma_root(weg_zagen,zaag_weg) .

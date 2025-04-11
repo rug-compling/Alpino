@@ -4701,6 +4701,11 @@ a([e(benedenste),
 a([e(benedenwaartse),
    no_e(benedenwaarts)],adv,[],[]).
 
+a([no_e(benedictijns),no_e('Benedictijns'),
+   e(benedictijnse),e('Benedictijnse')],nonadv,[],[]).
+
+a([both(benedictijner),both('Benedictijner')],nonadv,[],[]).
+
 a([both(benepen)],adv,[],[]).
 
 a([ge_e(benevelde),
@@ -5563,6 +5568,9 @@ a([ge_e(bewandelde),
 
 a([ge_e(bewapende),
    ge_no_e(bewapend)],adv,[],[zwaar]).
+
+a([ge_e(bewaterde),
+   ge_no_e(bewaterd)],adv,[],[]).
 
 a([e(beweeglijke),
    er(beweeglijker),

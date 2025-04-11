@@ -4588,6 +4588,9 @@ n([pl(benden),pl(bendes),sg(bende)],de,[measure]).
 n([pl(benden),pl(bendes),sg(bende)],de,[],
   [drug,s(drug)]).
 
+n([sg(benedictijn),pl(benedictijnen),
+   sg('Benedictijn'),pl('Benedictijnen')],de,[]).
+
 n([sg(bengel),pl(bengels)],de,[]).
 
 n([pl(benodigdheden)],de,[],

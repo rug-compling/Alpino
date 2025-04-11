@@ -5045,6 +5045,7 @@ with_dt([Ook,Al],
     modified_modal_mod_hd(Ook,Al,Cat,Pos).
 
 modified_modal_hd_mod(ook,al).
+modified_modal_hd_mod(ook,wel).
 modified_modal_hd_mod(zo,ongeveer).
 modified_modal_hd_mod(vooral,niet).
 modified_modal_hd_mod(vooral,ook).
@@ -5276,6 +5277,7 @@ m('zegge en schrijve', modal_adverb(noun_prep),[zeggen,en,schrijven]).
 
 %% even voor/na het einde; even voordat ..
 m(even,             modal_adverb(comp_prep),even).
+m(dadelijk,         modal_adverb(comp_prep),direct).
 m(direct,           modal_adverb(comp_prep),direct).
 m(meteen,           modal_adverb(comp_prep),meteen). % meteen na(dat) ..
 m(onmiddellijk,     modal_adverb(comp_prep),onmiddellijk).

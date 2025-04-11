@@ -3584,6 +3584,11 @@ v(bewapen,bewapent,bewapenen,bewapend,bewapende,bewapenden,
     [h([transitive,
 	np_pc_pp(tegen)])]).
 
+v(bewater,bewatert,bewateren,bewaterd,bewaterde,bewaterden,
+  [h([transitive,
+      intransitive
+     ])]).
+
 v(beweeg,beweegt,bewegen,bewogen,bewoog,bewogen,
     [h([intransitive,
 	np_vp_obj1,
@@ -15336,6 +15341,10 @@ v(neem,neemt,nemen,genomen,nam,namen,neme,
 	fixed([[ter,hand],acc],norm_passive),
 	fixed([[ter,harte],acc,refl],norm_passive),
 	fixed([[ter,harte],acc],norm_passive),
+	fixed([[de,tijd],me],imp_passive),
+	fixed([[de,tijd],me,vp],imp_passive),
+	fixed([[de,tijd]],imp_passive),
+	fixed([[de,tijd],vp],imp_passive),
 	fixed([[voor,lief],acc],norm_passive),
 	fixed([[voor,lief],sbar],norm_passive),
 	fixed([[voor,lief],opt_het_pobj1(dat_sbar)],norm_passive),
@@ -15492,9 +15501,10 @@ v(nok,nokt,nokken,genokt,nokte,nokten,
     [z([part_intransitive(af)])]).
 
 v(nomineer,nomineert,nomineren,genomineerd,nomineerde,nomineerden,
-    [h([transitive,
-	np_pc_pp(voor),
-	pc_pp(voor)])]).
+  [h([transitive,
+      als_pred_np,
+      np_pc_pp(voor),
+      pc_pp(voor)])]).
 
 v(nood,noodt,noden,genood,noodde,noodden,
     [h([transitive,
@@ -28195,11 +28205,12 @@ v(weet,weet,weten,geweten,wist,wisten,wete,
 	np_pc_pp(over),  % ik wil er alles over weten
 	part_fixed_dep(af,intransitive),
 	pc_pp(van),
-	part_pc_pp(weg,met), % hij weet er wel weg mee
+        %% part_pc_pp(weg,met), % hij weet er wel weg mee; ook "geen weg weten met"
+	fixed([{[acc(weg),pc(met)]}],no_passive),        
 	subj_control(te),   % dat hij de mensen wist te overtuigen
-	vp,
-      refl_vp,		       % daarvan wist zich eentje te handhaven
-      np_pred_refl,            % hij weet zich het middelpunt ...
+        vp,
+        refl_vp,		       % daarvan wist zich eentje te handhaven
+        np_pred_refl,            % hij weet zich het middelpunt ...
 	fixed([{[acc(raad),pc(met)]},refl],no_passive),
 	fixed([{[acc(raad),pc(met)]}],no_passive),
 	fixed([acc(raad),refl],no_passive),

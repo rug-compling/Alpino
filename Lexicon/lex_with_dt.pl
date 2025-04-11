@@ -2150,6 +2150,7 @@ with_dt_all(onzent,[ten]).
 with_dt_all(ook,[vandaar]).
 with_dt_all(ook,[vooral]).
 with_dt_all(ook,[vooral,weer]).
+with_dt_all(ook,[wel]).
 with_dt_all(ook,[zelf]).
 with_dt_all(opa,[u]).
 with_dt_all(opa,[zijn]).

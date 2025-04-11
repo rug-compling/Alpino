@@ -5903,6 +5903,16 @@ grammar_rule(pn_pn_rel, NP, [N, OPTCl, Rel, OPTCr ]) :-
     optcomma_dash(OPTCr),
     hd_rel_structure(N,Rel,NP).
 
+%%EX%% garagist Dimitri De Tremmerie ( DDT ) , gespeeld door Jacques Vermeire .
+grammar_rule(pn_pn_bracketed_mod, PN, [ N, Cl, ROOT, OptQm, Cr ]) :-
+    Cl => punct, Cr => punct,
+    PN => pn,
+    N => pn,
+    Cl:puncttype => haak_open, Cr:puncttype => haak_sluit,
+    optend_mod_punct(OptQm),
+    ROOT => start,
+    hd_mod_structure(N,ROOT,PN).
+
 % subsumed by n_n_modroot()
 %grammar_rule(n_n_bracketed_rel, NP, [N, Cl, Rel, OptQm, Cr ]) :-
 %    NP => n,  N => n,  Rel => rel,
@@ -7342,6 +7352,13 @@ grammar_rule(abs_p_mod_np,PP,[Met,MOD,OPTDUBB,NP]) :-
     optdubb(OPTDUBB),
     max_modifier(MOD),
     MOD:mcat => (mcat_pp;mcat_adv;mcat_sbar),
+    abs_p_mod_structure(Met,NP,MOD,PP).
+
+%%EX%% met allebei een ijsje
+grammar_rule(abs_p_predm_np,PP,[Met,MOD,OPTDUBB,NP]) :-
+    optdubb(OPTDUBB),
+    max_predm(MOD),
+    MOD:eenmaal => no,
     abs_p_mod_structure(Met,NP,MOD,PP).
 
 %%EX%% met op zijn hoofd natuurlijk een feestmuts
