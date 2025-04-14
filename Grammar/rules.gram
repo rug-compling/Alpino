@@ -4034,6 +4034,20 @@ grammar_rule(adv_a,Adv,[Adj]) :-
     Adj:aform => nattr,  % was: (attr;nattr)
     hd_structure(Adj,Adv).
 
+%%EX%% De tekeningen zijn decoratief uitgewerkt
+%%EX%% Hij reageerde afzijdig
+%%EX%% Hij leefde anarchistisch
+grammar_rule(adv_a_marked,Adv,[Adj]) :-
+    Adv => adv,
+    ap_arg(Adj),
+    Adv:subadv => subadv_adj,
+    Adj:cj => ncj, % reduce spurious amb.
+    Adj:adv => nadv,
+    %%    Adj:agr => het & indef & sg, % should not have -e suffix!
+    %% however: "Voorafgaande aan de visitatie moeten we ..."
+    Adj:aform => nattr,  % was: (attr;nattr)
+    hd_structure(Adj,Adv).
+
 %%EX%% De lucht werd hoe langer hoe blauwer
 %%EX%% Het principe van hoe groter hoe wateriger
 grammar_rule(adv_hoe_a,Adv,[Adj]) :-
