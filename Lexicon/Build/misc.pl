@@ -4222,6 +4222,7 @@ m(evenveel,              left_conj(als),evenveel).
 m(zowel,                 left_conj(als),zowel).
 m(als,                   right_conj(als),als).
 
+%%% hacks
 m('niet zozeer',         left_conj(maar),[niet,zozeer]).
 m('niet eens zozeer',    left_conj(maar),[niet,eens,zozeer]).
 m('niet alleen',         left_conj(maar),[niet,alleen]).
@@ -7678,6 +7679,16 @@ with_dt([deze,en,vele,andere],
                  cnj=l(deze,determiner(de,nwh,nmod,pro,nparg),detp,0,1),
                  cnj=dt(ap,[mod=l(veel,adjective(e),ap,2,3),
 			    hd=l(ander,adjective(ere),ap,3,4)
+			   ])])).
+
+with_dt([deze,en,nog,vele,andere],
+        adjective(e),
+        dt(conj,[crd=l(en,conj(en),vg,1,2),
+                 cnj=l(deze,determiner(de,nwh,nmod,pro,nparg),detp,0,1),
+                 cnj=dt(ap,[mod=dt(advp,[mod=l(nog,adverb,advp,2,3),
+					 mod=l(veel,adjective(e),ap,3,4)
+					 ]),    
+			    hd=l(ander,adjective(ere),ap,4,5)
 			   ])])).
 
 with_dt([helemaal,ongelijk],

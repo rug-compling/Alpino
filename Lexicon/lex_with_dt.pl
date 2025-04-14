@@ -1038,6 +1038,7 @@ with_dt_all(ander,[ben,plezant]).
 with_dt_all(ander,[ben,prettig]).
 with_dt_all(ander,[deze,en]).
 with_dt_all(ander,[deze,en,nog]).
+with_dt_all(ander,[deze,en,nog,veel]).
 with_dt_all(ander,[deze,en,veel]).
 with_dt_all(ander,[en,niet]).
 with_dt_all(ander,[ik]).

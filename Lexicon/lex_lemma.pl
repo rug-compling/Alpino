@@ -7400,6 +7400,7 @@ lemma_root(inspecteren,inspecteer) .
 lemma_root(in_spelen,speel_in) .
 lemma_root(in_spieden,spied_in) .
 lemma_root(in_spijkeren,spijker_in) .
+lemma_root(in_spinnen,spin_in) .
 lemma_root(inspireren,inspireer) .
 lemma_root(in_splitsen,splits_in) .
 lemma_root(in_spoeden,spoed_in) .
@@ -8801,6 +8802,7 @@ lemma_root(mee_spelen,speel_mee) .
 lemma_root(mee_spreken,spreek_mee) .
 lemma_root(mee_stemmen,stem_mee) .
 lemma_root(meester_maken,maak_meester) .
+lemma_root(mee_strijden,strijd_mee) .
 lemma_root(mee_sturen,stuur_mee) .
 lemma_root(mee_sudderen,sudder_mee) .
 lemma_root(mee_tellen,tel_mee) .

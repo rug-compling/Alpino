@@ -616,7 +616,9 @@ phrasal_entry(pre_np_adverb,pre_np_adverb) -->
     n_word(nummer),
     number_expression(_).
 
-phrasal_entry(pre_np_adverb,pre_np_adverb) -->
+phrasal_entry(with_dt(pre_np_adverb,dt(np,[hd=l(nummer,meas_mod_noun(both,count,sg),np,0,1),
+					   app=l(één,number(hoofd(sg_num)),np,1,2)])),
+	      pre_np_adverb) -->
     { hdrug_util:debug_message(4,"nummer één hit~n",[]) },
     n_word(nummer),
     n_word(één).
@@ -4675,11 +4677,31 @@ formula(Word) :-
 
 telephone -->
     tel_land,
-    tel_word(0,C1),
+    tel_word_br(0,C1),
     opt_dash,
     tel_word(C1,C2),
     telephone_rest(C2),
     optional_of.
+
+tel_word_br(0,C) -->
+    tel_word(0,C).
+tel_word_br(0,C) -->
+    n_word('('),
+    n_word('0'),
+    n_word(')'),
+    tel_word(1,C).
+tel_word_br(0,C) -->
+    n_word('('),
+    n_word(Next),
+    {  atom_codes(Next,[48,41|Rest]),
+       isdigits(Rest,1,C)
+    }.
+tel_word_br(0,C) -->
+    n_word(Next),
+    {  atom_codes(Next,[40,48,41|Rest]),
+       isdigits(Rest,1,C)
+    }.
+
 
 %% for
 %% Tel. : ( + 32 ) 2 533 14 76 of 77
@@ -4737,9 +4759,11 @@ more_tel_land -->
 
 isdigits([],N,N).
 isdigits([H|T],N0,N) :-
-    isdigit(H),
+    isdigit(H),!,
     N1 is N0 + 1,
     isdigits(T,N1,N).
+isdigits([46|T],N0,N) :-
+    isdigits(T,N0,N).
 
 %% U1.2.1.3 etc from corpus WR-P-P-L*
 phrasal_entry(Tag,u_number) -->

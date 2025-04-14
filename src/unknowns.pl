@@ -273,7 +273,8 @@ guess_names_next([Word|T1],Words,P1,R1) :-
 
 guess_names_position(W,Ws,P1,R1,Words) :-
     findall(Len-f(Msg,MsgArgs,Tag),name_heuristic(P1,R1,W,Ws,Words,Len,Msg,MsgArgs,Tag),Tags0),
-    longest_match(Tags0,Tags),
+    longest_match(Tags0,Tags1),
+    sort(Tags1,Tags),
 %    Tags0=Tags,
     (   lists:member(_-f(Msg,MsgArgs,Tag),Tags),
 	debug_message(1,"guessing|",[]),
@@ -2622,6 +2623,7 @@ function('Lijsttrekker').
 function('Luitenant-Kolonel').
 function('Luitenant-Generaal').
 function('Luitenant').
+function('Maarschalk').
 function('Madam').
 function('Mademoiselle').
 function('Makelaar').
@@ -2670,6 +2672,7 @@ function('Presentatrice').
 function('President').
 function('Producent').
 function('Producente').
+function('Professor').
 function('Raadsman').
 function('Rapper').
 function('Rapporteur').  % europarl

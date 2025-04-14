@@ -3682,7 +3682,7 @@ n([pl(banden),sg(band)],de,[],
 
 n([sg(bande),pl(bandes)],de,[]).
 
-n([sg(band),pl(bands)],de,[],
+n([sg(band),pl(bands)],de,[np_app_measure],
   [boy,
    rock,
    brass,
@@ -25774,7 +25774,7 @@ n([pl(opmaken),sg(opmaak)],de,[]).
 
 n([sg(opmaat),pl(opmaten)],de,[]).
 
-n([pl(opmarsen),sg(opmars)],de,[]).
+n([pl(opmarsen),sg(opmars)],de,[pred_pp(in)]).
 
 n([pl(opmerkingen),sg(opmerking)],de,[sbar,
 				      vp,
@@ -33400,7 +33400,7 @@ n([pl(spandoeken),sg(spandoek)],both,[]).
 
 n([sg(spanner),pl(spanners)],de,[]).  % insect
 
-n([pl(spanningen),sg(spanning)],de,[]).
+n([pl(spanningen),sg(spanning)],de,[pred_pp(op)]).
 
 n([sg(spant),pl(spanten)],het,[]).
 
