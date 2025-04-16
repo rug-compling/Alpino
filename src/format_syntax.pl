@@ -319,7 +319,8 @@ format_left_corners_of_obj(Obj) :-
 
 format_left_corners_of_result(Result,Key) :-
     result_to_deriv_tree(Result,Tree),
-    findall(LC,tree_to_left_corners(Tree,LC),LCS),
+    findall(LC,tree_to_left_corners(Tree,LC),LCS0),
+    sort(LCS0,LCS),
     format_left_corners(LCS,Key).
 
 format_new_left_corners_of_obj(Obj) :-
@@ -350,7 +351,8 @@ format_left_corner_his([H|T]) :-
 
 tree_to_new_left_corners(Tree,LCS) :-
     findall(LC,tree_to_left_corners(Tree,LC),LCS0),
-    filter_new_left_corners(LCS0,LCS).
+    sort(LCS0,LCS1),
+    filter_new_left_corners(LCS1,LCS).
 
 tree_to_left_corners(tree(robust,_,DS),LC) :-
     !,
