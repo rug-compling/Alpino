@@ -516,7 +516,7 @@ a([e('Armeense'),
    hh('West')]).
 
 a([e('Atlantische'),
-   no_e('Atlantisch')],nonadv,[],[]).
+   no_e('Atlantisch')],adv,[],[]).
 
 a([e('Australische'),
    er('Australischer'),
@@ -1117,7 +1117,7 @@ a([e('Siamese'),
    no_e('Siamees')],nonadv,[],[]).
 
 a([e('Siberische'),
-   no_e('Siberisch')],nonadv,[],[hh('Zuid'),
+   no_e('Siberisch')],adv,[],[hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
@@ -1156,7 +1156,7 @@ a([e('Somalische'),
    hh('West')]).
 
 a([e('Spaanse'),
-   no_e('Spaans')],nonadv,[],[hh('Zuid'),
+   no_e('Spaans')],adv,[],[hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
@@ -2871,7 +2871,7 @@ a([e(afzienbare),
    ste(afzienbaarste)],nonadv,[],[]).
 
 a([no_e(afzijdig),
-   e(afzijdige)],nonadv,[],[]).
+   e(afzijdige)],adv,[],[]).
 
 a([e(afzonderlijke),
    er(afzonderlijker),
@@ -3072,7 +3072,7 @@ a([e(ambetante),
   [subject_sbar],[]).
 
 a([e(ambigue),
-   no_e(ambigu)],nonadv,[],[]).
+   no_e(ambigu)],adv,[],[]).
 
 a([e(ambitieuze),
    er(ambitieuzer),
@@ -3148,7 +3148,7 @@ a([e(anarchistische),
    ere(anarchistischere),
    no_e(anarchistisch),
    st(anarchistischt),
-   ste(anarchistischte)],nonadv,[],[]).
+   ste(anarchistischte)],adv,[],[]).
 
 a([e(anatomische),
    no_e(anatomisch)],adv,[],[]).
@@ -3701,7 +3701,7 @@ a([e(barokke),
    ere(barokkere),
    no_e(barok),
    st(barokst),
-   ste(barokste)],nonadv,[],[]).
+   ste(barokste)],adv,[],[]).
 
 a([e(barse),
    er(barser),
@@ -6604,7 +6604,7 @@ a([e(buigzame),
    st(buigzaamst),
    ste(buigzaamste)],nonadv,[],[]).
 
-a([pred([buiten,kijf])],nonadv,
+a([pred([buiten,kijf])],adv,
   [subject_sbar],[]).
 
 a([e(buitenaardse),
@@ -7417,7 +7417,7 @@ a([e(decoratieve),
    ere(decoratievere),
    no_e(decoratief),
    st(decoratiefst),
-   ste(decoratiefste)],nonadv,[],[]).
+   ste(decoratiefste)],adv,[],[]).
 
 a([e(deductieve),
    no_e(deductief)],adv,[],[]).
@@ -9389,7 +9389,7 @@ a([e(empirische),
 
 a([pred([en,vogue])],padv,[],[]).
 
-a([e(endemische),no_e(endemisch)],nonadv,[],[]).  % die endemisch voorkomen in ...
+a([e(endemische),no_e(endemisch)],adv,[],[]).  % die endemisch voorkomen in ...
 
 a([e(endocriene),
    no_e(endocrien)],nonadv,[],[]).
@@ -18038,7 +18038,7 @@ a([e(heroïsche),
    ste(heroïschte)],adv,[],[]).
 
 a([ge_e(herontdekte),
-   ge_no_e(herontdekt)],nonadv,[],[]).
+   ge_no_e(herontdekt)],adv,[],[]).
 
 a([ge_e(heropende),
    ge_no_e(heropend)],nonadv,[],[]).
@@ -18224,7 +18224,7 @@ a([e(holle),
    ste(holste)],adv,[],[]).
 
 a([e(holistische),
-   no_e(holistisch)],nonadv,[],[]).
+   no_e(holistisch)],adv,[],[]).
 
 a([e(homeopathische),
    e(homeopatische),
@@ -21473,7 +21473,7 @@ a([e(leugenachtige),
    ere(leugenachtigere),
    no_e(leugenachtig),
    st(leugenachtigst),
-   ste(leugenachtigste)],nonadv,[],[]).
+   ste(leugenachtigste)],adv,[],[]).
 
 a([e(leuke),
    er(leuker),
@@ -21755,7 +21755,7 @@ a([e(linkse),
 
 a([stof(linnen)],nonadv,[],[]).
 
-a([both(liquide)],nonadv,[],[]).
+a([both(liquide)],adv,[],[]).
 
 a([e(listige),
    er(listiger),
@@ -23110,7 +23110,7 @@ a([e(monochrome),
    no_e(monochroom)],adv,[],[]).
 
 a([e(monogame),
-   no_e(monogaam)],nonadv,[],[]).
+   no_e(monogaam)],adv,[],[]).
 
 a([e(monomane),
    no_e(monomaan)],adv,[],[]).
@@ -25467,7 +25467,7 @@ a([e(ongeldige),
    ere(ongeldigere),
    no_e(ongeldig),
    st(ongeldigst),
-   ste(ongeldigste)],nonadv,[],[]).
+   ste(ongeldigste)],adv,[],[]).
 
 a([both(ongelegen),
    er(ongelegener),
@@ -27223,7 +27223,7 @@ a([e(onwezenlijke),
    ere(onwezenlijkere),
    no_e(onwezenlijk),
    st(onwezenlijkst),
-   ste(onwezenlijkste)],nonadv,
+   ste(onwezenlijkste)],adv,
   [subject_sbar,
    subject_vp],[]).
 
@@ -30788,7 +30788,7 @@ a([e(roodachtige),
    ere(roodachtigere),
    no_e(roodachtig),
    st(roodachtigst),
-   ste(roodachtigste)],nonadv,[],[]).
+   ste(roodachtigste)],adv,[],[]).
 
 a([e(roodbruine),
    er(roodbruiner),
@@ -32771,7 +32771,7 @@ a([e(stringente),
    ere(stringentere),
    er(stringenter),
    st(stringentst),
-   ste(stringentste)],nonadv,[],[]).
+   ste(stringentste)],adv,[],[]).
 
 a([stof(strobalen)],nonadv,[],[]).
 
@@ -33025,7 +33025,7 @@ a([e(tactische),
    ste(taktischte)],adv,[],[]).
 
 a([e(talige),
-   no_e(talig)],nonadv,[],
+   no_e(talig)],adv,[],
   [anders,
    'Nederlands',h('Nederlands'),i('Nederlands',nederlands),
    'Engels',h('Engels'),i('Engels',engels),
@@ -33320,7 +33320,7 @@ a([ge_both(terneergeslagen),
 a([prefix(terracotta)],nonadv,[],[]).
 
 a([e(territoriale),
-   no_e(territoriaal)],nonadv,[],[]).
+   no_e(territoriaal)],adv,[],[]).
 
 a([e(terroristische),
    er(terroristischer),
@@ -34685,7 +34685,7 @@ a([ge_both(uitgestoten)],adv,[],[]).
 a([ge_e(uitgestraalde),
    ge_no_e(uitgestraald)],adv,[],[]).
 
-a([ge_both(uitgestreken)],nonadv,[],[]).
+a([ge_both(uitgestreken)],adv,[],[]).
 
 a([ge_e(uitgestrekte),
    er(uitgestrekter),
@@ -35043,11 +35043,11 @@ a([pred([van,dik,hout,zaagt,men,planken])],nonadv,[],[]).
 a([pred([van,hetzelfde,laken,een,pak]),
    pred([van,het,zelfde,laken,een,pak])],nonadv,[],[]).
 
-a([pred([van,kwaad,naar,erger])],nonadv,[],[]).
+a([pred([van,kwaad,naar,erger])],adv,[],[]).
 
 a([pred([van,kwaad,tot,erger])],adv,[],[]).
 
-a([pred([van,hetzelfde,laken,een,pak])],nonadv,[],[]).
+a([pred([van,hetzelfde,laken,een,pak])],adv,[],[]).
 
 a([pred([van,kracht])],nonadv,[],[]).
 
@@ -38421,7 +38421,7 @@ a([e(vormloze),
    ere(vormlozere),
    no_e(vormloos),
    st(vormloost),
-   ste(vormlooste)],nonadv,[],[]).  
+   ste(vormlooste)],adv,[],[]).  
 
 a([e(vorstelijke),
    er(vorstelijker),
@@ -40099,7 +40099,7 @@ a([e(zoete),
    ste(zoetste)],nonadv,[],[]).
 
 a([e(zoetgevooisde),
-   no_e(zoetgevooisd)],nonadv,[],[]).
+   no_e(zoetgevooisd)],adv,[],[]).
 
 a([e(zoetige),
    er(zoetiger),

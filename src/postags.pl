@@ -266,6 +266,7 @@ p_of_f(wh_iets_anders_noun,pron,[sc=iets_anders_noun,wh=ywh]).
 p_of_f(er_noun,noun,[special=er]).
 p_of_f(wh_er_noun,noun,[special=er,wh=ywh]).
 p_of_f(tmp_app_noun,adv,[special=tmp_app]).
+p_of_f(me_tmp_app_noun,adv,[special=me_tmp_app]).
 p_of_f(np,noun,[]).
 p_of_f(np_TEMP,noun,[]).
 p_of_f(np(Y),noun,[neclass=Y]).

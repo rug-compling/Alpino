@@ -198,6 +198,7 @@ filter_tag_rule(meas_mod_noun(_,_,_),  []).
 filter_tag_rule(amount_meas_mod_noun(_,_,_),  []).
 filter_tag_rule(mod_noun(_,_,_),       []).
 filter_tag_rule(tmp_app_noun,          []).
+filter_tag_rule(me_tmp_app_noun,       []).
 filter_tag_rule(measure_noun(_),       []).
 filter_tag_rule(meas_app_noun(_),      []).
 filter_tag_rule(meas_tmp_noun(_,_,_),  []).

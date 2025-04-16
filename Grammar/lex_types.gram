@@ -270,7 +270,20 @@ np_app_measure_noun(N) :-
 tmp_app_noun(N) :-
     N => tmp_app_n,
     initialize_dt([],N),
-    sign(N,advp).
+    sign(N,advp),
+    N:sc => [].
+
+me_tmp_app_noun(N) :-
+    N => tmp_app_n,
+    initialize_dt([me],N),
+    sign(N,advp),
+    N:sc <=> [NP],
+    adj_np_me_arg(NP),
+    NP:subn => ~sub_def_verb  & ~sub_def_adj & ~sub_rang &
+               ~sub_indef_adj & ~sub_def_pron & ~sub_indef_pron & ~sub_det,
+    NP:exs => [],
+    NP:wh => nwh,
+    instantiated_deprel(N,me,NP).
 
 verbal_arg_noun(N,VerbalArg) :-
     noun(N0),

@@ -4037,6 +4037,7 @@ grammar_rule(adv_a,Adv,[Adj]) :-
 %%EX%% De tekeningen zijn decoratief uitgewerkt
 %%EX%% Hij reageerde afzijdig
 %%EX%% Hij leefde anarchistisch
+/*
 grammar_rule(adv_a_marked,Adv,[Adj]) :-
     Adv => adv,
     ap_arg(Adj),
@@ -4047,6 +4048,7 @@ grammar_rule(adv_a_marked,Adv,[Adj]) :-
     %% however: "Voorafgaande aan de visitatie moeten we ..."
     Adj:aform => nattr,  % was: (attr;nattr)
     hd_structure(Adj,Adv).
+*/
 
 %%EX%% De lucht werd hoe langer hoe blauwer
 %%EX%% Het principe van hoe groter hoe wateriger
@@ -5152,6 +5154,7 @@ grammar_rule(np_n_napp_app, NP, [ APP_N, N ]) :-
 %% hd-mod is the CGN analysis...
 grammar_rule(n_n_tmpnapp, ADV, [ APP_N, N ]) :-
     ADV => adv, APP_N => tmp_app_n, N => np,
+    APP_N:sc => [],
     ADV:wh => nwh,
     ADV:tmploc => tmp,
     ADV:wh_reltmploc => tmp,
@@ -5167,6 +5170,7 @@ grammar_rule(np_n_tmpnapp, NP, [ DET, APP_N, N ]) :-
     NP0 => np,
     NP => np,
     APP_N => tmp_app_n, N => np,
+    APP_N:sc => [],
     DET => det,
     NP:wh => nwh,
     NP:nform => norm,
@@ -5177,6 +5181,12 @@ grammar_rule(np_n_tmpnapp, NP, [ DET, APP_N, N ]) :-
     N:redrel => no,
     hd_mod_structure(APP_N,N,NP0),
     hd_det_structure(DET,NP0,NP,np).
+
+grammar_rule(me_tmpnapp, NP, [ME, HD]) :-
+    NP => tmp_app_n,
+    ME => np,
+    HD => tmp_app_n,
+    hd_comp_structure(HD,ME,NP).
 
 %%EX%% de familie Beerta
 %%EX%% minister van justitie Hirsch Ballin
@@ -6733,7 +6743,7 @@ grammar_rule(a_me_comp_a, AP, [ NP, A]) :-
     haspreyes(A),
     A:wh => nwh,		% * np hoe beter
     NP => np,
-    unify_except_l(AP0,AP,[wh,wh_reltmploc]),
+    unify_except_l(AP0,AP,[wh,wh_reltmploc,can_postn]),
     NP:wh <=> AP:wh,
 
     NP:wh <=> WH,

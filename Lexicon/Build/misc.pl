@@ -8301,6 +8301,13 @@ m(later,            tmp_app_noun,later).       % later die dag
 m(medio,            tmp_app_noun,medio).
 m(ultimo,           tmp_app_noun,ultimo).
 
+%% de gebeurtenissen eerder die dag
+%% de gebeurtenissen twee uur eerder die dag
+%% de gebeurtenissen twee uur eerder
+
+m(eerder,           me_tmp_app_noun,eerder).
+m(later,            me_tmp_app_noun,later).
+
 %% voor het eerst deze week
 %% voor het laatst dit seizoen
 m('voor het eerst', tmp_app_noun,[voor,Het,eerst]) :- het(Het).

@@ -201,7 +201,7 @@ cat_type(app_n_app,         [agr,bmeas,meas,amount,nform,e_agr,can_mod]).
 cat_type(start_app_n_app,   [agr,bmeas,meas,amount,nform,e_agr,can_mod]).
 cat_type(app_np_mod,        [agr,bmeas,meas,amount,nform,e_agr,can_mod]).
 cat_type(app_np,  [hstem,agr,meas,nform,e_agr]).
-cat_type(tmp_app_n,[agr]).
+cat_type(tmp_app_n,[agr,sc]).
 cat_type(iets_n,  [aform,wh,wh_reltmploc,agr]).
 cat_type(aan_het_comp, []).
 cat_type(op_comp, []).

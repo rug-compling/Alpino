@@ -2974,14 +2974,15 @@ v(beslecht,beslecht,beslechten,beslecht,beslechtte,beslechtten,
 
 v(beslis,beslist,beslissen,beslist,besliste,beslisten,
   [h([sbar,
-	transitive,
-	intransitive, % anders, tijdig
-        part_intransitive(mee),
-        part_pc_pp(mee,over),
-	vp,
-	pc_pp(over),
-	er_pp_sbar(over)
-       ])]).
+      transitive,
+      intransitive,		% anders, tijdig
+      part_intransitive(mee),
+      part_pc_pp(mee,over),
+      vp,
+      pc_pp(tot),
+      pc_pp(over),
+      er_pp_sbar(over)
+     ])]).
 
 v(besluip,besluipt,besluipen,beslopen,besloop,beslopen,
     [h([transitive])]).
@@ -5883,7 +5884,7 @@ v(dien,dient,dienen,gediend,diende,dienden,diene,
 	aux(te),
 	ld_pp,
 	ld_adv,
-	vp, % dat dient om ...
+	vp_no_control, % dat dient om ...
 	so_np_pc_pp(van),		% iemand van repliek dienen
 	fixed([{[pc(van),dat]},dip_sbar],no_passive),
         norm_passive,  % VL de schilderijen dienen overgebracht naar 't Museum
@@ -29939,9 +29940,10 @@ psp_only(geruggesteund,
 	 [transitive]).
 
 %% omdat we hem dankbaarheid zijn verschuldigd
+%% ook passief: omdat er dankbaarheid aan hem verschuldigd is
 psp_only(verschuldigd,
 	 verschuldigd,
-         unacc,
+         zijn,
          [transitive,
 	  so_pp_np,
 	  np_np]).

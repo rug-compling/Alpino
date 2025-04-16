@@ -20032,8 +20032,6 @@ n([pl(landen),sg(land)],het,[],
 n([mass(landjepik)],het,[]).
 n([mass('landje-pik')],het,[]).
 
-n([mass(['land-',en,tuinbouw])],de,[]). % troonrede: land- en tuinbouw zijn innovatief
-
 n([mass(landbouw)],de,[]).
 
 n([pl(landbouwers),sg(landbouwer)],de,[]).

@@ -98,6 +98,9 @@ a_lex(np(year),Sign) :-
 a_lex(tmp_app_noun,Sign) :-
     tmp_app_noun(Sign).
 
+a_lex(me_tmp_app_noun,Sign) :-
+    me_tmp_app_noun(Sign).
+
 %% noun(Word,{de,het,both},{mass,count,both},{sg,pl})
 %% noun(Word)
 a_lex(noun(De,MC,Num),Sign) :-
