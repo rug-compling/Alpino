@@ -29,7 +29,7 @@ default:
 include $(ALPINO_HOME)/Makefile.test
 
 ## defaults for testN target
-default_testN_options=-testN stop_if_optimal=off user_max=900000 max_sentence_length=25 
+default_testN_options=-testN stop_if_optimal=off user_max=900000 max_sentence_length=25 use_guides=on
 
 ## defaults per suite for testN target
 ovistrain_testN_options=-flag treebank ../Treebank/ovis

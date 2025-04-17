@@ -459,7 +459,6 @@ testN_options :-
     set_flag(parse_candidates_beam,0),
     set_flag(number_analyses,0),
     set_flag(unpack_bestfirst,off),
-    set_flag(use_guides,off),
     set_flag(pos_tagger,off),
     set_flag(display_main_parts,off),
     set_flag(display_quality,off).
@@ -2592,9 +2591,7 @@ compressed_sentence([_-remove|T],NewT) :-
 
 after_timeout_options_(testN):-
     alpino_lc:clean,
-    hdrug_flag(use_guides,off),
     hdrug_flag(pos_tagger,off),
-    set_flag(use_guides,on),
     set_flag(pos_tagger,on),
     set_flag(last_one_timeout,on),
     best_score_new_parse.
@@ -2652,7 +2649,6 @@ undo_timeout_options(alpino_cg:generate(_)) :-
 
 undo_timeout_options(alpino_lc:parse(_)) :-
     hdrug_flag(after_timeout_options,testN),
-    set_flag(use_guides,off),
     set_flag(pos_tagger,off),
     set_flag(parse_candidates_beam,0),
     !.
