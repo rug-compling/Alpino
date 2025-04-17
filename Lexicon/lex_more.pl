@@ -4759,11 +4759,18 @@ more_tel_land -->
 
 isdigits([],N,N).
 isdigits([H|T],N0,N) :-
-    isdigit(H),!,
+    isdigit(H),
+    !,
     N1 is N0 + 1,
     isdigits(T,N1,N).
 isdigits([46|T],N0,N) :-
-    isdigits(T,N0,N).
+    isdigits0(T,N0,N).
+
+isdigits0([H|T],N0,N) :-
+    isdigit(H),
+    !,
+    N1 is N0 + 1,
+    isdigits(T,N1,N).
 
 %% U1.2.1.3 etc from corpus WR-P-P-L*
 phrasal_entry(Tag,u_number) -->
