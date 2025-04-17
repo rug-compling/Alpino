@@ -21,12 +21,10 @@
 253	gapping
 255	flo 4,4 ( v.j. 2,8 ) miljoen
 279	extraposed PP out of extraposition
-287  	timeout
 292	timeout
 308	gapping
 374 	extraposed als-phrase from NP   "ongelukken ... (zo)als :"
 394	quotes with double punctuation " bla bla ! . "
-451	grammatical error 'de gemeenteraadslid'
 466	grammatical error "en" must be removed, or unlike category coordination   'kantfluweel en in combinatie met x'
 478	timeout
 509	gapping
@@ -43,7 +41,6 @@
 679	R-pron of modifier 'er een kraak voor zetten'
 693	spelling te Groot (Groot is a name too)
 694	?extraposed element from extraposition
-698	timeout
 711	unexpected quotes?
 725	coordination [ X niet en Y niet ]
 735	timeout
@@ -86,7 +83,6 @@
 1252	app without comma's
 1253	"het bordje zaal uitverkocht"
 1267	dip without comma
-1278	timeout
 1296	dp 'niet minder menselijk , integendeel'
 1297	om-VP modifier before attributive adjective "een morbide , om niet te zeggen , hypocriete belangstelling"
 1302	dp [ pp pp advp ]
@@ -177,14 +173,12 @@
 2451    "het dwingen van kinderen om te eten"  PP-mod < VC
 2460    quantitative er (2x)
 2466	DONE dp NP , WHREL
-2470	timeout
 2472	complex name 'Wester en De Groot'
 2476    ?? interaction multiple App/Mod?
 2485    coordination without? shared? modifiers
 2496	coordination RNR
 2503	"een heren- en een dameslokaal waarin.." relative ought to be attached to both conjuncts
 2537    ungrammatical (missing su/verb agreement)
-2540	timeout
 2544	extraposition of NP conjunct to the right of extraposed PP
 2551	error 'een verkeerde image'
 2552	[geen N meer PP]
@@ -209,7 +203,6 @@
 2941	"op X na die ..."
 2947	'en dat is, dat ik ...'
 2948	ad matai, hoe lang?
-2952	timeout (tagger misses NIET as crd)
 2963	grammatical error? "een manifestatie die elk wat wils te bieden heeft"
 2971	complex name 'Literaire verkenningen'
 2973	complex name 'Een aanmerkelijke luchtreis'
@@ -220,7 +213,6 @@
 3010	timeout
 3015	gapping
 3021	XP en XP en XP ==> treebank: '[[XP en XP] en XP]'
-3025	timeout
 3028	spelling error "of" -> "op"
 3029	coordination of PPs without crd
 3032	dp
@@ -261,7 +253,6 @@
 3457	timeout
 3477	coord 'het is 1881 en 13 jaar geleden dat ...'
 3484	modified second conjunct 'kon (en volgens haarzelf moest)'
-3502	tagger: gewond is a verb here
 3506	gapping
 3508	double topic
 3508	"om en langs hen heen"
@@ -291,7 +282,6 @@
 3714	dp "schande dan toch dat ..."
 3730	gapping
 3735	dp
-3738	timeout
 3758	coordination of unlike cats
 3762	modifier of PN inside APP
 3771	dp ROOT , onder meer:
@@ -456,7 +446,6 @@
 5317	timeout
 5318	"te beginnen met" modifier
 5328	complex name "De Waanzinnige , bezeten van het militaire commando"
-5330	timeout
 5355	scope of modifiers "eerst" in coordination
 5370	bracketed modifier of weak pronoun "nu je (Goedhart) uit de ..."
 5378	modifier in front of first conjnct 'niet in uniform en zonder raadsman'
@@ -549,7 +538,6 @@
 6405	[[NP en NP] PP]
 6421	extraposed relative < right pc complement
 6424	obj1 < obj2[dative inflection]
-6440	timeout
 6441	right node raising "tussen de 12 1/2 en 30 duizend gulden"
 6448	complex name
 6449    extraposed AP modifier of NP over SVP
@@ -611,16 +599,34 @@
 7120	grammatical error "drie van de grootst* bouwondernemingen"
 7122	subject extraposition
 7135	dp "waarop Ton Vissers"
-113 	AFGELOPEN
-536	?
 2028	guides
 1979	obcomp shared by both "te"
 2637	tagger "hetzelfde"
 3446	guides
-3048	tagger: "alleen al" modal-adv
-3192	"het woord politiek"
 3278	tagger: met name adv or modal_adv
 4351	guides: bracketed mod after PP mod
 7086    [pn mod:[pn mod:[pn]]]
 51	[pn mod:[pn mod:[pn]]]
-938	timeout after 100%
+375
+639
+240
+1355
+1329
+1501
+1509
+1724
+2774
+2790
+2250
+3229
+3168
+4130
+4987
+4988
+4989
+4338
+4697
+5132
+6011
+6725
+6513
