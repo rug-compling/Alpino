@@ -827,7 +827,6 @@ start_hook(parse,_,o(_,Sentence,_),Sentence):-
     ),
     ensure_grammar_compiled,
     check_flags,
-    adapt_guides_flag(Sentence),
     try_hook(alpino_start_hook(Key,Sentence)),
     (   Th == xml
     ->  check_unannotated(Key)
@@ -1749,22 +1748,6 @@ named_sentences :-
     ;   true
     ).
 
-
-%% use_guides_n=undefined by default
-adapt_guides_flag(Sentence) :-
-    hdrug_flag(use_guides_n,N),
-    (   N == undefined
-    ->  true % don't change anything
-    ;   integer(N),
-        N > 0
-    ->  length(Sentence,Len),
-        (   Len > N
-        ->  set_flag(use_guides,on)
-        ;   set_flag(use_guides,off)
-        )
-    ;   set_flag(use_guides,off)
-    ).
-        
 hdrug_command(gt,generate_from_treebank(FileXml),[File]) :-
     set_flag(current_ref,File),
     treebank_directory(Dir),
