@@ -126,14 +126,20 @@ nv_member_([El|_],El).
 nv_member_([_|Tail],El) :-
     nv_member(El,Tail).
 
+dt_to_relations_simple(DT,Triples) :-
+    alpino_dt:dt_to_relations_with_somewhat_simplified_postags(DT,Triples).
+
+dt_to_relations_full(DT,Triples) :-
+    alpino_dt:dt_to_relations_with_full_postags(DT,Triples).
+
 deprel_features(DT,H0,H) :-
-    (   alpino_dt:dt_to_relations_with_somewhat_simplified_postags(DT,[Tr|Triples])
+    (   dt_to_relations_simple(DT,[Tr|Triples])
     ->  findall(Fea,triples_to_feature([Tr|Triples],Fea),His0),
 	integrate_corpus_frequency_features(His0,His),
 	append(His,H1,H0)
     ;   H0=H1
     ),
-    (   alpino_dt:dt_to_relations_with_full_postags(DT,[Tr1|Triples1])
+    (   dt_to_relations_full(DT,[Tr1|Triples1])
     ->  findall(Fea,full_triples_to_feature([Tr1|Triples1],Fea),H1,H2)
     ;   H1 = H2
     ),
