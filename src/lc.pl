@@ -1370,6 +1370,21 @@ init_check_crd :-
     ;   set_thread_flag(lc_crd_z_exists,off)
     ).
 
+fail_connect_rule(vp_mod_v_en_mod) :-
+    thread_flag(lc_crd_exists,off).
+
+fail_connect_rule(vp_mod_v_en_np) :-
+    thread_flag(lc_crd_exists,off).
+
+fail_connect_rule(vp_pred_v_en_pred) :-
+    thread_flag(lc_crd_exists,off).
+
+fail_connect_rule(vp_pp_v_en_pp) :-
+    thread_flag(lc_crd_exists,off).
+
+fail_connect_rule(np_np_adv_non) :-
+    thread_flag(lc_crd_exists,off).
+
 fail_connect_rule(start_coord(CAT,en)) :-
     coord_requires_conj(CAT),
     thread_flag(lc_crd_exists,off).
@@ -1391,6 +1406,10 @@ fail_connect_rule(start_coord(CAT,zowel_als)) :-
     coord_requires_conj_or_etc(CAT),
     thread_flag(lc_crd_r_exists,off).
 
+fail_connect_rule(start_coord(root_niet,maar)):-
+    thread_flag(lc_crd_r_exists,off).
+fail_connect_rule(start_coord(root_niet_root,maar)):-
+    thread_flag(lc_crd_r_exists,off).
 fail_connect_rule(zowel_swap(_)) :-
     thread_flag(lc_crd_r_exists,off).
 fail_connect_rule(zowel_swap(_,_)) :-
@@ -1399,8 +1418,9 @@ fail_connect_rule(within_word_conjunction(zowel_als_np)) :-
     thread_flag(lc_crd_r_exists,off).
 fail_connect_rule(within_word_conjunction(zowel_als_pp)) :-
     thread_flag(lc_crd_r_exists,off).
-
 fail_connect_rule(start_coord(_,root,en)) :-
+    thread_flag(lc_crd_exists,off).
+fail_connect_rule(start_coord(dip,np,en)) :-
     thread_flag(lc_crd_exists,off).
 fail_connect_rule(van_en) :-
     thread_flag(lc_crd_exists,off).
@@ -1411,11 +1431,15 @@ fail_connect_rule(within_word_conjunction(en_np)) :-
 
 
 
+coord_requires_conj(np_np_pp).
+coord_requires_conj(np_np_rel).
+coord_requires_conj(zowel_np_np_pp).
 coord_requires_conj(within_word_conjunction(Name)) :-
     coord_requires_conj(Name).
 coord_requires_conj(quest_short).
 coord_requires_conj(root_imp).
 coord_requires_conj(root_imparative).
+coord_requires_conj(sv1_imparative).
 coord_requires_conj(root_modifier).
 coord_requires_conj(topic_drop_root).
 coord_requires_conj(v).
