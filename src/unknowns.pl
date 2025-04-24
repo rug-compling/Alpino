@@ -4355,7 +4355,7 @@ open_class_tag(dir_adverb).
 open_class_tag(tmp_adverb).
 open_class_tag(loc_adverb).
 open_class_tag(adjective(X)) :- \+ X = prefix, \+ X = meer.
-open_class_tag(adjective(_,_)).
+open_class_tag(adjective(X,Y)) :- \+ X = prefix, \+ X = meer, \+ Y = fixed(_).
 open_class_tag(nominalized_adjective).
 open_class_tag(nominalized_adjective_sg).
 open_class_tag(ge_nominalized_adjective).
