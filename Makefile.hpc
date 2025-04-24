@@ -1,7 +1,7 @@
 DISK=/dev/shm
 MAKEFLAGS=--no-print-directory
 
-QPROLOGMAXSIZE=15000
+QPROLOGMAXSIZE=12000
 
 jobname=$(shell echo $(suite)|sed -e 's/nlcow_part/nlc/'\
                                   -e 's/part//'\
