@@ -191,6 +191,9 @@ no_memo(Cat) :-
     Cat => num_na.
 
 no_memo(Cat) :-
+    Cat => np_seq.
+
+no_memo(Cat) :-
     Cat => op_comp.
 
 no_memo(Cat) :-
@@ -204,6 +207,9 @@ no_memo(Cat) :-
 
 no_memo(Cat) :-
     Cat => post_adv_adv.
+
+no_memo(Cat) :-
+    Cat => post_loc_adv_adv.
 
 no_memo(Cat) :-
     Cat => post_n_n.
@@ -236,6 +242,9 @@ no_memo(Cat) :-
     Cat => predm_adv.
 
 no_memo(Cat) :-
+    Cat => predm_adv_num.
+
+no_memo(Cat) :-
     Cat => pron.
 
 no_memo(Cat) :-
@@ -246,6 +255,9 @@ no_memo(Cat) :-
 
 no_memo(Cat) :-
     Cat => rootbar.
+
+no_memo(Cat) :-
+    Cat => start_seq.
 
 no_memo(Cat) :-
     Cat => tag.
@@ -327,7 +339,8 @@ weaken_link_cat(A,B) :-
     A:enzlast <=> B:enzlast,
     A:etc <=> B:etc,
     A:last <=> B:last,
-    A:left_conj <=> B:left_conj.
+    A:left_conj <=> B:left_conj,
+    A:within_word <=> B:within_word.
 
 weaken_link_cat(A,B) :-
     A => comp,
@@ -355,6 +368,10 @@ weaken_link_cat(A,B) :-
     B => conj,
     A:cform <=> B:cform,
     A:left_conj <=> B:left_conj.
+
+weaken_link_cat(A,B) :-
+    A => denk_ik,
+    B => denk_ik.
 
 weaken_link_cat(A,B) :-
     A => det,
@@ -391,8 +408,12 @@ weaken_link_cat(A,B) :-
 
 weaken_link_cat(A,B) :-
     A => max,
-    B => max,
-    A:puncttype <=> B:puncttype.
+    B => max.
+
+weaken_link_cat(A,B) :-
+    A => modal_adv,
+    B => modal_adv,
+    A:modal_adv_arg <=> B:modal_adv_arg.
 
 weaken_link_cat(A,B) :-
     A => modifier,
@@ -411,8 +432,11 @@ weaken_link_cat(A,B) :-
 
 weaken_link_cat(A,B) :-
     A => np,
-    B => np,
-    A:prs <=> B:prs.
+    B => np.
+
+weaken_link_cat(A,B) :-
+    A => np_seq,
+    B => np_seq.
 
 weaken_link_cat(A,B) :-
     A => num,
@@ -451,6 +475,10 @@ weaken_link_cat(A,B) :-
     B => post_adv_adv.
 
 weaken_link_cat(A,B) :-
+    A => post_loc_adv_adv,
+    B => post_loc_adv_adv.
+
+weaken_link_cat(A,B) :-
     A => post_n_adv,
     B => post_n_adv,
     A:cj <=> B:cj.
@@ -473,6 +501,14 @@ weaken_link_cat(A,B) :-
     B => post_p_adv.
 
 weaken_link_cat(A,B) :-
+    A => post_pn_adv,
+    B => post_pn_adv.
+
+weaken_link_cat(A,B) :-
+    A => post_pp,
+    B => post_pp.
+
+weaken_link_cat(A,B) :-
     A => post_wh_adv,
     B => post_wh_adv.
 
@@ -487,7 +523,8 @@ weaken_link_cat(A,B) :-
 
 weaken_link_cat(A,B) :-
     A => predm_adv,
-    B => predm_adv.
+    B => predm_adv,
+    A:eenmaal <=> B:eenmaal.
 
 weaken_link_cat(A,B) :-
     A => punct,
@@ -528,24 +565,27 @@ weaken_link_cat(A,B) :-
     B => start.
 
 weaken_link_cat(A,B) :-
+    A => start_seq,
+    B => start_seq.
+
+weaken_link_cat(A,B) :-
     A => sv1,
     B => sv1,
     A:cj <=> B:cj,
     A:iexs <=> B:iexs,
     A:imexs <=> B:imexs,
     A:slash <=> B:slash,
-    A:sv1_mod <=> B:sv1_mod,
-    A:tags <=> B:tags.
+    A:sv1_mod <=> B:sv1_mod.
 
 weaken_link_cat(A,B) :-
     A => tag,
     B => tag,
-    A:adv <=> B:adv.
+    A:adv <=> B:adv,
+    A:np <=> B:np.
 
 weaken_link_cat(A,B) :-
     A => tmp_app_n,
-    B => tmp_app_n,
-    A:agr <=> B:agr.
+    B => tmp_app_n.
 
 weaken_link_cat(A,B) :-
     A => top_cat,
@@ -586,6 +626,7 @@ weaken_link_cat(A,B) :-
     A:subj <=> B:subj,
     A:tags <=> B:tags,
     A:vslash <=> B:vslash.
+
 weaken_link_cat(A,B) :-
     A => v_noun,
     B => v_noun,
@@ -624,8 +665,6 @@ weaken_link_cat(A,B) :-
     A:cj <=> B:cj,
     A:cleft <=> B:cleft,
     A:e_deps <=> B:e_deps,
-    A:eps1 <=> B:eps1,
-    A:eps2 <=> B:eps2,
     A:eps3 <=> B:eps3,
     A:exs <=> B:exs,
     A:hebben_zijn <=> B:hebben_zijn,
@@ -652,7 +691,6 @@ weaken_link_cat(A,B) :-
 weaken_link_cat(A,B) :-
     A => vp,
     B => vp,
-    A:cj <=> B:cj,
     A:cleft <=> B:cleft,
     A:ctype <=> B:ctype,
     A:e_deps <=> B:e_deps,
