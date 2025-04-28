@@ -11863,6 +11863,7 @@ grammar_rule(within_word_conjunction(zowel_als_pp),PP,
              [ConjL,Prep,DET,WWCN,Clist]) :-
     zowel_als_start_structure(np,MOTHER,CrdType,ConjL,DEVOOR,Clist),
     CrdType => two_crd,
+    Clist:etc => no,
     MOTHER:cj <=> CrdType,
     WWCN => within_word_conjunct,
     unify_dt(WWCN,N),
@@ -12289,7 +12290,7 @@ nonfinal_coord_daughter(within_word_conjunction(Name),
     Cat => within_word_conjunct,
     allows_within_word_conjunction(Name),
     final_coord_daughter(Name,LexCat,Mother,Type,Mods,ETC),
-    Type => ~no_crd, % wrong for: 'mijn aller- , allerbeste vriend'
+    Type => ~no_crd,	% wrong for: 'mijn aller- , allerbeste vriend'
     Cat:dt <=> LexCat:dt,
     Cat:ccat0   <=> Mother:ccat0,
     Cat:ccat    <=> Mother:ccat,
