@@ -4,7 +4,11 @@ import sys
 
 def main():
     for line in sys.stdin:
-        (w,t,k,i,j,h,p,r,c,s) = line.rstrip().split("|")
+        try:
+            (w,t,k,i,j,h,p,r,c,s) = line.rstrip().split("|")
+        except ValueError:
+            print("warning: cannot parse line: {}".format(line),file=sys.stderr)
+            continue
         if r == "verspreiden"  and t == "adjective(er(adv))":
             t = "adjective(er(both))"
         if r == "verspreiden"  and t == "adjective(ge_no_e(adv))":
@@ -68,6 +72,10 @@ def main():
         if r == "eens nog" and t == "with_dt(modal_adverb(noun),dt(advp,[mod=l(nog,adverb,advp,0,1),hd=l(eens,adverb,advp,1,2)]))":
             r = "nog eens"
             t = "with_dt(modal_adverb(noun),dt(advp,[hd=l(nog,adverb,advp,0,1),mod=l(eens,adverb,advp,1,2)]))"
+        if r == "gefrustreerd" and t == "adjective(ge_no_e(adv))":
+            t = "adjective(ge_no_e(padv))"
+        if r == "gefrustreerd" and t == "adjective(er(adv))":
+            t = "adjective(er(padv))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
