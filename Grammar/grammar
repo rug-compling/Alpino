@@ -190,8 +190,8 @@ no_memo(Cat) :-
 no_memo(Cat) :-
     Cat => num_na.
 
-no_memo(Cat) :-
-    Cat => np_seq.
+%no_memo(Cat) :-
+%    Cat => np_seq.
 
 no_memo(Cat) :-
     Cat => op_comp.
@@ -256,8 +256,8 @@ no_memo(Cat) :-
 no_memo(Cat) :-
     Cat => rootbar.
 
-no_memo(Cat) :-
-    Cat => start_seq.
+%no_memo(Cat) :-
+%    Cat => start_seq.
 
 no_memo(Cat) :-
     Cat => tag.
