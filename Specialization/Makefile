@@ -108,76 +108,79 @@ MORE=$(basename $(basename $(notdir $(wildcard ../Suites/Machine/$(PATTERN)*.sen
 mores:
 	$(MAKE) $(MORE:%=%.log.gz)
 
+
+ANNOTATED_OPTIONS=extra="-slow stop_if_optimal=on end_hook=best_score\(left_corners\) max_sentence_length=25 after_timeout_options=off user_max=360000"
+
 alpino: cdb cgn_exs eans extra g_suite h_suite i_suite j_suite lassy-doc\
         leuven_yellow_pages lot_test_suite1 novelsample_corrected ntv-suite qa Titaantjes wpspel
 
 lassysmall:
 	$(MAKE) mores PATTERN=lassysmall\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/LassySmall"
 
 cdb:
 	$(MAKE) mores PATTERN=cdb\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/cdb end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/cdb"
 
 cgn_exs:
 	$(MAKE) mores PATTERN=cgn_exs\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/cgn_exs end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/cgn_exs"
 
 eans:
 	$(MAKE) mores PATTERN=eans\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/eans end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/eans"
 
 extra:
 	$(MAKE) mores PATTERN=extra_\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/extra end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/extra"
 
 g_suite:
 	$(MAKE) mores PATTERN=g_suite\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/g_suite end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/g_suite"
 
 h_suite:
 	$(MAKE) mores PATTERN=h_suite\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/h_suite end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/h_suite"
 
 j_suite:
 	$(MAKE) mores PATTERN=j_suite\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/j_suite end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/j_suite"
 
 i_suite:
 	$(MAKE) mores PATTERN=i_suite\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/i_suite end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/i_suite"
 
 lassy-doc:
 	$(MAKE) mores PATTERN=lassy-doc\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/lassy-doc end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/lassy-doc"
 
 leuven_yellow_pages:
 	$(MAKE) mores PATTERN=leuven_yellow_pages\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/leuven_yellow_pages end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/leuven_yellow_pages"
 
 lot_test_suite1:
 	$(MAKE) mores PATTERN=lot_test_suite1\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/lot_test_suite1 end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/lot_test_suite1"
 
 novelsample_corrected:
 	$(MAKE) mores PATTERN=novelsample_corrected\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/novelsample_corrected end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/novelsample_corrected"
 
 ntv-suite:
 	$(MAKE) mores PATTERN=ntv-suite\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/ntv-suite end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/ntv-suite"
 
 qa:
 	$(MAKE) mores PATTERN=qa\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/qa end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/qa"
 
 Titaantjes:
 	$(MAKE) mores PATTERN=Titaantjes\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/Titaantjes end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/Titaantjes"
 
 wpspel:
 	$(MAKE) mores PATTERN=wpspel\
-        extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/wpspel end_hook=best_score\(left_corners\) max_sentence_length=25"
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/wpspel"
 
 
 #### random subset of SoNaR:
