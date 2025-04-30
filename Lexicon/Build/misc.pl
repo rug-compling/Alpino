@@ -4972,6 +4972,7 @@ m('en suite',       postnp_adverb,[en,suite]).  % kamer e.d.
 m('en suites',      postnp_adverb,[en,suites]). % kamers e.d.
 
 m('ad interim',     postnp_adverb,[ad,interim]).
+m('ad valorem',     postnp_adverb,[ad,valorem]).
 m('in spe',         postnp_adverb,[in,spe]).
 
 m('at large',       postnp_adverb,[at,large]).
@@ -5051,6 +5052,7 @@ modified_modal_hd_mod(zo,ongeveer).
 modified_modal_hd_mod(vooral,niet).
 modified_modal_hd_mod(vooral,ook).
 modified_modal_hd_mod(alleen,maar).
+modified_modal_hd_mod(nog,maar).
 
 modified_modal_hd_mod_noun_prep(misschien,wel).
 
@@ -6527,6 +6529,12 @@ with_dt([eens,zo],
         dt(advp,[hd=l(zo,intensifier,1,2),
                  me=l(eens,adverb,advp,0,1)
                 ])).
+
+with_dt([eens,zoveel],
+	number(hoofd(both)),
+	dt(detp,[me=l(eens,adverb,advp,0,1),
+		 hd=l(zoveel,number(hoofd(both)),detp,2,1)
+		])).
 
 m(zo,               als_me_intensifier,zo).  % drie keer zo hard als ik
 

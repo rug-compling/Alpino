@@ -12972,6 +12972,7 @@ v(laat,laat,laten,gelaten,liet,lieten,
 	so_pp_np,		% ik laat het aan hem
 	vp_obj,		        % hij kan het niet laten om haar te plagen
         part_np_vp_obj(toe),    % PPI 03.p.1.s.4
+	part_vp_obj(toe),       % het is toegelaten om ..
 	part_np_np(toe),        % we laten het hem niet toe...
 	transitive_ndev_ndev_npas,	% laat dat !
         intransitive,           % laat maar ...
@@ -22085,10 +22086,11 @@ v(staar,staart,staren,gestaard,staarde,staarden,
         part_pc_pp_refl(uit,voor),
 	part_refl(blind),
 	part_refl_pc_pp(blind,op),
-        fixed([[blind],refl],no_passive),
-        fixed([{[[blind],pc(op)]},refl],no_passive),
+        fixed([ap_pred(blind),refl],no_passive),
+        fixed([{[ap_pred(blind),pc(op)]},refl],no_passive),
 				% not always particle, word order:
 				% dat ik me me daar blind op staar
+	                        % predc: je moet je niet *te* blind staren daarop
 	part_np_pc_pp(aan,met)])]).
 
 v(stabiliseer,stabiliseert,stabiliseren,gestabiliseerd,stabiliseerde,stabiliseerden,
@@ -23968,6 +23970,7 @@ v(trek,trekt,trekken,getrokken,trok,trokken,
 	part_transitive(om),
 	part_transitive(op),
 	part_transitive(open),
+	part_transitive(over),
 	part_transitive(recht),
 	part_transitive(samen),
 	part_transitive(terug),

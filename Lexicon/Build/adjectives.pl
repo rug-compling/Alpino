@@ -11966,7 +11966,7 @@ a([ge_e(gefrustreerde),
    ere(gefrustreerdere),
    ge_no_e(gefrustreerd),
    st(gefrustreerdst),
-   ste(gefrustreerdste)],adv,
+   ste(gefrustreerdste)],padv,
   [pp(door)],[]).
 
 a([ge_no_e(gefunctioneerd),
@@ -23732,6 +23732,8 @@ a([stem(neven_staan),
    end(nevenstaand)],nonadv,[],[]).
 
 a([both(nice)],nonadv,[],[]).
+
+a([prefix(niche)],nonadv,[],[]).
 
 a([e(nietige),
    er(nietiger),

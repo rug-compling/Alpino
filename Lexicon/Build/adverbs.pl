@@ -24,6 +24,12 @@ m('aller_eerst',adverb,allereerst).
 
 m(dood_leuk,adverb,doodleuk).
 
+m('zegge en schrijve', adverb,[zegge,en,schrijve]).
+m('zegge en schrijve', adverb,[zegge,en,schrijven]).
+m('zegge en schrijve', adverb,[zeggen,en,schrijve]).
+m('zegge en schrijve', adverb,[zeggen,en,schrijven]).
+
+
 adverb([geen,bal]).
 adverb([geen,barst]).
 adverb([geen,biet]).
@@ -569,7 +575,7 @@ adverb(wonderwel).
 adverb(zeer).
 adverb(zeg).
 adverb([zeg,maar]).         
-adverb([zeg,maar,gerust]).  
+adverb([zeg,maar,gerust]).
 adverb(zelfs).
 adverb(zienderogen).
 adverb([zonder,meer]).

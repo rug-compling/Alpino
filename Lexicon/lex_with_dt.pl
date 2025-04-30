@@ -1492,6 +1492,7 @@ with_dt_all(een,[stelletje]).
 with_dt_all(eens,[temeer]).
 with_dt_all(eens,['te veel']).
 with_dt_all(eens,[zo]).
+with_dt_all(eens,[zoveel]).
 with_dt_all(een,[welk]).
 with_dt_all(eerder,[gisteravond]).
 with_dt_all(eerder,[gisteren]).
@@ -1927,6 +1928,7 @@ with_dt_all(lijk,[me]).
 with_dt_all(lijk,[mij]).
 with_dt_all(linkerzijde,[te]).
 with_dt_all(maak,[onbekend,onbemind]).
+with_dt_all(maar,[nog]).
 with_dt_all(majesteit,[zijn]).
 with_dt_all(mam,[ons]).
 with_dt_all(man,[mijn]).

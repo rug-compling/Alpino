@@ -4575,12 +4575,14 @@ impossible_subcat_infl_combination(adjective(E,Sc)) :-
 impossible_subcat_infl_combination(verb(_,INFL,SC)) :-
     impossible_subcat_infl_combination(SC,INFL).
 
+
 impossible_subcat_infl_combination(aci,psp).
 impossible_subcat_infl_combination(aci_no_obj,psp).
 impossible_subcat_infl_combination(aci_no_obj1,psp).
 impossible_subcat_infl_combination(aci_refl_sbar,psp).
 impossible_subcat_infl_combination(aci_simple,psp).
 impossible_subcat_infl_combination(aux(_),psp).
+impossible_subcat_infl_combination(aux_pc_pp(_,_),psp).
 impossible_subcat_infl_combination(so_aux(_),psp).
 impossible_subcat_infl_combination(aux_modifier(inf),psp).
 impossible_subcat_infl_combination(aux_psp_hebben,psp).

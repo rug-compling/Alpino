@@ -36939,6 +36939,7 @@ n([pl(trappen),sg(trap)],de,[],
    mistrap,
    rol,
    tussen,
+   vis,
    voor,  % voortrap =/= rap_voort
    wentel,
    dim(trappetje),

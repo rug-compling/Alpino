@@ -1309,6 +1309,14 @@ number_expressionXX(pl_num) -->
     n_word(W),
     { duizend(W) }.
 
+%% vier en half miljoen
+number_expressionXX(pl_num) -->
+    number_expression_tien_ne(_),
+    n_word(en),
+    n_word(half),
+    n_word(W),
+    { duizend(W) }.
+
 %% WS-U...
 %% 30-duizend
 number_expressionXX(pl_num) -->
