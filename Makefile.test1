@@ -50,10 +50,12 @@ extra_test1_options=-flag syntax_features cdb/px_weights
 ovistest_test1_options=-flag treebank ../Treebank/ovis
 Titaantjes-silver_test1_options=-flag treebank ../Treebank/Titaantjes
 Titaantjes-orig_test1_options=-flag treebank ../Treebank/Titaantjes
-g_suite_test1_options=filter_infrequent_rules=off
-h_suite_test1_options=filter_infrequent_rules=off
-i_suite_test1_options=filter_infrequent_rules=off
-j_suite_test1_options=filter_infrequent_rules=off
+g_suite_test1_options=
+h_suite_test1_options=
+i_suite_test1_options=
+j_suite_test1_options=
+cgnn_test1_options=-flag treebank ../Treebank/CGN
+cgnv_test1_options=-flag treebank ../Treebank/CGN
 
 job := job${shell echo $$$$}
 
@@ -236,7 +238,7 @@ else
                          END { print M/N }'
 endif
 
-PATTERNS=cdb extra f[nv] novel 
+PATTERNS=cdb extra cgn[nv] novel 
 
 SUITESDIR=.Suites/
 
@@ -330,109 +332,17 @@ compare.mwu: test.mwu $(TREEBANK_MWU)
                     { print $$0; print PREVLINE; }\
                     PREV=$$1; PREVTAG=$$2; PREVLINE=$$0 }'
 
-### STARTING TESTS
+tests:    shorts cdbt
+alltests: shorts cdbt cgnt
 
-tests: ts cdbt cgns lassy-doc.test1 ovistest.test1 Titaantjes.test1
-
-shorts: ts lassy-doc.test1 ovistest.test1 Titaantjes.test1
-
-ts: g_suite.test1 h_suite.test1 i_suite.test1 j_suite.test1 extra.test1\
+shorts: g_suite.test1 h_suite.test1 i_suite.test1 j_suite.test1 extra.test1\
     leuven_yellow_pages.test1 lot_test_suite1.test1 cgn_exs.test1\
     qa.test1 wpspel.test1 novelsample_corrected.test1\
-    eans.test1 m_suite.test1
+    eans.test1 m_suite.test1 lassy-doc.test1 ovistest.test1 Titaantjes.test1
 
 cdbt: cdb_part0.test1 cdb_part1.test1 cdb_part2.test1\
       cdb_part3.test1 cdb_part4.test1 cdb_part5.test1\
       cdb_part6.test1 cdb_part7.test1 cdb_part8.test1\
       cdb_part9.test1
 
-CGNDIR=/net/corpora/CGN-in-alpino-xml
-cgns: cgn1 cgn2 cgn3 cgn4 cgn5 cgn6 cgn7 cgn8 cgn9 cgn10 cgn11 cgn12 cgn13 cgn14 cgn15 cgn16 cgn17 cgn18 cgn19 cgn20 cgn21 cgn22 cgn23 cgn24 cgn25 cgn26 cgn27 cgn28 cgn29 cgn30 cgn31 cgn32 cgn32 cgn33 cgn34 cgn35 cgn36 cgn37 cgn38 cgn39 cgn40 cgn41 cgn42 cgn43
-
-cgn1:
-	make test1 suitepath=$(CGNDIR)/comp-a/nl suite=fn000595 extra="-flag treebank $(CGNDIR)/comp-a/nl/fn000595"
-cgn2:
-	make test1 suitepath=$(CGNDIR)/comp-a/nl suite=fn000276 extra="-flag treebank $(CGNDIR)/comp-a/nl/fn000276"
-cgn3:
-	make test1 suitepath=$(CGNDIR)/comp-a/nl suite=fn000321 extra="-flag treebank $(CGNDIR)/comp-a/nl/fn000321"
-cgn4:
-	make test1 suitepath=$(CGNDIR)/comp-a/nl suite=fn000841 extra="-flag treebank $(CGNDIR)/comp-a/nl/fn000841"
-cgn5:
-	make test1 suitepath=$(CGNDIR)/comp-a/vl suite=fv400067 extra="-flag treebank $(CGNDIR)/comp-a/vl/fv400067"
-cgn6:
-	make test1 suitepath=$(CGNDIR)/comp-a/vl suite=fv400080 extra="-flag treebank $(CGNDIR)/comp-a/vl/fv400080"
-cgn7:
-	make test1 suitepath=$(CGNDIR)/comp-a/vl suite=fv400282 extra="-flag treebank $(CGNDIR)/comp-a/vl/fv400282"
-cgn8:
-	make test1 suitepath=$(CGNDIR)/comp-a/vl suite=fv400388 extra="-flag treebank $(CGNDIR)/comp-a/vl/fv400388"
-cgn9:
-	make test1 suitepath=$(CGNDIR)/comp-c/nl suite=fn008006 extra="-flag treebank $(CGNDIR)/comp-c/nl/fn008006"
-cgn10:
-	make test1 suitepath=$(CGNDIR)/comp-c/nl suite=fn008056 extra="-flag treebank $(CGNDIR)/comp-c/nl/fn008056"
-cgn11:
-	make test1 suitepath=$(CGNDIR)/comp-h/nl suite=fn009132 extra="-flag treebank $(CGNDIR)/comp-h/nl/fn009132"
-cgn12:
-	make test1 suitepath=$(CGNDIR)/comp-h/vl suite=fv400034 extra="-flag treebank $(CGNDIR)/comp-h/vl/fv400034"
-cgn13:
-	make test1 suitepath=$(CGNDIR)/comp-i/nl suite=fn007164 extra="-flag treebank $(CGNDIR)/comp-i/nl/fn007164"
-cgn14:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn001602 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn001602"
-cgn15:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn001604 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn001604"
-cgn16:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn001769 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn001769"
-cgn17:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn001826 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn001826"
-cgn18:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn001949 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn001949"
-cgn19:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn002034 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn002034"
-cgn20:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn002068 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn002068"
-cgn21:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn002157 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn002157"
-cgn22:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn002157 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn002157"
-cgn23:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn002910 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn002910"
-cgn24:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn003374 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn003374"
-cgn25:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn003439 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn003439"
-cgn26:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn003577 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn003577"
-cgn27:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn003972 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn003972"
-cgn28:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn005610 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn005610"
-cgn29:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn005740 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn005740"
-cgn30:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn006104 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn006104"
-cgn31:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn006104 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn006104"
-cgn32:
-	make test1 suitepath=$(CGNDIR)/comp-k/nl suite=fn006639 extra="-flag treebank $(CGNDIR)/comp-k/nl/fn006639"
-cgn33:
-	make test1 suitepath=$(CGNDIR)/comp-k/vl suite=fv600025 extra="-flag treebank $(CGNDIR)/comp-k/vl/fv600025"
-cgn34:
-	make test1 suitepath=$(CGNDIR)/comp-k/vl suite=fv601017 extra="-flag treebank $(CGNDIR)/comp-k/vl/fv601017"
-cgn35:
-	make test1 suitepath=$(CGNDIR)/comp-l/vl suite=fv600529 extra="-flag treebank $(CGNDIR)/comp-l/vl/fv600529"
-cgn36:
-	make test1 suitepath=$(CGNDIR)/comp-m/nl suite=fn000298 extra="-flag treebank $(CGNDIR)/comp-m/nl/fn000298"
-cgn37:
-	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv800085 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv800085"
-cgn38:
-	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv800095 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv800095"
-cgn39:
-	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv800195 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv800195"
-cgn40:
-	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv800585 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv800585"
-cgn41:
-	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv800975 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv800975"
-cgn42:
-	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv801065 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv801065"
-cgn43:
-	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv801195 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv801195"
-
+cgnt: cgnn.test1 cgnv.test1
