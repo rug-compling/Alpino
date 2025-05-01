@@ -3133,7 +3133,9 @@ n([pl(artsen),sg(arts)],de,[],
    vee,
    s(verzekering)]).
 
-n([pl(assen),sg(as)],de,[],[aandrijf]).
+n([pl(assen),sg(as)],de,[],
+  [aandrijf,
+   boven]).
 
 %% het as:
 %% https://www.neerlandistiek.nl/2018/10/het-as/
@@ -15494,6 +15496,8 @@ n([pl(hobbels),sg(hobbel)],de,[]).
 
 n([pl('hobby\'s'),sg(hobby)],de,[]).
 
+n([sg(hobo),pl('hobo\'s')],de,[]).
+
 n([mass(hockey)],both,[],
   [ijs,
    zaal]).
@@ -15804,6 +15808,7 @@ n([mass(hoon)],de,[]).
 
 n([mass(hoop)],de,
   [sbar,
+   pred_pp(in),                 % in de hoop op ...
    pred_pp(in,sbar),            % hij verkeerde in de hoop ...
    pred_pp(in,vp),              % hij verkeerde in de hoop ...
    pred_pp(in,subject_sbar),    % het was in de hoop ... dat ..
@@ -18330,6 +18335,8 @@ n([pl(kevers),sg(kever)],de,[],
    i(water_roof,waterroof),
    i(week_schild,weekschild),
    dim(kevertje)]).
+
+n([sg(keyboard),pl(keyboards)],de,[]).
 
 n([pl(khans),sg(khan)],de,[]).
 
@@ -23308,6 +23315,7 @@ n([pl(molens),sg(molen)],de,[np_app_measure],
   [beton,
    draai,
    koren,
+   polder,
    dim(molentje),
    water,
    wind]).
@@ -27057,6 +27065,8 @@ n([mass(patologie)],de,[]).
 n([mass(patos)],het,[]).
 
 n([pl(patriarchen),sg(patriarch)],de,[]).
+
+n([sg(patriarchaat),pl(patriarchaten)],het,[]).
 
 n([pl(patrijzen),sg(patrijs)],de,[]).
 
@@ -33562,6 +33572,7 @@ n([pl(spelers),sg(speler)],de,[],
    toneel,
    top,
    voor,
+   waterpolo,
    wit,
    zwart]).
 
@@ -36893,6 +36904,8 @@ n([pl(transacties),pl(transactiën),sg(transactie),
    pl(transakties),pl(transaktiën),sg(transaktie)],de,[sbar,vp]).
 
 n([mass(transcendentie)],de,[]).
+
+n([sg(transcriptie),pl(transcripties)],de,[]).
 
 n([pl(transfers),sg(transfer)],both,[]).
 
@@ -41888,6 +41901,7 @@ n([pl(wieken),sg(wiek)],de,[]).
 
 n([pl(wielen),sg(wiel)],het,[],
   [achter,
+   boven,
    muis,
    voor,
    dim(wieltje)]).
