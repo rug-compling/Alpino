@@ -37404,7 +37404,7 @@ a([e(verwoede),
    ste(verwoedste)],adv,[],[]).
 
 a([ge_e(verwoeste),
-   ge_no_e(verwoest)],adv,[],[]).
+   ge_no_e(verwoest)],padv,[],[]).
 
 a([ende(verwoestende),
    er(verwoestender),

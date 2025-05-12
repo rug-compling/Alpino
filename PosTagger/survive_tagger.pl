@@ -148,8 +148,8 @@ surviving_root_tag(_,_):-
 surviving_root_tag(terecht,adjective(_)).
 surviving_root_tag(terecht,adjective(_,_)).
 
-surviving_root_tag(aan,particle(aan)) :-
-    alpino_lexical_analysis:tag(_,_,_,_,v_root(kondig_aan,aan_kondigen),_,_,_).
+%surviving_root_tag(aan,particle(aan)) :-
+%    alpino_lexical_analysis:tag(_,_,_,_,v_root(kondig_aan,aan_kondigen),_,_,_).
 
 %% temp, confusion with tag, changed analysis
 surviving_root_tag(inderdaad,sentence_adverb).
@@ -172,11 +172,13 @@ surviving_root_tag(of,complenetizer(of)).
 surviving_tag(_):-
     fail.
 
-surviving_tag(reflexive(_,_)).
+%% surviving_tag(reflexive(_,_)).
+%% are now mapped to generic frame in tr_tag
 
 %% If there is no suitable verb (adjective), they will be removed anyway.
 surviving_tag(fixed_part(_)).
-surviving_tag(particle(_)).
+
+% surviving_tag(particle(_)).
 
 surviving_tag(preposition(_,_,me_adj)).
 

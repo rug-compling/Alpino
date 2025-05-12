@@ -35,9 +35,6 @@ t(verb(_,B0,C0),            verb(B,C)) :-
     ),
     t_subcat(C0,C).
 
-%% adv_tag no longer exists
-t(adv_tag,tag).
-
 t(adj_number(enkele),adjective(e)).
 
 t(name_determiner(X),  determiner(X)).
@@ -153,9 +150,8 @@ t(het_noun,determiner(het,nwh,nmod,pro,nparg,wkpro)).
 % treat special 'wat' as wh-pronoun 'wat'
 t(wh_cleft_het_noun,pronoun(ywh,thi,sg,het,both,indef,nparg)).
 
-%% keep form only for potential hdf-postpositions
-%% probably these ought to be their own tags,
-%% because quite different distribution
+%% fixed_parts survive anyway. Keep contexts simpler.
+t(fixed_part(_),fixed_part).
 
 t(particle(Form), Tag ) :-
     (   lists:member(Form,

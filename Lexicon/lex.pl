@@ -1482,6 +1482,7 @@ gerund_frame_map(ld_pp,                ld_pp       ).
 gerund_frame_map(np_ld_pp,             np_ld_pp       ).
 gerund_frame_map(refl_ld_pp,           refl_ld_pp ).
 gerund_frame_map(refl_pc_pp(Prep),     refl_pp(Prep) ).
+gerund_frame_map(np_pc_pp(Prep),       np_pc_pp(Prep) ).
 gerund_frame_map(refl_sbar,            refl_sbar).
 gerund_frame_map(er_pp_sbar(Prep),     er_pp_sbar(Prep)).
 gerund_frame_map(er_pp_sbar_dip(Prep), er_pp_sbar_dip(Prep)).

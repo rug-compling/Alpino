@@ -4400,6 +4400,19 @@ grammar_rule(xp_modal_xp(sbar),X,[Adv,OPTCOMMA,Y]):-
     optcomma(OPTCOMMA),
     xp_modal_xp_structure(Y,Adv,X).
 
+%%EX%% Ik aarzel vooral wat het tijdstip betreft
+%%EX%% De fondsen moeten doeltreffender worden met name wat werkgelegenheid betreft
+%%EX%% De regeling werkt slecht , met name waar deze neerkomt op permanente vrijstelling
+grammar_rule(redrel_modal_redrel,X,[ADV,OPTCOMMA,Y]):-
+    X => modifier,
+    X:mcat => mcat_redrel,
+    X:cj <=> Y:cj,
+    Y => modifier,
+    Y:mcat => mcat_redrel,
+    X:eps <=> Y:eps,
+    optcomma(OPTCOMMA),
+    xp_modal_xp_structure(Y,ADV,X).
+
 %%EX%% Diep in blessuretijd
 grammar_rule(xp_modal_xp(prep),X,[Adv,Y]):-
     X => p,
@@ -5265,7 +5278,9 @@ grammar_rule(n_n_pntag,NP,[N,Tag]) :-
 %%EX%% Het ING TopRentePlus programma
 %%EX%% de nieuwe ING drie procent lening
 grammar_rule(n_pn_n, NP1, [ PN, N ]) :-
-   
+    n_pn_n_struct(NP1,PN,N).
+
+n_pn_n_struct(NP1,PN,N) :-   
     NP => n, N => n, PN => pn,
     overwrite(NP,NP1,lex,yes),
     NP:nform => ~meas_mod & ~temp & ~temp_meas_mod,
@@ -5280,6 +5295,11 @@ grammar_rule(n_pn_n, NP1, [ PN, N ]) :-
     N:subn => ~sub_def_verb & ~sub_indef_verb & ~sub_name & ~sub_num,
     N:cj => ncj,
     hd_mod_structure(N,PN,NP).
+
+%%EX%% de Yad Vashem - onderscheiding
+grammar_rule(n_pn_dash_n, NP1, [ PN, PUNCT, N]) :-
+    dash(PUNCT),
+    n_pn_n_struct(NP1,PN,N).
 
 %%EX%% het ICCE kampioenschap schaken
 grammar_rule(app_n_pn_app_n, NP, [ PN, N ]) :-
@@ -6031,13 +6051,14 @@ grammar_rule(np_np_adv_non,Np,[Np0,Clist,Adv]) :-
 %%EX%% de afspraken deze week
 %%EX%% voorjaar 1992 kregen we de sleutel
 %%EX%% Honderd doden elk jaar
+%%EX%% De Olympische Winterspelen twee jaar geleden verliepen dramatisch
 grammar_rule(np_np_tmp,Np,[Np1,Adv]) :-
     Adv => adv,
     Adv:tmploc => (tmp;tmp_n;ld_dir),
     Adv:wh => nwh,
     Adv:wk => no,
     Np1:nform => (temp;norm),
-    Np1:subn => (sub_noun;sub_def_verb;sub_tmp;sub_adj_pl),
+    Np1:subn => (sub_noun;sub_def_verb;sub_tmp;sub_adj_pl;sub_name),
     Adv:agr => ~pl,     % try to limit type of temporal NP's that occur here
     %%% TODO: begin/eind jaren tachtig
     n_post_mod_structure(Np1,Adv,Np).
@@ -6253,6 +6274,15 @@ grammar_rule(n_n_modroot(comma), N, [ N0, Cl, ROOT, Cr ]) :-
     comma(Cl),comma(Cr),
     max_root(ROOT),
     n_post_mod_structure(N0,ROOT,N).
+
+%%EX%% De schilderijen , te zien in Amersfoort , worden streng bewaakt
+grammar_rule(n_n_mod_te_v, N, [ N0, Cl, ADJ, Cr ]) :-
+    comma(Cl),comma(Cr),
+    max_ap(ADJ0),
+    unify_except(ADJ0,ADJ,deverbal),
+    ADJ:deverbal => yes,
+    ADJ:avform => avform_aan_ti,
+    n_post_mod_structure(N0,ADJ,N).
 
 %% motivated by
 %% WR-P-P-H-0000000013.p.1.s.4
@@ -6697,6 +6727,19 @@ grammar_rule(a_a_pp_comp, AP, [ A, PP ]) :-
                            % Nov 16 2010
     AP:modifies_a => no,   % not with rightward complements/modifiers?
     hd_extra_structure(A,PP,AP).
+
+%% if deverbal, then PP not on extra but on subcat
+%%EX%% Rekening houdend met jouw bezwaren hebben we de volgende oplossing bedacht .
+grammar_rule(a_a_pp_comp_subcat, AP, [ A, PP ]) :-
+    AP => a, A => a, PP => pp,
+    A:hasextra => no,
+    A:aform => nattr,
+    A:avform => avform_ppres,
+    PP:wh => nwh,
+    PP:sel => to_right,
+    PP:slash => [],
+    AP:modifies_a => no,   % not with rightward complements/modifiers?
+    hd_comp_structure(A,PP,AP).
 
 %%EX%% Ze zijn daar wel afkerig van
 grammar_rule(a_a_er_pp_comp, AP, [ A, PP ]) :-
