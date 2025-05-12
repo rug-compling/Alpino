@@ -1007,6 +1007,19 @@ lexical_analysis_double(Input,SF,Surf0,Surf,P0,R0,Tag):-
     alpino_lex:concat_stems([Stem0,Stem1],Stem),
     assert_tag(P0,P,R0,R,Stem,double_compound,Tag).
 
+%% vitamine E-gehalte
+lexical_analysis_double(Gehalte,[Vitamine,X],Surf0,Surf,P0,R0,Tag) :-
+    alpino_lex:lexicon(_,vitamine,[Vitamine],[],_),
+    atom_codes(X,[A]),
+    lists:member(A,[65,66,67,68,69]),
+    concat_all(Surf0,Surf,' '),
+    alpino_lex:lexicon(Tag,Stem1,[Gehalte],[],_),
+    noun_tag(Tag),
+    P is P0+2,
+    R is R0+2,
+    alpino_lex:concat_stems([vitamine,X,Stem1],Stem),
+    assert_tag(P0,P,R0,R,Stem,double_compound,Tag).
+
 %% nummer 1-hit; artikel 12-status
 lexical_analysis_double(Input,[Nummer,Een],Surf0,Surf,P0,R0,Tag) :-
     alpino_lex:lexicon(noun(_,_,_),Stem0a,[Nummer],[],_),
