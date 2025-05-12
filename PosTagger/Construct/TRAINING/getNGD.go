@@ -11,7 +11,6 @@ package main
 
 import (
 	"bufio"
-	"github.com/pebbe/util"
 	"flag"
 	"fmt"
 	"io"
@@ -20,6 +19,8 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+
+	"github.com/pebbe/util"
 )
 
 type tokenType int
@@ -71,7 +72,6 @@ var (
 )
 
 func main() {
-
 	var inputfile string
 
 	flag.Parse()
@@ -339,7 +339,7 @@ MainLoop:
 			}
 		}
 		// collect data for unknown word; collect tags for all words that occur only once
-		//if($UNKNOWN_WORD_TAGPERCENTAGE>0){
+		// if($UNKNOWN_WORD_TAGPERCENTAGE>0){
 		if wordfreq == 1 {
 			unknown[tag]++
 		}
@@ -361,7 +361,7 @@ MainLoop:
 	fmt.Fprintf(WORD_TAG_FREQ, "%v|%v|0\n", DUMMY_WORD, SENTENCE_START)
 
 	// used context labels
-	for label, _ := range usedContext {
+	for label := range usedContext {
 		fmt.Fprintln(USED_CONTEXT, label)
 	}
 
@@ -375,7 +375,6 @@ MainLoop:
 	TAG_WORD_FREQ.Close()
 	USED_CONTEXT.Close()
 	WORD_TAG_LEX.Close()
-
 }
 
 func openWrite(filename string) (file *os.File) {
@@ -405,23 +404,23 @@ func addToLexicon(word, tag, words *string) {
 /*
 lexer:
 
-    (
-        tokenSentenceBegin
-        (   tokenLine data
-          |
-            tokenMultiWordBegin
-            ( tokenLine data ) +
-            tokenMultiWordEnd
-        ) +
-        tokenSentenceEnd
-    ) +
-    tokenFileEnd
+	(
+	    tokenSentenceBegin
+	    (   tokenLine data
+	      |
+	        tokenMultiWordBegin
+	        ( tokenLine data ) +
+	        tokenMultiWordEnd
+	    ) +
+	    tokenSentenceEnd
+	) +
+	tokenFileEnd
 
 data :=
 
-     tokenString  // word
-     tokenString  // thirdTag
-     tokenString  // newContext
+	tokenString  // word
+	tokenString  // thirdTag
+	tokenString  // newContext
 */
 func lexer(filename string, ch chan<- token) {
 	var fp *os.File
@@ -477,16 +476,16 @@ func lexer(filename string, ch chan<- token) {
 				breaks = append(breaks, i)
 			}
 		}
-		if len(breaks) != 6 {
+		if len(breaks) != 7 {
 			fmt.Fprintf(os.Stderr, "Parse failed for line %v: %v\n", lineno, line)
 			continue
 		}
-		// word|thirdTag|sentenceKey|undef|undef|undef|newContext
-		//     0        1           2     3     4     5
+		// word|thirdTag|sentenceKey|undef|undef|undef|newContext|undef
+		//     0        1           2     3     4     5          6
 		word = line[:breaks[0]]
 		thirdTag = line[breaks[0]+1 : breaks[1]]
 		sentenceKey = line[breaks[1]+1 : breaks[2]]
-		newContext = line[breaks[5]+1:]
+		newContext = line[breaks[5]+1 : breaks[6]]
 
 		if sentenceKey != sentenceKeyPrev {
 			if inMulti {
@@ -526,7 +525,6 @@ func lexer(filename string, ch chan<- token) {
 				ch <- token{t: tokenMultiWordEnd}
 				inMulti = false
 			}
-
 		}
 
 		ch <- token{t: tokenLine}
