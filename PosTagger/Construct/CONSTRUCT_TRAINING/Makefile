@@ -11,7 +11,7 @@ ALPINO=$(ALPINO_HOME)/src/Alpino -notk cmdint=off\
 
 TRAIN_TEST=train
 #train_options=user_max=60000 use_guides=on max_sentence_length=30
-train_options=user_max=120000 use_guides=off max_sentence_length=25 after_timeout_options=off
+train_options=user_max=120000 use_guides=off max_sentence_length=28 after_timeout_options=off use_guides=on
 test_options=user_max=1000000 use_guides=on max_sentence_length=30 after_timeout_options=off
 
 HPCTARGET=frames

@@ -40,10 +40,11 @@ default: all
 
 all: 
 	make testing
-	( cd TRAINING ; make bin; make -j 20 sfrs; make -j 20 frames.pl ; make outs )
+	( cd TRAINING ; make bin; make -j 20 sfrs; make outs )
 	$(MAKE) tag2.tpl tag3.tpl tag4.tpl prefix2.tpl prefix3.tpl context3.tpl\
                 wordTag.tpl tagWord.tpl # wordTagLex.fsa lexicon_files
 	$(MAKE) logs
+	( cd TRAINING ; make -j 20 frames.pl )
 
 logs: $(TESTSUITE).frames.testing $(TESTSUITE).la.testing
 	@wc -l words tags usedContext tag2 tag3 tag4 | grep -v total >>log
