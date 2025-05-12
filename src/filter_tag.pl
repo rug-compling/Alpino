@@ -332,6 +332,7 @@ valid_adj_sc(ld_pp,                   [check_ld_prep]).
 valid_adj_sc(np_ld_pp,                   [check_ld_prep]).
 valid_adj_sc(ld_pp(Prep),             [prep(Prep)]).
 valid_adj_sc(pp(Prep),                [prep(Prep)]).
+valid_adj_sc(np_pc_pp(Prep),          [prep(Prep)]).
 valid_adj_sc(mod_pp(Prep),            [prep(Prep)]).
 valid_adj_sc(so_pp(Prep),             [prep(Prep)]).
 valid_adj_sc(so_pp_np(Prep),          [prep(Prep)]).
