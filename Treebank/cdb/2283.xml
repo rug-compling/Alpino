@@ -19,7 +19,7 @@
           <node begin="6" buiging="met-e" end="7" getal="ev" id="14" lemma="zijn" naamval="gen" npagr="rest3" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,gen,vol,3,ev,prenom,met-e,rest3)" pt="vnw" rel="det" root="zijner" status="vol" vwtype="bez" word="zijner"/>
           <node begin="7" end="8" getal="mv" graad="basis" id="15" lemma="vriend" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vriend" word="vrienden"/>
         </node>
-        <node begin="9" cat="np" end="14" id="16" rel="app">
+        <node begin="9" cat="np" end="20" id="16" rel="app">
           <node begin="9" end="10" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="10" buiging="met-e" end="11" graad="basis" id="18" lemma="35_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="35-jarige"/>
           <node begin="11" cat="mwu" end="14" id="19" rel="hd">
@@ -27,18 +27,18 @@
             <node begin="12" end="13" id="21" lemma="A." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="A." spectype="deeleigen" word="A."/>
             <node begin="13" end="14" id="22" lemma="L." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="L." spectype="deeleigen" word="L."/>
           </node>
-        </node>
-        <node begin="15" cat="rel" end="20" id="23" rel="mod">
-          <node begin="15" end="16" getal="getal" id="24" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
-          <node begin="15" cat="ssub" end="20" id="25" rel="body">
-            <node begin="15" end="16" id="26" index="1" rel="su"/>
-            <node begin="16" end="17" id="27" lemma="zeggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zeg" word="zegt" wvorm="pv"/>
-            <node begin="15" cat="ti" end="20" id="28" rel="vc">
-              <node begin="18" end="19" id="29" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
-              <node begin="15" cat="inf" end="20" id="30" rel="body">
-                <node begin="15" end="16" id="31" index="1" rel="su"/>
-                <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="32" lemma="antiquair" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="antiquair" word="antiquair"/>
-                <node begin="19" buiging="zonder" end="20" id="33" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+          <node begin="15" cat="rel" end="20" id="23" rel="mod">
+            <node begin="15" end="16" getal="getal" id="24" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="15" cat="ssub" end="20" id="25" rel="body">
+              <node begin="15" end="16" id="26" index="1" rel="su"/>
+              <node begin="16" end="17" id="27" lemma="zeggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zeg" word="zegt" wvorm="pv"/>
+              <node begin="15" cat="ti" end="20" id="28" rel="vc">
+                <node begin="18" end="19" id="29" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                <node begin="15" cat="inf" end="20" id="30" rel="body">
+                  <node begin="15" end="16" id="31" index="1" rel="su"/>
+                  <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="32" lemma="antiquair" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="antiquair" word="antiquair"/>
+                  <node begin="19" buiging="zonder" end="20" id="33" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+                </node>
               </node>
             </node>
           </node>
