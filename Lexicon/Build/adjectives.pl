@@ -15415,10 +15415,10 @@ a([ge_e(gesteriliseerde),
    ge_no_e(gesteriliseerd)],adv,[],[]).
 
 a([ge_e(gesterkte),
-   ge_no_e(gesterkt)],adv,[],[]).
+   ge_no_e(gesterkt)],both,[],[]).
 
 a([ge_e(gesteunde),
-   ge_no_e(gesteund)],adv,[],[]).
+   ge_no_e(gesteund)],both,[],[]).
 
 a([ge_both(gesteven)],adv,[],[]).
 
@@ -25709,7 +25709,7 @@ a([e(onherkenbare),
    ere(onherkenbaardere),
    no_e(onherkenbaar),
    st(onherkenbaarst),
-   ste(onherkenbaarste)],adv,
+   ste(onherkenbaarste)],both,
   [pp(door)],[]).
 
 a([e(onherroepelijke),

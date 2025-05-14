@@ -11570,8 +11570,8 @@ v(knaag,knaagt,knagen,geknaagd,knaagde,knaagden,
 	transitive,
         part_transitive(aan),
 	ap_pred_np,
-	so_pp,  % dat knaagde aan hem
-	fixed([dat_pp(aan),sbar_subj_opt_het],no_passive),
+	pc_pp(aan),  % dat knaagde aan hem
+	fixed([pc(aan),sbar_subj_opt_het],no_passive),
 	        % het knaagde aan hem dat ...
 	ld_pp,
 	ld_adv,
@@ -28380,6 +28380,7 @@ v(werk,werkt,werken,gewerkt,werkte,werkten,
 	part_transitive(weg),
 	pc_pp(aan),
 	part_pc_pp(door,aan),
+	part_pc_pp(voort,aan),
 	er_pp_sbar(aan),
 	er_pp_vp(aan),
 	pc_pp(met),

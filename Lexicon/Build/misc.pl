@@ -2445,6 +2445,7 @@ particle(bij).
 particle(binnen).
 particle(blij).
 particle(blijk).
+particle(blind).
 particle(bloot).
 particle(bol).
 particle(bot).
@@ -6024,8 +6025,6 @@ sentence_adverb([zo,te,ruiken]).
 sentence_adverb([zo,te,voelen]). 
 sentence_adverb([zo,te,zien]). 
 sentence_adverb(zodoende).
-sentence_adverb(zopas).
-sentence_adverb(zostraks). 
 sentence_adverb(zowaar).
 sentence_adverb([zo,waar]).
 sentence_adverb(überhaupt). 
@@ -6390,6 +6389,7 @@ tmp_adverb(zometeen).
 tmp_adverb([zo,meteen]). 
 tmp_adverb(zonet).
 tmp_adverb(zopas).
+tmp_adverb(zostraks).
 
 tmp_adverb(['\'s',morgens]).
 tmp_adverb(['\'s',middags]).
@@ -7040,6 +7040,7 @@ m('hij_zij',    pronoun(nwh,thi,sg,de,nom,def),[hij,'/',zij]).
 m(hijzelf,      pronoun(nwh,thi,sg,de,nom,def),hijzelf).
 m(hijzelf,      pronoun(nwh,thi,sg,de,nom,def),hijzelve).
 m(hun,          pronoun(nwh,thi,pl,de,dat_acc,def),hun).
+m(hun,          pronoun(nwh,thi,pl,de,dat_acc,def),hunne).   % de hertogen van Brabant en hunne nazaten
 m(hunzelf,      pronoun(nwh,thi,pl,de,dat_acc,def),hunzelf).
 m(hunzelf,      pronoun(nwh,thi,pl,de,dat_acc,def),hunzelve).
 m(hun,          pronoun(nwh,thi,pl,both,gen,def),hunner).
