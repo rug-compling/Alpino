@@ -36,6 +36,12 @@ phrasal_entry(number(rang),Stem,number_rang) -->
     { hdrug_util:debug_message(4,"zesmiljardste~n",[]) },
     zesmiljardste(Stem).
 
+%% de xiiide eeuw
+phrasal_entry(number(rang),RomanSuf,number_rang) -->
+    { hdrug_util:debug_message(4,"xiiide~n",[]) },
+    n_word(RomanSuf),
+    { roman_rang(RomanSuf) }.
+
 phrasal_entry(adjective(E),Root,numberjarig) -->
     { hdrug_util:debug_message(4,"numberjarig",[]) },
     n_word(NumberJarig),
@@ -666,7 +672,7 @@ phrasal_entry(score_cat,score) -->
        parse_number_simple(Away)
     }.
 
-phrasal_entry(np,telephone) -->
+phrasal_entry(number(hoofd(pl_num)),telephone) -->
     { hdrug_util:debug_message(4,"telephone~n",[]) },
     telephone.
 
@@ -4685,10 +4691,10 @@ formula(Word) :-
 
 telephone -->
     tel_land,
+    opt_dash,
     tel_word_br(0,C1),
     opt_dash,
-    tel_word(C1,C2),
-    telephone_rest(C2),
+    telephone_rest(C1),
     optional_of.
 
 tel_word_br(0,C) -->
@@ -4771,7 +4777,9 @@ isdigits([H|T],N0,N) :-
     !,
     N1 is N0 + 1,
     isdigits(T,N1,N).
-isdigits([46|T],N0,N) :-
+isdigits([46|T],N0,N) :-  % .
+    isdigits0(T,N0,N).
+isdigits([47|T],N0,N) :-  % /
     isdigits0(T,N0,N).
 
 isdigits0([H|T],N0,N) :-
@@ -4808,3 +4816,13 @@ phrasal_entry(with_dt(pp(te),dt(pp,[hd=l(te,preposition(te,[],nodet),pp,0,1),
     {  simple_convert_number(Negen,N),
        N < 13
     }.
+
+roman_rang(Word) :-
+    atom(Word),
+    atom_concat(Roman,Suf,Word),
+    atom_codes(Roman,RomanStr),
+    roman_number(RomanStr),
+    rang_suffix(Suf).
+
+rang_suffix(de).   % de xiiide eeuw
+rang_suffix(ste).  % de xxiste eeuw

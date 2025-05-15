@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+      <node begin="1" end="2" id="3" infl="sg1" lemma="aarzelen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="aarzel" sc="intransitive" stype="declarative" tense="present" v_per="fir" word="aarzel" wvorm="pv"/>
+      <node begin="2" cat="whrel" end="7" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="vooral" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooral" sc="modal" word="vooral"/>
+        <node begin="3" case="both" def="indef" end="4" gen="het" getal="ev" id="6" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="wat"/>
+        <node begin="3" cat="ssub" end="7" id="7" rel="body">
+          <node begin="3" end="4" id="8" index="1" rel="su"/>
+          <node begin="4" cat="np" end="6" id="9" rel="obj1">
+            <node begin="4" end="5" id="10" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+            <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="tijdstip" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="tijdstip" word="tijdstip"/>
+          </node>
+          <node begin="6" end="7" id="12" infl="sg3" lemma="betreffen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="betref" sc="transitive" tense="present" v_per="thi" word="betreft" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik aarzel vooral wat het tijdstip betreft</sentence>
+</alpino_ds>

@@ -6533,7 +6533,7 @@ with_dt([eens,zo],
 with_dt([eens,zoveel],
 	number(hoofd(both)),
 	dt(detp,[me=l(eens,adverb,advp,0,1),
-		 hd=l(zoveel,number(hoofd(both)),detp,2,1)
+		 hd=l(zoveel,number(hoofd(both)),detp,1,2)
 		])).
 
 m(zo,               als_me_intensifier,zo).  % drie keer zo hard als ik

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" special="ligg_streep" word="-"/>
+    <node begin="0" cat="np" end="5" id="2" rel="--">
+      <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+      <node begin="1" cat="mwu" end="3" id="4" rel="mod">
+        <node begin="1" end="2" id="5" lemma="Yad" neclass="LOC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Yad" spectype="deeleigen" word="Yad"/>
+        <node begin="2" end="3" id="6" lemma="Vashem" neclass="LOC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Vashem" spectype="deeleigen" word="Vashem"/>
+      </node>
+      <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lemma="onderscheiding" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="onderscheiding" word="onderscheiding"/>
+    </node>
+  </node>
+  <sentence>de Yad Vashem - onderscheiding</sentence>
+</alpino_ds>

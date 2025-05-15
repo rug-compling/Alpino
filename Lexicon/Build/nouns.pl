@@ -14162,7 +14162,7 @@ n([sg(graai),pl(graaien)],de,[]).
 n([mass(gravel)],both,[]).
 
 %% baron, hertog, graaf
-n([pl(graven),sg(graaf)],de,[]).
+n([pl(graven),sg(graaf)],de,[],[palts]).
 
 %% wiskundig, (on)gerichte grafen
 n([sg(graaf),pl(grafen)],de,[]).
@@ -22101,8 +22101,9 @@ n([pl(marionetten),sg(marionet)],de,[]).
 
 n([mass(marjolein)],de,[]).
 
-n([meas(mark),pl(marken),
-   meas('D-mark'),
+n([meas(mark),pl(marken)],de,[meas_mod,measure]).
+
+n([meas('D-mark'),
    meas('Dmark'),
    meas('DMark'),
    meas('DM')],de,[meas_mod,measure]).

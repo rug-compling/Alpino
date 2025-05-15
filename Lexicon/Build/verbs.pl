@@ -8234,6 +8234,8 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	np_mod_pp(bij), % geef er stokbrood bij
         fixed([als_pred,sbar],imp_passive),
         fixed([als_pred,vp],imp_passive),
+	fixed([{[als_pred,acc,dat]}],norm_passive),
+	fixed([{[als_pred,acc,dat_pp(aan)]}],norm_passive),
         als_pred_np,
 	sbar_subj,     % het geeft niet dat je wat later bent
 	sbar_subj_np,  % het geeft een kick / een goed gevoel / ... dat ...
@@ -10832,7 +10834,10 @@ v(kader,kadert,kaderen,gekaderd,kaderde,kaderden,
        ])]).
 
 v(kaffer,kaffert,kafferen,gekafferd,kafferde,kafferden,
-    [h([part_transitive(uit)])]).
+  [h([part_transitive(uit),
+      pc_pp(op)
+     ])
+  ]).
 
 v(kak,kakt,kakken,gekakt,kakte,kakten,
     [h([intransitive]),
@@ -26845,6 +26850,7 @@ v(verwerk,verwerkt,verwerken,verwerkt,verwerkte,verwerkten,
     [h([transitive,
         intransitive, % je moet leren verwerken
 	np_pc_pp(in),
+	np_pc_pp(tot),
 	pp_sbar(in),
 	sbar])]).
 

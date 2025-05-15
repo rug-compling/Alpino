@@ -29821,6 +29821,8 @@ a([e(prozaïsche),
 a([e(prudente),
    no_e(prudent)],adv,[],[]).
 
+a([prefix(pseudo)],nonadv,[],[]).
+
 a([e(pseudonieme),
    no_e(pseudoniem)],nonadv,[],[]).
 

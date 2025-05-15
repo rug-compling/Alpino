@@ -5217,6 +5217,14 @@ grammar_rule(n_n_pnapp, NP, [ N, PN ]) :-
 %    ql(QL),
 %    n_n_pnapp_structure(NP,N,PN).
 
+%%EX%% het typische D66 speerpunt « bestuurlijke vernieuwing »
+grammar_rule(n_n_q_np_app, NP, [ N, QL, APP, QR ]) :-
+    ql(QL),
+    qr(QR),
+    max_np(APP),
+    APP:subn => ~sub_name,  % use n_n_pnapp rule in that case
+    n_n_app_structure(NP,N,APP).
+
 n_n_pnapp_structure(NP,N,PN) :-
     PN => pn,
     n_n_app_structure(NP,N,PN).
@@ -6568,10 +6576,11 @@ grammar_rule(a_a_pp, AP, [ A, COMMA, PP ]) :-
     hd_mod_structure(A,PP,AP).
 
 %%EX%% gekleed zoals hij zich altijd kleedt kwam hij binnen
+%%EX%% Jef ( geboren als « Jozef Adriaan Anna Geeraerts » op 23 februari 1930 )
 grammar_rule(a_a_modcp,AP,[A,SBAR]) :-
     AP => a, A => a, max_sbar(SBAR),
     haspreno(AP),
-    AP:hasextra => yes,
+%    AP:hasextra => yes, % geboren als <naam> op <datum> in <plaats>
     not_postp(AP),
     A:aform => nattr,
     A:adv => ~detadv,

@@ -326,8 +326,11 @@ next_word__(Suffix,['(',GS|Ws],Ws,repair_tokenize_brackets_robust,_) :-
 %% treat ( Grand Slam-)toernooi as Grand Slam-toernooi
 next_word__(Word,['('|Ws0],Ws,skip_l_brack(His),LC) :-
     Ws0 = [W1,GS|Tail],
+    atom(W1),
+    \+ sub_atom(W1,_,1,_,')'),
     atom(GS),
     sub_atom(GS,_,1,_,')'),
+    atom_length(GS,Len), Len > 1,
     atom_concat(Prefix,Rest,GS),
     atom_concat(')',Suffix,Rest),
     atom_concat(Prefix,Suffix,GrandSlamtoernooi),
