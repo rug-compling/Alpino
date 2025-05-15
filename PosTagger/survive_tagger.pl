@@ -18,7 +18,7 @@ survive_tagger(Ref,Rs0,Rs) :-
     ;	Rs0=[Ref|Rs]
     ).
 
-survives(tag(_,_,P0,_,_,_,_,_)) :-
+survives(tag(P0,_,_,_,_,_,_,_)) :-
     alpino_lexical_analysis:no_tagger(P0).
 survives(tag(_,_,_,_,W,_,_,_T)) :-
     surviving_root(W).
