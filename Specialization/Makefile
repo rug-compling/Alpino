@@ -109,7 +109,7 @@ mores:
 	$(MAKE) $(MORE:%=%.log.gz)
 
 
-ANNOTATED_OPTIONS=-slow stop_if_optimal=on end_hook=best_score\(left_corners\) max_sentence_length=25 after_timeout_options=off user_max=360000
+ANNOTATED_OPTIONS=-slow stop_if_optimal=on end_hook=best_score\(left_corners\) max_sentence_length=25 after_timeout_options=testN user_max=720000
 
 alpino: cdb cgn_exs eans extra g_suite h_suite i_suite j_suite lassy-doc\
         leuven_yellow_pages lot_test_suite1 novelsample_corrected ntv-suite qa Titaantjes wpspel
