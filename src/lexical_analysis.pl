@@ -915,12 +915,20 @@ filter_more_tags :-
     ).
 
 filter_bracketed_tags :-
-    %% forbid "3 )" as a tag if preceded by "("
-    %% forbid "( 3" as a tag if followed by ")"
+    %% forbid "3 )" as a tag if preceded by "(" and does not contain opening bracket itself
+    %% forbid "( 3" as a tag if followed by ")" and does not contain closing bracket itself
     (   current_word(P0,P1,'('),
 	current_word(P2,P,')'),
-	(   clause(tag(P1,P,_,_,_,_,_,_),true,R)
-	;   clause(tag(P0,P2,_,_,_,_,_,_),true,R)
+	(   clause(tag(P1,P,_,_,_,_,_,_),true,R),
+	    \+ (   current_word(P3,P4,'('),
+		   P3 > P1,
+		   P4 < P
+	       )
+	;   clause(tag(P0,P2,_,_,_,_,_,_),true,R),
+	    \+ (   current_word(P3,P4,')'),
+		   P3 > P0,
+		   P4 < P2
+	       )
 	),
 	erase_tag(R),
 	fail
