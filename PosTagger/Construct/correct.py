@@ -86,6 +86,12 @@ def main():
             t = "adjective(er(padv))"
         if r == "verwoesten" and t == "adjective(ge_no_e(adv))":
             t = "adjective(ge_no_e(padv))"
+        if r == "steunen" and t == "adjective(ge_no_e(adv))":
+            t = "adjective(ge_no_e(both))"
+        if r == "sterken" and t == "adjective(ge_no_e(adv))":
+            t = "adjective(ge_no_e(both))"
+        if r == "onherkenbaar" and t == "adjective(no_e(adv))":
+            t = "adjective(no_e(both))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
