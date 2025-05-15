@@ -6365,6 +6365,10 @@ potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[capital|His]) :-
     name_capital(Word,P0),!,
     P is P0 + 1,
     potential_name_fsa(4,P,Words,Ws,Prefix,His).
+potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[and|His]) :-
+    name_and(Word),!,
+    P is P0 + 1,
+    potential_name_fsa(7,P,Words,Ws,Prefix,His).
 potential_name_fsa(4,P0,[Word|Words],Ws,[Word|Prefix],[number|His]) :-
     name_number(Word),!,
     P is P0 + 1,

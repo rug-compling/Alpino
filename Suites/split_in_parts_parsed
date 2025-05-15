@@ -1,0 +1,39 @@
+#!/usr/bin/perl
+# © Gertjan van Noord, 2025.
+
+use Getopt::Std;
+
+getopts('s:p:o:z');
+
+$opt_p ||= 500000;
+$opt_o ||= "output";
+$opt_s ||= "log";
+
+if ($opt_z) {
+    $filesuffix = "";
+    $cmdprefix = "|cat >"
+} else {
+    $filesuffix = ".gz";
+    $cmdprefix = "|gzip >"
+}
+
+$part=1;
+while (<>) {
+  if (!/^[*][*][*][*] parsed/) {
+    if ($closed) {
+       $ofile = sprintf "%s_part%05d.%s$filesuffix",$opt_o,$part,$opt_s;
+       open(OUTPUT,"$cmdprefix$ofile") || die "cannot write to $ofile: $!\n";
+       $part++;
+       $counter=0;
+       $closed=0;
+    }
+    print OUTPUT $_;
+    next;
+  }
+  $counter++;
+  print OUTPUT $_;
+  if ($counter >= $opt_p) {
+    close OUTPUT;
+    $closed=1;
+  }
+}
