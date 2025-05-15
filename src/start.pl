@@ -2633,7 +2633,6 @@ undo_timeout_options(alpino_cg:generate(_)) :-
 undo_timeout_options(alpino_lc:parse(_)) :-
     hdrug_flag(after_timeout_options,testN),
     set_flag(pos_tagger,off),
-    set_flag(parse_candidates_beam,0),
     !.
 
 undo_timeout_options(alpino_lc:parse(_)) :-
