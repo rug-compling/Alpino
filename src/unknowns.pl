@@ -1461,6 +1461,15 @@ foreign_word(bracket(_)) :-
     !,
     fail.
 
+foreign_word('1st').
+foreign_word('2nd').
+foreign_word('3rd').
+foreign_word('4th').
+foreign_word('5th').
+foreign_word('6th').
+foreign_word('7th').
+foreign_word('8th').
+foreign_word('9th').
 foreign_word('\'s').
 foreign_word(a).
 foreign_word(à).
@@ -6169,6 +6178,11 @@ potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[initial|His]) :-
     P1 is P0 + 1,
     potential_name_fsa(2,P1,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[',',Next|Words],Ws,[','|Prefix],[comma|His]) :-
+    \+ common_dutch_word(Next),
+    !,
+    P is P0 + 1,
+    potential_name_fsa(22,P,[Next|Words],Ws,Prefix,His).
+potential_name_fsa(2,P0,['-',Next|Words],Ws,['-'|Prefix],[dash|His]) :-
     \+ common_dutch_word(Next),
     !,
     P is P0 + 1,
