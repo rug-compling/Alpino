@@ -1492,7 +1492,7 @@ a_tag(generate,_A,_B,_C,_D,_E,_F,_G,TAG,_,_) :-
     
 a_tag(parse,A,B,C,D,E,F,G,H,P0,P) :-
     alpino_lexical_analysis:search_tag_tag(H,tag(A,B,C,D,E,F,G,H)),
-    \+ alpino_lexical_analysis:overlap(A,B,P0,P).
+    \+ alpino_lexical_analysis:overlap(C,D,P0,P).
 
 check_stem(Stem,P0,P) :-
     check_stem(Stem,P0,P,_).
@@ -1509,8 +1509,8 @@ check_stem(Stem,P0,P,H) :-
     check_stem(PG,Stem,P0,P,H).
 
 check_stem(parse,Stem,P0,P,H) :-
-    alpino_lexical_analysis:search_tag_stem(Stem,tag(A,B,_C,_D,Stem,_F,_G,H)),
-    \+ alpino_lexical_analysis:overlap(A,B,P0,P).
+    alpino_lexical_analysis:search_tag_stem(Stem,tag(_A,_B,C,D,Stem,_F,_G,H)),
+    \+ alpino_lexical_analysis:overlap(C,D,P0,P).
 
 check_stem(generate,Stem,_,_,_) :-
     alpino_cg:lex(_,Stem,_,_,_,_).
