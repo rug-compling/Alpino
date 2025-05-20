@@ -5697,39 +5697,53 @@ er(er).
 er(daar).
 er(hier).
 
+%% daaraan
 er_adverb(Form,Prep) :-
     er(Er),
     er_adverb_prep(Prep),
     atom_concat(Er,Prep,Form).
 
+%% daar achter aan
 er_adverb([Er,Prep,Post],Prep) :-
     er(Er),
     er_adverb_prep(Prep,Post).
+%% daarachter aan
 er_adverb([ErPrep,Post],Prep) :-
     er(Er),
     er_adverb_prep(Prep,Post),
     atom_concat(Er,Prep,ErPrep).
-er_adverb([Er,PrepPost],Prep) :-
-    er(Er),
-    er_adverb_prep(Prep,Post),
-    atom_concat(Prep,Post,PrepPost).
+%% daar achteraan
+%er_adverb([Er,PrepPost],Prep) :-
+%    er(Er),
+%    er_adverb_prep(Prep,Post),
+%    atom_concat(Prep,Post,PrepPost).
+
+%% daarachteraan
 er_adverb(ErPrepPost,Prep) :-
     er(Er),
     er_adverb_prep(Prep,Post),
     atom_concat(Prep,Post,PrepPost),
     atom_concat(Er,PrepPost,ErPrepPost).
 
+%% daar tussen door
 er_adverb([Er,Prep,Post],PrepForm) :-
     er(Er),
     er_adverb_prep(Prep,Post,PrepForm).
+
+%% daartussen door
+%% weird spelling
 er_adverb([ErPrep,Post],PrepForm) :-
     er(Er),
     er_adverb_prep(Prep,Post,PrepForm),
     atom_concat(Er,Prep,ErPrep).
-er_adverb([Er,PrepPost],PrepForm) :-
-    er(Er),
-    er_adverb_prep(Prep,Post,PrepForm),
-    atom_concat(Prep,Post,PrepPost).
+
+%% 'daar tussendoor' can also be formed by the grammar rules
+%er_adverb([Er,PrepPost],PrepForm) :-
+%    er(Er),
+%    er_adverb_prep(Prep,Post,PrepForm),
+%    atom_concat(Prep,Post,PrepPost).
+
+%% daartussendoor
 er_adverb(ErPrepPost,PrepForm) :-
     er(Er),
     er_adverb_prep(Prep,Post,PrepForm),

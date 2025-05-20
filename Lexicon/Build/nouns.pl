@@ -18202,7 +18202,7 @@ n([pl(kennels),sg(kennel)],de,[measure]).
 
 n([pl(kenners),sg(kenner)],de,[],[kunst]).
 
-n([sg(kennis)],de,[sbar]).
+n([sg(kennis)],de,[sbar,pred_pp(bij)]).
 
 n([sg(kennis),pl(kennissen)],de,[]).
 
@@ -33466,7 +33466,7 @@ n([mass(speculaas)],both,[],[dim(speculaasje)]).
 
 n([pl(speculanten),sg(speculant)],de,[]).
 
-n([pl(speculaties),sg(speculatie)],de,[sbar]).
+n([pl(speculaties),sg(speculatie)],de,[sbar,subject_sbar]).
 
 n([pl(speechen),pl(speeches),sg(speech)],de,[]).
 

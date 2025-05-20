@@ -4697,23 +4697,24 @@ telephone -->
     telephone_rest(C1),
     optional_of.
 
-tel_word_br(0,C) -->
-    tel_word(0,C).
-tel_word_br(0,C) -->
+tel_word_br(C0,C) -->
+    tel_word(C0,C).
+tel_word_br(C0,C) -->
     n_word('('),
-    n_word('0'),
-    n_word(')'),
-    tel_word(1,C).
-tel_word_br(0,C) -->
+    tel_word(C0,C),
+    n_word(')').
+tel_word_br(C0,C) -->
     n_word('('),
     n_word(Next),
     {  atom_codes(Next,[48,41|Rest]),
-       isdigits(Rest,1,C)
+       C1 is C0 + 1,
+       isdigits(Rest,C1,C)
     }.
-tel_word_br(0,C) -->
+tel_word_br(C0,C) -->
     n_word(Next),
     {  atom_codes(Next,[40,48,41|Rest]),
-       isdigits(Rest,1,C)
+       C1 is C0 + 1,
+       isdigits(Rest,C1,C)
     }.
 
 
@@ -4725,7 +4726,8 @@ optional_of -->
     tel_word(0,_).
 
 opt_dash --> [].
-opt_dash --> n_word('-').
+opt_dash --> n_word('-').  % 0x2D (the normal ASCII one)
+opt_dash --> n_word('­').  % 0xAD
 opt_dash --> n_word('/').
 
 telephone_rest(C) --> [], { C > 4 }.

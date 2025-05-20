@@ -5482,6 +5482,11 @@ a([e(bevooroordeelde),
    st(bevooroordeeldst),
    ste(bevooroordeeldste)],nonadv,[],[]).
 
+a([ge_e(bevoorrade),
+   ge_no_e(bevoorraad)],padv,
+  [object_sbar,
+   object_vp],[]).
+
 a([ge_e(bevoorrechte),
    ge_no_e(bevoorrecht)],padv,
   [object_sbar,

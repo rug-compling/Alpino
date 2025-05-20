@@ -813,6 +813,8 @@ m(v_root(heb,hebben),
 	fixed([ap_pred(lief)],no_passive),        % VL ik heb niet liever dan dat ze komen
 	fixed([ap_pred(lief),sbar],no_passive),   % liever , het liefst
 	fixed([ap_pred(lief),acc],no_passive),    % liever , het liefst
+	fixed([ap_pred('het lief'),sbar],no_passive),   % liever , het liefst
+	fixed([ap_pred('het lief'),acc],no_passive),    % liever , het liefst
 	fixed([ap_pred(liefst),sbar],no_passive), % ik heb liefst dat ..
 	fixed([{[[lak],pc(aan)]}],no_passive),
 	fixed([[makkelijk,praten]],no_passive),
@@ -12005,7 +12007,8 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
 	  part_intransitive(over),
 	  part_ap_copula(over),	 % dat komt zuinig over
 	  part_ap_copula_sbar(over), % het komt raar over dat ...
-	  part_sbar_subj(over),	     % het komt op mij over dat ...
+	  part_sbar_subj(over),	     % het komt over dat ...
+	  part_fixed(over,[sbar_subj,pc(over)],no_passive),
 	  part_ld_pp(over),
 	  pc_pp(overheen),	% ik kom er wel overheen
 	  er_pp_sbar(overheen),	% ik kom er wel weer overheen dat ...
@@ -21129,7 +21132,7 @@ v([snij,snijd],snijdt,snijden,gesneden,sneed,sneden,
 	transitive,
 	np_ld_pp,
 	nonp_pred_np,
-	part_np_np(af),  % iemand de pas afsnijden
+	part_np_np(af),		% iemand de pas afsnijden; but also "om niet door de oprukkende Russen de pas afgesneden te worden . " ????
 	part_np_np(door),
 	part_transitive(aan),
 	part_transitive(af),
@@ -25500,6 +25503,7 @@ v(verkool,verkoolt,verkolen,verkoold,verkoolde,verkoolden,
 v(verkoop,verkoopt,verkopen,verkocht,verkocht,verkochten,
     [h([np_np,
 	so_pp_np,
+	so_pp,          % China verkocht wel aan Europa, maar had zelf geen behoefte aan Europese zaken
 	transitive,
 	intransitive,   % dat verkoopt niet
 	sbar_obj,       % we kunnen het niet verkopen, dat..
