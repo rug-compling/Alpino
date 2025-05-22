@@ -2762,7 +2762,9 @@ function('Zwitser').
 
 function(InterimPremier) :-
     atom(InterimPremier),
-    atom_concat(interim,_,InterimPremier).
+    (   atom_concat(interim,_,InterimPremier)
+    ;   atom_concat('Interim',_,InterimPremier)
+    ).
 function(ExFun) :-
     atom(ExFun),
     atom_concat('Ex-',Fun,ExFun),

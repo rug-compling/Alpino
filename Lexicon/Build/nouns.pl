@@ -14752,6 +14752,10 @@ n([pl(handen),sg(hand)],de,[],
    was,
    dim(handje)]). 
 
+%% een handje helpen
+%% het toeval speelde een  handje mee
+n([stem('hand_DIM'), sg(handje)],het,[mod]).
+
 n([pl(['hand-',en,spandiensten])],de,[]).
 
 n([sg(handbal),pl(handballen)],de,[]).
@@ -15527,6 +15531,8 @@ n([mass(hoedna)],de,[]).
 n([pl(hoeven),sg(hoef)],de,[]).
 
 n([pl(hoefijzers),sg(hoefijzer)],het,[]).
+
+n([pl(hoeken),sg(hoek)],de,[measure],[dim(hoekje)]).
 
 n([pl(hoeken),sg(hoek)],de,[],
   [beneden,

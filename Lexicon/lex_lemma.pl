@@ -563,6 +563,7 @@ lemma_root(aan_verdrinken,verdrink_aan) .
 lemma_root(aan_verdwalen,verdwaal_aan) .
 lemma_root(aan_verdwijnen,verdwijn_aan) .
 lemma_root(aan_veren,veer_aan) .
+lemma_root(aan_verglijden,verglijd_aan) .
 lemma_root(aan_verheffen,verhef_aan) .
 lemma_root(aan_verhogen,verhoog_aan) .
 lemma_root(aan_verhuizen,verhuis_aan) .
@@ -1644,6 +1645,7 @@ lemma_root(af_verdrinken,verdrink_af) .
 lemma_root(af_verdwalen,verdwaal_af) .
 lemma_root(af_verdwijnen,verdwijn_af) .
 lemma_root(af_veren,veer_af) .
+lemma_root(af_verglijden,verglijd_af) .
 lemma_root(af_verheffen,verhef_af) .
 lemma_root(af_verhogen,verhoog_af) .
 lemma_root(af_verhuizen,verhuis_af) .
@@ -6615,6 +6617,7 @@ lemma_root(heen_verdrinken,verdrink_heen) .
 lemma_root(heen_verdwalen,verdwaal_heen) .
 lemma_root(heen_verdwijnen,verdwijn_heen) .
 lemma_root(heen_veren,veer_heen) .
+lemma_root(heen_verglijden,verglijd_heen) .
 lemma_root(heen_verheffen,verhef_heen) .
 lemma_root(heen_verhogen,verhoog_heen) .
 lemma_root(heen_verhuizen,verhuis_heen) .
@@ -7524,6 +7527,7 @@ lemma_root(in_verdrinken,verdrink_in) .
 lemma_root(in_verdwalen,verdwaal_in) .
 lemma_root(in_verdwijnen,verdwijn_in) .
 lemma_root(in_veren,veer_in) .
+lemma_root(in_verglijden,verglijd_in) .
 lemma_root(in_verheffen,verhef_in) .
 lemma_root(in_verhogen,verhoog_in) .
 lemma_root(in_verhuizen,verhuis_in) .
@@ -8486,6 +8490,7 @@ lemma_root(langs_verdrinken,verdrink_langs) .
 lemma_root(langs_verdwalen,verdwaal_langs) .
 lemma_root(langs_verdwijnen,verdwijn_langs) .
 lemma_root(langs_veren,veer_langs) .
+lemma_root(langs_verglijden,verglijd_langs) .
 lemma_root(langs_verheffen,verhef_langs) .
 lemma_root(langs_verhogen,verhoog_langs) .
 lemma_root(langs_verhuizen,verhuis_langs) .
@@ -10304,6 +10309,7 @@ lemma_root(over_peddelen,peddel_over) .
 lemma_root(over_peren,peer_over) .
 lemma_root(over_persen,pers_over) .
 lemma_root(over_plaatsen,plaats_over) .
+lemma_root(over_planten,plant_over) .
 lemma_root(over_pleuren,pleur_over) .
 lemma_root(over_ploffen,plof_over) .
 lemma_root(over_plonzen,plons_over) .
@@ -15250,6 +15256,7 @@ lemma_root(toe_verdrinken,verdrink_toe) .
 lemma_root(toe_verdwalen,verdwaal_toe) .
 lemma_root(toe_verdwijnen,verdwijn_toe) .
 lemma_root(toe_veren,veer_toe) .
+lemma_root(toe_verglijden,verglijd_toe) .
 lemma_root(toe_verheffen,verhef_toe) .
 lemma_root(toe_verhogen,verhoog_toe) .
 lemma_root(toe_verhuizen,verhuis_toe) .
@@ -15369,7 +15376,6 @@ lemma_root(torpederen,torpedeer) .
 lemma_root(torsen,tors) .
 lemma_root(totaliseren,totaliseer) .
 lemma_root(totstand_komen,kom_totstand) .
-lemma_root(tot_wijden,wijd_tot) .
 lemma_root(toucheren,toucheer) .
 lemma_root(touwtrekken,touwtrek) .
 lemma_root(toveren,tover) .
@@ -15921,6 +15927,7 @@ lemma_root(tussen_verdrinken,verdrink_tussen) .
 lemma_root(tussen_verdwalen,verdwaal_tussen) .
 lemma_root(tussen_verdwijnen,verdwijn_tussen) .
 lemma_root(tussen_veren,veer_tussen) .
+lemma_root(tussen_verglijden,verglijd_tussen) .
 lemma_root(tussen_verheffen,verhef_tussen) .
 lemma_root(tussen_verhogen,verhoog_tussen) .
 lemma_root(tussen_verhuizen,verhuis_tussen) .
@@ -18062,6 +18069,7 @@ lemma_root(uit_vergaderen,vergader_uit) .
 lemma_root(uit_vergelijken,vergelijk_uit) .
 lemma_root(uit_vergeten,vergeet_uit) .
 lemma_root(uit_vergeven,vergeef_uit) .
+lemma_root(uit_verglijden,verglijd_uit) .
 lemma_root(uit_vergroten,vergroot_uit) .
 lemma_root(uit_verhapstukken,verhapstuk_uit) .
 lemma_root(uit_verheffen,verhef_uit) .
@@ -18894,6 +18902,7 @@ lemma_root(vanaf_verdrinken,verdrink_vanaf) .
 lemma_root(vanaf_verdwalen,verdwaal_vanaf) .
 lemma_root(vanaf_verdwijnen,verdwijn_vanaf) .
 lemma_root(vanaf_veren,veer_vanaf) .
+lemma_root(vanaf_verglijden,verglijd_vanaf) .
 lemma_root(vanaf_verheffen,verhef_vanaf) .
 lemma_root(vanaf_verhogen,verhoog_vanaf) .
 lemma_root(vanaf_verhuizen,verhuis_vanaf) .
@@ -19493,6 +19502,7 @@ lemma_root(vandaan_verdrinken,verdrink_vandaan) .
 lemma_root(vandaan_verdwalen,verdwaal_vandaan) .
 lemma_root(vandaan_verdwijnen,verdwijn_vandaan) .
 lemma_root(vandaan_veren,veer_vandaan) .
+lemma_root(vandaan_verglijden,verglijd_vandaan) .
 lemma_root(vandaan_verheffen,verhef_vandaan) .
 lemma_root(vandaan_verhogen,verhoog_vandaan) .
 lemma_root(vandaan_verhuizen,verhuis_vandaan) .
@@ -20088,6 +20098,7 @@ lemma_root(vandoor_verdrinken,verdrink_vandoor) .
 lemma_root(vandoor_verdwalen,verdwaal_vandoor) .
 lemma_root(vandoor_verdwijnen,verdwijn_vandoor) .
 lemma_root(vandoor_veren,veer_vandoor) .
+lemma_root(vandoor_verglijden,verglijd_vandoor) .
 lemma_root(vandoor_verheffen,verhef_vandoor) .
 lemma_root(vandoor_verhogen,verhoog_vandoor) .
 lemma_root(vandoor_verhuizen,verhuis_vandoor) .

@@ -27832,7 +27832,7 @@ a([ge_e(opgeslokte),
 a([ge_e(opgeslorpte),
    ge_no_e(opgeslorpt)],adv,[],[]).
 
-a([ge_both(opgesloten)],adv,[],[]).
+a([ge_both(opgesloten)],adv,[ld_pp],[]).
 
 a([e(opgesmukte),
    no_e(opgesmukt)],padv,[],[]).
