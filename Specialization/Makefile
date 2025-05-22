@@ -31,11 +31,7 @@ HPCTARGET=annotated_job
 
 left_corners:
 	zcat ../Suites/Machine/$(suite).sents.gz | \
-        $(ALPINO) -flag suite undefined -parse 2> $(DISK)/$(suite)-spec.log | gzip > $(DISK)/$(suite).lc.gz 
-	gzip $(DISK)/$(suite)-spec.log
-	mv $(DISK)/$(suite)-spec.log.gz $(suite).log.gz
-	mv $(DISK)/$(suite).lc.gz .
-	$(MAKE) $(suite).ps
+        $(ALPINO) -flag suite undefined -parse 2> $(suite)-spec.log | gzip > $(suite).lc.gz 
 
 %.ps: %.lc.gz
 	zcat $< \
@@ -182,7 +178,7 @@ wpspel:
 ### for LassySmall:
 ### make jobs PATTERN=lassysmall
 annotated_job:
-	zcat $(suite).sents.gz | \
+	zcat $(ALPINO_HOME)/Suites/Machine/$(suite).sents.gz | \
         $(ALPINO) $(ANNOTATED_OPTIONS) -flag comments $(suite) -flag treebank $(ALPINO_HOME)/Treebank/LassySmall -flag suite undefined -parse 2> $(DISK)/$(suite)-spec.log | gzip > $(DISK)/$(suite).lc.gz
 	gzip $(DISK)/$(suite)-spec.log
 	mv $(DISK)/$(suite)-spec.log.gz $(suite).log.gz
