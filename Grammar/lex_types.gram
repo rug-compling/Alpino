@@ -1807,7 +1807,10 @@ zoals_complementizer(C) :-
         ComparativeArg:subadv => subadv_adv
     ;   ComparativeArg => np                      % een man zoals Piet
     ;   ComparativeArg => pp                      % zoals in Amsterdam
-    ;   ComparativeArg => a                       % zoals genoegzaam bekend ...
+    ;   ComparativeArg => a	                  % zoals genoegzaam bekend ...
+    ;   ComparativeArg => sbar,                   % zoals toen hij naar de gevangenis werd gebracht
+	ComparativeArg:e_deps => [],
+	ComparativeArg:slash => []
     ;   ComparativeArg => vp,                     %  zoals ik al dacht ...
         comparative_arg(ComparativeArg),
         ComparativeArg:vform => fin               %  een gesprek zoals ik dat voer

@@ -11262,6 +11262,7 @@ grammar_rule(num_num_haak, NUMP, [ NUM, Cl, MOD, OptQm, Cr ]) :-
 %% np     --> detadj en detadjn
 %% detadj --> det adj
 %% detadjn--> det adj n
+%% which would also allow for "een rode , een groene en een blauwe knikker"
 
 /*
 %% "de belijdende of de volwassen leden"
