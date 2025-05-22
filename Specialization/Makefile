@@ -59,14 +59,6 @@ DATA=$(wildcard $(PAT)*.log.gz)
 echo:
 	echo $(DATA:%.log.gz=%.ps)
 
-noparses: make_guide_vector
-	echo "some syntax errors for euro sign expected...(just ignore)"
-	cat guides.t |\
-   ../src/Alpino cmdint=off debug=1 -notk -l to_predict_guides \
-             -cmd "to_sguides(tpl_prefix)" | sort -u > guides.txt
-	awk -F\| '{ print $$1}' guides.txt | ./make_guide_vector > guides_data.c
-	#cp guides_data.c ../src/guides_data.c.$(PROLOG)
-
 guides.t: $(DATA:%.log.gz=%.ps) make_guide_vector
 	sort -u $(DATA:%.log.gz=%.ps) > guides.t
 
