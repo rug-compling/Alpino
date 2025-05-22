@@ -31,7 +31,18 @@ HPCTARGET=annotated_job
 
 left_corners:
 	zcat ../Suites/Machine/$(suite).sents.gz | \
-        $(ALPINO) -flag suite undefined -parse 2> $(suite)-spec.log | gzip > $(suite).lc.gz 
+        $(ALPINO) -flag suite undefined -parse 2> $(DISK)/$(suite)-spec.log | gzip > $(DISK)/$(suite).lc.gz 
+	gzip $(DISK)/$(suite)-spec.log
+	mv $(DISK)/$(suite)-spec.log.gz $(suite).log.gz
+	mv $(DISK)/$(suite).lc.gz .
+	$(MAKE) $(suite).ps
+
+### for LassySmall:
+### make jobs PATTERN=lassysmall
+annotated_job:
+	zcat $(ALPINO_HOME)/$(suite).sents.gz | \
+        $(ALPINO) $(ANNOTATED_OPTIONS) -flag comments $(suite) -flag treebank $(ALPINO_HOME)/Treebank/LassySmall\
+                  -flag suite undefined -parse 2> $(suite)-spec.log | gzip > $(suite).lc.gz
 
 %.ps: %.lc.gz
 	zcat $< \
@@ -175,11 +186,3 @@ wpspel:
 #### random subset of SoNaR:
 #### find -name '*.sents.gz' | xargs zcat | $A/Suites/random_lines -p 0.01 | ( cd /dev/shm ; $A/Suites/split_in_parts -p 5000 -o ll )
 
-### for LassySmall:
-### make jobs PATTERN=lassysmall
-annotated_job:
-	zcat $(ALPINO_HOME)/Suites/Machine/$(suite).sents.gz | \
-        $(ALPINO) $(ANNOTATED_OPTIONS) -flag comments $(suite) -flag treebank $(ALPINO_HOME)/Treebank/LassySmall -flag suite undefined -parse 2> $(DISK)/$(suite)-spec.log | gzip > $(DISK)/$(suite).lc.gz
-	gzip $(DISK)/$(suite)-spec.log
-	mv $(DISK)/$(suite)-spec.log.gz $(suite).log.gz
-	mv $(DISK)/$(suite).lc.gz .
