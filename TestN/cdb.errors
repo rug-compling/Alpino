@@ -57,7 +57,6 @@
 973	extraposed AP modifier
 991     "kwantitatief ruim viermaal en in geldwaarde uitgedrukt driemaal"
 1001	name not recognized 'kath. v.'; apposition is a NP-conjunction
-1008	timeout
 1014	gapping, dependencies not recovered
 1022	vproj conjunction without conj
 1029	dp [smain smain]
@@ -111,12 +110,12 @@
 1598	nonadv adj modifier: een gesprek *smal* opzetten
 1637	'een , zo niet twee' coordination of 'een' and numbers
 1654	ungrammatical: agreement error 'het verspringen leverden resultaten op'
-1659	crickettaal?
-1659	timeout
+1659	crickettaal
+1659	timeout crickettaal
 1670	niet dan met geweld
 1672	pp extraction from np: een dilemma waaruit geen uitwegen bestaan
 1676	recursive coordination
-1676	timeout
+1676	timeout conj in conj
 1682	dp
 1689	timeout
 1712	gapping
@@ -164,10 +163,8 @@
 2329	dp
 2358	obj1 < su 'kent hem iedereen'
 2366	extraposition of PP over predc "steun nodig hebben van"
-2391	spelling/grammatical error in the input
-2391	timeout
-2430	misplace comma
-2430	vp conj root
+2391	timeout, ook spelling/grammatical error in the input
+2430	misplaced comma;	vp conj root
 2442	extraposed conjunct without CRD
 2451    "het dwingen van kinderen om te eten"  PP-mod < VC
 2460    quantitative er (2x)
@@ -190,8 +187,7 @@
 2723	"een 164 overwinning"
 2741	gapping
 2754	coordination extraposed NP-conjunct
-2857	"drie jaar geleden op DATE"
-2857	timeout
+2857	timeout, also "drie jaar geleden DATE"
 2858	[np en np] pp
 2868	'maatregelen voor de bespreking waarvan'
 2876	out of memory
@@ -208,8 +204,7 @@
 2997	pre-conj modifier in first conjunct
 3002    dp  relative extraposed to the right of extraposed apposition
 3005	grammatical error "de kader"
-3010	np explanation within commas for verb meaning
-3010	timeout
+3010	timeout, also np explanation within commas for verb meaning
 3015	gapping
 3021	XP en XP en XP ==> treebank: '[[XP en XP] en XP]'
 3028	spelling error "of" -> "op"
@@ -220,12 +215,10 @@
 3101	right node raising [NP prep det CRD NP prep det N]
 3102	nonfinal conjunct modified
 3117	dp / gapping
-3119	dp
-3119	timeout
+3119	timeout, also dp
 3164	pp after postnp_adverb "lof van Lindner dus voor .."
 3169	two PC arguments 'NP van-PP voor-PP krijgen'
-3178	right node raising
-3178	timeout
+3178	timeout, right node raising
 3181	dp/dp vs sat/nucl
 3193	adj,adj in prenominal position should be treated as conj (+comp)
 3197	dp PP PP
@@ -236,20 +229,19 @@
 3336	ungrammatical (no agreement relative)
 3344	subj-verb agreement: 'Paarden is te duur'
 3368	quantitative 'er'
-3369	timeout
+3369	DONE
 3371	ld 'er'
 3383	right node raising "een gekwelde en een vermoeide vrouw"
 3384	dp
 3386	'niets van aan'
 3395	gapping
-3405	timeout
-3405	van officiele instanties , van ons eigen bestuur , zogezegd , van onze democratische overheid .
+3405	timeout; van officiele instanties , van ons eigen bestuur , zogezegd , van onze democratische overheid .
 3420	conj root, sv1, root
 3425	"gesneden worden en in de koelkast gezet" coord
 3430	mistokenized
 3454	pp modifier after rel: 'de fragmenten die ik zag van'
 3455	'alleen ROOT'
-3457	timeout
+3457	timeout; absolute PP met NP PP
 3477	coord 'het is 1881 en 13 jaar geleden dat ...'
 3484	modified second conjunct 'kon (en volgens haarzelf moest)'
 3506	gapping
@@ -263,10 +255,10 @@
 3612	coordinated pred with hdf: 'over en van NP af'  ungrammatical, I say.
 3622	apposition without comma
 3622	modifier precedes apposition 'op dit moment NP' without comma
-3622	timeout
+3622	timeout; app with modifier without comma
 3623	dp
 3624	poem/dp
-3629
+3629	"dit en het komend jaar"
 3660	Wie-np die-rel; also coordination of unlike cat; gramm er "belle*n*"
 3661	quantitative-er
 3663	spelling error "geweldig*d*e"
@@ -295,7 +287,7 @@
 3839	compound 'Europa Cup houder'
 3851	coord "niet wat de mensen schreeuwen maar dat de mensen schreeuwen"
 3854	coordination of whrel without coordinator
-3854	timeout
+3854	timeout; conj of 3x whsub without crd
 3881	dp/coord
 3900	dp NP PP
 3902	error "mee" superfluous
@@ -400,10 +392,10 @@
 4881	extraposition pp from np [np inbetween]
 4886	'hoe Adj-er, des te ADJ-er' ?? predc<su
 4892	dp nucl/sat vs dp/dp
-4896	timeout
+4896	DONE
 4907	unknown modal adverb "[nog het meest] in de oude geest V2..."
 4911	etc coord with PP "bij de aanleg van wegen en dergelijke"
-4940	timeout
+4940	timeout/guides "( boven ) genoemde"
 4947	coordination with modifier in front of second conjunct without conj
 4950    dp?
 4950	quantitative er
@@ -442,7 +434,7 @@
 5315	app without comma
 5316	conj without comma
 5317	name "Protestants-christelijke groepering"
-5317	timeout
+5317	timeout; also name
 5318	"te beginnen met" modifier
 5328	complex name "De Waanzinnige , bezeten van het militaire commando"
 5355	scope of modifiers "eerst" in coordination
@@ -464,7 +456,7 @@
 5493	gapping
 5498	NP-APP < REL "Ischa Meyer, de recensent, die .."
 5530    complex name "nota provinciaal kapittel 1970"
-5544	timeout
+5544	timeout/pos_tagger (kans)
 5557	'(een dag) langer hebben (om)'
 5582	difficult coordination 'opgezet en bestemd voor' PC/MOD
 5593    relative extraction out of NP
@@ -492,10 +484,8 @@
 5837	missing "om"? "bij iemand aankloppen [om] iets te doen" (used as vp compl)
 5860	dp "het vervolg erop is verschenen ' De vrouwenarbeid in onze tijd ' ..
 5908	name not recognized 'MEESTERS van het orgel'
-5911	name not recognized 'Fantasie op Bach'
-5911	timeout
-5913	quantitative er
-5913	timeout
+5911	timeout; name not recognized 'Fantasie op Bach'
+5913	timeout; quantitative er
 5964	difficult coordination: predm modifier in front op 2nd conjunct
 5969	dp
 5970	dp
@@ -526,8 +516,7 @@
 6260	name "bijstand buitenlandse werknemers"
 6270	obj1: 'voor ME aan NP'
 6306	quantitative er
-6307	quantitative er
-6307	timeout
+6307	timeout; quantitative er
 6345	vanaf ['s middags twee uur]
 6351	dp SMAIN SMAIN no comma
 6374	right node raising in TEMP "1 en 4 juli"
@@ -545,14 +534,13 @@
 6466	dp / names
 6468	coord genuine smain/sv1
 6483	"iemand in de hoek redeneren"
-6518	timeout
+6518	DONE
 6531	coordination of SV1 without CRD
 6533	dip without comma
 6540    N PP PN "TV-filmserie in kleur Civilisation"
 6542	"van drie tot vier uur"
 6554	LD 'uit en thuis'
-6578	"gisteren , woensdag , ..."
-6578	timeout
+6578	timeout; "gisteren , woensdag , ..."
 6579	ADJ[+part] after verb in verb-cluster "omdat we er op zijn gebrand ..."
 6590	various problems "zonder er wat aan"
 6591	mis-tokenization ?
@@ -576,8 +564,7 @@
 6802	name not recognized 'Het land van Bartje'
 6810	dp/dip
 6820	gapping
-6848	dp SMAIN kegelen , heel gewoon , zit niets achter
-6848	timeout
+6848	timeout; dp SMAIN kegelen , heel gewoon , zit niets achter
 6855	extraposed sbar over extraposed relative
 6878	dp Mojo , spreek uit Modzjoo
 6894	dp NUCL[cat=sv1] ( SAT )
@@ -626,4 +613,4 @@
 2540
 5828
 6758
-4735 Vast staat
+536  timeout after 100%
