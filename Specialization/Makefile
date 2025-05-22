@@ -40,7 +40,7 @@ left_corners:
 ### for LassySmall:
 ### make jobs PATTERN=lassysmall
 annotated_job:
-	zcat $(ALPINO_HOME)/$(suite).sents.gz | \
+	zcat $(ALPINO_HOME)/Suites/Machine/$(suite).sents.gz | \
         $(ALPINO) $(ANNOTATED_OPTIONS) -flag comments $(suite) -flag treebank $(ALPINO_HOME)/Treebank/LassySmall\
                   -flag suite undefined -parse 2> $(suite)-spec.log | gzip > $(suite).lc.gz
 
