@@ -250,9 +250,9 @@ endif
 ORDERED=-rt
 
 j:
-	for part in $(cdb); do make tjob command=$(part).testN; done
+	for part in $(cdb); do make tjob command=$$part.testN; done
 l:
-	for part in $(lassy); do make tjob command=$(part).testN; done
+	for part in $(lassy); do make tjob command=$$part.testN; done
 
 tjob:
 	(  \
