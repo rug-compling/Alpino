@@ -13,38 +13,36 @@
       </node>
       <node begin="3" end="4" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="4" end="5" genus="onz" getal="ev" id="10" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
-      <node begin="5" cat="ap" end="8" id="11" rel="predc">
-        <node begin="5" cat="advp" end="7" id="12" rel="mod">
-          <node begin="5" end="6" id="13" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
-          <node begin="6" buiging="zonder" end="7" graad="comp" id="14" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
-        </node>
-        <node begin="7" buiging="zonder" end="8" graad="basis" id="15" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="mogelijk" word="mogelijk"/>
+      <node begin="5" cat="advp" end="7" id="11" rel="mod">
+        <node begin="5" end="6" id="12" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
+        <node begin="6" buiging="zonder" end="7" graad="comp" id="13" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
       </node>
-      <node begin="9" cat="pp" end="13" id="16" rel="mod">
-        <node begin="9" end="10" id="17" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
-        <node begin="10" cat="np" end="13" id="18" rel="obj1">
-          <node begin="10" buiging="met-e" end="11" id="19" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="welke"/>
-          <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="20" lemma="rente" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rente" word="rente"/>
-          <node begin="12" end="13" id="21" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+      <node begin="7" buiging="zonder" end="8" graad="basis" id="14" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="mogelijk" word="mogelijk"/>
+      <node begin="9" cat="pp" end="13" id="15" rel="mod">
+        <node begin="9" end="10" id="16" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+        <node begin="10" cat="np" end="13" id="17" rel="obj1">
+          <node begin="10" buiging="met-e" end="11" id="18" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="welke"/>
+          <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="rente" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rente" word="rente"/>
+          <node begin="12" end="13" id="20" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
         </node>
       </node>
-      <node begin="14" cat="ti" end="24" id="22" rel="su">
-        <node begin="16" end="17" id="23" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
-        <node begin="14" cat="inf" end="24" id="24" rel="body">
-          <node begin="15" end="16" id="25" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
-          <node begin="17" buiging="zonder" end="18" id="26" lemma="aan_trekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="trek" word="trekken" wvorm="inf"/>
-          <node begin="14" cat="np" end="24" id="27" rel="obj1">
-            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="28" lemma="kapitaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kapitaal" word="kapitaal"/>
-            <node begin="18" cat="pp" end="24" id="29" rel="mod">
-              <node begin="18" end="19" id="30" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-              <node begin="19" cat="np" end="24" id="31" rel="obj1">
-                <node begin="19" end="20" id="32" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                <node begin="20" buiging="zonder" end="21" getal-n="zonder-n" id="33" lemma="ontwikkelen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="ontwikkel" word="ontwikkelen" wvorm="inf"/>
-                <node begin="21" cat="pp" end="24" id="34" rel="mod">
-                  <node begin="21" end="22" id="35" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                  <node begin="22" cat="np" end="24" id="36" rel="obj1">
-                    <node begin="22" buiging="met-e" end="23" graad="basis" id="37" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
-                    <node begin="23" end="24" getal="mv" graad="basis" id="38" lemma="initiatief" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="initiatief" word="initiatieven"/>
+      <node begin="14" cat="ti" end="24" id="21" rel="su">
+        <node begin="16" end="17" id="22" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="14" cat="inf" end="24" id="23" rel="body">
+          <node begin="15" end="16" id="24" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+          <node begin="17" buiging="zonder" end="18" id="25" lemma="aan_trekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="trek" word="trekken" wvorm="inf"/>
+          <node begin="14" cat="np" end="24" id="26" rel="obj1">
+            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="27" lemma="kapitaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kapitaal" word="kapitaal"/>
+            <node begin="18" cat="pp" end="24" id="28" rel="mod">
+              <node begin="18" end="19" id="29" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+              <node begin="19" cat="np" end="24" id="30" rel="obj1">
+                <node begin="19" end="20" id="31" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="20" buiging="zonder" end="21" getal-n="zonder-n" id="32" lemma="ontwikkelen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="ontwikkel" word="ontwikkelen" wvorm="inf"/>
+                <node begin="21" cat="pp" end="24" id="33" rel="mod">
+                  <node begin="21" end="22" id="34" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="22" cat="np" end="24" id="35" rel="obj1">
+                    <node begin="22" buiging="met-e" end="23" graad="basis" id="36" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+                    <node begin="23" end="24" getal="mv" graad="basis" id="37" lemma="initiatief" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="initiatief" word="initiatieven"/>
                   </node>
                 </node>
               </node>
@@ -53,7 +51,7 @@
         </node>
       </node>
     </node>
-    <node begin="24" end="25" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="24" end="25" id="38" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Voor vele ondernemingen is het niet meer mogelijk , tegen welke rente ook , kapitaal aan te trekken voor het ontwikkelen van nieuwe initiatieven .</sentence>
 </alpino_ds>

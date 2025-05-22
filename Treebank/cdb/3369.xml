@@ -28,15 +28,16 @@
                       <node begin="13" end="14" getal="getal" id="25" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
                       <node begin="13" cat="ssub" end="20" id="26" rel="body">
                         <node begin="13" end="14" id="27" index="2" rel="su"/>
-                        <node begin="14" end="15" id="28" lemma="deels" pos="adv" postag="BW()" pt="bw" rel="mod" root="deels" word="deels"/>
-                        <node begin="16" end="17" id="29" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
-                        <node begin="15" cat="ppart" end="20" id="30" rel="predc">
-                          <node begin="15" buiging="zonder" end="16" id="31" lemma="bezetten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bezet" word="bezet" wvorm="vd"/>
-                          <node begin="17" cat="pp" end="20" id="32" rel="pc">
-                            <node begin="17" end="18" id="33" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
-                            <node begin="18" cat="np" end="20" id="34" rel="obj1">
-                              <node begin="18" buiging="met-e" end="19" graad="basis" id="35" lemma="buitenlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="buitenlands" word="buitenlandse"/>
-                              <node begin="19" end="20" getal="mv" graad="basis" id="36" lemma="werknemer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werknemer" word="werknemers"/>
+                        <node begin="16" end="17" id="28" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+                        <node begin="13" cat="ppart" end="20" id="29" rel="vc">
+                          <node begin="13" end="14" id="30" index="2" rel="obj1"/>
+                          <node begin="14" end="15" id="31" lemma="deels" pos="adv" postag="BW()" pt="bw" rel="mod" root="deels" word="deels"/>
+                          <node begin="15" buiging="zonder" end="16" id="32" lemma="bezetten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bezet" word="bezet" wvorm="vd"/>
+                          <node begin="17" cat="pp" end="20" id="33" rel="mod">
+                            <node begin="17" end="18" id="34" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                            <node begin="18" cat="np" end="20" id="35" rel="obj1">
+                              <node begin="18" buiging="met-e" end="19" graad="basis" id="36" lemma="buitenlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="buitenlands" word="buitenlandse"/>
+                              <node begin="19" end="20" getal="mv" graad="basis" id="37" lemma="werknemer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werknemer" word="werknemers"/>
                             </node>
                           </node>
                         </node>
@@ -48,14 +49,14 @@
             </node>
           </node>
         </node>
-        <node begin="21" cat="np" end="23" id="37" rel="obj1">
-          <node begin="21" buiging="zonder" end="22" graad="basis" id="38" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="veel" vwtype="onbep" word="veel"/>
-          <node begin="22" end="23" getal="mv" graad="basis" id="39" lemma="vijand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vijand" word="vijanden"/>
+        <node begin="21" cat="np" end="23" id="38" rel="obj1">
+          <node begin="21" buiging="zonder" end="22" graad="basis" id="39" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="veel" vwtype="onbep" word="veel"/>
+          <node begin="22" end="23" getal="mv" graad="basis" id="40" lemma="vijand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vijand" word="vijanden"/>
         </node>
-        <node begin="23" buiging="zonder" end="24" id="40" lemma="scheppen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schep" word="geschapen" wvorm="vd"/>
+        <node begin="23" buiging="zonder" end="24" id="41" lemma="scheppen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schep" word="geschapen" wvorm="vd"/>
       </node>
     </node>
-    <node begin="24" end="25" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="24" end="25" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Zij had zich door haar opdrijven van de huren in haar pensions , die deels bezet waren door buitenlandse werknemers , veel vijanden geschapen .</sentence>
 </alpino_ds>

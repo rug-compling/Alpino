@@ -63,9 +63,9 @@
                         <node begin="28" end="29" id="51" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                         <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="52" lemma="politie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="politie" word="politie"/>
                       </node>
-                      <node begin="30" cat="mwu" end="32" id="53" rel="svp">
-                        <node begin="30" end="31" id="54" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="fixed" postag="LID(onbep,stan,agr)" pt="lid" rel="mwp" root="een" word="een"/>
-                        <node begin="31" end="32" genus="onz" getal="ev" graad="dim" id="55" lemma="hand" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="mwp" root="handje" word="handje"/>
+                      <node begin="30" cat="np" end="32" id="53" rel="mod">
+                        <node begin="30" end="31" id="54" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="fixed" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                        <node begin="31" end="32" genus="onz" getal="ev" graad="dim" id="55" lemma="hand" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="handje" word="handje"/>
                       </node>
                       <node begin="33" buiging="zonder" end="34" id="56" lemma="helpen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="help" word="helpen" wvorm="inf"/>
                     </node>
