@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node aform="base" begin="0" buiging="met-e" end="1" graad="basis" id="2" infl="e" lemma="seksueel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="seksueel" vform="adj" word="Seksuele"/>
+      <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="3" lemma="gemeenschap" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="gemeenschap" word="gemeenschap"/>
+      <node begin="2" cat="ppres" end="6" id="4" rel="mod">
+        <node aform="base" begin="3" buiging="zonder" end="4" id="5" infl="e" lemma="gaan" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="ga" sc="ap_pred" vform="gerund" word="gaande" wvorm="od"/>
+        <node begin="2" cat="ppart" end="6" id="6" rel="predc">
+          <node aform="base" begin="2" buiging="zonder" end="3" id="7" infl="no_e" lemma="paren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="paren" sc="pp(met)" vform="psp" word="gepaard" wvorm="vd"/>
+          <node begin="4" cat="pp" end="6" id="8" rel="pc">
+            <node begin="4" end="5" id="9" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="10" lemma="geweld" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="geweld" word="geweld"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Seksuele gemeenschap gepaard gaande met geweld</sentence>
+</alpino_ds>
