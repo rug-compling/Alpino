@@ -250,16 +250,9 @@ endif
 ORDERED=-rt
 
 j:
-	make tjob command=cdb_part00001.testN
-	make tjob command=cdb_part00002.testN
-	make tjob command=cdb_part00003.testN
-	make tjob command=cdb_part00004.testN
-	make tjob command=cdb_part00005.testN
-	make tjob command=cdb_part00006.testN
-	make tjob command=cdb_part00007.testN
-	make tjob command=cdb_part00008.testN
-	make tjob command=cdb_part00009.testN
-	make tjob command=cdb_part00010.testN
+	for part in $(cdb); do make tjob command=$(part).testN
+l:
+	for part in $(lassy); do make tjob command=$(part).testN
 
 tjob:
 	(  \
