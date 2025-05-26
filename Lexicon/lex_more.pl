@@ -834,7 +834,8 @@ phrasal_entry(adjective(both(adv)),numberklas) -->
 phrasal_entry(adjective(both(adv)),numberklas) -->
     n_word(Economy),
     { economy(Economy) },
-    n_word(class).
+    n_word(Class),
+    { class(Class) }.
 
 phrasal_entry(adjective(no_e(nonadv)),numbereeuws) -->
     { hdrug_util:debug_message(4,"numbereeuws~n",[]) },
@@ -4654,6 +4655,9 @@ economy(economy).
 economy(standard).
 economy(tourist).
 
+class(class).
+class(klas).
+class(klasse).
 
 phrasal_entry(punct(Type),strange_punct) -->
     n_word(Word),

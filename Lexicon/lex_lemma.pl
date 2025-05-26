@@ -20857,6 +20857,7 @@ lemma_root(voor_doen,doe_voor) .
 lemma_root(voor_dragen,draag_voor) .
 lemma_root(voor_dringen,dring_voor) .
 lemma_root(voor_gaan,ga_voor) .
+lemma_root(voor_geleiden,geleid_voor) .
 lemma_root(voor_geven,geef_voor) .
 lemma_root(voor_hebben,heb_voor) .
 lemma_root(voor_houden,houd_voor) .

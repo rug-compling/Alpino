@@ -25633,7 +25633,7 @@ a([e(ongewone),
    ere(ongewonere),
    no_e(ongewoon),
    st(ongewoonst),
-   ste(ongewoonste)],adv,[],[]).
+   ste(ongewoonste)],adv,[subject_sbar,subject_vp],[]).
 
 a([e(ongezellige),
    er(ongezelliger),

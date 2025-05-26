@@ -16704,7 +16704,7 @@ n([mass(innerlijk)],het,[]).
 
 n([pl(inningen),sg(inning),pl(innings)],de,[]).
 
-n([pl(innovaties),sg(innovatie)],de,[]).
+n([pl(innovaties),sg(innovatie)],de,[subject_sbar]).
 
 n([sg(innovator),pl(innovatoren),pl(innovators)],de,[]).
 

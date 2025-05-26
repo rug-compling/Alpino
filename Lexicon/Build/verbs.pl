@@ -4051,6 +4051,7 @@ v(blijf,blijft,blijven,gebleven,bleef,bleven,blijve,
 	part_intransitive(thuis),
 	part_intransitive(uit),
 	part_intransitive(weg),
+	part_ld_pp(weg),    
 	part_so_np(bij),           % dat blijft me bij
         part_so_np(over),          % ons blijft niets anders over dan ...
                                    % overblijven = resten
@@ -8529,6 +8530,7 @@ v(geld,geldt,gelden,gegolden,gold,golden,
 v(geleid,geleidt,geleiden,geleid,geleidde,geleidden,
     [h([intransitive,
 	transitive,
+	part_np_ld_pp(voor),
 	np_ld_pp])]).
 
 v(gelief,gelieft,gelieven,geliefd,geliefde,geliefden,gelieve,
@@ -29154,6 +29156,7 @@ v(zet,zet,zetten,gezet,zette,zetten,
 	fixed([[op,het,getouw],acc],norm_passive), % Vlaams
         fixed([[reserve],acc],norm_passive),
 	fixed([[in,scene],acc],norm_passive),
+	fixed([[in,scène],acc],norm_passive),
 	fixed([[schrap],refl],no_passive),
 	fixed([[te,kakken],acc],norm_passive),
 	fixed([[te,schande],acc],norm_passive),

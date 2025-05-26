@@ -7482,6 +7482,16 @@ grammar_rule(abs_p_np_mod_dir,PP,[Met,NP,MOD2,MOD]) :-
     MOD:tmploc => ld_dir,
     abs_p_mod_structure(Met,NP,MOD,PP0).
 
+%%EX%% met de finish van de Tour traditiegetrouw in Parijs
+grammar_rule(abs_p_np_mod_pp,PP,[Met,NP,MOD2,MOD]) :-
+    PP => pp,
+    MOD2 => modifier,
+    MOD2:mcat => mcat_adv,
+    PP0 => pp,
+    hd_mod_structure(PP0,MOD2,PP),
+    pp_modifier(MOD),
+    abs_p_mod_structure(Met,NP,MOD,PP0).
+
 %%%%%%%%%%%%%%%%%%
 %%%% SBAR etc %%%%
 %%%%%%%%%%%%%%%%%%
