@@ -72,7 +72,7 @@ igz=i_part00001.igz i_part00002.igz i_part00003.igz i_part00004.igz i_part00005.
 pi.gz: $(igz)
 	zcat $(igz) | gzip > pi.gz
 
-xgz=x_part00001.xgz x_part00002.xgz x_part00003.xgz x_part00004.xgz x_part00005.xgz x_part00006.xgz x_part00007.xgz x_part00008.xgz x_part00009.xgz x_part00010.xgz x_part00011.xgz x_part00012.xgz x_part00013.xgz x_part00014.xgz x_part00015.xgz x_part00016.xgz x_part00017.xgz x_part00018.xgz x_part00019.xgz x_part00020.xgz x_part00021.xgz
+xgz=x_part00001.xgz x_part00002.xgz x_part00003.xgz x_part00004.xgz x_part00005.xgz x_part00006.xgz x_part00007.xgz x_part00008.xgz x_part00009.xgz x_part00010.xgz x_part00011.xgz x_part00012.xgz x_part00013.xgz x_part00014.xgz x_part00015.xgz x_part00016.xgz x_part00017.xgz x_part00018.xgz x_part00019.xgz x_part00020.xgz x_part00021.xgz x_part00022.xgz
 
 px.gz: $(xgz)
 	zcat $(xgz) | gzip > px.gz
