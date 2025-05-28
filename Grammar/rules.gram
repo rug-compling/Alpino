@@ -4110,6 +4110,15 @@ grammar_rule(adj_genoeg,Adj,[Gek,Genoeg]) :-
     Gek:adv => ~detadv,
     hd_mod_structure(Gek,Genoeg,Adj).
 
+%%EX%% De regeling ingaande zondag 10 januari behelst het centrum
+grammar_rule(adj_tmpnp,Adj,[Ingaande,Zondag]) :-
+    Adj => a,
+    Ingaande => a,
+    Ingaande:avform => avform_ppres,
+    Zondag => adv,
+    Zondag:tmploc => tmp_n,
+    hd_mod_structure(Ingaande,Zondag,Adj).
+
 %% modifier introduced by rule
 %% very tolerant..
 
@@ -12616,9 +12625,10 @@ conjunction_cat(max,M,Crd,ETC) :-
 %% Also for vpx conjunction
 %% The same is true for vp with control:
 %% "te slapen , zwoeren de leden of bleken ze"
-conjunction_cat(sv1,M,Crd,ETC) :-
+%%EX%% Gaan we door met de Betuweroute of niet ?
+conjunction_cat(sv1,M,Crd,_ETC) :-
     Crd => one_crd,
-    ETC => no,
+%     ETC => no,   % gaan we door met de Betuweroute of niet?
     M => sv1,
     no_vc_vp_slash(M),
     M:tags => [],
