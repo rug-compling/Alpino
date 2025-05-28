@@ -1277,6 +1277,14 @@ transitive_adjective(A) :-
     instantiated_deprel(A,obj1,Obj),
     A:sc <=> [Obj].
 
+meas_adjective(A) :-
+    adj_np_me_arg(Obj),
+    adjective(A0),
+    unify_except_l(A0,A,[sc,dt:me]),
+    A0:sc => [],
+    instantiated_deprel(A,me,Obj),
+    A:sc <=> [Obj].
+
 np_ld_pp_adjective(A) :-
     acc_np_arg(Obj),
     Obj:subn => (sub_name;sub_noun;sub_tmp;sub_indef_pron;sub_def_pron;
