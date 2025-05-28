@@ -584,6 +584,10 @@ allow_sentence_key_for_parser(on,Ref) :-
     format_to_chars("~w.xml",[Ref],Codes),
     atom_codes(File,Codes),
     \+ file_exists(File).
+allow_sentence_key_for_parser(fast_best(Dir),Ref) :-
+    format_to_chars("~w/~w.xml",[Dir,Ref],Codes),
+    atom_codes(File,Codes),
+    \+ file_exists(File).
 allow_sentence_key_for_parser(on,Ref) :-
     construct_identifier(Ref,1,Identifier),
     xml_filename(File,Identifier),
@@ -840,18 +844,10 @@ start_hook(generate,_,_,_) :-
     if_gui(tcl(update)).
 
 check_unannotated(Key) :-
-    hdrug_flag(parse_unannotated_only,Only),
-    check_unannotated(Only,Key).
-
-check_unannotated(off,_).
-check_unannotated(undefined,_).
-check_unannotated(on,Key) :-
-    construct_identifier(Key,1,Identifier),
-    xml_filename(File,Identifier),
-    (   file_exists(File)
-    ->  raise_exception(alpino_error('This sentence is already annotated'))
-    ;   true
-    ).
+    allow_sentence_key_for_parser(Key),
+    !.
+check_unannotated(_) :-
+    raise_exception(alpino_error('This sentence is already annotated')).
 
 check_flags :-
     hdrug_flag(end_hook,EndHook),
