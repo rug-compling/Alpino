@@ -12,7 +12,7 @@ all:
 	$(MAKE) -j dtchecks novel
 	$(MAKE) -j prepare_enhanced_all
 	$(MAKE) -j enhanced_all poslemma
-	$(MAKE) -j 30 freq trees_doc sentspl conllu pair installsents alpino.dact
+	$(MAKE) -j 30 sentspl freq trees_doc conllu pair installsents alpino.dact
 
 novel:
 	( cd fast; make -j i_suite.log extra.log j_suite.log )
@@ -189,10 +189,10 @@ conllu: $(DIRECTORIES:%=../CONLLU/%.conllu)
 update:
 	$(MAKE) sql/$(suite).sqlite corpus=$(suite)
 	$(MAKE) $(suite).enhanced
+	$(MAKE) ../SENTS/$(suite).sents sentspl installsents
 	$(MAKE) POSLEMMA/$(suite).poslemma
 	$(MAKE) MWU/$(suite).mwu FREQ/mwu-tagged.freq
 	(  cd Enhanced/$(suite); $(MAKE) -s --no-print-directory -j 30 index.html )
-	$(MAKE) ../SENTS/$(suite).sents sentspl
 	$(MAKE) ../CONLLU/$(suite).conllu
 
 TMPDATA:=$(DIRECTORIES:%=LP/%.lp) $(LASSYSMALL)/LP/*.lp
