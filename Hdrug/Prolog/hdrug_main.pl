@@ -235,7 +235,7 @@ translate_result_hook_loop(Mod:Call,Max,Status,ParGen,Obj,Start,CNo,UserOpt):-
 %%% Call is already instantiated. Therefore copy_term
 translate_timelimit(Call,Max,Status) :-
     copy_term(Call,Call2),
-    current_output(OutputStream),
+%    current_output(OutputStream),
     (	Max =:= 0
     ->	translate_memlimit(Call,StatusMem)
     ;   statistics(runtime,[Start,_]),
@@ -252,7 +252,7 @@ translate_timelimit(Call,Max,Status) :-
         )
     ),
 
-    redo_if_status(StatusTimeOut,StatusMem,Call,Call2,Max,Status),
+    redo_if_status(StatusTimeOut,StatusMem,Call,Call2,Max,Status).
 /*    
     (	(   StatusTimeOut == time_out
 	;   StatusMem == out_of_memory
@@ -266,12 +266,21 @@ translate_timelimit(Call,Max,Status) :-
 	Call=Call2
     ),
 */
-    current_output(OutputStreamChanged),  % bug in charsio/timeout
-    (   OutputStream == OutputStreamChanged
-    ->  true
-    ;   set_output(OutputStream),
-	close(OutputStreamChanged)
-    ).
+%    current_output(OutputStreamChanged),
+%% bug in charsio/timeout
+%% however this workaroud does not (always) seem to work either
+%% because after timeouts you sometimes get
+%% ! Domain error in argument 1 of set_output/1
+%% ! expected stream, found '$stream'(140066869397552)
+%% ! goal:  set_output('$stream'(140066869397552))
+
+
+%    (   OutputStream == OutputStreamChanged
+%    ->  true
+%    ;   set_output(OutputStream),
+%	close(OutputStreamChanged)
+				%    )
+    
 
 redo_if_status(StatusTimeOut,_StatusMem,Call,_Call2,Max,Status) :-
     StatusTimeOut == time_out,
