@@ -4936,7 +4936,8 @@ v(buit,buit,buiten,gebuit,buitte,buitten,
         part_sbar(uit)])]).
 
 v(buitel,buitelt,buitelen,gebuiteld,buitelde,buitelden,
-    [b([intransitive])]).
+  [b([intransitive,
+      ld_pp])]).
 
 v(buk,bukt,bukken,gebukt,bukte,bukten,
     [h([intransitive,

@@ -50,6 +50,7 @@ lemma_root(aan_brokkelen,brokkel_aan) .
 lemma_root(aan_brokken,brok_aan) .
 lemma_root(aan_buffelen,buffel_aan) .
 lemma_root(aan_buigen,buig_aan) .
+lemma_root(aan_buitelen,buitel_aan) .
 lemma_root(aan_bungelen,bungel_aan) .
 lemma_root(aan_bussen,bus_aan) .
 lemma_root(aan_circuleren,circuleer_aan) .
@@ -1052,6 +1053,7 @@ lemma_root(af_brokkelen,brokkel_af) .
 lemma_root(af_brokken,brok_af) .
 lemma_root(af_buffelen,buffel_af) .
 lemma_root(af_buigen,buig_af) .
+lemma_root(af_buitelen,buitel_af) .
 lemma_root(af_bungelen,bungel_af) .
 lemma_root(af_bussen,bus_af) .
 lemma_root(af_checken,check_af) .
@@ -6157,6 +6159,7 @@ lemma_root(heen_brokkelen,brokkel_heen) .
 lemma_root(heen_brokken,brok_heen) .
 lemma_root(heen_buffelen,buffel_heen) .
 lemma_root(heen_buigen,buig_heen) .
+lemma_root(heen_buitelen,buitel_heen) .
 lemma_root(heen_bungelen,bungel_heen) .
 lemma_root(heen_bussen,bus_heen) .
 lemma_root(heen_circuleren,circuleer_heen) .
@@ -6921,6 +6924,7 @@ lemma_root(in_brokkelen,brokkel_in) .
 lemma_root(in_brokken,brok_in) .
 lemma_root(in_buffelen,buffel_in) .
 lemma_root(in_buigen,buig_in) .
+lemma_root(in_buitelen,buitel_in) .
 lemma_root(in_bungelen,bungel_in) .
 lemma_root(in_burgeren,burger_in) .
 lemma_root(in_bussen,bus_in) .
@@ -8011,6 +8015,7 @@ lemma_root(langs_brokkelen,brokkel_langs) .
 lemma_root(langs_brokken,brok_langs) .
 lemma_root(langs_buffelen,buffel_langs) .
 lemma_root(langs_buigen,buig_langs) .
+lemma_root(langs_buitelen,buitel_langs) .
 lemma_root(langs_bungelen,bungel_langs) .
 lemma_root(langs_bussen,bus_langs) .
 lemma_root(langs_circuleren,circuleer_langs) .
@@ -14767,6 +14772,7 @@ lemma_root(toe_brokkelen,brokkel_toe) .
 lemma_root(toe_brokken,brok_toe) .
 lemma_root(toe_buffelen,buffel_toe) .
 lemma_root(toe_buigen,buig_toe) .
+lemma_root(toe_buitelen,buitel_toe) .
 lemma_root(toe_bungelen,bungel_toe) .
 lemma_root(toe_bussen,bus_toe) .
 lemma_root(toe_circuleren,circuleer_toe) .
@@ -15468,6 +15474,7 @@ lemma_root(tussen_brokkelen,brokkel_tussen) .
 lemma_root(tussen_brokken,brok_tussen) .
 lemma_root(tussen_buffelen,buffel_tussen) .
 lemma_root(tussen_buigen,buig_tussen) .
+lemma_root(tussen_buitelen,buitel_tussen) .
 lemma_root(tussen_bungelen,bungel_tussen) .
 lemma_root(tussen_bussen,bus_tussen) .
 lemma_root(tussen_circuleren,circuleer_tussen) .
@@ -18424,6 +18431,7 @@ lemma_root(vanaf_brokkelen,brokkel_vanaf) .
 lemma_root(vanaf_brokken,brok_vanaf) .
 lemma_root(vanaf_buffelen,buffel_vanaf) .
 lemma_root(vanaf_buigen,buig_vanaf) .
+lemma_root(vanaf_buitelen,buitel_vanaf) .
 lemma_root(vanaf_bungelen,bungel_vanaf) .
 lemma_root(vanaf_bussen,bus_vanaf) .
 lemma_root(vanaf_circuleren,circuleer_vanaf) .
@@ -19042,6 +19050,7 @@ lemma_root(vandaan_brokkelen,brokkel_vandaan) .
 lemma_root(vandaan_brokken,brok_vandaan) .
 lemma_root(vandaan_buffelen,buffel_vandaan) .
 lemma_root(vandaan_buigen,buig_vandaan) .
+lemma_root(vandaan_buitelen,buitel_vandaan) .
 lemma_root(vandaan_bungelen,bungel_vandaan) .
 lemma_root(vandaan_bussen,bus_vandaan) .
 lemma_root(vandaan_circuleren,circuleer_vandaan) .
@@ -19639,6 +19648,7 @@ lemma_root(vandoor_brokkelen,brokkel_vandoor) .
 lemma_root(vandoor_brokken,brok_vandoor) .
 lemma_root(vandoor_buffelen,buffel_vandoor) .
 lemma_root(vandoor_buigen,buig_vandoor) .
+lemma_root(vandoor_buitelen,buitel_vandoor) .
 lemma_root(vandoor_bungelen,bungel_vandoor) .
 lemma_root(vandoor_bussen,bus_vandoor) .
 lemma_root(vandoor_circuleren,circuleer_vandoor) .

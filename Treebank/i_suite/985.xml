@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="np" end="9" id="1" rel="--">
+      <node begin="0" cat="conj" end="8" id="2" rel="mod">
+        <node begin="0" cat="ppres" end="4" id="3" rel="cnj">
+          <node begin="0" cat="np" end="3" id="4" rel="me">
+            <node begin="0" end="1" id="5" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+            <node begin="1" cat="mwu" end="3" id="6" rel="hd">
+              <node begin="1" end="2" id="7" lemma="twee" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="twee" special="tmp" word="twee"/>
+              <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="8" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="uur" special="tmp" word="uur"/>
+            </node>
+          </node>
+          <node aform="base" begin="3" buiging="met-e" end="4" id="9" infl="e" lemma="duren" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="duur" sc="meas" vform="gerund" word="durende" wvorm="od"/>
+        </node>
+        <node begin="4" conjtype="neven" end="5" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="5" cat="ppres" end="8" id="11" rel="cnj">
+          <node begin="5" cat="np" end="7" id="12" rel="me">
+            <node begin="5" end="6" id="13" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="14" lemma="vermogen" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="vermogen" word="vermogen"/>
+          </node>
+          <node aform="base" begin="7" buiging="met-e" end="8" id="15" infl="e" lemma="kosten" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="kost" sc="meas" vform="gerund" word="kostende" wvorm="od"/>
+        </node>
+      </node>
+      <node begin="8" end="9" gen="de" genus="zijd" getal="ev" graad="basis" id="16" lemma="uitvoering" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="uitvoering" word="uitvoering"/>
+    </node>
+  </node>
+  <sentence>Een twee uur durende en een vermogen kostende uitvoering</sentence>
+</alpino_ds>

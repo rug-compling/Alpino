@@ -1456,8 +1456,8 @@ gerund_frame_map(np_ld_transitive,     np_ld       ).
 gerund_frame_map(refl_ld_transitive,   refl_ld     ).
 gerund_frame_map(transitive,           transitive  ).
 gerund_frame_map(transitive_ndev,      transitive  ).
-gerund_frame_map(transitive_ndev_ndev,      transitive  ).
-gerund_frame_map(meas,                 transitive  ).
+gerund_frame_map(transitive_ndev_ndev, transitive  ).
+gerund_frame_map(meas,                 meas  ).
 gerund_frame_map(refl,                 refl        ).
 gerund_frame_map(part_intransitive(P), part(P)     ).
 gerund_frame_map(ap_copula,            ap_pred     ).
@@ -3043,6 +3043,8 @@ spelling_variant(manoevreren,   manoeuvreren).
 spelling_variant(gemanoevreerd, gemanoeuvreerd).
 spelling_variant(manoevreerde,  manoeuvreerde).
 spelling_variant(manoevreerden, manoeuvreerden).
+spelling_variant(mediteraan,    mediterraan).
+spelling_variant(mediterane,    mediterrane).
 spelling_variant(meerendeel,    merendeel).
 spelling_variant(meot,          moet).
 spelling_variant(milibar,       millibar).

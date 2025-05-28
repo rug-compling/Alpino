@@ -379,6 +379,7 @@ valid_adj_sc(so_pp_subject_sbar_no_het(Prep),
 valid_adj_sc(so_np_subject_sbar,      [check_of_dat_whsub_sbar]).
 valid_adj_sc(so_np_subject_vp,        [check_vform(te)]).
 valid_adj_sc(transitive,              []).
+valid_adj_sc(meas,                    []).
 valid_adj_sc(ld_transitive,           []).
 valid_adj_sc(np_ld_transitive,        []).
 valid_adj_sc(refl_ld_transitive,      [check_refl]).

@@ -2548,7 +2548,7 @@ a([ge_both(afgescheiden)],adv,
   [pp(van)],[]).
 
 a([ge_e(afgeschermde),
-   ge_no_e(afgeschermd)],adv,[],[]).
+   ge_no_e(afgeschermd)],both,[pp(af)],[]).
 
 a([ge_e(afgescheurde),
    ge_no_e(afgescheurd)],adv,[],[]).
