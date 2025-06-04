@@ -15,7 +15,7 @@ all:
 	$(MAKE) -j 30 sentspl freq trees_doc conllu pair installsents alpino.dact
 
 novel:
-	( cd fast; make -j i_suite.log extra.log j_suite.log )
+	( cd fast; make -j alpino )
 
 DIRECTORIES=cdb cgn_exs eans extra g_suite h_suite i_suite lassy-doc leuven_yellow_pages lot_test_suite1 \
              novelsample_corrected ntv-suite qa Titaantjes wpspel j_suite
