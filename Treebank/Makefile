@@ -187,6 +187,7 @@ conllu: $(DIRECTORIES:%=../CONLLU/%.conllu)
 
 ## all steps for one suite only
 update:
+	$(MAKE) novel
 	$(MAKE) sql/$(suite).sqlite corpus=$(suite)
 	$(MAKE) $(suite).enhanced
 	$(MAKE) ../SENTS/$(suite).sents sentspl installsents
