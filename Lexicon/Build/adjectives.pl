@@ -22661,6 +22661,9 @@ a([e(metaalachtige),
    st(metaalachtigst),
    ste(metaalachtigste)],adv,[],[]).
 
+a([e(metabole),
+   no_e(metabool)],nonadv,[],[]).
+
 a([e(metafysische),
    no_e(metafysisch)],adv,[],[]).
 
@@ -27866,6 +27869,9 @@ a([ge_e(opgestapelde),
 
 a([ge_e(opgestapte),
    ge_no_e(opgestapt)],adv,[],[]).
+
+a([ge_e(opgestarte),
+   ge_no_e(opgestart)],adv,[],[]).
 
 a([ge_both(opgestegen)],adv,[],[]).
 
@@ -43663,6 +43669,7 @@ stem(opgesprongen,v_root(spring_op,op_springen)).
 stem(opgestaan,v_root(sta_op,op_staan)).
 stem(opgestapeld,v_root(stapel_op,op_stapelen)).
 stem(opgestapt,v_root(stap_op,op_stappen)).
+stem(opgestart,v_root(start_op,op_starten)).
 stem(opgestegen,v_root(stijg_op,op_stijgen)).
 stem(opgesteld,v_root(stel_op,op_stellen)).
 stem(opgestoken,v_root(steek_op,op_steken)).

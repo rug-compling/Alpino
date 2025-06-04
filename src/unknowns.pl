@@ -1826,6 +1826,8 @@ foreign_word(indeed).
 foreign_word(independent).
 foreign_word(input).
 foreign_word(instant).
+foreign_word(international).
+foreign_word(internationale).
 foreign_word(into).
 foreign_word(is).
 foreign_word(issue).

@@ -3126,6 +3126,7 @@ v(besta,bestaat,inflected(bestaan,bestane),bestaan,bestond,bestonden,
 	fixed([subj(onzekerheid),pc(over)],no_passive),
 	fixed([subj(opvatting),pc(over)],no_passive),	
 	fixed([subj(overeenstemming),pc(over)],no_passive),
+	fixed([subj(reden),pc(voor)],no_passive),
 	fixed([subj(relatie),pc(tussen)],no_passive),
         fixed([subj(remedie),pc(tegen)],no_passive),
 	fixed([subj(twijfel),pc(over)],no_passive),
@@ -12140,8 +12141,8 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
           fixed([{[svp_pp(in,botsing)]}],no_passive),
           fixed([{[svp_pp(in,aanvaring),pc(met)]}],no_passive),
           fixed([{[svp_pp(in,botsing),pc(met)]}],no_passive),
-          fixed([{[[in,actie],pc(tegen)]}],no_passive),
-          fixed([[in,actie]],no_passive),  % PP PREDC?
+          fixed([{[pp_pred(in,actie),pc(tegen)]}],no_passive),
+          fixed([pp_pred(in,actie)],no_passive),  % PP PREDC?
           fixed([{[[in,botsing],pc(met)]}],no_passive),
           fixed([pp_pred(in,hand),pc(van)],no_passive),
           fixed([[in,opstand]],no_passive),
@@ -12154,6 +12155,8 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
           fixed([{[[te,pas],pc(aan)]}],no_passive),
           fixed([{[[te,pas],pc(bij)]}],no_passive),
           fixed([{[[te,last],pc(van)]}],no_passive),
+          fixed([[te,rade],ld_pp],no_passive),
+          fixed([[te,rade],ld_adv],no_passive),
           fixed([{[[te,laste],pc(van)]}],no_passive),
           fixed([{[[ten,laste],pc(van)]}],no_passive),
           fixed([{[[tenlast],pc(van)]}],no_passive),
@@ -12248,7 +12251,8 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
           %% we zijn dat te weten gekomen
           fixed([[te,weten],acc],no_passive),
           fixed([[te,weten],mod_pp(over),acc],no_passive),
-          fixed([[te,weten],sbar],no_passive)
+          fixed([[te,weten],sbar],no_passive),
+          aan_het   % "toen deze aan het wankelen kwam"
           %% ?? %we zijn dat komen te weten
           % fixed([vc(weet,te,intransitive),acc],no_passive),
           % fixed([vc(weet,te,intransitive),mod_pp(over),acc],no_passive),
@@ -12560,7 +12564,10 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
 	fixed([{[er_pp(van,A),[genoeg]]},extra_vp(A)],no_passive),
 	fixed([{[er_pp(van,A),[genoeg]]},extra_sbar(A)],no_passive),
 	fixed([{[er_pp(van,A),acc(lucht)]},extra_sbar(A)],no_passive),
-	fixed([{[er_pp(van,A),[weet]]},extra_sbar(A)],no_passive),
+        fixed([{[er_pp(van,A),[weet]]},extra_sbar(A)],no_passive),
+      	fixed([{[[weet],pc(van)]}],no_passive),
+        fixed([{[er_pp(van,A),[weet]]},extra_sbar(A)],no_passive),
+      	fixed([{[[geen,weet],pc(van)]}],no_passive),
 	fixed([{[er_pp(van,A),[geen,weet]]},extra_sbar(A)],no_passive),
 	fixed([[gestalte]],no_passive),
 	fixed([[voor,het,zeggen],het_obj1],no_passive),
@@ -16969,7 +16976,8 @@ v(passeer,passeert,passeren,gepasseerd,passeerde,passeerden,
     [z([intransitive,
 	pc_pp(voor)]),
      h([np_pc_pp(voor)]),
-     b([transitive])]). % het koufront is Nederland gepasseerd
+     b([ld_pp,  % ik passeer langs het stadion (???)
+	transitive])]).		% het koufront is Nederland gepasseerd
 
 v(pasteuriseer,pasteuriseert,pasteuriseren,gepasteuriseerd,pasteuriseerde,pasteuriseerden,
     [h([transitive])]).
@@ -19823,8 +19831,8 @@ v(schiet,schiet,schieten,geschoten,schoot,schoten,
 	fixed([ld_pp,sbar_subj],no_passive), % het schoot door mijn gedachten dat ...
 			  	             % het schoot door me heen dat ...
 	                                     % het schoot in het verkeerde keelgat dat ...
-	fixed([{[[in,actie],pc(tegen)]}],no_passive),
-	fixed([[in,actie]],no_passive),	
+	fixed([{[pp_pred(in,actie),pc(tegen)]}],no_passive),
+	fixed([pp_pred(in,actie)],no_passive),	
 	part_np_ld_pp(af),
 	part_np_ld_pp(weg),
 	part_np_pc_pp(af,met),

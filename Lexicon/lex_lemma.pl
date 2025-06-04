@@ -321,6 +321,7 @@ lemma_root(aan_parelen,parel_aan) .
 lemma_root(aan_parkeren,parkeer_aan) .
 lemma_root(aan_passen,pas_aan) .
 lemma_root(aan_passen,pass_aan) .
+lemma_root(aan_passeren,passeer_aan) .
 lemma_root(aan_peddelen,peddel_aan) .
 lemma_root(aan_pendelen,pendel_aan) .
 lemma_root(aan_penetreren,penetreer_aan) .
@@ -1353,6 +1354,7 @@ lemma_root(af_parelen,parel_af) .
 lemma_root(af_parkeren,parkeer_af) .
 lemma_root(af_passen,pas_af) .
 lemma_root(af_passen,pass_af) .
+lemma_root(af_passeren,passeer_af) .
 lemma_root(af_peddelen,peddel_af) .
 lemma_root(af_peigeren,peiger_af) .
 lemma_root(af_pellen,pel_af) .
@@ -6395,6 +6397,7 @@ lemma_root(heen_parelen,parel_heen) .
 lemma_root(heen_parkeren,parkeer_heen) .
 lemma_root(heen_passen,pas_heen) .
 lemma_root(heen_passen,pass_heen) .
+lemma_root(heen_passeren,passeer_heen) .
 lemma_root(heen_peddelen,peddel_heen) .
 lemma_root(heen_pendelen,pendel_heen) .
 lemma_root(heen_penetreren,penetreer_heen) .
@@ -7244,6 +7247,7 @@ lemma_root(in_parelen,parel_in) .
 lemma_root(in_parkeren,parkeer_in) .
 lemma_root(in_passen,pas_in) .
 lemma_root(in_passen,pass_in) .
+lemma_root(in_passeren,passeer_in) .
 lemma_root(in_peddelen,peddel_in) .
 lemma_root(in_pendelen,pendel_in) .
 lemma_root(in_penetreren,penetreer_in) .
@@ -8262,6 +8266,7 @@ lemma_root(langs_parelen,parel_langs) .
 lemma_root(langs_parkeren,parkeer_langs) .
 lemma_root(langs_passen,pas_langs) .
 lemma_root(langs_passen,pass_langs) .
+lemma_root(langs_passeren,passeer_langs) .
 lemma_root(langs_peddelen,peddel_langs) .
 lemma_root(langs_pendelen,pendel_langs) .
 lemma_root(langs_penetreren,penetreer_langs) .
@@ -15027,6 +15032,7 @@ lemma_root(toe_parelen,parel_toe) .
 lemma_root(toe_parkeren,parkeer_toe) .
 lemma_root(toe_passen,pass_toe) .
 lemma_root(toe_passen,pas_toe) .
+lemma_root(toe_passeren,passeer_toe) .
 lemma_root(toe_peddelen,peddel_toe) .
 lemma_root(toe_pendelen,pendel_toe) .
 lemma_root(toe_penetreren,penetreer_toe) .
@@ -15710,6 +15716,7 @@ lemma_root(tussen_parelen,parel_tussen) .
 lemma_root(tussen_parkeren,parkeer_tussen) .
 lemma_root(tussen_passen,pass_tussen) .
 lemma_root(tussen_passen,pas_tussen) .
+lemma_root(tussen_passeren,passeer_tussen) .
 lemma_root(tussen_peddelen,peddel_tussen) .
 lemma_root(tussen_pendelen,pendel_tussen) .
 lemma_root(tussen_penetreren,penetreer_tussen) .
@@ -17328,6 +17335,7 @@ lemma_root(uit_parsen,parse_uit) .
 lemma_root(uit_participeren,participeer_uit) .
 lemma_root(uit_passen,pass_uit) .
 lemma_root(uit_passen,pas_uit) .
+lemma_root(uit_passeren,passeer_uit) .
 lemma_root(uit_patenteren,patenteer_uit) .
 lemma_root(uit_patrouilleren,patrouilleer_uit) .
 lemma_root(uit_pauzeren,pauzeer_uit) .
@@ -18677,6 +18685,7 @@ lemma_root(vanaf_parelen,parel_vanaf) .
 lemma_root(vanaf_parkeren,parkeer_vanaf) .
 lemma_root(vanaf_passen,pass_vanaf) .
 lemma_root(vanaf_passen,pas_vanaf) .
+lemma_root(vanaf_passeren,passeer_vanaf) .
 lemma_root(vanaf_peddelen,peddel_vanaf) .
 lemma_root(vanaf_pendelen,pendel_vanaf) .
 lemma_root(vanaf_penetreren,penetreer_vanaf) .
@@ -19287,6 +19296,7 @@ lemma_root(vandaan_parelen,parel_vandaan) .
 lemma_root(vandaan_parkeren,parkeer_vandaan) .
 lemma_root(vandaan_passen,pass_vandaan) .
 lemma_root(vandaan_passen,pas_vandaan) .
+lemma_root(vandaan_passeren,passeer_vandaan) .
 lemma_root(vandaan_peddelen,peddel_vandaan) .
 lemma_root(vandaan_pendelen,pendel_vandaan) .
 lemma_root(vandaan_penetreren,penetreer_vandaan) .
@@ -19884,6 +19894,7 @@ lemma_root(vandoor_parelen,parel_vandoor) .
 lemma_root(vandoor_parkeren,parkeer_vandoor) .
 lemma_root(vandoor_passen,pass_vandoor) .
 lemma_root(vandoor_passen,pas_vandoor) .
+lemma_root(vandoor_passeren,passeer_vandoor) .
 lemma_root(vandoor_peddelen,peddel_vandoor) .
 lemma_root(vandoor_pendelen,pendel_vandoor) .
 lemma_root(vandoor_penetreren,penetreer_vandoor) .

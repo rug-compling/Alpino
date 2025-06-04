@@ -4063,6 +4063,7 @@ m(inclusief,        complementizer(np),inclusief).
 m('laat staan',     complementizer(np),[laat,staan]).
 m(mits,             complementizer(np),mits).  % VLAAMS
 m(namelijk,         complementizer(np),namelijk).
+m(tenzij,           complementizer(np),tenzij).
 m('te weten',       complementizer(np),[te,weten]).
 m('zo niet',        complementizer(np),[zo,niet]). % zo niet de Nederlanders
 m('zo niet',        complementizer(np),zoniet). % zo niet de Nederlanders
