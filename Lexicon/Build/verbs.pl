@@ -3961,7 +3961,8 @@ v(blaas,blaast,blazen,geblazen,blies,bliezen,
 	part_transitive(op),
 	part_transitive(uit),
 	part_transitive(weg),
-	% hem werd nieuw leven ingeblazen
+				% hem werd nieuw leven ingeblazen
+				% also sometimes acc and passivizable?
 	part_fixed(in,[[nieuw,leven],dat],imp_passive)])]). 
 
 v(blaat,blaat,blaten,geblaat,blaatte,blaatten,
@@ -20464,6 +20465,7 @@ v(signeer,signeert,signeren,gesigneerd,signeerde,signeerden,
 v(sijpel,sijpelt,sijpelen,gesijpeld,sijpelde,sijpelden,
     [b([ld_pp,
 	ld_dir,
+	part_ld_pp(binnen),
 	part_ld_pp(door),
 	part_intransitive(weg),
 	part_ld_pp(weg),

@@ -6806,6 +6806,9 @@ with_dt([lang,niet,altijd],
 		 hd=l(altijd,sentence_adverb,advp,2,3)
 		])).
 
+m('heinde en verre', sentence_adverb, [heinde,en,verre]).
+m('heinde en verre', sentence_adverb, [heinde,en,ver]).
+
 m(Stem,predm_adverb,Surf) :-
     predm_adverb(Surf),
     stem_from_surf(Surf,Stem).

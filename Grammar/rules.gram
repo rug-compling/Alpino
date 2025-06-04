@@ -1601,11 +1601,12 @@ grammar_rule(vp_v_komma_arg(pred_heavy),VP, [V, OPTCOMMA, Arg] ) :-
 
 %%EX%% We moeten zijn zoals zij
 %%EX%% Een vriend is bedoeld om op te kunnen rekenen
+%%EX%% Men heeft hem versleten voor infantiel
 grammar_rule(vp_v_komma_arg(pred_als),VP, [V, OPTCOMMA, Arg] ) :-
     Arg => pred,
     Arg:sel => to_right,
     Arg:redrel => no,
-    Arg:pcat => (zoals_pred;als_pred;om_pred),
+    Arg:pcat => (zoals_pred;als_pred;om_pred;voor_pred_ap;voor_pred_np),
     vp_v_arg_structure(V,Arg,VP,OPTCOMMA),
     allow_wh_in_situ(Arg,VP),
     V:eps2 => no.

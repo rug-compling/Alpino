@@ -6907,6 +6907,9 @@ name_end_firma('NV').
 name_end_firma('NV.').
 name_end_firma('N.V.').
 
+name_end_firma(vzw).  % Vlaams: vereniging zonder winstoogmerk
+name_end_firma('VZW').  % Vlaams: vereniging zonder winstoogmerk
+
 name_end_loc('län').
 name_end_loc('Län').
 name_end_loc(drive).
