@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" index="1" lemma="men" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" rnum="sg" root="men" status="red" vwtype="pers" wh="nwh" word="Men"/>
+      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" v_per="thi" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="6" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" case="dat_acc" def="def" end="3" gen="de" genus="masc" getal="ev" id="6" lemma="hem" naamval="obl" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" rnum="sg" root="hem" status="vol" vwtype="pers" wh="nwh" word="hem"/>
+        <node begin="3" buiging="zonder" end="4" id="7" infl="psp" lemma="verslijten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verslijt" sc="voor_pred_np" word="versleten" wvorm="vd"/>
+        <node begin="4" cat="pp" end="6" id="8" rel="predc">
+          <node begin="4" end="5" id="9" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" sc="voor_pred" vztype="init" word="voor"/>
+          <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="10" infl="no_e" lemma="infantiel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obj1" root="infantiel" vform="adj" word="infantiel"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Men heeft hem versleten voor infantiel</sentence>
+</alpino_ds>
