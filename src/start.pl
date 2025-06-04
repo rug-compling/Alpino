@@ -587,7 +587,8 @@ allow_sentence_key_for_parser(on,Ref) :-
 allow_sentence_key_for_parser(fast_best(Dir),Ref) :-
     format_to_chars("~w/~w.xml",[Dir,Ref],Codes),
     atom_codes(File,Codes),
-    \+ file_exists(File).
+    \+ file_exists(File),
+    allow_sentence_key_for_parser(on,Ref).
 allow_sentence_key_for_parser(on,Ref) :-
     construct_identifier(Ref,1,Identifier),
     xml_filename(File,Identifier),
