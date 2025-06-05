@@ -6043,6 +6043,7 @@ grammar_rule(np_np_comma_adv,NP,[N,COMMA,ADV,OPTCOMMA]):-
 grammar_rule(n_n_loc_adv,NP,[N,ADV]):-
     ADV => adv,
     ADV:tmploc => loc,
+    ADV:redrel => no,  % can be derived with normal relative rule
     N:subn => ~sub_indef_verb,
     n_post_mod_structure(N,ADV,NP).
 

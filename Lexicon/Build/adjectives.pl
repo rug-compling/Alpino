@@ -23320,7 +23320,7 @@ a([e(naakte),
    ere(naaktere),
    no_e(naakt),
    st(naaktst),
-   ste(naaktste)],padv,[],
+   ste(naaktste)],both,[],
   [spier]).
 
 a([e(naamloze),
