@@ -18841,9 +18841,6 @@ a([e(impulsieve),
 %% ik ben er voor in
 a([pred(in)],nonadv,[pp(voor)],[]).
 
-a([pred([in,contact])],padv,
-  [pp(met)],[]).
-
 a([pred([in,de,maak])],nonadv,[],[]).
 
 a([pred([in,de,war])],padv,[],[]).

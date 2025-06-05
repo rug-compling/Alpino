@@ -2493,6 +2493,7 @@ n([pl(albums),sg(album)],het,
    muziek,
    studio,f([studio]),
    solo,
+   strip,
    verzamel
   ]).
 
