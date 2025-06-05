@@ -1253,7 +1253,9 @@ so_pp_np_adjective(Prep,A) :-
     unify_except_l(A0,A,[sc,dt:obj2,dt:obj1]),
     instantiated_deprel(A,obj2,PP),
     instantiated_deprel(A,obj1,Obj1),
-    A:sc <=> [Obj1,PP].
+    (  A:sc <=> [Obj1,PP]
+    ;  A:sc <=> [PP,Obj1]
+    ).
 
 als_pred_adjective(A) :-
     pred_arg(PREDC),
