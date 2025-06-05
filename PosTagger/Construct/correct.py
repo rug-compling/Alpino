@@ -92,6 +92,8 @@ def main():
             t = "adjective(ge_no_e(both))"
         if r == "onherkenbaar" and t == "adjective(no_e(adv))":
             t = "adjective(no_e(both))"
+        if r == "naakt" and t == "adjective(no_e(adv))":
+            t = "adjective(no_e(both))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
