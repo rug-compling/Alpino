@@ -4187,6 +4187,7 @@ conj('dan wel',        [dan,wel], maar).
 conj(danwel,           danwel,    maar).
 conj(doch,             doch).
 conj(dus,              dus).
+conj(echter,           echter). % ? Dit werd abrupt door de regering verboden echter de Tweede kamer wou vasthouden aan de zilverstandaard
 conj(edoch,            edoch).
 conj(en,               en).
 conj('en/of',          'en/of').
@@ -5249,9 +5250,15 @@ m(helemaal,         modal_adverb(adv_comp_prep), helemaal).
 m(zo,               modal_adverb(adv_prep), zo).
 
 m(alweer,           modal_adverb(noun),alweer).
-m('een beetje',     modal_adverb(noun),[een,beetje]).
+%%% m('een beetje',     modal_adverb(noun),[een,beetje]).
+
+with_dt([Een,beetje],modal_adverb(noun),
+	dt(np,[det=l(een,determiner(een),detp,0,1),
+	       hd=l(beetje,mod_noun(het,count,sg),np,1,2)])) :-
+    een(Een).
 				% een beetje een aansteller is hij wel
 				% hij profileert zich als een beetje een linkse projectontwikkelaar
+
 m(echt,             modal_adverb(noun),echt). 
 m('every inch',     modal_adverb(noun),[every,inch]).
 m(gans,             modal_adverb(noun),gans). % gans het land

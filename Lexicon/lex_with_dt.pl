@@ -1056,6 +1056,7 @@ with_dt_all(baan,[lang]).
 with_dt_all(bedde,[te]).
 with_dt_all(bedoel,[ik]).
 with_dt_all(bed,[te]).
+with_dt_all(beetje,[een]).
 with_dt_all(beginne,[den,in]).
 with_dt_all(begrijp,[me,niet,verkeerd]).
 with_dt_all(beide,[de]).
@@ -2571,6 +2572,7 @@ with_dt_root(baan).
 with_dt_root(bed).
 with_dt_root(bedde).
 with_dt_root(bedoel).
+with_dt_root(beetje).
 with_dt_root(beginne).
 with_dt_root(begrijp).
 with_dt_root(beide).

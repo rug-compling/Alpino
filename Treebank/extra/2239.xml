@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="sv1" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" infl="sg" lemma="mogen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="mag" sc="modifier(aux(inf))" stype="ynquestion" tense="present" v_per="fir" word="Mag" wvorm="pv"/>
+      <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="1" cat="inf" end="8" id="4" rel="vc">
+        <node begin="1" end="2" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" getal="getal" id="6" infl="de" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="obj1" rnum="sg" root="die" status="vol" vwtype="aanw" wh="nwh" word="die"/>
+        <node begin="3" end="4" id="7" lemma="misschien" pos="adv" postag="BW()" pt="bw" rel="mod" root="misschien" special="sentence" word="misschien"/>
+        <node begin="4" cat="np" end="7" id="8" rel="mod">
+          <node begin="4" end="5" id="9" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="10" lemma="paar" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="paar" sc="measure" special="tmp" word="paar"/>
+          <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="uur" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" rnum="sg" root="uur" special="tmp" word="uur"/>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="12" infl="inf" lemma="lenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leen" sc="transitive" word="lenen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Mag ik die misschien een paar uur lenen ?</sentence>
+</alpino_ds>

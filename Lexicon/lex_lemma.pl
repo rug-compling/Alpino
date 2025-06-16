@@ -101,6 +101,7 @@ lemma_root(aaneen_rijgen,rijg_aaneen) .
 lemma_root(aaneen_sluiten,sluit_aaneen) .
 lemma_root(aan_emigreren,emigreer_aan) .
 lemma_root(aan_evacueren,evacueer_aan) .
+lemma_root(aan_evolueren,evolueer_aan) .
 lemma_root(aan_exporteren,exporteer_aan) .
 lemma_root(aan_fietsen,fiets_aan) .
 lemma_root(aan_figureren,figureer_aan) .
@@ -1111,6 +1112,7 @@ lemma_root(af_dweilen,dweil_af) .
 lemma_root(af_dwingen,dwing_af) .
 lemma_root(af_emigreren,emigreer_af) .
 lemma_root(af_evacueren,evacueer_af) .
+lemma_root(af_evolueren,evolueer_af) .
 lemma_root(af_exporteren,exporteer_af) .
 lemma_root(afficheren,afficheer) .
 lemma_root(af_fietsen,fiets_af) .
@@ -6208,6 +6210,7 @@ lemma_root(heen_dwarrelen,dwarrel_heen) .
 lemma_root(heen_dwingen,dwing_heen) .
 lemma_root(heen_emigreren,emigreer_heen) .
 lemma_root(heen_evacueren,evacueer_heen) .
+lemma_root(heen_evolueren,evolueer_heen) .
 lemma_root(heen_exporteren,exporteer_heen) .
 lemma_root(heen_fietsen,fiets_heen) .
 lemma_root(heen_figureren,figureer_heen) .
@@ -7004,6 +7007,7 @@ lemma_root(ineen_zijgen,zijg_ineen) .
 lemma_root(in_emigreren,emigreer_in) .
 lemma_root(in_enten,ent_in) .
 lemma_root(in_evacueren,evacueer_in) .
+lemma_root(in_evolueren,evolueer_in) .
 lemma_root(in_exporteren,exporteer_in) .
 lemma_root(infecteren,infecteer) .
 lemma_root(in_fietsen,fiets_in) .
@@ -8068,6 +8072,7 @@ lemma_root(langs_dwarrelen,dwarrel_langs) .
 lemma_root(langs_dwingen,dwing_langs) .
 lemma_root(langs_emigreren,emigreer_langs) .
 lemma_root(langs_evacueren,evacueer_langs) .
+lemma_root(langs_evolueren,evolueer_langs) .
 lemma_root(langs_exporteren,exporteer_langs) .
 lemma_root(langs_fietsen,fiets_langs) .
 lemma_root(langs_figureren,figureer_langs) .
@@ -14829,6 +14834,7 @@ lemma_root(toe_dwingen,dwing_toe) .
 lemma_root(toe_eigenen,eigen_toe) .
 lemma_root(toe_emigreren,emigreer_toe) .
 lemma_root(toe_evacueren,evacueer_toe) .
+lemma_root(toe_evolueren,evolueer_toe) .
 lemma_root(toe_exporteren,exporteer_toe) .
 lemma_root(toe_faxen,fax_toe) .
 lemma_root(toe_fietsen,fiets_toe) .
@@ -15527,6 +15533,7 @@ lemma_root(tussen_dwarrelen,dwarrel_tussen) .
 lemma_root(tussen_dwingen,dwing_tussen) .
 lemma_root(tussen_emigreren,emigreer_tussen) .
 lemma_root(tussen_evacueren,evacueer_tussen) .
+lemma_root(tussen_evolueren,evolueer_tussen) .
 lemma_root(tussen_exporteren,exporteer_tussen) .
 lemma_root(tussen_fietsen,fiets_tussen) .
 lemma_root(tussen_figureren,figureer_tussen) .
@@ -16545,6 +16552,7 @@ lemma_root(uit_etteren,etter_uit) .
 lemma_root(uit_evacueren,evacueer_uit) .
 lemma_root(uit_evalueren,evalueer_uit) .
 lemma_root(uit_evangeliseren,evangeliseer_uit) .
+lemma_root(uit_evolueren,evolueer_uit) .
 lemma_root(uit_examineren,examineer_uit) .
 lemma_root(uit_excelleren,excelleer_uit) .
 lemma_root(uit_excuseren,excuseer_uit) .
@@ -18488,6 +18496,7 @@ lemma_root(vanaf_dwarrelen,dwarrel_vanaf) .
 lemma_root(vanaf_dwingen,dwing_vanaf) .
 lemma_root(vanaf_emigreren,emigreer_vanaf) .
 lemma_root(vanaf_evacueren,evacueer_vanaf) .
+lemma_root(vanaf_evolueren,evolueer_vanaf) .
 lemma_root(vanaf_exporteren,exporteer_vanaf) .
 lemma_root(vanaf_fietsen,fiets_vanaf) .
 lemma_root(vanaf_figureren,figureer_vanaf) .
@@ -19106,6 +19115,7 @@ lemma_root(vandaan_dwarrelen,dwarrel_vandaan) .
 lemma_root(vandaan_dwingen,dwing_vandaan) .
 lemma_root(vandaan_emigreren,emigreer_vandaan) .
 lemma_root(vandaan_evacueren,evacueer_vandaan) .
+lemma_root(vandaan_evolueren,evolueer_vandaan) .
 lemma_root(vandaan_exporteren,exporteer_vandaan) .
 lemma_root(vandaan_fietsen,fiets_vandaan) .
 lemma_root(vandaan_figureren,figureer_vandaan) .
@@ -19705,6 +19715,7 @@ lemma_root(vandoor_dwarrelen,dwarrel_vandoor) .
 lemma_root(vandoor_dwingen,dwing_vandoor) .
 lemma_root(vandoor_emigreren,emigreer_vandoor) .
 lemma_root(vandoor_evacueren,evacueer_vandoor) .
+lemma_root(vandoor_evolueren,evolueer_vandoor) .
 lemma_root(vandoor_exporteren,exporteer_vandoor) .
 lemma_root(vandoor_fietsen,fiets_vandoor) .
 lemma_root(vandoor_figureren,figureer_vandoor) .

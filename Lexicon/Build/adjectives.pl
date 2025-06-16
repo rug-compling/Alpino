@@ -4256,7 +4256,7 @@ a([ge_e(bejegende),
    ge_no_e(bejegend)],adv,[],[]).
 
 a([ge_e(bejubelde),
-   ge_no_e(bejubeld)],adv,[],[]).
+   ge_no_e(bejubeld)],both,[],[]).
 
 a([e(bekaaide),
    no_e(bekaaid),
@@ -25166,7 +25166,7 @@ a([ge_e(onderschatte),
    ge_no_e(onderschat)],adv,[],[]).
 
 a([ge_both(onderscheiden),
-   e(onderscheidene)],adv,
+   e(onderscheidene)],both,
   [pp(door),
    pp(in),
    pp(met),
@@ -34458,7 +34458,7 @@ a([ge_e(uitgekraamde),
 a([ge_e(uitgekristalliseerde),
    ge_no_e(uitgekristalliseerd)],adv,[],[]).
 
-a([ge_both(uitgelachen)],adv,[],[]).
+a([ge_both(uitgelachen)],both,[],[]).
 
 a([ge_both(uitgeladen)],adv,[],[]).
 
@@ -35934,7 +35934,7 @@ a([ge_e(vergrote),
    ge_no_e(vergroot)],adv,[],[]).
 
 a([ge_e(verguisde),
-   ge_no_e(verguisd)],adv,[],[]).
+   ge_no_e(verguisd)],both,[],[]).
 
 a([ge_e(vergulde),
    ge_no_e(verguld)],adv,

@@ -628,6 +628,8 @@ lexicon_(NoordWord,proper_name(X,'LOC'),Name,Ws1,Ws,His,_LC) :-
 lexicon_('Slag',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
     (  n_word(bij,Ws1,[L|Ws2])
     ;  n_word('Bij',Ws1,[L|Ws2])
+    ;  n_word('om',Ws1,[L|Ws2])
+    ;  n_word('Om',Ws1,[L|Ws2])
     ),
     in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
     hdrug_util:concat_all(['Slag',bij,Stem],Name,' ').
@@ -656,6 +658,13 @@ lexicon_('Overeenkomst',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
 lexicon_('Verbond',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
     (  n_word(van,Ws1,[L|Ws2])
     ;  n_word('Van',Ws1,[L|Ws2])
+    ),
+    in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
+    hdrug_util:concat_all(['Verbond',van,Stem],Name,' ').
+
+lexicon_('University',proper_name(X,'ORG'),Name,Ws1,Ws,slag(His),_LC) :-
+    (  n_word(of,Ws1,[L|Ws2])
+    ;  n_word('Of',Ws1,[L|Ws2])
     ),
     in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
     hdrug_util:concat_all(['Verbond',van,Stem],Name,' ').

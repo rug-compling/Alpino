@@ -5694,6 +5694,8 @@ v(demonstreer,demonstreert,demonstreren,gedemonstreerd,demonstreerde,demonstreer
 	sbar,
 	np_sbar,
 	transitive,
+	np_np,
+	so_pp_np,
 	pc_pp(tegen),
 	pc_pp(voor)])]).
 
@@ -7307,7 +7309,8 @@ v(evenaar,evenaart,evenaren,geëvenaard,evenaarde,evenaarden,
 	transitive])]).
 
 v(evolueer,evolueert,evolueren,geëvolueerd,evolueerde,evolueerden,
-    [z([intransitive])]).
+  [z([intransitive,
+      ld_pp])]).
 
 v(examineer,examineert,examineren,geëxamineerd,examineerde,examineerden,
     [h([intransitive,
@@ -12026,6 +12029,7 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
 	  part_intransitive(thuis),
 	  part_intransitive(toe),
 	  part_so_np(toe),
+	  part_so_pp(toe),
 	  part_vp_subj_so_np(toe),
 	  part_pc_pp(toe,aan),
 	  part_er_pp_vp(toe,aan),  % ik kom er niet aan toe de boeken te openen
@@ -13305,6 +13309,7 @@ v(leg,legt,leggen,gelegd,legde,legden,
 	part_refl(vast),   % different sense
 	part_refl_pc_pp(vast,op),
 	part_sbar(vast),
+	part_refl_vp(vast),
 	% part_sbar_subj_so_np(op), ???
 	part_sbar(neer),
 	part_sbar(uit),
@@ -27743,6 +27748,7 @@ v(vraag,vraagt,vragen,gevraagd,vroeg,vroegen,
 	acc_np_sbar, % ik werd gevraagd of ik wilde komen
 	np_vp_obj,   % mij werd gevraagd te komen
 	np_vp_obj1,  % ik werd gevraagd te komen
+	%%% ?? np_vp_nocontrol,  % ik vroeg de commisie te mogen komen
 	so_vp_obj,   % +aan
 	vp_subj_np,  % het vraagt een flinke investering om ...
 	fixed([{[pc(van),vp]}],imp_passive),

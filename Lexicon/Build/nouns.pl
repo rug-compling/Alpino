@@ -9264,7 +9264,7 @@ n([pl(detachementen),sg(detachement)],het,[measure]).
 
 n([sg(detachering),pl(detacheringen)],de,[]).
 
-n([pl(details),sg(detail)],het,[sbar]).
+n([pl(details),sg(detail)],het,[sbar,subject_sbar]).
 
 n([pl(detailleringen),sg(detaillering)],de,[]).
 
@@ -20992,6 +20992,8 @@ n([pl(lijkschouwers),sg(lijkschouwer)],de,[]).
 
 n([mass(lijm)],de,[]).
 
+n([pl(lijnen),sg(lijn)],de,[pred_pp(in)],[]).
+
 n([pl(lijnen),sg(lijn)],de,
   [subject_sbar,
    subject_vp,
@@ -21794,7 +21796,8 @@ n([pl('madonna\'s'),sg(madonna)],de,[],[dim(madonnaatje)]).
 
 n([sg(maestro),pl('maestro\'s')],de,[]).
 
-n([sg(maffia),sg(mafia),pl('maffia\'s'),pl('mafia\'s')],de,[]).
+n([sg(maffia),sg(mafia),pl('maffia\'s'),pl('mafia\'s')],de,[],
+  [seks]).
 
 n([sg(mafioso),pl(mafiosi),sg(maffioso),pl(maffiosi)],de,[]).
 
@@ -26499,7 +26502,11 @@ n([pl(palen),sg(paal)],de,[],
    telefoon,
    totem]).
 
-n([meas(paar),pl(paren)],het,[meas_mod,measure]).
+n([meas(paar),pl(paren)],het,
+  [meas_mod,
+   measure,
+   temp_mod  % de eerste paar dagen
+  ]).
 
 n([sg(paar),pl(paren),
    ignore_stem(paar)],het,[],
@@ -28149,6 +28156,8 @@ n([mass(politie)],de,[],
    h('VN'),
    i(vreemdeling,vreemdelingen),
    i(zede,zeden)]).
+
+n([mass(politiek)],de,[],[subject_sbar]).
 
 n([mass(politiek)],de,[],
   [s(bezetting),
