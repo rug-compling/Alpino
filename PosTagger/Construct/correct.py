@@ -94,6 +94,30 @@ def main():
             t = "adjective(no_e(both))"
         if r == "naakt" and t == "adjective(no_e(adv))":
             t = "adjective(no_e(both))"
+        if r == "bejubelen" and t == "adjective(ge_no_e(adv))":
+            t = "adjective(ge_no_e(both))"
+        if r == "verguizen" and t == "adjective(ge_no_e(adv))":
+            t = "adjective(ge_no_e(both))"
+        if r == "uit_lachen" and t == "adjective(ge_no_e(adv))":
+            t = "adjective(ge_no_e(both))"
+        if r == "onderscheiden" and t == "adjective(ge_both(adv))":
+            t = "adjective(ge_both(both))"
+        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(door))":
+            t = "adjective(ge_both(both),pp(door))"
+        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(in))":
+            t = "adjective(ge_both(both),pp(in))"
+        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(met))":
+            t = "adjective(ge_both(both),pp(met))"
+        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(naar))":
+            t = "adjective(ge_both(both),pp(naar))"
+        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(tot))":
+            t = "adjective(ge_both(both),pp(tot))"
+        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(van))":
+            t = "adjective(ge_both(both),pp(van))"
+        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(voor))":
+            t = "adjective(ge_both(both),pp(voor))"
+        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(wegens))":
+            t = "adjective(ge_both(both),pp(wegens))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
