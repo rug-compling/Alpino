@@ -8621,6 +8621,7 @@ lemma_root(leeg_drinken,drink_leeg) .
 lemma_root(leeg_gooien,gooi_leeg) .
 lemma_root(leeg_halen,haal_leeg) .
 lemma_root(leeg_kiepen,kiep_leeg) .
+lemma_root(leeg_knijpen,knijp_leeg) .
 lemma_root(leeg_lopen,loop_leeg) .
 lemma_root(leeg_pompen,pomp_leeg) .
 lemma_root(leeg_roven,roof_leeg) .

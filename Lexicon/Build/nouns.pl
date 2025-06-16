@@ -11152,7 +11152,7 @@ n([mass(eruditie)],de,[]).
 
 n([pl(erupties),sg(eruptie)],de,[]).
 
-n([pl(ervaringen),sg(ervaring)],de,[sbar,vp,subject_sbar,subject_vp],[]).
+n([pl(ervaringen),sg(ervaring)],de,[sbar,vp,subject_sbar_no_het,subject_vp],[]).
 
 n([pl(ervaringen),sg(ervaring)],de,[],
   [lees,
