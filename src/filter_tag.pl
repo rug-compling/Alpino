@@ -463,7 +463,12 @@ valid_sc(Sc,_,B,Constraints) :-
 valid_sc(part_sbar_subj_no_het_tpart(Part),_,[check_tpart(Part)|Conds]) :-
     !,
     valid_sc(sbar_subj_no_het_tpart,Conds).
-
+valid_sc(part_sbar_tpart(Part),_,[check_tpart(Part)|Conds]) :-
+    !,
+    valid_sc(sbar,Conds).
+valid_sc(part_vp_tpart(Part),_,[check_tpart(Part)|Conds]) :-
+    !,
+    valid_sc(vp,Conds).
 valid_sc(Term,Vform,[check_part(Vform,Part)|Conds]) :-
     Term =.. [Func,Part|Args],
     atom_concat(part_,NewFunc,Func),
@@ -489,6 +494,12 @@ valid_sc(Term,_Vform,Conds) :-
 valid_sc(part_sbar_subj_no_het_tpart(Part),[check_tpart(Part)|Conds]) :-
     !,
     valid_sc(sbar_subj_no_het_tpart,Conds).
+valid_sc(part_sbar_tpart(Part),[check_tpart(Part)|Conds]) :-
+    !,
+    valid_sc(sbar,Conds).
+valid_sc(part_vp_tpart(Part),[check_tpart(Part)|Conds]) :-
+    !,
+    valid_sc(vp,Conds).
 
 valid_sc(Term,[check_part(Part)|Conds]) :-
     Term =.. [Func,Part|Args],
