@@ -5662,6 +5662,18 @@ sbar_subj_no_het_tpart(V,C0,C) :-
     unify_except(V0,V,tpart),
     V:tpart => yes.
 
+%% overeen werd gekomen dat ..
+sbar_tpart(V,C0,C) :-
+    sbar(V0,C0,C),
+    unify_except(V0,V,tpart),
+    V:tpart => yes.
+
+%% overeen werd gekomen om ..
+vp_tpart(V,C0,C) :-
+    vp(V0,C0,C),
+    unify_except(V0,V,tpart),
+    V:tpart => yes.
+
 pp_sbar_subj_no_het(Prep,V,C,C) :-
     pp_pc_arg(PP,Prep),
     dip_sbar_subj(V,_Sdat,Subj,[pc/PP]),
