@@ -1750,8 +1750,10 @@ enof_sub('(tje)').
 
 %  exceptional_word_tag(meer,adjective(meer),'VNW(onbep,grad,stan,vrij,zonder,comp)').
 
-exceptional_word_tag('-ie',pronoun(nwh,thi,sg,de,nom,def),      'VNW(pers,pron,nomin,red,3,ev,masc)').
-exceptional_word_tag('\'ie',pronoun(nwh,thi,sg,de,nom,def),      'VNW(pers,pron,nomin,red,3,ev,masc)').
+exceptional_word_tag(ikke,  pronoun(nwh,fir,sg,de,nom,def), 'VNW(pers,pron,nomin,nadr,1,ev)').
+exceptional_word_tag('Ikke',pronoun(nwh,fir,sg,de,nom,def), 'VNW(pers,pron,nomin,nadr,1,ev)').
+exceptional_word_tag('-ie', pronoun(nwh,thi,sg,de,nom,def), 'VNW(pers,pron,nomin,red,3,ev,masc)').
+exceptional_word_tag('\'ie',pronoun(nwh,thi,sg,de,nom,def), 'VNW(pers,pron,nomin,red,3,ev,masc)'). % '
 
 exceptional_word_tag(Stem,number(hoofd(_)),'SPEC(symb)') :-
     atom(Stem),

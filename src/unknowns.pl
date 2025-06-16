@@ -2609,6 +2609,7 @@ function('Fransman').
 function('Freule').
 function('Gedeputeerde').
 function('Generaal').
+function('Generaal-Majoor').
 function('Gigant').
 function('Gitarist').
 function('Gouverneur').
@@ -3714,6 +3715,7 @@ form_of_suffix_rule(air,air,adjective(no_e(adv)),capital/['au-pair',
 							  miljonair
 							 ]).
 form_of_suffix_rule(eerd,eerd,adjective(ge_no_e(adv)),capital/[]).
+form_of_suffix_rule(lijkt,lijken,adjective(ge_no_e(adv)),capital/[]).
 form_of_suffix_rule(ees,ees,adjective(no_e(adv)),[abonnees,
 						  koolmees,
 						  pimpelmees,
@@ -4064,6 +4066,20 @@ form_of_suffix_rule(eerde,eer/eren,verb(hebben,past(sg),transitive),[prefix(ge),
 								     prefix('niet-ge')]).
 form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),intransitive),[geleerden]).
 form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),transitive),[geleerden]).
+
+%% verinnerlijken veruiterlijken
+form_of_suffix_rule(lijken,lijk/lijken,verb(hebben,inf,intransitive),capital/[]). 
+form_of_suffix_rule(lijken,lijk/lijken,verb(hebben,inf,transitive),capital/[]). 
+form_of_suffix_rule(lijken,lijk/lijken,verb(hebben,pl,intransitive),capital/[]). 
+form_of_suffix_rule(lijken,lijk/lijken,verb(hebben,pl,transitive),capital/[]). 
+form_of_suffix_rule(lijkt,lijk/lijken,verb(hebben,psp,intransitive),capital/[]). 
+form_of_suffix_rule(lijkt,lijk/lijken,verb(hebben,psp,transitive),capital/[]). 
+form_of_suffix_rule(lijkt,lijk/lijken,verb(hebben,sg3,intransitive),capital/[]). 
+form_of_suffix_rule(lijkt,lijk/lijken,verb(hebben,sg3,transitive),capital/[]). 
+form_of_suffix_rule(lijkte,lijk/lijken,verb(hebben,past(sg),intransitive),capital/[]). 
+form_of_suffix_rule(lijkte,lijk/lijken,verb(hebben,past(sg),transitive),capital/[]). 
+form_of_suffix_rule(lijkten,lijk/lijken,verb(hebben,past(pl),intransitive),capital/[]). 
+form_of_suffix_rule(lijkten,lijk/lijken,verb(hebben,past(pl),transitive),capital/[]). 
 
 form_of_suffix_rule(dderen,dder/dderen,verb(hebben,inf,intransitive),[]).
 form_of_suffix_rule(dderen,dder/dderen,verb(hebben,inf,transitive),[]).
