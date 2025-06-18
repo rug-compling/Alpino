@@ -625,6 +625,8 @@ lexicon_(NoordWord,proper_name(X,'LOC'),Name,Ws1,Ws,His,_LC) :-
     in_names_dictionary(proper_name(X,'LOC'),Word,RestStem,Ws1,Ws,His),
     hdrug_util:concat_all([NoordStem,RestStem],Name,'').
 
+%% todo: mwu locations "Slag om Monte Cassino"
+%% todo: "Slag aan de Somme"
 lexicon_('Slag',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
     (  n_word(bij,Ws1,[L|Ws2])
     ;  n_word('Bij',Ws1,[L|Ws2])

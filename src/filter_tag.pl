@@ -648,6 +648,7 @@ valid_sc(als_pred_refl,               [check_refl,
                                        check_tag(complementizer(als))]).
 valid_sc(refl_vp,                     [check_refl,check_vform(te)]).
 valid_sc(vp,                          [check_vform(te)]).
+valid_sc(vp_tpart,                    [check_vform(te)]).
 valid_sc(tr_vp,                       [check_vform(te)]).
 valid_sc(vp_no_control,               [check_vform(te)]).
 valid_sc(pp_vp(Prep),                 [prep(Prep),check_vform(te)]).
@@ -662,6 +663,7 @@ valid_sc(np_vp_obj,                   [check_vform(te)]).
 valid_sc(np_vp_obj1,                  [check_vform(te)]).
 valid_sc(dip_sbar,                    []).                
 valid_sc(sbar,                        []).                
+valid_sc(sbar_tpart,                   []).                
 valid_sc(alsof_sbar,                  [check_alsof]).
 valid_sc(tr_sbar,                     []).  
 valid_sc(van_sbar,                    [check_tag(complementizer(van))]).

@@ -27233,7 +27233,7 @@ v(vind,vindt,vinden,gevonden,vond,vonden,
 	fixed([er_pp(op),compar],no_passive),
 	np_mod_pp(over),  % ik vond daar niets over
 	part_np_mod_pp(terug,over),  % ik vond daar niets over terug
-	part_np_mod_pp(terug,van),  % ik vond daar niets over terug
+	part_np_mod_pp(terug,van),  % ik vond daar niets van terug
 	np_mod_pp(voor),  % ik vond daar geen oplossing voor
         part_transitive(goed),
         part_sbar(goed),
