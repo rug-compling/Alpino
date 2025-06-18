@@ -27381,6 +27381,8 @@ a([pred([op,de,hoogte])],padv,
 
 a([pred([op,handen]),pred(ophanden)],nonadv,[],[]).
 
+a([pred([op,de,been])],nonadv,[],[]).
+
 a([pred([op,dreef])],nonadv,[],[]).
 
 a([pred([op,en,top])],nonadv,[],[]).
