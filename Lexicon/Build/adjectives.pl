@@ -23184,7 +23184,7 @@ a([stem(moorden),
    ere(moordendere),
    end(moordend),
    st(moordendst),
-   ste(moordendste)],adv,[],[]).
+   ste(moordendste)],both,[],[]).
 
 a([e(moralistische),
    er(moralistischer),

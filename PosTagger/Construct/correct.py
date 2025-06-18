@@ -118,6 +118,8 @@ def main():
             t = "adjective(ge_both(both),pp(voor))"
         if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(wegens))":
             t = "adjective(ge_both(both),pp(wegens))"
+        if r == "moorden" and t == "adjective(end(adv))":
+            t = "adjective(end(both))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
