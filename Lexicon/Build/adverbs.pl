@@ -318,7 +318,6 @@ adverb([maar,liefst]).
 adverb(maarliefst).
 adverb([maar,wat,aan]).  % we rommelen (maar) wat aan; aan is really particle
 adverb(mede).
-adverb(meermaals).
 adverb(meermalen).
 adverb(meestentijds).
 adverb(menigmaal).

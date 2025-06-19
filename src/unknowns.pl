@@ -1589,6 +1589,7 @@ foreign_word(care).
 foreign_word(cast).
 foreign_word(casual).
 foreign_word(casuals).
+foreign_word(catering).
 foreign_word(ce).
 foreign_word(center).
 foreign_word(centers).
