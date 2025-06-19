@@ -40,42 +40,47 @@ h_suite_options=robustness=off
 i_suite_options=robustness=off
 j_suite_options=robustness=off
 
-lassysmall_part00001_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00002_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00003_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00004_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00005_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00006_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00007_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00008_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00009_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00010_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00011_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00012_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00013_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00014_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00015_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00016_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00017_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00018_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00019_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00020_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00021_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00022_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00023_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00024_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
-lassysmall_part00025_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall
 
-cdb_part00001_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
-cdb_part00002_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
-cdb_part00003_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
-cdb_part00004_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
-cdb_part00005_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
-cdb_part00006_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
-cdb_part00007_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
-cdb_part00008_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
-cdb_part00009_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
-cdb_part00010_testN_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
+lassysmall_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall stop_if_optimal=on
+
+lassysmall_part00001_testN_options=$(lassysmall_options)
+lassysmall_part00002_testN_options=$(lassysmall_options)
+lassysmall_part00003_testN_options=$(lassysmall_options)
+lassysmall_part00004_testN_options=$(lassysmall_options)
+lassysmall_part00005_testN_options=$(lassysmall_options)
+lassysmall_part00006_testN_options=$(lassysmall_options)
+lassysmall_part00007_testN_options=$(lassysmall_options)
+lassysmall_part00008_testN_options=$(lassysmall_options)
+lassysmall_part00009_testN_options=$(lassysmall_options)
+lassysmall_part00010_testN_options=$(lassysmall_options)
+lassysmall_part00011_testN_options=$(lassysmall_options)
+lassysmall_part00012_testN_options=$(lassysmall_options)
+lassysmall_part00013_testN_options=$(lassysmall_options)
+lassysmall_part00014_testN_options=$(lassysmall_options)
+lassysmall_part00015_testN_options=$(lassysmall_options)
+lassysmall_part00016_testN_options=$(lassysmall_options)
+lassysmall_part00017_testN_options=$(lassysmall_options)
+lassysmall_part00018_testN_options=$(lassysmall_options)
+lassysmall_part00019_testN_options=$(lassysmall_options)
+lassysmall_part00020_testN_options=$(lassysmall_options)
+lassysmall_part00021_testN_options=$(lassysmall_options)
+lassysmall_part00022_testN_options=$(lassysmall_options)
+lassysmall_part00023_testN_options=$(lassysmall_options)
+lassysmall_part00024_testN_options=$(lassysmall_options)
+lassysmall_part00025_testN_options=$(lassysmall_options)
+
+cdb_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb
+
+cdb_part00001_testN_options=$(cdb_options)
+cdb_part00002_testN_options=$(cdb_options)
+cdb_part00003_testN_options=$(cdb_options)
+cdb_part00004_testN_options=$(cdb_options)
+cdb_part00005_testN_options=$(cdb_options)
+cdb_part00006_testN_options=$(cdb_options)
+cdb_part00007_testN_options=$(cdb_options)
+cdb_part00008_testN_options=$(cdb_options)
+cdb_part00009_testN_options=$(cdb_options)
+cdb_part00010_testN_options=$(cdb_options)
 
 job := job${shell echo $$$$}
 
