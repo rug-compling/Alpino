@@ -6359,6 +6359,7 @@ tmp_adverb(hedenavond).
 tmp_adverb(indertijd). 
 tmp_adverb(kortgeleden).	% tot kortgeleden
 tmp_adverb(maandags).
+tmp_adverb(meermaals).
 tmp_adverb(morgen).
 tmp_adverb(morgenavond).
 tmp_adverb(morgenmiddag).

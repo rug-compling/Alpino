@@ -12063,7 +12063,7 @@ grammar_rule(mid_coord(Name),Blist,[COMMA, A, Clist]) :-
 			  within_word_conjunction(adv)]), /* NOT USED */			  
     Blist:conj <=> Clist:conj,
     COMMA => punct,
-    COMMA:puncttype => komma.
+    COMMA:puncttype => (komma;punt_komma).
 
 %%EX%% En appels , en peren en druiven
 grammar_rule(mid_coord(Name,conj),Blist,[OPTCOMMA, Conj, A, Clist]) :-

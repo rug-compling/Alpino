@@ -1062,6 +1062,10 @@ accent(patientenservice,patiëntenservice).
 accent(patientenzorg,patiëntenzorg).
 accent(patiente,patiënte).
 accent(patientes,patiëntes).
+accent(patientjaar,patiëntjaar).
+accent(patientjaartje,patiëntjaartje).
+accent(patientjaartjes,patiëntjaartjes).
+accent(patientjaren,patiëntjaren).
 accent(patient,patiënt).
 accent(peeen,peeën).
 accent(pere,père).

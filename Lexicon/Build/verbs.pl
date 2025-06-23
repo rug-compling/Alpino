@@ -12941,6 +12941,16 @@ v(laat,laat,laten,gelaten,liet,lieten,
 	fixed([vc(weet,inf,intransitive),acc,dat],no_passive),
 	fixed([vc(weet,inf,intransitive),{[acc,dat_pp(aan)]}],no_passive),
 	%
+	fixed([vc(versta,inf,intransitive),vp],no_passive),
+	fixed([vc(versta,inf,intransitive),dat,vp],no_passive),
+	fixed([vc(versta,inf,intransitive),dat_pp(aan),vp],no_passive),
+	fixed([vc(versta,inf,intransitive),sbar],no_passive),
+	fixed([vc(versta,inf,intransitive),dat,sbar],no_passive),
+	fixed([vc(versta,inf,intransitive),dat_pp(aan),sbar],no_passive),
+	fixed([vc(versta,inf,intransitive),acc],no_passive),
+	fixed([vc(versta,inf,intransitive),acc,dat],no_passive),
+	fixed([vc(versta,inf,intransitive),{[acc,dat_pp(aan)]}],no_passive),
+	%
         fixed([vc(eet,inf,intransitive),[van,het,brood],[de,kaas],refl],no_passive),
 	fixed([vc(ga,inf,intransitive),[verstek]],no_passive),
 	fixed([vc(kijk,inf,intransitive),[in,de,kaart],refl],no_passive),
@@ -13026,7 +13036,7 @@ v(laat,laat,laten,gelaten,liet,lieten,
 	part_vp(los),
 	part_vp(na),
         part_vp_obj(na),
-	part_vp(toe),
+	part_vp_no_control(toe),
 	part_vp(weg),
 	fixed([[aan,het,woord],acc],norm_passive),
 	fixed([ap_pred,dat,sbar_subj],no_passive),
@@ -26384,6 +26394,7 @@ v(versta,verstaat,inflected(verstaan,verstane),verstaan,verstond,verstonden,vers
         fixed_dep(intransitive),
 	np_pc_pp(van), % ik verstond er geen woord van
 	transitive,
+	fixed_dep(intransitive),  % heeft laten verstaan VP/SBAR
 	part_transitive(mis),  % dat is niet mis te verstaan
 	np_pc_pp(onder),
 	refl_pc_pp(met)])]).
