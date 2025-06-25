@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="7" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="mod" root="alleen" sc="modal" word="Alleen"/>
+        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="gokker" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="gokker" word="gokkers"/>
+        <node begin="2" cat="pp" end="7" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" cat="conj" end="7" id="7" rel="obj1">
+            <node begin="3" cat="np" end="5" id="8" rel="cnj">
+              <node begin="3" end="4" id="9" infl="pl_num" lemma="21" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="21" word="21"/>
+              <node begin="4" end="5" gen="het" genus="onz" getal="ev" graad="basis" id="10" lemma="jaar" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="jaar" special="tmp" word="jaar"/>
+            </node>
+            <node begin="5" conjtype="neven" end="6" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node aform="compar" begin="6" buiging="zonder" end="7" graad="comp" id="12" infl="no_e" lemma="oud" pos="adj" positie="prenom" postag="ADJ(prenom,comp,zonder)" pt="adj" rel="cnj" root="oud" vform="adj" word="ouder"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="13" infl="pl" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" sc="passive" stype="declarative" tense="present" v_per="thi" word="worden" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="9" id="14" rel="vc">
+        <node begin="0" end="7" id="15" index="1" rel="obj1"/>
+        <node begin="8" buiging="zonder" end="9" id="16" infl="psp" lemma="accepteren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="accepteer" sc="transitive" word="geaccepteerd" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Alleen gokkers van 21 jaar en ouder worden geaccepteerd</sentence>
+</alpino_ds>

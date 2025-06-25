@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="onderzoek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="onderzoek" word="onderzoek"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="12" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1"/>
+        <node begin="3" buiging="zonder" end="4" id="8" infl="psp" lemma="doen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="doe" sc="transitive" word="gedaan" wvorm="vd"/>
+        <node begin="4" cat="pp" end="12" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
+          <node begin="5" cat="np" end="12" id="11" rel="obj1">
+            <node begin="5" end="6" id="12" infl="pl_num" lemma="6800" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="6800" word="6800"/>
+            <node begin="6" end="7" gen="de" getal="mv" graad="basis" id="13" lemma="werknemer" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="werknemer" word="werknemers"/>
+            <node begin="7" cat="pp" end="12" id="14" rel="mod">
+              <node begin="7" end="8" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="8" cat="conj" end="12" id="16" rel="obj1">
+                <node begin="8" cat="np" end="10" id="17" rel="cnj">
+                  <node begin="8" end="9" id="18" infl="pl_num" lemma="60" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="60" word="60"/>
+                  <node begin="9" end="10" gen="het" genus="onz" getal="ev" graad="basis" id="19" lemma="jaar" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="jaar" special="tmp" word="jaar"/>
+                </node>
+                <node begin="10" conjtype="neven" end="11" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node aform="compar" begin="11" buiging="zonder" end="12" graad="comp" id="21" infl="no_e" lemma="oud" pos="adj" positie="prenom" postag="ADJ(prenom,comp,zonder)" pt="adj" rel="cnj" root="oud" vform="adj" word="ouder"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het onderzoek is gedaan onder 6800 werknemers van 60 jaar en ouder</sentence>
+</alpino_ds>
