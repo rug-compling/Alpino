@@ -19,8 +19,6 @@ def main():
         ### correct "old" files after changes in lexicon
         if r == "verspreiden"  and t == "adjective(er(adv))":
             t = "adjective(er(both))"
-        if r == "verspreiden"  and t == "adjective(ge_no_e(adv))":
-            t = "adjective(ge_no_e(both))"
         if t == "adverb" and r == "nagenoeg":
             t = "sentence_adverb"
         if t == "adjective(ge_no_e(padv))" and r == "irriteren":
@@ -37,22 +35,12 @@ def main():
             t = "modal_adverb(adv_noun_prep)"
         if t == "modal_adverb(noun_prep)" and r == "misschien":
             t = "modal_adverb(adv_noun_prep)"
-        if t == "adjective(ge_no_e(adv))"  and r == "gezien":
-            t = "adjective(ge_no_e(both))"
-        if t == "adjective(ge_no_e(adv),pp(bij))"  and r == "gezien":
-            t = "adjective(ge_no_e(both),pp(bij))"
-        if t == "adjective(ge_no_e(adv),fixed([[tegemoet]]))"  and r == "gezien":
-            t = "adjective(ge_no_e(both),fixed([[tegemoet]]))"
         if t == "tag" and h == "normal(enumeration)":
             t = "enumeration"
         if t == "adjective(no_e(adv))" and r == "dankbaar":
             t = "adjective(no_e(both))"
         if t == "adjective(er(adv))" and r == "dankbaar":
             t = "adjective(er(both))"
-        if t == "adjective(ge_no_e(adv))" and r == "voor_bereiden":
-            t = "adjective(ge_no_e(both))"
-        if t == "adjective(ge_no_e(adv))" and r == "onvoorbereid":
-            t = "adjective(ge_no_e(both))"
         if t == "noun(de,count,sg)" and r == "vlucht":
             t = "tmp_noun(de,count,sg)"
         if t == "intensifier" and r == "meer dan":
@@ -86,40 +74,18 @@ def main():
             t = "adjective(er(padv))"
         if r == "verwoesten" and t == "adjective(ge_no_e(adv))":
             t = "adjective(ge_no_e(padv))"
-        if r == "steunen" and t == "adjective(ge_no_e(adv))":
-            t = "adjective(ge_no_e(both))"
-        if r == "sterken" and t == "adjective(ge_no_e(adv))":
-            t = "adjective(ge_no_e(both))"
         if r == "onherkenbaar" and t == "adjective(no_e(adv))":
             t = "adjective(no_e(both))"
         if r == "naakt" and t == "adjective(no_e(adv))":
             t = "adjective(no_e(both))"
-        if r == "bejubelen" and t == "adjective(ge_no_e(adv))":
-            t = "adjective(ge_no_e(both))"
-        if r == "verguizen" and t == "adjective(ge_no_e(adv))":
-            t = "adjective(ge_no_e(both))"
-        if r == "uit_lachen" and t == "adjective(ge_no_e(adv))":
-            t = "adjective(ge_no_e(both))"
-        if r == "onderscheiden" and t == "adjective(ge_both(adv))":
-            t = "adjective(ge_both(both))"
-        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(door))":
-            t = "adjective(ge_both(both),pp(door))"
-        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(in))":
-            t = "adjective(ge_both(both),pp(in))"
-        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(met))":
-            t = "adjective(ge_both(both),pp(met))"
-        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(naar))":
-            t = "adjective(ge_both(both),pp(naar))"
-        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(tot))":
-            t = "adjective(ge_both(both),pp(tot))"
-        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(van))":
-            t = "adjective(ge_both(both),pp(van))"
-        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(voor))":
-            t = "adjective(ge_both(both),pp(voor))"
-        if r == "onderscheiden" and t == "adjective(ge_both(adv),pp(wegens))":
-            t = "adjective(ge_both(both),pp(wegens))"
         if r == "moorden" and t == "adjective(end(adv))":
             t = "adjective(end(both))"
+        if r == "meermaals" and t == "adverb":
+            t = "tmp_adverb"
+        if r == "onversneden" and t == "adjective(ge_both(nonadv))":
+            t = "adjective(ge_both(padv))"
+        if r == "hoog of" and t == "with_dt(complex_etc,dt(conj,[crd=l(of,conj(of),vg,0,1),cnj=l(hoog,adjective(er(adv)),ap,1,2)]))":
+            t = "with_dt(np_complex_etc,dt(conj,[crd=l(of,conj(of),vg,0,1),cnj=l(hoog,adjective(er(adv)),ap,1,2)]))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 

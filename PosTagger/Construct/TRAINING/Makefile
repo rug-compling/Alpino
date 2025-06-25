@@ -50,8 +50,10 @@ $(OUTS): $(OBJS)
 
 bin: getNGD getNGD2 getngd getngd2 getngdpre getngdpost
 
+BUILT=*.sfr *.sfr.* *.tmi *.tmo *.ftmi *.ftmo *.freqframes *.fr
+
 realclean:
-	rm getNGD getNGD2 getngd getngd2 getngdpre getngdpost
+	rm -f getNGD getNGD2 getngd getngd2 getngdpre getngdpost $(BUILT)
 
 .PRECIOUS : %.fr %.tmi %.tmo %.sfr
 

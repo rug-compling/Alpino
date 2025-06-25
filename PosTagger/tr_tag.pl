@@ -279,4 +279,21 @@ t_s_r(inverted_aux(X),inverted_aux(X)).
 adj_infl(aller_st(A),St) :-
     !,
     St = st(A).
+adj_infl(ge_no_e(A0),St):-
+    !,
+    adapt_ge_adv(A0,A),
+    St = no_e(A).
+adj_infl(ge_both(A0),St):-
+    !,
+    adapt_ge_adv(A0,A),
+    St = both(A).
+adj_infl(ge_e,St):-
+    !,
+    St = e.
 adj_infl(X,X).
+
+adapt_ge_adv(adv,N) :-
+    !,
+    N = both.
+adapt_ge_adv(N,N).
+
