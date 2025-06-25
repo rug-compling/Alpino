@@ -315,6 +315,8 @@ p_of_f(right_conj(_),vg,[special=right]).
 p_of_f(comparative(_),comparative,[]).
 p_of_f(etc,vg,[]).
 p_of_f(complex_etc,vg,[]).
+p_of_f(np_complex_etc,vg,[]).
+p_of_f(num_complex_etc,vg,[]).
 
 p_of_f(fixed_part(_),fixed,[]).
 

@@ -167,6 +167,8 @@ filter_tag_rule(denk_ik,               []).
 filter_tag_rule(denk_ik_dip,           []).
 filter_tag_rule(etc,                   []).
 filter_tag_rule(complex_etc,           []).
+filter_tag_rule(np_complex_etc,        []).
+filter_tag_rule(num_complex_etc,       []).
 filter_tag_rule(postnp_adverb,         []).
 filter_tag_rule(postn_adverb,          []).
 filter_tag_rule(postpn_adverb,         []).
