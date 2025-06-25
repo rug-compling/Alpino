@@ -1577,6 +1577,7 @@ foreign_word(bureau).
 foreign_word(business).
 foreign_word(but).
 foreign_word(by).
+foreign_word(cabrio).
 foreign_word(call).
 foreign_word(calls).
 foreign_word(camp).
@@ -6677,6 +6678,8 @@ junior('Jr').
 junior('Sr').
 junior('Jr.').
 junior('Sr.').
+
+junior(cabrio).
 
 
 word_rang(eerste).
