@@ -12299,6 +12299,7 @@ grammar_rule(end_coord(enz),Clist,[OPTCOMMA, Conj]) :-
 grammar_rule(end_coord(complex_enz),Clist,[OPTCOMMA, Conj]) :-
     Conj => complex_etc,
     enz_coord_structure(Clist,OPTCOMMA,Conj),
+    Clist:cat <=> Conj:cat,
     Clist:conj <=> ConjDt,
     Conj:dt => dt,
     Clist:cats <=> Conj:dt:cnj,
@@ -12605,8 +12606,8 @@ conjunction_cat(vpx,M,Crd,ETC) :-
     M:tags => [].
 
 %% zo'n twee , drie boeken
-conjunction_cat(num,M,_,ETC) :-
-    ETC => no,
+conjunction_cat(num,M,_,_ETC) :-
+%    ETC => no,
     M => num.
 
 conjunction_cat(max,M,Crd,ETC) :-

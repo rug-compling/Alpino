@@ -111,6 +111,18 @@ complex_etc(Sign) :-
     sign(Sign,vg),
     initialize_dt([],Sign).
 
+np_complex_etc(Sign) :-
+    Sign => complex_etc,
+    Sign:cat => np,
+    sign(Sign,vg),
+    initialize_dt([],Sign).
+
+num_complex_etc(Sign) :-
+    Sign => complex_etc,
+    Sign:cat => num,
+    sign(Sign,vg),
+    initialize_dt([],Sign).
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%% tag %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

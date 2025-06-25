@@ -18547,7 +18547,7 @@ v(reis,reist,reizen,gereisd,reisde,reisden,
 	part_transitive(af),
 	part_ld_pp(rond)])]).
 
-v(rek,rekt,rekken,gerekt,rekte,rekten,
+v(rek,rekt,rekken,[gerekt,gerokken],rekte,rekten,  % gerokken: VL
     [unacc([part_intransitive(uit)]),
      h([transitive,
 	%%% part_refl(uit),
@@ -24262,6 +24262,7 @@ v(vaar,vaart,varen,gevaren,[voer,vaarde],[voeren,vaarden],
      b([intransitive,
         part_intransitive(mee),
 	part_intransitive(om),  
+	part_intransitive(rond),
 	part_intransitive(uit),
 	part_ld_pp(uit),
 	ld_dir,

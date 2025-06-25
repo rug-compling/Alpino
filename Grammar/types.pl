@@ -274,7 +274,7 @@ cat_type(part,         [cj,part]).
 cat_type(modifier,     [vc,wh,wh_reltmploc,cj,hstem,exs,mexs,eps,mcat,sel,modifies_v]).
 cat_type(within_word_conjunct,[]).
 cat_type(etc,          []).	% end conjunction
-cat_type(complex_etc,  []).     % end conjunction
+cat_type(complex_etc,  [cat]).  % end conjunction
 cat_type(fixed_part,   [cat,sel,words]).
 
 type(etopic,  [], []).

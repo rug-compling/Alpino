@@ -4435,11 +4435,6 @@ with_dt([en,niet,'zo\'n',beetje,ook],
 	dt(conj,[crd=l(en,conj(en),vg,0,1),
 		 cnj=l('niet zo\'n beetje ook',adverb,advp,1,5)])).
 
-with_dt([of,hoger],
-	complex_etc,
-	dt(conj,[crd=l(of,conj(of),vg,0,1),
-		 cnj=l(hoog,adjective(er(adv)),ap,1,2)])).
-
 with_dt([en,met,succes],
 	complex_etc,
 	dt(conj,[crd=l(en,conj(en),vg,0,1),
@@ -4447,6 +4442,34 @@ with_dt([en,met,succes],
 			    obj1=l(succes,noun(het,count,sg),np,2,3)
 			    ]
 		       )])).
+
+%%% kinderen van zestien jaar of ouder
+with_dt([En,Ouder],
+	np_complex_etc,
+	dt(conj,[crd=l(En,conj(En),vg,0,1),
+		 cnj=l(Oud,adjective(er(adv)),ap,1,2)])) :-
+    lists:member(En,[en,of]),
+    en_ouder(Oud,Ouder).
+
+en_ouder(eerder,eerder).
+en_ouder(hoog,hoger).
+en_ouder(jong,jonger).
+en_ouder(kort,korter).
+en_ouder(koud,kouder).
+en_ouder(laag,lager).
+en_ouder(lang,langer).
+en_ouder(oud,ouder).
+en_ouder(warm,warmer).
+
+with_dt([En,Meer],
+	num_complex_etc,
+	dt(conj,[crd=l(En,conj(En),vg,0,1),
+		 cnj=l(MeerStem,adjective(meer),ap,1,2)])) :-
+    lists:member(En,[en,of]),
+    en_meer(Meer,MeerStem).
+
+en_meer(meer,meer).
+en_meer(minder,minder).
 
 %%%%%%%%%%%%%%%%%%%%%
 %%%% ADJECTIVES %%%%%

@@ -11319,8 +11319,8 @@ a([ge_e(gedekreteerde),
    ge_no_e(gedekreteerd)],adv,[],[]).
 
 a([ge_e(gedekte),
-   ge_no_e(gedekt)],adv,
-  [pp(door)],[]).
+   ge_no_e(gedekt)],both,
+  [],[]).
 
 a([ge_e(gedelegeerde),
    ge_no_e(gedelegeerd)],adv,[],[]).
@@ -14800,11 +14800,10 @@ a([ge_e(geschifte),
    st(geschiftst),
    ste(geschiftste)],adv,[],[]).
 
-a([stem(geschikt),
-   ge_e(geschikte),
+a([e(geschikte),
    er(geschikter),
    ere(geschiktere),
-   ge_no_e(geschikt),
+   no_e(geschikt),
    st(geschiktst),
    ste(geschiktste)],adv,
   [object_vp,
@@ -26949,7 +26948,7 @@ a([both(onverschrokken),
 a([e(onverslaanbare),
    no_e(onverslaanbaar)],padv,[],[]).
 
-a([ge_both(onversneden)],nonadv,[],[]).
+a([ge_both(onversneden)],padv,[],[]).
 
 a([e(onverstaanbare),
    no_e(onverstaanbaar)],adv,[],[]).
@@ -27540,7 +27539,7 @@ a([ge_e(opgeborrelde),
    ge_no_e(opgeborreld)],adv,[],[]).
 
 a([ge_e(opgebouwde),
-   ge_no_e(opgebouwd)],adv,[],[]).
+   ge_no_e(opgebouwd)],both,[],[]).
 
 a([ge_e(opgebrachte),
    ge_no_e(opgebracht)],adv,[],[]).
@@ -27776,8 +27775,10 @@ a([ge_e(opgerakelde),
 
 a([ge_both(opgereden)],adv,[],[]).
 
-a([ge_no_e(opgerekt),
-   ge_e(opgerekte)],padv,[],[]).
+a([stem(op_rekken),
+   ge_no_e(opgerekt),
+   ge_e(opgerekte),
+   ge_both(gerokken)],padv,[],[]).
 
 a([ge_both(opgerezen)],adv,[],[]).
 
@@ -43636,7 +43637,6 @@ stem(opgepropt,v_root(prop_op,op_proppen)).
 stem(opgeraapt,v_root(raap_op,op_rapen)).
 stem(opgerakeld,v_root(rakel_op,op_rakelen)).
 stem(opgereden,v_root(rijd_op,op_rijden)).
-stem(opgerekt,v_root(rek_op,op_rekken)).
 stem(opgerezen,v_root(rijs_op,op_rijzen)).
 stem(opgericht,v_root(richt_op,op_richten)).
 stem(opgeroepen,v_root(roep_op,op_roepen)).

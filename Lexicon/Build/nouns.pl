@@ -17174,10 +17174,12 @@ n([mass([ja,mits]),
 n([bare_meas(jaar),pl(jaren)],het,
   [temp_mod,
    sbar,
+   measure,
    app_measure,  % het jaar 2006
    pred_pp(van)]).
 
-n([bare_meas(jaar),pl(jaren)],het,
+n([bare_meas(jaar),pl(jaren),
+   ignore_stem(jaar)],het,
   [measure      % twee jaar ellende
   ],
   [patiënt,
@@ -23750,6 +23752,7 @@ n([pl(naalden),sg(naald)],de,[],
 
 n([pl(namen),sg(naam)],de,[sbar,
 			   vp,
+			   pred_pp(op),
 			   app_measure,
 			   np_app_measure]).
 

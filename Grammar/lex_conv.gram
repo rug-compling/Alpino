@@ -903,6 +903,12 @@ a_lex(etc,Sign) :-
 a_lex(complex_etc,Sign) :-
     complex_etc(Sign).
 
+a_lex(np_complex_etc,Sign) :-
+    np_complex_etc(Sign).
+
+a_lex(num_complex_etc,Sign) :-
+    num_complex_etc(Sign).
+
 a_lex(punct(aanhaal_both),Sign) :-
     !,
     punct(Sign),
