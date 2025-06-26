@@ -11,7 +11,8 @@ frames.pl: $(freqframes) ./cnt-frames
 	echo >> frames.pl
 	LANG=POSIX LC_ALL=POSIX sort -m -t\| -k2,2 $(freqframes) \
       | ./cnt-frames\
-      | Alpino debug=0 cmdint=off -u -notk -l frames2pl  >> frames.pl
+      | Alpino debug=0 cmdint=off -u -notk -l frames2pl  \
+      | LANG=POSIX LC_ALL=POSIX sort >> frames.pl
 
 OUTDIR=..
 OPTPRE=-c 1
