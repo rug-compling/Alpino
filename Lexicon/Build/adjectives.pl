@@ -16826,7 +16826,7 @@ a([ge_e(geïnstrueerde),
    ge_no_e(geïnstrueerd)],adv,[],[]).
 
 a([ge_e(geïntegreerde),
-   ge_no_e(geïntegreerd)],adv,
+   ge_no_e(geïntegreerd)],both,
   [pp(in)],[]).
 
 a([ge_e(geïntensiveerde),

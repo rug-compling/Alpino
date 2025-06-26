@@ -5146,7 +5146,7 @@ v(commandeer,commandeert,commanderen,gecommandeerd,commandeerde,commandeerden,
 	acc_np_dip_sbar,
         np_ld_pp,
         np_ld_dir,
-	vp,
+	vp_no_control,
 	np_vp_obj1])]).
 
 v(commiteer,commiteert,commiteren,gecommiteerd,commiteerde,commiteerden,
@@ -10532,6 +10532,7 @@ v(inspireer,inspireert,inspireren,geïnspireerd,inspireerde,inspireerden,
     [h([transitive,
 	intransitive,
 	np_vp_obj1,
+	vp_no_control,
 	np_pc_pp(op),
 	np_pc_pp(tot),
 	pc_pp(tot)])]).
@@ -10549,7 +10550,8 @@ v(institutionaliseer,institutionaliseert,institutionaliseren,geïnstitutionalise
 v(instrueer,instrueert,instrueren,geïnstrueerd,instrueerde,instrueerden,
     [h([transitive,
 	np_vp_obj1,
-	vp])]).
+	vp_no_control
+       ])]).
 
 v(integreer,integreert,integreren,geïntegreerd,integreerde,integreerden,
     [z([intransitive,
@@ -15164,6 +15166,7 @@ v(motiveer,motiveert,motiveren,gemotiveerd,motiveerde,motiveerden,
 	transitive,
 	intransitive,
 	np_vp_obj1,
+	vp_no_control,
 	np_pc_pp(voor)])]).
 
 v(motregen,motregent,motregenen,gemotregend,motregende,motregenden,
@@ -15500,7 +15503,7 @@ v(nodig,nodigt,nodigen,genodigd,nodigde,nodigden,
       np_pc_pp(aan),
       np_pc_pp(op),
       np_pc_pp(voor),
-      part_vp(uit),		% de maatregel nodigt uit om ...
+      part_vp_no_control(uit),	% de maatregel nodigt uit om ...
       part_np_vp_obj1(uit),
       np_vp_obj1,
       vp_no_control,
@@ -25513,8 +25516,10 @@ v(verkommer,verkommert,verkommeren,verkommerd,verkommerde,verkommerden,
 v(verkondig,verkondigt,verkondigen,verkondigd,verkondigde,verkondigden,
   [h([sbar,
       np_mod_pp(over),
-	transitive,
-	vp])]).
+      transitive,
+      so_pp_np,
+      so_pp_sbar,
+      vp])]).
 
 v(verkool,verkoolt,verkolen,verkoold,verkoolde,verkoolden,
     [unacc([intransitive]),
@@ -27762,7 +27767,7 @@ v(vraag,vraagt,vragen,gevraagd,vroeg,vroegen,
 	acc_np_sbar, % ik werd gevraagd of ik wilde komen
 	np_vp_obj,   % mij werd gevraagd te komen
 	np_vp_obj1,  % ik werd gevraagd te komen
-	%%% ?? np_vp_nocontrol,  % ik vroeg de commisie te mogen komen
+	%%% ?? np_vp_no_control,  % ik vroeg de commisie te mogen komen
 	so_vp_obj,   % +aan
 	vp_subj_np,  % het vraagt een flinke investering om ...
 	fixed([{[pc(van),vp]}],imp_passive),
@@ -29232,8 +29237,10 @@ v(zetel,zetelt,zetelen,gezeteld,zetelde,zetelden,
        ])]).
 
 v(zeul,zeult,zeulen,gezeuld,zeulde,zeulden,
-    [h([transitive,
-	pc_pp(met)])]).
+  [h([transitive,
+      part_transitive(mee),
+      part_pc_pp(mee,met),
+      pc_pp(met)])]).
 
 v(zeur,zeurt,zeuren,gezeurd,zeurde,zeurden,
     [h([intransitive,

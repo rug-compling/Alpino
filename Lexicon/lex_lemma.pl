@@ -8839,6 +8839,7 @@ lemma_root(mee_voelen,voel_mee) .
 lemma_root(mee_voeren,voer_mee) .
 lemma_root(mee_wegen,weeg_mee) .
 lemma_root(mee_werken,werk_mee) .
+lemma_root(mee_zeulen,zeul_mee) .
 lemma_root(mee_zingen,zing_mee) .
 lemma_root(mee_zitten,zit_mee) .
 lemma_root(mee_zuigen,zuig_mee) .

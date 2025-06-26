@@ -14,6 +14,7 @@ m(hand_klap,ge_v_noun(intransitive),handgeklap). % niet hand_gek_lap
 m(keet,ge_v_noun(intransitive),gekeet).
 m(praat,ge_v_noun(intransitive),gepraat).
 m(proest,ge_v_noun(intransitive),geproest).
+m(scheld,ge_v_noun(intransitive),gescheld).  %  not psp of schellen
 
 %% normal cases:
 m(Stem,Tag,Surf) :-
@@ -539,6 +540,8 @@ n([pl('Denen'),sg('Deen')],de,[]).
 n([mass('Deens')],het,[]).
 
 n([mass('Deventers')],het,[]).
+
+n([mass('Diets')],het,[]).
 
 n([sg('Doetinchemmer'),
    pl('Doetinchemmers')],de,[]).
@@ -10000,6 +10003,8 @@ n([pl(doopsels),sg(doopsel)],het,[]).
 
 n([sg(doopvont),pl(doopvonten)],de,[]).
 
+n([pl(doormeters),sg(doormeter)],de,[]).
+
 n([mass(doorbloeding)],de,[]).
 
 n([pl(doorbraken),sg(doorbraak)],de,[subject_sbar]).
@@ -11682,7 +11687,8 @@ n([pl(feestmalen),sg(feestmaal)],het,[]).
 n([sg(feestvierder),pl(feestvierders)],de,[]).
 
 n([pl(feiten),sg(feit)],het,
-  [sbar,subject_sbar],
+  [sbar,
+   subject_sbar],
   [dim(feitje),
    nieuws,
    wapen]).
@@ -13037,6 +13043,7 @@ n([pl(gelden),sg(geld)],het,[],
    spaar,
    start,
    statie,
+   teken,  % en niet lemma teek_geld
    vakantie,
    wacht,
    wissel,
@@ -39649,7 +39656,7 @@ n([pl(vissen),sg(vis)],de,[],
    i(zout_water,zoutwater),
    dim(visje)]).
 
-n([pl(visies),sg(visie)],de,[sbar,vp],
+n([pl(visies),sg(visie)],de,[sbar,vp,subject_sbar],
   [toekomst]).
 
 n([pl(visioenen),sg(visioen)],het,[sbar,vp]).

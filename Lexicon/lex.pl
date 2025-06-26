@@ -671,6 +671,14 @@ lexicon_('University',proper_name(X,'ORG'),Name,Ws1,Ws,slag(His),_LC) :-
     in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
     hdrug_util:concat_all(['Verbond',van,Stem],Name,' ').
 
+lexicon_('Grote',proper_name(X,'ORG'),Name,Ws1,Ws,slag(His),_LC) :-
+    n_word('Prijs',Ws1,Ws2),
+    (  n_word(van,Ws2,[L|Ws3])
+    ;  n_word('Van',Ws2,[L|Ws3])
+    ),
+    in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws3,Ws,His),
+    hdrug_util:concat_all(['Grote','Prijs',van,Stem],Name,' ').
+
 lexicon_(Noord,proper_name(X,'LOC'),Name,[Angola|Ws1],Ws,His,_LC) :-
     atom(Noord),
     ind_loc_prefix(Noord),
@@ -890,6 +898,8 @@ number_both(['Tilburg','Trappers']).
 number_both(['Tories']).
 number_both(['Trappers']).
 number_both(['Twin','Towers']).
+number_both(['US']).
+number_both(['USA']).
 number_both(['VN']).
 number_both(['Vogezen']).
 number_both(['VS']).

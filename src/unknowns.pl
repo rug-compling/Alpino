@@ -4834,6 +4834,7 @@ subsumed_by_dict(P0,P,_,_) :-
     tag(P0,P1,_,_,_,_,normal(normal),adjective(_)), P1 < P,
     \+ tag(P0,P1,_,_,_,_,normal(names_dictionary),_),
     tag(P1,P ,_,_,W,_,normal(names_dictionary),_),
+    W \= 'School',  % schilders van de Dendermondse School
     W \= 'Kanaal',  % het Eindhovens Kanaal
     W \= 'Baan'.  % cf "het Barneveldse Baan" vs. "de Keulse Baan"
 
