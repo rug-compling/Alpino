@@ -17200,7 +17200,8 @@ a([e(grandioze),
    no_e(grandioos),
    st(grandioost),
    ste(grandiooste)],adv,
-  [subject_vp],[]).
+  [subject_sbar,
+   subject_vp],[]).
 
 a([stof(granieten)],nonadv,[],[]).
 

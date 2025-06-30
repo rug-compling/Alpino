@@ -2418,7 +2418,6 @@ decap_only('Op').
 decap_only('Over').
 decap_only('Overwegende').
 decap_only('Pagina'). decap_only('PAGINA').
-decap_only('Postbus').
 decap_only('Procent').		% often capitalized !?!?
 decap_only('Publicatiedatum').
 decap_only('Regie').
@@ -4799,7 +4798,7 @@ subsumed_by_dict(P0,P,_,_) :-
 %% forbid (van) Onderwijs/Justitie Frank ...
 subsumed_by_dict(P1,_,[Onderwijs,_|_],_) :-
     tag(_,P1,_,_,van,van,_,_),
-    lists:member(Onderwijs,['Defensie','Justitie','Onderwijs']).
+    lists:member(Onderwijs,['Defensie','Justitie','Onderwijs','Wonen']).
 
 %% forbid: Name1 ( Name2 ) where Name1 is known person, and Name2 is known org
 subsumed_by_dict(P0,P,_,_) :-
@@ -6102,7 +6101,9 @@ potential_name_fsa(begin,P0,[Word1|Words0],Words,[Word1|Used],[begin|His]) :-
     %%
     %% Kommer 't Mannetje
     %% Ton Sondergaard
-    (   \+ tag(P0,_,_,_,_,Word1,normal(names_dictionary),_),
+    (   Word1 = 'Postbus'
+    ->  Flag=unknown
+    ;   \+ tag(P0,_,_,_,_,Word1,normal(names_dictionary),_),
         tag(P0,_,_,_,_,Word1,normal(decap(ADJ)),_),
         ADJ \= 'Adj-s'
     ->  Flag=normal_if_decap  % be hesitant this is start of a name

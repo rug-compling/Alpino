@@ -4506,6 +4506,10 @@ m(zelfde,           als_adjective(e),zelfde).
 m(zomin,            als_adjective(both(adv)),zomin).
 m(zoveel,           als_adjective(no_e(odet_adv)),zoveel).
 
+%% omdat het nooit meer zo wordt als het was
+m(zo,               als_adjective(pred(nonadv)),zo). % 'zo' already is comp_adverb(als)
+
+
 m(even,             comp_adverb(als),even).
 m(zo,               comp_adverb(als),zo).
 % also with of: "geen mens is zo dom of hij weet waar Rome ligt"

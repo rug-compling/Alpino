@@ -53,6 +53,7 @@ lemma_root(aan_buigen,buig_aan) .
 lemma_root(aan_buitelen,buitel_aan) .
 lemma_root(aan_bungelen,bungel_aan) .
 lemma_root(aan_bussen,bus_aan) .
+lemma_root(aan_centreren,centreer_aan) .
 lemma_root(aan_circuleren,circuleer_aan) .
 lemma_root(aan_cirkelen,cirkel_aan) .
 lemma_root(aan_commanderen,commandeer_aan) .
@@ -1058,6 +1059,7 @@ lemma_root(af_buigen,buig_af) .
 lemma_root(af_buitelen,buitel_af) .
 lemma_root(af_bungelen,bungel_af) .
 lemma_root(af_bussen,bus_af) .
+lemma_root(af_centreren,centreer_af) .
 lemma_root(af_checken,check_af) .
 lemma_root(af_circuleren,circuleer_af) .
 lemma_root(af_cirkelen,cirkel_af) .
@@ -3323,6 +3325,7 @@ lemma_root(door_cashen,cash_door) .
 lemma_root(door_categoriseren,categoriseer_door) .
 lemma_root(door_censureren,censureer_door) .
 lemma_root(door_centraliseren,centraliseer_door) .
+lemma_root(door_centreren,centreer_door) .
 lemma_root(door_certificeren,certificeer_door) .
 lemma_root(door_chanteren,chanteer_door) .
 lemma_root(door_chargeren,chargeer_door) .
@@ -6166,6 +6169,7 @@ lemma_root(heen_buigen,buig_heen) .
 lemma_root(heen_buitelen,buitel_heen) .
 lemma_root(heen_bungelen,bungel_heen) .
 lemma_root(heen_bussen,bus_heen) .
+lemma_root(heen_centreren,centreer_heen) .
 lemma_root(heen_circuleren,circuleer_heen) .
 lemma_root(heen_cirkelen,cirkel_heen) .
 lemma_root(heen_commanderen,commandeer_heen) .
@@ -6936,6 +6940,7 @@ lemma_root(in_burgeren,burger_in) .
 lemma_root(in_bussen,bus_in) .
 lemma_root(in_calculeren,calculeer_in) .
 lemma_root(incasseren,incasseer) .
+lemma_root(in_centreren,centreer_in) .
 lemma_root(in_checken,check_in) .
 lemma_root(in_circuleren,circuleer_in) .
 lemma_root(in_cirkelen,cirkel_in) .
@@ -8026,6 +8031,7 @@ lemma_root(langs_buigen,buig_langs) .
 lemma_root(langs_buitelen,buitel_langs) .
 lemma_root(langs_bungelen,bungel_langs) .
 lemma_root(langs_bussen,bus_langs) .
+lemma_root(langs_centreren,centreer_langs) .
 lemma_root(langs_circuleren,circuleer_langs) .
 lemma_root(langs_cirkelen,cirkel_langs) .
 lemma_root(langs_commanderen,commandeer_langs) .
@@ -14787,6 +14793,7 @@ lemma_root(toe_buigen,buig_toe) .
 lemma_root(toe_buitelen,buitel_toe) .
 lemma_root(toe_bungelen,bungel_toe) .
 lemma_root(toe_bussen,bus_toe) .
+lemma_root(toe_centreren,centreer_toe) .
 lemma_root(toe_circuleren,circuleer_toe) .
 lemma_root(toe_cirkelen,cirkel_toe) .
 lemma_root(toe_commanderen,commandeer_toe) .
@@ -15491,6 +15498,7 @@ lemma_root(tussen_buigen,buig_tussen) .
 lemma_root(tussen_buitelen,buitel_tussen) .
 lemma_root(tussen_bungelen,bungel_tussen) .
 lemma_root(tussen_bussen,bus_tussen) .
+lemma_root(tussen_centreren,centreer_tussen) .
 lemma_root(tussen_circuleren,circuleer_tussen) .
 lemma_root(tussen_cirkelen,cirkel_tussen) .
 lemma_root(tussen_commanderen,commandeer_tussen) .
@@ -16341,6 +16349,7 @@ lemma_root(uit_cashen,cash_uit) .
 lemma_root(uit_categoriseren,categoriseer_uit) .
 lemma_root(uit_censureren,censureer_uit) .
 lemma_root(uit_centraliseren,centraliseer_uit) .
+lemma_root(uit_centreren,centreer_uit) .
 lemma_root(uit_certificeren,certificeer_uit) .
 lemma_root(uit_chanteren,chanteer_uit) .
 lemma_root(uit_chargeren,chargeer_uit) .
@@ -18452,6 +18461,7 @@ lemma_root(vanaf_buigen,buig_vanaf) .
 lemma_root(vanaf_buitelen,buitel_vanaf) .
 lemma_root(vanaf_bungelen,bungel_vanaf) .
 lemma_root(vanaf_bussen,bus_vanaf) .
+lemma_root(vanaf_centreren,centreer_vanaf) .
 lemma_root(vanaf_circuleren,circuleer_vanaf) .
 lemma_root(vanaf_cirkelen,cirkel_vanaf) .
 lemma_root(vanaf_commanderen,commandeer_vanaf) .
@@ -19073,6 +19083,7 @@ lemma_root(vandaan_buigen,buig_vandaan) .
 lemma_root(vandaan_buitelen,buitel_vandaan) .
 lemma_root(vandaan_bungelen,bungel_vandaan) .
 lemma_root(vandaan_bussen,bus_vandaan) .
+lemma_root(vandaan_centreren,centreer_vandaan) .
 lemma_root(vandaan_circuleren,circuleer_vandaan) .
 lemma_root(vandaan_cirkelen,cirkel_vandaan) .
 lemma_root(vandaan_commanderen,commandeer_vandaan) .
@@ -19673,6 +19684,7 @@ lemma_root(vandoor_buigen,buig_vandoor) .
 lemma_root(vandoor_buitelen,buitel_vandoor) .
 lemma_root(vandoor_bungelen,bungel_vandoor) .
 lemma_root(vandoor_bussen,bus_vandoor) .
+lemma_root(vandoor_centreren,centreer_vandoor) .
 lemma_root(vandoor_circuleren,circuleer_vandoor) .
 lemma_root(vandoor_cirkelen,cirkel_vandoor) .
 lemma_root(vandoor_commanderen,commandeer_vandoor) .

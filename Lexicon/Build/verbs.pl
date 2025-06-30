@@ -5020,8 +5020,9 @@ v(centraliseer,centraliseert,centraliseren,gecentraliseerd,centraliseerde,centra
       intransitive])]).
 
 v(centreer,centreert,centreren,gecentreerd,centreerde,centreerden,
-    [h([transitive,
-        np_pc_pp(op)])]).
+  [h([transitive,
+      np_ld_pp,
+      np_pc_pp(op)])]).
 
 v(certificeer,certificeert,certificeren,gecertificeerd,certificeerde,
   certificeerden,

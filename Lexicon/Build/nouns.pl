@@ -9420,7 +9420,9 @@ n([pl(diensten),sg(dienst)],de,
    pred_pp(van),  % we zijn u graag van dienst
    app_measure],
   [s(overheid),
-   s(rijk)]).
+   s(rijk),
+   stafdienst
+  ]).
 
 n([pl(diensten),sg(dienst)],de,
   [pred_pp(in)],
@@ -9841,7 +9843,8 @@ n([pl(doelstellingen),sg(doelstelling)],de,
    vp,
    subject_sbar,
    subject_vp],
-  [hoofd,
+  [s(beleid),
+   hoofd,
    millennium,
    s(ontwikkeling)
   ]).
@@ -24405,7 +24408,12 @@ n([sg(noodverordening),pl(noodverordeningen)],de,[]).
 
 n([mass(noodweer)],het,[]).
 
-n([mass(noodzaak)],de,[vp,sbar]).
+n([mass(noodzaak)],de,
+  [vp,
+   sbar,
+   subject_vp,
+   subject_sbar
+  ]).
 
 n([pl(noodzakelijkheden),sg(noodzakelijkheid)],de,[sbar,vp]).
 

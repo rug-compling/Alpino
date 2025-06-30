@@ -3450,6 +3450,15 @@ spelling_variant(vind,    vindt) :-
 
 spelling_variant(kondt, kunt).
 
+spelling_variant('20-er',twintiger).
+spelling_variant('30-er',dertiger).
+spelling_variant('40-er',veertiger).
+spelling_variant('50-er',vijftiger).
+spelling_variant('60-er',zestiger).
+spelling_variant('70-er',zeventiger).
+spelling_variant('80-er',tachtiger).
+spelling_variant('90-er',negentiger).
+
 spelling_variant('Belgie','België').
 spelling_variant('Brazilie','Brazilië').
 spelling_variant('Israel','Israël').
