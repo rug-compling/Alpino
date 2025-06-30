@@ -3027,7 +3027,8 @@ grammar_rule(deverbal_vp_arg_v(np),VP, [Arg, V] ) :-
                               & ~sub_def_adj & ~sub_indef_adj
                               & ~sub_rang
                               & ~sub_det & ~sub_veel,
-			      %% sub_veel: Jarenlang te veel drinken kan leiden tot hersenschade
+			      %% BUT sub_veel: Jarenlang te veel drinken kan leiden tot hersenschade
+			      %% BUT sub_det: Er nog meer onderhoud aan plegen en het weer een beetje oplappen , was niet meer haalbaar
     Arg:wh => nwh,
     Arg:pred => npred,
     VP => vc_noun,
