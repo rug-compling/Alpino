@@ -5316,7 +5316,7 @@ m('zegge en schrijve', modal_adverb(noun_prep),[zeggen,en,schrijven]).
 
 %% even voor/na het einde; even voordat ..
 m(even,             modal_adverb(comp_prep),even).
-m(dadelijk,         modal_adverb(comp_prep),direct).
+m(dadelijk,         modal_adverb(comp_prep),dadelijk).
 m(direct,           modal_adverb(comp_prep),direct).
 m(meteen,           modal_adverb(comp_prep),meteen). % meteen na(dat) ..
 m(onmiddellijk,     modal_adverb(comp_prep),onmiddellijk).
@@ -7747,8 +7747,8 @@ with_dt([deze,en,nog,vele,andere],
         adjective(e),
         dt(conj,[crd=l(en,conj(en),vg,1,2),
                  cnj=l(deze,determiner(de,nwh,nmod,pro,nparg),detp,0,1),
-                 cnj=dt(ap,[mod=dt(advp,[mod=l(nog,adverb,advp,2,3),
-					 mod=l(veel,adjective(e),ap,3,4)
+                 cnj=dt(ap,[mod=dt(ap,[mod=l(nog,adverb,advp,2,3),
+					 hd=l(veel,adjective(e),ap,3,4)
 					 ]),    
 			    hd=l(ander,adjective(ere),ap,4,5)
 			   ])])).
