@@ -1338,7 +1338,7 @@ enforce_longest_match(H,Words,0,_Final) :-
     retractall(normal_tag(_,_)),
     \+ \+ tag(_,_,_,_,_,_,H,_),
     normal_base_cases(H),
-    (	tag(_,_,R0,R,_Surf0,_,H,Tag1),
+    (	tag(X1,X2,R0,R,Surf0,Lem0,H,Tag1),
 	tag(_,_,_,R0,_,_,_,_),	% poor man's version of is_connected
 	tag(_,_,R,_,_,_,_,_),	% poor man's version of is_connected
 	R-R0 > 1,
@@ -1351,7 +1351,7 @@ enforce_longest_match(H,Words,0,_Final) :-
         R0 =< S0,
         S =< R,
 
-        \+ longest_match_survivor(H,S0,S,Surf,Words,Ref2),
+        \+ longest_match_survivor(H,S0,S,Surf,Words,Ref2,tag(X1,X2,R0,R,Surf0,Lem0,H,Tag1)),
 
         (   Type == normal
         ->  (   once(competing_tag(H,H1,Tag1,Tag2,Surf)),
@@ -1377,10 +1377,10 @@ enforce_longest_match(H,Words,0,_Final) :-
 %% unknown word within all-capitalized normal words
 %% should remain unknown word, otherwise only very long
 %% name reading survives.
-longest_match_survivor(normal(_),_,_,_,_,_) :-
+longest_match_survivor(normal(_),_,_,_,_,_,_) :-
     !,
     fail.
-longest_match_survivor(_,S0,S,Surf,List,Ref) :-
+longest_match_survivor(_,S0,S,Surf,List,Ref,_) :-
     S is S0+1,
     S1 is S0-1,
     S2 is S+1,
@@ -1390,6 +1390,14 @@ longest_match_survivor(_,S0,S,Surf,List,Ref) :-
     \+ ( clause(tag(_,_,S0,S,_,Surf,_,_),true,Ref2),
          Ref2\==Ref
        ).
+
+%% Paltsgraaf Jan Piet => do not remove Jan Piet
+longest_match_survivor(name(not_begin),P1,P,_,_,_,
+		       tag(_,_,P0,P,_,Surf,name(_),proper_name(_,_))) :-
+    P1 is P0 + 1,
+    alpino_util:split_atom(Surf," ",[Paltsgraaf|_]),
+    alpino_unknowns:decap_first(Paltsgraaf,Graaf),
+    alpino_lex:lexicon(noun(_,_,_),_,[Graaf],[],normal). 
 
 competing_tag(normal(spaced_letters),normal(spaced_letters),_,_,_).
 competing_tag(normal(spaced_letters),normal(names_dictionary),_,_,_).

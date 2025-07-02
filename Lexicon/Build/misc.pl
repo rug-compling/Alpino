@@ -2054,6 +2054,7 @@ m(heleboel,      determiner(wat,nwh,mod,pro,nparg),heleboel).
 m(het,           determiner(het,nwh,nmod,pro,nparg,wkpro),het).
 m(hetzelfde,     determiner(het,nwh,mod,pro,yparg),hetzelfde).
 m(hun,           determiner(pron),hun).
+m(hun,           determiner(pron),hunne). % de hertogen van Brabant en hunne nazaten
 m(hun,           determiner(der),hunner).
 m(hun,           determiner(der),huns).
 %m(hun,           determiner(pron),ulder).
@@ -7093,7 +7094,6 @@ m('hij_zij',    pronoun(nwh,thi,sg,de,nom,def),[hij,'/',zij]).
 m(hijzelf,      pronoun(nwh,thi,sg,de,nom,def),hijzelf).
 m(hijzelf,      pronoun(nwh,thi,sg,de,nom,def),hijzelve).
 m(hun,          pronoun(nwh,thi,pl,de,dat_acc,def),hun).
-m(hun,          pronoun(nwh,thi,pl,de,dat_acc,def),hunne).   % de hertogen van Brabant en hunne nazaten
 m(hunzelf,      pronoun(nwh,thi,pl,de,dat_acc,def),hunzelf).
 m(hunzelf,      pronoun(nwh,thi,pl,de,dat_acc,def),hunzelve).
 m(hun,          pronoun(nwh,thi,pl,both,gen,def),hunner).

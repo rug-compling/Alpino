@@ -800,7 +800,7 @@ optcomma_end(OPTCOMMA) :-
 comma_end(COMMA) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct,
-    COMMA:puncttype => (komma;schuin_streep;uitroep;vraag;punt;ligg_streep;hellip).
+    COMMA:puncttype => (komma;schuin_streep;uitroep;vraag;punt;ligg_streep;hellip;punt_komma).
 
 comma_end(COMMA) :-
     hdrug_util:hdrug_flag(parse_or_generate,generate),

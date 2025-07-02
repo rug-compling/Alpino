@@ -24198,7 +24198,7 @@ a([ge_e(omgehakte),
    ge_no_e(omgehakt)],adv,[],[]).
 
 a([ge_e(omgekeerde),
-   ge_no_e(omgekeerd)],adv,[],[]).
+   ge_no_e(omgekeerd)],both,[],[]).
 
 a([ge_both(omgekeken)],adv,[],[]).
 
