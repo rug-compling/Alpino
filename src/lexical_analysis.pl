@@ -2857,13 +2857,20 @@ add_word_form(Word) :-
 add_word_form(W) :-
     atomic(W),
     atom_codes(W,Wstr0),
-    alpino_unknowns:decap_most_chars(Wstr0,Wstr1,_,_),
-    deaccent_chars(Wstr1,Wstr),
-    atom_codes(F,Wstr),
-    (   word_form(F)
-    ->  true
-    ;   noclp_assertz(word_form(F))
-    ).
+    (   (   alpino_unknowns:decap_most_chars(Wstr0,Wstr1,_,_)
+	;   Wstr0 = Wstr1
+	),
+        (   deaccent_chars(Wstr1,Wstr)
+	;   Wstr1 = Wstr	% list both options
+	),
+	atom_codes(F,Wstr),
+	(   word_form(F)
+	->  true
+	;   noclp_assertz(word_form(F))
+	),
+	fail
+    ;   true
+    ).   % both options if accented/capitalized
 		     
 
 %% restore tags that the pos-tagger wanted to remove,
