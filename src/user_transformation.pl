@@ -62,6 +62,14 @@ user_transformation(r(REL,p(mwu)),B,Ds0,
     mwu_postag(Surfs,Tags,Lemmas),
     assign_tags(Lemmas,Tags,Ds0,Ds),
     \+ Ds0 = Ds.
+/*
+user_transformation(r(svp,p(mwu)),B,[D1,D2],
+		    r(obj1,p(np)),B,[E1,E2],_,_) :-
+    D1 = tree(r(mwp,l(read_from_treebank(_,de,D13),D14,D15)),D16,[]),
+    E1 = tree(r(det,l(read_from_treebank(det,de,D13),D14,D15)),D16,[]),
+    D2 = tree(r(mwp,l(read_from_treebank(_,tijd,D23),D24,D25)),D26,[]),
+    E2 = tree(r(hd,l(read_from_treebank(noun,tijd,D23),D24,D25)),D26,[]).
+*/
 
 /*
 user_transformation(r(Rel,Cat),B,Ds0,
