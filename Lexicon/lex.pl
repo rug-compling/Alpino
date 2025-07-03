@@ -4883,8 +4883,8 @@ word_forms([over,de,schreef]) :-
     alpino_lexical_analysis:word_form(scheef).
 
 % now: list accented/capitalized here explicitly!
-is_word_form(één) :-
-    alpino_lexical_analysis:word_form(een).
+%%is_word_form(één) :-
+%%    alpino_lexical_analysis:word_form(een).
 is_word_form(W) :-
     alpino_lexical_analysis:word_form(W).
 is_word_form(hem) :-

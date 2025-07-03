@@ -3210,7 +3210,7 @@ dpc-vla-001161-nl-sen.p.152.s.1		     post-NP mod "samen te vatten als"
 dpc-vla-001161-nl-sen.p.51.s.9		     timeout/tagger 
 dpc-vla-001161-nl-sen.p.5.s.2		     complicated conj 
 dpc-vla-001161-nl-sen.p.96.s.3		     "in termen van WHREL[hoe]" 
-dpc-vla-001170-nl-sen.p.27.s.2		     DONEx
+dpc-vla-001170-nl-sen.p.27.s.2		     DONEx (tagger if timeout)
 dpc-vla-001170-nl-sen.p.84.s.2		     gramm.err. "het departement die" 
 dpc-vla-001171-nl-sen.p.114.s.2		     compl.conj. 
 dpc-vla-001171-nl-sen.p.159.s.3		     gapping 
@@ -3221,7 +3221,7 @@ wiki-135.p.17.s.2			     gapping
 wiki-135.p.28.s.4			     gapping 
 wiki-154.p.10.s.16			     gramm.err. "het aantal raakten" 
 wiki-1652.p.20.s.3			     gapping 
-wiki-1808.p.27.s.3			     DONEx 
+wiki-1808.p.27.s.3			     DONExx
 wiki-1823.p.11.s.4			     conj should be flat 
 wiki-1941.p.22.s.9			     extraposed conj (Elsschot) 
 wiki-208.p.57.s.2.1			     PP modifier extraposed over REL 
@@ -3274,7 +3274,7 @@ WR-P-E-I-0000024561.p.4.s.143		     name
 WR-P-E-I-0000026563.p.3.s.104		     gramm.err. "een album die" 
 WR-P-E-I-0000026563.p.3.s.199		     ? 
 WR-P-E-I-0000026563.p.3.s.272.1		     gramm.err. "geen meer singles" 
-WR-P-E-I-0000026563.p.3.s.77.2		     DONEx
+WR-P-E-I-0000026563.p.3.s.77.2		     DONEx (tagger if timeout)
 WR-P-E-I-0000027197.p.3.s.119		     name 
 WR-P-E-I-0000027197.p.3.s.146		     "over te ' beamen ' " 
 WR-P-E-I-0000027197.p.3.s.181		     name 
@@ -3540,7 +3540,7 @@ WR-P-E-I-0000050211.p.1.s.182 		     dat-zin zonder governor
 WR-P-E-I-0000050381.p.1.s.260.2 	     gapping 
 WR-P-E-I-0000050381.p.1.s.349 		     ? 
 WR-P-E-I-0000050381.p.1.s.359 		     gapping 
-WR-P-E-I-0000050381.p.1.s.398 		     DONE 
+WR-P-E-I-0000050381.p.1.s.398 		     DONExx (guides)
 WR-P-E-I-0000050381.p.1.s.445 		     spelling "ze hun" -> "hun" 
 WR-P-E-I-0000050381.p.1.s.48 		     gapping 
 WR-P-E-I-0000050381.p.1.s.49 		     gapping 
@@ -3548,7 +3548,7 @@ WR-P-E-I-0000050381.p.1.s.522 		     "daar" LD?
 WR-P-E-I-0000050381.p.1.s.553 		     "een heuveltje omhoog" 
 WR-P-E-I-0000051419.p.18.s.1		     ? 
 WR-P-E-I-0000051928.p.1.s.1		     gapping 
-WR-P-E-I-0000051928.p.1.s.79		     DONE 
+WR-P-E-I-0000051928.p.1.s.79		     gramm.err. "Europa werden verdeeld"
 WR-P-E-I-0000054957.p.2.s.184		     2x extraposed MOD of NP 
 WR-P-E-I-0000054957.p.2.s.52		     ? de Hohenstaufer Filips van Zwaben en de Welf Otto IV 
 WR-P-E-I-0000108667.p.3.s.25		     ? 
@@ -3594,7 +3594,7 @@ WR-P-P-I-0000000198.p.8.s.4	 	     ( ... )
 WR-P-P-I-0000000204.p.9.s.1	 	     ?
 WR-P-P-I-0000000219.p.6.s.4	 	     role of "hoe dan ook"
 WR-P-P-I-0000000234.p.11.s.2	 	     ?
-WR-P-P-I-0000000250.p.13.s.4	 	     DONE
+WR-P-P-I-0000000250.p.13.s.4	 	     DONExx
 WR-P-P-I-0000000258.p.11.s.3	 	     agreement error "tientallen werken viel ons in de schoot"
 WR-P-P-I-0000000261.p.13.s.3	 	     ?
 WR-P-P-I-0000000262.p.5.s.3	 	     "De ratio brutomarge/totale personeelskosten"
@@ -3625,7 +3625,7 @@ WS-U-E-A-0000000039.p.17.s.6	 	     ? why extra VP node with 2x index
 WS-U-E-A-0000000041.p.15.s.5	 	     meta noise
 WS-U-E-A-0000000042.p.6.s.3	 	     comma expected before APP
 WS-U-E-A-0000000044.p.30.s.7	 	     mistok 2x smain without punct
-WS-U-E-A-0000000204.p.41.s.1	 	     DONE
+WS-U-E-A-0000000204.p.41.s.1	 	     DONE (guides)
 WS-U-E-A-0000000208.p.8.s.4	 	     spelling 2x "voor"
 WS-U-E-A-0000000211.p.17.s.1	 	     meta noise
 WS-U-E-A-0000000214.p.4.s.1	 	     DU
@@ -3634,7 +3634,7 @@ WS-U-E-A-0000000223.p.40.s.13	 	     spelling 2x "hoort"
 WS-U-E-A-0000000225.p.17.s.2	 	     maar-sv1 topnode
 WS-U-E-A-0000000225.p.22.s.3	 	     meta noise?
 WS-U-E-A-0000000226.p.6.s.5	 	     meta noise
-WS-U-E-A-0000000227.p.11.s.2	 	     DONE
+WS-U-E-A-0000000227.p.11.s.2	 	     DONEx
 WS-U-E-A-0000000233.p.24.s.4	 	     "af of aanvoer" without "-"
 WS-U-E-A-0000000233.p.38.s.2	 	     "deze en andere"  DET or MOD?
 WS-U-E-A-0000000234.p.16.s.5	 	     spelling "het dat" => "dat"
@@ -3659,12 +3659,12 @@ dpc-eli-000945-nl-sen.p.8.s.2	 	     ?
 dpc-eli-000947-nl-sen.p.14.s.4		     ?
 dpc-eli-000947-nl-sen.p.8.s.2	 	     bracketed mod of pre-np adj 
 dpc-eup-000019-nl-sen.p.8.s.5	 	     unknown word vastbeslotenheid which governs VC
-dpc-fsz-000543-nl-sen.p.215.s.1	 	     DONE
+dpc-fsz-000543-nl-sen.p.215.s.1	 	     DONEx
 dpc-fsz-000543-nl-sen.p.50.s.2	 	     gapping
 dpc-fsz-000552-nl-sen.p.14.s.2	 	     gapping
 dpc-fsz-000552-nl-sen.p.7.s.4	 	     ATB "de"?
 dpc-ibm-000425-nl-sen.p.7.s.1	 	     "vele business en IT executives"
-dpc-ibm-001314-nl-sen.p.50.s.1	 	     DONE
+dpc-ibm-001314-nl-sen.p.50.s.1	 	     DONEx
 dpc-ibm-001315-nl-sen.p.14.s.1	 	     ? meer Engelse woorden dan Nederlandse
 dpc-ibm-001315-nl-sen.p.44.s.1	 	     gapping
 dpc-ibm-001315-nl-sen.p.58.s.1	 	     "kunnen gevonden worden"
@@ -3678,7 +3678,7 @@ dpc-med-000676-nl-sen.p.24.s.3	 	     ?
 dpc-med-000684-nl-sen.p.11.s.2	 	     ?
 dpc-med-000684-nl-sen.p.36.s.1	 	     ?
 dpc-qty-000931-nl-sen.p.9.s.5	 	     gapping
-dpc-qty-000935-nl-sen.p.9.s.1	 	     DONE
+dpc-qty-000935-nl-sen.p.9.s.1	 	     DONE (tagger if timeout)
 dpc-riz-001064-nl-sen.p.5.s.2	 	     2x extraposed PP
 dpc-rou-000478-nl-sen.p.12.s.8	 	     DU
 dpc-rou-000478-nl-sen.p.5.s.20	 	     sat/nucl nucl/sat
@@ -3728,14 +3728,14 @@ WR-P-E-H-0000000052.p.284.s.3	 	     "dubbel" as ME in "dubbel zo hoog"
 WR-P-E-H-0000000052.p.358.s.1	 	     , NP , as modifier
 WR-P-E-H-0000000055.p.278.s.1	 	     , NP , as modifier
 WR-P-E-H-0000000062.p.47.s.3	 	     APP or SAT after :
-WR-P-E-I-0000000332.p.4.s.119 	 	     DONE
+WR-P-E-I-0000000332.p.4.s.119 	 	     DONEx
 WR-P-E-I-0000000332.p.4.s.140 	 	     spelling "een" -> "en"
 WR-P-E-I-0000000332.p.4.s.172 	 	     "kalm" predm?
 WR-P-E-I-0000000332.p.4.s.181 	 	     "droevig" predm?
 WR-P-E-I-0000000332.p.4.s.281	 	     material between quotes acts as NP, should it be a name?
 WR-P-E-I-0000004258.p.5.s.4	 	     unexpected ";"
-WR-P-E-I-0000004745.p.5.s.54	 	     DONE
-WR-P-E-I-0000004745.p.5.s.67	 	     DONE
+WR-P-E-I-0000004745.p.5.s.54	 	     DONE (guides)
+WR-P-E-I-0000004745.p.5.s.67	 	     DONEx
 WR-P-E-I-0000006366.p.8.s.203	 	     spelling "dat" => "daar"
 WR-P-E-I-0000011406.p.4.s.56	 	     gapping
 WR-P-E-I-0000013937.p.4.s.105	 	     compl.conj.
@@ -3750,7 +3750,7 @@ WR-P-E-I-0000039352.p.1.s.1	 	     spelling "en" redundant
 WR-P-E-I-0000039352.p.3.s.111	 	     ?
 WR-P-E-I-0000039352.p.3.s.269.2 	     name app with name
 WR-P-E-I-0000039352.p.3.s.329_330 	     compl.conj.
-WR-P-E-I-0000040286.p.7.s.253 	 	     DONE
+WR-P-E-I-0000040286.p.7.s.253 	 	     gapping
 WR-P-E-I-0000040286.p.7.s.341 	 	     gapping
 WR-P-E-I-0000040286.p.7.s.69 	 	     spelling 2x "kon"
 WR-P-E-I-0000041235.p.1.s.122 	 	     zelfnoem + x
@@ -4255,3 +4255,11 @@ dpc-bmm-001097-nl-sen.p.9.s.2 		guides after lexicon change
 WR-P-E-J-0000000012.p.2.s.1 		NEW
 WR-P-P-I-0000000104.p.7.s.10 		tagger "Het Staatsblad" name
 WR-P-P-L-0000000001.p.115.s.8 		NEW
+WS-U-E-A-0000000218.p.14.s.5		DONE
+WS-U-E-A-0000000230.p.31.s.2		DONE
+WS-U-E-A-0000000201.p.5.s.4		DONE (tagger if timeout)
+WS-U-E-A-0000000200.p.35.s.1		DONE (tagger if timeout)
+WS-U-E-A-0000000022.p.13.s.4		DONE
+WR-P-P-I-0000000121.p.3.s.3		DONE
+WR-P-P-I-0000000063.p.2.s.2		DONE
+WR-P-P-H-0000000006.p.6.s.2		DONE

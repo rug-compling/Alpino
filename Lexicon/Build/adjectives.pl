@@ -2548,7 +2548,8 @@ a([ge_both(afgescheiden)],adv,
   [pp(van)],[]).
 
 a([ge_e(afgeschermde),
-   ge_no_e(afgeschermd)],both,[pp(af)],[]).
+   ge_no_e(afgeschermd)],both,
+  [pp(van)],[]).
 
 a([ge_e(afgescheurde),
    ge_no_e(afgescheurd)],adv,[],[]).
@@ -10851,7 +10852,7 @@ a([ge_e(gebolde),
 a([ge_e(gebombardeerde),
    ge_no_e(gebombardeerd)],adv,[],[]).
 
-a([ge_both(gebonden)],adv,
+a([ge_both(gebonden)],both,
   [],
   [aangifte,
    gebouw,
@@ -10863,6 +10864,7 @@ a([ge_both(gebonden)],adv,
    seizoen,s(seizoen),
    streek,
    taal,
+   tijd,
    vak,
    water
   ]).
@@ -10870,8 +10872,7 @@ a([ge_both(gebonden)],adv,
 a([ge_both(gebonden)],both,
   [pp(aan)],
   [niet,h(niet),
-   on,
-   tijd]).
+   on]).
 
 a([ge_both(gebonkt)],adv,[],[]).
 
@@ -36839,7 +36840,7 @@ a([ge_both(verslagen),
    er(verslagener),
    ere(verslagenere),
    st(verslagenst),
-   ste(verslagenste)],adv,
+   ste(verslagenste)],both,
   [pp(door),
    pp(met)],[]).
 
