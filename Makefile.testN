@@ -276,3 +276,11 @@ tjob:
    echo "cd `pwd`";\
    echo "$(MAKE) $(command)";\
        ) | sbatch --job-name=$(command)
+
+
+lerr: l_errors
+	make $(lassy:%=%.diff) | grep GONE | awk '{ print $3 }' > keys
+	grep -Fwvf keys LassySmall.errors > LassySmall.errors.new
+	mv LassySmall.errors LassySmall.errors.bak
+	mv LassySmall.errors.new LassySmall.errors
+	wc -l keys LassySmall.errors*
