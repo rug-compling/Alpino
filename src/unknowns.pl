@@ -1847,6 +1847,7 @@ foreign_word(just).
 foreign_word(kick).
 foreign_word(kid).
 foreign_word(killer).
+foreign_word(kilometers).
 foreign_word(know).
 foreign_word(község).  % Hongaarse plaats, frequent in Wikipedia
 foreign_word(la).
@@ -1959,6 +1960,7 @@ foreign_word(objective).
 foreign_word(of).
 foreign_word(off).
 foreign_word(official).
+foreign_word(offshore).
 foreign_word(old).
 foreign_word(on).
 foreign_word(one).
@@ -2156,6 +2158,7 @@ foreign_word(tango).
 foreign_word(tér).		% Hongaarse straat?
 foreign_word(technical).
 foreign_word(teens).
+foreign_word(tens).
 foreign_word(terre).
 foreign_word(terror).
 foreign_word(test).
@@ -4590,10 +4593,10 @@ check_de_het(P0,Tag) :-
     Tag=v_noun(_),
     !,
     \+ de_determiner(P0).
-check_de_het(P0,Tag) :-
-    sg_de_noun(Tag),
-    !,
-    \+ het_determiner(P0).
+%check_de_het(P0,Tag) :-
+%    sg_de_noun(Tag),
+%    !,
+%    \+ het_determiner(P0).   too strict, since dit/dat/het are all ambiguous
 check_de_het(_,_).
 
 %% as previous, but no compound should already be asserted
