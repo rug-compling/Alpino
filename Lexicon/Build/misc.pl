@@ -4469,8 +4469,8 @@ with_dt([En,Meer],
     lists:member(En,[en,of]),
     en_meer(Meer,MeerStem).
 
-en_meer(meer,meer).
-en_meer(minder,minder).
+en_meer(meer,veel).
+en_meer(minder,weinig).
 
 %%%%%%%%%%%%%%%%%%%%%
 %%%% ADJECTIVES %%%%%
@@ -5206,10 +5206,17 @@ with_dt([niet,ver],
 		])).
 
 %% nog altijd volgens X
+%% nog altijd niet
 with_dt([nog,altijd],
-        modal_adverb(prep),
+        modal_adverb(adv_prep),
         dt(advp,[mod=l(nog,modal_adverb,advp,0,1),
                  hd=l(altijd,sentence_adverb,1,2)
+		])).
+
+with_dt([nog,steeds],
+        modal_adverb(adv_prep),
+        dt(advp,[mod=l(nog,modal_adverb,advp,0,1),
+                 hd=l(steeds,sentence_adverb,1,2)
 		])).
 
 with_dt([in,totaal],
@@ -5275,6 +5282,7 @@ m(lang,             modal_adverb(adv_comp_prep),lang).
 %% helemaal als een verrassing kwam het niet
 m(helemaal,         modal_adverb(adv_comp_prep), helemaal).
 
+m(fel,              modal_adverb(adv_prep),fel).      % fel tegen (de wet)
 m(zo,               modal_adverb(adv_prep), zo).
 
 m(alweer,           modal_adverb(noun),alweer).
@@ -5395,7 +5403,7 @@ m(centraal,         modal_adverb(prep),centraal). % centraal in het midden; op h
 m(dicht,            modal_adverb(prep),dicht).    % dicht tegen zich aan ; dicht bij de macht?
 m(diep,             modal_adverb(prep),diep).     % diep in blessuretijd
 m(dwars,            modal_adverb(prep),dwars).    % dwars door
-m(elders,           modal_adverb(prep),elders).   % kerken elders in Nederland
+m(elders,           modal_adverb(prep),elders).	% kerken elders in Nederland
 m(hoog,             modal_adverb(prep),hoog).     % hoog boven de wolken
 m(laag,             modal_adverb(prep),laag). % hoog boven de wolken
 m(lijnrecht,        modal_adverb(prep),lijnrecht).  % lijnrecht tegenover ..
@@ -6669,8 +6677,8 @@ with_dt([ook,en,vooral],
 %% niet alleen Piet woont daar maar ook zijn zus
 with_dt([niet,alleen],
 	adverb,
-	dt(advp,[mod=l(alleen,adverb,advp,1,2),
-		 hd=l(niet,adverb,advp,0,1)
+	dt(advp,[hd=l(alleen,adverb,advp,1,2),
+		 mod=l(niet,adverb,advp,0,1)
 		])).
 
 with_dt([M,H],adverb,dt(advp,[mod=l(M,Tag,Cat,0,1),

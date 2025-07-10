@@ -819,7 +819,7 @@ m(v_root(heb,hebben),
 	fixed([[onder,de,knie],acc],no_passive),
 	fixed([[onder,ogen],acc],no_passive), %? ik had het werkstuk onder ogen
         fixed([svp_pp(op,geweten),acc],no_passive),
-	fixed([[op,het,oog],acc],no_passive),
+	fixed([ap_pred('op het oog'),acc],no_passive),
 	fixed([[op,zak],acc],no_passive),
 	fixed([[ten,gevolge],acc],no_passive),
 	fixed([[ten,gevolge],vp],no_passive),
@@ -10219,6 +10219,7 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	fixed([{[[toezicht],pc(op)]}],imp_passive),
 	fixed([[van,het,lijf],acc,refl],no_passive),
 	fixed([[van,de,domme],refl],no_passive),
+	fixed([[voet,bij,stuk]],no_passive),
         fixed([[voor,gezien],acc],no_passive),
         fixed([[voor,het,lapje],acc],no_passive),
 	fixed([pc(van),[verre],refl],no_passive),
@@ -10558,7 +10559,7 @@ v(integreer,integreert,integreren,geïntegreerd,integreerde,integreerden,
     [z([intransitive,
 	pc_pp(met)]),
      h([transitive,
-	np_pc_pp(in),
+	np_ld_pp,
 	np_pc_pp(met)])]).
 
 v(intensiveer,intensiveert,intensiveren,geïntensiveerd,intensiveerde,intensiveerden,
@@ -12999,13 +13000,13 @@ v(laat,laat,laten,gelaten,liet,lieten,
 	so_pp_np,		% ik laat het aan hem
 	vp_obj,		        % hij kan het niet laten om haar te plagen
         part_np_vp_obj(toe),    % PPI 03.p.1.s.4
-	part_vp_obj(toe),       % het is toegelaten om ..
+	part_vp_obj(toe),       % het wordt toegelaten om .. ; het laat toe om ..
 	part_np_np(toe),        % we laten het hem niet toe...
 	transitive_ndev_ndev_npas,	% laat dat !
         intransitive,           % laat maar ...
 	inverted_aux(inf),	% laten we gaan; * we laten gaan
 	np_ld_pp,               % ik liet hem binnen / in de kamer
-	np_ld_adv,               % ik liet hem binnen / in de kamer
+	np_ld_adv,              % ik liet hem binnen / in de kamer
 	np_pc_pp_refl(achter),  % ik heb het achter me gelaten
 	np_pc_pp(bij),          % daar laat ik het bij
 	part_np_np(na),
@@ -15026,8 +15027,9 @@ v(moedig,moedigt,moedigen,gemoedigd,moedigde,moedigden,
 	part_np_pc_pp(aan,tot)])]).
 
 v(moei,moeit,moeien,gemoeid,moeide,moeiden,
-    [h([transitive,
-	refl_pc_pp(met)])]).
+  [h([transitive,
+      refl,  % VL?
+      refl_pc_pp(met)])]).
 
 v(moet,moet,moeten,gemoeten,moest,moesten,
   [b([modifier(aux(inf)),
@@ -21916,7 +21918,8 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
 	fixed([er_pp(voor),ap_pred],no_passive),  % hij staat er niet goed voor
 	pc_pp(naar),
 	pc_pp(op),
-        fixed([{[svp_pp(op,naam),pc(van)]}],no_passive),
+        fixed([svp_pp(op,naam)],no_passive),              % de woning staat op zijn naam
+        fixed([{[svp_pp(op,naam),pc(van)]}],no_passive),  % de woning staat op naam van ...
 	er_pp_sbar(op),
 	er_pp_vp(op),
 	fixed([vc(kijk,te,intransitive),er_pp(van,C),extra_sbar(C)],no_passive),
@@ -27741,8 +27744,8 @@ v(vorm,vormt,vormen,gevormd,vormde,vormden,
 	np_pc_pp(uit),
 	np_pc_pp(van),
 	np_pc_pp(over),
-        fixed([pc(op),np_pred(uitzondering)],no_passive),
-        fixed([{[pc(van),np_pred(illustratie)]}],no_passive),
+        fixed([pc(op),acc(uitzondering)],no_passive),
+        fixed([{[pc(van),acc(illustratie)]}],no_passive),
 	fixed([{[acc(mening),refl,pc(over)]}],no_passive),
 	fixed([{[acc(oordeel),refl,pc(over)]}],no_passive),
 	part_als_pred_np(om),

@@ -1844,6 +1844,8 @@ zoals_complementizer(C) :-
         SBAR:dt => [],
 	SBAR:e_deps => [],
         ComparativeArg:vform => (psp;te)
+    ;   ComparativeArg => max,
+	ComparativeArg:max_type => t_dp
     ).
 
 als_complementizer(C) :-

@@ -7710,6 +7710,14 @@ grammar_rule(adj_te_begin, AP, [ V ] ) :-
     V:hstem <=> STEM,
     alpino_wappend:wwmember(STEM,[begin]).
 
+%%EX%% Hij won zoals van der Poel gisteren
+grammar_rule(sbar(dp), SBAR, [ COMP, ROOT ]) :-
+    SBAR => sbar, COMP => comp, ROOT => max,
+    COMP:hstem ==> zoals,
+    unify_mods(ROOT),
+    ROOT:max_type => t_dp,
+    cmp_body_structure(COMP,ROOT,SBAR).
+
 %%EX%% Ze zeiden van we hebben geen tijd
 grammar_rule(sbar(van), SBAR, [ COMP, OPTDUBB, ROOT ]) :-
     OPTDUBB => optpunct,
@@ -8822,6 +8830,17 @@ grammar_rule(dit_omdat,Start,[PRON,OPTCOMMA,SBAR]) :-
     optcomma(OPTCOMMA),
     PRON => np,
     np_omdat_structure(Start,PRON,SBAR).
+
+%%EX%% Wat natuurlijk een leuk idee is , zij het met verstrekkende gevolgen
+grammar_rule(rel_omdat,Start,[REL,COMMA,SBAR]) :-
+    max_sbar(SBAR),
+    SBAR:ctype => c_mod,
+    SBAR:e_deps =?> [],
+    comma(COMMA),
+    Start => max,
+    Start:max_type => t_dp,
+    max_redrel(REL),
+    nucl_sat_structure(REL,SBAR,Start).
 
 %%EX%% Dit allemaal omdat we geen tijd meer hadden
 grammar_rule(dit_allemaal_omdat,Start,[PRON,ALLEMAAL,OPTCOMMA,SBAR]) :-
@@ -12064,7 +12083,7 @@ grammar_rule(mid_coord(Name),Blist,[COMMA, A, Clist]) :-
 			  within_word_conjunction(adv)]), /* NOT USED */			  
     Blist:conj <=> Clist:conj,
     COMMA => punct,
-    COMMA:puncttype => (komma;punt_komma).
+    COMMA:puncttype => (komma;punt_komma;ligg_streep;schuin_streep;hellip).
 
 %%EX%% En appels , en peren en druiven
 grammar_rule(mid_coord(Name,conj),Blist,[OPTCOMMA, Conj, A, Clist]) :-

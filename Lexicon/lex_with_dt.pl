@@ -1560,10 +1560,8 @@ with_dt_all(en,[kort]).
 with_dt_all(en,[koud]).
 with_dt_all(en,[laag]).
 with_dt_all(en,[lang]).
-with_dt_all(en,[meer]).
 with_dt_all(en,[met,sta_op,val]).
 with_dt_all(en,[met,succes]).
-with_dt_all(en,[minder]).
 with_dt_all(en,[negen,tussen,twaalf]).
 with_dt_all(en,[negen,tussen,vijf]).
 with_dt_all(en,[negen,tussen,zes]).
@@ -1595,10 +1593,12 @@ with_dt_all(en,[tussen,vijf,vijftien]).
 with_dt_all(en,[tussen,vijf,zes]).
 with_dt_all(en,[tussen,vijf,zeven]).
 with_dt_all(en,[tussen,zes,zeven]).
+with_dt_all(en,[veel]).
 with_dt_all(en,[ver]).
 with_dt_all(en,['vice versa']).
 with_dt_all(en,[warm]).
 with_dt_all(en,[wat,wie]).
+with_dt_all(en,[weinig]).
 with_dt_all(en,[zo]).
 with_dt_all(eraan,[vooraf]).
 with_dt_all(ere,[ere,kom_toe,toe,wie]).
@@ -1954,7 +1954,6 @@ with_dt_all(man,[u]).
 with_dt_all(man,[zijn]).
 with_dt_all(ma,[ons]).
 with_dt_all(meerdere,[of,één]).
-with_dt_all(meer,[of]).
 with_dt_all(meer,[of,één]).
 with_dt_all(men,[zie]).
 with_dt_all(meteen,[niet]).
@@ -2028,7 +2027,6 @@ with_dt_all(mijn,[vriend]).
 with_dt_all(mijn,[vriendin]).
 with_dt_all(mijn,[zuster]).
 with_dt_all(miljoen,[één]).
-with_dt_all(minder,[of]).
 with_dt_all(min,[mogelijk,zo]).
 with_dt_all(minnaar,[u]).
 with_dt_all(minnaar,[zijn]).
@@ -2123,6 +2121,7 @@ with_dt_all('\'n',[miljoen]).
 with_dt_all('\'n',[miljoen,paar]).
 with_dt_all(nodig,[zo]).
 with_dt_all(nogal,[vaak]).
+with_dt_all(nog,[steeds]).
 with_dt_all(nog,[toe,tot]).
 with_dt_all(nooit,[of,zelden]).
 with_dt_all(nooit,[voorheen]).
@@ -2135,10 +2134,12 @@ with_dt_all('\'n',[stelletje]).
 with_dt_all(nu,[waarom,weer]).
 with_dt_all(of,[omgekeerd]).
 with_dt_all(of,[oud]).
+with_dt_all(of,[veel]).
 with_dt_all(of,[veel,één]).
 with_dt_all(of,['vice versa']).
 with_dt_all(of,[warm]).
 with_dt_all(of,[wat,wie]).
+with_dt_all(of,[weinig]).
 with_dt_all(of,[wel]).
 with_dt_all(of,[zo]).
 with_dt_all(of,['zo iets']).
@@ -2865,7 +2866,6 @@ with_dt_root(miljard).
 with_dt_root(miljoen).
 with_dt_root(millenium).
 with_dt_root(min).
-with_dt_root(minder).
 with_dt_root(minnaar).
 with_dt_root(mis).
 with_dt_root(misschien).
@@ -3107,6 +3107,7 @@ with_dt_root(we).
 with_dt_root(weer).
 with_dt_root(weet).
 with_dt_root(weggeweest).
+with_dt_root(weinig).
 with_dt_root(wel).
 with_dt_root(welaan).
 with_dt_root(welk).

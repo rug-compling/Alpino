@@ -2643,6 +2643,7 @@ n([pl(ambten),sg(ambt)],het,[]).
 n([pl(ambtenaars),pl(ambtenaren),sg(ambtenaar)],de,[app_measure],
   [s(bestuur),
    i(leer_plicht,leerplicht),
+   onderwijs,
    s(opsporing),
    politie,
    s(rijk),
@@ -14300,7 +14301,7 @@ n([pl(grasvelden),sg(grasveld)],het,[],
 
 n([pl(grasvlakten),pl(grasvlaktes),sg(grasvlakte)],de,[]).
 
-n([pl(gratiën),sg(gratie)],de,[vp]).
+n([pl(gratiën),sg(gratie)],de,[vp,pred_pp(uit)]).
 
 n([sg(gratificatie),pl(gratificaties)],de,[]).
 
@@ -26545,6 +26546,7 @@ n([sg(paar),pl(paren),
 n([pl(paarden),sg(paard)],het,[],
   [hobbel,
    parade,
+   zee,
    dim(paardje)]).
 
 n([sg('paard-en-wagen'),
@@ -31062,6 +31064,9 @@ n([pl(rondvaarten),sg(rondvaart)],de,[]).
 n([sg(rondzit)],de,[]).
 
 n([sg(ronselaar),pl(ronselaars)],de,[]).
+
+n([mass(rood)],het,[pred_pp(in)],
+  []).
 
 n([mass(rood)],het,[],
   [bloed,
@@ -39438,7 +39443,8 @@ n([pl(verzinselen),pl(verzinsels),sg(verzinsel)],het,[sbar,vp],
   [dim(verzinseltje)]).
 
 n([pl(verzoeken),sg(verzoek)],het,
-  [vp,sbar]).
+  [vp,sbar],
+  [tegen]).
 
 n([pl(verzoeken),sg(verzoek)],het,[],
   [asiel,

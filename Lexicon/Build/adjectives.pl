@@ -9951,9 +9951,7 @@ a([e(felle),
    no_e(fel),
    st(felst),
    ste(felste)],adv,
-  [er_pp_sbar(tegen),
-   er_pp_vp(tegen),
-   pp(tegen)],[]).
+  [],[]).
 
 a([e(feminiene),
    no_e(feminien)],nonadv,[],[]).
@@ -12941,7 +12939,7 @@ a([e(gelderse),
 a([e(geldige),
    er(geldiger),
    ere(geldigere),
-   no_e(geldig),
+   postn_no_e(geldig),
    st(geldigst),
    ste(geldigste)],adv,  % adv VL: geldig vergaderen
   [pp(tot),
@@ -27399,6 +27397,8 @@ a([pred([op,inactief])],nonadv,[],[]).
 
 a([pred([op,'non-actief']),
    pred([op,nonactief])],nonadv,[],[]).
+
+a([pred([op,het,oog])],adv,[],[]).
 
 a([pred([op,scherp])],nonadv,[],[]).
 

@@ -185,6 +185,7 @@ lemma_root(aan_incorporeren,incorporeer_aan) .
 lemma_root(aan_infiltreren,infiltreer_aan) .
 lemma_root(aan_injecteren,injecteer_aan) .
 lemma_root(aan_installeren,installeer_aan) .
+lemma_root(aan_integreren,integreer_aan) .
 lemma_root(aan_introduceren,introduceer_aan) .
 lemma_root(aan_jagen,jaag_aan) .
 lemma_root(aan_jakkeren,jakker_aan) .
@@ -1207,6 +1208,7 @@ lemma_root(af_incorporeren,incorporeer_af) .
 lemma_root(af_infiltreren,infiltreer_af) .
 lemma_root(af_injecteren,injecteer_af) .
 lemma_root(af_installeren,installeer_af) .
+lemma_root(af_integreren,integreer_af) .
 lemma_root(af_introduceren,introduceer_af) .
 lemma_root(af_jagen,jaag_af) .
 lemma_root(af_jakkeren,jakker_af) .
@@ -6291,6 +6293,7 @@ lemma_root(heen_incorporeren,incorporeer_heen) .
 lemma_root(heen_infiltreren,infiltreer_heen) .
 lemma_root(heen_injecteren,injecteer_heen) .
 lemma_root(heen_installeren,installeer_heen) .
+lemma_root(heen_integreren,integreer_heen) .
 lemma_root(heen_introduceren,introduceer_heen) .
 lemma_root(heen_jagen,jaag_heen) .
 lemma_root(heen_jakkeren,jakker_heen) .
@@ -7102,6 +7105,7 @@ lemma_root(in_incorporeren,incorporeer_in) .
 lemma_root(in_infiltreren,infiltreer_in) .
 lemma_root(in_injecteren,injecteer_in) .
 lemma_root(in_installeren,installeer_in) .
+lemma_root(in_integreren,integreer_in) .
 lemma_root(in_introduceren,introduceer_in) .
 lemma_root(initiëren,initieer) .
 lemma_root(in_jagen,jaag_in) .
@@ -8160,6 +8164,7 @@ lemma_root(langs_incorporeren,incorporeer_langs) .
 lemma_root(langs_infiltreren,infiltreer_langs) .
 lemma_root(langs_injecteren,injecteer_langs) .
 lemma_root(langs_installeren,installeer_langs) .
+lemma_root(langs_integreren,integreer_langs) .
 lemma_root(langs_introduceren,introduceer_langs) .
 lemma_root(langs_jagen,jaag_langs) .
 lemma_root(langs_jakkeren,jakker_langs) .
@@ -14927,6 +14932,7 @@ lemma_root(toe_incorporeren,incorporeer_toe) .
 lemma_root(toe_infiltreren,infiltreer_toe) .
 lemma_root(toe_injecteren,injecteer_toe) .
 lemma_root(toe_installeren,installeer_toe) .
+lemma_root(toe_integreren,integreer_toe) .
 lemma_root(toe_introduceren,introduceer_toe) .
 lemma_root(toe_jagen,jaag_toe) .
 lemma_root(toe_jakkeren,jakker_toe) .
@@ -15620,6 +15626,7 @@ lemma_root(tussen_incorporeren,incorporeer_tussen) .
 lemma_root(tussen_infiltreren,infiltreer_tussen) .
 lemma_root(tussen_injecteren,injecteer_tussen) .
 lemma_root(tussen_installeren,installeer_tussen) .
+lemma_root(tussen_integreren,integreer_tussen) .
 lemma_root(tussen_introduceren,introduceer_tussen) .
 lemma_root(tussen_jagen,jaag_tussen) .
 lemma_root(tussen_jakkeren,jakker_tussen) .
@@ -16860,6 +16867,7 @@ lemma_root(uit_insinueren,insinueer_uit) .
 lemma_root(uit_inspecteren,inspecteer_uit) .
 lemma_root(uit_inspireren,inspireer_uit) .
 lemma_root(uit_installeren,installeer_uit) .
+lemma_root(uit_integreren,integreer_uit) .
 lemma_root(uit_internetten,internet_uit) .
 lemma_root(uit_interpreteren,interpreteer_uit) .
 lemma_root(uit_interrumperen,interrumpeer_uit) .
@@ -18589,6 +18597,7 @@ lemma_root(vanaf_incorporeren,incorporeer_vanaf) .
 lemma_root(vanaf_infiltreren,infiltreer_vanaf) .
 lemma_root(vanaf_injecteren,injecteer_vanaf) .
 lemma_root(vanaf_installeren,installeer_vanaf) .
+lemma_root(vanaf_integreren,integreer_vanaf) .
 lemma_root(vanaf_introduceren,introduceer_vanaf) .
 lemma_root(vanaf_jagen,jaag_vanaf) .
 lemma_root(vanaf_jakkeren,jakker_vanaf) .
@@ -19206,6 +19215,7 @@ lemma_root(vandaan_incorporeren,incorporeer_vandaan) .
 lemma_root(vandaan_infiltreren,infiltreer_vandaan) .
 lemma_root(vandaan_injecteren,injecteer_vandaan) .
 lemma_root(vandaan_installeren,installeer_vandaan) .
+lemma_root(vandaan_integreren,integreer_vandaan) .
 lemma_root(vandaan_introduceren,introduceer_vandaan) .
 lemma_root(vandaan_jagen,jaag_vandaan) .
 lemma_root(vandaan_jakkeren,jakker_vandaan) .
@@ -19806,6 +19816,7 @@ lemma_root(vandoor_incorporeren,incorporeer_vandoor) .
 lemma_root(vandoor_infiltreren,infiltreer_vandoor) .
 lemma_root(vandoor_injecteren,injecteer_vandoor) .
 lemma_root(vandoor_installeren,installeer_vandoor) .
+lemma_root(vandoor_integreren,integreer_vandoor) .
 lemma_root(vandoor_introduceren,introduceer_vandoor) .
 lemma_root(vandoor_jagen,jaag_vandoor) .
 lemma_root(vandoor_jakkeren,jakker_vandoor) .
