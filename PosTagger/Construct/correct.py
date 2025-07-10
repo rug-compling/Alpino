@@ -27,6 +27,12 @@ def main():
             t = "adjective(er(both))"
         if t == "adjective(no_e(adv))" and r == "centraal":
             t = "adjective(postn_no_e(adv))"
+        if t == "adjective(no_e(adv),pp(tot))" and r == "geldig":
+            t = "adjective(postn_no_e(adv),pp(tot))"
+        if t == "adjective(no_e(adv),pp(voor))" and r == "geldig":
+            t = "adjective(postn_no_e(adv),pp(voor))"
+        if t == "adjective(no_e(adv))" and r == "geldig":
+            t = "adjective(postn_no_e(adv))"
         if t == "modal_adverb(noun_prep)" and r == "waarschijnlijk":
             t = "modal_adverb(adv_noun_prep)"
         if t == "modal_adverb(noun_prep)" and r == "wellicht":
@@ -84,6 +90,8 @@ def main():
             t = "tmp_adverb"
         if r == "onversneden" and t == "adjective(ge_both(nonadv))":
             t = "adjective(ge_both(padv))"
+        if r == "altijd nog" and t == "with_dt(modal_adverb(prep),dt(advp,[mod=l(nog,modal_adverb,advp,0,1),hd=l(altijd,sentence_adverb,1,2)]))":
+            t = "with_dt(modal_adverb(adv_prep),dt(advp,[mod=l(nog,modal_adverb,advp,0,1),hd=l(altijd,sentence_adverb,1,2)]))"
         if r == "hoog of" and t == "with_dt(complex_etc,dt(conj,[crd=l(of,conj(of),vg,0,1),cnj=l(hoog,adjective(er(adv)),ap,1,2)]))":
             t = "with_dt(np_complex_etc,dt(conj,[crd=l(of,conj(of),vg,0,1),cnj=l(hoog,adjective(er(adv)),ap,1,2)]))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
