@@ -134,8 +134,7 @@ gitversion=$(shell git log --oneline | wc -l)
 
 tars: $(DIRECTORIES:%=%.tar)
 
-tars-install: $(DIRECTORIES:%=%.tar-install) alpino.dact
-	cp alpino.dact ~/public_html/treebanks
+tars-install: $(DIRECTORIES:%=%.tar-install)
 
 %.tar:Enhanced/%
 	( cd Enhanced ; tar czf $*-$(gitversion).tar.gz $* )
