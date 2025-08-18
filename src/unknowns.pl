@@ -2459,6 +2459,7 @@ decap_only('Waarom').
 decap_only('Waarop').
 decap_only('Wanneer').
 decap_only('Want').
+decap_only('Waren').
 decap_only('Wat').
 decap_only('Welk').
 decap_only('Welke').
