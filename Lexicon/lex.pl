@@ -2939,6 +2939,7 @@ spelling_variant(binnenkamers,binnenskamers).
 spelling_variant(brachtten,   brachten).
 spelling_variant(buitenlanse, buitenlandse).
 spelling_variant(centimer,    centimeter).
+spelling_variant(commisaris,  commissaris).
 spelling_variant(conlusie,    conclusie).
 spelling_variant(continue,    continu).
 spelling_variant(creeër,      creëer).

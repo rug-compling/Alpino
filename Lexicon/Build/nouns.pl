@@ -2534,7 +2534,7 @@ n([pl(algen),sg(alge),sg(alg)],de,[]).
 
 n([sg(algebra),pl('algebra\'s')],de,[]).
 
-n([mass(algemeen)],het,[]).
+%% n([mass(algemeen)],het,[]).
 
 n([pl(algemeenheden),sg(algemeenheid)],de,[]).
 
@@ -26804,6 +26804,8 @@ n([pl(paradoxen),sg(paradox)],de,[sbar]).
 n([pl(parafernalia)],de,[]).
 
 n([pl(parafrasen),pl(parafrases),sg(parafrase)],de,[sbar]).
+
+n([pl(paragnosten),sg(paragnost)],de,[]).
 
 n([pl(paragrafen),sg(paragraaf)],de,[]).
 

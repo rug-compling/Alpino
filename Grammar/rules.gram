@@ -1121,6 +1121,7 @@ grammar_rule(vp_np_v_ap, VP, [ NP0, V, COMMA, Extra1 ]) :-
     V:eps1 => no.
 
 %%EX%% Omdat het om bandieten gaat , afkomstig uit Venlo
+%%EX%% Daarnaast worden ook activiteiten ondersteund direct gericht op groei
 grammar_rule(vp_pp_v_ap, VP, [ PP0, V, COMMA, Extra1 ]) :-
     Extra1 => a,
     Extra1:tmploc => ~wk_er & ~str_er & ~tmp & ~tmp_n & ~ld_dir & ~me, 
@@ -1143,7 +1144,7 @@ vp_v_m_extra_ap_structure(VP, V, COMMA, Extra  ) :-
     Extra:adv => ~oadv & ~detadv,
     Extra:can_postn_with_cform => yes,
     Extra:can_postn => yes,
-    comma(COMMA).
+    optcomma(COMMA).
 
 %%EX%% Bernard is natuurlijk nooit lid geweest van die club
 grammar_rule(vp_pred_v_pp, VP, [ NP0, V, OPTCOMMA, Extra ]) :-
@@ -8284,6 +8285,14 @@ grammar_rule(sat_tag_nucl(redrel),ROOT,[Max, OPTCOMMA, TAG, COMMA, Dan]) :-
     optcomma(OPTCOMMA),
     max_redrel(Max),
     root_nucl_sat_tag_structure(Dan,Max,TAG,ROOT).
+
+%%EX%% Doet u geen moeite , hij komt niet
+grammar_rule(sat_nucl(sv1),ROOT,[Max, COMMA, Dan]) :-
+    COMMA => punct, COMMA:puncttype => (komma;hellip;dubb_punt),
+    Max => max,
+    Max:max_type => t_sv1,
+    Max:mod_np => no,
+    root_nucl_sat_structure(Dan,Max,ROOT).
 
 %%EX%% Het is een vervelende vent , die kerel
 %%EX%% Wat een rothond is dat toch geworden , die van de buren

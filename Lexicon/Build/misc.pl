@@ -3584,6 +3584,17 @@ with_dt([in,Het,Adj],
     in_het_adj_pp(Adj),
     het(Het).
 
+with_dt([meer,in,Het,Adj],
+	pp(in),
+	dt(pp,[mod=l(veel,adjective(meer),ap,0,1),
+	       hd=l(in,preposition(in,[]),1,2),
+	       obj1=dt(np,[det=l(het,determiner(het,nwh,nmod,pro,nparg,wkpro),detp,2,3),
+			   hd=l(Adj,adjective(no_e(adv)),3,4)])
+	      ])) :-
+    in_het_adj_pp(Adj),
+    het(Het).
+
+in_het_adj_pp(algemeen).
 in_het_adj_pp(bijzonder).
 in_het_adj_pp(breed).		% ouderwets
 in_het_adj_pp(echt).
