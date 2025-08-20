@@ -27,6 +27,7 @@
 %% some very common words are always also treated as normal
 %% - specified as such below
 %% De --> de
+
 normal_capitalized_word(P,Word,Rest,Rest,DecapWord) :-
     (   is_start_sentence(P)
     ->  true
@@ -5529,11 +5530,13 @@ europarl('Voorzitterschap').
 europarl('Witboek').
 europarl('Zwartboek').
 
+
+%% do not put here non-inflected capitalized adjectives which can easily
+%% occur as titles ("Algemeen")
 unlikely_name_lonely('Afdeling').
 unlikely_name_lonely('Air').
 unlikely_name_lonely('Airlines').
 unlikely_name_lonely('Alcohol').
-unlikely_name_lonely('Algemeen').
 unlikely_name_lonely('Algemene').
 unlikely_name_lonely('Alles').
 unlikely_name_lonely('And').
@@ -5544,10 +5547,8 @@ unlikely_name_lonely('Beach').
 unlikely_name_lonely('Begroting').
 unlikely_name_lonely('Beleid').
 unlikely_name_lonely('Bin').
-unlikely_name_lonely('Binnenlands').
 unlikely_name_lonely('Binnenlandse').
 unlikely_name_lonely('Brigade').
-unlikely_name_lonely('Buitenlands').
 unlikely_name_lonely('Buitenlandse').
 unlikely_name_lonely('Business').
 unlikely_name_lonely('Center').
@@ -5560,7 +5561,6 @@ unlikely_name_lonely('Den').
 unlikely_name_lonely('Departement').
 unlikely_name_lonely('Derde').
 unlikely_name_lonely('Die').
-unlikely_name_lonely('Duurzaam').
 unlikely_name_lonely('Duurzame').
 unlikely_name_lonely('Economie').
 unlikely_name_lonely('Een').
@@ -5573,11 +5573,10 @@ unlikely_name_lonely('Euro').
 unlikely_name_lonely('European').
 unlikely_name_lonely('Express').
 unlikely_name_lonely('Faculteit').
-unlikely_name_lonely('Federaal').
 unlikely_name_lonely('Federale').
 unlikely_name_lonely('Federatie').
-unlikely_name_lonely('Financieel').
 unlikely_name_lonely('Financiele').
+unlikely_name_lonely('Financiële').
 unlikely_name_lonely('Galerie').
 unlikely_name_lonely('Gezondheid').
 unlikely_name_lonely('Grote').
@@ -5597,7 +5596,6 @@ unlikely_name_lonely('IV').
 unlikely_name_lonely('Ik').
 unlikely_name_lonely('Il').
 unlikely_name_lonely('Infrastructuur').
-unlikely_name_lonely('Internationaal').
 unlikely_name_lonely('International').
 unlikely_name_lonely('Internationale').
 unlikely_name_lonely('Jaar').
@@ -5606,14 +5604,12 @@ unlikely_name_lonely('Jij').
 unlikely_name_lonely('Jou').
 unlikely_name_lonely('Juridische').
 unlikely_name_lonely('Kabinet').
-unlikely_name_lonely('Katholiek').
 unlikely_name_lonely('Katholieke').
 unlikely_name_lonely('Koninklijke').
 unlikely_name_lonely('Kwartet').
 unlikely_name_lonely('La').
 unlikely_name_lonely('Laatste').
 unlikely_name_lonely('Le').
-unlikely_name_lonely('Liberaal').
 unlikely_name_lonely('Liberale').
 unlikely_name_lonely('Magazine').
 unlikely_name_lonely('Management').
@@ -5626,7 +5622,6 @@ unlikely_name_lonely('Ministerie').
 unlikely_name_lonely('Miss').
 unlikely_name_lonely('Mooi').
 unlikely_name_lonely('Naar').
-unlikely_name_lonely('Nationaal').
 unlikely_name_lonely('National').
 unlikely_name_lonely('Nationale').
 unlikely_name_lonely('News').
@@ -5640,7 +5635,6 @@ unlikely_name_lonely('Ontwikkeling').
 unlikely_name_lonely('Onze').
 unlikely_name_lonely('Oorlog').
 unlikely_name_lonely('Open').
-unlikely_name_lonely('Openbaar').
 unlikely_name_lonely('Openbare').
 unlikely_name_lonely('Operatie').
 unlikely_name_lonely('Oude').
@@ -5662,7 +5656,6 @@ unlikely_name_lonely('Services').
 unlikely_name_lonely('St').
 unlikely_name_lonely('St.').
 unlikely_name_lonely('Saint').
-unlikely_name_lonely('Sociaal').
 unlikely_name_lonely('Sociale').
 unlikely_name_lonely('Sport').
 unlikely_name_lonely('Studio').
@@ -5683,8 +5676,6 @@ unlikely_name_lonely('Tweede').
 unlikely_name_lonely('Universele').
 unlikely_name_lonely('University').
 unlikely_name_lonely('Vader').
-unlikely_name_lonely('Vandaag').
-unlikely_name_lonely('Vanavond').
 unlikely_name_lonely('Veiligheid').
 unlikely_name_lonely('Verklaring').
 unlikely_name_lonely('Verschenen').
