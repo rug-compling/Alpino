@@ -2265,6 +2265,10 @@ adapt_pos_with_alignment(Pos0,Pos,_) :-
     Pos0 == top,
     !,
     Pos0=Pos.
+adapt_pos_with_alignment(Pos0,Pos,_) :-
+    Pos0 == none,
+    !,
+    Pos0=Pos.
 adapt_pos_with_alignment(Pos0,Pos,Al) :-
     (   lists:member(m(Pos1,Pos0),Al)
     ->  Pos = Pos1
