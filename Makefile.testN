@@ -279,7 +279,7 @@ tjob:
 
 
 lerr: l_errors
-	make $(lassy:%=%.diff) | grep GONE | awk '{ print $3 }' > keys
+	make $(lassy:%=%.diff) | grep GONE | awk '{ print $$3 }' > keys
 	grep -Fwvf keys LassySmall.errors > LassySmall.errors.new
 	mv LassySmall.errors LassySmall.errors.bak
 	mv LassySmall.errors.new LassySmall.errors
