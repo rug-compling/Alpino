@@ -3574,6 +3574,14 @@ p_n_part_part_pp(sinds,kinds,af,aan).
 p_n_part_part_pp(sinds,kleins,af,aan).
 p_n_part_part_pp(sinds,kindsbeen,af,aan).
 
+with_dt([over,Het,algemeen],
+	sentence_adverb,
+	dt(pp,[hd=l(over,preposition(over,[]),0,1),
+	       obj1=dt(np,[det=l(het,determiner(het,nwh,nmod,pro,nparg,wkpro),detp,1,2),
+			   hd=l(algemeen,adjective(no_e(adv)),2,3)])
+	      ])) :-
+    het(Het).
+
 %% TODO: this is productive...
 with_dt([in,Het,Adj],
 	pp(in),
