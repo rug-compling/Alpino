@@ -284,6 +284,7 @@ lemma_root(aan_logeren,logeer_aan) .
 lemma_root(aan_lokken,lok_aan) .
 lemma_root(aan_loodsen,loods_aan) .
 lemma_root(aan_lopen,loop_aan) .
+lemma_root(aan_lozen,loos_aan) .
 lemma_root(aan_lullen,lul_aan) .
 lemma_root(aan_maaien,maai_aan) .
 lemma_root(aan_maken,maak_aan) .
@@ -1325,6 +1326,7 @@ lemma_root(af_lokken,lok_af) .
 lemma_root(af_loodsen,loods_af) .
 lemma_root(af_lopen,loop_af) .
 lemma_root(af_lossen,los_af) .
+lemma_root(af_lozen,loos_af) .
 lemma_root(af_luisteren,luister_af) .
 lemma_root(af_maaien,maai_af) .
 lemma_root(af_maken,maak_af) .
@@ -6379,6 +6381,7 @@ lemma_root(heen_logeren,logeer_heen) .
 lemma_root(heen_lokken,lok_heen) .
 lemma_root(heen_loodsen,loods_heen) .
 lemma_root(heen_lopen,loop_heen) .
+lemma_root(heen_lozen,loos_heen) .
 lemma_root(heen_maaien,maai_heen) .
 lemma_root(heen_malen,maal_heen) .
 lemma_root(heen_manoeuvreren,manoeuvreer_heen) .
@@ -7222,6 +7225,7 @@ lemma_root(in_loodsen,loods_in) .
 lemma_root(in_lopen,loop_in) .
 lemma_root(in_lossen,los_in) .
 lemma_root(in_loten,loot_in) .
+lemma_root(in_lozen,loos_in) .
 lemma_root(in_luiden,luid_in) .
 lemma_root(in_luizen,luis_in) .
 lemma_root(in_lukken,luk_in) .
@@ -8254,6 +8258,7 @@ lemma_root(langs_logeren,logeer_langs) .
 lemma_root(langs_lokken,lok_langs) .
 lemma_root(langs_loodsen,loods_langs) .
 lemma_root(langs_lopen,loop_langs) .
+lemma_root(langs_lozen,loos_langs) .
 lemma_root(langs_maaien,maai_langs) .
 lemma_root(langs_malen,maal_langs) .
 lemma_root(langs_manoeuvreren,manoeuvreer_langs) .
@@ -15023,6 +15028,7 @@ lemma_root(toe_logeren,logeer_toe) .
 lemma_root(toe_lokken,lok_toe) .
 lemma_root(toe_loodsen,loods_toe) .
 lemma_root(toe_lopen,loop_toe) .
+lemma_root(toe_lozen,loos_toe) .
 lemma_root(toe_luisteren,luister_toe) .
 lemma_root(toe_maaien,maai_toe) .
 lemma_root(toe_malen,maal_toe) .
@@ -15712,6 +15718,7 @@ lemma_root(tussen_logeren,logeer_tussen) .
 lemma_root(tussen_lokken,lok_tussen) .
 lemma_root(tussen_loodsen,loods_tussen) .
 lemma_root(tussen_lopen,loop_tussen) .
+lemma_root(tussen_lozen,loos_tussen) .
 lemma_root(tussen_maaien,maai_tussen) .
 lemma_root(tussen_malen,maal_tussen) .
 lemma_root(tussen_manoeuvreren,manoeuvreer_tussen) .
@@ -18687,6 +18694,7 @@ lemma_root(vanaf_logeren,logeer_vanaf) .
 lemma_root(vanaf_lokken,lok_vanaf) .
 lemma_root(vanaf_loodsen,loods_vanaf) .
 lemma_root(vanaf_lopen,loop_vanaf) .
+lemma_root(vanaf_lozen,loos_vanaf) .
 lemma_root(vanaf_maaien,maai_vanaf) .
 lemma_root(vanaf_malen,maal_vanaf) .
 lemma_root(vanaf_manoeuvreren,manoeuvreer_vanaf) .
@@ -19301,6 +19309,7 @@ lemma_root(vandaan_logeren,logeer_vandaan) .
 lemma_root(vandaan_lokken,lok_vandaan) .
 lemma_root(vandaan_loodsen,loods_vandaan) .
 lemma_root(vandaan_lopen,loop_vandaan) .
+lemma_root(vandaan_lozen,loos_vandaan) .
 lemma_root(vandaan_maaien,maai_vandaan) .
 lemma_root(vandaan_malen,maal_vandaan) .
 lemma_root(vandaan_manoeuvreren,manoeuvreer_vandaan) .
@@ -19902,6 +19911,7 @@ lemma_root(vandoor_logeren,logeer_vandoor) .
 lemma_root(vandoor_lokken,lok_vandoor) .
 lemma_root(vandoor_loodsen,loods_vandoor) .
 lemma_root(vandoor_lopen,loop_vandoor) .
+lemma_root(vandoor_lozen,loos_vandoor) .
 lemma_root(vandoor_maaien,maai_vandoor) .
 lemma_root(vandoor_malen,maal_vandoor) .
 lemma_root(vandoor_manoeuvreren,manoeuvreer_vandoor) .

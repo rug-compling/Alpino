@@ -33979,6 +33979,9 @@ a([e(transcendente),
    st(transcendentst),
    ste(transcendentste)],nonadv,[],[]).
 
+a([e(transcutane),
+   no_e(transcutaan)],nonadv,[],[]).  % iets medisch
+
 a([e(transfervrije),
    no_e(transfervrij)],padv,[],[]).
 

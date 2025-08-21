@@ -9359,10 +9359,11 @@ grammar_rule(a_pp_dp,MAX,[A,COMMA,XP]) :-
     dp_dp_structure(A,XP,MAX).
 
 %%EX%% tot nu toe zonder succes
+%%EX%% Dat heeft effect , maar tot nu toe zonder succes
 grammar_rule(pp_part_pp_dp,MAX,[PP,COMMA,XP]) :-
     optcomma(COMMA),
     MAX => max,
-    MAX:max_type => t_xp,
+    MAX:max_type => (t_xp;t_dp),
     ind_max_pp(PP),
     PP:haspart => yes,
     ind_max_pp(XP),
@@ -12486,7 +12487,9 @@ one_daughter_unifications(Cat0,Cat) :-
 	   ccat,subn,adv,prep,part,sv1_mod,vframe,ctype,tmploc,pcat,mcat,sel,
            pro,parg,hebben_zijn,neclass,passive,question,subadv,pp_er,
            can_nominalize,can_marked_attr,can_postv,deverbal,redrel,
-	   can_postn,wh_reltmploc,cform,meas,tags,hstem,eps,avform],
+	   can_postn,wh_reltmploc,cform,meas,tags,hstem,eps,avform,
+	   sel
+	  ],
     unify_paths(Paths,Cat0,Cat),
     (   Cat => sv1,
         Cat0:subj <?=?> Cat:subj
@@ -12517,7 +12520,7 @@ coord_daughter_paths(L,M) :-
     Paths = [vform,aform,nform,wh,app,tpart,amount,exs,cleft,
              compar_form,vslash,relform,ld_pc,me_adj,adj_can_postv,
              modifies_a,slash,sc,parts,pro_deps,e_deps,pred,has_app2,
-	     sel,
+	     %%% sel,  "Het dient niet te worden gebruikt tijdens het geven van borstvoeding of tegelijk met vaccinatie
              % question,
 	     % pp_er, %% in de schaatswereld en daarbuiten werd fel gespeculeerd
              allows_root_imp,

@@ -13473,6 +13473,7 @@ v(leid,leidt,leiden,geleid,leidde,leidden,
 	part_transitive(in),
 	part_transitive(om),
 	part_transitive(op),
+	part_np_pc_pp(op),
 	part_intransitive(op),
 	part_transitive(rond),
 	part_transitive(uit),
@@ -14144,8 +14145,9 @@ v(loop,loopt,lopen,gelopen,liep,liepen,
 	part_transitive(door)])]).   % ik heb/ben alles doorgelopen
 
 v(loos,loost,lozen,geloosd,loosde,loosden,
-    [h([intransitive,
-	transitive])]).
+  [h([intransitive,
+      np_ld_pp,
+      transitive])]).
 
 v(loot,loot,loten,geloot,lootte,lootten,
     [h([intransitive,

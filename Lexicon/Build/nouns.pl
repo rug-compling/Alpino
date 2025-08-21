@@ -10875,6 +10875,8 @@ n([sg(eindstreep),pl(eindstrepen)],de,[]).
 
 n([sg(eindstrijd),pl(eindstrijden)],de,[]).
 
+n([sg(eindwerk),pl(eindwerken)],het,[app_measure]).  % VL scriptie oid
+
 n([pl(eisen),sg(eis)],de,
   [sbar,
    vp]).
@@ -11312,7 +11314,7 @@ n([pl(evenaars),sg(evenaar)],de,[]).
 
 n([pl(evenbeelden),sg(evenbeeld)],het,[]).
 
-n([pl(evenementen),sg(evenement)],het,[sbar]).
+n([pl(evenementen),sg(evenement)],het,[sbar,np_app_measure]).
 
 n([pl(evenementen),sg(evenement)],het,[],
   [dans,

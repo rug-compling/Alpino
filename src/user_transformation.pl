@@ -284,6 +284,9 @@ correct_tags(_,_,_) :-
 
 root_lemma(_,_,_) :- fail.
 
+%% surf_lemma(Surf,app,'WW(inf,vrij,zonder)','WW(inf,nom,zonder,zonder-n)',L,L):-
+%%     format(user_error,"mapped ~w~n",[Surf]).
+
 surf_lemma(_,_,_,_,_,_) :- fail.
 
 surf_lemma(_,_,_,_,_) :- fail.

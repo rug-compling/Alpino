@@ -426,7 +426,6 @@ unknown_word_heuristic(P0,R0,W,Ws,
 unknown_word_heuristic(P1,R1,W,_,"lonely-foreign|~p|~p~n",[W,Stem],_,none) :-
     debug_message(3,"trying heuristic lonely-foreign~n",[]),
     decap_foreign_word(W,Stem),
-    !,
     start_of_sentence(P1,Start),
     P is P1 + 1, R is R1 + 1,
     \+ (   tag(Q0,Q,_,_,_,_,name(_),_),
