@@ -2211,7 +2211,8 @@ v(behoor,behoort,behoren,behoord,behoorde,behoorden,
       aux(te)])]).
 
 v([behoud,behoud],behoudt,behouden,behouden,behield,behielden,
-    [h([transitive,
+  [h([transitive,
+      als_pred_np,
 	part_np_np(voor),
 	part_transitive(voor),
 	part_np_pc_pp(voor,aan),
