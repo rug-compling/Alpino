@@ -20229,7 +20229,7 @@ n([mass(leefomgeving)],de,[]).
 
 n([pl(leefregels),sg(leefregel)],de,[sbar,vp]).
 
-n([pl(leeftijden),sg(leeftijd)],de,[sbar]).
+n([pl(leeftijden),sg(leeftijd)],de,[sbar,pred_pp(op)]).
 
 n([pl(leeftijden),sg(leeftijd)],de,[],
   [h('AOW'),

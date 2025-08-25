@@ -4779,6 +4779,9 @@ a([ende(bepalende),
 
 a([pred([bepakt,en,bezakt])],padv,[],[]).
 
+a([e(bepantserde),
+   no_e(bepantserd)],nonadv,[],[]).
+
 a([ge_e(beperkte),
    er(beperkter),
    ere(beperktere),
@@ -12589,11 +12592,12 @@ a([ge_e(geklede),
    ere(gekledere),
    ge_no_e(gekleed),
    st(gekleedst),
-   ste(gekleedste)],adv,
-  [pp(in)],
+   ste(gekleedste)],both,
+  [pp(in),
+   fixed([in,het,nieuw])
+  ],
   [goed,
    on,
-   fixed([in,het,nieuw]),
    schaars]).
 
 a([ge_e(gekleefde),
@@ -18799,6 +18803,9 @@ a([e(immune),
    st(immuunst),
    ste(immuunste)],nonadv,
   [pp(voor)],[]).
+
+a([e(imperfecte),
+   no_e(imperfect)],adv,[],[]).
 
 a([e(imperialistische),
    er(imperialistischer),
@@ -40010,7 +40017,7 @@ a([e(zijdeachtige),
    ere(zijdeachtigere),
    no_e(zijdeachtig),
    st(zijdeachtigst),
-   ste(zijdeachtigste)],nonadv,[],[]).
+   ste(zijdeachtigste)],adv,[],[]).
 
 a([e(zijdelingse),
    no_e(zijdelings)],adv,[],[]).

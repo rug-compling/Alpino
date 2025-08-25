@@ -2718,6 +2718,11 @@ v(bepaal,bepaalt,bepalen,bepaald,bepaalde,bepaalden,
 	refl_er_pp_vp(tot)
        ])]).
 
+v(bepantser,bepantsert,bepantseren,bepantserd,bepantserde,bepantserden,
+    [h([transitive,
+	intransitive
+       ])]).
+
 v(beperk,beperkt,beperken,beperkt,beperkte,beperkten,
     [h([refl,
 	transitive,
@@ -3962,6 +3967,7 @@ v(blaas,blaast,blazen,geblazen,blies,bliezen,
 	part_transitive(weg),
 				% hem werd nieuw leven ingeblazen
 				% also sometimes acc and passivizable?
+	part_fixed(in,[[nieuw,leven],acc],norm_passive), 
 	part_fixed(in,[[nieuw,leven],dat],imp_passive)])]). 
 
 v(blaat,blaat,blaten,geblaat,blaatte,blaatten,
@@ -5620,6 +5626,7 @@ v(deer,deert,deren,gedeerd,deerde,deerden,
 
 v(definieer,definieert,definiëren,gedefinieerd,definieerde,definieerden,
   [h([transitive,
+      als_pred_np,
       sbar
      ])]).
 
@@ -14788,6 +14795,7 @@ v(meld,meldt,melden,gemeld,meldde,meldden,
 	so_pp_sbar,
 	transitive,
 	np_np,
+	so_pp_np,
         np_mod_pp(over),   % daar heb ik niets over te melden
 	part_als_pred_np(aan),
 	part_als_pred_np(af),
@@ -23136,6 +23144,7 @@ v(stuur,stuurt,sturen,gestuurd,stuurde,stuurden,
         part_transitive(na),
         part_np_np(na),
 	part_transitive(op),
+	part_np_ld_pp(op),
 	part_intransitive(op),
 	part_transitive(over),
 	part_transitive(rond),

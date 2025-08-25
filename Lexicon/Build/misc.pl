@@ -5102,6 +5102,7 @@ modified_modal_hd_mod(zo,ongeveer).
 modified_modal_hd_mod(vooral,niet).
 modified_modal_hd_mod(vooral,ook).
 modified_modal_hd_mod(alleen,maar).
+modified_modal_hd_mod(alleen,nog).
 modified_modal_hd_mod(nog,maar).
 
 modified_modal_hd_mod_noun_prep(misschien,wel).
@@ -5422,9 +5423,10 @@ m(centraal,         modal_adverb(prep),centraal). % centraal in het midden; op h
 m(dicht,            modal_adverb(prep),dicht).    % dicht tegen zich aan ; dicht bij de macht?
 m(diep,             modal_adverb(prep),diep).     % diep in blessuretijd
 m(dwars,            modal_adverb(prep),dwars).    % dwars door
-m(elders,           modal_adverb(prep),elders).	% kerken elders in Nederland
+m(elders,           modal_adverb(prep),elders).	  % kerken elders in Nederland
 m(hoog,             modal_adverb(prep),hoog).     % hoog boven de wolken
-m(laag,             modal_adverb(prep),laag). % hoog boven de wolken
+m(laag,             modal_adverb(prep),laag).     % hoog boven de wolken
+m(laat,             modal_adverb(prep),later),    % later in de zomer
 m(lijnrecht,        modal_adverb(prep),lijnrecht).  % lijnrecht tegenover ..
 m(midden,           modal_adverb(prep),midden).   % midden in
 m(pal,              modal_adverb(prep),pal).      % pal naast/achter/..

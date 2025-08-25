@@ -957,6 +957,7 @@ with_dt_all(alleen,[alleen,ben,maar]).
 with_dt_all(alleen,[jammer]).
 with_dt_all(alleen,[maar]).
 with_dt_all(alleen,[niet]).
+with_dt_all(alleen,[nog]).
 with_dt_all(allemaal,[best]).
 with_dt_all(allemaal,[bijna]).
 with_dt_all(allemaal,[gij]).

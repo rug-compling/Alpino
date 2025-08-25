@@ -2043,6 +2043,7 @@ lemma_root(beoefenen,beoefen) .
 lemma_root(beogen,beoog) .
 lemma_root(beoordelen,beoordeel) .
 lemma_root(bepalen,bepaal) .
+lemma_root(bepantseren,bepantser) .
 lemma_root(beperken,beperk) .
 lemma_root(beplakken,beplak) .
 lemma_root(beplanten,beplant) .
@@ -3157,6 +3158,7 @@ lemma_root(door_bengelen,bengel_door) .
 lemma_root(door_benijden,benijd_door) .
 lemma_root(door_beoordelen,beoordeel_door) .
 lemma_root(door_bepalen,bepaal_door) .
+lemma_root(door_bepantseren,bepantser_door) .
 lemma_root(door_beraadslagen,beraadslaag_door) .
 lemma_root(door_berekenen,bereken_door) .
 lemma_root(door_bergen,berg_door) .
@@ -10922,6 +10924,7 @@ lemma_root(raak_bengelen,bengel_raak) .
 lemma_root(raak_benijden,benijd_raak) .
 lemma_root(raak_beoordelen,beoordeel_raak) .
 lemma_root(raak_bepalen,bepaal_raak) .
+lemma_root(raak_bepantseren,bepantser_raak) .
 lemma_root(raak_beraadslagen,beraadslaag_raak) .
 lemma_root(raak_berglopen,berglopen_raak) .
 lemma_root(raak_berispen,berisp_raak) .
@@ -16215,6 +16218,7 @@ lemma_root(uit_bengelen,bengel_uit) .
 lemma_root(uit_benijden,benijd_uit) .
 lemma_root(uit_beoordelen,beoordeel_uit) .
 lemma_root(uit_bepalen,bepaal_uit) .
+lemma_root(uit_bepantseren,bepantser_uit) .
 lemma_root(uit_beraadslagen,beraadslaag_uit) .
 lemma_root(uit_bergen,berg_uit) .
 lemma_root(uit_berispen,berisp_uit) .
@@ -21098,6 +21102,7 @@ lemma_root(voort_bengelen,bengel_voort) .
 lemma_root(voort_benijden,benijd_voort) .
 lemma_root(voort_beoordelen,beoordeel_voort) .
 lemma_root(voort_bepalen,bepaal_voort) .
+lemma_root(voort_bepantseren,bepantser_voort) .
 lemma_root(voort_beraadslagen,beraadslaag_voort) .
 lemma_root(voort_berglopen,berglopen_voort) .
 lemma_root(voort_berispen,berisp_voort) .
