@@ -1741,6 +1741,8 @@ with_dt_all(het,[in,kort]).
 with_dt_all(het,[in,kort,veel]).
 with_dt_all(het,[in,lang]).
 with_dt_all(het,[in,lang,veel]).
+with_dt_all(het,[in,nieuw]).
+with_dt_all(het,[in,nieuw,veel]).
 with_dt_all(het,[laatst,toe,tot]).
 with_dt_all(het,[laatst,tot]).
 with_dt_all(het,[nu]).

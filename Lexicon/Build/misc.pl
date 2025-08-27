@@ -3610,6 +3610,7 @@ in_het_adj_pp(groot).
 in_het_adj_pp(klein).
 in_het_adj_pp(kort).
 in_het_adj_pp(lang).
+in_het_adj_pp(nieuw).
 
 in_het_adj_modal_adverb(bijzonder).
 

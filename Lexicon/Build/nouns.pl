@@ -3398,6 +3398,8 @@ n([sg(avond),pl(avonden)],de,[measure,temp_mod,sbar],
    zomer,
    dim(avondje)]).
 
+n([sg([avondje,uit]),pl([avondjes,uit])],het,[]).
+
 n([mass(avondeten)],het,[]).
 
 n([pl(avondklokken),sg(avondklok)],de,[]).
@@ -13611,6 +13613,7 @@ n([mass(gevlucht)],het,[]).  % deel molen oid?
 
 n([sg(gevoel)],het,
   [sbar,
+   subject_sbar,
    van_sbar,
    vp]).
 

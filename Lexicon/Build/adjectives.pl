@@ -1918,7 +1918,8 @@ a([e(aantrekkelijke),
    pp(wegens)],[on]).
 
 a([ge_e(aanvaarde),
-   ge_no_e(aanvaard)],adv,[subject_sbar % het is algemeen aanvaard dat...
+   ge_no_e(aanvaard)],adv,[subject_sbar, % het is algemeen aanvaard dat...
+			   als_pred
                           ],[]).
 
 a([e(aanvaardbare),
@@ -12599,8 +12600,7 @@ a([ge_e(geklede),
    ge_no_e(gekleed),
    st(gekleedst),
    ste(gekleedste)],both,
-  [pp(in),
-   fixed([[in,het,nieuw]])
+  [pp(in)
   ],
   [goed,
    on,
@@ -18486,6 +18486,8 @@ a([e(huilerige),
    no_e(huilerig),
    st(huilerigst),
    ste(huilerigste)],adv,[],[]).
+
+a([both(huisbakken)],nonadv,[],[]).
 
 a([e(huiselijke),
    er(huiselijker),

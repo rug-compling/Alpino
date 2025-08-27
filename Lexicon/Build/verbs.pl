@@ -10254,7 +10254,8 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	part_pc_pp(vol,tot),
 	part_refl_ld_adv(op),
 	part_refl_ld_pp(op),
-	part_refl_pc_pp(bezig,met),  % met die vraag hielden zich SU bezig
+	part_refl_pc_pp(bezig,met), % met die vraag hielden zich SU bezig
+	part_refl_er_pp_vp(bezig,met),
 	part_refl_pc_pp(op,met)]),
      b([part_vp(op)])]).
 
@@ -15532,8 +15533,10 @@ v(nodig,nodigt,nodigen,genodigd,nodigde,nodigden,
       part_intransitive(uit),	% VL
       part_np_pc_pp(uit,op),
       part_np_pc_pp(uit,voor),
+      part_np_pc_pp(uit,tot),
       part_pc_pp(uit,tot),
-      part_er_pp_vp(uit,tot)])]).
+      er_pp_vp_no_control(uit,tot),
+      part_obj_np_er_pp_vp(uit,tot)])]).
 
 v(noem,noemt,noemen,genoemd,noemde,noemden,
     [h([pred_np,
@@ -15569,7 +15572,8 @@ v(noodzaak,noodzaakt,noodzaken,genoodzaakt,noodzaakte,noodzaakten,
 	pc_pp(tot)])]).
 
 v(noop,noopt,nopen,genoopt,noopte,noopten,
-    [h([np_vp_obj,
+  [h([np_vp_obj,
+      er_pp_vp_no_control(tot),
 	obj_np_er_pp_vp(tot),
 	np_pc_pp(tot),
 	pc_pp(tot)])]).
@@ -16553,6 +16557,7 @@ v(organiseer,organiseert,organiseren,georganiseerd,organiseerde,organiseerden,
 
 v(oriënteer,oriënteert,oriënteren,georiënteerd,oriënteerde,oriënteerden,
     [h([transitive,
+	np_pc_pp(naar),
 	np_pc_pp(op),
         refl,                   % word-order:
 	refl_pc_pp(op)          % want daar orienteren zich vele gegadigden
@@ -21688,6 +21693,7 @@ v(spoor,spoort,sporen,gespoord,spoorde,spoorden,
         part_intransitive(op),
 	pc_pp(met),
 	part_np_pc_pp(aan,tot),
+	part_er_pp_vp_no_control(aan,tot),
 	part_obj_np_er_pp_vp(aan,tot)]),
      b([intransitive])]).
 
