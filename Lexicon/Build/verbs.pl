@@ -13306,7 +13306,7 @@ v(leg,legt,leggen,gelegd,legde,legden,
     [h([ap_pred_np,
         pp_pred_np(in,as),
         pp_pred_np(in,puin),
-	np_np,      % ??
+	np_np,      % ?? dat heeft hem geen windeieren gelegd; hem een strobreed in de weg leggen
 	transitive,
 	np_ld_pp,
 	np_np_ld_pp,
@@ -13414,8 +13414,10 @@ v(leg,legt,leggen,gelegd,legde,legden,
         part_fixed(af,[acc(rekenschap)],no_passive),
         part_fixed(af,[acc(rekenschap),pc(van)],no_passive),
         part_fixed(af,[acc(rekenschap),pc(over)],no_passive),
-        part_fixed(af,[acc(verantwoording),pc(aan)],no_passive),
-        part_fixed(af,[acc(verantwoordelijkheid),pc(aan)],no_passive),
+        part_fixed(af,[acc(verantwoording),dat_pp(aan)],no_passive),
+        part_fixed(af,[acc(verantwoordelijkheid),dat_pp(aan)],no_passive),
+        part_fixed(af,[{[acc(verantwoording),dat]}],no_passive),
+        part_fixed(af,[{[acc(verantwoordelijkheid),dat]}],no_passive),
         fixed([[voor,anker],acc],norm_passive),
 	part_np_ld_pp(af),
 	part_np_ld_pp(neer),
@@ -26547,9 +26549,8 @@ v(verstuik,verstuikt,verstuiken,verstuikt,verstuikte,verstuikten,
 
 v(verstuur,verstuurt,versturen,verstuurd,verstuurde,verstuurden,
     [h([transitive,
-	np_pc_pp(per),
-	np_pc_pp(aan),
-	np_pc_pp(naar)])]).
+	np_ld_pp
+       ])]).
 
 v(versuf,versuft,versuffen,versuft,versufte,versuften,
     [unacc([intransitive]),

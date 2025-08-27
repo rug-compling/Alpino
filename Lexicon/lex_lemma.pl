@@ -586,6 +586,7 @@ lemma_root(aan_verschuiven,verschuif_aan) .
 lemma_root(aan_verspreiden,verspreid_aan) .
 lemma_root(aan_verspringen,verspring_aan) .
 lemma_root(aan_verstoppen,verstop_aan) .
+lemma_root(aan_versturen,verstuur_aan) .
 lemma_root(aan_vertoeven,vertoef_aan) .
 lemma_root(aan_vertrekken,vertrek_aan) .
 lemma_root(aan_verwijderen,verwijder_aan) .
@@ -1674,6 +1675,7 @@ lemma_root(af_verschuiven,verschuif_af) .
 lemma_root(af_verspreiden,verspreid_af) .
 lemma_root(af_verspringen,verspring_af) .
 lemma_root(af_verstoppen,verstop_af) .
+lemma_root(af_versturen,verstuur_af) .
 lemma_root(af_vertoeven,vertoef_af) .
 lemma_root(af_vertrekken,vertrek_af) .
 lemma_root(af_verwijderen,verwijder_af) .
@@ -5408,6 +5410,7 @@ lemma_root(door_verstoppen,verstop_door) .
 lemma_root(door_verstoren,verstoor_door) .
 lemma_root(door_verstrakken,verstrak_door) .
 lemma_root(door_verstrijken,verstrijk_door) .
+lemma_root(door_versturen,verstuur_door) .
 lemma_root(door_versuffen,versuf_door) .
 lemma_root(door_vertakken,vertak_door) .
 lemma_root(door_vertalen,vertaal_door) .
@@ -6655,6 +6658,7 @@ lemma_root(heen_verschuiven,verschuif_heen) .
 lemma_root(heen_verspreiden,verspreid_heen) .
 lemma_root(heen_verspringen,verspring_heen) .
 lemma_root(heen_verstoppen,verstop_heen) .
+lemma_root(heen_versturen,verstuur_heen) .
 lemma_root(heen_vertoeven,vertoef_heen) .
 lemma_root(heen_vertrekken,vertrek_heen) .
 lemma_root(heen_verwijderen,verwijder_heen) .
@@ -7571,6 +7575,7 @@ lemma_root(in_verschuiven,verschuif_in) .
 lemma_root(in_verspreiden,verspreid_in) .
 lemma_root(in_verspringen,verspring_in) .
 lemma_root(in_verstoppen,verstop_in) .
+lemma_root(in_versturen,verstuur_in) .
 lemma_root(in_vertoeven,vertoef_in) .
 lemma_root(in_vertrekken,vertrek_in) .
 lemma_root(in_verwijderen,verwijder_in) .
@@ -8540,6 +8545,7 @@ lemma_root(langs_verschuiven,verschuif_langs) .
 lemma_root(langs_verspreiden,verspreid_langs) .
 lemma_root(langs_verspringen,verspring_langs) .
 lemma_root(langs_verstoppen,verstop_langs) .
+lemma_root(langs_versturen,verstuur_langs) .
 lemma_root(langs_vertoeven,vertoef_langs) .
 lemma_root(langs_vertrekken,vertrek_langs) .
 lemma_root(langs_verwijderen,verwijder_langs) .
@@ -15315,6 +15321,7 @@ lemma_root(toe_verschuiven,verschuif_toe) .
 lemma_root(toe_verspreiden,verspreid_toe) .
 lemma_root(toe_verspringen,verspring_toe) .
 lemma_root(toe_verstoppen,verstop_toe) .
+lemma_root(toe_versturen,verstuur_toe) .
 lemma_root(toe_vertoeven,vertoef_toe) .
 lemma_root(toe_vertrekken,vertrek_toe) .
 lemma_root(toe_vertrouwen,vertrouw_toe) .
@@ -15992,6 +15999,7 @@ lemma_root(tussen_verschuiven,verschuif_tussen) .
 lemma_root(tussen_verspreiden,verspreid_tussen) .
 lemma_root(tussen_verspringen,verspring_tussen) .
 lemma_root(tussen_verstoppen,verstop_tussen) .
+lemma_root(tussen_versturen,verstuur_tussen) .
 lemma_root(tussen_vertoeven,vertoef_tussen) .
 lemma_root(tussen_vertrekken,vertrek_tussen) .
 lemma_root(tussen_verwijderen,verwijder_tussen) .
@@ -18185,6 +18193,7 @@ lemma_root(uit_verspreiden,verspreid_uit) .
 lemma_root(uit_verspringen,verspring_uit) .
 lemma_root(uit_verstoppen,verstop_uit) .
 lemma_root(uit_verstoren,verstoor_uit) .
+lemma_root(uit_versturen,verstuur_uit) .
 lemma_root(uit_vertakken,vertak_uit) .
 lemma_root(uit_vertalen,vertaal_uit) .
 lemma_root(uit_vertederen,verteder_uit) .
@@ -18978,6 +18987,7 @@ lemma_root(vanaf_verschuiven,verschuif_vanaf) .
 lemma_root(vanaf_verspreiden,verspreid_vanaf) .
 lemma_root(vanaf_verspringen,verspring_vanaf) .
 lemma_root(vanaf_verstoppen,verstop_vanaf) .
+lemma_root(vanaf_versturen,verstuur_vanaf) .
 lemma_root(vanaf_vertoeven,vertoef_vanaf) .
 lemma_root(vanaf_vertrekken,vertrek_vanaf) .
 lemma_root(vanaf_verwijderen,verwijder_vanaf) .
@@ -19584,6 +19594,7 @@ lemma_root(vandaan_verschuiven,verschuif_vandaan) .
 lemma_root(vandaan_verspreiden,verspreid_vandaan) .
 lemma_root(vandaan_verspringen,verspring_vandaan) .
 lemma_root(vandaan_verstoppen,verstop_vandaan) .
+lemma_root(vandaan_versturen,verstuur_vandaan) .
 lemma_root(vandaan_vertoeven,vertoef_vandaan) .
 lemma_root(vandaan_vertrekken,vertrek_vandaan) .
 lemma_root(vandaan_verwijderen,verwijder_vandaan) .
@@ -20186,6 +20197,7 @@ lemma_root(vandoor_verschuiven,verschuif_vandoor) .
 lemma_root(vandoor_verspreiden,verspreid_vandoor) .
 lemma_root(vandoor_verspringen,verspring_vandoor) .
 lemma_root(vandoor_verstoppen,verstop_vandoor) .
+lemma_root(vandoor_versturen,verstuur_vandoor) .
 lemma_root(vandoor_vertoeven,vertoef_vandoor) .
 lemma_root(vandoor_vertrekken,vertrek_vandoor) .
 lemma_root(vandoor_verwijderen,verwijder_vandoor) .

@@ -10677,6 +10677,12 @@ a([pred(gebaat)],padv,
 a([ge_e(gebagatelliseerde),
    ge_no_e(gebagatelliseerd)],adv,[],[]).
 
+a([ge_e(gebaggerde),
+   ge_no_e(gebaggerd)],adv,[],[op,
+			       uit,
+			       vrij
+			      ]).
+
 a([ge_e(gebakende),
    ge_no_e(gebakend)],adv,[],[]).
 
@@ -12594,7 +12600,7 @@ a([ge_e(geklede),
    st(gekleedst),
    ste(gekleedste)],both,
   [pp(in),
-   fixed([in,het,nieuw])
+   fixed([[in,het,nieuw]])
   ],
   [goed,
    on,
@@ -13139,7 +13145,7 @@ a([e(gelijkvloerse),
    no_e(gelijkvloers)],locadv,[],[]).
 
 a([e(gelijkwaardige),
-   no_e(gelijkwaardig)],padv,
+   no_e(gelijkwaardig)],both,
   [pp(aan)],[]).
 
 a([ge_e(gelijmde),

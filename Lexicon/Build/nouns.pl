@@ -4219,7 +4219,7 @@ n([pl(begeleiders),sg(begeleider)],de,[],
 
 n([pl(begeleidsters),sg(begeleidster)],de,[]).
 
-n([pl(begeleidingen),sg(begeleiding)],de,[]).
+n([pl(begeleidingen),sg(begeleiding)],de,[pred_pp(onder)]).
 
 n([pl(begijnen),sg(begijn)],de,[]).
 
