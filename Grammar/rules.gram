@@ -4597,11 +4597,11 @@ grammar_rule(adv_adv_cps, AdvP,[ Adv, OPTCl, CP ] ) :-
     hd_mod_structure(Adv,CP,AdvP).
 
 %%EX%% Vandaag woensdag gaan we uit
-%% ???
+%%EX%% Ergens volgend jaar zijn er verkiezingen
 grammar_rule(vandaag_woensdag, AdvP,[ Adv, TEMP ] ) :-
     AdvP => adv, Adv => adv, 
     Adv:wk => no,
-    Adv:tmploc => tmp, 
+    Adv:tmploc => (loc;tmp), 
     Adv:haspre => no,
     Adv:wh => nwh,  
     Adv:subadv => ~subadv_adj,  % reduce spur. amb.; use a_a_pp rule
