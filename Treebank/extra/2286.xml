@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="cp" end="7" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
+      <node begin="1" cat="ssub" end="7" id="3" rel="body">
+        <node begin="1" case="nom" def="def" end="2" gen="de" getal="mv" id="4" index="1" lemma="wij" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" rnum="pl" root="wij" status="vol" vwtype="pers" wh="nwh" word="wij"/>
+        <node begin="2" cat="pp" end="5" id="5" rel="pc">
+          <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" cat="np" end="5" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="politiek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="politiek" word="politiek"/>
+          </node>
+        </node>
+        <node begin="5" end="6" id="10" infl="pl" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" sc="aux_pc_pp(inf,van)" tense="present" v_per="fir" word="moeten" wvorm="pv"/>
+        <node begin="1" cat="inf" end="7" id="11" rel="vc">
+          <node begin="1" end="2" id="12" index="1" rel="su"/>
+          <node begin="6" buiging="zonder" end="7" id="13" infl="inf" lemma="presteren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="presteer" sc="intransitive" word="presteren" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Omdat wij van de politiek moeten presteren</sentence>
+</alpino_ds>
