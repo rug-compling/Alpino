@@ -1026,6 +1026,7 @@ m(v_root(wil,willen),
 	pp_copula(in,gesprek),
 	np_mod_pp(van),          % hij wil er een deel van
 	fixed([[te,lijf],acc],no_passive),
+	pc_pp(aan),              % ze willen niet aan de pil
 	er_pp_sbar(aan),         % hij wil er niet aan dat ..
         part_pc_er_transitive(aan),    % omdat zij er niet aanwilden
 
@@ -15050,10 +15051,10 @@ v(moei,moeit,moeien,gemoeid,moeide,moeiden,
       refl_pc_pp(met)])]).
 
 v(moet,moet,moeten,gemoeten,moest,moesten,
-  [b([modifier(aux(inf)),
-      aux_pc_pp(inf,van)]),	% VL: hij is diep moeten gaan
+  [b([modifier(aux(inf)),       % VL: hij is diep moeten gaan
                                 %     hij heeft diep moeten gaan
 				% vind je het erg moest je dochter thuiskomen met...
+      aux_pc_pp(inf,van)]),	
 
    h([intransitive,
       transitive_ndev_ndev_npas,
@@ -15072,13 +15073,14 @@ v(moet,moet,moeten,gemoeten,moest,moesten,
       part_pc_pp(af,van),
       fixed([{[ap_pred('aan de gang'),pc(met)]}],no_passive),
       fixed([[van,het,hart],dat],no_passive),  % mij moet vanavond iets van het hart
-      fixed([[van,het,hart],dat,sbar],no_passive),
+      fixed([[van,het,hart],dat,sbar_subj],no_passive),
+                                               % het moet me van het hart dat je zeurt
       fixed([[te,lijf],acc],no_passive),
       fixed([[te,rade],ld_pp],no_passive),
       fixed([[te,rade],ld_adv],no_passive),
 	     % ik moet (het) niet hebben dat ...
       fixed([vc(heb,inf,intransitive),opt_het_pobj1(dat_sbar)],no_passive),
-	
+                                % het moet gezegd dat je zeurt
       fixed([vc(zeg,psp,intransitive),sbar_subj_opt_het],no_passive),
                                 % je moet zien (om) de aandacht vast te houden
       fixed([vc(zie,inf,intransitive),vp],no_passive),

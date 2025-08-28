@@ -3886,14 +3886,14 @@ a([ge_e(bedreigde),
    ge_no_e(bedreigd)],adv,[mod_pp(door)],[on]).
 
 a([ende(bedreigende),
-   end(bedreigdend),
+   end(bedreigendend),
    ere(bedreigendere),
    er(bedreigender)],adv,[transitive],[]).
 
 a([ende(bedreigende),
-   end(bedreigdend),
+   end(bedreigendend),
    ere(bedreigendere),
-   er(bedreigender)],adv,[transitive],[s(leven)]).
+   er(bedreigender)],adv,[],[s(leven)]).
 
 a([e(bedremmelde),
    no_e(bedremmeld)],adv,[],[]).
@@ -21523,10 +21523,6 @@ a([e(levenloze),
    no_e(levenloos),
    st(levenloost),
    ste(levenlooste)],padv,[],[]).
-
-a([stem(leven_bedreigen),
-   ende(levensbedreigende),
-   end(levensbedreigend)],nonadv,[],[]).
 
 a([e(levensbeschouwelijke),
    no_e(levensbeschouwelijk)],adv,[],[]).

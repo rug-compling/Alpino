@@ -15282,11 +15282,7 @@ n([pl(hengsels),sg(hengsel)],het,[],[dim(hengseltje)]).
 
 n([pl(hengsten),sg(hengst)],de,[],[dek]).
 
-n([sg(hepatitis),
-   sg([hepatitis,'A']),
-   sg([hepatitis,'B']),
-   sg([hepatitis,'E'])
-  ],both,[]).
+n([sg(hepatitis)],both,[]).
 
 n([pl(herauten),sg(heraut)],de,[]).
 
