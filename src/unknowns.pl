@@ -4495,7 +4495,7 @@ assert_tags([Stem/Suffix/Tag|Tags],P0,R0,W,Wmin) :-
 alternative_open_class_suffix(Word,Prefix,NewStem,Tag):-
     alpino_lex:lexicon(Tag0,Stem,[Word],[],_),
     open_class_tag(Tag0,Tag),
-    \+ Tag = noun(_,_,_), % this one is generated anyway using "noun" heuristic
+%%    \+ Tag = noun(_,_,_), % this one is generated anyway using "noun" heuristic. No, not always.
     build_stem(Stem,Prefix,NewStem).
 
 build_stem(STEM0,Prefix,STEM) :-
