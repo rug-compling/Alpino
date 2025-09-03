@@ -153,7 +153,7 @@ all_dtchecks:
 	dtchecks $(shell find -L $(DIRECTORIES) -name '*.xml' | awk -F/ '{ printf "%s\n",$$1 }' | sort -u)
 	mv .dtchecks2 .dtchecks
 
-sqldir=/net/aps/haytabo/opt/alpinotools
+sqldir=/net/aps/opt/alpinotools
 prepare_enhanced_all: $(DIRECTORIES:%=sql/%.sqlite)
 
 sql/%.sqlite: best/%/*.xml fast/%/*.xml
