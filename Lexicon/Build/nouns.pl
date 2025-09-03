@@ -4288,6 +4288,8 @@ n([mass(behartiging)],de,[],
 n([sg(behartiger),pl(behartigers)],de,[],
   [i(belang,belangen)]).
 
+n([mass(beheer)],het,[pred_pp(in)],[]).
+
 n([mass(beheer)],het,[],
   [keten,  % en geen keet_beheer
    milieu,
