@@ -1158,14 +1158,27 @@ grammar_rule(vp_pred_v_pp, VP, [ NP0, V, OPTCOMMA, Extra ]) :-
     V:eps1 => no.
 
 %%EX%% Zij hopen dat het geen debacle wordt zoals de Blauwe Stad
+%%%%%% werkt alleen voor NP pred vanwege e_deps feature
 grammar_rule(vp_pred_v_sbar, VP, [ NP0, V, OPTCOMMA, Extra ]) :-
     vp_v_m_extra_sbar_structure(VP,VP1,OPTCOMMA,Extra),
     NP0 => pred,
+    NP0:pcat => np_pred,
     NP => pred,
     NP0:sel <=> NP:sel,
     hd_m_extra_structure(NP0,Extra,NP),
     vproj_vc_structure(VP1,V),
     vp_arg_v_pred_structure(VP,NP,VP1),
+    V:eps1 => no.
+
+%%EX%% Omdat hij werkzaam is als spion
+%%EX%% Hij riep de republiek uit die bekend zou worden als de Weimarrepubliek
+%%EX%% Dat was het minpunt dat hem onacceptabel maakte als leider van Afghanistan
+grammar_rule(vp_ap_pred_v_sbar, VP, [PRED0, V, OPTCOMMA, Extra ]) :-
+    optcomma(OPTCOMMA),
+    grammar_rule(a_a_modcp,PRED1,[PRED0,Extra]),
+    grammar_rule(pred_a,PRED,[PRED1]),
+    vproj_vc_structure(VP1,V),
+    vp_arg_v_pred_structure(VP,PRED,VP1),
     V:eps1 => no.
 
 vp_v_m_extra_pp_structure(VP, V, OPTCOMMA, Extra  ) :-
