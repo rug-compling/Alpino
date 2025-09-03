@@ -15402,12 +15402,12 @@ a([ge_e(gestelde),
    pp(op),
    object_sbar,
    pp(met),
-   pred],[]).
+   fixed([{[ap_pred,pc(met)]}]),
+   ap_pred],[]).
 
 a([ge_e(gestelde),
    ge_no_e(gesteld)],adv,
-  [],[ap_pred,  % slecht gesteld
-      tewerk]).
+  [],[tewerk]).
 
 a([ge_e(gestelpte),
    ge_no_e(gestelpt)],adv,[],[]).

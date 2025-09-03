@@ -3834,6 +3834,7 @@ m(doch,             complementizer(root),doch).
 m(dus,              complementizer(root),dus).
 m(echter,           complementizer(root),echter).
 m(en,               complementizer(root),en).
+m(hetzij,           complementizer(root),hetzij).
 m(immers,           complementizer(root),immers).  % only root (+punctuation)
 m(maar,             complementizer(root),maar).
 m(noch,             complementizer(root),noch).
