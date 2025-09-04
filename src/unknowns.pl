@@ -2582,7 +2582,6 @@ function('Branchegenoot').
 function('Brit').
 function('Broeder').
 function('Broer').
-function('Buitenlandse').
 function('Buurland').
 function('Canadees').
 function('CEO').

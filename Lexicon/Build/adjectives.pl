@@ -3821,8 +3821,7 @@ a([e(bedeesde),
 
 a([ge_e(bedekte),
    ge_no_e(bedekt)],adv,
-  [pp(door),
-   pp(met)],[]).
+  [],[]).
 
 a([e(bedenkelijke),
    er(bedenkelijker),
