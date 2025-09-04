@@ -28426,6 +28426,8 @@ v(werk,werkt,werken,gewerkt,werkte,werkten,
         fixed([[in,de,hand],acc],norm_passive),
         fixed([[in,de,hand],sbar],imp_passive),
 	fixed([ap_pred,vp_subj],no_passive),   % het werkt goed om naar de jongeren toe te gaan
+	%% dat werkt ons op de lachspieren/het gemoed
+	so_np_pc_pp(op),
 	part_intransitive(af),  % voetbal, afwerken op doel
         part_intransitive(mee),
 	part_intransitive(over),

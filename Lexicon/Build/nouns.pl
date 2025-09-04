@@ -19949,7 +19949,8 @@ n([pl(lanen),sg(laan)],de,[],[dim(laantje)]).
 
 n([pl(laarzen),sg(laars)],de,[],[rijg]).
 
-n([pl(laatstejaars),sg(laatstejaars)],de,[]).
+n([pl(laatstejaars),sg(laatstejaars)],de,[measure]).
+%% de laatstejaars secundair onderwijs
 
 n([pl(laatstgenoemden),sg(laatstgenoemde)],de,[measure]).
 
