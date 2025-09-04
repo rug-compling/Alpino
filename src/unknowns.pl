@@ -1439,6 +1439,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"default|~p|~p~n",
     \+ tag(P1,_,_,_,_,_,normal(url),_),
     \+ tag(P1,_,_,_,_,_,wo_dia,_),
     \+ tag(P1,_,_,_,_,_,mistok,_),
+    \+ tag(P1,_,_,_,_,_,strip_repeated_letters,_),
     \+ tag(P1,_,_,_,_,_,decap_w_dia,_),
     \+ tag(P1,_,_,_,_,_,decap_wo_dia,_),
     \+ tag(P1,_,_,_,_,_,nom_adj,nominalized_adjective),
@@ -1453,6 +1454,8 @@ unknown_word_heuristic(P,_,_,_,_,_,_,_) :-
     debug_message(2,"heuristics at ~p DONE ~n",[P]),
     fail.
 
+%% should have the same lemma, for cases such as "ontplofffffing" => "ontploffing"
+%% which is required to recognize lemma specific verbal idioms such as "tot ontploffing brengen"
 remove_more_specific_noun_tags(P0,R0) :-
     P is P0 + 1,
     R is R0 + 1,
@@ -7496,9 +7499,9 @@ verbal_compound_prefix('over-',over,intransitive,refl).
 verbal_compound_prefix(over,over,intransitive,refl).
 
 strip_repeated_letters([],[],I,I).
-strip_repeated_letters([H,H|Hs],[H],_,1) :-
-    hs(Hs,H),
-    !.
+%strip_repeated_letters([H,H|Hs],[H],_,1) :-
+%    hs(Hs,H),
+%    !.
 strip_repeated_letters([H,H,H|T0],[H,H|T],_,1) :-
     alpino_latin1:isalpha(H),
     !,

@@ -7460,6 +7460,7 @@ v(fiets,fietst,fietsen,gefietst,fietste,fietsten,
 v(figureer,figureert,figureren,gefigureerd,figureerde,figureerden,
     [h([intransitive,
 	transitive,
+	als_copula,
 	ld_adv,
 	ld_pp])]).
 

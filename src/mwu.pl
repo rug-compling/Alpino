@@ -1258,6 +1258,7 @@ mwu_postag('voor in de plaats',['VZ(fin)','VZ(init)','LID(bep,stan,rest)','N(soo
 mwu_postag('voor lief',['VZ(init)','ADJ(vrij,basis,zonder)'],[voor,lief]).
 mwu_postag('voor ogen',['VZ(init)','N(soort,mv,basis)'],[voor,oog]).
 mwu_postag('voor en tegen',['N(soort,mv,basis)','VG(neven)','N(soort,mv,basis)'],[voor,en,tegen]).
+mwu_postag('voor wat betreft',['VZ(init)','VNW(vb,pron,stan,vol,3o,ev)','WW(pv,tgw,met-t)'],[voor,wat,betreffen]).
 mwu_postag('voor zover',['VZ(init)','BW()'],[voor,zover]).
 mwu_postag('Voor zover',['VZ(init)','BW()'],[voor,zover]).
 mwu_postag('Vrede van Aken',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[vrede,van,'Aken']).

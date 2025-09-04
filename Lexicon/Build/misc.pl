@@ -2838,6 +2838,7 @@ preposition(zonder).
 preposition([à,la]).
 preposition([te,oordelen,naar]).
 
+preposition([voor,wat,betreft]).
 preposition([wat,betreft]).
 
 preposition(hartje).  % hij woont hartje centrum
