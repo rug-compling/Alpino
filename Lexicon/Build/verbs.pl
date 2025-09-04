@@ -29979,6 +29979,7 @@ psp_only(geboren,
 	 geboren,
          hebben,
          [transitive,
+	  als_pred_np,
           np_pc_pp(uit)]).
 
 psp_only(gecharmeerd,

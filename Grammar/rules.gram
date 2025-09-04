@@ -6602,7 +6602,6 @@ grammar_rule(a_a_pp, AP, [ A, COMMA, PP ]) :-
     hd_mod_structure(A,PP,AP).
 
 %%EX%% gekleed zoals hij zich altijd kleedt kwam hij binnen
-%%EX%% Jef ( geboren als « Jozef Adriaan Anna Geeraerts » op 23 februari 1930 )
 grammar_rule(a_a_modcp,AP,[A,SBAR]) :-
     AP => a, A => a, max_sbar(SBAR),
     haspreno(AP),
@@ -6910,6 +6909,21 @@ grammar_rule(a_pred_a, AP, [ PRED, A]) :-
     A:wh => nwh,		% * np hoe beter
     PRED => pred,
     PRED:subn => ~sub_indef_verb,
+    hd_comp_structure(A,PRED,AP).
+
+%%EX%% De oplichter , door iedereen aanvaard als een deskundige , verdiende een fortuin
+%%EX%% Jef ( geboren als « Jozef Adriaan Anna Geeraerts » op 23 februari 1930 )
+grammar_rule(a_a_pred, AP, [ A, PRED ]) :-
+    AP => a, A => a,
+    PRED => pred,
+    PRED:pcat => als_pred,
+    PRED:sel => to_right,
+    haspreno(AP),
+    not_postp(AP),
+    A:hasextra => no,
+    A:adv => ~detadv,
+    A:aform => nattr,
+    AP:modifies_a => no,   % not with rightward complements/modifiers?
     hd_comp_structure(A,PRED,AP).
 
 %%EX%% De zelf verklaarde burgemeester

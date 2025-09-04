@@ -10898,7 +10898,7 @@ a([ge_e(gebootste),
 a([ge_e(geborduurde),
    ge_no_e(geborduurd)],adv,[],[]).
 
-a([ge_both(geboren)],padv,[],[dood]).
+a([ge_both(geboren)],padv,[als_pred],[dood]).
 
 a([ge_both(geborgen)],adv,[],[]).
 
