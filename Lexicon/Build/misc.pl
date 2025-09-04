@@ -4194,7 +4194,7 @@ m(Stem,conj(Stem),Surf) :-
     conj/2,
     conj/3.
 
-conj('-',              '-').
+%% conj('-',              '-').  TODO?
 conj('/',              '/').
 conj('&',              '&').
 conj(à,                à).
