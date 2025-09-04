@@ -17458,6 +17458,7 @@ a([e(gunstige),
    st(gunstigst),
    ste(gunstigste)],adv,
   [pp(voor),
+   subject_vp,
    subject_sbar],[]).
 
 a([e(guste),

@@ -1446,11 +1446,21 @@ unknown_word_heuristic(P1,R1,W,_Ws,"default|~p|~p~n",
     \+ tag(P1,_,_,_,_,_,form_of_suffix(ische),_),
     \+ tag(P1,_,_,_,_,_,dashed_mwu,_),
     \+ tag(P1,_,_,_,_,_,verb_ster,_),
+    remove_more_specific_noun_tags(P1,R1),
     findall(_,lexical_analysis_tag(noun(both,both,both),P1,R1,W,noun),[_|_]).
 
 unknown_word_heuristic(P,_,_,_,_,_,_,_) :-
     debug_message(2,"heuristics at ~p DONE ~n",[P]),
     fail.
+
+remove_more_specific_noun_tags(P0,R0) :-
+    P is P0 + 1,
+    R is R0 + 1,
+    (   clause(alpino_lexical_analysis:tag(P0,P,R0,R,_,_,_,noun(_,_,_)),_,Ref),
+	alpino_lexical_analysis:erase_tag(Ref),
+	fail
+    ;   true
+    ).
 
 %% 1. don't hallucinate Dutch for English (French, German, ...)
 %% also, these are often non-capitalized parts of titles etc.
