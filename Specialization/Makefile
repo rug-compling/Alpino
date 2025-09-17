@@ -37,13 +37,14 @@ left_corners:
 	mv $(DISK)/$(suite).lc.gz .
 	$(MAKE) $(suite).ps
 
+KK=4
 keys_lc:
-	cat keys | \
-        $(ALPINO) -flag suite undefined $(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/LassySmall cmdint=on 2> $(DISK)/keys-spec.log | gzip > $(DISK)/keys.lc.gz 
-	gzip $(DISK)/keys-spec.log
-	mv $(DISK)/keys-spec.log.gz keys.log.gz
-	mv $(DISK)/keys.lc.gz .
-	$(MAKE) keys.ps
+	cat keys$(KK) | \
+        $(ALPINO) -flag suite undefined $(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/LassySmall cmdint=on 2> $(DISK)/keys$(KK)-spec.log | gzip > $(DISK)/keys$(KK).lc.gz 
+	gzip $(DISK)/keys$(KK)-spec.log
+	mv $(DISK)/keys$(KK)-spec.log.gz keys$(KK).log.gz
+	mv $(DISK)/keys$(KK).lc.gz .
+	$(MAKE) keys$(KK).ps
 
 ### for LassySmall:
 ### make jobs PATTERN=lassysmall
