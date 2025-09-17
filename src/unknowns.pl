@@ -7500,9 +7500,9 @@ verbal_compound_prefix('over-',over,intransitive,refl).
 verbal_compound_prefix(over,over,intransitive,refl).
 
 strip_repeated_letters([],[],I,I).
-%strip_repeated_letters([H,H|Hs],[H],_,1) :-
-%    hs(Hs,H),
-%    !.
+strip_repeated_letters([H,H,H|Hs],[H],_,1) :-
+    hs(Hs,H),
+    !.
 strip_repeated_letters([H,H,H|T0],[H,H|T],_,1) :-
     alpino_latin1:isalpha(H),
     !,
