@@ -239,6 +239,8 @@ t_subcat(Frame0,Frame) :-
 
 t_s_r(aux_simple(S),         aux(S)).
 
+t_s_r(aux_pc_pp(S,_),        aux(S)).
+
 t_s_r(aci,                   aux(inf)).
 t_s_r(aci_simple,            aux(inf)).
 t_s_r(aci_no_obj,            aux(inf)).

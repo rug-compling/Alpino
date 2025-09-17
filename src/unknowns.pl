@@ -2662,8 +2662,6 @@ function('Kroonprins').
 function('Kroaat').
 function('Landskampioen').
 function('Lijsttrekker').
-function('Luitenant-Kolonel').
-function('Luitenant-Generaal').
 function('Luitenant').
 function('Maarschalk').
 function('Madam').
@@ -2796,6 +2794,10 @@ function(ExFun) :-
 function(ExFun) :-
     atom(ExFun),
     atom_concat('Vice-',Fun,ExFun),
+    function(Fun).
+function(ExFun) :-
+    atom(ExFun),
+    atom_concat('Luitenant-',Fun,ExFun),
     function(Fun).
 
 decap_only_suffix('\'er').  % de PvdA'er Jansen

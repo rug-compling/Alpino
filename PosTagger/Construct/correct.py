@@ -43,6 +43,8 @@ def main():
             t = "modal_adverb(adv_noun_prep)"
         if t == "tag" and h == "normal(enumeration)":
             t = "enumeration"
+        if t == "adjective(no_e(padv))" and r == "gelijkwaardig":
+            t = "adjective(no_e(both))"
         if t == "adjective(no_e(adv))" and r == "dankbaar":
             t = "adjective(no_e(both))"
         if t == "adjective(er(adv))" and r == "dankbaar":

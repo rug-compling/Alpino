@@ -206,12 +206,12 @@ WR-P-E-H-0000000052.p.233.s.1
 WR-P-E-H-0000000052.p.84.s.1               
 WR-P-E-H-0000000055.p.101.s.1              
 WR-P-E-H-0000000055.p.84.s.1               
-WR-P-E-I-0000000014.p.6.s.6                
-WR-P-E-I-0000000332.p.4.s.118.1            
-WR-P-E-I-0000000332.p.4.s.92               
-WR-P-E-I-0000006366.p.8.s.177              
-WR-P-E-I-0000024561.p.4.s.29.1             
-WR-P-E-I-0000027197.p.3.s.47.1             
+WR-P-E-I-0000000014.p.6.s.6		     DONE               
+WR-P-E-I-0000000332.p.4.s.118.1              name
+WR-P-E-I-0000000332.p.4.s.92                 punct expected
+WR-P-E-I-0000006366.p.8.s.177                "kortstro en langstro rassen"
+WR-P-E-I-0000024561.p.4.s.29.1               name
+WR-P-E-I-0000027197.p.3.s.47.1               name
 WR-P-E-I-0000036627.p.1.s.137              
 WR-P-E-I-0000036834.p.1.s.210                ? 
 WR-P-E-I-0000036834.p.1.s.211              
@@ -1072,7 +1072,7 @@ wiki-9720.p.42.s.7                           gapping
 wiki-9844.p.35.s.1                           zoals : 
 wiki-9844.p.64.s.1                           extraposed ppart mod of NP 
 WR-P-E-C-0000000012.p.13.s.1                 ? 
-WR-P-E-C-0000000012.p.16.s.1               
+WR-P-E-C-0000000012.p.16.s.1                 gapping
 WR-P-E-C-0000000012.p.53.s.1               
 WR-P-E-C-0000000021.p.32.s.1                   2x NP but the first one is not "short" 
 WR-P-E-C-0000000021.p.50.s.7               
@@ -1660,7 +1660,7 @@ WS-U-E-A-0000000026.p.44.s.2                 meta noise
 WS-U-E-A-0000000027.p.4.s.9                  meta noise, also "van onjuist" 
 WS-U-E-A-0000000032.p.44.s.1                 gapping 
 WS-U-E-A-0000000033.p.14.s.2                 spelling "lossen" 
-WS-U-E-A-0000000033.p.26.s.3                
+WS-U-E-A-0000000033.p.26.s.3                 spelling verzoorzaakt ==> veroorzaakt
 WS-U-E-A-0000000033.p.6.s.11                 door-PP part of both conjuncts? 
 WS-U-E-A-0000000034.p.29.s.1                 spelling "uit de dagen" "uit te dagen 
 WS-U-E-A-0000000036.p.14.s.6                 spelling "oud CDA partijvoorzitter" 
@@ -1668,54 +1668,54 @@ WS-U-E-A-0000000036.p.2.s.2                  gapping
 WS-U-E-A-0000000038.p.6.s.19                 meta noise 
 WS-U-E-A-0000000040.p.39.s.10                spelling "verdrievoudigd" => "verdrievoudigt" 
 WS-U-E-A-0000000040.p.51.s.6                 extraposition of PP out of PP 
-WS-U-E-A-0000000043.p.26.s.2               
+WS-U-E-A-0000000043.p.26.s.2                 compl.conj.
 WS-U-E-A-0000000043.p.34.s.1                 name 
-WS-U-E-A-0000000044.p.6.s.1                 
-WS-U-E-A-0000000049.p.16.s.1                
+WS-U-E-A-0000000044.p.6.s.1                  DONE
+WS-U-E-A-0000000049.p.16.s.1                 spelling "geschollde" ==> "geschoolde"
 WS-U-E-A-0000000049.p.28.s.6                 spelling "fde" ipv "de" 
-WS-U-E-A-0000000200.p.41.s.1                
+WS-U-E-A-0000000200.p.41.s.1                 DONE
 WS-U-E-A-0000000202.p.13.s.3                 hangen + als-PRED 
-WS-U-E-A-0000000202.p.30.s.1                
+WS-U-E-A-0000000202.p.30.s.1                 "166-en-een halve kilometer"
 WS-U-E-A-0000000204.p.49.s.2                 gapping 
-WS-U-E-A-0000000206.p.34.s.1                
+WS-U-E-A-0000000206.p.34.s.1                 meta noise
 WS-U-E-A-0000000209.p.18.s.3                 gramm err "met een met" 
 WS-U-E-A-0000000214.p.20.s.3                 spelling "voorstaat" ==> "voor staat" 
-WS-U-E-A-0000000214.p.27.s.2                
+WS-U-E-A-0000000214.p.27.s.2                 DONE
 WS-U-E-A-0000000215.p.35.s.3                 extraposed PP out of NP 
 WS-U-E-A-0000000215.p.36.s.2                 agreement error "de natuur moeten worden beheerd" 
 WS-U-E-A-0000000218.p.28.s.1                 dp dp dp ipv dp [dp dp] 
 WS-U-E-A-0000000220.p.35.s.2                 conj of DP 
 WS-U-E-A-0000000222.p.28.s.10                subj verb agreement "de ziel zijn aangetast" 
 WS-U-E-A-0000000223.p.48.s.1                 extraposed PP over PP 
-WS-U-E-A-0000000223.p.5.s.2                
+WS-U-E-A-0000000223.p.5.s.2                  DU
 WS-U-E-A-0000000224.p.40.s.2                 name "buitenlandse zaken" 
 WS-U-E-A-0000000227.p.18.s.3                 gramm error 
 WS-U-E-A-0000000227.p.41.s.4                 predm "PP PP" 
 WS-U-E-A-0000000227.p.48.s.4                 NP "voor 2-honderdduizend euro aan schulden" 
 WS-U-E-A-0000000229.p.32.s.4                 als-comparative extraposed from als-predc 
 WS-U-E-A-0000000233.p.11.s.6                 waar..in MOD 
-WS-U-E-A-0000000234.p.37.s.1                
+WS-U-E-A-0000000234.p.37.s.1                 DU/compl.conj
 WS-U-E-A-0000000235.p.14.s.1                 conj of DPs 
-WS-U-E-A-0000000237.p.37.s.2                
+WS-U-E-A-0000000237.p.37.s.2                 DP/DP vs SAT/NUCL
 WS-U-E-A-0000000241.p.39.s.1                 DP 
 WS-U-E-A-0000000242.p.20.s.2                 tag without comma 
 WS-U-E-A-0000000243.p.15.s.3                 colon sat/nucl or simply rel as if comma 
 WS-U-E-A-0000000244.p.20.s.3                 dp/dp sat/nucl 
-WS-U-E-A-0000000244.p.2.s.1                
+WS-U-E-A-0000000244.p.2.s.1                  meta noise en DU
 WS-U-E-A-0000000248.p.23.s.8                 "niet of maar wanneer" 
-dpc-bal-001237-nl-sen.p.8.s.4               
-dpc-bal-001238-nl-sen.p.36.s.6 	 
+dpc-bal-001237-nl-sen.p.8.s.4                extraposed SU after :
+dpc-bal-001238-nl-sen.p.36.s.6 	 	     DU
 dpc-bal-001238-nl-sen.p.7.s.4                gapping 
-dpc-bmm-001091-nl-sen.p.7.s.4               
-dpc-bmm-001094-nl-sen.p.8.s.5               
+dpc-bmm-001091-nl-sen.p.7.s.4                DONE
+dpc-bmm-001094-nl-sen.p.8.s.5                ?
 dpc-bmm-001097-nl-sen.p.4.s.2                "diameter 14mm" 
 dpc-bmm-001102-nl-sen.p.2.s.1                "sediment stalen" 
 dpc-cam-001018-nl-sen.p.7.s.8                PP conjunction without conjunct 
-dpc-cam-001020-nl-sen.p.5.s.3               
+dpc-cam-001020-nl-sen.p.5.s.3                ?
 dpc-cam-001281-nl-sen.p.8.s.2                tag/nucl vs nucl/tag 
 dpc-dns-001069-nl-sen.p.2.s.1                attachment of "niet aan" PP 
-dpc-eli-000941-nl-sen.p.19.s.1              
-dpc-eli-000942-nl-sen.p.19.s.1              
+dpc-eli-000941-nl-sen.p.19.s.1               sat/nucl vs nucl/sat
+dpc-eli-000942-nl-sen.p.19.s.1               sat/nucl vs nucl/sat
 dpc-eup-000019-nl-sen.p.7.s.1               
 dpc-fsz-000543-nl-sen.p.150.s.1            
 dpc-fsz-000543-nl-sen.p.33.s.1               zin is niet af 
@@ -1764,29 +1764,29 @@ dpc-vla-001170-nl-sen.p.23.s.2
 dpc-vla-001171-nl-sen.p.99.s.1              
 dpc-vla-001175-nl-sen.p.283.s.2             
 wiki-11.p.47.s.7                           
-wiki-135.p.33.s.2                          
-wiki-135.p.7.s.2                            
-wiki-1541.p.27.s.1                          
-wiki-1635.p.13.s.2                          
-wiki-1808.p.19.s.3                          
-wiki-1823.p.16.s.1                          
+wiki-135.p.33.s.2                            DONE
+wiki-135.p.7.s.2                             compl.conj.
+wiki-1541.p.27.s.1                           ?
+wiki-1635.p.13.s.2                           punctuation expected
+wiki-1808.p.19.s.3                           DONE
+wiki-1823.p.16.s.1                           spelling "autonomie" ==> "autonome" ?
 wiki-1928.p.3.s.2                            mod or app? 
 wiki-1941.p.45.s.6                           quoted material starts with comma... 
 wiki-295.p.13.s.4                            "Latemmer"? 
-wiki-3745.p.38.s.3                          
-wiki-3781.p.2.s.5                           
+wiki-3745.p.38.s.3                           DONE
+wiki-3781.p.2.s.5                            gapping
 wiki-3824.p.2.s.3                            gapping 
-wiki-3828.p.9.s.3                           
-wiki-5.p.31.s.33                            
-wiki-6930.p.3.s.1                          
-wiki-6933.p.47.s.2                          
-wiki-737.p.13.s.2                          
-wiki-7891.p.3.s.3                          
-wiki-8628.p.18.s.2                         
+wiki-3828.p.9.s.3                            DONE
+wiki-5.p.31.s.33                             DONE
+wiki-6930.p.3.s.1                            DONE
+wiki-6933.p.47.s.2                           ?
+wiki-737.p.13.s.2                            gapping
+wiki-7891.p.3.s.3                            DONE
+wiki-8628.p.18.s.2                           DONE
 wiki-9844.p.66.s.5                           gapping 
 WR-P-E-C-0000000012.p.31.s.1                 zin niet af 
 WR-P-E-C-0000000036.p.9.s.1                
-WR-P-E-E-0000000020.p.5.s.4                  gapping 
+tWR-P-E-E-0000000020.p.5.s.4                  gapping 
 WR-P-E-H-0000000052.p.132.s.1              
 WR-P-E-H-0000000055.p.285.s.1_2            
 WR-P-E-H-0000000062.p.41.s.3                 modifier to the right of extraposed vp 
@@ -2399,7 +2399,7 @@ WR-P-P-K-0000000019.p.49.s.1                 missing "van"
 WR-P-P-L-0000000001.p.186.s.2                ?
 WR-P-P-L-0000000003.p.23.s.2                 "het doelgroep / populatiegerichte aanbod"
 WR-P-P-L-0000000003.p.74.s.2   	 	     mistok "- bedreigende" ==> "-bedreigende"
-WS-U-E-A-0000000002.p.2.s.3                  DONE
+WS-U-E-A-0000000002.p.2.s.3                  komma unexpected
 WS-U-E-A-0000000008.p.24.s.1                 spelling "de" ==> "te"
 WS-U-E-A-0000000009.p.5.s.7                  ATB "in plaats daarvan"?
 WS-U-E-A-0000000010.p.14.s.1                 "En dan : ..."
@@ -2411,7 +2411,7 @@ WS-U-E-A-0000000019.p.3.s.2                  gramm.err. missing "dat"
 WS-U-E-A-0000000023.p.3.s.2                  ?
 WS-U-E-A-0000000025.p.12.s.3                 spelling 2x "is" 
 WS-U-E-A-0000000026.p.15.s.1                 ATB "seksueel"
-WS-U-E-A-0000000026.p.25.s.3          	     DONE      
+WS-U-E-A-0000000026.p.25.s.3          	     DONE guides
 WS-U-E-A-0000000030.p.15.s.3                 spelling "op-" -> "op" 
 WS-U-E-A-0000000039.p.12.s.5                 spelling "ontvreden" ==> "ontevreden"
 WS-U-E-A-0000000041.p.15.s.6                 meta noise 
@@ -2455,9 +2455,9 @@ dpc-bmm-001089-nl-sen.p.11.s.1               ?
 dpc-bmm-001089-nl-sen.p.6.s.1                nucl/sat dp/dp 
 dpc-cam-001282-nl-sen.p.6.s.4                "in de sterren geschreven staan"
 dpc-cam-001284-nl-sen.p.4.s.2                DU
-dpc-dns-001069-nl-sen.p.24.s.3               DONE
+dpc-dns-001069-nl-sen.p.24.s.3               DONE guides
 dpc-eli-000948-nl-sen.p.13.s.1               guides "eenmaal daags" as modifier
-dpc-eup-000018-nl-sen.p.12.s.1               DONE
+dpc-eup-000018-nl-sen.p.12.s.1               DONE TODO
 dpc-fsz-000541-nl-sen.p.11.s.1               conj in conj
 dpc-fsz-000543-nl-sen.p.201.s.2              relative from NP
 dpc-fsz-000543-nl-sen.p.20.s.2               if brackets ignored, agreement mismatch... 
@@ -3975,3 +3975,7 @@ WR-P-P-C-0000000011.p.39.s.1 		NEW "in het algemeen"
 WR-P-P-H-0000000023.p.20.s.3 		NEW
 WR-P-P-I-0000000231.p.5.s.1 		NEW
 wiki-3828.p.10.s.1			guides temp
+wiki-1532.p.6.s.3			NEW geboren als
+wiki-7585.p.2.s.1			NEW geboren als
+wiki-4868.p.4.s.1			NEW geboren als
+WS-U-E-A-0000000032.p.41.s.1		timeout tagger?
