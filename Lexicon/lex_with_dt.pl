@@ -1542,6 +1542,7 @@ with_dt_all(elf,[u]).
 with_dt_all(elf,[wij]).
 with_dt_all(elf,[zij]).
 with_dt_all(elke,[paar]).
+with_dt_all(en,[geen,wel]).
 with_dt_all(en,[groen,rijp]).
 with_dt_all(en,[groot,klein]).
 with_dt_all(en,[hang,met,wurg]).
@@ -1617,6 +1618,7 @@ with_dt_all(ga,[moeilijk,ook]).
 with_dt_all(ga,[slaap]).
 with_dt_all(geef_toe,[ik,toe]).
 with_dt_all(geen,[nauwelijks,of]).
+with_dt_all(geen,[of,wel]).
 with_dt_all(geen,[stand]).
 with_dt_all(gelijk,[gelijk,kap,monnik]).
 with_dt_all(gelijk,[zijn]).

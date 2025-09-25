@@ -3812,7 +3812,7 @@ parse_only_lex(welker,welk,determiner(pron,rwh)).
 parse_only_lex(kwijtraak,   v_root(raak_kwijt,kwijt_raken),verb(unacc,sg1,ninv(transitive,part_transitive(kwijt)))).
 parse_only_lex(kwijtraakt,  v_root(raak_kwijt,kwijt_raken),verb(unacc,sg3,ninv(transitive,part_transitive(kwijt)))).
 parse_only_lex(kwijtraken,  v_root(raak_kwijt,kwijt_raken),verb(unacc,pl,ninv(transitive,part_transitive(kwijt)))).
-parse_only_lex(kwijtraken,  v_root(raak_kwijt,kwijt_raken),verb(unacc,inv,ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtraken,  v_root(raak_kwijt,kwijt_raken),verb(unacc,inf,ninv(transitive,part_transitive(kwijt)))).
 parse_only_lex(kwijtraken,  v_root(raak_kwijt,kwijt_raken),v_noun(transitive)).
 parse_only_lex(kwijtraakte, v_root(raak_kwijt,kwijt_raken),verb(unacc,past(sg),ninv(transitive,part_transitive(kwijt)))).
 parse_only_lex(kwijtraakten,v_root(raak_kwijt,kwijt_raken),verb(unacc,past(pl),ninv(transitive,part_transitive(kwijt)))).
@@ -3821,7 +3821,7 @@ parse_only_lex(kwijtgeraakt,v_root(raak_kwijt,kwijt_raken),verb(unacc,psp,ninv(t
 parse_only_lex(kwijtspeel,   v_root(speel_kwijt,kwijt_spelen),verb(unacc,sg1,ninv(transitive,part_transitive(kwijt)))).
 parse_only_lex(kwijtspeelt,  v_root(speel_kwijt,kwijt_spelen),verb(unacc,sg3,ninv(transitive,part_transitive(kwijt)))).
 parse_only_lex(kwijtspelen,  v_root(speel_kwijt,kwijt_spelen),verb(unacc,pl,ninv(transitive,part_transitive(kwijt)))).
-parse_only_lex(kwijtspelen,  v_root(speel_kwijt,kwijt_spelen),verb(unacc,inv,ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtspelen,  v_root(speel_kwijt,kwijt_spelen),verb(unacc,inf,ninv(transitive,part_transitive(kwijt)))).
 parse_only_lex(kwijtspelen,  v_root(speel_kwijt,kwijt_spelen),v_noun(transitive)).
 parse_only_lex(kwijtspeelde, v_root(speel_kwijt,kwijt_spelen),verb(unacc,past(sg),ninv(transitive,part_transitive(kwijt)))).
 parse_only_lex(kwijtspeelden,v_root(speel_kwijt,kwijt_spelen),verb(unacc,past(pl),ninv(transitive,part_transitive(kwijt)))).

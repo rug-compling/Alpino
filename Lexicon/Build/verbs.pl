@@ -13600,7 +13600,7 @@ v(lever,levert,leveren,geleverd,leverde,leverden,
 	part_transitive(over),
 	part_transitive(uit),
 	part_so_pp_np(over,aan),
-	part_so_pp_sbar(over,aan),
+	part_so_pp_sbar(over),
 	part_np_pc_pp(uit,aan)])]).
 
 v(liberaliseer,liberaliseert,liberaliseren,geliberaliseerd,liberaliseerde,liberaliseerden,

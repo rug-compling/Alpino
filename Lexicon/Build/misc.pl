@@ -2108,8 +2108,6 @@ m(wat,           determiner(wat,nwh,mod,pro,nparg,ntopicpro),wat). %  "wkpro"
                               % *wat vond ik het (without question reading)
                               % vond je het wat?
                               % was/wordt het wat?
-m('wel en geen', determiner(geen),[wel,en,geen]).
-m('wel of geen', determiner(geen),[wel,of,geen]).
 m(zijn,          determiner(pron),zijn).
 m(zijn,          determiner(pron),'z\'n').
 m('zijn/haar',   determiner(pron),'zijn/haar').
@@ -2140,6 +2138,23 @@ m(Stem,      determiner(pron,wh),[watvoor,Een]) :- een(Een), stem_from_surf([wat
 %% elke twee jaar
 m(elk,          tmp_determiner,  elke).
 m(ieder,        tmp_determiner,  iedere).
+
+%m('wel en geen', determiner(geen),[wel,en,geen]).
+%m('wel of geen', determiner(geen),[wel,of,geen]).
+
+with_dt([wel,en,geen],
+	determiner(geen),
+	dt(conj,[cnj=l(wel,adverb,advp,0,1),
+		 crd=l(en,conj(of),conj,1,2),
+		 cnj=l(geen,determiner(geen),detp,2,3)
+		])).
+
+with_dt([wel,of,geen],
+	determiner(geen),
+	dt(conj,[cnj=l(wel,adverb,advp,0,1),
+		 crd=l(of,conj(of),conj,1,2),
+		 cnj=l(geen,determiner(geen),detp,2,3)
+		])).
 
 with_dt([niet,een],
 	determiner(een),
