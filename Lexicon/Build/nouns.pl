@@ -16935,7 +16935,7 @@ n([mass(interactie),pl(interacties),sg(interactie)],de,[]).
 n([sg(interactiviteit)],de,[]).
 
 n([stem(interbellum),
-   sg(interbellum),sg('Interbellum')],het,[]).
+   sg(interbellum),sg('Interbellum')],het,[temp_mod]).
 
 n([sg(intercity),pl('intercity\'s')],de,[]).
 

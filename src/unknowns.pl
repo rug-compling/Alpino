@@ -5939,23 +5939,23 @@ potential_name_fsa_not_begin(_,P0,[Word|Words],Ws,[Word|Prefix],
 potential_name_fsa_not_begin(_,P0,[Rue,de,la|Words],Ws,[Rue,de,la|Prefix],
 		   [rue_de|His]) :-
     rue(Rue),!,
-    P1 is P0 + 2,
-    potential_name_fsa(6,P1,Words,Ws,Prefix,His).
+    P1 is P0 + 3,
+    potential_name_fsa(rue,P1,Words,Ws,Prefix,His).
 potential_name_fsa_not_begin(_,P0,[Rue,de|Words],Ws,[Rue,de|Prefix],
 		   [rue_de|His]) :-
     rue(Rue),!,
     P1 is P0 + 2,
-    potential_name_fsa(6,P1,Words,Ws,Prefix,His).
+    potential_name_fsa(rue,P1,Words,Ws,Prefix,His).
 potential_name_fsa_not_begin(_,P0,[Rue,du|Words],Ws,[Rue,du|Prefix],
 		   [rue_de|His]) :-
     rue(Rue),!,
     P1 is P0 + 2,
-    potential_name_fsa(6,P1,Words,Ws,Prefix,His).
+    potential_name_fsa(rue,P1,Words,Ws,Prefix,His).
 potential_name_fsa_not_begin(_,P0,[Rue,des|Words],Ws,[Rue,des|Prefix],
 		   [rue_de|His]) :-
     rue(Rue),!,
     P1 is P0 + 2,
-    potential_name_fsa(6,P1,Words,Ws,Prefix,His).
+    potential_name_fsa(rue,P1,Words,Ws,Prefix,His).
 potential_name_fsa_not_begin(_,P0,[The,Word|Words],Ws,
                    [The,Word|Prefix],[foreign,foreign|His]) :-
     ( The == the ; The == 'The' ),
@@ -6047,10 +6047,12 @@ potential_name_fsa_not_begin(normal_if_decap,P0,[Word|Words],Ws,[Word|Prefix],
     P1 is P0 + 1,
     potential_name_fsa(8,P1,Words,Ws,Prefix,His).
 
+rue(avenue).
 rue(bois).
 rue(col).
 rue(cote).
 rue(côte).
+rue(place).
 rue(quai).
 rue(rue).
 rue(via).
@@ -6087,6 +6089,18 @@ potential_name_fsa(5,_,Ws,Ws,[],[]).
 potential_name_fsa(55,_,Ws,Ws,[],[]).
 potential_name_fsa(6,_,Ws,Ws,[],[]).
 %% potential_name_fsa(8,_,Ws,Ws,[],[]).
+
+potential_name_fsa(rue,Pos,Ws0,Ws,Ls,Hs) :-
+    potential_name_fsa(222,Pos,Ws0,Ws,Ls,Hs).
+
+potential_name_fsa(rue,Pos,[Word|Ws0],Ws,[Word|Ls],[function|Hs]) :-
+    function(Word),
+    potential_name_fsa(222,Pos,Ws0,Ws,Ls,Hs).
+
+potential_name_fsa(rue,Pos,[Word|Ws0],Ws,[Word|Ls],[function|Hs]) :-
+    strip_accents(Word,Word1),
+    function(Word1),
+    potential_name_fsa(222,Pos,Ws0,Ws,Ls,Hs).
 
 potential_name_fsa(not_begin,Pos0,Ws0,Ws,Ls0,Hs) :-
     potential_name_fsa_not_begin(unknown,Pos0,Ws0,Ws,Ls0,Hs).

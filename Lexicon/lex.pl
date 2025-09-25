@@ -2009,6 +2009,7 @@ spelling_variant31(wel,is,waar,weliswaar).
 spelling_variant31(in,en,intriest,'in-en-in-triest').
 spelling_variant31('in-',en,intriest,'in-en-in-triest').
 spelling_variant31(als,je,blieft,alsjeblieft).
+spelling_variant31(voor,zo,ver,voorzover).
 
 %% ad2003/ad2004
 spelling_variant31('sji-','\'',ietisch,'sji\'itisch').
@@ -2114,6 +2115,7 @@ spelling_variant21(vol,strekt,    volstrekt).
 spelling_variant21(voor,dat,      voordat).
 spelling_variant21(vóór,dat,      voordat).
 spelling_variant21(voor,zover,    voorzover).
+spelling_variant21(zo,ver,        zover).
 spelling_variant21(vuurwerk,ramp, vuurwerkramp).
 spelling_variant21(tegen,partij,  tegenpartij).
 spelling_variant21(te,gelijkertijd,     tegelijkertijd).
@@ -3806,6 +3808,24 @@ parse_only_lex(Atom, Root, Tag ) :-
 
 parse_only_lex(welks,welk,determiner(pron,rwh)).
 parse_only_lex(welker,welk,determiner(pron,rwh)).
+
+parse_only_lex(kwijtraak,   v_root(raak_kwijt,kwijt_raken),verb(unacc,sg1,ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtraakt,  v_root(raak_kwijt,kwijt_raken),verb(unacc,sg3,ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtraken,  v_root(raak_kwijt,kwijt_raken),verb(unacc,pl,ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtraken,  v_root(raak_kwijt,kwijt_raken),verb(unacc,inv,ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtraken,  v_root(raak_kwijt,kwijt_raken),v_noun(transitive)).
+parse_only_lex(kwijtraakte, v_root(raak_kwijt,kwijt_raken),verb(unacc,past(sg),ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtraakten,v_root(raak_kwijt,kwijt_raken),verb(unacc,past(pl),ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtgeraakt,v_root(raak_kwijt,kwijt_raken),verb(unacc,psp,ninv(transitive,part_transitive(kwijt)))).
+
+parse_only_lex(kwijtspeel,   v_root(speel_kwijt,kwijt_spelen),verb(unacc,sg1,ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtspeelt,  v_root(speel_kwijt,kwijt_spelen),verb(unacc,sg3,ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtspelen,  v_root(speel_kwijt,kwijt_spelen),verb(unacc,pl,ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtspelen,  v_root(speel_kwijt,kwijt_spelen),verb(unacc,inv,ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtspelen,  v_root(speel_kwijt,kwijt_spelen),v_noun(transitive)).
+parse_only_lex(kwijtspeelde, v_root(speel_kwijt,kwijt_spelen),verb(unacc,past(sg),ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtspeelden,v_root(speel_kwijt,kwijt_spelen),verb(unacc,past(pl),ninv(transitive,part_transitive(kwijt)))).
+parse_only_lex(kwijtgespeeld,v_root(speel_kwijt,kwijt_spelen),verb(unacc,psp,ninv(transitive,part_transitive(kwijt)))).
 
 % des nachts des Nachts
 parse_only_lex(des, Root, Tag,[Avonds],[]) :-

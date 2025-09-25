@@ -26,7 +26,7 @@ name_accents.pl: name_accents.pl.$(PROLOG)
 	cp name_accents.pl.$(PROLOG) name_accents.pl
 
 realclean:
-	rm features.pl $(POS)
+	rm -f features.pl $(POS)
 
 clean:
 

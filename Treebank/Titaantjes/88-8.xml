@@ -13,21 +13,23 @@
           <node begin="11" end="12" id="10" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
           <node begin="5" cat="inf" end="13" id="11" rel="vc">
             <node begin="5" end="6" id="12" index="1" rel="su"/>
-            <node begin="6" end="7" genus="masc" getal="ev" id="13" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
-            <node begin="7" cat="pp" end="10" id="14" rel="mod">
-              <node begin="7" end="8" id="15" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-              <node begin="8" cat="np" end="10" id="16" rel="obj1">
-                <node begin="8" end="9" id="17" lemma="vanavond" pos="adv" postag="BW()" pt="bw" rel="hd" root="vanavond" word="vanavond"/>
-                <node begin="9" buiging="zonder" end="10" graad="basis" id="18" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="laat" word="laat"/>
+            <node begin="7" cat="pp" end="10" id="13" rel="mod">
+              <node begin="7" end="8" id="14" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+              <node begin="8" cat="np" end="10" id="15" rel="obj1">
+                <node begin="8" end="9" id="16" lemma="vanavond" pos="adv" postag="BW()" pt="bw" rel="hd" root="vanavond" word="vanavond"/>
+                <node begin="9" buiging="zonder" end="10" graad="basis" id="17" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="laat" word="laat"/>
               </node>
             </node>
-            <node begin="10" buiging="zonder" end="11" graad="basis" id="19" lemma="kwijt" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="kwijt" word="kwijt"/>
-            <node begin="12" buiging="zonder" end="13" id="20" lemma="kwijt_raken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="raak_kwijt" word="raken" wvorm="inf"/>
+            <node begin="6" cat="ap" end="11" id="18" rel="predc">
+              <node begin="6" end="7" genus="masc" getal="ev" id="19" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
+              <node begin="10" buiging="zonder" end="11" graad="basis" id="20" lemma="kwijt" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="kwijt" word="kwijt"/>
+            </node>
+            <node begin="12" buiging="zonder" end="13" id="21" lemma="raken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="raak_kwijt" word="raken" wvorm="inf"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="13" end="14" id="21" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." word="..."/>
+    <node begin="13" end="14" id="22" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." word="..."/>
   </node>
   <sentence>Hij geloofde niet , dat hij hem voor vanavond laat kwijt zou raken ...</sentence>
 </alpino_ds>

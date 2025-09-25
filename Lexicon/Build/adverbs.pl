@@ -417,7 +417,7 @@ adverb(sic).
 adverb(simpelweg).
 adverb([sine,die]). % Adjournment sine die means "without assigning a day for a further meeting or hearing"
 adverb(slechts).
-adverb(solo).
+% adverb(solo).  now adjective(prefix)
 adverb(sowieso).
 adverb(spelenderwijs).
 adverb(spoorslags).

@@ -32087,6 +32087,8 @@ a([both(solide),
 a([e(solitaire),
    no_e(solitair)],adv,[],[]).
 
+a([both(solo)],adv,[],[]).
+
 a([e(somatische),
    no_e(somatisch)],nonadv,[],[]).
 

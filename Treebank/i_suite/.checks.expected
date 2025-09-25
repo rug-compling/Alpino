@@ -78,3 +78,4 @@ i_suite/./946.xml	//node[ ../@cat="whsub" and not(@rel="body") and not(@rel="whd
 i_suite/./946.xml	//node[../node[@rel="whd"] and not(@rel="body") and not(@rel="whd")]	unexpected whd-sister.   Expected rels: body whd
 i_suite/./957.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
 i_suite/./962.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu") and not(@cat="ti") and not(@cat="ahi") and not(@cat="inf")]	unexpected svp-category.   Expected cats: pp mwu ti ahi inf
+i_suite/./457.xml	//node[@rel="det" and @pos and not(@pt="lid" or @pt="vnw" or @pt="tw" or (@pt="n" and @naamval="gen") or @pt="spec" or @pt="adj" or @lemma="genoeg" or (@pt="n" and @ntype="eigen"))]	unexpected postag for determiner

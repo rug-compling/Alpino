@@ -56,3 +56,4 @@ Titaantjes/./109-2.xml	//node[count(node[@rel="sat"]) > 1]/node[@rel="sat"]	rel 
 Titaantjes/./110-4.xml	//node[@rel="whd" and not(@index)]	whd without index?
 Titaantjes/./119-7.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
 Titaantjes/./77-4.xml	//node[@rel="det" and @pos and not(@pt="lid" or @pt="vnw" or @pt="tw" or (@pt="n" and @naamval="gen") or @pt="spec" or @pt="adj" or @root="genoeg" or (@pt="n" and @ntype="eigen"))]	unexpected postag for determiner
+Titaantjes/./77-4.xml	//node[@rel="det" and @pos and not(@pt="lid" or @pt="vnw" or @pt="tw" or (@pt="n" and @naamval="gen") or @pt="spec" or @pt="adj" or @lemma="genoeg" or (@pt="n" and @ntype="eigen"))]	unexpected postag for determiner

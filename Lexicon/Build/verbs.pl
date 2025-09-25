@@ -964,9 +964,18 @@ m(v_root(kan,kunnen),
 	fixed([er_pp(in),sbar_subj],no_passive), % het kan er niet in dat ...
 	fixed([er_pp(in),nor_mod_pp(bij)],no_passive), % het kan er bij mij niet in dat ...
 	fixed([er_pp(in),nor_mod_pp(bij),sbar_subj],no_passive), % het kan er bij mij niet in dat ...
-	part_transitive(kwijt),  % ik kan jou niet kwijt
-	part_np_mod_pp(kwijt,over), % meer kan ik daar niet over kwijt
-	part_np_mod_pp(kwijt,bij),  % ik kan mijn agressie daar bij kwijt
+	copula_np(kwijt),
+%%%	part_transitive(kwijt),  % ik kan jou niet kwijt
+	
+%%%	part_np_mod_pp(kwijt,over), % meer kan ik daar niet over kwijt
+%%%	part_np_mod_pp(kwijt,bij),  % ik kan mijn agressie daar bij kwijt
+	fixed([copula_np(kwijt),ld_pp],no_passive),
+	fixed([copula_np(kwijt,ld_pp)],no_passive),
+%%%	part_np_pc_pp(kwijt,aan),% je kunt je geld kwijt aan lekkere hapjes
+%%%	part_np_pc_pp(kwijt,op), % de verliezers kun je kwijt op de vrije klaveren...
+%%%	part_np_pc_pp(kwijt,in)  % daar kan ik veel in kwijt
+	fixed([copula_np(kwijt,mod_pp(over))],no_passive),
+	fixed([copula_np(kwijt,mod_pp(bij))],no_passive),
 	pc_pp(bij),              % ik kan er niet bij (?)
 	er_pp_sbar(bij),         % ik kan er niet bij dat mensen hun paarden opeten
 	pc_pp(buiten),           % ik kan niet buiten koffie
@@ -990,11 +999,7 @@ m(v_root(kan,kunnen),
         part_pc_pp(vooruit,met),
         part_intransitive(verder),
         part_pc_pp(verder,met),
-        part_intransitive(weg),
-	part_np_pc_pp(kwijt,aan),% je kunt je geld kwijt aan lekkere hapjes
-	part_np_pc_pp(kwijt,op), % de verliezers kun je kwijt op de vrije
-	                         %   klaveren...
-	part_np_pc_pp(kwijt,in)  % daar kan ik veel in kwijt
+        part_intransitive(weg)
        ])).
 
 m(v_root(wil,willen),
@@ -1039,13 +1044,16 @@ m(v_root(wil,willen),
 
 	fixed([vc(zeg,inf,intransitive),sbar_subj,sbar],no_passive),  % dat hij komt wil nog niet zeggen dat ...
 	
-	part_pc_pp(af,van),      % ik wil af van dat gezeur
-        part_pc_pp(kwijt,over),  % hij wilde daar niets over kwijt
-        part_np_pc_pp(kwijt,over),  % meer wilde hij daar niet over kwijt;
-                                    % hij wilde er geen details over kwijt
-        part_er_pp_sbar(kwijt,over), % hij wilde daar alleen over kwijt dat ..
-	part_transitive(kwijt),  % ik wil mijn huis kwijt
-	part_sbar(kwijt)         % hij wilde alleen kwijt dat ...
+	part_pc_pp(af,van),	% ik wil af van dat gezeur
+	copula_np(kwijt),
+	fixed([ap_pred,sbar],no_passive),
+	fixed([copula_np(kwijt,mod_pp(over))],no_passive)
+%%%     part_pc_pp(kwijt,over),  % hij wilde daar niets over kwijt
+%%%     part_np_pc_pp(kwijt,over),  % meer wilde hij daar niet over kwijt;
+%%%                                 % hij wilde er geen details over kwijt
+%%%     part_er_pp_sbar(kwijt,over), % hij wilde daar alleen over kwijt dat ..
+%%%	part_transitive(kwijt),  % ik wil mijn huis kwijt
+%%%	part_sbar(kwijt)         % hij wilde alleen kwijt dat ...
        ])).             
 
 m(v_root(zal,zullen),
@@ -10674,6 +10682,7 @@ v(jaag,jaagt,jagen,gejaagd,[joeg,jaagde],[joegen,jaagden],
     [h([intransitive,
 	np_ld_dir,
 	transitive,
+	np_ld_adv,
 	np_ld_pp,
 	part_np_np(aan),
 	part_sbar_subj_so_np(op),
@@ -13590,7 +13599,8 @@ v(lever,levert,leveren,geleverd,leverde,leverden,
 	part_intransitive(op),
 	part_transitive(over),
 	part_transitive(uit),
-	part_np_pc_pp(over,aan),
+	part_so_pp_np(over,aan),
+	part_so_pp_sbar(over,aan),
 	part_np_pc_pp(uit,aan)])]).
 
 v(liberaliseer,liberaliseert,liberaliseren,geliberaliseerd,liberaliseerde,liberaliseerden,
@@ -18156,7 +18166,7 @@ v(raak,raakt,raken,geraakt,raakte,raakten,
     [unacc([aan_het,
 	    nonp_copula,
 	    copula_np,
-	    nonp_copula_np,
+%%%	    nonp_copula_np,
 	    ld_pp,
 	    ld_adv,
             pc_pp(aan),   % aan de drank/diarree/...
@@ -18164,13 +18174,12 @@ v(raak,raakt,raken,geraakt,raakte,raakten,
 	    part_intransitive(af),
 	    part_intransitive(bekend),
 	    part_sbar_subj_no_het(bekend),
-	    part_intransitive(kwijt),
 	    part_intransitive(los),
             part_intransitive(op),  % geduld etc
 	    part_intransitive(uit),
 	    part_intransitive(zoek),
-	    part_so_pp_np(kwijt),
-	    part_transitive(kwijt),
+%%%	    part_so_pp_np(kwijt),
+%%%	    part_transitive(kwijt),
             pc_pp(overheen),      % ik ben er nu wel overheen
 	    er_pp_sbar(overheen), % ik ben er nog niet overheen dat ...
 	    pred_er_pp_sbar(van),
@@ -18192,7 +18201,8 @@ v(raak,raakt,raken,geraakt,raakte,raakten,
 	    fixed([ap_pred('in zwang')],no_passive),
 	    fixed([[in,gevecht]],no_passive),
 	    fixed([[slaags]],no_passive),
-	    part_np_pc_pp(kwijt,van),
+	    fixed([copula_np(kwijt,mod_pp(van))],no_passive),
+%%%	    part_np_pc_pp(kwijt,van),
 				% daar raakte ik de kluts/tel/.. van kwijt
 	    part_pc_pp(los,van)]),
      h([intransitive,
@@ -21429,7 +21439,8 @@ v(speech,speecht,speechen,gespeecht,speechte,speechten,
   [h([intransitive])]).
 
 v(speel,speelt,spelen,gespeeld,speelde,speelden,
-    [h([intransitive,           % hij speelt heel lief
+    [unacc([copula_np(kwijt)]),
+     h([intransitive,		% hij speelt heel lief
 	transitive,             % we spelen tikkertje
 	np_np_ld_pp,            % ik speel hem een boek in handen
 	np_ld_pp,               % ik speel de bal de hoek in / de pannen van het dak

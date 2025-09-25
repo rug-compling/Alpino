@@ -4468,11 +4468,19 @@ copula(V,Type,MoreArgs,C,C) :-
     dependents(V,[predc/Pred|Args]).
 
 %% ik ben die lui beu
-copula_np(V,C,C) :-
+copula_np(Stem,V,C,C) :-
     main_v(V),
     V:passive => no_passive,
     pred_arg(Pred),
     Pred:e_deps <=> [NP],
+    Pred:hstem ==> Stem,
+    copula_np_arg(NP),
+    dependents(V,[predc/Pred,none/NP]).
+
+copula_np(V,C,C) :-
+    copula_np(_,V,C,C).
+
+copula_np_arg(NP) :-
     NP => np,
     NP:nform => (norm;het_nform;refl), % het for "eens" etc
                                        % refl for "bewust" etc
@@ -4480,13 +4488,13 @@ copula_np(V,C,C) :-
     NP:pred => npred,
     NP:e_deps => [],
     NP:passivizes => no,
-    NP:allows_drop => no,
-    dependents(V,[predc/Pred,none/NP]).
+    NP:allows_drop => no.
 
-nonp_copula_np(V,C,C) :-
-    copula_np(V,C,C),
-    V:deps <=> [Pred|_],
-    Pred:pcat => ~np_pred.
+%%% maar copula_np gaat toch alleen met ADJ
+%nonp_copula_np(V,C,C) :-
+%    copula_np(V,C,C),
+%    V:deps <=> [Pred|_],
+%    Pred:pcat => ~np_pred.
 
 %% hij lijkt mij die lui beu
 so_copula_np(V,C,C) :-
@@ -6468,6 +6476,21 @@ map_deps(opt_het_pobj1(Dep),Deps0,Deps,V0,V) :-
     (	map_deps_list([het_pobj1,nt(Dep)],Deps0,Deps,V0,V)
     ;	map_deps(Dep,Deps0,Deps,V0,V)
     ).
+map_deps(copula_np(STEM),[predc/Pred,no_role/NP|Deps],Deps,V,V) :-
+    !,
+    pred_arg(Pred),
+    Pred:dt => dt,
+    Pred:hstem ==> STEM,
+    Pred:e_deps <=> [NP],
+    copula_np_arg(NP).
+map_deps(copula_np(STEM,Dep2),[predc/Pred,Role2/Cat2,no_role/NP|Deps],Deps,V0,V) :-
+    !,
+    pred_arg(Pred),
+    Pred:dt => dt,
+    Pred:hstem ==> STEM,
+    Pred:e_deps <=> [NP],
+    copula_np_arg(NP),
+    map_dep(Dep2,Role2,Cat2,V0,V).
 map_deps(Dep,[Role/Cat|Deps],Deps,V0,V) :-
     map_dep(Dep,Role,Cat,V0,V).
 
@@ -6900,6 +6923,9 @@ fdependents([DepRel/Dep|Dependents],Deps1,V0,V) :-
     ;	DepRel == se
     ->  instantiated_deprel(V0,DepRel,Dep),
 	Deps1=[Dep|Deps],
+	V0 = V1
+    ;   DepRel == no_role
+    ->  Deps1=[Dep|Deps],
 	V0 = V1
     ;	deprel(V0,DepRel,Dep),
 	Deps1=[Dep|Deps],

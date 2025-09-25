@@ -605,8 +605,10 @@ valid_sc(nonp_copula_sbar,            [check_subject_sbar,
                                        check_nonp_copula]).
 valid_sc(ap_copula_sbar,              [check_subject_sbar,
                                        check_ap_copula]).
-valid_sc(nonp_copula_np,              [check_np_adjective]).
+%%%valid_sc(nonp_copula_np,              [check_np_adjective]).
 valid_sc(copula_np,                   [check_np_adjective]).
+valid_sc(copula_np(H),                [check_np_adjective,
+				       check_stem(H)]).
 valid_sc(so_copula_np,                [check_np_adjective]).
 valid_sc(so_copula,                   []).
 valid_sc(so_copula_vp,                [check_subject_vp,check_vform(te)]).
@@ -858,6 +860,9 @@ check_fixed_el(voor_pred(A),          [check_tag(preposition(_,_,voor_pred)),
 				       check_stem(A)|Cs],Cs).
 check_fixed_el(svp_pp(V,R),           [prep(V),check_stem(R)|Cs],Cs).
 check_fixed_el(ap_pred(Stem),         [check_stem(Stem)|Cs],Cs).
+check_fixed_el(copula_np(Stem),       [check_stem(Stem)|Cs],Cs).
+check_fixed_el(copula_np(Stem,El),    [check_stem(Stem)|Cs0],Cs) :-
+    check_fixed_el(El,Cs0,Cs).
 check_fixed_el(ap_svp(Stem),          [check_stem(Stem)|Cs],Cs).
 check_fixed_el(adv(Stem),             [check_stem(Stem)|Cs],Cs).
 check_fixed_el(np_pred(Stem),         [check_stem(Stem)|Cs],Cs).

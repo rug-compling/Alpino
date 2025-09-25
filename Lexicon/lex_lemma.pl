@@ -7980,10 +7980,7 @@ lemma_root(kwetteren,kwetter) .
 lemma_root(kwijlen,kwijl) .
 lemma_root(kwijnen,kwijn) .
 lemma_root(kwijten,kwijt) .
-lemma_root(kwijt_kunnen,kan_kwijt) .
-lemma_root(kwijt_raken,raak_kwijt) .
 lemma_root(kwijt_schelden,scheld_kwijt) .
-lemma_root(kwijt_willen,wil_kwijt) .
 lemma_root(kwispelen,kwispel) .
 lemma_root(laaien,laai) .
 lemma_root(labelen,label) .

@@ -82,6 +82,9 @@ survives_bigram(dat,_,determiner(het,nwh,nmod,pro,nparg),soort,_,noun(both,count
 %% Achteraf gezien
 survives_bigram(achteraf,_,loc_adverb,zien,gezien,adjective(ge_no_e(both))).
 
+%% zover als TMP
+survives_bigram(zover,_,als_adjective(pred(locadv)),als,_,comparative(als)).
+
 %% because "dames en heren" is also tag
 survives_trigram(dame,_,noun(de,count,pl),en,_,conj(en),heer,_,noun(de,count,pl)).
 
@@ -170,6 +173,8 @@ surviving_root_tag(voor,complementizer).
 
 surviving_root_tag(dat,complementizer(dat)).
 surviving_root_tag(of,complenetizer(of)).
+
+surviving_root_tag(zover,als_adjective(pred(locadv))).  % TEMP
 
 surviving_tag(_):-
     fail.

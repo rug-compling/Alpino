@@ -3984,9 +3984,6 @@ m(inzoverre,        complementizer(zoals),[in,zoverre]).
 m(voorzover,        complementizer(zoals),voorzover).
 m(zoals,            complementizer(zoals),zoals).
 m(zover,            complementizer(zoals),zover).
-m('zover als',      complementizer(zoals),[zover,als]).
-m('voor zover als', complementizer(zoals),[voor,zover,als]).
-m(zover,            complementizer(zoals),[zo,ver]).
 m(zowaar,           complementizer(zoals),zowaar).
 
 m(alhoewel,         complementizer(a),alhoewel).
@@ -4529,10 +4526,11 @@ m(soortgelijk,      als_adjective(e),soortgelijke).
 m(zelfde,           als_adjective(e),zelfde).
 m(zomin,            als_adjective(both(adv)),zomin).
 m(zoveel,           als_adjective(no_e(odet_adv)),zoveel).
+m(voorzover,        als_adjective(pred(locadv)),voorzover).
+m(zover,            als_adjective(pred(locadv)),zover).
 
 %% omdat het nooit meer zo wordt als het was
 m(zo,               als_adjective(pred(nonadv)),zo). % 'zo' already is comp_adverb(als)
-
 
 m(even,             comp_adverb(als),even).
 m(zo,               comp_adverb(als),zo).
@@ -4755,10 +4753,8 @@ m('van dien aard',  sbar_pred_adjective(adv),[van,dien,aard]).
 m(zo,               sbar_pred_adjective(adv),zo).
 m(zolang,           sbar_pred_adjective(adv),zolang).
 m(zover,            sbar_pred_adjective(adv),zover).
-m(zover,            sbar_pred_adjective(adv),[zo,ver]).
 
 m(zover,            vp_pred_adjective(nonadv),zover).
-m(zover,            vp_pred_adjective(nonadv),[zo,ver]).
 
 %% VL het is daarom dat ik kom
 m(daarom,           adjective(no_e(nonadv),subject_sbar), daarom ).
