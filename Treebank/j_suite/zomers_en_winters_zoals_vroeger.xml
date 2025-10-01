@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="conj" end="5" id="1" rel="--">
+      <node begin="1" conjtype="neven" end="2" id="2" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="np" end="5" id="3" rel="cnj">
+        <node begin="0" end="1" gen="de" getal="mv" graad="basis" id="4" lemma="zomer" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="zomer" special="tmp" word="zomers"/>
+        <node begin="3" cat="cp" end="5" id="5" index="1" rel="mod">
+          <node begin="3" conjtype="onder" end="4" id="6" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" sc="zoals" word="zoals"/>
+          <node aform="compar" begin="4" buiging="zonder" end="5" graad="comp" id="7" infl="no_e" lemma="vroeg" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="body" root="vroeg" vform="adj" word="vroeger"/>
+        </node>
+      </node>
+      <node begin="2" cat="np" end="5" id="8" rel="cnj">
+        <node begin="2" end="3" gen="de" getal="mv" graad="basis" id="9" lemma="winter" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="winter" special="tmp" word="winters"/>
+        <node begin="3" end="5" id="10" index="1" rel="mod"/>
+      </node>
+    </node>
+  </node>
+  <sentence>zomers en winters zoals vroeger</sentence>
+</alpino_ds>

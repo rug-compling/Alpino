@@ -107,6 +107,7 @@ surviving_root('op zoek').
 surviving_root('opzoek').
 surviving_root('algemeen het in').
 surviving_root('algemeen het over').
+surviving_root(kwijt). % temp
 
 surviving_root('aantal een').
 surviving_root('aantal een groot').

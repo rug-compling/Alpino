@@ -5882,6 +5882,7 @@ grammar_rule(n_n_q_pp_q, NP, [ N, QL, PP, QR ] ) :-
 %%EX%% Het gaat om problemen zoals vermeld in artikel 23
 %%EX%% Clubs als Feyenoord die meestal winnen willen geen ander systeem
 %%but% Dat leek op stervende sterren voor die in een zwart gat veranderen
+%%EX%% Kinderen inclusief ouders zitten in vak L
 grammar_rule(n_n_cp, NP, [ N, OPTCOMMA1, CP, OPTCOMMA2 ] ) :-
     max_sbar(CP),
     optcomma(OPTCOMMA1),
@@ -11541,6 +11542,18 @@ grammar_rule(start_coord(np_np_pp),M,[XP,Clist,PP]) :-
     M0 => np,
     M0:cj => ~no_crd,
     pp_modifier(PP),
+    start_coord_name_en_structure(np,M0,XP,Clist),
+    hd_mod_structure(M0,PP,M).
+
+%%EX%% zomers en winters zoals vroeger
+%%EX%% een wereldbol en een kruis als symbool van de triomf van Christus
+%%EX%% jongens en meisjes inclusief ouders zitten in vak L
+grammar_rule(start_coord(np_np_cp),M,[XP,Clist,PP]) :-
+    M => np,
+    M0 => np,
+    M0:cj => ~no_crd,
+    max_sbar(PP),
+    PP:ctype => (c_compare_np;c_alsof;c_mod_np),
     start_coord_name_en_structure(np,M0,XP,Clist),
     hd_mod_structure(M0,PP,M).
 

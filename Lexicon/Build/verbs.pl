@@ -908,6 +908,7 @@ m(v_root(kan,kunnen),
 	fixed([vc(verhelp,inf,intransitive),sbar],no_passive), % hij kon niet verhelpen dat..
         nonp_pred_np_ndev,       % ik kan geen broek aan / geen pet op / etc
         ap_copula,             % het kan kapot! De pet kan af!
+	fixed([ap_pred(kwijt),sbar],no_passive),
         %% ik kan het goed/niet/slecht/wel met hem vinden
         %% wij kunnen het samen goed vinden
         fixed([vc(vind,inf,intransitive),het_obj1],no_passive),
@@ -1045,8 +1046,9 @@ m(v_root(wil,willen),
 	fixed([vc(zeg,inf,intransitive),sbar_subj,sbar],no_passive),  % dat hij komt wil nog niet zeggen dat ...
 	
 	part_pc_pp(af,van),	% ik wil af van dat gezeur
+	fixed([ap_pred(kwijt),sbar],no_passive),
 	copula_np(kwijt),
-	fixed([ap_pred,sbar],no_passive),
+	fixed([{[ap_pred(kwijt),mod_pp(over)]},sbar],no_passive),
 	fixed([copula_np(kwijt,mod_pp(over))],no_passive)
 %%%     part_pc_pp(kwijt,over),  % hij wilde daar niets over kwijt
 %%%     part_np_pc_pp(kwijt,over),  % meer wilde hij daar niet over kwijt;
@@ -2029,7 +2031,9 @@ v(beeld,beeldt,beelden,gebeeld,beeldde,beeldden,
 	part_refl_vp(in),    % hij beeldt zich in op X te stemmen VL
 	part_transitive(af),
 	part_nonp_pred_np(af),
-	part_transitive(uit)])]).
+	part_transitive(uit),
+	part_sbar(uit)
+       ])]).
 
 v(beeldhouw,beeldhouwt,beeldhouwen,gebeeldhouwd,beeldhouwde,beeldhouwden,
     [h([intransitive,
@@ -15080,6 +15084,7 @@ v(moet,moet,moeten,gemoeten,moest,moesten,
       part_intransitive(terug),
       part_ld_pp(terug),
       nonp_copula,              % het boek moet af/kapot/weg/open...
+      fixed([ap_pred(kwijt),sbar],no_passive),
       nonp_pred_np_ndev,  % ik moet een uniform aan / een pet op / etc
       part_pc_pp(af,van),
       fixed([{[ap_pred('aan de gang'),pc(met)]}],no_passive),

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" gen="het" getal="mv" graad="basis" id="3" lemma="kind" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kind" word="Kinderen"/>
+        <node begin="1" cat="cp" end="3" id="4" rel="mod">
+          <node begin="1" buiging="zonder" end="2" graad="basis" id="5" lemma="inclusief" pos="comp" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cmp" root="inclusief" sc="np" word="inclusief"/>
+          <node begin="2" end="3" gen="de" getal="mv" graad="basis" id="6" lemma="ouder" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="body" rnum="pl" root="ouder" word="ouders"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" infl="pl" lemma="zitten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zit" sc="ld_pp" stype="declarative" tense="present" v_per="thi" word="zitten" wvorm="pv"/>
+      <node begin="4" cat="pp" end="7" id="8" rel="ld">
+        <node begin="4" end="5" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="5" cat="np" end="7" id="10" rel="obj1">
+          <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="vak" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="vak" word="vak"/>
+          <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="12" lemma="L" naamval="stan" neclass="MISC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" rnum="sg" root="L" word="L"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Kinderen inclusief ouders zitten in vak L</sentence>
+</alpino_ds>

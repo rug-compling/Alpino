@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="organisatie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="organisatie" word="organisatie"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="modal_not_u" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" sc="fixed([ap_pred(kwijt),sbar],no_passive)" stype="declarative" tense="present" v_per="thi" word="wil" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="slechts" pos="adv" postag="BW()" pt="bw" rel="mod" root="slechts" word="slechts"/>
+      <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="7" infl="pred" lemma="kwijt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="kwijt" vform="adj" word="kwijt"/>
+      <node begin="5" cat="cp" end="14" id="8" rel="vc">
+        <node begin="5" conjtype="onder" end="6" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="6" cat="ssub" end="14" id="10" rel="body">
+          <node begin="6" cat="np" end="8" id="11" index="1" rel="su">
+            <node begin="6" end="7" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" end="8" gen="het" getal="mv" graad="basis" id="13" lemma="kenteken" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kenteken" word="kentekens"/>
+          </node>
+          <node begin="12" end="13" id="14" infl="pl" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" tense="present" v_per="thi" word="zullen" wvorm="pv"/>
+          <node begin="6" cat="inf" end="14" id="15" rel="vc">
+            <node begin="6" end="8" id="16" index="1" rel="su"/>
+            <node begin="8" cat="np" end="12" id="17" rel="obj1">
+              <node begin="8" end="9" id="18" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+              <node begin="9" end="10" gen="het" genus="onz" getal="ev" graad="basis" id="19" lemma="land" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="land" word="land"/>
+              <node begin="10" cat="pp" end="12" id="20" rel="mod">
+                <node begin="10" end="11" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="11" end="12" gen="de" genus="zijd" getal="ev" graad="basis" id="22" lemma="herkomst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="herkomst" word="herkomst"/>
+              </node>
+            </node>
+            <node begin="13" buiging="zonder" end="14" id="23" infl="inf" lemma="weer_geven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef_weer" sc="part_transitive(weer)" word="weergeven" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>De organisatie wil slechts kwijt dat de kentekens het land van herkomst zullen weergeven</sentence>
+</alpino_ds>
