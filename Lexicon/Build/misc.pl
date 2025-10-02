@@ -4212,9 +4212,11 @@ conj('/',              '/').
 conj('&',              '&').
 conj(à,                à).
 conj(alsmede,          alsmede,   maar).
+conj(alsook,           alsook,    als).
 conj(alsook,           alsook,    maar).
 conj(alswel,           [als,wel], maar).
 conj(alswel,           alswel,    maar).
+conj(alswel,           alswel,    als).
 conj(annex,            annex).
 conj('c.q.',           cq).
 conj('c.q.',           'cq.').

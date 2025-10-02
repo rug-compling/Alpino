@@ -3619,6 +3619,11 @@ n([pl(ballen),sg(bal)],de,[],
 
 n([pl(bals),sg(bal)],het,[]).
 
+n([pl(balansen),sg(balans)],de,
+  [pred_pp(in),
+   subject_sbar],
+  []).
+
 n([pl(balansen),sg(balans)],de,[pred_pp(in)],
   [tussen]).
 

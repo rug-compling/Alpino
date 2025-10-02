@@ -7028,7 +7028,9 @@ v(dut,dut,dutten,gedut,dutte,dutten,
 v(duur,duurt,duren,geduurd,duurde,duurden,
     [h([intransitive,
 	meas,
+	part_meas(voort),
 	adv_meas,
+	part_adv_meas(voort),
 	so_adv_meas,
 	vp_subj_adv_meas,  %% todo: het duurde even voor(dat)/eer/tot hij kwam
         sbar_subj_adv_meas,  %% hoe lang duurt het dat ...
