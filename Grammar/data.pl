@@ -660,7 +660,15 @@ precedes_embedded_subject_cat(Arg,Dep) ::-
     Arg:case => acc,
     Arg:nform => ~refl & ~er.
 
-
+%% we mogen ons niet van hem wapenen
+%% we moeten het van de autoriteiten weer afbreken
+precedes_embedded_subject_cat(Arg,Dep) ::-
+    Arg => np,
+    Arg:sel => to_left, % reduce spur amb
+    Dep => pp,
+    Dep:sel => to_left, % reduce spur amb
+    Arg:case => (dat;acc),
+    Arg:nform => (refl;norm).
 
 % Derivation tree structure
 deriv_tree_struct(Id,Fs,Daughters,Struct) ::-

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="eigenaar" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="eigenaar" word="eigenaars"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="pl" lemma="moeten" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="moet" sc="aux_pc_pp(inf,van)" stype="declarative" tense="past" v_per="thi" word="moesten" wvorm="pv"/>
+      <node begin="4" cat="pp" end="7" id="6" rel="pc">
+        <node begin="4" end="5" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="5" cat="np" end="7" id="8" rel="obj1">
+          <node begin="5" end="6" id="9" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" gen="de" getal="mv" graad="basis" id="10" lemma="autoriteit" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="autoriteit" word="autoriteiten"/>
+        </node>
+      </node>
+      <node begin="0" cat="inf" end="9" id="11" rel="vc">
+        <node begin="0" end="2" id="12" index="1" rel="su"/>
+        <node begin="3" end="4" genus="onz" getal="ev" id="13" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+        <node begin="7" end="8" id="14" lemma="daarom" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarom" special="er" word="daarom"/>
+        <node begin="8" buiging="zonder" end="9" id="15" infl="inf" lemma="af_breken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breek_af" sc="part_transitive(af)" word="afbreken" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De eigenaars moesten het van de autoriteiten daarom afbreken .</sentence>
+</alpino_ds>
