@@ -256,29 +256,13 @@ next_skips_candidate(Q0,Q,Word,Ts0,Ts) :-
 %% should not be worse than
 %% [x1...xi,xj..xm] [xm..xn]
 
-/*
-allow_skip(',').
-allow_skip('-').
-allow_skip(';').
-allow_skip(':').
-allow_skip('*').
-allow_skip('\'').
-allow_skip('"').
-*/
-allow_skip(_) :-
-    fail.
-
 next_cats(St0,_,Hs) :-
     findall(Item,max_category_first_or_allowed_skips(St0,_,Item),Hs).
 
 max_category_first_or_allowed_skips(St0,St,i(St,0,1,first(St0,St))) :-
     alpino_lc:max_category_first(St0,St).
-max_category_first_or_allowed_skips(St0,St,i(St,0,SKIP,allowed_skips(St0,St,Word))) :-
-    alpino_lexical_analysis:skips(St0,St,Word),
-    (   allow_skip(Word)
-    ->  SKIP=0
-    ;   SKIP=1
-    ).
+max_category_first_or_allowed_skips(St0,St,i(St,0,1,allowed_skips(St0,St,Word))) :-
+    alpino_lexical_analysis:skips(St0,St,Word).
 max_category_first_or_allowed_skips(St0,St,i(St,0,0,ignore_skip(St0,St))) :-
     alpino_lexical_analysis:open_bracket(St0,St,_).
 max_category_first_or_allowed_skips(St0,St,i(St,0,0,ignore_skip(St0,St))) :-
