@@ -13667,7 +13667,14 @@ n([mass(gevoelsleven)],het,[]).
 n([mass(gevogelte)],het,[]).
 
 n([pl(gevolgen),sg(gevolg)],het,
-  [sbar,subject_sbar],
+  [sbar,
+   subject_sbar,
+   pred_pp(zonder)
+  ],
+  []).
+
+n([pl(gevolgen),sg(gevolg)],het,
+  [],
   [pensioen]).
 
 n([pl(gevolgtrekkingen),sg(gevolgtrekking)],de,[sbar]).
@@ -25099,7 +25106,10 @@ n([pl(ondervragers),sg(ondervrager)],de,[]).
 
 n([pl(ondervragingen),sg(ondervraging)],de,[]).
 
-n([pl(onderwerpen),sg(onderwerp)],het,[sbar,app_measure],
+n([pl(onderwerpen),sg(onderwerp)],het,
+  [subject_sbar,
+   sbar,
+   app_measure],
   [s(gesprek)]).
 
 n([pl(onderwerpingen),sg(onderwerping)],de,[]).

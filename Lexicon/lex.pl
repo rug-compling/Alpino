@@ -1446,6 +1446,7 @@ remove_s(Word) :-
 
 s_atom(s).
 s_atom(sch).
+s_atom(sh).  % Bush
 s_atom(che).
 s_atom(x).
 s_atom(vic).
@@ -1986,12 +1987,17 @@ part_sc(_,_,L,L).
 spelling_variant31(Soc,'-',Dem, SocDem) :-
     atom(Soc), \+ parse_number_simple(Soc),
     atom(Dem), \+ parse_number_simple(Dem),
-    hdrug_util:concat_all([Soc,Dem],SocDem,'-').
+    hdrug_util:concat_all([Soc,Dem],SocDem,'-'),
+    \+ no_variant(SocDem).
 
 spelling_variant31(Soc,'-',Dem, SocDem) :-
     atom(Soc), \+ parse_number_simple(Soc),
     atom(Dem), \+ parse_number_simple(Dem),
-    hdrug_util:concat_all([Soc,Dem],SocDem,'').
+    hdrug_util:concat_all([Soc,Dem],SocDem,''),
+    \+ no_variant(SocDem).
+
+no_variant('dat-ie').
+no_variant(datie).
 
 spelling_variant31(van,te,voren,   vantevoren).
 spelling_variant31(of,te,wel,      oftewel).
@@ -2130,6 +2136,7 @@ spelling_variant21(als,mede,      alsmede).
 spelling_variant21(als,of,        alsof).
 spelling_variant21(ambulance,personeel,ambulancepersoneel).
 spelling_variant21(beneden,verdieping,benedenverdieping).
+spelling_variant21(berg,op,       bergop).
 spelling_variant21(binnen,kant,   binnenkant).
 spelling_variant21(boven,kant,    bovenkant).
 spelling_variant21(boven,verdieping,bovenverdieping).

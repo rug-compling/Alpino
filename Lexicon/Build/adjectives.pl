@@ -1245,14 +1245,6 @@ a([no_e('West-Duits'),
    e('Westduitse'),
    no_e('Westduits')],nonadv,[],[]).
 
-a([e('Westerse'),
-   no_e('Westers'),
-   e(westerse),
-   no_e(westers)],adv,[],
-  [h(niet),
-   h(pro),
-   h(anti)]).
-
 a([no_e('West-Europees'),
    e('West-Europese'),
    e('Westeuropese'),
@@ -12734,7 +12726,7 @@ a([ge_e(gekookte),
    ge_no_e(gekookt)],padv,[],[on]).
 
 a([ge_e(gekoppelde),
-   ge_no_e(gekoppeld)],adv,[],[]).
+   ge_no_e(gekoppeld)],adv,[pp(aan)],[]).
 
 a([ge_e(gekorte),
    ge_no_e(gekort)],adv,[],[]).
@@ -39428,9 +39420,11 @@ a([e(westelijke),
    ste(westelijkste)],adv,[],[]).
 
 a([e(westerse),
+   e('Westerse'),
    er(westerser),
    ere(westersere),
    no_e(westers),
+   no_e('Westers'),
    st(westerst),
    ste(westerste)],adv,[],
   [h(niet),
