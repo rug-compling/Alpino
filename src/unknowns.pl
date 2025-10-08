@@ -2951,7 +2951,7 @@ guess_compound(W,Results0) :-
     ),
     Results0=Results.
 
-%% man/vrouw compounds IS THIS STILL USEFUL?
+%% man/vrouw compounds
 guess_compoundXX(W,WLast,[WfirstStem],0) :-
     atom(W),
     once(atom_split(W,'/',Wfirst,WLast)),
@@ -2962,7 +2962,18 @@ guess_compoundXX(W,WLast,[WfirstStem],0) :-
     ;   Wfirst = WfirstStem
     ).
 
-%% Word-Word compounds IS THIS STILL USEFUL?
+%% rechtspersonen/rechtspersoon could be plural in total
+guess_compoundXX(W,WLast,[WfirstStem],0) :-
+    atom(W),
+    once(atom_split(W,'/',WLast,Wfirst)),
+    \+ never_compound_part(Wfirst),
+    \+ never_compound_part(WLast),
+    (   compound_part(first,Wfirst,WfirstStem)
+    ->  true
+    ;   Wfirst = WfirstStem
+    ).
+
+%% Word-Word compounds
 guess_compoundXX(W,WLast,[WfirstStem],1) :-
     atom(W),
     dash(Dash),

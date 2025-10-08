@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="conj" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="cnj">
+        <node begin="0" end="1" id="3" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node aform="base" begin="1" buiging="met-e" end="2" graad="basis" id="4" infl="e" lemma="natuurlijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="natuurlijk" vform="adj" word="natuurlijke"/>
+        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="persoon" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="persoon" word="persoon"/>
+      </node>
+      <node begin="3" conjtype="neven" end="4" id="6" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+      <node begin="4" cat="np" end="6" id="7" rel="cnj">
+        <node begin="4" end="5" id="8" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="rechtspersoon_rechtspersoon" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="rechtspersoon_rechtspersoon" word="rechtspersoon/rechtspersonen"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Een natuurlijke persoon of een rechtspersoon/rechtspersonen</sentence>
+</alpino_ds>

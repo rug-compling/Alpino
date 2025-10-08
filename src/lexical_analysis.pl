@@ -2049,7 +2049,7 @@ skip_labels(P0,P,R0,R,Names,C) :-
 skip_labels(P,P,R,R,[],C,C).
 skip_labels(P0,P,R0,R,Names,C0,C) :-
     skip_closure(P0,P,R0,R,Names,C0,C).
-    
+
 skip_closure(P0,P,R0,R,Names,C0,C) :-
     skip_label(P0,P,R0,R,Names,Cnt),
     C is C0 + Cnt.
@@ -2069,10 +2069,15 @@ skip_closure_lm(P0,P,R0,R,Names0,Names,C0,C) :-
     skip_closure_lm(P2,P,R2,R,Names2,Names,C2,C).
 skip_closure_lm(P,P,R,R,Names,Names,C,C).
 
+%% dat - ie
+%% should skip '-' without any cost
+allow_skip('-',P0,P) :-
+    tag(_,P0,_,_,dat,_,_,_),
+    tag(P,_,_,_,hij,ie,_,_).
 
 skip_label(P0,P,R0,R,Ws,Count) :-
     tag(P0,P,R0,R,_,W,_,skip),
-    (   alpino_robust:allow_skip(W)
+    (   allow_skip(W,P0,P)
     ->  Count = 0
     ;   Count = 1
     ),
