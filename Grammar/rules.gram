@@ -8174,8 +8174,9 @@ grammar_rule(sat_tag_nucl(np),ROOT,[Max, OPTCOMMA, TAG, COMMA, Dan]) :-
     root_nucl_sat_tag_structure(Dan,Max,TAG,ROOT).
 
 %%EX%% In Amsterdam , daar kun je goed uitgaan
+%%EX%% Voor alle duidelijkheid : ik heb dat nooit gedaan
 grammar_rule(sat_nucl(pp),ROOT,[Max, COMMA, Dan]) :-
-    COMMA => punct, COMMA:puncttype => komma,
+    COMMA => punct, COMMA:puncttype => (komma;dubb_punt),
     ind_max_pp(Max1),
     unify_except(Max1,Max,wh),  %% waarom, dat wist hij niet
     root_nucl_sat_structure(Dan,Max,ROOT).
