@@ -7271,6 +7271,7 @@ aci_simple(Sign,C,C) :-
     when(nonvar(FRAME),
          lists:member(FRAME,[intransitive,        % ik heb nog boeken liggen
                              ld_pp,               % ik heb daar paarden lopen
+                             ld_adv,              % ik heb de boeken thuis liggen
                              part_intransitive(_) % ik heb boeken klaarliggen 
                             ])).
 
