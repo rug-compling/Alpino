@@ -25027,6 +25027,8 @@ n([pl(onderkaken),sg(onderkaak)],de,[]).
 
 n([pl(onderkanten),sg(onderkant)],de,[]).
 
+n([sg(onderkenning)],de,[],[sbar]).
+
 n([pl(onderkomens),sg(onderkomen)],het,[]).
 
 n([pl(onderkoningen),sg(onderkoning)],de,[]).
