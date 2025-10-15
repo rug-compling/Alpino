@@ -4094,7 +4094,6 @@ m('dat wil zeggen', complementizer(np),[dat,wil,zeggen]).
 m('en wel',         complementizer(np),[en,wel]).
 m(hoewel,           complementizer(np),hoewel).       % Hoewel kleinzoon van een dominee had hij veel belangstelling voor het boeddhisme .
 m('in casu',        complementizer(np),[in,casu]).
-m(inclusief,        complementizer(np),inclusief).
 m('laat staan',     complementizer(np),[laat,staan]).
 m(mits,             complementizer(np),mits).  % VLAAMS
 m(namelijk,         complementizer(np),namelijk).

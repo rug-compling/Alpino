@@ -18939,7 +18939,7 @@ a([e(incidentele),
 a([pred(incluis)],adv,[transitive],[]).
 
 a([e(inclusieve),
-   no_e(inclusief)],adv,[transitive],[]).
+   postn_no_e(inclusief)],adv,[transitive],[]).
 
 a([both(incognito)],padv,[],[]).
 
@@ -29677,6 +29677,9 @@ a([both([pro,deo]),
 
 a([both([pro,forma]),
    both('pro-forma')],adv,[],[]).
+
+a([both([pro,poor]),
+   both('pro-poor')],adv,[],[]).
 
 a([e(probate),
    no_e(probaat)],adv,[],[]).
