@@ -14,9 +14,9 @@
       </node>
       <node begin="4" end="5" id="10" lemma="vertalen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vertaal" word="vertaalde" wvorm="pv"/>
       <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="Stals" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Stals" word="Stals"/>
-      <node begin="7" cat="cp" end="10" id="12" rel="mod">
-        <node begin="7" buiging="zonder" end="8" graad="basis" id="13" lemma="inclusief" pos="comp" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cmp" root="inclusief" word="inclusief"/>
-        <node begin="8" cat="np" end="10" id="14" rel="body">
+      <node begin="7" cat="ap" end="10" id="12" rel="mod">
+        <node begin="7" buiging="zonder" end="8" graad="basis" id="13" lemma="inclusief" pos="$VAR" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="inclusief" word="inclusief"/>
+        <node begin="8" cat="np" end="10" id="14" rel="obj1">
           <node begin="8" end="9" getal-n="mv-n" graad="basis" id="15" lemma="duizend" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,mv-n,basis)" pt="tw" rel="hd" root="duizenden" word="duizenden"/>
           <node begin="9" end="10" getal="mv" graad="basis" id="16" lemma="voetnoot" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="voetnoot" word="voetnoten"/>
         </node>
