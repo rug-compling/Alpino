@@ -2691,7 +2691,6 @@ preposition(conform).
 preposition(contra).
 preposition(dankzij).
 preposition([de,dato]).
-preposition(exclusief).
 preposition(gaande).
 preposition(gaandeweg).
 preposition(gedurende).
@@ -3425,6 +3424,7 @@ pp([ten,gepasten,tijde]).
 pp([te,kust,en,te,keur]).
 pp([te,voorschijn],te).
 pp([te,wier,laste]).
+pp([ten,laatste,male]).
 pp([ter,leering,ende,vermaak]).
 pp([ter,lering,ende,vermaak]).
 pp([ter,leering,ende,vermaeck]).
@@ -5204,10 +5204,12 @@ m(gemiddeld,        modal_adverb(adv_noun_prep),gemiddeld).
 m(nagenoeg,         modal_adverb(adv_noun_prep),nagenoeg).
 m(haast,            modal_adverb(adv_noun_prep),haast).
 m(ongeveer,         modal_adverb(adv_noun_prep),ongeveer).
-m(uiterlijk,        modal_adverb(adv_noun_prep),misschien).
-m(uiterlijk,        modal_adverb(adv_noun_prep),wellicht).
+m(misschien,        modal_adverb(adv_noun_prep),misschien).
+m(welllicht,        modal_adverb(adv_noun_prep),wellicht).
 m(uiterlijk,        modal_adverb(adv_noun_prep),uiterlijk).
 m(waarschijnlijk,   modal_adverb(adv_noun_prep),waarschijnlijk).
+
+m('te laat',        modal_adverb(adv_noun_prep),[ten,laatste]).
 
 m(heel,             modal_adverb(adv_noun_prep),heel).
 %% heel de wereld; heel Nederland

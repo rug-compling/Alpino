@@ -9414,7 +9414,9 @@ v(hannes,hannest,hannesen,gehannest,hanneste,hannesten,
     [h([transitive])]).
 
 v(hanteer,hanteert,hanteren,gehanteerd,hanteerde,hanteerden,
-    [h([transitive])]).
+    [h([transitive,
+	als_pred_np
+       ])]).
 
 v(hap,hapt,happen,gehapt,hapte,hapten,
     [h([intransitive,

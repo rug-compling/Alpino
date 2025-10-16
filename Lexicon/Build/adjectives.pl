@@ -9691,9 +9691,9 @@ a([e(excessieve),
 a([e(exclusieve),
    er(exclusiever),
    ere(exclusievere),
-   no_e(exclusief),
+   postn_no_e(exclusief),
    st(exclusiefst),
-   ste(exclusiefste)],adv,[],[]).
+   ste(exclusiefste)],adv,[transitive],[]).
 
 a([e(eksemplarische),
    e(exemplarische),
