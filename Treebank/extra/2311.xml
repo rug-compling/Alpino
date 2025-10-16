@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="np" end="15" id="2" rel="--">
+      <node begin="0" end="1" id="3" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+      <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="gebied" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="gebied" word="gebied"/>
+      <node begin="2" cat="rel" end="15" id="5" rel="mod">
+        <node begin="2" case="no_obl" end="3" gen="het" getal="ev" id="6" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" rnum="sg" root="dat" status="vol" vwtype="betr" wh="rel" word="dat"/>
+        <node begin="2" cat="ssub" end="15" id="7" rel="body">
+          <node begin="2" end="3" id="8" index="1" rel="su"/>
+          <node begin="3" cat="ti" end="5" id="9" rel="svp">
+            <node begin="3" end="4" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+            <node begin="4" buiging="zonder" end="5" id="11" infl="inf" lemma="maken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="maak" sc="fixed_dep(intransitive)" word="maken" wvorm="inf"/>
+          </node>
+          <node begin="5" end="6" id="12" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="fixed([vc(maak,pass_te,intransitive),pc(met)],no_passive)" tense="present" v_per="thi" word="heeft" wvorm="pv"/>
+          <node begin="6" cat="pp" end="15" id="13" rel="pc">
+            <node begin="6" end="7" id="14" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="7" cat="np" end="15" id="15" rel="obj1">
+              <node begin="7" end="8" id="16" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node aform="base" begin="8" buiging="met-e" end="9" graad="basis" id="17" infl="e" lemma="slecht" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="slecht" vform="adj" word="slechte"/>
+              <node aform="base" begin="9" buiging="met-e" end="10" graad="basis" id="18" infl="e" lemma="regionaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="regionaal" vform="adj" word="regionale"/>
+              <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="19" lemma="economie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="economie" word="economie"/>
+              <node begin="12" cat="ap" end="15" id="20" rel="mod">
+                <node aform="base" begin="12" buiging="zonder" end="13" graad="basis" id="21" infl="no_e" lemma="inclusief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="inclusief" sc="transitive" vform="adj" word="inclusief"/>
+                <node begin="13" cat="np" end="15" id="22" rel="obj1">
+                  <node aform="base" begin="13" buiging="met-e" end="14" graad="basis" id="23" infl="e" lemma="hoog" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="hoog" vform="adj" word="hoge"/>
+                  <node begin="14" end="15" gen="de" genus="zijd" getal="ev" graad="basis" id="24" lemma="werkloosheid" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="werkloosheid" word="werkloosheid"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Een gebied dat te maken heeft met een slechte regionale economie , inclusief hoge werkloosheid .</sentence>
+</alpino_ds>

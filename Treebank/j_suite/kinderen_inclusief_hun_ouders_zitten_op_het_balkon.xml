@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" end="1" gen="het" getal="mv" graad="basis" id="3" lemma="kind" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kind" word="kinderen"/>
+        <node begin="1" cat="ap" end="4" id="4" rel="mod">
+          <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="5" infl="no_e" lemma="inclusief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="inclusief" sc="transitive" vform="adj" word="inclusief"/>
+          <node begin="2" cat="np" end="4" id="6" rel="obj1">
+            <node begin="2" buiging="zonder" end="3" getal="mv" id="7" infl="pron" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+            <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="8" lemma="ouder" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="ouder" word="ouders"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" end="5" id="9" infl="pl" lemma="zitten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zit" sc="ld_pp" stype="declarative" tense="present" v_per="thi" word="zitten" wvorm="pv"/>
+      <node begin="5" cat="pp" end="8" id="10" rel="ld">
+        <node begin="5" end="6" id="11" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="6" cat="np" end="8" id="12" rel="obj1">
+          <node begin="6" end="7" id="13" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+          <node begin="7" end="8" gen="het" genus="onz" getal="ev" graad="basis" id="14" lemma="balkon" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="balkon" word="balkon"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>kinderen inclusief hun ouders zitten op het balkon</sentence>
+</alpino_ds>

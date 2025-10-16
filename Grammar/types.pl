@@ -222,7 +222,7 @@ cat_type(gen_det, [agr]).
 cat_type(tmp_det, []).
 cat_type(a,       [haspre,adv,slash,e_deps,sc,can_nominalize,can_marked_attr,can_inv_marked_attr,
                    lex,can_postv,can_prev,can_postn_with_cform,can_postn,has_obcomp,
-                   me_adj,agr,aform,avform,cform,cj,wh,wh_reltmploc,hstem,
+                   me_adj,agr,aform,avform,cform,cj,wh,wh_reltmploc,hstem,np_right,
                    hasextra,deverbal,exs,tmploc,modifies_a,modifies_v]).
 cat_type(p,       [cj,sc,wh,wh_reltmploc,slash,prep,preptype,
                    ppost,nhstem,nnform,pp_role,nagr,ndt,ld_pc]).

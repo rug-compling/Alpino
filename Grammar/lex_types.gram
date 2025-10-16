@@ -722,6 +722,7 @@ rang_num(NUM) :-
     NUM0:can_nominalize => yes,
     NUM0:can_marked_attr => no,
     NUM0:can_postn => no,
+    NUM0:np_right => no,
     NUM0:tmploc => ntmploc,
     NUM0:adv => nadv,
     NUM0:cform => rang,
@@ -1284,7 +1285,7 @@ als_pred_adjective(A) :-
 transitive_adjective(A) :-
     acc_np_arg(Obj),
     Obj:subn => (sub_name;sub_noun;sub_tmp;sub_indef_pron;sub_def_pron;
-                    sub_det;sub_veel;sub_def_verb),
+                    sub_det;sub_veel;sub_indef_verb;sub_def_verb),
     adjective(A0),
     unify_except_l(A0,A,[sc,dt:obj1]),
     A0:sc => [],
@@ -1582,6 +1583,7 @@ np_me_adjective(A0,A) :-
     A:me_adj => yes,
     A0:sc <=> SC,
     A:sc <=> [NP|SC],
+    A:np_right => no,
     adj_np_me_arg(NP),
     NP:exs => [],
     instantiated_deprel(A,me,NP).

@@ -251,6 +251,7 @@ a_lex(sbar_pred_adjective(Adv),Sign) :-
     Sign:can_nominalize => no,
     Sign:can_marked_attr => no,
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:avform => avform_ap,
     Sign:aform => nattr,
     Sign:cform => base.
@@ -261,6 +262,7 @@ a_lex(vp_pred_adjective(Adv),Sign) :-
     Sign:can_nominalize => no,
     Sign:can_marked_attr => no,
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:avform => avform_ap,
     Sign:aform => nattr,
     Sign:cform => base.
@@ -287,6 +289,7 @@ a_lex(post_adjective_anders(er),Sign) :-
     Sign:can_nominalize => no,
     Sign:can_marked_attr => no,
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:avform => avform_ap,
     Sign:aform => anders,
     Sign:adv => nadv.
@@ -367,6 +370,7 @@ a_lex(pred_np_me_adjective(A),Sign) :-
     Sign:can_nominalize => no,
     Sign:can_marked_attr => no,
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:avform => avform_ap,
     Sign:aform => nattr,
     Sign:cform => base.
@@ -379,6 +383,7 @@ a_lex(subject_sbar_pred_np_me_adjective,Sign) :-
     Sign:can_marked_attr => no,
     Sign:avform => avform_ap,
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:aform => nattr,
     Sign:cform => base.
 
@@ -390,6 +395,7 @@ a_lex(subject_sbar_pred_np_adjective,Sign) :-
     Sign:can_marked_attr => no,
     Sign:avform => avform_ap,
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:aform => nattr,
     Sign:cform => base.
 
@@ -401,6 +407,7 @@ a_lex(subject_vp_pred_np_adjective,Sign) :-
     Sign:avform => avform_ap,
     Sign:can_marked_attr => no,
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:aform => nattr,
     Sign:cform => base.
 
@@ -1179,12 +1186,14 @@ post_adjective_features(no_e,Sign) :-
     Sign:can_marked_attr => no,
     Sign:can_postn => no,
     Sign:avform => avform_ap,
+    Sign:np_right => no,
     Sign:aform => iets.
 post_adjective_features(er,Sign) :-
     Sign:cform => compar,
     Sign:can_nominalize => no,
     Sign:can_marked_attr => no,
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:avform => avform_ap,
     Sign:aform => iets.
 
@@ -1237,18 +1246,21 @@ features_adjective_adv(osentadv,V) :-
 adjective_features(pred(ADV),Sign) :-
     features_adjective_adv(ADV,Sign),
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:avform => avform_ap,
     Sign:cform => base,
     Sign:aform => nattr.
 adjective_features(pred_er(ADV),Sign) :-
     features_adjective_adv(ADV,Sign),
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:avform => avform_ap,
     Sign:cform => compar,
     Sign:aform => nattr.
 adjective_features(postn_pred(padv),Sign) :- % NB can be used as modifier in front of conjuncts, "Kees en samen met Piet de kinderen"
     features_adjective_adv(both,Sign),
     Sign:can_postn => yes,
+    Sign:np_right => no,
     Sign:can_nominalize => no,
     Sign:can_marked_attr => no,
     Sign:avform => avform_ap,
@@ -1259,6 +1271,7 @@ adjective_features(postn_pred(padv),Sign) :- % NB can be used as modifier in fro
 adjective_features(anders,Sign) :-
     Sign:can_postn => no,
     Sign:can_postn_with_cform => no,
+    Sign:np_right => no,
     Sign:tmploc => ntmploc,
     Sign:avform => avform_ap,
     Sign:adv => yadv,
@@ -1276,12 +1289,14 @@ adjective_features(ge_both(ADV),Sign) :-
     features_adjective_adv(ADV,Sign),
     Sign:avform => avform_ppart,
     Sign:can_postn => yes,
+    Sign:np_right => yes,
     Sign:can_nominalize => no,
     Sign:can_marked_attr => no,
     Sign:cform => base. 
 adjective_features(postn_both(ADV),Sign) :-
     features_adjective_adv(ADV,Sign),
     Sign:can_postn => yes,
+    Sign:np_right => yes,
     Sign:avform => avform_ap,
     Sign:can_nominalize => no,
     Sign:can_marked_attr => no,
@@ -1291,6 +1306,7 @@ adjective_features(stof,Sign) :-
     Sign:can_postn => no,
     Sign:can_nominalize => yes,  % only in ellipsis...
     Sign:can_marked_attr => no,
+    Sign:np_right => no,
     Sign:avform => avform_ap,
     Sign:aform => attr,
     Sign:cform => base. 
@@ -1299,6 +1315,7 @@ adjective_features(prefix,Sign) :-
     Sign:adv => ~oadv & ~detadv,
     Sign:can_prev => no,
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:can_nominalize => no,
     Sign:avform => avform_ap,
     Sign:can_marked_attr => no,
@@ -1307,6 +1324,7 @@ adjective_features(prefix,Sign) :-
 adjective_features(e,Sign) :-
     Sign:adv => ~oadv & ~detadv,
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:aform => attr,
     Sign:avform => avform_ap,
     Sign:can_nominalize => yes,
@@ -1316,12 +1334,14 @@ adjective_features(ge_e,Sign) :-
     Sign:adv => ~oadv & ~detadv,
     Sign:can_postn => no,
     Sign:aform => attr,
+    Sign:np_right => no,
     Sign:avform => avform_ppart,
     Sign:can_nominalize => yes,
     Sign:agr => ~(het & indef & sg),
     Sign:cform => base.
 adjective_features(no_e(ADV),Sign) :-
     Sign:can_postn => no,
+    Sign:np_right => no,
     features_adjective_adv(ADV,Sign),
     Sign:agr => indef & sg & het,
     Sign:avform => avform_ap,
@@ -1332,10 +1352,12 @@ adjective_features(ge_no_e(ADV),Sign) :-
     features_adjective_adv(ADV,Sign),
     Sign:agr => indef & sg & het,
     Sign:avform => avform_ppart,
+    Sign:np_right => yes,
     Sign:can_marked_attr => yes,
     Sign:cform => base.
 adjective_features(postn_no_e(ADV),Sign) :-
     Sign:can_postn => yes,
+    Sign:np_right => yes,
     features_adjective_adv(ADV,Sign),
     Sign:agr => indef & sg & het,
     Sign:avform => avform_ap,
@@ -1343,6 +1365,7 @@ adjective_features(postn_no_e(ADV),Sign) :-
     Sign:cform => base.
 adjective_features(meer,Sign):-
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:tmploc => ntmploc,
     Sign:avform => avform_ap,
     Sign:adv => (oadv;detadv),
@@ -1351,6 +1374,7 @@ adjective_features(meer,Sign):-
 adjective_features(er(ADV),Sign) :-
 %%  can postn only if there is a local compar; cf rule 
     Sign:can_postn => no,
+    Sign:np_right => no,
     features_adjective_adv(ADV,Sign),
     Sign:avform => avform_ap,
     Sign:can_nominalize => no,
@@ -1363,6 +1387,7 @@ adjective_features(er(ADV),Sign) :-
     Sign:agr => (indef & sg & het ; pl ),   % indef?  "de wat gematigder leden; de veel talrijker leden"
     Sign:cform => compar.
 adjective_features(ere,Sign) :-
+    Sign:np_right => no,
     Sign:adv => ~oadv & ~detadv,
     Sign:can_postn => no,
     Sign:avform => avform_ap,
@@ -1371,6 +1396,7 @@ adjective_features(ere,Sign) :-
     Sign:agr => ~(het & indef & sg),
     Sign:cform => compar.
 adjective_features(ste,Sign) :-
+    Sign:np_right => no,
     Sign:adv => ~oadv & ~detadv,
     Sign:can_postn => no,
     Sign:can_nominalize => yes,
@@ -1384,6 +1410,7 @@ adjective_features(st(_ADV),Sign) :-
     SignNotVeel => a,
     SignNotVeel:modifies_v => no,
     Sign:can_postn => no,
+    Sign:np_right => no,
     Sign:hstem <=> HSTEM,
     when(nonvar(HSTEM),
 	 (  HSTEM == veel       % hier wonen meest Chinezen
@@ -1399,18 +1426,21 @@ adjective_features(st(_ADV),Sign) :-
 %%     en   : ze speelden allerbelabberdst, 
 adjective_features(aller_st(_),Sign) :-
     Sign:can_postn => no,
+    Sign:np_right => no,
     features_adjective_adv(both,Sign),
     Sign:avform => avform_ap,
     Sign:agr =>  het & indef & sg,
     Sign:cform => super.
 adjective_features(het_st(ADV),Sign) :-
     Sign:can_postn => no,
+    Sign:np_right => no,
     features_adjective_adv(ADV,Sign),
     Sign:aform => nattr,
     Sign:avform => avform_ap,
     Sign:cform => super.
 adjective_features(end(ADV),Sign) :-
     Sign:can_postn => yes,
+    Sign:np_right => yes,
     features_adjective_adv(ADV,Sign),
     Sign:avform => avform_ppres,
     Sign:agr => indef & sg & het,
@@ -1418,6 +1448,7 @@ adjective_features(end(ADV),Sign) :-
     Sign:cform => base.    
 adjective_features(ende(ADV),Sign) :-
     Sign:can_postn => yes,
+    Sign:np_right => yes,
     features_adjective_adv(ADV,Sign),
     Sign:can_nominalize => yes,
     Sign:avform => avform_ppres,
