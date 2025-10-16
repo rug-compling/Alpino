@@ -27,6 +27,14 @@ def main():
             t = "adjective(er(both))"
         if t == "adjective(no_e(adv))" and r == "centraal":
             t = "adjective(postn_no_e(adv))"
+        if t == "adjective(no_e(adv))" and r == "inclusief":
+            t = "adjective(postn_no_e(adv))"
+        if t == "complementizer(np)" and r == "inclusief":
+            t = "adjective(postn_no_e(adv))"
+        if t == "adjective(no_e(adv))" and r == "exclusief":
+            t = "adjective(postn_no_e(adv))"
+        if t == "complementizer(np)" and r == "exclusief":
+            t = "adjective(postn_no_e(adv))"
         if t == "adjective(no_e(adv),pp(tot))" and r == "geldig":
             t = "adjective(postn_no_e(adv),pp(tot))"
         if t == "adjective(no_e(adv),pp(voor))" and r == "geldig":
@@ -88,6 +96,8 @@ def main():
             t = "adjective(no_e(both))"
         if r == "moorden" and t == "adjective(end(adv))":
             t = "adjective(end(both))"
+        if r == "solo" and t == "adverb":
+            t = " adjective(both(adv))"
         if r == "meermaals" and t == "adverb":
             t = "tmp_adverb"
         if r == "onversneden" and t == "adjective(ge_both(nonadv))":
