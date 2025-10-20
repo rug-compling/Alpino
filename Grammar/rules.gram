@@ -6870,10 +6870,12 @@ grammar_rule(a_np_comp_a, AP, [ NP, A]) :-
 %%EX%% de show , getiteld ZinZonderOnzin
 %%EX%% gesigneerd J. de Vries
 %%EX%% kinderen inclusief hun ouders zitten op het balkon
+%%EX%% Inclusief rente verdienden we een klein jaarsalaris
+%%EX%% We vertaalden , inclusief voetnoten , twintig studies
 grammar_rule(a_a_np_comp, AP1, [ A, NP ]) :-
     AP => a, A => a,
-    overwrite(AP,AP0,adv,nadv),
-    overwrite(AP0,AP1,can_nominalize,no),
+%%    overwrite(AP,AP0,adv,nadv),
+    overwrite(AP,AP1,can_nominalize,no),
     haspreno(AP),
     A:hasextra => no,
     A:wh => nwh,
@@ -6884,7 +6886,7 @@ grammar_rule(a_a_np_comp, AP1, [ A, NP ]) :-
     NP => np,
     NP:wh => nwh,
     NP:nform => norm,
-    NP:subn => (sub_noun;sub_name;sub_def_verb;sub_indef_verb),
+%%    NP:subn => (sub_noun;sub_name;sub_def_verb;sub_indef_verb;sub_def_adj;sub_indef_adj),
     NP:redrel => no,
     hd_comp_structure(A,NP,AP).
 
