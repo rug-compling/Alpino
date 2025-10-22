@@ -11316,7 +11316,8 @@ det_adv_det_structure(DetP,Adv,Det) :-
     DetP:wh_reltmploc <=> Adv:wh_reltmploc,
     DetP:wkpro => strongpro,    % if unspecified, spur amb np_pron(_weak) rule
                                 % for: 'omdat er heel wat zullen zijn, die ...
-    Det:subn => ~sub_veel, % diy: should be combined with adj[veel]
+    % Det:subn => ~sub_veel, % diy: should be combined with adj[veel]
+                             % no: "ongeveer evenveel bier als gisteren"
     hd_mod_structure(Det,Adv,DetP0).
 
 %%EX%% al de aanwezigen
