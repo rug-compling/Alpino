@@ -9856,6 +9856,7 @@ n([pl(doelstellingen),sg(doelstelling)],de,
   [s(beleid),
    hoofd,
    millennium,
+   'Millennium',
    s(ontwikkeling)
   ]).
 
