@@ -881,6 +881,7 @@ number_both(['Kempen']).
 number_both(['Lakers']).
 number_both(['Les','Bleus']).
 number_both(['Molukken']).
+number_both(['Mon']).  % volk dat iets met Boedhisme heeft
 number_both(['Mujahedeen']).
 number_both(['NS']).
 number_both(['Nederlanden']).

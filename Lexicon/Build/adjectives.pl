@@ -844,7 +844,9 @@ a([e('Lierse'),
    no_e('Liers')],nonadv,[],[]).
 
 a([e('Limburgse'),
-   no_e('Limburgs')],nonadv,[],[hh('Zuid'),
+   no_e('Limburgs')],nonadv,[],
+  [hh('Belgisch'),
+   hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
@@ -18969,7 +18971,7 @@ a([pred(indachtig)],padv,[transitive],[]).
 a([e(indicatieve),
    e(indikatieve),
    no_e(indicatief),
-   no_e(indikatief)],nonadv,[],[]).
+   no_e(indikatief)],adv,[],[]).
 
 a([e(indirecte),
    er(indirecter),

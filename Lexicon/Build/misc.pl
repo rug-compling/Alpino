@@ -7746,6 +7746,13 @@ with_dt([deze,en,soortgelijke],
                  cnj=l(soortgelijk,adjective(e),ap,2,3)])
        ).
 
+with_dt([deze,en,vergelijkbare],
+        adjective(e),
+        dt(conj,[crd=l(en,conj(en),vg,1,2),
+                 cnj=l(deze,determiner(de,nwh,nmod,pro,nparg),detp,0,1),
+                 cnj=l(vergelijkbaar,adjective(e),ap,2,3)])
+       ).
+
 with_dt([dit,en,volgend],
         adjective(no_e(nonadv)),
         dt(conj,[crd=l(en,conj(en),vg,1,2),

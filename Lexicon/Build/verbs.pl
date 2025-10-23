@@ -23187,6 +23187,7 @@ v(stuur,stuurt,sturen,gestuurd,stuurde,stuurden,
 	part_transitive(toe),
         part_np_np(thuis),   % ik krijg de boeken thuisgestuurd
 	part_transitive(uit),
+	fixed([[wandelen],acc],norm_passive),
 	part_transitive(weg),
 	fixed([ap_pred('in de war'),acc],norm_passive),
 	part_ld_pp(aan),

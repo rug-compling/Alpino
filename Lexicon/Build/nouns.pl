@@ -9049,12 +9049,13 @@ n([sg([déjà,vu]),
 n([pl(delen),sg(deel),sg('dl.'), pl('dln.')],het,[measure,mod],
   [dim(deeltje)]).
 
-n([pl(delen),sg(deel),ignore_stem(deel)],het,[],
+n([pl(delen),sg(deel),ignore_stem(deel)],het,[app_measure],
   [i(boeken,boek),
    boek,
    bouw,
    eiland,
    s(gebied),                   % overzeese
+   hersen,
    stof,
    dim(deeltje)]).
 
@@ -9856,7 +9857,6 @@ n([pl(doelstellingen),sg(doelstelling)],de,
   [s(beleid),
    hoofd,
    millennium,
-   'Millennium',
    s(ontwikkeling)
   ]).
 

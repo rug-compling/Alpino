@@ -139,6 +139,10 @@ similar_tags(_,proper_name(_,ORG),proper_name(_,ORG),Tag) :-
     !, Tag = proper_name(both,ORG).
 similar_tags(_,proper_name(_),proper_name(_),Tag) :-
     !, Tag = proper_name(both).
+similar_tags(_,proper_name(_,'ORG'),proper_name(_),Tag) :-
+    !, Tag = proper_name(both).
+similar_tags(_,proper_name(_),proper_name(_,'ORG'),Tag) :-
+    !, Tag = proper_name(both).
 %% inw. / km²
 similar_tags('/',noun(A,B,C),meas_mod_noun(_,_,_),Tag) :-
     !, Tag = noun(A,B,C).

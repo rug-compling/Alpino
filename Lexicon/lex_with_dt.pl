@@ -1379,6 +1379,7 @@ with_dt_all(de,[woord]).
 with_dt_all(deze,[duizend,paar]).
 with_dt_all(deze,[één]).
 with_dt_all(deze,[en,soortgelijk]).
+with_dt_all(deze,[en,vergelijkbaar]).
 with_dt_all(deze,[en,volg]).
 with_dt_all(deze,[en,vorig]).
 with_dt_all(deze,[honderdduizend,paar]).
@@ -3071,6 +3072,7 @@ with_dt_root(veld).
 with_dt_root(velde).
 with_dt_root(ver).
 with_dt_root(vergeet).
+with_dt_root(vergelijkbaar).
 with_dt_root(verkeerd).
 with_dt_root(vermoed).
 with_dt_root(verrast).
