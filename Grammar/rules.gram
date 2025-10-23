@@ -11307,6 +11307,8 @@ grammar_rule(det_bracketed_adv_det, DetP, [Left,Adv,Right,Det]):-
 det_adv_det_structure(DetP,Adv,Det) :-
     
     DetP => det, Adv => adv, DetP0 => det, Det => det,
+    Det:hstem <=> NietVeel,
+    dif(NietVeel,veel),
     Det:modf => yes,
     Adv:tmploc => (sent;ntmploc),
     unify_except_l(DetP0,DetP,[wh_reltmploc,wh,wkpro]),
