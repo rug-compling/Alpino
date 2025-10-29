@@ -140,8 +140,8 @@ surviving_word_tag('Wat',adverb).
 %    fail.
 
 %% both "wien"
-surviving_root(wie,rel_pronoun(both,no_nom)).
-surviving_root(wie,pronoun(ywh,thi,both,de,dat_acc,def)).
+surviving_root_tag(wie,rel_pronoun(both,no_nom)).
+surviving_root_tag(wie,pronoun(ywh,thi,both,de,dat_acc,def)).
 
 surviving_root_tag(_,_):-
     fail.

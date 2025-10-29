@@ -3163,10 +3163,11 @@ grammar_rule(deverbal_vp_mod_v,VP, [MOD, COMMA, V] ) :-
 %% they can almost always be attached at the noun
 %% level. One exception: if the modifier PP is followed
 %% by a complement PP:
-%%EX%% Het wachten tijdens slecht weer op je vrouw is vervelend
-%%EX%% Het classificeren van subsidies als handelsverstorend is gevaarlijk
 %% There are special combined rules for this:
 %% deverbal_vp_modpp_arg*
+%% Another exception: if there is another modifier after the PP which is
+%% allowed for deverbals but not ordinary NP
+%% EX het uitwerken van dergelijk systeem indien gewenst
 %%EX%% Winkelen zonder de deur uit te gaan is modern
 %%EX%% Verliezen omdat je partner een troefje was vergeten is irritant
 grammar_rule(deverbal_vp_v_mod,VP, [V, MOD] ) :-
@@ -3183,15 +3184,24 @@ deverbal_vp_v_mod_struct(VP,V,MOD) :-
     MOD:modifies_v => yes,
     hd_mod_structure(V,MOD,VP). 
 
+%%EX%% Het wachten tijdens slecht weer op je vrouw is vervelend
 grammar_rule(deverbal_vp_modpp_argpp,VP,[V,MOD,ARG]) :-
     deverbal_vp_v_mod_struct(VP1,V,MOD),
     MOD:mcat => mcat_pp,
     deverbal_vp_v_arg_pp_struct(VP,VP1,ARG).
 
+%%EX%% Het classificeren van subsidies als handelsverstorend is gevaarlijk
 grammar_rule(deverbal_vp_modpp_argpred,VP,[V,MOD,ARG]) :-
     deverbal_vp_v_mod_struct(VP1,V,MOD),
     MOD:mcat => mcat_pp,
     deverbal_vp_v_arg_pred_right_struct(VP,VP1,ARG).
+
+%%EX%% Het uitwerken van dit systeem indien gewenst
+grammar_rule(deverbal_vp_modpp_argsbar,VP,[V,MOD,ARG]) :-
+    deverbal_vp_v_mod_struct(VP1,V,MOD),
+    MOD:mcat => mcat_pp,
+    deverbal_vp_v_mod_struct(VP,VP1,ARG),
+    ARG:mcat => (mcat_sbar;mcat_vp).    
 
 %%EX%% Zelf appelbeignets bakken is een mooie traditie
 grammar_rule(deverbal_vp_predm_v,VP, [MOD, V] ) :-

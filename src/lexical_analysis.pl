@@ -2397,11 +2397,6 @@ do_all(Flag) :-
         fail
     ).
 
-lexical_analysis_one(Words,Tag,Root) :-
-    length(Words,P),
-    lexical_analysis(Words),
-    tag(P0,P,P0,P,Root,_,_,Tag).
-
 %:- initialize_flag(display_lexical_analysis,tagger_test).
 :- initialize_flag(display_lexical_analysis,normal).
 
@@ -3273,7 +3268,7 @@ between_enumeration(P0,P) :-
     tag(_,P0,_,_,_,_,normal(enumeration),_),
     tag(P,_,_,_,_,_,normal(enumeration),_).
 
-
+/*
 all_connected :-
     findall(P0/P,tag(P0,P,_,_,_,_,_,_),List0),
     add_pairs(List0,List,[]),
@@ -3304,3 +3299,5 @@ new_pair(P1,P,P0,P):-
 is_connected(P,P).
 is_connected(P0,P):-
     connected(P0,P).
+
+*/

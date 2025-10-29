@@ -6,10 +6,6 @@
 				  format_nderiv_of_obj/1,
 				  format_nderiv_of_result/2,
 				  format_nderiv_of_result_unknowns/2,
-				  format_palm_of_obj/1,
-				  format_palm_of_result/2,
-				  format_palm_score_of_obj/1,
-				  format_palm_score_of_result/2,
 				  format_left_corners_of_obj/1,
 				  format_new_left_corners_of_obj/1,
 				  format_left_corners_of_result/2,
@@ -68,7 +64,7 @@ tree_to_bracketed_string(Tree,S0,S):-
 tree_to_bracketed_string(traditional,tree(Node,_,Ds,_),S0,S) :-
     functor(Node,Cat,_),
     format_to_chars(" [ @~w",[Cat],S0,S1),
-    tree_to_bracketed_string_ds_traditional(Ds,S1,S2),
+    tree_to_bracketed_string_ds_(traditional,Ds,S1,S2),
     format_to_chars(" ]",[],S2,S).
 
 tree_to_bracketed_string(python,tree(Node,_,Ds,_),S0,S) :-
@@ -157,7 +153,7 @@ tree_to_some_bracketed_string_ds([H|T],S0,S,Sent) :-
 %%%%%%%%% with deriv %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-:- public format_nderiv_of_obj/1, format_deriv_of_obj/1, format_palm_of_obj/1, format_palm_score_of_obj/1, format_nderiv_of_obj_unknowns/1.
+:- public format_nderiv_of_obj/1, format_deriv_of_obj/1, format_nderiv_of_obj_unknowns/1.
 
 format_deriv_of_obj(N) :-
     hdrug_flag(current_ref,Key),
@@ -186,25 +182,6 @@ format_nderiv_of_result(Result,Key) :-
 format_nderiv_of_result_unknowns(Result,Key) :-
     result_to_deriv_tree(Result,Tree),
     format_local_trees_unknowns(Tree,Key).
-
-format_palm_of_obj(N) :-
-    hdrug_flag(current_ref,Key),
-    hdrug:object(N,o(Cat,_,_)),
-    format_palm_of_result(Cat,Key).
-
-format_palm_of_result(Result,Key) :-
-    result_to_bracketed_string_palm(Result,String,[]),
-    format("~w|~s~n",[Key,String]).
-
-format_palm_score_of_obj(N) :-
-    hdrug_flag(current_ref,Key),
-    hdrug:object(N,o(Cat,_,_)),
-    format_palm_score_of_result(Cat,Key).
-
-format_palm_score_of_result(Result,Key) :-
-    result_to_bracketed_string_palm(Result,String,[]),
-    alpino_treebank:score_string_of_result(Result,ScoreString),
-    format("~w|~s|~s~n",[Key,ScoreString,String]).
 
 result_to_bracketed_string_deriv(Result,S0,S):-
     alpino_data:result_term(_,_,_,Tree,_,Result),
@@ -242,39 +219,6 @@ tree_to_bracketed_string_ds_deriv2([H|T],S0,S) :-
     format_to_chars(",",[],S0,S1),
     tree_to_bracketed_string_deriv(H,S1,S2),
     tree_to_bracketed_string_ds_deriv2(T,S2,S).
-
-
-
-result_to_bracketed_string_palm(Result,S0,S):-
-    alpino_data:result_term(_,_,_,Tree,_,Result),
-    tree_to_bracketed_string_palm(Tree,S0,S),
-    !.
-result_to_bracketed_string_palm(_,_,_) :-
-    raise_exception(hdrug_error("result_to_bracketed_string_palm failed~n",[])).
-
-tree_to_bracketed_string_palm(
-          tree(_,_,lex(ref(_,_,_,Surf,_,_,_,_,_,_,_)),_),S0,S) :-
-    !,
-    format_to_chars("~w",[Surf],S0,S).
-tree_to_bracketed_string_palm(
-	  tree(skip,_,lex(W),_), S0, S) :-
-    !,
-    format_to_chars("[skip ~w]",[W],S0,S).
-tree_to_bracketed_string_palm(tree(_,Id,Ds,_),S0,S) :-
-    format_to_chars("[~w ",[Id],S0,S1),
-    tree_to_bracketed_string_ds_palm(Ds,S1,S2),
-    format_to_chars(" ~w]",[Id],S2,S).
-
-tree_to_bracketed_string_ds_palm([],S,S).
-tree_to_bracketed_string_ds_palm([H|T],S0,S) :-
-    tree_to_bracketed_string_palm(H,S0,S1),
-    tree_to_bracketed_string_ds_palm2(T,S1,S).
-
-tree_to_bracketed_string_ds_palm2([],S,S).
-tree_to_bracketed_string_ds_palm2([H|T],S0,S) :-
-    format_to_chars(" ",[],S0,S1),
-    tree_to_bracketed_string_palm(H,S1,S2),
-    tree_to_bracketed_string_ds_palm2(T,S2,S).
 
 
 

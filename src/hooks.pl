@@ -90,8 +90,6 @@ result_to_gerlof(_,_,_).
 
 alpino_startup_hook_end.
 
-vraag_joost(_).
-
 alpino_start_hook(_,_).
 alpino_result_hook(_,_,_,_).
 alpino_end_hook(_,_,_,_).
@@ -208,8 +206,6 @@ alpino_lex:inv_spelling_variant21(_,_,_).
 alpino_lex:inv_spelling_variant31(_,_,_,_).
 alpino_lex:inv_abbreviation(_,_).
 
-format_facts(_).
-
 alpino_lex:noclp_assertz(_).
 alpino_lexical_analysis:noclp_assertz(_).
 alpino_lc:noclp_assertz(_).
@@ -217,15 +213,10 @@ alpino_unknowns:noclp_assertz(_).
 alpino_util_tmp:noclp_assertz(_).
 alpino_lc_in:noclp_assertz(_).
 alpino_table_item:noclp_assertz(_).
-alpino_paraphrase:noclp_assertz(_).
-
-apply_adt_transformations(_,_).
 
 alpino_user_transformation:user_transformation(_,_,_,_,_,_,_,_).
 
 alpino_gen_suite:lf(_,_).
 
 alpino_data:separate(_,_).
-
-lu_form(_,_,_).
 

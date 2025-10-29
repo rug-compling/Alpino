@@ -21,7 +21,7 @@ DISK=$$ALPINO_HOME/src
 endif
 
 all: $(GUIDES)
-	$(MAKE) Alpino gadata.pl state
+	$(MAKE) Alpino state
 
 install: 
 	install -D Alpino ../bin/
@@ -128,7 +128,7 @@ clean:
 
 realclean: clean
 	/bin/rm -f Alpino $(DISK)/Alpino.sav guides${MODULEEXT}\
-                   guides.s.o guides_data.c gadata.pl guides_swi_glue.c Alpino.bak
+                   guides.s.o guides_data.c guides_swi_glue.c Alpino.bak
 
 guides$(MODULEEXT): guides.pl guides.c guides_data.o
 	$(SPLFR) guides.pl guides.c guides_data.o \
@@ -145,5 +145,3 @@ guides_data.c: guides_data.c.$(PROLOG)
 guides_data.o: guides_data.c
 	gcc -c $< -o $@
 
-gadata.pl: gadata.txt
-	cat gadata.txt  | $(HDRUG) -notk -l gadata2pl > gadata.pl

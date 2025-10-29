@@ -1095,9 +1095,9 @@ file_to_xml_terms(FN,Terms) :-
     ),
     alpino_ds_string_to_xml_terms(String,Terms).
 
-try_file_to_codes(FN,String) :-
-    catch(corpusreader:file_to_codes(FN,String),_,fail),
-    !.
+%try_file_to_codes(FN,String) :-
+%    catch(corpusreader:file_to_codes(FN,String),_,fail),
+%    !.
 try_file_to_codes(FN,String) :-
     alpino_treebank:prolog_file_to_codes(FN,String),
     !.
@@ -1105,9 +1105,9 @@ try_file_to_codes(FN,_) :-
     format(user_error,"warning: cannot read file ~w~n",[FN]),
     fail.
 
-try_get_data(FN,String) :-
-    catch(corpusreader:get_data(FN,String),_,fail),
-    !.
+%try_get_data(FN,String) :-
+%    catch(corpusreader:get_data(FN,String),_,fail),
+%    !.
 try_get_data(FN,String) :-
     alpino_treebank:prolog_file_to_codes(FN,String),
     !.

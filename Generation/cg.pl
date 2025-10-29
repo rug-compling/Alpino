@@ -11,7 +11,6 @@
 :- use_module(library(lists)).
 :- use_module(hdrug(hdrug_util)).
 :- use_module(alpino('src/utils')).
-:- use_module(treex).
 
 :- dynamic active_edge/7, inactive_edge/3, inactive_edge_frozen/5,
            inactive_edge_ref/2, his/2.
@@ -1438,17 +1437,8 @@ unpack_rule(vgap,vgap).
 unpack_rule(r(Id,Ptrs),Pat) :-
     unpack_rules(Id,Ptrs,Pat).
 
-:- initialize_flag(treex_corrections,off).
-
 transform_adt(Tree0,Tree) :-
-    apply_generic_transformations(Tree0,Tree1),
-    hdrug_flag(treex_corrections,Bool),
-    (   Bool == on
-    ->  alpino_treex:apply_transformations(Tree1,Tree),
-	instantiate_indexes(Tree),
-	debug_message(1,"treex corrections done~n",[])
-    ;   Tree1 = Tree
-    ).
+    apply_generic_transformations(Tree0,Tree).
 
 apply_generic_transformations(Tree0,Tree) :-
     apply_generic_transformations0(Tree0,Tree1),
@@ -1530,51 +1520,6 @@ all_bitcodes([],All,All).
 all_bitcodes([inactive_edge(_,Code,_)|T],All0,All) :-
     All1 is All0 \/ Code,
     all_bitcodes(T,All1,All).
-
-instantiate_indexes(Tree) :-
-    collect_indexes(Tree,Indexes,[],Variables,[]),
-    next_n(Indexes,I),
-    instantiate_indexes0(Variables,I).
-
-instantiate_indexes0([],_).
-instantiate_indexes0([H|T],H) :-
-    H2 is H + 1,
-    instantiate_indexes0(T,H2).
-
-collect_indexes(tree(Node,Ds),Is0,Is,Vs0,Vs) :-
-    collect_indexes(Node,Is0,Is1,Vs0,Vs1),
-    collect_indexes_ds(Ds,Is1,Is,Vs1,Vs).
-collect_indexes(r(_,Node),Is0,Is,Vs0,Vs) :-
-    collect_indexes(Node,Is0,Is,Vs0,Vs).
-collect_indexes(p(_),Is,Is,Vs,Vs).
-collect_indexes(adt_lex(_,_,_,_,_),Is,Is,Vs,Vs).
-collect_indexes(i(_),Is,Is,Vs,Vs).
-collect_indexes(i(Index,_),Is0,Is,Vs0,Vs) :-
-    (   var(Index)
-    ->  Vs0 = [Index|Vs],
-	Is0 = Is
-    ;   Is0 = [Index|Is],
-	Vs0 = Vs
-    ).
-
-collect_indexes_ds([],Is,Is,Vs,Vs).
-collect_indexes_ds([H|T],Is0,Is,Vs0,Vs):-
-    collect_indexes(H,Is0,Is1,Vs0,Vs1),
-    collect_indexes_ds(T,Is1,Is,Vs1,Vs).
-
-next_n(Indexes0,I) :-
-    sort(Indexes0,Indexes),
-    add1_last(Indexes,I).
-
-add1_last([],0).
-add1_last([H|T],Index) :-
-    add1_last(T,H,Index).
-
-add1_last([],I0,I) :-
-    I is I0 + 1.
-add1_last([H|T],_,I) :-
-    add1_last(T,H,I).
-
 
 %%% ensure there are no indexed nodes i(I,N)
 %%% for which there is no dependent node i(I)

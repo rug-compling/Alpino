@@ -257,11 +257,6 @@ een_of(Pairs0,Pdt) :-
 find_matching_with_dt([Root-Code|Pairs0],[Root|Roots],[Code|Codes]) :-
     alpino_lex:with_dt_all(Root,List),
     find_matching_with_dt_aux(List,Pairs0,Roots,Codes).
-find_matching_with_dt([Root-Code|Pairs0],[Root|Roots],[Code|Codes]) :-
-    alpino_paraphrase:add_lex(RootConcat,_,with_dt(_,_)),
-    alpino_util:split_atom(RootConcat," ",Atoms),
-    lists:append(_,[Root|Roots],Atoms),
-    find_matching_with_dt_aux(Roots,Pairs0,Roots,Codes).
 find_matching_with_dt([_|Pairs],Roots,Codes) :-
     find_matching_with_dt(Pairs,Roots,Codes).
 
@@ -288,9 +283,6 @@ is_root('een of').
 
 is_root(Root) :-
     alpino_lex:with_dt_root(Root), !.
-
-is_root(Root) :-
-    alpino_paraphrase:add_root(Root), !.
 
 construct_with_dts_aux(CatRoots,Bcs,Pdt) :-
     concat_all(CatRoots,Stem,' '),
@@ -391,9 +383,6 @@ dict_entry_with_dt(Root,Frame,SurfaceAtom) :-
     %% format(user_error,"lexical lookup with_dt: ~w~n",[SurfaceList]),
     alpino_lex:lexicon(Frame,Root0,SurfaceList,[],_),
     simplify_lemma(Root0,Root).
-
-dict_entry_with_dt(Root,with_dt(A,B),SurfaceAtom) :-
-    alpino_paraphrase:add_lex(Root,SurfaceAtom,with_dt(A,B)).
 
 %%% hack
 filter_adj_end(Root,End) :-
@@ -502,8 +491,7 @@ pos2frames(Root,Sense,Pos,Cat,Attr,Frames) :-
     (  var(Root)   -> Sense = Root ; true ),
     root_mismatch_heuristics(Frames0,Frames1,Root,Sense,Pos,Attr,Cat),
     unknown_root_heuristics(Frames1,Frames2,Root,Sense,Pos,Attr,Cat),
-    added_paraphrase_heuristics(Frames2,Frames3,Root,Sense,Pos,Attr),
-    last_resort_heuristics(Frames2,Frames3,Frames4,Root,Sense,Pos,Cat,Attr),
+    last_resort_heuristics(Frames2,Frames2,Frames4,Root,Sense,Pos,Cat,Attr),
     tag_mismatch_heuristics(Frames0,Frames4,Frames5,Root,Sense,Pos,Attr),
     prefer_best_words_in_frames(Root,Frames5,Frames6),
     remove_redundant_frames(Frames6,Frames).				% add later, so are not removed
@@ -1688,24 +1676,11 @@ filter_best([Score-Word|Words],Score0,R0,R,Result):-
 
 score_words(_,[],[]).
 score_words(Root,[W|Ws],[F-W|Ws1]) :-
-    (   lemma_word_freq(Root,W,F0)
+    (   lemma_word_freq(Root,W,F)
     ->  true
-    ;   F0 = 0
+    ;   F = 0
     ),
-    add_if_para(Root,W,F0,F),
     score_words(Root,Ws,Ws1).
-
-add_if_para(Root,W,F0,F) :-
-    alpino_paraphrase:add_lex(Root,W,_),
-    !,
-    (   add_value(Root,W,F1)
-    ->  true
-    ;   F1 = 1
-    ),
-    F is F0 + F1.
-add_if_para(_,_,F,F).
-
-add_value(één,één,100000).  %% otherwise, een is better than één, .... :-(
 
 unknown_root_heuristic(Pos,{RootList},Root,Atts,Pos,Cat,Surfs) :-
     !,
@@ -1899,37 +1874,6 @@ last_resort_heuristic(Pos,Cat,Root,_,Attr,Frame,Surfs):-
     add_morphology(Frame,Root,Surf1),
     findall(Surf,realize_surf(Surf1,Surf),Surfs),
     \+ wrong_cat(Frame,Cat).
-
-added_paraphrase_heuristics(Frames0,Frames,Root,Sense,Pos,Attr):-
-    findall(Frame-Surf,added_paraphrase_heuristic(Pos,Root,Sense,Attr,Frame,Surf),Frames1),
-    add_frames(Frames1,Frames0,Frames).
-
-add_frames([],F,F).
-add_frames([Frame|Frames],F0,F) :-
-    add_frame(Frame,F0,F1),
-    add_frames(Frames,F1,F).
-
-add_frame(Tag-Surfs,F0,F) :-
-    add_frame(F0,Tag,Surfs,F).
-
-add_frame([],Tag,Surfs,[Tag-Surfs]).
-add_frame([T-S|F0],Tag,Surfs0,F) :-
-    (  T == Tag
-    ->
-	lists:append(S,Surfs0,Surfs1),
-	sort(Surfs1,Surfs),
-	F = [Tag-Surfs|F0]
-    ;   F = [T-S|F2],
-	add_frame(F0,Tag,Surfs0,F2)
-    ).
-
-%% if we do paraphrasing, and we cannot find a lexical entry,
-%% use the same entry as in the input parse
-added_paraphrase_heuristic(Pos,Root,_Sense,Attr,Frame,[Surf]):-
-    alpino_paraphrase:add_lex(Root,Surf,Frame),
-    alpino_postags:postag_of_frame(Frame,Pos,CheckAttr),
-    check_attributes(CheckAttr,Attr,Pos,Frame,Root).
-    
 
 add_morphology(noun(_,_,pl),Root,Surf) :-
     atom_concat(Pref,Suf,Root),

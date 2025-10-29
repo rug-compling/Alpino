@@ -13,8 +13,6 @@
 		       result_to_triples_without_postags/2,
 		       result_to_triples_with_full_postags/2,
 		       format_triples_without_postags_of_result/2,
-		       format_triples_gosse_of_result/2,
-		       format_triples_harmen_of_result/2,
 		       format_triples_with_postags_of_result/2,
 		       format_triples_with_full_postags_of_result/2,
 		       format_full_triples_with_full_postags_of_result/3,
@@ -593,22 +591,6 @@ format_triples_without_postags_of_result(Result,Key) :-
     dt_to_relations_without_postags(DT,Relations),
     format_relations(Relations,Key).
 
-format_triples_gosse_of_result(Result,Key) :-
-    result_to_dt(Result,DT0),
-    hdrug_flag(triples_undo_mwu,On),
-    maybe_undo_mwp(On,DT0,DT),
-    dt_to_relations_without_postags(DT,Relations0),
-    sort(Relations0,Relations),
-    format_relations_gosse(Relations,Key).
-
-format_triples_harmen_of_result(Result,Key) :-
-    result_to_dt(Result,DT0),
-    hdrug_flag(triples_undo_mwu,On),
-    maybe_undo_mwp(On,DT0,DT),
-    dt_to_relations_harmen(DT,Relations0),
-    sort(Relations0,Relations),
-    format_relations_gosse(Relations,Key).
-
 format_triples_with_frames_of_result(Result,Key) :-
     format_triples_with_postags_of_result(Result,Key).
 
@@ -616,7 +598,7 @@ format_triples_with_postags_of_result(Result,Key) :-
     result_to_dt(Result,DT0),
     hdrug_flag(triples_undo_mwu,On),
     maybe_undo_mwp(On,DT0,DT),
-    dt_to_relations_harmen(DT,Relations0),
+    dt_to_relations_with_postags(DT,Relations0),
     sort(Relations0,Relations),
     format_relations(Relations,Key).
 
@@ -638,9 +620,6 @@ format_full_triples_with_full_postags_of_result(Result,Key,String0) :-
     sort(Relations0,Relations),
     format_full_relations_with_full_postags(Relations,Key,String).
 
-format_relations_gosse(Triples,Key) :-
-    format("triples(~q,~q).~n",[Key,Triples]).
-
 dt_to_relations(DT,Rels) :-
     dt_to_relations_start(DT,Rels0),
     relations_simplify_frames(Rels0,Rels).
@@ -661,10 +640,10 @@ dt_to_relations_with_lemma(DT,Rels) :-
     dt_to_relations_start(DT,Rels0),
     relations_with_lemma(Rels0,Rels).
 
-dt_to_relations_harmen(DT,Rels) :-
+dt_to_relations_with_postags(DT,Rels) :-
     dt_to_relations_start(DT,Rels0),
     relations_simplify_frames(Rels0,Rels1),
-    relations_harmen(Rels1,Rels).
+    relations_with_postags(Rels1,Rels).
 
 dt_to_relations_start(DT,RELS) :-
     dt_to_relations(DT,_,RELS,[],_).
@@ -690,12 +669,12 @@ relations_simplify_frame(PosTerm,Pos) :-
 			)
 		       ).
 
-relations_harmen([],[]).
-relations_harmen([H0|T0],[H|T]) :-
-    relations_harmen_(H0,H),
-    relations_harmen(T0,T).
+relations_with_postags([],[]).
+relations_with_postags([H0|T0],[H|T]) :-
+    relations_with_postags_(H0,H),
+    relations_with_postags(T0,T).
 
-relations_harmen_(deprel(Pos:H,Rel,Pos2:H2),deprel(H,Pos,Rel,H2,Pos2)).
+relations_with_postags_(deprel(Pos:H,Rel,Pos2:H2),deprel(H,Pos,Rel,H2,Pos2)).
 
 relations_ignore_string_pos([],[]).
 relations_ignore_string_pos([H0|T0],[H|T]) :-
@@ -1322,21 +1301,14 @@ relations_with_attributes([H0|T0],[H|T],Atts) :-
     relation_with_attributes(H0,H,Atts),
     relations_with_attributes(T0,T,Atts).
 
-relation_with_attributes(deprel(Pa0:Ha,R,  Pb0:Hb),
+relation_with_attributes(deprel(Pa0:Ha,Rel,Pb0:Hb),
                          deprel(Pa: Ha,Rel,Pb :Hb),Atts) :-
-    is_verbal_complement(Pa0,R), !,
-    somewhat_simplify_frame(Pa0,Pa1,Atts),
-    somewhat_simplify_frame(Pb0,Pb1,Atts),
-    incorporate_cluster(deprel(Pa1:Ha,R,Pb1:Hb),
-                        deprel(Pa:Ha, Rel,Pb: Hb)).
+    is_verbal_complement(Pa0,Rel), !,
+    somewhat_simplify_frame(Pa0,Pa,Atts),
+    somewhat_simplify_frame(Pb0,Pb,Atts).
 
 relation_with_attributes(Deprel0,Deprel,_) :-
     somewhat_simplify_postags_of_relation(Deprel0,Deprel).
-
-%incorporate_cluster(deprel(verb(Frame):Root/[P0,P],hd/Rel,N),
-%                    deprel(verb(clust):Root/[P0,P],hd/No, N)) :-
-%    frames_clusters:cluster(Root,Rel,Frame,No), !.
-incorporate_cluster(Rel,Rel).
 
 is_verbal_complement(Frame,Rel) :-
     functor(Frame,verb,3),

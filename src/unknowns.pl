@@ -4590,13 +4590,6 @@ de_determiner(P0) :-
 de_determiner(P0) :-
     search_tag_stem(deze,tag(_,P0,_,_,deze,_,_,determiner(de,_,_,_,_))).
 
-het_determiner(P0) :-
-    search_tag_stem(het,tag(_,P0,_,_,het,_,_,determiner(het))).
-het_determiner(P0) :-
-    search_tag_stem(dit,tag(_,P0,_,_,dit,_,_,determiner(het,_,_,_,_))).
-het_determiner(P0) :-
-    search_tag_stem(dat,tag(_,P0,_,_,dat,_,_,determiner(het,_,_,_,_))).
-
 sg_het_noun(noun(het,_,sg)).
 sg_het_noun(noun(het,_,sg,_)).
 sg_het_noun(tmp_noun(het,_,sg)).
@@ -4606,15 +4599,6 @@ sg_het_noun(mod_noun(het,_,sg,_)).
 sg_het_noun(meas_mod_noun(het,_,sg)).
 sg_het_noun(meas_mod_noun(het,_,sg,_)).
 
-sg_de_noun(noun(de,_,sg)).
-sg_de_noun(noun(de,_,sg,_)).
-sg_de_noun(tmp_noun(de,_,sg)).
-sg_de_noun(tmp_noun(de,_,sg,_)).
-sg_de_noun(mod_noun(de,_,sg)).
-sg_de_noun(mod_noun(de,_,sg,_)).
-sg_de_noun(meas_mod_noun(de,_,sg)).
-sg_de_noun(meas_mod_noun(de,_,sg,_)).
-
 check_de_het(P0,Tag) :-
     sg_het_noun(Tag),
     !,
@@ -4623,10 +4607,6 @@ check_de_het(P0,Tag) :-
     Tag=v_noun(_),
     !,
     \+ de_determiner(P0).
-%check_de_het(P0,Tag) :-
-%    sg_de_noun(Tag),
-%    !,
-%    \+ het_determiner(P0).   too strict, since dit/dat/het are all ambiguous
 check_de_het(_,_).
 
 %% as previous, but no compound should already be asserted

@@ -9,7 +9,7 @@ endif
 endif
 
 ifeq "$(PROLOG)" "sicstus"
-POS=lex_accent.po lex_with_dt.po lex_more.po lex.po lex_lemma.po
+POS=lex_accent.po lex_with_dt.po lex_more.po lex.po
 else
 POS=
 endif

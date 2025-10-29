@@ -36184,10 +36184,11 @@ n([mass(terugtrekking)],de,[]).
 n([pl(terugvorderingen),sg(terugvordering)],de,[]).
 
 n([pl(testen),pl(tests),sg(test)],de,[],
-  ['Cooper',h('Cooper'),
-   h('DNA'),
-   h(dna),
-   doping,
+  ['Cooper',h('Cooper'),f('Cooper'),
+   cooper,h(cooper),f(cooper),
+   h('DNA'),h(dna),f(dna),f('DNA'),
+   h(hiv),h('HIV'),f(hiv),f('HIV'),
+   doping,h(doping),f(doping),
    s(zwangerschap)
   ]).
 

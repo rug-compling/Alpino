@@ -37,7 +37,7 @@ left_corners:
 	mv $(DISK)/$(suite).lc.gz .
 	$(MAKE) $(suite).ps
 
-KK=4
+KK=7
 keys_lc:
 	cat keys$(KK) | \
         $(ALPINO) -flag suite undefined $(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/LassySmall cmdint=on 2> $(DISK)/keys$(KK)-spec.log | gzip > $(DISK)/keys$(KK).lc.gz 

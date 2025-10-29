@@ -27,7 +27,6 @@
 :- ensure_loaded(lex_more).
 :- ensure_loaded(lex_accent).
 :- ensure_loaded(lex_with_dt).
-:- ensure_loaded(lex_lemma).
 
 :- multifile user:term_expansion/2.
 user:term_expansion(spelling_variant(A,B),
@@ -322,6 +321,13 @@ next_word__(Suffix,['(',GS|Ws],Ws,repair_tokenize_brackets_robust,_) :-
     sub_atom(GS,_,2,_,'-)'),
     atom_concat(_,Rest,GS),
     atom_concat('-)',Suffix,Rest).
+
+%% treat "mond -" as "mond-"
+next_word__(Suffix,[W,'-'|Ws],Ws,repair_within_word_conjunct,_) :-
+    atom(W),
+    atom_length(W,Len),
+    Len > 2,
+    atom_concat(W,'-',Suffix).
 
 %% treat ( Grand Slam-)toernooi as Grand Slam-toernooi
 next_word__(Word,['('|Ws0],Ws,skip_l_brack(His),LC) :-
@@ -2105,13 +2111,6 @@ spelling_variant31(zes,en,negentigste,zesennegentigste).
 spelling_variant31(zeven,en,negentigste,zevenennegentigste).
 spelling_variant31(acht,en,negentigste,achtennegentigste).
 spelling_variant31(negen,en,negentigste,negenennegentigste).
-
-spelling_variant21_context(W,'-',Word,en) :-
-    atom(W),
-    atom_concat(W,'-',Word).
-spelling_variant21_context(W,'-',Word,of) :-
-    atom(W),
-    atom_concat(W,'-',Word).
 
 %% 2 --> 1 word
 %% repair tokenization errors:
@@ -4595,12 +4594,6 @@ lex_initialize :-
     ),
     hdrug_util:set_flag(initialize_lexicon,off).
 
-lex_initialize2(DictFile2) :-
-    pro_fadd:init_morph(DictFile2,0,0,0,0,Dict2),
-    hdrug_util:set_flag(lex_dict2,Dict2),
-    hdrug_util:debug_message(1,"Initialized ~w (~w)~n",
-				 [DictFile2,Dict2]).
-
 initialize_names_dict(No) :-
     hdrug_util:hdrug_flag(initialized_names_dict,Init),
     initialize_names_dict(Init,No).
@@ -5090,32 +5083,6 @@ concat_stems2(v_root(Stem0,Lemma0),Stem1,v_root(Stem,Lemma),Sep) :-
     hdrug_util:concat_all([Lemma0,Stem1],Lemma,Sep).
 concat_stems2(Stem0,Stem1,Stem,Sep) :-
     hdrug_util:concat_all([Stem0,Stem1],Stem,Sep).
-
-
-un_is_verb_lemma(Lemma,Root) :-
-    findall(Root,is_verb_lemma(Lemma,Root),Roots0),
-    sort(Roots0,Roots),
-    lists:member(Root,Roots),
-    !.
-
-un_is_verb_lemma(Lemma,Root) :-
-    findall(Root,is_verb_lemma2(Lemma,Root),Roots0),
-    sort(Roots0,Roots),
-    lists:member(Root,Roots),
-    !.
-
-un_is_verb_lemma(L,L).
-
-is_verb_lemma(Lemma,Root):-
-    lemma_root(Lemma,Root).
-
-is_verb_lemma2(Lemma,Root) :-
-    lexicon(verb(_,Inf,_),v_root(Root,Lemma),[Lemma],[],normal),
-    (  Inf = inf  ; Inf = inf(no_e) ).
-
-is_verb_lemma2(Lemma,Root) :-
-    lexicon(verb(_,Inf,_),v_root(Root,_),[Lemma],[],'part-V'),
-    (  Inf = inf  ; Inf = inf(no_e) ).
 
 quote_variant('`','``').
 quote_variant('’','’’').

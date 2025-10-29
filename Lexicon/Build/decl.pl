@@ -374,7 +374,6 @@ list_entries :-
     open('lex_accent0.pl',write, ACCENT),
     open('lex_with_dt0.pl',   write, WITHDT),
     open('lex_prefix.t',    write, PREFIX),
-    open('lex_lemma0.pl',   write, LEMMA),
     (   entry(A,B,C,Rest),
 	prettyvars(B),
 %	trace_dict(B),
@@ -390,7 +389,7 @@ list_entries :-
         write_inv_lex(C,Surf,B,INVLEX),
         write_exc_inv_lex(B,C,Surf,INVLEX),
 	write_if_accented(A,ACCENT),
-        create_part_verb(Rest,A,B,C,INVLEX,LEMMA),
+        create_part_verb(Rest,A,B,C,INVLEX),
 	fail
     ;   % trace_dict(prefix),
 	particle_form(A,Verb,Part),
@@ -403,7 +402,6 @@ list_entries :-
     close(ACCENT),
     close(PREFIX),
     close(WITHDT),
-    close(LEMMA),
     check_wrong_arity.
 
 write_with_dt(Tag,_,Stream) :-
@@ -509,17 +507,13 @@ postposition(vandaan,elders).
 
 
     
-create_part_verb([],A,B,Root0,INVLEX,LEMMA) :-
-    (   (   Root0 = v_root(Root1,Inf)
-	->  format(LEMMA,"~q .~n",[lemma_root(Inf,Root1)])
-	;   true
-	),
-        one_frame(B,Frame),
+create_part_verb([],A,B,Root0,INVLEX) :-
+    (   one_frame(B,Frame),
 	adapt_part_label(Frame,Part,Root0,Root2),
-	(   Root2 = v_root(Root3,Inf2)
-	->  format(LEMMA,"~q .~n",[lemma_root(Inf2,Root3)])
-	;   Root2 = Root3
-	),
+	(   Root2 = v_root(Root3,_)
+        ->  true
+        ;   Root2 = Root3
+        ),
         add_inflection_particle(Part,A,Surf),
         write_inv_lex(Root3,Surf,Frame,INVLEX),
         write_exc_inv_lex(Frame,Root3,Surf,INVLEX),

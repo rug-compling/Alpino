@@ -126,8 +126,6 @@ alpino_table_goal:unknown_predicate_handler(_,fail).
 		  '../Generation/adt',
 		  '../Generation/geneval',
 		  '../Generation/cg'
-%%%%		  simplify
-%%%%		  '../Derivbank/derivbank'
 		]).
 
 %% hdrug_hook
@@ -826,8 +824,6 @@ start_hook(parse,_,o(_,Sentence,_),Sentence):-
     ->	best_score_new_parse
     ;	Th = best_score(Sub)
     ->	best_score_new_parse(Sub)
-    ;	Th = palm_score
-    ->	best_score_new_parse
     ;	true
     ),
     ensure_grammar_compiled,
@@ -903,7 +899,6 @@ check_flags :-
 
 %% hdrug_hook
 start_hook0(parse,_,o(_,Wg,_),_):-
-    clear_additional_lexical_entries,
     lexical_analysis(Wg).
 
 construct_identifier(Key,No,Identifier) :-
@@ -979,8 +974,6 @@ result_hook(parse,_,o(Result,String,_),Flag) :-
     ->	format_syntax_of_result(Result,Identifier)
     ;	Th==some_syntax
     ->	format_some_syntax_of_result(Result,Identifier,StringNoBrackets)
-    ;	Th==gosse
-    ->	format_triples_gosse_of_result(Result,Identifier)
     ;	Th==triples_with_postags
     ->	format_triples_with_postags_of_result(Result,Identifier)
     ;	Th==triples_with_full_postags
@@ -990,16 +983,10 @@ result_hook(parse,_,o(Result,String,_),Flag) :-
                                                         Identifier,StringNoBrackets)
     ;	Th==triples_with_frames
     ->	format_triples_with_postags_of_result(Result,Identifier)
-    ;	Th==harmen
-    ->	format_triples_harmen_of_result(Result,Identifier)
     ;   Th==deriv
     ->  format_deriv_of_result(Result,Identifier)
     ;   Th==nderiv
     ->  format_nderiv_of_result(Result,Identifier)
-    ;   Th==palm
-    ->  format_palm_of_result(Result,Identifier)
-    ;   Th==palm_score
-    ->  format_palm_score_of_result(Result,Identifier)
     ;	Th==frames
     ->	format_frames_of_result(Result,Identifier)
     ;	Th==postags
@@ -1027,11 +1014,6 @@ result_hook(parse,_,o(Result,String,_),Flag) :-
     ;   Th==adt_xml
     ->  adt_xml_filename(File,Identifier),
 	xml_save_adt(Result,File)
-    ;   ( Th==adt_xml_dump ; Th==adt_dump_xml )
-    ->  % xml_save_adt(Result,stream(user_output))
-	xml_dump_adt(Result)
-    ;   Th==ntv1
-    ->  hook(format_facts(Result))   % external
     ;   Th==compare_cgn
     ->  xml_filename(File,Key),
 	compare_treebank_cgn_result(File,Result,Key)
@@ -1125,9 +1107,6 @@ end_hook(parse,_,_,String) :-
 	alpino_adt:result_to_adt(Result,Adt),
 	retractall(alpino_gen_suite:lf(Key,_)),
 	assertz(alpino_gen_suite:lf(Key,Adt))
-    ;   Th==joost
-    ->  hook(user:vraag_joost(StringNoBrackets)) % external
-    ;	true	
     ),
     (   Demo==on,
 	Th==best_score
@@ -1177,7 +1156,6 @@ end_hook(generate,_A,_B,_C) :-
     hdrug_flag(geneval,Geneval),
     hdrug_flag(found_solutions,NumberOfSolutions),
     hdrug_flag(end_hook,Th),
-    hdrug_flag(copy_input_if_paraphrase_failed,Copy),
     (	Demo==on,
 	object(1,o(Result,_,_))
     ->	if_gui((show(tree(syn),clig,[value(Result)]),
@@ -1834,26 +1812,12 @@ load_parametric_data :-
     debug_message(3,"loading suite..~n",[]),
     load_suite,
     debug_message(3,"loading suite done~n",[]),
-%    debug_message(3,"loading generation_suite..~n",[]),
-%    load_generation_suite,
-%    debug_message(3,"loading generation_suite done~n",[]),
     debug_message(3,"loading penalties..~n",[]),
     load_penalties,
     debug_message(3,"loading penalties done~n",[]),
     debug_message(3,"loading fluency..~n",[]),
     alpino_cg:load_fluency,
-    debug_message(3,"loading fluency done~n",[]),
-    debug_message(3,"loading additional lexicon..~n",[]),
-    load_additional_lexicon,
-    debug_message(3,"loading additional lexicon done~n",[]).
-
-%% used for Kostadin's experiments...
-load_additional_lexicon :-
-    hdrug_flag(additional_lexicon,File2),
-    (	File2==undefined
-    ->	true
-    ;   alpino_lex:lex_initialize2(File2)
-    ).
+    debug_message(3,"loading fluency done~n",[]).
 
 :- load_standard_data.
 
@@ -2280,11 +2244,6 @@ hdrug_command(deriv,format_deriv_of_obj(1),[]).
 hdrug_command(nderiv,format_nderiv_of_obj(Obj),[Obj]).
 hdrug_command(nderiv,format_nderiv_of_obj(1),[]).
 
-hdrug_command(palm,format_palm_of_obj(Obj),[Obj]).
-hdrug_command(palm,format_palm_of_obj(1),[]).
-hdrug_command(palm_score,format_palm_score_of_obj(Obj),[Obj]).
-hdrug_command(palm_score,format_palm_score_of_obj(1),[]).
-
 hdrug_command(lc,format_left_corners_of_obj(Obj),[Obj]).
 hdrug_command(lc,format_left_corners_of_obj(1),[]).
 hdrug_command(left_corners,format_left_corners_of_obj(Obj),[Obj]).
@@ -2415,40 +2374,11 @@ process_and_save(parse,Stream,Peer,Timeout) :-
     xml_save(Result,StringNoBrackets,[],stream(Stream),normal),
     !.
 
-% process_and_save(paraphrase,Stream,Peer,Timeout) :-
-%     read_line_timeout(Stream,Line,Timeout),
-%     alpino_parse_line(Peer,Line),
-%     alpino_adt:object_adt(1,Adt),
-%     generate(Adt),
-%     findall(Sent,object(_,o(_,Sent,_)),Sents),
-%     print_realizations(Sents,Stream),
-%     !.
-
-process_and_save(paraphrase,Stream,Peer,Timeout) :-
-    read_line_timeout(Stream,Line,Timeout),
-    codes_to_words_or_tokenize(Line,Words),
-    paraphrase(Peer,Words,Line,Result),
-    format(Stream,"~a~n",[Result]),
-    !.
-
-% process_and_save(compress,Stream,_Peer,Timeout) :-
-%     read_line_timeout(Stream,Line,Timeout),
-%     generate_compression(Line),
-%     findall(Sent,object(_,o(_,Sent,_)),Sents),
-%     print_realizations(Sents,Stream),
-%     !.
-
 process_and_save(_Kind,Stream,_Peer,_Timeout) :-
     print_error_stream(Stream,'parsing failed').
 
 print_error_stream(Stream,Error) :-
     format(Stream,"Error: ~w~n",[Error]).
-
-% print_realizations([],_).
-% print_realizations([H|T],Stream) :-
-%     concat_all(H,Atom,' '),
-%     format(Stream,"~a~n",[Atom]),
-%     print_realizations(T,Stream).
 
 :- if(current_prolog_flag(dialect,swi)).
 
@@ -2526,44 +2456,6 @@ option(init_dict_p) -->
 option(init_dict_g) -->
     { initialize_dictionaries_generation }.
 
-/*
-:- use_module('../Generation/compress').
-
-:- public generate_compression/1.  % I don't understand why this is required for the X-ref check
-generate_compression(String) :-
-    tok_compression_string(String,Pairs),
-    full_sentence(Pairs,Sent),
-    compressed_sentence(Pairs,Compressed),
-    alpino_compress:best_compression_parse(Sent,Compressed).
-
-tok_compression_string(String,Pairs) :-
-    split_string(String," ",Items),
-    items_to_pairs(Items,Pairs).
-
-items_to_pairs([],[]).
-items_to_pairs([H|T],[Word-Remove|NewT]) :-
-    lists:reverse(H,[Marker,47|WordR]), % forward slash
-    (   Marker == 48
-    ->  Remove = keep
-    ;   Marker == 49
-    ->  Remove = remove
-    ;   fail
-    ),
-    lists:reverse(WordR,WordCodes),
-    atom_codes(Word,WordCodes),
-    items_to_pairs(T,NewT).
-
-full_sentence([],[]).
-full_sentence([Word-_|T],[Word|NewT]) :-
-    full_sentence(T,NewT).
-
-compressed_sentence([],[]).
-compressed_sentence([Word-keep|T],[Word|NewT]) :-
-    compressed_sentence(T,NewT).
-compressed_sentence([_-remove|T],NewT) :-
-    compressed_sentence(T,NewT).
-*/
-
 :- initialize_flag(generate_failsafe,off).
 
 %% TODO: take threads into account here
@@ -2601,7 +2493,6 @@ after_timeout_options(alpino_lc:parse(_)) :-
     hdrug_flag(after_timeout_options,Val),
     after_timeout_options_(Val),
     hdrug:retractall(object(_,_)),
-    clear_additional_lexical_entries,
     lexical_analysis(Sentence0).
 
 after_timeout_options(alpino_cg:generate(_)) :-
@@ -2758,6 +2649,7 @@ compare_cgn([cgn_postag(P0,P,LemmaA,H)|T],
     ),
     compare_cgn(T,T2,P,Words,C1,C,L1,L,Ident,Msg2,Msg).
 
+/*
 :- public lex_without_context_options/0.
 lex_without_context_options :-
     lex_without_context_options(_,_,_,_,_).
@@ -2924,8 +2816,9 @@ parse_ids([H|T],[Pos/NH|NT],Word) :-
 parse_ids([H|T],[none/H|NT],Word) :-
     format("%%%% ~w no pos: ~w~n",[Word,H]),
     parse_ids(T,NT,Word).
+*/
 
-%%% from dt.pl
+%%% user_hook in dt.pl
 %%% after parsing, create output attribute-values on the basis of Dt
 dt_extract_attributes(Dt,Attributes,Rel) :-
     (   Rel == se
@@ -3006,14 +2899,8 @@ dt_extract_rnum(Dt,rnum=sg) :-
     nonvar(Num),
     \+ \+ alpino_data:sg(Num).
 
-
-
-
-
-
-%%% from adt.pl
+%%% user_hook in adt.pl
 %%% before generation, instantiate Dt on the basis of attribute-values of Adt
-
 dt_apply_attributes(Dt,Attributes) :-
     (   lists:member(rnum=Val1,Attributes)
     ->  dt_apply_rnum(Val1,Dt)
@@ -3105,6 +2992,7 @@ remove_nlc(C,Cs,Cs1) :-
     ;   Cs = [C|Cs1]
     ).
 
+/*
 :- public generate_adt_xmls/0.
 
 generate_adt_xmls :-
@@ -3243,6 +3131,7 @@ roundtrip :-
     fail.
 roundtrip :-
     print_table_total.
+*/
 
 :- public train_generation/0.
 train_generation :-
@@ -3265,78 +3154,11 @@ train_generation(Ref) :-
     parser_comparison(Ref),
     slow_options,
     set_flag(list_all_maxent_features,on),
-    set_flag(treex_corrections,off),
     set_flag(number_analyses,1000),
     set_flag(fluency_candidates_beam,1000),
     set_flag(end_hook,train_fluency),
     set_flag(robustness,off),
     generator_comparison(Ref).
-
-/*
-
-par_parse_loop :-
-    prompt(OldPrompt,'* '),
-    call_cleanup(par_parse_loop0,prompt(_,OldPrompt)).
-
-par_parse_loop0 :-
-    hdrug_flag(first_line_no,First),
-    initialize_flag(current_line_no,0),
-    hdrug_flag(parse_unannotated_only,Only),
-
-    set_flag(ids,[]),
-
-    repeat,
-
-    %%% reset, because apparantly this can get lost if timed outs occur????
-
-    set_output(user_output),
-
-    read_line(Line0),
-    (	Line0 == []
-    ->	fail           % empty lines are ignored
-    ;   Line0 = [37|_]
-    ->  fail           % lines starting with % are treated as comments
-    ;	Line0 == end_of_file
-    ->	!              % end of file -> halt
-    ;	Line0 == [16]
-    ->	hdrug_runtime_cmd_interpreter,              % ^P -> escape to Prolog
-	fail
-    ;   update_line_number(Int),
-	Int >= First,
-        (   Line0 = [92,37|Line1]
-        ->  Line= [37|Line1]
-        ;   Line0 = Line
-        ),
-	(   append(Prefix,[124|ParseLine],Line)
-	->  atom_codes(Ref,Prefix),
-	    set_flag(current_ref,Ref),
-	    fork(Pid),
-	    par_parse_this_line(Pid,Only,Ref,Int,ParseLine),
-	    fail    
-	;   set_flag(current_ref,Int),
-	    fork(Pid),
-	    par_parse_this_line(Pid,Only,Int,Int,Line),
-	    fail
-	)
-    ).
-
-
-par_parse_this_line(child,Only,Ref,Int,Line) :-
-    !,
-    parse_this_line(Only,Ref,Int,Line),
-    halt.
-par_parse_this_line(Id,_,_,_,_) :-
-%    reap_zombies,
-    hdrug_flag(ids,List0),
-    (   length(List0,Len),
-	Len < 10  % 
-    ->	set_flag(ids,[Id|List0])
-    ;   alpino_unix:wait(OtherId, _),  % should check value here?
-	lists:select(List0,OtherId,List1),
-	set_flag(ids,[Id|List1])
-    ).
-
-*/
 
 :- initialize_flag(check_tags,off).
 
@@ -3394,170 +3216,7 @@ find_missing_frame(Frame,List,_Sent) :-
     ).
 
 
-:- initialize_flag(copy_input_if_paraphrase_failed,off).
 :- initialize_flag(copy_input_if_no_transformation,off).
-
-hdrug_command(para,paraphrase,[]).
-hdrug_command(para,paraphrase([H|T]),[H|T]).
-hdrug_command(psen,psen(Key),[Key]).
-hdrug_command(pnext,pnext,[]).
-hdrug_command(pn,pnext,[]).
-hdrug_command(pprev,pprev,[]).
-hdrug_command(pp,pprev,[]).
-hdrug_command(pr,pcurrent,[]).
-hdrug_command_help(para,"para Sentence","to paraphrase the sentence given as argument (without sentence, paraphrase prompt)").
-hdrug_command_help(psen,"psen Key","paraphrase sentence with key Key").
-hdrug_command_help(pnext,"pnext","paraphrase next sentence").
-hdrug_command_help(pprev,"pprev","paraphrase previous sentence").
-hdrug_command_help(pr,"pr","paraphrase current sentence once more").
-
-:- public pcurrent/0, pnext/0, pprev/0, psen/1.
-
-pcurrent :-
-    hdrug_flag(current_ref,Key),
-    psen(Key).
-
-pnext :-
-    hdrug_flag(current_ref,Key0),
-    find_next_ref(Key0,Key,_),
-    psen(Key).
-
-pprev :-
-    hdrug_flag(current_ref,Key0),
-    find_prev_ref(Key0,Key,_),
-    psen(Key).
-
-psen(Key0) :-
-    a_sentence_with_map(Key0,Key,Tokens0),
-    if_gui(tcl('set pp_nr {~w}',[Key])),
-    set_flag(current_ref,Key),
-    try_hook(extern_phon(Tokens0,Tokens),Tokens0=Tokens),
-    concat_all(Tokens,Chars,' '),
-    paraphrase(Key0,Tokens,Chars).
-
-:- public paraphrase/0, paraphrase/1.
-
-paraphrase(Tokens0) :-
-    try_hook(extern_phon(Tokens0,Tokens),Tokens0=Tokens),
-    concat_all(Tokens,Chars,' '),
-    paraphrase(0,Tokens,Chars).
-
-paraphrase(Ref,Tokens,Chars) :-
-    paraphrase(Ref,Tokens,Chars,Result),
-    format("~a~n",Result),
-    format(user_error,"      original: ~s~n",[Chars]),
-    format(user_error,"=> paraphrased: ~a~n",[Result]).
-
-paraphrase(Ref,Tokens,Chars,Result) :-
-    statistics(runtime,[Start,_]),
-    hdrug_flag(copy_input_if_no_parse,CopyOnFailParse),
-    set_flag(robustness,off),
-    set_flag(order_canonical_dt,off),
-    alpino_parse_tokens(Ref,Tokens),
-    (   hdrug:object(1,o(Cat,_,_))
-    ->  paraphrase_continue(Chars,Cat,Result,Start)
-    ;   CopyOnFailParse == on
-    ->  Result = Chars
-    ;   CopyOnFailParse = msg(Msg)
-    ->  Result = Msg
-    ;   Result = ''
-    ).
-
-paraphrase_continue(Chars,Cat,Result,Start) :-
-    statistics(runtime,[Mid,_]),
-    set_flag(geneval,off),
-    hdrug_flag(copy_input_if_no_transformation,On),
-    hdrug_flag(demo,Demo),
-    alpino_dt:result_to_dt(Cat,Dt),
-    alpino_adt:dt_to_adt(Dt,Adt0),
-
-    clear_additional_lexical_entries,
-    save_additional_lexical_entries(Cat),
-
-    (   Demo == on
-    ->  if_gui(Output=clig,Output=user),
-        debug_call(1,show(tree(adt),Output,[value(Adt0)]))
-    ;   true
-    ),
-    
-    apply_adt_transformations(Adt0,Adt),
-    
-    (   On == on,
-	Adt0 == Adt
-    ->  format(user_error,"copy_input_if_no_transformation=on: copying input~n",[]),
-	Result = Chars
-    ;   On == ignore,
-	Adt0 == Adt
-    ->  Result = "", % format("ignored~n",[]),
-	format(user_error,"copy_input_if_no_transformation=ignore: ignore input~n",[])
-    ;   (   Demo == on
-	->  if_gui(Output=clig,Output=user),
-	    show(tree(adt),Output,[value(Adt)])
-	;   true
-	),
-	set_flag(robustness,off),
-	hdrug_flag(copy_input_if_paraphrase_failed,Off),
-	(   Off == off
-	->  FailResult=''
-	;   Off = msg(Msg)
-	->  FailResult=Msg
-	;   atom_codes(Chars,FailResult)
-	),
-	if(generate_or_split(Adt,GenTokens,[]),
-	   hdrug_util:concat_all(GenTokens,Result,' '),
-	   Result=FailResult
-	  )	
-    ),
-    statistics(runtime,[End,_]),
-    ParTime is End - Start,
-    GenTime is End - Mid,
-    format(user_error,"paraphrase cputime total ~w msec (~w msec without parser)~n",[ParTime,GenTime]).
-	
-
-paraphrase :-
-    initialize_flag(current_line_no,0),
-    repeat,
-    %%% reset, because apparantly this can get lost if timed outs occur????
-
-    set_output(user_output),
-    
-    create_paraphrase_prompt(Prompt),	% incorporate number in prompt
-    prompt(_,Prompt),			% and redefine prompt
-
-    read_line(Chars),
-    (   Chars == []
-    ->  fail			% ignore empty line
-    ;   Chars = [37|_]
-    ->  fail	       % lines starting with % are treated as comments
-    ;   Chars == end_of_file
-    ->  !
-    ;   update_line_number(Int),
-	(   append(Prefix,[124|ParseLine],Chars)
-	->  (   Prefix = [_|_],
-		atom_codes(Ref,Prefix),
-		Key=Ref
-	    ;   Prefix = [],
-		Key=Int
-	    )
-	;   Key=Int,
-	    Chars = ParseLine
-	),
-	set_flag(current_ref,Key),
-	debug_message(1,"**** paraphrasing line ~w (~w)~n",[Int,Key]),
-	codes_to_words_or_tokenize(ParseLine,Tokens),
-	paraphrase(Key,Tokens,ParseLine),
-	debug_message(1,"**** paraphrased line ~w (~w)~n",[Int,Key]),
-	fail
-    ).
-
-create_paraphrase_prompt(Prompt):-
-    hdrug_cmdint:dev_run(prolog:'$breaklevel'(BreakLevel,0),BreakLevel=0),
-    hdrug_flag(current_line_no,N),
-    (   BreakLevel =:= 0
-    ->  charsio:format_to_chars('~w para> ',[N],Chars)
-    ;   charsio:format_to_chars('{~w} ~w para> ',[BreakLevel,N],Chars)
-    ),
-    name(Prompt,Chars).
 
 create_parse_prompt(Prompt):-
     hdrug_cmdint:dev_run(prolog:'$breaklevel'(BreakLevel,0),BreakLevel=0),
@@ -3567,97 +3226,6 @@ create_parse_prompt(Prompt):-
     ;   charsio:format_to_chars('{~w} ~w parse: ',[BreakLevel,N],Chars)
     ),
     name(Prompt,Chars).
-
-clear_additional_lexical_entries :-
-    retractall(alpino_paraphrase:add_lex(_,_,_)),
-    retractall(alpino_paraphrase:add_root(_)).
-
-save_additional_lexical_entries(Cat) :-
-    alpino_format_syntax:result_to_frames(Cat,Frames,_),
-    save_frames(Frames).
-
-save_frames([]).
-save_frames([_-Frame|Frames]) :-
-    save_frame(Frame),
-    save_frames(Frames).
-
-:- dynamic
-    alpino_paraphrase:add_lex/3,
-    alpino_paraphrase:add_root/1.
-
-save_frame(frame(P0,P,Q0,Q,Stem,Frame,Surf0,His)) :-
-    His == normal(decap(normal)),
-    !,
-    alpino_unknowns:decap(Surf0,Surf),
-    save_frame(frame(P0,P,Q0,Q,Stem,Frame,Surf,normal(normal))).
-
-save_frame(frame(_P0,_P,_Q0,_Q,Stem0,Frame,Surf,His)):-
-    (   (  Frame == robust_skip
-	;  Frame == skip
-	;  His = normal(decap(_)) % zucht
-	;  His = decap_and_strip_diacritics
-	;  His = decap_and_add_diacritics
-	;  His = decap_and_diminutive
-	;  His = decap_and_compound(_)
-	;  His = decap(_)
-	;  His = decap_w_dia
-	;  His = decap_wo_dia
-	;  His = normal(variant(_,_))
-	)
-    ->  true
-    ;   alpino_genlex:simplify_lemma(Stem0,Stem),
-	hdrug_util:un_prettyvars(Frame,Frame1),
-	alpino_paraphrase:noclp_assertz(add_lex(Stem,Surf,Frame1)),
-	add_roots(Frame1,Stem)
-    ).
-
-add_roots(with_dt(_,_),Stem) :-
-    !,
-    alpino_util:split_atom(Stem," ",List),
-    assert_roots(List).
-add_roots(_,_).
-
-assert_roots([]).
-assert_roots([H|T]) :-
-    alpino_paraphrase:noclp_assertz(add_root(H)),
-    assert_roots(T).
-
-generate_or_split(tree(r(split,p(split)),Ds0),Toks0,Toks) :-
-    !,
-    generate_list(Ds0,Toks0,Toks).
-
-generate_or_split(Tree,Toks0,Toks) :-
-    generate(Tree,Toks0,Toks).
-
-generate_list([],Toks,Toks).
-generate_list([H|T],Toks0,Toks) :-
-    hdrug_flag(demo,Demo),
-    (   Demo == on
-    ->  if_gui(Output=clig,Output=user),	
-	debug_call(1,show(tree(adt),Output,[value(H)]))
-    ;   true
-    ),
-    generate_or_split(H,Toks0,Toks1),
-    generate_list(T,Toks1,Toks).
-
-generate(H,Toks0,Toks) :-
-    generate(H),
-    object(1,o(Obj,Ts,_)),
-    hdrug_flag(paraphrase_nderiv,OnOff),
-    hdrug_flag(current_ref,Key),
-    (   OnOff == on
-    ->  (   format_nderiv_of_result(Obj,Key)
-	->  true
-	;   true
-	)
-    ;   OnOff == unknowns
-    ->  (   format_nderiv_of_result_unknowns(Obj,Key)
-	->  true
-	;   true
-	)
-    ;   true
-    ),
-    lists:append(Ts,Toks,Toks0).
 
 :- public has_rule/1.
 hdrug_command(hasrule,has_rule(Rule),[Rule]).

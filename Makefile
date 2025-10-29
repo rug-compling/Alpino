@@ -59,7 +59,7 @@ xref:
                         Generation/fluency/pro_lm\
                         Grammar/penalties.pl Generation/fluency/maxent.pl Lexicon/lex.pl\
         | grep -v 'can not follow'
-	@echo "(26 warnings expected; 1 unused ugraphs)"
+	@echo "(25 warnings expected; 1 unused ugraphs)"
 
 
 include Makefile.export

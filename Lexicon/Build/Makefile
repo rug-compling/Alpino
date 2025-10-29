@@ -10,7 +10,7 @@ endif
 
 .PHONY: all install clean realclean
 
-TARGETS=lex.fsa lex_prefix.fsa lex_inv.fsa lex_accent.pl lex_with_dt.pl lex_lemma.pl
+TARGETS=lex.fsa lex_prefix.fsa lex_inv.fsa lex_accent.pl lex_with_dt.pl 
 
 all: $(TARGETS)
 
@@ -18,7 +18,7 @@ install:
 	for t in $(TARGETS); do if cmp -s $$t ../$$t; then true ; else cp -f $$t ../; fi; done
 
 clean:
-	/bin/rm -f lex_accent0.pl lex_with_dt0.pl lex.t lex_prefix.t lex_inv.t lex_lemma0.pl
+	/bin/rm -f lex_accent0.pl lex_with_dt0.pl lex.t lex_prefix.t lex_inv.t 
 
 realclean: clean
 	/bin/rm -f $(TARGETS) lex_with_dt.pl lex_accent.pl
@@ -26,7 +26,7 @@ realclean: clean
 #  extra=expand_subcat=off
 extra=
 
-lex_inv.t lex.t lex_accent0.pl lex_prefix.t lex_with_dt0.pl lex_lemma0.pl: decl.pl nouns.pl\
+lex_inv.t lex.t lex_accent0.pl lex_prefix.t lex_with_dt0.pl: decl.pl nouns.pl\
                               verbs.pl adjectives.pl add_compounds.pl\
                               numbers.pl misc.pl adverbs.pl extra.pl
 	echo "list_entries." | $(HDRUG) -notk -l decl $(extra)
@@ -43,10 +43,6 @@ lex_accent.pl: lex_accent0.pl
 
 lex_with_dt.pl: lex_with_dt0.pl
 	sort -u lex_with_dt0.pl > lex_with_dt.pl
-
-lex_lemma.pl: lex_lemma0.pl
-	sort -u lex_lemma0.pl > lex_lemma.pl
-
 
 ### check if participles are adjectives too:
 ### grep verb lex.t |grep 'verb([^,]*,psp' | cut -f1 | grep -v ' ' | sort -u > psp

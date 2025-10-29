@@ -1529,7 +1529,7 @@ abstract_call2(put_val(Key/_,_),put_val(Key)).
 %% call(get_val)....
 
 
-
+:- public user:list_rules/0.
 user:list_rules :-
     (   alpino_lc_in:grammar_rule(Id,_,_),
 	format("rule_id(~w).~n",[Id]),

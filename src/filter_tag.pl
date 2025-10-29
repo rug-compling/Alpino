@@ -21,7 +21,7 @@
     check_stem/3, check_ap_pp_copula/2, check_nonp_copula/2,
     check_fixed_word/3, check_alsof/2,
     check_pp_copula/2, check_pp_copula/4, check_ap_copula/2, check_aci_simple/2,
-    check_er/2, check_compar_adjective/2, check_subject_sbar/2, check_aux_simple/2,
+    check_er/2, check_comp/2, check_compar_adjective/2, check_subject_sbar/2, check_aux_simple/2,
     check_subject_vp/2,check_er_er/2, fail/2, check_of_dat_whsub_sbar_right/2,
     check_hebben/2, check_zijn/2, check_simple_zijn/2,
     check_part/4, check_part/3, check_ld_prep/3,
