@@ -8,10 +8,13 @@ XSL=$(ALPINO_HOME)/TreebankTools/stylesheets
 
 LASSYSMALL=/net/corpora/LassyDevelop
 
+ALUDVERSION=$(shell alto | grep ALUD | awk '{ print $$4 }' )
+
 all:
 	$(MAKE) -j dtchecks novel
 	$(MAKE) -j prepare_enhanced_all
-	$(MAKE) -j enhanced_all poslemma
+	$(MAKE) -j enhanced_all 
+	$(MAKE) -j poslemma
 	$(MAKE) -j 30 sentspl freq trees_doc conllu pair installsents alpino.dact
 
 novel:
@@ -163,6 +166,7 @@ sql/%.sqlite: best/%/*.xml fast/%/*.xml
 enhanced_all: $(DIRECTORIES:%=%.enhanced)
 
 %.enhanced: 
+	find Enhanced/$* -name '*.xml' | xargs grep -L $(ALUDVERSION) | xargs rm -f
 	$(sqldir)/alpinomod -u -p $*  sql/$*.sqlite $* Enhanced/$*
 
 sents: $(DIRECTORIES:%=../SENTS/%.sents)
@@ -179,7 +183,7 @@ sentspl: sents
 conllu: $(DIRECTORIES:%=../CONLLU/%.conllu)
 
 ../CONLLU/%.conllu: Enhanced/%/*.xml
-	ls -v ../Treebank/Enhanced/$*/*.xml | alud > ../CONLLU/$*.conllu 2> ../CONLLU/$*.conllu.err
+	ls -v ../Treebank/Enhanced/$*/*.xml | alto -s -i tt:%u > ../CONLLU/$*.conllu 2> ../CONLLU/$*.conllu.err
 
 
 #	( cd fast; make eans.log BASE=/net/aistaff/vannoord/z/Alpino )
