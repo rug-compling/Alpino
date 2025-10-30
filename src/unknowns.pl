@@ -1644,6 +1644,7 @@ foreign_word(consultants).
 foreign_word(contemporain).
 foreign_word(cool).
 foreign_word(corner).
+foreign_word(corners).
 foreign_word(corporate).
 foreign_word(could).
 foreign_word(county).

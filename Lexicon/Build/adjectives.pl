@@ -22413,6 +22413,9 @@ a([e(medeplichtige),
 a([ende(medewerkende),
    end(medewerkend)],adv,[],[]).
 
+a([no_e(mediaan),
+   e(mediane)],nonadv,[],[]).
+
 a([e(mediamieke),
    no_e(mediamiek)],nonadv,[],[]).
 
