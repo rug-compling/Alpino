@@ -17887,6 +17887,8 @@ v(prik,prikt,prikken,geprikt,prikte,prikten,
 	np_ld_pp,
 	refl_pc_pp(aan),
 	part_intransitive(tegen),  % VL tegenscoren
+	part_intransitive(uit),
+	part_transitive(uit),
 	part_transitive(aan),
 	part_transitive(door),
 	part_transitive(in),
@@ -22076,8 +22078,6 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
         fixed([[in,lichterlaaien]],no_passive),
 	fixed([[in,de,weg],dat],no_passive),
 	fixed([[in,de,weg]],no_passive),
-	fixed([[klaar]],no_passive),
-	fixed([[klaar],vp],no_passive),
 	fixed([[hun,mannetje]],no_passive),
 	fixed([[mijn,mannetje]],no_passive),
 	fixed([[je,mannetje]],no_passive),
@@ -22131,6 +22131,7 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
 	part_er_pp_sbar(in,voor),  % ik sta er voor in dat hij komt
 	part_pc_pp(klaar,met),
 	part_pc_pp(klaar,voor),
+	part_vp(klaar),
 	part_er_pp_sbar(klaar,voor),
 	part_er_pp_vp(klaar,voor),
 	part_pc_pp(open,voor),
@@ -25059,10 +25060,13 @@ v(vereis,vereist,vereisen,vereist,vereiste,vereisten,
 	vp_subj_so_np])]).
 
 v(vereng,verengt,verengen,verengd,verengde,verengden,
-    [h([refl,
-	transitive,
-	np_pc_pp(tot),
-	refl_pc_pp(tot)])]).
+  [z([intransitive]),
+   h([refl,
+      transitive,
+      np_pc_pp(tot),
+      refl_pc_pp(tot)
+     ])
+  ]).
 
 v(verenig,verenigt,verenigen,verenigd,verenigde,verenigden,
     [unacc([intransitive]),
