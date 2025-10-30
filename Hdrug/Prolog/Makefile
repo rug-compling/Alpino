@@ -11,11 +11,11 @@ PLS=\
 ifeq "$(PROLOG)" "sicstus"
 hdrug.sav: $(PLS)
 	-echo "use_module(hdrug_main),\
-               save_program('hdrug.sav',hdrug_main)." | $(SICSTUS) 
+               save_program('hdrug.sav',hdrug_main)." | $(PROLOGBIN) 
 else
 
-hdrug: $(PLS) swi.pl
-	$(PROLOG) -o hdrug --goal=hdrug_main -c swi.pl
+hdrug.sav: $(PLS) swi.pl
+	$(PROLOGBIN) -o hdrug.sav --goal=hdrug_main -c swi.pl
 
 endif
 

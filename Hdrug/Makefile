@@ -11,7 +11,7 @@ all: create install
 create: hdrug state apps
 
 state:
-	( cd Prolog ; $(MAKE) HDRUGDIR=$(HDRUGDIR) )
+	( cd Prolog ; $(MAKE) hdrug.sav HDRUGDIR=$(HDRUGDIR) )
 
 .PHONY: hdrug
 
@@ -35,7 +35,7 @@ hdrug:
 	echo "#!/bin/sh" > hdrug
 	echo "export SP_CTYPE=utf8" >> hdrug
 	echo "export SP_CSETLEN=212">> hdrug
-	echo "$(SICSTUS) -r $(CURDIR)/Prolog/hdrug.sav -a\
+	echo "$(PROLOGBIN) -r $(CURDIR)/Prolog/hdrug.sav -a\
               -flag hdrug_library $(CURDIR)/Tcl\
               -flag tex_library $(CURDIR)/Tex\
               blt=$(BLT) -flag blt_library $(BLTLIB)\
@@ -52,6 +52,9 @@ else
 apps:
 
 hdrug:
+	echo "#!/bin/sh" > hdrug
+	echo "SWIPL=$(PROLOGBIN) $(CURDIR)/Prolog/hdrug.sav \"\$$@\"" >> hdrug
+	chmod +x hdrug
 
 endif
 
@@ -65,7 +68,7 @@ ifeq "$(PROLOG)" "sicstus"
 	echo '#!/bin/sh' > $(BINDIR)/$(TARGET)
 	echo "export SP_CTYPE=utf8" >> $(BINDIR)/$(TARGET)
 	echo "export SP_CSETLEN=212">> $(BINDIR)/$(TARGET)
-	echo '$(SICSTUS) -r $(PATH_TO_LIBDIR)/hdrug.sav -a\
+	echo '$(PROLOGBIN) -r $(PATH_TO_LIBDIR)/hdrug.sav -a\
               -flag hdrug_library $(PATH_TO_LIBDIR)\
               -flag tex_library $(PATH_TO_LIBDIR)\
               blt=$(BLT) -flag blt_library $(BLTLIB)' \
@@ -103,7 +106,7 @@ clean :
          done
 
 realclean :
-	/bin/rm -f Prolog/hdrug.sav hdrug Prolog/hdrug Makefile.hdrug
+	/bin/rm -f Prolog/hdrug.sav hdrug Makefile.hdrug
 	-for dir in $(APPL_DIRS); do \
            if [ -d $$dir ];\
            then ( cd $$dir ;\

@@ -10,24 +10,8 @@ ifeq "$(shell if [ -r $(HDRUGDIR)/Makefile.defs ]; then echo yes; fi)" "yes"
 include $(HDRUGDIR)/Makefile.defs
 endif
 
-ifndef PREFIX
-       PREFIX=/usr/local
-endif
-
-ifndef SICSTUS
-	SICSTUS=sicstus
-endif
-
-ifndef BINDIR
-       BINDIR=$(PREFIX)/bin
-endif
-
 ifndef LIBDIR
        LIBDIR=$(PREFIX)/lib/hdrug
-endif
-
-ifndef MANDIR
-       MANDIR=$(PREFIX)/man
 endif
 
 ifndef TARGET
@@ -36,10 +20,6 @@ endif
 
 ifndef PATH_TO_LIBDIR
        PATH_TO_LIBDIR=$(LIBDIR)
-endif
-
-ifndef SICSTUS
-       SICSTUS=sicstus
 endif
 
 ifndef BLT
@@ -58,9 +38,4 @@ endif
 
 PWD=$(shell pwd)
 
-ifeq ($(PLATFORM),windows)
-CURDIR=$(shell cygpath -m $(PWD))
-else
-CURDIR=$(PWD)
-endif
 

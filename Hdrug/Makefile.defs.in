@@ -15,26 +15,6 @@
 # directory for man pages
 #MANDIR=$(PREFIX)/man
 
-#Uncomment this line on Windows.
-#PLATFORM=windows
-
-# Sicstus options
-# ---------------
-
-SICSTUS=sicstus
-
-# BLT is used to display graphically the results of running a test-suite
-# it is much nicer than the Hdrug built-in version. 
-# For dynamically  loading BLT, you have to specify BLTLIB to point to
-# the BLT dynamic load library. So, if you want to load BLT dynamically,
-# define BLTLIB, otherwise don't. This is only supported for Tcl/Tk 7.5/4.1,
-# or later.
-# Also, always define BLTLIB, if only with some nonsense value
-BLT=noblt
-#BLT=blt
-#BLTLIB=none
-BLTLIB=$(PREFIX)/lib/libBLT24.sl
-
 # HDRUG options
 # -------------
 

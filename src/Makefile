@@ -96,11 +96,11 @@ endif
 else
 
 PLATFORM=${shell echo "prolog_flag(version,X), write(X), nl, fail."\
-     | $(PROLOG) 2>/dev/null}
+     | $(PROLOGBIN) 2>/dev/null}
 
 state:
 	-echo "Alpino-$(PLATFORM)-git$(gitversion)-$(PROLOG)" > ../version
-	$(PROLOG) -o $(DISK)/Alpino.sav --goal=hdrug_main\
+	$(PROLOGBIN) -o $(DISK)/Alpino.sav --goal=hdrug_main\
            -c ../Hdrug/Prolog/swi.pl start.pl
 
 Alpino:
@@ -111,7 +111,7 @@ endif
 	echo "ulimit -s unlimited"                >>Alpino
 	echo "export ALPINO_HOME=$(ALPINO_HOME)"   >>Alpino
 	echo "echo using Alpino from directory $(DISK) ... >&2">>Alpino
-	echo `which $(PROLOG)` -x $(DISK)/Alpino.sav --\
+	echo $(PROLOGBIN) -x $(DISK)/Alpino.sav --\
    debug=0 $(HDRUGFLAGS) $(ALPINOFLAGS)\
   $(DEFAULT_ALPINO_OPTIONS)\
   '$$DEFAULT_ALPINO_OPTIONS'\
