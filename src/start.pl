@@ -1173,14 +1173,8 @@ end_hook(generate,_A,_B,_C) :-
     ;   true
     ),
     (   NumberOfSolutions < 1,
-	Th == print_generated_sentence,
-	Copy==off
+	Th == print_generated_sentence
     ->  format("~n",[])    % always produce a line of output for each input
-    ;   NumberOfSolutions < 1,
-	Th == print_generated_sentence,
-	Copy=on(Chars)
-    ->  format("~s~n",[Chars]),	% always produce a line of output for each input
-	format(user_error,"warning: cannot generate adt for ~w ~s~n",[Key,Chars])
     ;   true
     ),
     if_gui(update_buttons),
