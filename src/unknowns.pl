@@ -29,15 +29,12 @@
 %% De --> de
 
 normal_capitalized_word(P,Word,Rest,Rest,DecapWord) :-
+    decap_first(Word,DecapWord),
     (   is_start_sentence(P)
     ->  true
-    ;   is_decap_only(Word)
+    ;   is_decap_only(Word,DecapWord)
     ;   decap_only_one(Word)
-    ),
-    decap_first(Word,DecapWord).
-%    ;   Rest = [],                       % krantenkopjes zoals "TIPS"
-%	only_capitals(Word,DecapWord)
-%    ).
+    ).
 
 normal_capitalized_word(P,Word,[Word1|Rest],[Word2|Rest],Word) :-
     is_start_sentence(P),
@@ -1569,6 +1566,7 @@ foreign_word(bête).
 foreign_word(bêtes).
 foreign_word(big).
 foreign_word(bin).
+foreign_word(binge).
 foreign_word(bis).
 foreign_word(black).
 foreign_word(blanc).
@@ -1928,6 +1926,7 @@ foreign_word(men).
 foreign_word(même).
 foreign_word(merchandising).
 foreign_word(mich).
+foreign_word('mid-term').
 foreign_word(military).
 foreign_word(mind).
 foreign_word(mineur).
@@ -2063,6 +2062,7 @@ foreign_word(report).
 foreign_word(république).
 foreign_word(research).
 foreign_word(return).
+foreign_word(review).
 foreign_word(right).
 foreign_word(river).
 foreign_word(rock).
@@ -2354,6 +2354,11 @@ decap_only_one('Rechtstreeks').
 %% which are very unlikely *first parts* of names
 
 is_decap_only(Word) :-
+    decap_first(Word,Decap),
+    is_decap_only(Word,Decap).
+
+is_decap_only(Word,Decap) :-
+    \+ foreign_word(Decap),
     atom(Word),
     atom_length(Word,Len),
     Len < 50,
