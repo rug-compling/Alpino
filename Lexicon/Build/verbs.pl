@@ -908,6 +908,7 @@ m(v_root(kan,kunnen),
 	fixed([vc(verhelp,inf,intransitive),sbar],no_passive), % hij kon niet verhelpen dat..
         nonp_pred_np_ndev,       % ik kan geen broek aan / geen pet op / etc
         ap_copula,             % het kan kapot! De pet kan af!
+	pp_copula,             % met verlof/met pensioen
 	fixed([ap_pred(kwijt),sbar],no_passive),
         %% ik kan het goed/niet/slecht/wel met hem vinden
         %% wij kunnen het samen goed vinden

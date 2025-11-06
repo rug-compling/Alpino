@@ -9501,13 +9501,14 @@ grammar_rule(adj_rel_vp_dp,MAX,[ADV,COMMA,XP]) :-
 
 %%EX%% in Amsterdam , derhalve
 %%EX%% volgens mij niet
+%%EX%% volgens mij wel
 %% maybe refuse ADV that are also TAG
 grammar_rule(pp_adv_dp,MAX,[XP,COMMA,ADV]) :-
     optcomma(COMMA),
     MAX => max,
     MAX:max_type => t_dp,
     max_advp(ADV),
-    ADV:subadv => ~subadv_adj,
+%    ADV:subadv => ~subadv_adj,   % volgens mij wel
     ADV:redrel => no,
     ind_max_pp(XP),
     dp_dp_structure(XP,ADV,MAX).

@@ -27300,6 +27300,9 @@ n([pl(pensioenen),sg(pensioen)],het,[],
    vroeg,
    dim(pensioentje)]).
 
+n([pl(pensioenen),sg(pensioen)],het,[pred_pp(met)],
+  []).
+
 n([pl(pensions),sg(pension)],het,[],[dim(pensionnetje)]).
 
 n([pl(pensionaten),sg(pensionaat)],het,[]).
@@ -40189,7 +40192,7 @@ n([pl(voogdijen),sg(voogdij)],de,[],
 
 n([sg([voor,en,tegen]),pl([voors,en,tegens])],het,[]).
 
-n([pl(voorarresten),sg(voorarrest)],het,[pred_pp(in)]).
+n([pl(voorarresten),sg(voorarrest)],het,[]).
 
 n([pl(voorassen),sg(vooras)],de,[]).
 

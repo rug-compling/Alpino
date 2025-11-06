@@ -129,6 +129,7 @@ adverb([bij,tijds]).
 adverb([bij,verre]).
 adverb(bijwijlen).
 adverb([bij,wijze,van]).
+adverb(binge). % hm, tja
 adverb([binnen,no,time]).
 adverb(binnenslands).
 adverb(binnensmonds).
