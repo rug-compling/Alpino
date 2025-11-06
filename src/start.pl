@@ -964,8 +964,6 @@ result_hook(parse,_,o(Result,String,_),Flag) :-
     ;   (  Th==xml_dump ; Th==dump_xml )
     ->  display_quality(Q,Tree,StringInput,Score,Identifier,QualityString),
         xml_save(Result,StringNoBrackets,[QualityString],stream(user_output),normal)
-%    ;   Th=ldplayer
-%    ->  format_thistle_script_of_result(Result,String,[])
     ;	Th==triples
     ->	format_triples_without_postags_of_result(Result,Identifier)
     ;   Th==gerlof
@@ -1107,6 +1105,7 @@ end_hook(parse,_,_,String) :-
 	alpino_adt:result_to_adt(Result,Adt),
 	retractall(alpino_gen_suite:lf(Key,_)),
 	assertz(alpino_gen_suite:lf(Key,Adt))
+    ;   true
     ),
     (   Demo==on,
 	Th==best_score
