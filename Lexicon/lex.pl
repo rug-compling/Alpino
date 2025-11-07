@@ -327,6 +327,8 @@ next_word__(Suffix,[W,'-'|Ws],Ws,repair_within_word_conjunct,_) :-
     atom(W),
     atom_length(W,Len),
     Len > 2,
+    atom_codes(W,Codes),
+    all_alpha(Codes),
     atom_concat(W,'-',Suffix).
 
 %% treat ( Grand Slam-)toernooi as Grand Slam-toernooi
