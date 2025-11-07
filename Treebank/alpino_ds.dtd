@@ -3,6 +3,11 @@
 <!-- Alpino Dependency Structures DTD -->
 
 <!--
+Versie 1.17 per november 2025
+
+- feature PronType for UD, added possible values: Art Neg Tot
+- new features for UD: ExtPos Mood
+
 Versie 1.16 per februari 2023
  - is_np
  - is_vorfeld, is_nachfeld
@@ -73,11 +78,13 @@ Abbr		(Yes)				#IMPLIED
 Case		(Nom|Acc|Gen|Dat)		#IMPLIED
 Definite	(Def|Ind)			#IMPLIED
 Degree		(Pos|Cmp|Sup)			#IMPLIED
+ExtPos (ADJ|ADP|ADV|AUX|CCONJ|DET|INTJ|PRON|PROPN|SCONJ) #IMPLIED
 Foreign		(Yes)				#IMPLIED
 Gender		CDATA			        #IMPLIED
+Mood            (Ind|Imp|Sub)                   #IMPLIED
 Number		(Sing|Plur)			#IMPLIED
 Person		(1|2|3)				#IMPLIED
-PronType	(Prs|Rcp|Int|Dem|Ind|Rel)	#IMPLIED
+PronType (Art|Dem|Ind|Int|Neg|Prs|Rcp|Rel|Tot)  #IMPLIED
 Reflex		(Yes)				#IMPLIED
 Tense		(Past|Pres)			#IMPLIED
 VerbForm	(Fin|Inf|Part)			#IMPLIED
