@@ -7476,13 +7476,32 @@ with_dt([Een,mits],
 	      ])) :-
     een(Een).
 
-
-
 with_dt([Jong,en,Oud],
 	pronoun(nwh,thi,both,de,both,indef,strpro),
 	dt(conj,[crd=l(en,conj(en),vg,1,2),
 		 cnj=l(Jong,adjective(no_e(adv)),ap,0,1),
 		 cnj=l(Oud,adjective(no_e(adv)),ap,2,3)])) :-
+    jong_en_oud(Jong,Oud).
+
+with_dt([Oud,en,Jong],
+	pronoun(nwh,thi,both,de,both,indef,strpro),
+	dt(conj,[crd=l(en,conj(en),vg,1,2),
+		 cnj=l(Oud,adjective(no_e(adv)),ap,0,1),
+		 cnj=l(Jong,adjective(no_e(adv)),ap,2,3)])) :-
+    jong_en_oud(Jong,Oud).
+
+with_dt([Jong,of,Oud],
+	pronoun(nwh,thi,both,de,both,indef,strpro),
+	dt(conj,[crd=l(of,conj(of),vg,1,2),
+		 cnj=l(Jong,adjective(no_e(adv)),ap,0,1),
+		 cnj=l(Oud,adjective(no_e(adv)),ap,2,3)])) :-
+    jong_en_oud(Jong,Oud).
+
+with_dt([Oud,of,Jong],
+	pronoun(nwh,thi,both,de,both,indef,strpro),
+	dt(conj,[crd=l(en,conj(of),vg,1,2),
+		 cnj=l(Oud,adjective(no_e(adv)),ap,0,1),
+		 cnj=l(Jong,adjective(no_e(adv)),ap,2,3)])) :-
     jong_en_oud(Jong,Oud).
 
 with_dt([zowel,Jong,als,Oud],
@@ -7493,18 +7512,21 @@ with_dt([zowel,Jong,als,Oud],
 		 cnj=l(Oud,adjective(no_e(adv)),ap,3,4)])) :-
     jong_en_oud(Jong,Oud).
 
-jong_en_oud(J,O) :-
-    jong_en_oud1(J,O).
-jong_en_oud(J,O) :-
-    jong_en_oud1(O,J).
+with_dt([zowel,Oud,als,Jong],
+	pronoun(nwh,thi,both,de,both,indef,strpro),
+	dt(conj,[crd=l(zowel,left_conj(als),vg,0,1),
+		 cnj=l(Oud,adjective(no_e(adv)),ap,1,2),
+		 crd=l(als,right_conj(als),vg,2,3),
+		 cnj=l(Jong,adjective(no_e(adv)),ap,3,4)])) :-
+    jong_en_oud(Jong,Oud).
 
-jong_en_oud1(echt,onecht).
-jong_en_oud1(groot,klein).
-jong_en_oud1(hard,zacht).
-jong_en_oud1(hoog,laag).
-jong_en_oud1(jong,oud).
-jong_en_oud1(oud,nieuw).
-jong_en_oud1(rijp,groen).
+jong_en_oud(echt,onecht).
+jong_en_oud(groot,klein).
+jong_en_oud(hard,zacht).
+jong_en_oud(hoog,laag).
+jong_en_oud(jong,oud).
+jong_en_oud(oud,nieuw).
+jong_en_oud(rijp,groen).
 
 with_dt([des,Doods],
 	determiner(pron),
@@ -9065,6 +9087,7 @@ term([big,deal]).
 term([big,government]).
 term([big,thing]).
 term([billing,contact]).
+term(binge).
 term([black,box]).
 term([black,spot]).
 term([blind,date]).

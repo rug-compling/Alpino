@@ -1473,6 +1473,7 @@ with_dt_all(echt,[het,in,veel]).
 with_dt_all(echt,[ik]).
 with_dt_all(echt,[niet]).
 with_dt_all(echt,[niet,overal]).
+with_dt_all(echt,[of,onecht]).
 with_dt_all(ede,[onder]).
 with_dt_all(een,[een,een,een,man,man,woord,woord]).
 with_dt_all(een,[handvol]).
@@ -1668,8 +1669,10 @@ with_dt_all(goed,[mij]).
 with_dt_all(graag,[niet]).
 with_dt_all(graag,[niet,of]).
 with_dt_all(grabbel,[te]).
+with_dt_all(groen,[of,rijp]).
 with_dt_all(groot,[het,in]).
 with_dt_all(groot,[het,in,veel]).
+with_dt_all(groot,[klein,of]).
 with_dt_all(grootmoeder,[haar]).
 with_dt_all(grootmoeder,[hun]).
 with_dt_all(grootmoeder,[je]).
@@ -1706,6 +1709,7 @@ with_dt_all(haar,[zuster]).
 with_dt_all(haast,[meteen]).
 with_dt_all(haast,[onmiddellijk]).
 with_dt_all(haast,[uitsluitend]).
+with_dt_all(hard,[of,zacht]).
 with_dt_all(hard,[om]).
 with_dt_all(haren,[huize,te]).
 with_dt_all(haren,[laste,te]).
@@ -1768,6 +1772,7 @@ with_dt_all(hoever,[in]).
 with_dt_all(hoeverre,[in]).
 with_dt_all(hoever,[tot]).
 with_dt_all(hoever,[voor]).
+with_dt_all(hoog,[laag,of]).
 with_dt_all(hoog,[of]).
 with_dt_all(hoop,[ik]).
 with_dt_all(hoor,[voor,wat,wat]).
@@ -1866,6 +1871,7 @@ with_dt_all(je,[vriendin]).
 with_dt_all(je,[weet]).
 with_dt_all(je,[zuster]).
 with_dt_all(jong,[of]).
+with_dt_all(jong,[of,oud]).
 with_dt_all(jongsaf,[sinds]).
 with_dt_all(jongsaf,[van]).
 with_dt_all(jou,[man]).
@@ -2131,6 +2137,7 @@ with_dt_all(niet,[zeker]).
 with_dt_all(niet,[zelden]).
 with_dt_all(niet,[zonder]).
 with_dt_all(niet,[zozeer]).
+with_dt_all(nieuw,[of,oud]).
 with_dt_all(nieuw,[stijl]).
 with_dt_all('\'n',[miljard,paar]).
 with_dt_all('\'n',[miljoen]).

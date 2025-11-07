@@ -5216,6 +5216,7 @@ not_a_genitive_name('Chris').
 not_a_genitive_name('Els').
 not_a_genitive_name('Frans').
 not_a_genitive_name('Hans').
+not_a_genitive_name('Is').
 not_a_genitive_name('Jacques').
 not_a_genitive_name('Joris').
 not_a_genitive_name('Jos').

@@ -3382,6 +3382,7 @@ v(betreed,betreedt,betreden,betreden,betrad,betraden,
 
 v(betref,betreft,betreffen,betroffen,betrof,betroffen,
     [h([transitive,
+	sbar,       %% hun kritiek betreft dat ...
 	cleft])]).  %% ?? het betreffen NP[pl].
 
 v(betrek,betrekt,betrekken,betrokken,betrok,betrokken,
