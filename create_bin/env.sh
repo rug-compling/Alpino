@@ -33,10 +33,10 @@ then
     echo
     echo Please set the environment variable ALPINO_HOME
     echo
-elif [ ! -x "$a/bin/AlpinoCheck" ]
+elif [ ! -x "$a/bin/folia2alpino.py" ]
 then
     echo
-    echo '$ALPINO_HOME/bin/AlpinoCheck is not executable'
+    echo '$ALPINO_HOME/bin/folia2alpino.py is not executable'
     echo 'Did you set ALPINO_HOME correctly?'
     echo
 elif [ "$ALPINO_SET" = "" ]
