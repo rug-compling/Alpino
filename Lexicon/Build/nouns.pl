@@ -20331,7 +20331,7 @@ n([pl(legers),sg(leger)],het,[measure],
 n([pl(legers),sg(leger)],het,[],
   [s(bevrijding),
    expeditie,
-   guerilla,
+   guerrilla,
    s(regering),
    dim(legertje)]).
 
