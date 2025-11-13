@@ -35,11 +35,6 @@ default_testN_options=-testN stop_if_optimal=off user_max=900000 max_sentence_le
 ovistrain_testN_options=-flag treebank ../Treebank/ovis
 oviswg_testN_options=-flag treebank ../Treebank/ovis
 wpspel_testN_options=-flag treebank ../Treebank/wpspel
-g_suite_options=robustness=off
-h_suite_options=robustness=off
-i_suite_options=robustness=off
-j_suite_options=robustness=off
-
 
 lassysmall_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/LassySmall stop_if_optimal=on
 
