@@ -42508,7 +42508,10 @@ n([mass(wrongel)],de,[]).
 
 n([sg(wurm),pl(wurmen)],both,[]).
 
-n([meas(x)],de,[temp_mod]).
+n([meas(x)],de,
+  [temp_mod,
+   np_measure
+  ]).
 
 n([pl('x\'en'),sg(x)],de,[]).
 

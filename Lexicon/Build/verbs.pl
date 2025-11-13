@@ -17688,6 +17688,7 @@ v(positioneer,positioneert,positioneren,gepositioneerd,positioneerde,
   positioneerden,
     [h([transitive,
         np_ld_pp,
+	ap_pred_np,
         als_pred_np])]).
     
 
