@@ -5,10 +5,17 @@ Alpino parser and related tools for Dutch
 
 The choice is between
 
-* binary installation from tar.gz
 * Docker image
+* binary installation from tar.gz
+
+For the brave:
 * source installation with SWI-Prolog 6.6.4
 * source installation with SICStus Prolog 3.11.12
+
+## Docker
+
+There is also a Docker image available with Alpino and related tools.
+Refer to https://github.com/rug-compling/alpino-docker
 
 ## binary installation
 
@@ -52,9 +59,4 @@ ensure that the environment variable ALPINO_HOME points to the right directory, 
     make install
 
 In order to build the Tokenization/partok tool, you need Go.
-
-## Docker
-
-There is also a Docker image available with Alpino and related tools.
-Refer to https://github.com/rug-compling/alpino-docker
 
