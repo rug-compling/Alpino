@@ -42774,7 +42774,7 @@ n([pl(zegeningen),sg(zegening)],de,[sbar,vp]).
 
 n([sg(zegge),pl(zeggen),pl(zegges)],de,[]).
 
-n([mass(zeggenschap)],de,[]).
+n([mass(zeggenschap)],de,[pred_pp(onder)]).
 
 n([pl(zegslieden),pl(zegslui),sg(zegsman)],de,[]).
 
