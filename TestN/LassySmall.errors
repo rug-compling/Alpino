@@ -1674,7 +1674,7 @@ WR-P-E-H-0000000062.p.41.s.3                 modifier to the right of extraposed
 WR-P-E-I-0000000004.p.10.s.1                 ?
 WR-P-E-I-0000000006.p.6.s.5                  gapping
 WR-P-E-I-0000000332.p.4.s.314                spelling "zin" ipv "zijn" 
-WR-P-E-I-0000006366.p.8.s.148                guides
+WR-P-E-I-0000006366.p.8.s.148 		     DONE guides
 WR-P-E-I-0000011406.p.4.s.54.2               extraposed CNJ 
 WR-P-E-I-0000013937.p.4.s.6                  spelling ? "er toe" --> "ertoe" 
 WR-P-E-I-0000013937.p.4.s.70                 als...  dan maar NP 
@@ -2772,7 +2772,7 @@ dpc-bmm-001111-nl-sen.p.7.s.3		     PP extracted from NP , "X waarvan het gebrui
 dpc-cam-001019-nl-sen.p.3.s.1		     ? 
 dpc-cam-001021-nl-sen.p.16.s.1		     English part of sent 
 dpc-cam-001279-nl-sen.p.7.s.7		     gapping 
-dpc-cam-001284-nl-sen.p.11.s.1		     DONE guides
+dpc-cam-001284-nl-sen.p.11.s.1		     SU was predc[OTI]
 dpc-dns-001066-nl-sen.p.20.s.4		     " ' * ' characters " 
 dpc-dns-001068-nl-sen.p.2.s.1		     dp/dp nucl/sat 
 dpc-dns-001069-nl-sen.p.22.s.2		     gramm.err. "het domeinnaamhouder" 
@@ -3465,7 +3465,7 @@ dpc-cam-001019-nl-sen.p.9.s.5	 	     ?
 dpc-eli-000948-nl-sen.p.24.s.1	 	     ?
 dpc-eup-000015-nl-sen.p.24.s.2	 	     compl.conj.
 dpc-eup-000019-nl-sen.p.6.s.1	 	     gapping
-dpc-fsz-000543-nl-sen.p.16.s.2	 	     DONE
+dpc-fsz-000543-nl-sen.p.16.s.2	 	     TODO
 dpc-fsz-000543-nl-sen.p.192.s.1	 	     ?
 dpc-fsz-000543-nl-sen.p.252.s.1	 	     ?
 dpc-fsz-000551-nl-sen.p.32.s.2	 	     conj in conj
@@ -3477,14 +3477,14 @@ dpc-ind-001646-nl-sen.p.12.s.2	 	     2x PP topic?
 dpc-ind-001648-nl-sen.p.12.s.6	 	     het PER ("het Russischer klinkende Kasparov")
 dpc-ind-001648-nl-sen.p.15.s.3	 	     extraposed APP 
 dpc-ind-001649-nl-sen.p.16.s.1	 	     ?
-dpc-ind-001650-nl-sen.p.16.s.2	 	     DONE
+dpc-ind-001650-nl-sen.p.16.s.2	 	     TODO
 dpc-ind-001651-nl-sen.p.6.s.4	 	     unexpected question mark
 dpc-ind-001652-nl-sen.p.25.s.4	 	     wrong control "verzoeken te worden vrijgelaten"
 dpc-med-000685-nl-sen.p.39.s.2	 	     ? (7)
 dpc-qty-000929-nl-sen.p.10.s.7	 	     sat/nucl nucl/sat
 dpc-qty-000931-nl-sen.p.25.s.2	 	     where to attach stuff between '-'
 dpc-rou-000480-nl-sen.p.9.s.3	 	     sat/nucl nucl/sat
-dpc-rou-000485-nl-sen.p.12.s.2	 	     DONE
+dpc-rou-000485-nl-sen.p.12.s.2	 	     DONE DONE
 dpc-rou-000485-nl-sen.p.8.s.5	 	     DONE
 dpc-rou-000983-nl-sen.p.9.s.4	 	     telegram NP "zie illustratie flesjes"
 dpc-rou-000984-nl-sen.p.2.s.3	 	     DONE
@@ -3738,11 +3738,11 @@ WR-P-P-C-0000000051.txt-323	gapping (rnr)
 WR-P-P-C-0000000052.txt-122	spelling "voor voor" => "voor" 
 WR-P-P-C-0000000031.txt-223	conform-PP is PREDC? 
 dpc-cam-001282-nl-sen.p.8.s.2	guides gapping 
-dpc-rou-000349-nl-sen.p.2.s.17	bguides/tagger 
+dpc-rou-000349-nl-sen.p.2.s.17	guides/tagger
 WR-P-E-I-0000013937.p.4.s.189 	DONE
 WR-P-P-C-0000000051.txt-277 	absolute met "met NP PP"?
 WR-P-P-L-0000000001.p.225.s.1 	?
-WS-U-E-A-0000000225.p.28.s.3 	guides?
+WS-U-E-A-0000000225.p.28.s.3 	DONE guides
 dpc-bmm-001097-nl-sen.p.7.s.2 	timeout/tagger? "tot" as conj
 WR-P-P-L-0000000001.p.80.s.1 	?
 WR-P-P-L-0000000001.p.175.s.1 	?
@@ -3754,20 +3754,21 @@ WR-P-E-I-0000039081.p.1.s.155.2		dp/dp sat/nucl
 WR-P-E-I-0000032165.p.5.s.60		?
 WS-U-E-A-0000000035.p.3.s.24		DONE
 WS-U-E-A-0000000237.p.4.s.10		spelling "vervrooegd"
-WR-P-E-I-0000050381.p.1.s.450		?
-WR-P-E-J-0000000012.p.2.s.1 		NEW
+WR-P-E-I-0000050381.p.1.s.450		DONE
+WR-P-E-J-0000000012.p.2.s.1 		tagger after timeout?
 WR-P-P-L-0000000001.p.115.s.8 		NEW
 WS-U-E-A-0000000218.p.14.s.5		DONE
 WS-U-E-A-0000000230.p.31.s.2		DONE
 wiki-1532.p.17.s.1			"Brons" as mod of NP
-WR-P-P-H-0000000064.p.8.s.2 		"gekleed" guides temp
-WR-P-E-I-0000039352.p.3.s.211 		NEW gekleed
+WR-P-P-H-0000000064.p.8.s.2 		DONE guides
+WR-P-E-I-0000039352.p.3.s.211 		DONE guides
 WR-P-E-I-0000024561.p.4.s.48 		NEW (tagger after timeout?)
-WR-P-P-C-0000000011.p.39.s.1 		NEW "in het algemeen"	
-WR-P-P-H-0000000023.p.20.s.3 		NEW
-WR-P-P-I-0000000231.p.5.s.1 		NEW
+WR-P-P-C-0000000011.p.39.s.1 		DONE guides
+WR-P-P-H-0000000023.p.20.s.3 		topicalization of VC[ppart]
+WR-P-P-I-0000000231.p.5.s.1 		DONE
 WS-U-E-A-0000000032.p.41.s.1		timeout tagger?
 WR-P-E-E-0000000020.p.5.s.4 		compl. conj.
 WR-P-E-I-0000086197.p.1.s.57		extraction from copula_np "te groot om in de kerk kwijt te kunnen"
-dpc-rou-000481-nl-sen.p.8.s.1 		NEW
-wiki-737.p.13.s.1 			NEW
+dpc-rou-000481-nl-sen.p.8.s.1 		DONE
+wiki-737.p.13.s.1 			DONE
+wiki-135.p.93.s.1 			DONE

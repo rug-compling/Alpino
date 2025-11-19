@@ -2309,7 +2309,7 @@ a([ge_e(afgedankte),
    ge_no_e(afgedankt)],adv,[],[]).
 
 a([ge_e(afgedekte),
-   ge_no_e(afgedekt)],adv,[],[]).
+   ge_no_e(afgedekt)],adv,[pp(met)],[]).
 
 a([ge_e(afgedraaide),
    ge_no_e(afgedraaid)],adv,[],[]).

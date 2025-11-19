@@ -3005,7 +3005,6 @@ collocational_preposition([op,initiatief,van]).
 %%% collocational_preposition([op,jacht,naar]).
 collocational_preposition([op,kosten,van]).
 collocational_preposition([op,last,van]).
-collocational_preposition([op,naam,van]).
 collocational_preposition([op,straffe,van]).
 collocational_preposition([op,uitnodiging,van]).
 collocational_preposition([op,verdenking,van]).
