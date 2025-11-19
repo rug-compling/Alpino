@@ -5124,9 +5124,9 @@ grammar_rule(n_n_npapp, NP, [ APP_N, N ]) :-
     NP:nform <=> N:nform,  % tientallen keren
     N:e_deps => [],
     N:pred => npred,
-    N:subn => ~sub_name & ~sub_num & ~sub_def_verb,
+%%    N:subn => ~sub_name & ~sub_num & ~sub_def_verb,
+    N:subn =>  ~sub_num & ~sub_def_verb,   % 30.510 km2 ( 0.9 x Nederland )
     NP:subn => sub_noun,
-    N:subn => ~sub_name,
     hd_mod_structure(APP_N,N,NP).
 
 %%EX%% het woord fietsen

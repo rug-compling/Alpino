@@ -26,7 +26,6 @@ all: $(GUIDES)
 install: 
 	install -D Alpino ../bin/
 	install -D Alpino $(BINDIR)
-	install -D Alpino.man $(MANDIR)/man1/Alpino.1
 
 ## always re-builds, can be dependent on env. variables:
 .PHONY: AlpinoNS Alpino

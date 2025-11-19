@@ -790,7 +790,6 @@ m(v_root(heb,hebben),
 	fixed([[gemeen],acc],no_passive),
 	fixed([[gemeen],pc(met),sbar],no_passive),
 	fixed([[gemeen],{[acc,pc(met)]}],no_passive),
-	fixed([[het,laatste,woord]],no_passive),
 	fixed([[voor,het,zeggen],het_obj1],no_passive),
 	fixed([[iets],van_sbar],no_passive),
 	fixed([[zoiets],van_sbar],no_passive),
@@ -17689,6 +17688,7 @@ v(positioneer,positioneert,positioneren,gepositioneerd,positioneerde,
   positioneerden,
     [h([transitive,
         np_ld_pp,
+	ap_pred_np,
         als_pred_np])]).
     
 

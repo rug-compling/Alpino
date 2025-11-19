@@ -31,10 +31,10 @@
           </node>
           <node begin="13" end="14" id="23" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
           <node begin="14" end="15" id="24" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
-          <node begin="15" cat="mwu" end="18" id="25" rel="svp">
-            <node begin="15" end="16" id="26" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="fixed" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
-            <node begin="16" buiging="met-e" end="17" graad="sup" id="27" lemma="laat" naamval="stan" pos="fixed" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mwp" root="laatste" word="laatste"/>
-            <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="28" lemma="woord" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="woord" word="woord"/>
+          <node begin="15" cat="np" end="18" id="25" rel="obj1">
+            <node begin="15" end="16" id="26" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="fixed" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="16" buiging="met-e" end="17" graad="sup" id="27" lemma="laat" naamval="stan" pos="fixed" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="laatste" word="laatste"/>
+            <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="28" lemma="woord" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="woord" word="woord"/>
           </node>
           <node begin="18" end="19" id="29" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
         </node>

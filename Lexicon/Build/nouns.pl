@@ -20331,7 +20331,7 @@ n([pl(legers),sg(leger)],het,[measure],
 n([pl(legers),sg(leger)],het,[],
   [s(bevrijding),
    expeditie,
-   guerilla,
+   guerrilla,
    s(regering),
    dim(legertje)]).
 
@@ -42508,7 +42508,10 @@ n([mass(wrongel)],de,[]).
 
 n([sg(wurm),pl(wurmen)],both,[]).
 
-n([meas(x)],de,[temp_mod]).
+n([meas(x)],de,
+  [temp_mod,
+   np_measure
+  ]).
 
 n([pl('x\'en'),sg(x)],de,[]).
 

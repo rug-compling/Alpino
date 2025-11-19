@@ -3,6 +3,11 @@
 <!-- Alpino Dependency Structures DTD -->
 
 <!--
+
+Versie 1.18 per november 2025
+
+- feature PronType for UD, added possible values: Emp Exc
+
 Versie 1.17 per november 2025
 
 - feature PronType for UD, added possible values: Art Neg Tot
@@ -73,21 +78,22 @@ wvorm		(pv|inf|od|vd)								#IMPLIED
 " >
 
 <!-- mogelijke waardes voor Gender: 'Com' 'Neut' 'Com,Neut' dus CDATA dan maar... -->
+<!-- zie https://universaldependencies.org/u/feat/ -->
 <!ENTITY % feats "
-Abbr		(Yes)				#IMPLIED
-Case		(Nom|Acc|Gen|Dat)		#IMPLIED
-Definite	(Def|Ind)			#IMPLIED
-Degree		(Pos|Cmp|Sup)			#IMPLIED
-ExtPos (ADJ|ADP|ADV|AUX|CCONJ|DET|INTJ|PRON|PROPN|SCONJ) #IMPLIED
-Foreign		(Yes)				#IMPLIED
-Gender		CDATA			        #IMPLIED
-Mood            (Ind|Imp|Sub)                   #IMPLIED
-Number		(Sing|Plur)			#IMPLIED
-Person		(1|2|3)				#IMPLIED
-PronType (Art|Dem|Ind|Int|Neg|Prs|Rcp|Rel|Tot)  #IMPLIED
-Reflex		(Yes)				#IMPLIED
-Tense		(Past|Pres)			#IMPLIED
-VerbForm	(Fin|Inf|Part)			#IMPLIED
+Abbr		(Yes)							#IMPLIED
+Case		(Nom|Acc|Gen|Dat)					#IMPLIED
+Definite	(Def|Ind)						#IMPLIED
+Degree		(Pos|Cmp|Sup)						#IMPLIED
+ExtPos		(ADJ|ADP|ADV|AUX|CCONJ|DET|INTJ|PRON|PROPN|SCONJ)	#IMPLIED
+Foreign		(Yes)							#IMPLIED
+Gender		CDATA							#IMPLIED
+Mood		(Ind|Imp|Sub)						#IMPLIED
+Number		(Sing|Plur)						#IMPLIED
+Person		(1|2|3)							#IMPLIED
+PronType	(Art|Dem|Emp|Exc|Ind|Int|Neg|Prs|Rcp|Rel|Tot)		#IMPLIED
+Reflex		(Yes)							#IMPLIED
+Tense		(Past|Pres)						#IMPLIED
+VerbForm	(Fin|Inf|Part)						#IMPLIED
 " >
 
 <!ENTITY % upos "

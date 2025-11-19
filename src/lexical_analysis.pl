@@ -3037,7 +3037,7 @@ second_part_lemma(man,noun(_,_,_)).
 second_part_lemma(elite,noun(_,_,_)).
 second_part_lemma(vormig,adjective(_)).
 second_part_lemma(school,noun(_,_,_)).
-second_part_lemma(deskundig,nominalized_adjective).
+second_part_lemma(deskundig,noun(_,_,_)).
 
 first_alternative_to_compound(R0,R1) :-
     search_tag_r0(R0,tag(_,_,R0,R1,_,_,_,Tag)),
