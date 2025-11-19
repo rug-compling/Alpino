@@ -13,7 +13,7 @@
 
 ## TrEd
 
-in http://www.let.rug.nl/vannoord/alp/Alpino/tred/ na upgrade van dtd
+In http://www.let.rug.nl/vannoord/alp/Alpino/tred/ na upgrade van dtd
 
 `alpino_full/package.xml` :
 
@@ -32,6 +32,17 @@ Twee manieren om bij te werken naar laatste versie van alud:
     make -C /net/homepages/vannoord/www/bin/cmd/conllu_svg upgrade
 
     curl -L https://urd2.let.rug.nl/~vannoord/bin/make
+
+
+## Alpino in Docker
+
+`alpino-in-docker/build/macros.txt`
+
+Zie tekst `## DEP:ALPINODS`
+
+Gewoonlijk:
+
+    make step0
 
 
 ## Overigen
