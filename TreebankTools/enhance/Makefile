@@ -6,3 +6,9 @@ install:
 enhance: *.go go.mod
 	go build .
 
+go.mod: dummy
+	go get -u github.com/rug-compling/alud/v2
+	go mod tidy
+
+.PHONY: dummy
+dummy:
