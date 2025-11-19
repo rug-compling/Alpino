@@ -1,6 +1,6 @@
 module local.home/enhance
 
-go 1.20
+go 1.18
 
 require (
 	github.com/pebbe/util v0.9.0
