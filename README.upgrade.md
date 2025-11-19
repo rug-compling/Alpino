@@ -1,5 +1,20 @@
 # Afhankelijkheden van alud en alpinods
 
+Afhankelijkheden zoeken in Go-programma's:
+
+    rg 'alud|alpinods' -g go.mod
+
+Upgrade van sources met alud:
+
+    go get -u github.com/rug-compling/alud/v2
+    go mod tidy
+
+Upgrade van sources met alpinods, maar zonder alud:
+
+    go get -u github.com/rug-compling/alpinods
+    go mod tidy
+
+
 ## Alpino
 
 `alpino_ds.dtd` :
@@ -29,8 +44,7 @@ in http://www.let.rug.nl/vannoord/alp/Alpino/tred/ na upgrade van dtd
 
 Twee manieren om bij te werken naar laatste versie van alud:
 
-```
-make -C /net/homepages/vannoord/www/bin/cmd/conllu_svg upgrade
+    make -C /net/homepages/vannoord/www/bin/cmd/conllu_svg upgrade
 
-curl -L https://urd2.let.rug.nl/~vannoord/bin/make
-```
+    curl -L https://urd2.let.rug.nl/~vannoord/bin/make
+
