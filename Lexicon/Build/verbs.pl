@@ -356,6 +356,8 @@ m(v_root(ben,zijn),
 	    fixed([{[pc(voor),subj(aandacht)]}],no_passive),
 	    fixed([{[pc(tot),subj(aanleiding)]}],no_passive),
 	    fixed([{[pc(voor),subj(aanleiding)]}],no_passive),
+	    fixed([{[pc(tot),np_pred(aanleiding)]}],no_passive),
+	    fixed([{[pc(voor),np_pred(aanleiding)]}],no_passive),
             fixed([{[pc(van),subj(afgeleide)]}],no_passive),
 	    fixed([{[pc(voor),subj(afkorting)]}],no_passive),
 	    fixed([pc(voor),np_pred(afkorting)],no_passive),
@@ -19654,12 +19656,13 @@ v(scheep,scheept,schepen,gescheept,scheepte,scheepten,
 	part_np_pc_pp(op,met)])]).
 
 v(scheer,scheert,scheren,gescheerd,scheerde,scheerden,
-    [z([ld_pp,
-	part_refl(weg)])]).  % scheer je weg
+  [z([ld_pp,
+      part_refl(weg)])]).	% scheer je weg
 
 v(scheer,scheert,scheren,[geschoren,gescheerd],
   [schoor,scheerde],[schoren,scheerden],
     [h([np_np,
+	ap_pred_np,
 	transitive,
 	fixed([[over,een,kam],acc],norm_passive),
 	fixed([[over,één,kam],acc],norm_passive),

@@ -14865,7 +14865,8 @@ a([ge_e(geschopte),
    ge_no_e(geschopt)],adv,[],[]).
 
 a([ge_both(geschoren)],both,
-  [part(kaal)],
+  [ap_pred,
+   part(kaal)],
   [glad,
    kaal,
    on]).
