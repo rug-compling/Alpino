@@ -9051,10 +9051,13 @@ anom_org(bedrijf).
     term/1,
     term/2.
 
+term('3D').
 term([accident,de,parcours],     [accidents,de,parcours]).
 term([accumulate]).
 term([air,support]).
 term([alive,and,kicking]).
+term([alive,en,kicking]).
+term([alive,'&',kicking]).
 term([all,in,the,game]).
 term([all,time,favorite],        [all,time,favorites]).
 term([all,time,favourite],       [all,time,favourites]).
@@ -9114,6 +9117,8 @@ term([chambre,'d\'hôtes']).
 term([champignons,de,'Paris']).
 term([chapelle,ardente]).
 term([checks,and,balances]).
+term([checks,en,balances]).
+term([checks,'&',balances]).
 term([chill,out]).
 term([circumstantial,evidence]).
 term([cliff,hanger]).
@@ -9145,6 +9150,7 @@ term([deus,ex,machina]).
 term(['director\'s',cut]).
 term([dolce,far,niente]).
 term([drag,and,drop]).
+term([drag,en,drop]).
 term([drag,'&',drop]).
 term([dramatis,personae]).
 term([drive,through,penalty],[drive,through,penalties]).
@@ -9180,9 +9186,15 @@ term([full,colour]).
 term([gallery,play]).
 term([game,set,and,match]).
 term([game,',',set,and,match]).
+term([game,set,en,match]).
+term([game,',',set,en,match]).
+term([game,set,'&',match]).
+term([game,',',set,'&',match]).
 term([gefundenes,'Fressen']).
 term(['gentleman\'s',agreement]).
 term([glitter,and,glamour]).
+term([glitter,en,glamour]).
+term([glitter,'&',glamour]).
 term([global,village]).
 term([golden,parachute],[golden,parachutes]).
 term([golden,score]).
@@ -9197,8 +9209,12 @@ term([haute,cuisine]).
 term([haute,finance]).
 term(heartbeating).
 term([hell,of,a,job]).
+term([high,performance]).
+term('high-performance').
 term([himmelhoch,jauchzend]).
 term([hit,and,run]).
+term([hit,en,run]).
+term([hit,'&',run]).
 term([hold]).
 term([hot,news]).
 term([hot,stuff]).
@@ -9214,9 +9230,11 @@ term([jeune,premier]).
 term([jus,sanguinis]).
 term([jus,soli]).
 term([kick,and,rush]).
-term([kiss,'&',ride]).
+term([kick,en,rush]).
+term([kick,'&',rush]).
 term([kiss,and,ride]).
 term([kiss,en,ride]).
+term([kiss,'&',ride]).
 term(['l\'art',pour,'l\'art']).
 term([la,condition,humaine]).
 term([laisser,faire]).
@@ -9225,6 +9243,8 @@ term([last,in,',',first,out]).
 term([last,in,last,out]).
 term([last,in,',',last,out]).
 term([law,and,order]).
+term([law,en,order]).
+term([law,'&',order]).
 term([le,condition,humaine]).
 term([learning,curve]).
 term([lees,meer]).  % klik op lees meer
@@ -9244,6 +9264,8 @@ term([mea,culpa]).
 term([memento,mori]).
 term([ménage,à,trois]).
 term([meet,and,greet],[meet,and,greets]).
+term([meet,en,greet],[meet,en,greets]).
+term([meet,'&',greet],[meet,'&',greets]).
 term([method,acting]).
 term([middle,class]).
 term([middle,of,the,road]).
@@ -9286,6 +9308,8 @@ term([own,goal],[own,goals]).
 term([pais,en,vree]).
 term([peis,en,vree]).               % VL
 term([park,and,ride]).
+term([park,en,ride]).
+term([park,'&',ride]).
 term([pars,pro,toto]).
 term([part,of,the,deal]).
 term([pas,de,deux]).
@@ -9315,6 +9339,8 @@ term([raison,'d\'être']).
 term([raison,'d\'','être']).
 term([raison,'d\'être']).
 term([rank,and,file]).
+term([rank,en,file]).
+term([rank,'&',file]).
 term([real,audio]).
 term([reculer,pour,mieux,sauter]).
 term([reduce]).
@@ -9461,11 +9487,17 @@ term([zum,'Tode',betrübt]).
 term_pl([bad,guys]).
 term_pl([the,bad,guys]).
 term_pl(['do\'s',and,'don\'ts']).
+term_pl(['do\'s',en,'don\'ts']).
+term_pl(['do\'s','&','don\'ts']).
 term_pl([family,values]).
 term_pl([good,guys]).
 term_pl([the,good,guys]).
 term_pl([good,guys,and,bad,guys]).
+term_pl([good,guys,en,bad,guys]).
+term_pl([good,guys,'&',bad,guys]).
 term_pl([the,good,guys,and,the,bad,guys]).
+term_pl([the,good,guys,en,the,bad,guys]).
+term_pl([the,good,guys,'&',the,bad,guys]).
 term_pl([hard,feelings]).
 term_pl([happy,few]).
 term_pl([heat,shock,proteins]).

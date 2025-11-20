@@ -3440,6 +3440,17 @@ grammar_rule(vp_dip_vp2,VP1,[QR,Sv1,OPTCOMMA,QL,V]) :-
     LQ => yes,
     vp_dip_vp_structure(V,Sv1,VP1,LQ).
 
+%%EX%% " Ik denk , " zei Jan , " dat dit niet mogelijk is "
+grammar_rule(vp_dip_vp3,VP1,[COMMAL,QR,Sv1,COMMAR,OPTQL,V]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    qr(QR),
+    optql(OPTQL),
+    comma(COMMAL),
+    comma(COMMAR),
+    Sv1 => dip,
+    LQ => yes,
+    vp_dip_vp_structure(V,Sv1,VP1,LQ).
+
 %%EX%% Ik denk , ja , dat dit niet kan
 grammar_rule(vp_tag_vp1,VP1,[COMMAL,TAG,COMMAR,V]) :-
 %    hdrug_util:hdrug_flag(parse_or_generate,parse),

@@ -240,6 +240,10 @@ a([prefix(hardcore),
 
 a([prefix([high,end])],nonadv,[],[]).
 
+a([prefix([high,performance],
+	  'high-performance'
+	  )],nonadv,[],[]).
+
 a([prefix(horror)],nonadv,[],[]).
 
 a([prefix('houtje-touwtje'),
@@ -16478,8 +16482,7 @@ a([e(gezaghebbende),
 a([ge_e(gezakte),
    ge_no_e(gezakt)],adv,
   [pp(door),
-   pp(in),
-   fixed([[in,elkaar]]),
+   ld_pp,
    pp(naar)],[]).
 
 a([ge_e(gezalfde),

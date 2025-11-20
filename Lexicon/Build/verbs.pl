@@ -2131,6 +2131,7 @@ v(begrijp,begrijpt,begrijpen,begrepen,begreep,begrepen,
 	sbar,
 	sbar_obj,   % begrijp ik het goed dat hij ...
 	transitive,
+	np_ld_pp, % die zijn daarin begrepen
 	part_transitive(mis),
 	np_pc_pp(van)])]).
 
@@ -11652,10 +11653,6 @@ v(knal,knalt,knallen,geknald,knalde,knalden,
 	part_transitive(raak)]),
      b([ld_pp,
         np_ld_pp,
-        ap_copula('uit elkaar'),
-        ap_copula('in elkaar'),
-        ap_copula('uit mekaar'),
-        ap_copula('in mekaar'),
 	intransitive])]).
 
 v(knap,knapt,knappen,geknapt,knapte,knapten,

@@ -15325,6 +15325,8 @@ n([pl(herenhuizen),sg(herenhuis)],het,[]).
 
 n([pl(herenigingen),sg(hereniging)],de,[],[s(gezin)]).
 
+n([sg(herbivoor),pl(herbivoren)],de,[]).
+
 n([sg(herfst)],de,[temp_mod,sbar]).
 
 n([pl(hergroeperingen),sg(hergroepering)],de,[]).
