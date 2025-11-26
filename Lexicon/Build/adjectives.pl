@@ -18864,11 +18864,6 @@ a([pred([in,dubio])],padv,
   [subject_sbar,
    object_sbar],[]).
 
-a([pred([in,elkaar]),
-   pred(inelkaar)],nonadv,[],[]).
-
-a([pred([in,mekaar])],nonadv,[],[]).
-
 a([pred([in,gebruik])],padv,[],[]).
 
 a([pred([in,de,weer])],padv,
@@ -34210,10 +34205,6 @@ a([pred(uit)],adv,[],[]).
 
 a([pred([uit,den,boze])],nonadv,
   [subject_vp],[]).
-
-a([pred([uit,elkaar]),pred(uitelkaar)],nonadv,[],[]).
-
-a([pred([uit,mekaar])],nonadv,[],[]).
 
 a([ge_e(uitbestede),
    ge_no_e(uitbesteed)],padv,[],[]).
