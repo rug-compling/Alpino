@@ -9,9 +9,9 @@
       <node begin="2" end="3" id="5" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
       <node begin="0" cat="inf" end="6" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
-        <node begin="3" cat="mwu" end="5" id="8" rel="predc">
-          <node begin="3" end="4" id="9" lemma="uit" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="uit" vztype="init" word="uit"/>
-          <node begin="4" end="5" getal="mv" id="10" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="adj" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="mwp" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
+        <node begin="3" cat="pp" end="5" id="8" rel="ld">
+          <node begin="3" end="4" id="9" lemma="uit" pos="adj" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="4" end="5" getal="mv" id="10" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="adj" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
         </node>
         <node begin="5" buiging="zonder" end="6" id="11" lemma="spatten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spat" word="spatten" wvorm="inf"/>
       </node>

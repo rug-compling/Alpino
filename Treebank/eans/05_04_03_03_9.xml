@@ -7,9 +7,9 @@
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="menigte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="menigte" word="menigte"/>
       </node>
       <node begin="2" end="3" id="5" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
-      <node begin="3" cat="mwu" end="5" id="6" rel="predc">
-        <node begin="3" end="4" id="7" lemma="uit" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="uit" vztype="init" word="uit"/>
-        <node begin="4" end="5" getal="mv" id="8" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="adj" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="mwp" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
+      <node begin="3" cat="pp" end="5" id="6" rel="ld">
+        <node begin="3" end="4" id="7" lemma="uit" pos="adj" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+        <node begin="4" end="5" getal="mv" id="8" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="adj" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
       </node>
     </node>
     <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

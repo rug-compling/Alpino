@@ -32,9 +32,9 @@
         </node>
         <node begin="15" end="16" id="24" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
         <node begin="16" end="17" id="25" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
-        <node begin="17" cat="mwu" end="19" id="26" rel="predc">
-          <node begin="17" end="18" id="27" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="uit" vztype="init" word="uit"/>
-          <node begin="18" end="19" getal="mv" id="28" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="mwp" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
+        <node begin="17" cat="pp" end="19" id="26" rel="ld">
+          <node begin="17" end="18" id="27" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="18" end="19" getal="mv" id="28" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
         </node>
       </node>
     </node>

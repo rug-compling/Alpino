@@ -10,9 +10,9 @@
           <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="radio" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="radio" word="radio"/>
         </node>
-        <node begin="4" cat="mwu" end="6" id="9" rel="predc">
-          <node begin="4" end="5" id="10" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="uit" vztype="init" word="uit"/>
-          <node begin="5" end="6" getal="mv" id="11" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="mwp" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
+        <node begin="4" cat="pp" end="6" id="9" rel="ld">
+          <node begin="4" end="5" id="10" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="5" end="6" getal="mv" id="11" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
         </node>
         <node begin="6" buiging="zonder" end="7" id="12" lemma="halen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="haal" word="gehaald" wvorm="vd"/>
       </node>
