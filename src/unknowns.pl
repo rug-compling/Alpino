@@ -2258,6 +2258,7 @@ foreign_word(we).
 foreign_word(welcome).
 foreign_word(well).
 foreign_word(were).
+foreign_word(werden).
 foreign_word(what).
 foreign_word(whatever).
 foreign_word(when).
@@ -2269,6 +2270,7 @@ foreign_word(why).
 foreign_word(wild).
 foreign_word(will).
 foreign_word(win).
+foreign_word(wird).
 foreign_word(with).
 foreign_word(without).
 foreign_word(woman).
@@ -5011,7 +5013,8 @@ part_of_longest_match(Q) :-
     \+ normal_analysis(Q,P),
     \+ komma(P0,Q),
     \+ komma(Q,P),
-    \+ tag(_,Q,_,_,en,en,_,_).
+    \+ tag(_,Q,_,_,en,en,_,_),
+    \+ tag(_,Q,_,_,of,of,_,_).
 
 komma(P0,P) :-
     P1 is P-1,

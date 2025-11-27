@@ -1495,6 +1495,7 @@ gerund_frame_map(ap_copula,            ap_pred     ).
 gerund_frame_map(ap_copula(T),         ap_pred(T)  ).
 gerund_frame_map(nonp_copula,          pred        ).
 gerund_frame_map(copula,               pred        ).
+gerund_frame_map(als_copula,           als_pred    ).
 gerund_frame_map(so_copula,            pred_so_np  ).
 gerund_frame_map(so_nonp_copula,       pred_so_np  ).
 gerund_frame_map(so_ap_copula,         pred_so_np  ).

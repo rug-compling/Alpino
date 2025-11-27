@@ -5136,7 +5136,8 @@ grammar_rule(n_n_npapp, NP, [ APP_N, N ]) :-
     N:e_deps => [],
     N:pred => npred,
 %%    N:subn => ~sub_name & ~sub_num & ~sub_def_verb,
-    N:subn =>  ~sub_num & ~sub_def_verb,   % 30.510 km2 ( 0.9 x Nederland )
+%%    N:subn =>  ~sub_num & ~sub_def_verb,   % 30.510 km2 ( 0.9 x Nederland )
+    N:subn => ~sub_def_verb,  % twee maal 6-4
     NP:subn => sub_noun,
     hd_mod_structure(APP_N,N,NP).
 

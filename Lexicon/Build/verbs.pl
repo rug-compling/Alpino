@@ -5282,6 +5282,12 @@ v(confisqueer,confisqueert,confisqueren,geconfisqueerd,confisqueerde,
   confisqueerden,
     [h([transitive])]).
 
+v(conflicteer,conflicteert,conflicteren,geconflicteerd,conflicteerde,
+  conflicteerden,
+    [b([intransitive,
+	pc_pp(met)
+       ])]).
+
 v(conformeer,conformeert,conformeren,geconformeerd,conformeerde,conformeerden,
     [h([transitive,
 	refl_pc_pp(aan)])]).
@@ -22481,6 +22487,7 @@ v(stel,stelt,stellen,gesteld,stelde,stelden,
 	fixed([[in,kennis],{[acc,pc(van)]}],norm_passive),
 	fixed([[in,kennis],{[acc,er_pp(van,C)]},extra_sbar(C)],norm_passive),
 	fixed([[in,uitzicht],{[acc,dat]}],norm_passive),
+	fixed([[onder,bewijs],acc],norm_passive),
         fixed([[op,de,proef],acc],norm_passive),
 	fixed([[op,het,standpunt],refl,sbar],no_passive),
 	fixed([[op,'non-actief'],acc],norm_passive),  

@@ -2681,6 +2681,9 @@ a([ge_both(afgevallen)],adv,[],[]).
 a([ge_e(afgeveegde),
    ge_no_e(afgeveegd)],adv,[],[]).
 
+a([ge_e(afgevlakte),
+   ge_no_e(afgevlakt)],adv,[],[]).
+
 a([ge_e(afgevoerde),
    ge_no_e(afgevoerd)],adv,[],[]).
 

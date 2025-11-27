@@ -1481,6 +1481,7 @@ enforce_unique_match(H,Tag,H1,Tag1,MaxLarge,MaxSmall) :-
 	clause(tag(_,_,S0,S,_,_,H1,Tag1),true,Ref2),
 	S-S0 > MaxSmall,
 	part_of_interval(R0,R,S0,S),
+	\+ tag(_,_,_,S0,Of,Of,normal(normal),conj(Of)),   % don't remove second name in name CONJ name 
 	erase_tag(Ref2),
 	fail
     ;   var(MaxLarge),

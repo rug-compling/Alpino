@@ -39901,8 +39901,8 @@ n([pl(vluchten),
    ignore(m(vlucht,noun(de,count,sg),vlucht)),
    ignore(m(vluchten,noun(de,count,pl),vlucht))
    ],de,
-  [measure,
-   pred_pp(op)],[]).		% regenwulpen
+  [measure,  % regenwulpen
+   pred_pp(op)],[]).		
 
 n([pl(vluchten),sg(vlucht)],de,[temp_mod],
   [f([award]),
