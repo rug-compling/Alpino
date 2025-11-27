@@ -3811,6 +3811,11 @@ parse_only_lex(den,    de,     determiner(den)).
 parse_only_lex(nikske, niks,   meas_mod_noun(het,mass,sg)).
 parse_only_lex(nikske, niks,   meas_mod_noun(het,mass,sg,pred_pp(voor))).
 
+parse_only_lex(uitelkaar,'uit elkaar',loc_adverb).
+parse_only_lex(uitmekaar,'uit mekaar',loc_adverb).
+parse_only_lex(inelkaar, 'in elkaar', loc_adverb).
+parse_only_lex(inmekaar, 'in mekaar', loc_adverb).
+
 %% (Vlaamse) blog etc.
 parse_only_lex(em,     hem,    pronoun(nwh,thi,sg,de,dat_acc,def) ).
 parse_only_lex(goe,    goed,   adjective(no_e(adv))    ).
