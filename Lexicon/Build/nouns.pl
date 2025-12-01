@@ -4263,8 +4263,6 @@ n([pl(begroetingen),sg(begroeting)],de,[]).
 
 n([pl(begrotingen),sg(begroting)],de,[],[ontwerp,s(rijk)]).
 
-n([pl(begrotingstekorten),sg(begrotingstekort)],het,[]).
-
 n([pl('beha\'s'),sg(beha)],de,[]).
 
 n([mass(behagen)],het,[]).
@@ -5900,6 +5898,7 @@ n([pl(boeken),sg(boek)],het,[],
    draai,
    groen,
    kas,
+   i(last,lasten),
    log,
    telefoon,
    wet,
@@ -11411,9 +11410,7 @@ n([pl(expliciteringen),sg(explicitering)],de,[]).
 
 n([pl(exploitanten),sg(exploitant)],de,[],[kabel]).
 
-n([pl(exploitaties),sg(exploitatie)],de,[]).
-
-n([pl(exploitatietekorten),sg(exploitatietekort)],het,[]).
+n([pl(exploitaties),sg(exploitatie)],de,[],[grind]).
 
 n([pl(exploraties),sg(exploratie)],de,[]).
 
@@ -11877,8 +11874,6 @@ n([pl(financiën)],de,[],[s(overheid)]).
 n([pl(financiers),sg(financier)],de,[]).
 
 n([pl(financieringen),sg(financiering)],de,[]).
-
-n([mass(financieringstekort),pl(financieringstekorten),sg(financieringstekort)],het,[]).
 
 n([pl(finesses),sg(finesse)],de,[]).
 
@@ -14847,13 +14842,7 @@ n([pl(handelshuizen),sg(handelshuis)],het,[]).
 
 n([pl(handelsmerken),sg(handelsmerk)],het,[]).
 
-n([pl(handelsregisters),sg(handelsregister)],het,[]).
-
 n([pl(handelsreizigers),sg(handelsreiziger)],de,[]).
-
-n([pl(handelstekorten),sg(handelstekort)],het,[]).
-
-n([pl(handelsverdragen),sg(handelsverdrag)],het,[]).
 
 n([pl(handelwijzen),sg(handelwijs),sg(handelwijze)],de,[]).
 
@@ -16182,7 +16171,7 @@ n([sg(huurwaardeforfait)],het,[]).
 n([pl(huurlingen),sg(huurling)],de,[]).
 
 n([pl(huwelijken),sg(huwelijk)],het,[],
-  [homo,
+  [homo,h(homo),
    schijn]).
 
 n([pl(huwelijksgemeenschappen),sg(huwelijksgemeenschap)],de,[]).
@@ -17616,6 +17605,7 @@ n([pl(kabels),sg(kabel)],de,[],
    i(elektriciteit,electriciteits),
    internet,
    netwerk,
+   staal,
    s(toelevering)
   ]).
 
@@ -22419,6 +22409,7 @@ n([pl(medestudenten),sg(medestudent)],de,[]).
 n([pl(medewerkers),sg(medewerker)],de,[app_measure],
   [s(beleid),
    i(land,landen),
+   paleis,
    spoorweg]).
 
 n([mass(medewerking)],de,[]).
@@ -30267,6 +30258,7 @@ n([pl(regisseuses),sg(regisseuse)],de,[]).
 
 n([pl(registers),sg(register)],het,[],
   [condoleance,
+   s(handel),
    rouw,
    monument,
    i(rijk_monument,rijksmonumenten),
@@ -31062,7 +31054,7 @@ n([pl(romers),sg(romer)],de,[],[dim(romertje)]).
 
 n([mass(rommel)],de,[],[dim(rommeltje)]).
 
-n([pl(rompen),sg(romp)],de,[]).
+n([pl(rompen),sg(romp)],de,[],i(schip,scheeps)).
 
 n([mass(rompslomp)],de,[]).
 
@@ -32028,6 +32020,7 @@ n([pl(scholen),sg(school)],de,[np_app_measure],
    s(rijk),
    sport,
    toneel,
+   tuinbouw,
    tussen,
    s(volk),
    dim(schooltje)]).
@@ -32486,7 +32479,7 @@ n([pl(sera),pl(serums),sg(serum)],het,[]).
 
 n([pl(serveersters),sg(serveerster)],de,[]).
 
-n([sg(server),pl(servers)],de,[]).
+n([sg(server),pl(servers)],de,[],[name]).
 
 n([pl(servetten),sg(servet)],het,[]).
 
@@ -32508,7 +32501,8 @@ n([mass(sesamolie)],de,[]).
 
 n([pl(sessies),sg(sessie)],de,
   [measure,
-   temp_mod]).
+   temp_mod],
+  [informatie]).
 
 n([pl(sets),sg(set)],de,
   [measure,
@@ -34075,7 +34069,7 @@ n([pl(staten),sg(staat)],de,[],
    i(schurk,schurken),
    stad,
    s(verzorging),
-   s(welvaart)]).
+   welvaart, s(welvaart)]).
 
 n([sg(staatkunde)],de,[]).
 
@@ -35917,7 +35911,11 @@ n([pl(tekkels),sg(tekkel),
    sg(tackel),pl(tackels)],de,[]).
 
 n([pl(tekorten),sg(tekort)],het,[],
-  [i(cel,cellen),
+  [s(begroting),
+   i(cel,cellen),
+   exploitatie,
+   s(financiering),
+   s(handel),
    i(leraar,leraren),
    s(overheid),
    s(personeel),
@@ -37872,6 +37870,8 @@ n([sg(url)],de,[]).
 
 n([sg(urn),pl(urnen)],de,[]).
 
+n([sg(uroloog),pl(urologen)],de,[]).
+
 n([pl(utopieën),sg(utopie)],de,[subject_vp,subject_sbar]).
 
 n([pl(utopisten),sg(utopist)],de,[]).
@@ -38399,6 +38399,7 @@ n([mass(verdraagzaamheid)],de,[]).
 n([pl(verdragen),sg(verdrag)],het,[],
   [h('ABM'),
    associatie,
+   s(handel),
    kernstop,
    vrijhandel]).
 
@@ -40442,6 +40443,7 @@ n([pl(voorwaarden),sg(voorwaarde)],de,
   [s(annulering),
    s(arbeid),
    basis,
+   s(gebruik),
    s(leven),
    licentie,
    polis,
@@ -42649,6 +42651,7 @@ n([sg(zaakvoerster),pl(zaakvoersters)],de,[]).
 n([pl(zalen),sg(zaal)],de,[np_app_measure],
   [bal,
    concert,
+   conferentie,
    dans,			% en geen dan_zaal
    feest,
    fuif,
