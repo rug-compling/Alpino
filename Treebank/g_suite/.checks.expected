@@ -25,3 +25,4 @@ g_suite/./959.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma=
 g_suite/./962.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
 g_suite/./887.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="WW(inf,vrij,zonder)" or @postag="WW(inf,prenom,zonder)" or @postag="WW(inf,prenom,met-e)")]]	inf cat without inf hd?
 g_suite/./862.xml	//node[@rel="det" and @pos and not(@pt="lid" or @pt="vnw" or @pt="tw" or (@pt="n" and @naamval="gen") or @pt="spec" or @pt="adj" or @root="genoeg" or (@pt="n" and @ntype="eigen"))]	unexpected postag for determiner
+g_suite/./862.xml	//node[@rel="det" and @pos and not(@pt="lid" or @pt="vnw" or @pt="tw" or (@pt="n" and @naamval="gen") or @pt="spec" or @pt="adj" or @lemma="genoeg" or (@pt="n" and @ntype="eigen"))]	unexpected postag for determiner
