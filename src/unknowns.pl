@@ -1817,6 +1817,7 @@ foreign_word(he).
 foreign_word(heart).
 foreign_word(her).
 foreign_word(here).
+foreign_word(herren).
 foreign_word(high).
 foreign_word(highs).
 foreign_word(him).

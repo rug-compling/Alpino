@@ -4081,6 +4081,7 @@ abbreviation('geref.', gereformeerd).
 abbreviation('geref.', gereformeerde).
 abbreviation('gest.',  gestorven).
 abbreviation('hoogl.', hoogleraar).
+abbreviation(hr,       heer).
 abbreviation('\'k',    ik).
 abbreviation(idd,      inderdaad).
 abbreviation('inf.',   infanterie).

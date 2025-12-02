@@ -15288,6 +15288,8 @@ n([pl(hengsten),sg(hengst)],de,[],[dek]).
 
 n([sg(hepatitis)],both,[]).
 
+n([sg(her),pl(herren)],het,[]).  % hertentamen herren?
+
 n([pl(herauten),sg(heraut)],de,[]).
 
 n([pl(herbenoemingen),sg(herbenoeming)],de,[]).

@@ -5476,6 +5476,7 @@ m(hoelaat,          wh_adjective,hoelaat).
 m(hoelang,          wh_me_adjective,hoelang).
 
 m(hoeveel,          wh_adjective(odet_adv),hoeveel).
+m(hoeveel,          wh_adjective(odet_adv),hoevele).
 % m(hoeveel,          wh_adjective(odet_adv),[de,hoeveel]).  % ? "om de hoeveel"?
 
 m(hoeveel,          pronoun(ywh,thi,pl,de,both,indef), hoevelen).

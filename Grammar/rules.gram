@@ -833,6 +833,16 @@ comma_hellip(COMMA) :-
     COMMA => punct,
     COMMA:puncttype => (komma;hellip).
 
+comma_hellip_punt_komma(COMMA) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    COMMA => punct,
+    COMMA:puncttype => (komma;hellip;schuin_streep;ligg_streep;punt_komma).
+
+comma_hellip_punt_komma(COMMA) :-
+    hdrug_util:hdrug_flag(parse_or_generate,generate),
+    COMMA => punct,
+    COMMA:puncttype => (komma;hellip).
+
 hellip(COMMA) :-
     COMMA => punct,
     COMMA:puncttype => hellip.
@@ -8353,8 +8363,9 @@ grammar_rule(sat_nucl(sv1),ROOT,[Max, COMMA, Dan]) :-
 %%EX%% Wat een rothond is dat toch geworden , die van de buren
 %%EX%% Ze moeten ook het laatste offensief stoppen , dat op de Golan-hoogvlakte
 %%EX%% Hier hebben we op gewacht ... de pizza-automaat
+%%EX%% De samenstelling dreigt scheef te groeien ; te weinig gezagdragers
 grammar_rule(nucl_sat(np),ROOT,[Dan, COMMA, Max]) :-
-    comma_hellip(COMMA),
+    comma_hellip_punt_komma(COMMA),
     ind_max_np(Max),
 %    Max:subn => ~sub_det,
     Max:redrel => no,

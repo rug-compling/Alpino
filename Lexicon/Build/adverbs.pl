@@ -255,6 +255,7 @@ adverb('heen-en-weer').
 adverb(helemaal).
 adverb(heletijd).
 adverb([de,heletijd]).
+adverb(her).
 adverb(hieromtrent).
 adverb(hierzo).
 adverb(hoedanook).
