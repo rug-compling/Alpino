@@ -18845,6 +18845,7 @@ v(revalideer,revalideert,revalideren,gerevalideerd,revalideerde,revalideerden,
 
 v(revancheer,revancheert,revancheren,gerevancheerd,revancheerde,revancheerden,
     [h([refl,
+	refl_pc_pp(op),
 	transitive % de nederlaag
        ])]).
 
