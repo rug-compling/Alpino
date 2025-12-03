@@ -22061,6 +22061,7 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
         part_pc_pp(bekend,om),
         part_pc_pp(bekend,onder),
         part_intransitive(bekend),  % vanwege, omdat
+	fixed([[aan,de,wieg],pc(van)],no_passive),
 	fixed([{[[bol],pc(van)]}],no_passive),
 	fixed([{[[borg],pc(voor)]}],no_passive),
 	fixed([{[[borg],er_pp(voor,C)]},extra_sbar(C)],no_passive),

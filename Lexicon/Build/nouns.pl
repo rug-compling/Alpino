@@ -1356,7 +1356,10 @@ n([sg(aanbetaling),pl(aanbetalingen)],de,[]).
 
 n([pl(aanbevelingen),sg(aanbeveling)],de,
   [sbar,
-   vp]).
+   vp,
+   subject_sbar,
+   subject_vp
+  ]).
 
 n([pl(aanbidders),sg(aanbidder)],de,[]).
 
@@ -39084,7 +39087,7 @@ n([pl(verschijnselen),pl(verschijnsels),sg(verschijnsel)],het,[],
    s(onthouding)  
   ]).
 
-n([pl(verschillen),sg(verschil)],het,[sbar,subject_sbar,vp]).
+n([pl(verschillen),sg(verschil)],het,[sbar,subject_sbar_no_het,vp]).
 
 n([pl(verschillen),sg(verschil)],het,[],
   [cultuur,
