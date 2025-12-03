@@ -14767,6 +14767,7 @@ n([pl(handen),sg(hand)],de,
   [measure,
    pred_pp_pl(in),
    pred_pp_pl(uit),
+   pred_pp(op),    % ze zijn op de hand van ..
    pred_pp(van),   % van de hand van
    pred_pp(aan)],                           % aan de (winnende) hand
   [dim(handje)]). 
