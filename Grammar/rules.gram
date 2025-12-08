@@ -6963,6 +6963,23 @@ grammar_rule(a_a_pred, AP, [ A, PRED ]) :-
     AP:modifies_a => no,   % not with rightward complements/modifiers?
     hd_comp_structure(A,PRED,AP).
 
+%%EX%% Het stripverhaal , zijnde de negende kunstvorm , wordt overschat
+%%EX%% we beschouwen die informatie als zijnde onbetrouwbaar
+%%EX%% De drie teksten , zijnde gelijkelijk rechtsgeldig , werden bekritiseerd
+grammar_rule(a_a_pred_ende, AP, [ A, PRED ]) :-
+    AP => a, A => a,
+    PRED => pred,
+    PRED:pcat => ~als_pred,  % use previous rule
+    PRED:sel => to_right,
+    haspreno(AP),
+    not_postp(AP),
+    A:hasextra => no,
+    A:adv => ~detadv,
+    A:aform => nattr,
+    A:avform => avform_ppres,
+    AP:modifies_a => no,   % not with rightward complements/modifiers?
+    hd_comp_structure(A,PRED,AP).
+
 %%EX%% De zelf verklaarde burgemeester
 grammar_rule(a_predm_a, AP, [ PRED, A]) :-
     AP => a, A => a,

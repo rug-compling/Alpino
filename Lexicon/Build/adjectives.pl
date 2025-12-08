@@ -2739,7 +2739,8 @@ a([ge_e(afgezegde),
 a([ge_e(afgezette),
    ge_no_e(afgezet)],adv,[],[]).
 
-a([ge_both(afgezien)],adv,[pp(van),
+a([ge_both(afgezien)],adv,[transitive,
+			   pp(van),
                            er_pp_sbar(van),
                            object_sbar],[]).
 
@@ -16550,7 +16551,8 @@ a([ge_e(geziene),
    ge_no_e(gezien),
    st(gezienst),
    ste(gezienste)],both,
-  [pp(bij),
+  [transitive,
+   pp(bij),
    fixed([[tegemoet]])],[on]).
 
 a([ge_e(gezigzagde),
@@ -17603,7 +17605,8 @@ a([e(handzame),
    st(handzaamst)],nonadv,[],[]).
 
 a([ende(hangende),
-   end(hangend)],padv,[],[laag]).
+   end(hangend)],padv,[],[transitive,
+			  laag]).
 
 a([e(hanteerbare),
    er(hanteerbaarder),
@@ -28458,7 +28461,9 @@ a([ge_both(overdreven),
 a([ge_both(overeengekomen)],adv,[],[]).
 
 a([e(overeenkomstige),
-   no_e(overeenkomstig)],padv,[pp(met)],[]).
+   no_e(overeenkomstig)],padv,
+  [transitive,
+   pp(met)],[]).
 
 a([pred(overeind)],diradv,[],[]).
 

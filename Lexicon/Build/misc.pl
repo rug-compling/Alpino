@@ -2677,7 +2677,7 @@ preposition(Prep,[]) :-
 preposition(aangaande).
 preposition(aangezien). % VL
 preposition(ad).
-preposition(afgezien).
+% preposition(afgezien).
 preposition(aldus).
 m(dixit,preposition(aldus,[]),dixit). % also for dip
 preposition(alias).
@@ -2698,10 +2698,10 @@ preposition(gegeven).
 %preposition(genaamd).
 %preposition(getiteld).
 preposition(getuige).
-preposition(gezien).
+% preposition(gezien).
 preposition(halfweg).
 preposition(halverwege).
-preposition(hangende).
+% preposition(hangende).
 preposition(ingevolge).
 preposition(indachtig).
 preposition(inzake).
@@ -2732,7 +2732,7 @@ preposition(omstreeks).
 preposition(omtrent).
 preposition(ondanks).
 preposition(ongeacht).
-preposition(overeenkomstig).
+% preposition(overeenkomstig).
 preposition('o.w.').  % onder wie...
 preposition(plus).
 preposition('+').
@@ -2760,7 +2760,7 @@ preposition(vergelijk).
 preposition(via).
 preposition(wegens).
 preposition(volgens).
-m(zijn,preposition(zijnde,[]),zijnde).
+%% m(zijn,preposition(zijnde,[]),zijnde).
 
 preposition('d.d.').            % tja...
 preposition('na/op').           % tja...
