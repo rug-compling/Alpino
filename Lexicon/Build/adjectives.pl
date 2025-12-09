@@ -17605,8 +17605,9 @@ a([e(handzame),
    st(handzaamst)],nonadv,[],[]).
 
 a([ende(hangende),
-   end(hangend)],padv,[],[transitive,
-			  laag]).
+   end(hangend)],both,
+  [transitive],
+  [laag]).
 
 a([e(hanteerbare),
    er(hanteerbaarder),
@@ -28461,7 +28462,7 @@ a([ge_both(overdreven),
 a([ge_both(overeengekomen)],adv,[],[]).
 
 a([e(overeenkomstige),
-   no_e(overeenkomstig)],padv,
+   postn_no_e(overeenkomstig)],both,
   [transitive,
    pp(met)],[]).
 
