@@ -7751,6 +7751,8 @@ adj_te_struct_np(AP,V) :-
 %%EX%% De als winnaar te nomineren onderzoeker
 %%EX%% De schoon te poetsen kastjes
 %%EX%% De groen te schilderen kozijnen
+%% for some reason, those predicatives can never be NP
+%% although the grammar now generates them: *"de een uitslover te vinden cabaretier)
 
 %%EX%% De door ons te nemen maatregelen
 %%EX%% De te doorstane proef
