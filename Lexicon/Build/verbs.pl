@@ -10079,6 +10079,7 @@ v(hoor,hoort,horen,gehoord,hoorde,hoorden,
 	np_pc_pp(in),	      % ik hoor er een duidelijke aarzeling in
 	pc_pp(over),    % daar heb ik over gehoord
 	np_pc_pp(over), % daar hoorden we niemand over
+	np_pc_pp(aan),
 	np_pc_pp(van),
 	pp_sbar_subj_no_het(bij), % hier hoort nog bij, dat ..
 				% part_np_np(aan),
@@ -19348,6 +19349,7 @@ v([ruik,riek],[ruikt,riekt],[ruiken,rieken],geroken,[rook,riekte],[roken,riekten
 	transitive,
 	pc_pp(uit),
 	pc_pp(aan),
+	np_pc_pp(aan),
 	pc_pp(naar)])]).
 
 v(ruil,ruilt,ruilen,geruild,ruilde,ruilden,
@@ -27580,6 +27582,7 @@ v(voel,voelt,voelen,gevoeld,voelde,voelden,
 	part_transitive(mee),
 	part_transitive(na),
 	pc_pp(aan),
+	np_pc_pp(aan),
 	pc_pp(voor),
 	np_pc_pp(van),  % ik heb er weinig/niets van gevoeld
 	fixed([[aan,de,tand],acc],norm_passive),

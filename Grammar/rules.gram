@@ -4281,28 +4281,6 @@ grammar_rule(mod7, Mod, [ SV1 ]) :-
     max_sv1(SV1),
     hd_structure(SV1, Mod).
 
-/*
-extremely slow
-%% aan zijn reactie te zien heeft hij ...
-grammar_rule(mod8,Mod,[X]) :-
-    X => vp,
-    X:vform => pass_te,
-    X:e_deps => [],
-    %% to prevent clefts etc:
-    X:cleft => no,
-    X:subj => np,
-    X:subj:nform => (norm;het_nform),
-    X:subj:subn => sub_noun,
-    X:subj:allows_drop => yes,
-    X:subj:dt => [],    
-    %%
-    X:haswh => no,
-    Mod => modifier, 
-    Mod:mcat => mcat_vp,
-    Mod:sel => to_topic,
-    hd_structure(X,Mod).
-*/
-
 modifier_p_start_structure(Mod,Mod1,P1,P2) :-
     Mod1 => modifier,
     Mod1:eps => no,
@@ -7746,26 +7724,28 @@ adj_te_struct(AP,V) :-
     AP:agr <=> V:adj_agr,  %% 'de te doorstane/*doorstaan proef
     AP:avform => avform_aan_ti,
     AP:tmploc => ntmploc,
-    AP:sc <=> Asc,        %% now inherits remaining subcat elements;
-    
-    V0 => vb,
-    V0:vform => te,
-    V0:vslash => [],
+    V => vb,
+    V:vform => te,
+    V:vslash => [],
+    V:vtype => vmain, % trouble otherwise, since you cannot remove NP from a subcat list that you still need to inherit
     % forbid clefts etc.
-    V0:cleft => no,
-    V0:subj => np,
-    V0:subj:nform => norm,
-    V0:subj:subn => sub_noun,
-    hd_structure(V0,AP),
-    unify_except(V0,V,sc),
+    V:cleft => no,
+    V:subj => np,
+    V:subj:nform => norm,
+    V:subj:subn => sub_noun,
+    hd_structure(V,AP).
+
+adj_te_struct_np(AP,V) :-
+    adj_te_struct(AP0,V),
+    AP => a,
+    unify_except(AP0,AP,sc),
     V:sc <=> Vsc,
-%    V:sc <=> [NP|Tail],	%% except for an NP; perhaps this should be select rather than the first one???
-                                %% Yes. "De vreemd te noemen opmerkingen"
-    alpino_wappend:wselect(NP,Vsc,Asc),
+    AP:sc <=> Asc,        %% now inherits remaining subcat elements;
     NP => np,
     NP:dt => [],
     NP:allows_drop => yes,
-    NP:case => acc.
+    NP:case => acc,    
+    alpino_wappend:wselect(NP,Vsc,Asc).
 
 %%EX%% De vreemd te noemen opmerkingen
 %%EX%% De als winnaar te nomineren onderzoeker
@@ -7778,27 +7758,27 @@ adj_te_struct(AP,V) :-
 %%EX%% De van de Duitsers te vorderen fietsen
 %%%%%% TODO: De fietsen , te vorderen van de Duitsers , zullen worden verkocht
 grammar_rule(adj_te_v, AP, [ V ] ) :-
-    adj_te_struct(AP,V),
+    adj_te_struct_np(AP,V),
     AP:adv => nadv,
     AP:wh_reltmploc => ~hoe_hoe.
 
-adj_te_special_struct(AP,V) :-
-    adj_te_struct(AP,V),
-    AP:adv => yadv.
-
 %%EX%% Aan het weerbericht te zien komt er sneeuw
 grammar_rule(adj_te_zien, AP, [ V ] ) :-
-    adj_te_special_struct(AP, V),
-    V:sc <=> [_,PP],
-    V:hstem <=> STEM,
-    alpino_wappend:wwmember(STEM,[zie,hoor,merk,oordeel,voel]),
+    adj_te_struct_np(AP,V),
+    AP:adv => yadv,
     PP => pp,
-    PP:prep ==> aan.
+    PP:prep ==> aan,
+    PP:ld_pc => pc_pp,
+    AP:sc <=> [PP],
+    V:hstem <=> STEM,
+    alpino_wappend:wwmember(STEM,[zie,hoor,merk,ruik,voel]).
 
 %%EX%% De kernwapens moeten de wereld uit , te beginnen in Nederland
 grammar_rule(adj_te_begin, AP, [ V ] ) :-
-    adj_te_special_struct(AP, V),
+    adj_te_struct(AP, V),
+    AP:adv => yadv,
     V:hstem <=> STEM,
+    AP:sc => [],
     alpino_wappend:wwmember(STEM,[begin]).
 
 %%EX%% Hij won zoals van der Poel gisteren
