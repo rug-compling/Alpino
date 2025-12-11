@@ -8248,7 +8248,8 @@ v(gedenk,gedenkt,gedenken,gedacht,gedacht,gedachten,
 	transitive])]).
 
 v(gedij,gedijt,gedijen,gedijd,gedijde,gedijden,
-    [h([intransitive])]).
+    [h([intransitive,
+	pc_pp(op)])]).
 
 v(gedoog,gedoogt,gedogen,gedoogd,gedoogde,gedoogden,
     [h([sbar,
@@ -14304,7 +14305,7 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	fixed_dep(intransitive),  % we hebben met de koningin te maken
 	ap_pred_refl,  % hij maakt zich kwaad
 	np_aan_het,    % iemand aan het lachen/huilen maken
-	pred_np,       % ik maak de deur groen
+	pred_np,       % ik maak de deur groen; ik maak hem minister
 	pred_np_sbar,  % ik maak het acceptabel dat je komt
 	pred_np_vp,    % ik maak het acceptabel om de boeken te lezen
         so_pred_np,    % ik maak jullie het leven zuur
@@ -21431,7 +21432,7 @@ v(spat,spat,spatten,gespat,spatte,spatten,
 	so_np_ld_pp,  % het zeepsop spat haar in het gezicht
 	part_intransitive(uiteen),
         part_pc_pp(uiteen,in)]),
-     h([pred_np,        % ik spat jou nat
+     h([ap_pred_np,        % ik spat jou nat
 	pc_pp(met)]),
      b([intransitive,
 	part_pc_pp(af,van)])]).

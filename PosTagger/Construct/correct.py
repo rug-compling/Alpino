@@ -106,14 +106,22 @@ def main():
             t = "with_dt(modal_adverb(adv_prep),dt(advp,[mod=l(nog,modal_adverb,advp,0,1),hd=l(altijd,sentence_adverb,1,2)]))"
         if r == "hoog of" and t == "with_dt(complex_etc,dt(conj,[crd=l(of,conj(of),vg,0,1),cnj=l(hoog,adjective(er(adv)),ap,1,2)]))":
             t = "with_dt(np_complex_etc,dt(conj,[crd=l(of,conj(of),vg,0,1),cnj=l(hoog,adjective(er(adv)),ap,1,2)]))"
-        if r == "zien" and t == "preposition":
-            t = "adjective(ge_no_e(both,transitive))"
-        if r == "overeenkomstig" and t == "preposition":
-            t = "adjective(postn_no_e(both),transitive))"
-        if r == "hangende" and t == "preposition":
-            t = "adjective(ende(both),transitive))"
-        if r == "zijn" and t == "preposition":
-            t = "adjective(ende(padv),pred))"        
+        if r == "gezien" and t == "preposition(gezien,[])":
+            t = "adjective(ge_no_e(both),transitive)"
+        if r == "overeenkomstig" and t == "preposition(overeenkomstig,[])":
+            t = "adjective(postn_no_e(both),transitive)"
+        if r == "hangende" and t == "preposition(hangende,[])":
+            t = "adjective(ende(both),transitive)"
+        if r == "zijn" and t == "preposition(zijnde,[])":
+            t = "adjective(ende(padv),pred)"
+        if r == "ontgoochelen" and t == "adjective(ge_no_e(adv))":
+            t == "adjective(ge_no_e(padv))"
+        if r == "ontgoochelen" and t == "adjective(ge_no_e(adv),object_sbar)":
+            t == "adjective(ge_no_e(padv),object_sbar)"
+        if r == "ontgoochelen" and t == "adjective(ge_no_e(adv),er_pp_sbar(over))":
+            t == "adjective(ge_no_e(padv),er_pp_sbar(over))"
+        if r == "ontgoochelen" and t == "adjective(ge_no_e(adv),pp(over))":
+            t == "adjective(ge_no_e(padv),pp(over))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 

@@ -26359,7 +26359,7 @@ a([stem(ontgoochelen),
    ere(ontgoocheldere),
    ge_no_e(ontgoocheld),
    st(ontgoocheldst),
-   ste(ontgoocheldste)],adv,
+   ste(ontgoocheldste)],padv,
   [er_pp_sbar(over),
    pp(over),
    object_sbar],[]).

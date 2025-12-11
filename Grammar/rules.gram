@@ -7746,7 +7746,8 @@ adj_te_struct(AP,V) :-
     AP:agr <=> V:adj_agr,  %% 'de te doorstane/*doorstaan proef
     AP:avform => avform_aan_ti,
     AP:tmploc => ntmploc,
-    AP:sc <=> Tail,        %% now inherits remaining subcat elements; 
+    AP:sc <=> Asc,        %% now inherits remaining subcat elements;
+    
     V0 => vb,
     V0:vform => te,
     V0:vslash => [],
@@ -7757,11 +7758,19 @@ adj_te_struct(AP,V) :-
     V0:subj:subn => sub_noun,
     hd_structure(V0,AP),
     unify_except(V0,V,sc),
-    V:sc <=> [NP|Tail],	%% except for an NP; perhaps this should be select rather than the first one???
+    V:sc <=> Vsc,
+%    V:sc <=> [NP|Tail],	%% except for an NP; perhaps this should be select rather than the first one???
+                                %% Yes. "De vreemd te noemen opmerkingen"
+    alpino_wappend:wselect(NP,Vsc,Asc),
     NP => np,
     NP:dt => [],
     NP:allows_drop => yes,
     NP:case => acc.
+
+%%EX%% De vreemd te noemen opmerkingen
+%%EX%% De als winnaar te nomineren onderzoeker
+%%EX%% De schoon te poetsen kastjes
+%%EX%% De groen te schilderen kozijnen
 
 %%EX%% De door ons te nemen maatregelen
 %%EX%% De te doorstane proef

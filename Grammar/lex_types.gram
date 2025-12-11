@@ -1287,7 +1287,7 @@ transitive_adjective(A) :-
 %%    Obj:subn => (sub_name;sub_noun;sub_tmp;sub_indef_pron;sub_def_pron;
 %%                    sub_det;sub_veel;sub_indef_verb;sub_def_verb),
     adjective(A0),
-    unify_except_l(A0,A,[sc,dt:obj1]),
+    unify_except_l(A0,A,[sc,dt:obj1,can_postv]),
     A0:sc => [],
     instantiated_deprel(A,obj1,Obj),
     A:sc <=> [Obj].
