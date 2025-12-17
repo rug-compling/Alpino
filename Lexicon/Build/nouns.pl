@@ -30156,6 +30156,7 @@ n([pl(regelen),pl(regels),sg(regel)],de,
    hoofd,
    huis,
    milieu,
+   partij,
    privacy,
    straf,
    dim(regeltje)]).

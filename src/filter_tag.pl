@@ -713,8 +713,8 @@ valid_sc(van_sbar_subj_so_np_no_het,  [check_tag(complementizer(van))]).
 valid_sc(pp_sbar_subj(Prep),          [prep(Prep),check_of_dat_whsub_sbar]). 
 valid_sc(pp_sbar_subj_no_het(Prep),   [prep(Prep)]). 
 valid_sc(pp_sbar_subj_opt_het(Prep),  [prep(Prep),check_of_dat_whsub_sbar]). 
-valid_sc(ld_pp_sbar_subj_no_het,      [check_ld_prep,check_of_dat_whsub_sbar]).
-valid_sc(ld_adv_sbar_subj_no_het,     [check_loc_adv,check_of_dat_whsub_sbar]).
+valid_sc(ld_pp_sbar_subj_no_het,      [check_ld_prep]).
+valid_sc(ld_adv_sbar_subj_no_het,     [check_loc_adv]).
 valid_sc(sbar_subj_so_np,             [check_of_dat_whsub_sbar]).
 valid_sc(sbar_subj_so_pp,             [prep(aan),check_of_dat_whsub_sbar]).
 valid_sc(sbar_subj_so_np_opt_het,     [check_of_dat_whsub_sbar]).

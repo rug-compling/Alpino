@@ -5701,7 +5701,7 @@ a([ge_e(bezielde),
    ste(bezieldste)],adv,[],[]).
 
 a([ge_no_e(bezien),
-   ge_e(beziene)],padv,[],[]).
+   ge_e(beziene)],adv,[],[]).
 
 a([e(bezienswaardige),
    er(bezienswaardiger),
