@@ -19813,6 +19813,7 @@ v(schets,schetst,schetsen,geschetst,schetste,schetsten,
     [h([np_np,
 	sbar,
 	np_sbar,
+	als_pred_np,
 	intransitive,
 	transitive])]).
 
