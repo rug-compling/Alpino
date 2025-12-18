@@ -25,15 +25,15 @@
         <node begin="10" end="11" genus="onz" getal="ev" id="18" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
         <node begin="11" end="12" id="19" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
         <node begin="15" end="16" id="20" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-        <node begin="12" cat="ap" end="19" id="21" rel="predc">
-          <node begin="12" cat="np" end="15" id="22" rel="obj1">
-            <node begin="12" end="13" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="13" end="14" getal="mv" graad="basis" id="24" lemma="product" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="produkt" word="produkten"/>
-            <node begin="14" end="15" id="25" lemma="daarvan" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarvan" word="daarvan"/>
-          </node>
-          <node begin="16" cat="pp" end="18" id="26" rel="pc">
-            <node begin="16" end="17" id="27" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
-            <node begin="17" end="18" getal="mv" id="28" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" root="ons" status="vol" vwtype="pr" word="ons"/>
+        <node begin="16" cat="pp" end="18" id="21" rel="pc">
+          <node begin="16" end="17" id="22" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="17" end="18" getal="mv" id="23" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" root="ons" status="vol" vwtype="pr" word="ons"/>
+        </node>
+        <node begin="12" cat="ap" end="19" id="24" rel="predc">
+          <node begin="12" cat="np" end="15" id="25" rel="obj1">
+            <node begin="12" end="13" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="13" end="14" getal="mv" graad="basis" id="27" lemma="product" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="produkt" word="produkten"/>
+            <node begin="14" end="15" id="28" lemma="daarvan" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarvan" word="daarvan"/>
           </node>
           <node begin="18" buiging="zonder" end="19" graad="basis" id="29" lemma="kwijt" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="kwijt" word="kwijt"/>
         </node>

@@ -7,48 +7,48 @@
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Blaauw" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Blaauw" word="Blaauw"/>
       </node>
       <node begin="2" end="3" id="5" lemma="raken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="raak" word="raakte" wvorm="pv"/>
-      <node begin="3" cat="ap" end="22" id="6" rel="predc">
+      <node begin="3" cat="ap" end="6" id="6" rel="predc">
         <node begin="3" cat="np" end="5" id="7" rel="obj1">
           <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="bal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bal" word="bal"/>
         </node>
         <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="kwijt" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="kwijt" word="kwijt"/>
-        <node begin="6" cat="pp" end="22" id="11" rel="pc">
-          <node begin="6" end="7" id="12" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
-          <node begin="7" cat="np" end="22" id="13" rel="obj1">
-            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="Roode" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Roode" word="Roode"/>
-            <node begin="8" cat="rel" end="22" id="15" rel="mod">
-              <node begin="8" cat="np" end="10" id="16" index="1" rel="rhd">
-                <node begin="8" end="9" getal="ev" id="17" lemma="wie" naamval="gen" pdtype="pron" persoon="3m" pos="det" postag="VNW(vb,pron,gen,vol,3m,ev)" pt="vnw" rel="det" root="wiens" status="vol" vwtype="vb" word="wiens"/>
-                <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="voorzet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzet" word="voorzet"/>
-              </node>
-              <node begin="8" cat="ssub" end="22" id="19" rel="body">
-                <node begin="8" end="10" id="20" index="1" rel="su"/>
-                <node begin="20" end="21" id="21" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
-                <node begin="8" cat="ppart" end="22" id="22" rel="vc">
-                  <node begin="8" end="10" id="23" index="1" rel="obj1"/>
-                  <node begin="10" cat="pp" end="13" id="24" rel="mod">
-                    <node begin="10" end="11" id="25" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
-                    <node begin="11" cat="mwu" end="13" id="26" rel="obj1">
-                      <node begin="11" end="12" id="27" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
-                      <node begin="12" end="13" id="28" lemma="Jong" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jong" spectype="deeleigen" word="Jong"/>
-                    </node>
+      </node>
+      <node begin="6" cat="pp" end="22" id="11" rel="pc">
+        <node begin="6" end="7" id="12" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+        <node begin="7" cat="np" end="22" id="13" rel="obj1">
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="Roode" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Roode" word="Roode"/>
+          <node begin="8" cat="rel" end="22" id="15" rel="mod">
+            <node begin="8" cat="np" end="10" id="16" index="1" rel="rhd">
+              <node begin="8" end="9" getal="ev" id="17" lemma="wie" naamval="gen" pdtype="pron" persoon="3m" pos="det" postag="VNW(vb,pron,gen,vol,3m,ev)" pt="vnw" rel="det" root="wiens" status="vol" vwtype="vb" word="wiens"/>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="voorzet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzet" word="voorzet"/>
+            </node>
+            <node begin="8" cat="ssub" end="22" id="19" rel="body">
+              <node begin="8" end="10" id="20" index="1" rel="su"/>
+              <node begin="20" end="21" id="21" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+              <node begin="8" cat="ppart" end="22" id="22" rel="vc">
+                <node begin="8" end="10" id="23" index="1" rel="obj1"/>
+                <node begin="10" cat="pp" end="13" id="24" rel="mod">
+                  <node begin="10" end="11" id="25" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                  <node begin="11" cat="mwu" end="13" id="26" rel="obj1">
+                    <node begin="11" end="12" id="27" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+                    <node begin="12" end="13" id="28" lemma="Jong" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jong" spectype="deeleigen" word="Jong"/>
                   </node>
-                  <node begin="13" cat="pp" end="20" id="29" rel="mod">
-                    <node begin="13" buiging="zonder" end="14" graad="basis" id="30" lemma="vlak" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vlak" word="vlak"/>
-                    <node begin="14" end="15" id="31" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-                    <node begin="15" cat="np" end="20" id="32" rel="obj1">
-                      <node begin="15" end="16" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="16" buiging="met-e" end="17" id="34" lemma="graaien" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="graaiend" word="graaiende" wvorm="od"/>
-                      <node begin="17" end="18" getal="mv" graad="basis" id="35" lemma="hand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hand" word="handen"/>
-                      <node begin="18" cat="pp" end="20" id="36" rel="mod">
-                        <node begin="18" end="19" id="37" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                        <node begin="19" end="20" genus="genus" getal="ev" graad="basis" id="38" lemma="Lelieveld" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Lelieveld" word="Lelieveld"/>
-                      </node>
-                    </node>
-                  </node>
-                  <node begin="21" buiging="zonder" end="22" id="39" lemma="in_koppen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gekopt" word="ingekopt" wvorm="vd"/>
                 </node>
+                <node begin="13" cat="pp" end="20" id="29" rel="mod">
+                  <node begin="13" buiging="zonder" end="14" graad="basis" id="30" lemma="vlak" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vlak" word="vlak"/>
+                  <node begin="14" end="15" id="31" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                  <node begin="15" cat="np" end="20" id="32" rel="obj1">
+                    <node begin="15" end="16" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="16" buiging="met-e" end="17" id="34" lemma="graaien" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="graaiend" word="graaiende" wvorm="od"/>
+                    <node begin="17" end="18" getal="mv" graad="basis" id="35" lemma="hand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hand" word="handen"/>
+                    <node begin="18" cat="pp" end="20" id="36" rel="mod">
+                      <node begin="18" end="19" id="37" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="19" end="20" genus="genus" getal="ev" graad="basis" id="38" lemma="Lelieveld" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Lelieveld" word="Lelieveld"/>
+                    </node>
+                  </node>
+                </node>
+                <node begin="21" buiging="zonder" end="22" id="39" lemma="in_koppen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gekopt" word="ingekopt" wvorm="vd"/>
               </node>
             </node>
           </node>
