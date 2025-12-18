@@ -1303,13 +1303,18 @@ format_tree_d(H,Space0,Space,S):-
 portray_message(warning,no_match(abolish(_))).
 :- endif.
 
-:- public flags/0.  % ?
+:- public flags/0.
 flags :-
-    (	hdrug_flag(A,V),
+    findall(A,hdrug_flag(A,_),As0),
+    sort(As0,As),
+    (	lists:member(A,As),
+	hdrug_flag(A,V),
 	format(user_output,"%% ~w=~w~n",[A,V]),
 	fail
     ;   true
     ).
+
+hdrug_command(flags,flags,[]).
 
 :- public parse_with_tags/1.
 parse_with_tags(Sent) :-
