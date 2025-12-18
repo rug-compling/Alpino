@@ -23780,7 +23780,6 @@ n([pl(naalden),sg(naald)],de,[],
 
 n([pl(namen),sg(naam)],de,[sbar,
 			   vp,
-			   pred_pp(op),
 			   app_measure,
 			   np_app_measure]).
 

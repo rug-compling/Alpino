@@ -82,17 +82,17 @@ WR-P-E-I-0000040286.p.3.s.2                 incomplete sentence
 WR-P-E-I-0000040286.p.7.s.6                 ?
 WR-P-E-I-0000040286.p.7.s.82.1              name 
 WR-P-P-B-0000000001.p.78.s.1.2               onvolledige zin 
-WR-P-P-C-0000000011.p.55.s.1               
-WR-P-P-C-0000000043.txt-10.5               
-WR-P-P-C-0000000044.txt-144.2              
-WR-P-P-C-0000000049.txt-1                     missing comma 
+WR-P-P-C-0000000011.p.55.s.1                 telegram np
+WR-P-P-C-0000000043.txt-10.5                 telegram np
+WR-P-P-C-0000000044.txt-144.2                mod/dp?
+WR-P-P-C-0000000049.txt-1                    missing comma 
 WR-P-P-E-0000000001.p.1.s.1                  ? 
-WR-P-P-L-0000000003.p.53.s.1               
+WR-P-P-L-0000000003.p.53.s.1                 ?
 WS-U-E-A-0000000016.p.38.s.2                 meta noise 
 WS-U-E-A-0000000017.p.45.s.11                meta noise 
 WS-U-E-A-0000000021.p.27.s.1                 meta 
 WS-U-E-A-0000000025.p.6.s.12                 incomplete sentence 
-WS-U-E-A-0000000033.p.2.s.1                
+WS-U-E-A-0000000033.p.2.s.1                  telegram np
 WS-U-E-A-0000000041.p.15.s.10.4              meta noise 
 WS-U-E-A-0000000203.p.10.s.1                 meta noise 
 WS-U-E-A-0000000203.p.28.s.1                 meta noise 
@@ -2775,7 +2775,7 @@ dpc-vla-001161-nl-sen.p.152.s.1		     post-NP mod "samen te vatten als"
 dpc-vla-001161-nl-sen.p.51.s.9		     timeout/tagger 
 dpc-vla-001161-nl-sen.p.5.s.2		     complicated conj 
 dpc-vla-001161-nl-sen.p.96.s.3		     "in termen van WHREL[hoe]" 
-dpc-vla-001170-nl-sen.p.27.s.2		     DONEx (tagger if timeout)
+dpc-vla-001170-nl-sen.p.27.s.2		     DONE guides
 dpc-vla-001170-nl-sen.p.84.s.2		     gramm.err. "het departement die" 
 dpc-vla-001171-nl-sen.p.114.s.2		     compl.conj. 
 dpc-vla-001171-nl-sen.p.159.s.3		     gapping 
@@ -2873,7 +2873,7 @@ WR-P-P-C-0000000047.txt-116		     gapping
 WR-P-P-C-0000000049.txt-175		     ATB "hoe laat" ??? 
 WR-P-P-C-0000000050.txt-155		     conj SSUB SMAIN 
 WR-P-P-C-0000000051.txt-147.2		     "zowel in de linker als de rechter hersenhelft " 
-WR-P-P-C-0000000054.txt-49		     DONEx guides
+WR-P-P-C-0000000054.txt-49		     DONE guides
 WR-P-P-C-0000000054.txt-90		     conj in conj 
 WR-P-P-C-0000000057.p.70.s.1		     name 
 WR-P-P-C-0000000058.p.59.s.1		     extraposed als-conj 
@@ -3330,7 +3330,7 @@ WR-P-P-C-0000000051.txt-166	 	     "terug" LD?
 WR-P-P-C-0000000051.txt-52.1	 	     ATB
 WR-P-P-C-0000000052.txt-103	 	     where should "wel" go?
 WR-P-P-C-0000000053.txt-54	 	     ?
-WR-P-P-C-0000000054.txt-110.2	 	     DONE (guides)
+WR-P-P-C-0000000054.txt-110.2	 	     DONE guides
 WR-P-P-C-0000000054.txt-253	 	     "één tot anderhalve week"
 WR-P-P-C-0000000054.txt-36	 	     "overgevoelig" nonadv used as adv
 WR-P-P-C-0000000054.txt-81	 	     nucl/sat sat/nucl
@@ -3341,7 +3341,7 @@ WR-P-P-F-0000000008.p.30.s.1	 	     ?
 WR-P-P-G-0000000020.head.1.s.4	 	     gapping
 WR-P-P-H-0000000023.p.3.s.3	 	     DP DP only if both have comma?
 WR-P-P-H-0000000025.p.7.s.1	 	     "een rotsituatie vond hij"  PREDC but no OBJ1
-WR-P-P-H-0000000041.p.6.s.1	 	     DONE
+WR-P-P-H-0000000041.p.6.s.1	 	     "vier wijd"
 WR-P-P-H-0000000095.p.11.s.6	 	     at which level should tag/nucl be placed
 WR-P-P-I-0000000025.p.13.s.4	 	     gapping
 WR-P-P-I-0000000025.p.15.s.3	 	     ?
@@ -3396,7 +3396,7 @@ WS-U-E-A-0000000035.p.27.s.2	 	     ATB "volgens hem"
 WS-U-E-A-0000000039.p.8.s.2	 	     meta noise; punct expected
 WS-U-E-A-0000000043.p.1.s.1	 	     3x news headlines without punctuation; out of memory
 WS-U-E-A-0000000200.p.39.s.3 	 	     DU
-WS-U-E-A-0000000206.p.11.s.23 	 	     DONE
+WS-U-E-A-0000000206.p.11.s.23 	 	     DONE (with pos_tagger)
 WS-U-E-A-0000000206.p.11.s.9 	 	     spelling "me" => "met"
 WS-U-E-A-0000000206.p.18.s.3 	 	     spelling 3-part compound with 2 spaces
 WS-U-E-A-0000000208.p.17.s.1 	 	     spelling "sms alarm"

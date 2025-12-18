@@ -1926,7 +1926,8 @@ a([e(aanvaardbare),
    no_e(aanvaardbaar),
    st(aanvaardbaarst),
    ste(aanvaardbaarste)],nonadv,
-  [subject_sbar,
+  [als_pred,
+   subject_sbar,
    subject_vp],[]).
 
 a([e(aanvankelijke),
