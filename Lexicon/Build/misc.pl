@@ -4646,16 +4646,29 @@ m(oneens,           het_np_adjective(er_pp_vp(over)),     oneens).
 %% VL: het afgebold zijn: er mee opgehouden
 m(afgebold,         het_np_adjective,                     afgebold).
 
-m(kwijt,            np_adjective(pp(aan)), kwijt).
-				% we zijn er een fortuin aan kwijt
+%%%% FROM HERE
+%
+% these do not work if the second, non-obj1, argument goes to the left of obj1!
+% m(kwijt,            np_adjective(pp(aan)), kwijt).
+%%%ok : we zijn er een fortuin aan kwijt
+%%%not: we zijn daaraan een fortuin kwijt
+%m(erkentelijk,      np_adjective(pp(voor)),   erkentelijk).
+%m(erkentelijk,      np_adjective(er_pp_sbar(voor)),   erkentelijk).
 
-m(erkentelijk,      np_adjective(pp(voor)),   erkentelijk).
-m(erkentelijk,      np_adjective(er_pp_sbar(voor)),   erkentelijk).
+%%%%% 2x obj2...  Hij lijkt me hun veel geld schuldig, so obj2 really must be part of PREDC
+
+%% omdat hij mij de bank veel geld schuldig lijkt
+%% these are ok
 m(schuldig,         np_adjective(so_np),      schuldig).
-m(schuldig,         np_adjective(so_pp(aan)), schuldig).
 m(verschuldigd,     np_adjective(so_np),      verschuldigd).
-m(verschuldigd,     np_adjective(so_pp(aan)), verschuldigd).
 m(verplicht,        np_adjective(so_np),      verplicht).
+
+%% NO: omdat hij aan de bank veel geld schuldig is
+%% YE: omdat hij veel geld schuldig is aan de bank 
+%% YE: omdat hij veel geld aan de bank schuldig is
+%% these are ok only in one word order
+m(schuldig,         np_adjective(so_pp(aan)), schuldig).
+m(verschuldigd,     np_adjective(so_pp(aan)), verschuldigd).
 m(verplicht,        np_adjective(so_pp(aan)), verplicht).
 
 m(Stem,np_me_adjective(e),Surf) :-

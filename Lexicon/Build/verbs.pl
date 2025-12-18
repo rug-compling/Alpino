@@ -402,6 +402,8 @@ m(v_root(ben,zijn),
 	    fixed([[af],subj(kous)],no_passive),
 	    fixed([pc(op),subj(kritiek)],no_passive),
 	    fixed([er_pp(op,C),subj(kritiek),extra_sbar(C)],no_passive),
+	    fixed([copula_np(kwijt),pc(aan)],no_passive),
+	    fixed([copula_np(kwijt,pc(aan))],no_passive),
 	    fixed([er_pp(naar,C),np_pred,extra_vp(C)],no_passive), % hij is er de man niet naar om..
             fixed([er_pp(naar,C),extra_vp(C)],no_passive), % zijn aard is er niet naar om ..
 	    fixed([{[np_pred(meester),pc(in)]}],no_passive),
@@ -911,6 +913,8 @@ m(v_root(kan,kunnen),
         ap_copula,             % het kan kapot! De pet kan af!
 	pp_copula,             % met verlof/met pensioen
 	fixed([ap_pred(kwijt),sbar],no_passive),
+	fixed([copula_np(kwijt,pc(aan))],no_passive),
+	fixed([copula_np(kwijt),pc(aan)],no_passive),
         %% ik kan het goed/niet/slecht/wel met hem vinden
         %% wij kunnen het samen goed vinden
         fixed([vc(vind,inf,intransitive),het_obj1],no_passive),
@@ -968,15 +972,8 @@ m(v_root(kan,kunnen),
 	fixed([er_pp(in),nor_mod_pp(bij)],no_passive), % het kan er bij mij niet in dat ...
 	fixed([er_pp(in),nor_mod_pp(bij),sbar_subj],no_passive), % het kan er bij mij niet in dat ...
 	copula_np(kwijt),
-%%%	part_transitive(kwijt),  % ik kan jou niet kwijt
-	
-%%%	part_np_mod_pp(kwijt,over), % meer kan ik daar niet over kwijt
-%%%	part_np_mod_pp(kwijt,bij),  % ik kan mijn agressie daar bij kwijt
 	fixed([copula_np(kwijt),ld_pp],no_passive),
 	fixed([copula_np(kwijt,ld_pp)],no_passive),
-%%%	part_np_pc_pp(kwijt,aan),% je kunt je geld kwijt aan lekkere hapjes
-%%%	part_np_pc_pp(kwijt,op), % de verliezers kun je kwijt op de vrije klaveren...
-%%%	part_np_pc_pp(kwijt,in)  % daar kan ik veel in kwijt
 	fixed([copula_np(kwijt,mod_pp(over))],no_passive),
 	fixed([copula_np(kwijt,mod_pp(bij))],no_passive),
 	pc_pp(bij),              % ik kan er niet bij (?)
@@ -4106,6 +4103,8 @@ v(blijf,blijft,blijven,gebleven,bleef,bleven,blijve,
         fixed([{[pp_pred(in,hand),pc(van)]}],no_passive),
 	fixed([[in,stand]],no_passive),
         part_intransitive(instand),
+	    fixed([copula_np(kwijt,pc(aan))],no_passive),
+	    fixed([copula_np(kwijt),pc(aan)],no_passive),
 	    %% daar is geen discussie/twijfel over mogelijk
 	    fixed([{[pc(over),ap_pred(mogelijk)]}],no_passive),
 	    fixed([{[er_pp(over,A),ap_pred(mogelijk)]},extra_sbar(A)],
@@ -4201,6 +4200,8 @@ v(blijk,blijkt,blijken,gebleken,bleek,bleken,
 	    fixed([svp_pp(in,conflict)],no_passive),
 	    fixed([[in,gebreke]],no_passive),
 	    fixed([[in,gebreke],vp],no_passive),
+	    fixed([copula_np(kwijt,pc(aan))],no_passive),
+	    fixed([copula_np(kwijt),pc(aan)],no_passive),
 	    %% daar is geen discussie/twijfel over mogelijk
 	    fixed([pc(van),ap_pred(op)],no_passive), % hij zou op van de zenuwen zijn / op zijn van de zenuwen
 	    fixed([pc(aan),ap_pred(na)],no_passive), % hij was na aan de waarheid 
@@ -13818,6 +13819,8 @@ v(lijk,lijkt,lijken,geleken,leek,leken,
         er_pp_sbar(overheen),   % ik ben er nog niet overheen dat ...
 	aux(te),     % hij lijkt te slapen
 	so_aux(te),  % hij lijkt me te slapen
+	fixed([copula_np(kwijt,pc(aan))],no_passive),
+	fixed([copula_np(kwijt),pc(aan)],no_passive),
         fixed([vc(lig,psp,intransitive),pc(aan),dat],no_passive),
         fixed([vc(lig,psp,intransitive),extra_obj_vp(A,B),er_pp(aan,A),i(dat,B)],no_passive),
         fixed([vc(lig,psp,intransitive),extra_sbar(A),er_pp(aan,A),dat],no_passive),
@@ -18225,8 +18228,10 @@ v(raak,raakt,raken,geraakt,raakte,raakten,
 	    fixed([ap_pred('in zwang')],no_passive),
 	    fixed([[in,gevecht]],no_passive),
 	    fixed([[slaags]],no_passive),
+	    fixed([copula_np(kwijt,pc(aan))],no_passive),
+	    fixed([copula_np(kwijt),pc(aan)],no_passive),
 	    fixed([copula_np(kwijt,mod_pp(van))],no_passive),
-%%%	    part_np_pc_pp(kwijt,van),
+	    fixed([copula_np(kwijt),mod_pp(van)],no_passive),
 				% daar raakte ik de kluts/tel/.. van kwijt
 	    part_pc_pp(los,van)]),
      h([intransitive,
@@ -19988,6 +19993,8 @@ v(schijn,schijnt,schijnen,geschenen,scheen,schenen,
 	part_transitive(uit),   % VL
 	aux(te),
 	passive,                % het boek scheen voor hem klaargelegd
+	    fixed([copula_np(kwijt,pc(aan))],no_passive),
+	    fixed([copula_np(kwijt),pc(aan)],no_passive),
         fixed([vc(lig,psp,intransitive),pc(aan),dat],no_passive),
         fixed([vc(lig,psp,intransitive),extra_obj_vp(A,B),er_pp(aan,A),i(dat,B)],no_passive),
         fixed([vc(lig,psp,intransitive),extra_sbar(A),er_pp(aan,A),dat],no_passive),
