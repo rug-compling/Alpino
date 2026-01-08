@@ -2498,11 +2498,12 @@ is_dict_used(P1) :-
     \+ Type = url,
     \+ probably_wrong_tag(P1,P2).
 is_dict_used(P1) :-
-    tag(P0,P,_,_,_,_,normal(Type),_),
+    tag(P0,P,_,_,DeGoede,_,normal(Type),_),
     P0 < P1,
     P1 < P,
     \+ Type = url,
-    \+ probably_wrong_tag(P0,P).
+    \+ probably_wrong_tag(P0,P),
+    \+ less_likely_name(DeGoede).
 is_dict_used(P) :-
     close_bracket(P,_,_).
 is_dict_used(P1) :-
@@ -3303,3 +3304,9 @@ is_connected(P0,P):-
     connected(P0,P).
 
 */
+
+less_likely_name('de Goede').
+less_likely_name('de Korte').
+less_likely_name('de Lange').
+less_likely_name('de Wilde').
+less_likely_name('de Witte').
