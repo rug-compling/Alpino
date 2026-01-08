@@ -4646,17 +4646,11 @@ m(oneens,           het_np_adjective(er_pp_vp(over)),     oneens).
 %% VL: het afgebold zijn: er mee opgehouden
 m(afgebold,         het_np_adjective,                     afgebold).
 
-%%%% FROM HERE
-%
-% these do not work if the second, non-obj1, argument goes to the left of obj1!
-% m(kwijt,            np_adjective(pp(aan)), kwijt).
-%%%ok : we zijn er een fortuin aan kwijt
-%%%not: we zijn daaraan een fortuin kwijt
-%m(erkentelijk,      np_adjective(pp(voor)),   erkentelijk).
-%m(erkentelijk,      np_adjective(er_pp_sbar(voor)),   erkentelijk).
-
-%%%%% 2x obj2...  Hij lijkt me hun veel geld schuldig, so obj2 really must be part of PREDC
-
+%% Note that we cannot treat these latter three adjectives in the
+%% verbal entries, since there can be 2x obj2: Hij lijkt me hun veel geld schuldig,
+%% so obj2 really must be part of PREDC
+%%
+%%
 %% omdat hij mij de bank veel geld schuldig lijkt
 %% these are ok
 m(schuldig,         np_adjective(so_np),      schuldig).

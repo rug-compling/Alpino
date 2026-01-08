@@ -39708,7 +39708,12 @@ n([pl(vissen),sg(vis)],de,[],
    i(zout_water,zoutwater),
    dim(visje)]).
 
-n([pl(visies),sg(visie)],de,[sbar,vp,subject_sbar],
+n([pl(visies),sg(visie)],de,
+  [sbar,
+   vp,
+   subject_vp_no_het,
+   subject_sbar_no_het
+  ],
   [toekomst]).
 
 n([pl(visioenen),sg(visioen)],het,[sbar,vp]).
