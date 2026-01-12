@@ -13707,6 +13707,7 @@ v(lig,ligt,liggen,gelegen,lag,lagen,
 	part_intransitive(voor),
 	pc_pp(aan),  % dat ligt aan jou
 	er_pp_sbar(in),
+	er_pp_vp(in),
 	subj_control(wk_te),    % hij ligt te klieren / hij komt liggen klieren (?)
 	subj_control(pass_te),  % VL: omdat hij te slapen lag
         part_ld_er_transitive(bij), % zoals ze er bijliggen
