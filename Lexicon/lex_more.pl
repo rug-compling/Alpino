@@ -1298,7 +1298,7 @@ number_expression(Type,Ws0,Ws) :-
     term_hash(Ws0,Ix),
     (   found_number_expression(Ix,Ws0,List)
     ->  true
-    ;   findall(Type0/Ws,number_expressionXX(Type0,Ws0,Ws),List0),
+    ;   findall(Type0/Ws1,number_expressionXX(Type0,Ws0,Ws1),List0),
 	sort(List0,List),
 	noclp_assertz(found_number_expression(Ix,Ws0,List))
     ),
@@ -4830,5 +4830,6 @@ roman_rang(Word) :-
     roman_number(RomanStr),
     rang_suffix(Suf).
 
+rang_suffix(e).    % de xiiie eeuw
 rang_suffix(de).   % de xiiide eeuw
 rang_suffix(ste).  % de xxiste eeuw
