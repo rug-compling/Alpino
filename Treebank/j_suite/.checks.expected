@@ -91,3 +91,7 @@ j_suite/./Ik_aarzel_vooral_wat_het_tijdstip_betreft.xml	//node[ ../@cat="whrel" 
 j_suite/./Ik_aarzel_vooral_wat_het_tijdstip_betreft.xml	//node[../node[@rel="rhd"] and not(@rel="body") and not(@rel="rhd")]	unexpected rhd-sister.   Expected rels: body rhd
 j_suite/./allemaal_gelul.xml	//node[@rel="det" and @pos and not(@pt="lid" or @pt="vnw" or @pt="tw" or (@pt="n" and @naamval="gen") or @pt="spec" or @pt="adj" or @lemma="genoeg" or (@pt="n" and @ntype="eigen"))]	unexpected postag for determiner
 j_suite/./zo_heette_het.xml	//node[not(@lemma="er") and @rel="sup" and ../node[@rel="su" and not(@cat="cp" or @cat="oti" or @cat="ti" or @cat="whsub" or @cat="conj")] and not(../node[@rel="hd" and (@lemma="zijn" or @lemma="vallen")] and ../node[@rel="su" and @index])]	unexpected sup/su combination
+j_suite/./Het_komt_,_vooral_wat_de_spelregels_aangaat_,_veel_overeen_met_volleybal_..xml	//node[ ../@cat="whrel" and not(@rel="body") and not(@rel="rhd")]	unexpected whrel-daughter.   Expected rels: body rhd
+j_suite/./Het_komt_,_vooral_wat_de_spelregels_aangaat_,_veel_overeen_met_volleybal_..xml	//node[../node[@rel="rhd"] and not(@rel="body") and not(@rel="rhd")]	unexpected rhd-sister.   Expected rels: body rhd
+j_suite/./Vooral_wat_ons_betreft_moet_hij_weg.xml	//node[ ../@cat="whrel" and not(@rel="body") and not(@rel="rhd")]	unexpected whrel-daughter.   Expected rels: body rhd
+j_suite/./Vooral_wat_ons_betreft_moet_hij_weg.xml	//node[../node[@rel="rhd"] and not(@rel="body") and not(@rel="rhd")]	unexpected rhd-sister.   Expected rels: body rhd

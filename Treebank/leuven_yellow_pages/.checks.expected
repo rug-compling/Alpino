@@ -304,3 +304,4 @@ leuven_yellow_pages/./253.xml	//node[not(@cat="pp") and node[@rel="hd" and @post
 leuven_yellow_pages/./253.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?
 leuven_yellow_pages/./201.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
 leuven_yellow_pages/./202.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
+leuven_yellow_pages/./54.xml	//node[node[@rel="hd" and (@lemma="worden" or @lemma="zijn" or @lemma="zullen" or @lemma="lijken" or @lemma="blijken" or @lemma="schijnen" or @lemma="blijven" or @lemma="dunken")] and node[@rel="obj1"]]	unexpected obj1 with copula

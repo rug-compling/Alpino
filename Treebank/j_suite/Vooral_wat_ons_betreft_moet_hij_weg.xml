@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="whrel" end="4" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="vooral" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooral" sc="modal" word="Vooral"/>
+        <node begin="1" case="both" def="indef" end="2" gen="het" getal="ev" id="4" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="wat"/>
+        <node begin="1" cat="ssub" end="4" id="5" rel="body">
+          <node begin="1" end="2" id="6" index="1" rel="su"/>
+          <node begin="2" case="dat_acc" def="def" end="3" gen="de" getal="mv" id="7" lemma="ons" naamval="obl" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" rnum="pl" root="ons" status="vol" vwtype="pr" wh="nwh" word="ons"/>
+          <node begin="3" end="4" id="8" infl="sg3" lemma="betreffen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="betref" sc="transitive" tense="present" v_per="thi" word="betreft" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="9" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="ld_adv" stype="declarative" tense="present" v_per="thi" word="moet" wvorm="pv"/>
+      <node begin="5" case="nom" def="def" end="6" gen="de" genus="masc" getal="ev" id="10" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node aform="base" begin="6" end="7" id="11" infl="pred" lemma="weg" pos="adj" postag="BW()" pt="bw" rel="ld" root="weg" vform="adj" word="weg"/>
+    </node>
+  </node>
+  <sentence>Vooral wat ons betreft moet hij weg</sentence>
+</alpino_ds>
