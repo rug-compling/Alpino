@@ -4,19 +4,17 @@
     <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="6" id="2" rel="--">
       <node begin="0" cat="whrel" end="3" id="3" rel="su">
-        <node begin="0" cat="np" end="2" id="4" index="1" rel="rhd">
-          <node begin="0" buiging="zonder" end="1" id="5" lemma="al" naamval="stan" pdtype="det" pos="adv" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" vwtype="onbep" word="Al"/>
-          <node begin="1" end="2" getal="ev" id="6" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="wat" status="vol" vwtype="vb" word="wat"/>
-        </node>
-        <node begin="0" cat="ssub" end="3" id="7" rel="body">
-          <node begin="0" end="2" id="8" index="1" rel="su"/>
-          <node begin="2" end="3" id="9" lemma="stinken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="stink" word="stinkt" wvorm="pv"/>
+        <node begin="0" buiging="zonder" end="1" id="4" lemma="al" naamval="stan" pdtype="det" pos="adv" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" vwtype="onbep" word="Al"/>
+        <node begin="1" end="2" getal="ev" id="5" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
+        <node begin="1" cat="ssub" end="3" id="6" rel="body">
+          <node begin="1" end="2" id="7" index="1" rel="su"/>
+          <node begin="2" end="3" id="8" lemma="stinken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="stink" word="stinkt" wvorm="pv"/>
         </node>
       </node>
-      <node begin="4" end="5" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
-      <node begin="5" buiging="zonder" end="6" graad="basis" id="11" lemma="vies" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="vies" word="vies"/>
+      <node begin="4" end="5" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="vies" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="vies" word="vies"/>
     </node>
-    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Al wat stinkt , is vies .</sentence>
 </alpino_ds>
