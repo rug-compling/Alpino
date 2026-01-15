@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="du" end="5" id="2" rel="--">
+      <node begin="1" case="nom" def="def" end="2" gen="de" genus="masc" getal="ev" id="3" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="dp" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="0" cat="ap" end="5" id="4" rel="dp">
+        <node aform="compar" begin="0" end="1" id="5" infl="no_e" lemma="liever" pos="adj" postag="BW()" pt="bw" rel="hd" root="lief" vform="adj" word="Liever"/>
+        <node begin="3" cat="cp" end="5" id="6" rel="obcomp">
+          <node begin="3" conjtype="onder" end="4" id="7" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+          <node begin="4" case="nom" def="def" end="5" gen="de" getal="ev" id="8" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="body" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Liever hij , dan ik</sentence>
+</alpino_ds>

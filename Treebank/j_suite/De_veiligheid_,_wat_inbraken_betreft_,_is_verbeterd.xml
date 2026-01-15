@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="6" end="7" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="9" id="3" rel="--">
+      <node begin="0" cat="np" end="6" id="4" index="1" rel="su">
+        <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="veiligheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="veiligheid" word="veiligheid"/>
+        <node begin="3" cat="whrel" end="6" id="7" rel="mod">
+          <node begin="3" end="4" getal="ev" id="8" index="2" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
+          <node begin="3" cat="ssub" end="6" id="9" rel="body">
+            <node begin="3" end="4" id="10" index="2" rel="su"/>
+            <node begin="4" end="5" getal="mv" graad="basis" id="11" lemma="inbraak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="inbraak" word="inbraken"/>
+            <node begin="5" end="6" id="12" lemma="betreffen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="betref" word="betreft" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="13" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="9" id="14" rel="vc">
+        <node begin="0" end="6" id="15" index="1" rel="su"/>
+        <node begin="8" buiging="zonder" end="9" id="16" lemma="verbeteren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verbeter" word="verbeterd" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>De veiligheid , wat inbraken betreft , is verbeterd</sentence>
+</alpino_ds>

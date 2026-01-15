@@ -95,3 +95,7 @@ j_suite/./Het_komt_,_vooral_wat_de_spelregels_aangaat_,_veel_overeen_met_volleyb
 j_suite/./Het_komt_,_vooral_wat_de_spelregels_aangaat_,_veel_overeen_met_volleybal_..xml	//node[../node[@rel="rhd"] and not(@rel="body") and not(@rel="rhd")]	unexpected rhd-sister.   Expected rels: body rhd
 j_suite/./Vooral_wat_ons_betreft_moet_hij_weg.xml	//node[ ../@cat="whrel" and not(@rel="body") and not(@rel="rhd")]	unexpected whrel-daughter.   Expected rels: body rhd
 j_suite/./Vooral_wat_ons_betreft_moet_hij_weg.xml	//node[../node[@rel="rhd"] and not(@rel="body") and not(@rel="rhd")]	unexpected rhd-sister.   Expected rels: body rhd
+j_suite/./De_veiligheid_,_vooral_wat_inbraken_betreft_,_is_verbeterd.xml	//node[ ../@cat="whrel" and not(@rel="body") and not(@rel="rhd")]	unexpected whrel-daughter.   Expected rels: body rhd
+j_suite/./De_veiligheid_,_vooral_wat_inbraken_betreft_,_is_verbeterd.xml	//node[../node[@rel="rhd"] and not(@rel="body") and not(@rel="rhd")]	unexpected rhd-sister.   Expected rels: body rhd
+j_suite/./De_veiligheid_,_vooral_wat_inbraken_betreft_,_is_verbeterd.xml	//node[@cat="np" and ./node[@cat="whrel"]]	whrel modifies an NP?
+j_suite/./De_veiligheid_,_wat_inbraken_betreft_,_is_verbeterd.xml	//node[@cat="np" and ./node[@cat="whrel"]]	whrel modifies an NP?
