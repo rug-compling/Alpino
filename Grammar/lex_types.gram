@@ -1774,7 +1774,7 @@ datje_complementizer(C) :-
 
 xp_complementizer(C,XP) :-
     C => comp,
-    C:ctype => c_mod,
+    C:ctype => (c_mod;c_mod_np),
     C:sc <=> [XP],
     XP:slash =?> [],
     unify_mods(XP),

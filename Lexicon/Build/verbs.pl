@@ -1440,7 +1440,7 @@ v(adviseer,adviseert,adviseren,geadviseerd,adviseerde,adviseerden,
 	so_pp_np,
 	so_pp_sbar,
 	np_np,
-	transitive,
+	transitive,  %% also only obj2? "zij adviseren me" OBJ2 or OBJ1?
 	vp_no_control,
 	np_pc_pp(tot)])]).
 

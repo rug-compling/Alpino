@@ -4398,13 +4398,16 @@ xp_modal_xp_structure(X,Adv,XP) :-
 %%EX%% Ook daar werd flink op gehamerd
 %%EX%% Al begin jaren tachtig pleitte hij voor keiharde bezuinigingen
 %%EX%% Hij heeft het circa 1970 al geroepen
+%% now separate rule for redrel, because can also work for things like
+%%EX%% Vooral wat ons betreft moet hij weg
+%%EX%% Het komt , vooral wat de spelregels aangaat , veel overeen met volleybal .
 grammar_rule(xp_modal_xp(np),XP,[Adv,X]):-
     XP => np,
     X:has_app => no,   % reduce spurious ambiguities
     XP:nform => (norm;temp;temp_meas_mod;meas_mod;year),
     X => np,
     X:wh => nwh,
-%    X:redrel => no,   
+    X:redrel => no,   
     Adv:modal_adv_arg => adv_noun,
 
     YES => yes,
@@ -4419,6 +4422,11 @@ grammar_rule(xp_modal_xp(np),XP,[Adv,X]):-
 	 )),
     
 %   wrong: "alleen die twee hebben ..."
+    xp_modal_xp_structure(X,Adv,XP).
+
+grammar_rule(xp_modal_xp(redrel), XP, [Adv, X]) :-
+    max_redrel(X),
+    XP => redrel,
     xp_modal_xp_structure(X,Adv,XP).
 
 %%EX%% Vooral omdat we geen geld hebben
@@ -7821,6 +7829,9 @@ grammar_rule(sbar(behalve_np), SBAR, [ Comp, Mod, XP ]) :-
     unify_except_l(NP,XP,[case,e_deps]),  % zoals ik/mij
     XP:wkpro => ~weakpro,
     XP:redrel => no,
+    max_advp(Mod),
+    Comp:hstem <=> Stem,
+    alpino_wappend:wwmember(Stem,[behalve,behoudens,'zij het',tenzij,'maar dan']),
     sbar_comp_behalve_xp_structure(Comp,XP,SBAR,Mod).
 
 %%EX%% Een wandelaar zoals , natuurlijk , ondergetekende houdt dat makkelijk vol
@@ -7833,9 +7844,10 @@ grammar_rule(sbar(mod_np),SBAR,[ Comp, COMMA, MOD, COMMA2, XP ]) :-
     XP:nform => (norm;meas_mod),
     XP:wkpro => ~weakpro,
     XP:redrel => no,
-    XP1 => np,
-    hd_mod_structure(XP,MOD,XP1),
-    sbar_comp_xp_structure(Comp,XP1,SBAR).
+%    XP1 => np,
+%    hd_mod_structure(XP,MOD,XP1),
+%    sbar_comp_xp_structure(Comp,XP1,SBAR).
+    sbar_comp_behalve_xp_structure(Comp,XP,SBAR,MOD).
 
 %% hack
 %%
@@ -7885,15 +7897,15 @@ grammar_rule(sbar(pp),SBAR,[ Comp, XP ]) :-
 grammar_rule(sbar(behalve_pp),SBAR,[Comp,Mod,XP]) :-
     ind_max_pp(XP0),
     unify_except_l(XP0,XP,[wh,e_deps]),
+    max_advp(Mod),
+    Comp:hstem <=> Stem,
+    alpino_wappend:wwmember(Stem,[behalve,behoudens,'zij het',tenzij,'maar dan']),
     sbar_comp_behalve_xp_structure(Comp,XP,SBAR,Mod).
 
 sbar_comp_behalve_xp_structure(Comp,XP,SBAR,Mod) :-
-    max_advp(Mod),
     SBAR => sbar,
     sbar_comp_xp_structure(Comp,XP,SBAR0),
-    hd_mod_structure(SBAR0,Mod,SBAR),
-    Comp:hstem <=> Stem,
-    alpino_wappend:wwmember(Stem,[behalve,behoudens,'zij het',tenzij,'maar dan']).
+    hd_mod_structure(SBAR0,Mod,SBAR).
 
 %%EX%% Die winkel is altijd open , laat staan , natuurlijk , op vrijdag
 grammar_rule(sbar(mod_pp),SBAR,[ Comp, COMMA, MOD, COMMA2, XP ]) :-
@@ -7906,10 +7918,11 @@ grammar_rule(sbar(mod_pp),SBAR,[ Comp, COMMA, MOD, COMMA2, XP ]) :-
     max(XP0),
     XP0:pp_role => pp_obj1,
     unify_except(XP0,XP,e_deps),
-    XP1 => pp,
-    hd_mod_structure(XP,MOD,XP1),
-    unify_mods(XP1),
-    sbar_comp_xp_structure(Comp,XP1,SBAR).
+    sbar_comp_behalve_xp_structure(Comp,XP,SBAR,MOD).
+%    XP1 => pp,
+%    hd_mod_structure(XP,MOD,XP1),
+%    unify_mods(XP1),
+%    sbar_comp_xp_structure(Comp,XP1,SBAR).
 
 %%EX%% Het team won uiteindelijk wel , alhoewel onterecht
 grammar_rule(sbar(a),SBAR,[ Comp, XP ]) :-
@@ -7944,6 +7957,9 @@ grammar_rule(sbar(behalve_sbar),SBAR,[ Comp, Mod, XP ]) :-
     XP => sbar,
     XP:wh => nwh,
     XP:tags => [],
+    max_advp(Mod),
+    Comp:hstem <=> Stem,
+    alpino_wappend:wwmember(Stem,[behalve,behoudens,'zij het',tenzij,'maar dan']),
     sbar_comp_behalve_xp_structure(Comp,XP,SBAR,Mod).
 
 %%EX%% Ik ga niet , behalve om even de deur uit te zijn
@@ -7973,6 +7989,9 @@ grammar_rule(sbar(behalve_vp),SBAR,[ Comp, Mod, XP ]) :-
     XP:haswh => no,
     XP:subj => np,
     XP:subj:prs =?> ~invje,
+    max_advp(Mod),
+    Comp:hstem <=> Stem,
+    alpino_wappend:wwmember(Stem,[behalve,behoudens,'zij het',tenzij,'maar dan']),
     sbar_comp_behalve_xp_structure(Comp,XP,SBAR,Mod).
 
 %%EX%% Zoals afgesproken komt hij niet
@@ -13048,7 +13067,7 @@ grammar_rule(comparative(mod_np), CompP, [ Comp, COMMA, MOD, COMMA2, XP ]) :-
     ind_max_np(XP),
     XP:subn => ~sub_indef_verb,
     XP1 => np,
-    hd_mod_structure(XP,MOD,XP1),
+    dp_dp_structure(MOD,XP,XP1),
     comparative_structure(Comp,XP1,CompP).
 
 %%EX%% Zij deden het beter dan destijd Rusland

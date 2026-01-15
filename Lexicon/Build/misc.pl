@@ -3514,6 +3514,16 @@ pp('n.Chr').
 pp('n.Chr.').
 pp('n.C.').
 
+pp(['v.','Chr']).
+pp(['v.','Chr.']).
+pp(['v.','C.']).
+
+pp(['na','Chr']).
+pp(['na','Chr.']).
+pp(['na','C.']).
+pp(['voor','Chr']).
+pp(['voor','Chr.']).
+pp(['voor','C.']).
 
 %% others:
 %% patat met; dan moet het toch maar met;
