@@ -7405,6 +7405,7 @@ v(exposeer,exposeert,exposeren,geëxposeerd,exposeerde,exposeerden,
 
 v(extraheer,extraheert,extraheren,geëxtraheerd,extraheerde,extraheerden,
     [h([transitive,
+	np_ld_pp,
 	intransitive])]).
 
 v(extrapoleer,extrapoleert,extrapoleren,geëxtrapoleerd,extrapoleerde,
@@ -27824,7 +27825,7 @@ v(vorm,vormt,vormen,gevormd,vormde,vormden,
 	fixed([{[acc(oordeel),refl,pc(over)]}],no_passive),
 	part_als_pred_np(om),
 	part_transitive(om),
-	part_np_pc_pp(om,tot)])]).
+	part_np_ld_pp(om)])]).
 
 v(vors,vorst,vorsen,gevorst,vorste,vorsten,
     [h([intransitive,

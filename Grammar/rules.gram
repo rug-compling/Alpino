@@ -6329,6 +6329,14 @@ grammar_rule(n_n_modroot(comma), N, [ N0, Cl, ROOT, Cr ]) :-
     max_root(ROOT),
     n_post_mod_structure(N0,ROOT,N).
 
+%%EX%% De veiligheid , wat inbraken betreft , is verbeterd
+%%EX%% De veiligheid , vooral wat inbraken betreft , is verbeterd
+grammar_rule(n_n_modredrel(comma), N, [ N0, Cl, ROOT, Cr ]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    comma(Cl),comma(Cr),
+    max_redrel(ROOT),
+    n_post_mod_structure(N0,ROOT,N).
+
 %%EX%% De schilderijen , te zien in Amersfoort , worden streng bewaakt
 grammar_rule(n_n_mod_te_v, N, [ N0, Cl, ADJ, Cr ]) :-
     comma(Cl),comma(Cr),
@@ -13183,7 +13191,9 @@ grammar_rule(optpunct(ne),OPTPUNCT,[PUNCT]) :-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% liever X dan X
 %%EX%% Liever hij dan ik
-grammar_rule(compar_np_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
+%%EX%% Liever hij , dan ik
+grammar_rule(compar_np_dan_obcomp,Start,[MOD0,XP,OPTCOMMA,OBCOMP]) :-
+    optcomma(OPTCOMMA),
     Start => start,
     MOD0 => modifier,
     MOD => modifier,
@@ -13194,7 +13204,9 @@ grammar_rule(compar_np_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     dp_dp_structure(MOD,XP,Start).
 
 %%EX%% Liever met chocolade dan zonder chocolade
-grammar_rule(compar_pp_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
+%%EX%% Liever met chocolade , dan zonder chocolade
+grammar_rule(compar_pp_dan_obcomp,Start,[MOD0,XP,OPTCOMMA,OBCOMP]) :-
+    optcomma(OPTCOMMA),
     Start => start,
     MOD0 => modifier,
     MOD => modifier,
@@ -13205,7 +13217,9 @@ grammar_rule(compar_pp_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     dp_dp_structure(MOD,XP,Start).
 
 %%EX%% Liever buiten dan binnen
-grammar_rule(compar_adv_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
+%%EX%% Liever buiten , dan binnen
+grammar_rule(compar_adv_dan_obcomp,Start,[MOD0,XP,OPTCOMMA,OBCOMP]) :-
+    optcomma(OPTCOMMA),
     Start => start,
     MOD0 => modifier,
     MOD => modifier,
@@ -13216,7 +13230,9 @@ grammar_rule(compar_adv_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     dp_dp_structure(MOD,XP,Start).
 
 %%EX%% Liever lui dan moe
-grammar_rule(compar_adj_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
+%%EX%% Liever lui , dan moe
+grammar_rule(compar_adj_dan_obcomp,Start,[MOD0,XP,OPTCOMMA,OBCOMP]) :-
+    optcomma(OPTCOMMA),
     Start => start,
     MOD0 => modifier,
     MOD => modifier,

@@ -20217,7 +20217,9 @@ a([ende(kenmerkende),
    ste(kenmerkendste)],adv,
   [subject_sbar,
    transitive,
-   pp(voor)],[]).
+   pp(voor),
+   pp_subject_sbar(voor)
+  ],[]).
 
 a([e(kennelijke),
    er(kennelijker),
