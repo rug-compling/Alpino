@@ -45,3 +45,5 @@ eans/./04_05_04_8.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt="bw
 eans/./05_07_04_02_8.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt="bw" or @lemma="hoeveel")]	whd without wh postag?
 eans/./05_10_02_01_8b.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt="bw" or @lemma="hoeveel")]	whd without wh postag?
 eans/./05_10_02_03_1a.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt="bw" or @lemma="hoeveel")]	whd without wh postag?
+eans/./05_09_02_02_8.xml	//node[ ../@cat="whrel" and not(@rel="body") and not(@rel="rhd")]	unexpected whrel-daughter.   Expected rels: body rhd
+eans/./05_09_02_02_8.xml	//node[../node[@rel="rhd"] and not(@rel="body") and not(@rel="rhd")]	unexpected rhd-sister.   Expected rels: body rhd
