@@ -11,11 +11,11 @@
         <node begin="3" end="4" id="7" lemma="Duimpje" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Duimpje" spectype="deeleigen" word="Duimpje"/>
       </node>
       <node begin="4" cat="cp" end="14" id="8" rel="mod">
-        <node begin="4" cat="mwu" end="6" id="9" rel="body">
+        <node begin="4" cat="mwu" end="6" id="9" rel="cmp">
           <node begin="4" conjtype="neven" end="5" id="10" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="mwp" root="maar" word="maar"/>
           <node begin="5" end="6" id="11" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mwp" root="dan" word="dan"/>
         </node>
-        <node begin="6" cat="np" end="14" id="12" rel="cmp">
+        <node begin="6" cat="np" end="14" id="12" rel="body">
           <node begin="6" end="7" getal-n="zonder-n" graad="basis" id="13" lemma="één" numtype="hoofd" pos="pron" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="één" word="een"/>
           <node begin="7" cat="rel" end="14" id="14" rel="mod">
             <node begin="7" end="8" getal="getal" id="15" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
