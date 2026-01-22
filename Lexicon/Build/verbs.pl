@@ -11941,7 +11941,8 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
       part_vp_tpart(overeen),
       pc_pp(aan),		% hoe kom je aan wormen?
                                 % een eind(e) komen aan
-                                 % hij komt er eindelijk aan ==> er aan LD?
+                                % hij komt er eindelijk aan ==> er aan LD?
+                                % de heerlijkheid van Bazel kwam aan prinses Margaretha
       
       pc_pp(achter),		% hoe kom je achter de waarheid
       pc_pp(door)		% dat kwam door jullie
@@ -12245,7 +12246,8 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
           fixed([[te,baat],dat],no_passive),
           fixed([[te,boven],acc],no_passive),
           fixed([[te,hulp]],no_passive),
-          fixed([[te,hulp],dat],no_passive),
+          fixed([[te,hulp],dat],imp_passive),  % WR-P-E-I-0000054957.p.2.s.271
+	                                       % Noorwegen werd te hulp gekomen
           fixed([[te,stade]],no_passive),
           fixed([[te,stade],dat],no_passive),
           fixed([[te,na],dat],no_passive),
@@ -13281,6 +13283,7 @@ v(leer,leert,leren,geleerd,leerde,leerden,
 	vp,
 	np_pc_pp(uit),
 	np_pc_pp(van),
+	pp_sbar(van),   % van hem leerde ik dat ...
 	np_mod_pp(over),
 	part_np_np(aan),
 	part_np_vp_obj(aan),    % ik heb hem aangeleerd om goed uit te kijken
@@ -23202,6 +23205,7 @@ v(stuur,stuurt,sturen,gestuurd,stuurde,stuurden,
         part_np_np(na),
 	part_transitive(op),
 	part_np_ld_pp(op),
+	part_np_ld_transitive(op),   % ik stuur hem de heuvel op =/= ik stuur hem de boeken op
 	part_intransitive(op),
 	part_transitive(over),
 	part_transitive(rond),

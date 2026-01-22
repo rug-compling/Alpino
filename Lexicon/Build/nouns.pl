@@ -29349,6 +29349,7 @@ n([sg(punt),pl(punten),
    ignore(m(punt,noun(both,count,pl,pred_pp(op)),punten))
   ],both,
   [sbar,
+   app_measure,
    subject_sbar,
    subject_vp
   ],

@@ -6830,6 +6830,7 @@ name_baron(ridder). % mr L.R.J. ridder van Rappard
 
 name_baron(kardinaal).
 
+name_vanhet(et,de).
 name_vanhet(de,la).
 name_vanhet(de,las).
 name_vanhet(de,los).

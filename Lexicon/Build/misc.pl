@@ -6629,6 +6629,7 @@ m('o zo',           intensifier,[o,zo]).
 m('o zo',           intensifier,[oh,zo]).
 m(omin,             intensifier,omin).
 m(oming,            intensifier,oming).
+m(pseudo,           intensifier,pseudo).
 m(te,               intensifier,te).
 m('veel te',        intensifier,veelste).
 m('verre van',      intensifier,[verre,van]).
