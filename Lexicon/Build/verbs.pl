@@ -6236,7 +6236,7 @@ v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
         fixed([{[acc(zeg),pc(over)]}],norm_passive),
         fixed([{[acc(zeg_DIM),pc(over)]}],norm_passive),
 				% je doet er verstandig aan te verdwijnen
-	fixed([er_pp(aan),ap_pred,vp],no_passive),
+	fixed([er_pp(aan,A),ap_pred,extra_vp(A)],no_passive),
 	part_np_ld_pp(over),
 	part_pc_pp(af,aan),  % dat doet daar niet aan af 
 	part_np_pc_pp(af,aan),  % dat doet niets af aan de overwinning
@@ -8029,10 +8029,10 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	part_ld_pp(verder),
 	part_dip_sbar(verder),
         part_pc_pp(verder,met),
-	part_intransitive(voor),
-	part_ld_pp(voor),
+	part_intransitive(voor),   % dames gaan voor
 	part_transitive(voor),     % ik ga hem voor
         part_np_pc_pp(voor,in),    % hij ging ons voor in de dienst
+        part_np_pc_pp(voor,op),    % het wetboek gaat voor op de praktijk
 	part_intransitive(vooraf), % de soep ging de maaltijd vooraf
 	part_transitive(vooraf),
 	part_pc_pp(vooraf,aan),
@@ -11826,7 +11826,7 @@ v(knoop,knoopt,knopen,geknoopt,knoopte,knoopten,
 	fixed([svp_pp(in,oor),refl,acc],norm_passive),
 	fixed([svp_pp(in,oor),sbar],norm_passive),
 	fixed([svp_pp(in,oor),refl,sbar],norm_passive),
-	fixed([[aan,elkaar],acc(eindje)],norm_passive),  % de eindjes moeten aan elkaar worden geknoopt
+	fixed([svp_pp(aan,elkaar),acc(eindje)],norm_passive),  % de eindjes moeten aan elkaar worden geknoopt
 	part_np_ld_pp(vast),
 	part_pc_pp(aan,bij)])]).
 

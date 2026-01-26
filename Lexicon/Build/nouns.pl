@@ -7840,6 +7840,7 @@ n([pl('coma\'s'),sg(coma)],both,[pred_pp(in)]).
 
 n([pl(combinaties),sg(combinatie)],de,
   [app_measure,
+   sbar, 
    subject_sbar  % het was een vervelende combinatie (van factoren) dat ...
   ]).
 
@@ -16374,7 +16375,7 @@ n([sg(implantaat),pl(implantaten)],het,[],[borst]).
 
 n([sg(implementatie),pl(implementaties)],de,[]).
 
-n([pl(implicaties),sg(implicatie)],de,[]).
+n([pl(implicaties),sg(implicatie)],de,[sbar]).
 
 n([pl(importen),sg(import)],de,[],[parallel]).
 
@@ -22289,7 +22290,7 @@ n([sg(matchpoint),pl(matchpoints),
 
 n([mass(mate)],de,[sbar]).
 
-n([pl(materialen),sg(materiaal)],het,[],
+n([pl(materialen),sg(materiaal)],het,[sbar],
   [archief,
    beeld,
    bewijs,
@@ -35975,7 +35976,10 @@ n([mass(telefoonverkeer)],het,[]).
 
 n([pl(telegrafen),sg(telegraaf)],de,[]).
 
-n([pl(telegrammen),pl(telegrams),sg(telegram)],het,[],[dim(telegrammetje)]).
+n([pl(telegrammen),pl(telegrams),sg(telegram)],het,
+  [sbar],
+  [s(geluk),
+   dim(telegrammetje)]).
 
 n([mass(telepathie)],de,[]).
 
@@ -36758,7 +36762,7 @@ n([meas(ton),pl(tonnen)],de,[meas_mod,measure],
    kilo,
    mega]).
 
-n([pl(tonelen),sg(toneel)],het,[],[wereld]).
+n([pl(tonelen),sg(toneel)],het,[sbar],[wereld]).
 
 n([pl(toneelspelen),sg(toneelspel)],het,[]).
 
