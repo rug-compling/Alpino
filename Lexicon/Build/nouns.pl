@@ -8268,7 +8268,7 @@ n([mass(consternatie)],de,[]).
 
 n([pl(constituties),sg(constitutie)],de,[]).
 
-n([sg(contructeur),pl(constructeurs)],de,[]).
+n([sg(constructeur),pl(constructeurs)],de,[]).
 
 n([pl(constructies),sg(constructie)],de,[],
   [s(bescherming)]).

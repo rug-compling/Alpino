@@ -10156,6 +10156,7 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	part_transitive(vrij),
 	part_refl(in),
 	fixed([[schrap],refl],no_passive),
+	part_transitive(gevangen),
 	part_refl(schuil),
 	part_transitive(schuil),  % hij houdt de kinderen schuil
 	part_refl(verborgen),     % daar houden zich Joden verborgen
@@ -10948,8 +10949,9 @@ v(kano,kanoot,kanoën,gekanood,kanode,kanoden,
 	ld_pp])]).
 
 v(kant,kant,kanten,gekant,kantte,kantten,
-    [h([transitive,
-	refl_pc_pp(tegen)])]).
+  [z([pc_pp(tegen)]),
+   h([transitive,
+      refl_pc_pp(tegen)])]).
 
 v(kantel,kantelt,kantelen,gekanteld,kantelde,kantelden,
     [unacc([intransitive]),
