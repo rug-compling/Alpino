@@ -9366,25 +9366,27 @@ v(handicap,handicapt,handicappen,gehandicapt,handicapte,handicapten,
 	transitive])]).
 
 v(hang,hangt,hangen,gehangen,hing,hingen,
-    [z([part_intransitive(uit)]),
-     h([intransitive,
-	transitive,
-	ld_pp,
-	ld_adv,
-        ld_dir,  % omlaag hangen
-	np_ld_pp,
-	np_ld_adv,
-	subj_control(pass_te),	% ?omdat het wasgoed hangt te drogen
+  [z([part_intransitive(uit)]),
+   h([intransitive,
+      transitive,
+      ld_pp,
+      ld_adv,
+      ld_dir,			% omlaag hangen
+      np_ld_pp,
+      np_ld_adv,
+      subj_control(pass_te),	% ?omdat het wasgoed hangt te drogen
 	                        % omdat het wasgoed te drogen hangt
 				% het wasgoed heeft daar te drogen gehangen
-	obj_control(pass_te),   % ik hang het wasgoed te drogen
+      obj_control(pass_te),	% ik hang het wasgoed te drogen
 	                        % TODO het wasgoed wordt te drogen gehangen
-%	                        % ALLOWS *omdat ik het wasgoed hang te drogen
-%	                        % omdat ik het wasgoed te drogen hang
-	fixed([ap_pred('te kijk')],no_passive), % VL
-	fixed([ap_pred('te kijk'),acc],norm_passive), % VL
-	fixed([ap_pred('halfstok')],no_passive), 
-	fixed([ap_pred('halfstok'),acc],norm_passive), 
+				%	                        % ALLOWS *omdat ik het wasgoed hang te drogen
+				%	                        % omdat ik het wasgoed te drogen hang
+      fixed([ap_pred('te kijk')],no_passive),	      % VL
+      fixed([ap_pred('te kijk'),acc],norm_passive),   % VL
+      fixed([ap_pred('halfstok')],no_passive), 
+      fixed([ap_pred('halfstok'),acc],norm_passive),
+     
+      
         norm_passive,           % omdat de kunstwerken hangen uitgestald
         sbar_passive,           % er hing bijvermeld dat ...
 	fixed([[boven,het,hoofd],dat],no_passive),
@@ -9416,6 +9418,7 @@ v(hang,hangt,hangen,gehangen,hing,hingen,
 	part_fixed(uit,[sbar_subj,[de,keel],dat],no_passive),
 	fixed([svp_pp(aan,klok),sbar],no_passive),
 	fixed([svp_pp(aan,klok),acc],no_passive),
+	part_np_pc_pp(vol,met),
 	part_er_pp_sbar(af,van),
 	part_ld_pp(rond),
 	part_np_ld_pp(op),
@@ -9423,7 +9426,11 @@ v(hang,hangt,hangen,gehangen,hing,hingen,
 	part_pc_pp(af,van),
 	part_pc_pp(samen,met),
 	part_fixed(samen,[pc(met),sbar],no_passive)]),
-     b([part_ld_pp(uit)])]).
+   b([part_ld_pp(uit),
+      part_pc_pp(vol,met),
+      ap_copula(vol),
+      fixed([ap_pred(vol),pc(met)],no_passive)
+     ])]).
 
 v(hannes,hannest,hannesen,gehannest,hanneste,hannesten,
     [h([transitive])]).
@@ -14361,8 +14368,8 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	part_so_pp_np(bekend),
 	part_np_mod_pp(bekend,over),
         part_refl_vp(op),	% hij maakt zich op om...
-	part_pc_pp_refl(op,tot),  
-	part_pc_pp_refl(op,voor),  
+	part_refl_pc_pp(op,tot),  
+	part_refl_pc_pp(op,voor),  
 	part_np_np(over),
 	part_np_np(uit),
 	part_np_np(wijs),
