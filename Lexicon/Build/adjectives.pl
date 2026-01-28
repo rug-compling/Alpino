@@ -1346,6 +1346,8 @@ a([ge_both(aanbeden)],adv,[],[]).
 a([ge_both(aanbevolen)],adv,
   [so_np],[]).
 
+a([pred([aan,het,feest])],nonadv,[],[]).
+
 a([pred([aan,het,hoofd])],nonadv,[pp(van)],[]).
 
 a([e(aanbiddelijke),

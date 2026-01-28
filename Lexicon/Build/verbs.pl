@@ -14358,7 +14358,9 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	part_np_np(bekend),
 	part_so_pp_np(bekend),
 	part_np_mod_pp(bekend,over),
-        part_refl_vp(op),  % hij maakt zich op om...
+        part_refl_vp(op),	% hij maakt zich op om...
+	part_pc_pp_refl(op,tot),  
+	part_pc_pp_refl(op,voor),  
 	part_np_np(over),
 	part_np_np(uit),
 	part_np_np(wijs),
@@ -14565,7 +14567,6 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	part_refl_pc_pp(af,van),
 	part_refl_pc_pp(gereed,voor),
 %	part_refl_pc_pp(los,van),
-	part_refl_pc_pp(op,voor),
 	part_refl_pc_pp(vrij,voor),
 	part_transitive(zwart), % omdat ze mij heeft zwart gemaakt bij ...
         part_fixed(uit,[{[acc(deel),pc(van)]}],norm_passive)])
