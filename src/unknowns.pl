@@ -611,6 +611,14 @@ unknown_word_heuristic(P1,R1,W,Ws,"k_c|~p|~p|~p~n",
 	    alternative([Wmin|Ws],P1,_,R1,_,k_c_letters,Tag,HIS),
 	    [Th|Tt]).
 
+unknown_word_heuristic(P1,R1,W,Ws,"x_dash_y|~p|~p|~p~n",
+		       [W,Wmin,[Th|Tt]],_,HIS) :-
+    debug_message(3,"trying heuristic x_dash_y~n",[]),
+    x_dash_y(W,Wmin),
+    findall(Tag,
+	    alternative([Wmin|Ws],P1,_,R1,_,x_dash_y,Tag,HIS),
+	    [Th|Tt]).
+
 unknown_word_heuristic(P1,R1,W,Ws,"skip_bracket|~p|~p|~p~n",
 		       [W,Wmin,[Th|Tt]],_,HIS ):-
     debug_message(3,"trying heuristic skip_bracket~n",[]),
@@ -785,6 +793,14 @@ decap_some_word_heuristic(W,P1,R1,CapW,Ws,"decap(k_c)|~p|~p|~p~n",
     k_c_letters(W,Wmin),
     findall(Tag,
 	    alternative([Wmin|Ws],P1,_,R1,_,decap(g_ch_letters),Tag,_),
+	    [Th|Tt]).
+
+decap_some_word_heuristic(W,P1,R1,CapW,Ws,"decap(x_dash_y)|~p|~p|~p~n",
+		       [CapW,Wmin,[Th|Tt]],_) :-
+    debug_message(3,"trying heuristic decap(x_dash_y)~n",[]),
+    x_dash_y(W,Wmin),
+    findall(Tag,
+	    alternative([Wmin|Ws],P1,_,R1,_,decap(x_dash_y),Tag,_),
 	    [Th|Tt]).
 
 decap_some_word_heuristic(W,P1,R1,CapW,Ws,"decap(iseer)|~p|~p|~p~n",
@@ -7882,3 +7898,8 @@ trema(101,235).
 trema(105,239).
 trema(111,246).
 trema(117,252).
+
+x_dash_y(X,Y) :-
+    atomic(X),
+    alpino_util:split_atom(X,"-",[Y1,Y2]),
+    atom_concat(Y1,Y2,Y).
