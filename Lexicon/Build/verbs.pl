@@ -8031,6 +8031,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
         part_pc_pp(verder,met),
 	part_intransitive(voor),   % dames gaan voor
 	part_transitive(voor),     % ik ga hem voor
+	part_pc_pp(voor,in),       % de paus ging voor in een mis met 300 gelovigen
         part_np_pc_pp(voor,in),    % hij ging ons voor in de dienst
         part_np_pc_pp(voor,op),    % het wetboek gaat voor op de praktijk
 	part_intransitive(vooraf), % de soep ging de maaltijd vooraf

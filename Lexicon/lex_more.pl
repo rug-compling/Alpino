@@ -656,6 +656,22 @@ phrasal_entry(score_cat,score) -->
     n_word(Score),
     { number_dash_number(Score) }.
 
+phrasal_entry(with_dt(number(hoofd(both)),dt(conj,[cnj=l(W1,number(hoofd(both)),np,0,1),
+						   cnj=l(W2,number(hoofd(both)),np,1,2)|More])),score) -->
+    n_word(W1),
+    { number_dash_number(W1) },
+    n_word(W2),
+    { number_dash_number(W2) },
+    more_score_cats(2,More).
+
+more_score_cats(_,[]) --> [].
+more_score_cats(P0,[cnj=l(W3,number(hoofd(both)),np,P0,P1)|More]) -->
+    n_word(W3),
+    {  number_dash_number(W3),
+       P1 is P0 + 1
+    },
+    more_score_cats(P1,More).
+
 % often mis-tokenized...
 phrasal_entry(score_cat,score) -->
     { hdrug_util:debug_message(4,"score_cat~n",[]) },
