@@ -1627,15 +1627,19 @@ tree_comparison(Obj,Score) :-
 %% the parser has found N objects for a given sentence
 %% which object is closest/least close to the treebank?
 tree_comparison_find_best :-
-    hdrug_flag(stop_if_optimal,OldFlag,off),  % we also report worst parse
+    hdrug_flag(stop_if_optimal,OldFlag,off), % we also report worst parse
+    call_cleanup(tree_comparison_find_best_cont,
+		 hdrug_flag(stop_if_optimal,_,OldFlag)
+		).
+
+tree_comparison_find_best_cont :-
     best_score_new_parse,
     (   hdrug:object(Obj,o(Result,_,_)),
 	best_score_result_parse(Result,_,Obj),
 	fail
     ;   true
     ),
-    best_score_end_parse,
-    hdrug_flag(stop_if_optimal,_,OldFlag).
+    best_score_end_parse.
 
 %% for each object, display its evaluation score
 tree_comparison_all :-
