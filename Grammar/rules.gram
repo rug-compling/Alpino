@@ -1060,7 +1060,7 @@ vproj_vc_structure(VP,V) :-
     V:pspslash => [],
     hd_structure(V,VP),
     
-    V:dt => dt,
+%    V:dt => dt,
     V:vslash <=> Empty,
     NonEmpty => vslash,
 %%%    V:dt:cat <=> CAT,     18 jan 2024
@@ -1260,6 +1260,7 @@ grammar_rule(vp_np_v_en_np,VP, [NP1, V, OPTCOMMA, CLIST]) :-
 
 %    CLIST:etc => no.
 
+
 %% cdb/359 cdb/5689
 %%EX%% Omdat ik een doorzetter ben en een volhouder .
 %%EX%% Omdat ik bedroefd en ongelukkig ben en verdrietig .
@@ -1301,6 +1302,92 @@ grammar_rule(vp_pp_v_en_pp,VP, [NP1, V, OPTCOMMA, CLIST]) :-
 %    CLIST:etc => no.
 
 
+
+%%EX%% Hij heeft zowel platen gekocht als boeken
+%%EX%% Er werden niet alleen wapens gevonden maar ook gedetailleerde plannen
+grammar_rule(vp_zowel_np_v_en_np,VP, [ConjL, NP1, V, OPTCOMMA, CLIST]) :-
+    NP1 => np,
+    NP => np,
+    unify_except_l(NP,NP1,[subn,cj]),
+
+    optcomma(OPTCOMMA),
+    vp_arg_v_np_structure(VP,NPS,V1),
+    vproj_vc_structure(V1,V),
+
+    %% do this only for VPs at edge of surface V
+    VP:eps3 <=> V:eps3,
+    VP:rightx => yes,
+    NPS:cj => ~no_crd,
+
+    zowel_als_start_structure(np,NPS,CrdType,ConjL,NP,CLIST),
+    CrdType => two_crd,
+    NPS:cj <=> CrdType,
+    CLIST:cform <=> CFORM,
+    dif(CFORM,om),
+    CLIST:within_word => no.
+
+%    CLIST:etc => no.
+
+%%EX%% Omdat ik niet alleen een doorzetter ben maar ook een volhouder
+%%EX%% Omdat ik niet alleen teleurgesteld ben maar ook woedend
+grammar_rule(vp_zowel_pred_v_en_pred,VP, [ConjL, NP1, V, OPTCOMMA, CLIST]) :-
+    NP1 => pred,
+    NP => pred,
+    unify_except(NP,NP1,cj),
+    optcomma(OPTCOMMA),
+    vp_arg_v_pred_structure(VP,NPS,V1),
+    vproj_vc_structure(V1,V),
+
+    %% do this only for VPs at edge of surface V
+    VP:eps3 <=> V:eps3,
+    VP:rightx => yes,
+
+    NPS:cj => ~no_crd,
+    zowel_als_start_structure(pred,NPS,CrdType,ConjL,NP,CLIST),
+    CrdType => two_crd,
+    NPS:cj <=> CrdType,
+    CLIST:within_word => no.
+%    CLIST:etc => no.
+
+%%EX%% Jongeren kunnen zowel alleen reizen als in een kleine groep
+%%EX%% Studenten moeten niet alleen 's avonds studeren maar ook 's ochtends
+grammar_rule(vp_zowel_mod_v_en_mod,VP,[ConjL,MOD,V,OPTCOMMA,CLIST]) :-
+    optcomma(OPTCOMMA),
+    vp_mod_v_structure(VP,MOD1,V1),
+    vproj_vc_structure(V1,V),
+    %% do this only for VPs at edge of surface V
+    VP:eps3 <=> V:eps3,
+    VP:rightx => yes,
+    MOD1:cj => ~no_crd,
+    zowel_als_start_structure(modifier,MOD1,CrdType,ConjL,MOD,CLIST),
+    CrdType => two_crd,
+    MOD1:cj <=> CrdType,
+    CLIST:cform <=> CFORM,
+    dif(CFORM,om),
+    CLIST:within_word => no.
+
+%%%%% ! compiled representation of clause has more than 256 permanent variables
+/*
+%  %%EX%% omdat ik niet alleen van spruitjes houd maar ook van spinazie
+grammar_rule(vp_zowel_pp_v_en_pp,VP, [ConjL, NP1, V, OPTCOMMA, CLIST]) :-
+    NP1 => pp,
+    NP => pp,
+    unify_except(NP,NP1,cj),
+    optcomma(OPTCOMMA),
+    vp_arg_v_pp_structure(VP,NPS,V1),
+    vproj_vc_structure(V1,V),
+
+    %% do this only for VPs at edge of surface V
+    VP:eps3 <=> V:eps3,
+    VP:rightx => yes,
+
+    NPS:cj => ~no_crd,
+    zowel_als_start_structure(pp,NPS,CrdType,ConjL,NP,CLIST),
+    CrdType => two_crd,
+    NPS:cj <=> CrdType,
+    CLIST:within_word => no.
+%    CLIST:etc => no.
+*/
 
 no_vslash(VP) :-
     VP:vslash => [],
@@ -13280,7 +13367,10 @@ dts([H0|T0],[H|T]) :-
 
 add_mf(Mother,Arg,Hd) :-
     Hd:mf <=> Tail,
-    Mother:mf <=> [Arg|Tail].
+    functor(Arg,F,A),
+    functor(MfArg,F,A),
+    unify_paths([agr,case,mcat,pcat,dt],Arg,MfArg),
+    Mother:mf <=> [MfArg|Tail].
 
 %% only allow wh in situ if there is already another WH.
 %% wie is wanneer waarvoor verantwoordelijk?
