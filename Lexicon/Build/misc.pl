@@ -4669,6 +4669,8 @@ m(verschuldigd,     np_adjective(so_np),      verschuldigd).
 m(verplicht,        np_adjective(so_np),      verplicht).
 
 %% NO: omdat hij aan de bank veel geld schuldig is
+%% NO: WS-U-E-A-0000000035.p.3.s.24
+%%%    Dat heeft voor de directie het voordeel dat ze niet meer aan jan-en-alleman uitleg verschuldigd zijn .
 %% YE: omdat hij veel geld schuldig is aan de bank 
 %% YE: omdat hij veel geld aan de bank schuldig is
 %% these are ok only in one word order

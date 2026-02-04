@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="2" lemma="zij" naamval="nomin" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" rnum="pl" root="zij" status="vol" vwtype="pers" wh="nwh" word="Zij"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="wedijveren" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="wedijver" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="wedijverden" wvorm="pv"/>
+      <node begin="2" cat="pp" end="14" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
+        <node begin="3" cat="np" end="14" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+          <node begin="4" cat="conj" end="9" id="8" rel="mod">
+            <node begin="4" cat="ap" end="6" id="9" rel="cnj">
+              <node aform="super" begin="4" buiging="zonder" end="5" graad="sup" id="10" infl="no_e" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,sup)" pt="vnw" rel="mod" root="veel" vform="adj" vwtype="onbep" word="meest"/>
+              <node aform="base" begin="5" buiging="met-e" end="6" graad="basis" id="11" infl="e" lemma="pompeus" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="pompeus" vform="adj" word="pompeuze"/>
+            </node>
+            <node begin="6" conjtype="neven" end="7" id="12" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="7" cat="ppres" end="9" id="13" rel="cnj">
+              <node aform="super" begin="7" buiging="zonder" end="8" graad="sup" id="14" infl="no_e" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,sup)" pt="vnw" rel="mod" root="veel" vform="adj" vwtype="onbep" word="meest"/>
+              <node aform="base" begin="8" buiging="met-e" end="9" id="15" infl="e" lemma="op_vallen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="op_vallen" vform="gerund" word="opvallende" wvorm="od"/>
+            </node>
+          </node>
+          <node begin="9" end="10" gen="het" genus="onz" getal="ev" graad="basis" id="16" lemma="graf_monument" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="graf_monument" word="grafmonument"/>
+          <node begin="10" cat="cp" end="14" id="17" rel="mod">
+            <node begin="10" conjtype="onder" end="11" id="18" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
+            <node begin="11" cat="np" end="14" id="19" rel="body">
+              <node begin="11" end="12" gen="het" genus="onz" getal="ev" graad="basis" id="20" lemma="blijk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="blijk" word="blijk"/>
+              <node begin="12" cat="pp" end="14" id="21" rel="mod">
+                <node begin="12" end="13" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="13" end="14" gen="both" genus="onz" getal="ev" graad="basis" id="23" lemma="fortuin" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="fortuin" word="fortuin"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Zij wedijverden om het meest pompeuze en meest opvallende grafmonument als blijk van fortuin</sentence>
+</alpino_ds>

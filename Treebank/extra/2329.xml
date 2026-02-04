@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="8" id="2" rel="--">
+      <node begin="0" cat="np" end="4" id="3" rel="sat">
+        <node begin="0" cat="np" end="2" id="4" rel="obj1">
+          <node begin="0" buiging="zonder" end="1" graad="basis" id="5" lemma="kwaliteit_vol" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="kwaliteit_vol" word="Kwaliteitsvol"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="6" lemma="onderwijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="onderwijs" word="onderwijs"/>
+        </node>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="7" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="mogelijk" word="mogelijk"/>
+        <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="8" lemma="maken" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="maak" word="maken" wvorm="inf"/>
+      </node>
+      <node begin="5" cat="smain" end="8" id="9" rel="nucl">
+        <node begin="5" end="6" getal="ev" id="10" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="6" end="7" id="11" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="7" buiging="zonder" end="8" graad="basis" id="12" lemma="belangrijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="belangrijk" word="belangrijk"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Kwaliteitsvol onderwijs mogelijk maken , dat is belangrijk .</sentence>
+</alpino_ds>
