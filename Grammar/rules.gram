@@ -1794,6 +1794,9 @@ grammar_rule(vc_part_vc,VP, [Part, Inf]) :-
 %%EX%% Omdat ik ontslagen zou moeten worden
 %%EX%% Omdat ik te bereiken zou moeten zijn
 %%EX%% Omdat ik aan het slapen zou zijn geweest
+
+%%EX%% Omdat ik zou geslapen hebben
+%%EX%% Omdat ik zou aan het slapen zijn geweest
 grammar_rule(v_psp_v,VP, [Psp, V]) :-
 
     % Noord-Nederlands
