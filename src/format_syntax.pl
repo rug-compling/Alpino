@@ -685,7 +685,20 @@ rewrite_first(lex(Cat),lex(Cat2)) :-
 
 not_new_left_corner([H|T],Goal,First) :-
     lists:reverse([First,H|T],List),
+    not_new(Goal,List).
+
+not_new(Goal,List0) :-
+    replace_vgap(List0,List),
     alpino_guides:check_connect(Goal,List).
+
+replace_vgap([],[]).
+replace_vgap([H|T],List) :-
+    replace_vgap(H,T,List).
+
+replace_vgap(gap(vgap),[],[vgap,get_val]).
+replace_vgap(El,[],[El]).
+replace_vgap(H,[N|T0],[H|T]) :-
+    replace_vgap(N,T0,T).
 
 format_cgn_postags([],[]).
 format_cgn_postags([cgn_postag(P0,P,Lemma0,Tag)|T],[W|Words]) :-
