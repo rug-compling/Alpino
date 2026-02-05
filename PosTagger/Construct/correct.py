@@ -91,7 +91,7 @@ def main():
         if r == "verwoesten" and t == "adjective(ge_no_e(adv))":
             t = "adjective(ge_no_e(padv))"
         if r == "onherkenbaar" and t == "adjective(no_e(adv))":
-            t = "adjective(no_e(both))"
+            t = "adjective(postn_no_e(both))"
         if r == "naakt" and t == "adjective(no_e(adv))":
             t = "adjective(no_e(both))"
         if r == "moorden" and t == "adjective(end(adv))":
@@ -122,10 +122,8 @@ def main():
             t == "adjective(ge_no_e(padv),er_pp_sbar(over))"
         if r == "ontgoochelen" and t == "adjective(ge_no_e(adv),pp(over))":
             t == "adjective(ge_no_e(padv),pp(over))"
-        if t == "adjective(no_e(adv))" and r == "herkenbaar":
-            t = "adjective(postn_no_e(adv))"
-        if t == "adjective(no_e(adv))" and r == "onherkenbaar":
-            t = "adjective(postn_no_e(adv))"
+        if t == "adjective(no_e(padv))" and r == "herkenbaar":
+            t = "adjective(postn_no_e(padv))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
