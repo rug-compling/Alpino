@@ -1753,7 +1753,16 @@ best_score_end_parse_sub(Sub) :-
     hdrug_flag(current_ref,Key),
     (	Result == none
     ->	true
-    ;	format_of_result(Sub,Result,Key)
+    ;   hdrug_flag(best_score_optimal,Val),
+	(   Val == on
+	->  hdrug_flag(best_score_current,val(Score,_,_,_,_)),
+	    (   Score is 100.0
+	    ->  format_of_result(Sub,Result,Key)
+	    ;   true
+	    )
+	;
+	    format_of_result(Sub,Result,Key)
+	)
     ).
 
 format_of_result(dump_xml,Result,_Key) :-
