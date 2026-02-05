@@ -68,6 +68,13 @@ annotated_job:
 	mv $(DISK)/$*-spec.log.gz $*.log.gz
 	mv $(DISK)/$*.lc.gz .
 
+%.o.log.gz: ../Suites/Machine/%.sents.gz
+	zcat $< | \
+        $(ALPINO) max_sentence_length=40 pos_tagger=on best_score_optimal=on -flag suite undefined -parse 2> $(DISK)/$*-spec.o.log | gzip > $(DISK)/$*.o.lc.gz
+	gzip $(DISK)/$*-spec.o.log
+	mv $(DISK)/$*-spec.o.log.gz $*.o.log.gz
+	mv $(DISK)/$*.o.lc.gz .
+
 include $(ALPINO_HOME)/Makefile.errormining
 
 PAT=
@@ -118,7 +125,11 @@ mores:
 	$(MAKE) $(MORE:%=%.log.gz)
 
 
-ANNOTATED_OPTIONS=-slow stop_if_optimal=on end_hook=best_score\(left_corners\) max_sentence_length=25 after_timeout_options=testN user_max=720000
+omores:
+	$(MAKE) $(MORE:%=%.o.log.gz)
+
+
+ANNOTATED_OPTIONS=-slow stop_if_optimal=on end_hook=best_score\(left_corners\) max_sentence_length=25 after_timeout_options=testN user_max=720000 
 
 alpino: cdb cgn_exs eans extra g_suite h_suite i_suite j_suite lassy-doc\
         leuven_yellow_pages lot_test_suite1 novelsample_corrected ntv-suite qa Titaantjes wpspel
@@ -126,6 +137,14 @@ alpino: cdb cgn_exs eans extra g_suite h_suite i_suite j_suite lassy-doc\
 lassysmall:
 	$(MAKE) mores PATTERN=lassysmall\
         extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/LassySmall"
+
+olassysmall:
+	$(MAKE) omores PATTERN=lassysmall\
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/LassySmall"
+
+ocdb:
+	$(MAKE) omores PATTERN=cdb\
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/cdb"
 
 cdb:
 	$(MAKE) mores PATTERN=cdb\
@@ -169,6 +188,10 @@ leuven_yellow_pages:
 
 lot_test_suite1:
 	$(MAKE) mores PATTERN=lot_test_suite1\
+        extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/lot_test_suite1"
+
+olot_test_suite1:
+	$(MAKE) omores PATTERN=lot_test_suite1\
         extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/lot_test_suite1"
 
 novelsample_corrected:
