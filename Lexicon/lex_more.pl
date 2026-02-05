@@ -769,6 +769,15 @@ phrasal_entry(number(rang),number_rang) -->
     [e],
     { parse_number_simple(Rang) }.
 
+phrasal_entry(number(rang),number_rang) -->
+    n_word(Rang1),
+    n_word(Rang2),
+    {  atom_length(Rang2,Len),
+       Len > 4,
+       atom_concat(Rang1,Rang2,Rang),
+       phrasal_entry(number(rang),_,number_rang,[Rang],[])
+    }.
+
 zesmiljardste(Stem) -->
     [Word],
     { atom(Word),
@@ -1665,6 +1674,9 @@ number_expression_small_honderd -->
     n_word(honderd),
     number_expression_tien(_).
 number_expression_small_honderd -->
+    n_word(eenhonderd),
+    number_expression_tien(_).
+number_expression_small_honderd -->
     n_word(Tweehonderd),
     { atom(Tweehonderd),
       atom_concat(Twee,honderd,Tweehonderd),
@@ -1705,6 +1717,16 @@ number_expression_small_honderd -->
       )
     }.
 
+number_expression_small_honderd -->
+    n_word(HonderdTachtig),
+    { atom(HonderdTachtig),
+      (   alpino_unknowns:atom_concat(honderd,Tachtig,HonderdTachtig)
+      ;   alpino_unknowns:atom_concat(eenhonderd,Tachtig,HonderdTachtig)
+      ),
+      convert_number(Tachtig,TachtigN),
+      TachtigN < 100
+    }.
+
 % ??
 % number_expression_large_honderd_or_een -->
 %     n_word(een).
@@ -1715,6 +1737,9 @@ number_expression_large_honderd -->
     number_expression_tien(_).
 number_expression_large_honderd -->
     n_word(honderd),
+    number_expression_tien(_).
+number_expression_large_honderd -->
+    n_word(eenhonderd),
     number_expression_tien(_).
 number_expression_large_honderd -->
     n_word(Dertienhonderd),
@@ -2784,6 +2809,17 @@ complex_convert_number(TweehonderdTachtig,Number) :-
     convert_number(Tachtig,TachtigN),
     TachtigN < 100,
     Number is TweeN*100+TachtigN.
+
+complex_convert_number(HonderdTachtig,Number) :-
+    atom(HonderdTachtig),
+    (   atom_concat(eenhonderd,Tachtig,HonderdTachtig)
+    ;   atom_concat(honderd,Tachtig,HonderdTachtig)
+    ;   atom_concat('eenhonderd-',Tachtig,HonderdTachtig)
+    ;   atom_concat('honderd-',Tachtig,HonderdTachtig)
+    ),
+    convert_number(Tachtig,TachtigN),
+    TachtigN < 100,
+    Number is 100+TachtigN.
 
 %atom_codes_silent(Atom,Codes) :-
 %    prolog:'$atom_elems'(Atom,Codes,character_code).
