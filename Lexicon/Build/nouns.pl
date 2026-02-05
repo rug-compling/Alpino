@@ -24016,7 +24016,7 @@ n([pl(naïviteiten),sg(naïviteit)],de,[]).
 
 n([sg([near,banker]),pl([near,bankers])],de,[]).
 
-n([sg([nectar])],de,[]).
+n([sg([nectar])],both,[]).
 
 n([mass(nederigheid)],de,[]).
 

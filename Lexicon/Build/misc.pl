@@ -7901,6 +7901,18 @@ jaar(seizoen).
 volgende(komende,kom).
 volgende(volgende,volg).
 
+with_dt([niets,van,dit,al],
+	np,
+	dt(np,[hd=l(niets,noun(het,mass,sg),0,1),
+	       mod=dt(pp,[hd=l(van,preposition(van,[af,uit,vandaan,[af,aan]]),1,2),
+			  obj1=dt(np,[det=l(dit,determiner(het,nwh,nmod,pro,nparg),2,3),
+				      hd=l(al,noun(het,count,sg),3,4)
+				      ])
+			 ])
+	      ]
+	  )
+       ).
+
 %% TODO: deze en de volgende pagina/...
 
 

@@ -12049,6 +12049,7 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
 	  part_pc_pp(neer,op),
 	  part_er_pp_sbar(neer,op),
 	  part_ld_pp(neer),
+	  part_ld_adv(neer),
 	  part_intransitive(om),
 	  part_intransitive(onder),
 	  part_intransitive(op),
@@ -13704,7 +13705,7 @@ v(lig,ligt,liggen,gelegen,lag,lagen,
 	nonp_copula_vp,     % het ligt voor de hand ..
 	norm_passive,       % omdat de spulletjes in de etalage liggen uitgestald
 
-        fixed([vc(lig,psp,intransitive),{[pc(aan),{[acc,dat]}]}],no_passive),
+        fixed([vc(lig,psp,intransitive),{[pc(aan),acc,dat]}],no_passive),
         fixed([vc(lig,psp,intransitive),extra_obj_vp(A,B),er_pp(aan,A),i(dat,B)],no_passive),
         fixed([vc(lig,psp,intransitive),extra_sbar(A),er_pp(aan,A),dat],no_passive),
 
@@ -29379,7 +29380,7 @@ v(zie,ziet,inflected(zien,ziene),gezien,zag,zagen,
         np_mod_pp(op),    % er is niets op te zien (film/foto)
         np_mod_pp(over),  % ik heb er iets over gezien (op tv)
 	obj1_passive,     % ziet zich voor problemen gesteld
-        refl_passive,
+        refl_passive,     % hij ziet zich genoodzaakt ...
 
         %%% todo: is this refl_passive; or is refl_passive===obj1_passive?
 % 	fixed([[gedwongen],refl,vp],no_passive),

@@ -925,6 +925,7 @@ with_dt_all(al,[alleen]).
 with_dt_all(al,[dat]).
 with_dt_all(al,[degeen]).
 with_dt_all(al,[dit]).
+with_dt_all(al,[dit,niets,van]).
 with_dt_all(algemeen,[het,in]).
 with_dt_all(algemeen,[het,in,veel]).
 with_dt_all(algemeen,[het,over]).

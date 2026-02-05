@@ -4142,7 +4142,9 @@ a([stem(beharen),
    ere(behaardere),
    ge_no_e(behaard),
    st(behaardst),
-   ste(behaardste)],padv,[],[]).
+   ste(behaardste)],padv,
+  [ap_pred],   %% de hommels zijn geel behaard
+  []).
 
 a([e(behandelbare),
    no_e(behandelbaar)],adv,[],[on]).
