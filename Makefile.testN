@@ -273,22 +273,29 @@ tjob:
        ) | sbatch --job-name=$(command)
 
 
-lerr: l_errors
-	make $(lassy:%=%.diff) | grep GONE | awk '{ print $$3 }' > keys
-	grep -Fwvf keys LassySmall.errors > LassySmall.errors.new
+lerr: l_errors l.timeout
+	make $(lassy:%=%.diff) | grep GONE | awk '{ print $$3 }' > l.keys
+	grep -Fwvf l.keys LassySmall.errors > LassySmall.errors.new
 	mv LassySmall.errors LassySmall.errors.bak
-	mv LassySmall.errors.new LassySmall.errors
-	wc -l keys LassySmall.errors*
+	cat l.timeout LassySmall.errors.new | sort -n |uniq > LassySmall.errors
+	wc -l l.keys LassySmall.errors*
+
+cerr: c_errors c.timeout
+	make $(cdb:%=%.diff) | grep GONE | awk '{ print $$3 }' > c.keys
+	grep -Fwvf c.keys cdb.errors > cdb.errors.new
+	mv cdb.errors cdb.errors.bak
+	cat c.timeout cdb.errors.new | sort -n |uniq > cdb.errors
+	wc -l c.keys cdb.errors*
 
 c.timeout:
 	cat cdb_part*/job*/log |\
         grep -e time_out -e '^Lexical analysis'  |\
-        awk '/^Lexical analysis/{ P=$$20} /time_out/{print P}' |\
+        awk '/^Lexical analysis/{ P=$$20} /time_out/{printf("%s\ttime-out\n", P)}' |\
         tr -d ')'  > c.timeout
 
 l.timeout:
 	cat lassysmall_part*/job*/log |\
         grep -e time_out -e '^Lexical analysis'  |\
-        awk '/^Lexical analysis/{ P=$$20} /time_out/{print P}' |\
-        tr -d ')'  > c.timeout
+        awk '/^Lexical analysis/{ P=$$20} /time_out/{printf("%s\ttime-out\n", P)}' |\
+        tr -d ')'  > l.timeout
 
