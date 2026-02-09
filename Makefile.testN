@@ -287,15 +287,19 @@ cerr: c_errors c.timeout
 	cat c.timeout cdb.errors.new | sort -n |uniq > cdb.errors
 	wc -l c.keys cdb.errors*
 
-c.timeout:
+c.timeout: cdb_part*/job*/log
 	cat cdb_part*/job*/log |\
-        grep -e time_out -e '^Lexical analysis'  |\
-        awk '/^Lexical analysis/{ P=$$20} /time_out/{printf("%s\ttime-out\n", P)}' |\
+        grep -e time_out -e '^out of memory' -e '^Lexical analysis'  |\
+        awk '/^Lexical analysis/{ P=$$20}\
+             /time_out/{printf("%s\ttime-out\n", P)}\
+             /out of memory/{printf("%s\tout of memory\n", P)}' |\
         tr -d ')'  > c.timeout
 
-l.timeout:
+l.timeout: lassysmall_part*/job*/log
 	cat lassysmall_part*/job*/log |\
-        grep -e time_out -e '^Lexical analysis'  |\
-        awk '/^Lexical analysis/{ P=$$20} /time_out/{printf("%s\ttime-out\n", P)}' |\
+        grep -e time_out -e '^out of memory' -e '^Lexical analysis'  |\
+        awk '/^Lexical analysis/{ P=$$20}\
+             /time_out/{printf("%s\ttime-out\n", P)}\
+             /out of memory/{printf("%s\tout of memory\n", P)}' |\
         tr -d ')'  > l.timeout
 
