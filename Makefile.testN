@@ -279,3 +279,16 @@ lerr: l_errors
 	mv LassySmall.errors LassySmall.errors.bak
 	mv LassySmall.errors.new LassySmall.errors
 	wc -l keys LassySmall.errors*
+
+c.timeout:
+	cat cdb_part*/job*/log |\
+        grep -e time_out -e '^Lexical analysis'  |\
+        awk '/^Lexical analysis/{ P=$$20} /time_out/{print P}' |\
+        tr -d ')'  > c.timeout
+
+l.timeout:
+	cat lassysmall_part*/job*/log |\
+        grep -e time_out -e '^Lexical analysis'  |\
+        awk '/^Lexical analysis/{ P=$$20} /time_out/{print P}' |\
+        tr -d ')'  > c.timeout
+
