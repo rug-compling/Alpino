@@ -20469,7 +20469,7 @@ v(scout,scout,scouten,gescout,scoutte,scoutten,
     [h([intransitive,
 	transitive])]).
 
-v(screen,screent,screenen,gescreend,screende,screende,
+v(screen,screent,screenen,gescreend,screende,screenden,
     [h([transitive,
         sbar])]).  % hij screende of alles wel klopte
 
