@@ -64,6 +64,7 @@
 954	dp
 960	bracketed modifier extraposed??
 962	[np telkens dat gedeelte .. ]
+967	time-out
 973	extraposed AP modifier
 991     "kwantitatief ruim viermaal en in geldwaarde uitgedrukt driemaal"
 991	time-out
@@ -76,6 +77,7 @@
 1034	unrecognized name 'De smalle basis van de Engelse roman'
 1046	dp  'niet voor de grap , niet alsof , maar echt ...'
 1048	app with app?
+1052	out of memory
 1062	out of memory
 1073	time-out
 1084	gapping NP PREDM NP
@@ -89,6 +91,7 @@
 1187	"De piloot , de tweede luitenant H. V. Leenders , ( 24 jr. en gehuwd ) uit Eindhoven ,"
 1195	double topic (or apposition of PP) 'daarvoor , vlak na de bevrijding'
 1207	coordination of LD/MOD ".. die in Parijs woont en werkt"
+1217	out of memory
 1219	pred < su (extraposed su is long coordination of names)
 1240	extraposition of PP out of ALS-PREDC
 1250	" ( alsdkjflsdjkf ) "
@@ -108,6 +111,7 @@
 1404	dp dip
 1405	missing prep? 'de baan noordelijker de luchthaven'
 1406	[ n PP mod-n]  'kampioene van Fiesland langebaan'
+1419	out of memory
 1429	pp extraposed from np [complex]
 1440	extraposition of np: 'heden is overleden de heer ..'
 1441	gapping
@@ -204,11 +208,10 @@
 2660	ATB "op-"MOD part of both conjuncts?
 2665    spelling "waar voor" for "waarvoor"
 2691	pp extraposition 2x
+2717	time-out
 2723	"een 164 overwinning"
 2741	gapping
-2754	coordination extraposed NP-conjunct
 2790
-2792	NEW
 2857	timeout, also "drie jaar geleden DATE"
 2858	[np en np] pp
 2868	'maatregelen voor de bespreking waarvan'
@@ -243,6 +246,7 @@
 3119	time-out
 3120	out of memory
 3137	NEW
+3137	time-out
 3164	pp after postnp_adverb "lof van Lindner dus voor .."
 3169	two PC arguments 'NP van-PP voor-PP krijgen'
 3178	timeout, right node raising
@@ -251,11 +255,13 @@
 3197	dp PP PP
 3210	conjunction in conjunct
 3247	NEW
+3247	time-out
 3251	grammatical error "piloten die werd* gevlogen"
 3268	ungrammatical? missing prep?
 3278	time-out
 3287	extraposed conjunct ROOT , en NP (over PREDC)
 3296	time-out
+3334	time-out
 3336	ungrammatical (no agreement relative)
 3337	out of memory
 3344	subj-verb agreement: 'Paarden is te duur'
@@ -282,6 +288,7 @@
 3546	double coordination?
 3572	om-vp modifier of ADJ 'een vergadering speciaal belegd om ...'
 3576	"een kleine twintig in getal"
+3576	time-out
 3611	coordination of unlike categories (almost ungrammatical)
 3612	coordinated pred with hdf: 'over en van NP af'  ungrammatical, I say.
 3622	apposition without comma
@@ -509,6 +516,7 @@
 5756	unexpected comma "het is niet waar , zei ik dat ik arriveer"
 5757	extraposed pp from np with fixed-svp-pp intervening
 5761	'zulke' should take sbar obcomp?
+5762	out of memory
 5769	time-out
 5776	kwantitatief er
 5778	agreement error "een jury ... zullen"
@@ -536,6 +544,7 @@
 6071	"project" with sbar complement?
 6080	gapping
 6099    extraposed SU
+6099	time-out
 6138	dp SAT TAG NUCL  [TAG [SAT NUCL]]
 6141	dp NP PP
 6154	time-out
@@ -566,11 +575,15 @@
 6375	extraposition PP > extraposed REL
 6377    extraposed WHREL > extraposed REL
 6380	coordination VP[te] VP[om]
+6380	time-out
+6388	out of memory
 6405	[[NP en NP] PP]
 6421	extraposed relative < right pc complement
 6424	obj1 < obj2[dative inflection]
+6438	time-out
 6441	right node raising "tussen de 12 1/2 en 30 duizend gulden"
 6443	NEW
+6443	time-out
 6448	complex name
 6449    extraposed AP modifier of NP over SVP
 6454	time-out
