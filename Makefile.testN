@@ -64,7 +64,7 @@ lassysmall_part00023_testN_options=$(lassysmall_options)
 lassysmall_part00024_testN_options=$(lassysmall_options)
 lassysmall_part00025_testN_options=$(lassysmall_options)
 
-cdb_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb stop_if_optimal=on
+cdb_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb stop_if_optimal=on max_sentence_length=30
 
 cdb_part00001_testN_options=$(cdb_options)
 cdb_part00002_testN_options=$(cdb_options)
