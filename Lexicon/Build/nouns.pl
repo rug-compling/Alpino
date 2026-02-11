@@ -3511,7 +3511,7 @@ n([mass(baccarat)],het,[]).
 
 n([sg(bacchant),pl(bacchanten)],de,[]).
 
-n([sg(bachelor)],de,[]).
+n([sg(bachelor)],de,[app_measure]).
 
 n([sg(back),pl(backs)],de,[]).  % Laseroms
 

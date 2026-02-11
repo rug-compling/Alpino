@@ -9462,6 +9462,7 @@ term([state,of,the,art]).
 term([status,epilepticus]).
 term([street,credibility]).
 term([struggle,for,life]).
+term([student,union],[student,unions]).
 term([sudden,death]).
 term([sur,place]).
 term([survival,of,the,fittest]).
