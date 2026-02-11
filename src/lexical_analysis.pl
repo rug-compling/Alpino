@@ -882,7 +882,8 @@ non_noun_tag(P1,P) :-
     tag(Z0,Z,_,_,_,_,_,Tag),
     overlap(P1,P,Z0,Z),
     \+ Tag = noun(_,_,sg,_),
-    \+ Tag = noun(_,_,sg).    
+    \+ Tag = noun(_,_,sg),
+    \+ Tag = v_noun(_).    
 
 unique(P0,P,Ref) :-
     findall(Ref2,( clause(tag(Z0,Z,_,_,_,_,_,_),_,Ref2),
