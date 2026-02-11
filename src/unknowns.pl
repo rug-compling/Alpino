@@ -6064,6 +6064,7 @@ potential_name_fsa_not_begin(_,P0,[Open|Words],Ws,[Open|Prefix],[open|His]) :-
 %% not begin - decap
 potential_name_fsa_not_begin(normal_if_decap,P0,[Word|Words],Ws,[Word|Prefix],
                              [capital|His]) :-
+    \+ decap_only(Word),
     name_capital(Word,P0),!,
     P1 is P0 + 1,
     potential_name_fsa(8,P1,Words,Ws,Prefix,His).
