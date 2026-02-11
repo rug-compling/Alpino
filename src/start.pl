@@ -2819,6 +2819,16 @@ parse_ids([H|T],[none/H|NT],Word) :-
 %%% user_hook in dt.pl
 %%% after parsing, create output attribute-values on the basis of Dt
 dt_extract_attributes(Dt,Attributes,Rel) :-
+    hdrug_flag(annotating,OnOff),
+    dt_extract_attributes(OnOff,Dt,Attributes,Rel).
+
+dt_extract_attributes(off,Dt,Attributes,Rel) :-
+    (   Rel == se
+    ->  Attributes = []
+    ;   findall(Att,dt_extract_attribute(Dt,Att),Attributes)
+    ).
+
+dt_extract_attributes(undefined,Dt,Attributes,Rel) :-
     (   Rel == se
     ->  Attributes = []
     ;   findall(Att,dt_extract_attribute(Dt,Att),Attributes)
