@@ -2,18 +2,18 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="np" end="7" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
-      <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="3" lemma="principe" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="principe" word="principe"/>
+      <node begin="0" end="1" id="2" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+      <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="3" lemma="principe" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="principe" word="principe"/>
       <node begin="2" cat="pp" end="7" id="4" rel="mod">
-        <node begin="2" end="3" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sc="pc_adv" vztype="init" word="van"/>
+        <node begin="2" end="3" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
         <node begin="3" cat="du" end="7" id="6" rel="obj1">
           <node begin="3" cat="ap" end="5" id="7" rel="dp">
-            <node begin="3" end="4" id="8" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="mod" root="hoe" special="hoe" word="hoe"/>
-            <node aform="compar" begin="4" buiging="zonder" end="5" graad="comp" id="9" infl="no_e" lemma="groot" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="groot" vform="adj" word="groter"/>
+            <node begin="3" end="4" id="8" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="mod" root="hoe" word="hoe"/>
+            <node begin="4" buiging="zonder" end="5" graad="comp" id="9" lemma="groot" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="groot" word="groter"/>
           </node>
           <node begin="5" cat="ap" end="7" id="10" rel="dp">
-            <node begin="5" end="6" id="11" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="mod" root="hoe" special="hoe" word="hoe"/>
-            <node aform="compar" begin="6" buiging="zonder" end="7" graad="comp" id="12" infl="no_e" lemma="waterig" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="waterig" vform="adj" word="wateriger"/>
+            <node begin="5" end="6" id="11" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="mod" root="hoe" word="hoe"/>
+            <node begin="6" buiging="zonder" end="7" graad="comp" id="12" lemma="waterig" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="waterig" word="wateriger"/>
           </node>
         </node>
       </node>

@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="Vast"/>
-      <node begin="1" end="2" id="3" infl="sg3" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta_vast" sc="part_sbar_subj_no_het_tpart(vast)" stype="declarative" tense="present" v_per="thi" word="staat" wvorm="pv"/>
+      <node begin="1" end="2" id="3" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta_vast" word="staat" wvorm="pv"/>
       <node begin="2" cat="cp" end="8" id="4" rel="su">
-        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="3" cat="ssub" end="8" id="6" rel="body">
-          <node begin="3" case="nom" def="def" end="4" gen="de" genus="masc" getal="ev" id="7" index="1" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+          <node begin="3" end="4" genus="masc" getal="ev" id="7" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
           <node begin="3" cat="ppart" end="7" id="8" rel="vc">
             <node begin="3" end="4" id="9" index="1" rel="su"/>
             <node begin="4" cat="np" end="6" id="10" rel="obj1">
-              <node begin="4" end="5" id="11" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="dader" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="dader" word="dader"/>
+              <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="dader" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dader" word="dader"/>
             </node>
-            <node begin="6" buiging="zonder" end="7" id="13" infl="psp" lemma="helpen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="help" sc="transitive_ndev" word="geholpen" wvorm="vd"/>
+            <node begin="6" buiging="zonder" end="7" id="13" lemma="helpen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="help" word="geholpen" wvorm="vd"/>
           </node>
-          <node begin="7" end="8" id="14" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" tense="present" v_per="thi" word="heeft" wvorm="pv"/>
+          <node begin="7" end="8" id="14" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
         </node>
       </node>
     </node>

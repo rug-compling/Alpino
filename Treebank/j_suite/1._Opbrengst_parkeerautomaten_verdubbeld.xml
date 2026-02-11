@@ -4,9 +4,9 @@
     <node begin="0" cat="du" end="4" id="1" rel="--">
       <node begin="0" end="1" id="2" lemma="1." pos="tag" postag="SPEC(symb)" pt="spec" rel="tag" root="1." spectype="symb" word="1."/>
       <node begin="1" cat="du" end="4" id="3" rel="nucl">
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="opbrengst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="dp" rnum="sg" root="opbrengst" word="Opbrengst"/>
-        <node begin="2" end="3" gen="de" getal="mv" graad="basis" id="5" lemma="parkeer_automaat" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="dp" rnum="pl" root="parkeer_automaat" word="parkeerautomaten"/>
-        <node aform="base" begin="3" buiging="zonder" end="4" id="6" infl="no_e" lemma="verdubbelen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="dp" root="verdubbelen" vform="psp" word="verdubbeld" wvorm="vd"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="opbrengst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="dp" root="opbrengst" word="Opbrengst"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="parkeer_automaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="dp" root="parkeer_automaat" word="parkeerautomaten"/>
+        <node begin="3" buiging="zonder" end="4" id="6" lemma="verdubbelen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="dp" root="verdubbelen" word="verdubbeld" wvorm="vd"/>
       </node>
     </node>
   </node>

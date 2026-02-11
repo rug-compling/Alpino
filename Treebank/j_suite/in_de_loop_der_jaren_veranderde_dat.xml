@@ -5,16 +5,16 @@
       <node begin="0" cat="pp" end="5" id="2" rel="mod">
         <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
         <node begin="1" cat="np" end="5" id="4" rel="obj1">
-          <node begin="1" end="2" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="loop" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="loop" word="loop"/>
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="loop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="loop" word="loop"/>
           <node begin="3" cat="np" end="5" id="7" rel="mod">
-            <node begin="3" end="4" id="8" infl="der" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="de" word="der"/>
-            <node begin="4" end="5" gen="het" getal="mv" graad="basis" id="9" lemma="jaar" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="jaar" special="tmp" word="jaren"/>
+            <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="de" word="der"/>
+            <node begin="4" end="5" getal="mv" graad="basis" id="9" lemma="jaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jaar" word="jaren"/>
           </node>
         </node>
       </node>
-      <node begin="5" end="6" id="10" infl="sg" lemma="veranderen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verander" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="veranderde" wvorm="pv"/>
-      <node begin="6" end="7" getal="ev" id="11" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+      <node begin="5" end="6" id="10" lemma="veranderen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verander" word="veranderde" wvorm="pv"/>
+      <node begin="6" end="7" getal="ev" id="11" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
     </node>
   </node>
   <sentence>in de loop der jaren veranderde dat</sentence>

@@ -3,19 +3,19 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
       <node begin="0" cat="ppart" end="6" id="2" rel="mod">
-        <node aform="base" begin="0" buiging="zonder" end="1" id="3" infl="no_e" lemma="kleden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kleden" vform="psp" word="gekleed" wvorm="vd"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="kleden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kleden" word="gekleed" wvorm="vd"/>
         <node begin="1" cat="cp" end="6" id="4" rel="mod">
-          <node begin="1" conjtype="onder" end="2" id="5" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" sc="zoals" word="zoals"/>
+          <node begin="1" conjtype="onder" end="2" id="5" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
           <node begin="2" cat="ssub" end="6" id="6" rel="body">
-            <node begin="2" case="nom" def="def" end="3" gen="de" genus="masc" getal="ev" id="7" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
-            <node begin="3" case="dat_acc" def="def" end="4" gen="de" getal="getal" id="8" lemma="zich" naamval="obl" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" rnum="sg" root="zich" special="wkpro" status="red" vwtype="refl" wh="nwh" word="zich"/>
-            <node begin="4" end="5" id="9" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" special="sentence" word="altijd"/>
-            <node begin="5" end="6" id="10" infl="sg3" lemma="kleden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kleed" sc="transitive" tense="present" v_per="thi" word="kleedt" wvorm="pv"/>
+            <node begin="2" end="3" genus="masc" getal="ev" id="7" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+            <node begin="3" end="4" getal="getal" id="8" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
+            <node begin="4" end="5" id="9" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
+            <node begin="5" end="6" id="10" lemma="kleden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kleed" word="kleedt" wvorm="pv"/>
           </node>
         </node>
       </node>
-      <node begin="6" end="7" id="11" infl="sg" lemma="binnen_komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom_binnen" sc="part_intransitive(binnen)" stype="declarative" tense="past" v_per="thi" word="kwam" wvorm="pv"/>
-      <node begin="7" case="nom" def="def" end="8" gen="de" genus="masc" getal="ev" id="12" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="6" end="7" id="11" lemma="binnen_komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom_binnen" word="kwam" wvorm="pv"/>
+      <node begin="7" end="8" genus="masc" getal="ev" id="12" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
       <node begin="8" end="9" id="13" lemma="binnen" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="binnen" vztype="fin" word="binnen"/>
     </node>
   </node>

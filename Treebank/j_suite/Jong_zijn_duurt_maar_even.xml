@@ -3,12 +3,12 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="3" infl="no_e" lemma="jong" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="jong" vform="adj" word="Jong"/>
-        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="4" lemma="zijn" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" rnum="sg" root="ben" sc="copula" special="v_noun" word="zijn" wvorm="inf"/>
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="jong" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="jong" word="Jong"/>
+        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="4" lemma="zijn" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="duren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="duur" sc="adv_meas" stype="declarative" tense="present" v_per="thi" word="duurt" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="duren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="duur" word="duurt" wvorm="pv"/>
       <node begin="3" end="4" id="6" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
-      <node aform="base" begin="4" end="5" id="7" infl="both" lemma="even" pos="adj" postag="BW()" pt="bw" rel="me" root="even" vform="adj" word="even"/>
+      <node begin="4" end="5" id="7" lemma="even" pos="adj" postag="BW()" pt="bw" rel="me" root="even" word="even"/>
     </node>
   </node>
   <sentence>Jong zijn duurt maar even</sentence>

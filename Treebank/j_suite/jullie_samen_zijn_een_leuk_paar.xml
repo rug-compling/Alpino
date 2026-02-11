@@ -3,14 +3,14 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" case="both" def="def" end="1" gen="de" getal="mv" id="3" lemma="jullie" naamval="stan" num="pl" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,stan,nadr,2v,mv)" pt="vnw" rel="hd" rnum="pl" root="jullie" status="nadr" vwtype="pers" wh="nwh" word="jullie"/>
-        <node aform="base" begin="1" end="2" id="4" infl="pred" lemma="samen" pos="adj" postag="BW()" pt="bw" rel="mod" root="samen" vform="adj" word="samen"/>
+        <node begin="0" end="1" getal="mv" id="3" lemma="jullie" naamval="stan" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,stan,nadr,2v,mv)" pt="vnw" rel="hd" root="jullie" status="nadr" vwtype="pers" word="jullie"/>
+        <node begin="1" end="2" id="4" lemma="samen" pos="adj" postag="BW()" pt="bw" rel="mod" root="samen" word="samen"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="ninvje" word="zijn" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="3" cat="np" end="6" id="6" rel="predc">
-        <node begin="3" end="4" id="7" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="8" infl="no_e" lemma="leuk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="leuk" vform="adj" word="leuk"/>
-        <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="9" lemma="paar" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="paar" special="meas_mod" word="paar"/>
+        <node begin="3" end="4" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="leuk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="leuk" word="leuk"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="paar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="paar" word="paar"/>
       </node>
     </node>
   </node>

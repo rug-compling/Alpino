@@ -2,20 +2,20 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="3" end="4" id="2" infl="pl" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" stype="declarative" tense="present" v_per="fir" word="kunnen" wvorm="pv"/>
-      <node begin="4" case="nom" def="def" end="5" gen="de" getal="mv" id="3" index="1" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+      <node begin="3" end="4" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+      <node begin="4" end="5" getal="mv" id="3" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
       <node begin="0" cat="inf" end="8" id="4" rel="vc">
         <node begin="0" cat="np" end="3" id="5" rel="obj1">
-          <node begin="0" end="1" gen="het" getal="mv" graad="basis" id="6" lemma="probleem" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="probleem" word="problemen"/>
+          <node begin="0" end="1" getal="mv" graad="basis" id="6" lemma="probleem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="probleem" word="problemen"/>
           <node begin="1" cat="cp" end="3" id="7" rel="mod">
-            <node begin="1" conjtype="onder" end="2" id="8" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" sc="zoals" word="zoals"/>
-            <node aform="base" begin="2" buiging="zonder" end="3" id="9" infl="no_e" lemma="voornoemd" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="body" root="voornoemd" vform="psp" word="voornoemd" wvorm="vd"/>
+            <node begin="1" conjtype="onder" end="2" id="8" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
+            <node begin="2" buiging="zonder" end="3" id="9" lemma="voornoemd" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="body" root="voornoemd" word="voornoemd" wvorm="vd"/>
           </node>
         </node>
         <node begin="4" end="5" id="10" index="1" rel="su"/>
-        <node begin="5" end="6" id="11" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="mod" root="dus" special="sentence" word="dus"/>
-        <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="12" infl="no_e" lemma="makkelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="makkelijk" vform="adj" word="makkelijk"/>
-        <node begin="7" buiging="zonder" end="8" id="13" infl="inf" lemma="vermijden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vermijd" sc="transitive" word="vermijden" wvorm="inf"/>
+        <node begin="5" end="6" id="11" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="mod" root="dus" word="dus"/>
+        <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="makkelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="makkelijk" word="makkelijk"/>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="vermijden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vermijd" word="vermijden" wvorm="inf"/>
       </node>
     </node>
   </node>

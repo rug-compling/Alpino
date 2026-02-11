@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="stof" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="stof" word="stof"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="stof" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stof" word="stof"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="3" cat="conj" end="8" id="6" rel="predm">
-        <node begin="3" end="4" id="7" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" special="left" word="zowel"/>
+        <node begin="3" end="4" id="7" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" word="zowel"/>
         <node begin="4" cat="pp" end="6" id="8" rel="cnj">
           <node begin="4" end="5" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-          <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="poeder_vorm" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="poeder_vorm" sc="pred_pp(in)" word="poedervorm"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="poeder_vorm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="poeder_vorm" word="poedervorm"/>
         </node>
-        <node begin="6" conjtype="onder" end="7" id="11" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="als" special="right" word="als"/>
-        <node aform="base" begin="7" buiging="zonder" end="8" graad="basis" id="12" infl="no_e" lemma="vloeibaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="vloeibaar" vform="adj" word="vloeibaar"/>
+        <node begin="6" conjtype="onder" end="7" id="11" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="als" word="als"/>
+        <node begin="7" buiging="zonder" end="8" graad="basis" id="12" lemma="vloeibaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="vloeibaar" word="vloeibaar"/>
       </node>
-      <node aform="base" begin="8" buiging="zonder" end="9" graad="basis" id="13" infl="no_e" lemma="verkrijgbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="verkrijgbaar" vform="adj" word="verkrijgbaar"/>
+      <node begin="8" buiging="zonder" end="9" graad="basis" id="13" lemma="verkrijgbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="verkrijgbaar" word="verkrijgbaar"/>
     </node>
   </node>
   <sentence>De stof is zowel in poedervorm als vloeibaar verkrijgbaar</sentence>

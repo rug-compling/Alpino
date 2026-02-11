@@ -2,10 +2,10 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="3" id="0" rel="top">
     <node begin="0" cat="du" end="3" id="1" rel="--">
-      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Provinciezetel" naamval="stan" neclass="ORG" ntype="eigen" num="both" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="dp" root="Provinciezetel" word="Provinciezetel"/>
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Provinciezetel" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="dp" root="Provinciezetel" word="Provinciezetel"/>
       <node begin="1" cat="mwu" end="3" id="3" rel="dp">
-        <node aform="base" begin="1" end="2" id="4" infl="pred" lemma="te" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="te" vform="adj" vztype="init" word="te"/>
-        <node aform="base" begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" infl="pred" lemma="koop" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="koop" vform="adj" word="koop"/>
+        <node begin="1" end="2" id="4" lemma="te" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="te" vztype="init" word="te"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="koop" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="koop" word="koop"/>
       </node>
     </node>
   </node>

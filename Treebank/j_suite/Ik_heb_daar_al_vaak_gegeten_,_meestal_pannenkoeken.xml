@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
-    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="du" end="9" id="2" rel="--">
       <node begin="0" cat="smain" end="6" id="3" rel="nucl">
-        <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-        <node begin="1" end="2" id="5" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" v_per="fir" word="heb" wvorm="pv"/>
+        <node begin="0" end="1" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+        <node begin="1" end="2" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
         <node begin="0" cat="ppart" end="6" id="6" rel="vc">
           <node begin="0" end="1" id="7" index="1" rel="su"/>
-          <node begin="2" end="3" getal="getal" id="8" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" special="er_loc" status="vol" vwtype="aanw" word="daar"/>
+          <node begin="2" end="3" getal="getal" id="8" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" status="vol" vwtype="aanw" word="daar"/>
           <node begin="3" cat="ap" end="5" id="9" rel="mod">
             <node begin="3" end="4" id="10" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
-            <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="11" infl="no_e" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="vaak" vform="adj" word="vaak"/>
+            <node begin="4" buiging="zonder" end="5" graad="basis" id="11" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="vaak" word="vaak"/>
           </node>
-          <node begin="5" buiging="zonder" end="6" id="12" infl="psp" lemma="eten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="eet" sc="intransitive" word="gegeten" wvorm="vd"/>
+          <node begin="5" buiging="zonder" end="6" id="12" lemma="eten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="eet" word="gegeten" wvorm="vd"/>
         </node>
       </node>
       <node begin="7" cat="du" end="9" id="13" rel="sat">
-        <node begin="7" end="8" id="14" lemma="meestal" pos="adv" postag="BW()" pt="bw" rel="dp" root="meestal" special="sentence" word="meestal"/>
-        <node begin="8" end="9" gen="de" getal="mv" graad="basis" id="15" lemma="pannenkoek" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="dp" rnum="pl" root="pannenkoek" word="pannenkoeken"/>
+        <node begin="7" end="8" id="14" lemma="meestal" pos="adv" postag="BW()" pt="bw" rel="dp" root="meestal" word="meestal"/>
+        <node begin="8" end="9" getal="mv" graad="basis" id="15" lemma="pannenkoek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="dp" root="pannenkoek" word="pannenkoeken"/>
       </node>
     </node>
   </node>

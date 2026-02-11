@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" wh="nwh" word="Dat"/>
-        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="boek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="boek" word="boek"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="Dat"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="boek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="boek" word="boek"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="present" v_per="thi" word="moet" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
       <node begin="0" cat="inf" end="8" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
-        <node begin="4" buiging="zonder" end="5" id="8" infl="inf" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="copula" word="zijn" wvorm="inf"/>
+        <node begin="4" buiging="zonder" end="5" id="8" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
         <node begin="3" cat="ap" end="8" id="9" rel="predc">
-          <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="10" infl="no_e" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="leuk" sc="subject_vp" vform="adj" word="leuk"/>
+          <node begin="3" buiging="zonder" end="4" graad="basis" id="10" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="leuk" word="leuk"/>
           <node begin="5" cat="oti" end="8" id="11" rel="vc">
-            <node begin="5" end="6" id="12" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" sc="om" vztype="init" word="om"/>
+            <node begin="5" end="6" id="12" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
             <node begin="6" cat="ti" end="8" id="13" rel="body">
-              <node begin="6" end="7" id="14" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
-              <node begin="7" buiging="zonder" end="8" id="15" infl="inf" lemma="lezen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="lees" sc="transitive" word="lezen" wvorm="inf"/>
+              <node begin="6" end="7" id="14" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+              <node begin="7" buiging="zonder" end="8" id="15" lemma="lezen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="lees" word="lezen" wvorm="inf"/>
             </node>
           </node>
         </node>

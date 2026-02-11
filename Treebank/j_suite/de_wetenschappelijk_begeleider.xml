@@ -2,9 +2,9 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="3" id="0" rel="top">
     <node begin="0" cat="np" end="3" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-      <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="3" infl="no_e" lemma="wetenschappelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="wetenschappelijk" vform="adj" word="wetenschappelijk"/>
-      <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="begeleider" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="begeleider" word="begeleider"/>
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+      <node begin="1" buiging="zonder" end="2" graad="basis" id="3" lemma="wetenschappelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="wetenschappelijk" word="wetenschappelijk"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="begeleider" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="begeleider" word="begeleider"/>
     </node>
   </node>
   <sentence>de wetenschappelijk begeleider</sentence>

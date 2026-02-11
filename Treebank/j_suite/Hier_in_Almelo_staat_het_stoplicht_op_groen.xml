@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="advp" end="3" id="2" rel="mod">
-        <node begin="0" end="1" getal="getal" id="3" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="hd" root="hier" special="er_loc" status="vol" vwtype="aanw" word="Hier"/>
+        <node begin="0" end="1" getal="getal" id="3" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="hd" root="hier" status="vol" vwtype="aanw" word="Hier"/>
         <node begin="1" cat="pp" end="3" id="4" rel="mod">
           <node begin="1" end="2" id="5" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="Almelo" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Almelo" word="Almelo"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="Almelo" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Almelo" word="Almelo"/>
         </node>
       </node>
-      <node begin="3" end="4" id="7" infl="sg3" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" sc="pc_pp(op)" stype="declarative" tense="present" v_per="thi" word="staat" wvorm="pv"/>
+      <node begin="3" end="4" id="7" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
       <node begin="4" cat="np" end="6" id="8" rel="su">
-        <node begin="4" end="5" id="9" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-        <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="10" lemma="stop_licht" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="stop_licht" word="stoplicht"/>
+        <node begin="4" end="5" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="stop_licht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stop_licht" word="stoplicht"/>
       </node>
       <node begin="6" cat="pp" end="8" id="11" rel="pc">
         <node begin="6" end="7" id="12" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-        <node begin="7" buiging="zonder" end="8" gen="het" getal-n="zonder-n" graad="basis" id="13" lemma="groen" num="sg" pos="noun" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="obj1" rnum="sg" root="groen" word="groen"/>
+        <node begin="7" buiging="zonder" end="8" getal-n="zonder-n" graad="basis" id="13" lemma="groen" pos="noun" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="obj1" root="groen" word="groen"/>
       </node>
     </node>
   </node>

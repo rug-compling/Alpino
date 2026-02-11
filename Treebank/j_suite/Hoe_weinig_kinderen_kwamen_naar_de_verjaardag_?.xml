@@ -4,24 +4,24 @@
     <node begin="0" cat="whq" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" index="1" rel="whd">
         <node begin="0" cat="detp" end="2" id="3" rel="det">
-          <node begin="0" end="1" id="4" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="mod" root="hoe" wh="ywh" word="Hoe"/>
-          <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="5" infl="no_e" lemma="weinig" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="hd" root="weinig" vform="adj" vwtype="onbep" word="weinig"/>
+          <node begin="0" end="1" id="4" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="mod" root="hoe" word="Hoe"/>
+          <node begin="1" buiging="zonder" end="2" graad="basis" id="5" lemma="weinig" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="hd" root="weinig" vwtype="onbep" word="weinig"/>
         </node>
-        <node begin="2" end="3" gen="het" getal="mv" graad="basis" id="6" lemma="kind" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kind" word="kinderen"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
       </node>
       <node begin="0" cat="sv1" end="7" id="7" rel="body">
         <node begin="0" end="3" id="8" index="1" rel="su"/>
-        <node begin="3" end="4" id="9" infl="pl" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" sc="ld_pp" stype="whquestion" tense="past" v_per="thi" word="kwamen" wvorm="pv"/>
+        <node begin="3" end="4" id="9" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="kwamen" wvorm="pv"/>
         <node begin="4" cat="pp" end="7" id="10" rel="ld">
           <node begin="4" end="5" id="11" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
           <node begin="5" cat="np" end="7" id="12" rel="obj1">
-            <node begin="5" end="6" id="13" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lemma="verjaar_dag" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="verjaar_dag" special="tmp" word="verjaardag"/>
+            <node begin="5" end="6" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="verjaar_dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verjaar_dag" word="verjaardag"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="15" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="7" end="8" id="15" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Hoe weinig kinderen kwamen naar de verjaardag ?</sentence>
 </alpino_ds>

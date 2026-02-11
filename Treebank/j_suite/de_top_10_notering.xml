@@ -2,12 +2,12 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="np" end="4" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
       <node begin="1" cat="mwu" end="3" id="3" rel="mod">
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="top" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="top" special="pre_np" word="top"/>
-        <node begin="2" end="3" id="5" lemma="10" numtype="hoofd" pos="adv" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="10" special="pre_np" word="10"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="top" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="top" word="top"/>
+        <node begin="2" end="3" id="5" lemma="10" numtype="hoofd" pos="adv" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="10" word="10"/>
       </node>
-      <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="notering" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="notering" word="notering"/>
+      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="notering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="notering" word="notering"/>
     </node>
   </node>
   <sentence>de top 10 notering</sentence>

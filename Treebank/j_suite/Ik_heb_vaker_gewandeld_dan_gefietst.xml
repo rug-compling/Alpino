@@ -2,16 +2,16 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-      <node begin="1" end="2" id="3" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" v_per="fir" word="heb" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
       <node begin="0" cat="ppart" end="6" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
-        <node begin="3" buiging="zonder" end="4" id="6" infl="psp" lemma="wandelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wandel" sc="intransitive" word="gewandeld" wvorm="vd"/>
+        <node begin="3" buiging="zonder" end="4" id="6" lemma="wandelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wandel" word="gewandeld" wvorm="vd"/>
         <node begin="2" cat="ap" end="6" id="7" rel="mod">
-          <node aform="compar" begin="2" buiging="zonder" end="3" graad="comp" id="8" infl="no_e" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="vaak" vform="adj" word="vaker"/>
+          <node begin="2" buiging="zonder" end="3" graad="comp" id="8" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="vaak" word="vaker"/>
           <node begin="4" cat="cp" end="6" id="9" rel="obcomp">
             <node begin="4" conjtype="onder" end="5" id="10" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
-            <node aform="base" begin="5" buiging="zonder" end="6" id="11" infl="no_e" lemma="fietsen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="body" root="fietsen" vform="psp" word="gefietst" wvorm="vd"/>
+            <node begin="5" buiging="zonder" end="6" id="11" lemma="fietsen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="body" root="fietsen" word="gefietst" wvorm="vd"/>
           </node>
         </node>
       </node>

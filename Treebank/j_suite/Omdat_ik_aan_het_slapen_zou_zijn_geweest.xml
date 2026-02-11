@@ -4,24 +4,24 @@
     <node begin="0" cat="cp" end="8" id="1" rel="--">
       <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
       <node begin="1" cat="ssub" end="8" id="3" rel="body">
-        <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
-        <node begin="5" end="6" id="5" infl="sg" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" sc="aux(inf)" tense="past" v_per="fir" word="zou" wvorm="pv"/>
+        <node begin="1" end="2" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="5" end="6" id="5" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
         <node begin="1" cat="inf" end="8" id="6" rel="vc">
           <node begin="1" end="2" id="7" index="1" rel="su"/>
-          <node begin="6" buiging="zonder" end="7" id="8" infl="inf" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="aux_psp_zijn" word="zijn" wvorm="inf"/>
+          <node begin="6" buiging="zonder" end="7" id="8" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
           <node begin="1" cat="ppart" end="8" id="9" rel="vc">
             <node begin="1" end="2" id="10" index="1" rel="su"/>
             <node begin="1" cat="ahi" end="5" id="11" rel="vc">
               <node begin="2" cat="mwu" end="4" id="12" rel="cmp">
-                <node begin="2" end="3" id="13" lemma="aan" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="aan" sc="aan_het" vztype="init" word="aan"/>
-                <node begin="3" end="4" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="comp" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" sc="aan_het" word="het"/>
+                <node begin="2" end="3" id="13" lemma="aan" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
+                <node begin="3" end="4" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="comp" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
               </node>
               <node begin="1" cat="inf" end="5" id="15" rel="body">
                 <node begin="1" end="2" id="16" index="1" rel="su"/>
-                <node begin="4" buiging="zonder" end="5" id="17" infl="inf" lemma="slapen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="slaap" sc="intransitive" word="slapen" wvorm="inf"/>
+                <node begin="4" buiging="zonder" end="5" id="17" lemma="slapen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="slaap" word="slapen" wvorm="inf"/>
               </node>
             </node>
-            <node begin="7" buiging="zonder" end="8" id="18" infl="psp" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="aan_het" word="geweest" wvorm="vd"/>
+            <node begin="7" buiging="zonder" end="8" id="18" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
           </node>
         </node>
       </node>

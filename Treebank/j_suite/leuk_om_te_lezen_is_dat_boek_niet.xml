@@ -3,19 +3,19 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="ap" end="4" id="2" rel="predc">
-        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="3" infl="no_e" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="leuk" sc="subject_vp" vform="adj" word="leuk"/>
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="leuk" word="leuk"/>
         <node begin="1" cat="oti" end="4" id="4" rel="vc">
-          <node begin="1" end="2" id="5" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" sc="om" vztype="init" word="om"/>
+          <node begin="1" end="2" id="5" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
           <node begin="2" cat="ti" end="4" id="6" rel="body">
-            <node begin="2" end="3" id="7" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
-            <node begin="3" buiging="zonder" end="4" id="8" infl="inf" lemma="lezen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="lees" sc="transitive" word="lezen" wvorm="inf"/>
+            <node begin="2" end="3" id="7" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="3" buiging="zonder" end="4" id="8" lemma="lezen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="lees" word="lezen" wvorm="inf"/>
           </node>
         </node>
       </node>
-      <node begin="4" end="5" id="9" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="4" end="5" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="5" cat="np" end="7" id="10" rel="su">
-        <node begin="5" buiging="zonder" end="6" id="11" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" wh="nwh" word="dat"/>
-        <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="12" lemma="boek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="boek" word="boek"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="dat"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="12" lemma="boek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="boek" word="boek"/>
       </node>
       <node begin="7" end="8" id="13" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
     </node>

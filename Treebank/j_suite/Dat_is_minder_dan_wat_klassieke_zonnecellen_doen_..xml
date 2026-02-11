@@ -2,27 +2,27 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="0" end="1" getal="ev" id="2" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="Dat"/>
-      <node begin="1" end="2" id="3" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="2" cat="ap" end="8" id="4" rel="predc">
-        <node aform="compar" begin="2" buiging="zonder" end="3" graad="comp" id="5" infl="meer" lemma="weinig" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="minder" vform="adj" vwtype="onbep" word="minder"/>
+        <node begin="2" buiging="zonder" end="3" graad="comp" id="5" lemma="weinig" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="minder" vwtype="onbep" word="minder"/>
         <node begin="3" cat="cp" end="8" id="6" rel="obcomp">
           <node begin="3" conjtype="onder" end="4" id="7" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
           <node begin="4" cat="whrel" end="8" id="8" rel="body">
-            <node begin="4" case="both" def="indef" end="5" gen="het" getal="ev" id="9" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="wat"/>
+            <node begin="4" end="5" getal="ev" id="9" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
             <node begin="4" cat="ssub" end="8" id="10" rel="body">
               <node begin="4" end="5" id="11" index="1" rel="obj1"/>
               <node begin="5" cat="np" end="7" id="12" rel="su">
-                <node aform="base" begin="5" buiging="met-e" end="6" graad="basis" id="13" infl="e" lemma="klassiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="klassiek" vform="adj" word="klassieke"/>
-                <node begin="6" end="7" gen="de" getal="mv" graad="basis" id="14" lemma="zon_cel" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="zon_cel" word="zonnecellen"/>
+                <node begin="5" buiging="met-e" end="6" graad="basis" id="13" lemma="klassiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="klassiek" word="klassieke"/>
+                <node begin="6" end="7" getal="mv" graad="basis" id="14" lemma="zon_cel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zon_cel" word="zonnecellen"/>
               </node>
-              <node begin="7" end="8" id="15" infl="pl" lemma="doen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="doe" sc="transitive_ndev" tense="present" v_per="thi" word="doen" wvorm="pv"/>
+              <node begin="7" end="8" id="15" lemma="doen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="doe" word="doen" wvorm="pv"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Dat is minder dan wat klassieke zonnecellen doen .</sentence>
 </alpino_ds>

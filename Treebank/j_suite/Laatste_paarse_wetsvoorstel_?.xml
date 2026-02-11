@@ -2,11 +2,11 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="np" end="3" id="1" rel="--">
-      <node begin="0" buiging="met-e" end="1" graad="sup" id="2" lemma="laat" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="laat" word="Laatste"/>
-      <node aform="base" begin="1" buiging="met-e" end="2" graad="basis" id="3" infl="e" lemma="paars" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="paars" vform="adj" word="paarse"/>
-      <node begin="2" end="3" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="wet_voorstel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="wet_voorstel" word="wetsvoorstel"/>
+      <node begin="0" buiging="met-e" end="1" graad="sup" id="2" lemma="laat" naamval="stan" pos="num" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="laat" word="Laatste"/>
+      <node begin="1" buiging="met-e" end="2" graad="basis" id="3" lemma="paars" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="paars" word="paarse"/>
+      <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="4" lemma="wet_voorstel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wet_voorstel" word="wetsvoorstel"/>
     </node>
-    <node begin="3" end="4" id="5" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="3" end="4" id="5" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Laatste paarse wetsvoorstel ?</sentence>
 </alpino_ds>

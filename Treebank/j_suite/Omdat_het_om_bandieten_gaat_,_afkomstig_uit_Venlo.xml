@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
-    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="cp" end="9" id="2" rel="--">
       <node begin="0" conjtype="onder" end="1" id="3" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
       <node begin="1" cat="ssub" end="9" id="4" rel="body">
-        <node begin="1" end="2" genus="onz" getal="ev" id="5" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
-        <node begin="4" end="5" id="6" infl="sg3" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" sc="pc_pp(om)" tense="present" v_per="thi" word="gaat" wvorm="pv"/>
+        <node begin="1" end="2" genus="onz" getal="ev" id="5" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="4" end="5" id="6" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
         <node begin="2" cat="pp" end="9" id="7" rel="pc">
           <node begin="2" end="3" id="8" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
           <node begin="3" cat="np" end="9" id="9" rel="obj1">
-            <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="10" lemma="bandiet" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="bandiet" word="bandieten"/>
+            <node begin="3" end="4" getal="mv" graad="basis" id="10" lemma="bandiet" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bandiet" word="bandieten"/>
             <node begin="6" cat="ap" end="9" id="11" rel="mod">
-              <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="12" infl="no_e" lemma="afkomstig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="afkomstig" sc="pp(uit)" vform="adj" word="afkomstig"/>
+              <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="afkomstig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="afkomstig" word="afkomstig"/>
               <node begin="7" cat="pp" end="9" id="13" rel="pc">
                 <node begin="7" end="8" id="14" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
-                <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="Venlo" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Venlo" word="Venlo"/>
+                <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="Venlo" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Venlo" word="Venlo"/>
               </node>
             </node>
           </node>

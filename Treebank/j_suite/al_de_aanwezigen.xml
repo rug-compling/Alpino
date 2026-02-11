@@ -3,10 +3,10 @@
   <node begin="0" cat="top" end="3" id="0" rel="top">
     <node begin="0" cat="np" end="3" id="1" rel="--">
       <node begin="0" cat="detp" end="2" id="2" rel="det">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="al" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" special="pre_det_quant" vwtype="onbep" word="al"/>
-        <node begin="1" end="2" id="4" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="hd" root="de" word="de"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" vwtype="onbep" word="al"/>
+        <node begin="1" end="2" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="hd" root="de" word="de"/>
       </node>
-      <node aform="base" begin="2" buiging="met-e" end="3" getal-n="mv-n" graad="basis" id="5" lemma="aanwezig" num="pl" personalized="true" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" rnum="pl" root="aanwezig" special="a_noun" word="aanwezigen"/>
+      <node begin="2" buiging="met-e" end="3" getal-n="mv-n" graad="basis" id="5" lemma="aanwezig" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="aanwezig" word="aanwezigen"/>
     </node>
   </node>
   <sentence>al de aanwezigen</sentence>

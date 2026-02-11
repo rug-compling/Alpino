@@ -3,12 +3,12 @@
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="du" end="4" id="1" rel="--">
       <node begin="0" cat="cp" end="2" id="2" rel="dp">
-        <node begin="0" conjtype="onder" end="1" id="3" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
-        <node begin="1" buiging="met-e" end="2" getal-n="zonder-n" graad="sup" id="4" lemma="laat" naamval="stan" numtype="rang" pos="num" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="body" rnum="sg" root="laat" word="laatste"/>
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+        <node begin="1" buiging="met-e" end="2" getal-n="zonder-n" graad="sup" id="4" lemma="laat" naamval="stan" pos="num" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="body" root="laat" word="laatste"/>
       </node>
       <node begin="2" cat="np" end="4" id="5" rel="dp">
-        <node begin="2" end="3" id="6" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-        <node begin="3" end="4" gen="het" genus="onz" getal="ev" graad="basis" id="7" lemma="milieu" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="milieu" word="milieu"/>
+        <node begin="2" end="3" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="milieu" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="milieu" word="milieu"/>
       </node>
     </node>
   </node>

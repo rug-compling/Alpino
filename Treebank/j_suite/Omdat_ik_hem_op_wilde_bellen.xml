@@ -4,13 +4,13 @@
     <node begin="0" cat="cp" end="6" id="1" rel="--">
       <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
       <node begin="1" cat="ssub" end="6" id="3" rel="body">
-        <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
-        <node begin="4" end="5" id="5" infl="sg" lemma="willen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wil" sc="modifier(aux(inf))" tense="past" v_per="fir" word="wilde" wvorm="pv"/>
+        <node begin="1" end="2" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="4" end="5" id="5" lemma="willen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wil" word="wilde" wvorm="pv"/>
         <node begin="1" cat="inf" end="6" id="6" rel="vc">
           <node begin="1" end="2" id="7" index="1" rel="su"/>
-          <node begin="2" case="dat_acc" def="def" end="3" gen="de" genus="masc" getal="ev" id="8" lemma="hem" naamval="obl" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" rnum="sg" root="hem" status="vol" vwtype="pers" wh="nwh" word="hem"/>
+          <node begin="2" end="3" genus="masc" getal="ev" id="8" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
           <node begin="3" end="4" id="9" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
-          <node begin="5" buiging="zonder" end="6" id="10" infl="inf" lemma="op_bellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bel_op" sc="part_transitive(op)" word="bellen" wvorm="inf"/>
+          <node begin="5" buiging="zonder" end="6" id="10" lemma="op_bellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bel_op" word="bellen" wvorm="inf"/>
         </node>
       </node>
     </node>

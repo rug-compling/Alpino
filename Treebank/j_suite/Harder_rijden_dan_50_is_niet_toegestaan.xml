@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" index="1" rel="su">
-        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="3" lemma="rijden" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" rnum="sg" root="rijd" sc="intransitive" special="v_noun" word="rijden" wvorm="inf"/>
+        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="3" lemma="rijden" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="rijd" word="rijden" wvorm="inf"/>
         <node begin="0" cat="ap" end="4" id="4" rel="mod">
-          <node aform="compar" begin="0" buiging="zonder" end="1" graad="comp" id="5" infl="no_e" lemma="hard" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="hard" vform="adj" word="Harder"/>
+          <node begin="0" buiging="zonder" end="1" graad="comp" id="5" lemma="hard" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="hard" word="Harder"/>
           <node begin="2" cat="cp" end="4" id="6" rel="obcomp">
             <node begin="2" conjtype="onder" end="3" id="7" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
-            <node begin="3" end="4" id="8" infl="pl_num" lemma="50" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="body" root="50" word="50"/>
+            <node begin="3" end="4" id="8" lemma="50" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="body" root="50" word="50"/>
           </node>
         </node>
       </node>
-      <node begin="4" end="5" id="9" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="4" end="5" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="7" id="10" rel="vc">
         <node begin="0" end="4" id="11" index="1" rel="obj1"/>
         <node begin="5" end="6" id="12" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-        <node begin="6" buiging="zonder" end="7" id="13" infl="psp" lemma="toe_staan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="sta_toe" sc="part_transitive(toe)" word="toegestaan" wvorm="vd"/>
+        <node begin="6" buiging="zonder" end="7" id="13" lemma="toe_staan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="sta_toe" word="toegestaan" wvorm="vd"/>
       </node>
     </node>
   </node>

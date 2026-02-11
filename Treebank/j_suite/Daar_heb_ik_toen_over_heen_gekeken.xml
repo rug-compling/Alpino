@@ -2,17 +2,17 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="1" end="2" id="2" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" v_per="fir" word="heb" wvorm="pv"/>
-      <node begin="2" case="nom" def="def" end="3" gen="de" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="1" end="2" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
       <node begin="0" cat="ppart" end="7" id="4" rel="vc">
         <node begin="2" end="3" id="5" index="1" rel="su"/>
-        <node begin="3" end="4" id="6" lemma="toen" pos="adv" postag="BW()" pt="bw" rel="mod" root="toen" special="tmp" word="toen"/>
+        <node begin="3" end="4" id="6" lemma="toen" pos="adv" postag="BW()" pt="bw" rel="mod" root="toen" word="toen"/>
         <node begin="0" cat="pp" end="6" id="7" rel="ld">
-          <node begin="0" end="1" getal="getal" id="8" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" special="er_loc" status="vol" vwtype="aanw" word="Daar"/>
+          <node begin="0" end="1" getal="getal" id="8" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="Daar"/>
           <node begin="4" end="5" id="9" lemma="over" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="over" vztype="fin" word="over"/>
           <node begin="5" end="6" id="10" lemma="heen" pos="part" postag="VZ(fin)" pt="vz" rel="hdf" root="heen" vztype="fin" word="heen"/>
         </node>
-        <node begin="6" buiging="zonder" end="7" id="11" infl="psp" lemma="kijken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kijk" sc="ld_pp" word="gekeken" wvorm="vd"/>
+        <node begin="6" buiging="zonder" end="7" id="11" lemma="kijken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kijk" word="gekeken" wvorm="vd"/>
       </node>
     </node>
   </node>

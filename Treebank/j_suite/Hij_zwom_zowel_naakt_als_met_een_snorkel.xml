@@ -2,17 +2,17 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="zwemmen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zwem" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="zwom" wvorm="pv"/>
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="zwemmen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zwem" word="zwom" wvorm="pv"/>
       <node begin="2" cat="conj" end="8" id="4" rel="mod">
-        <node begin="2" end="3" id="5" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" special="left" word="zowel"/>
-        <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="6" infl="no_e" lemma="naakt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="naakt" vform="adj" word="naakt"/>
-        <node begin="4" conjtype="onder" end="5" id="7" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="als" special="right" word="als"/>
+        <node begin="2" end="3" id="5" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" word="zowel"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="naakt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="naakt" word="naakt"/>
+        <node begin="4" conjtype="onder" end="5" id="7" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="als" word="als"/>
         <node begin="5" cat="pp" end="8" id="8" rel="cnj">
           <node begin="5" end="6" id="9" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
           <node begin="6" cat="np" end="8" id="10" rel="obj1">
-            <node begin="6" end="7" id="11" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="7" end="8" gen="both" genus="zijd" getal="ev" graad="basis" id="12" lemma="snorkel" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="snorkel" word="snorkel"/>
+            <node begin="6" end="7" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="snorkel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="snorkel" word="snorkel"/>
           </node>
         </node>
       </node>

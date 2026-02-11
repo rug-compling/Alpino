@@ -2,10 +2,10 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="np" end="4" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
-      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="ING" naamval="stan" neclass="ORG" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" rnum="sg" root="ING" word="ING"/>
-      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="TopRentePlus" naamval="stan" neclass="ORG" ntype="eigen" num="both" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="TopRentePlus" word="TopRentePlus"/>
-      <node begin="3" end="4" gen="het" genus="onz" getal="ev" graad="basis" id="5" lemma="programma" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="programma" word="programma"/>
+      <node begin="0" end="1" id="2" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="ING" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="ING" word="ING"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="TopRentePlus" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="TopRentePlus" word="TopRentePlus"/>
+      <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="5" lemma="programma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="programma" word="programma"/>
     </node>
   </node>
   <sentence>Het ING TopRentePlus programma</sentence>

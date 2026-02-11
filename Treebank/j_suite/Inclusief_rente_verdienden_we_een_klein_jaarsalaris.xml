@@ -3,15 +3,15 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="ap" end="2" id="2" rel="mod">
-        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="3" infl="no_e" lemma="inclusief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="inclusief" sc="transitive" vform="adj" word="Inclusief"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="rente" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="rente" word="rente"/>
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="inclusief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="inclusief" word="Inclusief"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="rente" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="rente" word="rente"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="verdienen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="verdien" sc="transitive" stype="declarative" tense="past" v_per="fir" word="verdienden" wvorm="pv"/>
-      <node begin="3" case="nom" def="def" end="4" gen="de" getal="mv" id="6" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+      <node begin="2" end="3" id="5" lemma="verdienen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="verdien" word="verdienden" wvorm="pv"/>
+      <node begin="3" end="4" getal="mv" id="6" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
       <node begin="4" cat="np" end="7" id="7" rel="obj1">
-        <node begin="4" end="5" id="8" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="9" infl="no_e" lemma="klein" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="klein" vform="adj" word="klein"/>
-        <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="10" lemma="jaar_salaris" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="jaar_salaris" word="jaarsalaris"/>
+        <node begin="4" end="5" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="klein" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="klein" word="klein"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="10" lemma="jaar_salaris" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar_salaris" word="jaarsalaris"/>
       </node>
     </node>
   </node>

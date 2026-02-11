@@ -3,18 +3,18 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="Die"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="kleur" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="kleur" word="kleur"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="kleur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kleur" word="kleur"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="werken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="werk" sc="ap_copula" stype="declarative" tense="present" v_per="thi" word="werkt" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="werken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="werk" word="werkt" wvorm="pv"/>
       <node begin="3" cat="ap" end="8" id="6" rel="predc">
-        <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="7" infl="no_e" lemma="rustgevend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="rustgevend" vform="adj" word="rustgevend"/>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="7" lemma="rustgevend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="rustgevend" word="rustgevend"/>
         <node begin="3" cat="advp" end="8" id="8" rel="mod">
-          <node begin="3" end="4" id="9" lemma="net" pos="adv" postag="BW()" pt="bw" rel="mod" root="net" sc="modal" word="net"/>
-          <node begin="4" comparative="als" end="5" id="10" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="hd" root="zo" special="comp" word="zo"/>
+          <node begin="3" end="4" id="9" lemma="net" pos="adv" postag="BW()" pt="bw" rel="mod" root="net" word="net"/>
+          <node begin="4" end="5" id="10" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="hd" root="zo" word="zo"/>
           <node begin="6" cat="cp" end="8" id="11" rel="obcomp">
             <node begin="6" conjtype="onder" end="7" id="12" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
-            <node aform="base" begin="7" buiging="zonder" end="8" graad="basis" id="13" infl="no_e" lemma="groen" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="body" root="groen" vform="adj" word="groen"/>
+            <node begin="7" buiging="zonder" end="8" graad="basis" id="13" lemma="groen" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="body" root="groen" word="groen"/>
           </node>
         </node>
       </node>

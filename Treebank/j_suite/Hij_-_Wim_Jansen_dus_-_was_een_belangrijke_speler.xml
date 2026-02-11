@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="10" id="0" rel="top">
-    <node begin="1" end="2" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" special="ligg_streep" word="-"/>
-    <node begin="5" end="6" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" special="ligg_streep" word="-"/>
+    <node begin="1" end="2" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="5" end="6" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
     <node begin="0" cat="smain" end="10" id="3" rel="--">
       <node begin="0" cat="np" end="5" id="4" rel="su">
-        <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="5" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="hd" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+        <node begin="0" end="1" genus="masc" getal="ev" id="5" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="hd" root="hij" status="vol" vwtype="pers" word="Hij"/>
         <node begin="2" cat="np" end="5" id="6" rel="mod">
           <node begin="2" cat="mwu" end="4" id="7" rel="hd">
-            <node begin="2" end="3" id="8" lemma="Wim" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Wim" spectype="deeleigen" word="Wim"/>
-            <node begin="3" end="4" id="9" lemma="Jansen" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Jansen" spectype="deeleigen" word="Jansen"/>
+            <node begin="2" end="3" id="8" lemma="Wim" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wim" spectype="deeleigen" word="Wim"/>
+            <node begin="3" end="4" id="9" lemma="Jansen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jansen" spectype="deeleigen" word="Jansen"/>
           </node>
-          <node begin="4" end="5" id="10" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="mod" root="dus" special="postnp" word="dus"/>
+          <node begin="4" end="5" id="10" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="mod" root="dus" word="dus"/>
         </node>
       </node>
-      <node begin="6" end="7" id="11" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula" stype="declarative" tense="past" v_per="thi" word="was" wvorm="pv"/>
+      <node begin="6" end="7" id="11" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
       <node begin="7" cat="np" end="10" id="12" rel="predc">
-        <node begin="7" end="8" id="13" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node aform="base" begin="8" buiging="met-e" end="9" graad="basis" id="14" infl="e" lemma="belangrijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="belangrijk" vform="adj" word="belangrijke"/>
-        <node begin="9" end="10" gen="de" genus="zijd" getal="ev" graad="basis" id="15" lemma="speler" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="speler" word="speler"/>
+        <node begin="7" end="8" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="8" buiging="met-e" end="9" graad="basis" id="14" lemma="belangrijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="belangrijk" word="belangrijke"/>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="15" lemma="speler" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="speler" word="speler"/>
       </node>
     </node>
   </node>

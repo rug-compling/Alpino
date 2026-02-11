@@ -3,16 +3,16 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="cp" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="mod">
-        <node begin="0" end="1" id="3" infl="pl_num" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
-        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="jaar" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="jaar" special="tmp" word="jaar"/>
+        <node begin="0" end="1" id="3" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
       </node>
       <node begin="2" conjtype="onder" end="3" id="5" lemma="voordat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="voordat" word="voordat"/>
       <node begin="3" cat="ssub" end="6" id="6" rel="body">
         <node begin="3" cat="np" end="5" id="7" rel="su">
-          <node begin="3" end="4" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="crisis" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="crisis" word="crisis"/>
+          <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="crisis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="crisis" word="crisis"/>
         </node>
-        <node begin="5" end="6" id="10" infl="sg" lemma="beginnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="begin" sc="intransitive" tense="past" v_per="thi" word="begon" wvorm="pv"/>
+        <node begin="5" end="6" id="10" lemma="beginnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="begin" word="begon" wvorm="pv"/>
       </node>
     </node>
   </node>

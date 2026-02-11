@@ -3,14 +3,14 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="3" infl="no_e" lemma="hard" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="hard" vform="adj" word="Hard"/>
-        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="4" lemma="fietsen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" rnum="sg" root="fiets" sc="intransitive" special="v_noun" word="fietsen" wvorm="inf"/>
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="hard" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="hard" word="Hard"/>
+        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="4" lemma="fietsen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="fiets" word="fietsen" wvorm="inf"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" sc="passive" stype="declarative" tense="present" v_per="thi" word="wordt" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
       <node begin="0" cat="ppart" end="5" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="obj1"/>
-        <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="8" lemma="wielrennen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="predc" rnum="sg" root="wielren" sc="intransitive" special="v_noun" word="wielrennen" wvorm="inf"/>
-        <node begin="4" buiging="zonder" end="5" id="9" infl="psp" lemma="noemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="noem" sc="pred_np" word="genoemd" wvorm="vd"/>
+        <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="8" lemma="wielrennen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="predc" root="wielren" word="wielrennen" wvorm="inf"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="noemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="noem" word="genoemd" wvorm="vd"/>
       </node>
     </node>
   </node>

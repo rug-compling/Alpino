@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
-    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
-    <node begin="4" end="5" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="4" end="5" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="9" id="3" rel="--">
       <node begin="0" cat="ap" end="4" id="4" rel="mod">
-        <node aform="compar" begin="0" buiging="zonder" end="1" graad="comp" id="5" infl="no_e" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="laat" vform="adj" word="Later"/>
+        <node begin="0" buiging="zonder" end="1" graad="comp" id="5" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="laat" word="Later"/>
         <node begin="2" cat="pp" end="4" id="6" rel="mod">
           <node begin="2" end="3" id="7" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-          <node begin="3" end="4" id="8" lemma="1995" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1995" word="1995"/>
+          <node begin="3" end="4" id="8" lemma="1995" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1995" word="1995"/>
         </node>
       </node>
-      <node begin="5" end="6" id="9" infl="pl" lemma="verhuizen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="verhuis" sc="ld_pp" stype="declarative" tense="past" v_per="thi" word="verhuisden" wvorm="pv"/>
-      <node begin="6" case="nom" def="def" end="7" gen="de" getal="mv" id="10" lemma="zij" naamval="nomin" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" rnum="pl" root="zij" status="vol" vwtype="pers" wh="nwh" word="zij"/>
+      <node begin="5" end="6" id="9" lemma="verhuizen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="verhuis" word="verhuisden" wvorm="pv"/>
+      <node begin="6" end="7" getal="mv" id="10" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
       <node begin="7" cat="pp" end="9" id="11" rel="ld">
         <node begin="7" end="8" id="12" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
-        <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="13" lemma="Bedum" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Bedum" word="Bedum"/>
+        <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="13" lemma="Bedum" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Bedum" word="Bedum"/>
       </node>
     </node>
   </node>

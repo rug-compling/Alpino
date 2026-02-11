@@ -3,11 +3,11 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" cat="cp" end="2" id="2" rel="mod">
-        <node begin="0" conjtype="onder" end="1" id="3" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" sc="zoals" word="Zoals"/>
-        <node begin="1" buiging="zonder" end="2" id="4" infl="psp" lemma="af_spreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="body" root="spreek_af" sc="part_sbar(af)" word="afgesproken" wvorm="vd"/>
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="Zoals"/>
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="af_spreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="body" root="spreek_af" word="afgesproken" wvorm="vd"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" sc="intransitive" stype="declarative" tense="present" v_per="thi" word="komt" wvorm="pv"/>
-      <node begin="3" case="nom" def="def" end="4" gen="de" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="2" end="3" id="5" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+      <node begin="3" end="4" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
       <node begin="4" end="5" id="7" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
     </node>
   </node>

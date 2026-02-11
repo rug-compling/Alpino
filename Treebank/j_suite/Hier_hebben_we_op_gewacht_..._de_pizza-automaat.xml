@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
-    <node begin="5" end="6" id="1" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." special="hellip" word="..."/>
+    <node begin="5" end="6" id="1" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." word="..."/>
     <node begin="0" cat="du" end="8" id="2" rel="--">
       <node begin="0" cat="smain" end="5" id="3" rel="nucl">
-        <node begin="1" end="2" id="4" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" v_per="fir" word="hebben" wvorm="pv"/>
-        <node begin="2" case="nom" def="def" end="3" gen="de" getal="mv" id="5" index="1" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+        <node begin="1" end="2" id="4" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+        <node begin="2" end="3" getal="mv" id="5" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
         <node begin="0" cat="ppart" end="5" id="6" rel="vc">
           <node begin="2" end="3" id="7" index="1" rel="su"/>
           <node begin="0" cat="pp" end="4" id="8" rel="pc">
-            <node begin="0" end="1" getal="getal" id="9" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="hier" special="er_loc" status="vol" vwtype="aanw" word="Hier"/>
+            <node begin="0" end="1" getal="getal" id="9" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="hier" status="vol" vwtype="aanw" word="Hier"/>
             <node begin="3" end="4" id="10" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="op" vztype="fin" word="op"/>
           </node>
-          <node begin="4" buiging="zonder" end="5" id="11" infl="psp" lemma="wachten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wacht" sc="pc_pp(op)" word="gewacht" wvorm="vd"/>
+          <node begin="4" buiging="zonder" end="5" id="11" lemma="wachten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wacht" word="gewacht" wvorm="vd"/>
         </node>
       </node>
       <node begin="6" cat="np" end="8" id="12" rel="sat">
-        <node begin="6" end="7" id="13" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lemma="pizza_automaat" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="pizza_automaat" word="pizza-automaat"/>
+        <node begin="6" end="7" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="pizza_automaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pizza_automaat" word="pizza-automaat"/>
       </node>
     </node>
   </node>

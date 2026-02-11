@@ -2,11 +2,11 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="2" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="We"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="thuis_blijven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="blijf_thuis" sc="part_intransitive(thuis)" stype="declarative" tense="present" v_per="fir" word="blijven" wvorm="pv"/>
+      <node begin="0" end="1" getal="mv" id="2" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="We"/>
+      <node begin="1" end="2" id="3" lemma="thuis_blijven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="blijf_thuis" word="blijven" wvorm="pv"/>
       <node begin="2" cat="mwu" end="4" id="4" rel="mod">
-        <node begin="2" end="3" id="5" lemma="4" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="4" special="tmp" word="4"/>
-        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="januari" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="januari" special="tmp" word="januari"/>
+        <node begin="2" end="3" id="5" lemma="4" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="4" word="4"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="januari" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="januari" word="januari"/>
       </node>
       <node begin="4" end="5" id="7" lemma="thuis" pos="part" postag="BW()" pt="bw" rel="svp" root="thuis" word="thuis"/>
     </node>

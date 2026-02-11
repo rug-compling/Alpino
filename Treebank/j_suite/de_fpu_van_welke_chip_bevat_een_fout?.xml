@@ -3,22 +3,22 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="whq" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="5" id="2" index="1" rel="whd">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="1" end="2" gen="both" genus="zijd" getal="ev" graad="basis" id="4" lemma="fpu" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="fpu" word="fpu"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="fpu" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fpu" word="fpu"/>
         <node begin="2" cat="pp" end="5" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="5" id="7" rel="obj1">
-            <node begin="3" buiging="met-e" end="4" id="8" infl="welke" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" wh="rwh" word="welke"/>
-            <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="chip" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="chip" word="chip"/>
+            <node begin="3" buiging="met-e" end="4" id="8" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="welke"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="chip" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="chip" word="chip"/>
           </node>
         </node>
       </node>
       <node begin="0" cat="sv1" end="8" id="10" rel="body">
         <node begin="0" end="5" id="11" index="1" rel="su"/>
-        <node begin="5" end="6" id="12" infl="sg" lemma="bevatten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="bevat" sc="transitive" stype="whquestion" tense="present" v_per="thi" word="bevat" wvorm="pv"/>
+        <node begin="5" end="6" id="12" lemma="bevatten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="bevat" word="bevat" wvorm="pv"/>
         <node begin="6" cat="np" end="8" id="13" rel="obj1">
-          <node begin="6" end="7" id="14" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="15" lemma="fout" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="fout" word="fout?"/>
+          <node begin="6" end="7" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="fout" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fout" word="fout?"/>
         </node>
       </node>
     </node>

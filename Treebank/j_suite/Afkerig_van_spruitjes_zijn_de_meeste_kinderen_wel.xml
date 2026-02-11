@@ -3,19 +3,19 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="ap" end="3" id="2" rel="predc">
-        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="3" infl="no_e" lemma="afkerig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="afkerig" sc="pp(van)" vform="adj" word="Afkerig"/>
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="afkerig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="afkerig" word="Afkerig"/>
         <node begin="1" cat="pp" end="3" id="4" rel="pc">
           <node begin="1" end="2" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-          <node begin="2" end="3" gen="het" getal="mv" graad="dim" id="6" lemma="spruit" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="obj1" rnum="pl" root="spruit_DIM" word="spruitjes"/>
+          <node begin="2" end="3" getal="mv" graad="dim" id="6" lemma="spruit" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="obj1" root="spruit_DIM" word="spruitjes"/>
         </node>
       </node>
-      <node begin="3" end="4" id="7" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="thi" word="zijn" wvorm="pv"/>
+      <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="4" cat="np" end="7" id="8" rel="su">
-        <node begin="4" end="5" id="9" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node aform="super" begin="5" buiging="met-e" end="6" graad="sup" id="10" infl="e" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,agr,sup)" pt="vnw" rel="mod" root="veel" vform="adj" vwtype="onbep" word="meeste"/>
-        <node begin="6" end="7" gen="het" getal="mv" graad="basis" id="11" lemma="kind" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kind" word="kinderen"/>
+        <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" buiging="met-e" end="6" graad="sup" id="10" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,agr,sup)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="meeste"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="11" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
       </node>
-      <node aform="base" begin="7" end="8" id="12" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
+      <node begin="7" end="8" id="12" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
     </node>
   </node>
   <sentence>Afkerig van spruitjes zijn de meeste kinderen wel</sentence>

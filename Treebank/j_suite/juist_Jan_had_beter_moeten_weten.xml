@@ -3,17 +3,17 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="juist" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="juist" sc="modal" word="juist"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Jan" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="Jan" word="Jan"/>
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="juist" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="juist" word="juist"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Jan" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Jan" word="Jan"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="past" v_per="thi" word="had" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
       <node begin="0" cat="inf" end="6" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
-        <node begin="4" buiging="zonder" end="5" id="8" infl="inf" lemma="moeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="moet" sc="modifier(aux(inf))" word="moeten" wvorm="inf"/>
+        <node begin="4" buiging="zonder" end="5" id="8" lemma="moeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="moet" word="moeten" wvorm="inf"/>
         <node begin="0" cat="inf" end="6" id="9" rel="vc">
           <node begin="0" end="2" id="10" index="1" rel="su"/>
           <node begin="3" buiging="zonder" end="4" graad="comp" id="11" lemma="beter" pos="fixed" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="svp" root="beter" word="beter"/>
-          <node begin="5" buiging="zonder" end="6" id="12" infl="inf" lemma="weten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="weet" sc="fixed([[beter]],no_passive)" word="weten" wvorm="inf"/>
+          <node begin="5" buiging="zonder" end="6" id="12" lemma="weten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="weet" word="weten" wvorm="inf"/>
         </node>
       </node>
     </node>

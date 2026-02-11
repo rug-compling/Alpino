@@ -2,17 +2,17 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="winnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="win" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="won" wvorm="pv"/>
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="winnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="win" word="won" wvorm="pv"/>
       <node begin="2" cat="cp" end="7" id="4" rel="mod">
-        <node begin="2" conjtype="onder" end="3" id="5" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" sc="zoals" word="zoals"/>
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
         <node begin="3" cat="du" end="7" id="6" rel="body">
           <node begin="3" cat="mwu" end="6" id="7" rel="dp">
-            <node begin="3" end="4" id="8" lemma="van" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="van" spectype="deeleigen" word="van"/>
-            <node begin="4" end="5" id="9" lemma="der" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="der" spectype="deeleigen" word="der"/>
-            <node begin="5" end="6" id="10" lemma="Poel" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Poel" spectype="deeleigen" word="Poel"/>
+            <node begin="3" end="4" id="8" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+            <node begin="4" end="5" id="9" lemma="der" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+            <node begin="5" end="6" id="10" lemma="Poel" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Poel" spectype="deeleigen" word="Poel"/>
           </node>
-          <node begin="6" end="7" id="11" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="dp" root="gisteren" special="tmp" word="gisteren"/>
+          <node begin="6" end="7" id="11" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="dp" root="gisteren" word="gisteren"/>
         </node>
       </node>
     </node>

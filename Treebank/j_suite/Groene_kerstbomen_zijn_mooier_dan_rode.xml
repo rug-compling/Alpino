@@ -3,15 +3,15 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node aform="base" begin="0" buiging="met-e" end="1" graad="basis" id="3" infl="e" lemma="groen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groen" vform="adj" word="Groene"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="kerstboom" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kerstboom" word="kerstbomen"/>
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="groen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groen" word="Groene"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="kerstboom" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kerstboom" word="kerstbomen"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="thi" word="zijn" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="3" cat="ap" end="6" id="6" rel="predc">
-        <node aform="compar" begin="3" buiging="zonder" end="4" graad="comp" id="7" infl="no_e" lemma="mooi" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="mooi" vform="adj" word="mooier"/>
+        <node begin="3" buiging="zonder" end="4" graad="comp" id="7" lemma="mooi" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="mooi" word="mooier"/>
         <node begin="4" cat="cp" end="6" id="8" rel="obcomp">
           <node begin="4" conjtype="onder" end="5" id="9" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
-          <node aform="base" begin="5" buiging="met-e" end="6" getal-n="zonder-n" graad="basis" id="10" infl="e" lemma="rood" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="body" rnum="sg" root="rood" vform="adj" word="rode"/>
+          <node begin="5" buiging="met-e" end="6" getal-n="zonder-n" graad="basis" id="10" lemma="rood" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="body" root="rood" word="rode"/>
         </node>
       </node>
     </node>

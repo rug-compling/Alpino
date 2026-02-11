@@ -3,15 +3,15 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="opleiding" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="opleiding" word="opleiding"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="opleiding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="opleiding" word="opleiding"/>
         <node begin="2" cat="np" end="4" id="5" rel="mod">
-          <node aform="base" begin="2" buiging="met-e" end="3" graad="basis" id="6" infl="e" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" vform="adj" word="nieuwe"/>
-          <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lemma="stijl" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stijl" word="stijl"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="stijl" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stijl" word="stijl"/>
         </node>
       </node>
-      <node begin="4" end="5" id="8" infl="sg" lemma="bevallen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="beval" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="beviel" wvorm="pv"/>
-      <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="9" infl="no_e" lemma="uitstekend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uitstekend" vform="adj" word="uitstekend"/>
+      <node begin="4" end="5" id="8" lemma="bevallen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="beval" word="beviel" wvorm="pv"/>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="uitstekend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uitstekend" word="uitstekend"/>
     </node>
   </node>
   <sentence>de opleiding nieuwe stijl beviel uitstekend</sentence>

@@ -3,22 +3,22 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
       <node begin="0" cat="advp" end="5" id="2" rel="mod">
-        <node begin="0" end="1" getal="getal" id="3" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="hd" root="daar" special="er_loc" status="vol" vwtype="aanw" word="Daar"/>
+        <node begin="0" end="1" getal="getal" id="3" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="hd" root="daar" status="vol" vwtype="aanw" word="Daar"/>
         <node begin="1" cat="rel" end="5" id="4" rel="mod">
-          <node begin="1" end="2" getal="getal" id="5" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" special="er_loc" status="vol" vwtype="vb" wh="ywh" word="waar"/>
+          <node begin="1" end="2" getal="getal" id="5" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
           <node begin="1" cat="ssub" end="5" id="6" rel="body">
             <node begin="1" end="2" id="7" index="1" rel="mod"/>
-            <node begin="2" end="3" genus="onz" getal="ev" id="8" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" special="het" status="red" vwtype="pers" word="het"/>
+            <node begin="2" end="3" genus="onz" getal="ev" id="8" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
             <node begin="3" end="4" id="9" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-            <node begin="4" end="5" id="10" infl="sg3" lemma="regenen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="regen" sc="het_subj" tense="present" v_per="thi" word="regent" wvorm="pv"/>
+            <node begin="4" end="5" id="10" lemma="regenen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="regen" word="regent" wvorm="pv"/>
           </node>
         </node>
       </node>
-      <node begin="5" end="6" id="11" infl="modal_not_u" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" sc="intransitive" stype="declarative" tense="present" v_per="fir" word="wil" wvorm="pv"/>
-      <node begin="6" case="nom" def="def" end="7" gen="de" getal="ev" id="12" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="5" end="6" id="11" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="6" end="7" getal="ev" id="12" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
       <node begin="7" cat="pp" end="9" id="13" rel="mod">
         <node begin="7" end="8" id="14" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-        <node begin="8" end="9" gen="de" genus="zijd" getal="ev" graad="basis" id="15" lemma="vakantie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="vakantie" special="tmp" word="vakantie"/>
+        <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="vakantie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="vakantie" word="vakantie"/>
       </node>
     </node>
   </node>

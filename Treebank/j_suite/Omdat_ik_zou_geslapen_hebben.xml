@@ -4,15 +4,15 @@
     <node begin="0" cat="cp" end="5" id="1" rel="--">
       <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
       <node begin="1" cat="ssub" end="5" id="3" rel="body">
-        <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
-        <node begin="2" end="3" id="5" infl="sg" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" sc="aux(inf)" tense="past" v_per="fir" word="zou" wvorm="pv"/>
+        <node begin="1" end="2" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="2" end="3" id="5" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
         <node begin="1" cat="inf" end="5" id="6" rel="vc">
           <node begin="1" end="2" id="7" index="1" rel="su"/>
           <node begin="1" cat="ppart" end="4" id="8" rel="vc">
             <node begin="1" end="2" id="9" index="1" rel="su"/>
-            <node begin="3" buiging="zonder" end="4" id="10" infl="psp" lemma="slapen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="slaap" sc="intransitive" word="geslapen" wvorm="vd"/>
+            <node begin="3" buiging="zonder" end="4" id="10" lemma="slapen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="slaap" word="geslapen" wvorm="vd"/>
           </node>
-          <node begin="4" buiging="zonder" end="5" id="11" infl="inf" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" sc="aux_psp_hebben" word="hebben" wvorm="inf"/>
+          <node begin="4" buiging="zonder" end="5" id="11" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
         </node>
       </node>
     </node>

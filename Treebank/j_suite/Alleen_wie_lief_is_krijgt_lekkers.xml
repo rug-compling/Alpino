@@ -3,16 +3,16 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="whrel" end="4" id="2" rel="su">
-        <node begin="0" end="1" id="3" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="mod" root="alleen" sc="modal" word="Alleen"/>
-        <node begin="1" case="both" def="indef" end="2" gen="de" getal="getal" id="4" index="1" lemma="wie" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="rhd" rnum="sg" root="wie" status="vol" vwtype="vb" wh="ywh" word="wie"/>
+        <node begin="0" end="1" id="3" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="mod" root="alleen" word="Alleen"/>
+        <node begin="1" end="2" getal="getal" id="4" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="rhd" root="wie" status="vol" vwtype="vb" word="wie"/>
         <node begin="1" cat="ssub" end="4" id="5" rel="body">
           <node begin="1" end="2" id="6" index="1" rel="su"/>
-          <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="7" infl="no_e" lemma="lief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="lief" vform="adj" word="lief"/>
-          <node begin="3" end="4" id="8" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" v_per="thi" word="is" wvorm="pv"/>
+          <node begin="2" buiging="zonder" end="3" graad="basis" id="7" lemma="lief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="lief" word="lief"/>
+          <node begin="3" end="4" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         </node>
       </node>
-      <node begin="4" end="5" id="9" infl="sg3" lemma="krijgen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="krijg" sc="transitive" stype="declarative" tense="present" v_per="thi" word="krijgt" wvorm="pv"/>
-      <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="10" lemma="lekkers" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="lekkers" word="lekkers"/>
+      <node begin="4" end="5" id="9" lemma="krijgen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="krijg" word="krijgt" wvorm="pv"/>
+      <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="lekkers" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="lekkers" word="lekkers"/>
     </node>
   </node>
   <sentence>Alleen wie lief is krijgt lekkers</sentence>

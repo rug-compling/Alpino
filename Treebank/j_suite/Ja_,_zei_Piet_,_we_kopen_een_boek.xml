@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
-    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
-    <node begin="4" end="5" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="4" end="5" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="du" end="9" id="3" rel="--">
       <node begin="2" cat="sv1" end="4" id="4" rel="tag">
-        <node begin="2" end="3" id="5" infl="sg" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" sc="tr_sbar" tense="past" v_per="thi" word="zei" wvorm="pv"/>
-        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="Piet" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Piet" word="Piet"/>
+        <node begin="2" end="3" id="5" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="Piet" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Piet" word="Piet"/>
       </node>
       <node begin="0" cat="du" end="9" id="7" rel="nucl">
         <node begin="0" end="1" id="8" lemma="ja" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="ja" word="Ja"/>
         <node begin="5" cat="smain" end="9" id="9" rel="nucl">
-          <node begin="5" case="nom" def="def" end="6" gen="de" getal="mv" id="10" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
-          <node begin="6" end="7" id="11" infl="pl" lemma="kopen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="koop" sc="transitive" stype="declarative" tense="present" v_per="fir" word="kopen" wvorm="pv"/>
+          <node begin="5" end="6" getal="mv" id="10" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+          <node begin="6" end="7" id="11" lemma="kopen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="koop" word="kopen" wvorm="pv"/>
           <node begin="7" cat="np" end="9" id="12" rel="obj1">
-            <node begin="7" end="8" id="13" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="8" end="9" gen="het" genus="onz" getal="ev" graad="basis" id="14" lemma="boek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="boek" word="boek"/>
+            <node begin="7" end="8" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="14" lemma="boek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="boek" word="boek"/>
           </node>
         </node>
       </node>

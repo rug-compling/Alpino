@@ -3,14 +3,14 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="du" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="dp">
-        <node aform="super" begin="0" buiging="met-e" end="1" graad="sup" id="3" infl="e" lemma="hoog" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="hoog" vform="adj" word="hoogste"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="tijd" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="tijd" sc="subject_sbar" special="tmp" word="tijd"/>
+        <node begin="0" buiging="met-e" end="1" graad="sup" id="3" lemma="hoog" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="hoog" word="hoogste"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
       </node>
       <node begin="2" cat="cp" end="5" id="5" rel="dp">
-        <node begin="2" conjtype="onder" end="3" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="2" conjtype="onder" end="3" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="3" cat="ssub" end="5" id="7" rel="body">
-          <node begin="3" case="nom" def="def" end="4" gen="de" genus="masc" getal="ev" id="8" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
-          <node begin="4" end="5" id="9" infl="sg3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" sc="intransitive" tense="present" v_per="thi" word="komt" wvorm="pv"/>
+          <node begin="3" end="4" genus="masc" getal="ev" id="8" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+          <node begin="4" end="5" id="9" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
         </node>
       </node>
     </node>

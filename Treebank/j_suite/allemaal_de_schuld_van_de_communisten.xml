@@ -2,15 +2,15 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="du" end="6" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="dp" root="allemaal" special="predm" word="allemaal"/>
+      <node begin="0" end="1" id="2" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="dp" root="allemaal" word="allemaal"/>
       <node begin="1" cat="np" end="6" id="3" rel="dp">
-        <node begin="1" end="2" id="4" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="schuld" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="schuld" word="schuld"/>
+        <node begin="1" end="2" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="schuld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schuld" word="schuld"/>
         <node begin="3" cat="pp" end="6" id="6" rel="mod">
           <node begin="3" end="4" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="4" cat="np" end="6" id="8" rel="obj1">
-            <node begin="4" end="5" id="9" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="10" lemma="communist" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="communist" word="communisten"/>
+            <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="communist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="communist" word="communisten"/>
           </node>
         </node>
       </node>

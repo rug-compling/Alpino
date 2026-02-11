@@ -2,16 +2,16 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="wonen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="woon" sc="ld_pp" stype="declarative" tense="past" v_per="thi" word="woonde" wvorm="pv"/>
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="wonen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="woon" word="woonde" wvorm="pv"/>
       <node begin="2" cat="conj" end="8" id="4" rel="ld">
-        <node begin="2" end="3" id="5" lemma="niet" pos="vg" postag="BW()" pt="bw" rel="crd" root="niet" special="left" word="niet"/>
+        <node begin="2" end="3" id="5" lemma="niet" pos="vg" postag="BW()" pt="bw" rel="crd" root="niet" word="niet"/>
         <node begin="4" conjtype="neven" end="5" id="6" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
         <node begin="3" cat="pp" end="8" id="7" rel="cnj">
           <node begin="3" end="4" id="8" lemma="naast" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naast" vztype="init" word="naast"/>
           <node begin="6" cat="np" end="8" id="9" index="1" rel="obj1">
-            <node begin="6" end="7" id="10" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="seks_shop" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="seks_shop" word="sexshop"/>
+            <node begin="6" end="7" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="11" lemma="seks_shop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="seks_shop" word="sexshop"/>
           </node>
         </node>
         <node begin="5" cat="pp" end="8" id="12" rel="cnj">

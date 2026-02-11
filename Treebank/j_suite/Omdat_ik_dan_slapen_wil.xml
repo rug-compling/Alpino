@@ -4,13 +4,13 @@
     <node begin="0" cat="cp" end="5" id="1" rel="--">
       <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
       <node begin="1" cat="ssub" end="5" id="3" rel="body">
-        <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+        <node begin="1" end="2" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
         <node begin="1" cat="inf" end="4" id="5" rel="vc">
           <node begin="1" end="2" id="6" index="1" rel="su"/>
-          <node begin="2" end="3" id="7" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
-          <node begin="3" buiging="zonder" end="4" id="8" infl="inf" lemma="slapen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="slaap" sc="intransitive" word="slapen" wvorm="inf"/>
+          <node begin="2" end="3" id="7" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+          <node begin="3" buiging="zonder" end="4" id="8" lemma="slapen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="slaap" word="slapen" wvorm="inf"/>
         </node>
-        <node begin="4" end="5" id="9" infl="modal_not_u" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" sc="modifier(aux(inf))" tense="present" v_per="fir" word="wil" wvorm="pv"/>
+        <node begin="4" end="5" id="9" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
       </node>
     </node>
   </node>

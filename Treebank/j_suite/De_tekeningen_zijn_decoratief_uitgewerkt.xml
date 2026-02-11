@@ -3,14 +3,14 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="tekening" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="tekening" word="tekeningen"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="tekening" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="tekening" word="tekeningen"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" v_per="thi" word="zijn" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="0" cat="ppart" end="5" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="obj1"/>
-        <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="8" infl="no_e" lemma="decoratief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="decoratief" vform="adj" word="decoratief"/>
-        <node begin="4" buiging="zonder" end="5" id="9" infl="psp" lemma="uit_werken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="werk_uit" sc="part_transitive(uit)" word="uitgewerkt" wvorm="vd"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="decoratief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="decoratief" word="decoratief"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="uit_werken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="werk_uit" word="uitgewerkt" wvorm="vd"/>
       </node>
     </node>
   </node>

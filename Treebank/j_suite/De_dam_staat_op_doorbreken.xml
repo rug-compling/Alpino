@@ -3,15 +3,15 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="dam" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="dam" word="dam"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="dam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dam" word="dam"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" sc="op" stype="declarative" tense="present" v_per="thi" word="staat" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
       <node begin="0" cat="ahi" end="5" id="6" rel="vc">
-        <node begin="3" end="4" id="7" lemma="op" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="op" sc="op" vztype="init" word="op"/>
+        <node begin="3" end="4" id="7" lemma="op" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="op" vztype="init" word="op"/>
         <node begin="0" cat="inf" end="5" id="8" rel="body">
           <node begin="0" end="2" id="9" index="1" rel="su"/>
-          <node begin="4" buiging="zonder" end="5" id="10" infl="inf" lemma="door_breken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breek_door" sc="part_intransitive(door)" word="doorbreken" wvorm="inf"/>
+          <node begin="4" buiging="zonder" end="5" id="10" lemma="door_breken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breek_door" word="doorbreken" wvorm="inf"/>
         </node>
       </node>
     </node>

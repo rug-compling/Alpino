@@ -3,30 +3,30 @@
   <node begin="0" cat="top" end="10" id="0" rel="top">
     <node begin="0" cat="whq" end="9" id="1" rel="--">
       <node begin="0" cat="cp" end="3" id="2" index="1" rel="whd">
-        <node begin="0" conjtype="onder" end="1" id="3" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="1" cat="np" end="3" id="4" rel="body">
-          <node begin="1" buiging="zonder" end="2" id="5" infl="welk" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" wh="rwh" word="welk"/>
-          <node begin="2" end="3" gen="both" genus="onz" getal="ev" graad="basis" id="6" lemma="personage" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="personage" word="personage"/>
+          <node begin="1" buiging="zonder" end="2" id="5" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" word="welk"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="personage" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="personage" word="personage"/>
         </node>
       </node>
       <node begin="0" cat="sv1" end="9" id="7" rel="body">
         <node begin="0" end="3" id="8" index="1" rel="predm"/>
-        <node begin="3" end="4" id="9" infl="sg_hebt" lemma="willen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="wil" sc="modifier(aux(inf))" stype="declarative" tense="present" v_per="u" word="wilt" wvorm="pv"/>
-        <node begin="4" case="both" def="def" end="5" gen="de" getal="getal" id="10" index="2" lemma="u" naamval="nomin" num="sg" pdtype="pron" per="u" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" rnum="sg" root="u" status="vol" vwtype="pers" wh="nwh" word="u"/>
+        <node begin="3" end="4" id="9" lemma="willen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="wil" word="wilt" wvorm="pv"/>
+        <node begin="4" end="5" getal="getal" id="10" index="2" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
         <node begin="4" cat="inf" end="9" id="11" rel="vc">
           <node begin="4" end="5" id="12" index="2" rel="su"/>
           <node begin="5" cat="pp" end="8" id="13" rel="mod">
             <node begin="5" end="6" id="14" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
             <node begin="6" cat="np" end="8" id="15" rel="obj1">
-              <node begin="6" buiging="zonder" end="7" getal="getal" id="16" infl="pron" lemma="u" naamval="stan" npagr="agr" pdtype="det" persoon="2" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="u" status="vol" vwtype="bez" word="uw"/>
-              <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="17" lemma="dood" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="dood" word="dood"/>
+              <node begin="6" buiging="zonder" end="7" getal="getal" id="16" lemma="u" naamval="stan" npagr="agr" pdtype="det" persoon="2" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)" pt="vnw" rel="det" root="u" status="vol" vwtype="bez" word="uw"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="dood" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dood" word="dood"/>
             </node>
           </node>
-          <node begin="8" buiging="zonder" end="9" id="18" infl="inf" lemma="terug_keren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="keer_terug" sc="part_intransitive(terug)" word="terugkeren" wvorm="inf"/>
+          <node begin="8" buiging="zonder" end="9" id="18" lemma="terug_keren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="keer_terug" word="terugkeren" wvorm="inf"/>
         </node>
       </node>
     </node>
-    <node begin="9" end="10" id="19" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="9" end="10" id="19" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>als welk personage wilt u na uw dood terugkeren ?</sentence>
 </alpino_ds>

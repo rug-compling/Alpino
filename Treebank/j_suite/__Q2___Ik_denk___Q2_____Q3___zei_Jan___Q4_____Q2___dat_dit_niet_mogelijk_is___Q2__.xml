@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="15" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" special="aanhaal_both" word="&quot;"/>
-    <node begin="3" end="4" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" special="aanhaal_both" word="&quot;"/>
-    <node begin="4" end="5" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" special="haak_open" word="("/>
-    <node begin="7" end="8" id="4" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" special="haak_sluit" word=")"/>
-    <node begin="8" end="9" id="5" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="3" end="4" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="4" end="5" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="7" end="8" id="4" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="8" end="9" id="5" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
     <node begin="1" cat="du" end="14" id="6" rel="--">
       <node begin="5" cat="sv1" end="7" id="7" rel="tag">
-        <node begin="5" end="6" id="8" infl="sg" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" sc="tr_sbar" tense="past" v_per="thi" word="zei" wvorm="pv"/>
-        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="9" lemma="Jan" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Jan" word="Jan"/>
+        <node begin="5" end="6" id="8" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="9" lemma="Jan" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Jan" word="Jan"/>
       </node>
       <node begin="1" cat="smain" end="14" id="10" rel="nucl">
-        <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="11" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-        <node begin="2" end="3" id="12" infl="sg1" lemma="denken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="denk" sc="tr_sbar" stype="declarative" tense="present" v_per="fir" word="denk" wvorm="pv"/>
+        <node begin="1" end="2" getal="ev" id="11" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+        <node begin="2" end="3" id="12" lemma="denken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="denk" word="denk" wvorm="pv"/>
         <node begin="9" cat="cp" end="14" id="13" rel="vc">
-          <node begin="9" conjtype="onder" end="10" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="9" conjtype="onder" end="10" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="10" cat="ssub" end="14" id="15" rel="body">
-            <node begin="10" end="11" getal="ev" id="16" infl="het" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dit" status="vol" vwtype="aanw" wh="nwh" word="dit"/>
+            <node begin="10" end="11" getal="ev" id="16" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dit" status="vol" vwtype="aanw" word="dit"/>
             <node begin="11" end="12" id="17" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-            <node aform="base" begin="12" buiging="zonder" end="13" graad="basis" id="18" infl="no_e" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="mogelijk" vform="adj" word="mogelijk"/>
-            <node begin="13" end="14" id="19" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" v_per="thi" word="is" wvorm="pv"/>
+            <node begin="12" buiging="zonder" end="13" graad="basis" id="18" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="mogelijk" word="mogelijk"/>
+            <node begin="13" end="14" id="19" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="14" end="15" id="20" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="14" end="15" id="20" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
   </node>
   <sentence>&quot; Ik denk &quot; ( zei Jan ) &quot; dat dit niet mogelijk is &quot;</sentence>
 </alpino_ds>

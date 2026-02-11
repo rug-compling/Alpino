@@ -4,21 +4,21 @@
     <node begin="0" cat="cp" end="7" id="1" rel="--">
       <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
       <node begin="1" cat="ssub" end="7" id="3" rel="body">
-        <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
-        <node begin="4" end="5" id="5" infl="sg" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" sc="aux(inf)" tense="past" v_per="fir" word="zou" wvorm="pv"/>
+        <node begin="1" end="2" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="4" end="5" id="5" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
         <node begin="1" cat="inf" end="7" id="6" rel="vc">
           <node begin="1" end="2" id="7" index="1" rel="su"/>
-          <node begin="5" buiging="zonder" end="6" id="8" infl="inf" lemma="moeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="moet" sc="modifier(aux(inf))" word="moeten" wvorm="inf"/>
+          <node begin="5" buiging="zonder" end="6" id="8" lemma="moeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="moet" word="moeten" wvorm="inf"/>
           <node begin="1" cat="inf" end="7" id="9" rel="vc">
             <node begin="1" end="2" id="10" index="1" rel="su"/>
             <node begin="1" cat="ti" end="4" id="11" rel="vc">
-              <node begin="2" end="3" id="12" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+              <node begin="2" end="3" id="12" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
               <node begin="1" cat="inf" end="4" id="13" rel="body">
                 <node begin="1" end="2" id="14" index="1" rel="obj1"/>
-                <node begin="3" buiging="zonder" end="4" id="15" infl="inf" lemma="bereiken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bereik" sc="transitive" word="bereiken" wvorm="inf"/>
+                <node begin="3" buiging="zonder" end="4" id="15" lemma="bereiken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bereik" word="bereiken" wvorm="inf"/>
               </node>
             </node>
-            <node begin="6" buiging="zonder" end="7" id="16" infl="inf" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="te_passive" word="zijn" wvorm="inf"/>
+            <node begin="6" buiging="zonder" end="7" id="16" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
           </node>
         </node>
       </node>

@@ -4,24 +4,24 @@
     <node begin="0" cat="cp" end="8" id="1" rel="--">
       <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
       <node begin="1" cat="ssub" end="8" id="3" rel="body">
-        <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
-        <node begin="2" end="3" id="5" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" tense="present" v_per="fir" word="heb" wvorm="pv"/>
+        <node begin="1" end="2" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
         <node begin="1" cat="conj" end="8" id="6" rel="vc">
           <node begin="1" cat="inf" end="5" id="7" rel="cnj">
             <node begin="1" end="2" id="8" index="1" rel="su"/>
-            <node begin="3" buiging="zonder" end="4" id="9" infl="inf" lemma="moeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="moet" sc="modifier(aux(inf))" word="moeten" wvorm="inf"/>
+            <node begin="3" buiging="zonder" end="4" id="9" lemma="moeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="moet" word="moeten" wvorm="inf"/>
             <node begin="1" cat="inf" end="5" id="10" rel="vc">
               <node begin="1" end="2" id="11" index="1" rel="su"/>
-              <node begin="4" buiging="zonder" end="5" id="12" infl="inf" lemma="rusten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="rust" sc="intransitive" word="rusten" wvorm="inf"/>
+              <node begin="4" buiging="zonder" end="5" id="12" lemma="rusten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="rust" word="rusten" wvorm="inf"/>
             </node>
           </node>
           <node begin="5" conjtype="neven" end="6" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="1" cat="inf" end="8" id="14" rel="cnj">
             <node begin="1" end="2" id="15" index="1" rel="su"/>
-            <node begin="6" buiging="zonder" end="7" id="16" infl="inf" lemma="willen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wil" sc="modifier(aux(inf))" word="willen" wvorm="inf"/>
+            <node begin="6" buiging="zonder" end="7" id="16" lemma="willen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wil" word="willen" wvorm="inf"/>
             <node begin="1" cat="inf" end="8" id="17" rel="vc">
               <node begin="1" end="2" id="18" index="1" rel="su"/>
-              <node begin="7" buiging="zonder" end="8" id="19" infl="inf" lemma="door_werken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="werk_door" sc="part_intransitive(door)" word="doorwerken" wvorm="inf"/>
+              <node begin="7" buiging="zonder" end="8" id="19" lemma="door_werken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="werk_door" word="doorwerken" wvorm="inf"/>
             </node>
           </node>
         </node>

@@ -4,13 +4,13 @@
     <node begin="0" cat="sv1" end="7" id="1" rel="--">
       <node begin="0" cat="pp" end="2" id="2" rel="mod">
         <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
-        <node begin="1" end="2" genus="genus" getal="ev" graad="basis" id="4" lemma="Google" naamval="stan" neclass="ORG" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" rnum="sg" root="Google" word="Google"/>
+        <node begin="1" end="2" genus="genus" getal="ev" graad="basis" id="4" lemma="Google" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Google" word="Google"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg1" lemma="in_typen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="typ_in" sc="part_transitive(in)" stype="imparative" tense="present" v_per="invje" word="typ" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="in_typen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="typ_in" word="typ" wvorm="pv"/>
       <node begin="3" cat="np" end="6" id="6" rel="obj1">
-        <node begin="3" end="4" id="7" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node aform="base" begin="4" buiging="met-e" end="5" id="8" infl="e" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="volg" vform="gerund" word="volgende" wvorm="od"/>
-        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="zoek_opdracht" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="zoek_opdracht" word="zoekopdracht"/>
+        <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" buiging="met-e" end="5" id="8" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="volg" word="volgende" wvorm="od"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="zoek_opdracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zoek_opdracht" word="zoekopdracht"/>
       </node>
       <node begin="6" end="7" id="10" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
     </node>

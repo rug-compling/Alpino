@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="14" id="0" rel="top">
-    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="13" id="2" rel="--">
       <node begin="0" cat="np" end="2" id="3" rel="su">
-        <node begin="0" end="1" id="4" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="5" lemma="kost" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kost" word="kosten"/>
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="kost" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kost" word="kosten"/>
       </node>
-      <node begin="2" end="3" id="6" infl="pl" lemma="bedragen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="bedraag" sc="meas" stype="declarative" tense="present" v_per="thi" word="bedragen" wvorm="pv"/>
+      <node begin="2" end="3" id="6" lemma="bedragen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="bedraag" word="bedragen" wvorm="pv"/>
       <node begin="3" cat="np" end="13" id="7" rel="me">
-        <node begin="3" end="4" id="8" infl="pl_num" lemma="30" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="30" word="30"/>
-        <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="euro" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="euro" special="meas_mod" word="euro"/>
+        <node begin="3" end="4" id="8" lemma="30" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="30" word="30"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="euro" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="euro" word="euro"/>
         <node begin="6" cat="ap" end="13" id="10" rel="mod">
-          <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="11" infl="no_e" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="veel" vform="adj" vwtype="onbep" word="veel"/>
-          <node aform="compar" begin="7" buiging="zonder" end="8" graad="comp" id="12" infl="meer" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="meer" vform="adj" vwtype="onbep" word="meer"/>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="11" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="veel"/>
+          <node begin="7" buiging="zonder" end="8" graad="comp" id="12" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="meer" vwtype="onbep" word="meer"/>
           <node begin="8" cat="cp" end="13" id="13" rel="obcomp">
             <node begin="8" conjtype="onder" end="9" id="14" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
             <node begin="9" cat="pp" end="13" id="15" rel="body">
               <node begin="9" end="10" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
               <node begin="10" cat="np" end="13" id="17" rel="obj1">
-                <node begin="10" end="11" id="18" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="10" end="11" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="11" cat="mwu" end="13" id="19" rel="hd">
-                  <node begin="11" end="12" id="20" lemma="Verenigde" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verenigde" spectype="deeleigen" word="Verenigde"/>
-                  <node begin="12" end="13" id="21" lemma="Staten" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Staten" spectype="deeleigen" word="Staten"/>
+                  <node begin="11" end="12" id="20" lemma="Verenigde" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verenigde" spectype="deeleigen" word="Verenigde"/>
+                  <node begin="12" end="13" id="21" lemma="Staten" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Staten" spectype="deeleigen" word="Staten"/>
                 </node>
               </node>
             </node>
@@ -30,7 +30,7 @@
         </node>
       </node>
     </node>
-    <node begin="13" end="14" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="13" end="14" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De kosten bedragen 30 euro , veel meer dan in de Verenigde Staten .</sentence>
 </alpino_ds>

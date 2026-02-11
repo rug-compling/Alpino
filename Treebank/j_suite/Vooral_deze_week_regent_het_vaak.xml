@@ -3,13 +3,13 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="mod">
-        <node begin="0" end="1" id="3" lemma="vooral" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooral" sc="modal" word="Vooral"/>
-        <node begin="1" buiging="met-e" end="2" id="4" infl="de" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" wh="nwh" word="deze"/>
-        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="week" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="week" special="tmp" word="week"/>
+        <node begin="0" end="1" id="3" lemma="vooral" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooral" word="Vooral"/>
+        <node begin="1" buiging="met-e" end="2" id="4" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="week" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="week" word="week"/>
       </node>
-      <node begin="3" end="4" id="6" infl="sg3" lemma="regenen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="regen" sc="het_subj" stype="declarative" tense="present" v_per="thi" word="regent" wvorm="pv"/>
-      <node begin="4" end="5" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" special="het" status="red" vwtype="pers" word="het"/>
-      <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="8" infl="no_e" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vaak" vform="adj" word="vaak"/>
+      <node begin="3" end="4" id="6" lemma="regenen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="regen" word="regent" wvorm="pv"/>
+      <node begin="4" end="5" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="8" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vaak" word="vaak"/>
     </node>
   </node>
   <sentence>Vooral deze week regent het vaak</sentence>

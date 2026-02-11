@@ -2,21 +2,21 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="2" index="1" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="present" v_per="fir" word="moeten" wvorm="pv"/>
+      <node begin="0" end="1" getal="mv" id="2" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+      <node begin="1" end="2" id="3" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" word="moeten" wvorm="pv"/>
       <node begin="0" cat="inf" end="8" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
-        <node begin="2" buiging="zonder" end="3" id="6" infl="inf" lemma="door_werken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="werk_door" sc="part_intransitive(door)" word="doorwerken" wvorm="inf"/>
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="door_werken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="werk_door" word="doorwerken" wvorm="inf"/>
         <node begin="3" cat="sv1" end="8" id="7" rel="mod">
-          <node begin="3" end="4" id="8" infl="pl" lemma="willen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wil" sc="modifier(aux(inf))" tense="present" v_per="fir" word="willen" wvorm="pv"/>
-          <node begin="4" case="nom" def="def" end="5" gen="de" getal="mv" id="9" index="2" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+          <node begin="3" end="4" id="8" lemma="willen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wil" word="willen" wvorm="pv"/>
+          <node begin="4" end="5" getal="mv" id="9" index="2" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
           <node begin="4" cat="inf" end="8" id="10" rel="vc">
             <node begin="4" end="5" id="11" index="2" rel="su"/>
             <node begin="5" cat="pp" end="7" id="12" rel="predc">
               <node begin="5" end="6" id="13" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-              <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lemma="tijd" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="tijd" sc="pred_pp(op)" special="tmp" word="tijd"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="tijd" word="tijd"/>
             </node>
-            <node begin="7" buiging="zonder" end="8" id="15" infl="inf" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" sc="pp_copula" word="komen" wvorm="inf"/>
+            <node begin="7" buiging="zonder" end="8" id="15" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="komen" wvorm="inf"/>
           </node>
         </node>
       </node>

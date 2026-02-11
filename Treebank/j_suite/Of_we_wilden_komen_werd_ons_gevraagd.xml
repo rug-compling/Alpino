@@ -2,21 +2,21 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="4" end="5" id="2" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" stype="declarative" tense="past" v_per="thi" word="werd" wvorm="pv"/>
+      <node begin="4" end="5" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
       <node begin="0" cat="ppart" end="7" id="3" rel="vc">
         <node begin="0" cat="cp" end="4" id="4" rel="vc">
-          <node begin="0" conjtype="onder" end="1" id="5" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" sc="of" word="Of"/>
+          <node begin="0" conjtype="onder" end="1" id="5" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="Of"/>
           <node begin="1" cat="ssub" end="4" id="6" rel="body">
-            <node begin="1" case="nom" def="def" end="2" gen="de" getal="mv" id="7" index="1" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
-            <node begin="2" end="3" id="8" infl="pl" lemma="willen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="wil" sc="modifier(aux(inf))" tense="past" v_per="fir" word="wilden" wvorm="pv"/>
+            <node begin="1" end="2" getal="mv" id="7" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+            <node begin="2" end="3" id="8" lemma="willen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="wil" word="wilden" wvorm="pv"/>
             <node begin="1" cat="inf" end="4" id="9" rel="vc">
               <node begin="1" end="2" id="10" index="1" rel="su"/>
-              <node begin="3" buiging="zonder" end="4" id="11" infl="inf" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" sc="intransitive" word="komen" wvorm="inf"/>
+              <node begin="3" buiging="zonder" end="4" id="11" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="komen" wvorm="inf"/>
             </node>
           </node>
         </node>
-        <node begin="5" case="dat_acc" def="def" end="6" gen="de" getal="mv" id="12" lemma="ons" naamval="obl" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj2" rnum="pl" root="ons" status="vol" vwtype="pr" wh="nwh" word="ons"/>
-        <node begin="6" buiging="zonder" end="7" id="13" infl="psp" lemma="vragen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vraag" sc="np_sbar" word="gevraagd" wvorm="vd"/>
+        <node begin="5" end="6" getal="mv" id="12" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj2" root="ons" status="vol" vwtype="pr" word="ons"/>
+        <node begin="6" buiging="zonder" end="7" id="13" lemma="vragen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vraag" word="gevraagd" wvorm="vd"/>
       </node>
     </node>
   </node>

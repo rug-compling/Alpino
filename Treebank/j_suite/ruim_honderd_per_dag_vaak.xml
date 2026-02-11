@@ -3,14 +3,14 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="du" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" rel="dp">
-        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="3" infl="no_e" lemma="ruim" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" vform="adj" word="ruim"/>
-        <node begin="1" end="2" id="4" infl="pl_num" lemma="honderd" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="honderd" word="honderd"/>
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="ruim" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
+        <node begin="1" end="2" id="4" lemma="honderd" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="honderd" word="honderd"/>
         <node begin="2" cat="pp" end="4" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
-          <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lemma="dag" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="dag" special="tmp" word="dag"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="dag" word="dag"/>
         </node>
       </node>
-      <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="8" infl="no_e" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="vaak" vform="adj" word="vaak"/>
+      <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="vaak" word="vaak"/>
     </node>
   </node>
   <sentence>ruim honderd per dag vaak</sentence>
