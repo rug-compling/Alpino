@@ -329,19 +329,16 @@ lemma(_,_) :-
 mlemma(_,_) :-
     fail.
 
-surf(_,_,_) :-
-    fail.
-
 surf(_,_) :-
     fail.
 
+surf(_,_,_) :-
+    fail.
 
 surf(Word,'N(eigen,ev,basis,zijd,stan)',Word) :-
     person(Word).
-
 surf(Word,'N(eigen,ev,basis,onz,stan)',Word) :-
     org(Word).
-
 surf(Bont,'N(soort,ev,basis,onz,stan)',Bont) :-
     het(Bont).
 surf(Bont,'N(soort,ev,basis,zijd,stan)',Bont) :-
