@@ -2647,6 +2647,9 @@ v(bemoeilijk,bemoeilijkt,bemoeilijken,bemoeilijkt,bemoeilijkte,bemoeilijkten,
   [h([transitive,
       np_np])]).
 
+v(bemonster,bemonstert,bemonsteren,bemonsterd,bemonsterde,bemonsterden,
+    [h([transitive])]).
+
 v(benadeel,benadeelt,benadelen,benadeeld,benadeelde,benadeelden,
     [h([transitive])]).
 

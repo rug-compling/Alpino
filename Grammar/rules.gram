@@ -8974,6 +8974,7 @@ grammar_rule(start_start_dubb_punt,M,[A,COMMA,B]) :-
     nucl_sat_structure(A,B,M).
 
 %%EX%% Toen kwam het antwoord : " Bitterballen "
+%% in many cases, this could equally be tag_nucl_structure
 grammar_rule(start_start_dubb_punt_q,M,[A,COMMA,QL,B,QR]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct, COMMA:puncttype => dubb_punt,
@@ -8984,6 +8985,18 @@ grammar_rule(start_start_dubb_punt_q,M,[A,COMMA,QL,B,QR]) :-
     M => start,
     M:puncttype <=> B:puncttype,
     nucl_sat_structure(A,B,M).
+
+%%EX%% de directeur zei het volgende : " wij zijn verantwoordelijk " .
+grammar_rule(root_start_dubb_punt_q,M,[A,COMMA,QL,B,QR]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    COMMA => punct, COMMA:puncttype => dubb_punt,
+    ql(QL),
+    optqr(QR),
+    max_root(A),
+    B => start,
+    M => start,
+    M:puncttype <=> B:puncttype,
+    nucl_tag_structure(B,A,M).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%% FRAGMENTS %%%%%%%%%%%%%%%%%%%

@@ -651,6 +651,20 @@ lexicon_('Verdrag',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
     in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
     hdrug_util:concat_all(['Verdrag',van,Stem],Name,' ').
 
+lexicon_('Vrede',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
+    (  n_word(van,Ws1,[L|Ws2])
+    ;  n_word('Van',Ws1,[L|Ws2])
+    ),
+    in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
+    hdrug_util:concat_all(['Vrede',van,Stem],Name,' ').
+
+lexicon_('Akkoord',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
+    (  n_word(van,Ws1,[L|Ws2])
+    ;  n_word('Van',Ws1,[L|Ws2])
+    ),
+    in_names_dictionary(proper_name(X,'LOC'),L,Stem,Ws2,Ws,His),
+    hdrug_util:concat_all(['Akkoord',van,Stem],Name,' ').
+
 lexicon_('Congres',proper_name(X),Name,Ws1,Ws,slag(His),_LC) :-
     (  n_word(van,Ws1,[L|Ws2])
     ;  n_word('Van',Ws1,[L|Ws2])

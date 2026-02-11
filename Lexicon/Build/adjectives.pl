@@ -4657,6 +4657,9 @@ a([ge_e(bemoeide),
 a([ge_e(bemoeilijkte),
    ge_no_e(bemoeilijkt)],adv,[],[]).
 
+a([ge_e(bemonsterde),
+   ge_no_e(bemonsterd)],adv,[],[]).
+
 a([e(bemoste),
    er(bemoster),
    ere(bemostere),
