@@ -577,6 +577,7 @@ lassy_postag_atts_('VNW(aanw,det,dat,prenom,met-e,evmo)',[pt='vnw',vwtype='aanw'
 lassy_postag_atts_('VNW(aanw,det,dat,prenom,met-e,evf)',[pt='vnw',vwtype='aanw',pdtype='det',naamval='dat',positie='prenom',buiging='met-e',npagr='evf'|AttVal],AttVal).
 lassy_postag_atts_('VNW(aanw,det,gen,nom,met-e,zonder-n)',[pt='vnw',vwtype='aanw',pdtype='det',naamval='gen',positie='nom',buiging='met-e','getal-n'='zonder-n'|AttVal],AttVal).
 lassy_postag_atts_('VNW(aanw,det,dat,nom,met-e,zonder-n)',[pt='vnw',vwtype='aanw',pdtype='det',naamval='dat',positie='nom',buiging='met-e','getal-n'='zonder-n'|AttVal],AttVal).
+lassy_postag_atts_('VNW(aanw,det,stan,gen,met-e,mv-n)',[pt='vnw',vwtype='aanw',pdtype='det',naamval='gen',buiging='met_e',getal='mv-n'|AttVal],AttVal).
 lassy_postag_atts_('VNW(onbep,det,gen,prenom,met-e,mv)',[pt='vnw',vwtype='onbep',pdtype='det',naamval='gen',positie='prenom',buiging='met-e',npagr='mv'|AttVal],AttVal).
 lassy_postag_atts_('VNW(onbep,det,dat,prenom,met-e,evmo)',[pt='vnw',vwtype='onbep',pdtype='det',naamval='dat',positie='prenom',buiging='met-e',npagr='evmo'|AttVal],AttVal).
 lassy_postag_atts_('VNW(onbep,det,dat,prenom,met-e,evf)',[pt='vnw',vwtype='onbep',pdtype='det',naamval='dat',positie='prenom',buiging='met-e',npagr='evf'|AttVal],AttVal).
