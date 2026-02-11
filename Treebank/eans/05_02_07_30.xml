@@ -2,17 +2,17 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="du" end="7" id="1" rel="--">
-      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" sc="root" word="En"/>
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
       <node begin="1" cat="smain" end="7" id="3" rel="nucl">
-        <node begin="1" end="2" id="4" lemma="toen" pos="adv" postag="BW()" pt="bw" rel="mod" root="toen" special="tmp" word="toen"/>
-        <node begin="2" end="3" id="5" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="fixed([pred,[me]],no_passive)" stype="declarative" tense="past" word="werd" wvorm="pv"/>
-        <node begin="3" case="nom" def="def" end="4" gen="de" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,red,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ie"/>
+        <node begin="1" end="2" id="4" lemma="toen" pos="adv" postag="BW()" pt="bw" rel="mod" root="toen" word="toen"/>
+        <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+        <node begin="3" end="4" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,red,3,ev,masc)" pt="vnw" rel="su" root="hij" status="red" vwtype="pers" word="ie"/>
         <node begin="4" end="5" getal="ev" id="7" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="fixed" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="svp" root="me" status="red" vwtype="pr" word="me"/>
         <node begin="5" end="6" id="8" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
-        <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="9" infl="no_e" lemma="kwaad" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="kwaad" vform="adj" word="kwaad"/>
+        <node begin="6" buiging="zonder" end="7" graad="basis" id="9" lemma="kwaad" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="kwaad" word="kwaad"/>
       </node>
     </node>
-    <node begin="7" end="8" id="10" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+    <node begin="7" end="8" id="10" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
   </node>
   <sentence>En toen werd ie me toch kwaad !</sentence>
 </alpino_ds>

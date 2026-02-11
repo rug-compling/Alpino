@@ -2,27 +2,27 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="11" id="0" rel="top">
     <node begin="0" cat="smain" end="10" id="1" rel="--">
-      <node begin="0" case="dat_acc" def="def" end="1" gen="de" getal="ev" id="2" lemma="mij" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" rnum="sg" root="mij" status="vol" vwtype="pr" wh="nwh" word="Mij"/>
-      <node begin="1" end="2" id="3" infl="sg3" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" sc="dip_sbar_subj_so_np_opt_het" stype="declarative" tense="present" word="lijkt" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" root="mij" status="vol" vwtype="pr" word="Mij"/>
+      <node begin="1" end="2" id="3" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" word="lijkt" wvorm="pv"/>
       <node begin="2" cat="cp" end="10" id="4" rel="su">
-        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="3" cat="ssub" end="10" id="6" rel="body">
-          <node begin="3" case="both" def="def" end="4" gen="de" getal="mv" id="7" index="1" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
-          <node begin="8" end="9" id="8" infl="pl" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" tense="present" word="kunnen" wvorm="pv"/>
+          <node begin="3" end="4" getal="mv" id="7" index="1" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+          <node begin="8" end="9" id="8" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
           <node begin="3" cat="inf" end="10" id="9" rel="vc">
             <node begin="3" end="4" id="10" index="1" rel="su"/>
-            <node begin="4" end="5" genus="onz" getal="ev" id="11" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
-            <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="12" infl="no_e" lemma="best" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="best" vform="adj" word="best"/>
+            <node begin="4" end="5" genus="onz" getal="ev" id="11" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+            <node begin="5" buiging="zonder" end="6" graad="basis" id="12" lemma="best" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="best" word="best"/>
             <node begin="6" cat="pp" end="8" id="13" rel="mod">
               <node begin="6" end="7" id="14" lemma="zonder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="zonder" vztype="init" word="zonder"/>
-              <node begin="7" case="dat_acc" def="def" end="8" gen="de" genus="masc" getal="ev" id="15" lemma="hem" naamval="obl" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,obl,red,3,ev,masc)" pt="vnw" rel="obj1" rnum="sg" root="hem" special="wkpro" status="red" vwtype="pers" wh="nwh" word="&apos;m"/>
+              <node begin="7" end="8" genus="masc" getal="ev" id="15" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,red,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="red" vwtype="pers" word="'m"/>
             </node>
-            <node begin="9" buiging="zonder" end="10" id="16" infl="inf" lemma="stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" sc="transitive" word="stellen" wvorm="inf"/>
+            <node begin="9" buiging="zonder" end="10" id="16" lemma="stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="stellen" wvorm="inf"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="10" end="11" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="10" end="11" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Mij lijkt dat ze het best zonder &apos;m kunnen stellen .</sentence>
 </alpino_ds>

@@ -4,16 +4,16 @@
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="su">
         <node begin="0" cat="detp" end="2" id="3" rel="det">
-          <node begin="0" buiging="zonder" end="1" id="4" infl="al" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" special="pre_det_quant" vwtype="onbep" word="Al"/>
-          <node begin="1" end="2" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="hd" root="de" word="de"/>
+          <node begin="0" buiging="zonder" end="1" id="4" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" vwtype="onbep" word="Al"/>
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="hd" root="de" word="de"/>
         </node>
-        <node begin="2" end="3" gen="de" getal="mv" graad="basis" id="6" lemma="zebra" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="zebra" word="zebra&apos;s"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="zebra" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zebra" word="zebra's"/>
       </node>
-      <node begin="3" end="4" id="7" infl="pl" lemma="weg_lopen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="loop_weg" sc="part_intransitive(weg)" stype="declarative" tense="past" word="liepen" wvorm="pv"/>
+      <node begin="3" end="4" id="7" lemma="weg_lopen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="loop_weg" word="liepen" wvorm="pv"/>
       <node begin="4" end="5" id="8" lemma="ineens" pos="adv" postag="BW()" pt="bw" rel="mod" root="ineens" word="ineens"/>
       <node begin="5" end="6" id="9" lemma="weg" pos="part" postag="BW()" pt="bw" rel="svp" root="weg" word="weg"/>
     </node>
-    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Al de zebra&apos;s liepen ineens weg .</sentence>
 </alpino_ds>

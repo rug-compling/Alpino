@@ -2,27 +2,27 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="12" id="0" rel="top">
     <node begin="0" cat="du" end="11" id="1" rel="--">
-      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" sc="root" word="Maar"/>
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
       <node begin="1" cat="smain" end="11" id="3" rel="nucl">
-        <node begin="1" end="2" id="4" lemma="overdag" pos="adv" postag="BW()" pt="bw" rel="mod" root="overdag" special="tmp" word="overdag"/>
-        <node begin="2" end="3" id="5" infl="pl" lemma="terug_keren" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="keer_terug" sc="part_intransitive(terug)" stype="declarative" tense="past" v_per="thi" word="keerden" wvorm="pv"/>
+        <node begin="1" end="2" id="4" lemma="overdag" pos="adv" postag="BW()" pt="bw" rel="mod" root="overdag" word="overdag"/>
+        <node begin="2" end="3" id="5" lemma="terug_keren" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="keer_terug" word="keerden" wvorm="pv"/>
         <node begin="3" cat="np" end="9" id="6" rel="su">
-          <node begin="3" end="4" id="7" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="4" end="5" gen="het" getal="mv" graad="basis" id="8" lemma="gevoelen" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="gevoelen" word="gevoelens"/>
+          <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="gevoelen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gevoelen" word="gevoelens"/>
           <node begin="5" cat="pp" end="9" id="9" rel="mod">
             <node begin="5" end="6" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="6" cat="conj" end="9" id="11" rel="obj1">
-              <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="eenzaamheid" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="eenzaamheid" word="eenzaamheid"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="eenzaamheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="eenzaamheid" word="eenzaamheid"/>
               <node begin="7" conjtype="neven" end="8" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-              <node begin="8" end="9" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lemma="angst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="angst" word="angst"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="14" lemma="angst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="angst" word="angst"/>
             </node>
           </node>
         </node>
-        <node aform="compar" begin="9" buiging="zonder" end="10" graad="comp" id="15" infl="no_e" lemma="zelden" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="zelden" vform="adj" word="zeldener"/>
+        <node begin="9" buiging="zonder" end="10" graad="comp" id="15" lemma="zelden" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="zelden" word="zeldener"/>
         <node begin="10" end="11" id="16" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
       </node>
     </node>
-    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Maar overdag keerden de gevoelens van eenzaamheid en angst zeldener terug .</sentence>
 </alpino_ds>

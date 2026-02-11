@@ -2,21 +2,21 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="du" end="7" id="1" rel="--">
-      <node begin="0" conjtype="neven" end="1" id="2" lemma="want" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="want" sc="root" word="want"/>
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="want" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="want" word="want"/>
       <node begin="1" cat="smain" end="7" id="3" rel="nucl">
-        <node begin="1" end="2" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" rnum="sg" root="het" special="het" status="red" vwtype="pers" word="&apos;t"/>
-        <node begin="2" end="3" id="5" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula_sbar" stype="declarative" tense="past" word="was" wvorm="pv"/>
-        <node aform="base" begin="3" end="4" id="6" infl="no_e" lemma="daarom" pos="adj" postag="BW()" pt="bw" rel="predc" root="daarom" sc="subject_sbar" vform="adj" word="daarom"/>
+        <node begin="1" end="2" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="'t"/>
+        <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="3" end="4" id="6" lemma="daarom" pos="adj" postag="BW()" pt="bw" rel="predc" root="daarom" word="daarom"/>
         <node begin="4" cat="cp" end="7" id="7" rel="su">
-          <node begin="4" conjtype="onder" end="5" id="8" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="4" conjtype="onder" end="5" id="8" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="5" cat="ssub" end="7" id="9" rel="body">
-            <node begin="5" case="nom" def="def" end="6" gen="de" id="10" lemma="ik" num="sg" per="fir" pos="pron" postag="SPEC(afk)" pt="spec" rel="su" rnum="sg" root="ik" spectype="afk" wh="nwh" word="&apos;k"/>
-            <node begin="6" end="7" id="11" infl="sg" lemma="bellen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="bel" sc="intransitive" tense="past" word="belde" wvorm="pv"/>
+            <node begin="5" end="6" id="10" lemma="ik" pos="pron" postag="SPEC(afk)" pt="spec" rel="su" root="ik" spectype="afk" word="'k"/>
+            <node begin="6" end="7" id="11" lemma="bellen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="bel" word="belde" wvorm="pv"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>want &apos;t was daarom dat &apos;k belde .</sentence>
 </alpino_ds>

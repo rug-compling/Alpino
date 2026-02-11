@@ -2,12 +2,12 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="4" id="1" rel="--">
-      <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="2" infl="no_e" lemma="plotseling" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="plotseling" vform="adj" word="Plotseling"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="copula" stype="declarative" tense="past" word="werd" wvorm="pv"/>
-      <node begin="2" case="nom" def="def" end="3" gen="de" genus="masc" getal="ev" id="4" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
-      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="5" infl="pred" lemma="onwel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="onwel" vform="adj" word="onwel"/>
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="plotseling" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="plotseling" word="Plotseling"/>
+      <node begin="1" end="2" id="3" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="2" end="3" genus="masc" getal="ev" id="4" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="onwel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="onwel" word="onwel"/>
     </node>
-    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Plotseling werd hij onwel .</sentence>
 </alpino_ds>

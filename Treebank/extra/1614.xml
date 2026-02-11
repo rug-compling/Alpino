@@ -2,22 +2,22 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="2" end="3" id="2" infl="sg" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" sc="aux(psp(part_ld_pp(A,B)))" stype="declarative" tense="past" word="kwam" wvorm="pv"/>
+      <node begin="2" end="3" id="2" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
       <node begin="3" cat="np" end="6" id="3" index="1" rel="su">
-        <node begin="3" end="4" id="4" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="4" end="5" id="5" lemma="drie" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="drie" special="rang" word="derde"/>
-        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="man" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="man" word="man"/>
+        <node begin="3" end="4" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="4" end="5" id="5" lemma="drie" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="drie" word="derde"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="6" lemma="man" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="man" word="man"/>
       </node>
       <node begin="0" cat="ppart" end="7" id="7" rel="vc">
         <node begin="0" cat="pp" end="2" id="8" rel="ld">
           <node begin="0" end="1" id="9" lemma="achter" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="achter" vztype="init" word="Achter"/>
-          <node begin="1" case="dat_acc" def="def" end="2" gen="de" genus="fem" getal="getal" id="10" lemma="haar" naamval="obl" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,getal,fem)" pt="vnw" rel="obj1" rnum="sg" root="haar" status="vol" vwtype="pers" wh="nwh" word="haar"/>
+          <node begin="1" end="2" genus="fem" getal="getal" id="10" lemma="haar" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,getal,fem)" pt="vnw" rel="obj1" root="haar" status="vol" vwtype="pers" word="haar"/>
         </node>
         <node begin="3" end="6" id="11" index="1" rel="su"/>
-        <node begin="6" buiging="zonder" end="7" id="12" infl="psp" lemma="aan_rennen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ren_aan" sc="part_ld_pp(aan,achter)" word="aangerend" wvorm="vd"/>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="aan_rennen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ren_aan" word="aangerend" wvorm="vd"/>
       </node>
     </node>
-    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Achter haar kwam een derde man aangerend .</sentence>
 </alpino_ds>

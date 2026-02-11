@@ -2,7 +2,7 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="du" end="6" id="1" rel="--">
-      <node begin="0" case="both" def="indef" end="1" gen="het" getal="ev" id="2" lemma="zulk" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="dp" rnum="sg" root="zulk" status="vol" vwtype="aanw" wh="nwh" word="Zulks"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="zulk" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="dp" root="zulk" status="vol" vwtype="aanw" word="Zulks"/>
       <node begin="1" cat="pp" end="6" id="3" rel="dp">
         <node begin="1" cat="mwu" end="4" id="4" rel="hd">
           <node begin="1" end="2" id="5" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
@@ -10,8 +10,8 @@
           <node begin="3" end="4" id="7" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="tot" vztype="init" word="tot"/>
         </node>
         <node begin="4" cat="np" end="6" id="8" rel="obj1">
-          <node begin="4" end="5" id="9" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="politie_staat" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="politie_staat" word="politiestaat"/>
+          <node begin="4" end="5" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="politie_staat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="politie_staat" word="politiestaat"/>
         </node>
       </node>
     </node>

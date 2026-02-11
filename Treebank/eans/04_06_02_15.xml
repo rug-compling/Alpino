@@ -3,23 +3,23 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="5" id="2" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="grammatica" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="grammatica" word="grammatica"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="grammatica" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="grammatica" word="grammatica"/>
         <node begin="2" cat="pp" end="5" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="5" id="7" rel="obj1">
-            <node begin="3" end="4" id="8" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-            <node begin="4" end="5" gen="het" genus="onz" getal="ev" graad="basis" id="9" lemma="Fins" naamval="stan" ntype="eigen" num="sg" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="Fins" word="Fins"/>
+            <node begin="3" end="4" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="Fins" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Fins" word="Fins"/>
           </node>
         </node>
       </node>
-      <node begin="5" end="6" id="10" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="5" end="6" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="6" cat="ppart" end="8" id="11" rel="predc">
         <node begin="6" end="7" id="12" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
-        <node aform="base" begin="7" buiging="zonder" end="8" id="13" infl="no_e" lemma="compliceren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="compliceren" vform="psp" word="gecompliceerd" wvorm="vd"/>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="compliceren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="compliceren" word="gecompliceerd" wvorm="vd"/>
       </node>
     </node>
-    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De grammatica van het Fins is zeer gecompliceerd .</sentence>
 </alpino_ds>

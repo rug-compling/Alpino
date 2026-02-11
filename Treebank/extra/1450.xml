@@ -4,27 +4,27 @@
     <node begin="0" cat="cp" end="11" id="1" rel="--">
       <node begin="0" end="1" id="2" lemma="voor" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="voor" vztype="init" word="Voor"/>
       <node begin="1" cat="ssub" end="11" id="3" rel="body">
-        <node begin="1" case="both" def="def" end="2" gen="de" getal="ev" id="4" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+        <node begin="1" end="2" getal="ev" id="4" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
         <node begin="2" cat="pp" end="6" id="5" rel="svp">
           <node begin="2" end="3" id="6" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
           <node begin="3" cat="np" end="6" id="7" rel="obj1">
-            <node begin="3" end="4" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node aform="base" begin="4" buiging="met-e" end="5" graad="basis" id="9" infl="e" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" vform="adj" word="grote"/>
-            <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="klok" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="klok" word="klok"/>
+            <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="klok" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="klok" word="klok"/>
           </node>
         </node>
-        <node begin="6" end="7" id="11" infl="sg" lemma="hangen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="hang" sc="fixed([svp_pp(aan,klok),sbar],no_passive)" tense="past" word="hing" wvorm="pv"/>
+        <node begin="6" end="7" id="11" lemma="hangen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="hang" word="hing" wvorm="pv"/>
         <node begin="7" cat="cp" end="11" id="12" rel="vc">
-          <node begin="7" conjtype="onder" end="8" id="13" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="7" conjtype="onder" end="8" id="13" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="8" cat="ssub" end="11" id="14" rel="body">
-            <node begin="8" case="nom" def="def" end="9" gen="de" getal="ev" id="15" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
-            <node begin="9" end="10" getal="getal" id="16" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" special="er_loc" status="vol" vwtype="aanw" word="hier"/>
-            <node begin="10" end="11" id="17" infl="sg" lemma="zitten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zit" sc="ld_adv" tense="past" word="zat" wvorm="pv"/>
+            <node begin="8" end="9" getal="ev" id="15" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+            <node begin="9" end="10" getal="getal" id="16" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" status="vol" vwtype="aanw" word="hier"/>
+            <node begin="10" end="11" id="17" lemma="zitten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zit" word="zat" wvorm="pv"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Voor je aan de grote klok hing dat ik hier zat .</sentence>
 </alpino_ds>

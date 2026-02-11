@@ -2,32 +2,32 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="13" id="0" rel="top">
     <node begin="0" cat="smain" end="12" id="1" rel="--">
-      <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="2" infl="no_e" lemma="ontwapenend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="ontwapenend" sc="subject_sbar" vform="adj" word="Ontwapenend"/>
-      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula_sbar" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="ontwapenend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="ontwapenend" word="Ontwapenend"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="2" cat="cp" end="12" id="4" rel="su">
-        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="3" cat="ssub" end="12" id="6" rel="body">
           <node begin="3" cat="np" end="5" id="7" rel="su">
-            <node begin="3" end="4" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="4" end="5" getal="mv" graad="basis" id="9" lemma="Lee" neclass="PER" ntype="eigen" num="pl" pos="name" postag="N(eigen,mv,basis)" pt="n" rel="hd" rnum="pl" root="Lee" word="Lee&apos;s"/>
+            <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" getal="mv" graad="basis" id="9" lemma="Lee" ntype="eigen" pos="name" postag="N(eigen,mv,basis)" pt="n" rel="hd" root="Lee" word="Lee's"/>
           </node>
-          <node begin="5" end="6" id="10" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="predm" root="zelf" special="predm" word="zelf"/>
+          <node begin="5" end="6" id="10" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="predm" root="zelf" word="zelf"/>
           <node begin="6" cat="np" end="11" id="11" rel="obj1">
-            <node begin="6" end="7" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lemma="betrekkelijkheid" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="betrekkelijkheid" word="betrekkelijkheid"/>
+            <node begin="6" end="7" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="betrekkelijkheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="betrekkelijkheid" word="betrekkelijkheid"/>
             <node begin="8" cat="pp" end="11" id="14" rel="mod">
               <node begin="8" end="9" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="9" cat="np" end="11" id="16" rel="obj1">
-                <node begin="9" buiging="zonder" end="10" getal="mv" id="17" infl="pron" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
-                <node begin="10" end="11" gen="het" genus="onz" getal="ev" graad="dim" id="18" lemma="boek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" rnum="sg" root="boek_DIM" word="boekje"/>
+                <node begin="9" buiging="zonder" end="10" getal="mv" id="17" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+                <node begin="10" end="11" genus="onz" getal="ev" graad="dim" id="18" lemma="boek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="boek_DIM" word="boekje"/>
               </node>
             </node>
           </node>
-          <node begin="11" end="12" id="19" infl="pl" lemma="etaleren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="etaleer" sc="transitive" tense="present" word="etaleren" wvorm="pv"/>
+          <node begin="11" end="12" id="19" lemma="etaleren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="etaleer" word="etaleren" wvorm="pv"/>
         </node>
       </node>
     </node>
-    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ontwapenend is dat de Lee&apos;s zelf de betrekkelijkheid van hun boekje etaleren .</sentence>
 </alpino_ds>

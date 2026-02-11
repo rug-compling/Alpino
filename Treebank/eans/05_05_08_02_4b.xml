@@ -3,25 +3,25 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="met-e" end="1" getal="mv" id="3" infl="onze" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="Onze"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="melk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="melk" word="melk"/>
+        <node begin="0" buiging="met-e" end="1" getal="mv" id="3" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="Onze"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="melk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="melk" word="melk"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="3" cat="ap" end="8" id="6" rel="predc">
-        <node aform="compar" begin="3" buiging="zonder" end="4" graad="comp" id="7" infl="no_e" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="goed" vform="adj" word="beter"/>
+        <node begin="3" buiging="zonder" end="4" graad="comp" id="7" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="goed" word="beter"/>
         <node begin="4" cat="cp" end="8" id="8" rel="obcomp">
           <node begin="4" conjtype="onder" end="5" id="9" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
           <node begin="5" cat="np" end="8" id="10" rel="body">
-            <node begin="5" end="6" getal="getal" id="11" infl="de" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="hd" rnum="sg" root="die" status="vol" vwtype="aanw" wh="nwh" word="die"/>
+            <node begin="5" end="6" getal="getal" id="11" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="hd" root="die" status="vol" vwtype="aanw" word="die"/>
             <node begin="6" cat="pp" end="8" id="12" rel="mod">
               <node begin="6" end="7" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-              <node begin="7" case="dat_acc" def="def" end="8" gen="de" getal="mv" id="14" lemma="hen" naamval="obl" num="pl" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj1" rnum="pl" root="hen" status="vol" vwtype="pers" wh="nwh" word="hen"/>
+              <node begin="7" end="8" getal="mv" id="14" lemma="hen" naamval="obl" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj1" root="hen" status="vol" vwtype="pers" word="hen"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Onze melk is beter dan die van hen .</sentence>
 </alpino_ds>

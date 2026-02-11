@@ -3,17 +3,17 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="met-e" end="1" id="3" infl="de" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" wh="nwh" word="Deze"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="historicus" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="historicus" word="historicus"/>
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="Deze"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="historicus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="historicus" word="historicus"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="bestuderen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="bestudeer" sc="transitive" stype="declarative" tense="present" word="bestudeert" wvorm="pv"/>
-      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="6" infl="no_e" lemma="momenteel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="momenteel" vform="adj" word="momenteel"/>
+      <node begin="2" end="3" id="5" lemma="bestuderen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="bestudeer" word="bestudeert" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="momenteel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="momenteel" word="momenteel"/>
       <node begin="4" cat="np" end="6" id="7" rel="obj1">
-        <node begin="4" end="5" id="8" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="Oudbulgaars" naamval="stan" neclass="LOC" ntype="eigen" num="both" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="Oudbulgaars" word="Oudbulgaars"/>
+        <node begin="4" end="5" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="Oudbulgaars" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Oudbulgaars" word="Oudbulgaars"/>
       </node>
     </node>
-    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Deze historicus bestudeert momenteel het Oudbulgaars .</sentence>
 </alpino_ds>

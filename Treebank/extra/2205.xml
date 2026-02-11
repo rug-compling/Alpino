@@ -4,37 +4,37 @@
     <node begin="0" cat="conj" end="12" id="1" rel="--">
       <node begin="0" cat="conj" end="4" id="2" rel="cnj">
         <node begin="0" cat="np" end="2" id="3" rel="cnj">
-          <node begin="0" buiging="zonder" end="1" getal="mv" id="4" index="1" infl="pron" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="Hun"/>
-          <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="familie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="familie" word="familie"/>
+          <node begin="0" buiging="zonder" end="1" getal="mv" id="4" index="1" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="Hun"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="familie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="familie" word="familie"/>
         </node>
         <node begin="2" conjtype="neven" end="3" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="0" cat="np" end="4" id="7" rel="cnj">
           <node begin="0" end="1" id="8" index="1" rel="det"/>
-          <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="9" lemma="vriend" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="vriend" word="vrienden"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="9" lemma="vriend" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vriend" word="vrienden"/>
         </node>
       </node>
       <node begin="4" conjtype="neven" end="5" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="5" cat="np" end="12" id="11" rel="cnj">
-        <node begin="5" buiging="met-e" end="6" id="12" infl="elke" lemma="ieder" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="ieder" vwtype="onbep" wh="nwh" word="ieder"/>
-        <node aform="compar" begin="6" buiging="zonder" end="7" getal-n="zonder-n" graad="basis" id="13" lemma="ander" num="sg" personalized="true" pos="adj" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="hd" rnum="sg" root="ander" special="a_noun" word="ander"/>
+        <node begin="5" buiging="met-e" end="6" id="12" lemma="ieder" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="ieder" vwtype="onbep" word="ieder"/>
+        <node begin="6" buiging="zonder" end="7" getal-n="zonder-n" graad="basis" id="13" lemma="ander" pos="adj" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="hd" root="ander" word="ander"/>
         <node begin="7" cat="rel" end="12" id="14" rel="mod">
-          <node begin="7" case="no_obl" end="8" gen="de" getal="getal" id="15" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="sg" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="7" end="8" getal="getal" id="15" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="7" cat="ssub" end="12" id="16" rel="body">
             <node begin="7" end="8" id="17" index="2" rel="su"/>
-            <node begin="10" end="11" id="18" infl="modal_not_u" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" sc="modifier(aux(inf))" tense="present" v_per="thi" word="wil" wvorm="pv"/>
+            <node begin="10" end="11" id="18" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
             <node begin="7" cat="inf" end="12" id="19" rel="vc">
               <node begin="7" end="8" id="20" index="2" rel="su"/>
               <node begin="8" cat="np" end="10" id="21" rel="obj1">
-                <node begin="8" end="9" id="22" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                <node begin="9" end="10" gen="de" genus="zijd" getal="ev" graad="basis" id="23" lemma="premie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="premie" word="premie"/>
+                <node begin="8" end="9" id="22" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="23" lemma="premie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="premie" word="premie"/>
               </node>
-              <node begin="11" buiging="zonder" end="12" id="24" infl="inf" lemma="innen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="in" sc="transitive" word="innen" wvorm="inf"/>
+              <node begin="11" buiging="zonder" end="12" id="24" lemma="innen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="in" word="innen" wvorm="inf"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="12" end="13" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="12" end="13" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Hun familie en vrienden en ieder ander die een premie wil innen .</sentence>
 </alpino_ds>

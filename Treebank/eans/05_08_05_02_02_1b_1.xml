@@ -3,22 +3,22 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="su">
-        <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="3" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="hd" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+        <node begin="0" end="1" genus="masc" getal="ev" id="3" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="hd" root="hij" status="vol" vwtype="pers" word="Hij"/>
         <node begin="1" cat="rel" end="3" id="4" rel="mod">
-          <node begin="1" case="no_obl" end="2" gen="de" getal="getal" id="5" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="sg" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="1" end="2" getal="getal" id="5" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="1" cat="ssub" end="3" id="6" rel="body">
             <node begin="1" end="2" id="7" index="1" rel="su"/>
-            <node begin="2" end="3" id="8" infl="sg3" lemma="stelen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="steel" sc="intransitive" tense="present" word="steelt" wvorm="pv"/>
+            <node begin="2" end="3" id="8" lemma="stelen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="steel" word="steelt" wvorm="pv"/>
           </node>
         </node>
       </node>
-      <node begin="3" end="4" id="9" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="3" end="4" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="4" cat="np" end="6" id="10" rel="predc">
-        <node begin="4" end="5" id="11" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="dief" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="dief" word="dief"/>
+        <node begin="4" end="5" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="dief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dief" word="dief"/>
       </node>
     </node>
-    <node begin="6" end="7" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Hij die steelt is een dief .</sentence>
 </alpino_ds>

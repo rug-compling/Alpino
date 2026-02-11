@@ -2,20 +2,20 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="np" end="7" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
-      <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="3" lemma="man" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="man" word="man"/>
+      <node begin="0" end="1" id="2" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="man" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="man" word="man"/>
       <node begin="2" cat="rel" end="7" id="4" rel="mod">
         <node begin="2" cat="pp" end="4" id="5" index="1" rel="rhd">
           <node begin="2" end="3" id="6" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-          <node begin="3" case="obl" end="4" gen="both" getal="getal" id="7" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="obj1" rnum="sg" root="wie" status="vol" vwtype="vb" wh="rel" word="wien"/>
+          <node begin="3" end="4" getal="getal" id="7" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="obj1" root="wie" status="vol" vwtype="vb" word="wien"/>
         </node>
         <node begin="2" cat="ssub" end="7" id="8" rel="body">
           <node begin="2" end="4" id="9" index="1" rel="mod"/>
           <node begin="4" cat="np" end="6" id="10" rel="su">
-            <node begin="4" buiging="met-e" end="5" id="11" infl="elke" lemma="elk" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="elk" vwtype="onbep" wh="nwh" word="elke"/>
-            <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="ondergeschikte" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="ondergeschikte" word="ondergeschikte"/>
+            <node begin="4" buiging="met-e" end="5" id="11" lemma="elk" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="elk" vwtype="onbep" word="elke"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="ondergeschikte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ondergeschikte" word="ondergeschikte"/>
           </node>
-          <node begin="6" end="7" id="13" infl="sg3" lemma="beven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="beef" sc="intransitive" tense="present" v_per="thi" word="beeft" wvorm="pv"/>
+          <node begin="6" end="7" id="13" lemma="beven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="beef" word="beeft" wvorm="pv"/>
         </node>
       </node>
     </node>

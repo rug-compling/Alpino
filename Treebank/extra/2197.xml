@@ -3,28 +3,28 @@
   <node begin="0" cat="top" end="12" id="0" rel="top">
     <node begin="0" cat="smain" end="11" id="1" rel="--">
       <node begin="0" cat="np" end="5" id="2" rel="su">
-        <node begin="0" end="1" id="3" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
-        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="archief" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="archief" word="archief"/>
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="archief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="archief" word="archief"/>
         <node begin="2" cat="pp" end="5" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="5" id="7" rel="obj1">
-            <node begin="3" end="4" id="8" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="Bfi" naamval="stan" neclass="ORG" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="Bfi" word="BFI"/>
+            <node begin="3" end="4" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="Bfi" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Bfi" word="BFI"/>
           </node>
         </node>
       </node>
-      <node begin="5" end="6" id="10" infl="sg" lemma="bevatten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="bevat" sc="transitive" stype="declarative" tense="present" v_per="thi" word="bevat" wvorm="pv"/>
+      <node begin="5" end="6" id="10" lemma="bevatten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="bevat" word="bevat" wvorm="pv"/>
       <node begin="6" cat="np" end="11" id="11" rel="obj1">
         <node begin="6" cat="mwu" end="8" id="12" rel="mod">
-          <node begin="6" buiging="zonder" end="7" graad="comp" id="13" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" sc="noun" vwtype="onbep" word="meer"/>
-          <node begin="7" conjtype="onder" end="8" id="14" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" sc="noun" word="dan"/>
+          <node begin="6" buiging="zonder" end="7" graad="comp" id="13" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" vwtype="onbep" word="meer"/>
+          <node begin="7" conjtype="onder" end="8" id="14" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" word="dan"/>
         </node>
-        <node begin="8" end="9" id="15" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="9" end="10" gen="both" genus="onz" getal="ev" graad="basis" id="16" lemma="miljoen" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="pl" root="miljoen" sc="measure" special="meas_mod" word="miljoen"/>
-        <node begin="10" end="11" gen="het" getal="mv" graad="basis" id="17" lemma="stuk" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" rnum="pl" root="stuk" special="meas_mod" word="stukken"/>
+        <node begin="8" end="9" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="miljoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="miljoen" word="miljoen"/>
+        <node begin="10" end="11" getal="mv" graad="basis" id="17" lemma="stuk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="stuk" word="stukken"/>
       </node>
     </node>
-    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Het archief van het BFI bevat meer dan een miljoen stukken .</sentence>
 </alpino_ds>

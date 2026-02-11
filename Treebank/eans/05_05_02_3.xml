@@ -3,21 +3,21 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" buiging="met-e" end="1" getal="mv" id="3" infl="onze" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="Onze"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="kat" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="kat" word="kat"/>
+        <node begin="0" buiging="met-e" end="1" getal="mv" id="3" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="Onze"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="kat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kat" word="kat"/>
       </node>
-      <node begin="2" end="3" id="5" infl="modal_not_u" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" stype="declarative" tense="present" word="zal" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
       <node begin="0" cat="inf" end="6" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
         <node begin="0" cat="ppart" end="5" id="8" rel="vc">
           <node begin="0" end="2" id="9" index="1" rel="obj1"/>
-          <node begin="3" end="4" id="10" lemma="binnenkort" pos="adv" postag="BW()" pt="bw" rel="mod" root="binnenkort" special="tmp" word="binnenkort"/>
-          <node begin="4" buiging="zonder" end="5" id="11" infl="psp" lemma="steriliseren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="steriliseer" sc="transitive" word="gesteriliseerd" wvorm="vd"/>
+          <node begin="3" end="4" id="10" lemma="binnenkort" pos="adv" postag="BW()" pt="bw" rel="mod" root="binnenkort" word="binnenkort"/>
+          <node begin="4" buiging="zonder" end="5" id="11" lemma="steriliseren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="steriliseer" word="gesteriliseerd" wvorm="vd"/>
         </node>
-        <node begin="5" buiging="zonder" end="6" id="12" infl="inf" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" sc="passive" word="worden" wvorm="inf"/>
+        <node begin="5" buiging="zonder" end="6" id="12" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
       </node>
     </node>
-    <node begin="6" end="7" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Onze kat zal binnenkort gesteriliseerd worden .</sentence>
 </alpino_ds>

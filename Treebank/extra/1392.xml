@@ -2,32 +2,32 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="13" id="0" rel="top">
     <node begin="0" cat="du" end="12" id="1" rel="--">
-      <node begin="0" conjtype="neven" end="1" id="2" lemma="want" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="want" sc="root" word="Want"/>
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="want" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="want" word="Want"/>
       <node begin="1" cat="du" end="12" id="3" rel="nucl">
         <node begin="1" cat="np" end="6" id="4" rel="sat">
-          <node begin="1" end="2" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="2" end="3" gen="het" getal="mv" graad="basis" id="6" lemma="jaar" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="jaar" special="tmp" word="jaren"/>
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="jaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jaar" word="jaren"/>
           <node begin="3" cat="pp" end="6" id="7" rel="mod">
             <node begin="3" end="4" id="8" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
             <node begin="4" cat="mwu" end="6" id="9" rel="obj1">
-              <node begin="4" end="5" id="10" lemma="Juan" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Juan" spectype="deeleigen" word="Juan"/>
-              <node begin="5" end="6" id="11" lemma="Peron" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Peron" spectype="deeleigen" word="Peron"/>
+              <node begin="4" end="5" id="10" lemma="Juan" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Juan" spectype="deeleigen" word="Juan"/>
+              <node begin="5" end="6" id="11" lemma="Peron" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Peron" spectype="deeleigen" word="Peron"/>
             </node>
           </node>
         </node>
         <node begin="6" cat="smain" end="12" id="12" rel="nucl">
-          <node begin="6" end="7" getal="ev" id="13" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
-          <node begin="7" end="8" id="14" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula" stype="declarative" tense="past" word="was" wvorm="pv"/>
+          <node begin="6" end="7" getal="ev" id="13" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+          <node begin="7" end="8" id="14" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
           <node begin="8" cat="np" end="12" id="15" rel="predc">
-            <node begin="8" end="9" id="16" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node aform="base" begin="9" buiging="met-e" end="10" graad="basis" id="17" infl="e" lemma="goed" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="goed" vform="adj" word="goede"/>
-            <node aform="base" begin="10" buiging="met-e" end="11" graad="basis" id="18" infl="e" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="oud" vform="adj" word="oude"/>
-            <node begin="11" end="12" gen="de" genus="zijd" getal="ev" graad="basis" id="19" lemma="tijd" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="tijd" special="tmp" word="tijd"/>
+            <node begin="8" end="9" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="9" buiging="met-e" end="10" graad="basis" id="17" lemma="goed" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="goed" word="goede"/>
+            <node begin="10" buiging="met-e" end="11" graad="basis" id="18" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="oud" word="oude"/>
+            <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Want de jaren onder Juan Peron dat was de goede oude tijd .</sentence>
 </alpino_ds>

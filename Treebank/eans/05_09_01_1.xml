@@ -2,18 +2,18 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="0" case="both" def="def" end="1" gen="de" getal="ev" id="2" lemma="iedereen" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="su" rnum="sg" root="iedereen" special="strpro" status="vol" vwtype="onbep" wh="nwh" word="Iedereen"/>
-      <node begin="1" end="2" id="3" infl="sg3" lemma="spreken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="spreek" sc="pc_pp(over)" stype="declarative" tense="present" word="spreekt" wvorm="pv"/>
-      <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="4" infl="no_e" lemma="tegenwoordig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="tegenwoordig" vform="adj" word="tegenwoordig"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="iedereen" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="su" root="iedereen" status="vol" vwtype="onbep" word="Iedereen"/>
+      <node begin="1" end="2" id="3" lemma="spreken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="spreek" word="spreekt" wvorm="pv"/>
+      <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="tegenwoordig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="tegenwoordig" word="tegenwoordig"/>
       <node begin="3" cat="pp" end="6" id="5" rel="pc">
         <node begin="3" end="4" id="6" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
         <node begin="4" cat="np" end="6" id="7" rel="obj1">
-          <node begin="4" end="5" id="8" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-          <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="9" lemma="milieu" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="milieu" word="milieu"/>
+          <node begin="4" end="5" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="milieu" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="milieu" word="milieu"/>
         </node>
       </node>
     </node>
-    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Iedereen spreekt tegenwoordig over het milieu .</sentence>
 </alpino_ds>

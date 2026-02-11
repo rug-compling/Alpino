@@ -3,25 +3,25 @@
   <node begin="0" cat="top" end="12" id="0" rel="top">
     <node begin="0" cat="smain" end="12" id="1" rel="--">
       <node begin="0" cat="np" end="6" id="2" rel="predc">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node aform="base" begin="1" buiging="met-e" end="2" id="4" infl="stof" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="adj" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="mod" root="enig" vform="adj" vwtype="onbep" word="enige"/>
-        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="reden" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="reden" sc="subject_sbar_vp" word="reden"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" id="4" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="adj" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="mod" root="enig" vwtype="onbep" word="enige"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="reden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="reden" word="reden"/>
         <node begin="3" cat="oti" end="6" id="6" rel="vc">
-          <node begin="3" end="4" id="7" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" sc="om" vztype="init" word="om"/>
+          <node begin="3" end="4" id="7" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
           <node begin="4" cat="ti" end="6" id="8" rel="body">
-            <node begin="4" end="5" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
-            <node begin="5" buiging="zonder" end="6" id="10" infl="inf" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="kom" sc="intransitive" word="komen" wvorm="inf"/>
+            <node begin="4" end="5" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="5" buiging="zonder" end="6" id="10" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="kom" word="komen" wvorm="inf"/>
           </node>
         </node>
       </node>
-      <node begin="6" end="7" id="11" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula_sbar" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="6" end="7" id="11" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="7" cat="cp" end="12" id="12" rel="su">
-        <node begin="7" conjtype="onder" end="8" id="13" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="7" conjtype="onder" end="8" id="13" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="8" cat="ssub" end="12" id="14" rel="body">
-          <node begin="8" case="nom" def="def" end="9" gen="de" genus="masc" getal="ev" id="15" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
-          <node begin="9" end="10" gen="het" genus="onz" getal="ev" graad="basis" id="16" lemma="geld" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="geld" word="geld"/>
-          <node aform="base" begin="10" buiging="zonder" end="11" graad="basis" id="17" infl="no_e" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nodig" vform="adj" word="nodig"/>
-          <node begin="11" end="12" id="18" infl="sg" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" sc="nonp_pred_np_ndev" tense="past" v_per="thi" word="had" wvorm="pv"/>
+          <node begin="8" end="9" genus="masc" getal="ev" id="15" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+          <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="geld" word="geld"/>
+          <node begin="10" buiging="zonder" end="11" graad="basis" id="17" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nodig" word="nodig"/>
+          <node begin="11" end="12" id="18" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
         </node>
       </node>
     </node>

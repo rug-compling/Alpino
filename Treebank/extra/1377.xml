@@ -2,15 +2,15 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="du" end="7" id="1" rel="--">
-      <node begin="0" end="1" gen="de" genus="zijd" getal="ev" graad="basis" id="2" lemma="politiek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="sat" rnum="sg" root="politiek" word="politiek"/>
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="politiek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="sat" root="politiek" word="politiek"/>
       <node begin="1" cat="smain" end="7" id="3" rel="nucl">
-        <node begin="2" end="3" id="4" infl="sg1" lemma="bemoeien" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="bemoei" sc="refl_pc_pp(met)" stype="declarative" tense="present" word="bemoei" wvorm="pv"/>
-        <node begin="3" case="nom" def="def" end="4" gen="de" getal="ev" id="5" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
-        <node begin="4" end="5" getal="ev" id="6" lemma="me" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" refl="refl" rel="se" rnum="sg" root="me" status="red" vwtype="pr" word="me"/>
+        <node begin="2" end="3" id="4" lemma="bemoeien" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="bemoei" word="bemoei" wvorm="pv"/>
+        <node begin="3" end="4" getal="ev" id="5" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="4" end="5" getal="ev" id="6" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="se" root="me" status="red" vwtype="pr" word="me"/>
         <node begin="5" end="6" id="7" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
         <node begin="1" cat="pp" end="7" id="8" rel="pc">
-          <node begin="1" end="2" getal="getal" id="9" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" special="er_loc" status="vol" vwtype="aanw" word="daar"/>
-          <node begin="6" end="7" id="10" lemma="met" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="met" sc="extracted_np" vztype="fin" word="mee"/>
+          <node begin="1" end="2" getal="getal" id="9" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+          <node begin="6" end="7" id="10" lemma="met" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="met" vztype="fin" word="mee"/>
         </node>
       </node>
     </node>

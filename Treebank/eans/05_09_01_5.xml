@@ -3,15 +3,15 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="met-e" end="1" id="3" infl="pl_num" lemma="sommig" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="sommig" vwtype="onbep" wh="nwh" word="Sommige"/>
-        <node begin="1" end="2" gen="both" getal="mv" graad="basis" id="4" lemma="mens" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="mens" word="mensen"/>
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="sommig" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="sommig" vwtype="onbep" word="Sommige"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="mens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mens" word="mensen"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="vinden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vind" sc="pred_np" stype="declarative" tense="present" word="vinden" wvorm="pv"/>
-      <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="wiskunde" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="wiskunde" word="wiskunde"/>
+      <node begin="2" end="3" id="5" lemma="vinden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vind" word="vinden" wvorm="pv"/>
+      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="wiskunde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="wiskunde" word="wiskunde"/>
       <node begin="4" end="5" id="7" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-      <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="8" infl="no_e" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="leuk" vform="adj" word="leuk"/>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="8" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="leuk" word="leuk"/>
     </node>
-    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Sommige mensen vinden wiskunde niet leuk .</sentence>
 </alpino_ds>

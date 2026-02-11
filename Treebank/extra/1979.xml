@@ -3,45 +3,45 @@
   <node begin="0" cat="top" end="17" id="0" rel="top">
     <node begin="0" cat="smain" end="16" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="Die"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="betaling" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="betaling" word="betaling"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="betaling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="betaling" word="betaling"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" sc="aux(inf)" stype="declarative" tense="past" v_per="thi" word="zou" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
       <node begin="0" cat="inf" end="16" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
-        <node begin="4" buiging="zonder" end="5" id="8" infl="inf" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="passive" word="zijn" wvorm="inf"/>
+        <node begin="4" buiging="zonder" end="5" id="8" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
         <node begin="0" cat="ppart" end="16" id="9" rel="vc">
           <node begin="0" end="2" id="10" index="1" rel="obj1"/>
-          <node begin="3" buiging="zonder" end="4" id="11" infl="psp" lemma="bedoelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bedoel" sc="acc_np_om_vp_no_control" word="bedoeld" wvorm="vd"/>
+          <node begin="3" buiging="zonder" end="4" id="11" lemma="bedoelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bedoel" word="bedoeld" wvorm="vd"/>
           <node begin="5" cat="oti" end="16" id="12" rel="vc">
-            <node begin="5" end="6" id="13" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" sc="om" vztype="init" word="om"/>
+            <node begin="5" end="6" id="13" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
             <node begin="6" cat="ti" end="16" id="14" rel="body">
-              <node begin="14" end="15" id="15" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+              <node begin="14" end="15" id="15" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
               <node begin="6" cat="inf" end="16" id="16" rel="body">
                 <node begin="6" cat="np" end="14" id="17" rel="obj1">
-                  <node begin="6" end="7" id="18" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                  <node aform="base" begin="7" buiging="met-e" end="8" graad="basis" id="19" infl="e" lemma="seksueel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="seksueel" vform="adj" word="seksuele"/>
-                  <node begin="8" end="9" gen="de" genus="zijd" getal="ev" graad="basis" id="20" lemma="affaire" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="affaire" word="affaire"/>
+                  <node begin="6" end="7" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="7" buiging="met-e" end="8" graad="basis" id="19" lemma="seksueel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="seksueel" word="seksuele"/>
+                  <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="20" lemma="affaire" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="affaire" word="affaire"/>
                   <node begin="9" cat="pp" end="14" id="21" rel="mod">
                     <node begin="9" end="10" id="22" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
                     <node begin="10" cat="conj" end="14" id="23" rel="obj1">
                       <node begin="10" cat="np" end="12" id="24" rel="cnj">
-                        <node begin="10" end="11" id="25" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                        <node begin="11" end="12" gen="de" genus="zijd" getal="ev" graad="basis" id="26" lemma="porno_ster" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="porno_ster" word="pornoster"/>
+                        <node begin="10" end="11" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="26" lemma="porno_ster" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="porno_ster" word="pornoster"/>
                       </node>
                       <node begin="12" conjtype="neven" end="13" id="27" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-                      <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="28" lemma="Trump" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="Trump" word="Trump"/>
+                      <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="28" lemma="Trump" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Trump" word="Trump"/>
                     </node>
                   </node>
                 </node>
-                <node begin="15" buiging="zonder" end="16" id="29" infl="inf" lemma="verzwijgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verzwijg" sc="transitive" word="verzwijgen" wvorm="inf"/>
+                <node begin="15" buiging="zonder" end="16" id="29" lemma="verzwijgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verzwijg" word="verzwijgen" wvorm="inf"/>
               </node>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="16" end="17" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="16" end="17" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Die betaling zou bedoeld zijn om een seksuele affaire tussen de pornoster en Trump te verzwijgen .</sentence>
 </alpino_ds>

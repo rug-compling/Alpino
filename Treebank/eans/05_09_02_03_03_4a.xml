@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="su">
-        <node begin="0" buiging="zonder" case="both" def="def" end="1" gen="de" id="3" lemma="ieder" naamval="stan" num="sg" pdtype="det" per="thi" pos="pron" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="hd" rnum="sg" root="ieder" vwtype="onbep" wh="nwh" word="Ieder"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="ieder" naamval="stan" pdtype="det" pos="pron" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="hd" root="ieder" vwtype="onbep" word="Ieder"/>
         <node begin="1" cat="pp" end="3" id="4" rel="mod">
           <node begin="1" end="2" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-          <node begin="2" case="dat_acc" def="def" end="3" gen="de" getal="mv" id="6" lemma="ons" naamval="obl" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" rnum="pl" root="ons" status="vol" vwtype="pr" wh="nwh" word="ons"/>
+          <node begin="2" end="3" getal="mv" id="6" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" root="ons" status="vol" vwtype="pr" word="ons"/>
         </node>
       </node>
-      <node begin="3" end="4" id="7" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula_np" stype="declarative" tense="past" word="was" wvorm="pv"/>
+      <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
       <node begin="4" cat="ap" end="7" id="8" rel="predc">
-        <node begin="4" end="5" genus="onz" getal="ev" id="9" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
-        <node begin="5" end="6" id="10" lemma="ermee" pos="pp" postag="BW()" pt="bw" rel="pc" root="ermee" special="er" word="ermee"/>
-        <node begin="6" end="7" id="11" lemma="eens" pos="adj" postag="BW()" pt="bw" rel="hd" root="eens" sc="pp(met)" special="np" word="eens"/>
+        <node begin="4" end="5" genus="onz" getal="ev" id="9" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="5" end="6" id="10" lemma="ermee" pos="pp" postag="BW()" pt="bw" rel="pc" root="ermee" word="ermee"/>
+        <node begin="6" end="7" id="11" lemma="eens" pos="adj" postag="BW()" pt="bw" rel="hd" root="eens" word="eens"/>
       </node>
     </node>
-    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ieder van ons was het ermee eens .</sentence>
 </alpino_ds>

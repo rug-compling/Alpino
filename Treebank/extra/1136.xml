@@ -2,17 +2,17 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="np" end="6" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="HET"/>
-      <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="3" lemma="apparaat" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="apparaat" word="APPARAAT"/>
+      <node begin="0" end="1" id="2" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="HET"/>
+      <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="3" lemma="apparaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="apparaat" word="APPARAAT"/>
       <node begin="2" cat="rel" end="6" id="4" rel="mod">
-        <node begin="2" end="3" getal="getal" id="5" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" special="er_loc" status="vol" vwtype="vb" wh="ywh" word="WAAR"/>
+        <node begin="2" end="3" getal="getal" id="5" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="WAAR"/>
         <node begin="2" cat="ssub" end="6" id="6" rel="body">
-          <node begin="3" case="both" def="def" end="4" gen="de" getal="ev" id="7" lemma="iedereen" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="su" rnum="sg" root="iedereen" special="strpro" status="vol" vwtype="onbep" wh="nwh" word="IEDEREEN"/>
+          <node begin="3" end="4" getal="ev" id="7" lemma="iedereen" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="su" root="iedereen" status="vol" vwtype="onbep" word="IEDEREEN"/>
           <node begin="2" cat="pp" end="5" id="8" rel="pc">
             <node begin="2" end="3" id="9" index="1" rel="obj1"/>
             <node begin="4" end="5" id="10" lemma="over" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="over" vztype="fin" word="OVER"/>
           </node>
-          <node begin="5" end="6" id="11" infl="sg" lemma="praten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="praat" sc="pc_pp(over)" tense="present" word="PRAAT" wvorm="pv"/>
+          <node begin="5" end="6" id="11" lemma="praten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="praat" word="PRAAT" wvorm="pv"/>
         </node>
       </node>
     </node>

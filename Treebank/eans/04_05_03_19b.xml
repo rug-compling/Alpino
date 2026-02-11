@@ -2,17 +2,17 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" case="both" def="def" end="1" gen="de" genus="fem" getal="ev" id="2" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" rnum="sg" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
-      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="ld_pp" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="0" end="1" genus="fem" getal="ev" id="2" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="Ze"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="2" cat="pp" end="5" id="4" rel="ld">
         <node begin="2" end="3" id="5" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
         <node begin="3" cat="np" end="5" id="6" rel="obj1">
-          <node begin="3" end="4" id="7" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-          <node begin="4" end="5" gen="het" genus="onz" getal="ev" graad="basis" id="8" lemma="kantoor" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="kantoor" word="kantoor"/>
+          <node begin="3" end="4" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="kantoor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kantoor" word="kantoor"/>
         </node>
       </node>
     </node>
-    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ze is naar het kantoor .</sentence>
 </alpino_ds>

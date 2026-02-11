@@ -3,26 +3,26 @@
   <node begin="0" cat="top" end="10" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" infl="pron" lemma="jou" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,2v,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="jou" status="vol" vwtype="bez" word="Jouw"/>
-        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="voorstel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="voorstel" word="voorstel"/>
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" lemma="jou" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,2v,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="jou" status="vol" vwtype="bez" word="Jouw"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="voorstel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voorstel" word="voorstel"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" sc="so_copula" stype="declarative" tense="present" word="lijkt" wvorm="pv"/>
-      <node begin="3" case="dat_acc" def="def" end="4" gen="de" getal="ev" id="6" lemma="me" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" rnum="sg" root="me" special="wkpro" status="red" vwtype="pr" wh="nwh" word="me"/>
+      <node begin="2" end="3" id="5" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" word="lijkt" wvorm="pv"/>
+      <node begin="3" end="4" getal="ev" id="6" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
       <node begin="4" cat="ap" end="9" id="7" rel="predc">
-        <node aform="compar" begin="4" buiging="zonder" end="5" graad="comp" id="8" infl="no_e" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="goed" vform="adj" word="beter"/>
+        <node begin="4" buiging="zonder" end="5" graad="comp" id="8" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="goed" word="beter"/>
         <node begin="5" cat="cp" end="9" id="9" rel="obcomp">
           <node begin="5" conjtype="onder" end="6" id="10" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
           <node begin="6" cat="np" end="9" id="11" rel="body">
-            <node begin="6" end="7" getal="ev" id="12" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+            <node begin="6" end="7" getal="ev" id="12" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="dat" status="vol" vwtype="aanw" word="dat"/>
             <node begin="7" cat="pp" end="9" id="13" rel="mod">
               <node begin="7" end="8" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="Paul" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="Paul" word="Paul"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="Paul" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Paul" word="Paul"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Jouw voorstel lijkt me beter dan dat van Paul .</sentence>
 </alpino_ds>

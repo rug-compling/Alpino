@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
-    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="du" end="8" id="2" rel="--">
       <node begin="0" cat="smain" end="5" id="3" rel="nucl">
         <node begin="0" cat="pp" end="2" id="4" rel="pc">
-          <node begin="0" end="1" id="5" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" sc="pc_adv" vztype="init" word="Aan"/>
+          <node begin="0" end="1" id="5" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="Aan"/>
           <node begin="1" end="2" getal="ev" id="6" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="adv" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="wat" status="vol" vwtype="onbep" word="wát"/>
         </node>
-        <node begin="2" end="3" id="7" infl="sg1" lemma="zien" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zie" sc="np_pc_pp(aan)" stype="declarative" tense="present" word="zie" wvorm="pv"/>
-        <node begin="3" case="both" def="def" end="4" gen="de" getal="ev" id="8" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
-        <node begin="4" end="5" getal="ev" id="9" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+        <node begin="2" end="3" id="7" lemma="zien" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zie" word="zie" wvorm="pv"/>
+        <node begin="3" end="4" getal="ev" id="8" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+        <node begin="4" end="5" getal="ev" id="9" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
       </node>
       <node begin="6" cat="sv1" end="8" id="10" rel="tag">
-        <node begin="6" end="7" id="11" infl="sg" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" sc="tr_sbar" tense="past" word="zei" wvorm="pv"/>
-        <node begin="7" case="both" def="def" end="8" gen="de" getal="ev" id="12" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+        <node begin="6" end="7" id="11" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+        <node begin="7" end="8" getal="ev" id="12" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
       </node>
     </node>
-    <node begin="8" end="9" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="8" end="9" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Aan wát zie je dat , zei je ?</sentence>
 </alpino_ds>

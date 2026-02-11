@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
-    <node begin="2" end="3" id="2" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
-    <node begin="3" end="4" id="3" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="0" end="1" id="1" lemma="'" pos="punct" postag="LET()" pt="let" rel="--" root="'" word="'"/>
+    <node begin="2" end="3" id="2" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+    <node begin="3" end="4" id="3" lemma="'" pos="punct" postag="LET()" pt="let" rel="--" root="'" word="'"/>
     <node begin="1" cat="du" end="7" id="4" rel="--">
       <node begin="1" end="2" id="5" lemma="nou" pos="adv" postag="BW()" pt="bw" rel="nucl" root="nou" word="Nou"/>
       <node begin="4" cat="sv1" end="7" id="6" rel="tag">
-        <node begin="4" end="5" id="7" infl="sg3" lemma="aan_dringen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="dring_aan" sc="part_dip_sbar(aan)" tense="present" word="dringt" wvorm="pv"/>
-        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="Kreuger" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Kreuger" word="Kreuger"/>
+        <node begin="4" end="5" id="7" lemma="aan_dringen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="dring_aan" word="dringt" wvorm="pv"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="Kreuger" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Kreuger" word="Kreuger"/>
         <node begin="6" end="7" id="9" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
       </node>
     </node>
-    <node begin="7" end="8" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>&apos; Nou ? &apos; dringt Kreuger aan .</sentence>
 </alpino_ds>

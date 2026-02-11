@@ -2,19 +2,19 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" index="1" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
-      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="6" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="obj1"/>
-        <node aform="base" begin="2" end="3" id="6" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
-        <node begin="3" buiging="zonder" end="4" id="7" infl="psp" lemma="bekeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bekeer" sc="np_pc_pp(tot)" word="bekeerd" wvorm="vd"/>
+        <node begin="2" end="3" id="6" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="bekeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bekeer" word="bekeerd" wvorm="vd"/>
         <node begin="4" cat="pp" end="6" id="8" rel="pc">
           <node begin="4" end="5" id="9" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
-          <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="christen" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="christen" word="christen"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="christen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="christen" word="christen"/>
         </node>
       </node>
     </node>
-    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Hij is wel bekeerd tot christen .</sentence>
 </alpino_ds>

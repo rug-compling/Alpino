@@ -13,7 +13,7 @@
         <node begin="3" end="4" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
         <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="lot" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="lot" word="lot"/>
         <node begin="5" cat="np" end="9" id="11" rel="mod">
-          <node begin="5" end="6" id="12" lemma="dergenen" pos="pron" postag="VNW(aanw,det,stan,gen,met-e,mv-n)" pt="vnw" rel="hd" root="degeen" word="dergenen"/>
+          <node begin="5" buiging="met_e" end="6" getal="mv-n" id="12" lemma="dergenen" naamval="gen" pdtype="det" pos="pron" postag="VNW(aanw,det,stan,gen,met-e,mv-n)" pt="vnw" rel="hd" root="degeen" vwtype="aanw" word="dergenen"/>
           <node begin="7" cat="rel" end="9" id="13" rel="mod">
             <node begin="7" end="8" getal="getal" id="14" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="7" cat="ssub" end="9" id="15" rel="body">

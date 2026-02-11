@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
-    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="8" id="2" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-      <node begin="1" end="2" id="4" infl="modal_not_u" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" tense="present" word="kan" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="4" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
       <node begin="0" cat="conj" end="8" id="5" rel="vc">
         <node begin="0" cat="inf" end="4" id="6" rel="cnj">
           <node begin="0" end="1" id="7" index="1" rel="su"/>
-          <node begin="2" end="3" gen="het" genus="onz" getal="ev" graad="basis" id="8" index="3" lemma="Russisch" naamval="stan" ntype="eigen" num="sg" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Russisch" word="Russisch"/>
-          <node begin="3" buiging="zonder" end="4" id="9" infl="inf" lemma="lezen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lees" sc="transitive" word="lezen" wvorm="inf"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="8" index="2" lemma="Russisch" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Russisch" word="Russisch"/>
+          <node begin="3" buiging="zonder" end="4" id="9" lemma="lezen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lees" word="lezen" wvorm="inf"/>
         </node>
         <node begin="5" conjtype="neven" end="6" id="10" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
         <node begin="0" cat="inf" end="8" id="11" rel="cnj">
           <node begin="0" end="1" id="12" index="1" rel="su"/>
-          <node begin="2" end="3" id="13" index="3" rel="obj1"/>
+          <node begin="2" end="3" id="13" index="2" rel="obj1"/>
           <node begin="6" end="7" id="14" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-          <node begin="7" buiging="zonder" end="8" id="15" infl="inf" lemma="spreken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spreek" sc="transitive" word="spreken" wvorm="inf"/>
+          <node begin="7" buiging="zonder" end="8" id="15" lemma="spreken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="spreken" wvorm="inf"/>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ik kan Russisch lezen , maar niet spreken .</sentence>
 </alpino_ds>

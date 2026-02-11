@@ -2,20 +2,20 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" index="1" lemma="Clara" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" rnum="sg" root="Clara" word="Clara"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="antwoorden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="antwoord" sc="np_vp_subj" stype="declarative" tense="past" word="antwoordde" wvorm="pv"/>
-      <node begin="2" case="dat_acc" def="def" end="3" gen="de" getal="ev" id="4" lemma="me" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" rnum="sg" root="me" special="wkpro" status="red" vwtype="pr" wh="nwh" word="me"/>
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" index="1" lemma="Clara" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Clara" word="Clara"/>
+      <node begin="1" end="2" id="3" lemma="antwoorden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="antwoord" word="antwoordde" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="4" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
       <node begin="0" cat="ti" end="7" id="5" rel="vc">
-        <node begin="5" end="6" id="6" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="5" end="6" id="6" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
         <node begin="0" cat="inf" end="7" id="7" rel="body">
           <node begin="0" end="1" id="8" index="1" rel="su"/>
-          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="Frits" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="Frits" word="Frits"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="Frits" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Frits" word="Frits"/>
           <node begin="4" end="5" id="10" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-          <node begin="6" buiging="zonder" end="7" id="11" infl="inf" lemma="kennen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ken" sc="transitive" word="kennen" wvorm="inf"/>
+          <node begin="6" buiging="zonder" end="7" id="11" lemma="kennen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ken" word="kennen" wvorm="inf"/>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Clara antwoordde me Frits niet te kennen .</sentence>
 </alpino_ds>

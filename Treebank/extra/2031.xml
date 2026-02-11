@@ -3,17 +3,17 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="ap" end="2" id="2" rel="mod">
-        <node begin="0" end="1" id="3" lemma="telkens" pos="adv" postag="BW()" pt="bw" rel="mod" root="telkens" special="sentence" word="Telkens"/>
-        <node aform="compar" begin="1" buiging="zonder" end="2" graad="comp" id="4" infl="no_e" lemma="zelden" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="zelden" vform="adj" word="zeldener"/>
+        <node begin="0" end="1" id="3" lemma="telkens" pos="adv" postag="BW()" pt="bw" rel="mod" root="telkens" word="Telkens"/>
+        <node begin="1" buiging="zonder" end="2" graad="comp" id="4" lemma="zelden" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="zelden" word="zeldener"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" sc="pc_pp(tot)" stype="declarative" tense="past" v_per="thi" word="kwam" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
       <node begin="3" cat="np" end="5" id="6" rel="su">
-        <node begin="3" end="4" id="7" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-        <node begin="4" end="5" gen="both" genus="onz" getal="ev" graad="basis" id="8" lemma="buiten" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="buiten" word="buiten"/>
+        <node begin="3" end="4" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="buiten" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="buiten" word="buiten"/>
       </node>
       <node begin="5" cat="pp" end="7" id="9" rel="pc">
         <node begin="5" end="6" id="10" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
-        <node begin="6" end="7" gen="het" getal="mv" graad="basis" id="11" lemma="gevecht" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" rnum="pl" root="gevecht" word="gevechten"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="11" lemma="gevecht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="gevecht" word="gevechten"/>
       </node>
     </node>
   </node>

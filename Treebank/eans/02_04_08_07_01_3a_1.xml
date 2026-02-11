@@ -2,22 +2,22 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="1" end="2" id="2" infl="sg1" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" stype="declarative" tense="present" word="ben" wvorm="pv"/>
-      <node begin="2" case="nom" def="def" end="3" gen="de" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="1" end="2" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="ben" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
       <node begin="0" cat="ppart" end="7" id="4" rel="vc">
-        <node begin="0" end="1" id="5" lemma="gisteravond" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteravond" special="tmp" word="Gisteravond"/>
+        <node begin="0" end="1" id="5" lemma="gisteravond" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteravond" word="Gisteravond"/>
         <node begin="2" end="3" id="6" index="1" rel="su"/>
         <node begin="3" cat="pp" end="6" id="7" rel="ld">
           <node begin="3" end="4" id="8" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
           <node begin="4" cat="np" end="6" id="9" rel="obj1">
-            <node begin="4" end="5" id="10" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="bioscoop" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="bioscoop" word="bioscoop"/>
+            <node begin="4" end="5" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="bioscoop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bioscoop" word="bioscoop"/>
           </node>
         </node>
-        <node begin="6" buiging="zonder" end="7" id="12" infl="psp" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="ld_pp" word="geweest" wvorm="vd"/>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
       </node>
     </node>
-    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Gisteravond ben ik naar de bioscoop geweest .</sentence>
 </alpino_ds>

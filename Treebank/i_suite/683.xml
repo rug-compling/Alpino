@@ -2,17 +2,17 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="0" buiging="zonder" end="1" getal-n="zonder-n" id="2" lemma="schurken" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="predc" rnum="sg" root="schurk" sc="intransitive" special="v_noun" word="Schurken" wvorm="inf"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="lijken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="lijk" sc="cleft_np" stype="declarative" tense="present" word="lijken" wvorm="pv"/>
-      <node begin="3" case="dat_acc" def="def" end="4" gen="de" getal="ev" id="4" lemma="mij" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" rnum="sg" root="mij" status="vol" vwtype="pr" wh="nwh" word="mij"/>
+      <node begin="0" buiging="zonder" end="1" getal-n="zonder-n" id="2" lemma="schurken" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="predc" root="schurk" word="Schurken" wvorm="inf"/>
+      <node begin="1" end="2" id="3" lemma="lijken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="lijk" word="lijken" wvorm="pv"/>
+      <node begin="3" end="4" getal="ev" id="4" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" root="mij" status="vol" vwtype="pr" word="mij"/>
       <node begin="2" cat="np" end="7" id="5" rel="su">
-        <node begin="2" end="3" genus="onz" getal="ev" id="6" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="hd" rnum="pl" root="het" special="het" status="red" vwtype="pers" word="het"/>
+        <node begin="2" end="3" genus="onz" getal="ev" id="6" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="hd" root="het" status="red" vwtype="pers" word="het"/>
         <node begin="4" cat="rel" end="7" id="7" rel="mod">
-          <node begin="4" case="no_obl" end="5" gen="de" getal="getal" id="8" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="pl" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="4" end="5" getal="getal" id="8" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="4" cat="ssub" end="7" id="9" rel="body">
             <node begin="4" end="5" id="10" index="1" rel="su"/>
-            <node begin="5" end="6" getal="ev" id="11" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
-            <node begin="6" end="7" id="12" infl="pl" lemma="doen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="doe" sc="transitive_ndev" tense="present" word="doen" wvorm="pv"/>
+            <node begin="5" end="6" getal="ev" id="11" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
+            <node begin="6" end="7" id="12" lemma="doen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="doe" word="doen" wvorm="pv"/>
           </node>
         </node>
       </node>

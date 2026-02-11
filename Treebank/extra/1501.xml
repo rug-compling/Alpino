@@ -2,33 +2,33 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="13" id="0" rel="top">
     <node begin="0" cat="smain" end="12" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-      <node begin="1" end="2" id="3" infl="sg1" lemma="durven" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="durf" sc="subj_control(te_inf)" stype="declarative" tense="present" word="durf" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="durven" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="durf" word="durf" wvorm="pv"/>
       <node begin="0" cat="ti" end="12" id="4" rel="vc">
-        <node begin="5" end="6" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="5" end="6" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
         <node begin="0" cat="inf" end="12" id="6" rel="body">
           <node begin="0" end="1" id="7" index="1" rel="su"/>
-          <node begin="3" end="4" getal="ev" id="8" infl="wat" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" rnum="sg" root="wat" status="vol" vwtype="onbep" wh="nwh" word="wat"/>
-          <node begin="6" buiging="zonder" end="7" id="9" infl="inf" lemma="verwedden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verwed" sc="np_er_pp_sbar(om)" word="verwedden" wvorm="inf"/>
+          <node begin="3" end="4" getal="ev" id="8" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="wat" status="vol" vwtype="onbep" word="wat"/>
+          <node begin="6" buiging="zonder" end="7" id="9" lemma="verwedden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verwed" word="verwedden" wvorm="inf"/>
           <node begin="2" cat="pp" end="12" id="10" rel="pc">
-            <node begin="2" end="3" getal="getal" id="11" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="2" end="3" getal="getal" id="11" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
             <node begin="4" end="5" id="12" lemma="om" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="om" vztype="fin" word="om"/>
             <node begin="7" cat="cp" end="12" id="13" rel="vc">
-              <node begin="7" conjtype="onder" end="8" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+              <node begin="7" conjtype="onder" end="8" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
               <node begin="8" cat="ssub" end="12" id="15" rel="body">
-                <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="gedonder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" rnum="sg" root="gedonder" sc="intransitive" special="ge_v_noun" word="gedonder"/>
+                <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="gedonder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="gedonder" word="gedonder"/>
                 <node begin="8" cat="pp" end="11" id="17" rel="pc">
-                  <node begin="8" end="9" getal="getal" id="18" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+                  <node begin="8" end="9" getal="getal" id="18" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
                   <node begin="10" end="11" id="19" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
                 </node>
-                <node begin="11" end="12" id="20" infl="sg3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" sc="pc_pp(van)" tense="present" word="komt" wvorm="pv"/>
+                <node begin="11" end="12" id="20" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
               </node>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="12" end="13" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="12" end="13" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ik durf er wat om te verwedden dat er gedonder van komt .</sentence>
 </alpino_ds>

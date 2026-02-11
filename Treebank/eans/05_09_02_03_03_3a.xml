@@ -3,23 +3,23 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" index="1" rel="su">
-        <node begin="0" buiging="zonder" case="both" def="def" end="1" gen="de" id="3" lemma="ieder" naamval="stan" num="sg" pdtype="det" per="thi" pos="pron" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="hd" rnum="sg" root="ieder" vwtype="onbep" wh="nwh" word="Ieder"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="ieder" naamval="stan" pdtype="det" pos="pron" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="hd" root="ieder" vwtype="onbep" word="Ieder"/>
         <node begin="1" cat="pp" end="4" id="4" rel="mod">
           <node begin="1" end="2" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="2" cat="np" end="4" id="6" rel="obj1">
-            <node begin="2" end="3" id="7" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="8" lemma="deelnemer" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="deelnemer" word="deelnemers"/>
+            <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="deelnemer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="deelnemer" word="deelnemers"/>
           </node>
         </node>
       </node>
-      <node begin="4" end="5" id="9" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" stype="declarative" tense="past" word="werd" wvorm="pv"/>
+      <node begin="4" end="5" id="9" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
       <node begin="0" cat="ppart" end="7" id="10" rel="vc">
         <node begin="0" end="4" id="11" index="1" rel="obj1"/>
-        <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="12" infl="no_e" lemma="persoonlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="persoonlijk" vform="adj" word="persoonlijk"/>
-        <node begin="6" buiging="zonder" end="7" id="13" infl="psp" lemma="toe_spreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="spreek_toe" sc="part_transitive(toe)" word="toegesproken" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="12" lemma="persoonlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="persoonlijk" word="persoonlijk"/>
+        <node begin="6" buiging="zonder" end="7" id="13" lemma="toe_spreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="spreek_toe" word="toegesproken" wvorm="vd"/>
       </node>
     </node>
-    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ieder van de deelnemers werd persoonlijk toegesproken .</sentence>
 </alpino_ds>

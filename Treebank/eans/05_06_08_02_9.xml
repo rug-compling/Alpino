@@ -2,27 +2,27 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" index="1" lemma="rijk" naamval="stan" neclass="PER" ntype="soort" num="sg" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" rnum="sg" root="Rijk" word="Rijk"/>
-      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" index="1" lemma="rijk" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="Rijk" word="Rijk"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="8" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
-        <node begin="5" buiging="zonder" end="6" id="6" infl="psp" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="ld_pp" word="geweest" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="6" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
         <node begin="2" cat="pp" end="8" id="7" rel="ld">
           <node begin="2" end="3" id="8" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
           <node begin="3" cat="np" end="8" id="9" rel="obj1">
-            <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="school" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="school" word="school"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="school" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="school" word="school"/>
             <node begin="3" cat="detp" end="8" id="11" rel="det">
-              <node begin="3" buiging="zonder" comparative="als" end="4" graad="basis" id="12" infl="de" lemma="dezelfde" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="hd" root="dezelfde" special="comp" word="dezelfde"/>
+              <node begin="3" buiging="zonder" end="4" graad="basis" id="12" lemma="dezelfde" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="hd" root="dezelfde" word="dezelfde"/>
               <node begin="6" cat="cp" end="8" id="13" rel="obcomp">
                 <node begin="6" conjtype="onder" end="7" id="14" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
-                <node begin="7" case="nom" def="def" end="8" gen="de" getal="ev" id="15" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="body" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+                <node begin="7" end="8" getal="ev" id="15" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="body" root="ik" status="vol" vwtype="pers" word="ik"/>
               </node>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Rijk is op dezelfde school geweest als ik .</sentence>
 </alpino_ds>

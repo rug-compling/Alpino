@@ -3,19 +3,19 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" wh="nwh" word="Dat"/>
-        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="zinsdeel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="zinsdeel" word="zinsdeel"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="Dat"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="zinsdeel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="zinsdeel" word="zinsdeel"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="fungeren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="fungeer" sc="als_copula" stype="declarative" tense="present" word="fungeert" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="fungeren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="fungeer" word="fungeert" wvorm="pv"/>
       <node begin="3" cat="cp" end="6" id="6" rel="predc">
-        <node begin="3" conjtype="onder" end="4" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
+        <node begin="3" conjtype="onder" end="4" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="4" cat="np" end="6" id="8" rel="body">
-          <node aform="base" begin="4" buiging="met-e" end="5" graad="basis" id="9" infl="e" lemma="bij_woordelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bij_woordelijk" vform="adj" word="bijwoordelijke"/>
-          <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="bepaling" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="bepaling" word="bepaling"/>
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="bij_woordelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bij_woordelijk" word="bijwoordelijke"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="bepaling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bepaling" word="bepaling"/>
         </node>
       </node>
     </node>
-    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Dat zinsdeel fungeert als bijwoordelijke bepaling .</sentence>
 </alpino_ds>

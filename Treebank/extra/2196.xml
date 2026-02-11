@@ -4,33 +4,33 @@
     <node begin="0" cat="smain" end="15" id="1" rel="--">
       <node begin="0" cat="np" end="10" id="2" rel="su">
         <node begin="0" cat="mwu" end="2" id="3" rel="mod">
-          <node begin="0" buiging="zonder" end="1" graad="comp" id="4" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" sc="noun" vwtype="onbep" word="Meer"/>
-          <node begin="1" conjtype="onder" end="2" id="5" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" sc="noun" word="dan"/>
+          <node begin="0" buiging="zonder" end="1" graad="comp" id="4" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" vwtype="onbep" word="Meer"/>
+          <node begin="1" conjtype="onder" end="2" id="5" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" word="dan"/>
         </node>
-        <node begin="2" end="3" id="6" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="3" end="4" gen="both" genus="onz" getal="ev" graad="basis" id="7" lemma="miljoen" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="pl" root="miljoen" sc="measure" special="meas_mod" word="miljoen"/>
-        <node begin="4" end="5" gen="het" getal="mv" graad="basis" id="8" lemma="kind" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" rnum="pl" root="kind" word="kinderen"/>
+        <node begin="2" end="3" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="miljoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="miljoen" word="miljoen"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="kind" word="kinderen"/>
         <node begin="5" cat="pp" end="10" id="9" rel="mod">
           <node begin="5" end="6" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="6" cat="np" end="10" id="11" rel="obj1">
-            <node begin="6" end="7" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="6" end="7" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="7" cat="mwu" end="10" id="13" rel="hd">
-              <node begin="7" end="8" id="14" lemma="Centraal" neclass="LOC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Centraal" spectype="deeleigen" word="Centraal"/>
-              <node begin="8" end="9" id="15" lemma="Afrikaanse" neclass="LOC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Afrikaanse" spectype="deeleigen" word="Afrikaanse"/>
-              <node begin="9" end="10" id="16" lemma="Republiek" neclass="LOC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Republiek" spectype="deeleigen" word="Republiek"/>
+              <node begin="7" end="8" id="14" lemma="Centraal" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Centraal" spectype="deeleigen" word="Centraal"/>
+              <node begin="8" end="9" id="15" lemma="Afrikaanse" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Afrikaanse" spectype="deeleigen" word="Afrikaanse"/>
+              <node begin="9" end="10" id="16" lemma="Republiek" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Republiek" spectype="deeleigen" word="Republiek"/>
             </node>
           </node>
         </node>
       </node>
-      <node begin="10" end="11" id="17" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="nonp_pred_np_ndev" stype="declarative" tense="present" v_per="thi" word="hebben" wvorm="pv"/>
-      <node aform="base" begin="11" buiging="zonder" end="12" graad="basis" id="18" infl="no_e" lemma="dringend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="dringend" vform="adj" word="dringend"/>
+      <node begin="10" end="11" id="17" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="11" buiging="zonder" end="12" graad="basis" id="18" lemma="dringend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="dringend" word="dringend"/>
       <node begin="12" cat="np" end="14" id="19" rel="obj1">
-        <node aform="base" begin="12" buiging="met-e" end="13" graad="basis" id="20" infl="e" lemma="humanitair" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="humanitair" vform="adj" word="humanitaire"/>
-        <node begin="13" end="14" gen="de" genus="zijd" getal="ev" graad="basis" id="21" lemma="hulp" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="hulp" word="hulp"/>
+        <node begin="12" buiging="met-e" end="13" graad="basis" id="20" lemma="humanitair" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="humanitair" word="humanitaire"/>
+        <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="21" lemma="hulp" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hulp" word="hulp"/>
       </node>
-      <node aform="base" begin="14" buiging="zonder" end="15" graad="basis" id="22" infl="no_e" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nodig" vform="adj" word="nodig"/>
+      <node begin="14" buiging="zonder" end="15" graad="basis" id="22" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nodig" word="nodig"/>
     </node>
-    <node begin="15" end="16" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="15" end="16" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Meer dan een miljoen kinderen in de Centraal Afrikaanse Republiek hebben dringend humanitaire hulp nodig .</sentence>
 </alpino_ds>

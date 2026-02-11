@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
-    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="du" end="5" id="2" rel="--">
       <node begin="0" cat="pp" end="3" id="3" rel="nucl">
         <node begin="0" cat="np" end="2" id="4" rel="obj1">
-          <node begin="0" buiging="met-e" end="1" id="5" infl="de" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" wh="nwh" word="Deze"/>
-          <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="kant" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="kant" word="kant"/>
+          <node begin="0" buiging="met-e" end="1" id="5" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="Deze"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="kant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kant" word="kant"/>
         </node>
-        <node begin="2" end="3" id="7" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="op" special="post" vztype="fin" word="op"/>
+        <node begin="2" end="3" id="7" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="op" vztype="fin" word="op"/>
       </node>
-      <node begin="4" end="5" gen="de" getal="mv" graad="basis" id="8" lemma="dame" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="tag" rnum="pl" root="dame" word="dames"/>
+      <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="dame" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="tag" root="dame" word="dames"/>
     </node>
   </node>
   <sentence>Deze kant op , dames</sentence>

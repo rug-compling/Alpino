@@ -3,13 +3,13 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="du" end="4" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="nucl">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="een" lemma="zo&apos;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&apos;n" vwtype="aanw" word="Zo&apos;n"/>
-        <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="4" infl="no_e" lemma="lief" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="lief" vform="adj" word="lief"/>
-        <node begin="2" end="3" gen="het" genus="onz" getal="ev" graad="basis" id="5" lemma="kind" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="kind" word="kind"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="zo'n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo'n" vwtype="aanw" word="Zo'n"/>
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="4" lemma="lief" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="lief" word="lief"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="kind" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kind" word="kind"/>
       </node>
       <node begin="3" end="4" id="6" lemma="toch" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="toch" word="toch"/>
     </node>
-    <node begin="4" end="5" id="7" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+    <node begin="4" end="5" id="7" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
   </node>
   <sentence>Zo&apos;n lief kind toch !</sentence>
 </alpino_ds>

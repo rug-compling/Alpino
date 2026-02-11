@@ -2,15 +2,15 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="du" end="5" id="1" rel="--">
-      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Olaf" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="sat" rnum="sg" root="Olaf" word="Olaf"/>
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Olaf" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="sat" root="Olaf" word="Olaf"/>
       <node begin="1" cat="smain" end="5" id="3" rel="nucl">
-        <node begin="1" end="2" getal="getal" id="4" infl="de" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" rnum="sg" root="die" status="vol" vwtype="aanw" wh="nwh" word="die"/>
-        <node begin="2" end="3" id="5" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="ld_adv" stype="declarative" tense="past" word="was" wvorm="pv"/>
-        <node begin="3" end="4" id="6" lemma="vanmiddag" pos="adv" postag="BW()" pt="bw" rel="mod" root="vanmiddag" special="tmp" word="vanmiddag"/>
-        <node begin="4" end="5" getal="getal" id="7" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" special="er_loc" status="vol" vwtype="aanw" word="hier"/>
+        <node begin="1" end="2" getal="getal" id="4" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" root="die" status="vol" vwtype="aanw" word="die"/>
+        <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="3" end="4" id="6" lemma="vanmiddag" pos="adv" postag="BW()" pt="bw" rel="mod" root="vanmiddag" word="vanmiddag"/>
+        <node begin="4" end="5" getal="getal" id="7" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" status="vol" vwtype="aanw" word="hier"/>
       </node>
     </node>
-    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Olaf die was vanmiddag hier .</sentence>
 </alpino_ds>

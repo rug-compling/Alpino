@@ -2,12 +2,12 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="4" id="1" rel="--">
-      <node begin="0" case="both" def="def" end="1" gen="de" getal="mv" id="2" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" sc="copula" stype="declarative" tense="past" word="waren" wvorm="pv"/>
-      <node begin="2" end="3" id="4" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="predm" root="allemaal" special="predm" word="allemaal"/>
-      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="5" infl="both" lemma="tevreden" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="tevreden" vform="adj" word="tevreden"/>
+      <node begin="0" end="1" getal="mv" id="2" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="Ze"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="2" end="3" id="4" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="predm" root="allemaal" word="allemaal"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="tevreden" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="tevreden" word="tevreden"/>
     </node>
-    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ze waren allemaal tevreden .</sentence>
 </alpino_ds>

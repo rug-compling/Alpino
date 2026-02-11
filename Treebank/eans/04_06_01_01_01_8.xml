@@ -2,22 +2,22 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-      <node begin="1" end="2" id="3" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" word="heb" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
       <node begin="0" cat="ppart" end="7" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
-        <node begin="2" end="3" id="6" lemma="vandaag" pos="adv" postag="BW()" pt="bw" rel="mod" root="vandaag" special="tmp" word="vandaag"/>
+        <node begin="2" end="3" id="6" lemma="vandaag" pos="adv" postag="BW()" pt="bw" rel="mod" root="vandaag" word="vandaag"/>
         <node begin="3" cat="np" end="6" id="7" rel="obj1">
-          <node aform="base" begin="3" buiging="met-e" end="4" id="8" infl="e" lemma="een" naamval="stan" npagr="evz" pdtype="det" pos="adj" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="mod" root="een" vform="adj" vwtype="onbep" word="ene"/>
+          <node begin="3" buiging="met-e" end="4" id="8" lemma="een" naamval="stan" npagr="evz" pdtype="det" pos="adj" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="mod" root="een" vwtype="onbep" word="ene"/>
           <node begin="4" cat="mwu" end="6" id="9" rel="hd">
-            <node begin="4" end="5" id="10" lemma="Ludo" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Ludo" spectype="deeleigen" word="Ludo"/>
-            <node begin="5" end="6" id="11" lemma="Verstappen" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Verstappen" spectype="deeleigen" word="Verstappen"/>
+            <node begin="4" end="5" id="10" lemma="Ludo" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ludo" spectype="deeleigen" word="Ludo"/>
+            <node begin="5" end="6" id="11" lemma="Verstappen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verstappen" spectype="deeleigen" word="Verstappen"/>
           </node>
         </node>
-        <node begin="6" buiging="zonder" end="7" id="12" infl="psp" lemma="ontmoeten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontmoet" sc="transitive" word="ontmoet" wvorm="vd"/>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="ontmoeten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontmoet" word="ontmoet" wvorm="vd"/>
       </node>
     </node>
-    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ik heb vandaag ene Ludo Verstappen ontmoet .</sentence>
 </alpino_ds>

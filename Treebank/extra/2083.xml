@@ -5,7 +5,7 @@
     <node begin="0" cat="np" end="11" id="2" rel="--">
       <node begin="0" end="1" getal-n="zonder-n" graad="basis" id="3" lemma="één" numtype="hoofd" pos="pron" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="één" word="Een"/>
       <node begin="1" cat="np" end="11" id="4" rel="mod">
-        <node begin="1" end="2" id="5" lemma="dergenen" pos="pron" postag="VNW(aanw,det,stan,gen,met-e,mv-n)" pt="vnw" rel="hd" root="degeen" word="dergenen"/>
+        <node begin="1" buiging="met_e" end="2" getal="mv-n" id="5" lemma="dergenen" naamval="gen" pdtype="det" pos="pron" postag="VNW(aanw,det,stan,gen,met-e,mv-n)" pt="vnw" rel="hd" root="degeen" vwtype="aanw" word="dergenen"/>
         <node begin="2" cat="rel" end="11" id="6" rel="mod">
           <node begin="2" cat="pp" end="4" id="7" index="1" rel="rhd">
             <node begin="2" end="3" id="8" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>

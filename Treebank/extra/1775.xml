@@ -3,15 +3,15 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="ppart" end="2" id="2" rel="mod">
-        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="3" infl="no_e" lemma="eerlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="eerlijk" vform="adj" word="Eerlijk"/>
-        <node aform="base" begin="1" buiging="zonder" end="2" id="4" infl="no_e" lemma="zeggen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zeggen" vform="psp" word="gezegd" wvorm="vd"/>
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="eerlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="eerlijk" word="Eerlijk"/>
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="zeggen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zeggen" word="gezegd" wvorm="vd"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" sc="intransitive" stype="declarative" tense="present" word="komt" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
       <node begin="3" cat="np" end="5" id="6" rel="su">
-        <node begin="3" end="4" id="7" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-        <node aform="base" begin="4" buiging="met-e" end="5" getal-n="zonder-n" graad="basis" id="8" infl="e" lemma="moeilijk" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" rnum="sg" root="moeilijk" vform="adj" word="moeilijke"/>
+        <node begin="3" end="4" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="4" buiging="met-e" end="5" getal-n="zonder-n" graad="basis" id="8" lemma="moeilijk" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" root="moeilijk" word="moeilijke"/>
       </node>
-      <node begin="5" end="6" id="9" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" special="tmp" word="nu"/>
+      <node begin="5" end="6" id="9" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
       <node begin="6" end="7" id="10" lemma="pas" pos="adv" postag="BW()" pt="bw" rel="mod" root="pas" word="pas"/>
     </node>
   </node>

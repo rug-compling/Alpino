@@ -3,15 +3,15 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="zonder" end="1" getal="mv" id="3" infl="pron" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="Hun"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="kelk" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kelk" word="kelken"/>
+        <node begin="0" buiging="zonder" end="1" getal="mv" id="3" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="Hun"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="kelk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kelk" word="kelken"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="sluiten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sluit" sc="refl" stype="declarative" tense="present" word="sluiten" wvorm="pv"/>
-      <node begin="3" end="4" getal="getal" id="6" lemma="zich" naamval="obl" num="both" pdtype="pron" per="u_thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" refl="refl" rel="se" rnum="pl" root="zich" status="red" vwtype="refl" word="zich"/>
-      <node begin="4" end="5" id="7" lemma="namelijk" pos="adv" postag="BW()" pt="bw" rel="mod" root="namelijk" special="sentence" word="namelijk"/>
-      <node begin="5" end="6" id="8" lemma="nooit" pos="adv" postag="BW()" pt="bw" rel="mod" root="nooit" special="tmp" word="nooit"/>
+      <node begin="2" end="3" id="5" lemma="sluiten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sluit" word="sluiten" wvorm="pv"/>
+      <node begin="3" end="4" getal="getal" id="6" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node begin="4" end="5" id="7" lemma="namelijk" pos="adv" postag="BW()" pt="bw" rel="mod" root="namelijk" word="namelijk"/>
+      <node begin="5" end="6" id="8" lemma="nooit" pos="adv" postag="BW()" pt="bw" rel="mod" root="nooit" word="nooit"/>
     </node>
-    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Hun kelken sluiten zich namelijk nooit .</sentence>
 </alpino_ds>

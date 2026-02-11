@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="10" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="0" end="1" id="1" lemma="'" pos="punct" postag="LET()" pt="let" rel="--" root="'" word="'"/>
     <node begin="1" cat="du" end="9" id="2" rel="--">
-      <node begin="1" end="2" id="3" lemma="goddank" pos="adv" postag="BW()" pt="bw" rel="dp" root="goddank" sc="vandaar" word="Goddank"/>
+      <node begin="1" end="2" id="3" lemma="goddank" pos="adv" postag="BW()" pt="bw" rel="dp" root="goddank" word="Goddank"/>
       <node begin="2" cat="cp" end="9" id="4" rel="dp">
-        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="3" cat="ssub" end="9" id="6" rel="body">
-          <node begin="3" case="both" def="def" end="4" gen="de" getal="ev" id="7" index="1" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
-          <node begin="7" end="8" id="8" infl="sg_hebt" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" tense="present" word="hebt" wvorm="pv"/>
+          <node begin="3" end="4" getal="ev" id="7" index="1" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+          <node begin="7" end="8" id="8" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="hebt" wvorm="pv"/>
           <node begin="3" cat="ppart" end="9" id="9" rel="vc">
             <node begin="3" end="4" id="10" index="1" rel="su"/>
             <node begin="4" cat="np" end="6" id="11" rel="obj1">
-              <node begin="4" buiging="zonder" end="5" getal="ev" id="12" infl="pron" lemma="je" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="je" status="red" vwtype="bez" word="je"/>
-              <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lemma="wijn" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="wijn" word="wijn"/>
+              <node begin="4" buiging="zonder" end="5" getal="ev" id="12" lemma="je" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="je" status="red" vwtype="bez" word="je"/>
+              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="wijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wijn" word="wijn"/>
             </node>
             <node begin="6" end="7" id="14" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-            <node begin="8" buiging="zonder" end="9" id="15" infl="psp" lemma="op_drinken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="drink_op" sc="part_transitive(op)" word="opgedronken" wvorm="vd"/>
+            <node begin="8" buiging="zonder" end="9" id="15" lemma="op_drinken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="drink_op" word="opgedronken" wvorm="vd"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>&apos; Goddank dat je je wijn niet hebt opgedronken .</sentence>
 </alpino_ds>

@@ -2,18 +2,18 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" index="1" lemma="Wouter" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Wouter" word="Wouter"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" stype="declarative" tense="past" word="werd" wvorm="pv"/>
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" index="1" lemma="Wouter" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Wouter" word="Wouter"/>
+      <node begin="1" end="2" id="3" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
       <node begin="0" cat="ppart" end="5" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="obj1"/>
-        <node begin="2" buiging="zonder" end="3" id="6" infl="psp" lemma="uit_roepen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="roep_uit" sc="part_np_pc_pp(uit,tot)" word="uitgeroepen" wvorm="vd"/>
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="uit_roepen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="roep_uit" word="uitgeroepen" wvorm="vd"/>
         <node begin="3" cat="pp" end="5" id="7" rel="pc">
           <node begin="3" end="4" id="8" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
-          <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="overwinnaar" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="overwinnaar" word="overwinnaar"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="overwinnaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="overwinnaar" word="overwinnaar"/>
         </node>
       </node>
     </node>
-    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Wouter werd uitgeroepen tot overwinnaar .</sentence>
 </alpino_ds>

@@ -4,19 +4,19 @@
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" rel="su">
         <node begin="0" cat="detp" end="2" id="3" rel="det">
-          <node begin="0" buiging="zonder" end="1" id="4" infl="al" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" special="pre_det_quant" vwtype="onbep" word="Al"/>
-          <node begin="1" buiging="met-e" end="2" getal="mv" id="5" infl="onze" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="hd" root="ons" status="vol" vwtype="bez" word="onze"/>
+          <node begin="0" buiging="zonder" end="1" id="4" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" vwtype="onbep" word="Al"/>
+          <node begin="1" buiging="met-e" end="2" getal="mv" id="5" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="hd" root="ons" status="vol" vwtype="bez" word="onze"/>
         </node>
-        <node begin="2" end="3" id="6" infl="pl_num" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" special="hoofd" word="drie"/>
-        <node begin="3" end="4" gen="het" getal="mv" graad="basis" id="7" lemma="kind" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kind" word="kinderen"/>
+        <node begin="2" end="3" id="6" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
       </node>
-      <node begin="4" end="5" id="8" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="present" word="hebben" wvorm="pv"/>
+      <node begin="4" end="5" id="8" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
       <node begin="5" cat="np" end="7" id="9" rel="obj1">
-        <node begin="5" end="6" id="10" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="ingenieur_diploma" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="ingenieur_diploma" word="ingenieursdiploma"/>
+        <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="ingenieur_diploma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="ingenieur_diploma" word="ingenieursdiploma"/>
       </node>
     </node>
-    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Al onze drie kinderen hebben een ingenieursdiploma .</sentence>
 </alpino_ds>

@@ -3,16 +3,16 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="whq" end="4" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="welk" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" wh="rwh" word="Welk"/>
-        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="boek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="boek" word="boek"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welk"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="boek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="boek" word="boek"/>
       </node>
       <node begin="0" cat="sv1" end="4" id="5" rel="body">
         <node begin="0" end="2" id="6" index="1" rel="su"/>
-        <node begin="2" end="3" id="7" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="whquestion" tense="present" word="is" wvorm="pv"/>
-        <node begin="3" end="4" getal="ev" id="8" infl="het" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="predc" rnum="sg" root="dit" status="vol" vwtype="aanw" wh="nwh" word="dit"/>
+        <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="3" end="4" getal="ev" id="8" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="predc" root="dit" status="vol" vwtype="aanw" word="dit"/>
       </node>
     </node>
-    <node begin="4" end="5" id="9" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="4" end="5" id="9" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Welk boek is dit ?</sentence>
 </alpino_ds>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
-    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="8" id="2" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="3" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="We"/>
-      <node begin="1" end="2" id="4" infl="pl" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" sc="ld_adv" stype="declarative" tense="present" v_per="fir" word="moeten" wvorm="pv"/>
-      <node aform="base" begin="2" end="3" id="5" infl="pred" lemma="weg" pos="adj" postag="BW()" pt="bw" rel="ld" root="weg" vform="adj" word="weg"/>
+      <node begin="0" end="1" getal="mv" id="3" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="We"/>
+      <node begin="1" end="2" id="4" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" word="moeten" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="weg" pos="adj" postag="BW()" pt="bw" rel="ld" root="weg" word="weg"/>
       <node begin="4" cat="cp" end="8" id="6" rel="mod">
-        <node begin="4" end="5" id="7" lemma="naar" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="naar" sc="naar" vztype="init" word="naar"/>
+        <node begin="4" end="5" id="7" lemma="naar" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="naar" vztype="init" word="naar"/>
         <node begin="5" cat="ssub" end="8" id="8" rel="body">
-          <node begin="5" end="6" genus="onz" getal="ev" id="9" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" special="het" status="red" vwtype="pers" word="het"/>
-          <node begin="6" case="dat_acc" def="def" end="7" gen="de" getal="ev" id="10" lemma="mij" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" rnum="sg" root="mij" status="vol" vwtype="pr" wh="nwh" word="mij"/>
-          <node begin="7" end="8" id="11" infl="sg3" lemma="toe_schijnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="schijn_toe" sc="part_dip_sbar_subj_so_np(toe)" tense="present" v_per="thi" word="toeschijnt" wvorm="pv"/>
+          <node begin="5" end="6" genus="onz" getal="ev" id="9" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="6" end="7" getal="ev" id="10" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" root="mij" status="vol" vwtype="pr" word="mij"/>
+          <node begin="7" end="8" id="11" lemma="toe_schijnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="schijn_toe" word="toeschijnt" wvorm="pv"/>
         </node>
       </node>
     </node>

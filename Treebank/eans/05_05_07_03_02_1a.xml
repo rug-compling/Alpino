@@ -2,18 +2,18 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-      <node begin="1" end="2" id="3" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" word="heb" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
       <node begin="0" cat="ppart" end="5" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
         <node begin="2" cat="np" end="4" id="6" rel="obj1">
-          <node begin="2" end="3" getal="ev" graad="basis" id="7" infl="pron" lemma="Jan" naamval="gen" neclass="PER" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Jan" special="name" word="Jans"/>
-          <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lemma="fiets" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="fiets" word="fiets"/>
+          <node begin="2" end="3" getal="ev" graad="basis" id="7" lemma="Jan" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Jan" word="Jans"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="fiets" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fiets" word="fiets"/>
         </node>
-        <node begin="4" buiging="zonder" end="5" id="9" infl="psp" lemma="verkopen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verkoop" sc="transitive" word="verkocht" wvorm="vd"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="verkopen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verkoop" word="verkocht" wvorm="vd"/>
       </node>
     </node>
-    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ik heb Jans fiets verkocht .</sentence>
 </alpino_ds>

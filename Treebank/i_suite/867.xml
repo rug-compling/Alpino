@@ -2,16 +2,16 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="2" index="1" lemma="zij" naamval="nomin" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" rnum="pl" root="zij" status="vol" vwtype="pers" wh="nwh" word="Zij"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="present" word="moeten" wvorm="pv"/>
+      <node begin="0" end="1" getal="mv" id="2" index="1" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="Zij"/>
+      <node begin="1" end="2" id="3" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" word="moeten" wvorm="pv"/>
       <node begin="0" cat="inf" end="6" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
         <node begin="2" cat="mwu" end="4" id="6" rel="obj1">
-          <node begin="2" buiging="zonder" case="dat_acc" def="def" end="3" gen="de" getal="mv" id="7" lemma="hun" naamval="stan" npagr="agr" num="pl" pdtype="det" per="thi" persoon="3" pos="pron" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="mwp" rnum="pl" root="hun" status="vol" vwtype="bez" wh="nwh" word="hun"/>
-          <node begin="3" buiging="zonder" case="dat_acc" def="def" end="4" gen="de" getal-n="zonder-n" graad="basis" id="8" lemma="eigen" num="pl" per="thi" pos="pron" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="mwp" rnum="pl" root="eigen" wh="nwh" word="eigen"/>
+          <node begin="2" buiging="zonder" end="3" getal="mv" id="7" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="pron" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="mwp" root="hun" status="vol" vwtype="bez" word="hun"/>
+          <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" graad="basis" id="8" lemma="eigen" pos="pron" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="mwp" root="eigen" word="eigen"/>
         </node>
-        <node aform="compar" begin="4" buiging="zonder" end="5" graad="comp" id="9" infl="no_e" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="goed" vform="adj" word="beter"/>
-        <node begin="5" buiging="zonder" end="6" id="10" infl="inf" lemma="verzorgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verzorg" sc="transitive" word="verzorgen" wvorm="inf"/>
+        <node begin="4" buiging="zonder" end="5" graad="comp" id="9" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="goed" word="beter"/>
+        <node begin="5" buiging="zonder" end="6" id="10" lemma="verzorgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verzorg" word="verzorgen" wvorm="inf"/>
       </node>
     </node>
   </node>

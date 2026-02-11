@@ -3,24 +3,24 @@
   <node begin="0" cat="top" end="10" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="boek_handelaar" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="boek_handelaar" word="boekhandelaar"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="boek_handelaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="boek_handelaar" word="boekhandelaar"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="verkopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verkoop" sc="np_np" stype="declarative" tense="past" word="verkocht" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="verkopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verkoop" word="verkocht" wvorm="pv"/>
       <node begin="3" cat="mwu" end="5" id="6" rel="obj2">
-        <node begin="3" end="4" id="7" lemma="Harry" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Harry" spectype="deeleigen" word="Harry"/>
-        <node begin="4" end="5" id="8" lemma="Mulisch" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Mulisch" spectype="deeleigen" word="Mulisch"/>
+        <node begin="3" end="4" id="7" lemma="Harry" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Harry" spectype="deeleigen" word="Harry"/>
+        <node begin="4" end="5" id="8" lemma="Mulisch" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mulisch" spectype="deeleigen" word="Mulisch"/>
       </node>
       <node begin="5" cat="np" end="9" id="9" rel="obj1">
-        <node begin="5" end="6" id="10" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="boek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="boek" word="boek"/>
+        <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="boek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="boek" word="boek"/>
         <node begin="7" cat="pp" end="9" id="12" rel="mod">
           <node begin="7" end="8" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-          <node begin="8" case="dat_acc" def="def" end="9" gen="de" genus="masc" getal="ev" id="14" lemma="hemzelf" naamval="obl" num="sg" pdtype="pron" per="thi" persoon="3m" pos="pron" postag="VNW(pers,pron,obl,nadr,3m,ev,masc)" pt="vnw" rel="obj1" rnum="sg" root="hemzelf" status="nadr" vwtype="pers" wh="nwh" word="hemzelf"/>
+          <node begin="8" end="9" genus="masc" getal="ev" id="14" lemma="hemzelf" naamval="obl" pdtype="pron" persoon="3m" pos="pron" postag="VNW(pers,pron,obl,nadr,3m,ev,masc)" pt="vnw" rel="obj1" root="hemzelf" status="nadr" vwtype="pers" word="hemzelf"/>
         </node>
       </node>
     </node>
-    <node begin="9" end="10" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="9" end="10" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De boekhandelaar verkocht Harry Mulisch een boek van hemzelf .</sentence>
 </alpino_ds>

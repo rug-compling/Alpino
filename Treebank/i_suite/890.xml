@@ -3,14 +3,14 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="Zijn"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="dag" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="dag" special="tmp" word="dagen"/>
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="Zijn"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="dag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dag" word="dagen"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="lijken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="lijk" sc="dat_passive" stype="declarative" tense="present" word="lijken" wvorm="pv"/>
-      <node begin="3" case="dat_acc" def="def" end="4" gen="de" getal="ev" id="6" lemma="mij" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" rnum="sg" root="mij" status="vol" vwtype="pr" wh="nwh" word="mij"/>
+      <node begin="2" end="3" id="5" lemma="lijken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="lijk" word="lijken" wvorm="pv"/>
+      <node begin="3" end="4" getal="ev" id="6" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" root="mij" status="vol" vwtype="pr" word="mij"/>
       <node begin="0" cat="ppart" end="5" id="7" rel="vc">
         <node begin="0" end="2" id="8" index="1" rel="obj1"/>
-        <node begin="4" buiging="zonder" end="5" id="9" infl="psp" lemma="tellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="tel" sc="transitive" word="geteld" wvorm="vd"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="tellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="tel" word="geteld" wvorm="vd"/>
       </node>
     </node>
   </node>

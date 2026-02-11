@@ -2,22 +2,22 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Johan" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Johan" word="Johan"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="zien" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zie" sc="aci" stype="declarative" tense="past" word="zag" wvorm="pv"/>
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Johan" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Johan" word="Johan"/>
+      <node begin="1" end="2" id="3" lemma="zien" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zie" word="zag" wvorm="pv"/>
       <node begin="2" cat="np" end="4" id="4" index="1" rel="obj1">
-        <node begin="2" end="3" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="agent" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="agent" word="agent"/>
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="agent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="agent" word="agent"/>
       </node>
       <node begin="2" cat="inf" end="7" id="7" rel="vc">
         <node begin="2" end="4" id="8" index="1" rel="su"/>
         <node begin="4" cat="pp" end="6" id="9" rel="pc">
           <node begin="4" end="5" id="10" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-          <node begin="5" case="dat_acc" def="def" end="6" gen="de" genus="masc" getal="ev" id="11" lemma="hem" naamval="obl" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" rnum="sg" root="hem" status="vol" vwtype="pers" wh="nwh" word="hem"/>
+          <node begin="5" end="6" genus="masc" getal="ev" id="11" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
         </node>
-        <node begin="6" buiging="zonder" end="7" id="12" infl="inf" lemma="af_komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom_af" sc="part_pc_pp(af,op)" word="afkomen" wvorm="inf"/>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="af_komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom_af" word="afkomen" wvorm="inf"/>
       </node>
     </node>
-    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Johan zag de agent op hem afkomen .</sentence>
 </alpino_ds>

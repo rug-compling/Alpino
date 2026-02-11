@@ -2,16 +2,16 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
-      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="is" wvorm="pv"/>
-      <node begin="2" end="3" genus="onz" getal="ev" id="4" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="predc" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" end="3" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="predc" root="het" status="red" vwtype="pers" word="het"/>
       <node begin="3" cat="np" end="6" id="5" rel="mod">
-        <node begin="3" end="4" id="6" lemma="pas" pos="adv" postag="BW()" pt="bw" rel="mod" root="pas" sc="modal" word="pas"/>
-        <node begin="4" end="5" id="7" infl="pl_num" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" special="hoofd" word="twee"/>
-        <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="8" lemma="maand" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="maand" special="tmp" word="maanden"/>
+        <node begin="3" end="4" id="6" lemma="pas" pos="adv" postag="BW()" pt="bw" rel="mod" root="pas" word="pas"/>
+        <node begin="4" end="5" id="7" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+        <node begin="5" end="6" getal="mv" graad="basis" id="8" lemma="maand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="maand" word="maanden"/>
       </node>
     </node>
-    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Hij is het pas twee maanden .</sentence>
 </alpino_ds>

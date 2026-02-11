@@ -5,28 +5,28 @@
       <node begin="0" conjtype="onder" end="1" id="2" lemma="zodat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zodat" word="Zodat"/>
       <node begin="1" cat="ssub" end="10" id="3" rel="body">
         <node begin="1" cat="np" end="8" id="4" index="1" rel="su">
-          <node begin="1" end="2" id="5" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="kern_temperatuur" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="kern_temperatuur" word="kerntemperatuur"/>
+          <node begin="1" end="2" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="kern_temperatuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kern_temperatuur" word="kerntemperatuur"/>
           <node begin="3" cat="pp" end="8" id="7" rel="mod">
             <node begin="3" end="4" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="4" cat="conj" end="8" id="9" rel="obj1">
               <node begin="4" cat="np" end="6" id="10" rel="cnj">
-                <node begin="4" end="5" id="11" infl="pl_num" lemma="-7" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="-7" word="-7"/>
-                <node begin="5" end="6" gen="both" id="12" lemma="°C" num="meas" pos="noun" postag="SPEC(symb)" pt="spec" rel="hd" rnum="sg" root="°C" special="meas_mod" spectype="symb" word="°C"/>
+                <node begin="4" end="5" id="11" lemma="-7" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="-7" word="-7"/>
+                <node begin="5" end="6" id="12" lemma="°C" pos="noun" postag="SPEC(symb)" pt="spec" rel="hd" root="°C" spectype="symb" word="°C"/>
               </node>
               <node begin="6" conjtype="neven" end="7" id="13" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
-              <node aform="compar" begin="7" buiging="zonder" end="8" graad="comp" id="14" infl="no_e" lemma="koud" pos="adj" positie="prenom" postag="ADJ(prenom,comp,zonder)" pt="adj" rel="cnj" root="koud" vform="adj" word="kouder"/>
+              <node begin="7" buiging="zonder" end="8" graad="comp" id="14" lemma="koud" pos="adj" positie="prenom" postag="ADJ(prenom,comp,zonder)" pt="adj" rel="cnj" root="koud" word="kouder"/>
             </node>
           </node>
         </node>
-        <node begin="8" end="9" id="15" infl="sg3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" sc="passive" tense="present" v_per="thi" word="wordt" wvorm="pv"/>
+        <node begin="8" end="9" id="15" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
         <node begin="1" cat="ppart" end="10" id="16" rel="vc">
           <node begin="1" end="8" id="17" index="1" rel="obj1"/>
-          <node begin="9" buiging="zonder" end="10" id="18" infl="psp" lemma="bereiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bereik" sc="transitive" word="bereikt" wvorm="vd"/>
+          <node begin="9" buiging="zonder" end="10" id="18" lemma="bereiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bereik" word="bereikt" wvorm="vd"/>
         </node>
       </node>
     </node>
-    <node begin="10" end="11" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="10" end="11" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Zodat een kerntemperatuur van -7 °C of kouder wordt bereikt .</sentence>
 </alpino_ds>

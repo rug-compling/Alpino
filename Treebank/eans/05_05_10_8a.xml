@@ -2,30 +2,30 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="12" id="0" rel="top">
     <node begin="0" cat="smain" end="11" id="1" rel="--">
-      <node begin="3" end="4" id="2" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" word="heeft" wvorm="pv"/>
-      <node begin="4" case="nom" def="def" end="5" gen="de" genus="masc" getal="ev" id="3" index="1" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="3" end="4" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="4" end="5" genus="masc" getal="ev" id="3" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
       <node begin="0" cat="ppart" end="11" id="4" rel="vc">
         <node begin="0" cat="pp" end="3" id="5" rel="mod">
           <node begin="0" end="1" id="6" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="Met"/>
           <node begin="1" cat="np" end="3" id="7" rel="obj1">
-            <node begin="1" buiging="zonder" end="2" id="8" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="die"/>
-            <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="affaire" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="affaire" word="affaire"/>
+            <node begin="1" buiging="zonder" end="2" id="8" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="affaire" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="affaire" word="affaire"/>
           </node>
         </node>
         <node begin="4" end="5" id="10" index="1" rel="su"/>
-        <node begin="5" case="dat_acc" def="def" end="6" gen="de" getal="getal" id="11" lemma="zich" naamval="obl" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" rnum="sg" root="zich" special="wkpro" status="red" vwtype="refl" wh="nwh" word="zich"/>
-        <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="12" infl="no_e" lemma="lelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="lelijk" vform="adj" word="lelijk"/>
+        <node begin="5" end="6" getal="getal" id="11" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
+        <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="lelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="lelijk" word="lelijk"/>
         <node begin="7" cat="pp" end="10" id="13" rel="ld">
           <node begin="7" end="8" id="14" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="8" cat="np" end="10" id="15" rel="obj1">
-            <node begin="8" end="9" id="16" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="9" end="10" gen="de" getal="mv" graad="basis" id="17" lemma="vinger" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="vinger" word="vingers"/>
+            <node begin="8" end="9" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="9" end="10" getal="mv" graad="basis" id="17" lemma="vinger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vinger" word="vingers"/>
           </node>
         </node>
-        <node begin="10" buiging="zonder" end="11" id="18" infl="psp" lemma="snijden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="snijd" sc="np_ld_pp" word="gesneden" wvorm="vd"/>
+        <node begin="10" buiging="zonder" end="11" id="18" lemma="snijden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="snijd" word="gesneden" wvorm="vd"/>
       </node>
     </node>
-    <node begin="11" end="12" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Met die affaire heeft hij zich lelijk in de vingers gesneden .</sentence>
 </alpino_ds>

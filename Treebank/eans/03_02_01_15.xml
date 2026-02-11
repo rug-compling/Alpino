@@ -2,14 +2,14 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="sv1" end="4" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="sg3" lemma="houden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="houd" sc="pc_pp(van)" stype="ynquestion" tense="present" word="Houdt" wvorm="pv"/>
-      <node begin="1" case="both" def="def" end="2" gen="de" getal="getal" id="3" lemma="u" naamval="nomin" num="sg" pdtype="pron" per="u" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" rnum="sg" root="u" status="vol" vwtype="pers" wh="nwh" word="u"/>
+      <node begin="0" end="1" id="2" lemma="houden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="houd" word="Houdt" wvorm="pv"/>
+      <node begin="1" end="2" getal="getal" id="3" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
       <node begin="2" cat="pp" end="4" id="4" rel="pc">
         <node begin="2" end="3" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="Brahms" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="Brahms" word="Brahms"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="Brahms" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Brahms" word="Brahms"/>
       </node>
     </node>
-    <node begin="4" end="5" id="7" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="4" end="5" id="7" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Houdt u van Brahms ?</sentence>
 </alpino_ds>

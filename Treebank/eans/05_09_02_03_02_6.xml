@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="16" id="0" rel="top">
-    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="conj" end="15" id="2" rel="--">
       <node begin="0" cat="smain" end="7" id="3" rel="cnj">
         <node begin="0" cat="np" end="2" id="4" rel="su">
-          <node begin="0" buiging="zonder" end="1" id="5" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="Die"/>
-          <node begin="1" end="2" gen="het" getal="mv" graad="basis" id="6" lemma="boek" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="boek" word="boeken"/>
+          <node begin="0" buiging="zonder" end="1" id="5" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
+          <node begin="1" end="2" getal="mv" graad="basis" id="6" lemma="boek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="boek" word="boeken"/>
         </node>
-        <node begin="2" end="3" id="7" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="pc_pp(van)" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
-        <node begin="3" end="4" id="8" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="mod" root="dus" special="sentence" word="dus"/>
+        <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="3" end="4" id="8" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="mod" root="dus" word="dus"/>
         <node begin="4" cat="pp" end="7" id="9" rel="pc">
           <node begin="4" end="5" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="5" cat="np" end="7" id="11" rel="obj1">
-            <node begin="5" end="6" id="12" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-            <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="13" lemma="instituut" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="instituut" word="instituut"/>
+            <node begin="5" end="6" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="instituut" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="instituut" word="instituut"/>
           </node>
         </node>
       </node>
       <node begin="8" conjtype="neven" end="9" id="14" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
       <node begin="9" cat="whq" end="15" id="15" rel="cnj">
-        <node begin="9" end="10" getal="getal" id="16" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="whd" root="waar" special="er_loc" status="vol" vwtype="vb" wh="ywh" word="waar"/>
+        <node begin="9" end="10" getal="getal" id="16" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="whd" root="waar" status="vol" vwtype="vb" word="waar"/>
         <node begin="9" cat="sv1" end="15" id="17" rel="body">
           <node begin="9" end="10" id="18" index="1" rel="ld"/>
-          <node begin="10" end="11" id="19" infl="pl" lemma="staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" sc="ld_adv" stype="whquestion" tense="present" word="staan" wvorm="pv"/>
+          <node begin="10" end="11" id="19" lemma="staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" word="staan" wvorm="pv"/>
           <node begin="11" cat="np" end="13" id="20" rel="su">
-            <node begin="11" end="12" id="21" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="12" buiging="met-e" end="13" gen="both" getal="ev" getal-n="zonder-n" id="22" lemma="jou" naamval="stan" num="both" pdtype="det" persoon="2v" pos="noun" positie="nom" postag="VNW(bez,det,stan,vol,2v,ev,nom,met-e,zonder-n)" pt="vnw" rel="hd" rnum="pl" root="jouwe" status="vol" vwtype="bez" word="jouwe"/>
+            <node begin="11" end="12" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="12" buiging="met-e" end="13" getal="ev" getal-n="zonder-n" id="22" lemma="jou" naamval="stan" pdtype="det" persoon="2v" pos="noun" positie="nom" postag="VNW(bez,det,stan,vol,2v,ev,nom,met-e,zonder-n)" pt="vnw" rel="hd" root="jouwe" status="vol" vwtype="bez" word="jouwe"/>
           </node>
-          <node begin="13" end="14" id="23" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
-          <node begin="14" end="15" id="24" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="predm" root="allemaal" special="predm" word="allemaal"/>
+          <node begin="13" end="14" id="23" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+          <node begin="14" end="15" id="24" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="predm" root="allemaal" word="allemaal"/>
         </node>
       </node>
     </node>
-    <node begin="15" end="16" id="25" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="15" end="16" id="25" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Die boeken zijn dus van het instituut , maar waar staan de jouwe dan allemaal ?</sentence>
 </alpino_ds>

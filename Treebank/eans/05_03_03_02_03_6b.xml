@@ -2,22 +2,22 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="2" index="1" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="We"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="present" word="moeten" wvorm="pv"/>
+      <node begin="0" end="1" getal="mv" id="2" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="We"/>
+      <node begin="1" end="2" id="3" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" word="moeten" wvorm="pv"/>
       <node begin="0" cat="inf" end="7" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
         <node begin="2" cat="np" end="4" id="6" rel="obj1">
-          <node begin="2" buiging="zonder" end="3" id="7" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="die"/>
-          <node begin="3" end="4" gen="het" getal="mv" graad="basis" id="8" lemma="jong" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="jong" word="jongen"/>
+          <node begin="2" buiging="zonder" end="3" id="7" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="jong" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jong" word="jongen"/>
         </node>
         <node begin="4" cat="pp" end="6" id="9" rel="pc">
           <node begin="4" end="5" id="10" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
-          <node begin="5" case="dat_acc" def="def" end="6" gen="de" genus="masc" getal="ev" id="11" lemma="hemzelf" naamval="obl" num="sg" pdtype="pron" per="thi" persoon="3m" pos="pron" postag="VNW(pers,pron,obl,nadr,3m,ev,masc)" pt="vnw" rel="obj1" rnum="sg" root="hemzelf" status="nadr" vwtype="pers" wh="nwh" word="hemzelf"/>
+          <node begin="5" end="6" genus="masc" getal="ev" id="11" lemma="hemzelf" naamval="obl" pdtype="pron" persoon="3m" pos="pron" postag="VNW(pers,pron,obl,nadr,3m,ev,masc)" pt="vnw" rel="obj1" root="hemzelf" status="nadr" vwtype="pers" word="hemzelf"/>
         </node>
-        <node begin="6" buiging="zonder" end="7" id="12" infl="inf" lemma="beschermen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bescherm" sc="np_pc_pp(tegen)" word="beschermen" wvorm="inf"/>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="beschermen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bescherm" word="beschermen" wvorm="inf"/>
       </node>
     </node>
-    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>We moeten die jongen tegen hemzelf beschermen .</sentence>
 </alpino_ds>

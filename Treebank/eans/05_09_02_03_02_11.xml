@@ -3,18 +3,18 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="Die"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="rommel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="rommel" word="rommel"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="rommel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rommel" word="rommel"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" word="is" wvorm="pv"/>
-      <node begin="4" end="5" id="6" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="predm" root="allemaal" special="predm" word="allemaal"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="4" end="5" id="6" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="predm" root="allemaal" word="allemaal"/>
       <node begin="0" cat="ppart" end="6" id="7" rel="vc">
         <node begin="0" end="2" id="8" index="1" rel="obj1"/>
-        <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="9" infl="no_e" lemma="gelukkig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="gelukkig" vform="adj" word="gelukkig"/>
-        <node begin="5" buiging="zonder" end="6" id="10" infl="psp" lemma="op_ruimen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ruim_op" sc="part_transitive(op)" word="opgeruimd" wvorm="vd"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="9" lemma="gelukkig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="gelukkig" word="gelukkig"/>
+        <node begin="5" buiging="zonder" end="6" id="10" lemma="op_ruimen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ruim_op" word="opgeruimd" wvorm="vd"/>
       </node>
     </node>
-    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Die rommel is gelukkig allemaal opgeruimd .</sentence>
 </alpino_ds>

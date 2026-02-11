@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="16" id="0" rel="top">
-    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="sv1" end="15" id="2" rel="--">
-      <node begin="0" end="1" id="3" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="topic_drop" tense="present" word="Zijn" wvorm="pv"/>
-      <node begin="1" end="2" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="0" end="1" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="Zijn" wvorm="pv"/>
+      <node begin="1" end="2" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
       <node begin="2" end="3" id="5" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
       <node begin="3" cat="np" end="15" id="6" rel="predc">
-        <node begin="3" end="4" id="7" infl="wat" lemma="genoeg" pos="det" postag="BW()" pt="bw" rel="det" root="genoeg" wh="nwh" word="genoeg"/>
-        <node begin="4" end="5" gen="both" getal="mv" graad="basis" id="8" lemma="mens" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="mens" word="mensen"/>
+        <node begin="3" end="4" id="7" lemma="genoeg" pos="det" postag="BW()" pt="bw" rel="det" root="genoeg" word="genoeg"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="mens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mens" word="mensen"/>
         <node begin="5" cat="rel" end="15" id="9" rel="mod">
-          <node begin="5" case="no_obl" end="6" gen="de" getal="getal" id="10" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="pl" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="5" end="6" getal="getal" id="10" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="5" cat="ssub" end="15" id="11" rel="body">
             <node begin="5" end="6" id="12" index="1" rel="su"/>
-            <node begin="6" end="7" id="13" infl="pl" lemma="beweren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="beweer" sc="tr_sbar" tense="present" word="beweren" wvorm="pv"/>
+            <node begin="6" end="7" id="13" lemma="beweren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="beweer" word="beweren" wvorm="pv"/>
             <node begin="8" cat="cp" end="15" id="14" rel="vc">
-              <node begin="8" conjtype="onder" end="9" id="15" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+              <node begin="8" conjtype="onder" end="9" id="15" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
               <node begin="9" cat="ssub" end="15" id="16" rel="body">
-                <node begin="9" case="nom" def="def" end="10" gen="de" getal="mv" id="17" index="2" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
-                <node begin="13" end="14" id="18" infl="pl" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" tense="present" word="kunnen" wvorm="pv"/>
+                <node begin="9" end="10" getal="mv" id="17" index="2" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+                <node begin="13" end="14" id="18" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
                 <node begin="9" cat="inf" end="15" id="19" rel="vc">
                   <node begin="9" end="10" id="20" index="2" rel="su"/>
                   <node begin="10" end="11" id="21" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
                   <node begin="11" end="12" id="22" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
                   <node begin="12" end="13" id="23" lemma="door" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="door" vztype="fin" word="door"/>
-                  <node begin="14" buiging="zonder" end="15" id="24" infl="inf(no_e)" lemma="door_gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga_door" sc="part_intransitive(door)" word="gaan" wvorm="inf"/>
+                  <node begin="14" buiging="zonder" end="15" id="24" lemma="door_gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga_door" word="gaan" wvorm="inf"/>
                 </node>
               </node>
             </node>
@@ -32,7 +32,7 @@
         </node>
       </node>
     </node>
-    <node begin="15" end="16" id="25" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="15" end="16" id="25" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Zijn er niet genoeg mensen die beweren , dat we zo niet door kunnen gaan ?</sentence>
 </alpino_ds>

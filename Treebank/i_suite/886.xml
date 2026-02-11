@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="17" id="0" rel="top">
-    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="16" id="2" rel="--">
       <node begin="0" cat="cp" end="5" id="3" rel="su">
-        <node begin="0" conjtype="onder" end="1" id="4" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="Dat"/>
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="Dat"/>
         <node begin="1" cat="ssub" end="5" id="5" rel="body">
-          <node begin="1" end="2" getal="ev" id="6" infl="het" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dit" status="vol" vwtype="aanw" wh="nwh" word="dit"/>
-          <node begin="2" end="3" id="7" lemma="vandaag" pos="adv" postag="BW()" pt="bw" rel="mod" root="vandaag" special="tmp" word="vandaag"/>
-          <node aform="base" begin="3" end="4" id="8" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
-          <node begin="4" end="5" id="9" infl="sg3" lemma="gebeuren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="gebeur" sc="intransitive" tense="present" word="gebeurt" wvorm="pv"/>
+          <node begin="1" end="2" getal="ev" id="6" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dit" status="vol" vwtype="aanw" word="dit"/>
+          <node begin="2" end="3" id="7" lemma="vandaag" pos="adv" postag="BW()" pt="bw" rel="mod" root="vandaag" word="vandaag"/>
+          <node begin="3" end="4" id="8" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+          <node begin="4" end="5" id="9" lemma="gebeuren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="gebeur" word="gebeurt" wvorm="pv"/>
         </node>
       </node>
-      <node begin="6" end="7" id="10" infl="sg3" lemma="bewijzen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="bewijs" sc="sbar_sbar_subj" stype="declarative" tense="present" word="bewijst" wvorm="pv"/>
+      <node begin="6" end="7" id="10" lemma="bewijzen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="bewijs" word="bewijst" wvorm="pv"/>
       <node begin="7" cat="cp" end="16" id="11" rel="vc">
-        <node begin="7" conjtype="onder" end="8" id="12" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="7" conjtype="onder" end="8" id="12" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="8" cat="ssub" end="16" id="13" rel="body">
           <node begin="8" cat="np" end="12" id="14" rel="su">
-            <node begin="8" end="9" id="15" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="9" end="10" gen="de" genus="zijd" getal="ev" graad="basis" id="16" lemma="regering" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="regering" word="regering"/>
+            <node begin="8" end="9" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="regering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regering" word="regering"/>
             <node begin="10" cat="pp" end="12" id="17" rel="mod">
               <node begin="10" end="11" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="Sharon" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="Sharon" word="Sharon"/>
+              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="Sharon" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Sharon" word="Sharon"/>
             </node>
           </node>
           <node begin="12" cat="np" end="15" id="20" rel="obj1">
-            <node begin="12" end="13" gen="de" getal="mv" graad="basis" id="21" lemma="grens" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="grens" word="grenzen"/>
+            <node begin="12" end="13" getal="mv" graad="basis" id="21" lemma="grens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="grens" word="grenzen"/>
             <node begin="13" cat="pp" end="15" id="22" rel="mod">
               <node begin="13" end="14" id="23" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-              <node begin="14" end="15" gen="de" genus="zijd" getal="ev" graad="basis" id="24" lemma="menselijkheid" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="menselijkheid" word="menselijkheid"/>
+              <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="24" lemma="menselijkheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="menselijkheid" word="menselijkheid"/>
             </node>
           </node>
-          <node begin="15" end="16" id="25" infl="sg3" lemma="overschrijden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="overschrijd" sc="transitive" tense="present" word="overschrijdt" wvorm="pv"/>
+          <node begin="15" end="16" id="25" lemma="overschrijden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="overschrijd" word="overschrijdt" wvorm="pv"/>
         </node>
       </node>
     </node>
-    <node begin="16" end="17" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="16" end="17" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Dat dit vandaag wel gebeurt , bewijst dat de regering van Sharon grenzen van menselijkheid overschrijdt .</sentence>
 </alpino_ds>

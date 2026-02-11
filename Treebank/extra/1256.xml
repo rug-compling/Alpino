@@ -2,29 +2,29 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="11" id="0" rel="top">
     <node begin="0" cat="smain" end="10" id="1" rel="--">
-      <node begin="2" end="3" id="2" infl="sg3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" sc="passive" stype="declarative" tense="present" word="wordt" wvorm="pv"/>
+      <node begin="2" end="3" id="2" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
       <node begin="3" cat="np" end="9" id="3" index="1" rel="su">
-        <node begin="3" end="4" id="4" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node aform="compar" begin="4" buiging="met-e" end="5" graad="comp" id="5" infl="e" lemma="ver" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="ver" vform="adj" word="verdere"/>
-        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="stijging" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="stijging" word="stijging"/>
+        <node begin="3" end="4" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="4" buiging="met-e" end="5" graad="comp" id="5" lemma="ver" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="ver" word="verdere"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="6" lemma="stijging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stijging" word="stijging"/>
         <node begin="6" cat="pp" end="9" id="7" rel="mod">
           <node begin="6" end="7" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="7" cat="np" end="9" id="9" rel="obj1">
-            <node begin="7" buiging="zonder" end="8" id="10" infl="het" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" wh="nwh" word="dit"/>
-            <node begin="8" end="9" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="aantal" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="aantal" word="aantal"/>
+            <node begin="7" buiging="zonder" end="8" id="10" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="11" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
           </node>
         </node>
       </node>
       <node begin="0" cat="ppart" end="10" id="12" rel="vc">
         <node begin="0" cat="pp" end="2" id="13" rel="mod">
           <node begin="0" end="1" id="14" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="Voor"/>
-          <node begin="1" end="2" id="15" lemma="1994" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" rnum="sg" root="1994" word="1994"/>
+          <node begin="1" end="2" id="15" lemma="1994" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1994" word="1994"/>
         </node>
         <node begin="3" end="9" id="16" index="1" rel="obj1"/>
-        <node begin="9" buiging="zonder" end="10" id="17" infl="psp" lemma="verwachten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verwacht" sc="transitive" word="verwacht" wvorm="vd"/>
+        <node begin="9" buiging="zonder" end="10" id="17" lemma="verwachten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verwacht" word="verwacht" wvorm="vd"/>
       </node>
     </node>
-    <node begin="10" end="11" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="10" end="11" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Voor 1994 wordt een verdere stijging van dit aantal verwacht .</sentence>
 </alpino_ds>

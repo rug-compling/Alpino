@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="15" id="0" rel="top">
-    <node begin="7" end="8" id="1" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" special="punt_komma" word=";"/>
+    <node begin="7" end="8" id="1" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
     <node begin="0" cat="du" end="14" id="2" rel="--">
       <node begin="0" cat="smain" end="7" id="3" rel="dp">
         <node begin="0" cat="np" end="4" id="4" rel="su">
-          <node begin="0" end="1" gen="de" getal="mv" graad="basis" id="5" lemma="wacht_tijd" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="wacht_tijd" special="tmp" word="Wachttijden"/>
+          <node begin="0" end="1" getal="mv" graad="basis" id="5" lemma="wacht_tijd" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wacht_tijd" word="Wachttijden"/>
           <node begin="1" cat="pp" end="4" id="6" rel="mod">
             <node begin="1" end="2" id="7" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
             <node begin="2" cat="np" end="4" id="8" rel="obj1">
-              <node begin="2" end="3" id="9" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="veiligheid_controle" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="veiligheid_controle" word="veiligheidscontrole"/>
+              <node begin="2" end="3" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="veiligheid_controle" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="veiligheid_controle" word="veiligheidscontrole"/>
             </node>
           </node>
         </node>
-        <node begin="4" end="5" id="11" infl="pl" lemma="op_lopen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="loop_op" sc="part_intransitive(op)" stype="declarative" tense="past" v_per="thi" word="liepen" wvorm="pv"/>
-        <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="12" infl="no_e" lemma="sterk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="sterk" vform="adj" word="sterk"/>
+        <node begin="4" end="5" id="11" lemma="op_lopen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="loop_op" word="liepen" wvorm="pv"/>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="12" lemma="sterk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="sterk" word="sterk"/>
         <node begin="6" end="7" id="13" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
       </node>
       <node begin="8" cat="smain" end="14" id="14" rel="dp">
-        <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="Schiphol" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" rnum="sg" root="Schiphol" word="Schiphol"/>
-        <node begin="9" end="10" id="16" infl="sg" lemma="verzoeken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verzoek" sc="np_vp_obj" stype="declarative" tense="past" v_per="thi" word="verzocht" wvorm="pv"/>
-        <node begin="10" end="11" gen="de" getal="mv" graad="basis" id="17" index="1" lemma="luchtvaart_maatschappij" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj2" rnum="pl" root="luchtvaart_maatschappij" word="luchtvaartmaatschappijen"/>
+        <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="Schiphol" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Schiphol" word="Schiphol"/>
+        <node begin="9" end="10" id="16" lemma="verzoeken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verzoek" word="verzocht" wvorm="pv"/>
+        <node begin="10" end="11" getal="mv" graad="basis" id="17" index="1" lemma="luchtvaart_maatschappij" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj2" root="luchtvaart_maatschappij" word="luchtvaartmaatschappijen"/>
         <node begin="10" cat="ti" end="14" id="18" rel="vc">
-          <node begin="12" end="13" id="19" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+          <node begin="12" end="13" id="19" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
           <node begin="10" cat="inf" end="14" id="20" rel="body">
             <node begin="10" end="11" id="21" index="1" rel="su"/>
-            <node begin="11" end="12" gen="de" getal="mv" graad="basis" id="22" lemma="vlucht" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" rnum="pl" root="vlucht" word="vluchten"/>
-            <node begin="13" buiging="zonder" end="14" id="23" infl="inf" lemma="annuleren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="annuleer" sc="transitive" word="annuleren" wvorm="inf"/>
+            <node begin="11" end="12" getal="mv" graad="basis" id="22" lemma="vlucht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="vlucht" word="vluchten"/>
+            <node begin="13" buiging="zonder" end="14" id="23" lemma="annuleren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="annuleer" word="annuleren" wvorm="inf"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Wachttijden bij de veiligheidscontrole liepen sterk op ; Schiphol verzocht luchtvaartmaatschappijen vluchten te annuleren .</sentence>
 </alpino_ds>

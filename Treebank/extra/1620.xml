@@ -3,22 +3,22 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="5" id="2" rel="su">
-        <node begin="0" buiging="met-e" end="1" id="3" infl="alle" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="al" vwtype="onbep" wh="nwh" word="Alle"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="hoogleraar" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="hoogleraar" word="hoogleraren"/>
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="al" vwtype="onbep" word="Alle"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="hoogleraar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hoogleraar" word="hoogleraren"/>
         <node begin="2" cat="rel" end="5" id="5" rel="mod">
-          <node begin="2" case="no_obl" end="3" gen="de" getal="getal" id="6" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="pl" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="2" end="3" getal="getal" id="6" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="2" cat="ssub" end="5" id="7" rel="body">
             <node begin="2" end="3" id="8" index="1" rel="obj1"/>
-            <node begin="3" case="nom" def="def" end="4" gen="de" getal="ev" id="9" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
-            <node begin="4" end="5" id="10" infl="sg1" lemma="kennen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ken" sc="transitive" tense="present" word="ken" wvorm="pv"/>
+            <node begin="3" end="4" getal="ev" id="9" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+            <node begin="4" end="5" id="10" lemma="kennen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ken" word="ken" wvorm="pv"/>
           </node>
         </node>
       </node>
-      <node begin="5" end="6" id="11" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
-      <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="12" infl="no_e" lemma="olie_dom" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="olie_dom" vform="adj" word="oliedom"/>
+      <node begin="5" end="6" id="11" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="olie_dom" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="olie_dom" word="oliedom"/>
     </node>
-    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
-    <node begin="8" end="9" id="14" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="8" end="9" id="14" lemma="'" pos="punct" postag="LET()" pt="let" rel="--" root="'" word="'"/>
   </node>
   <sentence>Alle hoogleraren die ik ken zijn oliedom . &apos;</sentence>
 </alpino_ds>

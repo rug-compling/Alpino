@@ -3,17 +3,17 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" infl="pron" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="Mijn"/>
-        <node begin="1" end="2" gen="het" getal="mv" graad="dim" id="4" lemma="dochter" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" rnum="pl" root="dochter_DIM" word="dochtertjes"/>
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="Mijn"/>
+        <node begin="1" end="2" getal="mv" graad="dim" id="4" lemma="dochter" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="dochter_DIM" word="dochtertjes"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="vertellen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vertel" sc="np_np" stype="declarative" tense="present" word="vertellen" wvorm="pv"/>
-      <node begin="3" case="dat_acc" def="def" end="4" gen="de" getal="mv" id="6" lemma="elkaar" naamval="obl" num="pl" pdtype="pron" per="thi" persoon="persoon" pos="pron" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj2" rnum="pl" root="elkaar" status="vol" vwtype="recip" wh="nwh" word="elkaar"/>
+      <node begin="2" end="3" id="5" lemma="vertellen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vertel" word="vertellen" wvorm="pv"/>
+      <node begin="3" end="4" getal="mv" id="6" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj2" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
       <node begin="4" cat="np" end="6" id="7" rel="obj1">
-        <node aform="base" begin="4" buiging="met-e" end="5" graad="basis" id="8" infl="e" lemma="wild" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="wild" vform="adj" word="wilde"/>
-        <node begin="5" end="6" gen="het" getal="mv" graad="basis" id="9" lemma="verhaal" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="verhaal" word="verhalen"/>
+        <node begin="4" buiging="met-e" end="5" graad="basis" id="8" lemma="wild" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="wild" word="wilde"/>
+        <node begin="5" end="6" getal="mv" graad="basis" id="9" lemma="verhaal" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verhaal" word="verhalen"/>
       </node>
     </node>
-    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Mijn dochtertjes vertellen elkaar wilde verhalen .</sentence>
 </alpino_ds>

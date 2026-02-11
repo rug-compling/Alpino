@@ -3,13 +3,13 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="np" end="4" id="1" rel="--">
       <node begin="0" cat="detp" end="2" id="2" rel="det">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="al" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" special="pre_det_quant" vwtype="onbep" word="Al"/>
-        <node begin="1" buiging="zonder" end="2" id="4" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="hd" root="die" vwtype="aanw" wh="nwh" word="die"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" vwtype="onbep" word="Al"/>
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="hd" root="die" vwtype="aanw" word="die"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl_num" lemma="negentig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="negentig" special="hoofd" word="negentig"/>
-      <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="6" lemma="gijzelaar" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="gijzelaar" word="gijzelaars"/>
+      <node begin="2" end="3" id="5" lemma="negentig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="negentig" word="negentig"/>
+      <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="gijzelaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gijzelaar" word="gijzelaars"/>
     </node>
-    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Al die negentig gijzelaars .</sentence>
 </alpino_ds>

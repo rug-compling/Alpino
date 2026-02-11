@@ -2,12 +2,12 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="np" end="4" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
-      <node begin="1" buiging="met-e" end="2" id="3" infl="enkele" lemma="enkel" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" special="adj_number" vwtype="onbep" word="enkele"/>
-      <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="reis" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="reis" special="tmp" word="reis"/>
-      <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="5" lemma="Utrecht" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" rnum="sg" root="Utrecht" word="Utrecht"/>
+      <node begin="0" end="1" id="2" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+      <node begin="1" buiging="met-e" end="2" id="3" lemma="enkel" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" vwtype="onbep" word="enkele"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="reis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="reis" word="reis"/>
+      <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="5" lemma="Utrecht" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Utrecht" word="Utrecht"/>
     </node>
-    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Een enkele reis Utrecht .</sentence>
 </alpino_ds>

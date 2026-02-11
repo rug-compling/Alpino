@@ -4,19 +4,19 @@
     <node begin="0" cat="cp" end="8" id="1" rel="--">
       <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
       <node begin="1" cat="ssub" end="8" id="3" rel="body">
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="vrouw" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" rnum="pl" root="vrouw" word="vrouwen"/>
-        <node aform="compar" begin="2" buiging="zonder" end="3" graad="comp" id="5" infl="no_e" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="vaak" vform="adj" word="vaker"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="vrouw" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="vrouw" word="vrouwen"/>
+        <node begin="2" buiging="zonder" end="3" graad="comp" id="5" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="vaak" word="vaker"/>
         <node begin="3" cat="np" end="7" id="6" rel="obj1">
           <node begin="3" cat="ppart" end="6" id="7" rel="mod">
             <node begin="3" cat="ap" end="5" id="8" rel="mod">
-              <node aform="compar" begin="3" buiging="zonder" end="4" graad="comp" id="9" infl="meer" lemma="weinig" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="minder" vform="adj" vwtype="onbep" word="minder"/>
-              <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="10" infl="no_e" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="goed" vform="adj" word="goed"/>
+              <node begin="3" buiging="zonder" end="4" graad="comp" id="9" lemma="weinig" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="minder" vwtype="onbep" word="minder"/>
+              <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="goed" word="goed"/>
             </node>
-            <node aform="base" begin="5" buiging="met-e" end="6" id="11" infl="e" lemma="betalen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="betalen" vform="psp" word="betaalde" wvorm="vd"/>
+            <node begin="5" buiging="met-e" end="6" id="11" lemma="betalen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="betalen" word="betaalde" wvorm="vd"/>
           </node>
-          <node begin="6" end="7" gen="de" getal="mv" graad="basis" id="12" lemma="baan" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="baan" word="banen"/>
+          <node begin="6" end="7" getal="mv" graad="basis" id="12" lemma="baan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="baan" word="banen"/>
         </node>
-        <node begin="7" end="8" id="13" infl="pl" lemma="uit_oefenen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="oefen_uit" sc="part_transitive(uit)" tense="present" v_per="thi" word="uitoefenen" wvorm="pv"/>
+        <node begin="7" end="8" id="13" lemma="uit_oefenen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="oefen_uit" word="uitoefenen" wvorm="pv"/>
       </node>
     </node>
   </node>

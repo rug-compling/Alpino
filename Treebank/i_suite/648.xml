@@ -2,21 +2,21 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
-      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="Er"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="raken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="raak" sc="nonp_copula" stype="declarative" tense="past" word="raakten" wvorm="pv"/>
-      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="4" infl="no_e" lemma="gewond" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="gewond" vform="psp" word="gewond"/>
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="3" lemma="raken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="raak" word="raakten" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="4" lemma="gewond" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="gewond" word="gewond"/>
       <node begin="2" cat="np" end="9" id="5" rel="su">
-        <node begin="2" end="3" gen="both" getal="mv" graad="basis" id="6" lemma="mens" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="mens" word="mensen"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="mens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mens" word="mensen"/>
         <node begin="4" cat="rel" end="9" id="7" rel="mod">
-          <node begin="4" end="5" id="8" lemma="waaronder" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waaronder" special="waar" word="waaronder"/>
+          <node begin="4" end="5" id="8" lemma="waaronder" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waaronder" word="waaronder"/>
           <node begin="5" cat="du" end="9" id="9" rel="body">
             <node begin="5" cat="np" end="7" id="10" rel="dp">
-              <node begin="5" end="6" id="11" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-              <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="enkeling" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="enkeling" word="enkeling"/>
+              <node begin="5" end="6" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="enkeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="enkeling" word="enkeling"/>
             </node>
             <node begin="7" cat="pp" end="9" id="13" rel="dp">
               <node begin="7" end="8" id="14" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
-              <node begin="8" end="9" gen="de" getal="mv" graad="basis" id="15" lemma="brand_wond" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" rnum="pl" root="brand_wond" word="brandwonden"/>
+              <node begin="8" end="9" getal="mv" graad="basis" id="15" lemma="brand_wond" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="brand_wond" word="brandwonden"/>
             </node>
           </node>
         </node>

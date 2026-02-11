@@ -3,32 +3,32 @@
   <node begin="0" cat="top" end="13" id="0" rel="top">
     <node begin="0" cat="smain" end="12" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" index="1" rel="su">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" wh="nwh" word="Dat"/>
-        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="4" lemma="praten" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" rnum="sg" root="praat" sc="intransitive" special="v_noun" word="praten" wvorm="inf"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="Dat"/>
+        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="4" lemma="praten" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="praat" word="praten" wvorm="inf"/>
         <node begin="2" cat="pp" end="4" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
-          <node begin="3" case="dat_acc" def="def" end="4" gen="de" getal="mv" id="7" lemma="elkaar" naamval="obl" num="pl" pdtype="pron" per="thi" persoon="persoon" pos="pron" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" rnum="pl" root="elkaar" status="vol" vwtype="recip" wh="nwh" word="elkaar"/>
+          <node begin="3" end="4" getal="mv" id="7" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
         </node>
       </node>
-      <node begin="4" end="5" id="8" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="aux_psp_zijn" stype="declarative" tense="past" word="was" wvorm="pv"/>
+      <node begin="4" end="5" id="8" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
       <node begin="0" cat="ppart" end="12" id="9" rel="vc">
         <node begin="0" end="4" id="10" index="1" rel="su"/>
         <node begin="5" cat="pp" end="9" id="11" rel="mod">
           <node begin="5" end="6" id="12" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
           <node begin="6" cat="conj" end="9" id="13" rel="obj1">
-            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="Bart" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="Bart" word="Bart"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="Bart" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Bart" word="Bart"/>
             <node begin="7" conjtype="neven" end="8" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="Marijn" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="Marijn" word="Marijn"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="Marijn" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Marijn" word="Marijn"/>
           </node>
         </node>
         <node begin="9" cat="np" end="11" id="17" rel="predc">
-          <node begin="9" end="10" id="18" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="19" lemma="noodzaak" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="noodzaak" word="noodzaak"/>
+          <node begin="9" end="10" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="noodzaak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="noodzaak" word="noodzaak"/>
         </node>
-        <node begin="11" buiging="zonder" end="12" id="20" infl="psp" lemma="worden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="word" sc="copula" word="geworden" wvorm="vd"/>
+        <node begin="11" buiging="zonder" end="12" id="20" lemma="worden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="word" word="geworden" wvorm="vd"/>
       </node>
     </node>
-    <node begin="12" end="13" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="12" end="13" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Dat praten met elkaar was voor Bart en Marijn een noodzaak geworden .</sentence>
 </alpino_ds>

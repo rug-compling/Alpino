@@ -2,21 +2,21 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="du" end="7" id="1" rel="--">
-      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" sc="root" word="En"/>
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
       <node begin="1" cat="smain" end="7" id="3" rel="nucl">
         <node begin="1" cat="mwu" end="4" id="4" rel="mod">
-          <node begin="1" end="2" id="5" lemma="van" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="van" special="sentence" vztype="init" word="van"/>
-          <node begin="2" end="3" id="6" lemma="staan" pos="adv" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="mwp" root="stonden" special="sentence" word="stonden" wvorm="pv"/>
-          <node begin="3" end="4" id="7" lemma="aan" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="aan" special="sentence" vztype="init" word="aan"/>
+          <node begin="1" end="2" id="5" lemma="van" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+          <node begin="2" end="3" id="6" lemma="staan" pos="adv" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="mwp" root="stonden" word="stonden" wvorm="pv"/>
+          <node begin="3" end="4" id="7" lemma="aan" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
         </node>
-        <node begin="4" end="5" id="8" infl="sg" lemma="zwijgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zwijg" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="zweeg" wvorm="pv"/>
+        <node begin="4" end="5" id="8" lemma="zwijgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zwijg" word="zweeg" wvorm="pv"/>
         <node begin="5" cat="mwu" end="7" id="9" rel="su">
-          <node begin="5" end="6" id="10" lemma="Pieter" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Pieter" spectype="deeleigen" word="Pieter"/>
-          <node begin="6" end="7" id="11" lemma="Jelles" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Jelles" spectype="deeleigen" word="Jelles"/>
+          <node begin="5" end="6" id="10" lemma="Pieter" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pieter" spectype="deeleigen" word="Pieter"/>
+          <node begin="6" end="7" id="11" lemma="Jelles" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jelles" spectype="deeleigen" word="Jelles"/>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>En van stonden aan zweeg Pieter Jelles .</sentence>
 </alpino_ds>

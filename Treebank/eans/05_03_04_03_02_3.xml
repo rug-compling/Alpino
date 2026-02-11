@@ -2,16 +2,16 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="0" case="dat_acc" def="def" end="1" gen="de" getal="getal" id="2" lemma="zichzelf" naamval="obl" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,nadr,3,getal)" pt="vnw" rel="obj2" rnum="sg" root="zichzelf" status="nadr" vwtype="refl" wh="nwh" word="Zichzelf"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="verschaffen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verschaf" sc="np_np" stype="declarative" tense="past" word="verschafte" wvorm="pv"/>
-      <node begin="2" case="nom" def="def" end="3" gen="de" genus="masc" getal="ev" id="4" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="0" end="1" getal="getal" id="2" lemma="zichzelf" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,nadr,3,getal)" pt="vnw" rel="obj2" root="zichzelf" status="nadr" vwtype="refl" word="Zichzelf"/>
+      <node begin="1" end="2" id="3" lemma="verschaffen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verschaf" word="verschafte" wvorm="pv"/>
+      <node begin="2" end="3" genus="masc" getal="ev" id="4" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
       <node begin="3" cat="np" end="6" id="5" rel="obj1">
-        <node begin="3" end="4" id="6" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node aform="super" begin="4" buiging="met-e" end="5" graad="sup" id="7" infl="e" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="groot" vform="adj" word="grootste"/>
-        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lemma="vreugde" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="vreugde" word="vreugde"/>
+        <node begin="3" end="4" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" buiging="met-e" end="5" graad="sup" id="7" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="groot" word="grootste"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="vreugde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vreugde" word="vreugde"/>
       </node>
     </node>
-    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Zichzelf verschafte hij de grootste vreugde .</sentence>
 </alpino_ds>

@@ -7,24 +7,24 @@
           <node begin="0" end="1" id="4" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="hd" root="alleen" word="Alleen"/>
           <node begin="1" end="2" id="5" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
         </node>
-        <node begin="2" buiging="met-e" end="3" id="6" infl="de" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" wh="nwh" word="deze"/>
-        <node begin="3" end="4" gen="het" getal="mv" graad="basis" id="7" lemma="element" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="element" word="elementen"/>
+        <node begin="2" buiging="met-e" end="3" id="6" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="element" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="element" word="elementen"/>
       </node>
-      <node begin="4" end="5" id="8" infl="pl" lemma="zullen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="zal" sc="aux(inf)" stype="declarative" tense="past" v_per="thi" word="zouden" wvorm="pv"/>
+      <node begin="4" end="5" id="8" lemma="zullen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="zal" word="zouden" wvorm="pv"/>
       <node begin="0" cat="inf" end="10" id="9" rel="vc">
         <node begin="0" end="4" id="10" index="1" rel="su"/>
         <node begin="5" cat="np" end="9" id="11" rel="obj1">
-          <node begin="5" end="6" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lemma="verkiezingscampagne" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="verkiezingscampagne" word="verkiezingscampagne"/>
+          <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="verkiezingscampagne" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verkiezingscampagne" word="verkiezingscampagne"/>
           <node begin="7" cat="pp" end="9" id="14" rel="mod">
             <node begin="7" end="8" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="Berlusconi" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="Berlusconi" word="Berlusconi"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="Berlusconi" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Berlusconi" word="Berlusconi"/>
           </node>
         </node>
-        <node begin="9" buiging="zonder" end="10" id="17" infl="inf" lemma="bezwaren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bezwaar" sc="transitive" word="bezwaren" wvorm="inf"/>
+        <node begin="9" buiging="zonder" end="10" id="17" lemma="bezwaren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bezwaar" word="bezwaren" wvorm="inf"/>
       </node>
     </node>
-    <node begin="10" end="11" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="10" end="11" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Alleen al deze elementen zouden de verkiezingscampagne van Berlusconi bezwaren .</sentence>
 </alpino_ds>

@@ -3,19 +3,19 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" index="1" rel="su">
-        <node begin="0" end="1" id="3" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
-        <node aform="compar" begin="1" buiging="met-e" end="2" graad="comp" id="4" infl="e" lemma="gehaaid" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="gehaaid" vform="adj" word="gehaaidere"/>
-        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="speler" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="speler" word="speler"/>
+        <node begin="0" end="1" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" buiging="met-e" end="2" graad="comp" id="4" lemma="gehaaid" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="gehaaid" word="gehaaidere"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="speler" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="speler" word="speler"/>
       </node>
-      <node begin="3" end="4" id="6" infl="sg" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="past" word="had" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
       <node begin="0" cat="ppart" end="8" id="7" rel="vc">
         <node begin="0" end="3" id="8" index="1" rel="su"/>
         <node begin="4" cat="np" end="7" id="9" rel="obj1">
-          <node begin="4" end="5" id="10" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node aform="compar" begin="5" buiging="zonder" end="6" graad="comp" id="11" infl="no_e" lemma="gehaaid" pos="adj" positie="prenom" postag="ADJ(prenom,comp,zonder)" pt="adj" rel="mod" root="gehaaid" vform="adj" word="gehaaider"/>
-          <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="12" lemma="formaat" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="formaat" word="formaat"/>
+          <node begin="4" end="5" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" buiging="zonder" end="6" graad="comp" id="11" lemma="gehaaid" pos="adj" positie="prenom" postag="ADJ(prenom,comp,zonder)" pt="adj" rel="mod" root="gehaaid" word="gehaaider"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="12" lemma="formaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="formaat" word="formaat"/>
         </node>
-        <node begin="7" buiging="zonder" end="8" id="13" infl="psp" lemma="gebruiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gebruik" sc="transitive" word="gebruikt" wvorm="vd"/>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="gebruiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gebruik" word="gebruikt" wvorm="vd"/>
       </node>
     </node>
   </node>

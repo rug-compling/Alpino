@@ -2,20 +2,20 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="whq" end="6" id="1" rel="--">
-      <node begin="0" case="both" def="indef" end="1" gen="het" getal="ev" id="2" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="Wat"/>
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="Wat"/>
       <node begin="0" cat="sv1" end="6" id="3" rel="body">
         <node begin="0" end="1" id="4" index="1" rel="obj1"/>
-        <node begin="1" end="2" id="5" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aci_simple" stype="whquestion" tense="present" word="heb" wvorm="pv"/>
-        <node begin="2" case="both" def="def" end="3" gen="de" getal="ev" id="6" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+        <node begin="1" end="2" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="6" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
         <node begin="0" cat="inf" end="6" id="7" rel="vc">
           <node begin="0" end="1" id="8" index="1" rel="su"/>
-          <node begin="3" end="4" getal="getal" id="9" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" special="er_loc" status="vol" vwtype="aanw" word="daar"/>
-          <node begin="4" end="5" id="10" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" special="tmp" word="nu"/>
-          <node begin="5" buiging="zonder" end="6" id="11" infl="inf" lemma="hangen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="hang" sc="intransitive" word="hangen" wvorm="inf"/>
+          <node begin="3" end="4" getal="getal" id="9" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" status="vol" vwtype="aanw" word="daar"/>
+          <node begin="4" end="5" id="10" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+          <node begin="5" buiging="zonder" end="6" id="11" lemma="hangen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="hang" word="hangen" wvorm="inf"/>
         </node>
       </node>
     </node>
-    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Wat heb je daar nu hangen ?</sentence>
 </alpino_ds>

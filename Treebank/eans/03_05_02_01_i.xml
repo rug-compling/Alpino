@@ -2,18 +2,18 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="2" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="We"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="present" word="hebben" wvorm="pv"/>
+      <node begin="0" end="1" getal="mv" id="2" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="We"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
       <node begin="2" cat="np" end="4" id="4" rel="obj1">
-        <node aform="base" begin="2" buiging="met-e" end="3" graad="basis" id="5" infl="e" lemma="divers" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="divers" vform="adj" word="diverse"/>
-        <node aform="base" begin="3" buiging="met-e" end="4" getal-n="mv-n" graad="basis" id="6" lemma="blauw" num="pl" personalized="true" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" rnum="pl" root="blauw" special="a_noun" word="blauwen"/>
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="5" lemma="divers" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="divers" word="diverse"/>
+        <node begin="3" buiging="met-e" end="4" getal-n="mv-n" graad="basis" id="6" lemma="blauw" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="blauw" word="blauwen"/>
       </node>
       <node begin="4" cat="pp" end="6" id="7" rel="mod">
         <node begin="4" end="5" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="voorraad" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="voorraad" word="voorraad"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="voorraad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="voorraad" word="voorraad"/>
       </node>
     </node>
-    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>We hebben diverse blauwen in voorraad .</sentence>
 </alpino_ds>

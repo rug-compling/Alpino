@@ -3,31 +3,31 @@
   <node begin="0" cat="top" end="13" id="0" rel="top">
     <node begin="0" cat="smain" end="12" id="1" rel="--">
       <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="Vast"/>
-      <node begin="1" end="2" id="3" infl="sg3" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta_vast" sc="part_sbar_subj_no_het_tpart(vast)" stype="declarative" tense="present" v_per="thi" word="staat" wvorm="pv"/>
-      <node aform="base" begin="2" end="3" id="4" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
+      <node begin="1" end="2" id="3" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta_vast" word="staat" wvorm="pv"/>
+      <node begin="2" end="3" id="4" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
       <node begin="3" cat="cp" end="12" id="5" rel="su">
-        <node begin="3" conjtype="onder" end="4" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="3" conjtype="onder" end="4" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="4" cat="ssub" end="12" id="7" rel="body">
           <node begin="4" cat="np" end="9" id="8" rel="su">
-            <node begin="4" end="5" id="9" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-            <node begin="5" buiging="zonder" end="6" getal-n="zonder-n" id="10" lemma="werken" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" rnum="sg" root="werk" sc="intransitive" special="v_noun" word="werken" wvorm="inf"/>
+            <node begin="4" end="5" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="5" buiging="zonder" end="6" getal-n="zonder-n" id="10" lemma="werken" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="werk" word="werken" wvorm="inf"/>
             <node begin="6" cat="pp" end="9" id="11" rel="mod">
               <node begin="6" end="7" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
               <node begin="7" cat="np" end="9" id="13" rel="obj1">
-                <node begin="7" end="8" id="14" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                <node begin="8" end="9" gen="het" genus="onz" getal="ev" graad="basis" id="15" lemma="verpleegtehuis" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="verpleegtehuis" word="verpleegtehuis"/>
+                <node begin="7" end="8" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="verpleegtehuis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verpleegtehuis" word="verpleegtehuis"/>
               </node>
             </node>
           </node>
           <node begin="9" cat="ap" end="11" id="16" rel="predc">
-            <node aform="base" begin="9" buiging="zonder" end="10" graad="basis" id="17" infl="no_e" lemma="bijzonder" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="bijzonder" vform="adj" word="bijzonder"/>
-            <node aform="base" begin="10" buiging="zonder" end="11" graad="basis" id="18" infl="no_e" lemma="zwaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="zwaar" vform="adj" word="zwaar"/>
+            <node begin="9" buiging="zonder" end="10" graad="basis" id="17" lemma="bijzonder" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="bijzonder" word="bijzonder"/>
+            <node begin="10" buiging="zonder" end="11" graad="basis" id="18" lemma="zwaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="zwaar" word="zwaar"/>
           </node>
-          <node begin="11" end="12" id="19" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" v_per="thi" word="is" wvorm="pv"/>
+          <node begin="11" end="12" id="19" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         </node>
       </node>
     </node>
-    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Vast staat wel dat het werken in een verpleegtehuis bijzonder zwaar is .</sentence>
 </alpino_ds>

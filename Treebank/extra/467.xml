@@ -3,18 +3,18 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="met-e" end="1" id="3" infl="enkele" lemma="enkel" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" special="adj_number" vwtype="onbep" word="Enkele"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="voor_uitwijzing" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="voor_uitwijzing" word="vooruitwijzingen"/>
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="enkel" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" vwtype="onbep" word="Enkele"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="voor_uitwijzing" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voor_uitwijzing" word="vooruitwijzingen"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="over_laten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="laat_over" sc="part_fixed(over,[vc(raad,pass_te,intransitive),acc],norm_passive)" stype="declarative" tense="present" word="laten" wvorm="pv"/>
-      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="6" infl="no_e" lemma="weinig" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="obj1" rnum="sg" root="weinig" vform="adj" vwtype="onbep" word="weinig"/>
+      <node begin="2" end="3" id="5" lemma="over_laten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="laat_over" word="laten" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="weinig" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="obj1" root="weinig" vwtype="onbep" word="weinig"/>
       <node begin="4" cat="ti" end="6" id="7" rel="svp">
-        <node begin="4" end="5" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
-        <node begin="5" buiging="zonder" end="6" id="9" infl="inf" lemma="raden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="raad" sc="intransitive" word="raden" wvorm="inf"/>
+        <node begin="4" end="5" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="5" buiging="zonder" end="6" id="9" lemma="raden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="raad" word="raden" wvorm="inf"/>
       </node>
       <node begin="6" end="7" id="10" lemma="over" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="over" vztype="fin" word="over"/>
     </node>
-    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Enkele vooruitwijzingen laten weinig te raden over .</sentence>
 </alpino_ds>

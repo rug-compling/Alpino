@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="operatie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="operatie" word="operatie"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="operatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="operatie" word="operatie"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="6" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
         <node begin="3" cat="pp" end="5" id="8" rel="mod">
           <node begin="3" end="4" id="9" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="volgens"/>
-          <node begin="4" end="5" gen="both" genus="onz" getal="ev" graad="basis" id="10" lemma="plan" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="plan" word="plan"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="plan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="plan" word="plan"/>
         </node>
-        <node begin="5" buiging="zonder" end="6" id="11" infl="psp" lemma="verlopen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verloop" sc="intransitive" word="verlopen" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="verlopen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verloop" word="verlopen" wvorm="vd"/>
       </node>
     </node>
-    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De operatie is volgens plan verlopen .</sentence>
 </alpino_ds>

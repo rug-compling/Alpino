@@ -3,12 +3,12 @@
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="du" end="4" id="1" rel="--">
       <node begin="0" cat="ppart" end="2" id="2" rel="dp">
-        <node aform="super" begin="0" buiging="zonder" end="1" graad="sup" id="3" infl="no_e" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,sup,zonder)" pt="adj" rel="mod" root="laat" vform="adj" word="Laatst"/>
-        <node aform="base" begin="1" buiging="zonder" end="2" id="4" infl="no_e" lemma="bij_werken" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bij_werken" vform="psp" word="bijgewerkt" wvorm="vd"/>
+        <node begin="0" buiging="zonder" end="1" graad="sup" id="3" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,sup,zonder)" pt="adj" rel="mod" root="laat" word="Laatst"/>
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="bij_werken" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bij_werken" word="bijgewerkt" wvorm="vd"/>
       </node>
       <node begin="2" cat="np" end="4" id="5" rel="dp">
-        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="april" naamval="stan" ntype="eigen" num="sg" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="april" special="tmp" word="april"/>
-        <node begin="3" end="4" id="7" lemma="2005" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="2005" word="2005"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="april" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="april" word="april"/>
+        <node begin="3" end="4" id="7" lemma="2005" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="2005" word="2005"/>
       </node>
     </node>
   </node>

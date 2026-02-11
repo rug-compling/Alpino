@@ -2,22 +2,22 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-      <node begin="1" end="2" id="3" infl="sg1" lemma="denken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="denk" sc="tr_sbar" stype="declarative" tense="present" word="denk" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="denken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="denk" word="denk" wvorm="pv"/>
       <node begin="2" cat="cp" end="8" id="4" rel="vc">
-        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="3" cat="ssub" end="8" id="6" rel="body">
           <node begin="3" cat="np" end="6" id="7" rel="su">
-            <node begin="3" end="4" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node aform="base" begin="4" buiging="met-e" end="5" graad="basis" id="9" infl="e" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" vform="adj" word="nieuwe"/>
-            <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="gebruiksaanwijzing" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="gebruiksaanwijzing" word="gebruiksaanwijzing"/>
+            <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="gebruiksaanwijzing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gebruiksaanwijzing" word="gebruiksaanwijzing"/>
           </node>
-          <node aform="compar" begin="6" buiging="zonder" end="7" graad="comp" id="11" infl="no_e" lemma="duidelijk" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="predc" root="duidelijk" vform="adj" word="duidelijker"/>
-          <node begin="7" end="8" id="12" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" word="is" wvorm="pv"/>
+          <node begin="6" buiging="zonder" end="7" graad="comp" id="11" lemma="duidelijk" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="predc" root="duidelijk" word="duidelijker"/>
+          <node begin="7" end="8" id="12" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ik denk dat de nieuwe gebruiksaanwijzing duidelijker is .</sentence>
 </alpino_ds>

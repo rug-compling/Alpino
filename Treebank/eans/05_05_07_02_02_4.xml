@@ -2,18 +2,18 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" index="1" lemma="men" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" rnum="sg" root="men" status="red" vwtype="pers" wh="nwh" word="Men"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="present" word="moet" wvorm="pv"/>
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" index="1" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="Men"/>
+      <node begin="1" end="2" id="3" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
       <node begin="0" cat="inf" end="5" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
         <node begin="2" cat="np" end="4" id="6" rel="obj1">
-          <node begin="2" buiging="zonder" end="3" getal="ev" id="7" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
-          <node aform="base" begin="3" buiging="met-e" end="4" getal-n="mv-n" graad="basis" id="8" lemma="naast" num="pl" personalized="true" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" rnum="pl" root="naast" special="a_noun" word="naasten"/>
+          <node begin="2" buiging="zonder" end="3" getal="ev" id="7" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+          <node begin="3" buiging="met-e" end="4" getal-n="mv-n" graad="basis" id="8" lemma="naast" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="naast" word="naasten"/>
         </node>
-        <node begin="4" buiging="zonder" end="5" id="9" infl="inf" lemma="lief_hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb_lief" sc="part_transitive(lief)" word="liefhebben" wvorm="inf"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="lief_hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb_lief" word="liefhebben" wvorm="inf"/>
       </node>
     </node>
-    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Men moet zijn naasten liefhebben .</sentence>
 </alpino_ds>

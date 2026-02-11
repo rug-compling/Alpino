@@ -4,18 +4,18 @@
     <node begin="0" cat="inf" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" index="1" rel="obj1">
         <node begin="0" cat="detp" end="2" id="3" rel="det">
-          <node begin="0" buiging="zonder" end="1" id="4" infl="al" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" special="pre_det_quant" vwtype="onbep" word="Al"/>
-          <node begin="1" end="2" id="5" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="hd" root="het" wh="nwh" word="het"/>
+          <node begin="0" buiging="zonder" end="1" id="4" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" vwtype="onbep" word="Al"/>
+          <node begin="1" end="2" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="hd" root="het" word="het"/>
         </node>
-        <node begin="2" end="3" gen="het" genus="onz" getal="ev" graad="basis" id="6" lemma="eten" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="eten" word="eten"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="eten" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="eten" word="eten"/>
       </node>
-      <node begin="3" buiging="zonder" end="4" id="7" infl="inf" lemma="laten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="laat" sc="aci" word="laten" wvorm="inf"/>
+      <node begin="3" buiging="zonder" end="4" id="7" lemma="laten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="laat" word="laten" wvorm="inf"/>
       <node begin="0" cat="inf" end="5" id="8" rel="vc">
         <node begin="0" end="3" id="9" index="1" rel="su"/>
-        <node begin="4" buiging="zonder" end="5" id="10" infl="inf(no_e)" lemma="staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta" sc="intransitive" word="staan" wvorm="inf"/>
+        <node begin="4" buiging="zonder" end="5" id="10" lemma="staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta" word="staan" wvorm="inf"/>
       </node>
     </node>
-    <node begin="5" end="6" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="5" end="6" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Al het eten laten staan ?</sentence>
 </alpino_ds>

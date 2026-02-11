@@ -4,11 +4,11 @@
     <node begin="0" cat="pp" end="3" id="1" rel="--">
       <node begin="0" end="1" id="2" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="Bij"/>
       <node begin="1" cat="np" end="3" id="3" rel="obj1">
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="grootvader" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="grootvader" word="grootvader"/>
-        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="Jacobs" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" rnum="sg" root="Jacobs" word="Jacobs"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="grootvader" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="grootvader" word="grootvader"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="Jacobs" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Jacobs" word="Jacobs"/>
       </node>
     </node>
-    <node begin="3" end="4" id="6" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="3" end="4" id="6" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Bij grootvader Jacobs ?</sentence>
 </alpino_ds>

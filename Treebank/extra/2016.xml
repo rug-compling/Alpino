@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="obj1">
-        <node begin="0" buiging="met-e" end="1" getal-n="zonder-n" id="3" infl="pl_num" lemma="sommig" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" rnum="pl" root="sommig" vwtype="onbep" wh="nwh" word="Sommige"/>
+        <node begin="0" buiging="met-e" end="1" getal-n="zonder-n" id="3" lemma="sommig" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" root="sommig" vwtype="onbep" word="Sommige"/>
         <node begin="1" cat="np" end="3" id="4" rel="mod">
-          <node begin="1" buiging="met-e" end="2" id="5" infl="der" lemma="deze" naamval="gen" npagr="rest3" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,gen,prenom,met-e,rest3)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="dezer"/>
-          <node begin="2" end="3" gen="de" getal="mv" graad="basis" id="6" lemma="eigenschap" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="eigenschap" word="eigenschappen"/>
+          <node begin="1" buiging="met-e" end="2" id="5" lemma="deze" naamval="gen" npagr="rest3" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,gen,prenom,met-e,rest3)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="dezer"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="eigenschap" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="eigenschap" word="eigenschappen"/>
         </node>
       </node>
-      <node begin="3" end="4" id="7" infl="pl" lemma="vinden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vind" sc="np_ld_pp" stype="declarative" tense="present" v_per="fir" word="vinden" wvorm="pv"/>
-      <node begin="4" case="nom" def="def" end="5" gen="de" getal="mv" id="8" lemma="wij" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" rnum="pl" root="wij" status="vol" vwtype="pers" wh="nwh" word="wij"/>
-      <node begin="5" end="6" id="9" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="ook"/>
+      <node begin="3" end="4" id="7" lemma="vinden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vind" word="vinden" wvorm="pv"/>
+      <node begin="4" end="5" getal="mv" id="8" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+      <node begin="5" end="6" id="9" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
       <node begin="6" cat="pp" end="9" id="10" rel="ld">
         <node begin="6" end="7" id="11" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
         <node begin="7" cat="np" end="9" id="12" rel="obj1">
-          <node aform="compar" begin="7" buiging="met-e" end="8" graad="basis" id="13" infl="e" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" vform="adj" word="andere"/>
-          <node begin="8" end="9" gen="de" getal="mv" graad="basis" id="14" lemma="Nederlander" ntype="eigen" num="pl" pos="noun" postag="N(eigen,mv,basis)" pt="n" rel="hd" rnum="pl" root="Nederlander" word="Nederlanders"/>
+          <node begin="7" buiging="met-e" end="8" graad="basis" id="13" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
+          <node begin="8" end="9" getal="mv" graad="basis" id="14" lemma="Nederlander" ntype="eigen" pos="noun" postag="N(eigen,mv,basis)" pt="n" rel="hd" root="Nederlander" word="Nederlanders"/>
         </node>
       </node>
     </node>

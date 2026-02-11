@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="16" id="0" rel="top">
-    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
-    <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="15" id="3" rel="--">
       <node begin="0" cat="np" end="8" id="4" rel="su">
-        <node begin="0" end="1" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="koning" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="koning" word="koning"/>
+        <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="koning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="koning" word="koning"/>
         <node begin="2" cat="pp" end="4" id="7" rel="mod">
           <node begin="2" end="3" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="Frankrijk" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Frankrijk" word="Frankrijk"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="Frankrijk" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Frankrijk" word="Frankrijk"/>
         </node>
         <node begin="5" cat="rel" end="8" id="10" rel="mod">
-          <node begin="5" case="no_obl" end="6" gen="de" getal="getal" id="11" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="sg" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="5" end="6" getal="getal" id="11" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="5" cat="ssub" end="8" id="12" rel="body">
             <node begin="5" end="6" id="13" index="1" rel="su"/>
-            <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="14" infl="no_e" lemma="kaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="kaal" vform="adj" word="kaal"/>
-            <node begin="7" end="8" id="15" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula" tense="past" word="was" wvorm="pv"/>
+            <node begin="6" buiging="zonder" end="7" graad="basis" id="14" lemma="kaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="kaal" word="kaal"/>
+            <node begin="7" end="8" id="15" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
           </node>
         </node>
       </node>
-      <node begin="9" end="10" id="16" infl="sg" lemma="nemen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="neem" sc="nonp_pred_np" stype="declarative" tense="past" word="nam" wvorm="pv"/>
+      <node begin="9" end="10" id="16" lemma="nemen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="neem" word="nam" wvorm="pv"/>
       <node begin="10" cat="np" end="13" id="17" rel="obj1">
         <node begin="10" cat="ap" end="12" id="18" rel="mod">
-          <node aform="base" begin="10" buiging="zonder" end="11" graad="basis" id="19" infl="no_e" lemma="uitsluitend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uitsluitend" vform="adj" word="uitsluitend"/>
-          <node aform="base" begin="11" buiging="met-e" end="12" graad="basis" id="20" infl="e" lemma="kaalhoofdig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="kaalhoofdig" vform="adj" word="kaalhoofdige"/>
+          <node begin="10" buiging="zonder" end="11" graad="basis" id="19" lemma="uitsluitend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uitsluitend" word="uitsluitend"/>
+          <node begin="11" buiging="met-e" end="12" graad="basis" id="20" lemma="kaalhoofdig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="kaalhoofdig" word="kaalhoofdige"/>
         </node>
-        <node begin="12" end="13" gen="de" getal="mv" graad="basis" id="21" lemma="lakei" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="lakei" word="lakeien"/>
+        <node begin="12" end="13" getal="mv" graad="basis" id="21" lemma="lakei" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="lakei" word="lakeien"/>
       </node>
       <node begin="13" cat="pp" end="15" id="22" rel="predc">
         <node begin="13" end="14" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-        <node begin="14" end="15" gen="de" genus="zijd" getal="ev" graad="basis" id="24" lemma="dienst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="dienst" sc="pred_pp(in)" word="dienst"/>
+        <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="24" lemma="dienst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="dienst" word="dienst"/>
       </node>
     </node>
-    <node begin="15" end="16" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="15" end="16" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De koning van Frankrijk , die kaal was , nam uitsluitend kaalhoofdige lakeien in dienst .</sentence>
 </alpino_ds>

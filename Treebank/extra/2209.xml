@@ -3,29 +3,29 @@
   <node begin="0" cat="top" end="13" id="0" rel="top">
     <node begin="0" cat="smain" end="12" id="1" rel="--">
       <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="Vast"/>
-      <node begin="1" end="2" id="3" infl="sg3" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta_vast" sc="part_sbar_subj_no_het_tpart(vast)" stype="declarative" tense="present" v_per="thi" word="staat" wvorm="pv"/>
-      <node begin="2" end="3" id="4" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" special="sentence" word="echter"/>
-      <node aform="base" begin="3" end="4" id="5" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
+      <node begin="1" end="2" id="3" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta_vast" word="staat" wvorm="pv"/>
+      <node begin="2" end="3" id="4" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
+      <node begin="3" end="4" id="5" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
       <node begin="4" cat="cp" end="12" id="6" rel="su">
-        <node begin="4" conjtype="onder" end="5" id="7" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="4" conjtype="onder" end="5" id="7" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="5" cat="ssub" end="12" id="8" rel="body">
           <node begin="5" cat="np" end="7" id="9" rel="su">
-            <node begin="5" buiging="met-e" end="6" id="10" infl="alle" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="al" vwtype="onbep" wh="nwh" word="alle"/>
-            <node begin="6" end="7" gen="de" getal="mv" graad="basis" id="11" lemma="bibliotheek_medewerker" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="bibliotheek_medewerker" word="bibliotheekmedewerkers"/>
+            <node begin="5" buiging="met-e" end="6" id="10" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="al" vwtype="onbep" word="alle"/>
+            <node begin="6" end="7" getal="mv" graad="basis" id="11" lemma="bibliotheek_medewerker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bibliotheek_medewerker" word="bibliotheekmedewerkers"/>
           </node>
           <node begin="7" cat="np" end="9" id="12" rel="obj1">
-            <node begin="7" end="8" id="13" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-            <node begin="8" end="9" gen="het" genus="onz" getal="ev" graad="basis" id="14" lemma="voorval" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="voorval" word="voorval"/>
+            <node begin="7" end="8" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="14" lemma="voorval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voorval" word="voorval"/>
           </node>
           <node begin="9" cat="mwu" end="11" id="15" rel="mod">
-            <node begin="9" end="10" id="16" lemma="te" pos="adv" postag="VZ(versm)" pt="vz" rel="mwp" root="ten" special="sentence" vztype="versm" word="ten"/>
-            <node begin="10" buiging="met-e" end="11" getal-n="zonder-n" graad="sup" id="17" lemma="diep" naamval="stan" pos="adv" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="mwp" root="diepste" special="sentence" word="diepste"/>
+            <node begin="9" end="10" id="16" lemma="te" pos="adv" postag="VZ(versm)" pt="vz" rel="mwp" root="ten" vztype="versm" word="ten"/>
+            <node begin="10" buiging="met-e" end="11" getal-n="zonder-n" graad="sup" id="17" lemma="diep" naamval="stan" pos="adv" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="mwp" root="diepste" word="diepste"/>
           </node>
-          <node begin="11" end="12" id="18" infl="pl" lemma="betreuren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="betreur" sc="transitive" tense="present" v_per="thi" word="betreuren" wvorm="pv"/>
+          <node begin="11" end="12" id="18" lemma="betreuren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="betreur" word="betreuren" wvorm="pv"/>
         </node>
       </node>
     </node>
-    <node begin="12" end="13" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="12" end="13" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Vast staat echter wel dat alle bibliotheekmedewerkers het voorval ten diepste betreuren .</sentence>
 </alpino_ds>

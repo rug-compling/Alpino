@@ -2,27 +2,27 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="np" end="8" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
-      <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="3" lemma="gruwel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="gruwel" word="gruwel"/>
+      <node begin="0" end="1" id="2" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="gruwel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gruwel" word="gruwel"/>
       <node begin="2" cat="pp" end="8" id="4" rel="mod">
         <node begin="2" end="3" id="5" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
         <node begin="3" cat="np" end="8" id="6" rel="obj1">
-          <node begin="3" buiging="met-e" case="both" def="indef" end="4" gen="de" getal-n="mv-n" id="7" lemma="al" naamval="stan" num="pl" pdtype="det" per="thi" pos="pron" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,mv-n)" pt="vnw" rel="hd" rnum="pl" root="al" vwtype="onbep" wh="nwh" word="allen"/>
+          <node begin="3" buiging="met-e" end="4" getal-n="mv-n" id="7" lemma="al" naamval="stan" pdtype="det" pos="pron" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,mv-n)" pt="vnw" rel="hd" root="al" vwtype="onbep" word="allen"/>
           <node begin="4" cat="rel" end="8" id="8" rel="mod">
-            <node begin="4" case="no_obl" end="5" gen="de" getal="getal" id="9" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="pl" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+            <node begin="4" end="5" getal="getal" id="9" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="4" cat="ssub" end="8" id="10" rel="body">
               <node begin="4" end="5" id="11" index="1" rel="su"/>
               <node begin="5" cat="np" end="7" id="12" rel="obj1">
-                <node begin="5" end="6" id="13" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-                <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="14" lemma="geloof" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="geloof" word="geloof"/>
+                <node begin="5" end="6" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="14" lemma="geloof" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geloof" word="geloof"/>
               </node>
-              <node begin="7" end="8" id="15" infl="pl" lemma="zoeken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zoek" sc="transitive" tense="present" word="zoeken" wvorm="pv"/>
+              <node begin="7" end="8" id="15" lemma="zoeken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zoek" word="zoeken" wvorm="pv"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Een gruwel voor allen die het geloof zoeken .</sentence>
 </alpino_ds>

@@ -3,16 +3,16 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="zonder" end="1" getal="mv" id="3" infl="pron" lemma="jullie" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,nadr,2v,mv,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="jullie" status="nadr" vwtype="bez" word="Jullie"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="slager" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="slager" word="slager"/>
+        <node begin="0" buiging="zonder" end="1" getal="mv" id="3" lemma="jullie" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,nadr,2v,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="jullie" status="nadr" vwtype="bez" word="Jullie"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="slager" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="slager" word="slager"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="present" word="heeft" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
       <node begin="3" cat="np" end="5" id="6" rel="obj1">
-        <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="7" infl="no_e" lemma="lekker" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="lekker" vform="adj" word="lekker"/>
-        <node begin="4" end="5" gen="both" genus="onz" getal="ev" graad="basis" id="8" lemma="gehakt" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="gehakt" word="gehakt"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="lekker" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="lekker" word="lekker"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="gehakt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gehakt" word="gehakt"/>
       </node>
     </node>
-    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Jullie slager heeft lekker gehakt .</sentence>
 </alpino_ds>

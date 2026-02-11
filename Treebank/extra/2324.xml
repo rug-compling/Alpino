@@ -2,21 +2,21 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="3" end="4" id="2" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" stype="declarative" tense="past" v_per="thi" word="werd" wvorm="pv"/>
-      <node begin="4" case="nom" def="def" end="5" gen="de" genus="masc" getal="ev" id="3" index="1" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="3" end="4" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="4" end="5" genus="masc" getal="ev" id="3" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
       <node begin="0" cat="ppart" end="6" id="4" rel="vc">
         <node begin="0" cat="ppart" end="3" id="5" rel="mod">
-          <node aform="base" begin="0" buiging="zonder" end="1" id="6" infl="no_e" lemma="zien" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zien" sc="transitive" vform="psp" word="Gezien" wvorm="vd"/>
+          <node begin="0" buiging="zonder" end="1" id="6" lemma="zien" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zien" word="Gezien" wvorm="vd"/>
           <node begin="1" cat="np" end="3" id="7" rel="obj1">
-            <node begin="1" end="2" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="verhoging" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="verhoging" word="verhoging"/>
+            <node begin="1" end="2" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="verhoging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verhoging" word="verhoging"/>
           </node>
         </node>
         <node begin="4" end="5" id="10" index="1" rel="obj1"/>
-        <node begin="5" buiging="zonder" end="6" id="11" infl="psp" lemma="wijzigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wijzig" sc="transitive" word="gewijzigd" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="wijzigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wijzig" word="gewijzigd" wvorm="vd"/>
       </node>
     </node>
-    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Gezien de verhoging werd hij gewijzigd .</sentence>
 </alpino_ds>

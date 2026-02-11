@@ -2,39 +2,39 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="15" id="0" rel="top">
     <node begin="0" cat="smain" end="14" id="1" rel="--">
-      <node begin="6" end="7" id="2" infl="sg" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" sc="refl_passive" stype="declarative" tense="present" v_per="thi" word="weet" wvorm="pv"/>
+      <node begin="6" end="7" id="2" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" word="weet" wvorm="pv"/>
       <node begin="7" cat="mwu" end="9" id="3" index="1" rel="su">
-        <node begin="7" end="8" id="4" lemma="Ramses" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Ramses" spectype="deeleigen" word="Ramses"/>
-        <node begin="8" end="9" id="5" lemma="Shaffy" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Shaffy" spectype="deeleigen" word="Shaffy"/>
+        <node begin="7" end="8" id="4" lemma="Ramses" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ramses" spectype="deeleigen" word="Ramses"/>
+        <node begin="8" end="9" id="5" lemma="Shaffy" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Shaffy" spectype="deeleigen" word="Shaffy"/>
       </node>
-      <node begin="9" end="10" getal="getal" id="6" lemma="zich" naamval="obl" num="both" pdtype="pron" per="u_thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" refl="refl" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node begin="9" end="10" getal="getal" id="6" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
       <node begin="0" cat="ppart" end="14" id="7" rel="vc">
         <node begin="0" cat="pp" end="6" id="8" rel="mod">
           <node begin="0" end="1" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
           <node begin="1" cat="np" end="6" id="10" rel="obj1">
-            <node begin="1" end="2" id="11" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="2" end="3" gen="het" genus="onz" getal="ev" graad="dim" id="12" lemma="hoek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" rnum="sg" root="hoek_DIM" word="hoekje"/>
+            <node begin="1" end="2" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="dim" id="12" lemma="hoek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="hoek_DIM" word="hoekje"/>
             <node begin="3" cat="pp" end="6" id="13" rel="mod">
               <node begin="3" end="4" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="4" cat="np" end="6" id="15" rel="obj1">
-                <node begin="4" end="5" id="16" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="5" end="6" gen="both" genus="zijd" getal="ev" graad="basis" id="17" lemma="foyer" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="foyer" word="foyer"/>
+                <node begin="4" end="5" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="17" lemma="foyer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="foyer" word="foyer"/>
               </node>
             </node>
           </node>
         </node>
         <node begin="7" end="9" id="18" index="1" rel="obj1"/>
-        <node begin="10" buiging="zonder" end="11" id="19" infl="psp" lemma="omringen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="omring" sc="transitive" word="omringd" wvorm="vd"/>
+        <node begin="10" buiging="zonder" end="11" id="19" lemma="omringen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="omring" word="omringd" wvorm="vd"/>
         <node begin="11" cat="pp" end="14" id="20" rel="mod">
           <node begin="11" end="12" id="21" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
           <node begin="12" cat="np" end="14" id="22" rel="obj1">
-            <node aform="base" begin="12" buiging="met-e" end="13" graad="basis" id="23" infl="e" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="oud" vform="adj" word="oude"/>
-            <node begin="13" end="14" gen="de" getal="mv" graad="basis" id="24" lemma="vriend" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="vriend" word="vrienden"/>
+            <node begin="12" buiging="met-e" end="13" graad="basis" id="23" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="oud" word="oude"/>
+            <node begin="13" end="14" getal="mv" graad="basis" id="24" lemma="vriend" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vriend" word="vrienden"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="14" end="15" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="14" end="15" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>In een hoekje van de foyer weet Ramses Shaffy zich omringd door oude vrienden .</sentence>
 </alpino_ds>

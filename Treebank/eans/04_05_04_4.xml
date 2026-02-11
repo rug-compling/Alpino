@@ -3,23 +3,23 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="5" id="2" index="1" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="halte" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="halte" word="halte"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="halte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="halte" word="halte"/>
         <node begin="2" cat="pp" end="5" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="5" id="7" rel="obj1">
-            <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lemma="lijn" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="lijn" word="lijn"/>
-            <node begin="4" end="5" id="9" infl="pl_num" lemma="6" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="6" special="hoofd" word="6"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="lijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lijn" word="lijn"/>
+            <node begin="4" end="5" id="9" lemma="6" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="6" word="6"/>
           </node>
         </node>
       </node>
-      <node begin="5" end="6" id="10" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="5" end="6" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="7" id="11" rel="vc">
         <node begin="0" end="5" id="12" index="1" rel="obj1"/>
-        <node begin="6" buiging="zonder" end="7" id="13" infl="psp" lemma="op_heffen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="hef_op" sc="part_transitive(op)" word="opgeheven" wvorm="vd"/>
+        <node begin="6" buiging="zonder" end="7" id="13" lemma="op_heffen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="hef_op" word="opgeheven" wvorm="vd"/>
       </node>
     </node>
-    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De halte van lijn 6 is opgeheven .</sentence>
 </alpino_ds>

@@ -3,22 +3,22 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="conj" end="8" id="1" rel="--">
       <node begin="0" cat="smain" end="6" id="2" rel="cnj">
-        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" index="1" lemma="Bram" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Bram" word="Bram"/>
-        <node begin="1" end="2" id="4" infl="sg" lemma="heen_kijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kijk_heen" sc="part_pc_pp_refl(heen,voor)" tense="past" word="keek" wvorm="pv"/>
-        <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="5" infl="no_e" lemma="treurig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="treurig" vform="adj" word="treurig"/>
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" index="1" lemma="Bram" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Bram" word="Bram"/>
+        <node begin="1" end="2" id="4" lemma="heen_kijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kijk_heen" word="keek" wvorm="pv"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="treurig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="treurig" word="treurig"/>
         <node begin="3" cat="pp" end="5" id="6" rel="pc">
           <node begin="3" end="4" id="7" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-          <node begin="4" end="5" getal="getal" id="8" lemma="zich" naamval="obl" num="both" pdtype="pron" per="u_thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" refl="refl" rel="se" rnum="sg" root="zich" status="red" vwtype="refl" word="zich"/>
+          <node begin="4" end="5" getal="getal" id="8" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
         </node>
         <node begin="5" end="6" id="9" lemma="heen" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="heen" vztype="fin" word="heen"/>
       </node>
       <node begin="6" conjtype="neven" end="7" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="0" cat="smain" end="8" id="11" rel="cnj">
         <node begin="0" end="1" id="12" index="1" rel="su"/>
-        <node begin="7" end="8" id="13" infl="sg" lemma="zuchten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zucht" sc="intransitive" tense="past" word="zuchtte" wvorm="pv"/>
+        <node begin="7" end="8" id="13" lemma="zuchten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zucht" word="zuchtte" wvorm="pv"/>
       </node>
     </node>
-    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Bram keek treurig voor zich heen en zuchtte .</sentence>
 </alpino_ds>

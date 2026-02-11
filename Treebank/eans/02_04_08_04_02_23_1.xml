@@ -2,12 +2,12 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="4" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="fietsen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="fiets" sc="intransitive" stype="declarative" tense="past" word="fietste" wvorm="pv"/>
-      <node aform="compar" begin="2" buiging="zonder" end="3" graad="comp" id="4" infl="no_e" lemma="vroeg" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="vroeg" vform="adj" word="vroeger"/>
-      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="5" infl="no_e" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="veel" vform="adj" vwtype="onbep" word="veel"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="fietsen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="fiets" word="fietste" wvorm="pv"/>
+      <node begin="2" buiging="zonder" end="3" graad="comp" id="4" lemma="vroeg" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="vroeg" word="vroeger"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="veel"/>
     </node>
-    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ik fietste vroeger veel .</sentence>
 </alpino_ds>

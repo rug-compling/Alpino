@@ -3,24 +3,24 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="trein" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="trein" word="trein"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="trein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="trein" word="trein"/>
       </node>
-      <node begin="2" end="3" id="5" infl="modal_not_u" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" stype="declarative" tense="present" word="zal" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
       <node begin="0" cat="inf" end="8" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
         <node begin="3" cat="pp" end="7" id="8" rel="mod">
           <node begin="3" end="4" id="9" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
           <node begin="4" cat="mwu" end="7" id="10" rel="obj1">
-            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="11" lemma="kwart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="kwart" special="tmp" word="kwart"/>
-            <node begin="5" end="6" id="12" lemma="over" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="over" special="tmp" vztype="init" word="over"/>
-            <node begin="6" end="7" id="13" lemma="twee" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="twee" special="tmp" word="twee"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="11" lemma="kwart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="kwart" word="kwart"/>
+            <node begin="5" end="6" id="12" lemma="over" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="over" vztype="init" word="over"/>
+            <node begin="6" end="7" id="13" lemma="twee" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="twee" word="twee"/>
           </node>
         </node>
-        <node begin="7" buiging="zonder" end="8" id="14" infl="inf" lemma="aan_komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom_aan" sc="part_intransitive(aan)" word="aankomen" wvorm="inf"/>
+        <node begin="7" buiging="zonder" end="8" id="14" lemma="aan_komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom_aan" word="aankomen" wvorm="inf"/>
       </node>
     </node>
-    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De trein zal om kwart over twee aankomen .</sentence>
 </alpino_ds>

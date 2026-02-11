@@ -3,13 +3,13 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="4" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="het" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" wh="nwh" word="Dit"/>
-        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="was_middel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="was_middel" word="wasmiddel"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="Dit"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="was_middel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="was_middel" word="wasmiddel"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="wassen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="was" sc="intransitive" stype="declarative" tense="present" word="wast" wvorm="pv"/>
-      <node aform="compar" begin="3" buiging="zonder" end="4" graad="comp" id="6" infl="no_e" lemma="wit" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="wit" vform="adj" word="witter"/>
+      <node begin="2" end="3" id="5" lemma="wassen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="was" word="wast" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" graad="comp" id="6" lemma="wit" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="wit" word="witter"/>
     </node>
-    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Dit wasmiddel wast witter .</sentence>
 </alpino_ds>

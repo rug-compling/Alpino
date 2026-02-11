@@ -3,13 +3,13 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="4" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" end="1" id="3" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
-        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="verzet" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="verzet" word="verzet"/>
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="verzet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verzet" word="verzet"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" sc="copula" stype="declarative" tense="present" word="blijft" wvorm="pv"/>
-      <node aform="base" begin="3" buiging="zonder" end="4" id="6" infl="e" lemma="groeien" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="predc" root="groei" vform="gerund" word="groeiende" wvorm="od"/>
+      <node begin="2" end="3" id="5" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" word="blijft" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" id="6" lemma="groeien" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="predc" root="groei" word="groeiende" wvorm="od"/>
     </node>
-    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Het verzet blijft groeiende .</sentence>
 </alpino_ds>

@@ -2,14 +2,14 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="4" id="1" rel="--">
-      <node begin="0" case="both" def="def" end="1" gen="de" genus="fem" getal="ev" id="2" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" rnum="sg" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
-      <node begin="1" end="2" id="3" infl="sg3" lemma="zien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zie" sc="intransitive" stype="declarative" tense="present" word="ziet" wvorm="pv"/>
+      <node begin="0" end="1" genus="fem" getal="ev" id="2" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="Ze"/>
+      <node begin="1" end="2" id="3" lemma="zien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zie" word="ziet" wvorm="pv"/>
       <node begin="2" cat="ap" end="4" id="4" rel="mod">
-        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="heel" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="heel" special="intensifier" word="heel"/>
-        <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="6" infl="no_e" lemma="slecht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="slecht" vform="adj" word="slecht"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="heel" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="heel" word="heel"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="slecht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="slecht" word="slecht"/>
       </node>
     </node>
-    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ze ziet heel slecht .</sentence>
 </alpino_ds>

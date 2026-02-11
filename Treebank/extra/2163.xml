@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="13" id="0" rel="top">
-    <node begin="3" end="4" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" special="haak_open" word="("/>
-    <node begin="6" end="7" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" special="haak_sluit" word=")"/>
+    <node begin="3" end="4" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="6" end="7" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="0" cat="smain" end="12" id="3" rel="--">
-      <node aform="base" begin="0" buiging="met-e" end="1" getal-n="zonder-n" id="4" infl="e" lemma="onder_staan" pos="adj" positie="nom" postag="WW(od,nom,met-e,zonder-n)" pt="ww" rel="su" rnum="sg" root="onder_staan" vform="gerund" word="Onderstaande" wvorm="od"/>
-      <node begin="1" end="2" id="5" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
+      <node begin="0" buiging="met-e" end="1" getal-n="zonder-n" id="4" lemma="onder_staan" pos="adj" positie="nom" postag="WW(od,nom,met-e,zonder-n)" pt="ww" rel="su" root="onder_staan" word="Onderstaande" wvorm="od"/>
+      <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="2" cat="np" end="12" id="6" rel="predc">
-        <node begin="2" end="3" id="7" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="2" end="3" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
         <node begin="4" cat="ap" end="6" id="8" rel="mod">
           <node begin="4" end="5" id="9" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-          <node aform="base" begin="5" buiging="met-e" end="6" graad="basis" id="10" infl="e" lemma="volledig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="volledig" vform="adj" word="volledige"/>
+          <node begin="5" buiging="met-e" end="6" graad="basis" id="10" lemma="volledig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="volledig" word="volledige"/>
         </node>
-        <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="lijst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="lijst" word="lijst"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="11" lemma="lijst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lijst" word="lijst"/>
         <node begin="8" cat="pp" end="12" id="12" rel="mod">
           <node begin="8" end="9" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="9" cat="np" end="12" id="14" rel="obj1">
-            <node begin="9" end="10" gen="de" getal="mv" graad="basis" id="15" lemma="student_vereniging" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="student_vereniging" word="studentenverenigingen"/>
+            <node begin="9" end="10" getal="mv" graad="basis" id="15" lemma="student_vereniging" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="student_vereniging" word="studentenverenigingen"/>
             <node begin="10" cat="pp" end="12" id="16" rel="mod">
               <node begin="10" end="11" id="17" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="18" lemma="Leiden" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Leiden" word="Leiden"/>
+              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="18" lemma="Leiden" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Leiden" word="Leiden"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="12" end="13" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="12" end="13" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Onderstaande is een ( niet volledige ) lijst van studentenverenigingen in Leiden .</sentence>
 </alpino_ds>

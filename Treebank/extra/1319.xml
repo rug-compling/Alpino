@@ -3,28 +3,28 @@
   <node begin="0" cat="top" end="11" id="0" rel="top">
     <node begin="0" cat="smain" end="10" id="1" rel="--">
       <node begin="0" cat="np" end="5" id="2" index="1" rel="su">
-        <node begin="0" end="1" id="3" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
-        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="aantal" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="aantal" word="aantal"/>
+        <node begin="0" end="1" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
         <node begin="2" cat="pp" end="5" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="5" id="7" rel="obj1">
-            <node begin="3" buiging="zonder" end="4" id="8" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="die"/>
-            <node begin="4" end="5" gen="het" getal="mv" graad="basis" id="9" lemma="verhaal" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="verhaal" word="verhalen"/>
+            <node begin="3" buiging="zonder" end="4" id="8" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+            <node begin="4" end="5" getal="mv" graad="basis" id="9" lemma="verhaal" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verhaal" word="verhalen"/>
           </node>
         </node>
       </node>
-      <node begin="5" end="6" id="10" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="5" end="6" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="10" id="11" rel="vc">
         <node begin="0" end="5" id="12" index="1" rel="obj1"/>
-        <node begin="6" end="7" id="13" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="ook"/>
+        <node begin="6" end="7" id="13" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
         <node begin="7" cat="pp" end="9" id="14" rel="mod">
           <node begin="7" end="8" id="15" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-          <node begin="8" end="9" gen="de" genus="zijd" getal="ev" graad="basis" id="16" lemma="televisie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="televisie" word="televisie"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="televisie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="televisie" word="televisie"/>
         </node>
-        <node begin="9" buiging="zonder" end="10" id="17" infl="psp" lemma="bewerken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bewerk" sc="transitive" word="bewerkt" wvorm="vd"/>
+        <node begin="9" buiging="zonder" end="10" id="17" lemma="bewerken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bewerk" word="bewerkt" wvorm="vd"/>
       </node>
     </node>
-    <node begin="10" end="11" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="10" end="11" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Een aantal van die verhalen is ook voor televisie bewerkt .</sentence>
 </alpino_ds>

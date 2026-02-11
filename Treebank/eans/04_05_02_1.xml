@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="gil" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="gil" word="gil"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="gil" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gil" word="gil"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="dringen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dring" sc="intransitive" stype="declarative" tense="past" word="drong" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="dringen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dring" word="drong" wvorm="pv"/>
       <node begin="3" cat="pp" end="7" id="6" rel="mod">
         <node begin="3" end="4" id="7" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
         <node begin="4" cat="conj" end="7" id="8" rel="obj1">
-          <node begin="4" end="5" gen="het" genus="onz" getal="ev" graad="basis" id="9" lemma="merg" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" rnum="sg" root="merg" word="merg"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="merg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="merg" word="merg"/>
           <node begin="5" conjtype="neven" end="6" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-          <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="been" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" rnum="sg" root="been" word="been"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="been" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="been" word="been"/>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De gil drong door merg en been .</sentence>
 </alpino_ds>

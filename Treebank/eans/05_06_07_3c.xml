@@ -2,15 +2,15 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="predm" root="zelf" special="predm" word="Zelf"/>
-      <node begin="1" end="2" id="3" infl="sg1" lemma="schrijven" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="schrijf" sc="transitive" stype="declarative" tense="present" word="schrijf" wvorm="pv"/>
-      <node begin="2" case="nom" def="def" end="3" gen="de" getal="ev" id="4" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="0" end="1" id="2" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="predm" root="zelf" word="Zelf"/>
+      <node begin="1" end="2" id="3" lemma="schrijven" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="schrijf" word="schrijf" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="4" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
       <node begin="3" cat="np" end="5" id="5" rel="obj1">
-        <node begin="3" buiging="zonder" end="4" id="6" infl="geen" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" wh="nwh" word="geen"/>
-        <node begin="4" end="5" gen="het" getal="mv" graad="basis" id="7" lemma="boek" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="boek" word="boeken"/>
+        <node begin="3" buiging="zonder" end="4" id="6" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="7" lemma="boek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="boek" word="boeken"/>
       </node>
     </node>
-    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Zelf schrijf ik geen boeken .</sentence>
 </alpino_ds>

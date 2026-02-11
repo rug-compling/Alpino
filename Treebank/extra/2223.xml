@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="11" id="0" rel="top">
-    <node begin="1" end="2" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" special="ligg_streep" word="-"/>
-    <node begin="5" end="6" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" special="ligg_streep" word="-"/>
+    <node begin="1" end="2" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="5" end="6" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
     <node begin="0" cat="smain" end="10" id="3" rel="--">
       <node begin="0" cat="np" end="5" id="4" rel="su">
-        <node begin="0" case="both" def="def" end="1" gen="de" getal="ev" id="5" lemma="iedereen" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="hd" rnum="sg" root="iedereen" special="strpro" status="vol" vwtype="onbep" wh="nwh" word="Iedereen"/>
+        <node begin="0" end="1" getal="ev" id="5" lemma="iedereen" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="hd" root="iedereen" status="vol" vwtype="onbep" word="Iedereen"/>
         <node begin="2" cat="du" end="5" id="6" rel="mod">
           <node begin="2" cat="cp" end="4" id="7" rel="dp">
-            <node begin="2" conjtype="onder" end="3" id="8" lemma="behalve" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="behalve" sc="np" word="behalve"/>
-            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="Breton" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="body" rnum="sg" root="Breton" word="Breton"/>
+            <node begin="2" conjtype="onder" end="3" id="8" lemma="behalve" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="behalve" word="behalve"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="Breton" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="body" root="Breton" word="Breton"/>
           </node>
-          <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="10" infl="no_e" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="natuurlijk" vform="adj" word="natuurlijk"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="natuurlijk" word="natuurlijk"/>
         </node>
       </node>
-      <node begin="6" end="7" id="11" infl="sg3" lemma="krijgen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="krijg" sc="transitive" stype="declarative" tense="present" v_per="thi" word="krijgt" wvorm="pv"/>
+      <node begin="6" end="7" id="11" lemma="krijgen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="krijg" word="krijgt" wvorm="pv"/>
       <node begin="7" cat="np" end="10" id="12" rel="obj1">
-        <node begin="7" end="8" id="13" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node aform="base" begin="8" buiging="met-e" end="9" graad="basis" id="14" infl="e" lemma="slap" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="slap" vform="adj" word="slappe"/>
-        <node begin="9" end="10" gen="de" genus="zijd" getal="ev" graad="basis" id="15" lemma="lach" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="lach" word="lach"/>
+        <node begin="7" end="8" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="8" buiging="met-e" end="9" graad="basis" id="14" lemma="slap" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="slap" word="slappe"/>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="15" lemma="lach" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lach" word="lach"/>
       </node>
     </node>
-    <node begin="10" end="11" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="10" end="11" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Iedereen - behalve Breton natuurlijk - krijgt de slappe lach .</sentence>
 </alpino_ds>

@@ -2,12 +2,12 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="0" end="1" gen="het" genus="onz" getal="ev" graad="dim" id="2" lemma="kruimel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="su" rnum="sg" root="kruimel_DIM" word="Kruimeltje"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="uit_wrijven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wrijf_uit" sc="part_refl_np(uit)" stype="declarative" tense="past" word="wreef" wvorm="pv"/>
-      <node begin="2" end="3" getal="getal" id="4" lemma="zich" naamval="obl" num="both" pdtype="pron" per="u_thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" refl="refl" rel="se" rnum="sg" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node begin="0" end="1" genus="onz" getal="ev" graad="dim" id="2" lemma="kruimel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="su" root="kruimel_DIM" word="Kruimeltje"/>
+      <node begin="1" end="2" id="3" lemma="uit_wrijven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wrijf_uit" word="wreef" wvorm="pv"/>
+      <node begin="2" end="3" getal="getal" id="4" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
       <node begin="3" cat="np" end="5" id="5" rel="obj1">
-        <node begin="3" end="4" id="6" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="4" end="5" gen="het" getal="mv" graad="basis" id="7" lemma="oog" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="oog" word="ogen"/>
+        <node begin="3" end="4" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="7" lemma="oog" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="oog" word="ogen"/>
       </node>
       <node begin="5" end="6" id="8" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
     </node>

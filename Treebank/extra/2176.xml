@@ -2,25 +2,25 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="11" id="0" rel="top">
     <node begin="0" cat="smain" end="11" id="1" rel="--">
-      <node begin="1" end="2" id="2" infl="pl" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" sc="passive" stype="declarative" tense="present" v_per="thi" word="worden" wvorm="pv"/>
+      <node begin="1" end="2" id="2" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
       <node begin="2" cat="np" end="4" id="3" index="1" rel="su">
-        <node begin="2" end="3" id="4" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="5" lemma="camping" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="camping" word="campings"/>
+        <node begin="2" end="3" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="5" lemma="camping" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="camping" word="campings"/>
       </node>
       <node begin="0" cat="ppart" end="11" id="6" rel="vc">
-        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="7" infl="no_e" lemma="jaarlijks" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="jaarlijks" vform="adj" word="Jaarlijks"/>
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="7" lemma="jaarlijks" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="jaarlijks" word="Jaarlijks"/>
         <node begin="2" end="4" id="8" index="1" rel="obj1"/>
-        <node begin="4" buiging="zonder" end="5" id="9" infl="psp" lemma="bezoeken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bezoek" sc="transitive" word="bezocht" wvorm="vd"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="bezoeken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bezoek" word="bezocht" wvorm="vd"/>
         <node begin="5" cat="pp" end="11" id="10" rel="mod">
           <node begin="5" end="6" id="11" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
           <node begin="6" cat="np" end="11" id="12" rel="obj1">
             <node begin="6" cat="mwu" end="8" id="13" rel="mod">
-              <node begin="6" buiging="zonder" end="7" graad="comp" id="14" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" sc="noun" vwtype="onbep" word="meer"/>
-              <node begin="7" conjtype="onder" end="8" id="15" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" sc="noun" word="dan"/>
+              <node begin="6" buiging="zonder" end="7" graad="comp" id="14" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" vwtype="onbep" word="meer"/>
+              <node begin="7" conjtype="onder" end="8" id="15" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" word="dan"/>
             </node>
-            <node begin="8" end="9" id="16" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="9" end="10" gen="both" genus="onz" getal="ev" graad="basis" id="17" lemma="miljoen" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="pl" root="miljoen" sc="measure" special="meas_mod" word="miljoen"/>
-            <node begin="10" end="11" gen="de" getal="mv" graad="basis" id="18" lemma="vakantie_ganger" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" rnum="pl" root="vakantie_ganger" word="vakantiegangers"/>
+            <node begin="8" end="9" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="17" lemma="miljoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="miljoen" word="miljoen"/>
+            <node begin="10" end="11" getal="mv" graad="basis" id="18" lemma="vakantie_ganger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="vakantie_ganger" word="vakantiegangers"/>
           </node>
         </node>
       </node>

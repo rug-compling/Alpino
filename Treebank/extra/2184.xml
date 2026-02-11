@@ -3,29 +3,29 @@
   <node begin="0" cat="top" end="12" id="0" rel="top">
     <node begin="0" cat="smain" end="11" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" index="1" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" end="2" id="4" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="één" word="eerste"/>
-        <node begin="2" end="3" gen="de" getal="mv" graad="basis" id="5" lemma="aflevering" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="aflevering" special="tmp" word="afleveringen"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="aflevering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aflevering" word="afleveringen"/>
       </node>
-      <node begin="3" end="4" id="6" infl="pl" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" sc="passive" stype="declarative" tense="past" v_per="thi" word="werden" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
       <node begin="0" cat="ppart" end="11" id="7" rel="vc">
         <node begin="0" end="3" id="8" index="1" rel="obj1"/>
         <node begin="4" cat="pp" end="10" id="9" rel="mod">
           <node begin="4" end="5" id="10" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
           <node begin="5" cat="np" end="10" id="11" rel="obj1">
             <node begin="5" cat="mwu" end="7" id="12" rel="mod">
-              <node begin="5" buiging="zonder" end="6" graad="comp" id="13" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" sc="noun" vwtype="onbep" word="meer"/>
-              <node begin="6" conjtype="onder" end="7" id="14" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" sc="noun" word="dan"/>
+              <node begin="5" buiging="zonder" end="6" graad="comp" id="13" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" vwtype="onbep" word="meer"/>
+              <node begin="6" conjtype="onder" end="7" id="14" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" word="dan"/>
             </node>
-            <node begin="7" end="8" id="15" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="8" end="9" gen="both" genus="onz" getal="ev" graad="basis" id="16" lemma="miljoen" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="pl" root="miljoen" sc="measure" special="meas_mod" word="miljoen"/>
-            <node begin="9" end="10" gen="both" getal="mv" graad="basis" id="17" lemma="mens" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" rnum="pl" root="mens" word="mensen"/>
+            <node begin="7" end="8" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="16" lemma="miljoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="miljoen" word="miljoen"/>
+            <node begin="9" end="10" getal="mv" graad="basis" id="17" lemma="mens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="mens" word="mensen"/>
           </node>
         </node>
-        <node begin="10" buiging="zonder" end="11" id="18" infl="psp" lemma="bekijken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bekijk" sc="transitive" word="bekeken" wvorm="vd"/>
+        <node begin="10" buiging="zonder" end="11" id="18" lemma="bekijken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bekijk" word="bekeken" wvorm="vd"/>
       </node>
     </node>
-    <node begin="11" end="12" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De eerste afleveringen werden door meer dan een miljoen mensen bekeken .</sentence>
 </alpino_ds>

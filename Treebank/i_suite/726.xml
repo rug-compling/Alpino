@@ -4,24 +4,24 @@
     <node begin="0" cat="cp" end="8" id="1" rel="--">
       <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
       <node begin="1" cat="ssub" end="8" id="3" rel="body">
-        <node begin="3" end="4" id="4" infl="sg" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" sc="aux(inf)" tense="past" word="zou" wvorm="pv"/>
+        <node begin="3" end="4" id="4" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
         <node begin="1" cat="inf" end="8" id="5" rel="vc">
-          <node begin="4" buiging="zonder" end="5" id="6" infl="inf(no_e)" lemma="staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta" sc="sbar_passive" word="staan" wvorm="inf"/>
+          <node begin="4" buiging="zonder" end="5" id="6" lemma="staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta" word="staan" wvorm="inf"/>
           <node begin="1" cat="ppart" end="8" id="7" rel="vc">
-            <node begin="1" end="2" getal="getal" id="8" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="er"/>
-            <node begin="2" buiging="zonder" end="3" id="9" infl="psp" lemma="schrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schrijf" sc="sbar" word="geschreven" wvorm="vd"/>
+            <node begin="1" end="2" getal="getal" id="8" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="2" buiging="zonder" end="3" id="9" lemma="schrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schrijf" word="geschreven" wvorm="vd"/>
             <node begin="5" cat="cp" end="8" id="10" rel="vc">
-              <node begin="5" conjtype="onder" end="6" id="11" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+              <node begin="5" conjtype="onder" end="6" id="11" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
               <node begin="6" cat="ssub" end="8" id="12" rel="body">
-                <node begin="6" case="nom" def="def" end="7" gen="de" genus="masc" getal="ev" id="13" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
-                <node begin="7" end="8" id="14" infl="sg3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" sc="intransitive" tense="present" word="komt" wvorm="pv"/>
+                <node begin="6" end="7" genus="masc" getal="ev" id="13" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+                <node begin="7" end="8" id="14" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
               </node>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Omdat er geschreven zou staan dat hij komt .</sentence>
 </alpino_ds>

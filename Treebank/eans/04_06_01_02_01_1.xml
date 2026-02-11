@@ -3,22 +3,22 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node aform="base" begin="0" buiging="met-e" end="1" graad="basis" id="3" infl="e" lemma="slim" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="slim" vform="adj" word="Slimme"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Joop" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="Joop" word="Joop"/>
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="slim" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="slim" word="Slimme"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Joop" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Joop" word="Joop"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" word="heeft" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
       <node begin="0" cat="ppart" end="8" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
         <node begin="3" end="4" id="8" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
-        <node begin="4" end="5" id="9" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" special="tmp" word="eens"/>
+        <node begin="4" end="5" id="9" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" word="eens"/>
         <node begin="5" cat="np" end="7" id="10" rel="obj1">
-          <node begin="5" end="6" id="11" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="list" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="list" word="list"/>
+          <node begin="5" end="6" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="list" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="list" word="list"/>
         </node>
-        <node begin="7" buiging="zonder" end="8" id="13" infl="psp" lemma="verzinnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verzin" sc="transitive" word="verzonnen" wvorm="vd"/>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="verzinnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verzin" word="verzonnen" wvorm="vd"/>
       </node>
     </node>
-    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Slimme Joop heeft weer eens een list verzonnen .</sentence>
 </alpino_ds>

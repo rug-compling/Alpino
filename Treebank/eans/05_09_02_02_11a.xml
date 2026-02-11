@@ -3,17 +3,17 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" buiging="met-e" end="1" id="3" infl="alle" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="al" vwtype="onbep" wh="nwh" word="Alle"/>
-        <node begin="1" end="2" gen="both" genus="zijd" getal="ev" graad="basis" id="4" lemma="alcohol" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="alcohol" word="alcohol"/>
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="al" vwtype="onbep" word="Alle"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="alcohol" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="alcohol" word="alcohol"/>
       </node>
-      <node begin="2" end="3" id="5" infl="modal_not_u" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" stype="declarative" tense="present" word="kan" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
       <node begin="0" cat="inf" end="5" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
-        <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="8" infl="no_e" lemma="teveel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="predc" root="teveel" sc="me" vform="adj" vwtype="onbep" word="teveel"/>
-        <node begin="4" buiging="zonder" end="5" id="9" infl="inf" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="copula" word="zijn" wvorm="inf"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="teveel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="predc" root="teveel" vwtype="onbep" word="teveel"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
       </node>
     </node>
-    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Alle alcohol kan teveel zijn .</sentence>
 </alpino_ds>

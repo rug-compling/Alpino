@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="12" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" special="haak_open" word="("/>
-    <node begin="2" end="3" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" special="haak_sluit" word=")"/>
+    <node begin="0" end="1" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="2" end="3" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="1" cat="du" end="11" id="3" rel="--">
-      <node begin="1" dropped_agr="sg" dropped_prs="thi" end="2" id="4" infl="sg3" lemma="grijnzen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="dp" root="grijns" sc="intransitive" stype="topic_drop" tense="present" v_per="thi" word="grijnst" wvorm="pv"/>
+      <node begin="1" end="2" id="4" lemma="grijnzen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="dp" root="grijns" word="grijnst" wvorm="pv"/>
       <node begin="3" cat="smain" end="11" id="5" rel="dp">
-        <node begin="3" case="nom" def="def" end="4" gen="de" getal="ev" id="6" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-        <node begin="4" end="5" id="7" infl="sg" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" sc="tr_sbar" stype="declarative" tense="present" v_per="fir" word="weet" wvorm="pv"/>
+        <node begin="3" end="4" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+        <node begin="4" end="5" id="7" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" word="weet" wvorm="pv"/>
         <node begin="5" end="6" id="8" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
         <node begin="6" cat="whsub" end="11" id="9" rel="vc">
           <node begin="6" cat="np" end="8" id="10" index="1" rel="whd">
-            <node begin="6" buiging="met-e" end="7" id="11" infl="welke" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" wh="rwh" word="welke"/>
-            <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="richting" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="richting" word="richting"/>
+            <node begin="6" buiging="met-e" end="7" id="11" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="welke"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="richting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="richting" word="richting"/>
           </node>
           <node begin="6" cat="ssub" end="11" id="13" rel="body">
             <node begin="6" end="8" id="14" index="1" rel="ld"/>
-            <node begin="8" case="both" def="def" end="9" gen="de" getal="ev" id="15" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+            <node begin="8" end="9" getal="ev" id="15" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
             <node begin="9" end="10" id="16" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
-            <node begin="10" end="11" id="17" infl="modal_not_u" lemma="uit_willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil_uit" sc="part_ld_transitive(uit)" tense="present" v_per="ninvje" word="wil" wvorm="pv"/>
+            <node begin="10" end="11" id="17" lemma="uit_willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil_uit" word="wil" wvorm="pv"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>( grijnst ) Ik weet al welke richting je uit wil .</sentence>
 </alpino_ds>

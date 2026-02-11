@@ -2,18 +2,18 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="whq" end="4" id="1" rel="--">
-      <node begin="0" case="both" def="indef" end="1" gen="de" getal="getal" id="2" index="1" lemma="wie" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" rnum="sg" root="wie" status="vol" vwtype="vb" wh="ywh" word="Wie"/>
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="Wie"/>
       <node begin="0" cat="sv1" end="4" id="3" rel="body">
         <node begin="0" end="1" id="4" index="1" rel="su"/>
-        <node begin="1" end="2" id="5" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="whquestion" tense="present" word="heeft" wvorm="pv"/>
+        <node begin="1" end="2" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
         <node begin="0" cat="ppart" end="4" id="6" rel="vc">
           <node begin="0" end="1" id="7" index="1" rel="su"/>
-          <node begin="2" end="3" getal="ev" id="8" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
-          <node begin="3" buiging="zonder" end="4" id="9" infl="psp" lemma="doen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="doe" sc="transitive_ndev" word="gedaan" wvorm="vd"/>
+          <node begin="2" end="3" getal="ev" id="8" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
+          <node begin="3" buiging="zonder" end="4" id="9" lemma="doen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="doe" word="gedaan" wvorm="vd"/>
         </node>
       </node>
     </node>
-    <node begin="4" end="5" id="10" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="4" end="5" id="10" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Wie heeft dat gedaan ?</sentence>
 </alpino_ds>

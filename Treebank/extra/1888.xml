@@ -8,15 +8,15 @@
           <node begin="1" end="2" id="5" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
         </node>
         <node begin="2" end="3" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="Nordrhein-Westfalen" naamval="stan" neclass="LOC" ntype="eigen" num="both" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Nordrhein-Westfalen" word="Nordrhein-Westfalen"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="Nordrhein-Westfalen" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Nordrhein-Westfalen" word="Nordrhein-Westfalen"/>
       </node>
-      <node begin="4" end="5" id="8" infl="pl" lemma="verdwijnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="verdwijn" sc="intransitive" stype="declarative" tense="present" v_per="thi" word="verdwijnen" wvorm="pv"/>
+      <node begin="4" end="5" id="8" lemma="verdwijnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="verdwijn" word="verdwijnen" wvorm="pv"/>
       <node begin="5" cat="np" end="7" id="9" rel="su">
-        <node begin="5" end="6" id="10" infl="pl_num" lemma="8000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="8000" word="8000"/>
-        <node begin="6" end="7" gen="het" getal="mv" graad="basis" id="11" lemma="bed" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="bed" word="bedden"/>
+        <node begin="5" end="6" id="10" lemma="8000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="8000" word="8000"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="11" lemma="bed" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bed" word="bedden"/>
       </node>
     </node>
-    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Alleen al in Nordrhein-Westfalen verdwijnen 8000 bedden .</sentence>
 </alpino_ds>

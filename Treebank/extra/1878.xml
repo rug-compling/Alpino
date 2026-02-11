@@ -8,30 +8,30 @@
           <node begin="1" end="2" id="5" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
         </node>
         <node begin="2" end="3" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-        <node begin="3" end="4" id="7" lemma="1994" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1994" word="1994"/>
+        <node begin="3" end="4" id="7" lemma="1994" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1994" word="1994"/>
       </node>
-      <node begin="4" end="5" id="8" infl="sg" lemma="binnen_krijgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="krijg_binnen" sc="part_transitive(binnen)" stype="declarative" tense="past" v_per="thi" word="kreeg" wvorm="pv"/>
+      <node begin="4" end="5" id="8" lemma="binnen_krijgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="krijg_binnen" word="kreeg" wvorm="pv"/>
       <node begin="5" cat="np" end="7" id="9" rel="su">
-        <node begin="5" end="6" id="10" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="Fonds" naamval="stan" neclass="ORG" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="Fonds" word="Fonds"/>
+        <node begin="5" end="6" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="Fonds" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Fonds" word="Fonds"/>
       </node>
       <node begin="7" cat="np" end="13" id="12" rel="obj1">
-        <node aform="compar" begin="7" buiging="zonder" end="8" graad="comp" id="13" infl="meer" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" rnum="sg" root="meer" vform="adj" vwtype="onbep" word="meer"/>
+        <node begin="7" buiging="zonder" end="8" graad="comp" id="13" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="meer" vwtype="onbep" word="meer"/>
         <node begin="8" cat="cp" end="13" id="14" rel="obcomp">
           <node begin="8" conjtype="onder" end="9" id="15" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
           <node begin="9" cat="np" end="13" id="16" rel="body">
-            <node begin="9" end="10" id="17" infl="pl_num" lemma="11.000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="11.000" word="11.000"/>
-            <node begin="10" end="11" gen="de" getal="mv" graad="basis" id="18" lemma="aanvraag" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="aanvraag" word="aanvragen"/>
+            <node begin="9" end="10" id="17" lemma="11.000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="11.000" word="11.000"/>
+            <node begin="10" end="11" getal="mv" graad="basis" id="18" lemma="aanvraag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aanvraag" word="aanvragen"/>
             <node begin="11" cat="pp" end="13" id="19" rel="mod">
               <node begin="11" end="12" id="20" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-              <node begin="12" end="13" gen="de" genus="zijd" getal="ev" graad="basis" id="21" lemma="tussenkomst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="tussenkomst" word="tussenkomst"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="21" lemma="tussenkomst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="tussenkomst" word="tussenkomst"/>
             </node>
           </node>
         </node>
       </node>
       <node begin="13" end="14" id="22" lemma="binnen" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="binnen" vztype="fin" word="binnen"/>
     </node>
-    <node begin="14" end="15" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="14" end="15" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Alleen al in 1994 kreeg het Fonds meer dan 11.000 aanvragen voor tussenkomst binnen .</sentence>
 </alpino_ds>

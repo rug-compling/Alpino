@@ -2,21 +2,21 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
-      <node begin="1" end="2" id="2" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" stype="declarative" tense="past" v_per="thi" word="werd" wvorm="pv"/>
+      <node begin="1" end="2" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
       <node begin="0" cat="ppart" end="9" id="3" rel="vc">
         <node begin="0" end="1" id="4" lemma="overeen" pos="part" postag="BW()" pt="bw" rel="svp" root="overeen" word="Overeen"/>
-        <node begin="2" buiging="zonder" end="3" id="5" infl="psp" lemma="overeen_komen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom_overeen" sc="part_vp_tpart(overeen)" word="gekomen" wvorm="vd"/>
+        <node begin="2" buiging="zonder" end="3" id="5" lemma="overeen_komen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom_overeen" word="gekomen" wvorm="vd"/>
         <node begin="3" cat="oti" end="9" id="6" rel="vc">
-          <node begin="3" end="4" id="7" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" sc="om" vztype="init" word="om"/>
+          <node begin="3" end="4" id="7" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
           <node begin="4" cat="ti" end="9" id="8" rel="body">
-            <node begin="7" end="8" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+            <node begin="7" end="8" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
             <node begin="4" cat="inf" end="9" id="10" rel="body">
               <node begin="4" cat="np" end="6" id="11" rel="obj1">
-                <node begin="4" end="5" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="13" lemma="verjaar_dag" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="verjaar_dag" special="tmp" word="verjaardagen"/>
+                <node begin="4" end="5" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="5" end="6" getal="mv" graad="basis" id="13" lemma="verjaar_dag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verjaar_dag" word="verjaardagen"/>
               </node>
-              <node begin="6" end="7" id="14" lemma="thuis" pos="adv" postag="BW()" pt="bw" rel="mod" root="thuis" special="loc" word="thuis"/>
-              <node begin="8" buiging="zonder" end="9" id="15" infl="inf" lemma="vieren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vier" sc="transitive" word="vieren" wvorm="inf"/>
+              <node begin="6" end="7" id="14" lemma="thuis" pos="adv" postag="BW()" pt="bw" rel="mod" root="thuis" word="thuis"/>
+              <node begin="8" buiging="zonder" end="9" id="15" lemma="vieren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vier" word="vieren" wvorm="inf"/>
             </node>
           </node>
         </node>

@@ -2,17 +2,17 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="cp" end="5" id="1" rel="--">
-      <node begin="0" conjtype="onder" end="1" id="2" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" sc="zoals" word="Zoals"/>
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="Zoals"/>
       <node begin="1" cat="cp" end="5" id="3" rel="body">
         <node begin="1" conjtype="onder" end="2" id="4" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="toen"/>
         <node begin="2" cat="ssub" end="5" id="5" rel="body">
-          <node begin="2" case="nom" def="def" end="3" gen="de" getal="ev" id="6" lemma="jij" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,vol,2v,ev)" pt="vnw" rel="su" rnum="sg" root="jij" status="vol" vwtype="pers" wh="nwh" word="jij"/>
-          <node begin="3" end="4" genus="onz" getal="ev" id="7" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
-          <node begin="4" end="5" id="8" infl="sg" lemma="runnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="run" sc="transitive" tense="past" v_per="ninvje" word="runde" wvorm="pv"/>
+          <node begin="2" end="3" getal="ev" id="6" lemma="jij" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,vol,2v,ev)" pt="vnw" rel="su" root="jij" status="vol" vwtype="pers" word="jij"/>
+          <node begin="3" end="4" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="4" end="5" id="8" lemma="runnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="run" word="runde" wvorm="pv"/>
         </node>
       </node>
     </node>
-    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Zoals toen jij het runde .</sentence>
 </alpino_ds>

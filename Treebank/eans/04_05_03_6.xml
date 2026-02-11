@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="brief" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="brief" word="brieven"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="brief" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="brief" word="brieven"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" sc="passive" stype="declarative" tense="present" word="worden" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
       <node begin="0" cat="ppart" end="6" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="obj1"/>
         <node begin="3" cat="pp" end="5" id="8" rel="mod">
           <node begin="3" end="4" id="9" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
-          <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="lucht_post" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="lucht_post" word="luchtpost"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="lucht_post" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="lucht_post" word="luchtpost"/>
         </node>
-        <node begin="5" buiging="zonder" end="6" id="11" infl="psp" lemma="verzenden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verzend" sc="transitive" word="verzonden" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="verzenden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verzend" word="verzonden" wvorm="vd"/>
       </node>
     </node>
-    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De brieven worden per luchtpost verzonden .</sentence>
 </alpino_ds>

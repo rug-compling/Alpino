@@ -5,24 +5,24 @@
       <node begin="0" cat="pp" end="4" id="2" rel="mod">
         <node begin="0" end="1" id="3" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="Op"/>
         <node begin="1" cat="np" end="4" id="4" rel="obj1">
-          <node begin="1" end="2" id="5" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-          <node begin="2" end="3" id="6" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="één" special="rang" word="eerste"/>
-          <node begin="3" end="4" gen="het" genus="onz" getal="ev" graad="basis" id="7" lemma="net" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="net" word="net"/>
+          <node begin="1" end="2" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="2" end="3" id="6" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="één" word="eerste"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="net" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="net" word="net"/>
         </node>
       </node>
-      <node begin="4" end="5" id="8" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="intransitive" stype="declarative" tense="present" word="is" wvorm="pv"/>
-      <node begin="5" end="6" getal="getal" id="9" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="4" end="5" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="5" end="6" getal="getal" id="9" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
       <node begin="6" cat="np" end="11" id="10" rel="su">
-        <node begin="6" end="7" id="11" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+        <node begin="6" end="7" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
         <node begin="7" cat="mwu" end="10" id="12" rel="mod">
-          <node aform="base" begin="7" end="8" id="13" infl="no_e" lemma="één" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="een" vform="adj" word="een"/>
-          <node aform="base" begin="8" conjtype="neven" end="9" id="14" infl="no_e" lemma="of" pos="adj" postag="VG(neven)" pt="vg" rel="mwp" root="of" vform="adj" word="of"/>
-          <node aform="base" begin="9" buiging="zonder" end="10" graad="basis" id="15" infl="no_e" lemma="ander" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="ander" vform="adj" word="ander"/>
+          <node begin="7" end="8" id="13" lemma="één" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="een" word="een"/>
+          <node begin="8" conjtype="neven" end="9" id="14" lemma="of" pos="adj" postag="VG(neven)" pt="vg" rel="mwp" root="of" word="of"/>
+          <node begin="9" buiging="zonder" end="10" graad="basis" id="15" lemma="ander" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="ander" word="ander"/>
         </node>
-        <node begin="10" end="11" gen="het" genus="onz" getal="ev" graad="basis" id="16" lemma="spel_programma" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="spel_programma" word="spelprogramma"/>
+        <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="16" lemma="spel_programma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="spel_programma" word="spelprogramma"/>
       </node>
     </node>
-    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Op het eerste net is er het een of ander spelprogramma .</sentence>
 </alpino_ds>

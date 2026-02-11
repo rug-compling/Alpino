@@ -3,31 +3,31 @@
   <node begin="0" cat="top" end="14" id="0" rel="top">
     <node begin="0" cat="smain" end="14" id="1" rel="--">
       <node begin="0" cat="ppart" end="6" id="2" rel="predm">
-        <node aform="base" begin="0" buiging="zonder" end="1" id="3" infl="both" lemma="daar_laten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="daar_laten" sc="object_sbar" vform="psp" word="Daargelaten" wvorm="vd"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="daar_laten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="daar_laten" word="Daargelaten" wvorm="vd"/>
         <node begin="1" cat="cp" end="6" id="4" rel="vc">
-          <node begin="1" conjtype="onder" end="2" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="1" conjtype="onder" end="2" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="2" cat="ssub" end="6" id="6" rel="body">
             <node begin="2" cat="np" end="4" id="7" rel="su">
-              <node begin="2" buiging="zonder" end="3" id="8" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="die"/>
-              <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="poging" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="poging" word="poging"/>
+              <node begin="2" buiging="zonder" end="3" id="8" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="poging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="poging" word="poging"/>
             </node>
-            <node begin="4" end="5" id="10" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" special="sentence" word="altijd"/>
-            <node begin="5" end="6" id="11" infl="sg3" lemma="falen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="faal" sc="intransitive" tense="present" v_per="thi" word="faalt" wvorm="pv"/>
+            <node begin="4" end="5" id="10" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
+            <node begin="5" end="6" id="11" lemma="falen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="faal" word="faalt" wvorm="pv"/>
           </node>
         </node>
       </node>
-      <node begin="6" end="7" id="12" infl="modal_not_u" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" stype="declarative" tense="present" v_per="thi" word="kan" wvorm="pv"/>
+      <node begin="6" end="7" id="12" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
       <node begin="7" cat="inf" end="14" id="13" rel="vc">
-        <node begin="8" buiging="zonder" end="9" id="14" infl="inf" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" sc="passive" word="worden" wvorm="inf"/>
+        <node begin="8" buiging="zonder" end="9" id="14" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
         <node begin="7" cat="ppart" end="14" id="15" rel="vc">
-          <node begin="7" buiging="zonder" end="8" id="16" infl="psp" lemma="op_merken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="merk_op" sc="part_sbar(op)" word="opgemerkt" wvorm="vd"/>
+          <node begin="7" buiging="zonder" end="8" id="16" lemma="op_merken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="merk_op" word="opgemerkt" wvorm="vd"/>
           <node begin="9" cat="cp" end="14" id="17" rel="vc">
-            <node begin="9" conjtype="onder" end="10" id="18" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+            <node begin="9" conjtype="onder" end="10" id="18" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
             <node begin="10" cat="ssub" end="14" id="19" rel="body">
-              <node begin="10" end="11" getal="ev" id="20" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+              <node begin="10" end="11" getal="ev" id="20" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
               <node begin="11" end="12" id="21" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-              <node aform="base" begin="12" buiging="zonder" end="13" graad="basis" id="22" infl="no_e" lemma="eerlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="eerlijk" vform="adj" word="eerlijk"/>
-              <node begin="13" end="14" id="23" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" v_per="thi" word="is" wvorm="pv"/>
+              <node begin="12" buiging="zonder" end="13" graad="basis" id="22" lemma="eerlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="eerlijk" word="eerlijk"/>
+              <node begin="13" end="14" id="23" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
             </node>
           </node>
         </node>

@@ -2,11 +2,11 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="smain" end="3" id="1" rel="--">
-      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Jan" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Jan" word="Jan"/>
-      <node begin="1" end="2" id="3" infl="sg3" lemma="vergissen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vergis" sc="refl" stype="declarative" tense="present" word="vergist" wvorm="pv"/>
-      <node begin="2" end="3" getal="getal" id="4" lemma="zich" naamval="obl" num="both" pdtype="pron" per="u_thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" refl="refl" rel="se" rnum="sg" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Jan" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Jan" word="Jan"/>
+      <node begin="1" end="2" id="3" lemma="vergissen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vergis" word="vergist" wvorm="pv"/>
+      <node begin="2" end="3" getal="getal" id="4" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
     </node>
-    <node begin="3" end="4" id="5" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="3" end="4" id="5" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Jan vergist zich .</sentence>
 </alpino_ds>

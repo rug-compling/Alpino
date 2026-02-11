@@ -2,11 +2,11 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="smain" end="3" id="1" rel="--">
-      <node begin="0" end="1" genus="onz" getal="ev" id="2" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="Het"/>
-      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="is" wvorm="pv"/>
-      <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="burgemeester" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" rnum="sg" root="burgemeester" word="burgemeester"/>
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="burgemeester" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="burgemeester" word="burgemeester"/>
     </node>
-    <node begin="3" end="4" id="5" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="3" end="4" id="5" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Het is burgemeester .</sentence>
 </alpino_ds>

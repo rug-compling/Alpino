@@ -4,17 +4,17 @@
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="pp" end="2" id="2" rel="mod">
         <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
-        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="Amerika" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Amerika" word="Amerika"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="Amerika" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Amerika" word="Amerika"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="zien" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zie" sc="transitive_ndev_ndev" stype="declarative" tense="present" word="zien" wvorm="pv"/>
-      <node begin="3" case="nom" def="def" end="4" gen="de" getal="mv" id="6" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+      <node begin="2" end="3" id="5" lemma="zien" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zie" word="zien" wvorm="pv"/>
+      <node begin="3" end="4" getal="mv" id="6" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
       <node begin="4" cat="np" end="7" id="7" rel="obj1">
-        <node begin="4" end="5" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node aform="super" begin="5" buiging="met-e" end="6" graad="sup" id="9" infl="e" lemma="vreemd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="vreemd" vform="adj" word="vreemdste"/>
-        <node begin="6" end="7" gen="het" getal="mv" graad="basis" id="10" lemma="ding" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="ding" word="dingen"/>
+        <node begin="4" end="5" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" buiging="met-e" end="6" graad="sup" id="9" lemma="vreemd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="vreemd" word="vreemdste"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="10" lemma="ding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ding" word="dingen"/>
       </node>
     </node>
-    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>In Amerika zien we de vreemdste dingen .</sentence>
 </alpino_ds>

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="14" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
-    <node begin="2" end="3" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
-    <node begin="3" end="4" id="3" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
-    <node begin="7" end="8" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" end="1" id="1" lemma="'" pos="punct" postag="LET()" pt="let" rel="--" root="'" word="'"/>
+    <node begin="2" end="3" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="3" end="4" id="3" lemma="'" pos="punct" postag="LET()" pt="let" rel="--" root="'" word="'"/>
+    <node begin="7" end="8" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="1" cat="conj" end="13" id="5" rel="--">
       <node begin="1" cat="du" end="7" id="6" rel="cnj">
-        <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="7" infl="no_e" lemma="allemachtig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="nucl" root="allemachtig" vform="adj" word="Allemachtig"/>
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="7" lemma="allemachtig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="nucl" root="allemachtig" word="Allemachtig"/>
         <node begin="4" cat="sv1" end="7" id="8" rel="tag">
-          <node begin="4" end="5" id="9" infl="sg" lemma="uit_roepen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="roep_uit" sc="part_sbar(uit)" tense="past" word="riep" wvorm="pv"/>
-          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="Scarlet" naamval="stan" neclass="ORG" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Scarlet" word="Scarlet"/>
+          <node begin="4" end="5" id="9" lemma="uit_roepen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="roep_uit" word="riep" wvorm="pv"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="Scarlet" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Scarlet" word="Scarlet"/>
           <node begin="6" end="7" id="11" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
         </node>
       </node>
       <node begin="8" conjtype="neven" end="9" id="12" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="9" cat="smain" end="13" id="13" rel="cnj">
-        <node begin="9" case="both" def="def" end="10" gen="de" genus="fem" getal="ev" id="14" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" rnum="sg" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
-        <node begin="10" end="11" id="15" infl="sg" lemma="weg_trekken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="trek_weg" sc="part_intransitive(weg)" stype="declarative" tense="past" word="trok" wvorm="pv"/>
-        <node aform="base" begin="11" buiging="zonder" end="12" graad="basis" id="16" infl="no_e" lemma="wit" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="wit" vform="adj" word="wit"/>
+        <node begin="9" end="10" genus="fem" getal="ev" id="14" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+        <node begin="10" end="11" id="15" lemma="weg_trekken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="trek_weg" word="trok" wvorm="pv"/>
+        <node begin="11" buiging="zonder" end="12" graad="basis" id="16" lemma="wit" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="wit" word="wit"/>
         <node begin="12" end="13" id="17" lemma="weg" pos="part" postag="BW()" pt="bw" rel="svp" root="weg" word="weg"/>
       </node>
     </node>
-    <node begin="13" end="14" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="13" end="14" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>&apos; Allemachtig , &apos; riep Scarlet uit , en ze trok wit weg .</sentence>
 </alpino_ds>

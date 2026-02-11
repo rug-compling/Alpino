@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="11" id="0" rel="top">
-    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="10" id="2" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="3" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
-      <node begin="1" end="2" id="4" infl="sg3" lemma="beweren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="beweer" sc="tr_sbar" stype="declarative" tense="present" word="beweert" wvorm="pv"/>
+      <node begin="0" end="1" genus="masc" getal="ev" id="3" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="4" lemma="beweren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="beweer" word="beweert" wvorm="pv"/>
       <node begin="2" cat="cp" end="6" id="5" rel="vc">
-        <node begin="2" conjtype="onder" end="3" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="2" conjtype="onder" end="3" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="3" cat="ssub" end="6" id="7" rel="body">
-          <node begin="3" case="nom" def="def" end="4" gen="de" getal="ev" id="8" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
-          <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="9" infl="no_e" lemma="ziek" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="ziek" vform="adj" word="ziek"/>
-          <node begin="5" end="6" id="10" infl="sg1" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" word="ben" wvorm="pv"/>
+          <node begin="3" end="4" getal="ev" id="8" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="ziek" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="ziek" word="ziek"/>
+          <node begin="5" end="6" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="ben" wvorm="pv"/>
         </node>
       </node>
       <node begin="7" cat="whrel" end="10" id="11" rel="mod">
-        <node begin="7" case="both" def="indef" end="8" gen="het" getal="ev" id="12" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="wat"/>
+        <node begin="7" end="8" getal="ev" id="12" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
         <node begin="7" cat="ssub" end="10" id="13" rel="body">
           <node begin="7" end="8" id="14" index="1" rel="su"/>
-          <node aform="base" begin="8" buiging="zonder" end="9" graad="basis" id="15" infl="no_e" lemma="onjuist" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="onjuist" vform="adj" word="onjuist"/>
-          <node begin="9" end="10" id="16" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" word="is" wvorm="pv"/>
+          <node begin="8" buiging="zonder" end="9" graad="basis" id="15" lemma="onjuist" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="onjuist" word="onjuist"/>
+          <node begin="9" end="10" id="16" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         </node>
       </node>
     </node>
-    <node begin="10" end="11" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="10" end="11" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Hij beweert dat ik ziek ben , wat onjuist is .</sentence>
 </alpino_ds>

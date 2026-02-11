@@ -2,19 +2,19 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="sv1" end="7" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="sg1" lemma="af_stammen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="stam_af" sc="part_pc_pp(af,van)" stype="ynquestion" tense="present" word="Stam" wvorm="pv"/>
-      <node begin="1" case="both" def="def" end="2" gen="de" getal="ev" id="3" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+      <node begin="0" end="1" id="2" lemma="af_stammen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="stam_af" word="Stam" wvorm="pv"/>
+      <node begin="1" end="2" getal="ev" id="3" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
       <node begin="2" end="3" id="4" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
       <node begin="3" cat="pp" end="6" id="5" rel="pc">
         <node begin="3" end="4" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
         <node begin="4" cat="np" end="6" id="7" rel="obj1">
-          <node begin="4" end="5" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="9" lemma="zigeuner" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="zigeuner" word="zigeuners"/>
+          <node begin="4" end="5" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="5" end="6" getal="mv" graad="basis" id="9" lemma="zigeuner" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zigeuner" word="zigeuners"/>
         </node>
       </node>
       <node begin="6" end="7" id="10" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
     </node>
-    <node begin="7" end="8" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="7" end="8" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Stam je niet van de zigeuners af ?</sentence>
 </alpino_ds>

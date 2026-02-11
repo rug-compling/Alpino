@@ -2,12 +2,12 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="du" end="4" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="hoelang" pos="adj" postag="BW()" pt="bw" rel="dp" root="hoelang" stype="whquestion" wh="ywh" word="Hoelang"/>
+      <node begin="0" end="1" id="2" lemma="hoelang" pos="adj" postag="BW()" pt="bw" rel="dp" root="hoelang" word="Hoelang"/>
       <node begin="1" cat="cp" end="4" id="3" rel="dp">
         <node begin="1" conjtype="onder" end="2" id="4" lemma="voordat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="voordat" word="voordat"/>
         <node begin="2" cat="ssub" end="4" id="5" rel="body">
-          <node begin="2" end="3" genus="onz" getal="ev" id="6" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
-          <node begin="3" end="4" id="7" infl="sg3" lemma="uit_sterven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sterf_uit" sc="part_intransitive(uit)" tense="present" v_per="thi" word="uitsterft" wvorm="pv"/>
+          <node begin="2" end="3" genus="onz" getal="ev" id="6" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="3" end="4" id="7" lemma="uit_sterven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sterf_uit" word="uitsterft" wvorm="pv"/>
         </node>
       </node>
     </node>

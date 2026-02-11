@@ -2,32 +2,32 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="11" id="0" rel="top">
     <node begin="0" cat="smain" end="10" id="1" rel="--">
-      <node begin="0" end="1" gen="het" getal="ev" id="2" lemma="niets" naamval="stan" num="sg" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="niets" special="meas_mod" status="vol" vwtype="onbep" word="Niets"/>
-      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="niets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="niets" status="vol" vwtype="onbep" word="Niets"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="2" cat="ap" end="10" id="4" rel="predc">
-        <node aform="compar" begin="2" buiging="zonder" end="3" graad="comp" id="5" infl="no_e" lemma="zielig" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="zielig" vform="adj" word="zieliger"/>
+        <node begin="2" buiging="zonder" end="3" graad="comp" id="5" lemma="zielig" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="zielig" word="zieliger"/>
         <node begin="3" cat="cp" end="10" id="6" rel="obcomp">
           <node begin="3" conjtype="onder" end="4" id="7" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
           <node begin="4" cat="np" end="10" id="8" rel="body">
-            <node begin="4" end="5" id="9" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="soldaat" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="soldaat" word="soldaat"/>
+            <node begin="4" end="5" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="soldaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="soldaat" word="soldaat"/>
             <node begin="6" cat="rel" end="10" id="11" rel="mod">
-              <node begin="6" case="no_obl" end="7" gen="de" getal="getal" id="12" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="sg" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+              <node begin="6" end="7" getal="getal" id="12" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
               <node begin="6" cat="ssub" end="10" id="13" rel="body">
                 <node begin="6" end="7" id="14" index="1" rel="su"/>
                 <node begin="6" cat="inf" end="9" id="15" rel="vc">
                   <node begin="6" end="7" id="16" index="1" rel="su"/>
                   <node begin="7" end="8" id="17" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-                  <node begin="8" buiging="zonder" end="9" id="18" infl="inf" lemma="schieten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="schiet" sc="intransitive" word="schieten" wvorm="inf"/>
+                  <node begin="8" buiging="zonder" end="9" id="18" lemma="schieten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="schiet" word="schieten" wvorm="inf"/>
                 </node>
-                <node begin="9" end="10" id="19" infl="modal_not_u" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" tense="present" word="kan" wvorm="pv"/>
+                <node begin="9" end="10" id="19" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
               </node>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="10" end="11" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="10" end="11" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Niets is zieliger dan een soldaat die niet schieten kan .</sentence>
 </alpino_ds>

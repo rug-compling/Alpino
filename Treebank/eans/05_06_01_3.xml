@@ -3,24 +3,24 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" buiging="met-e" end="1" id="3" infl="de" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" wh="nwh" word="Deze"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="tekst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="tekst" word="tekst"/>
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="Deze"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="tekst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tekst" word="tekst"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="8" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="obj1"/>
         <node begin="3" cat="pp" end="7" id="8" rel="mod">
           <node begin="3" end="4" id="9" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
           <node begin="4" cat="np" end="7" id="10" rel="obj1">
-            <node begin="4" end="5" id="11" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="12" lemma="aantal" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="aantal" sc="measure" word="aantal"/>
-            <node begin="6" end="7" gen="both" getal="mv" graad="basis" id="13" lemma="punt" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" rnum="pl" root="punt" special="meas_mod" word="punten"/>
+            <node begin="4" end="5" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
+            <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="punt" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="punt" word="punten"/>
           </node>
         </node>
-        <node begin="7" buiging="zonder" end="8" id="14" infl="psp" lemma="wijzigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wijzig" sc="transitive" word="gewijzigd" wvorm="vd"/>
+        <node begin="7" buiging="zonder" end="8" id="14" lemma="wijzigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wijzig" word="gewijzigd" wvorm="vd"/>
       </node>
     </node>
-    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Deze tekst is op een aantal punten gewijzigd .</sentence>
 </alpino_ds>

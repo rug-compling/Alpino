@@ -3,22 +3,22 @@
   <node begin="0" cat="top" end="10" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" rel="obj1">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="Die"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Jantje" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="Jantje" word="Jantje"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Jantje" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Jantje" word="Jantje"/>
         <node begin="2" cat="pp" end="4" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-          <node begin="3" case="both" def="def" end="4" gen="de" getal="mv" id="7" lemma="jullie" naamval="stan" num="pl" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,stan,nadr,2v,mv)" pt="vnw" rel="obj1" rnum="pl" root="jullie" status="nadr" vwtype="pers" wh="nwh" word="jullie"/>
+          <node begin="3" end="4" getal="mv" id="7" lemma="jullie" naamval="stan" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,stan,nadr,2v,mv)" pt="vnw" rel="obj1" root="jullie" status="nadr" vwtype="pers" word="jullie"/>
         </node>
       </node>
-      <node begin="4" end="5" id="8" infl="sg1" lemma="vinden" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="vind" sc="pred_np" stype="declarative" tense="present" word="vind" wvorm="pv"/>
-      <node begin="5" case="nom" def="def" end="6" gen="de" getal="ev" id="9" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="4" end="5" id="8" lemma="vinden" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="vind" word="vind" wvorm="pv"/>
+      <node begin="5" end="6" getal="ev" id="9" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
       <node begin="6" cat="np" end="9" id="10" rel="predc">
-        <node begin="6" end="7" id="11" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node aform="base" begin="7" buiging="zonder" end="8" graad="basis" id="12" infl="no_e" lemma="vervelend" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="vervelend" vform="adj" word="vervelend"/>
-        <node begin="8" end="9" gen="het" genus="onz" getal="ev" graad="dim" id="13" lemma="kerel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" rnum="sg" root="kerel_DIM" word="kereltje"/>
+        <node begin="6" end="7" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="7" buiging="zonder" end="8" graad="basis" id="12" lemma="vervelend" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="vervelend" word="vervelend"/>
+        <node begin="8" end="9" genus="onz" getal="ev" graad="dim" id="13" lemma="kerel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="kerel_DIM" word="kereltje"/>
       </node>
     </node>
-    <node begin="9" end="10" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="9" end="10" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Die Jantje van jullie vind ik een vervelend kereltje .</sentence>
 </alpino_ds>

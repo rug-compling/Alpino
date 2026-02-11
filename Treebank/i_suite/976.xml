@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
-    <node begin="2" end="3" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" special="haak_open" word="("/>
+    <node begin="2" end="3" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
     <node begin="0" cat="np" end="4" id="2" rel="--">
       <node begin="0" cat="mwu" end="2" id="3" rel="hd">
-        <node begin="0" end="1" id="4" lemma="'t" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="'t" spectype="deeleigen" word="'t"/>
-        <node begin="1" end="2" id="5" lemma="Pleksken" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pleksken" spectype="deeleigen" word="Pleksken"/>
+        <node begin="0" end="1" id="4" lemma="'t" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="'t" spectype="deeleigen" word="'t"/>
+        <node begin="1" end="2" id="5" lemma="Pleksken" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pleksken" spectype="deeleigen" word="Pleksken"/>
       </node>
-      <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="Sint-Niklaas" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" rnum="sg" root="Sint-Niklaas" word="Sint-Niklaas"/>
+      <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="Sint-Niklaas" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" root="Sint-Niklaas" word="Sint-Niklaas"/>
     </node>
-    <node begin="4" end="5" id="7" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" special="haak_sluit" word=")"/>
+    <node begin="4" end="5" id="7" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
   </node>
   <sentence>&apos;t Pleksken ( Sint-Niklaas )</sentence>
 </alpino_ds>

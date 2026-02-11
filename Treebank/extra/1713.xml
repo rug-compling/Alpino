@@ -3,21 +3,21 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" end="1" id="3" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="&apos;t"/>
-        <node aform="base" begin="1" buiging="met-e" end="2" getal-n="zonder-n" id="4" infl="e" lemma="gebeuren" pos="adj" positie="nom" postag="WW(vd,nom,met-e,zonder-n)" pt="ww" rel="hd" rnum="sg" root="gebeuren" vform="psp" word="Gebeurde" wvorm="vd"/>
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="'t"/>
+        <node begin="1" buiging="met-e" end="2" getal-n="zonder-n" id="4" lemma="gebeuren" pos="adj" positie="nom" postag="WW(vd,nom,met-e,zonder-n)" pt="ww" rel="hd" root="gebeuren" word="Gebeurde" wvorm="vd"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="past" word="had" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
       <node begin="0" cat="ppart" end="7" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
-        <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="8" infl="no_e" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" vform="adj" word="natuurlijk"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" word="natuurlijk"/>
         <node begin="4" cat="np" end="6" id="9" rel="obj1">
-          <node begin="4" end="5" id="10" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="oploop" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="oploop" word="oploop"/>
+          <node begin="4" end="5" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="oploop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oploop" word="oploop"/>
         </node>
-        <node begin="6" buiging="zonder" end="7" id="12" infl="psp" lemma="veroorzaken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="veroorzaak" sc="transitive" word="veroorzaakt" wvorm="vd"/>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="veroorzaken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="veroorzaak" word="veroorzaakt" wvorm="vd"/>
       </node>
     </node>
-    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>&apos;t Gebeurde had natuurlijk een oploop veroorzaakt .</sentence>
 </alpino_ds>

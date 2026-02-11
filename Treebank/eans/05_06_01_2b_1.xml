@@ -2,16 +2,16 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="sv1" end="5" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" stype="ynquestion" tense="present" word="Is" wvorm="pv"/>
-      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" index="1" lemma="Jan" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Jan" word="Jan"/>
+      <node begin="0" end="1" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="Is" wvorm="pv"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" index="1" lemma="Jan" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Jan" word="Jan"/>
       <node begin="1" cat="ppart" end="5" id="4" rel="vc">
         <node begin="1" end="2" id="5" index="1" rel="su"/>
         <node begin="2" end="3" id="6" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
-        <node begin="3" end="4" getal="getal" id="7" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" special="er_loc" status="vol" vwtype="aanw" word="hier"/>
-        <node begin="4" buiging="zonder" end="5" id="8" infl="psp" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="ld_adv" word="geweest" wvorm="vd"/>
+        <node begin="3" end="4" getal="getal" id="7" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" status="vol" vwtype="aanw" word="hier"/>
+        <node begin="4" buiging="zonder" end="5" id="8" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
       </node>
     </node>
-    <node begin="5" end="6" id="9" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="5" end="6" id="9" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Is Jan nog hier geweest ?</sentence>
 </alpino_ds>

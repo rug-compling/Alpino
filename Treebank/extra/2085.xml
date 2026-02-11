@@ -8,7 +8,7 @@
       <node begin="2" cat="np" end="15" id="5" rel="predc">
         <node begin="2" end="3" getal-n="zonder-n" graad="basis" id="6" lemma="één" numtype="hoofd" pos="pron" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="één" word="een"/>
         <node begin="3" cat="np" end="15" id="7" rel="mod">
-          <node begin="3" end="4" id="8" lemma="dergenen" pos="pron" postag="VNW(aanw,det,stan,gen,met-e,mv-n)" pt="vnw" rel="hd" root="degeen" word="dergenen"/>
+          <node begin="3" buiging="met_e" end="4" getal="mv-n" id="8" lemma="dergenen" naamval="gen" pdtype="det" pos="pron" postag="VNW(aanw,det,stan,gen,met-e,mv-n)" pt="vnw" rel="hd" root="degeen" vwtype="aanw" word="dergenen"/>
           <node begin="5" cat="rel" end="15" id="9" rel="mod">
             <node begin="5" end="6" getal="getal" id="10" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="5" cat="ssub" end="15" id="11" rel="body">

@@ -2,18 +2,18 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="morgen" pos="adv" postag="BW()" pt="bw" rel="mod" root="morgen" special="tmp" word="Morgen"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="ld_pp" stype="declarative" tense="present" word="moet" wvorm="pv"/>
-      <node begin="2" case="nom" def="def" end="3" gen="de" genus="masc" getal="ev" id="4" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="0" end="1" id="2" lemma="morgen" pos="adv" postag="BW()" pt="bw" rel="mod" root="morgen" word="Morgen"/>
+      <node begin="1" end="2" id="3" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+      <node begin="2" end="3" genus="masc" getal="ev" id="4" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
       <node begin="3" cat="pp" end="6" id="5" rel="ld">
         <node begin="3" end="4" id="6" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
         <node begin="4" cat="np" end="6" id="7" rel="obj1">
-          <node begin="4" end="5" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="tand_arts" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="tand_arts" word="tandarts"/>
+          <node begin="4" end="5" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="tand_arts" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tand_arts" word="tandarts"/>
         </node>
       </node>
     </node>
-    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Morgen moet hij naar de tandarts .</sentence>
 </alpino_ds>

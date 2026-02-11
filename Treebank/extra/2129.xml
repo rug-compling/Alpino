@@ -3,25 +3,25 @@
   <node begin="0" cat="top" end="11" id="0" rel="top">
     <node begin="0" cat="smain" end="10" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node aform="compar" begin="0" buiging="met-e" end="1" graad="basis" id="3" infl="e" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" vform="adj" word="Andere"/>
-        <node begin="1" end="2" gen="het" getal="mv" graad="basis" id="4" lemma="dier" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="dier" word="dieren"/>
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="Andere"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="dier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dier" word="dieren"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="present" v_per="thi" word="hebben" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
       <node begin="3" cat="conj" end="10" id="6" rel="obj1">
-        <node begin="3" conjtype="neven" end="4" id="7" lemma="ofwel" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="ofwel" special="left" word="ofwel"/>
+        <node begin="3" conjtype="neven" end="4" id="7" lemma="ofwel" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="ofwel" word="ofwel"/>
         <node begin="4" cat="np" end="6" id="8" rel="cnj">
-          <node begin="4" end="5" id="9" infl="sg_num" lemma="één" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="één" word="één"/>
-          <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="opening" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="opening" word="opening"/>
+          <node begin="4" end="5" id="9" lemma="één" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="één" word="één"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="opening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="opening" word="opening"/>
         </node>
         <node begin="6" conjtype="neven" end="7" id="11" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
         <node begin="7" cat="np" end="10" id="12" rel="cnj">
-          <node begin="7" buiging="zonder" end="8" id="13" infl="geen" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" wh="nwh" word="geen"/>
-          <node aform="base" begin="8" buiging="zonder" end="9" graad="basis" id="14" infl="no_e" lemma="expliciet" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="expliciet" vform="adj" word="expliciet"/>
-          <node begin="9" end="10" gen="het" genus="onz" getal="ev" graad="basis" id="15" lemma="spijsvertering_kanaal" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="spijsvertering_kanaal" word="spijsverteringskanaal"/>
+          <node begin="7" buiging="zonder" end="8" id="13" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+          <node begin="8" buiging="zonder" end="9" graad="basis" id="14" lemma="expliciet" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="expliciet" word="expliciet"/>
+          <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="15" lemma="spijsvertering_kanaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="spijsvertering_kanaal" word="spijsverteringskanaal"/>
         </node>
       </node>
     </node>
-    <node begin="10" end="11" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="10" end="11" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Andere dieren hebben ofwel één opening of geen expliciet spijsverteringskanaal .</sentence>
 </alpino_ds>

@@ -2,14 +2,14 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="smain" end="3" id="1" rel="--">
-      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" index="1" lemma="Robbie" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Robbie" word="Robbie"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" sc="aux(psp(part_intransitive(aan)))" stype="declarative" tense="past" word="kwam" wvorm="pv"/>
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" index="1" lemma="Robbie" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Robbie" word="Robbie"/>
+      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
       <node begin="0" cat="ppart" end="3" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
-        <node begin="2" buiging="zonder" end="3" id="6" infl="psp" lemma="aan_snellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="snel_aan" sc="part_intransitive(aan)" word="aangesneld" wvorm="vd"/>
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="aan_snellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="snel_aan" word="aangesneld" wvorm="vd"/>
       </node>
     </node>
-    <node begin="3" end="4" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="3" end="4" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Robbie kwam aangesneld .</sentence>
 </alpino_ds>

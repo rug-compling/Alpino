@@ -3,19 +3,19 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="su">
-        <node begin="0" buiging="met-e" case="both" def="indef" end="1" gen="de" getal-n="mv-n" id="3" lemma="al" naamval="stan" num="pl" pdtype="det" per="thi" pos="pron" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,mv-n)" pt="vnw" rel="hd" rnum="pl" root="al" vwtype="onbep" wh="nwh" word="Allen"/>
+        <node begin="0" buiging="met-e" end="1" getal-n="mv-n" id="3" lemma="al" naamval="stan" pdtype="det" pos="pron" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,mv-n)" pt="vnw" rel="hd" root="al" vwtype="onbep" word="Allen"/>
         <node begin="1" cat="rel" end="3" id="4" rel="mod">
-          <node begin="1" case="no_obl" end="2" gen="de" getal="getal" id="5" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="pl" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="1" end="2" getal="getal" id="5" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="1" cat="ssub" end="3" id="6" rel="body">
             <node begin="1" end="2" id="7" index="1" rel="su"/>
-            <node begin="2" end="3" id="8" infl="pl" lemma="stelen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="steel" sc="intransitive" tense="present" word="stelen" wvorm="pv"/>
+            <node begin="2" end="3" id="8" lemma="stelen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="steel" word="stelen" wvorm="pv"/>
           </node>
         </node>
       </node>
-      <node begin="3" end="4" id="9" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
-      <node begin="4" end="5" gen="de" getal="mv" graad="basis" id="10" lemma="dief" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="predc" rnum="pl" root="dief" word="dieven"/>
+      <node begin="3" end="4" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="4" end="5" getal="mv" graad="basis" id="10" lemma="dief" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="predc" root="dief" word="dieven"/>
     </node>
-    <node begin="5" end="6" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Allen die stelen zijn dieven .</sentence>
 </alpino_ds>

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="12" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
-    <node begin="2" end="3" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
-    <node begin="3" end="4" id="3" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="0" end="1" id="1" lemma="'" pos="punct" postag="LET()" pt="let" rel="--" root="'" word="'"/>
+    <node begin="2" end="3" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="3" end="4" id="3" lemma="'" pos="punct" postag="LET()" pt="let" rel="--" root="'" word="'"/>
     <node begin="1" cat="conj" end="11" id="4" rel="--">
       <node begin="1" cat="du" end="6" id="5" rel="cnj">
         <node begin="1" end="2" id="6" lemma="alstublieft" pos="adv" postag="BW()" pt="bw" rel="nucl" root="alstublieft" word="Alstublieft"/>
         <node begin="4" cat="sv1" end="6" id="7" rel="tag">
-          <node begin="4" end="5" id="8" infl="sg" lemma="fluisteren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="fluister" sc="sbar" tense="past" word="fluisterde" wvorm="pv"/>
-          <node begin="5" case="nom" def="def" end="6" gen="de" genus="masc" getal="ev" id="9" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+          <node begin="4" end="5" id="8" lemma="fluisteren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="fluister" word="fluisterde" wvorm="pv"/>
+          <node begin="5" end="6" genus="masc" getal="ev" id="9" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
         </node>
       </node>
       <node begin="6" conjtype="neven" end="7" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="7" cat="smain" end="11" id="11" rel="cnj">
-        <node begin="7" case="nom" def="def" end="8" gen="de" genus="masc" getal="ev" id="12" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
-        <node begin="8" end="9" id="13" infl="sg" lemma="schuiven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="schuif" sc="np_ld_dir" stype="declarative" tense="past" word="schoof" wvorm="pv"/>
-        <node begin="9" case="dat_acc" def="def" end="10" gen="de" getal="ev" id="14" lemma="me" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj1" rnum="sg" root="me" special="wkpro" status="red" vwtype="pr" wh="nwh" word="me"/>
-        <node begin="10" end="11" id="15" lemma="opzij" pos="adv" postag="BW()" pt="bw" rel="ld" root="opzij" special="dir" word="opzij"/>
+        <node begin="7" end="8" genus="masc" getal="ev" id="12" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="8" end="9" id="13" lemma="schuiven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="schuif" word="schoof" wvorm="pv"/>
+        <node begin="9" end="10" getal="ev" id="14" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj1" root="me" status="red" vwtype="pr" word="me"/>
+        <node begin="10" end="11" id="15" lemma="opzij" pos="adv" postag="BW()" pt="bw" rel="ld" root="opzij" word="opzij"/>
       </node>
     </node>
-    <node begin="11" end="12" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>&apos; Alstublieft , &apos; fluisterde hij en hij schoof me opzij .</sentence>
 </alpino_ds>

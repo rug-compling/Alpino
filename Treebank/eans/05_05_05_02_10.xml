@@ -3,18 +3,18 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="met-e" end="1" getal="mv" id="3" infl="onze" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="Onze"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="held" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="held" word="held"/>
+        <node begin="0" buiging="met-e" end="1" getal="mv" id="3" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="Onze"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="held" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="held" word="held"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="tegemoet_kijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kijk_tegemoet" sc="part_ld_transitive(tegemoet)" stype="declarative" tense="past" word="keek" wvorm="pv"/>
-      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="6" infl="no_e" lemma="fier" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="fier" vform="adj" word="fier"/>
+      <node begin="2" end="3" id="5" lemma="tegemoet_kijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kijk_tegemoet" word="keek" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="fier" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="fier" word="fier"/>
       <node begin="4" cat="np" end="6" id="7" rel="ld">
-        <node begin="4" end="5" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="einder" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="einder" word="einder"/>
+        <node begin="4" end="5" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="einder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="einder" word="einder"/>
       </node>
       <node begin="6" end="7" id="10" lemma="tegemoet" pos="part" postag="BW()" pt="bw" rel="svp" root="tegemoet" word="tegemoet"/>
     </node>
-    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Onze held keek fier de einder tegemoet .</sentence>
 </alpino_ds>

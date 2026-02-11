@@ -4,37 +4,37 @@
     <node begin="0" cat="conj" end="15" id="1" rel="--">
       <node begin="0" cat="smain" end="6" id="2" rel="cnj">
         <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
-          <node begin="0" buiging="met-e" end="1" getal-n="zonder-n" id="4" infl="pl_num" lemma="sommig" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" rnum="pl" root="sommig" vwtype="onbep" wh="nwh" word="Sommige"/>
-          <node begin="1" buiging="met-e" case="gen" def="def" end="2" gen="both" getal-n="zonder-n" id="5" lemma="deze" naamval="gen" num="both" pdtype="det" per="thi" pos="pron" positie="nom" postag="VNW(aanw,det,gen,nom,met-e,zonder-n)" pt="vnw" rel="mod" rnum="sg" root="deze" vwtype="aanw" wh="nwh" word="dezer"/>
+          <node begin="0" buiging="met-e" end="1" getal-n="zonder-n" id="4" lemma="sommig" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" root="sommig" vwtype="onbep" word="Sommige"/>
+          <node begin="1" buiging="met-e" end="2" getal-n="zonder-n" id="5" lemma="deze" naamval="gen" pdtype="det" pos="pron" positie="nom" postag="VNW(aanw,det,gen,nom,met-e,zonder-n)" pt="vnw" rel="mod" root="deze" vwtype="aanw" word="dezer"/>
         </node>
-        <node begin="2" end="3" id="6" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="passive" tense="present" v_per="thi" word="zijn" wvorm="pv"/>
+        <node begin="2" end="3" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
         <node begin="0" cat="ppart" end="6" id="7" rel="vc">
           <node begin="0" end="2" id="8" index="1" rel="obj1"/>
           <node begin="3" cat="ap" end="5" id="9" rel="mod">
             <node begin="3" end="4" id="10" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
-            <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="11" infl="no_e" lemma="oordeel_kundig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="oordeel_kundig" vform="adj" word="oordeelkundig"/>
+            <node begin="4" buiging="zonder" end="5" graad="basis" id="11" lemma="oordeel_kundig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="oordeel_kundig" word="oordeelkundig"/>
           </node>
-          <node begin="5" buiging="zonder" end="6" id="12" infl="psp" lemma="kiezen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kies" sc="transitive" word="gekozen" wvorm="vd"/>
+          <node begin="5" buiging="zonder" end="6" id="12" lemma="kiezen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kies" word="gekozen" wvorm="vd"/>
         </node>
       </node>
       <node begin="6" conjtype="neven" end="7" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="0" cat="smain" end="15" id="14" rel="cnj">
         <node begin="0" end="2" id="15" index="1" rel="su"/>
-        <node begin="7" end="8" id="16" infl="pl" lemma="geven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="geef" sc="transitive" tense="present" v_per="thi" word="geven" wvorm="pv"/>
+        <node begin="7" end="8" id="16" lemma="geven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="geef" word="geven" wvorm="pv"/>
         <node begin="8" cat="pp" end="11" id="17" rel="mod">
           <node begin="8" end="9" id="18" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="9" cat="np" end="11" id="19" rel="obj1">
-            <node begin="9" end="10" id="20" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="21" lemma="oogwenk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="oogwenk" word="oogwenk"/>
+            <node begin="9" end="10" id="20" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="21" lemma="oogwenk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oogwenk" word="oogwenk"/>
           </node>
         </node>
         <node begin="11" cat="np" end="15" id="22" rel="obj1">
-          <node begin="11" end="12" id="23" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="11" end="12" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="12" cat="ap" end="14" id="24" rel="mod">
-            <node aform="super" begin="12" buiging="zonder" end="13" graad="sup" id="25" infl="no_e" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,sup)" pt="vnw" rel="mod" root="veel" vform="adj" vwtype="onbep" word="meest"/>
-            <node aform="base" begin="13" buiging="met-e" end="14" graad="basis" id="26" infl="e" lemma="klaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="klaar" vform="adj" word="klare"/>
+            <node begin="12" buiging="zonder" end="13" graad="sup" id="25" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,sup)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="meest"/>
+            <node begin="13" buiging="met-e" end="14" graad="basis" id="26" lemma="klaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="klaar" word="klare"/>
           </node>
-          <node begin="14" end="15" gen="de" genus="zijd" getal="ev" graad="basis" id="27" lemma="voorstelling" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="voorstelling" word="voorstelling"/>
+          <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="27" lemma="voorstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorstelling" word="voorstelling"/>
         </node>
       </node>
     </node>

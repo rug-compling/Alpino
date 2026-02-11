@@ -2,28 +2,28 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="10" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
-      <node begin="5" end="6" id="2" infl="pl" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" sc="passive" stype="declarative" tense="present" word="worden" wvorm="pv"/>
+      <node begin="5" end="6" id="2" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
       <node begin="6" cat="np" end="8" id="3" index="1" rel="su">
-        <node begin="6" end="7" id="4" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node aform="base" begin="7" buiging="met-e" end="8" getal-n="mv-n" id="5" lemma="vallen" num="pl" personalized="true" pos="adj" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" rnum="pl" root="vallen" special="a_noun" word="gevallenen" wvorm="vd"/>
+        <node begin="6" end="7" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="7" buiging="met-e" end="8" getal-n="mv-n" id="5" lemma="vallen" pos="adj" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" root="vallen" word="gevallenen" wvorm="vd"/>
       </node>
       <node begin="0" cat="ppart" end="9" id="6" rel="vc">
         <node begin="0" cat="np" end="5" id="7" rel="mod">
-          <node begin="0" buiging="zonder" end="1" id="8" infl="het" lemma="ieder" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="ieder" vwtype="onbep" wh="nwh" word="Ieder"/>
-          <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="9" lemma="jaar" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="jaar" special="tmp" word="jaar"/>
+          <node begin="0" buiging="zonder" end="1" id="8" lemma="ieder" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="ieder" vwtype="onbep" word="Ieder"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="9" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
           <node begin="2" cat="pp" end="5" id="10" rel="mod">
             <node begin="2" end="3" id="11" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
             <node begin="3" cat="mwu" end="5" id="12" rel="obj1">
-              <node begin="3" end="4" id="13" lemma="11" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="11" special="tmp" word="11"/>
-              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="14" lemma="november" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="november" special="tmp" word="november"/>
+              <node begin="3" end="4" id="13" lemma="11" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="11" word="11"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="14" lemma="november" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="november" word="november"/>
             </node>
           </node>
         </node>
         <node begin="6" end="8" id="15" index="1" rel="obj1"/>
-        <node begin="8" buiging="zonder" end="9" id="16" infl="psp" lemma="herdenken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="herdenk" sc="transitive" word="herdacht" wvorm="vd"/>
+        <node begin="8" buiging="zonder" end="9" id="16" lemma="herdenken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="herdenk" word="herdacht" wvorm="vd"/>
       </node>
     </node>
-    <node begin="9" end="10" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="9" end="10" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ieder jaar op 11 november worden de gevallenen herdacht .</sentence>
 </alpino_ds>

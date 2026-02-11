@@ -3,15 +3,15 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="ppart" end="2" id="2" rel="mod">
-        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="3" infl="no_e" lemma="dodelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="dodelijk" vform="adj" word="Dodelijk"/>
-        <node aform="base" begin="1" buiging="zonder" end="2" id="4" infl="no_e" lemma="verschrikken" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verschrikken" vform="psp" word="verschrikt" wvorm="vd"/>
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="dodelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="dodelijk" word="Dodelijk"/>
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="verschrikken" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verschrikken" word="verschrikt" wvorm="vd"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="om_wenden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="wend_om" sc="part_refl(om)" stype="declarative" tense="past" word="wendden" wvorm="pv"/>
-      <node begin="3" case="both" def="def" end="4" gen="de" getal="mv" id="6" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
-      <node begin="4" end="5" getal="getal" id="7" lemma="zich" naamval="obl" num="both" pdtype="pron" per="u_thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" refl="refl" rel="se" rnum="pl" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node begin="2" end="3" id="5" lemma="om_wenden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="wend_om" word="wendden" wvorm="pv"/>
+      <node begin="3" end="4" getal="mv" id="6" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+      <node begin="4" end="5" getal="getal" id="7" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
       <node begin="5" end="6" id="8" lemma="om" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="om" vztype="fin" word="om"/>
     </node>
-    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Dodelijk verschrikt wendden ze zich om .</sentence>
 </alpino_ds>

@@ -2,27 +2,27 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-      <node begin="1" end="2" id="3" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="present" word="heb" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
       <node begin="2" cat="np" end="8" id="4" rel="obj1">
-        <node begin="2" end="3" gen="het" genus="onz" getal="ev" graad="basis" id="5" lemma="bezwaar" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="bezwaar" word="bezwaar"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="bezwaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bezwaar" word="bezwaar"/>
         <node begin="3" cat="pp" end="8" id="6" rel="mod">
           <node begin="3" end="4" id="7" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
           <node begin="4" cat="np" end="8" id="8" rel="obj1">
-            <node begin="4" end="5" gen="het" getal="ev" id="9" lemma="alles" naamval="stan" num="sg" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" rnum="sg" root="alles" status="vol" vwtype="onbep" word="alles"/>
+            <node begin="4" end="5" getal="ev" id="9" lemma="alles" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="alles" status="vol" vwtype="onbep" word="alles"/>
             <node begin="5" cat="rel" end="8" id="10" rel="mod">
-              <node begin="5" case="both" end="6" gen="het" getal="ev" id="11" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" rnum="sg" root="wat" status="vol" vwtype="vb" wh="rel" word="wat"/>
+              <node begin="5" end="6" getal="ev" id="11" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
               <node begin="5" cat="ssub" end="8" id="12" rel="body">
                 <node begin="5" end="6" id="13" index="1" rel="su"/>
-                <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="14" infl="no_e" lemma="lang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="me" root="lang" vform="adj" word="lang"/>
-                <node begin="7" end="8" id="15" infl="sg3" lemma="duren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="duur" sc="adv_meas" tense="present" word="duurt" wvorm="pv"/>
+                <node begin="6" buiging="zonder" end="7" graad="basis" id="14" lemma="lang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="me" root="lang" word="lang"/>
+                <node begin="7" end="8" id="15" lemma="duren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="duur" word="duurt" wvorm="pv"/>
               </node>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ik heb bezwaar tegen alles wat lang duurt .</sentence>
 </alpino_ds>

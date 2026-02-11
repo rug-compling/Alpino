@@ -3,29 +3,29 @@
   <node begin="0" cat="top" end="13" id="0" rel="top">
     <node begin="0" cat="smain" end="12" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="mod">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node aform="base" begin="1" buiging="met-e" end="2" id="4" infl="e" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="volg" vform="gerund" word="volgende" wvorm="od"/>
-        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="avond" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="avond" special="tmp" word="avond"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" id="4" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="volg" word="volgende" wvorm="od"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="avond" word="avond"/>
       </node>
-      <node begin="3" end="4" id="6" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="copula" stype="declarative" tense="past" word="werd" wvorm="pv"/>
-      <node begin="4" end="5" genus="onz" getal="ev" id="7" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+      <node begin="3" end="4" id="6" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="4" end="5" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
       <node begin="5" end="6" id="8" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
       <node begin="6" cat="ap" end="12" id="9" rel="predc">
-        <node aform="base" begin="7" buiging="zonder" end="8" graad="basis" id="10" infl="no_e" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="laat" vform="adj" word="laat"/>
+        <node begin="7" buiging="zonder" end="8" graad="basis" id="10" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="laat" word="laat"/>
         <node begin="6" cat="advp" end="12" id="11" rel="mod">
-          <node begin="6" comparative="als" end="7" id="12" lemma="even" pos="adv" postag="BW()" pt="bw" rel="hd" root="even" special="comp" word="even"/>
+          <node begin="6" end="7" id="12" lemma="even" pos="adv" postag="BW()" pt="bw" rel="hd" root="even" word="even"/>
           <node begin="8" cat="cp" end="12" id="13" rel="obcomp">
             <node begin="8" conjtype="onder" end="9" id="14" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
             <node begin="9" cat="np" end="12" id="15" rel="body">
-              <node begin="9" end="10" id="16" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="17" lemma="dag" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="dag" special="tmp" word="dag"/>
-              <node begin="11" end="12" id="18" lemma="daarvoor" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarvoor" special="er" word="daarvoor"/>
+              <node begin="9" end="10" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="17" lemma="dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="dag"/>
+              <node begin="11" end="12" id="18" lemma="daarvoor" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarvoor" word="daarvoor"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="12" end="13" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="12" end="13" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De volgende avond werd het weer even laat als de dag daarvoor .</sentence>
 </alpino_ds>

@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" buiging="met-e" end="1" id="3" infl="pl_num" lemma="sommig" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="sommig" vwtype="onbep" wh="nwh" word="Sommige"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="bezoeker" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="bezoeker" word="bezoekers"/>
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="sommig" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="sommig" vwtype="onbep" word="Sommige"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="bezoeker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bezoeker" word="bezoekers"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" stype="declarative" tense="present" word="kunnen" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
       <node begin="0" cat="inf" end="6" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
         <node begin="3" cat="ap" end="5" id="8" rel="predc">
           <node begin="3" end="4" id="9" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
-          <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="10" infl="no_e" lemma="lastig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="lastig" vform="adj" word="lastig"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="lastig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="lastig" word="lastig"/>
         </node>
-        <node begin="5" buiging="zonder" end="6" id="11" infl="inf" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="copula" word="zijn" wvorm="inf"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
       </node>
     </node>
-    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Sommige bezoekers kunnen zo lastig zijn .</sentence>
 </alpino_ds>

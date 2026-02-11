@@ -2,17 +2,17 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="0" end="1" getal="ev" id="2" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="Dat"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="ld_pp" stype="declarative" tense="past" v_per="thi" word="was" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
       <node begin="2" cat="pp" end="8" id="4" rel="ld">
         <node begin="2" end="3" id="5" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
         <node begin="3" cat="np" end="8" id="6" rel="obj1">
-          <node begin="3" end="4" id="7" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="4" cat="mwu" end="8" id="8" rel="hd">
-            <node begin="4" end="5" id="9" lemma="avenue" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="avenue" spectype="deeleigen" word="avenue"/>
-            <node begin="5" end="6" id="10" lemma="de" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
-            <node begin="6" end="7" id="11" lemma="Président" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Président" spectype="deeleigen" word="Président"/>
-            <node begin="7" end="8" id="12" lemma="Wilson" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wilson" spectype="deeleigen" word="Wilson"/>
+            <node begin="4" end="5" id="9" lemma="avenue" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="avenue" spectype="deeleigen" word="avenue"/>
+            <node begin="5" end="6" id="10" lemma="de" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+            <node begin="6" end="7" id="11" lemma="Président" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Président" spectype="deeleigen" word="Président"/>
+            <node begin="7" end="8" id="12" lemma="Wilson" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wilson" spectype="deeleigen" word="Wilson"/>
           </node>
         </node>
       </node>

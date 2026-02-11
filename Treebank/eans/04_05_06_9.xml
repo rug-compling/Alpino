@@ -3,16 +3,16 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="Zijn"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="vader" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="vader" word="vader"/>
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="Zijn"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="vader" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vader" word="vader"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula" stype="declarative" tense="past" word="was" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
       <node begin="3" cat="np" end="5" id="6" rel="predc">
-        <node aform="base" begin="3" buiging="zonder" end="4" id="7" infl="no_e" lemma="diplomeren" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="diplomeren" vform="psp" word="gediplomeerd" wvorm="vd"/>
-        <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lemma="opticien" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="opticien" word="opticien"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="diplomeren" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="diplomeren" word="gediplomeerd" wvorm="vd"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="opticien" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="opticien" word="opticien"/>
       </node>
     </node>
-    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Zijn vader was gediplomeerd opticien .</sentence>
 </alpino_ds>

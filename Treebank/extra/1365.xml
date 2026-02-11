@@ -3,17 +3,17 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="du" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" rel="sat">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="Die"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="beneden_buur_man" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="beneden_buur_man" word="benedenbuurman"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="beneden_buur_man" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beneden_buur_man" word="benedenbuurman"/>
         <node begin="2" cat="pp" end="4" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
-          <node begin="3" case="dat_acc" def="def" end="4" gen="de" getal="ev" id="7" lemma="mij" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" rnum="sg" root="mij" status="vol" vwtype="pr" wh="nwh" word="mij"/>
+          <node begin="3" end="4" getal="ev" id="7" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" root="mij" status="vol" vwtype="pr" word="mij"/>
         </node>
       </node>
       <node begin="4" cat="smain" end="7" id="8" rel="nucl">
-        <node begin="4" end="5" getal="getal" id="9" infl="de" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" rnum="sg" root="die" status="vol" vwtype="aanw" wh="nwh" word="die"/>
-        <node begin="5" end="6" id="10" infl="sg3" lemma="roken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="rook" sc="intransitive" stype="declarative" tense="present" word="rookt" wvorm="pv"/>
-        <node begin="6" end="7" id="11" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="ook"/>
+        <node begin="4" end="5" getal="getal" id="9" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" root="die" status="vol" vwtype="aanw" word="die"/>
+        <node begin="5" end="6" id="10" lemma="roken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="rook" word="rookt" wvorm="pv"/>
+        <node begin="6" end="7" id="11" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
       </node>
     </node>
   </node>

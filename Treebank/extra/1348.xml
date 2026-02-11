@@ -4,17 +4,17 @@
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="pp" end="2" id="2" rel="mod">
         <node begin="0" end="1" id="3" lemma="ondanks" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="ondanks" vztype="init" word="Ondanks"/>
-        <node begin="1" end="2" getal="ev" id="4" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+        <node begin="1" end="2" getal="ev" id="4" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" sc="copula" stype="declarative" tense="present" word="wordt" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
       <node begin="3" cat="np" end="5" id="6" rel="su">
-        <node begin="3" end="4" id="7" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-        <node begin="4" end="5" gen="het" genus="onz" getal="ev" graad="basis" id="8" lemma="boek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="boek" word="boek"/>
+        <node begin="3" end="4" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="boek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="boek" word="boek"/>
       </node>
-      <node begin="5" end="6" getal="getal" id="9" lemma="nergens" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(onbep,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="nergens" special="er_loc" status="vol" vwtype="onbep" word="nergens"/>
-      <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="10" infl="no_e" lemma="ongeloofwaardig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="ongeloofwaardig" vform="adj" word="ongeloofwaardig"/>
+      <node begin="5" end="6" getal="getal" id="9" lemma="nergens" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(onbep,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="nergens" status="vol" vwtype="onbep" word="nergens"/>
+      <node begin="6" buiging="zonder" end="7" graad="basis" id="10" lemma="ongeloofwaardig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="ongeloofwaardig" word="ongeloofwaardig"/>
     </node>
-    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ondanks dat wordt het boek nergens ongeloofwaardig .</sentence>
 </alpino_ds>

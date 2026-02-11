@@ -6,25 +6,25 @@
         <node begin="0" cat="pp" end="6" id="3" rel="mod">
           <node begin="0" cat="np" end="3" id="4" rel="mod">
             <node begin="0" cat="detp" end="2" id="5" rel="det">
-              <node begin="0" buiging="zonder" end="1" id="6" infl="pl_indef" lemma="zo'n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="mod" root="zo'n" special="pre_num_adv" vwtype="aanw" word="Zo'n"/>
-              <node begin="1" end="2" id="7" infl="pl_num" lemma="zeven" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="zeven" word="zeven"/>
+              <node begin="0" buiging="zonder" end="1" id="6" lemma="zo'n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="mod" root="zo'n" vwtype="aanw" word="Zo'n"/>
+              <node begin="1" end="2" id="7" lemma="zeven" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="zeven" word="zeven"/>
             </node>
-            <node begin="2" end="3" gen="de" getal="mv" graad="basis" id="8" lemma="week" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="week" special="tmp" word="weken"/>
+            <node begin="2" end="3" getal="mv" graad="basis" id="8" lemma="week" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="week" word="weken"/>
           </node>
           <node begin="3" end="4" id="9" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
           <node begin="4" cat="np" end="6" id="10" rel="obj1">
-            <node begin="4" end="5" id="11" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="geboorte" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="geboorte" word="geboorte"/>
+            <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="geboorte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="geboorte" word="geboorte"/>
           </node>
         </node>
-        <node begin="6" end="7" id="13" infl="sg3" lemma="verdwijnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="verdwijn" sc="intransitive" stype="declarative" tense="present" v_per="thi" word="verdwijnt" wvorm="pv"/>
-        <node begin="7" end="8" getal="ev" id="14" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+        <node begin="6" end="7" id="13" lemma="verdwijnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="verdwijn" word="verdwijnt" wvorm="pv"/>
+        <node begin="7" end="8" getal="ev" id="14" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
       </node>
       <node begin="8" conjtype="neven" end="9" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="9" cat="smain" end="12" id="16" rel="cnj">
-        <node begin="9" end="10" getal="ev" id="17" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
-        <node begin="10" end="11" id="18" infl="sg3" lemma="geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" sc="transitive" stype="declarative" tense="present" v_per="thi" word="geeft" wvorm="pv"/>
-        <node begin="11" end="12" gen="het" getal="ev" id="19" lemma="niets" naamval="stan" num="sg" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" rnum="sg" root="niets" special="meas_mod" status="vol" vwtype="onbep" word="niets"/>
+        <node begin="9" end="10" getal="ev" id="17" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="10" end="11" id="18" lemma="geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" word="geeft" wvorm="pv"/>
+        <node begin="11" end="12" getal="ev" id="19" lemma="niets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="niets" status="vol" vwtype="onbep" word="niets"/>
       </node>
     </node>
   </node>

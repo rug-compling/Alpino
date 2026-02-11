@@ -2,31 +2,31 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="14" id="0" rel="top">
     <node begin="0" cat="smain" end="14" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="kunnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kan" sc="er_pp_sbar(bij)" stype="declarative" tense="past" word="kon" wvorm="pv"/>
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="kunnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kan" word="kon" wvorm="pv"/>
       <node begin="3" end="4" id="4" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
       <node begin="2" cat="pp" end="14" id="5" rel="pc">
-        <node begin="2" end="3" getal="getal" id="6" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="2" end="3" getal="getal" id="6" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
         <node begin="4" end="5" id="7" lemma="bij" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="bij" vztype="fin" word="bij"/>
         <node begin="5" cat="cp" end="14" id="8" rel="vc">
-          <node begin="5" conjtype="onder" end="6" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="5" conjtype="onder" end="6" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="6" cat="ssub" end="14" id="10" rel="body">
             <node begin="6" cat="np" end="8" id="11" index="1" rel="su">
-              <node aform="base" begin="6" buiging="met-e" end="7" id="12" infl="e" lemma="playbacken" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="playback" vform="gerund" word="playbackende" wvorm="od"/>
-              <node begin="7" end="8" gen="de" getal="mv" graad="basis" id="13" lemma="zanger" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="zanger" word="zangers"/>
+              <node begin="6" buiging="met-e" end="7" id="12" lemma="playbacken" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="playback" word="playbackende" wvorm="od"/>
+              <node begin="7" end="8" getal="mv" graad="basis" id="13" lemma="zanger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zanger" word="zangers"/>
             </node>
-            <node begin="12" end="13" id="14" infl="pl" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" sc="passive" tense="past" word="werden" wvorm="pv"/>
+            <node begin="12" end="13" id="14" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
             <node begin="6" cat="ppart" end="14" id="15" rel="vc">
               <node begin="6" end="8" id="16" index="1" rel="obj1"/>
               <node begin="8" end="9" id="17" lemma="zomaar" pos="adv" postag="BW()" pt="bw" rel="mod" root="zomaar" word="zomaar"/>
               <node begin="9" cat="pp" end="12" id="18" rel="pc">
                 <node begin="9" end="10" id="19" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
                 <node begin="10" cat="np" end="12" id="20" rel="obj1">
-                  <node begin="10" end="11" id="21" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-                  <node begin="11" end="12" gen="het" genus="onz" getal="ev" graad="basis" id="22" lemma="applaus" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="applaus" word="applaus"/>
+                  <node begin="10" end="11" id="21" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="22" lemma="applaus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="applaus" word="applaus"/>
                 </node>
               </node>
-              <node begin="13" buiging="zonder" end="14" id="23" infl="psp" lemma="bedelven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bedelf" sc="np_pc_pp(onder)" word="bedolven" wvorm="vd"/>
+              <node begin="13" buiging="zonder" end="14" id="23" lemma="bedelven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bedelf" word="bedolven" wvorm="vd"/>
             </node>
           </node>
         </node>

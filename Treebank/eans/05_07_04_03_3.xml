@@ -3,30 +3,30 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="whq" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" index="1" rel="whd">
-        <node begin="0" buiging="met-e" end="1" getal-n="zonder-n" id="3" infl="welk" lemma="welk" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(vb,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" rnum="sg" root="welk" vwtype="vb" wh="rwh" word="Welk"/>
+        <node begin="0" buiging="met-e" end="1" getal-n="zonder-n" id="3" lemma="welk" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(vb,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" root="welk" vwtype="vb" word="Welk"/>
         <node begin="1" cat="pp" end="4" id="4" rel="mod">
           <node begin="1" end="2" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="2" cat="np" end="4" id="6" rel="obj1">
-            <node begin="2" buiging="met-e" end="3" id="7" infl="de" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" wh="nwh" word="deze"/>
-            <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="8" lemma="monteur" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="monteur" word="monteurs"/>
+            <node begin="2" buiging="met-e" end="3" id="7" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+            <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="monteur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="monteur" word="monteurs"/>
           </node>
         </node>
       </node>
       <node begin="0" cat="sv1" end="8" id="9" rel="body">
         <node begin="0" end="4" id="10" index="1" rel="su"/>
-        <node begin="4" end="5" id="11" infl="sg" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" sc="aux(inf)" stype="whquestion" tense="past" word="zou" wvorm="pv"/>
+        <node begin="4" end="5" id="11" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
         <node begin="0" cat="inf" end="8" id="12" rel="vc">
           <node begin="0" end="4" id="13" index="1" rel="su"/>
           <node begin="0" cat="ppart" end="7" id="14" rel="vc">
             <node begin="0" end="4" id="15" index="1" rel="su"/>
-            <node begin="5" end="6" genus="onz" getal="ev" id="16" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
-            <node begin="6" buiging="zonder" end="7" id="17" infl="psp" lemma="doen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="doe" sc="transitive_ndev" word="gedaan" wvorm="vd"/>
+            <node begin="5" end="6" genus="onz" getal="ev" id="16" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+            <node begin="6" buiging="zonder" end="7" id="17" lemma="doen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="doe" word="gedaan" wvorm="vd"/>
           </node>
-          <node begin="7" buiging="zonder" end="8" id="18" infl="inf" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" sc="aux_psp_hebben" word="hebben" wvorm="inf"/>
+          <node begin="7" buiging="zonder" end="8" id="18" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="19" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="8" end="9" id="19" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Welk van deze monteurs zou het gedaan hebben ?</sentence>
 </alpino_ds>

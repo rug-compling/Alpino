@@ -3,36 +3,36 @@
   <node begin="0" cat="top" end="14" id="0" rel="top">
     <node begin="0" cat="smain" end="13" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" wh="nwh" word="Dat"/>
-        <node begin="1" end="2" gen="het" getal="ev" id="4" lemma="alles" naamval="stan" num="sg" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" rnum="sg" root="alles" status="vol" vwtype="onbep" word="alles"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="Dat"/>
+        <node begin="1" end="2" getal="ev" id="4" lemma="alles" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="alles" status="vol" vwtype="onbep" word="alles"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" sc="aux(inf)" stype="declarative" tense="past" word="zou" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
       <node begin="0" cat="inf" end="13" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
-        <node begin="6" buiging="zonder" end="7" id="8" infl="inf" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="aux_psp_zijn" word="zijn" wvorm="inf"/>
+        <node begin="6" buiging="zonder" end="7" id="8" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
         <node begin="0" cat="ppart" end="13" id="9" rel="vc">
           <node begin="0" end="2" id="10" index="1" rel="su"/>
           <node begin="3" end="4" id="11" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-          <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="12" infl="no_e" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nodig" vform="adj" word="nodig"/>
-          <node begin="5" buiging="zonder" end="6" id="13" infl="psp" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="copula" word="geweest" wvorm="vd"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="12" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nodig" word="nodig"/>
+          <node begin="5" buiging="zonder" end="6" id="13" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
           <node begin="7" cat="cp" end="13" id="14" rel="mod">
-            <node begin="7" conjtype="onder" end="8" id="15" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
+            <node begin="7" conjtype="onder" end="8" id="15" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
             <node begin="8" cat="ssub" end="13" id="16" rel="body">
               <node begin="8" cat="ppart" end="12" id="17" rel="vc">
-                <node begin="8" end="9" getal="getal" id="18" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+                <node begin="8" end="9" getal="getal" id="18" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
                 <node begin="9" cat="pp" end="11" id="19" rel="pc">
                   <node begin="9" end="10" id="20" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
-                  <node begin="10" case="dat_acc" def="def" end="11" gen="de" getal="ev" id="21" lemma="mij" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" rnum="sg" root="mij" status="vol" vwtype="pr" wh="nwh" word="mij"/>
+                  <node begin="10" end="11" getal="ev" id="21" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" root="mij" status="vol" vwtype="pr" word="mij"/>
                 </node>
-                <node begin="11" buiging="zonder" end="12" id="22" infl="psp" lemma="luisteren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="luister" sc="pc_pp(naar)" word="geluisterd" wvorm="vd"/>
+                <node begin="11" buiging="zonder" end="12" id="22" lemma="luisteren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="luister" word="geluisterd" wvorm="vd"/>
               </node>
-              <node begin="12" end="13" id="23" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="passive" tense="past" word="was" wvorm="pv"/>
+              <node begin="12" end="13" id="23" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="13" end="14" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="13" end="14" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Dat alles zou niet nodig geweest zijn als er naar mij geluisterd was .</sentence>
 </alpino_ds>

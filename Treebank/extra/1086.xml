@@ -2,11 +2,11 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="10" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
-      <node begin="2" end="3" id="2" infl="pl" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" sc="passive" stype="declarative" tense="past" word="werden" wvorm="pv"/>
+      <node begin="2" end="3" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
       <node begin="3" cat="conj" end="6" id="3" index="1" rel="su">
-        <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="benzine" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="benzine" word="benzine"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="4" lemma="benzine" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="benzine" word="benzine"/>
         <node begin="4" conjtype="neven" end="5" id="5" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="diesel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="diesel" word="diesel"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="6" lemma="diesel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="diesel" word="diesel"/>
       </node>
       <node begin="0" cat="ppart" end="9" id="7" rel="vc">
         <node begin="0" cat="advp" end="2" id="8" rel="mod">
@@ -16,12 +16,12 @@
         <node begin="3" end="6" id="11" index="1" rel="obj1"/>
         <node begin="6" cat="ap" end="8" id="12" rel="mod">
           <node begin="6" end="7" id="13" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
-          <node aform="base" begin="7" buiging="zonder" end="8" graad="basis" id="14" infl="no_e" lemma="duur" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="duur" vform="adj" word="duur"/>
+          <node begin="7" buiging="zonder" end="8" graad="basis" id="14" lemma="duur" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="duur" word="duur"/>
         </node>
-        <node begin="8" buiging="zonder" end="9" id="15" infl="psp" lemma="betalen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="betaal" sc="transitive" word="betaald" wvorm="vd"/>
+        <node begin="8" buiging="zonder" end="9" id="15" lemma="betalen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="betaal" word="betaald" wvorm="vd"/>
       </node>
     </node>
-    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Nooit voorheen werden benzine en diesel zo duur betaald .</sentence>
 </alpino_ds>

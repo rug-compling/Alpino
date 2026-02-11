@@ -3,23 +3,23 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node aform="base" begin="0" buiging="met-e" end="1" graad="basis" id="3" infl="e" lemma="verscheiden" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verscheiden" vform="adj" word="Verscheidene"/>
-        <node begin="1" buiging="met-e" end="2" gen="de" getal-n="mv-n" id="4" lemma="verdenken" num="pl" pos="noun" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" rnum="pl" root="verdenken" word="verdachten" wvorm="vd"/>
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="verscheiden" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verscheiden" word="Verscheidene"/>
+        <node begin="1" buiging="met-e" end="2" getal-n="mv-n" id="4" lemma="verdenken" pos="noun" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" root="verdenken" word="verdachten" wvorm="vd"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" sc="passive" stype="declarative" tense="past" word="werden" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
       <node begin="0" cat="ppart" end="7" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="obj1"/>
         <node begin="3" cat="pp" end="6" id="8" rel="pc">
           <node begin="3" end="4" id="9" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
           <node begin="4" cat="np" end="6" id="10" rel="obj1">
-            <node aform="base" begin="4" buiging="met-e" end="5" graad="basis" id="11" infl="e" lemma="hoog" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="hoog" vform="adj" word="hoge"/>
-            <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="12" lemma="boete" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="boete" word="boetes"/>
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="11" lemma="hoog" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="hoog" word="hoge"/>
+            <node begin="5" end="6" getal="mv" graad="basis" id="12" lemma="boete" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="boete" word="boetes"/>
           </node>
         </node>
-        <node begin="6" buiging="zonder" end="7" id="13" infl="psp" lemma="veroordelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="veroordeel" sc="np_pc_pp(tot)" word="veroordeeld" wvorm="vd"/>
+        <node begin="6" buiging="zonder" end="7" id="13" lemma="veroordelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="veroordeel" word="veroordeeld" wvorm="vd"/>
       </node>
     </node>
-    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Verscheidene verdachten werden tot hoge boetes veroordeeld .</sentence>
 </alpino_ds>

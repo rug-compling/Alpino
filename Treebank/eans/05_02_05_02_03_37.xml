@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="traan" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="traan" word="tranen"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="traan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="traan" word="tranen"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="staan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="sta" sc="so_np_ld_pp" stype="declarative" tense="past" word="stonden" wvorm="pv"/>
-      <node begin="3" case="dat_acc" def="def" end="4" gen="de" getal="mv" id="6" lemma="hun" naamval="obl" num="pl" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj2" rnum="pl" root="hun" status="vol" vwtype="pers" wh="nwh" word="hun"/>
+      <node begin="2" end="3" id="5" lemma="staan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="sta" word="stonden" wvorm="pv"/>
+      <node begin="3" end="4" getal="mv" id="6" lemma="hun" naamval="obl" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj2" root="hun" status="vol" vwtype="pers" word="hun"/>
       <node begin="4" cat="pp" end="7" id="7" rel="ld">
         <node begin="4" end="5" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
         <node begin="5" cat="np" end="7" id="9" rel="obj1">
-          <node begin="5" end="6" id="10" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="6" end="7" gen="het" getal="mv" graad="basis" id="11" lemma="oog" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="oog" word="ogen"/>
+          <node begin="5" end="6" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" getal="mv" graad="basis" id="11" lemma="oog" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="oog" word="ogen"/>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De tranen stonden hun in de ogen .</sentence>
 </alpino_ds>

@@ -2,14 +2,14 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="smain" end="3" id="1" rel="--">
-      <node begin="0" end="1" gen="de" genus="zijd" getal="ev" graad="basis" id="2" index="1" lemma="oma" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="oma" word="Oma"/>
-      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" word="heeft" wvorm="pv"/>
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" index="1" lemma="oma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="oma" word="Oma"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
       <node begin="0" cat="ppart" end="3" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
-        <node begin="2" buiging="zonder" end="3" id="6" infl="psp" lemma="op_bellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bel_op" sc="part_intransitive(op)" word="opgebeld" wvorm="vd"/>
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="op_bellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bel_op" word="opgebeld" wvorm="vd"/>
       </node>
     </node>
-    <node begin="3" end="4" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="3" end="4" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Oma heeft opgebeld .</sentence>
 </alpino_ds>

@@ -3,12 +3,12 @@
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="whq" end="3" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="whd">
-        <node begin="0" buiging="met-e" end="1" id="3" infl="welke" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" wh="rwh" word="Welke"/>
-        <node begin="1" end="2" gen="het" getal="mv" graad="basis" id="4" lemma="kind" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kind" word="kinderen"/>
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
       </node>
-      <node aform="base" begin="2" end="3" id="5" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="body" root="wel" vform="adj" word="wel"/>
+      <node begin="2" end="3" id="5" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="body" root="wel" word="wel"/>
     </node>
-    <node begin="3" end="4" id="6" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="3" end="4" id="6" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Welke kinderen wel ?</sentence>
 </alpino_ds>

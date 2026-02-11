@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
-    <node begin="2" end="3" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" special="haak_open" word="("/>
-    <node begin="4" end="5" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
-    <node begin="6" end="7" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" special="haak_sluit" word=")"/>
+    <node begin="2" end="3" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="4" end="5" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="6" end="7" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="0" cat="smain" end="9" id="4" rel="--">
       <node begin="0" cat="np" end="6" id="5" rel="su">
-        <node aform="base" begin="0" buiging="met-e" end="1" graad="basis" id="6" infl="e" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" vform="adj" word="Grote"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="7" lemma="fabriek" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="fabriek" word="fabrieken"/>
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="6" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="Grote"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="7" lemma="fabriek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="fabriek" word="fabrieken"/>
         <node begin="3" cat="np" end="6" id="8" rel="mod">
-          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="Philips" naamval="stan" neclass="PER" ntype="eigen" num="both" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="Philips" word="Philips"/>
-          <node begin="5" end="6" id="10" lemma="bijvoorbeeld" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijvoorbeeld" special="postnp" word="bijvoorbeeld"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="Philips" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Philips" word="Philips"/>
+          <node begin="5" end="6" id="10" lemma="bijvoorbeeld" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijvoorbeeld" word="bijvoorbeeld"/>
         </node>
       </node>
-      <node begin="7" end="8" id="11" infl="pl" lemma="door_draaien" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="draai_door" sc="part_intransitive(door)" stype="declarative" tense="past" word="draaiden" wvorm="pv"/>
+      <node begin="7" end="8" id="11" lemma="door_draaien" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="draai_door" word="draaiden" wvorm="pv"/>
       <node begin="8" end="9" id="12" lemma="door" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="door" vztype="fin" word="door"/>
     </node>
   </node>

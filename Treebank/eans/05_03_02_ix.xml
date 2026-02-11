@@ -3,26 +3,26 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="het" getal="mv" graad="basis" id="4" lemma="kind" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kind" word="kinderen"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="aan_het" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="0" cat="ahi" end="8" id="6" rel="vc">
         <node begin="5" cat="mwu" end="7" id="7" rel="cmp">
-          <node begin="5" end="6" id="8" lemma="aan" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="aan" sc="aan_het" vztype="init" word="aan"/>
-          <node begin="6" end="7" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="comp" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" sc="aan_het" word="het"/>
+          <node begin="5" end="6" id="8" lemma="aan" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
+          <node begin="6" end="7" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="comp" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
         </node>
         <node begin="0" cat="inf" end="8" id="10" rel="body">
           <node begin="0" end="2" id="11" index="1" rel="su"/>
           <node begin="3" cat="mwu" end="5" id="12" rel="obj1">
-            <node begin="3" case="dat_acc" def="def" end="4" gen="de" genus="fem" getal="getal" id="13" lemma="haar" naamval="obl" num="sg" pdtype="pron" per="thi" persoon="3v" pos="pron" postag="VNW(pers,pron,obl,red,3v,getal,fem)" pt="vnw" rel="mwp" rnum="sg" root="d&apos;r" status="red" vwtype="pers" wh="nwh" word="d&apos;r"/>
-            <node begin="4" buiging="zonder" case="dat_acc" def="def" end="5" gen="de" getal-n="zonder-n" graad="basis" id="14" lemma="eigen" num="sg" per="thi" pos="pron" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="mwp" rnum="sg" root="eigen" wh="nwh" word="eigen"/>
+            <node begin="3" end="4" genus="fem" getal="getal" id="13" lemma="haar" naamval="obl" pdtype="pron" persoon="3v" pos="pron" postag="VNW(pers,pron,obl,red,3v,getal,fem)" pt="vnw" rel="mwp" root="d'r" status="red" vwtype="pers" word="d'r"/>
+            <node begin="4" buiging="zonder" end="5" getal-n="zonder-n" graad="basis" id="14" lemma="eigen" pos="pron" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="mwp" root="eigen" word="eigen"/>
           </node>
-          <node begin="7" buiging="zonder" end="8" id="15" infl="inf" lemma="aan_kleden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kleed_aan" sc="part_transitive(aan)" word="aankleden" wvorm="inf"/>
+          <node begin="7" buiging="zonder" end="8" id="15" lemma="aan_kleden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kleed_aan" word="aankleden" wvorm="inf"/>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De kinderen zijn d&apos;r eigen aan het aankleden .</sentence>
 </alpino_ds>

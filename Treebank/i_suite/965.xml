@@ -3,26 +3,26 @@
   <node begin="0" cat="top" end="12" id="0" rel="top">
     <node begin="0" cat="smain" end="12" id="1" rel="--">
       <node begin="0" cat="cp" end="3" id="2" rel="su">
-        <node begin="0" conjtype="onder" end="1" id="3" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="Dat"/>
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="Dat"/>
         <node begin="1" cat="ssub" end="3" id="4" rel="body">
-          <node begin="1" case="nom" def="def" end="2" gen="de" genus="masc" getal="ev" id="5" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
-          <node begin="2" end="3" id="6" infl="sg" lemma="slapen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="slaap" sc="intransitive" tense="past" v_per="thi" word="sliep" wvorm="pv"/>
+          <node begin="1" end="2" genus="masc" getal="ev" id="5" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+          <node begin="2" end="3" id="6" lemma="slapen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="slaap" word="sliep" wvorm="pv"/>
         </node>
       </node>
-      <node begin="3" end="4" id="7" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula_sbar" stype="declarative" tense="present" v_per="thi" word="is" wvorm="pv"/>
-      <node aform="compar" begin="6" buiging="zonder" end="7" graad="comp" id="8" infl="meer" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vform="adj" vwtype="onbep" word="meer"/>
+      <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="6" buiging="zonder" end="7" graad="comp" id="8" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
       <node begin="4" cat="np" end="12" id="9" rel="predc">
-        <node begin="4" buiging="zonder" end="5" id="10" infl="geen" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" wh="nwh" word="geen"/>
-        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="reden" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="reden" sc="subject_sbar_sbar" word="reden"/>
+        <node begin="4" buiging="zonder" end="5" id="10" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="reden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="reden" word="reden"/>
         <node begin="7" cat="cp" end="12" id="12" rel="vc">
-          <node begin="7" conjtype="onder" end="8" id="13" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="7" conjtype="onder" end="8" id="13" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="8" cat="ssub" end="12" id="14" rel="body">
-            <node begin="8" case="nom" def="def" end="9" gen="de" genus="masc" getal="ev" id="15" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+            <node begin="8" end="9" genus="masc" getal="ev" id="15" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
             <node begin="9" cat="ap" end="11" id="16" rel="mod">
-              <node begin="9" end="10" id="17" lemma="te" pos="adv" postag="BW()" pt="bw" rel="mod" root="te" special="intensifier" word="te"/>
-              <node aform="base" begin="10" buiging="zonder" end="11" graad="basis" id="18" infl="no_e" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="laat" vform="adj" word="laat"/>
+              <node begin="9" end="10" id="17" lemma="te" pos="adv" postag="BW()" pt="bw" rel="mod" root="te" word="te"/>
+              <node begin="10" buiging="zonder" end="11" graad="basis" id="18" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="laat" word="laat"/>
             </node>
-            <node begin="11" end="12" id="19" infl="sg" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" sc="intransitive" tense="past" v_per="thi" word="kwam" wvorm="pv"/>
+            <node begin="11" end="12" id="19" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
           </node>
         </node>
       </node>

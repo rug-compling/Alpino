@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="17" id="0" rel="top">
-    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="conj" end="16" id="2" rel="--">
       <node begin="0" cat="smain" end="5" id="3" rel="cnj">
-        <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="4" index="1" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="We"/>
-        <node begin="1" end="2" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
+        <node begin="0" end="1" getal="mv" id="4" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="We"/>
+        <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
         <node begin="0" cat="ppart" end="5" id="6" rel="vc">
           <node begin="0" end="1" id="7" index="1" rel="su"/>
           <node begin="2" cat="mwu" end="4" id="8" rel="mod">
-            <node begin="2" end="3" id="9" lemma="de" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&apos;s" special="tmp" word="&apos;s"/>
-            <node begin="3" end="4" getal="ev" graad="basis" id="10" lemma="winter" naamval="gen" ntype="soort" pos="adv" postag="N(soort,ev,basis,gen)" pt="n" rel="mwp" root="winters" special="tmp" word="winters"/>
+            <node begin="2" end="3" id="9" lemma="de" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="'s" word="'s"/>
+            <node begin="3" end="4" getal="ev" graad="basis" id="10" lemma="winter" naamval="gen" ntype="soort" pos="adv" postag="N(soort,ev,basis,gen)" pt="n" rel="mwp" root="winters" word="winters"/>
           </node>
-          <node begin="4" buiging="zonder" end="5" id="11" infl="psp" lemma="trouwen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="trouw" sc="intransitive" word="getrouwd" wvorm="vd"/>
+          <node begin="4" buiging="zonder" end="5" id="11" lemma="trouwen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="trouw" word="getrouwd" wvorm="vd"/>
         </node>
       </node>
       <node begin="6" end="7" id="12" lemma="dus" pos="vg" postag="BW()" pt="bw" rel="crd" root="dus" word="dus"/>
       <node begin="7" cat="smain" end="16" id="13" rel="cnj">
-        <node begin="7" case="nom" def="def" end="8" gen="de" getal="mv" id="14" index="2" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
-        <node begin="8" end="9" id="15" infl="pl" lemma="kunnen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kan" sc="aux(inf)" stype="declarative" tense="past" word="konden" wvorm="pv"/>
+        <node begin="7" end="8" getal="mv" id="14" index="2" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+        <node begin="8" end="9" id="15" lemma="kunnen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kan" word="konden" wvorm="pv"/>
         <node begin="7" cat="inf" end="16" id="16" rel="vc">
           <node begin="7" end="8" id="17" index="2" rel="su"/>
           <node begin="9" cat="np" end="11" id="18" rel="obj1">
-            <node begin="9" end="10" id="19" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="20" lemma="receptie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="receptie" word="receptie"/>
+            <node begin="9" end="10" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="20" lemma="receptie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="receptie" word="receptie"/>
           </node>
           <node begin="11" end="12" id="21" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
           <node begin="12" cat="pp" end="15" id="22" rel="ld">
             <node begin="12" end="13" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="13" cat="np" end="15" id="24" rel="obj1">
-              <node begin="13" end="14" id="25" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="14" end="15" gen="de" genus="zijd" getal="ev" graad="basis" id="26" lemma="tuin" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="tuin" word="tuin"/>
+              <node begin="13" end="14" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="tuin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tuin" word="tuin"/>
             </node>
           </node>
-          <node begin="15" buiging="zonder" end="16" id="27" infl="inf" lemma="houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" sc="np_ld_pp" word="houden" wvorm="inf"/>
+          <node begin="15" buiging="zonder" end="16" id="27" lemma="houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="houden" wvorm="inf"/>
         </node>
       </node>
     </node>
-    <node begin="16" end="17" id="28" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="16" end="17" id="28" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>We zijn &apos;s winters getrouwd , dus we konden de receptie niet in de tuin houden .</sentence>
 </alpino_ds>

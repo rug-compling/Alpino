@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="Vast"/>
-      <node begin="1" end="2" id="3" infl="sg3" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta_vast" sc="part_sbar_subj_no_het_tpart(vast)" stype="declarative" tense="present" v_per="thi" word="staat" wvorm="pv"/>
+      <node begin="1" end="2" id="3" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta_vast" word="staat" wvorm="pv"/>
       <node begin="2" cat="cp" end="7" id="4" rel="su">
-        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="3" cat="ssub" end="7" id="6" rel="body">
           <node begin="3" cat="np" end="5" id="7" rel="su">
-            <node begin="3" end="4" id="8" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="'t"/>
-            <node begin="4" end="5" gen="het" genus="onz" getal="ev" graad="dim" id="9" lemma="wijf" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" rnum="sg" root="wijf_DIM" word="wijfje"/>
+            <node begin="3" end="4" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="'t"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="dim" id="9" lemma="wijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="wijf_DIM" word="wijfje"/>
           </node>
-          <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="10" infl="no_e" lemma="zwanger" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="zwanger" vform="adj" word="zwanger"/>
-          <node begin="6" end="7" id="11" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" v_per="thi" word="is" wvorm="pv"/>
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="zwanger" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="zwanger" word="zwanger"/>
+          <node begin="6" end="7" id="11" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Vast staat dat &apos;t wijfje zwanger is .</sentence>
 </alpino_ds>

@@ -2,15 +2,15 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" case="both" def="def" end="1" gen="de" getal="mv" id="2" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="komen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kom" sc="intransitive" stype="declarative" tense="present" word="komen" wvorm="pv"/>
-      <node begin="2" end="3" getal="getal" id="4" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" special="er_loc" status="vol" vwtype="aanw" word="hier"/>
+      <node begin="0" end="1" getal="mv" id="2" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="Ze"/>
+      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kom" word="komen" wvorm="pv"/>
+      <node begin="2" end="3" getal="getal" id="4" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
       <node begin="3" cat="cp" end="5" id="5" rel="predm">
-        <node begin="3" conjtype="onder" end="4" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
-        <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lemma="advocaat" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" rnum="sg" root="advocaat" word="advocaat"/>
+        <node begin="3" conjtype="onder" end="4" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="advocaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="advocaat" word="advocaat"/>
       </node>
     </node>
-    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ze komen hier als advocaat .</sentence>
 </alpino_ds>

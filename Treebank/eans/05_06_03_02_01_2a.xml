@@ -3,10 +3,10 @@
   <node begin="0" cat="top" end="15" id="0" rel="top">
     <node begin="0" cat="smain" end="14" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" end="1" id="3" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
-        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="akkoord" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="akkoord" word="akkoord"/>
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="akkoord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="akkoord" word="akkoord"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" sc="fixed([[tot,stand]],no_passive)" stype="declarative" tense="past" word="kwam" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
       <node begin="3" cat="mwu" end="5" id="6" rel="svp">
         <node begin="3" end="4" id="7" lemma="tot" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="tot" vztype="init" word="tot"/>
         <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="stand" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="stand" word="stand"/>
@@ -14,30 +14,30 @@
       <node begin="5" cat="pp" end="14" id="9" rel="mod">
         <node begin="5" end="6" id="10" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
         <node begin="6" cat="np" end="14" id="11" rel="obj1">
-          <node begin="6" end="7" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lemma="voorwaarde" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="voorwaarde" sc="sbar" word="voorwaarde"/>
+          <node begin="6" end="7" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="voorwaarde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorwaarde" word="voorwaarde"/>
           <node begin="8" cat="cp" end="14" id="14" rel="vc">
-            <node begin="8" conjtype="onder" end="9" id="15" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+            <node begin="8" conjtype="onder" end="9" id="15" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
             <node begin="9" cat="ssub" end="14" id="16" rel="body">
               <node begin="9" cat="np" end="11" id="17" index="1" rel="su">
-                <node aform="base" begin="9" buiging="met-e" end="10" graad="basis" id="18" infl="e" lemma="eventueel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="eventueel" vform="adj" word="eventuele"/>
-                <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="19" lemma="schade" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="schade" word="schade"/>
+                <node begin="9" buiging="met-e" end="10" graad="basis" id="18" lemma="eventueel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="eventueel" word="eventuele"/>
+                <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="schade" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schade" word="schade"/>
               </node>
-              <node begin="12" end="13" id="20" infl="sg" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" sc="aux(inf)" tense="past" word="zou" wvorm="pv"/>
+              <node begin="12" end="13" id="20" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
               <node begin="9" cat="inf" end="14" id="21" rel="vc">
                 <node begin="9" end="11" id="22" index="1" rel="su"/>
                 <node begin="9" cat="ppart" end="12" id="23" rel="vc">
                   <node begin="9" end="11" id="24" index="1" rel="obj1"/>
-                  <node begin="11" buiging="zonder" end="12" id="25" infl="psp" lemma="vergoeden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vergoed" sc="transitive" word="vergoed" wvorm="vd"/>
+                  <node begin="11" buiging="zonder" end="12" id="25" lemma="vergoeden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vergoed" word="vergoed" wvorm="vd"/>
                 </node>
-                <node begin="13" buiging="zonder" end="14" id="26" infl="inf" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" sc="passive" word="worden" wvorm="inf"/>
+                <node begin="13" buiging="zonder" end="14" id="26" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
               </node>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="14" end="15" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="14" end="15" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Het akkoord kwam tot stand onder de voorwaarde dat eventuele schade vergoed zou worden .</sentence>
 </alpino_ds>

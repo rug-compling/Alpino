@@ -2,10 +2,10 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="3" id="0" rel="top">
     <node begin="0" cat="np" end="2" id="1" rel="--">
-      <node begin="0" buiging="zonder" end="1" id="2" infl="een" lemma="zo&apos;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&apos;n" vwtype="aanw" word="Zo&apos;n"/>
-      <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="3" lemma="hufter" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="hufter" word="hufter"/>
+      <node begin="0" buiging="zonder" end="1" id="2" lemma="zo'n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo'n" vwtype="aanw" word="Zo'n"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="hufter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hufter" word="hufter"/>
     </node>
-    <node begin="2" end="3" id="4" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+    <node begin="2" end="3" id="4" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
   </node>
   <sentence>Zo&apos;n hufter !</sentence>
 </alpino_ds>

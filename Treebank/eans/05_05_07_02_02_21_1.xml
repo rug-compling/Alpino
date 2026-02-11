@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="14" id="0" rel="top">
-    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="13" id="2" rel="--">
       <node begin="0" cat="np" end="5" id="3" rel="su">
-        <node begin="0" end="1" id="4" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
-        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="5" lemma="gebruik" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="gebruik" word="gebruik"/>
+        <node begin="0" end="1" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="gebruik" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebruik" word="gebruik"/>
         <node begin="2" cat="pp" end="5" id="6" rel="mod">
           <node begin="2" end="3" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="5" id="8" rel="obj1">
-            <node begin="3" end="4" id="9" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="4" end="5" gen="het" genus="onz" getal="ev" graad="basis" id="10" lemma="offer_blok" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="offer_blok" word="offerblok"/>
+            <node begin="3" end="4" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="offer_blok" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="offer_blok" word="offerblok"/>
           </node>
         </node>
       </node>
-      <node begin="5" end="6" id="11" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="present" word="heeft" wvorm="pv"/>
+      <node begin="5" end="6" id="11" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
       <node begin="6" cat="conj" end="13" id="12" rel="obj1">
         <node begin="6" cat="np" end="8" id="13" rel="cnj">
-          <node begin="6" buiging="zonder" end="7" getal="ev" id="14" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="red" vwtype="bez" word="z&apos;n"/>
-          <node begin="7" end="8" gen="het" getal="mv" graad="basis" id="15" lemma="voordeel" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="voordeel" word="voordelen"/>
+          <node begin="6" buiging="zonder" end="7" getal="ev" id="14" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="red" vwtype="bez" word="z'n"/>
+          <node begin="7" end="8" getal="mv" graad="basis" id="15" lemma="voordeel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voordeel" word="voordelen"/>
         </node>
         <node begin="9" conjtype="neven" end="10" id="16" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
         <node begin="10" cat="np" end="13" id="17" rel="cnj">
-          <node begin="10" end="11" id="18" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="ook"/>
-          <node begin="11" buiging="zonder" end="12" getal="ev" id="19" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="red" vwtype="bez" word="z&apos;n"/>
-          <node begin="12" end="13" gen="het" getal="mv" graad="basis" id="20" lemma="nadeel" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="nadeel" word="nadelen"/>
+          <node begin="10" end="11" id="18" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+          <node begin="11" buiging="zonder" end="12" getal="ev" id="19" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="red" vwtype="bez" word="z'n"/>
+          <node begin="12" end="13" getal="mv" graad="basis" id="20" lemma="nadeel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="nadeel" word="nadelen"/>
         </node>
       </node>
     </node>
-    <node begin="13" end="14" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="13" end="14" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Het gebruik van een offerblok heeft z&apos;n voordelen , maar ook z&apos;n nadelen .</sentence>
 </alpino_ds>

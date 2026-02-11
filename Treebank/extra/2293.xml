@@ -3,32 +3,32 @@
   <node begin="0" cat="top" end="14" id="0" rel="top">
     <node begin="0" cat="smain" end="13" id="1" rel="--">
       <node begin="0" cat="cp" end="4" id="2" rel="mod">
-        <node begin="0" conjtype="onder" end="1" id="3" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" sc="zoals" word="Zoals"/>
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="Zoals"/>
         <node begin="1" cat="du" end="4" id="4" rel="body">
-          <node aform="compar" begin="1" buiging="zonder" end="2" graad="comp" id="5" infl="no_e" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="dp" root="vaak" vform="adj" word="vaker"/>
+          <node begin="1" buiging="zonder" end="2" graad="comp" id="5" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="dp" root="vaak" word="vaker"/>
           <node begin="2" cat="pp" end="4" id="6" rel="dp">
             <node begin="2" end="3" id="7" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
-            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="Ibsen" naamval="stan" neclass="ORG" ntype="eigen" num="both" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Ibsen" word="Ibsen"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="Ibsen" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Ibsen" word="Ibsen"/>
           </node>
         </node>
       </node>
-      <node begin="4" end="5" id="9" infl="sg" lemma="vast_zitten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zit_vast" sc="part_ld_pp(vast)" stype="declarative" tense="present" v_per="thi" word="zit" wvorm="pv"/>
+      <node begin="4" end="5" id="9" lemma="vast_zitten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zit_vast" word="zit" wvorm="pv"/>
       <node begin="5" cat="np" end="8" id="10" rel="su">
-        <node begin="5" end="6" id="11" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node aform="base" begin="6" buiging="met-e" end="7" graad="basis" id="12" infl="e" lemma="sterk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="sterk" vform="adj" word="sterke"/>
-        <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lemma="vrouw" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="vrouw" word="vrouw"/>
+        <node begin="5" end="6" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="6" buiging="met-e" end="7" graad="basis" id="12" lemma="sterk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="sterk" word="sterke"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="vrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vrouw" word="vrouw"/>
       </node>
       <node begin="8" buiging="zonder" end="9" graad="basis" id="14" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="vast"/>
       <node begin="9" cat="pp" end="13" id="15" rel="ld">
         <node begin="9" end="10" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
         <node begin="10" cat="np" end="13" id="17" rel="obj1">
-          <node begin="10" end="11" id="18" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node aform="base" begin="11" buiging="zonder" end="12" graad="basis" id="19" infl="no_e" lemma="slap" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="slap" vform="adj" word="slap"/>
-          <node begin="12" end="13" gen="het" genus="onz" getal="ev" graad="basis" id="20" lemma="huwelijk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="huwelijk" word="huwelijk"/>
+          <node begin="10" end="11" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="11" buiging="zonder" end="12" graad="basis" id="19" lemma="slap" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="slap" word="slap"/>
+          <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="20" lemma="huwelijk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="huwelijk" word="huwelijk"/>
         </node>
       </node>
     </node>
-    <node begin="13" end="14" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="13" end="14" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Zoals vaker bij Ibsen zit een sterke vrouw vast in een slap huwelijk .</sentence>
 </alpino_ds>

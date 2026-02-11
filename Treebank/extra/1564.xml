@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
-    <node begin="2" end="3" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
-    <node begin="3" end="4" id="3" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="0" end="1" id="1" lemma="'" pos="punct" postag="LET()" pt="let" rel="--" root="'" word="'"/>
+    <node begin="2" end="3" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="3" end="4" id="3" lemma="'" pos="punct" postag="LET()" pt="let" rel="--" root="'" word="'"/>
     <node begin="1" cat="du" end="6" id="4" rel="--">
-      <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="5" infl="no_e" lemma="allemachtig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="nucl" root="allemachtig" vform="adj" word="Allemachtig"/>
+      <node begin="1" buiging="zonder" end="2" graad="basis" id="5" lemma="allemachtig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="nucl" root="allemachtig" word="Allemachtig"/>
       <node begin="4" cat="sv1" end="6" id="6" rel="tag">
-        <node begin="4" end="5" id="7" infl="sg3" lemma="fluisteren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="fluister" sc="sbar" tense="present" word="fluistert" wvorm="pv"/>
-        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="Erixon" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Erixon" word="Erixon"/>
+        <node begin="4" end="5" id="7" lemma="fluisteren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="fluister" word="fluistert" wvorm="pv"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="Erixon" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Erixon" word="Erixon"/>
       </node>
     </node>
-    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>&apos; Allemachtig , &apos; fluistert Erixon .</sentence>
 </alpino_ds>

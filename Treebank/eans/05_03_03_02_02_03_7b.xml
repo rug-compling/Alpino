@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="12" id="0" rel="top">
-    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="11" id="2" rel="--">
       <node begin="0" cat="cp" end="4" id="3" rel="mod">
         <node begin="0" conjtype="onder" end="1" id="4" lemma="terwijl" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="terwijl" word="Terwijl"/>
         <node begin="1" cat="ssub" end="4" id="5" rel="body">
-          <node begin="1" case="nom" def="def" end="2" gen="de" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
-          <node begin="2" case="dat_acc" def="def" end="3" gen="de" getal="getal" id="7" lemma="zichzelf" naamval="obl" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,nadr,3,getal)" pt="vnw" rel="obj1" rnum="sg" root="zichzelf" status="nadr" vwtype="refl" wh="nwh" word="zichzelf"/>
-          <node begin="3" end="4" id="8" infl="sg" lemma="bedienen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="bedien" sc="transitive" tense="past" word="bediende" wvorm="pv"/>
+          <node begin="1" end="2" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+          <node begin="2" end="3" getal="getal" id="7" lemma="zichzelf" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,nadr,3,getal)" pt="vnw" rel="obj1" root="zichzelf" status="nadr" vwtype="refl" word="zichzelf"/>
+          <node begin="3" end="4" id="8" lemma="bedienen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="bedien" word="bediende" wvorm="pv"/>
         </node>
       </node>
-      <node begin="5" end="6" id="9" infl="sg" lemma="praten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="praat" sc="intransitive" stype="declarative" tense="past" word="praatte" wvorm="pv"/>
+      <node begin="5" end="6" id="9" lemma="praten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="praat" word="praatte" wvorm="pv"/>
       <node begin="6" cat="np" end="9" id="10" rel="su">
-        <node begin="6" end="7" id="11" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node aform="base" begin="7" buiging="met-e" end="8" graad="basis" id="12" infl="e" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="oud" vform="adj" word="oude"/>
-        <node begin="8" end="9" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lemma="man" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="man" word="man"/>
+        <node begin="6" end="7" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="7" buiging="met-e" end="8" graad="basis" id="12" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="oud" word="oude"/>
+        <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="13" lemma="man" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="man" word="man"/>
       </node>
       <node begin="9" cat="mwu" end="11" id="14" rel="mod">
-        <node begin="9" end="10" id="15" lemma="honderd" numtype="hoofd" pos="adv" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="honderd" special="sentence" word="honderd"/>
-        <node begin="10" end="11" id="16" lemma="uit" pos="adv" postag="VZ(fin)" pt="vz" rel="mwp" root="uit" special="sentence" vztype="fin" word="uit"/>
+        <node begin="9" end="10" id="15" lemma="honderd" numtype="hoofd" pos="adv" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="honderd" word="honderd"/>
+        <node begin="10" end="11" id="16" lemma="uit" pos="adv" postag="VZ(fin)" pt="vz" rel="mwp" root="uit" vztype="fin" word="uit"/>
       </node>
     </node>
-    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Terwijl hij zichzelf bediende , praatte de oude man honderd uit .</sentence>
 </alpino_ds>

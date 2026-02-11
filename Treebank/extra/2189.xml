@@ -3,33 +3,33 @@
   <node begin="0" cat="top" end="15" id="0" rel="top">
     <node begin="0" cat="smain" end="14" id="1" rel="--">
       <node begin="0" cat="cp" end="4" id="2" rel="mod">
-        <node begin="0" end="1" id="3" lemma="net" pos="adv" postag="BW()" pt="bw" rel="mod" root="net" sc="modal" word="Net"/>
-        <node begin="1" conjtype="onder" end="2" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
+        <node begin="0" end="1" id="3" lemma="net" pos="adv" postag="BW()" pt="bw" rel="mod" root="net" word="Net"/>
+        <node begin="1" conjtype="onder" end="2" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="2" cat="pp" end="4" id="5" rel="body">
           <node begin="2" end="3" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-          <node begin="3" end="4" id="7" lemma="2014" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="2014" word="2014"/>
+          <node begin="3" end="4" id="7" lemma="2014" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="2014" word="2014"/>
         </node>
       </node>
-      <node begin="4" end="5" id="8" infl="pl" lemma="wandelen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="wandel" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="wandelden" wvorm="pv"/>
+      <node begin="4" end="5" id="8" lemma="wandelen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="wandel" word="wandelden" wvorm="pv"/>
       <node begin="5" cat="np" end="11" id="9" rel="su">
-        <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="ruim" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" sc="modal" word="ruim"/>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="ruim" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
         <node begin="6" cat="mwu" end="8" id="11" rel="mod">
-          <node begin="6" buiging="zonder" end="7" graad="comp" id="12" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" sc="noun" vwtype="onbep" word="meer"/>
-          <node begin="7" conjtype="onder" end="8" id="13" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" sc="noun" word="dan"/>
+          <node begin="6" buiging="zonder" end="7" graad="comp" id="12" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" vwtype="onbep" word="meer"/>
+          <node begin="7" conjtype="onder" end="8" id="13" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" word="dan"/>
         </node>
-        <node begin="8" end="9" id="14" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="9" end="10" gen="both" genus="onz" getal="ev" graad="basis" id="15" lemma="miljoen" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="pl" root="miljoen" sc="measure" special="meas_mod" word="miljoen"/>
-        <node begin="10" end="11" gen="both" getal="mv" graad="basis" id="16" lemma="mens" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" rnum="pl" root="mens" word="mensen"/>
+        <node begin="8" end="9" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="15" lemma="miljoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="miljoen" word="miljoen"/>
+        <node begin="10" end="11" getal="mv" graad="basis" id="16" lemma="mens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="mens" word="mensen"/>
       </node>
       <node begin="11" cat="pp" end="14" id="17" rel="mod">
         <node begin="11" end="12" id="18" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
         <node begin="12" cat="np" end="14" id="19" rel="obj1">
-          <node begin="12" end="13" id="20" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-          <node begin="13" end="14" gen="het" genus="onz" getal="ev" graad="basis" id="21" lemma="bloem_park" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="bloem_park" word="bloemenpark"/>
+          <node begin="12" end="13" id="20" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="21" lemma="bloem_park" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bloem_park" word="bloemenpark"/>
         </node>
       </node>
     </node>
-    <node begin="14" end="15" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="14" end="15" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Net als in 2014 wandelden ruim meer dan een miljoen mensen door het bloemenpark .</sentence>
 </alpino_ds>

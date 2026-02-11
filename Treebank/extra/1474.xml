@@ -3,35 +3,35 @@
   <node begin="0" cat="top" end="14" id="0" rel="top">
     <node begin="0" cat="conj" end="13" id="1" rel="--">
       <node begin="0" cat="smain" end="5" id="2" rel="cnj">
-        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" index="1" lemma="Puller" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Puller" word="Puller"/>
-        <node begin="1" end="2" id="4" infl="sg" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" sc="ld_pp" tense="past" word="kwam" wvorm="pv"/>
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" index="1" lemma="Puller" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Puller" word="Puller"/>
+        <node begin="1" end="2" id="4" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
         <node begin="2" cat="pp" end="5" id="5" rel="ld">
           <node begin="2" end="3" id="6" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
           <node begin="3" cat="np" end="5" id="7" rel="obj1">
-            <node begin="3" end="4" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="pick-up" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="pick-up" word="pick-up"/>
+            <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="pick-up" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pick-up" word="pick-up"/>
           </node>
         </node>
       </node>
       <node begin="5" conjtype="neven" end="6" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="0" cat="smain" end="13" id="11" rel="cnj">
         <node begin="0" end="1" id="12" index="1" rel="su"/>
-        <node begin="6" end="7" id="13" infl="sg" lemma="vergewissen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vergewis" sc="refl_er_pp_sbar(van)" tense="past" word="vergewiste" wvorm="pv"/>
-        <node begin="7" end="8" getal="getal" id="14" lemma="zich" naamval="obl" num="both" pdtype="pron" per="u_thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" refl="refl" rel="se" rnum="sg" root="zich" status="red" vwtype="refl" word="zich"/>
+        <node begin="6" end="7" id="13" lemma="vergewissen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vergewis" word="vergewiste" wvorm="pv"/>
+        <node begin="7" end="8" getal="getal" id="14" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
         <node begin="8" cat="pp" end="13" id="15" rel="pc">
-          <node begin="8" end="9" id="16" lemma="ervan" pos="pp" postag="BW()" pt="bw" rel="hd" root="ervan" special="er" word="ervan"/>
+          <node begin="8" end="9" id="16" lemma="ervan" pos="pp" postag="BW()" pt="bw" rel="hd" root="ervan" word="ervan"/>
           <node begin="9" cat="cp" end="13" id="17" rel="vc">
-            <node begin="9" conjtype="onder" end="10" id="18" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+            <node begin="9" conjtype="onder" end="10" id="18" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
             <node begin="10" cat="ssub" end="13" id="19" rel="body">
-              <node begin="10" end="11" getal="getal" id="20" infl="de" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" rnum="sg" root="die" status="vol" vwtype="aanw" wh="nwh" word="die"/>
-              <node aform="base" begin="11" buiging="zonder" end="12" graad="basis" id="21" infl="no_e" lemma="leeg" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="leeg" vform="adj" word="leeg"/>
-              <node begin="12" end="13" id="22" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula" tense="past" word="was" wvorm="pv"/>
+              <node begin="10" end="11" getal="getal" id="20" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" root="die" status="vol" vwtype="aanw" word="die"/>
+              <node begin="11" buiging="zonder" end="12" graad="basis" id="21" lemma="leeg" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="leeg" word="leeg"/>
+              <node begin="12" end="13" id="22" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="13" end="14" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="13" end="14" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Puller kwam bij de pick-up en vergewiste zich ervan dat die leeg was .</sentence>
 </alpino_ds>

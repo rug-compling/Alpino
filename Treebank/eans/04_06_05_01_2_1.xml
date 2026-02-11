@@ -3,17 +3,17 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="mod">
-        <node aform="base" begin="0" buiging="met-e" end="1" graad="basis" id="3" infl="e" lemma="aanstaand" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="aanstaand" vform="gerund" word="Aanstaande"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="donderdag_morgen" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="donderdag_morgen" special="tmp" word="donderdagmorgen"/>
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="aanstaand" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="aanstaand" word="Aanstaande"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="donderdag_morgen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="donderdag_morgen" word="donderdagmorgen"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg3" lemma="vertrekken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vertrek" sc="ld_pp" stype="declarative" tense="present" word="vertrekt" wvorm="pv"/>
-      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="José" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="José" word="José"/>
+      <node begin="2" end="3" id="5" lemma="vertrekken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vertrek" word="vertrekt" wvorm="pv"/>
+      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="José" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="José" word="José"/>
       <node begin="4" cat="pp" end="6" id="7" rel="ld">
         <node begin="4" end="5" id="8" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
-        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="Suriname" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Suriname" word="Suriname"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="Suriname" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Suriname" word="Suriname"/>
       </node>
     </node>
-    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Aanstaande donderdagmorgen vertrekt José naar Suriname .</sentence>
 </alpino_ds>

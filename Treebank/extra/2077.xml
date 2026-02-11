@@ -3,11 +3,11 @@
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="smain" end="4" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="su">
-        <node begin="0" case="both" def="indef" end="1" gen="de" getal-n="zonder-n" graad="basis" id="3" lemma="één" num="sg" numtype="hoofd" per="thi" pos="pron" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" rnum="sg" root="één" special="strpro" wh="nwh" word="Een"/>
-        <node begin="1" case="gen" def="def" end="2" gen="both" getal="mv" id="4" lemma="hun" naamval="gen" num="pl" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,gen,vol,3p,mv)" pt="vnw" rel="mod" rnum="pl" root="hun" status="vol" vwtype="pers" wh="nwh" word="hunner"/>
-        <node begin="2" end="3" id="5" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" special="postnp" word="echter"/>
+        <node begin="0" end="1" getal-n="zonder-n" graad="basis" id="3" lemma="één" numtype="hoofd" pos="pron" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="één" word="Een"/>
+        <node begin="1" end="2" getal="mv" id="4" lemma="hun" naamval="gen" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,gen,vol,3p,mv)" pt="vnw" rel="mod" root="hun" status="vol" vwtype="pers" word="hunner"/>
+        <node begin="2" end="3" id="5" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
       </node>
-      <node begin="3" end="4" id="6" infl="sg" lemma="falen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="faal" sc="intransitive" stype="declarative" tense="past" v_per="thi" word="faalde" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="falen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="faal" word="faalde" wvorm="pv"/>
     </node>
   </node>
   <sentence>Een hunner echter faalde</sentence>

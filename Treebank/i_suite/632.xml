@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
       <node begin="0" cat="np" end="5" id="2" rel="obj1">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" wh="nwh" word="Dat"/>
-        <node begin="2" buiging="zonder" end="3" getal-n="zonder-n" id="4" lemma="zijn" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" rnum="sg" root="ben" sc="copula" special="v_noun" word="zijn" wvorm="inf"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="Dat"/>
+        <node begin="2" buiging="zonder" end="3" getal-n="zonder-n" id="4" lemma="zijn" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
         <node begin="1" cat="ap" end="5" id="5" rel="predc">
-          <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="6" infl="no_e" lemma="blij" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="blij" sc="pp(met)" vform="adj" word="blij"/>
+          <node begin="1" buiging="zonder" end="2" graad="basis" id="6" lemma="blij" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="blij" word="blij"/>
           <node begin="3" cat="pp" end="5" id="7" rel="pc">
             <node begin="3" end="4" id="8" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
-            <node begin="4" case="dat_acc" def="def" end="5" gen="de" getal="getal" id="9" lemma="jezelf" naamval="obl" num="both" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,nadr,2v,getal)" pt="vnw" rel="obj1" rnum="sg" root="jezelf" status="nadr" vwtype="pr" wh="nwh" word="jezelf"/>
+            <node begin="4" end="5" getal="getal" id="9" lemma="jezelf" naamval="obl" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,nadr,2v,getal)" pt="vnw" rel="obj1" root="jezelf" status="nadr" vwtype="pr" word="jezelf"/>
           </node>
         </node>
       </node>
-      <node begin="5" end="6" id="10" infl="pl" lemma="weten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="weet" sc="transitive" stype="declarative" tense="present" word="weten" wvorm="pv"/>
-      <node begin="6" case="nom" def="def" end="7" gen="de" getal="mv" id="11" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
-      <node begin="7" end="8" id="12" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" special="tmp" word="nu"/>
-      <node aform="base" begin="8" end="9" id="13" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
+      <node begin="5" end="6" id="10" lemma="weten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="weet" word="weten" wvorm="pv"/>
+      <node begin="6" end="7" getal="mv" id="11" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+      <node begin="7" end="8" id="12" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+      <node begin="8" end="9" id="13" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
     </node>
   </node>
   <sentence>Dat blij zijn met jezelf weten we nu wel</sentence>

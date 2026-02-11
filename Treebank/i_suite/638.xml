@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="15" id="0" rel="top">
-    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="14" id="2" rel="--">
       <node begin="0" cat="pp" end="3" id="3" rel="mod">
         <node begin="0" end="1" id="4" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="Aan"/>
         <node begin="1" cat="np" end="3" id="5" rel="obj1">
-          <node begin="1" end="2" id="6" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="7" lemma="Koningsplein" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="Koningsplein" word="Koningsplein"/>
+          <node begin="1" end="2" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="7" lemma="Koningsplein" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Koningsplein" word="Koningsplein"/>
         </node>
       </node>
-      <node begin="3" end="4" id="8" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="intransitive" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
+      <node begin="3" end="4" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="4" cat="np" end="14" id="9" rel="su">
-        <node begin="4" buiging="zonder" end="5" graad="basis" id="10" infl="wat" lemma="allerlei" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="det" root="allerlei" word="allerlei"/>
-        <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="11" lemma="winkel" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="winkel" word="winkels"/>
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="allerlei" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="det" root="allerlei" word="allerlei"/>
+        <node begin="5" end="6" getal="mv" graad="basis" id="11" lemma="winkel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="winkel" word="winkels"/>
         <node begin="7" cat="rel" end="14" id="12" rel="mod">
-          <node begin="7" end="8" id="13" lemma="waaronder" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waaronder" special="waar" word="waaronder"/>
+          <node begin="7" end="8" id="13" lemma="waaronder" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waaronder" word="waaronder"/>
           <node begin="8" cat="du" end="14" id="14" rel="body">
             <node begin="8" cat="pp" end="11" id="15" rel="dp">
               <node begin="8" end="9" id="16" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
               <node begin="9" cat="np" end="11" id="17" rel="obj1">
-                <node begin="9" end="10" gen="de" genus="zijd" getal="ev" graad="basis" id="18" lemma="mei" naamval="stan" ntype="eigen" num="sg" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="mei" special="tmp" word="mei"/>
-                <node begin="10" end="11" id="19" lemma="2015" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" rnum="sg" root="2015" word="2015"/>
+                <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="mei" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="mei" word="mei"/>
+                <node begin="10" end="11" id="19" lemma="2015" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="2015" word="2015"/>
               </node>
             </node>
             <node begin="11" cat="np" end="14" id="20" rel="dp">
-              <node begin="11" end="12" id="21" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="12" end="13" gen="de" genus="zijd" getal="ev" graad="basis" id="22" lemma="boek_handel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="boek_handel" word="boekhandel"/>
-              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="Scheltema" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" rnum="sg" root="Scheltema" word="Scheltema"/>
+              <node begin="11" end="12" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="boek_handel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="boek_handel" word="boekhandel"/>
+              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="Scheltema" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Scheltema" word="Scheltema"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Aan het Koningsplein zijn allerlei winkels , waaronder tot mei 2015 de boekhandel Scheltema .</sentence>
 </alpino_ds>

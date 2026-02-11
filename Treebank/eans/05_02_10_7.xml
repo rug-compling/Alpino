@@ -2,15 +2,15 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="besterven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="besterf" sc="fixed([pc(van),het_obj1],no_passive)" stype="declarative" tense="past" word="bestierf" wvorm="pv"/>
-      <node begin="2" end="3" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" special="het" status="red" vwtype="pers" word="het"/>
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="besterven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="besterf" word="bestierf" wvorm="pv"/>
+      <node begin="2" end="3" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
       <node begin="3" cat="pp" end="5" id="5" rel="pc">
         <node begin="3" end="4" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-        <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lemma="angst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="angst" word="angst"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="angst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="angst" word="angst"/>
       </node>
     </node>
-    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Hij bestierf het van angst .</sentence>
 </alpino_ds>

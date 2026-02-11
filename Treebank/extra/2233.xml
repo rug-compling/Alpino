@@ -4,27 +4,27 @@
     <node begin="0" cat="smain" end="11" id="1" rel="--">
       <node begin="0" cat="conj" end="8" id="2" rel="predm">
         <node begin="0" cat="ppart" end="4" id="3" rel="cnj">
-          <node aform="base" begin="0" buiging="zonder" end="1" id="4" infl="both" lemma="onderscheiden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="onderscheiden" sc="pp(met)" vform="psp" word="Onderscheiden" wvorm="vd"/>
+          <node begin="0" buiging="zonder" end="1" id="4" lemma="onderscheiden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="onderscheiden" word="Onderscheiden" wvorm="vd"/>
           <node begin="1" cat="pp" end="4" id="5" rel="pc">
             <node begin="1" end="2" id="6" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
             <node begin="2" cat="np" end="4" id="7" rel="obj1">
-              <node aform="base" begin="2" buiging="met-e" end="3" graad="basis" id="8" infl="e" lemma="divers" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="divers" vform="adj" word="diverse"/>
-              <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="9" lemma="prijs" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="prijs" word="prijzen"/>
+              <node begin="2" buiging="met-e" end="3" graad="basis" id="8" lemma="divers" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="divers" word="diverse"/>
+              <node begin="3" end="4" getal="mv" graad="basis" id="9" lemma="prijs" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="prijs" word="prijzen"/>
             </node>
           </node>
         </node>
         <node begin="4" conjtype="neven" end="5" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="5" cat="ppart" end="8" id="11" rel="cnj">
-          <node aform="base" begin="5" buiging="zonder" end="6" id="12" infl="no_e" lemma="bejubelen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bejubelen" vform="psp" word="bejubeld" wvorm="vd"/>
+          <node begin="5" buiging="zonder" end="6" id="12" lemma="bejubelen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bejubelen" word="bejubeld" wvorm="vd"/>
           <node begin="6" cat="pp" end="8" id="13" rel="mod">
             <node begin="6" end="7" id="14" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
-            <node begin="7" end="8" gen="de" getal="mv" graad="basis" id="15" lemma="criticus" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" rnum="pl" root="criticus" word="critici"/>
+            <node begin="7" end="8" getal="mv" graad="basis" id="15" lemma="criticus" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="criticus" word="critici"/>
           </node>
         </node>
       </node>
-      <node begin="8" end="9" id="16" infl="sg" lemma="blijven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="blijf" sc="copula" stype="declarative" tense="past" v_per="thi" word="bleef" wvorm="pv"/>
-      <node begin="9" case="nom" def="def" end="10" gen="de" genus="masc" getal="ev" id="17" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
-      <node aform="base" begin="10" buiging="zonder" end="11" graad="basis" id="18" infl="both" lemma="bescheiden" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="bescheiden" vform="adj" word="bescheiden"/>
+      <node begin="8" end="9" id="16" lemma="blijven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="blijf" word="bleef" wvorm="pv"/>
+      <node begin="9" end="10" genus="masc" getal="ev" id="17" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="10" buiging="zonder" end="11" graad="basis" id="18" lemma="bescheiden" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="bescheiden" word="bescheiden"/>
     </node>
   </node>
   <sentence>Onderscheiden met diverse prijzen en bejubeld door critici bleef hij bescheiden</sentence>

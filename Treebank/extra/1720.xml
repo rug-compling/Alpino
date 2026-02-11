@@ -2,21 +2,21 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="2" infl="no_e" lemma="nieuwsgierig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predm" root="nieuwsgierig" vform="adj" word="Nieuwsgierig"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="volgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="volg" sc="transitive" stype="declarative" tense="past" word="volgde" wvorm="pv"/>
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="nieuwsgierig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predm" root="nieuwsgierig" word="Nieuwsgierig"/>
+      <node begin="1" end="2" id="3" lemma="volgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="volg" word="volgde" wvorm="pv"/>
       <node begin="2" cat="np" end="4" id="4" rel="su">
-        <node begin="2" end="3" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="bemanning" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="bemanning" word="bemanning"/>
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="bemanning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bemanning" word="bemanning"/>
       </node>
       <node begin="4" cat="np" end="7" id="7" rel="obj1">
-        <node begin="4" buiging="zonder" end="5" id="8" infl="het" lemma="elk" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="hd" rnum="sg" root="elk" vwtype="onbep" wh="nwh" word="elk"/>
+        <node begin="4" buiging="zonder" end="5" id="8" lemma="elk" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="hd" root="elk" vwtype="onbep" word="elk"/>
         <node begin="5" cat="np" end="7" id="9" rel="mod">
-          <node begin="5" end="6" id="10" infl="der" lemma="zijn" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="zijn" word="zijner"/>
-          <node begin="6" end="7" gen="de" getal="mv" graad="basis" id="11" lemma="beweging" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="beweging" word="bewegingen"/>
+          <node begin="5" end="6" id="10" lemma="zijn" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="zijn" word="zijner"/>
+          <node begin="6" end="7" getal="mv" graad="basis" id="11" lemma="beweging" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="beweging" word="bewegingen"/>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Nieuwsgierig volgde de bemanning elk zijner bewegingen .</sentence>
 </alpino_ds>

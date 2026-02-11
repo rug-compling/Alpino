@@ -2,10 +2,10 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="np" end="4" id="1" rel="--">
-      <node begin="0" end="1" id="2" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-      <node aform="base" begin="1" buiging="zonder" end="2" id="3" infl="no_e" lemma="op_vallen" pos="adj" positie="prenom" postag="WW(od,prenom,zonder)" pt="ww" rel="mod" root="op_vallen" vform="gerund" word="opvallend" wvorm="od"/>
-      <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="4" infl="no_e" lemma="stil" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="stil" vform="adj" word="stil"/>
-      <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="5" lemma="Parijs" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="Parijs" word="Parijs"/>
+      <node begin="0" end="1" id="2" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+      <node begin="1" buiging="zonder" end="2" id="3" lemma="op_vallen" pos="adj" positie="prenom" postag="WW(od,prenom,zonder)" pt="ww" rel="mod" root="op_vallen" word="opvallend" wvorm="od"/>
+      <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="stil" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="stil" word="stil"/>
+      <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="5" lemma="Parijs" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Parijs" word="Parijs"/>
     </node>
   </node>
   <sentence>een opvallend stil Parijs</sentence>

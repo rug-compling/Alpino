@@ -5,31 +5,31 @@
       <node begin="0" cat="smain" end="7" id="2" rel="cnj">
         <node begin="0" cat="pp" end="2" id="3" index="1" rel="mod">
           <node begin="0" end="1" id="4" lemma="ondanks" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="ondanks" vztype="init" word="Ondanks"/>
-          <node begin="1" end="2" getal="ev" id="5" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+          <node begin="1" end="2" getal="ev" id="5" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
         </node>
-        <node begin="2" end="3" id="6" infl="sg" lemma="vinden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vind" sc="pred_np" tense="past" word="vond" wvorm="pv"/>
-        <node begin="3" case="nom" def="def" end="4" gen="de" getal="ev" id="7" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-        <node begin="4" end="5" genus="onz" getal="ev" id="8" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+        <node begin="2" end="3" id="6" lemma="vinden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vind" word="vond" wvorm="pv"/>
+        <node begin="3" end="4" getal="ev" id="7" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+        <node begin="4" end="5" genus="onz" getal="ev" id="8" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
         <node begin="5" end="6" id="9" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
-        <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="10" infl="no_e" lemma="spannend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="spannend" vform="adj" word="spannend"/>
+        <node begin="6" buiging="zonder" end="7" graad="basis" id="10" lemma="spannend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="spannend" word="spannend"/>
       </node>
       <node begin="7" conjtype="neven" end="8" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="0" cat="smain" end="13" id="12" rel="cnj">
-        <node begin="8" end="9" id="13" infl="sg" lemma="willen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wil" sc="modifier(aux(inf))" tense="past" word="wilde" wvorm="pv"/>
-        <node begin="9" case="nom" def="def" end="10" gen="de" getal="ev" id="14" index="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+        <node begin="8" end="9" id="13" lemma="willen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wil" word="wilde" wvorm="pv"/>
+        <node begin="9" end="10" getal="ev" id="14" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
         <node begin="0" cat="inf" end="13" id="15" rel="vc">
           <node begin="9" end="10" id="16" index="2" rel="su"/>
-          <node begin="11" buiging="zonder" end="12" id="17" infl="inf" lemma="blijven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="blijf" sc="aux(inf)" word="blijven" wvorm="inf"/>
+          <node begin="11" buiging="zonder" end="12" id="17" lemma="blijven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="blijf" word="blijven" wvorm="inf"/>
           <node begin="0" cat="inf" end="13" id="18" rel="vc">
             <node begin="0" end="2" id="19" index="1" rel="mod"/>
             <node begin="9" end="10" id="20" index="2" rel="su"/>
             <node begin="10" end="11" id="21" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
-            <node begin="12" buiging="zonder" end="13" id="22" infl="inf" lemma="lezen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lees" sc="intransitive" word="lezen" wvorm="inf"/>
+            <node begin="12" buiging="zonder" end="13" id="22" lemma="lezen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lees" word="lezen" wvorm="inf"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="13" end="14" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="13" end="14" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ondanks dat vond Ik het toch spannend en wilde ik maar blijven lezen .</sentence>
 </alpino_ds>

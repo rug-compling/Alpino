@@ -3,16 +3,16 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="du" end="7" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="sat">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="Die"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="clown" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="clown" word="clowns"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="clown" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="clown" word="clowns"/>
       </node>
       <node begin="2" cat="smain" end="7" id="5" rel="nucl">
-        <node begin="2" end="3" getal="getal" id="6" infl="de" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="obj2" rnum="sg" root="die" status="vol" vwtype="aanw" wh="nwh" word="die"/>
-        <node begin="3" end="4" id="7" infl="sg1" lemma="geven" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="geef" sc="np_np" stype="declarative" tense="present" word="geef" wvorm="pv"/>
-        <node begin="4" case="nom" def="def" end="5" gen="de" getal="ev" id="8" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+        <node begin="2" end="3" getal="getal" id="6" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="obj2" root="die" status="vol" vwtype="aanw" word="die"/>
+        <node begin="3" end="4" id="7" lemma="geven" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="geef" word="geef" wvorm="pv"/>
+        <node begin="4" end="5" getal="ev" id="8" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
         <node begin="5" cat="np" end="7" id="9" rel="obj1">
-          <node begin="5" end="6" id="10" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="compliment" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="compliment" word="compliment"/>
+          <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="compliment" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="compliment" word="compliment"/>
         </node>
       </node>
     </node>

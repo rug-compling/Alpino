@@ -3,18 +3,18 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="du" end="5" id="1" rel="--">
       <node begin="0" cat="ap" end="2" id="2" rel="dp">
-        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="3" infl="no_e" lemma="erg" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="erg" vform="adj" word="Erg"/>
-        <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="4" infl="no_e" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="leuk" vform="adj" word="leuk"/>
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="erg" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="erg" word="Erg"/>
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="4" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="leuk" word="leuk"/>
       </node>
       <node begin="2" cat="oti" end="5" id="5" rel="dp">
-        <node begin="2" end="3" id="6" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" sc="om" vztype="init" word="om"/>
+        <node begin="2" end="3" id="6" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
         <node begin="3" cat="ti" end="5" id="7" rel="body">
-          <node begin="3" end="4" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
-          <node begin="4" buiging="zonder" end="5" id="9" infl="inf" lemma="horen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="hoor" sc="intransitive" word="horen" wvorm="inf"/>
+          <node begin="3" end="4" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="4" buiging="zonder" end="5" id="9" lemma="horen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="hoor" word="horen" wvorm="inf"/>
         </node>
       </node>
     </node>
-    <node begin="5" end="6" id="10" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+    <node begin="5" end="6" id="10" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
   </node>
   <sentence>Erg leuk om te horen !</sentence>
 </alpino_ds>

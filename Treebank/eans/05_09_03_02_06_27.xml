@@ -2,27 +2,27 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="12" id="0" rel="top">
     <node begin="0" cat="smain" end="11" id="1" rel="--">
-      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="Er"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" sc="ld_pp" stype="declarative" tense="present" word="staan" wvorm="pv"/>
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="3" lemma="staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" word="staan" wvorm="pv"/>
       <node begin="2" end="3" id="4" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
       <node begin="3" end="4" id="5" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
       <node begin="4" cat="np" end="7" id="6" rel="su">
         <node begin="4" cat="detp" end="6" id="7" rel="det">
-          <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="8" infl="no_e" lemma="aardig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="aardig" vform="adj" word="aardig"/>
-          <node begin="5" end="6" getal="ev" id="9" infl="wat" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="wat" status="vol" vwtype="onbep" wh="nwh" word="wat"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="aardig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="aardig" word="aardig"/>
+          <node begin="5" end="6" getal="ev" id="9" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="wat" status="vol" vwtype="onbep" word="wat"/>
         </node>
-        <node begin="6" end="7" gen="de" getal="mv" graad="basis" id="10" lemma="boom" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="boom" word="bomen"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="10" lemma="boom" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="boom" word="bomen"/>
       </node>
       <node begin="7" cat="pp" end="11" id="11" rel="ld">
         <node begin="7" end="8" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
         <node begin="8" cat="np" end="11" id="13" rel="obj1">
-          <node begin="8" buiging="zonder" end="9" id="14" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="die"/>
-          <node aform="base" begin="9" buiging="met-e" end="10" graad="basis" id="15" infl="e" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" vform="adj" word="nieuwe"/>
-          <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="16" lemma="wijk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="wijk" word="wijk"/>
+          <node begin="8" buiging="zonder" end="9" id="14" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+          <node begin="9" buiging="met-e" end="10" graad="basis" id="15" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="16" lemma="wijk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wijk" word="wijk"/>
         </node>
       </node>
     </node>
-    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Er staan toch al aardig wat bomen in die nieuwe wijk .</sentence>
 </alpino_ds>

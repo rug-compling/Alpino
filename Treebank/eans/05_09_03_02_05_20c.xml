@@ -2,16 +2,16 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" end="1" gen="het" getal="ev" id="2" index="1" lemma="iets" naamval="stan" num="sg" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="iets" special="meas_mod" status="vol" vwtype="onbep" word="Iets"/>
-      <node begin="1" end="2" id="3" infl="modal_not_u" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" stype="declarative" tense="present" word="zal" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="iets" status="vol" vwtype="onbep" word="Iets"/>
+      <node begin="1" end="2" id="3" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
       <node begin="0" cat="inf" end="5" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
-        <node begin="2" case="dat_acc" def="def" end="3" gen="de" getal="ev" id="6" lemma="mij" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" rnum="sg" root="mij" status="vol" vwtype="pr" wh="nwh" word="mij"/>
-        <node aform="base" begin="3" end="4" id="7" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
-        <node begin="4" buiging="zonder" end="5" id="8" infl="inf(no_e)" lemma="ontgaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ontga" sc="so_np" word="ontgaan" wvorm="inf"/>
+        <node begin="2" end="3" getal="ev" id="6" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" root="mij" status="vol" vwtype="pr" word="mij"/>
+        <node begin="3" end="4" id="7" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+        <node begin="4" buiging="zonder" end="5" id="8" lemma="ontgaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ontga" word="ontgaan" wvorm="inf"/>
       </node>
     </node>
-    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Iets zal mij wel ontgaan .</sentence>
 </alpino_ds>

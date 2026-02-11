@@ -2,22 +2,22 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="0" case="both" def="def" end="1" gen="de" getal="getal" id="2" index="1" lemma="u" naamval="nomin" num="sg" pdtype="pron" per="u" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" rnum="sg" root="u" status="vol" vwtype="pers" wh="nwh" word="U"/>
-      <node begin="1" end="2" id="3" infl="sg_hebt" lemma="kunnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" stype="declarative" tense="present" word="kunt" wvorm="pv"/>
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="U"/>
+      <node begin="1" end="2" id="3" lemma="kunnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kan" word="kunt" wvorm="pv"/>
       <node begin="0" cat="inf" end="7" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
-        <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="6" infl="no_e" lemma="desgewenst" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="desgewenst" vform="adj" word="desgewenst"/>
-        <node begin="3" buiging="zonder" end="4" id="7" infl="inf" lemma="betalen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="betaal" sc="intransitive" word="betalen" wvorm="inf"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="6" lemma="desgewenst" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="desgewenst" word="desgewenst"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="betalen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="betaal" word="betalen" wvorm="inf"/>
         <node begin="4" cat="pp" end="7" id="8" rel="mod">
           <node begin="4" end="5" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="5" cat="np" end="7" id="10" rel="obj1">
-            <node aform="base" begin="5" buiging="met-e" end="6" graad="basis" id="11" infl="e" lemma="half_jaarlijks" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="half_jaarlijks" vform="adj" word="halfjaarlijkse"/>
-            <node begin="6" end="7" gen="de" getal="mv" graad="basis" id="12" lemma="termijn" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="termijn" special="tmp" word="termijnen"/>
+            <node begin="5" buiging="met-e" end="6" graad="basis" id="11" lemma="half_jaarlijks" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="half_jaarlijks" word="halfjaarlijkse"/>
+            <node begin="6" end="7" getal="mv" graad="basis" id="12" lemma="termijn" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="termijn" word="termijnen"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>U kunt desgewenst betalen in halfjaarlijkse termijnen .</sentence>
 </alpino_ds>

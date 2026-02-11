@@ -2,14 +2,14 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="smain" end="4" id="1" rel="--">
-      <node begin="0" end="1" getal="getal" id="2" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" special="er_loc" status="vol" vwtype="aanw" word="Hier"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="intransitive" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
+      <node begin="0" end="1" getal="getal" id="2" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="Hier"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="2" cat="np" end="4" id="4" rel="su">
-        <node begin="2" end="3" id="5" infl="pl_num" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" special="hoofd" word="twee"/>
-        <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="6" lemma="bloem" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="bloem" word="bloemen"/>
+        <node begin="2" end="3" id="5" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="bloem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bloem" word="bloemen"/>
       </node>
     </node>
-    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Hier zijn twee bloemen .</sentence>
 </alpino_ds>

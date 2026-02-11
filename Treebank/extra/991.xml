@@ -3,41 +3,41 @@
   <node begin="0" cat="top" end="17" id="0" rel="top">
     <node begin="0" cat="smain" end="16" id="1" rel="--">
       <node begin="0" cat="ti" end="5" id="2" rel="mod">
-        <node begin="3" end="4" id="3" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="3" end="4" id="3" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
         <node begin="0" cat="inf" end="5" id="4" rel="body">
           <node begin="0" cat="pp" end="3" id="5" rel="pc">
             <node begin="0" end="1" id="6" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="Aan"/>
             <node begin="1" cat="np" end="3" id="7" rel="obj1">
-              <node begin="1" end="2" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="2" end="3" gen="de" getal="mv" graad="basis" id="9" lemma="foto" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="foto" word="foto&apos;s"/>
+              <node begin="1" end="2" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="2" end="3" getal="mv" graad="basis" id="9" lemma="foto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="foto" word="foto's"/>
             </node>
           </node>
-          <node begin="4" buiging="zonder" end="5" id="10" infl="inf(no_e)" lemma="zien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zie" sc="np_pc_pp(aan)" word="zien" wvorm="inf"/>
+          <node begin="4" buiging="zonder" end="5" id="10" lemma="zien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zie" word="zien" wvorm="inf"/>
         </node>
       </node>
-      <node begin="5" end="6" id="11" infl="sg" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" sc="fixed([vc(maak,pass_te,intransitive),pc(met)],no_passive)" stype="declarative" tense="past" word="had" wvorm="pv"/>
-      <node begin="6" case="nom" def="def" end="7" gen="de" genus="masc" getal="ev" id="12" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="5" end="6" id="11" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+      <node begin="6" end="7" genus="masc" getal="ev" id="12" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
       <node begin="7" cat="pp" end="10" id="13" rel="pc">
         <node begin="7" end="8" id="14" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
         <node begin="8" cat="np" end="10" id="15" rel="obj1">
-          <node begin="8" buiging="zonder" end="9" getal="ev" id="16" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
-          <node begin="9" end="10" gen="de" getal="mv" graad="basis" id="17" lemma="buur" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="buur" word="buren"/>
+          <node begin="8" buiging="zonder" end="9" getal="ev" id="16" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+          <node begin="9" end="10" getal="mv" graad="basis" id="17" lemma="buur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="buur" word="buren"/>
         </node>
       </node>
       <node begin="10" cat="ap" end="14" id="18" rel="mod">
         <node begin="10" end="11" id="19" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
         <node begin="11" cat="advp" end="13" id="20" rel="mod">
           <node begin="11" end="12" id="21" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
-          <node begin="12" end="13" id="22" lemma="te" pos="adv" postag="BW()" pt="bw" rel="hd" root="te" special="intensifier" word="te"/>
+          <node begin="12" end="13" id="22" lemma="te" pos="adv" postag="BW()" pt="bw" rel="hd" root="te" word="te"/>
         </node>
-        <node aform="base" begin="13" buiging="zonder" end="14" graad="basis" id="23" infl="no_e" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="hd" root="veel" vform="adj" vwtype="onbep" word="veel"/>
+        <node begin="13" buiging="zonder" end="14" graad="basis" id="23" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="hd" root="veel" vwtype="onbep" word="veel"/>
       </node>
       <node begin="14" cat="ti" end="16" id="24" rel="svp">
-        <node begin="14" end="15" id="25" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
-        <node begin="15" buiging="zonder" end="16" id="26" infl="inf" lemma="maken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="maak" sc="fixed_dep(intransitive)" word="maken" wvorm="inf"/>
+        <node begin="14" end="15" id="25" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="15" buiging="zonder" end="16" id="26" lemma="maken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="maak" word="maken" wvorm="inf"/>
       </node>
     </node>
-    <node begin="16" end="17" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="16" end="17" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Aan de foto&apos;s te zien had hij met zijn buren niet al te veel te maken .</sentence>
 </alpino_ds>

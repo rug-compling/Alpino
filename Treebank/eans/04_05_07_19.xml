@@ -2,18 +2,18 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" genus="fem" getal="ev" id="2" index="1" lemma="zij" naamval="nomin" num="both" pdtype="pron" per="thi" persoon="3v" pos="pron" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" rnum="sg" root="zij" status="vol" vwtype="pers" wh="nwh" word="Zij"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" stype="declarative" tense="past" word="werd" wvorm="pv"/>
+      <node begin="0" end="1" genus="fem" getal="ev" id="2" index="1" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="pron" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="Zij"/>
+      <node begin="1" end="2" id="3" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
       <node begin="0" cat="ppart" end="5" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="obj1"/>
-        <node begin="2" buiging="zonder" end="3" id="6" infl="psp" lemma="verkiezen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verkies" sc="np_pc_pp(tot)" word="verkozen" wvorm="vd"/>
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="verkiezen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verkies" word="verkozen" wvorm="vd"/>
         <node begin="3" cat="pp" end="5" id="7" rel="pc">
           <node begin="3" end="4" id="8" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
-          <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="voorzitter" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="voorzitter" word="voorzitter"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="voorzitter" word="voorzitter"/>
         </node>
       </node>
     </node>
-    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Zij werd verkozen tot voorzitter .</sentence>
 </alpino_ds>

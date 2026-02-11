@@ -2,24 +2,24 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
-      <node begin="0" case="both" def="def" end="1" gen="de" getal="mv" id="2" index="1" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="dienen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="dien" sc="aux(te)" stype="declarative" tense="present" v_per="thi" word="dienen" wvorm="pv"/>
+      <node begin="0" end="1" getal="mv" id="2" index="1" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="Ze"/>
+      <node begin="1" end="2" id="3" lemma="dienen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="dien" word="dienen" wvorm="pv"/>
       <node begin="0" cat="ti" end="9" id="4" rel="vc">
-        <node begin="6" end="7" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="6" end="7" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
         <node begin="0" cat="inf" end="9" id="6" rel="body">
           <node begin="0" end="1" id="7" index="1" rel="su"/>
-          <node begin="7" buiging="zonder" end="8" id="8" infl="inf" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" sc="passive" word="worden" wvorm="inf"/>
+          <node begin="7" buiging="zonder" end="8" id="8" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
           <node begin="0" cat="ppart" end="9" id="9" rel="vc">
             <node begin="0" end="1" id="10" index="1" rel="obj1"/>
             <node begin="2" end="3" id="11" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
             <node begin="3" cat="cp" end="6" id="12" rel="predc">
-              <node begin="3" conjtype="onder" end="4" id="13" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
+              <node begin="3" conjtype="onder" end="4" id="13" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
               <node begin="4" cat="ti" end="6" id="14" rel="body">
-                <node begin="4" end="5" id="15" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
-                <node begin="5" buiging="zonder" end="6" id="16" infl="inf" lemma="verwaarlozen" pos="verb" positie="prenom" postag="WW(inf,prenom,zonder)" pt="ww" rel="body" root="verwaarloos" sc="transitive" word="verwaarlozen" wvorm="inf"/>
+                <node begin="4" end="5" id="15" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                <node begin="5" buiging="zonder" end="6" id="16" lemma="verwaarlozen" pos="verb" positie="prenom" postag="WW(inf,prenom,zonder)" pt="ww" rel="body" root="verwaarloos" word="verwaarlozen" wvorm="inf"/>
               </node>
             </node>
-            <node begin="8" buiging="zonder" end="9" id="17" infl="psp" lemma="beschouwen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="beschouw" sc="als_pred_np" word="beschouwd" wvorm="vd"/>
+            <node begin="8" buiging="zonder" end="9" id="17" lemma="beschouwen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="beschouw" word="beschouwd" wvorm="vd"/>
           </node>
         </node>
       </node>

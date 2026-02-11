@@ -2,9 +2,9 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="3" id="0" rel="top">
     <node begin="0" cat="np" end="3" id="1" rel="--">
-      <node aform="base" begin="0" buiging="met-e" end="1" graad="basis" id="2" infl="e" lemma="zeker" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zeker" vform="adj" word="zekere"/>
-      <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="3" lemma="sjeik" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="sjeik" word="Sjeik"/>
-      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="Ali" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" rnum="sg" root="Ali" word="Ali"/>
+      <node begin="0" buiging="met-e" end="1" graad="basis" id="2" lemma="zeker" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zeker" word="zekere"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="sjeik" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sjeik" word="Sjeik"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="Ali" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Ali" word="Ali"/>
     </node>
   </node>
   <sentence>zekere Sjeik Ali</sentence>

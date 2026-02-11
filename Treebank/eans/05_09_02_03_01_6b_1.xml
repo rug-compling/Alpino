@@ -4,19 +4,19 @@
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" index="1" rel="su">
         <node begin="0" cat="detp" end="2" id="3" rel="det">
-          <node begin="0" buiging="zonder" end="1" id="4" infl="al" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" special="pre_det_quant" vwtype="onbep" word="Al"/>
-          <node begin="1" buiging="zonder" end="2" id="5" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="hd" root="die" vwtype="aanw" wh="nwh" word="die"/>
+          <node begin="0" buiging="zonder" end="1" id="4" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" vwtype="onbep" word="Al"/>
+          <node begin="1" buiging="zonder" end="2" id="5" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="hd" root="die" vwtype="aanw" word="die"/>
         </node>
-        <node begin="2" end="3" id="6" infl="pl_num" lemma="negentig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="negentig" special="hoofd" word="negentig"/>
-        <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="7" lemma="gijzelaar" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="gijzelaar" word="gijzelaars"/>
+        <node begin="2" end="3" id="6" lemma="negentig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="negentig" word="negentig"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="gijzelaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gijzelaar" word="gijzelaars"/>
       </node>
-      <node begin="4" end="5" id="8" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
+      <node begin="4" end="5" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="0" cat="ppart" end="6" id="9" rel="vc">
         <node begin="0" end="4" id="10" index="1" rel="obj1"/>
-        <node begin="5" buiging="zonder" end="6" id="11" infl="psp" lemma="redden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="red" sc="transitive" word="gered" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="redden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="red" word="gered" wvorm="vd"/>
       </node>
     </node>
-    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Al die negentig gijzelaars zijn gered .</sentence>
 </alpino_ds>

@@ -2,20 +2,20 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="cp" end="6" id="1" rel="--">
-      <node begin="0" conjtype="onder" end="1" id="2" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" sc="zoals" word="Zoals"/>
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="Zoals"/>
       <node begin="1" cat="cp" end="6" id="3" rel="body">
         <node begin="1" conjtype="onder" end="2" id="4" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="toen"/>
         <node begin="2" cat="ssub" end="6" id="5" rel="body">
-          <node begin="2" case="both" def="def" end="3" gen="de" getal="ev" id="6" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+          <node begin="2" end="3" getal="ev" id="6" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
           <node begin="3" cat="np" end="5" id="7" rel="obj1">
-            <node begin="3" buiging="zonder" end="4" id="8" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="die"/>
-            <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="pizza_man" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="pizza_man" word="pizzaman"/>
+            <node begin="3" buiging="zonder" end="4" id="8" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="pizza_man" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pizza_man" word="pizzaman"/>
           </node>
-          <node begin="5" end="6" id="10" infl="sg" lemma="af_poeieren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="poeier_af" sc="part_transitive(af)" tense="past" v_per="ninvje" word="afpoeierde" wvorm="pv"/>
+          <node begin="5" end="6" id="10" lemma="af_poeieren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="poeier_af" word="afpoeierde" wvorm="pv"/>
         </node>
       </node>
     </node>
-    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Zoals toen je die pizzaman afpoeierde .</sentence>
 </alpino_ds>

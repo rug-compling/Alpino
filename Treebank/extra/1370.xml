@@ -3,21 +3,21 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="du" end="9" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="sat">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="die"/>
-        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="pastoor_mevrouw" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="pastoor_mevrouw" word="pastoormevrouw"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="pastoor_mevrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pastoor_mevrouw" word="pastoormevrouw"/>
       </node>
       <node begin="2" cat="smain" end="9" id="5" rel="nucl">
-        <node begin="2" end="3" getal="getal" id="6" infl="de" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" rnum="sg" root="die" status="vol" vwtype="aanw" wh="nwh" word="die"/>
-        <node begin="3" end="4" id="7" infl="sg" lemma="vragen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vraag" sc="van_sbar" stype="declarative" tense="past" word="vroeg" wvorm="pv"/>
+        <node begin="2" end="3" getal="getal" id="6" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" root="die" status="vol" vwtype="aanw" word="die"/>
+        <node begin="3" end="4" id="7" lemma="vragen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vraag" word="vroeg" wvorm="pv"/>
         <node begin="4" cat="svan" end="9" id="8" rel="vc">
-          <node begin="4" end="5" id="9" lemma="van" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="van" sc="van" vztype="init" word="van"/>
+          <node begin="4" end="5" id="9" lemma="van" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="van" vztype="init" word="van"/>
           <node begin="5" cat="whq" end="9" id="10" rel="body">
-            <node begin="5" end="6" id="11" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" wh="ywh" word="hoe"/>
+            <node begin="5" end="6" id="11" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="hoe"/>
             <node begin="5" cat="sv1" end="9" id="12" rel="body">
               <node begin="5" end="6" id="13" index="1" rel="predc"/>
-              <node begin="6" end="7" id="14" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="nonp_copula" stype="whquestion" tense="present" word="moet" wvorm="pv"/>
-              <node begin="7" end="8" getal="ev" id="15" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
-              <node begin="8" end="9" id="16" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
+              <node begin="6" end="7" id="14" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+              <node begin="7" end="8" getal="ev" id="15" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+              <node begin="8" end="9" id="16" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
             </node>
           </node>
         </node>

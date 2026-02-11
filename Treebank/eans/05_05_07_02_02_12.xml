@@ -3,16 +3,16 @@
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="bloem" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="bloem" word="bloemen"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="bloem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bloem" word="bloemen"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="sluiten" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="sluit" sc="transitive" stype="declarative" tense="past" word="sloten" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="sluiten" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="sluit" word="sloten" wvorm="pv"/>
       <node begin="3" cat="np" end="5" id="6" rel="obj1">
-        <node begin="3" buiging="zonder" end="4" getal="mv" id="7" infl="pron" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
-        <node begin="4" end="5" gen="de" getal="mv" graad="basis" id="8" lemma="kelk" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kelk" word="kelken"/>
+        <node begin="3" buiging="zonder" end="4" getal="mv" id="7" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="kelk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kelk" word="kelken"/>
       </node>
     </node>
-    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De bloemen sloten hun kelken .</sentence>
 </alpino_ds>
