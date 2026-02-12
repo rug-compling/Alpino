@@ -8224,7 +8224,7 @@ v(gebeur,gebeurt,gebeuren,gebeurd,gebeurde,gebeurden,
             mod_pp(omheen),		 % er gebeurde veel omheen
 	    mod_pp(in),                  % daar moet nog veel in gebeuren
 	    pc_pp(aan),                  % ?
-	    pc_pp(met),                  % ?
+	    pc_pp(met),                  % wat gebeurt er met ..
             no_subj   % en zo gebeurde .
            ])]).
 

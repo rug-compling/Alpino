@@ -3890,7 +3890,7 @@ grammar_rule(np_quoted_dip,MAX,[NP,DUBB,DQ1,XP,OPTEND,DQ2]) :-
     XP => start,
     XP:puncttype <=> Type,
     ql(DQ1),
-    qr(DQ2),
+    optqr(DQ2),
     nucl_tag_structure(XP,NP,MAX).
 
 %%EX%% Lachend : ik hou er mee op
@@ -8974,12 +8974,12 @@ grammar_rule(start_start_dubb_punt,M,[A,COMMA,B]) :-
     nucl_sat_structure(A,B,M).
 
 %%EX%% Toen kwam het antwoord : " Bitterballen "
-%% in many cases, this could equally be tag_nucl_structure
+%% in many cases, this could equally be tag_nucl_structure, see below
 grammar_rule(start_start_dubb_punt_q,M,[A,COMMA,QL,B,QR]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct, COMMA:puncttype => dubb_punt,
     ql(QL),
-    qr(QR),
+    optqr(QR),
     A => start,
     B => start,
     M => start,
