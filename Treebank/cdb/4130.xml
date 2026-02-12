@@ -20,32 +20,30 @@
           <node begin="7" cat="ssub" end="15" id="15" rel="body">
             <node begin="7" end="8" id="16" index="1" rel="su"/>
             <node begin="8" end="9" id="17" lemma="anders" pos="adv" postag="BW()" pt="bw" rel="mod" root="anders" word="anders"/>
-            <node begin="9" cat="np" end="14" id="18" rel="me">
-              <node begin="9" cat="detp" end="13" id="19" rel="det">
-                <node begin="9" cat="mwu" end="12" id="20" rel="mod">
-                  <node begin="9" end="10" id="21" lemma="op" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
-                  <node begin="10" buiging="zonder" end="11" getal="ev" id="22" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="adj" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="mwp" root="zijn" status="vol" vwtype="bez" word="zijn"/>
-                  <node begin="11" buiging="zonder" end="12" getal-n="zonder-n" graad="sup" id="23" lemma="hoog" pos="adj" positie="nom" postag="ADJ(nom,sup,zonder,zonder-n)" pt="adj" rel="mwp" root="hoogst" word="hoogst"/>
-                </node>
-                <node begin="12" end="13" id="24" lemma="vier" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="vier" word="vier"/>
-              </node>
-              <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="25" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="uur" word="uur"/>
+            <node begin="9" cat="mwu" end="12" id="18" rel="mod">
+              <node begin="9" end="10" id="19" lemma="op" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+              <node begin="10" buiging="zonder" end="11" getal="ev" id="20" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="adj" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="mwp" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+              <node begin="11" buiging="zonder" end="12" getal-n="zonder-n" graad="sup" id="21" lemma="hoog" pos="adj" positie="nom" postag="ADJ(nom,sup,zonder,zonder-n)" pt="adj" rel="mwp" root="hoogst" word="hoogst"/>
             </node>
-            <node begin="14" end="15" id="26" lemma="duren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="duur" word="duurt" wvorm="pv"/>
+            <node begin="12" cat="np" end="14" id="22" rel="me">
+              <node begin="12" end="13" id="23" lemma="vier" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="vier" word="vier"/>
+              <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="24" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="uur" word="uur"/>
+            </node>
+            <node begin="14" end="15" id="25" lemma="duren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="duur" word="duurt" wvorm="pv"/>
           </node>
         </node>
       </node>
-      <node begin="16" end="17" id="27" lemma="vergen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verg" word="vergde" wvorm="pv"/>
-      <node begin="17" end="18" id="28" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
-      <node begin="18" cat="np" end="21" id="29" rel="obj1">
-        <node begin="18" cat="detp" end="20" id="30" rel="det">
-          <node begin="18" buiging="zonder" end="19" graad="basis" id="31" lemma="ruim" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
-          <node begin="19" end="20" id="32" lemma="acht" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="acht" word="acht"/>
+      <node begin="16" end="17" id="26" lemma="vergen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verg" word="vergde" wvorm="pv"/>
+      <node begin="17" end="18" id="27" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+      <node begin="18" cat="np" end="21" id="28" rel="obj1">
+        <node begin="18" cat="detp" end="20" id="29" rel="det">
+          <node begin="18" buiging="zonder" end="19" graad="basis" id="30" lemma="ruim" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
+          <node begin="19" end="20" id="31" lemma="acht" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="acht" word="acht"/>
         </node>
-        <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="33" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="uur" word="uur"/>
+        <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="32" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="uur" word="uur"/>
       </node>
     </node>
-    <node begin="21" end="22" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="21" end="22" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Een reis vanuit Zeeuws-Vlaanderen naar Amsterdam , die anders op zijn hoogst vier uur duurt , vergde gisteren ruim acht uur .</sentence>
 </alpino_ds>
