@@ -16,6 +16,7 @@
 179     comma expected in coordination
 182	'dat-zin' used as obj1 "dat hij komt zal ik maar opvatten als..."
 187	maar zegt hij
+195	time-out
 212	dp "tot ziens PP PP"
 217	time-out
 239	"het is uit die overtuiging vandaan dat"
@@ -26,18 +27,22 @@
 255	flo 4,4 ( v.j. 2,8 ) miljoen
 257	time-out
 279	extraposed PP out of extraposition
+293	time-out
 299	time-out
 308	gapping
+366	time-out
 374 	extraposed als-phrase from NP   "ongelukken ... (zo)als :"
-394	quotes with double punctuation " bla bla ! . "
 466	grammatical error "en" must be removed, or unlike category coordination   'kantfluweel en in combinatie met x'
+500	time-out
 509	gapping
 543     "- 2" not analysed as number
+543	out of memory
 567	coordination "dat slijmverhaal en of we het niet konden regelen.."
 572	time-out
 580	ungrammatical (?) 'het was helemaal geevacueerd en ... bezet geworden
 593	dp/dip with max not root
 610	appositie modifiers without punctuation
+625	time-out
 638	quotes around partial np (without the relative clause)
 639
 654     rel modifier < pp modifier
@@ -49,6 +54,7 @@
 693	spelling te Groot (Groot is a name too)
 694	?extraposed element from extraposition
 711	unexpected quotes?
+724	out of memory
 725	coordination [ X niet en Y niet ]
 735	time-out
 744	"Porsche 3 liters 908"
@@ -58,11 +64,15 @@
 802	time-out
 804	coordination 'niet door NP VP maar door NP'
 806     conjunction with vgap and extraposed WHREL > extraposed OBCOMP
+824	time-out
 839	mis-tokenized; two sentences
 858	er extraction from modifier 'er buitenlanders voor aantrekken'
+890	time-out
 899	dp
+910	time-out
 954	dp
 960	bracketed modifier extraposed??
+960	time-out
 962	[np telkens dat gedeelte .. ]
 967	time-out
 973	extraposed AP modifier
@@ -75,6 +85,7 @@
 1029	time-out
 1031	coordination of unlike cat; vp coordination without explicit cnj
 1034	unrecognized name 'De smalle basis van de Engelse roman'
+1038	time-out
 1046	dp  'niet voor de grap , niet alsof , maar echt ...'
 1048	app with app?
 1052	out of memory
@@ -85,19 +96,24 @@
 1093	missing comma 'topic , DIP vp'
 1094	coordination in conjunct
 1100	ellipsis/gapping
+1117	time-out
 1133 	dp
 1141	dp ... maar wel MOD PP  (two pre-conjunct modifiers)
 1164	gapping  (no CRD)
+1174	time-out
 1187	"De piloot , de tweede luitenant H. V. Leenders , ( 24 jr. en gehuwd ) uit Eindhoven ,"
 1195	double topic (or apposition of PP) 'daarvoor , vlak na de bevrijding'
+1200	time-out
 1207	coordination of LD/MOD ".. die in Parijs woont en werkt"
 1217	out of memory
 1219	pred < su (extraposed su is long coordination of names)
+1233	time-out
 1240	extraposition of PP out of ALS-PREDC
 1250	" ( alsdkjflsdjkf ) "
 1252	app without comma's
 1253	"het bordje zaal uitverkocht"
 1267	dip without comma
+1272	time-out
 1295	time-out
 1296	dp 'niet minder menselijk , integendeel'
 1297	om-VP modifier before attributive adjective "een morbide , om niet te zeggen , hypocriete belangstelling"
@@ -115,7 +131,10 @@
 1429	pp extraposed from np [complex]
 1440	extraposition of np: 'heden is overleden de heer ..'
 1441	gapping
+1441	time-out
 1460	missing subject-verb agreement 'zeven renners zou te veel kosten'
+1461	out of memory
+1474	out of memory
 1480	mis-tokenized
 1483	'dagen- wekenlang'
 1492	out of memory
@@ -123,22 +142,29 @@
 1522	coordination of VP and SBAR
 1538	apposition without comma
 1549	pp after np-apposition
+1561	time-out
 1568	dp [np zo'n tweemaal per week gemiddeld]
 1574	time-out
+1578	out of memory
 1595	quotes
 1597	time-out
 1598	nonadv adj modifier: een gesprek *smal* opzetten
+1616	time-out
 1637	'een , zo niet twee' coordination of 'een' and numbers
 1654	ungrammatical: agreement error 'het verspringen leverden resultaten op'
 1659	crickettaal
 1670	time-out
 1672	pp extraction from np: een dilemma waaruit geen uitwegen bestaan
+1675	out of memory
 1676	recursive coordination
+1677	out of memory
 1682	dp
 1689	timeout
 1695	time-out
 1712	gapping
+1715	time-out
 1736	floating quantifier 'winterlandschappen zijn er slechts enkele'
+1744	time-out
 1755	right node raising  [CRD prep adj CRD prep adj] n
 1759 	dp
 1771	'tenzij dan dat ..'
@@ -147,23 +173,33 @@
 1787	tag within VP 'laten we eens aannemen, monsigneur, dat ...'
 1796	dp
 1797	dp
+1801	time-out
 1819	dp
+1839	out of memory
+1841	time-out
 1853	extraction from ap's vp complement 'het huis dat hij bezig is te kopen'
 1861    name "Seminarium voor de Leer der Communicatiemiddelen"
 1909	dp
 1921	relative after apposition
 1934	coordination vp[om] without comma
 1950	grammatical error "die zich alle openheid zou dienen af te spelen"
+1952	out of memory
 1965	complex detp: 'kleine honderd' syntax ok, dep-struct wrong
+1970	time-out
 1972	gapping
 1975	APP < REL
 1979	obcomp shared by both "te"
 1990	DET N , DET N REL
 1995	"Toepolew 114 ( turboprop ) toestellen"
+2002	time-out
 2013	coordination "Wel voor verkiezingen maar niet tegen elke prijs in 1971 zijn"
 2027	dp
+2032	out of memory
 2037	"nieuwe 8-procent 15-jarige obligaties"
 2045	spelling samenDvattend
+2067	time-out
+2068	time-out
+2077	out of memory
 2086	extraposition of subject
 2105	conjunction NP, NP en PP
 2106	gapping (2 conjuncts)
@@ -174,49 +210,61 @@
 2156	dp
 2190	coordination with ellipsis   CRD ADJ N CRD ADJ
 2197	dp
+2197	time-out
 2199	extraposition of zoals-clause of NP over PP
 2224	time-out
 2225	time-out
 2228	'de boeken overigens met geringe waarde van Robbins'
-2237	misplaced comma?
+2230	time-out
+2239	time-out
 2252	time-out
+2255	time-out
+2257	time-out
 2280	er extraction from modifier 'de broek er strak voor trekken'
+2289	out of memory
 2295	time-out
 2329	dp
 2358	obj1 < su 'kent hem iedereen'
 2366	extraposition of PP over predc "steun nodig hebben van"
 2391	timeout, ook spelling/grammatical error in the input
+2421	time-out
 2430	misplaced comma;	vp conj root
 2442	extraposed conjunct without CRD
 2451    "het dwingen van kinderen om te eten"  PP-mod < VC
 2460    quantitative er (2x)
-2466	DONE dp NP , WHREL
 2472	complex name 'Wester en De Groot'
 2476	out of memory
 2485	time-out
 2496	coordination RNR
 2499	time-out
 2503	"een heren- en een dameslokaal waarin.." relative ought to be attached to both conjuncts
+2537	time-out
 2537    ungrammatical (missing su/verb agreement)
 2544	extraposition of NP conjunct to the right of extraposed PP
 2552	[geen N meer PP]
 2582	extraposition pp from np [complex]
+2589	time-out
 2612	NEW
 2612	time-out
 2622	R-extraction from modifier 'er het een en ander van onthullen'
 2629	dp
 2660	ATB "op-"MOD part of both conjuncts?
 2665    spelling "waar voor" for "waarvoor"
+2665	time-out
 2691	pp extraposition 2x
 2717	time-out
+2719	time-out
 2723	"een 164 overwinning"
+2727	time-out
 2741	gapping
+2752	time-out
 2790
 2857	timeout, also "drie jaar geleden DATE"
-2858	[np en np] pp
+2858	time-out
 2868	'maatregelen voor de bespreking waarvan'
 2876	out of memory
 2886	time-out
+2903	time-out
 2913	dp
 2914	gapping
 2918	'dertien stemmen voor en dertien tegen' coordination of abs-met args
@@ -225,18 +273,22 @@
 2947	'en dat is, dat ik ...'
 2948	ad matai, hoe lang?
 2960	time-out
+2961	out of memory
 2963	grammatical error? "een manifestatie die elk wat wils te bieden heeft"
 2971	complex name 'Literaire verkenningen'
 2973	complex name 'Een aanmerkelijke luchtreis'
 2997	pre-conj modifier in first conjunct
 3002    dp  relative extraposed to the right of extraposed apposition
+3002	time-out
 3005	grammatical error "de kader"
+3007	out of memory
 3010	timeout, also np explanation within commas for verb meaning
 3015	gapping
 3021	XP en XP en XP ==> treebank: '[[XP en XP] en XP]'
 3028	spelling error "of" -> "op"
 3029	coordination of PPs without crd
 3032	dp
+3038	time-out
 3046	time-out
 3079    sentential modifier between PC of adj and adj 'hiermee vermoedelijk bezig zijn'
 3083	[PP,PP] coordination without coordinator
@@ -249,15 +301,23 @@
 3137	time-out
 3164	pp after postnp_adverb "lof van Lindner dus voor .."
 3169	two PC arguments 'NP van-PP voor-PP krijgen'
+3170	time-out
+3173	out of memory
 3178	timeout, right node raising
 3181	dp/dp vs sat/nucl
+3182	time-out
 3193	adj,adj in prenominal position should be treated as conj (+comp)
 3197	dp PP PP
 3210	conjunction in conjunct
+3210	time-out
 3247	NEW
 3247	time-out
 3251	grammatical error "piloten die werd* gevlogen"
+3257	out of memory
+3257	time-out
+3265	time-out
 3268	ungrammatical? missing prep?
+3276	time-out
 3278	time-out
 3287	extraposed conjunct ROOT , en NP (over PREDC)
 3296	time-out
@@ -271,14 +331,17 @@
 3383	right node raising "een gekwelde en een vermoeide vrouw"
 3384	dp
 3386	'niets van aan'
+3389	time-out
 3395	gapping
 3405	timeout; van officiele instanties , van ons eigen bestuur , zogezegd , van onze democratische overheid .
+3419	out of memory
 3420	conj root, sv1, root
 3425	"gesneden worden en in de koelkast gezet" coord
 3430	mistokenized
 3454	pp modifier after rel: 'de fragmenten die ik zag van'
 3455	'alleen ROOT'
 3457	out of memory
+3474	out of memory
 3477	coord 'het is 1881 en 13 jaar geleden dat ...'
 3484	modified second conjunct 'kon (en volgens haarzelf moest)'
 3506	gapping
@@ -295,13 +358,14 @@
 3623	dp
 3624	poem/dp
 3629	"dit en het komend jaar"
+3657	time-out
 3660	Wie-np die-rel; also coordination of unlike cat; gramm er "belle*n*"
 3661	quantitative-er
 3663	spelling error "geweldig*d*e"
 3668	post-np np as modifier "de heer visser, enige druppels op het gelaat,..
+3674	time-out
 3679	dp
 3682	unexpected ;
-3692
 3693	nucl/sat vs dp/dp
 3697	dp
 3703	R-extraction from modifier 'er gaat niets van door'
@@ -309,11 +373,13 @@
 3714	dp "schande dan toch dat ..."
 3730	gapping
 3735	dp
+3745	out of memory
 3758	coordination of unlike cats
 3771	dp ROOT , onder meer:
 3772	dp
 3793	dp
 3803	extraposition of PP out of NP over obj2-PP
+3803	time-out
 3828	coordination in conjunct
 3833	gapping
 3834	time-out
@@ -357,8 +423,10 @@
 4136	modifier precedes first conjunct "hetzij rechtstreek PP hetzij PP"
 4140	coordination of pp without crd
 4141	difficult name: Pianoconcert K 595 in Bes
+4141	time-out
 4146	dp NP PP
 4148	dp
+4155	out of memory
 4212	'veel , zeer veel' N; treebank: a coordination of dps
 4214	dp "nu eens niet om ..."
 4244	gapping
@@ -369,6 +437,7 @@
 4310	difficult name
 4311	dp NP PP ('PN over NP :')
 4343	dp
+4343	out of memory
 4346	bible citation (not Dutch)
 4348	bible citation (not Dutch)
 4349	"hier iets dichter bij"
@@ -380,11 +449,13 @@
 4383	right node raising/gapping
 4384    coordination: with/without extra finite empty head ???
 4393	time-out
+4394	time-out
 4396	time-out
 4418	difficult name with . within "" " actie l plus . "
 4429	tag/quotes
 4435	'er was (sg) zes maanden (pl) geeist
 4437	dp
+4441	out of memory
 4443    dp
 4446	coordination R-PP with SBAR
 4454	dp / ungrammatical input? OK with tagger...
@@ -398,10 +469,12 @@
 4512	weird long sentence that i cannot parse myself
 4523	dp
 4536	dp
+4539	time-out
 4541	quantitative er 'er een aantal'
 4576	NEW
 4576	time-out
 4581	time-out
+4585	time-out
 4590	spelling 'de indruk worden gewerkt'
 4598	extraposed VP precedes extraposed sentential modifier
 4600	NEW
@@ -410,11 +483,14 @@
 4613	spelling "Oud-internationaal" rather than "Oud-international"
 4630	misplaced komma inside "name"
 4633	extraposed PP from NP with PREDC intervening "gevallen in onderzoek hebben van jeugdige criminelen"
+4633	time-out
+4638	time-out
 4654	gapping
 4670	grammatical error or misplaced closing bracket?
 4676	dp 'maar nu even terug naar'
 4695    conj in conj
 4714	grammatical error "het 43 tankbataljon"
+4716	time-out
 4726	PP to the right of relative clause "het beeld dat hij me schetste van"
 4742	recursive coord
 4747	dp
@@ -424,22 +500,29 @@
 4756	XP (vorig jaar XP)
 4762	quotes make pp attachment impossible
 4774    "bij X - maar daar niet alleen - ..."
+4774	out of memory
 4777	dp nucl/sat vs dp/dp
 4787	extraposed PP out of NP over PP
 4788	[[np en np] pp]
+4789	out of memory
 4806	apposition without comma
+4806	time-out
 4811	PP dwz PP
+4816	out of memory
 4819	spelling error: 'ontworpen' -> 'onderworpen'
 4852	spelling error: 'herstelt' as participle!
 4874	difficult name "Universitair medisch centrum Leiden"
 4875	extraposition of complex SU
 4881	extraposition pp from np [np inbetween]
 4886	'hoe Adj-er, des te ADJ-er' ?? predc<su
+4888	out of memory
 4892	dp nucl/sat vs dp/dp
 4907	unknown modal adverb "[nog het meest] in de oude geest V2..."
 4911	etc coord with PP "bij de aanleg van wegen en dergelijke"
 4947	coordination with modifier in front of second conjunct without conj
 4950    dp?
+4967	out of memory
+4967	time-out
 4970	time-out
 4983	modified second conjunct  (2 modifiers)
 5009	extraposed subject
@@ -449,9 +532,11 @@
 5025	several extraposed PP from NP
 5036	"beter uit de voeten komen"
 5052	ungrammatical sentence
+5054	out of memory
 5064	aldus-dip without punctuation
 5076	apposition without comma
 5081	ungrammatical? "men slaagt hem uit te graven"
+5084	time-out
 5123	flo 23,38 ( v.j. 19.00 ) miljoen
 5124	dp
 5125	extraposition of subj: 'voor dividend is beschikbaar NP'
@@ -465,13 +550,20 @@
 5201	quantitative er
 5206	"liefhebbers , en dat zijn er velen , vertrekken"
 5211	out of memory
+5213	out of memory
 5216	ungrammatical (subject-verb agreement)
+5217	time-out
 5221	coord op PP without coordinator
 5237	subject dat-sentence
 5250	dp
+5257	time-out
+5276	time-out
 5280	spelling error "aapart" for "apart"
 5282	extraposition from np to the right of vp (fixed intervenes)
+5283	out of memory
+5298	time-out
 5308	dp
+5308	out of memory
 5315	app without comma
 5316	conj without comma
 5317	name "Protestants-christelijke groepering"
@@ -481,10 +573,13 @@
 5370	bracketed modifier of weak pronoun "nu je (Goedhart) uit de ..."
 5378	modifier in front of first conjnct 'niet in uniform en zonder raadsman'
 5383	dp
+5393	time-out
 5396	dp 'de cupwinnaars zelf trouwens ook'
 5400	dip without missing sbar arg
 5412	"Nereus lichte elite-acht" PN < ADJ
+5417	out of memory
 5427	dp NUCL[root] SAT[pp]
+5433	out of memory
 5435	dp
 5438	quantitative er; also "daar .. uitgekozen" stranded prep with verb
 5441	two extraposed pp's
@@ -495,24 +590,31 @@
 5488	postnp modifier 'de fractie dan schrijft ..'
 5493	gapping
 5498	NP-APP < REL "Ischa Meyer, de recensent, die .."
+5506	time-out
+5511	time-out
 5530    complex name "nota provinciaal kapittel 1970"
 5544	out of memory
 5557	'(een dag) langer hebben (om)'
+5562	time-out
 5582	difficult coordination 'opgezet en bestemd voor' PC/MOD
 5592	time-out
 5593    relative extraction out of NP
 5596	time-out
 5598	NP tegen gisteren NP
-5648	[NP en NP] PP
 5666	gapping
 5671	extraposed apposition
 5690	proper name "bemiddelend orgaan Limburg"
+5690	time-out
 5691	coord too difficult
+5692	time-out
 5696	time-out
 5698	coord ???
+5702	time-out
 5703	dp NP PP
 5705	apposition without comma
 5730	'een reeks branden ... die .. brak uit'  agr mismatch/rel attached to mod
+5738	out of memory
+5746	time-out
 5756	unexpected comma "het is niet waar , zei ik dat ik arriveer"
 5757	extraposed pp from np with fixed-svp-pp intervening
 5761	'zulke' should take sbar obcomp?
@@ -523,23 +625,29 @@
 5799	NEW
 5803	agreement error "bijna de helft van de mijnen zijn .."
 5807    agreement error "de .. groothandelsbedrijf"
+5810	out of memory
 5817	quoted bracketed modifier...
 5826	nonadv adjective as modifier 'confessioneel'
 5828	time-out
 5836	time-out
 5837	missing "om"? "bij iemand aankloppen [om] iets te doen" (used as vp compl)
 5860	dp "het vervolg erop is verschenen ' De vrouwenarbeid in onze tijd ' ..
+5862	time-out
+5885	time-out
 5908	name not recognized 'MEESTERS van het orgel'
 5911	time-out
 5913	timeout; quantitative er
+5926	out of memory
+5937	out of memory
 5947	time-out
-5964	difficult coordination: predm modifier in front op 2nd conjunct
+5964	out of memory
 5969	dp
 5970	dp
 5987	coordination of sv1/root without coordinator
 5998	grammatical error "een roman dat"
 6013	Topic , MOD , SV1
 6037	extraposed SU
+6038	time-out
 6066	apposition without comma
 6071	"project" with sbar complement?
 6080	gapping
@@ -549,12 +657,14 @@
 6141	dp NP PP
 6154	time-out
 6165	dp NP al-SBAR
+6169	out of memory
 6176	dp
 6180	extraposition of PP with fixed PP intervening "prijsrecord bij elkaar gedraafd van 167.000 gulden"
 6184	dp
 6193	complex name not recognized "Boedha in De Tempel"
 6195	NP en NP , MOD ,
 6202	"een daad onlangs in Japan"
+6207	time-out
 6220	time-out
 6227	difficult name not recognized
 6231	unexpected brackets
@@ -562,12 +672,16 @@
 6236	two pre-conjunct modifiers 'en ook enigszins als'
 6241	pre-conjunct modifier for first conjunct
 6248	coordination of unlike cats
+6256	time-out
 6260	name "bijstand buitenlandse werknemers"
 6270	obj1: 'voor ME aan NP'
+6301	time-out
 6306	quantitative er
 6307	timeout; quantitative er
+6326	time-out
 6327	time-out
 6339	time-out
+6345	out of memory
 6345	vanaf ['s middags twee uur]
 6351	dp SMAIN SMAIN no comma
 6352	NEW
@@ -577,15 +691,17 @@
 6380	coordination VP[te] VP[om]
 6380	time-out
 6388	out of memory
-6405	[[NP en NP] PP]
+6397	out of memory
 6421	extraposed relative < right pc complement
 6424	obj1 < obj2[dative inflection]
+6429	out of memory
 6438	time-out
 6441	right node raising "tussen de 12 1/2 en 30 duizend gulden"
 6443	NEW
 6443	time-out
 6448	complex name
 6449    extraposed AP modifier of NP over SVP
+6449	time-out
 6454	time-out
 6457	evenzeer door X als door Y; door Y is  not extraposed...
 6458	dp
@@ -595,24 +711,30 @@
 6518	out of memory
 6531	coordination of SV1 without CRD
 6533	dip without comma
-6540    N PP PN "TV-filmserie in kleur Civilisation"
+6540	time-out
 6542	out of memory
 6542	"van drie tot vier uur"
+6550	time-out
 6554	LD 'uit en thuis'
 6565	out of memory
+6577	time-out
 6578	time-out
 6579	ADJ[+part] after verb in verb-cluster "omdat we er op zijn gebrand ..."
 6590	various problems "zonder er wat aan"
 6591	mis-tokenization ?
+6592	time-out
 6593	root , bij alles trouwens
 6598	out of memory
+6650	time-out
 6652	'er' as ld
 6658	syntactic error "de raadsleden .. heeft .."
 6660	"een aantal (49) inwoners .."
 6671	out of memory
 6672	dp, also "bij het trappetje op"
+6672	time-out
 6682	scope of topicalized modifier in sv1 coordination
 6693	dp / right node raising
+6701	time-out
 6704	misspelled? number missing?
 6709	dat-sbar modifier of n? 'ze zijn van een formaat dat ze erdoor klimmen'
 6712	ungrammatical, finite verb missing in second conjunct
@@ -620,6 +742,7 @@
 6728	coordination unlike cats
 6730	two modifiers in topic position
 6731	'ergens in de doelmond' ld/mod
+6749	time-out
 6752	out of memory
 6758	time-out
 6785	app without comma
@@ -630,7 +753,7 @@
 6814	time-out
 6820	gapping
 6848	time-out
-6855	extraposed sbar over extraposed relative
+6855	time-out
 6876	time-out
 6878	dp Mojo , spreek uit Modzjoo
 6894	dp NUCL[cat=sv1] ( SAT )
@@ -642,14 +765,16 @@
 6966	gapping/ellipsis "geen sprake is en ook nooit is geweest"
 6972    complex name, "Bond van Carnavalsverenigingen in Limburg"
 6981	time-out
-7031	grammatical error "een nieuwe stadhuis"
+7018	out of memory
 7063	coordination of sbar without crd
 7068	dp coordination root sv1 without conj
 7080	dp (ok with pos_tagger=on)
 7086    [pn mod:[pn mod:[pn]]]
 7098	extraposition of subject/predc
 7113	"het was niet te doen , kousen aan te trekken"
+7116	out of memory
 7117	missing comma in apposition
 7120	grammatical error "drie van de grootst* bouwondernemingen"
 7122	subject extraposition
+7133	time-out
 7135	dp "waarop Ton Vissers"
