@@ -20,7 +20,7 @@
 212	dp "tot ziens PP PP"
 217	time-out
 239	"het is uit die overtuiging vandaan dat"
-240
+240	guides
 244	dp nucl/sat dp/dp
 253	gapping
 254	out of memory
@@ -44,7 +44,7 @@
 610	appositie modifiers without punctuation
 625	time-out
 638	quotes around partial np (without the relative clause)
-639
+639	DONE
 654     rel modifier < pp modifier
 662	dp "priesters terug in het ambt"
 664	time-out
@@ -59,7 +59,6 @@
 735	time-out
 744	"Porsche 3 liters 908"
 770	dp coordination AP's without crd
-788	NEW
 788	time-out
 802	time-out
 804	coordination 'niet door NP VP maar door NP'
@@ -244,7 +243,6 @@
 2552	[geen N meer PP]
 2582	extraposition pp from np [complex]
 2589	time-out
-2612	NEW
 2612	time-out
 2622	R-extraction from modifier 'er het een en ander van onthullen'
 2629	dp
@@ -258,7 +256,7 @@
 2727	time-out
 2741	gapping
 2752	time-out
-2790
+2790	DONE
 2857	timeout, also "drie jaar geleden DATE"
 2858	time-out
 2868	'maatregelen voor de bespreking waarvan'
@@ -297,7 +295,6 @@
 3117	dp / gapping
 3119	time-out
 3120	out of memory
-3137	NEW
 3137	time-out
 3164	pp after postnp_adverb "lof van Lindner dus voor .."
 3169	two PC arguments 'NP van-PP voor-PP krijgen'
@@ -310,7 +307,6 @@
 3197	dp PP PP
 3210	conjunction in conjunct
 3210	time-out
-3247	NEW
 3247	time-out
 3251	grammatical error "piloten die werd* gevlogen"
 3257	out of memory
@@ -333,7 +329,7 @@
 3386	'niets van aan'
 3389	time-out
 3395	gapping
-3405	timeout; van officiele instanties , van ons eigen bestuur , zogezegd , van onze democratische overheid .
+3405	"van officiele instanties , van ons eigen bestuur , zogezegd , van onze democratische overheid"
 3419	out of memory
 3420	conj root, sv1, root
 3425	"gesneden worden en in de koelkast gezet" coord
@@ -418,7 +414,7 @@
 4105	coordination of pp without crd
 4111	time-out
 4112	conjunction "in de badmintonwereld en daar niet alleen"
-4130
+4130	DONE
 4131	time-out
 4136	modifier precedes first conjunct "hetzij rechtstreek PP hetzij PP"
 4140	coordination of pp without crd
@@ -471,13 +467,11 @@
 4536	dp
 4539	time-out
 4541	quantitative er 'er een aantal'
-4576	NEW
 4576	time-out
 4581	time-out
 4585	time-out
 4590	spelling 'de indruk worden gewerkt'
 4598	extraposed VP precedes extraposed sentential modifier
-4600	NEW
 4600	time-out
 4604	dp...
 4613	spelling "Oud-internationaal" rather than "Oud-international"
@@ -622,7 +616,7 @@
 5769	time-out
 5776	kwantitatief er
 5778	agreement error "een jury ... zullen"
-5799	NEW
+5799	"met ongeveer twee tot tweeenhalf miljoen boeken"
 5803	agreement error "bijna de helft van de mijnen zijn .."
 5807    agreement error "de .. groothandelsbedrijf"
 5810	out of memory
@@ -684,7 +678,7 @@
 6345	out of memory
 6345	vanaf ['s middags twee uur]
 6351	dp SMAIN SMAIN no comma
-6352	NEW
+6352	inf top node
 6374	right node raising in TEMP "1 en 4 juli"
 6375	extraposition PP > extraposed REL
 6377    extraposed WHREL > extraposed REL
@@ -697,7 +691,7 @@
 6429	out of memory
 6438	time-out
 6441	right node raising "tussen de 12 1/2 en 30 duizend gulden"
-6443	NEW
+6443	DU
 6443	time-out
 6448	complex name
 6449    extraposed AP modifier of NP over SVP
