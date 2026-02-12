@@ -200,7 +200,13 @@ cdb=cdb_part00001 cdb_part00002 cdb_part00003 cdb_part00004 cdb_part00005 cdb_pa
 
 cdb:$(cdb:%=%.testN)
 
-diffs: errors $(cdb:%=%.diff) $(lassy:%=%.diff)
+diffs: errors c_diffs l_diffs
+
+c_diffs:
+	$(MAKE) $(cdb:%=%.diff) | grep NEW
+
+l_diffs:
+	$(MAKE) $(lassy:%=%.diff) | grep NEW
 
 %.diff: %.errors
 	@-diff <(make $*.err) $*.errors
@@ -224,7 +230,7 @@ K/%.keys: ../Suites/%.named_sents
          do if [ -f $$file ]; then $(ALPINO_HOME)/compare_errors.py <(grep '^BEST SCORE' $$file | awk '{ print $$3, $$11 }') $*.errors;\
 	    else cat $*.errors;\
 	    fi; \
-         done
+         done 
 
 SCORES=$(sort $(wildcard */*/bests))
 bf:
