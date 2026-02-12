@@ -17471,7 +17471,7 @@ v(pleit,pleit,pleiten,gepleit,pleitte,pleitten,
 	transitive,
         part_transitive(vrij),
 	er_pp_sbar(voor),
-	er_pp_vp(voor),
+	er_pp_vp_no_control(voor),
                                     % het pleit voor hem dat ...
 	pp_sbar_subj_opt_het(voor), % voor deze zienswijze pleit dat ...
 	pp_sbar_subj_opt_het(tegen),
@@ -17683,6 +17683,7 @@ v(poort,poort,poorten,gepoort,poorte,poorten,
 
 v(poot,poot,poten,gepoot,pootte,pootten,
     [h([transitive,
+	part_transitive(neer),
 	part_np_ld_pp(neer),
 	part_np_ld_adv(neer)])]).
 

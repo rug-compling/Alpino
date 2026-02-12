@@ -37271,6 +37271,9 @@ a([ge_e(vervoegde),
 a([ge_e(vervoerde),
    ge_no_e(vervoerd)],adv,[],[]).
 
+a([ge_e(vervolledigde),
+   ge_no_e(vervolledigd)],adv,[],[]).
+
 a([ge_e(vervolgde),
    ge_no_e(vervolgd)],adv,[],[]).
 
