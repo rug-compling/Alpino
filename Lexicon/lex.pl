@@ -1642,6 +1642,7 @@ optionally_drop_np_complement(transitive_ndev_ndev,intransitive).
 optionally_drop_np_complement(np_np,transitive).
 optionally_drop_np_complement(np_np,intransitive).
 optionally_drop_np_complement(so_pp_np,so_pp).
+optionally_drop_np_complement(np_pc_pp(Prep),pc_pp(Prep)).
 optionally_drop_np_complement(part_np_np(X),part_transitive(X)).
 optionally_drop_np_complement(part_np_np(X),part_intransitive(X)).
 optionally_drop_np_complement(het_subj,intransitive).
