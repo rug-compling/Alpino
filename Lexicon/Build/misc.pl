@@ -9459,6 +9459,7 @@ term([so,far,',',so,good]).
 term([special,issue]).
 term([splendid,isoalation]).
 term([state,of,the,art]).
+term('state-of-the-art').
 term([status,epilepticus]).
 term([street,credibility]).
 term([struggle,for,life]).

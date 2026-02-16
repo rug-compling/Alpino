@@ -8273,6 +8273,7 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	intransitive,  % het geeft niet
 	so_pp_np,
 %% 	so_np,  ??
+	so_pp,  % we geven al aan het KWF
 	transitive,
 	so_np_pc_pp(tot),	% ik geef jullie tot vrijdag
 	fixed([pc(tot),vp_no_control],no_passive),
@@ -25634,8 +25635,7 @@ v(verkoop,verkoopt,verkopen,verkocht,verkocht,verkochten,
 	sbar_obj,       % we kunnen het niet verkopen, dat..
 	so_pp_sbar_obj, % we kunnen het niet aan de achterban verkopen, dat
 	so_np_sbar_obj, % we kunnen het onze achterban niet verkopen, dat
-	np_pc_pp(voor),
-	np_pc_pp(van),
+	np_mod_pp(van), % we verkopen er steeds minder van
 	part_transitive(door),
         part_np_np(door),
 	part_so_pp_np(door),

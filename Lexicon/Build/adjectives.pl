@@ -21108,6 +21108,12 @@ a([e(lage),
    st(laagst),
    ste(laagste)],adv,[],[]).
 
+a([e([laag,bij,de,grondse]),
+   e('laag-bij-de-grondse'),
+   no_e([laag,bij,de,gronds]),
+   no_e('laag-bij-de-gronds')],
+  nonadv,[],[]).
+
 a([e(laagdrempelige),
    no_e(laagdrempelig)],adv,[],[]).
 
@@ -23918,7 +23924,8 @@ a([e(noodzakelijke),
    no_e(noodzakelijk),
    st(noodzakelijkst),
    ste(noodzakelijkste)],adv,
-  [subject_sbar,
+  [object_vp,   % deze techniek is noodzakelijk om ...
+   subject_sbar,
    subject_vp],[]).
 
 a([pred(noord)],nonadv,[],[]).
@@ -32427,6 +32434,9 @@ a([e(starre),
 
 a([no_e(startensklaar),
    e(startensklare)],padv,[],[]).
+
+a([prefix([state,of,the,art]),
+   prefix('state-of-the-art')],nonadv,[],[]).
 
 a([e(statige),
    er(statiger),

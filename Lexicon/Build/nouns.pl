@@ -35542,7 +35542,8 @@ n([sg(tackle),pl(tackles)],de,[]).
 n([mass(tact)],de,[]).
 
 n([mass(tactiek),pl(tactieken),sg(tactiek),sg(taktiek)],de,
-  [subject_sbar,
+  [vp,
+   subject_sbar,
    subject_vp]).
 
 n([mass([tae,bo]),
