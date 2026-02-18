@@ -3695,7 +3695,7 @@ grammar_rule(vp_vp_dip_q,VP,[V,COLON,QL,NUCL,OPTEND,QR]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND,Type),
     ql(QL),
-    qr(QR),
+    optqr(QR),
     NUCL => start,
     NUCL:puncttype <=> Type,
     comma_dubb(COLON),

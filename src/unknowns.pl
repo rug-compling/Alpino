@@ -2512,6 +2512,9 @@ decap_only('Winst').
 decap_only('Zaken').
 decap_only('Zal').
 decap_only('Ze').
+decap_only('Zeg').
+decap_only('Zegt').
+decap_only('Zei').
 decap_only('Zelfs').
 decap_only('Zie').
 decap_only('Zijn').
