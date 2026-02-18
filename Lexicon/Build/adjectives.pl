@@ -1739,11 +1739,12 @@ a([ge_both(aangevreten)],adv,[],[]).
 a([ge_both(aangevroren)],padv,[],[]).
 
 a([ge_e(aangevulde),
-   ge_no_e(aangevuld)],adv,[],[]).
+   ge_no_e(aangevuld)],adv,
+  [pp(met)],[]).
 
 a([ge_e(aangevuurde),
    ge_no_e(aangevuurd)],padv,
-  [pp(door)],[]).
+  [],[]).
 
 a([ge_e(aangewaaide),
    ge_no_e(aangewaaid)],adv,[],[]).

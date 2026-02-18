@@ -24943,7 +24943,7 @@ n([mass(onbeweeglijkheid)],de,[]).
 
 n([mass(onbewuste)],het,[]).
 
-n([mass(onbruik)],het,[]).
+n([mass(onbruik)],het,[pred_pp(in)]).
 
 n([sg(oncoloog),pl(oncologen)],de,[]).
 
@@ -26407,7 +26407,7 @@ n([pl(overleggingen),sg(overlegging)],de,[]).
 
 n([pl(overlevers),sg(overlever)],de,[]).
 
-n([pl(overleveringen),sg(overlevering)],de,[]).
+n([pl(overleveringen),sg(overlevering)],de,[sbar]).
 
 n([mass(overleving)],de,[]).
 
@@ -34669,7 +34669,7 @@ n([pl(stilten),pl(stiltes),sg(stilte)],de,[],
 
 n([mass(stilzwijgen)],het,[]).
 
-n([pl(stimulansen),pl(stimulantia),sg(stimulans)],de,[vp]).
+n([pl(stimulansen),pl(stimulantia),sg(stimulans)],de,[vp,subject_sbar]).
 
 n([pl(stimulaties),sg(stimulatie)],de,[sbar,vp]).
 
