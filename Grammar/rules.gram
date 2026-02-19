@@ -3981,14 +3981,19 @@ grammar_rule(start_max_tag_max,START,[START1,COMMA1,TAG,COMMA2,START2]) :-
     nucl_tag_structure(START0,TAG,START).
 
 %%EX%% Ja , zei Piet , we kopen een boek
-grammar_rule(start_tag_dip_max,START,[TAG,COMMA1,DIP,COMMA2,START1] ):-
+%%EX%% Ja , zei Piet , " we kopen een boek .
+grammar_rule(start_tag_dip_max,START,[TAG,COMMA1,DIP,COMMA2,QL,START1,OPTEND,QR] ):-
     START => start,
     START1 => start,
     START0 => start,
     comma(COMMA1),
     comma(COMMA2),
+    optql(QL),
+    optqr(QR),
     TAG => tag,
     unify_mods(TAG),
+    optend_punct(OPTEND,Type),
+    START1:puncttype <=> Type,
     DIP => dip,
     nucl_tag_structure(START1,TAG,START0),
     nucl_tag_structure(START0,DIP,START).
@@ -4006,9 +4011,9 @@ grammar_rule(start_tag_dip_max_q,START,[QL1,TAG,QR1,COMMA1,DIP,COMMA2,QL2,START1
     ql(QL2),
     qr(QR2),
     TAG => tag,
+    unify_mods(TAG),
     optend_punct(OPTEND,Type),
     START1:puncttype <=> Type,
-    unify_mods(TAG),
     DIP => dip,
     nucl_tag_structure(START1,TAG,START0),
     nucl_tag_structure(START0,DIP,START).
@@ -4025,9 +4030,9 @@ grammar_rule(start_tag_dip_max_q2,START,[QL1,TAG,QR1,COMMA1,DIP,COMMA2,QL2,START
     qr(QR1),
     ql(QL2),
     TAG => tag,
+    unify_mods(TAG),
     end_punct(END,Type),
     START1:puncttype <=> Type,
-    unify_mods(TAG),
     DIP => dip,
     nucl_tag_structure(START1,TAG,START0),
     nucl_tag_structure(START0,DIP,START).
