@@ -8496,6 +8496,17 @@ grammar_rule(nucl_sat(np),ROOT,[Dan, COMMA, Max]) :-
     Max:redrel => no,
     root_nucl_sat_structure(Dan,Max,ROOT).
 
+%%EX%% Omdat hij vervelend is , die kerel
+grammar_rule(nucl_sat(sbar_np),ROOT,[SBAR,COMMA,Max]) :-
+    ROOT => max,
+    ROOT:max_type => t_dp,
+    comma_hellip_punt_komma(COMMA),
+    ind_max_np(Max),
+    Max:redrel => no,
+    max_sbar(SBAR),
+    SBAR:ctype => c_mod,
+    nucl_sat_structure(SBAR,Max,ROOT).
+
 %%EX%% Ik heb daar al vaak gegeten , meestal pannenkoeken
 grammar_rule(nucl_sat(mod_np),ROOT,[Dan, COMMA, MOD, NP,OPTCOMMA]) :-
     optcomma(OPTCOMMA),
