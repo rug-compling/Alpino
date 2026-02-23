@@ -44,7 +44,6 @@
 610	appositie modifiers without punctuation
 625	time-out
 638	quotes around partial np (without the relative clause)
-639	DONE
 654     rel modifier < pp modifier
 662	dp "priesters terug in het ambt"
 664	time-out
@@ -60,6 +59,7 @@
 744	"Porsche 3 liters 908"
 770	dp coordination AP's without crd
 788	time-out
+800	NEW
 802	time-out
 804	coordination 'niet door NP VP maar door NP'
 806     conjunction with vgap and extraposed WHREL > extraposed OBCOMP
@@ -121,6 +121,7 @@
 1361	spelling "extra-tijd" should allow vp complement
 1362	spelling spoken language spelling 'effe' and 'omrijje'
 1376	obj1 np? "beneden zo'n vierhonderd mark"
+1377	NEW
 1386	difficult ellipsis/coordination
 1399	out of memory
 1404	dp dip
@@ -148,7 +149,6 @@
 1595	quotes
 1597	time-out
 1598	nonadv adj modifier: een gesprek *smal* opzetten
-1616	time-out
 1637	'een , zo niet twee' coordination of 'een' and numbers
 1654	ungrammatical: agreement error 'het verspringen leverden resultaten op'
 1659	crickettaal
@@ -197,7 +197,6 @@
 2037	"nieuwe 8-procent 15-jarige obligaties"
 2045	spelling samenDvattend
 2067	time-out
-2068	time-out
 2077	out of memory
 2086	extraposition of subject
 2105	conjunction NP, NP en PP
@@ -212,7 +211,6 @@
 2197	time-out
 2199	extraposition of zoals-clause of NP over PP
 2224	time-out
-2225	time-out
 2228	'de boeken overigens met geringe waarde van Robbins'
 2230	time-out
 2239	time-out
@@ -250,13 +248,13 @@
 2665    spelling "waar voor" for "waarvoor"
 2665	time-out
 2691	pp extraposition 2x
+2706	NEW
 2717	time-out
 2719	time-out
 2723	"een 164 overwinning"
 2727	time-out
 2741	gapping
 2752	time-out
-2790	DONE
 2857	timeout, also "drie jaar geleden DATE"
 2858	time-out
 2868	'maatregelen voor de bespreking waarvan'
@@ -266,6 +264,7 @@
 2913	dp
 2914	gapping
 2918	'dertien stemmen voor en dertien tegen' coordination of abs-met args
+2932	NEW
 2937	'10 punten (was 20)'
 2941	"op X na die ..."
 2947	'en dat is, dat ik ...'
@@ -286,7 +285,6 @@
 3028	spelling error "of" -> "op"
 3029	coordination of PPs without crd
 3032	dp
-3038	time-out
 3046	time-out
 3079    sentential modifier between PC of adj and adj 'hiermee vermoedelijk bezig zijn'
 3083	[PP,PP] coordination without coordinator
@@ -414,7 +412,6 @@
 4105	coordination of pp without crd
 4111	time-out
 4112	conjunction "in de badmintonwereld en daar niet alleen"
-4130	DONE
 4131	time-out
 4136	modifier precedes first conjunct "hetzij rechtstreek PP hetzij PP"
 4140	coordination of pp without crd
@@ -460,7 +457,9 @@
 4461	dp
 4467	"NP niet LD willen hebben"
 4476	coordination of unlike 'meer en sneller vrienden'
+4478	out of memory
 4482	'dll 540 miljoen' dll?
+4505	NEW
 4509	name/coord??
 4512	weird long sentence that i cannot parse myself
 4523	dp
@@ -531,6 +530,7 @@
 5076	apposition without comma
 5081	ungrammatical? "men slaagt hem uit te graven"
 5084	time-out
+5111	NEW
 5123	flo 23,38 ( v.j. 19.00 ) miljoen
 5124	dp
 5125	extraposition of subj: 'voor dividend is beschikbaar NP'
@@ -538,6 +538,7 @@
 5141	weird names Peugeot 304 coupe en cabriolet
 5148	complicated coordination with coordinated conjunct and [NP en NP PP] where PP modifies both NP
 5157	quantitative er
+5173	NEW
 5175	flo 4,4 ( v.j. 2,8 ) miljoen
 5177	flo 38,8 ( 37,7 ) miljoen
 5195	difficult name
@@ -586,7 +587,6 @@
 5498	NP-APP < REL "Ischa Meyer, de recensent, die .."
 5506	time-out
 5511	time-out
-5530    complex name "nota provinciaal kapittel 1970"
 5544	out of memory
 5557	'(een dag) langer hebben (om)'
 5562	time-out
@@ -641,12 +641,13 @@
 5998	grammatical error "een roman dat"
 6013	Topic , MOD , SV1
 6037	extraposed SU
-6038	time-out
+6038	out of memory
 6066	apposition without comma
 6071	"project" with sbar complement?
 6080	gapping
 6099    extraposed SU
 6099	time-out
+6101	NEW
 6138	dp SAT TAG NUCL  [TAG [SAT NUCL]]
 6141	dp NP PP
 6154	time-out
@@ -666,7 +667,6 @@
 6236	two pre-conjunct modifiers 'en ook enigszins als'
 6241	pre-conjunct modifier for first conjunct
 6248	coordination of unlike cats
-6256	time-out
 6260	name "bijstand buitenlandse werknemers"
 6270	obj1: 'voor ME aan NP'
 6301	time-out
@@ -772,11 +772,3 @@
 7122	subject extraposition
 7133	time-out
 7135	dp "waarop Ton Vissers"
-1377	NEW
-800	NEW
-2706	NEW
-2932	NEW
-4505	NEW
-5173	NEW
-5111	NEW
-6101	NEW
