@@ -2214,8 +2214,7 @@ v(behoor,behoort,behoren,behoord,behoorde,behoorden,
   [h([intransitive,  % zoals het behoort (ouderwets)
       so_np,
       so_pp,
-      pc_pp(bij),
-      pc_pp(in),
+      ld_pp,
       pc_pp(tot),
       pp_sbar_subj(tot),     % het behoort tot de mogelijkheden dat...
       pp_vp_subj(tot), % het behoort tot de traditie om zo nu en dan...
