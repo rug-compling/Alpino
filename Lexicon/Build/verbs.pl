@@ -13455,7 +13455,6 @@ v(leg,legt,leggen,gelegd,legde,legden,
 	fixed([[ten,uitvoer],acc],norm_passive),
 	fixed([{[pc(op),acc(nadruk)]}],norm_passive),
 	fixed([{[er_pp(op,C),acc(nadruk)]},extra_sbar(C)],norm_passive),
-        fixed([[aan,de,schenen],ap_pred(na),{[[het,vuur],dat]}],imp_passive),  % also "te na"
 	fixed([[te,luister],acc(oor)],norm_passive),
 	fixed([[te,luisteren],acc(oor)],norm_passive),
 	fixed([svp_pp(in,schaal),acc(gewicht)],no_passive),
@@ -29327,8 +29326,8 @@ v(zet,zet,zetten,gezet,zette,zetten,
 	part_fixed(bij,[{[[luister],pc(aan)]}],imp_passive),
 	part_fixed(bij,[[kracht],acc],norm_passive), 
 					% het betoog werd kracht bijgezet
-	part_fixed(bij,[[luister],acc],norm_passive),
-	part_fixed(om,[[in,klinkende,munt],acc],norm_passive)]),
+	part_fixed(bij,[[luister],acc],norm_passive)
+       ]),
      b([fixed([[op,de,keel],[het,mes],dat],imp_passive)])]).
 
 v(zetel,zetelt,zetelen,gezeteld,zetelde,zetelden,

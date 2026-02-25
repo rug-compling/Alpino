@@ -11299,8 +11299,6 @@ n([sg(euroland),pl(eurolanden)],het,[]).
 n([sg('Europacup'),pl('Europacups'),
    sg(europacup), pl(europacups)],de,[app_measure]).
 
-n([sg('Europarlementariër'),pl('Europarlementariërs')],de,[]).
-
 n([sg(['Europees','Commissaris'])],de,[app_measure]).
 
 n([mass(eutanasie)],de,[]).

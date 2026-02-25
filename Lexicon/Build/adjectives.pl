@@ -7298,7 +7298,8 @@ a([e(culturele),
    no_e(cultureel),
    st(cultureelst),
    ste(cultureelste)],adv,[],
-  [inter,
+  [horti,h(horti),
+   inter,h(inter),
    multi,h(multi),
    socio,h(socio),
    sociaal,h(sociaal)
@@ -34359,7 +34360,7 @@ a([ge_e(uitgebuite),
    ge_no_e(uitgebuit)],adv,[],[]).
 
 a([ge_e(uitgedaagde),
-   ge_no_e(uitgedaagd)],adv,[],[]).
+   ge_no_e(uitgedaagd)],adv,[object_vp],[]).
 
 a([ge_e(uitgedane),
    ge_no_e(uitgedaan)],adv,[],[]).
