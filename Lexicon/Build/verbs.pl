@@ -15875,6 +15875,7 @@ v(onderscheid,onderscheidt,onderscheiden,onderscheiden,onderscheidde,onderscheid
 	np_pc_pp(met),
 	np_pc_pp(van),
 	refl_pc_pp(door),
+	refl_pc_pp(in),
 	refl_pc_pp(van)])]).
 
 v(onderschep,onderschept,onderscheppen,onderschept,onderschepte,onderschepten,
@@ -15905,6 +15906,7 @@ v(onderstreep,onderstreept,onderstrepen,onderstreept,onderstreepte,onderstreepte
 v(onderteken,ondertekent,ondertekenen,ondertekend,ondertekende,ondertekenden,
     [h([transitive,
         intransitive,
+	acc_np_sbar, 
 	sbar])]).
 
 v(ondertitel,ondertitelt,ondertitelen,ondertiteld,ondertitelde,ondertitelden,
