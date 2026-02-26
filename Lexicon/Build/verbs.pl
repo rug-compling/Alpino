@@ -1294,6 +1294,7 @@ v(aanvaard,aanvaardt,aanvaarden,aanvaard,aanvaardde,aanvaardden,
 
 v(aanzie,aanziet,aanzien,aanzien,aanzag,aanzagen,
     [h([transitive,
+	als_pred_np,
 	sbar])]).
 
 v(aap,aapt,apen,geaapt,aapte,aapten,
