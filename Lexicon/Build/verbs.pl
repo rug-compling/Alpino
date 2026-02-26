@@ -29384,7 +29384,7 @@ v(zie,ziet,inflected(zien,ziene),gezien,zag,zagen,
         np_mod_pp(op),    % er is niets op te zien (film/foto)
         np_mod_pp(over),  % ik heb er iets over gezien (op tv)
 	obj1_passive,     % ziet zich voor problemen gesteld
-        refl_passive,     % hij ziet zich genoodzaakt ...
+%%        refl_passive,     % hij ziet zich genoodzaakt ... why would this be SE, not OBJ1?
 
         %%% todo: is this refl_passive; or is refl_passive===obj1_passive?
 % 	fixed([[gedwongen],refl,vp],no_passive),
