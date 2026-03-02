@@ -98,7 +98,7 @@ macro(fondsen,
 	      num)).
 
 macro(dot_single_letter,
-              replace(sep:[],[sep,word-{m,u,'U'}],['.',sep])
+              replace(sep:[],[sep,word-{m,u,'U','X'}],['.',sep])
                                o
               replace(sep:[],[sep,['I','J']],['.',sep])
 				         % Dimitri van IJ. heeft ..
