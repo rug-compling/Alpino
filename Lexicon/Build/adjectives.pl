@@ -3653,6 +3653,9 @@ a([e(baldadige),
    st(baldadigst),
    ste(baldadigste)],adv,[],[]).
 
+a([e(ballistische),
+   no_e(ballistisch)],nonadv,[],[]).
+
 a([stof(bamboe)],nonadv,[],[]).
 
 a([e(banale),

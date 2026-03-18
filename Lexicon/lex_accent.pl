@@ -1192,6 +1192,8 @@ accent(religien,religiën).
 accent(relikwieen,relikwieën).
 accent(repatrieren,repatriëren).
 accent(repatriering,repatriëring).
+accent(repatrieringsvluchten,repatriëringsvluchten).
+accent(repatrieringsvlucht,repatriëringsvlucht).
 accent(resume,resumé).
 accent(resumes,resumés).
 accent(reumapatienten,reumapatiënten).
