@@ -980,6 +980,7 @@ accent('NAVOaktien','NAVOaktiën').
 accent(naweeen,naweeën).
 accent(netcoordinaat,netcoördinaat).
 accent(netcoordinaten,netcoördinaten).
+accent('Netflix-serien','Netflix-seriën').
 accent(neurieen,neurieën).
 accent(neurien,neuriën).
 accent('niet-essentiele','niet-essentiële').

@@ -544,6 +544,9 @@ a([e('Aziatische'),
 
 a([e('Balinese'),no_e('Balinees')],nonadv,[],[]).
 
+a([e('Belarussische'),
+   no_e('Belarussisch')],nonadv,[],[]).
+
 a([e('Belgische'),
    er('Belgischer'),
    ere('Belgischere'),
@@ -779,7 +782,9 @@ a([e('Irakese'),
    hh('West')]).
 
 a([e('Iraanse'),
-   no_e('Iraans')],nonadv,[],[hh('Zuid'),
+   no_e('Iraans')],nonadv,[],
+  [h(pro),
+   hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).

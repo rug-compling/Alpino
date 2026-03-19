@@ -154,8 +154,8 @@ surviving_root_tag(_,_):-
 surviving_root_tag(terecht,adjective(_)).
 surviving_root_tag(terecht,adjective(_,_)).
 
-%surviving_root_tag(aan,particle(aan)) :-
-%    alpino_lexical_analysis:tag(_,_,_,_,v_root(kondig_aan,aan_kondigen),_,_,_).
+surviving_root_tag(aan,particle(aan)) :-
+    alpino_lexical_analysis:tag(_,_,_,_,v_root(kondig_aan,aan_kondigen),_,_,_).
 
 %% temp, confusion with tag, changed analysis
 surviving_root_tag(inderdaad,sentence_adverb).
