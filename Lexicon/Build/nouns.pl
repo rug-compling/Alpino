@@ -11665,6 +11665,8 @@ n([pl(fata),sg(fatum)],het,[]).
 
 n([sg([fata,morgana])],both,[]).
 
+n([sg(fatbike),pl(fatbikes)],de,[]).
+
 n([pl('fauna\'s'),sg(fauna)],de,[]).
 
 n([pl(fauteuils),sg(fauteuil)],de,[],[dim(fauteuiltje)]).
@@ -15439,6 +15441,7 @@ n([pl(hervormers),sg(hervormer)],de,[]).
 
 n([pl(hervormingen),sg(hervorming)],de,[],
   [land,
+   pensioen,
    politie,
    s(staat)]).
 
@@ -18475,6 +18478,7 @@ n([pl(kinnen),sg(kin)],de,[],[dim(kinnetje)]).
 n([pl(kinderen),sg(kind)],het,[],
   [adoptie,
    s(dominee),
+   donor,
    pleeg,
    school,
    straat,
@@ -21127,6 +21131,7 @@ n([pl(lijsten),sg(lijst)],de,[],
    hit,
    loon,
    prijs,
+   sanctie,
    i(tarief,tarieven),
    verlang,
    wacht,
@@ -21285,7 +21290,7 @@ n([pl(lobbyisten),sg(lobbyist)],de,[]).
 
 n([stem(locatie),
    pl(locaties),sg(locatie),
-   pl(lokaties),sg(lokatie)],de,[]).
+   pl(lokaties),sg(lokatie)],de,[],[opvang]).
 
 n([pl(locomotieven),sg(locomotief)],de,[]).
 
@@ -23557,6 +23562,8 @@ n([mass(mortel)],de,[]).
 
 n([pl(mortieren),sg(mortier)],both,[]).
 
+n([sg(mortuarium),pl(mortuaria)],het,[]).
+
 n([pl(mossen),sg(mos)],het,[]).
 
 n([pl(moskeeën),sg(moskee)],de,[],
@@ -25618,7 +25625,7 @@ n([pl(oorlogen),sg(oorlog),mass(oorlog)],de,[],
    cyber,
    grond,
    s(handel),
-   h('Irak'),
+   h('Irak'),'Irak',
    h('Iran'),'Iran',
    kern,
    h('Kosovo'),
@@ -29244,7 +29251,7 @@ n([pl(prototypen),pl(prototypes),sg(prototype)],het,[app_measure]).
 
 n([mass(proviand)],de,[]).
 
-n([sg(provider),pl(providers)],de,[]).
+n([sg(provider),pl(providers)],de,[],[telecom]).
 
 n([sg(provinciaal),pl(provincialen)],de,[]).
 
@@ -32821,6 +32828,8 @@ n([sg(skeeler),pl(skeelers)],de,[]).
 
 n([pl(skeletten),sg(skelet)],het,[]).
 
+n([sg(skeletonster),pl(skeletonsters)],de,[]).
+
 n([mass(skepsis)],de,[]).
 
 n([pl(skepters),sg(skepter)],de,[]).
@@ -32839,7 +32848,7 @@ n([sg(skill),pl(skills)],de,[]).
 
 n([sg(skinhead),pl(skinheads)],de,[]).
 
-n([pl(skiërs),sg(skiër)],de,[]).
+n([pl(skiërs),sg(skiër)],de,[],[zit]).
 
 n([sg(skip),pl(skips)],de,[]).  % iets van aanvoerder bij curling
 
@@ -38229,6 +38238,7 @@ n([pl(velden),sg(veld)],het,[],
   [bij,
    s(deelnemer),
    graan,
+   'Groningen',
    hoofd,
    koren,
    maai,
@@ -42452,6 +42462,7 @@ n([pl(woorden),sg(woord)],het,
    i(hulp_werk,hulpwerk),
    leen,
    lid,
+   h(n),    % het n-woord
    naam,
    scheld,
    sleutel,

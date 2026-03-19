@@ -25045,7 +25045,8 @@ v(verduur,verduurt,verduren,verduurd,verduurde,verduurden,
 
 v(verduurzaam,verduurzaamt,verduurzamen,verduurzaamd,
   verduurzaamde,verduurzaamden,
-    [h([transitive])]).
+    [h([intransitive,
+	transitive])]).
 
 v(verdwaal,verdwaalt,verdwalen,verdwaald,verdwaalde,verdwaalden,
     [unacc([intransitive,

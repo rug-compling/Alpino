@@ -1410,6 +1410,8 @@ accent(zeeen,zeeën).
 accent(zelfmoordactien,zelfmoordactiën).
 accent(zelfmoordaktien,zelfmoordaktiën).
 accent(zelfstudien,zelfstudiën).
+accent(zitskiers,zitskiërs).
+accent(zitskier,zitskiër).
 accent(zoekactien,zoekactiën).
 accent(zoekaktien,zoekaktiën).
 accent(zoeven,zoëven).

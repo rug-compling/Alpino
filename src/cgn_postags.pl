@@ -3336,7 +3336,15 @@ mwu_postag(proper_name(_,'MISC'),_,Surf,Q0,Q,_) -->
 %    { alpino_util:split_atom(Surf," ",Surfs) },
 %    guess_tags(Q0,Q,proper_name(M),Surfs),
 %    !.
-mwu_postag(proper_name(_,_),_,Surf,Q0,Q,_Result) -->
+mwu_postag(proper_name(_,_),Stem,_Surf,Q0,Q,_Result) -->
+    {  Len is Q - Q0,
+       alpino_util:split_atom(Stem," ",Parts),
+       length(Parts,Len),
+       !
+    },
+    mwu_name_tags(Stem,Q0,Q).
+
+mwu_postag(proper_name(_,_),_Stem,Surf,Q0,Q,_Result) -->
     mwu_name_tags(Surf,Q0,Q).
 
 mwu_postag(punct(_),_,Surf,Q0,Q,_) -->

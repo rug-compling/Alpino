@@ -2607,6 +2607,7 @@ function('Bestuurslid').
 function('Bestuursvoorzitter').
 function('Bierbrouwer').
 function('Bisschop').
+function('Bobsleeër').
 function('Bondsarts').
 function('Bondscoach').
 function('Bondskanselier').
@@ -2643,6 +2644,7 @@ function('Echtgenoot').
 function('Echtgenote').
 function('Eigenaar').
 function('Electronicaconcern').
+function('EU-buitenlandchef').
 function('Eurocommissaris').
 function('Europarlementariër').
 function('Familie').
@@ -5947,13 +5949,13 @@ potential_name_fsa_not_begin(_,P0,[Word|Words],Ws,[Word|Prefix],
     name_vanhet_maybe_start(Word),!,
     P1 is P0 + 1,    
     potential_name_fsa(3,P1,Words,Ws,Prefix,His).
-potential_name_fsa_not_begin(_,P0,[Word|Words],Ws,[Word|Prefix],
+potential_name_fsa_not_begin(_,P0,[Word|Words],Ws,[Word,Pre1|Prefix],
 		   [vanhet1|His]) :-
     name_vanhet_start(Word),
     \+ decap_foreign_word(Word),
     !,
     P1 is P0 + 1,
-    potential_name_fsa(33,P1,Words,Ws,Prefix,His).
+    potential_name_fsa(33,P1,Words,Ws,[Pre1|Prefix],His).
 potential_name_fsa_not_begin(_,P0,[Word|Words],Ws,[Word|Prefix],
 		   [vanhet1|His]) :-
     name_vanhet_start(Word),
@@ -6273,6 +6275,7 @@ potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
     name_vanhet(Word),
     \+ Word = van,
+    \+ Word = von,
     \+ Word = de,
     P1 is P0 + 1,
     potential_name_fsa(3,P1,Words,Ws,Prefix,His).

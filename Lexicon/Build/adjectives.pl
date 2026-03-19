@@ -21785,6 +21785,7 @@ a([e(linkse),
    ste(linkste)],dir_locadv,[],
   [h(centrum),
    extreem,h(extreem),
+   radicaal,h(radicaal),
    h(ultra),ultra]).
 
 a([stof(linnen)],nonadv,[],[]).
@@ -30274,6 +30275,7 @@ a([e(rechtse),
   [h(centrum),
    h(extreem),extreem,
    h(links),
+   radicaal,h(radicaal),
    ultra,h(ultra)]).
 
 a([both(rechtschapen),
