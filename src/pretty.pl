@@ -65,6 +65,12 @@ hdrug_command_help(lex, "lex <Type> <Output> Word",
 :- public mlex/1.  % cmdint
 
 mlex(L) :-
+    (   \+ lex_lexicon(_Tag,_Label,L,[],_His)
+    ->  format("not in lexicon: ~w~n",[L])
+    ;   mlex0(L)
+    ).
+
+mlex0(L) :-
     (   lex_lexicon(Tag,Label,L,[],His),
 	format("~w|~w|~w|~w~n", [Label,L,His,Tag]),
 	fail
