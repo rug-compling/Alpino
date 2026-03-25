@@ -3061,9 +3061,12 @@ a_first_noun_tag_sc(app_measure).
 
 alternative_to_compound(R0,R1,LR) :-
     search_tag_r0(R0,tag(_,_,R0,R1,_,Used,His,Tag)),
+    \+ first_part_ok(LR,Used),
     (   alternative_to_compound_root(LR,Used)
     ;   His=normal(_), \+ allowed_alt_tag(Tag)
     ).
+
+first_part_ok(l,baby).
 
 alternative_to_compound_root(_,alles).
 alternative_to_compound_root(_,heb).
