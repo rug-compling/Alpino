@@ -1093,6 +1093,7 @@ with_dt_all(beide,[wij]).
 with_dt_all(beide,[zij]).
 with_dt_all(bekend,[bemind,maak]).
 with_dt_all(beloofd,[beloofd,ben]).
+with_dt_all(beloofd,[beloofd,blijf]).
 with_dt_all(ben,[binnen,binnen]).
 with_dt_all(ben,[dat,een,het,lief,lust]).
 with_dt_all(ben,[doe,jong,leer,oud]).
@@ -2642,6 +2643,7 @@ with_dt_root(binnen).
 with_dt_root(binnenkort).
 with_dt_root(binnenland).
 with_dt_root(blij).
+with_dt_root(blijf).
 with_dt_root(blik).
 with_dt_root(blind).
 with_dt_root(bloede).

@@ -1682,6 +1682,12 @@ with_dt([beloofd,is,beloofd],
 		  su=l(beloofd,adjective(ge_no_e(adv)),ap,0,1),
 		  predc=l(beloofd,adjective(ge_no_e(adv)),ap,2,3)])).
 
+with_dt([beloofd,blijft,beloofd],
+	sentence_adverb,
+	dt(smain,[hd=l(v_root(blijf,blijven),verb(unacc,sg3,copula),1,2),
+		  su=l(beloofd,adjective(ge_no_e(adv)),ap,0,1),
+		  predc=l(beloofd,adjective(ge_no_e(adv)),ap,2,3)])).
+
 with_dt([eerlijk,is,eerlijk],
 	sentence_adverb,
 	dt(smain,[hd=l(v_root(ben,zijn),verb(zijn,sg3,copula),1,2),

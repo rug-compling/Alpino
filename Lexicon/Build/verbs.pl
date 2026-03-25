@@ -7484,6 +7484,7 @@ v(fiets,fietst,fietsen,gefietst,fietste,fietsten,
        ]),
      b([ld_pp,
         part_intransitive(langs),
+	part_intransiteve(om),
 	part_intransitive(verder),  % HACK VL: ik ben op mijn elan blijven verder fietsen
 	part_transitive(rond),
 	intransitive])]).
@@ -16487,6 +16488,7 @@ v(ontwijk,ontwijkt,ontwijken,ontweken,ontweek,ontweken,
 v(ontwikkel,ontwikkelt,ontwikkelen,ontwikkeld,ontwikkelde,ontwikkelden,
     [h([refl,    % word order "waarin zich een kankercel ontwikkelde"
 	refl_pc_pp(tot),
+	part_transitive(door),
 	part_refl(door),
 	transitive])]).
 

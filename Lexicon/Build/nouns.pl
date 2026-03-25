@@ -3231,7 +3231,9 @@ n([pl(atleten),sg(atleet)],de,[]).
 
 n([pl(atletes),sg(atlete)],de,[]).
 
-n([mass(atletiek)],de,[],[weg]).
+n([mass(atletiek)],de,[],
+  [indoor,
+   weg]).
 
 %% een druk van vijf atmosfeer
 n([pl(atmosferen),meas(atmosfeer)],de,[]).
@@ -6533,7 +6535,7 @@ n([stem(brief_wisseling),
 
 n([sg(bries)],de,[],[dim(briesje)]).
 
-n([pl(brievenbussen),sg(brievenbus)],de,[]).
+n([pl(brievenbussen),sg(brievenbus)],de,[],[pakket]).
 
 n([pl(brigaden),pl(brigades),sg(brigade)],de,[measure]).
 
@@ -7876,7 +7878,9 @@ n([sg(comedy),pl(comedies)],de,[],
    f(['stand-up'])
   ]).
 
-n([mass(comfort)],het,[],[zit]).
+n([mass(comfort)],het,[],
+  [woon,
+   zit]).
 
 n([sg(comic),pl(comics)],de,[]).
 
@@ -10566,6 +10570,8 @@ n([mass(duur)],de,[pred_pp(van)],
 n([mass(duurzaamheid)],de,[]).
 
 n([pl(duwen),sg(duw)],de,[],[dim(duwtje)]).
+
+n([sg(duwer),pl(duwers)],de,[],[lijst]).
 
 n([sg(dvd),pl('dvd\'s'),sg('DVD'),pl('DVD\'s')],de,[]).
 
@@ -15430,7 +15436,7 @@ n([sg(herstelling),pl(herstellingen)],de,[]).
 
 n([pl(herstructureringen),sg(herstructurering)],de,[]).
 
-n([pl(herten),sg(hert)],het,[]).
+n([pl(herten),sg(hert)],het,[],[edel]).
 
 n([pl(hertogen),sg(hertog)],de,[],[aarts]).
 
@@ -16977,7 +16983,7 @@ n([sg([intensive,care])],de,[]).
 
 n([pl(intensiveringen),sg(intensivering)],de,[]).
 
-n([pl(intenties),sg(intentie)],de,[vp]).
+n([pl(intenties),sg(intentie)],de,[vp,sbar,subject_vp,subject_sbar]).
 
 n([mass(interactie),pl(interacties),sg(interactie)],de,[]).
 
@@ -18645,7 +18651,8 @@ n([pl(klassen),sg(klasse)],de,[],
 
 n([pl(klassementen),sg(klassement)],het,[],
   [eind,
-   medaille
+   medaille,
+   i(wereld_beker,wereldbeker)
   ]).
 
 n([mass(klassenstrijd)],de,[]).
@@ -30260,6 +30267,7 @@ n([pl(regelingen),sg(regeling)],de,[],
    pardon,
    pensioen,
    prepensioen,
+   s(saldering),
    i(spaar_loon,spaarloon),
    schade,
    steun,
@@ -37882,7 +37890,8 @@ n([mass(uitzaai)],de,[]).
 
 n([pl(uitzaaiingen),sg(uitzaaiing)],de,[]).
 
-n([pl(uitzendingen),sg(uitzending)],de,[],
+n([pl(uitzendingen),sg(uitzending)],de,
+  [temp_mod],  % iedere uitzending ontving hij drie gasten
   [nieuws,
    televisie,tv,h(tv),f([tv]),i(tv,'TV-')
   ]).
@@ -38777,6 +38786,7 @@ n([pl(verjongingen),sg(verjonging)],de,[]).
 n([mass(verkeer)],het,[],
   [s(betaling),
    data,
+   fiets,
    i(goed,goederen),
    s(handel),
    scheepvaart,
