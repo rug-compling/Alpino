@@ -3436,7 +3436,7 @@ n([pl('axioma\'s'),pl(axiomata),sg(axioma)],het,[sbar]).
 
 n([pl(ayatollahs),sg(ayatollah)],de,[]).
 
-n([sg(azc),pl('azc\'c')],het,[]).
+n([sg(azc),pl('azc\'s')],het,[]).
 
 %% scheikunde
 n([sg(azeotroop),pl(azeotropen)],de,[]).
@@ -3700,6 +3700,7 @@ n([mass(banco)],het,[]).
 
 n([pl(banden),sg(band)],de,[],
   [s(aanvoerder),
+   enkel,
    familie,
    kruis,
    lei,
@@ -6153,6 +6154,7 @@ n([pl(boomtakken),sg(boomtak)],de,[]).
 
 n([pl(bonen),sg(boon)],de,[],
   [sperzie,
+   i(diepvries_sperzie,diepvriessperzie),
    tuin,
    dim(boontje)]).
 
@@ -16879,7 +16881,8 @@ n([mass(instabiliteit)],de,[]).
 n([sg(installateur),pl(installateurs)],de,[]).
 
 n([pl(installaties),sg(installatie)],de,[],
-  [geluid,
+  [gas,
+   geluid,
    muziek]).
 
 n([mass(instandhouden),mass([in,standhouden])],het,[]).
@@ -21306,6 +21309,8 @@ n([pl(liturgieën),sg(liturgie)],de,[]).
 
 n([pl(livings),sg(living)],de,[]).
 
+n([mass(lng)],both,[]).
+
 n([sg('L.O.')],de,[app_measure]).
 
 n([sg(lob),pl(lobs),pl(lobben)],de,[]).
@@ -23011,7 +23016,9 @@ n([pl(mietjes),sg(mietje)],het,[]).
 
 n([pl(migraines),sg(migraine)],de,[]).
 
-n([pl(migranten),sg(migrant)],de,[],[s(arbeid)]).
+n([pl(migranten),sg(migrant)],de,[],
+  [s(arbeid),
+   trans]).
 
 n([pl(migrantes),sg(migrante)],de,[]).
 
@@ -28311,7 +28318,7 @@ n([stem(politie_man),
 
 n([pl(politierechters),sg(politierechter)],de,[]).
 
-n([pl(polls),sg(poll)],de,[]).
+n([pl(polls),sg(poll)],de,[],[exit]).
 
 n([sg(polonaise),pl(polonaises)],de,[]).
 
@@ -30306,6 +30313,7 @@ n([pl(regeringen),sg(regering)],de,[],
    post_h('Bush'),
    post_h('Clinton'),
    post_h('Trump'),
+   h('Trump'),
    coalitie,
    deel,
    s(eenheid),
@@ -33001,7 +33009,8 @@ n([pl(slangen),sg(slang)],de,[],
 n([mass(slapeloosheid)],de,[]).
 
 n([pl(slapers),sg(slaper)],de,[],
-  ['Dam'  % en niet Dam_sla_pers
+  ['Dam',  % en niet Dam_sla_pers
+   grond
   ]).
 
 n([pl(slappelingen),sg(slappeling)],de,[]).
