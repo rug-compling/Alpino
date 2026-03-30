@@ -1136,6 +1136,7 @@ inf_only(alpineskiën,alpine_skiën).
 inf_only(baanwielrennen,baan_wielrennen).
 inf_only(backpacken).
 inf_only(ballonvaren,ballon_varen).
+inf_only(beeldbellen).
 inf_only(berglopen).
 inf_only(bloemlezen).
 inf_only(boekhouden).
@@ -3106,6 +3107,9 @@ v(bespuit,bespuit,bespuiten,bespoten,bespoot,bespoten,
 	np_pc_pp(met)])]).
 
 v(bespuug,bespuugt,bespugen,bespuugd,bespuugde,bespuugden,
+    [h([transitive])]).
+
+v(bespuuw,bespuuwt,bespuwen,bespuuwd,bespuuwde,bespuuwden,
     [h([transitive])]).
 
 v(besta,bestaat,inflected(bestaan,bestane),bestaan,bestond,bestonden,
@@ -27892,6 +27896,7 @@ v(vraag,vraagt,vragen,gevraagd,vroeg,vroegen,
 	np_pc_pp(ten),
 	np_pc_pp(van),
 	als_pred_np,
+	np_ld_pp,		% we vragen hem het podium op
 	fixed([{[acc(aandacht),pc(voor)]}],norm_passive),
 	fixed([svp_pp(van,lijf),[de,hemd],dat],imp_passive),
 	fixed([svp_pp(van,lijf),[het,hemd],dat],imp_passive),

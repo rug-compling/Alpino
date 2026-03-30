@@ -36,6 +36,8 @@ accent(alzheimerpatientes,alzheimerpatiëntes).
 accent(ambieren,ambiëren).
 accent(ambiguiteit,ambiguïteit).
 accent(ambiguiteiten,ambiguïteiten).
+accent('Amerikaans-Israelisch','Amerikaans-Israëlisch').
+accent('Amerikaans-Israelische','Amerikaans-Israëlische').
 accent(amfibieen,amfibieën).
 accent(amnestieen,amnestieën).
 accent(anaerobe,anaërobe).
@@ -1077,6 +1079,8 @@ accent(petitien,petitiën).
 accent(piece,pièce).
 accent(pieteiten,piëteiten).
 accent(pieteit,piëteit).
+accent(pinguin,pinguïn).
+accent(pinguins,pinguïns).
 accent(planetoiden,planetoïden).
 accent(planetoide,planetoïde).
 accent(platenindustrieen,platenindustrieën).

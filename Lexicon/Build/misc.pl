@@ -501,28 +501,29 @@ punct('#',symbol).    % whatever
 punct('o',symbol).    % whatever
 punct('·',symbol).    % whatever
 punct('*',symbol).    % whatever
-punct('**',symbol).    % whatever
-punct('***',symbol).    % whatever
+punct('**',symbol).   % whatever
+punct('***',symbol).  % whatever
+punct('⇑',symbol).    % whatever
 
 punct(-,ligg_streep).
 punct('',ligg_streep).
 punct('&#8211;',ligg_streep).   % dash
-punct('–',ligg_streep).   % dash
+punct('–',ligg_streep).		% dash
 punct('&#8212;',ligg_streep).   % mdash
-punct('—',ligg_streep).   % mdash
+punct('—',ligg_streep).		% mdash
 punct('&#8211;',ligg_streep).   % ndash
-punct('‰',ligg_streep).   % ndash
-punct(ndash,ligg_streep).  % nlcow
-punct('­',ligg_streep).  % 173
+punct('‰',ligg_streep).		% ndash
+punct(ndash,ligg_streep).	% nlcow
+punct('­',ligg_streep).		% 173
 punct('--',ligg_streep).
-punct(['-','-'],ligg_streep).  % trouw2004
+punct(['-','-'],ligg_streep).	% trouw2004
 punct('---',ligg_streep).
 punct('----',ligg_streep).
 punct('-----',ligg_streep).
 punct('- -',ligg_streep).
-punct('_',ligg_streep).  % ad2000...
-punct('__',ligg_streep).  % ad2001...
-punct('~',ligg_streep).   % twitter
+punct('_',ligg_streep).		% ad2000...
+punct('__',ligg_streep).	% ad2001...
+punct('~',ligg_streep).		% twitter
 punct('–',ligg_streep).
 punct('.',punt).
 punct('',punt).

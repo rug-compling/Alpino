@@ -1647,7 +1647,9 @@ n([pl(aanvragen),sg(aanvraag),sg(aanvrage)],de,
   [vp,
    app_measure],
   [advies,
-   asiel]).
+   asiel,
+   octrooi
+  ]).
 
 n([pl(aanvragers),sg(aanvrager)],de,[]).
 
@@ -1789,7 +1791,7 @@ n([sg(accordeon),pl(accordeons)],both,[]).
 
 n([sg(accordeonist),pl(accordeonisten)],de,[]).
 
-n([sg(account),pl(accounts)],both,[]).
+n([sg(account),pl(accounts)],both,[],[nep]).
 
 n([pl(accountants),sg(accountant)],de,[]).
 
@@ -2403,7 +2405,9 @@ n([sg(agendapunt),pl(agendapunten)],het,[app_measure]).
 n([pl(agenten),sg(agent)],de,[],
   [f([geheim]),
    hoofd,
+   h('ICE'),
    motor,
+   nep,
    politie,h(politie),
    reis,
    s(veiligheid),
@@ -2414,6 +2418,7 @@ n([pl(agentes),sg(agente)],de,[],
   [f([geheim]),
    hoofd,
    motor,
+   nep,
    politie,h(politie),
    s(veiligheid),
    wijk,
@@ -3406,6 +3411,7 @@ n([sg(avond),pl(avonden)],de,[measure,temp_mod,sbar],
    koop,
    s(oudejaar),
    s(oudjaar),
+   i(uitslag,uitslagen),
    s(verkiezing),
    winter,
    zomer,
@@ -3706,6 +3712,9 @@ n([pl(banden),sg(band)],de,[],
    lei,
    pols, % en niet pol_band_DIM
    winter,
+   zomer,
+   j(['4', seizoen],['4',seizoens]),
+   j([vier,seizoen],[vier,seizoens]),
    dim(bandje)]).
 
 n([sg(bande),pl(bandes)],de,[]).
@@ -4016,6 +4025,9 @@ n([sg(bedreiger),pl(bedreigers)],de,[]).
 
 n([pl(bedreigingen),sg(bedreiging)],de,[sbar,vp]).
 
+n([pl(bedreigingen),sg(bedreiging)],de,[],
+  [s(dood)]).
+
 n([pl(bedriegers),sg(bedrieger)],de,[]).
 
 n([pl(bedrijven),sg(bedrijf)],het,[pred_pp(in), pred_pp(buiten)]).
@@ -4146,11 +4158,13 @@ n([pl(beelden),sg(beeld)],het,
   [sbar,
    vp],
   [amateur,
+   s(bewaking),
    camera,
    cliché,
    droom,
    ideaal,
    mens,
+   nep,
    sateliet,
    schrik,
    spook,
@@ -5187,6 +5201,7 @@ n([pl(bewijzen),sg(bewijs)],het,[],
   [kenteken,
    legitimatie,
    start,
+   steun,
    s(toegang),
    vaar]).
 
@@ -5782,7 +5797,8 @@ n([pl(blokken),sg(blok)],het,[],
    dim(blokje)]).
 
 n([pl(blokkades),sg(blokkade)],de,[],
-  [weg]).
+  [olie,
+   weg]).
 
 n([pl(blokkers),sg(blokker)],de,[]).
 
@@ -5918,6 +5934,7 @@ n([pl(boeken),sg(boek)],het,[],
    kas,
    i(last,lasten),
    log,
+   i(straf_wet,strafwet),
    telefoon,
    wet,
    dim(boekje)]).
@@ -6090,7 +6107,8 @@ n([pl(bonden),sg(bond)],de,[],
    wieler,
    zwem]).
 
-n([sg(bondgenoot),pl(bondgenoten)],de,[]).
+n([sg(bondgenoot),pl(bondgenoten)],de,[],
+  [h('NAVO')]).
 
 n([pl(bondgenootschappen),sg(bondgenootschap)],het,[]).
 
@@ -6897,6 +6915,7 @@ n([pl(bussen),sg(bus)],de,[measure],
   [auto,
    bestel,
    s(dubbeldek),
+   lijn,
    s(stad),
    streek,
    trolley,
@@ -7304,6 +7323,7 @@ n([pl(centrales),sg(centrale)],de,[],
    i(elektriciteit,electriciteit),
    i(elektriciteit,electriciteits),
    elektriciteit,s(elektriciteit),
+   energie,
    kern,
    i(kool,kolen),
    mest,
@@ -7431,7 +7451,8 @@ n([pl(chauffeurs),sg(chauffeur)],de,[],
 n([sg(chauvinisme)],het,[]).
 
 n([pl(checks),sg(check)],de,
-  [sbar]).
+  [sbar],
+  [fact]).
 
 n([sg([check,in]),
    sg('check-in')],de,[]).
@@ -7733,6 +7754,7 @@ n([pl(coaches),sg(coach)],de,[app_measure],
    h(interim),
    schaats,
    sprint,
+   straat,
    i(trainer,'trainer/'),
    h(trainer),
    voetbal]).
@@ -8206,6 +8228,8 @@ n([pl(conductrices),sg(conductrice)],de,[],
 
 n([pl(confederaties),sg(confederatie)],de,[]).
 
+n([sg(conference),pl(conferences)],de,[],[s(oudejaar)]).
+
 n([pl(conferenties),sg(conferentie)],de,[],
   [donor,
    klimaat,
@@ -8357,6 +8381,7 @@ n([mass(contra)],both,[]).
 n([pl(contracten),sg(contract),
    pl(kontrakten),sg(kontrakt)],het,[],
   [s(arbeid),
+   energie,
    flex,
    huur,
    s(inburgering),
@@ -8843,6 +8868,7 @@ n([sg(dag),pl(dagen)],de,
    s(verkiezing),
    wedstrijd,
    werk,
+   s(zitting),
    zomer,
    dim(dagje)]).
 
@@ -9712,7 +9738,10 @@ n([pl(discrepanties),sg(discrepantie)],de,[]).
 
 n([mass(discretie)],de,[]).
 
-n([pl(discriminaties),sg(discriminatie)],de,[],[s(leeftijd)]).
+n([pl(discriminaties),sg(discriminatie)],de,[],
+  [s(leeftijd),
+   moslim
+  ]).
 
 n([pl(discussies),sg(discussie)],de,
   [sbar],
@@ -10844,6 +10873,8 @@ n([pl(eieren),sg(ei)],het,[],
 
 n([pl(eicellen),sg(eicel)],de,[]).
 
+n([sg(eider),pl(eiders)],de,[],[bril]).
+
 n([pl(eierdooiers),sg(eierdooier)],de,[]).
 
 n([pl(eierstokken),sg(eierstok)],de,[]).
@@ -11462,7 +11493,8 @@ n([sg(expo)],de,[]).
 
 n([pl(exponenten),sg(exponent)],de,[]).
 
-n([sg(export),pl(exporten)],de,[]).
+n([sg(export),pl(exporten)],de,[],
+  [h(olie)]).
 
 n([pl(exporteurs),sg(exporteur)],de,[]).
 
@@ -11561,7 +11593,8 @@ n([pl(facetten),sg(facet)],het,[sbar]).
 n([pl(faciliteiten),sg(faciliteit)],de,[sbar]).
 
 n([pl(faciliteiten),sg(faciliteit)],de,[],
-  [s(investering),
+  [energie,
+   s(investering),
    productie]).
 
 n([pl(facties),pl(factiën),sg(factie)],de,[]).
@@ -11600,7 +11633,7 @@ n([pl(faillissementen),sg(faillissement)],het,[]).
 
 n([sg([fait,divers]),pl([faits,divers])],both,[]).
 
-n([mass(fake)],both,[]).
+n([mass(fake),pl(fakes)],both,[],[deep]).
 
 n([pl(fakkels),sg(fakkel)],de,[],[dim(fakkeltje)]).
 
@@ -12052,6 +12085,8 @@ n([pl(fluittonen),sg(fluittoon)],de,[]).
 
 n([pl(fluwelen),sg(fluweel)],het,[],[dim(fluweeltje)]).
 
+n([sg(flyer),pl(flyers)],de,[]).
+
 n([pl(fobieën),sg(fobie)],de,[]).
 
 n([pl(focussen),sg(focus)],de,[],[subject_sbar,
@@ -12325,7 +12360,9 @@ n([pl(fraudes),sg(fraude)],de,[],
    beurs,
    s(bijstand),
    boekhoud,
-   bouw]).
+   bouw,
+   stem
+  ]).
 
 n([sg(fraudeur),pl(fraudeurs)],de,[]).
 
@@ -12343,7 +12380,8 @@ n([sg(freelancer),pl(freelancers)],de,[]).
 
 n([sg(freeware)],de,[]).
 
-n([pl(fregatten),sg(fregat)],het,[np_app_measure]).
+n([pl(fregatten),sg(fregat)],het,[np_app_measure],
+  [commando]).
 
 n([pl(frequenties),sg(frequentie),
    pl(frekwenties),sg(frekwentie)],de,[],
@@ -15431,6 +15469,7 @@ n([pl(hersenspoelingen),sg(hersenspoeling)],de,[]).
 
 n([mass(herstel)],het,[],
   [koers,
+   natuur,
    s(recht),
    winst]).
 
@@ -16382,7 +16421,7 @@ n([sg('iMac'),pl('iMacs')],de,[]).
 
 n([pl(images),sg(image)],both,[]).
 
-n([pl('imago\'s'),sg(imago)],het,[sbar]).
+n([pl('imago\'s'),sg(imago)],het,[sbar,vp]).
 
 n([pl(imams),sg(imam)],de,[]).
 
@@ -16634,7 +16673,9 @@ n([mass([information,retrieval])],de,[]).
 n([mass(infrarood)],het,[]).
 
 n([mass(infrastructuur),pl(infrastructuren),sg(infrastructuur)],de,
-  [h(energie)]).
+  [h(energie),
+   gas
+  ]).
 
 n([sg(infusie),pl(infusies)],de,[]).
 
@@ -17608,6 +17649,7 @@ n([pl(kaarsen),sg(kaars)],de,[measure],[dim(kaarsje)]).
 
 n([pl(kaarten),sg(kaart)],de,[],
   [ansicht,
+   bank,
    bij,
    brief,
    chip,
@@ -17959,6 +18001,7 @@ n([mass(kanker),pl(kankers)],de,[],
    huid,
    lever,
    long,
+   i(lymfe_klier,lymfeklier),
    ovarium,
    prostaat]).
 
@@ -18847,7 +18890,9 @@ n([pl(klonten),sg(klont)],de,[measure],[dim(klontje)]).
 
 n([sg(klonter),pl(klonters)],de,[]).
 
-n([pl(kloven),sg(kloof)],de,[],[dim(kloofje)]).
+n([pl(kloven),sg(kloof)],de,[],
+  [loon,
+   dim(kloofje)]).
 
 n([pl(klonen),sg(kloon)],de,[]).
 
@@ -20365,7 +20410,12 @@ n([pl(leeuwen),sg(leeuw)],de,[],
 
 n([pl(leeuwendelen),sg(leeuwendeel),sg(leeuwedeel),pl(leeuwedelen)],het,[]).
 
-n([pl(leeuweriken),sg(leeuwerik)],de,[]).
+n([pl(leeuweriken),sg(leeuwerik)],de,[],
+  [boom,
+   rots,
+   veld,
+   woestijn
+  ]).
 
 n([mass(lef)],both,[vp]).
 
@@ -20770,7 +20820,8 @@ n([pl(leveranciers),sg(leverancier)],de,[],
 n([pl(leveranties),sg(leverantie)],de,[],
   [wapen]).
 
-n([pl(leveringen),sg(levering)],de,[]).
+n([pl(leveringen),sg(levering)],de,[],
+  [olie]).
 
 n([mass(levertraan)],de,[]).
 
@@ -21374,6 +21425,7 @@ n([pl(lokken),sg(lok)],de,[measure]).
 n([pl(lokalen),sg(lokaal)],het,[np_app_measure],
   [klas,
    proef,
+   stem,
    dim(lokaaltje)]).
 
 n([pl(lokazen),sg(lokaas)],het,[]).
@@ -22624,6 +22676,8 @@ n([mass(melancholie)],de,[]).
 
 n([sg(melanoom),pl(melanomen)],het,[]).
 
+n([sg(melder),pl(melders)],de,[]).
+
 n([pl(meldingen),sg(melding)],de,
   [sbar,
    vp,
@@ -22635,7 +22689,9 @@ n([pl(meldingen),sg(melding)],de,
 n([pl(meldingen),sg(melding)],de,
   [],
   [bom,
-   file]).
+   file,
+   schade
+  ]).
 
 n([pl(meldpunten),sg(meldpunt)],het,[app_measure]).
 
@@ -23137,6 +23193,7 @@ n([pl(ministers),sg(minister)],de,[],
    h('CDA'),
    i('D66','D\'66-'),h('D66'),
    defensie,
+   energie,
    h('EU'),
    h(ex),
    h('GroenLinks'),
@@ -23547,6 +23604,7 @@ n([pl(moorden),sg(moord)],de,[],
    'December',december,
    i(kind,kinder),
    massa,
+   roof,
    i(volk,volkeren),
    i(volk,volken)]).
 
@@ -26089,7 +26147,8 @@ n([sg([opus,magnum])],het,[]).
 n([sg(opvaart)],de,[]).
 
 n([sg(opvang)],de,[],
-  [i(kind,kinder),
+  [asiel,
+   i(kind,kinder),
    nacht,
    nood]).			% de eerste opvang, hence countable
 
@@ -26698,6 +26757,7 @@ n([pl(pacten),sg(pact),
 n([pl(pacten),sg(pact),
    sg(pakt)],het,[],
   [groei,
+   migratie,
    s(stabiliteit)]).
 
 n([pl(padden),sg(pad)],de,[],
@@ -27249,7 +27309,9 @@ n([sg(pauwoog),pl(pauwogen)],de,[],
 
 n([pl(pauzen),pl(pauzes),sg(pauze)],de,[],
   [koffie,
-   lunch]).
+   lunch,
+   meno
+  ]).
 
 n([pl(paviljoenen),pl(paviljoens),sg(paviljoen)],het,[],[dim(paviljoentje)]).
 
@@ -27448,6 +27510,7 @@ n([sg(periode),pl(perioden),pl(periodes)],de,
    s(beoordeling),
    bloei,
    s(contingent),
+   interland,
    s(kabinet),
    meet,
    s(overgang),
@@ -27688,6 +27751,8 @@ n([sg(ping)],both,[]).
 
 n([sg(pingel),pl(pingels)],de,[]).
 
+n([sg(pinguïn),pl(pinguïns)],de,[]).
+
 n([mass(pingpong),mass([ping,pong]),mass('ping-pong')],het,[]).
 
 n([pl(pinken),sg(pink)],de,[]).
@@ -27732,7 +27797,9 @@ n([pl(pistes),sg(piste),pl(pisten)],de,[],
   [ijs,
    tussen]).
 
-n([pl(pistolen),sg(pistool)],het,[],[dim(pistooltje)]).
+n([pl(pistolen),sg(pistool)],het,[],
+  [alarm,
+   dim(pistooltje)]).
 
 n([sg(pistolet),pl(pistolets)],het,[],[dim(pistoletje)]).  % geen pis_tol_ets
 
@@ -28013,7 +28080,9 @@ n([sg(pleger),pl(plegers)],de,[],
   [veel]).
 
 n([pl(pleidooien),sg(pleidooi)],het,[vp],
-  [s(opening)]).
+  [s(opening),
+   slot
+  ]).
 
 n([pl(pleinen),sg(plein)],het,[],
   [school,
@@ -28773,8 +28842,10 @@ n([pl(prijzen),sg(prijs)],de,[app_measure],
    kost,
    literatuur,
    markt,
+   maximum,
    meer,
    melk,
+   minimum,
    netto,
    olie,
    oeuvre,
@@ -28783,6 +28854,7 @@ n([pl(prijzen),sg(prijs)],de,[app_measure],
    i(producent,producenten),
    richt,
    s(schoonheid),
+   ticket,
    s(toegang),
    troost,
    uitgifte,
@@ -28792,8 +28864,6 @@ n([pl(prijzen),sg(prijs)],de,[app_measure],
    voedsel,
    vraag,
    dim(prijsje)]).
-
-n([mass(prijskompensatie)],de,[]).
 
 n([sg(prijsstop),pl(prijsstops)],de,[]).
 
@@ -29702,7 +29772,10 @@ n([mass([raison,d,'\'être']),
    mass([raison,'d\'','être']),
    mass([raison,'d\'être'])],de,[]).
 
-n([pl(raketten),sg(raket)],de,[],[kruis]).
+n([pl(raketten),sg(raket)],de,[],
+  [kruis,
+   h('Patriot')
+  ]).
 
 n([pl(rakkers),sg(rakker)],de,[],[dim(rakkertje)]).
 
@@ -29894,6 +29967,8 @@ n([pl(rebellen),sg(rebel)],de,[],
   [moslim]).
 
 n([pl(rebellieën),sg(rebellie)],de,[]).
+
+n([sg(reboot),pl(reboots)],de,[]).
 
 n([sg(rebound),pl(rebounds)],de,[]).
 
@@ -30343,7 +30418,8 @@ n([sg([regime,change]),pl([regime,changes])],de,[]).
 n([pl(regimenten),pl(regiments),sg(regiment)],het,[measure]).
 
 n([pl('regio\'s'),pl(regionen),pl(regiones),sg(regio)],de,[],
-  [micro,
+  ['Golf',
+  micro,
    meso,
    s(veiligheid)]).
 
@@ -31747,6 +31823,7 @@ n([pl(schachten),sg(schacht)],de,[]).
 
 n([pl(schaden),pl(schades),sg(schade)],de,[],
   [plan,
+   reputatie,
    rook,
    water]).
 
@@ -32175,6 +32252,8 @@ n([pl(schorsingen),sg(schorsing)],de,[]).
 
 n([pl(schorten),sg(schort)],both,[],[dim(schortje)]).
 
+n([sg(shortlist),pl(shortlists)],de,[]).
+
 n([mass(shorttrack),
    mass('short-track'),
    mass([short,track])],both,[]).
@@ -32404,6 +32483,7 @@ n([pl(sectoren),pl(sectors),sg(sector),
    chip,
    cultuur,
    i(dagblad,dagbladen),
+   diamant,
    i(dienst,diensten),
    energie,
    film,
@@ -32691,6 +32771,8 @@ n([pl(shows),sg(show)],de,[],
 n([sg(showman),pl(showmannen)],de,[]).
 
 n([sg(showroom),pl(showrooms)],de,[]).
+
+n([sg(shutdown),pl(shutdowns)],de,[]).
 
 n([sg(shuttle),pl(shuttles)],de,[],[]).
 
@@ -34921,7 +35003,8 @@ n([pl(stoten),sg(stoot)],de,[],
    dim(stootje)]).
 
 n([pl(stoppen),pl(stops),sg(stop)],de,[],
-  [bombardement,
+  [i(aan_sluiten,aansluit),
+   bombardement,
    campagne,
    i(prijs,prijzen),
    vacature,
@@ -36228,6 +36311,7 @@ n([pl(termijnen),sg(termijn)],de,
   [s(aanmelding),
    s(ambt),
    bedenk,
+   betaal,
    s(levering),
    opzeg,
    s(uitvoering),
@@ -36505,6 +36589,7 @@ n([sg(tijd),pl(tijden)],de,
    i(ramp,rampen),
    record,
    reis,
+   scherm,
    school,
    s(sluiting),
    speel,
@@ -37166,7 +37251,7 @@ n([sg(trapper),pl(trappers)],de,[]). % en niet trap_pers
 
 n([pl(traptreden),sg(traptrede)],de,[]).
 
-n([pl('trauma\'s'),pl(traumata),sg(trauma)],both,[]).
+n([pl('trauma\'s'),pl(traumata),sg(trauma)],both,[],[jeugd]).
 
 n([sg(traumatoloog),pl(traumatologen)],de,[]).
 
@@ -38213,7 +38298,9 @@ n([pl(vaten),sg(vat)],het,
 n([pl(vaten),sg(vat)],het,[],
   [dim(vaatje),
    bloed,
-   kruit]).
+   kruit,
+   olie
+  ]).
 
 n([mass(vatbaarheid)],de,[]).
 
@@ -39223,7 +39310,9 @@ n([pl(verschillen),sg(verschil)],het,[],
    hoogte,
    s(inkomen),
    s(leeftijd),
-   sekse]).
+   sekse,
+   s(tijd)
+  ]).
 
 n([sg(verschraling),pl(verschralingen)],de,[subject_sbar]).
 
@@ -39930,7 +40019,10 @@ n([pl(vlekken),sg(vlek)],both,[],
 
 n([pl(vlerken),sg(vlerk)],de,[]).
 
-n([pl(vleugelen),pl(vleugels),sg(vleugel)],de,[],[dim(vleugeltje)]).
+n([pl(vleugelen),pl(vleugels),sg(vleugel)],de,[],
+  [achter,
+   voor,
+   dim(vleugeltje)]).
 
 n([pl(vleugen),sg(vleug)],de,[measure],[dim(vleugje)]).
 
@@ -39960,6 +40052,7 @@ n([pl(vliegtuigen),sg(vliegtuig)],het,[],
    s(passagier),
    patrouille,
    spionage,
+   tank,
    transport,
    s(verkeer),
    vracht,
@@ -40321,7 +40414,7 @@ n([pl(voltrekkingen),sg(voltrekking)],de,[]).
 
 n([pl(volumen),pl(volumes),sg(volume)],het,[measure]).
 
-n([stem(volwassen),pl(volwassenen),sg(volwassene)],de,[]).
+n([stem(volwassen),pl(volwassenen),sg(volwassene)],de,[],[jong]).
 
 n([mass(volwassenheid)],de,[]).
 
@@ -41202,6 +41295,7 @@ n([pl(wagens),sg(wagen)],de,[],
   [aanhang,
    s(bedrijf),
    bestel,
+   brandweer,
    commando,
    wh(['Formule','1']),
    hooi,
@@ -42353,6 +42447,7 @@ n([pl(winsten),sg(winst)],de,[],
    record,
    terrein,
    tijd,
+   zetel,
    dim(winstje)]).
 
 n([sg(['winst-',en,verliesrekening])],de,[]).

@@ -1039,6 +1039,7 @@ plural_suffix(jumpers).
 plural_suffix(kids).
 plural_suffix(kinks).
 plural_suffix(koloniën).
+plural_suffix(landen).
 plural_suffix(lemonheads).
 plural_suffix(lions).
 plural_suffix(lips).
@@ -1112,6 +1113,7 @@ plural_suffix(sparks).
 plural_suffix(specials).
 plural_suffix(spelen).
 plural_suffix(spurs).
+plural_suffix(staten).
 plural_suffix(states).
 plural_suffix(stones).
 plural_suffix(stooges).

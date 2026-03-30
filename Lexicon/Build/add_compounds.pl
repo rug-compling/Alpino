@@ -30,6 +30,14 @@ add_compound([H|T],Stem2,Surf1,Stem,Surf) :-     % mond- en klauwzeercrisis
     lists:append(Prefix,[Last],[H|T]),
     atom_concat(Last,Surf1,Surf2),
     lists:append(Prefix,[Surf2],Surf).
+%% 4 seizoensbanden => 4 seizoen_band
+add_compound(j([H|T],[H2|T2]),Stem2,Surf1,Stem,Surf) :-     % mond- en klauwzeercrisis
+    concat_all([H|T],Stem0,' '),
+    atom_concat(Stem0,'_',Stem1),
+    atom_concat(Stem1,Stem2,Stem),
+    lists:append(Prefix,[Last],[H2|T2]),
+    atom_concat(Last,Surf1,Surf2),
+    lists:append(Prefix,[Surf2],Surf).
 %% pruimeboom => pruim_boom
 add_compound(i(StemPrefix,SurfPrefix),Stem0,Surf0,Stem,Surf) :- % i
     atom_concat(StemPrefix,'_',StemPrefix1),

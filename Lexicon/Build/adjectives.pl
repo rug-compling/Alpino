@@ -792,7 +792,8 @@ a([e('Iraanse'),
 a([e('Israëlische'),
    no_e('Israëlisch'),
    e('Israelische'),
-   no_e('Israelisch')],nonadv,[],[]).
+   no_e('Israelisch')],nonadv,[],
+  [h('Amerikaans')]).
 
 a([e('Italiaanse'),
    no_e('Italiaans')],nonadv,[],[hh('Zuid'),
@@ -4170,7 +4171,7 @@ a([ge_e(beheerde),
    ge_no_e(beheerd)],adv,[],[]).
 
 a([e(beheersbare),
-   no_e(beheersbaar)],adv,[],[]).
+   no_e(beheersbaar)],adv,[],[on]).
 
 a([ge_e(beheerste),
    er(beheerster),
