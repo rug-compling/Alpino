@@ -40,7 +40,7 @@ left_corners:
 KK=8
 keys_lc:
 	cat keys$(KK) | \
-        $(ALPINO) -flag suite undefined $(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/LassySmall cmdint=on 2> $(DISK)/keys$(KK)-spec.log | gzip > $(DISK)/keys$(KK).lc.gz 
+        $(ALPINO) -flag suite undefined $(ANNOTATED_OPTIONS) max_sentence_length=0 -flag treebank $(ALPINO_HOME)/Treebank/LassySmall cmdint=on 2> $(DISK)/keys$(KK)-spec.log | gzip > $(DISK)/keys$(KK).lc.gz 
 	gzip $(DISK)/keys$(KK)-spec.log
 	mv $(DISK)/keys$(KK)-spec.log.gz keys$(KK).log.gz
 	mv $(DISK)/keys$(KK).lc.gz .
