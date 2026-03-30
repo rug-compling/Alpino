@@ -16672,7 +16672,7 @@ n([mass([information,retrieval])],de,[]).
 
 n([mass(infrarood)],het,[]).
 
-n([mass(infrastructuur),pl(infrastructuren),sg(infrastructuur)],de,
+n([mass(infrastructuur),pl(infrastructuren),sg(infrastructuur)],de,[],
   [h(energie),
    gas
   ]).
