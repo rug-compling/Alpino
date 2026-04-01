@@ -44,6 +44,7 @@ accent(anaerobe,anaërobe).
 accent(anaeroob,anaëroob).
 accent(analogieen,analogieën).
 accent(animatieserien,animatieseriën).
+accent(antimaterien,antimateriën).
 accent(antipathieen,antipathieën).
 accent(antipatieen,antipatieën).
 accent(appel,appèl).

@@ -729,6 +729,8 @@ n([sg('Hengeloër'),pl('Hengeloërs')],de,[]).
 
 n([sg('Hoogevener'),pl('Hoogeveners')],de,[]).
 
+n([sg('Houthi'),pl('Houthi\'s')],de,[]).
+
 n([pl('Hollanders'),sg('Hollander')],de,[],
   [hh('Zuid'),
    hh('Noord'),
@@ -1941,6 +1943,7 @@ n([pl(activisten),sg(activist),
    pl(aktivisten),sg(aktivist)],de,[],
   [i(consument,consumenten),
    i(dier,dieren),
+   klimaat,
    i(mens_recht,mensenrechten),
    milieu]).
 
@@ -4164,6 +4167,7 @@ n([pl(beelden),sg(beeld)],het,
    droom,
    ideaal,
    mens,
+   naakt,
    nep,
    sateliet,
    schrik,
@@ -4644,6 +4648,8 @@ n([pl(benodigdheden)],de,[],
 n([pl(benoemingen),sg(benoeming)],de,[]).
 
 n([mass(benul)],het,[vp,sbar]).
+
+n([mass(benzeen)],both,[]).
 
 n([mass(benzine)],de,[]).
 
@@ -19504,7 +19510,7 @@ n([pl(kraaien),sg(kraai)],de,[],[dim(kraaitje)]).
 
 n([sg(kraj),pl(krajs)],both,[]). % Oosteuropese geografische eenheid?
 
-n([pl(kraken),sg(kraak)],de,[]).
+n([pl(kraken),sg(kraak)],de,[],[plof]).
 
 n([pl(kralen),sg(kraal)],de,[],[dim(kraaltje)]).
 
@@ -22109,6 +22115,7 @@ n([bare_meas(man),pl(mannen)],de,[measure]).
 
 n([sg(man),pl(mannen),ignore(m(man,noun(de,count,sg),man))],de,[],
   [buur,
+   h(ex),
    front,
    overbuur,
    hoek,
@@ -22425,7 +22432,7 @@ n([pl(materialen),sg(materiaal)],het,[sbar],
 
 n([mass(materialisme)],het,[]).
 
-n([pl(materies),pl(materiën),sg(materie)],de,[]).
+n([pl(materies),pl(materiën),sg(materie)],de,[],[anti]).
 
 n([mass(materieel)],het,[],[vervoer]).
 
@@ -23824,6 +23831,8 @@ n([pl(musicals),sg(musical)],de,[]).
 
 n([pl(musici),sg(musicus)],de,[],
   [pop]).
+
+n([sg(musketier),pl(musketiers)],de,[]).
 
 n([pl(muskieten),sg(muskiet)],de,[]).
 
@@ -27626,6 +27635,8 @@ n([sg(peul),pl(peulen)],de,[],[dim(peultje)]).
 n([pl(peuters),sg(peuter)],de,[],[dim(peutertje)]).
 
 n([pl(peuterspeelzalen),sg(peuterspeelzaal)],de,[]).
+
+n([sg('PFAS'),pl('PFAS')],both,[]).
 
 n([sg(pg),pl('pg\'s')],de,[]).
 
@@ -34657,7 +34668,9 @@ n([sg(stemmer),pl(stemmers)],de,[],
   [tegen,
    voor]).
 
-n([pl(stemmingen),sg(stemming)],de,[],[eind]).
+n([pl(stemmingen),sg(stemming)],de,[],
+  [eind,
+   her]).
 
 n([pl(stemmingen),sg(stemming)],de,[van_sbar]).
 
@@ -41097,6 +41110,7 @@ n([pl(vrouwen),sg(vrouw)],de,[],
    hockey,
    kop,
    moslim,
+   trans,f(trans),h(trans),
    i(zaak,zaken),
    s(zeg),
    dim(vrouwtje)]).
