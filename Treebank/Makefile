@@ -17,6 +17,13 @@ all:
 	$(MAKE) -j poslemma
 	$(MAKE) -j 30 sentspl freq trees_doc conllu pair installsents alpino.dact
 
+freqs:
+	$(MAKE) -j dtchecks novel
+	$(MAKE) -j prepare_enhanced_all
+	$(MAKE) -j enhanced_all 
+	$(MAKE) -j poslemma
+	$(MAKE) -j 30 sentspl freq trees_doc conllu pair installsents
+
 novel:
 	( cd fast; make -j alpino )
 
