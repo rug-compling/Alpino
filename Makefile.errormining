@@ -97,14 +97,15 @@ LOGS=*.log.gz
 cat=zcat
 
 e:
-	-@$(cat) $(LOGS) | \
-         grep -v  -e '^unknown[|]'\
+	-@$(cat) $(LOGS) | $(epipe)
+
+epipe=grep -v  -e '^unknown[|]'\
                   -e '^guessing[|]'\
                   -e '^parse: '\
 		  -e '^Lexical analysis: '\
 		  -e '^[*][*][*][*] parsing'\
 		  -e '^[*][*][*][*] parsed'\
-                  -e '^FRAME#'\
+                  -e '^FRAME\#'\
 		  -e '^timeout[|]'\
                   -e '^warning: UNKNOWN'\
                   -e '^english compound' |\
@@ -116,7 +117,12 @@ e:
                   -e segmentation\
                   -e failure    |\
          grep -vi -e 'filter_tags removed last tag|'\
-                  -e '^Q#'
+                  -e '^Q\#'
+
+## to allow for things like:
+## find -name '*.log' | xargs cat | make -f $A/Makefile.errormining epipe
+epipe:
+	$(epipe)
 
 logs:
 	-$(cat) $(LOGS) | $(Q) -c
