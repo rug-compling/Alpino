@@ -19,7 +19,7 @@
     check_op/2, check_vform_right/3, check_tpart/3, check_tpart/4,
     check_of_dat_whsub_sbar/2, check_of_dat_whsub_sbar/2, check_tmp_adv/2,
     check_stem/3, check_ap_pp_copula/2, check_nonp_copula/2,
-    check_fixed_word/3, check_alsof/2,
+    check_fixed_word/3, check_alsof/2, check_some/2,
     check_pp_copula/2, check_pp_copula/4, check_ap_copula/2, check_aci_simple/2,
     check_er/2, check_comp/2, check_compar_adjective/2, check_subject_sbar/2, check_aux_simple/2,
     check_subject_vp/2,check_er_er/2, fail/2, check_of_dat_whsub_sbar_right/2,
@@ -427,11 +427,11 @@ valid_noun_sc(subject_sbar_vp,        [check_vform(te)]).
 valid_noun_sc(subject_vp_sbar,        [check_vform(te),check_of_dat_whsub_sbar]).
 valid_noun_sc(subject_vp_vp,          [check_vform(te)]).
 valid_noun_sc(measure,                []).
-valid_noun_sc(np_measure,             []).
-valid_noun_sc(app_measure,            []).
-valid_noun_sc(start_app_measure,      []).
-valid_noun_sc(np_app_measure,         []).
-valid_noun_sc(tmp_app_measure,        []).
+valid_noun_sc(np_measure,             [check_some]).
+valid_noun_sc(app_measure,            [check_some]).
+valid_noun_sc(start_app_measure,      [check_some]).
+valid_noun_sc(np_app_measure,         [check_some]).
+valid_noun_sc(tmp_app_measure,        [check_some]).
 
 valid_sc(fixed_dep(Frame), Root, Infl,
          [check_fixed_part(vc(Root,_,Frame))|Checks]):-
@@ -1042,6 +1042,14 @@ memo(Goal,Index) :-
     assertz(checked(Index,Goal)),
     call(Goal),
     assertz(checked_ok(Index,Goal)).
+
+%% odd that POS-tagger does not always pick this up
+check_some(_,P) :-
+    alpino_lexical_analysis:tag(P,_,_,_,_,_,_,punct(Punt)),
+    lists:member(Punt,[punt,punt_komma,haak_sluit,vraag,uitroep]),
+    !,
+    fail.
+check_some(_,_).
 
 check_of_dat_sbar(P0,P) :-
     (	check_tag(complementizer(of),P0,P)
