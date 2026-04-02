@@ -30083,7 +30083,7 @@ a([e(rampzalige),
    st(rampzaligst),
    ste(rampzaligste)],adv,
   [subject_sbar,
-   subect_vp
+   subject_vp
   ],[]).
 
 a([e(rancuneuze),
