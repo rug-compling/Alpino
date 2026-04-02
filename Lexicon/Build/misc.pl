@@ -5377,6 +5377,7 @@ m('ook maar',       modal_adverb(noun),[ook,maar]).
 m(opnieuw,          modal_adverb(noun),opnieuw). 
 m(rond,             modal_adverb(noun),rond). % rond de 100 N's
 m(samen,            modal_adverb(noun),samen).  % van samen 1700 euro
+m(vermoedelijk,     modal_adverb(noun),vermoedelijk).  % het beeld van vermoedelijk een bewakingscamera
 m(wederom,          modal_adverb(noun),wederom).
 m(wijlen,           modal_adverb(noun),wijlen).
 m('zo goed als',    modal_adverb(noun),[zo,goed,als]).

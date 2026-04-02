@@ -5260,7 +5260,7 @@ n([mass(bewusteloosheid)],de,[]).
 
 n([mass(bewustheid)],de,[]).
 
-n([mass(bewustwording)],de,[]).
+n([mass(bewustwording)],de,[sbar]).
 
 n([mass(bewustzijn)],het,[pred_pp(buiten),
                           pred_pp(bij),
@@ -9856,6 +9856,8 @@ n([pl(doctorandi),pl(doctorandussen),sg(doctorandus)],de,[]).
 
 n([pl(doctrines),sg(doctrine)],de,[sbar]).
 
+n([sg(docu),pl('docu\'s')],de,[]).
+
 n([pl(documenten),sg(document),
    pl(dokumenten),sg(dokument)],het,[np_app_measure]).
 
@@ -10302,7 +10304,9 @@ n([pl(dreigingen),sg(dreiging)],de,[],
 n([mass(drek)],de,[]).
 
 n([pl(drempels),sg(drempel)],de,
-  [vp],
+  [vp,
+   subject_sbar
+  ],
   [dim(drempeltje)]).
 
 n([pl(drempels),sg(drempel)],de,[],
@@ -17445,6 +17449,8 @@ n([pl(jeneverbessen),sg(jeneverbes)],de,[]).
 
 n([sg(jengel),pl(jengels)],de,[]).
 
+n([sg(jerrycan),pl(jerrycans)],de,[measure]).
+
 n([pl(jerseys),sg(jersey)],de,[]).
 
 n([sg([jet,lag]),pl([jet,lags]),
@@ -23101,7 +23107,8 @@ n([pl(mijnen),sg(mijn)],de,[],
   [goud,
    kolen,
    steenkolen,
-   steenkool
+   steenkool,
+   zee
   ]).
 
 n([sg(mijne),pl(mijne)],both,[]).
@@ -23393,7 +23400,9 @@ n([pl(modellen),sg(model)],het,[],
   [s(ontwikkeling),
    reken,
    rol,
-   top]).
+   top,
+   verdien
+  ]).
 
 n([sg(modem),pl(modems)],both,[]).
 
@@ -23516,7 +23525,9 @@ n([pl(mommen),sg(mom)],both,
   [van_sbar,
    vp]).			% celex: de; 'onder het mom van:'
 
-n([sg(moment),pl(momenten)],both,[measure,temp_mod,sbar],[dim(momentje)]).
+n([sg(moment),pl(momenten)],both,[measure,temp_mod,sbar],
+  [pers,
+   dim(momentje)]).
 
 n([sg([moment,suprême]),
    sg([moment,suprème])],het,[]).
@@ -27584,6 +27595,7 @@ n([pl(personen),sg(persoon)],de,[],
   [s(bewind),
    hoofd,
    dim(persoontje),
+   trans,f(trans),h(trans),
    s(vertrouwen)]).
 
 n([pl(persoonlijkheden),sg(persoonlijkheid)],de,[]).
@@ -27927,7 +27939,8 @@ n([pl(plaatsingen),sg(plaatsing)],de,[]).
 
 n([pl('placenta\'s'),sg(placenta)],de,[]).
 
-n([pl(plafonds),pl(plafons),sg(plafond),sg(plafon)],het,[]).
+n([pl(plafonds),pl(plafons),sg(plafond),sg(plafon)],het,[],
+  [prijs]).
 
 n([pl(plagerijen),sg(plagerij)],de,[sbar,vp],[dim(plagerijtje)]).
 
@@ -29718,7 +29731,8 @@ n([pl(races),sg(race)],de,[measure,temp_mod,sbar,pred_pp(in)],
 n([pl(races),sg(race),
    ignore_stem(race)],de,[],
   [wh(['Formule','1']),
-   inhaal                     % races schorsing ???
+   inhaal,                     % races schorsing ???
+   sprint
   ]).
 
 %% niet race_rij
@@ -35626,6 +35640,7 @@ n([pl(systemen),sg(systeem)],het,[],
    controle,
    demotica,
    eco,
+   energie,
    s(handel),
    s(honorering),
    immuun,

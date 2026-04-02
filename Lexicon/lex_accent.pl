@@ -838,6 +838,12 @@ accent('Israeliers','Israeliërs').
 accent('Israeliers','Israëliers').
 accent('Israeliers','Israëliërs').
 accent('Israeli','Israëli').
+accent('Israelisch-Amerikaanse','Israëlisch-Amerikaanse').
+accent('Israelisch-Amerikaansere','Israëlisch-Amerikaansere').
+accent('Israelisch-Amerikaanser','Israëlisch-Amerikaanser').
+accent('Israelisch-Amerikaans','Israëlisch-Amerikaans').
+accent('Israelisch-Amerikaanste','Israëlisch-Amerikaanste').
+accent('Israelisch-Amerikaanst','Israëlisch-Amerikaanst').
 accent('Israelische','Israëlische').
 accent('Israelisch','Israëlisch').
 accent('Israelisch-Palestijnse','Israëlisch-Palestijnse').

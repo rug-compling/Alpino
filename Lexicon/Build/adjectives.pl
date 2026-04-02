@@ -458,6 +458,7 @@ a([e('Amerikaanse'),
   [h(anti),
    h(niet),
    h(pro),
+   h('Israëlisch'),
    h('Latijns'),
    s('Latijn'),
    hh('Zuid'),
@@ -30080,9 +30081,10 @@ a([e(rampzalige),
    ere(rampzaligere),
    no_e(rampzalig),
    st(rampzaligst),
-   ste(rampzaligste)],adv,[subject_sbar,
-			   subect_vp
-			  ],[]).
+   ste(rampzaligste)],adv,
+  [subject_sbar,
+   subect_vp
+  ],[]).
 
 a([e(rancuneuze),
    er(rancuneuzer),
