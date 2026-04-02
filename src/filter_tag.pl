@@ -1049,7 +1049,8 @@ check_some(_,P) :-
     lists:member(Punt,[punt,punt_komma,haak_sluit,vraag,uitroep]),
     !,
     fail.
-check_some(_,_).
+check_some(_,P) :-
+    \+ \+ alpino_lexical_analysis:tag(P,_,_,_,_,_,_,_).
 
 check_of_dat_sbar(P0,P) :-
     (	check_tag(complementizer(of),P0,P)
