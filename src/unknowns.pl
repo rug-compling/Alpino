@@ -6265,7 +6265,7 @@ potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[baron|His]) :-
     P1 is P0 + 1,
     potential_name_fsa(2,P1,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
-    Word = van,
+    (  Word = van ; Word = von ),
     P1 is P0 + 1,
     potential_name_fsa(3,P1,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[vanhet1|His]) :-
@@ -6915,7 +6915,6 @@ name_vanhet_start(X1,W2) :-
 name_vanhet_maybe(van).
 name_vanhet_maybe(de).
 
-name_vanhet(von).
 name_vanhet('v.').
 name_vanhet('v.d.').
 name_vanhet(den).
