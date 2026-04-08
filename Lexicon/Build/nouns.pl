@@ -4246,6 +4246,8 @@ n([pl(beesten),sg(beest)],het,[],[dim(beestje)]).
 
 n([pl(beten),sg(beet)],de,[]).
 
+n([pl(beten),sg(beet)],de,[],[i(teek,teken)]).
+
 n([pl(beetjes),sg(beetje)],het,[mod,measure]).
 
 n([sg(bef),pl(beffen)],de,[]).
@@ -5294,6 +5296,7 @@ n([mass(bezit)],het,[pred_pp(in)]).
 
 n([mass(bezit)],het,[],
   [bal,
+   drugs,
    grond,
    kunst,
    privé,
@@ -6473,7 +6476,9 @@ n([pl(brandstichtingen),sg(brandstichting)],de,[]).
 n([pl(brandstoffen),sg(brandstof)],de,
   [app_measure],
   [auto,
-   bio]).
+   bio,
+   vliegtuig
+  ]).
 
 n([pl(brandstoftanks),sg(brandstoftank)],de,[]).
 
@@ -6820,6 +6825,8 @@ n([mass(bullshit)],both,[]).
 
 n([pl(bulten),sg(bult)],de,[]).
 
+n([pl(bultruggen),sg(bultrug)],de,[]).
+
 n([pl(bumpers),sg(bumper)],de,[]).
 
 n([pl(bundels),sg(bundel)],de,
@@ -7134,6 +7141,10 @@ n([pl(capitulaties),sg(capitulatie)],de,[]).
 n([pl(capriolen),sg(capriool)],de,[]).
 
 n([pl(capsules),sg(capsule)],de,[measure],[dim(capsuletje)]).
+
+n([pl(capsules),sg(capsule)],de,[],
+  [h('Orion'),
+   dim(capsuletje)]).
 
 n([pl(captains),sg(captain)],de,[]).
 
@@ -9284,7 +9295,9 @@ n([pl(deputaties),sg(deputatie)],de,[]).
 
 n([sg(derailleur),pl(derailleurs)],de,[]).
 
-n([sg(derby),pl('derby\'s')],de,[],[s(stad)]).
+n([sg(derby),pl('derby\'s')],de,[],
+  [s(stad),
+   'IJssel']).
 
 n([sg([derde,kerstdag]),
    sg(['Derde','Kerstdag'])],de,[temp_mod,sbar]).
@@ -10424,7 +10437,9 @@ n([mass(drop)],de,[],[dim(dropje)]).
 n([pl([drop,outs]),pl('drop-outs'),
    sg([drop,out]),sg('drop-out')],de,[]).
 
-n([pl(drugs),sg(drug),mass(drugs)],de,[],[smart]).
+n([pl(drugs),sg(drug),mass(drugs)],de,[],
+  [designer,
+   smart]).
 
 n([pl(druiven),sg(druif)],de,[],[dim(druifje)]).
 
@@ -13836,6 +13851,8 @@ n([pl(gewichten),sg(gewicht)],both,[],
 
 n([mass(gewichtheffen)],het,[]).
 
+n([sg(gewichtloosheid)],de,[]).
+
 n([pl(gewijsden),sg(gewijsde)],het,[]).
 
 n([mass(gewin)],het,[]).
@@ -16143,6 +16160,7 @@ n([pl(huizen),sg(huis)],het,[np_app_measure],
    jeugd,
    i(kaart,kaarten),
    koffie,
+   omroep,
    i(pop,poppen),i(pop,poppe),
    productie,
    provincie,
@@ -20016,7 +20034,8 @@ n([pl(kwesties),sg(kwestie)],de,
   [dim(kwestietje)]).
 
 n([pl(kwesties),sg(kwestie)],de,[],
-  [portefeuille]).
+  [paspoort,
+   portefeuille]).
 
 n([mass(kwetsbaarheid)],de,[subject_sbar]).
 
@@ -20212,7 +20231,8 @@ n([pl(landheren),sg(landheer)],de,[]).
 
 n([pl(landhuizen),sg(landhuis)],het,[]).
 
-n([pl(landingen),sg(landing)],de,[],[nood]).
+n([pl(landingen),sg(landing)],de,[],[maan,
+				     nood]).
 
 n([pl(landingsbanen),sg(landingsbaan)],de,[]).
 
@@ -23330,6 +23350,7 @@ n([pl(missies),pl(missiën),sg(missie)],de,
 
 n([pl(missies),pl(missiën),sg(missie)],de,[],
   [s(handel),
+   maan,
    s(veiligheid),
    s(vrede)]).
 
@@ -26287,6 +26308,7 @@ n([pl(organisaties),sg(organisatie),
    i(consument,consumenten),
    s(handel),
    hulp,
+   i('VN_hulp','VN-hulp'),
    s(huurder),
    jeugd,
    i(jong,jongeren),
@@ -30077,6 +30099,7 @@ n([mass(recht),pl(rechten),sg(recht)],het,[],
    straf,
    successie,
    h(tv),tv,televisie,f([tv]),i(tv,'TV-'),
+   uitstoot,
    uitzend,
    s(varken),
    i(verbintenis,verbintenissen),
@@ -30303,7 +30326,8 @@ n([pl(reeën),sg(ree)],both,[],[dim(reetje)]).
 n([pl(reeksen),sg(reeks)],de,[measure]).
 
 n([pl(reeksen),sg(reeks)],de,[],
-  [kwalificatie,
+  [concert,
+   kwalificatie,
    strip,
    televisie,
    zege]).
@@ -38531,6 +38555,7 @@ n([pl(verboden),sg(verbod)],het,[],
    bordeel,
    contact,
    export,
+   fatbike,
    fok,
    import,
    inhaal,
@@ -41178,7 +41203,8 @@ n([pl(vulpennen),sg(vulpen)],de,[]).
 n([pl('vulva\'s'),sg(vulva)],de,[]).
 
 n([pl(vuren),sg(vuur)],het,[],
-  [sper,
+  [paas,
+   sper,
    dim(vuurtje)]).
 
 n([stem('VUT'),
@@ -42434,6 +42460,7 @@ n([pl(winkels),sg(winkel)],de,[],
    nacht,
    i(sigaar,sigaren),
    speelgoed,
+   i(toerist,toeristen),
    vis,
    web,
    dim(winkeltje)]).

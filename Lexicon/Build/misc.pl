@@ -504,6 +504,7 @@ punct('*',symbol).    % whatever
 punct('**',symbol).   % whatever
 punct('***',symbol).  % whatever
 punct('⇑',symbol).    % whatever
+punct('⇓',symbol).    % whatever
 
 punct(-,ligg_streep).
 punct('',ligg_streep).

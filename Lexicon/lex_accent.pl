@@ -911,6 +911,7 @@ accent(loss,löss).
 accent(luchtactien,luchtactiën).
 accent(luchtaktien,luchtaktiën).
 accent(luchtvaartindustrieen,luchtvaartindustrieën).
+accent(maanmissien,maanmissiën).
 accent('Macedonier','Macedoniër').
 accent('Macedoniers','Macedoniërs').
 accent(machinerieen,machinerieën).
