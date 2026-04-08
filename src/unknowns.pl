@@ -6000,7 +6000,7 @@ potential_name_fsa_not_begin(_,P0,[Word|Words],Ws,[Word|Prefix],
     name_initial(Word),
     !,
     P1 is P0 + 1,
-    potential_name_fsa(2,P1,Words,Ws,Prefix,His).
+    potential_name_fsa(initial,P1,Words,Ws,Prefix,His).
 
 potential_name_fsa_not_begin(_,P0,[Word,Word2|Words],Ws,[Word,Word2|Prefix],
 		   [initial|His]) :-
@@ -6092,6 +6092,13 @@ rue(via).
 %% is ok
 a_person_name(Words) :-
     alpino_lex:lexicon(proper_name(_,'PER'),_,Words,_,names_dictionary).
+
+potential_name_fsa(initial,P0,[Word|Words],Ws,[Word|Prefix],[initial|His]) :-
+    name_initial(Word),!,
+    P1 is P0 + 1,
+    potential_name_fsa(initial,P1,Words,Ws,Prefix,His).
+potential_name_fsa(initial,P0,Words,Ws,Pref,His):-
+    potential_name_fsa(2,P0,Words,Ws,Pref,His).
 
 potential_name_fsa(2,_,['>',Word,Helip|Ws],Ws,['>',Word,Helip],['>']) :-
     hellip(Helip),
@@ -6191,6 +6198,11 @@ potential_name_fsa(1,P0,[Word1,Word|Words],Ws,[Word1,Word|Prefix],
     name_vanhet(Word1,Word),
     P1 is P0 + 2,
     potential_name_fsa(33,P1,Words,Ws,Prefix,His).
+potential_name_fsa(1,P0,[Word|Words],Ws,[Word|Prefix],[initial|His]) :-
+    name_initial(Word),
+    !,
+    P1 is P0 + 1,
+    potential_name_fsa(initial,P1,Words,Ws,Prefix,His).
 potential_name_fsa(1,P0,[Word|Words],Ws,[Word|Prefix],[capital|His]) :-
     name_capital(Word,P0),
     P1 is P0 + 1,
@@ -6238,12 +6250,12 @@ potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[foreign|His]) :-
     unknown_foreign_word(Word),
     P is P0 + 1,
     potential_name_fsa(22,P,Words,Ws,Prefix,His).
-potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[capital|His]) :-
-    name_capital(Word,P0),!,
-    P1 is P0 + 1,
-    potential_name_fsa(2,P1,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[initial|His]) :-
     name_initial(Word),!,
+    P1 is P0 + 1,
+    potential_name_fsa(initial,P1,Words,Ws,Prefix,His).
+potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[capital|His]) :-
+    name_capital(Word,P0),!,
     P1 is P0 + 1,
     potential_name_fsa(2,P1,Words,Ws,Prefix,His).
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[initial|His]) :-

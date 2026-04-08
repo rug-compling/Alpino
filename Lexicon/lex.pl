@@ -586,6 +586,7 @@ lexicon_(Cat,Label,Ws0,Ws,His,LC) :-
 lexicon_(Cat,Label,Ws0,Ws,His,_) :-
     initials(Label0,Ws0,Ws1),
     next_word(Word,Ws1,Ws2,Variant),
+    \+ initial(Word),
     combine_his(Variant,His0,His),
     (   Cat = proper_name(sg,'PER'),
 	in_names_dictionary(proper_name(sg,'PER'),Word,Label1,Ws2,Ws,His0),
