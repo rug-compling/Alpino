@@ -24996,7 +24996,7 @@ n([pl(omleidingen),sg(omleiding)],de,[]).
 
 n([pl(omlijstingen),sg(omlijsting)],de,[]).
 
-n([pl(omlopen),sg(omloop)],de,[temp_mod]).
+n([pl(omlopen),sg(omloop)],de,[temp_mod,pred_pp(in)]).
 
 n([pl(omloopbanen),sg(omloopbaan)],de,[]).
 
