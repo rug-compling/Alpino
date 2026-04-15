@@ -1068,6 +1068,8 @@ accent(pastorieen,pastorieën).
 accent(pate,pâté).
 accent('pate\'s','pâté\'s').
 accent(pates,pâtés).
+accent(patientendossier,patiëntendossier).
+accent(patientendossiers,patiëntendossiers).
 accent(patienten,patiënten).
 accent(patientenservice,patiëntenservice).
 accent(patientenzorg,patiëntenzorg).

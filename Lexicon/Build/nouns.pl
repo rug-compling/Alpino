@@ -10214,6 +10214,7 @@ n([pl(doses),pl(dosissen),sg(dosis)],de,[measure],
 
 n([pl(dossiers),sg(dossier)],het,[app_measure],
   [i(cliënt,cliënten),
+   i(patiënt,patiënten),
    s(onderzoek),
    straf]).
 
@@ -13617,6 +13618,7 @@ n([pl(gesprekken),sg(gesprek)],het,[],
    sollicitatie,
    telefoon,
    twee,
+   s(vrede),
    vraag,
    voor,
    dim(gesprekje)]).
@@ -17141,7 +17143,9 @@ n([pl(interventies),sg(interventie)],de,[],
   [crisis]).
 
 n([pl(interviews),sg(interview)],het,[],
-  [achtergrond % niet acht_erg_rond_interview
+  [achtergrond, % niet acht_erg_rond_interview
+   h(televisie),
+   h(tv)
   ]).
 
 n([pl(interviewers),sg(interviewer)],de,[]).
@@ -23430,7 +23434,8 @@ n([pl(modehuizen),sg(modehuis)],het,[]).
 n([pl(modellen),sg(model)],het,[measure],[dim(modelletje)]).  % dat model steentjes
 
 n([pl(modellen),sg(model)],het,[],
-  [s(ontwikkeling),
+  [h('AI'),
+   s(ontwikkeling),
    reken,
    rol,
    top,
@@ -26357,7 +26362,9 @@ n([pl('organisatie-strukturen'),sg('organisatie-struktuur')],de,[]).
 
 n([pl(organisatiemodellen),sg(organisatiemodel)],het,[]).
 
-n([pl(organisatoren),pl(organisators),sg(organisator)],de,[],[reis]).
+n([pl(organisatoren),pl(organisators),sg(organisator)],de,[],
+  [concert,
+   reis]).
 
 n([pl(organismen),pl(organismes),sg(organisme)],het,[]).
 
@@ -27164,6 +27171,7 @@ n([sg(partij),pl(partijen),
    i(oud,ouderen),
    s(regering),
    tegen,
+   h('Tisza'),
    s(volk),
    weder]).
 
@@ -28026,6 +28034,7 @@ n([pl(plannen),sg(plan)],both,
    s(sanering),
    streek,
    structuur,
+   i(tien_punt,tienpunten),
    toekomst,
    s(uitbreiding),
    vakantie,
@@ -38958,6 +38967,7 @@ n([mass(verkeer)],het,[],
    i(goed,goederen),
    s(handel),
    scheepvaart,
+   s(scheep),
    spoor,
    trein,
    weg,

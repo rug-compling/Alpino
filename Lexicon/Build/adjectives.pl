@@ -21790,10 +21790,10 @@ a([e(linkse),
    postn_no_e(links),
    st(linkst),
    ste(linkste)],dir_locadv,[],
-  [h(centrum),
-   extreem,h(extreem),
-   radicaal,h(radicaal),
-   h(ultra),ultra]).
+  [centrum, h(centrum),
+   extreem, h(extreem),
+   radicaal, h(radicaal),
+   h(ultra), ultra]).
 
 a([stof(linnen)],nonadv,[],[]).
 
@@ -30282,7 +30282,7 @@ a([e(rechtse),
    er(rechtser),
    ere(rechtsere)
   ],dir_locadv,[],
-  [h(centrum),
+  [h(centrum),centrum,
    h(extreem),extreem,
    h(links),
    radicaal,h(radicaal),
@@ -39960,6 +39960,10 @@ a([e(zelfingenomene),
    no_e(zelfingenomen),
    st(zelfingenomenst),
    ste(zelfingenomenste)],padv,[],[]).
+
+a([end(zelfrijdend),
+   ende(zelfrijdende)
+  ],padv,[],[]).
 
 a([e(zelfstandige),
    er(zelfstandiger),
