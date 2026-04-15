@@ -1129,6 +1129,7 @@ m(v_root(Inf,Inf),verb(Inf,hebben,inf,[intransitive])) :-
 % ik wil weer gaan skispringen
 :- discontiguous inf_only/1, inf_only/2.
 
+inf_only(abseilen).
 inf_only(allroundschaatsen,allround_schaatsen).
 inf_only(allrounden).
 inf_only(alpineskiën,alpine_skiën).

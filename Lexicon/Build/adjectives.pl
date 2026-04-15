@@ -40586,7 +40586,7 @@ name_adj('Drents').
 name_adj('Duffels').
 name_adj('Ecuadoraans').
 name_adj('Egyptisch').
-name_adj('Einhovens').
+name_adj('Eindhovens').
 name_adj('Ests').
 name_adj('Ethiopisch').
 name_adj('Evergems').

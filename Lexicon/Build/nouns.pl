@@ -4893,9 +4893,11 @@ n([pl(bestaanszekerheden),sg(bestaanszekerheid)],de,[]).
 
 n([pl(bestanden),sg(bestand)],het,[],
   [i(lid,leden),
+   paas,
    s(personeel),
    tekst,
-   vis]).
+   vis
+  ]).
 
 n([pl(bestanddelen),sg(bestanddeel)],het,[app_measure]).
 
@@ -5071,6 +5073,7 @@ n([pl(beurzen),sg(beurs)],de,[],
    ruil,
    i(scherm,schermen),
    studie,
+   tech,
    technologie,
    tempo,
    vak,
@@ -6538,6 +6541,7 @@ n([mass(brie)],de,[],[room]).
 n([pl(brieven),sg(brief)],de,
   [measure,sbar],
   [dreig,
+   'Kamer',
    dim(briefje)]).
 
 n([pl(brieven),sg(brief)],de,[],
@@ -7489,6 +7493,7 @@ n([sg('chef-staf')],de,[],[]).
 n([pl(chefs),sg(chef)],de,[],
   [kabinet, s(kabinet),
    leger,
+   h('NAVO'),
    pers,
    s(personeel),
    politie,
@@ -9142,6 +9147,8 @@ n([mass(deelgenootschap)],het,[]).
 
 n([mass(deelname),pl(deelnames)],de,[],
   [s(arbeid),
+   h('EK'),
+   h('WK'),
    s(regering)]).
 
 n([pl(deelneemsters),sg(deelneemster)],de,[]).
@@ -17583,11 +17590,13 @@ n([pl(journaals),pl(journalen),sg(journaal)],het,[],
 n([pl(journalisten),sg(journalist)],de,[],
   [foto,
    internet,
+   pop,
    sport]).
 
 n([pl(journalistes),sg(journaliste)],de,[],
   [foto,
    internet,
+   pop,
    sport]).
 
 n([mass(journalistiek)],de,[],[sport]).
@@ -17607,6 +17616,8 @@ n([pl(juffen),pl(jufs),sg(juf)],de,[]).
 n([pl(juffers),sg(juffer)],de,[],[dim(juffertje)]).
 
 n([pl(juffrouwen),sg(juffrouw)],de,[]).
+
+n([mass(juice)],de,[]).
 
 n([mass(juistheid)],de,[]).
 
@@ -23349,7 +23360,8 @@ n([pl(missies),pl(missiën),sg(missie)],de,
   ]).
 
 n([pl(missies),pl(missiën),sg(missie)],de,[],
-  [s(handel),
+  [wh(['Artemis','II']),
+   s(handel),
    maan,
    s(veiligheid),
    s(vrede)]).
@@ -27143,6 +27155,8 @@ n([sg(partij),pl(partijen),
   [s(arbeider),
    coalitie,
    college,
+   h('Fidesz'),
+   fusie,
    markt,
    s(meerderheid),
    s(oorlog),
@@ -36162,6 +36176,7 @@ n([pl(tekkels),sg(tekkel),
 
 n([pl(tekorten),sg(tekort)],het,[],
   [s(begroting),
+   brandstof,
    i(cel,cellen),
    exploitatie,
    s(financiering),
@@ -38238,10 +38253,14 @@ n([pl('vagina\'s'),sg(vagina)],de,[]).
 n([mass(vaginisme)],het,[]).
 
 n([pl(vakken),sg(vak)],het,[app_measure],
-  [zoek,
-   keuze,
+  [keuze,
    h(keuze),
    dim(vakje)]).
+
+n([pl(vakken),sg(vak)],het,[],
+  [uit,
+   zoek
+   ]).
 
 n([pl(vakanties),sg(vakantie)],de,
   [temp_mod,
@@ -41587,7 +41606,7 @@ n([sg(webcam),pl(webcams)],de,[]).
 
 n([sg(weblog),pl(weblogs)],both,[app_measure]).
 
-n([sg(website),pl(websites)],both,[app_measure]).
+n([sg(website),pl(websites)],both,[app_measure],[entertainment]).
 
 n([sg(webstek),pl(webstekken)],both,[app_measure]).
 
@@ -42503,6 +42522,7 @@ n([pl(winsten),sg(winst)],de,[],
    record,
    terrein,
    tijd,
+   s(verkiezing),
    zetel,
    dim(winstje)]).
 
