@@ -5249,7 +5249,9 @@ a([e(bestendige),
    ere(bestendigere),
    no_e(bestendig),
    st(bestendigst),
-   ste(bestendigste)],adv,[],[]).
+   ste(bestendigste)],adv,[],
+  [i(leven_loop,levensloop),
+   toekomst]).
 
 a([ge_e(bestendigde),
    ge_no_e(bestendigd)],adv,[],[]).
@@ -11776,7 +11778,8 @@ a([e(gele),
    no_e(geel),
    st(geelst),
    ste(geelste)],nonadv,[],
-  [licht,
+  [knal,
+   licht,
    donker,
    goud,
    h(goud)]).
@@ -29838,7 +29841,7 @@ a([e(propere),
    ste(properste)],nonadv,[],[]).
 
 a([e(proportionele),
-   no_e(proportioneel)],adv,[],[]).
+   no_e(proportioneel)],adv,[],[dis]).
 
 a([e(protestante),
    no_e(protestant)],nonadv,[],[]).

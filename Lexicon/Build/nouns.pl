@@ -1623,6 +1623,7 @@ n([pl(aanvallen),sg(aanval)],de,[],
    paniek,
    raket,
    tegen,
+   terreur,
    s(vergelding)
   ]).
 
@@ -4355,7 +4356,7 @@ n([pl(behendigheden),sg(behendigheid)],de,[vp]).
 
 n([mass(behoef)],het,[]).
 
-n([pl(behoeften),pl(behoeftes),sg(behoefte)],de,[vp]).
+n([pl(behoeften),pl(behoeftes),sg(behoefte)],de,[vp],[basis]).
 
 n([pl(behoeften),pl(behoeftes),sg(behoefte)],de,[],
   [s(financiering),
@@ -4714,7 +4715,8 @@ n([mass(bereidheid)],de,[vp]).
 
 n([pl(bereidingen),sg(bereiding)],de,[]).
 
-n([mass(bereik)],het,[]).
+n([mass(bereik)],het,[],
+  [rij]).
 
 n([mass(bereikbaarheid)],de,[]).
 
@@ -5107,7 +5109,9 @@ n([pl(bevelen),sg(bevel)],het,[sbar,vp,pred_pp(onder)]).
 n([pl(bevelen),sg(bevel)],het,[],
   [s(aanhouding),
    arrestatie,
-   s(huiszoeking)]).
+   s(huiszoeking),
+   s(sluiting)
+  ]).
 
 n([pl(bevelhebbers),sg(bevelhebber)],de,[]).
 
@@ -6697,6 +6701,7 @@ n([sg(browser),pl(browsers)],de,[]).
 
 n([pl(bruggen),sg(brug)],de,[],
   [fiets,
+   i(snel_weg,snelweg),
    dim(bruggetje),
    dim(brugje)]).
 
@@ -7370,6 +7375,7 @@ n([pl(centra),pl(centrums),sg(centrum)],het,
    controle,
    crisis,
    cultuur,
+   debat,
    epi,
    expertise,
    s(gezondheid),
@@ -7398,6 +7404,7 @@ n([pl(centra),pl(centrums),sg(centrum)],het,
    wijk,
    winkel,
    zorg,
+   i(woon_zorg,woonzorg),
    [woon,en,zorg]
   ]).
 
@@ -7917,6 +7924,8 @@ n([pl(combinaties),sg(combinatie)],de,
 n([pl(comebacks),sg(comeback),
    pl([come,backs]),sg([come,back]),
    sg('come-back'),pl('come-backs')],de,[]).
+
+n([sg(comedian),pl(comedians)],de,[]).
 
 n([sg(comedy),pl(comedies)],de,[],
   [f([screwball]),
@@ -13687,7 +13696,8 @@ n([pl(gevaren),sg(gevaar)],het,
 
 n([pl(gevaren),sg(gevaar)],het,
   [],
-  [inflatie]).
+  [brand,
+   inflatie]).
 
 n([pl(gevaarten),pl(gevaartes),sg(gevaarte)],het,[]).
 
@@ -14601,6 +14611,7 @@ n([pl(groepen),sg(groep)],de,[app_measure,np_app_measure],
    toneel,
    tussen,
    vak,
+   i(vriend,vrienden),
    wereld,
    werk,
    woon,
@@ -14823,7 +14834,8 @@ n([pl(hakenkruisen),sg(hakenkruis)],het,[]).
 n([pl(hakkers),sg(hakker)],de,[]).
 
 n([pl(hallen),sg(hal)],de,[],
-  [vertrek,
+  [inkom,
+   vertrek,
    dim(halletje)]).
 
 n([sg(halfbloed),pl(halfbloeds)],de,[]).
@@ -25211,6 +25223,7 @@ n([pl(onderhandelingen),sg(onderhandeling)],de,[pred_pp(in)],
 
 n([pl(onderhandelingen),sg(onderhandeling)],de,[],
   [h(cao),h('CAO'),
+   coalitie,
    s(toetreding)]).
 
 n([mass(onderhoud)],both,[pred_pp(in)]).  %VL de onderhoud
@@ -26067,7 +26080,10 @@ n([pl(opperbevelhebbers),sg(opperbevelhebber)],de,[]).
 
 n([pl(opperhoofden),sg(opperhoofd)],het,[]).
 
-n([pl(oppervlakken),sg(oppervlak)],het,[],[contact]).
+n([pl(oppervlakken),sg(oppervlak)],het,[],
+  [contact,
+   maan
+  ]).
 
 n([pl(oppervlakkigheden),sg(oppervlakkigheid)],de,[]).
 
@@ -27573,6 +27589,7 @@ n([sg(periode),pl(perioden),pl(periodes)],de,
    begin,
    s(beoordeling),
    bloei,
+   broed,
    s(contingent),
    interland,
    s(kabinet),
@@ -30146,7 +30163,8 @@ n([pl(rechters),sg(rechter)],de,[],
    i(kind,kinder),
    s(onderzoek),
    opper,
-   straf
+   straf,
+   vrede
   ]).
 
 n([pl(rechterkanten),sg(rechterkant)],de,[]).
@@ -31641,7 +31659,8 @@ n([pl(sakristieën),sg(sakristie)],de,[]).
 n([sg([salad,bar]),pl([salad,bars])],de,[]).
 
 n([pl(salades),sg(salade)],de,[],
-  [krab]).
+  [ei,
+   krab]).
 
 n([pl(salamanders),sg(salamander)],de,[],[dim(salamandertje)]).
 
@@ -34373,6 +34392,7 @@ n([pl(steden),sg(stad),
    haven,
    provincie,
    speel,
+   thuis,
    voor,
    wereld,
    dim(stadje)]).
@@ -35136,6 +35156,7 @@ n([pl(straaljagers),sg(straaljager)],de,[]).
 
 n([pl(straten),sg(straat)],de,[],
   [s(dorp),
+   fiets,
    hoofd,
    was,
    winkel,
@@ -35918,10 +35939,15 @@ n([pl(tangen),sg(tang)],de,[],[dim(tangetje)]).
 n([pl('tango\'s'),sg(tango)],de,[]).
 
 n([pl(tanks),sg(tank)],de,[],
-  [brandstof]).
+  [brandstof,
+   gas,
+   olie
+  ]).
 
 n([pl(tankers),sg(tanker)],de,[],
-  [olie,h(olie)]).
+  [brandstof,
+   gas,
+   olie,h(olie)]).
 
 n([mass(tannine)],de,[]).
 
@@ -36027,6 +36053,7 @@ n([pl(teams),sg(team)],het,[],
    prof,
    project,
    recherche,
+   trauma,
    voetbal,
    volleybal,
    i(vrouw,vrouwen)
