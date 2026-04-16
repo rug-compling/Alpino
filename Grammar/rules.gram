@@ -801,7 +801,7 @@ optcomma_end(OPTCOMMA) :-
 comma_end(COMMA) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct,
-    COMMA:puncttype => (komma;schuin_streep;uitroep;vraag;punt;ligg_streep;hellip;punt_komma).
+    COMMA:puncttype => (komma;schuin_streep;uitroep;vraag;punt;ligg_streep;hellip;punt_komma;staand_streep).
 
 comma_end(COMMA) :-
     hdrug_util:hdrug_flag(parse_or_generate,generate),
@@ -4172,6 +4172,7 @@ grammar_rule(adv_a,Adv,[Adj]) :-
     Adv:subadv => subadv_adj,
     Adj:cj => ncj, % reduce spurious amb.
     Adj:adv => (yadv;oadv),
+    Adj:wh_reltmploc => ~hoe_hoe,
     %%    Adj:agr => het & indef & sg, % should not have -e suffix!
     %% however: "Voorafgaande aan de visitatie moeten we ..."
     Adj:aform => nattr,  % was: (attr;nattr)
@@ -4195,13 +4196,15 @@ grammar_rule(adv_a_marked,Adv,[Adj]) :-
 
 %%EX%% De lucht werd hoe langer hoe blauwer
 %%EX%% Het principe van hoe groter hoe wateriger
+%%EX%% hoe zieker de patient , hoe negatiever de gevolgen
+%%EX%% De patient werd hoe langer hoe zieker
 grammar_rule(adv_hoe_a,Adv,[Adj]) :-
     Adv => adv,
     ap_arg(Adj),
     Adv:subadv => subadv_adj,
     Adv:wh_reltmploc => hoe_hoe,
     Adj:cj => ncj, % reduce spurious amb.
-    Adj:adv => nadv,
+%%    Adj:adv => nadv,
     Adj:aform => nattr,
     hd_structure(Adj,Adv).
 
@@ -8887,8 +8890,8 @@ grammar_rule(start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C]) :-
     B => start, B:mod_np => no, 
     C => start, C:mod_np => no, 
     M => start, M:mod_np => yes,
-    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;ligg_streep),
-    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;ligg_streep),
+    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;ligg_streep;staand_streep),
+    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;ligg_streep;staand_streep),
     (   hdrug_util:hdrug_flag(parse_or_generate,generate),
 	COMMA:puncttype => punt_komma,
 	COMMA2:puncttype => punt_komma
@@ -8920,8 +8923,8 @@ grammar_rule(start_start_start_start_punt_komma,M,[A,COMMA,B,COMMA2,C,D]) :-
     C => start, C:mod_np => no,
     D => start_seq,
     M => start, M:mod_np => yes,
-    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;ligg_streep),
-    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;ligg_streep),
+    COMMA => punct,  COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;ligg_streep;staand_streep),
+    COMMA2 => punct, COMMA2:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;ligg_streep;staand_streep),
     (   hdrug_util:hdrug_flag(parse_or_generate,generate),
 	COMMA:puncttype => punt_komma,
 	COMMA2:puncttype => punt_komma
@@ -8945,7 +8948,7 @@ grammar_rule(start_dp_dp_seq,M,[COMMA,El,List]) :-
     El:mod_np => no,
     El:cj => ~no_crd,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
-	COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma)
+	COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;staand_streep)
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
 	COMMA:puncttype => punt_komma
     ),
@@ -8955,7 +8958,7 @@ grammar_rule(start_dp_seq,M,[COMMA,El]):-
     M => start_seq,
     COMMA => punct,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
-	COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma)
+	COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep;komma;staand_streep)
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
 	COMMA:puncttype => punt_komma
     ),

@@ -592,6 +592,7 @@ punct(x,maal).
 punct('×',maal).
 punct(+,plus).
 punct(&,ampersand).
+punct('__',staand_streep).
 punct('|',staand_streep).
 punct('||',staand_streep).
 punct('|||',staand_streep).

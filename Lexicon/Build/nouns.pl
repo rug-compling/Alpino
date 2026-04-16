@@ -25149,7 +25149,7 @@ n([mass(onderbewustzijn)],het,[],[]).
 
 n([mass(onderbouw)],de,[],[]).
 
-n([sg(onderbouwing),pl(onderbouwingen)],de,[],[]).
+n([sg(onderbouwing),pl(onderbouwingen)],de,[subject_sbar],[]).
 
 n([pl(onderbrekingen),sg(onderbreking)],de,
   [sbar,vp],[]).

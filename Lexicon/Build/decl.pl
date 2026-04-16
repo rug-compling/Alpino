@@ -224,6 +224,7 @@ check_wrong_arity :-
 
 wrong_arity_goal(adjectives:a(_)).
 wrong_arity_goal(adjectives:a(_,_)).
+wrong_arity_goal(adjectives:a(_,_,_)).
 wrong_arity_goal(adjectives:a(_,_,_,_,_)).
 
 wrong_arity_goal(adverbs:adverb(_,_)).

@@ -2176,7 +2176,7 @@ a([e(actieve),
    pp(in)],[]).
 
 a([e(activistische),
-   no_e(activistisch)],adv,[]).
+   no_e(activistisch)],adv,[],[]).
 
 a([e(actuele),
    er(actueler),
@@ -29596,6 +29596,8 @@ a([both(premium)],adv,[],[]).
 a([e(prenatale),
    no_e(prenataal)],adv,
   [],[]).
+
+a([prefix(prepaid)],nonadv,[],[]).
 
 a([e(presente),
    e(prezente),

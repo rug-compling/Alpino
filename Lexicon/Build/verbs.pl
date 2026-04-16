@@ -5604,6 +5604,7 @@ v(decreteer,decreteert,decreteren,gedecreteerd,decreteerde,decreteerden,
 v(deel,deelt,delen,gedeeld,deelde,deelden,
     [h([intransitive,
 	transitive,
+	sbar,  % we deelden dat ... (typisch voor social media)
 	np_pc_pp(door),
 	np_pc_pp(in),
 	np_pc_pp(met),
@@ -11534,6 +11535,7 @@ v(klink,klinkt,klinken,geklonken,klonk,klonken,
       part_ld_pp(door),
       part_transitive(door),
       part_intransitive(na),
+      fixed([sbar_subj_no_het,als_pred],no_passive), % toen klonk als verklaring dat ...
       pc_pp(op),		     % daar moet op geklonken worden
       part_transitive(vast),	     % spijkeren
       part_np_ld_pp(vast),	     % ,,
@@ -24523,6 +24525,9 @@ v(valideer,valideert,valideren,gevalideerd,valideerde,valideerden,
     [h([transitive,
 	intransitive])]).
 
+v(vape,vapet,vapen,gevapet,vapete,vapeten,
+    [h([intransitive])]).
+
 v(varieer,varieert,variëren,gevarieerd,varieerde,varieerden,
     [h([transitive,
 	pc_pp(op)]),
@@ -28616,12 +28621,12 @@ v(wijd,wijdt,wijden,gewijd,wijdde,wijdden,
 	part_np_pc_pp(toe,aan)])]).
 
 v(wijk,wijkt,wijken,geweken,week,weken,
-    [z([intransitive,
-	part_intransitive(af),
+    [b([part_intransitive(af),
+	part_pc_pp(af,van)]),
+     z([intransitive,
 	part_intransitive(terug),
 	part_intransitive(uit),
 	pc_pp(voor),
-	part_pc_pp(af,van),
 	part_ld_pp(uit)])]).
 
 v(wijs,wijst,wijzen,gewezen,wees,wezen,
