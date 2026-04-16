@@ -236,6 +236,7 @@ wrong_arity_goal(numbers:number(_,_,_,_,_)).
 
 wrong_arity_goal(nouns:n(_)).
 wrong_arity_goal(nouns:n(_,_)).
+wrong_arity_goal(nouns:n(_,_,_)).
 wrong_arity_goal(nouns:n(_,_,_,_,_)).
 
 wrong_arity_goal(verbs:v(_)).
