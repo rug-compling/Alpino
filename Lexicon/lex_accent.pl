@@ -1075,6 +1075,8 @@ accent(patientenservice,patiëntenservice).
 accent(patientenzorg,patiëntenzorg).
 accent(patiente,patiënte).
 accent(patientes,patiëntes).
+accent(patientgegeven,patiëntgegeven).
+accent(patientgegevens,patiëntgegevens).
 accent(patientjaar,patiëntjaar).
 accent(patientjaartje,patiëntjaartje).
 accent(patientjaartjes,patiëntjaartjes).
