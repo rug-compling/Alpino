@@ -127,6 +127,10 @@ surviving_root(toedoen).          % Door het toedoen van; door toedoen der
 
 surviving_root('meer dan').
 
+%% because otherwise replace_dehet kicks in, and wins
+surviving_root('op de been').
+
+
 %surviving_root(_):-
 %    fail.
 
