@@ -1789,7 +1789,9 @@ n([sg(accordeon),pl(accordeons)],both,[],[]).
 
 n([sg(accordeonist),pl(accordeonisten)],de,[],[]).
 
-n([sg(account),pl(accounts)],both,[],[nep]).
+n([sg(account),pl(accounts)],both,[],
+  [h('Instagram'),
+   nep]).
 
 n([pl(accountants),sg(accountant)],de,[],[]).
 
@@ -7493,7 +7495,8 @@ n([pl(chefs),sg(chef)],de,[app_measure],[]).
 n([sg('chef-staf')],de,[],[]).
 
 n([pl(chefs),sg(chef)],de,[],
-  [kabinet, s(kabinet),
+  [i('EU_buitenland','EU-buitenland'),
+   kabinet, s(kabinet),
    leger,
    h('NAVO'),
    h('VN'),
@@ -8575,6 +8578,7 @@ n([pl(couranten),sg(courant)],de,[],[]).
 
 n([sg(coureur),pl(coureurs)],de,[],
   [auto,
+   wh(['Red','Bull']),
    wh(['Formule','1']),
    motor]).
 
@@ -12406,7 +12410,8 @@ n([pl(fraudes),sg(fraude)],de,[],
    s(bijstand),
    boekhoud,
    bouw,
-   stem
+   stem,
+   s(verkiezing)
   ]).
 
 n([sg(fraudeur),pl(fraudeurs)],de,[],[]).
@@ -15204,6 +15209,8 @@ n([mass(hbs)],both,[],[]).
 
 n([mass(heao)],both,[],[]).
 
+n([sg(headliner),pl(headliners)],de,[],[]).
+
 n([sg(heat),pl(heats)],de,[],[]).
 
 n([mass(hebzucht)],de,[],[]).
@@ -16977,7 +16984,8 @@ n([mass(instabiliteit)],de,[],[]).
 n([sg(installateur),pl(installateurs)],de,[],[]).
 
 n([pl(installaties),sg(installatie)],de,[],
-  [gas,
+  [h(energie),
+   gas,
    geluid,
    muziek]).
 
@@ -17963,6 +17971,7 @@ n([pl(kampen),sg(kamp)],het,[],
    opvang,
    straf,
    i(tent,tenten),
+   s(schrijver),
    s(training),
    s(vernietiging),
    i(vluchteling,vluchtelingen),
@@ -22600,7 +22609,8 @@ n([pl(medewerkers),sg(medewerker)],de,[app_measure],
    i(land,landen),
    paleis,
    politie,
-   spoorweg]).
+   spoorweg
+  ]).
 
 n([mass(medewerking)],de,[],[]).
 
@@ -27243,6 +27253,7 @@ n([pl(passen),sg(pas)],both,[],
   [betaal,
    dans,
    pin,
+   stem,
    uit,      % bridge; ook wellicht pasje om uit te gaan
    water,
    wissel,
@@ -36629,7 +36640,10 @@ n([sg(ti),pl('ti\'s')],de,[],[]).
 
 n([pl(tics),sg(tic)],de,[vp],[]).
 
-n([pl(tickets),sg(ticket)],both,[],[vlieg]).
+n([pl(tickets),sg(ticket)],both,[],
+  [h('EK'),
+   vlieg,
+   h('WK')]).
 
 n([sg(tiebreak),pl(tiebreaks),
    sg([tie,break]),pl([tie,breaks]),
@@ -40397,6 +40411,7 @@ n([mass(voetbal)],het,[],
    club,
    combinatie,
    counter,
+   degradatie,
    jeugd,
    paniek,
    prof,
@@ -40407,13 +40422,16 @@ n([mass(voetbal)],het,[],
   ]).
 
 n([pl(voetballers),sg(voetballer)],de,[],
-  [degradatie,
+  [h(oud),
    prof,
-   top]).
+   top
+  ]).
 
 n([pl(voetbalsters),sg(voetbalster)],de,[],
-  [prof,
-   top]).
+  [h(oud),
+   prof,
+   top
+  ]).
 
 n([mass(voetballerij)],de,[],[]).
 
