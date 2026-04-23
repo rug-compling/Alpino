@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="pp" end="2" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="ondanks" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="ondanks" vztype="init" word="Ondanks"/>
+        <node begin="1" end="2" getal="ev" id="4" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" word="is" wvorm="pv"/>
+      <node begin="3" cat="np" end="6" id="6" rel="su">
+        <node begin="3" end="4" id="7" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+        <node aform="base" begin="4" buiging="met-e" end="5" graad="basis" id="8" infl="e" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" vform="adj" word="nieuwe"/>
+        <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="9" lemma="model" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="model" word="model"/>
+      </node>
+      <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="10" infl="no_e" lemma="succesvol" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="succesvol" vform="adj" word="succesvol"/>
+    </node>
+  </node>
+  <sentence>Ondanks dat is het nieuwe model succesvol</sentence>
+</alpino_ds>

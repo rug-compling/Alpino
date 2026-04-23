@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="8" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" sc="root" word="Maar"/>
+      <node begin="1" cat="smain" end="8" id="3" rel="nucl">
+        <node begin="3" end="4" id="4" infl="sg" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" sc="aux_psp_hebben" tense="past" word="had" wvorm="pv"/>
+        <node begin="4" case="nom" def="def" end="5" gen="de" getal="ev" id="5" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+        <node begin="1" cat="ppart" end="8" id="6" rel="vc">
+          <node begin="1" cat="pp" end="3" id="7" rel="mod">
+            <node begin="1" end="2" id="8" lemma="zonder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="zonder" vztype="init" word="zonder"/>
+            <node begin="2" end="3" getal="ev" id="9" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+          </node>
+          <node begin="4" end="5" id="10" index="1" rel="su"/>
+          <node begin="5" case="both" def="def" end="6" gen="de" getal="getal" id="11" lemma="je" naamval="obl" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,red,2v,getal)" pt="vnw" rel="obj1" root="je" special="wkpro" status="red" vwtype="pr" wh="nwh" word="je"/>
+          <node begin="6" end="7" id="12" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="7" buiging="zonder" end="8" id="13" infl="psp" lemma="helpen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="help" sc="transitive_ndev" word="geholpen" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Maar zonder dat had ik je niet geholpen</sentence>
+</alpino_ds>
