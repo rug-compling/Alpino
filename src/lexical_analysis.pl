@@ -227,10 +227,10 @@ lexical_analysisXXX(Input) :-
 			     EraseTags,ErasedTags),
 	restore_alternatives_to_unknown(ErasedTags,MaxPos,UnbracketedInput),
 	count_edges(tag(_,_,_,_,_,_,_,_),VEdges),
-	(	VEdges < Edges
-	->	time(2,filter_tags(Filter))
-	;	true
-	),
+%	(	VEdges < Edges
+%	->	time(2,filter_tags(Filter))
+%	;	true
+%	),
 	count_edges(tag(_,_,_,_,_,_,_,_),VVEdges),
 	time(Debug,check_connected(Input,P,ErasedTags,Filter)),
 	
