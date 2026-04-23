@@ -32800,6 +32800,8 @@ a([e(stramme),
    st(stramst),
    ste(stramste)],adv,[],[]).
 
+a([both(strapless)],nonadv,[],[]).
+
 a([e(strategische),
    no_e(strategisch)],adv,[],[]).
 

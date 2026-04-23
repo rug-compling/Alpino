@@ -1186,7 +1186,6 @@ with_dt_all(broer,[jullie]).
 with_dt_all(broer,[mijn]).
 with_dt_all(broer,[u]).
 with_dt_all(broer,[zijn]).
-with_dt_all(buiten,[dat]).
 with_dt_all(buiten,[de]).
 with_dt_all(communie,[te]).
 with_dt_all(daaraan,[vooraf]).
@@ -1211,12 +1210,10 @@ with_dt_all(dan,[waarom]).
 with_dt_all(dan,[welaan]).
 with_dt_all(dat,[giet,het]).
 with_dt_all(dat,[het,kraak]).
-with_dt_all(dat,[ondanks]).
 with_dt_all(dat,[soort]).
 with_dt_all(dat,[type]).
 with_dt_all(dat,[van]).
 with_dt_all(dat,[van,veel]).
-with_dt_all(dat,[zonder]).
 with_dt_all(decennium,[dit,en,het,kom]).
 with_dt_all(decennium,[dit,en,het,volg]).
 with_dt_all(de,[de,dertig,en,tussen,twintig]).
@@ -2936,7 +2933,6 @@ with_dt_root(oma).
 with_dt_root(omgekeerd).
 with_dt_root(onbekend).
 with_dt_root(onbemind).
-with_dt_root(ondanks).
 with_dt_root(onder).
 with_dt_root(onderscheid).
 with_dt_root(onderweg).

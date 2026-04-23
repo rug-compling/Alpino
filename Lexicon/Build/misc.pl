@@ -3694,24 +3694,6 @@ with_dt([tot,Het,laatst,toe],
 			   hd=l(laatst,adjective(st(adv)),2,3)])
 	      ])) :- het(Het).
 
-with_dt([zonder,dat],
-	pp(zonder),
-	dt(pp,[hd=l(zonder,preposition(zonder,[]),0,1),
-	       obj1=l(dat,determiner(het,nwh,nmod,pro,nparg),np,1,2)
-	      ])).
-
-with_dt([buiten,dat],
-	pp(buiten),
-	dt(pp,[hd=l(buiten,preposition(buiten,[]),0,1),
-	       obj1=l(dat,determiner(het,nwh,nmod,pro,nparg),np,1,2)
-	      ])).
-
-with_dt([ondanks,dat],
-	pp(ondanks),
-	dt(pp,[hd=l(ondanks,preposition(ondanks,[]),0,1),
-	       obj1=l(dat,determiner(het,nwh,nmod,pro,nparg),np,1,2)
-	      ])).
-
 with_dt([niet,zonder,reden],
 	pp,
 	dt(pp,[mod=l(niet,adverb,advp,0,1),
