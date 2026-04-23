@@ -7370,6 +7370,7 @@ n([pl(centra),pl(centrums),sg(centrum)],het,
    crisis,
    cultuur,
    debat,
+   detentie,
    epi,
    expertise,
    s(gezondheid),
@@ -9845,7 +9846,8 @@ n([pl(divisies),pl(divisiën),sg(divisie)],de,[],[keuken]).
 
 n([pl('dj\'s'),sg(dj),
    sg(deejay),pl(deejays),
-   sg(diskjockey),pl(diskjockeys)],de,[],[]).
+   sg(diskjockey),pl(diskjockeys)],de,[],
+  [h(radio)]).
 
 n([mass([djeroek,poeroet])],both,[],[]).  % citroenbladeren
 
@@ -14945,6 +14947,7 @@ n([pl(handels),sg(handel)],de,[],
    koop,
    kunst,
    i(mens,mensen),
+   olie,
    optie,
    orgaan,
    ruil,
@@ -15735,7 +15738,8 @@ n([mass(hoest)],de,[],[]).
 n([pl(hoeven),sg(hoeve)],de,[],[]).
 
 n([pl(hoeveelheden),sg(hoeveelheid)],de,
-  [measure],[]).
+  [measure],
+  [record]).
 
 n([pl(hoeveelheden),sg(hoeveelheid)],de,[],
   [geld]).
@@ -26321,6 +26325,7 @@ n([pl(organen),sg(orgaan)],het,[],
   [advies,
    s(bestuur),
    s(geslacht),
+   opvang,
    s(overheid),
    overleg,h(overleg),
    pers,
@@ -29794,6 +29799,7 @@ n([pl(races),sg(race)],de,[measure,temp_mod,sbar,pred_pp(in)],
 n([pl(races),sg(race),
    ignore_stem(race)],de,[],
   [wh(['Formule','1']),
+   hoofd,
    inhaal,                     % races schorsing ???
    sprint
   ]).
@@ -29842,7 +29848,9 @@ n([sg(radon)],both,[],[]).
 
 n([pl(rafels),sg(rafel)],de,[],[dim(rafeltje)]).
 
-n([pl(raffinaderijen),sg(raffinaderij)],de,[],[]).
+n([pl(raffinaderijen),sg(raffinaderij)],de,
+  [],
+  [olie]).
 
 n([sg(raffinage)],de,[],[]).
 
@@ -34456,6 +34464,8 @@ n([pl(stallen),sg(stal)],de,[],
 
 n([sg(stalker),pl(stalkers)],de,[],[]).
 
+n([mass(stalking)],both,[],[]).
+
 n([pl(stalknechten),pl(stalknechts),sg(stalknecht)],de,[],[]).
 
 n([pl(stallingen),sg(stalling)],de,[],
@@ -36935,6 +36945,7 @@ n([pl(toernooien),sg(toernooi),
    'Europa-Cup',
    h('Grand-Slam'),'Grand-Slam',grandslam,'grand-slam',
    wh(['Grand','Slam']),
+   gravel,
    hoofd,
    korfbal,
    kwalificatie,
