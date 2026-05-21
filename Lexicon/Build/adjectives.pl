@@ -822,6 +822,9 @@ a([e('Kenyaanse'),
    e('Keniaanse'),
    no_e('Keniaans')],nonadv,[],[]).
 
+a([e('Kaapverdische'),
+   no_e('Kaapverdisch')],nonadv,[],[]).
+
 a([e('Koerdische'),
    no_e('Koerdisch'),
    e('Kurdische'),
@@ -901,6 +904,7 @@ a([e('Nederlandse'),
    hh('Brits'),
    hh('Duits'),
    hh('Frans'),
+   hh('Turks'),
    hh('Vlaams'),hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
@@ -1019,7 +1023,8 @@ a([e('Pakistaanse'),
    hh('West')]).
 
 a([e('Palestijnse'),
-   no_e('Palestijns')],nonadv,[],[h('Israëlisch')]).
+   no_e('Palestijns')],nonadv,[],[h('Israëlisch'),
+				  h(pro)]).
 
 a([e('Panamese'),
    no_e('Panamees')],nonadv,[],[]).
@@ -1078,16 +1083,19 @@ a([e('Romeinse'),
   ]).
 
 a([e('Rotterdamse'),
-   no_e('Rotterdams')],adv,[],[hh('Zuid'),
+   no_e('Rotterdams')],adv,[],
+  [hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
    hh('West')]).
 
 a([e('Russische'),
-   no_e('Russisch')],nonadv,[],[hh('Zuid'),
+   no_e('Russisch')],nonadv,[],
+  [hh('Zuid'),
    hh('Noord'),
    hh('Oost'),
-   hh('West')]).
+   hh('West'),
+   h(pro)]).
 
 a([e('Rwandese'),
    no_e('Rwandees'),
@@ -6925,9 +6933,7 @@ a([e(cognitieve),
    no_e(cognitief)],adv,[],[]).
 
 a([e(coherente),
-   e(koherente),
-   no_e(coherent),
-   no_e(koherent)],adv,[],[in]).
+   no_e(coherent)],adv,[],[in]).
 
 a([e(collectieve),
    er(collectiever),
@@ -20659,6 +20665,9 @@ a([e(koene),
    ste(koenste)],adv,[],[]).
 
 a([pred(koest)],nonadv,[],[]).
+
+a([end(kogelwerend),
+   ende(kogelwerende)],nonadv,[],[]).
 
 a([e(kokette),
    er(koketter),
@@ -40703,6 +40712,7 @@ name_adj('Noords').
 name_adj('Noors').
 name_adj('Oekraïens').
 name_adj('Oezbeeks').
+name_adj('Oirschots').
 name_adj('Oostends').
 name_adj('Oostenrijks').
 name_adj('Opwijks').
