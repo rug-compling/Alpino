@@ -1392,6 +1392,7 @@ accent(vergeldingsaktien,vergeldingsaktiën).
 accent(verifieren,verifiëren).
 accent(verkeerssituatien,verkeerssituatiën).
 accent(vetoen,vetoën).
+accent('Videoland-serien','Videoland-seriën').
 accent(vliegtuigindustrieen,vliegtuigindustrieën).
 accent(voedingsindustrieen,voedingsindustrieën).
 accent(voetbalcarrieres,voetbalcarrières).

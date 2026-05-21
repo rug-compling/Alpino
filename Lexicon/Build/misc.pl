@@ -4943,6 +4943,9 @@ m(sprint,           postn_adverb,sprint).
 m(weltergewicht,    postn_adverb,weltergewicht).
 m(zwaargewicht,     postn_adverb,zwaargewicht).
 
+m('ad interim',     postn_adverb,[ad,interim]).
+m('in spe',         postn_adverb,[in,spe]).
+
 with_dt([alleen,al],
 	postp_adverb,
 	dt(advp,[hd=l(alleen,adverb,advp,0,1),
@@ -5047,9 +5050,7 @@ m('k.k.',           postnp_adverb,'k.k.').
 m('en suite',       postnp_adverb,[en,suite]).  % kamer e.d.
 m('en suites',      postnp_adverb,[en,suites]). % kamers e.d.
 
-m('ad interim',     postnp_adverb,[ad,interim]).
 m('ad valorem',     postnp_adverb,[ad,valorem]).
-m('in spe',         postnp_adverb,[in,spe]).
 
 m('at large',       postnp_adverb,[at,large]).
 m('par excellence', postnp_adverb,[par,excellence]).
@@ -7531,6 +7532,34 @@ with_dt([zowel,Oud,als,Jong],
 		 cnj=l(Oud,adjective(no_e(adv)),ap,1,2),
 		 crd=l(als,right_conj(als),vg,2,3),
 		 cnj=l(Jong,adjective(no_e(adv)),ap,3,4)])) :-
+    jong_en_oud(Jong,Oud).
+
+with_dt([van,Oud,tot,Jong],
+	pronoun(nwh,thi,both,de,both,indef,strpro),
+	dt(du,[dp=dt(pp,[hd=l(van,preposition(van,[]),0,1),
+			 obj1=l(Oud,adjective(no_e(adv)),ap,1,2)
+			]
+		    ),
+	       dp=dt(pp,[hd=l(tot,preposition(tot,[]),2,3),
+			 obj1=l(Jong,adjective(no_e(adv)),ap,3,4)
+			]
+		    )
+	      ]
+	  )) :-
+    jong_en_oud(Jong,Oud).
+
+with_dt([van,Jong,tot,Oud],
+	pronoun(nwh,thi,both,de,both,indef,strpro),
+	dt(du,[dp=dt(pp,[hd=l(van,preposition(van,[]),0,1),
+			 obj1=l(Jong,adjective(no_e(adv)),ap,1,2)
+			]
+		    ),
+	       dp=dt(pp,[hd=l(tot,preposition(tot,[]),2,3),
+			 obj1=l(Oud,adjective(no_e(adv)),ap,3,4)
+			]
+		    )
+	      ]
+	  )) :-
     jong_en_oud(Jong,Oud).
 
 jong_en_oud(echt,onecht).

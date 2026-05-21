@@ -18487,6 +18487,7 @@ v(red,redt,redden,gered,redde,redden,
     [h([np_np,
 	intransitive,
 	refl,
+	np_mod_pp(met),  % daar kunnen we het mee redden
         np_pc_pp(van), % iemand redden van de ondergang
 	transitive,
 	np_ld_pp])]).

@@ -13259,7 +13259,10 @@ n([pl(gelijkheden),sg(gelijkheid)],de,[],
 
 n([pl(gelijkmakers),sg(gelijkmaker)],de,[],[]).
 
-n([pl([gelijke,spelen]),sg(gelijkspel)],het,[],
+n([stem(gelijkspel),
+   pl([gelijke,spelen])],het,[],[]).
+
+n([sg(gelijkspel),pl(gelijkspelen)],het,[],
   [i('0_0','0-0-'),
    i('1_1','1-1-'),
    i('2_2','2-2-'),
@@ -36260,7 +36263,7 @@ n([pl(tegoeden),sg(tegoed)],het,[],
   [bel,
    spaar]).
 
-n([pl(tehuizen),sg(tehuis)],het,[],
+n([pl(tehuizen),sg(tehuis)],het,[np_app_measure],
   [i(kind,kinder),
    s(verzorging)
   ]).

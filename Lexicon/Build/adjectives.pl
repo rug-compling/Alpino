@@ -1898,7 +1898,7 @@ a([e(aansprakelijke),
    pp(voor)],[]).
 
 a([e(aanspreekbare),
-   no_e(aanspreekbaar)],nonadv,[],[]).
+   no_e(aanspreekbaar)],padv,[],[]).
 
 a([ende(aanstaande),
    no_e(aanstaand)],nonadv,[],[]).
@@ -30455,7 +30455,7 @@ a([e(relaxte),
    ere(relaxtere),
    no_e(relaxed),
    e(relaxe),
-   no_e(relax)],both,[],[]).
+   no_e(relax)],both,[],[a]).
 
 a([e(relevante),
    er(relevanter),
