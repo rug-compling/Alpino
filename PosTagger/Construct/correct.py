@@ -97,7 +97,13 @@ def main():
         if r == "moorden" and t == "adjective(end(adv))":
             t = "adjective(end(both))"
         if r == "solo" and t == "adverb":
-            t = " adjective(both(adv))"
+            t = "adjective(both(adv))"
+        if r == "aanspreekbaar" and t == "adjective(no_e(nonadv))":
+            t = "adjective(no_e(padv))"
+        if r == "ad interim" and t == "postnp_adverb":
+            t = "postn_adverb"
+        if r == "in spe" and t == "postnp_adverb":
+            t = "postn_adverb"
         if r == "meermaals" and t == "adverb":
             t = "tmp_adverb"
         if r == "onversneden" and t == "adjective(ge_both(nonadv))":
