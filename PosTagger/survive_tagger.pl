@@ -31,6 +31,11 @@ survives(tag(_,_,_,_,W,_,_,T)) :-
 survives(tag(_,_,_,_,_,W,_,T)) :-
     surviving_word_tag(W,T).
 
+survives(tag(_,_,R1,R2,_,Word,_,Tag)) :-
+    survives_context(Word,Tag,Left,Right),
+    alpino_lexical_analysis:tag(_,_,_,R1,_,Left,_,_),
+    alpino_lexical_analysis:tag(_,_,R2,_,_,Right,_,_).
+
 survives(tag(_,_,_,R1,Root1,Word1,_,Tag1)) :-
     survives_trigram(Root1,Word1,Tag1,Root2,Word2,Tag2,Root3,Word3,Tag3),
     alpino_lexical_analysis:tag(_,_,R1,R2,Root2,Word2,_,Tag2),
@@ -213,3 +218,4 @@ finite(modal_inv).
 finite(past(_)).
 finite(subjunctive).
 
+survives_context(haar,pronoun(nwh,thi,sg,de,dat_acc,def),bij,borstkanker).

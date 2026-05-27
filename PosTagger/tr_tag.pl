@@ -23,10 +23,12 @@ t(verb(_,B0,C0),            verb(B,C)) :-
     ->  B  = inf_pl
 %    ;   B0 = imp(_)  % tmp
 %    ->  B  = imp     % tmp
+    ;   B0 = past(pl)
+    ->  B = inf_pl
     ;   B0 = past(Agr)
     ->  B  = Agr
     ;   B0 = both(pl)
-    ->  B  = pl
+    ->  B  = inf_pl
     ;   B0 = pl
     ->  B  = inf_pl
     ;   B0 = inf
