@@ -1048,10 +1048,11 @@ generate_compare_st1(Ref,Max,Lf,Len,Generator):-
 %%%% MAIN + OPTIONS %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 
+%hdrug_main :-
+%    catch(hdrug_main0,P,print_message(error,P)).
+%
+%hdrug_main0 :-
 hdrug_main :-
-    catch(hdrug_main0,P,print_message(error,P)).
-
-hdrug_main0 :-
     options,
     debug_message(3,"finished option processing~n",[]),
     start_interface_or_batch.

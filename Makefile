@@ -29,8 +29,10 @@ quick:
 	$(MAKE) -C src
 
 rebuild:
-	( cd Lexicon/Build; $(MAKE) ; $(MAKE) install )
-	( cd Names/Build; $(MAKE) ; $(MAKE) install )
+	$(MAKE) -C Lexicon/Build
+	$(MAKE) -C Lexicon/Build install
+	$(MAKE) -C Names/Build
+	$(MAKE) -C Names/Build install
 	$(MAKE) quick
 
 treebank:

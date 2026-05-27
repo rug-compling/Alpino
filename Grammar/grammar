@@ -1,5 +1,9 @@
 %%           -*-Mode: prolog;-*- 
 
+user:message_hook(error,_,Lines) :-
+    print_message_lines(user_error,error,Lines),
+    halt(-1).
+
 %% inherit feature library
 :- use_module(hdrug(hdrug_feature)).
 

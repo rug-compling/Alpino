@@ -6,6 +6,10 @@
 :- use_module(alpino('src/utils')).
 :- use_module(add_compounds).
 
+user:message_hook(error,_,Lines) :-
+    print_message_lines(user_error,error,Lines),
+    halt(-1).
+
 :- use_module(adjectives:adjectives).
 :- use_module(verbs:verbs).
 :- use_module(nouns:nouns).
