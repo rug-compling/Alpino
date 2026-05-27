@@ -8,7 +8,7 @@ APPL_DIRS= Applications/Ale Applications/Alvey Applications/CBCG\
 
 all: create install
 
-create: hdrug state apps
+create: hdrug state
 
 state:
 	( cd Prolog ; $(MAKE) hdrug.sav HDRUGDIR=$(HDRUGDIR) )
