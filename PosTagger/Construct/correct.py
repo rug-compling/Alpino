@@ -98,6 +98,8 @@ def main():
             t = "adjective(end(both))"
         if r == "solo" and t == "adverb":
             t = "adjective(both(adv))"
+        if r == "heel wat" and t == "pronoun(nwh,thi,sg,het,both,indef,strpro)":
+            t = "pronoun(nwh,thi,both,het,both,indef,strpro)"
         if r == "aanspreekbaar" and t == "adjective(no_e(nonadv))":
             t = "adjective(no_e(padv))"
         if r == "ad interim" and t == "postnp_adverb":
