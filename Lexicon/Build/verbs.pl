@@ -13398,6 +13398,7 @@ v(leg,legt,leggen,gelegd,legde,legden,
 	part_transitive(af),
 	part_transitive(bij),
 	part_transitive(bloot),
+	part_sbar(bloot),
         part_transitive(droog),
 	part_transitive(in),
 	part_transitive(klaar),
@@ -15811,7 +15812,8 @@ v(onderbelicht,onderbelicht,onderbelichten,onderbelicht,onderbelichtte,onderbeli
     [h([transitive])]).
 
 v(onderbouw,onderbouwt,onderbouwen,onderbouwd,onderbouwde,onderbouwden,
-    [h([sbar_subj_np,
+    [h([sbar,
+	sbar_subj_np,
 	transitive])]).
 
 v(onderbreek,onderbreekt,onderbreken,onderbroken,onderbrak,onderbraken,

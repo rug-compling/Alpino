@@ -8411,7 +8411,7 @@ with_dt([heel,wat],
 %% heel wat van de genodigden trok(ken) de beurs...
 %% er speelt zich heel wat af dat beter verborgen blijft
 with_dt([heel,wat],
-        pronoun(nwh,thi,sg,het,both,indef,strpro),
+        pronoun(nwh,thi,both,het,both,indef,strpro),
         dt(np,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg,ntopicpro),1,2),
                  mod=l(heel,intensifier,advp,0,1)])).
 

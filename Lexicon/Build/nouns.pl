@@ -4049,6 +4049,7 @@ n([pl(bedrijven),sg(bedrijf)],het,[],
    bus,
    caravan,
    chemie,
+   chip,
    computer,
    container,
    i(container_overslag,containeroverslag),
@@ -7336,6 +7337,7 @@ n([mass(censuur)],de,[],
 
 n([sg(center),pl(centers)],both,[],
   [data,
+   i('AI_data','AI-data'),
    f([shared,service,center])]).
 
 n([meas(cent),
@@ -8364,7 +8366,9 @@ n([pl(constituties),sg(constitutie)],de,[],[]).
 n([sg(constructeur),pl(constructeurs)],de,[],[]).
 
 n([pl(constructies),sg(constructie)],de,[],
-  [s(bescherming)]).
+  [s(bescherming),
+   tent
+  ]).
 
 n([pl(consuls),sg(consul)],de,[],[]).
 
@@ -11763,6 +11767,7 @@ n([stem(fase),pl(fasen),pl(fases),sg(fase),
    eind,
    s(groep),
    s(ontwikkeling),
+   s(opening),
    s(overgang),
    slot]).
 
@@ -12130,6 +12135,8 @@ n([pl(flitsen),sg(flits)],de,[],
 n([sg(flop),pl(floppen)],de,[],[]).
 
 n([pl('flora\'s'),sg(flora)],de,[],[]).
+
+n([sg(flotilla)],de,[],[]).
 
 n([pl(flottieljes),sg(flottielje)],both,[],[]).  % de
 
@@ -13659,6 +13666,7 @@ n([pl(gesprekken),sg(gesprek)],het,[pred_pp(in)],
 n([pl(gesprekken),sg(gesprek)],het,[],
   [s(functionering),
    intake,
+   pers,
    sollicitatie,
    telefoon,
    twee,
@@ -14626,6 +14634,7 @@ n([pl(groepen),sg(groep)],de,[app_measure,np_app_measure],
    s(leeftijd),
    lobby,
    i(mens_recht,mensenrechten), % en niet mens_recht_eng_roe_pen
+   i(meid,meiden),
    midden,
    muziek,
    nieuws,
@@ -15294,7 +15303,8 @@ n([pl(hefbomen),sg(hefboom)],de,[],[]).
 
 n([pl(heffingen),sg(heffing)],de,
   [app_measure],  % de naheffing loonbeslasting
-  [na,
+  [invoer,
+   na,
    voor]).
 
 n([pl(heffingen),sg(heffing)],de,[],
@@ -29210,6 +29220,7 @@ n([pl(processen),sg(proces)],het,
    integratie,
    leer,
    s(leven),
+   h('Marengo'),
    s(onderhandeling),
    s(ontwikkeling),
    s(planning),
@@ -29498,7 +29509,10 @@ n([sg(protectoraat),pl(protectoraten)],het,[],[]).
 
 n([sg(protegé),pl(protegés)],de,[],[]).
 
-n([pl(protesten),sg(protest)],het,[],[i(anti_azc,'anti-azc-')]).
+n([pl(protesten),sg(protest)],het,[],
+  [i(anti_azc,'anti-azc-'),
+   asiel
+  ]).
 
 n([pl(protestanten),sg(protestant)],de,[],[]).
 
@@ -30321,6 +30335,7 @@ n([pl(records),sg(record)],both,
   [app_measure],
   [baan,
    club,
+   slot,
    wereld,
    i(wereld_uur,werelduur)]).
 
@@ -32081,7 +32096,9 @@ n([pl(scheidingen),sg(scheiding)],de,[],
   [flits,
    dim(scheidinkje)]).
 
-n([pl(scheidsrechters),sg(scheidsrechter)],de,[],[voetbal]).
+n([pl(scheidsrechters),sg(scheidsrechter)],de,[],
+  [video,
+   voetbal]).
 
 n([mass(scheikunde)],de,[],[]).
 
@@ -36769,6 +36786,7 @@ n([sg(tijd),pl(tijden)],de,
    s(halvering),
    incheck,
    ijs,
+   incubatie,
    i(kind,kinder),
    latentie,
    lever,
@@ -37016,6 +37034,7 @@ n([pl(toernooien),sg(toernooi),
   [['10.000',dollar],
    h('ATP'),
    beker,
+   club,
    'Davis-Cup',
    eind,
    'Europa-Cup',
@@ -37296,6 +37315,8 @@ n([pl(tranen),sg(traan)],de,[],[dim(traantje)]).
 n([sg(tracé),pl('tracé\'s')],het,[],[]).
 
 n([sg(track),pl(tracks)],de,[],[]).
+
+n([sg(tracker),pl(trackers)],de,[],[]).
 
 n([pl(tractaten),sg(tractaat)],het,[sbar,vp],[]).
 
@@ -38388,7 +38409,8 @@ n([pl(vakken),sg(vak)],het,[app_measure],
    dim(vakje)]).
 
 n([pl(vakken),sg(vak)],het,[],
-  [uit,
+  [demonstratie,
+   uit,
    zoek
    ]).
 
@@ -40342,7 +40364,8 @@ n([pl(vlokken),sg(vlok)],de,[measure],[dim(vlokje)]).
 n([pl(vloten),sg(vloot)],de,[measure],[dim(vlootje)]).
 
 n([pl(vloten),sg(vloot)],de,[],
-  [schaduw,
+  [hulp,
+   schaduw,
    dim(vlootje)]).
 
 n([pl(vlotten),sg(vlot)],het,[],[dim(vlotje)]).
