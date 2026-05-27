@@ -24,7 +24,7 @@ EXTRACXXFLAGS=
 endif
 
 PLS=maxent_feature_weights.pl maxent_feature_weights_d.pl maxent_feature_weights_p.pl maxent_feature_weights_c.pl maxent_feature_weights_x.pl maxent_feature_weights_w.pl maxent_feature_weights_i.pl maxent_feature_weights_u.pl maxent_feature_weights_e.pl maxent_feature_weights_l.pl maxent_feature_weights_q.pl
-POS=maxent_feature_weights.po
+POS=maxent_feature_weights.po stem_word_freq.po
 
 ifeq "$(PROLOG)" "sicstus"
 all: $(PRO_LM_LIB) $(PRO_LM_STATIC) $(PLS) $(POS) 
