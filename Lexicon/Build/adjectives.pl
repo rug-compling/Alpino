@@ -12074,7 +12074,7 @@ a([ge_e(gegeneraliseerde),
    ge_no_e(gegeneraliseerd)],adv,[],[]).
 
 a([ge_e(gegenereerde),
-   ge_no_e(gegenereerd)],adv,[],[]).
+   ge_no_e(gegenereerd)],adv,[],[h('AI')]).
 
 a([ge_e(gegeselde),
    ge_no_e(gegeseld)],adv,[],[]).
@@ -12545,6 +12545,9 @@ a([ge_e(gekarakteriseerde),
 
 a([ge_e(gekastreerde),
    ge_no_e(gekastreerd)],adv,[],[]).
+
+a([ge_e(gekatapulteerde),
+   ge_no_e(gekatapulteerd)],nonadv,[],[]).
 
 a([ge_e(gekauwde),
    ge_no_e(gekauwd)],adv,[],[]).
@@ -14452,7 +14455,7 @@ a([ge_e(gerekte),
    ge_no_e(gerekt)],adv,[],[]).
 
 a([ge_e(gerelateerde),
-   ge_no_e(gerelateerd)],adv,[],
+   ge_no_e(gerelateerd)],adv,[pp(aan)],
   [s(arbeid),
    armoede]).
 
@@ -16814,6 +16817,9 @@ a([ge_e(geïncasseerde),
 
 a([ge_e(geïnde),
    ge_no_e(geïnd)],adv,[],[]).
+
+a([ge_e(geïndexeerde),
+   ge_no_e(geïndexeerd)],adv,[],[]).
 
 a([ge_e(geïndiceerde),
    ge_no_e(geïndiceerd)],adv,[],[]).
@@ -29432,7 +29438,7 @@ a([e(populaire),
   [pp(bij)],[]).
 
 a([e(populistische),
-   no_e(populistisch)],adv,[],[]).
+   no_e(populistisch)],adv,[],[h(rechts)]).
 
 a([e(poreuze),
    no_e(poreus)],adv,[],[]).
@@ -36993,7 +36999,7 @@ a([ge_e(verspreide),
    ge_no_e(verspreid),
    st(verspreidst),
    ste(verspreidste)],both,
-  [pp(over)],[]).
+  [pp(over)],[wijd]).
 
 a([ge_both(versprongen)],adv,[],[]).
 
@@ -42087,6 +42093,7 @@ stem(geïmponeerd,v_root(imponeer,imponeren)).
 stem(geïmporteerd,v_root(importeer,importeren)).
 stem(geïmproviseerd,v_root(improviseer,improviseren)).
 stem(geïncasseerd,v_root(incasseer,incasseren)).
+stem(geïndexeerd,v_root(indexeer,indexeren)).
 stem(geïndiceerd,v_root(indiceer,indiceren)).
 stem(geïndividualiseerd,v_root(individualiseer,individualiseren)).
 stem(geïnduceerd,v_root(induceer,induceren)).
@@ -42136,6 +42143,7 @@ stem(gekapseisd,v_root(kapseis,kapseizen)).
 stem(gekapt,v_root(kap,kappen)).
 stem(gekarakteriseerd,v_root(karakteriseer,karakteriseren)).
 stem(gekastreerd,v_root(kastreer,kastreren)).
+stem(getapulteerd,v_root(katapulteer,katapulteren)).
 stem(gekauwd,v_root(kauw,kauwen)).
 stem(gekeeld,v_root(keel,kelen)).
 stem(gekeerd,v_root(keer,keren)).

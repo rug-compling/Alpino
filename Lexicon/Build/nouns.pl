@@ -2717,7 +2717,8 @@ n([pl(analitici),sg(analiticus)],de,[],[]).
 %% de analogie mens/aap
 n([pl(analogieën),sg(analogie)],de,[sbar,app_measure],[]).
 
-n([pl(analysen),pl(analyses),sg(analyse)],de,[sbar,subject_sbar],[]).
+n([pl(analysen),pl(analyses),sg(analyse)],de,[sbar,subject_sbar],
+  [risico]).
 
 n([pl(analysten),sg(analyst)],de,[],[]).
 
@@ -5212,7 +5213,9 @@ n([pl(bewijzen),sg(bewijs)],het,[],
    start,
    steun,
    s(toegang),
-   vaar]).
+   vaar,
+   s(vervoer)
+  ]).
 
 n([stem(bewijs_last),
    mass(bewijslast)],de,[sbar],[]).
@@ -6940,6 +6943,7 @@ n([pl(bussen),sg(bus)],de,[measure],
    bestel,
    s(dubbeldek),
    lijn,
+   school,
    s(stad),
    streek,
    trolley,
@@ -16298,6 +16302,7 @@ n([pl(hulpen),sg(hulp)],de,[],
    nood,
    s(ontwikkeling),
    s(recht),
+   slachtoffer,
    voedsel,
    dim(hulpje)]).
 
@@ -18122,6 +18127,7 @@ n([mass(kanker),pl(kankers)],de,[],
    long,
    i(lymfe_klier,lymfeklier),
    ovarium,
+   pancreas,
    prostaat]).
 
 n([sg(kannibaal),pl(kannibalen)],de,[],[]).
@@ -20951,7 +20957,8 @@ n([pl(leveranties),sg(leverantie)],de,[],
   [wapen]).
 
 n([pl(leveringen),sg(levering)],de,[],
-  [olie]).
+  [olie,
+   wapen]).
 
 n([mass(levertraan)],de,[],[]).
 
@@ -21990,6 +21997,7 @@ n([pl(maatschappijen),sg(maatschappij)],de,[],
    dochter,
    film,
    houdster,
+   s(huisvesting),
    informatie,
    s(investering),
    kabel,
@@ -25517,7 +25525,8 @@ n([mass(ongerief)],het,[],[]).
 n([mass(ongerustheid)],de,[],[]).
 
 n([pl(ongevallen),sg(ongeval)],het,[],
-  [s(verkeer),
+  [bus,
+   s(verkeer),
    dim(ongevalletje)]).
 
 n([pl(onhandigheden),sg(onhandigheid)],de,[vp],[]).
@@ -26781,7 +26790,8 @@ n([mass(oververhitting)],de,[],[]).
 
 n([mass(overvloed),pl(overvloeden),sg(overvloed)],de,[],[]).
 
-n([pl(overwegen),sg(overweg)],de,[],[]).
+n([pl(overwegen),sg(overweg)],de,[],
+  [spoor]).
 
 n([pl(overwegingen),sg(overweging)],de,
   [sbar,
@@ -28913,11 +28923,13 @@ n([pl(preparaten),sg(preparaat)],het,[],
 n([pl(presentaties),sg(presentatie)],de,[],[]).
 
 n([pl(presentatoren),sg(presentator)],de,[],
-  [h(tv),televisie,tv,f([tv]),i(tv,'TV-')
+  [radio,
+   h(tv),televisie,tv,f([tv]),i(tv,'TV-')
   ]).
 
 n([pl(presentatrices),sg(presentatrice)],de,[],
-  [h(tv),televisie,tv,f([tv]),i(tv,'TV-')]).
+  [radio,
+   h(tv),televisie,tv,f([tv]),i(tv,'TV-')]).
 
 n([sg(preses),sg(praeses)],de,[],
   [h(ex),
@@ -29160,6 +29172,7 @@ n([pl(problemen),sg(probleem)],het,[],
    s(personeel),
    relatie,
    taal,
+   s(veiligheid),
    s(verkeer)]).
 
 n([mass(probleemstelling)],de,[],[]).
@@ -32677,6 +32690,7 @@ n([pl(sectoren),pl(sectors),sg(sector),
    chip,
    cultuur,
    i(dagblad,dagbladen),
+   defensie,
    diamant,
    i(dienst,diensten),
    energie,
@@ -32996,7 +33010,8 @@ n([pl(sigarettepeuken),sg(sigarettepeuk)],de,[],[dim(sigarettepeukje)]).
 n([pl(signalen),sg(signaal)],het,[sbar,vp],[]).
 
 n([pl(signalen),sg(signaal)],het,[],
-  [eind,
+  [alarm,
+   eind,
    fluit]).
 
 n([pl(signalementen),sg(signalement)],het,[sbar],[]).
@@ -37405,6 +37420,7 @@ n([pl(tralies),pl(traliën),sg(tralie)],de,[],[]).
 
 n([pl(trammen),pl(trams),sg(tram)],de,[],
   [dim(trammetje),
+   kust,   % VL
    snel]).
 
 n([pl(tramhalten),pl(tramhaltes),sg(tramhalte)],de,[],[]).
@@ -38086,7 +38102,9 @@ n([sg(uitprint),pl(uitprinten)],de,[],[]).  % VL?
 
 n([mass(uitputting)],de,[],[]).
 
-n([pl(uitreikingen),sg(uitreiking)],de,[],[prijs]).
+n([pl(uitreikingen),sg(uitreiking)],de,[],
+  [h(diploma),
+   prijs]).
 
 n([sg(uitreis)],de,[],[]).
 
@@ -39397,7 +39415,8 @@ n([pl(vermeldingen),sg(vermelding)],de,
   [],
   [bron]).
 
-n([pl(vermengingen),sg(vermenging)],de,[],[]).
+n([pl(vermengingen),sg(vermenging)],de,[],
+  [i(belang,belangen)]).
 
 n([pl(vermenigvuldigingen),sg(vermenigvuldiging)],de,[],[]).
 
@@ -41894,7 +41913,8 @@ n([pl(weefselen),pl(weefsels),sg(weefsel)],het,[],
 n([pl(weegschalen),sg(weegschaal)],de,[],[]).
 
 n([sg(week),pl(weken)],de,[temp_mod,sbar,measure],
-  [les,
+  [finale,
+   les,
    s(handel),
    school,
    dim(weekje)]).

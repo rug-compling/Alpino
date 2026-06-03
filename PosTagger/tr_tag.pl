@@ -141,8 +141,10 @@ t(conj(_),                conj).
 t(proper_name(_,_),       proper_name).
 t(proper_name(_),         proper_name).
 
+/*
 % treat cleft 'dit/dat' as determiner/pronoun 'dit/dat'
 t(cleft_het_noun,determiner(het,nwh,nmod,pro,nparg)).
+*/
 
 % treat special 'het' as determiner/pronoun 'het'
 t(het_noun,determiner(het,nwh,nmod,pro,nparg,wkpro)).

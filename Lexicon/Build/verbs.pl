@@ -2647,6 +2647,7 @@ v(bemoei,bemoeit,bemoeien,bemoeid,bemoeide,bemoeiden,
 
 v(bemoeilijk,bemoeilijkt,bemoeilijken,bemoeilijkt,bemoeilijkte,bemoeilijkten,
   [h([transitive,
+      sbar_subj,  % het bemoeilijkt de gesprekken dat Israel de aanvallen intensiveert
       np_np])]).
 
 v(bemonster,bemonstert,bemonsteren,bemonsterd,bemonsterde,bemonsterden,
@@ -10524,6 +10525,11 @@ v(incorporeer,incorporeert,incorporeren,geïncorporeerd,incorporeerde,incorporee
     [h([transitive,
         np_ld_pp])]).
 
+v(indexeer,indexeert,indexeren,geïndexeerd,indexeerde,indexeerden,
+    [h([transitive,
+	intransitive
+       ])]).
+
 v(indiceer,indiceert,indiceren,geïndiceerd,indiceerde,indiceerden,
     [h([sbar,
 	transitive,
@@ -11015,6 +11021,10 @@ v(kat,kat,katten,gekat,katte,katten,
       np_pc_pp(af),
       part_transitive(om),
       intransitive])]).
+
+v(katapulteer,katapulteert,katapulteren,gekatapulteerd,katapulteerde,katapulteerden,
+    [h([transitive,
+	np_ld_pp])]).
 
 v(kauw,kauwt,kauwen,gekauwd,kauwde,kauwden,
     [h([intransitive,

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="2" infl="no_e" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vaak" vform="adj" word="Vaak"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="cleft" tense="present" word="zijn" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="4" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" special="cleft_het" status="vol" vwtype="aanw" word="dat"/>
+      <node begin="3" cat="np" end="8" id="5" rel="predc">
+        <node begin="3" end="4" gen="both" getal="mv" graad="basis" id="6" lemma="mens" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mens" word="mensen"/>
+        <node begin="4" cat="rel" end="8" id="7" rel="mod">
+          <node begin="4" case="no_obl" end="5" gen="de" getal="getal" id="8" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="4" cat="ssub" end="8" id="9" rel="body">
+            <node begin="4" end="5" id="10" index="1" rel="su"/>
+            <node begin="5" end="6" id="11" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="ook"/>
+            <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="12" infl="no_e" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="obj1" root="veel" vform="adj" vwtype="onbep" word="veel"/>
+            <node begin="7" end="8" id="13" infl="pl" lemma="drinken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="drink" sc="transitive" tense="present" word="drinken" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Vaak zijn dat mensen die ook veel drinken</sentence>
+</alpino_ds>
