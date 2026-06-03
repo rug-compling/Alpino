@@ -5825,7 +5825,7 @@ grammar_rule(q_a,M,[QL,A,QR]) :-
 grammar_rule(q_pp,M,[QL,A,QR]) :-
     quoted_structure(M,A,QL,QR),
     A => pp,
-    A:ld_pc => (ld_pp;pc_pp).  % otherwise use mod or predc rule
+    A:ld_pc => (ld_pp;pc_pp;adv_pc_pp).  % otherwise use mod or predc rule
 
 %%EX%% iets lekkers
 %%EX%% wat heel lekkers

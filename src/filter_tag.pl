@@ -575,6 +575,7 @@ valid_sc(np_refl_pc_pp(Prep),         [prep(Prep),check_refl]).
 valid_sc(refl_aan_pc_pp,              [prep(aan),check_refl]).
 valid_sc(mod_pp(Prep),                [prep(Prep)]).
 valid_sc(pc_pp(Prep),                 [prep(Prep)]).
+valid_sc(adv_pc_pp(Prep),                 [prep(Prep)]).
 valid_sc(er_pc_pp(Prep),              [er_prep(Prep)]).
 valid_sc(pc_pp_refl(Prep),            [prep(Prep),check_refl]).
 valid_sc(np_pc_pp_refl(Prep),         [prep(Prep),check_refl]).

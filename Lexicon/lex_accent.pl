@@ -336,6 +336,10 @@ accent(dramaserien,dramaseriën).
 accent(drieeenheid,drieëenheid).
 accent(drieen,drieën).
 accent(dynastieen,dynastieën).
+accent(ebolapatient,ebolapatiënt).
+accent(ebolapatiente,ebolapatiënte).
+accent(ebolapatienten,ebolapatiënten).
+accent(ebolapatientes,ebolapatiëntes).
 accent(echoen,echoën).
 accent(economieen,economieën).
 accent(een,één).

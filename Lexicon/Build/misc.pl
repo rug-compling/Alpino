@@ -3162,6 +3162,7 @@ with_dt([in,tegenstelling,tot,vroeger],
 %% *ik slaap op vanmiddag
 %% todo: perhaps this is general feature of prep's?
 m(aan,   preposition(aan,[],pc_adv),aan).
+m(bij,   preposition(bij,[],pc_adv),bij).  % dat past perfect bij [hoe jij bent]/[vandaag]
 m(met,   preposition(met,[],pc_adv),met).
 m(naar,  preposition(naar,[],pc_adv),naar).
 m(op,    preposition(op,[],pc_adv),op).
@@ -4541,6 +4542,9 @@ m(netzomin,         als_adjective(both(adv)),[net,zomin]).
 m(soortgelijk,      als_adjective(no_e(nonadv)),soortgelijk).
 m(soortgelijk,      als_adjective(e),soortgelijke).
 m(zelfde,           als_adjective(e),zelfde).
+m(zolang,           als_adjective(both(tmpadv)),zolang).   % De aanvallen gaan door zolang als nodig is
+m('voor zolang',    als_adjective(both(tmpadv)),[voor,zolang]).
+m(voorzolang,       als_adjective(both(tmpadv)),voorzolang).
 m(zomin,            als_adjective(both(adv)),zomin).
 m(zoveel,           als_adjective(no_e(odet_adv)),zoveel).
 m(voorzover,        als_adjective(pred(locadv)),voorzover).
@@ -7125,6 +7129,7 @@ m(diegene,      pronoun(nwh,thi,sg,de,both,def,strpro),diegene).
 m(diegene,      pronoun(nwh,thi,pl,de,both,def,strpro),diegenen).
 m(één,          pronoun(nwh,thi,sg,de,both,indef,strpro),een).  %% both => de
 m(één,          pronoun(nwh,thi,sg,de,both,indef,strpro),één).  %% both => de
+m('1',          pronoun(nwh,thi,sg,de,both,indef,strpro),'1').  %% both => de
 m(eenieder,     pronoun(nwh,thi,sg,de,both,def,strpro),[Een,ieder]) :- een(Een).
 m(eenieder,     pronoun(nwh,thi,sg,de,both,def,strpro),eenieder).
 m(één,          pronoun(nwh,thi,sg,de,both,indef,strpro),eentje).
@@ -8049,6 +8054,7 @@ nominalized_adjective_both(bespreken,besprokene,besprokenen).
 nominalized_adjective_both(betrekken,betrokkene,betrokkenen).
 nominalized_adjective_both(bezeten,bezetene,bezetenen).
 nominalized_adjective_both(bieden,gebodene,gebodenen).
+nominalized_adjective_both(dood,dode,doden).   % dode vaak in telegramstijl nieuwsberichten "Dode na woningbrand"
 nominalized_adjective_both(geboren,geborene,geborenen).
 nominalized_adjective_both(vallen,gevallene,gevallenen).
 nominalized_adjective_both(treffen,getroffene,getroffenen).
@@ -8224,7 +8230,6 @@ nominalized_adjective(dezelfde,dezelfden).
 nominalized_adjective(diezelfde,diezelfden).
 nominalized_adjective(dienstplichtig,dienstplichtigen).
 nominalized_adjective(dik,dikken).
-nominalized_adjective(dood,doden).
 nominalized_adjective(doof,doven).
 nominalized_adjective(doopsgezind,doopsgezinden).
 nominalized_adjective(doortrapt,doortrapten).

@@ -2406,6 +2406,7 @@ decap_only('Beste').
 decap_only('Bij').
 decap_only('Bijvoorbeeld').
 decap_only('Binnen').
+decap_only('Blijf').
 decap_only('Breng').
 decap_only('Daar').
 decap_only('Daarom').
@@ -2503,6 +2504,7 @@ decap_only('Wanneer').
 decap_only('Want').
 decap_only('Waren').
 decap_only('Wat').
+decap_only('Wees').
 decap_only('Welk').
 decap_only('Welke').
 decap_only('Wie').

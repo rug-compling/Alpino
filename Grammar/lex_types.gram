@@ -2767,7 +2767,7 @@ preposition_adv(Word,P,List) :-
     ADV:tmploc => ~tmp_n & ~meas_n & ~hoe_hoe & ~wk_er & ~str_er & ~postp,
     (   dif(Word,van),
         dif(Word,als),
-        P:ld_pc => pc_pp
+        P:ld_pc => (pc_pp;adv_pc_pp)
     
     ;   Word = van,   % een voorbeeld van hoe ..
                       %                   abstract
@@ -3408,6 +3408,12 @@ pp_ld_arg(PP,Prep) :-
 pp_pc_arg(PP,Prep) :-
     pp_arg(PP,Prep),
     PP:ld_pc => pc_pp,
+    PP:nnform => ~refl,
+    PP:haspart => no.
+
+pp_adv_pc_arg(PP,Prep) :-
+    pp_arg(PP,Prep),
+    PP:ld_pc => adv_pc_pp,
     PP:nnform => ~refl,
     PP:haspart => no.
 
@@ -4068,6 +4074,12 @@ pc_pp(Prep,V,C,C) :-
     main_v(V),
     V:passive => imp_passive,
     pp_pc_arg(PP,Prep), 
+    dependents(V,[pc/PP]).
+
+adv_pc_pp(Prep,V,C,C) :-
+    main_v(V),
+    V:passive => imp_passive,
+    pp_adv_pc_arg(PP,Prep), 
     dependents(V,[pc/PP]).
 
 er_pc_pp(Prep,V,C,C) :-

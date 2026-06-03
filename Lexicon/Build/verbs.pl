@@ -786,6 +786,7 @@ m(v_root(heb,hebben),
 	fixed([{[acc(tijd),pc(voor)]}],imp_passive),
 	fixed([acc(tijd),vp],imp_passive),
 	fixed([{[[een,broertje,dood],pc(aan)]}],no_passive),
+	fixed([[een,handje],pc(van)],no_passive),
 	fixed([er_pp(van,A),[een,handje],extra_vp(A)],no_passive),
 	fixed([{[[een,zwak],pc(voor)]}],no_passive),
         fixed([ap_pred(gemeenschappelijk),sbar],no_passive),
@@ -2697,6 +2698,7 @@ v(benodig,benodigt,benodigen,benodigd,benodigde,benodigden,
 
 v(benoem,benoemt,benoemen,benoemd,benoemde,benoemden,
     [h([transitive,
+	sbar, % daarnaast wordt benoemd dat ...
         als_pred_np,
 	np_pc_pp(tot)])]).
 
@@ -6042,6 +6044,7 @@ v(discussieer,discussieert,discussiëren,gediscussieerd,discussieerde,discussiee
     [h([intransitive,
 	mod_pp(met),
 	sbar,
+	er_pp_sbar(over),
 	pc_pp(over)])]).
 
 v(diskussieer,diskussieert,diskussiëren,gediskussieerd,diskussieerde,diskussieerden,
@@ -6631,6 +6634,7 @@ v(draai,draait,draaien,gedraaid,draaide,draaiden,
 	part_transitive(om),
 	part_transitive(open),
 	part_transitive(terug),
+	part_sbar(terug),   % we hebben teruggedraaid dat ...
         part_transitive(weg),
         part_np_ld_pp(weg),
 	part_np_ld_pp(af),
@@ -6942,6 +6946,7 @@ v(duid,duidt,duiden,geduid,duidde,duidden,
     [h([np_np,
 	intransitive,
 	transitive,
+	dip_sbar,
 	part_als_pred_np(aan),
 	part_np_np(aan),
 	part_np_vp_obj(aan),
@@ -9607,6 +9612,8 @@ v(help,helpt,helpen,geholpen,hielp,hielpen,
 	fixed([[om,zeep],acc],norm_passive),
 	fixed([ap_pred('op de been'),acc],norm_passive),
 	fixed([ap_pred('op weg'),acc],norm_passive),
+	fixed([[een,handje]],imp_passive),
+	fixed([[een,handje],acc],norm_passive),
 	part_np_pc_pp(af,van),
 	part_pc_pp(mee,aan),
 	part_pc_pp(mee,tegen),
@@ -11224,6 +11231,9 @@ v(kijk,kijkt,kijken,gekeken,keek,keken,
 	transitive,
 	ld_pp,
 	ld_dir,  % hij kijkt de weg af
+	adv_pc_pp(naar), % we kijken naar hoe we dat kunnen oplossen
+	part_adv_pc_pp(mee,naar),
+	part_adv_pc_pp(terug,naar),
 	np_ld_pp,		% haar in de ogen / hem in de rug
 	np_np_ld_pp,  % Ze keken je de kleren van het lijf .
 	mod_pp(bij),
@@ -14375,6 +14385,7 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	part_np_np(bekend),
 	part_so_pp_np(bekend),
 	part_np_mod_pp(bekend,over),
+	part_sbar(bekend),
         part_refl_vp(op),	% hij maakt zich op om...
 	part_refl_pc_pp(op,tot),  
 	part_refl_pc_pp(op,voor),  
@@ -14430,7 +14441,6 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	part_sbar_subj(uit),        % het maakt niet uit of je komt
         part_sbar_subj_np(uit),     % het maakt een groot verschil uit of ...
         part_sbar_subj_np_np(uit),  % wat maakt het mij uit of ...
-	part_sbar(bekend),
 	part_sbar(goed),
 	part_sbar(mee),
 	part_sbar_obj(mee),   % we maken het nog mee dat ..
@@ -27023,6 +27033,7 @@ v(verwijs,verwijst,verwijzen,verwezen,verwees,verwezen,
     [h([transitive,
 	pc_pp(naar),
 	er_pp_sbar(naar),
+	fixed([pc(naar),dip_sbar],no_passive),
 	np_pc_pp(naar),
 	part_transitive(door),
 	part_pc_pp(door,naar),

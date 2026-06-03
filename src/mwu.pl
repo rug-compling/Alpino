@@ -122,6 +122,7 @@ mwu_postag('As van het Kwaad',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep
 mwu_postag('as van het Kwaad',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[as,van,het,kwaad]).
 mwu_postag('As van het kwaad',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[as,van,het,kwaad]).
 mwu_postag('As van het kwaad\'-toespraak',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)'],[as,van,het,kwaad_toespraak]).
+mwu_postag('avond uit',['N(soort,ev,basis,zijd,stan)','VZ(fin)'],[avond,uit]).
 mwu_postag('avondje uit',['N(soort,ev,dim,onz,stan)','VZ(fin)'],[avond,uit]).
 mwu_postag('Baldakijn van Bernini',['N(soort,ev,basis,onz,stan)','VZ(init)','N(eigen,ev,basis,zijd,stan)'],[baldakijn,van,'Bernini']).
 mwu_postag('Basistakenpakket Jeugdgezondheidszorg',['N(soort,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)'],[basis_taak_pakket,jeugd_gezondheid_zorg]).
@@ -209,6 +210,7 @@ mwu_postag('dag in , dag uit',['N(soort,ev,basis,zijd,stan)','VZ(fin)','LET()','
 mwu_postag('Dag van de Geliefden',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[dag,van,de,geliefde]).
 mwu_postag('Dag van de Student',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[dag,van,de,student]).
 mwu_postag('Dag voor Internet-veiligheid',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)'],[dag,voor,internet_veiligheid]).
+mwu_postag('dag uit',['N(soort,ev,basis,zijd,stan)','VZ(fin)'],[dag,uit]).
 mwu_postag('dagje uit',['N(soort,ev,dim,onz,stan)','VZ(fin)'],[dag,uit]).
 mwu_postag('dank je wel',['WW(pv,tgw,ev)','VNW(pr,pron,obl,red,2v,getal)','BW()'],[danken,je,wel]).
 mwu_postag(dankzij,['N(soort,ev,basis,zijd,stan)','WW(pv,conj,ev)'],[dank,zijn]).
@@ -1259,6 +1261,7 @@ mwu_postag('voor lief',['VZ(init)','ADJ(vrij,basis,zonder)'],[voor,lief]).
 mwu_postag('voor ogen',['VZ(init)','N(soort,mv,basis)'],[voor,oog]).
 mwu_postag('voor en tegen',['N(soort,mv,basis)','VG(neven)','N(soort,mv,basis)'],[voor,en,tegen]).
 mwu_postag('voor wat betreft',['VZ(init)','VNW(vb,pron,stan,vol,3o,ev)','WW(pv,tgw,met-t)'],[voor,wat,betreffen]).
+mwu_postag('voor zolang',['VZ(init)','BW()'],[voor,zolang]).
 mwu_postag('voor zover',['VZ(init)','BW()'],[voor,zover]).
 mwu_postag('Voor zover',['VZ(init)','BW()'],[voor,zover]).
 mwu_postag('Vrede van Aken',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[vrede,van,'Aken']).

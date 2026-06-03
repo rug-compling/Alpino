@@ -352,6 +352,10 @@ next_word__(Autos,[Auto,'\'s'|Ws],Ws,wrong_quote_s,_) :-
     atom(Auto),
     atom_concat(Auto,'\'s',Autos).
 
+next_word__('\'t',['\'',t|Ws],Ws,wrong_quote_s,_).
+
+next_word__('\'t',['’',t|Ws],Ws,wrong_quote_s,_).
+
 next_word__(Autos,[Auto,'&apos;',s|Ws],Ws,xml_entity_s,_) :-
     atom(Auto),
     atom_concat(Auto,'\'s',Autos).
@@ -3201,7 +3205,6 @@ spelling_variant(ondekt,      ontdekt).
 spelling_variant(ondekken,    ontdekken).
 spelling_variant(ondekte,     ontdekte).
 spelling_variant(ondekten,    ontdekten).
-
 spelling_variant(onbreekt,    ontbreekt).
 spelling_variant(onbreken,    ontbreken).
 spelling_variant(onbrak,      ontbrak).
@@ -3257,9 +3260,8 @@ spelling_variant(onsymphatiek,onsympathiek).
 spelling_variant(onsymphatieke,onsympathieke).
 spelling_variant(onsymphathiek,onsympathiek).
 spelling_variant(onsymphathieke,onsympathieke).
-spelling_variant(tegehouden,tegenhouden).
-spelling_variant(tegenoverstelde,
-                              tegenovergestelde).
+spelling_variant(tegehouden,  tegenhouden).
+spelling_variant(tegenoverstelde,tegenovergestelde).
 spelling_variant(tjdens,      tijdens).
 spelling_variant(todat,       totdat).
 spelling_variant(toekomt,     toekomst).
@@ -3274,6 +3276,7 @@ spelling_variant(verrastte,   verraste).
 spelling_variant(verassing,   verrassing).
 spelling_variant(verloorloven,veroorloven).
 spelling_variant(verontwaardigt,verontwaardigd).
+spelling_variant(verrichte,   verrichtte).
 spelling_variant(verslaggvers,verslaggevers).
 spelling_variant(verwezelijk, verwezenlijk).
 spelling_variant(verwezelijkt,verwezenlijkt).

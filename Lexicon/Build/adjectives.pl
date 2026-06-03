@@ -280,9 +280,6 @@ a([prefix('kosten-baten'),
 a([prefix([lange,termijn]),
    prefix('lange-termijn')],nonadv,[],[]).
 
-a([prefix([last,minute]),
-   prefix('last-minute')],nonadv,[],[]).
-
 a([prefix('late-night'),
    prefix([late,night])],nonadv,[],[]).
 
@@ -12011,7 +12008,9 @@ a([ge_e(gefrustreerde),
    ge_no_e(gefrustreerd),
    st(gefrustreerdst),
    ste(gefrustreerdste)],padv,
-  [pp(door)],[]).
+  [pp(door),
+   object_sbar
+  ],[]).
 
 a([ge_no_e(gefunctioneerd),
    ge_e(gefunctioneerde)],adv,[],[]).
@@ -21322,7 +21321,7 @@ a([e(lastige),
 
 a([both([last,minute]),
    both('last-minute'),
-   both(lastminute)],nonadv,[],[]).
+   both(lastminute)],adv,[],[]).
 
 a([e(latente),
    er(latenter),

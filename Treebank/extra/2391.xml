@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="pp" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="Met"/>
+      <node begin="1" cat="np" end="7" id="3" rel="obj1">
+        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="video" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="video" word="video’s"/>
+        <node begin="2" cat="rel" end="7" id="5" rel="mod">
+          <node begin="2" case="no_obl" end="3" gen="de" getal="getal" id="6" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="2" cat="ssub" end="7" id="7" rel="body">
+            <node begin="2" end="3" id="8" index="1" rel="su"/>
+            <node begin="5" end="6" id="9" infl="pl" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" sc="passive" tense="present" word="worden" wvorm="pv"/>
+            <node begin="2" cat="ppart" end="7" id="10" rel="vc">
+              <node begin="2" end="3" id="11" index="1" rel="obj1"/>
+              <node begin="3" cat="np" end="5" id="12" rel="mod">
+                <node begin="3" end="4" gen="both" getal="mv" graad="basis" id="13" lemma="miljoen" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="miljoen" special="meas_mod" word="miljoenen"/>
+                <node begin="4" end="5" gen="de" getal="mv" graad="basis" id="14" lemma="keer" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="keer" special="tmp" word="keren"/>
+              </node>
+              <node begin="6" buiging="zonder" end="7" id="15" infl="psp" lemma="bekijken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bekijk" sc="transitive" word="bekeken" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Met video’s die miljoenen keren worden bekeken</sentence>
+</alpino_ds>

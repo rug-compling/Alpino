@@ -538,7 +538,7 @@ boolean_type(subn,[[sub_num,sub_indef_adj,sub_def_adj,sub_rang,
 
 boolean_type(modal_adv_arg,[[adv_adv,adv_prep,adv_noun,adv_verb,adv_comp]]).
 
-boolean_type(ld_pc,[[ld_pp,pc_pp,mod_pp,pred_pp,n_pp]]).
+boolean_type(ld_pc,[[ld_pp,pc_pp,adv_pc_pp,mod_pp,pred_pp,n_pp]]).
 
 boolean_type(hz,[[hebben,zijn,unacc]]).
 

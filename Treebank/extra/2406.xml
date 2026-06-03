@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="sv1" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" infl="sg" lemma="genieten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="geniet" sc="pc_pp(van)" tense="present" word="Geniet" wvorm="pv"/>
+      <node begin="1" cat="pp" end="5" id="3" rel="pc">
+        <node begin="1" end="2" id="4" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="2" cat="np" end="5" id="5" rel="obj1">
+          <node begin="2" buiging="zonder" end="3" getal="ev" id="6" infl="pron" lemma="je" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="je" status="red" vwtype="bez" word="je"/>
+          <node begin="3" cat="mwu" end="5" id="7" rel="hd">
+            <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lemma="avond" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="avond" word="avond"/>
+            <node begin="4" end="5" gen="de" id="9" lemma="uit" num="sg" pos="noun" postag="VZ(fin)" pt="vz" rel="mwp" root="uit" vztype="fin" word="uit"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Geniet van je avond uit .</sentence>
+</alpino_ds>
