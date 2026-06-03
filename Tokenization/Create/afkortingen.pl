@@ -8,6 +8,9 @@
 %%%         separated by a single space
 
 macro( words_afkortingen,
+       {
+	max,  % Max. is usually not an abbreviation
+	
        cap_words([
 		  %% these were in words_afkortingen_after before, but that led to too many sentence breaks
                   %% aug already was here anyway
@@ -37,7 +40,7 @@ macro( words_afkortingen,
    'Jak','Jansz','Jer','Jes',jg,'Joeg',jrg,
    kand,kapt,kath,kcal,'Kerkgem',kerkgem,kl,kol,'Kon',kr,kw,
    'Lat','Lc',lett,'Lev',lib,lidw,losbl,lt,ltd,'Luc','Luk','luit.kol',luth,
-   ma,mass,max,
+   ma,mass,
           'Matt','Matth',mbt,'Md',med,medew,meerv,mg,mgr,mhd,'Mich',mil,milj,'Miss',ml,mld,mln,
 	   mnd,mnl,mog,mrg,mrt,ms,mt,mtr,muz,mv,
    naamw,'niet-chr','niet-Chr','Nat.Lab',
@@ -59,7 +62,9 @@ macro( words_afkortingen,
                  vrijg,vrijw,vrz,vs,vt,vz,'vice-vz','fr.vz',
    wb,wd,wdb,wed,weled,werkw,werkz,wetensch,weth,wijkgem,wnd,wo,
    za,zach,zelfst,zg,zgn,zn,znw,zr,zw,'z.mv','z.nr'
-   ]) ).
+   ])
+
+       }).
 
 macro(words_titel,cap_words([bc,dhr,dipl,dr,ds,drs,ir,jhr,mgr,mrs,mw,mej,mevr,mr,hr,prof])).
 
