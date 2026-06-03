@@ -132,6 +132,20 @@ def main():
             t == "adjective(ge_no_e(padv),pp(over))"
         if t == "adjective(no_e(padv))" and r == "herkenbaar":
             t = "adjective(postn_no_e(padv))"
+        if t == "noun(de,count,sg)" and r == "1":
+            t = "pronoun(nwh,thi,sg,de,both,indef,strpro)"
+        if r == "last minute" and t == "adjective(prefix)":
+            t = "adjective(both(adv))"
+        if r == "last minute" and t == "adjective(both(nonadv))":
+            t = "adjective(both(adv))"
+        if r == "last-minute" and t == "adjective(prefix)":
+            t = "adjective(both(adv))"
+        if r == "last-minute" and t == "adjective(both(nonadv))":
+            t = "adjective(both(adv))"
+        if r == "lastminute" and t == "adjective(prefix)":
+            t = "adjective(both(adv))"
+        if r == "lastminute" and t == "adjective(both(nonadv))":
+            t = "adjective(both(adv))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 

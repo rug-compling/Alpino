@@ -68,6 +68,8 @@ survives(tag(_,_,_,R1,_,_,_,adjective(ge_both(_)))) :-
     R2 < R1,
     R1 - R2 < 6.
 
+survives_bigram(zolang,_,als_adjective(both(tmpadv)),als,_,comparative(als)).
+
 survives_bigram(dan,'Dan',tmp_adverb,eerst,eerst,postadv_adverb).
 
 %% because "naar voren" is also fixed_part, it is often filtered out
@@ -113,6 +115,8 @@ surviving_root('opzoek').
 surviving_root('algemeen het in').
 surviving_root('algemeen het over').
 surviving_root(kwijt). % temp
+surviving_root('voor zolang').  % temp
+surviving_root('avond uit').    % temp
 
 surviving_root('aantal een').
 surviving_root('aantal een groot').

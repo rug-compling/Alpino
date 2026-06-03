@@ -21,18 +21,16 @@ tr_tag(Tag,Tag).
 t(verb(_,B0,C0),            verb(B,C)) :-
     (   B0 = inf(no_e)
     ->  B  = inf_pl
-%    ;   B0 = imp(_)  % tmp
-%    ->  B  = imp     % tmp
     ;   B0 = past(pl)
-    ->  B = inf_pl
-    ;   B0 = past(Agr)
-    ->  B  = Agr
+    ->  B  = inf_pl
+    ;   B0 = past(sg)
+    ->  B  = sg
     ;   B0 = both(pl)
     ->  B  = inf_pl
-    ;   B0 = pl
-    ->  B  = inf_pl
     ;   B0 = inf
-    ->  B  = inf_pl
+    ->  B = inf_pl
+    ;   B0 = pl
+    ->  B = inf_pl
     ;   B0 = B
     ),
     t_subcat(C0,C).
