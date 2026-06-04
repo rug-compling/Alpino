@@ -6031,7 +6031,9 @@ n([sg(boks),pl(boksen)],de,[],[]).
 
 n([pl(boksers),sg(bokser)],de,[],[prof]).
 
-n([pl(bollen),sg(bol)],de,[measure],[dim(bolletje)]). % cocaine
+n([pl(bollen),sg(bol)],de,[measure],
+  [hagel,  % VL
+   dim(bolletje)]).		% cocaine
 
 n([pl(bolhoeden),sg(bolhoed)],de,[],[]).
 
@@ -36018,6 +36020,8 @@ n([pl(takes),sg(take)],de,[],[]).
 n([sg([take,over,panel]),pl([take,over,panels])],het,[],[]).
 
 n([sg(takel),pl(takels)],de,[],[]).
+
+n([mass(taks)],de,[],[]).
 
 n([mass(takt)],de,[],[]).
 

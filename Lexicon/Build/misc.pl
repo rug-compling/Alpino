@@ -505,6 +505,7 @@ punct('**',symbol).   % whatever
 punct('***',symbol).  % whatever
 punct('⇑',symbol).    % whatever
 punct('⇓',symbol).    % whatever
+punct('•',symbol).    % whatever
 
 punct(-,ligg_streep).
 punct('',ligg_streep).
@@ -4298,6 +4299,7 @@ m(Stem, etc, Surf):-
     etc(Surf),
     stem_from_surf(Surf,Stem).
 
+etc([en,co]).
 etc([cum,suis]).  % X cum suis --> kan als meervoud worden gebruikt
 etc(etcetera).
 etc(enzoverder).

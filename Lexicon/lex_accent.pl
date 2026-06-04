@@ -580,6 +580,8 @@ accent(geincasseerde,geïncasseerde).
 accent(geincasseerd,geïncasseerd).
 accent(geincorporeerd,geïncorporeerd).
 accent(geinde,geïnde).
+accent(geindexeerde,geïndexeerde).
+accent(geindexeerd,geïndexeerd).
 accent(geind,geïnd).
 accent(geindiceerde,geïndiceerde).
 accent(geindiceerd,geïndiceerd).

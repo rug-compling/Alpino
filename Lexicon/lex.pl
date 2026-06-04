@@ -1561,6 +1561,7 @@ non_adj_fixed(extra_sbar(_)).
 non_adj_fixed(extra_vp(_)).
 non_adj_fixed(vc(_,_,_)).
 non_adj_fixed(het_pobj1(vp)).
+non_adj_fixed(naar_sbar_subj_no_het).
 non_adj_fixed({L}) :-
     lists:member(El,L),
     non_adj_fixed(El).
