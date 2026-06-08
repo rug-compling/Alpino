@@ -3561,6 +3561,8 @@ p_n_part_pp(van,jongsaf,aan).
 p_n_part_pp(van,kindsaf,aan).
 p_n_part_pp(van,kleinsaf,aan).
 
+p_n_part_pp(van,nature,uit).
+
 p_n_part_pp(vanaf,jongs,af).
 p_n_part_pp(vanaf,kinds,af).
 p_n_part_pp(vanaf,kleins,af).
@@ -7102,6 +7104,7 @@ vandaar_ook(dus).
 vandaar_ook(misschien).
 vandaar_ook(natuurlijk).
 vandaar_ook(ook).
+vandaar_ook(trouwens).
 vandaar_ook(waarschijnlijk).
 vandaar_ook(wellicht).
 
@@ -8056,7 +8059,8 @@ nominalized_adjective_both(bespreken,besprokene,besprokenen).
 nominalized_adjective_both(betrekken,betrokkene,betrokkenen).
 nominalized_adjective_both(bezeten,bezetene,bezetenen).
 nominalized_adjective_both(bieden,gebodene,gebodenen).
-nominalized_adjective_both(dood,dode,doden).   % dode vaak in telegramstijl nieuwsberichten "Dode na woningbrand"
+nominalized_adjective_both(dood,dode,doden).   % vaak in telegramstijl nieuwsberichten "Dode na woningbrand"
+nominalized_adjective_both(gewond,gewonde,gewonden).  % vaak in telegramstijl nieuwsberichten "Gewonde na woningbrand"
 nominalized_adjective_both(geboren,geborene,geborenen).
 nominalized_adjective_both(vallen,gevallene,gevallenen).
 nominalized_adjective_both(treffen,getroffene,getroffenen).

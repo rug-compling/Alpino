@@ -1301,6 +1301,7 @@ accent(specificatien,specificatiën).
 accent(specifikatien,specifikatiën).
 accent(spraaktechnologieen,spraaktechnologieën).
 accent(staalindustrieen,staalindustrieën).
+accent(standaardsituatien,standaardsituatiën).
 accent(steeen,steeën).
 accent(stoicijnsere,stoïcijnsere).
 accent(stoicijnser,stoïcijnser).

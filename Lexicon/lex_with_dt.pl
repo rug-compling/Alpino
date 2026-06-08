@@ -2083,6 +2083,7 @@ with_dt_all(naar,[schatting]).
 with_dt_all(naar,[verwachting]).
 with_dt_all(nadele,[te,uwen]).
 with_dt_all(nadele,[te,zijnen]).
+with_dt_all(nature,[uit,van]).
 with_dt_all(nature,[van]).
 with_dt_all(natuurlijk,[niet]).
 with_dt_all(natuurlijk,[niet,overal]).
@@ -2255,6 +2256,7 @@ with_dt_all(tien,[zij]).
 with_dt_all(toch,[vanwaar]).
 with_dt_all(toch,[waarom]).
 with_dt_all(tot,[zo]).
+with_dt_all(trouwens,[vandaar]).
 with_dt_all(twaalf,[u]).
 with_dt_all(twaalf,[wij]).
 with_dt_all(twaalf,[zij]).
@@ -3049,6 +3051,7 @@ with_dt_root(toe).
 with_dt_root(toen).
 with_dt_root(tot).
 with_dt_root(totaal).
+with_dt_root(trouwens).
 with_dt_root(tussen).
 with_dt_root(twaalf).
 with_dt_root(twaalfhonderd).

@@ -540,6 +540,7 @@ m(v_root(heb,hebben),
 	np_aan_het,		       % ik heb de kinderen aan het rekenen
         
 	part_pc_pp(terug,van),         % daar heb ik niet van terug
+	part_transitive(vast),         % ik heb haar vast; omdat ik haar vastheb
 	part_pc_pp(weg,van),           % hij heeft iets/veel/wat weg van Piet
         part_fixed(weg,[er_pp(van),sbar_subj],no_passive),
         % het heeft er veel van weg dat ..
@@ -4042,7 +4043,9 @@ v(blèr,blèrt,blèren,geblèrd,blèrde,blèrden,
 	sbar])]).
 
 v(blesseer,blesseert,blesseren,geblesseerd,blesseerde,blesseerden,
-    [h([transitive])]).
+    [h([transitive,
+	refl   % VL als er zich iemand blesseert ...
+       ])]).
 
 v(blief,blieft,blieven,gebliefd,bliefde,bliefden,
     [h([transitive])]).
@@ -8221,6 +8224,8 @@ v(garneer,garneert,garneren,gegarneerd,garneerde,garneerden,
 v(gebaar,gebaart,gebaren,gebaard,gebaarde,gebaarden,
     [h([np_vp_obj,
 	sbar,
+	fixed([[van,kromme,haas]],imp_passive),     % VL
+	fixed([[van,krommen,haas]],imp_passive),    % VL
 	np_sbar,
 	intransitive,
 	vp])]).
@@ -13790,6 +13795,9 @@ v(lig,ligt,liggen,gelegen,lag,lagen,
 	fixed([vp_subj,svp_pp(in,rede)],no_passive),
 	fixed([sbar_subj_no_het,yt(svp_pp(in,rede))],no_passive),
 	fixed([vp_subj_no_het,yt(svp_pp(in,rede))],no_passive),
+
+	fixed([sbar_subj,[zwaar,op,de,maag],dat],no_passive),
+	
 %	fixed([sbar_subj,svp_pp(voor,hand)],no_passive),
 %	fixed([vp_subj,svp_pp(voor,hand)],no_passive),
 %	fixed([sbar_subj_no_het,yt(svp_pp(voor,hand))],no_passive),

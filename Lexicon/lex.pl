@@ -3184,6 +3184,7 @@ spelling_variant(mediteraan,    mediterraan).
 spelling_variant(mediterane,    mediterrane).
 spelling_variant(meerendeel,    merendeel).
 spelling_variant(meot,          moet).
+spelling_variant(meoten,        moeten).
 spelling_variant(milibar,       millibar).
 spelling_variant(miligram,      milligram).
 spelling_variant(mililiter,     milliliter).

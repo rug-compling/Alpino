@@ -21371,6 +21371,9 @@ a([e(lawaaiige),
    st(lawaaiigst),
    ste(lawaaiigste)],adv,[],[]).
 
+%% hij dronk zich lazarus
+a([pred(lazarus)],nonadv,[],[]).
+
 a([stof(lederen)],nonadv,[],[]).
 
 a([e(ledige),
@@ -38565,7 +38568,8 @@ a([e(vreemde),
 
 a([e(vreemde),
    no_e(vreemd)],adv,
-  [],[wild]).
+  [],[wild,
+      zone]).
 
 a([e(vreemdsoortige),
    er(vreemdsoortiger),
@@ -40142,6 +40146,8 @@ a([e(zinnelijke),
    no_e(zinnelijk),
    st(zinnelijkst),
    ste(zinnelijkste)],adv,[],[]).
+
+a([pred(zinnens)],padv,[object_vp],[]).
 
 a([e(zinnige),
    er(zinniger),
