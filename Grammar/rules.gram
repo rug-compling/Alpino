@@ -7449,7 +7449,8 @@ grammar_rule(pp_pp_adv,PP,[P,ADV]):-
 
 %%EX%% met Haider dronken
 grammar_rule(abs_p_predc,PP,[Met,NP,PRED]) :-
-    abs_p_np_predc_structure(Met,NP,PRED,PP).
+    abs_p_np_predc_structure(Met,NP,PRED,PP),
+    PRED:pcat => ~np_pred.
 
 %%EX%% met Haider uiteraard dronken
 grammar_rule(abs_p_mod_predc,PP,[Met,NP,MOD,PRED]) :-
@@ -7458,7 +7459,8 @@ grammar_rule(abs_p_mod_predc,PP,[Met,NP,MOD,PRED]) :-
     MOD:mcat => mcat_adv,
     PP0 => pp,
     hd_mod_structure(PP0,MOD,PP),
-    abs_p_np_predc_structure(Met,NP,PRED,PP0).
+    abs_p_np_predc_structure(Met,NP,PRED,PP0),
+    PRED:pcat => ~np_pred.
 
 %%EX%% met parallel hieraan een mooie versiering
 %% met NP NP creates an ambiguity. Block predc obj1 order...
