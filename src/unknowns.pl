@@ -7142,6 +7142,7 @@ start_quote('“','”').
 start_quote('<','>').
 start_quote('«','»').
 start_quote('“','"').
+start_quote('„','”').
 
 start_quote('`','`','\'','\'').
 start_quote(',',',','\'','\'').
