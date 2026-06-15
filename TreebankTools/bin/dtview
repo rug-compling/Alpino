@@ -570,6 +570,25 @@ proc shellquote {s} {
     }
 }
 
+proc fix-it-sub {text} {
+    regsub -all "\[\\\!-\\\/\\\:-\\\@\\\[-\\\`\\\{-\\\~\]" $text "\\\\&" result
+    return " \"$result\" "
+}
+
+proc fix-it {text} {
+    while {1} {
+        set p [string first "{::{" $text]
+	if {$p < 0} {
+	    return $text
+	}
+	set q [string first "}::}" $text]
+	set left [string range $text 0 [expr $p - 1]]
+	set right [string range $text [expr $q + 4] end]
+	set mid [fix-it-sub [string range $text [expr $p + 4] [expr $q - 1]]]
+	set text "$left$mid$right"
+    }
+}
+
 proc show-tree {} {
     global dtget cligsheet cligsheet2 env filelist current expr extended_attributes has_alto macrofile opts
     # laat de boom uit FILELIST op positie CURRENT zien mbv CLIGSHEET en EXPR
@@ -610,6 +629,7 @@ proc show-tree {} {
 
     }
 
+    set output [fix-it $output]
     eval $output
 
     # FIXME, hoort hier eigenlijk niet (toch?)
