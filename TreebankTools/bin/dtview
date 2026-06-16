@@ -570,21 +570,30 @@ proc shellquote {s} {
     }
 }
 
-proc fix-it-sub {text} {
-    regsub -all "\[\\\!-\\\/\\\:-\\\@\\\[-\\\`\\\{-\\\~\]" $text "\\\\&" result
-    return " \"$result\" "
-}
-
-proc fix-it {text} {
+# Post-processor voor uitvoer van stylesheets $cligsheet en $cligsheet2.
+#
+# Sommige tekens kunnen niet opgenomen worden in { }, namelijk: { } \
+# Escape in { } is niet mogelijk.
+# Oplossing is om strings tussen " " te zetten, maar dan moeten 
+# een hoop andere tekens ge'escape't worden.
+# Welke tekens? Niet duidelijk.
+# De stylesheets zetten enkele teksten niet in  { } maar in {::{ }::}
+# Deze functie maakt daar " " van, en zorgt voor de nodige escapes.
+proc post-process {text} {
     while {1} {
         set p [string first "{::{" $text]
 	if {$p < 0} {
 	    return $text
 	}
 	set q [string first "}::}" $text]
+	if {$q < $p} {
+	    # dit zou niet mogelijk moeten zijn
+	    return $text
+	}
 	set left [string range $text 0 [expr $p - 1]]
 	set right [string range $text [expr $q + 4] end]
-	set mid [fix-it-sub [string range $text [expr $p + 4] [expr $q - 1]]]
+	# escape alles in us-ascii, behalve spatie, letters en cijfers
+        regsub -all "\[\\\!-\\\/\\\:-\\\@\\\[-\\\`\\\{-\\\~\]" [string range $text [expr $p + 4] [expr $q - 1]] "\\\\&" mid
 	set text "$left$mid$right"
     }
 }
@@ -629,7 +638,8 @@ proc show-tree {} {
 
     }
 
-    set output [fix-it $output]
+    set output [post-process $output]
+
     eval $output
 
     # FIXME, hoort hier eigenlijk niet (toch?)
