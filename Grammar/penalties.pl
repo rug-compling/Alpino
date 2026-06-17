@@ -95,7 +95,6 @@ frame_feature(Frames,Pen) :-
     lexical_penalty_frame(His,Stem,Surf,Frame,Frame1,Len,Pen),
     debug_message(6,"    ~w:~n",[Pen]).
 
-
 %%% TODO!    
 
 g_subtree(Tree,Tree).
@@ -170,7 +169,7 @@ triple_to_feature(on,deprel(HdPos: Hd/HdP,Rel,ArgPos: Arg  /ArgP),dep35(Arg/ArgP
 
 triple_member([TrH|TrT],Triple) :-
     member(Triple,[TrH|TrT]).
-%%% het boek dat ik lees => boek hd/obj1 less
+%%% het boek dat ik lees => boek hd/obj1 lees
 triple_member([TrH|TrT],deprel(verb:Head,Rel,noun:Noun)) :-
     member(deprel(noun:Noun,hd/mod,pron(rel):Pron/Ps), [TrH|TrT]),
     die_rel_pron(Pron),
@@ -195,27 +194,6 @@ triple_member([TrH|TrT],deprel(Pred,predc/su,Su)):-
     member(deprel(verb:Cop/Pos,hd/predc,Pred),[TrH|TrT]),
     member(deprel(verb:Cop/Pos,hd/su,Su),[TrH|TrT]),
     \+ member(deprel(verb:Cop/Pos,hd/obj1,_),[TrH|TrT]).
-
-/*
-- too infrequent?
-- wier also for plural?
-- wiens is "wie" in LassyLarge !?
-
-%% de moeder wier kinderen ongelukkig waren -> moeder+wier hd/rel
-triple_member([TrH|TrT],deprel(noun:Noun/PosN,hd/rel,det(rwh):Wier/WierPos)) :-
-    select(deprel(noun:NounX/PosX,rhd/body,_),[TrH|TrT],[TrH2|TrT2]),
-    select(deprel(noun:NounX/PosX,hd/det,det(rwh):Wier/WierPos),[TrH2|TrT2],[TrH3|TrT3]),
-    Wier \= welk,
-    member(deprel(noun:Noun/PosN,hd/mod,noun:NounX/PosX),[TrH3|TrT3]).
-
-%% de moeder met wier kinderen we naar Artis gingen -> moeder+wier hd/rel
-triple_member([TrH|TrT],deprel(noun:Noun/PosN,hd/rel,det(rwh):Wier/WierPos)) :-
-    select(deprel(prep:Prep/PosPrep,rhd/body,_),[TrH|TrT],[TrH2|TrT2]),
-    select(deprel(prep:Prep/PosPrep,hd/obj1,noun:NounX/PosX),[TrH2|TrT2],[TrH3|TrT3]),
-    select(deprel(noun:NounX/PosX,hd/det,det(rwh):Wier/WierPos),[TrH3|TrT3],[TrH4|TrT4]),
-    Wier \= welk,
-    member(deprel(noun:Noun/PosN,hd/mod,prep:Prep/PosPrep),[TrH4|TrT4]).
-*/
 
 %% komt te staan/zitten/hangen/liggen/weten/spreken/overlijden/vervallen
 %% does not yield anything yet, but I believe in it!
@@ -369,15 +347,6 @@ wh_pos(det(rwh)).
 wh_pos(noun(_,ywh)).
 wh_pos(pp(waar)).
 
-/*
-find_wh_trace(Body,WH,Body,Rel,Triples,_) :-
-    member(deprel(Body,Rel,WH),Triples).
-find_wh_trace(Body,WH,Arg,Rel,Triples,His) :-
-    member(deprel(Body,_,Body2),Triples),
-    \+ member(Body2,His),
-    find_wh_trace(Body2,WH,Arg,Rel,Triples,[Body2|His]).
-*/
-
 find_wh_trace(_,WH,Arg,Rel,Triples,_):-
     member(deprel(Arg,Rel,WH),Triples).
 
@@ -393,23 +362,11 @@ integrate_corpus_freq(Feature0,Feature-Count) :-
     corpus_frequency_feature(Feature0),
     score_corpus_feature(Feature0,Feature,Count).
 
-/* method 1: always add w2v feature 
-integrate_corpus_freq(dep35(S1,_P1,Rel,P2,S2),w2v(P2,Rel)-Count) :-
-    score_named_dep(w2v(S2,P2,Rel,S1),Count),
-    debug_message(2,"~w ~w ~w ~w ~n",[S2,w2v(P2,Rel),S1,Count]).
-*/
-
 score_corpus_feature(dep35(A,B,C,D,E),z_dep35(D,C),Val) :-
     decompound(dep35(A,B,C,D,E),Feature),
     corpus_frequency_lookup(Feature,Val),
     !,			       % if z_dep35, then do not use w2v
     debug_message(3,"~w ~w~n",[Feature,Val]).
-
-/*
-score_corpus_feature(dep35(S1,_,Rel,P2,S2),w2v(P2,Rel),Count) :-
-    score_named_dep(w2v(S2,P2,Rel,S1),Count),
-    debug_message(3,"~w ~w ~w ~w ~n",[S2,w2v(P2,Rel),S1,Count]).
-*/
 
 score_corpus_feature(hdpp(A,B,C,D,E,F),z_hdpp(B,C),Val) :-	
     corpus_frequency_lookup(hdpp(A,B,C,D,E,F),Val),
@@ -445,35 +402,6 @@ corpus_frequency_feature(hdpp(_,_,_,_,_,_)).
 corpus_frequency_feature(appos_person(_,_)).
 corpus_frequency_feature(depprep(_,_,_,_)).
 
-/*
-%% NB. used from treebank.pl!!!
-marginals([],[]).
-marginals([F1|Fs],M) :-
-    (   marginal(F1,List)
-    ->  append(List,M1,M)
-    ;   M = M1
-    ),
-    marginals(Fs,M1).
-
-marginal(dep35(Arg,ArgPos,Rel,HeadPos,Head),
-         [tdep35,
-          ldep35(Arg,ArgPos),
-          rdep35(Rel,HeadPos,Head)]).
-
-marginal(appos_person(TYPE,Word),
-	 [appos,
-	  apposl(TYPE),
-	  apposr(Word)]).
-
-% not required here, all marginals are already included
-% becuase of previous clause
-%marginal(hdpp(Head,HeadPos,Rel,Prep,Noun,NounPos),
-%	 [tdep35,
-%	  dep35(Noun,NounPos,hd/obj1,prep,Prep),
-%	  rdep35(Rel,HeadPos,Head)]
-%	).
-*/
-
 penalty_weights(List,Score) :-
     penalty_weights(List,0.0,Score). % should always be a real
 
@@ -483,24 +411,15 @@ penalty_weights([P|Ps],S0,S) :-
     S1 is S0 + Weight,
     penalty_weights(Ps,S1,S).
 
-get_feature_weight(h1(replace_dehet),W) :-
-    !,
-    W = 1.0.
-get_feature_weight(p1(very_strict_par),W) :-
-    !,
-    W = -0.2.
 get_feature_weight(weight(Weight),W) :-
     !,
     Weight=W.
 get_feature_weight(Feature-Count,Weight) :-
     !,
     try_penalty_weight(Feature,S1),
-%    try_additional_weight(Feature,S2),
-    Weight is (Count*S1). % +(Count*S2).
+    Weight is (Count*S1). 
 get_feature_weight(Feature,Weight) :-
-    try_penalty_weight(Feature,S1),
-%    try_additional_weight(Feature,S2),
-    Weight is S1.  %+S2.
+    try_penalty_weight(Feature,Weight).
 
     
 try_penalty_weight(P,S1) :-
@@ -508,54 +427,6 @@ try_penalty_weight(P,S1) :-
     ->  S=S1
     ;   S1=0.0
     ).
-
-% try_additional_weight(P,S1) :-
-%     (   additional_weight(P,S)
-%     ->  S=S1
-%     ;   S1=0.0
-%     ).
-
-%% additional weights are set by hand, to prefer readings which cannot be
-%% distinguished from competing readings by mapping to the treebank; for
-%% instance in the case of wrong lexical sense (really, the treebank should
-%% have more sense distinctions, and we should be compatible with those,
-%% and check for them...)
-
-%% only punish "bad" readings
-
-%%additional_weight(f2(Word,Pos),Val) :-
-%%    additional_weight_f2(Word,Pos,Val).
-
-%% is now learned because postag is taken into account
-%%additional_weight(subjunctive(ga),0.000000001).
-
-%% should now be learned because lemma is taken into account
-%additional_weight(stem_best(best),                0.4).   % prefer goed over best
-%additional_weight(stem_best(v_root(las,lassen)),  0.1).   % prefer lezen over lassen
-%additional_weight(stem_best(v_root(zaag,zagen)),  0.1).   % prefer zien over zagen
-%additional_weight(stem_best(v_root(eet,eten)),    0.1).   % prefer eten/noun over eten/v_noun
-
-%% could be learned, but typically are not
-%%additional_weight(bal(bal,het),0.2).
-%%additional_weight(bal(blik,het),0.2).
-%%additional_weight(bal(broek,het),0.2).
-%%additional_weight(bal(kamp,de),0.2).
-
-%% is now learned
-%%additional_weight(van_tot(van,tot),-1).
-
-%% is now learned
-%% prefer [[eerder gevonden] oplossingen] over [eerder gevonden oplossingen]
-%%additional_weight(adjective_er_plural,1).
-
-%% should be learned
-%%additional_weight_f2(hen,noun,0.2).
-%%additional_weight_f2(haar,noun,0.2).
-%%additional_weight_f2(zij,noun,0.2).
-%%additional_weight_f2(u,noun,0.2).
-%%additional_weight_f2(kies,noun,0.2).
-%%additional_weight_f2(armen,noun,1).
-%%additional_weight_f2(rijken,noun,1).
 
 %% TODO:
 %% prefer 'door-PP' attach to embedded verb in passive
@@ -605,13 +476,6 @@ tree_penalty(_Node,_Rule,Ds,H) :-
     ;                 % in scope of findall anyway
 	member_or_id(Cache,H)
     ).
-
-% tree_penalty(Node,_,_,extra_question_mark):-
-%     alpino_data:top_cat(Node),  % otherwise we get the feature many times
-%     alpino_data:dt(Node,DT),
-%     alpino_data:dt(DT,_,_,_,_,_,Attrs),
-%     \+ member(stype=_,Attrs),
-%     \+ \+ (   alpino_data:ynquestion(DT)  ;   alpino_data:whquestion(DT)   ).
 
 member_or_id(weight(W),weight(W)).
 member_or_id([H|T],El) :-
