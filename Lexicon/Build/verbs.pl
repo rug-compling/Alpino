@@ -1005,11 +1005,15 @@ m(v_root(kan,kunnen),
 
 m(v_root(wil,willen),
   verb_modal(wil,_,wilt,willen,gewild,[wou,wilde],
+	     [wouden,wilden],'hebben/zijn',
+       [modifier(aux(inf))
+       ])).      % hij wil niet slapen;
+                 % ik moet opschieten , wil ik op op tijd komen
+
+m(v_root(wil,willen),
+  verb_modal(wil,_,wilt,willen,gewild,[wou,wilde],
 	     [wouden,wilden],hebben,
-       [
-	modifier(aux(inf)),      % hij wil niet slapen;
-                                 % ik moet opschieten , wil ik op op tijd komen
-	transitive_ndev_ndev_npas,    % ik wil Bolletje
+       [transitive_ndev_ndev_npas,    % ik wil Bolletje
 	modifier(tr_sbar),       % wie wilde hij dat de opening zou doen?
                                  % ik moet opschieten , wil ik dat we op tijd k
 	ld_pp,                   % ik wil naar huis
@@ -3023,7 +3027,6 @@ v(besluit,besluit,besluiten,besloten,besloot,besloten,
         part_intransitive(naast), % Vlaams voetbal 
         part_intransitive(over),  % Vlaams voetbal
         part_intransitive(raak),  % Vlaams voetbal
-        part_intransitive(voorlangs),  % Vlaams voetbal
 	pc_pp(tot),
 	er_pp_sbar(tot),
 	er_pp_vp(tot),
@@ -4514,6 +4517,7 @@ v(botvier,botviert,botvieren,gebotvierd,botvierde,botvierden,
 v(bouw,bouwt,bouwen,gebouwd,bouwde,bouwden,
     [h([intransitive,
 	transitive,
+	fixed([{[acc(reputatie),dat]}],no_passive),  % VL
 	part_als_pred_np(om),
 	part_sbar(in),
 	part_intransitive(aan),
@@ -14649,7 +14653,8 @@ v(machtig,machtigt,machtigen,gemachtigd,machtigde,machtigden,
 	np_pc_pp(tot)])]).
 
 v(mag,mag,mogen,gemogen,mocht,mochten,moge,
-    [h([intransitive,
+    [b([modifier(aux(inf))]),
+     h([intransitive,
 	ld_dir,
         uit,
         sbar_subj, % VL: het mag niet dat de zakken zo vlug scheuren
@@ -14663,7 +14668,6 @@ v(mag,mag,mogen,gemogen,mocht,mochten,moge,
 	part_ld_pp(terug),
 	part_transitive(terug),
         nonp_pred_np_ndev,       % ik mag een uniform aan / een pet op / etc
-	modifier(aux(inf)),
 	aux_pc_pp(inf,van),     % ik mag niet zeuren van mijn vrouw
         passive,		% daar mag niet aan getornd (VLAAMS?)
 	pc_pp(van),		% dat mag niet van de directeur
@@ -15138,7 +15142,7 @@ v(moei,moeit,moeien,gemoeid,moeide,moeiden,
 
 v(moet,moet,moeten,gemoeten,moest,moesten,
   [b([modifier(aux(inf)),       % VL: hij is diep moeten gaan
-                                %     hij heeft diep moeten gaan
+                                %     hij heeft diep moeten graven
 				% vind je het erg moest je dochter thuiskomen met...
       aux_pc_pp(inf,van)]),	
 

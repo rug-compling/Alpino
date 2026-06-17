@@ -2010,7 +2010,9 @@ a([e(abnormale),
    ere(abnormalere),
    no_e(abnormaal),
    st(abnormaalst),
-   ste(abnormaalste)],adv,[],[]).
+   ste(abnormaalste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(abominabele),
    no_e(abominabel)],adv,[],[]).
@@ -23628,6 +23630,11 @@ a([e(navrante),
    no_e(navrant)],nonadv,
   [subject_sbar,
    subject_vp],[]).
+
+a([e(nazistische),
+   no_e(nazistisch)],nonadv,[],
+  [h(anti),
+   h(pro)]).
 
 a([e(naïeve),
    no_e(naïef)],padv,

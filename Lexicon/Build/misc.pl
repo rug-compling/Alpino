@@ -2636,7 +2636,6 @@ particle(vlot).
 particle(vol).
 particle(vooraf).
 particle(voorbij).
-particle(voorlangs).
 particle(voorop).
 particle(voor).
 particle(voort).
@@ -6020,6 +6019,7 @@ sentence_adverb([in,het,eerst]). % ouderwets?
 sentence_adverb([in,lang]).  % ik heb hem in lang niet gezien
 sentence_adverb([in,the,end]).
 sentence_adverb([in,vredesnaam]).
+sentence_adverb([in,zeven,haasten]).  % VL
 sentence_adverb(inderdaad). 
 sentence_adverb(intussen). 
 sentence_adverb(kortom). 
@@ -6261,6 +6261,7 @@ loc_adverb(tussenin).    %
 loc_adverb(terug).
 loc_adverb(vooraan).
 loc_adverb(voorin).
+loc_adverb(voorlangs).   % VL voorlangs schieten/besluiten/knallen/...
 loc_adverb(voorop).
 loc_adverb(voorover).
 loc_adverb(vooruit).

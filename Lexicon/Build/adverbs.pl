@@ -508,6 +508,7 @@ adverb(toch).
 adverb(toevalligerwijs).
 adverb(toevalligerwijze).
 adverb([tot,in,den,treure]).
+adverb([tout,court]).
 adverb([uit,den,treure]).
 adverb(uitentreure).
 adverb(uitentreuren).
