@@ -146,6 +146,8 @@ def main():
             t = "adjective(both(adv))"
         if r == "lastminute" and t == "adjective(both(nonadv))":
             t = "adjective(both(adv))"
+        if r == "voorlangs" and t == "particle(voorlangs)":
+            t = "loc_adverb"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 
