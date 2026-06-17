@@ -306,4 +306,4 @@ installsents: $(DIRECTORIES:%=Suites/Machine/%_part00001.sents.gz)
         done
 
 Suites/Machine/%_part00001.sents.gz: Suites/%.sents
-	cat $< | (cd Suites/Machine ; $(ALPINO_HOME)/Suites/split_in_parts -o $* -p 200 )
+	cat $< | (cd Suites/Machine ; $(ALPINO_HOME)/Suites/split_in_parts -o $* -p 20 )
