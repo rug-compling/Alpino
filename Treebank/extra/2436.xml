@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="3" infl="both" lemma="extra" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="extra" vform="adj" word="Extra"/>
+        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="geld" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geld" word="geld"/>
+        <node begin="2" end="3" id="5" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="mod" root="alleen" special="postnp" word="alleen"/>
+      </node>
+      <node begin="3" end="4" id="6" infl="sg3" lemma="op_lossen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="los_op" sc="part_transitive(op)" tense="present" word="lost" wvorm="pv"/>
+      <node begin="4" cat="np" end="6" id="7" rel="obj1">
+        <node begin="4" buiging="zonder" end="5" id="8" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="die"/>
+        <node begin="5" end="6" gen="het" getal="mv" graad="basis" id="9" lemma="probleem" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="probleem" word="problemen"/>
+      </node>
+      <node begin="6" end="7" id="10" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="7" end="8" id="11" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+    </node>
+    <node begin="8" end="9" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Extra geld alleen lost die problemen niet op .</sentence>
+</alpino_ds>
