@@ -594,7 +594,7 @@ proc post-process {text} {
 	set right [string range $text [expr $q + 4] end]
 	# escape alles in us-ascii, behalve spatie, letters en cijfers
         regsub -all "\[\\\!-\\\/\\\:-\\\@\\\[-\\\`\\\{-\\\~\]" [string range $text [expr $p + 4] [expr $q - 1]] "\\\\&" mid
-	set text "$left$mid$right"
+	set text "$left\"$mid\"$right"
     }
 }
 
