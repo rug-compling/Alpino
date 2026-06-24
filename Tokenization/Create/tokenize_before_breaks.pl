@@ -119,7 +119,7 @@ macro(ampersand_names,{
 		       ['O','C',sep,'&',sep,'W']
 		       }).
 
-macro(single_quote,{sq,tlq,backquote}).
+macro(single_quote,{sq,tlq,backquote,’}).
 
 macro(quoted_single_letter,
               replace(sep:[],[sep,single_quote],[lower-u,sep])

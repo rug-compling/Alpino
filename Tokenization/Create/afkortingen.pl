@@ -54,7 +54,7 @@ macro( words_afkortingen,
 		   rijksuniv,'r.-k','Rom','Russ',
    'S.A',samenst,samenw,'Sanskr',sc,scen,schr,sp,spec,spp,spr,st,'ST','Ste',str,subsp,subst,symf,syn,
 		  
-   'Tac',techn,tek,tel,'tel.nr',temp,'tent.cat','Tg',th,theel,tl,toegel,toep,toez,tov,
+   'Tac',techn,tek,tel,'tel.nr',tek,temp,'tent.cat','Tg',th,theel,tl,toegel,toep,toez,tov,
                    'Tsj','Tu','TV-uitz','tv-uitz',
    'U',uitg,uitk,ul,ult,'vakantie-uitk',uitdr,uitgeg,uitz,univ,
    'V.S',var,vb,vbb,'Ver',verd,verl,verm,vert,vervr,verz,vgl,'Vl',vlg,vlgg,'vice-vrz',vlp,
