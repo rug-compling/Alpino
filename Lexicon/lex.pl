@@ -348,7 +348,15 @@ next_word__(Autos,[Auto,'\'',s|Ws],Ws,wrong_quote_s,_) :-
     atom(Auto),
     atom_concat(Auto,'\'s',Autos).
 
+next_word__(Autos,[Auto,'\’',s|Ws],Ws,wrong_quote_s,_) :-
+    atom(Auto),
+    atom_concat(Auto,'\'s',Autos).
+
 next_word__(Autos,[Auto,'\'s'|Ws],Ws,wrong_quote_s,_) :-
+    atom(Auto),
+    atom_concat(Auto,'\'s',Autos).
+
+next_word__(Autos,[Auto,'\’s'|Ws],Ws,wrong_quote_s,_) :-
     atom(Auto),
     atom_concat(Auto,'\'s',Autos).
 
@@ -365,6 +373,10 @@ next_word__(Autos,[Auto,'\\u2019s'|Ws],Ws,u2019s,_) :-
     atom_concat(Auto,'\'s',Autos).
 
 next_word__(Autos,[Auto,'\'',n|Ws],Ws,wrong_quote_n,_) :-
+    atom(Auto),
+    atom_concat(Auto,'\'n',Autos).
+
+next_word__(Autos,[Auto,'\’',n|Ws],Ws,wrong_quote_n,_) :-
     atom(Auto),
     atom_concat(Auto,'\'n',Autos).
 
@@ -2140,10 +2152,12 @@ spelling_variant31(negen,en,negentigste,negenennegentigste).
 
 %% 2 --> 1 word
 %% repair tokenization errors:
-spelling_variant21('`',s,         '\'s').
-spelling_variant21('`',ns,         '\'ns').
-spelling_variant21('\'',s,        '\'s').
-spelling_variant21('\'',ns,       '\'ns').
+spelling_variant21('`',s,        '\'s').
+spelling_variant21('`',ns,       '\'ns').
+spelling_variant21('\'',s,       '\'s').
+spelling_variant21('\'',ns,      '\'ns').
+spelling_variant21('’',s,        '\'s').
+spelling_variant21('’',ns,       '\'ns').
 
 %% old tokenization...
 spelling_variant21('da','\'s',      'da\'s').

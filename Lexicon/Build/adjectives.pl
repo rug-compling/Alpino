@@ -12042,6 +12042,9 @@ a([ge_e(gegane),
    part('ten onder'),
    part(teloor)],[]).
 
+a([ge_e(gegaarde),
+   ge_no_e(gegaard)],adv,[],[]).
+
 a([ge_e(gegalmde),
    ge_no_e(gegalmd)],adv,[],[]).
 
@@ -12566,7 +12569,7 @@ a([ge_e(gekelderde),
    ge_no_e(gekelderd)],nonadv,[],[]).
 
 a([ge_e(gekende),
-   ge_no_e(gekend)],adv,[],[on]).
+   ge_no_e(gekend)],adv,[subject_sbar],[on]).
 
 a([ge_e(gekenmerkte),
    ge_no_e(gekenmerkt)],adv,[],[]).
@@ -17134,6 +17137,9 @@ a([stem(goed_bedoelen),
 a([stem(goed_bedoelen),
    end(goedbedoelend),
    ende(goedbedoelende)],padv,[],[]).
+
+a([ge_e(goedgehumeurde),
+   ge_no_e(goedgehumeurd)],adv,[],[]).
 
 a([ge_e(goedgekeurde),
    ge_no_e(goedgekeurd)],adv,[],[]).

@@ -4877,6 +4877,10 @@ m('eerste-klas',postnp_adverb,'eerste-klas').
 m('tweede-klas',postnp_adverb,'tweede-klas').
 m('derde-klas', postnp_adverb,'derde-klas' ).
 m('vierde-klas',postnp_adverb,'vierde-klas').
+m(eersteklas,postnp_adverb,eersteklas).
+m(tweedeklas,postnp_adverb,tweedeklas).
+m(derdeklas, postnp_adverb,derdeklas ).
+m(vierdeklas,postnp_adverb,vierdeklas).
 
 with_dt([misschien,wel], postnp_adverb,dt(advp,[mod=l(wel,adverb,advp,1,2),
 						hd=l(misschien,adverb,0,1)])).
@@ -6059,6 +6063,7 @@ sentence_adverb(opzij).
 sentence_adverb([out,of,court]).
 sentence_adverb([out,of,the,blue]).
 sentence_adverb(overigens).
+sentence_adverb(plankgas).
 sentence_adverb(potverdomme).
 sentence_adverb(potverdorie).
 sentence_adverb(redelijkerwijs). 

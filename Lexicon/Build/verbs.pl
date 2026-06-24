@@ -8187,7 +8187,7 @@ v(gaap,gaapt,gapen,gegaapt,gaapte,gaapten,
         ld_pp, % daar gaapt een groot gat tussen
 	pc_pp(naar)])]).
 
-v(gaar,gaart,garen,gegaart,gaarde,gaarden,
+v(gaar,gaart,garen,gegaard,gaarde,gaarden,
     [h([transitive])]).
 
 v(gak,gakt,gakken,gegakt,gakte,gakten,
@@ -12057,6 +12057,7 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
 	  part_intransitive(achter), % omdat we toen heel vlug zijn achtergekomen
 	  part_intransitive(af),
 	  part_intransitive(bij),
+	  part_pc_pp(bij,van),
 	  part_intransitive(bijeen),
 	  part_intransitive(binnen),
 	  part_ld_pp(binnen),
@@ -16042,7 +16043,9 @@ v(ontdek,ontdekt,ontdekken,ontdekt,ontdekte,ontdekten,
 	np_ld_pp,   % wij ontdekken geen lijn in dit stuk
 	np_ld_adv,
 	np_pc_pp(aan), % ik kan er geen vrolijke noot aan ontdekken
-	transitive])]).
+	transitive,
+	intransitive
+       ])]).
 
 v(ontdoe,ontdoet,inflected(ontdoen,ontdoene),ontdaan,ontdeed,ontdeden,
     [h([np_pc_pp(van)
@@ -20800,6 +20803,7 @@ v(sla,slaat,slaan,geslagen,sloeg,sloegen,
 	part_transitive(weg),
 	fixed([{[pc(op),acc(acht)]}],norm_passive),
         fixed([svp_acc(alarm)],norm_passive),  % groot alarm werd geslagen
+        fixed([svp_acc(alarm),sbar],norm_passive),  % Artsen zonder Grenzen slaat alarm dat ebola ...
  	fixed([{[pc(uit),[een,slaatje]]}],imp_passive),
  	fixed([{[pc(uit),[geen,slaatje]]}],imp_passive),
 	fixed([{[pc(uit),acc(munt)]}],imp_passive),

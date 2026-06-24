@@ -502,15 +502,16 @@ postposition(heen,over).
 postposition(in,tegen).
 postposition(in,tussen).
 postposition(langs,achter).
+postposition(langs,voor).
 postposition(toe,naar).
 postposition(uit,achter).
 postposition(uit,van).
+postposition(uit,voor).  % omdat hij de problemen voor zich uitschuift
 postposition(vanaf,van).
 postposition(vandaan,van).
 postposition(vandaan,achter).
 postposition(vandaan,onder).
 postposition(vandaan,elders).
-
 
     
 create_part_verb([],A,B,Root0,INVLEX) :-

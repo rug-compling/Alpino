@@ -1838,6 +1838,8 @@ n([pl(achterflappen),sg(achterflap)],de,[],[]).
 
 n([pl(achtergronden),sg(achtergrond)],de,[pred_pp(tegen)],[]).
 
+n([pl(achtergronden),sg(achtergrond)],de,[pred_pp(tegen)],[migratie]).
+
 n([pl(achterhoeden),pl(achterhoedes),sg(achterhoede)],de,[],[]).
 
 n([pl(achterhoedegevechten),sg(achterhoedegevecht)],het,[],[]).
@@ -1904,7 +1906,8 @@ n([pl(acts),sg(act)],de,[],[]).
 n([sg([acte,de,présence])],de,[],[]).
 
 n([pl(acteurs),sg(acteur),pl(akteurs),sg(akteur)],de,[],
-  [film]).
+  [film,
+   stem]).
 
 n([mass(actief)],het,[],[]).
 
@@ -5533,6 +5536,8 @@ n([pl(biljetten),sg(biljet)],het,[],
 
 n([pl(biljoenen),meas(biljoen)],both,[meas_mod,measure],[]).
 
+n([pl(biljonairs),sg(biljonair)],de,[],[multi]).
+
 n([sg(billboard),pl(billboards)],both,[],[]).
 
 n([mass(billijkheid)],de,[],[]).
@@ -9122,7 +9127,7 @@ n([sg(debiel),pl(debielen)],de,[],[]).
 
 n([pl(debiteuren),pl(debiteurs),sg(debiteur)],de,[],[]).
 
-n([pl(debutanten),sg(debutant)],de,[],[]).
+n([pl(debutanten),sg(debutant)],de,[],[h('WK')]).
 
 n([pl(debuten),sg(debuut)],het,
   [start_app_measure,
@@ -10608,6 +10613,7 @@ n([pl(duellen),pl(duels),sg(duel)],het,[measure,temp_mod],
    kop,
    kwalificatie, 'EK-kwalificatie',
    oefen,
+   s(opening),
    thuis,
    uit,
    h('WK')
@@ -11805,6 +11811,7 @@ n([stem(fase),pl(fasen),pl(fases),sg(fase),
   [alarm,
    eind,
    s(groep),
+   'knock-out',
    s(ontwikkeling),
    s(opening),
    s(overgang),
@@ -17550,6 +17557,7 @@ n([pl(jagers),sg(jager)],de,[],
   [aan,
    dim(jagertje),
    i(koop_DIM,koopjes),
+   i(mijn,mijnen),
    premie]).
 
 n([pl(jaguars),sg(jaguar)],de,[],[dim(jaguartje)]).
@@ -22999,6 +23007,8 @@ n([pl(meppen),sg(mep)],de,[],[]).
 
 n([sg([mer,à,boire])],both,[],[]).
 
+n([sg(merchandise)],de,[],[]).
+
 n([mass(merchandising)],de,[],[]).
 
 %% een dikke merci aan iedereen die heeft meegeholpen
@@ -23316,7 +23326,7 @@ n([sg([milieu,actie,plan]),pl([milieu,actie,plannen])],het,[],[]).
 
 n([mass(milieuhygiëne)],de,[],[]).
 
-n([pl(militairen),sg(militair)],de,[],[]).
+n([pl(militairen),sg(militair)],de,[],[h('KNIL')]).
 
 n([sg(militant),pl(militanten)],de,[],[]).
 
@@ -23716,6 +23726,8 @@ n([sg([moment,suprême]),
    sg([moment,suprème])],het,[],[]).
 
 n([pl(momentopnamen),pl(momentopnames),sg(momentopname)],de,[sbar],[]).
+
+n([sg(momentum)],het,[],[]).
 
 n([pl(monarchen),sg(monarch)],de,[],[]).
 
@@ -26916,6 +26928,7 @@ n([sg(paar),pl(paren),
    ignore_stem(paar)],het,[],
   [homo,
    jeugd,
+   s(keizer),
    s(koning),
    ouder
   ]).
@@ -27537,7 +27550,8 @@ n([sg(pauwoog),pl(pauwogen)],de,[],
    nacht]).
 
 n([pl(pauzen),pl(pauzes),sg(pauze)],de,[],
-  [koffie,
+  [drink,
+   koffie,
    lunch,
    meno
   ]).
@@ -28480,7 +28494,9 @@ n([pl('po\'s'),sg(po)],de,[],[]).
 
 n([pl(pockets),sg(pocket)],de,[],[]).
 
-n([sg(podcast),pl(podcasts)],de,[],[]).
+n([sg(podcast),pl(podcasts)],de,[],
+  [h('Afspelen'),
+   voetbal]).
 
 n([pl(podia),pl(podiums),sg(podium)],het,[],[ere]).
 
@@ -34118,6 +34134,7 @@ n([pl(spelers),sg(speler)],de,[],
    i(hoofd_rol,hoofdrol),
    jeugd,
    mede,
+   'Oranje',
    h(oud),oud,
    selectie,
    ster,
@@ -38846,7 +38863,8 @@ n([pl(verbindingen),sg(verbinding)],de,
 
 n([pl(verbindingen),sg(verbinding)],de,[],
   [internet,
-   oever]).
+   oever,
+   video]).
 
 n([pl(verbintenissen),sg(verbintenis)],de,[sbar,vp],[]).
 
@@ -42846,6 +42864,7 @@ n([pl(winsten),sg(winst)],de,[],
    boek,
    bruto,
    concern,
+   s(groep),
    i(half_jaar,halfjaar),
    jaar,
    koers,
@@ -43427,7 +43446,8 @@ n([pl(zeges),sg(zege)],de,[],
    etappe,
    oefen,
    rit,
-   toernooi]).
+   toernooi,
+   h('WK')]).
 
 n([pl(zegels),sg(zegel)],both,[],[dim(zegeltje)]).
 
