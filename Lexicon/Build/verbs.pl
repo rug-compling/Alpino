@@ -12005,6 +12005,7 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
 	  aux(psp(part_intransitive(aan))), % hij komt aangelopen
 	  aux(psp(ld_pp)),	       % hij komt naar huis gelopen
 	  aux(psp(part_ld_transitive(_))), % hij komt het bos in gelopen
+	  aux(psp(part_ld_pp(_))),	   % hij komt overgevlogen uit Amerika
 	  aux(psp(part_ld_pp(_,_))),	   % hij komt op ons afgerend
 	  er_pp_sbar(achter),		   % ik kwam erachter dat ..
 	  er_pp_sbar(bij),		   % hoe komt u er bij dat ..
@@ -21910,6 +21911,7 @@ v(spring,springt,springen,gesprongen,sprong,sprongen,
     [z([ld_dir,
 	transitive,
 	part_intransitive(aan),
+	part_intransitive(af),
 	part_intransitive(bij),
 	part_intransitive(binnen),
 	part_intransitive(in),
@@ -28662,6 +28664,8 @@ v(wijd,wijdt,wijden,gewijd,wijdde,wijdden,
 
 v(wijk,wijkt,wijken,geweken,week,weken,
     [b([part_intransitive(af),
+	part_sbar_subj(af),
+	part_pp_sbar_subj(af,van),
 	part_pc_pp(af,van)]),
      z([intransitive,
 	part_intransitive(terug),

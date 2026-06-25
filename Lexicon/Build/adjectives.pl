@@ -20662,6 +20662,9 @@ a([e(koene),
 
 a([pred(koest)],nonadv,[],[]).
 
+%% Hoe het de komende maanden verder moet , blijft koffiedik kijken .
+a([pred([koffiedik,kijken])],nonadv,[subject_sbar],[]).
+
 a([end(kogelwerend),
    ende(kogelwerende)],nonadv,[],[]).
 
@@ -24014,7 +24017,7 @@ a([e(nostalgische),
    st(nostalgischt),
    ste(nostalgischte)],adv,[],[]).
 
-a([pred([not,amused])],padv,[],[]).
+a([pred([not,amused])],padv,[object_sbar],[]).
 
 a([pred([not,done])],nonadv,
   [subject_vp,
@@ -31739,7 +31742,7 @@ a([e(serene),
    ere(serenere),
    no_e(sereen),
    st(sereenst),
-   ste(sereenste)],padv,[],[]).
+   ste(sereenste)],both,[],[]).
 
 a([e(serieuze),
    er(serieuzer),

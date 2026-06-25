@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="cp" end="7" id="2" rel="su">
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="Dat"/>
+        <node begin="1" cat="ssub" end="7" id="4" rel="body">
+          <node begin="1" cat="np" end="3" id="5" index="1" rel="su">
+            <node begin="1" end="2" id="6" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+            <node begin="2" end="3" gen="both" genus="onz" getal="ev" graad="basis" id="7" lemma="WK" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="WK" word="WK"/>
+          </node>
+          <node begin="5" end="6" id="8" infl="sg3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" sc="passive" tense="present" word="wordt" wvorm="pv"/>
+          <node begin="1" cat="ppart" end="7" id="9" rel="vc">
+            <node begin="1" end="3" id="10" index="1" rel="obj1"/>
+            <node begin="3" cat="pp" end="5" id="11" rel="ld">
+              <node begin="3" end="4" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="13" lemma="Tilburg" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Tilburg" word="Tilburg"/>
+            </node>
+            <node begin="6" buiging="zonder" end="7" id="14" infl="psp" lemma="houden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" sc="np_ld_pp" word="gehouden" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="15" infl="sg3" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" sc="copula_sbar" tense="present" word="lijkt" wvorm="pv"/>
+      <node begin="8" cat="ap" end="12" id="16" rel="predc">
+        <node begin="8" cat="mwu" end="11" id="17" rel="mod">
+          <node begin="8" end="9" id="18" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mwp" root="niet" special="sentence" word="niet"/>
+          <node begin="9" buiging="zonder" end="10" graad="comp" id="19" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" special="sentence" vwtype="onbep" word="meer"/>
+          <node begin="10" conjtype="onder" end="11" id="20" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" special="sentence" word="dan"/>
+        </node>
+        <node aform="base" begin="11" buiging="zonder" end="12" graad="basis" id="21" infl="no_e" lemma="logisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="logisch" sc="subject_sbar" vform="adj" word="logisch"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Dat het WK in Tilburg wordt gehouden lijkt niet meer dan logisch</sentence>
+</alpino_ds>

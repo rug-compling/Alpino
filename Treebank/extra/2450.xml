@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="ppart" end="2" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="Zo"/>
+        <node aform="base" begin="1" buiging="zonder" end="2" id="4" infl="no_e" lemma="bezien" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bezien" vform="psp" word="bezien" wvorm="vd"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula" tense="past" word="was" wvorm="pv"/>
+      <node begin="3" cat="np" end="6" id="6" rel="su">
+        <node begin="3" end="4" id="7" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" id="8" lemma="3-1" pos="num" postag="SPEC(symb)" pt="spec" rel="mod" root="3-1" special="score" spectype="symb" word="3-1"/>
+        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="zege" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zege" word="zege"/>
+      </node>
+      <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="10" infl="no_e" lemma="terecht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="terecht" vform="adj" word="terecht"/>
+    </node>
+  </node>
+  <sentence>Zo bezien was de 3-1 zege terecht</sentence>
+</alpino_ds>

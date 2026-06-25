@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" special="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" infl="sg_is" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula_vp" tense="present" word="is" wvorm="pv"/>
+      <node begin="2" cat="ap" end="6" id="4" rel="predc">
+        <node begin="2" cat="mwu" end="5" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mwp" root="niet" special="sentence" word="niet"/>
+          <node begin="3" buiging="zonder" end="4" graad="comp" id="7" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" special="sentence" vwtype="onbep" word="meer"/>
+          <node begin="4" conjtype="onder" end="5" id="8" lemma="dan" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="dan" special="sentence" word="dan"/>
+        </node>
+        <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="9" infl="no_e" lemma="billijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="billijk" sc="subject_vp" vform="adj" word="billijk"/>
+      </node>
+      <node begin="6" cat="ti" end="16" id="10" rel="su">
+        <node begin="6" end="7" id="11" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="7" cat="inf" end="16" id="12" rel="body">
+          <node begin="7" buiging="zonder" end="8" id="13" infl="inf" lemma="zeggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zeg" sc="tr_sbar" word="zeggen" wvorm="inf"/>
+          <node begin="8" cat="cp" end="16" id="14" rel="vc">
+            <node begin="8" conjtype="onder" end="9" id="15" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+            <node begin="9" cat="ssub" end="16" id="16" rel="body">
+              <node begin="9" case="nom" def="def" end="10" gen="de" getal="mv" id="17" index="1" lemma="wij" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" wh="nwh" word="wij"/>
+              <node begin="14" end="15" id="18" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" tense="present" word="hebben" wvorm="pv"/>
+              <node begin="9" cat="ppart" end="16" id="19" rel="vc">
+                <node begin="9" end="10" id="20" index="1" rel="su"/>
+                <node begin="10" cat="np" end="12" id="21" rel="obj1">
+                  <node begin="10" buiging="met-e" end="11" getal="mv" id="22" infl="onze" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="onze"/>
+                  <node begin="11" end="12" gen="de" genus="zijd" getal="ev" graad="basis" id="23" lemma="taak" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="taak" word="taak"/>
+                </node>
+                <node begin="12" cat="pp" end="14" id="24" rel="mod">
+                  <node begin="12" end="13" id="25" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                  <node begin="13" end="14" gen="de" genus="zijd" getal="ev" graad="basis" id="26" lemma="zorgvuldigheid" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zorgvuldigheid" word="zorgvuldigheid"/>
+                </node>
+                <node begin="15" buiging="zonder" end="16" id="27" infl="psp" lemma="uit_voeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer_uit" sc="part_transitive(uit)" word="uitgevoerd" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het is niet meer dan billijk te zeggen dat wij onze taak met zorgvuldigheid hebben uitgevoerd</sentence>
+</alpino_ds>
