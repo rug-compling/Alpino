@@ -1266,7 +1266,10 @@ n([mass('Wit-Russisch'),
 n([pl('WK'),pl('WK\'s'),sg('WK'),
    pl('W.K'),pl('W.K\'s'),sg('W.K'),
    pl('W.K.'),pl('W.K.\'s'),sg('W.K.'),
-   pl(wk),pl('wk\'s'),sg(wk)],both,[app_measure],[]).
+   pl(wk),pl('wk\'s'),sg(wk)],
+  both,
+  [temp_mod,
+   app_measure],[]).
 
 n([stem('WK_afstand'),
    sg('WK-afstanden')],both,[],[]).

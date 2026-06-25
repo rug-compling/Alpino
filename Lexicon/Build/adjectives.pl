@@ -18364,7 +18364,9 @@ a([e(hoge),
    st(hoogst),
    ste(hoogste)],adv,[],
   [s(meter),
-   middel]).
+   middel,
+   toren
+  ]).
 
 a([pred(hogerop)],dir_locadv,[],[]).
 
@@ -18410,28 +18412,9 @@ a([e(hoogmoedige),
 a([e(hoogmogende),
    no_e(hoogmogend)],nonadv,[],[]).
 
-a([e(hoognodige),
-   no_e(hoognodig)],adv,[],[]).
-
-a([e(hoogstnodige),
-   no_e(hoogstnodig)],adv,[],[]).
-
-a([e(hoogrode),
-   er(hoogroder),
-   ere(hoogrodere),
-   no_e(hoogrood),
-   st(hoogroodst),
-   ste(hoogroodste)],nonadv,[],[]).
-
 a([stem(hoog_staan),
    ende(hoogstaande),
    end(hoogstaand)],nonadv,[],[]).
-
-a([e(hoogstpersoonlijke),
-   no_e(hoogstpersoonlijk)],both,[],[]).
-
-a([no_e(hoogstwaarschijnlijk),
-   e(hoogstwaarschijnlijke)],adv,[],[]).
 
 a([e(hoogwaardige),
    er(hoogwaardiger),
@@ -23916,7 +23899,9 @@ a([e(nodige),
    subject_vp_no_het,
    pp(voor),
    mod_pp(bij),
-   er_pp_vp(voor)],[]).
+   er_pp_vp(voor)],[hoog,
+		    hoogst
+		   ]).
 
 a([e(noemenswaardige),
    er(noemenswaardiger),
@@ -29115,7 +29100,9 @@ a([e(persoonlijke),
    ere(persoonlijkere),
    no_e(persoonlijk),
    st(persoonlijkst),
-   ste(persoonlijkste)],both,[],[]).
+   ste(persoonlijkste)],both,
+  [subject_sbar],
+  [hoogst]).
 
 a([e(pertinente),
    er(pertinenter),
@@ -34006,13 +33993,6 @@ a([e(toonloze),
 
 a([both(topless),
    both('top-less')],padv,[],[]).
-
-a([e(torenhoge),
-   er(torenhoger),
-   ere(torenhogere),
-   no_e(torenhoog),
-   st(torenhoogst),
-   ste(torenhoogste)],adv,[],[]).
 
 a([pred([total,loss])],padv,[],[]).
 
@@ -38923,7 +38903,7 @@ a([e(waarschijnlijke),
    no_e(waarschijnlijk),
    st(waarschijnlijkst),
    ste(waarschijnlijkste)],adv,
-  [subject_sbar],[]).
+  [subject_sbar],[hoogst]).
 
 a([e(wagenwijde),
    no_e(wagenwijd)],adv,[],[]).
