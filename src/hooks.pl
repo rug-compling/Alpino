@@ -179,13 +179,10 @@ alpino_data:declarative(_).
 alpino_data:imparative(_).
 alpino_data:topic_drop(_).
 alpino_data:conj(_,_,_).
-alpino_data:hstem(_,_).
-alpino_data:prep(_,_).
 alpino_data:max_dt(_).
 alpino_data:np_agr(_,_).
 alpino_data:subj_agr(_,_).
 alpino_data:vproj_without_eps3(_).
-alpino_data:ld_pp(_).
 alpino_data:def(_).
 alpino_data:indef(_).
 alpino_data:vp(_).
