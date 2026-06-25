@@ -289,11 +289,11 @@ plural_noun(Node) ::-
 aform(Node,Attr) ::-
     Node:aform <=> Attr.
 
-prep(Node,Prep) ::-
-    Node:prep <=> Prep.
+%% prep(Node,Prep) ::-
+%%    Node:prep <=> Prep.
 
-hstem(Node,Stem) ::-
-    Node:hstem <=> Stem.
+%% hstem(Node,Stem) ::-
+%%    Node:hstem <=> Stem.
 
 not_attr(Node) ::-
     Node => aform,
@@ -750,9 +750,9 @@ dt_cnj_crd(Dt,Cnj,Crd) ::-
     Dt:cnj <=> Cnj,
     Dt:crd <=> Crd.
 
-ld_pp(Cat) ::-
-    Cat => pp,
-    Cat:ld_pc => ld_pp.
+%% ld_pp(Cat) ::-
+%%    Cat => pp,
+%%    Cat:ld_pc => ld_pp.
 
 vproj_without_eps3(Cat) ::-
     Cat => vproj,

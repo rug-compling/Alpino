@@ -86,16 +86,17 @@ test:
         $(ALPINO_HOME)/Disambiguation/kleiweg/eval -w $*.weights $(TESTDEBUG) > $@
 
 SHELL := /bin/bash
-MEANF=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9 } END { printf "first %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9}'
-MEANB=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9 } END { printf " best %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9}'
-MEANT=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9 } END { printf " test %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9}'
-MEANP=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9 } END { printf "  phi %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9}'
+MEANF=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9; U=U+$$11; V=V+$$12 } END { printf "first %.2f %.2f   %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9,U/9,V/9}'
+MEANB=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9; U=U+$$11; V=V+$$12 } END { printf " best %.2f %.2f   %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9,U/9,V/9}'
+MEANT=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9; U=U+$$11; V=V+$$12 } END { printf " test %.2f %.2f   %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9,U/9,V/9}'
+MEANP=awk '{ N=N+$$2; P=P+$$3; Q=Q+$$5; R=R+$$6; S=S+$$8; T=T+$$9; U=U+$$11; V=V+$$12 } END { printf "  phi %.2f %.2f   %.2f %.2f   %.2f %.2f   %.2f %.2f\n",N/9,P/9,Q/9,R/9,S/9,T/9,U/9,V/9}'
+
 analyse:
-	@echo "        LATEST       LATEST-1       LATEST-2"
-	@paste <(grep first-score log |tail -n 9) <(grep first-score log|tail -n 18 |head -n 9 ) <(grep first-score log |tail -n 27 |head -n 9 ) | $(MEANF)
-	@paste <(grep best-score log |tail -n 9) <(grep best-score log|tail -n 18 |head -n 9 ) <(grep best-score log |tail -n 27 |head -n 9 ) | $(MEANB)
-	@paste <(grep test-score log |tail -n 9) <(grep test-score log|tail -n 18 |head -n 9 ) <(grep test-score log |tail -n 27 |head -n 9 ) | $(MEANT)
-	@paste <(grep phi-score log |tail -n 9) <(grep phi-score log|tail -n 18 |head -n 9 ) <(grep phi-score log |tail -n 27 |head -n 9 ) | $(MEANP)
+	@echo "        LATEST       LATEST-1      LATEST-2      LATEST-3"
+	@paste <(grep first-score log |tail -n 9) <(grep first-score log|tail -n 18 |head -n 9 ) <(grep first-score log |tail -n 27 |head -n 9 ) <(grep first-score log |tail -n 36 |head -n 9 ) | $(MEANF)
+	@paste <(grep best-score log  |tail -n 9) <(grep best-score log |tail -n 18 |head -n 9 ) <(grep best-score log  |tail -n 27 |head -n 9 ) <(grep best-score log  |tail -n 36 |head -n 9 ) | $(MEANB)
+	@paste <(grep test-score log  |tail -n 9) <(grep test-score log |tail -n 18 |head -n 9 ) <(grep test-score log  |tail -n 27 |head -n 9 ) <(grep test-score log  |tail -n 36 |head -n 9 ) | $(MEANT)
+	@paste <(grep phi-score log   |tail -n 9) <(grep phi-score log  |tail -n 18 |head -n 9 ) <(grep phi-score log   |tail -n 27 |head -n 9 ) <(grep phi-score log   |tail -n 36 |head -n 9 ) | $(MEANP)
 
 parses:
 	-cat Data/p*.log | grep '^T#' > parses

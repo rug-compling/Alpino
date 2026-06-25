@@ -536,11 +536,11 @@ syntactic_penalty_nl(np_det_n_q,_NP,[_, tree(Det,_,_,_), Conj, _],p2(det_n_agr))
 %% ?waar is dat nodig voor/waar is dat voor nodig
 %% waar is dat belangrijk voor/?waar is dat voor belangrijk
 
-syntactic_penalty_nl(a_a_er_pp_comp,_,[NodigTree,VoorTree],a_er(Nodig,Voor)) :-
-    NodigTree = tree(NodigCat,_,_,_),
-    VoorTree = tree(VoorCat,_,_,_),
-    alpino_data:prep(VoorCat,Voor),
-    alpino_data:hstem(NodigCat,Nodig).
+%syntactic_penalty_nl(a_a_er_pp_comp,_,[NodigTree,VoorTree],a_er(Nodig,Voor)) :-
+%    NodigTree = tree(NodigCat,_,_,_),
+%    VoorTree = tree(VoorCat,_,_,_),
+%    alpino_data:prep(VoorCat,Voor),
+%    alpino_data:hstem(NodigCat,Nodig).
 
 %% we want to recognize non-standard orderings in the `middle field'. For
 %% instance:
@@ -584,20 +584,15 @@ syntactic_penalty_nl(max_xp(sv1),Cat,_,q(yesno)) :-
     alpino_data:vraag_puncttype(Vraag2),
     Vraag1 == Vraag2.
 
-syntactic_penalty_nl(a_pp_comp_a,_,[tree(PP,_,_,_),tree(Adj,_,_,_)],meebezig(Prep,Stem)) :-
-    alpino_data:prep(PP,Prep), nonvar(Prep),
-    alpino_data:hstem(Adj,Stem), nonvar(Stem).
+%% syntactic_penalty_nl(a_pp_comp_a,_,[tree(PP,_,_,_),tree(Adj,_,_,_)],meebezig(Prep,Stem)) :-
+%%    alpino_data:prep(PP,Prep), nonvar(Prep),
+%%    alpino_data:hstem(Adj,Stem), nonvar(Stem).
 
-syntactic_penalty_nl(vp_v_komma_arg(pp),_,[_,_,tree(PP,_,_,_)],s(ld_pp_extra)) :-
-    alpino_data:ld_pp(PP).
-
-%% prevent "we wachten jaar" but generate "we wachten jaren"
-syntactic_penalty_nl(np_n,_,[N],np_n_bare(Surf)) :-
-    rulename_surf(N,Surf).
+%% syntactic_penalty_nl(vp_v_komma_arg(pp),_,[_,_,tree(PP,_,_,_)],s(ld_pp_extra)) :-
+%%    alpino_data:ld_pp(PP).
 
 nth_syntactic_penalty(Id,N,D,r2l(Id,N)) :-
-    rulename(D,l),
-    !.
+    rulename(D,l).
 
 nth_syntactic_penalty(Id,N,D,r2(Id,N,DId)) :-
     rulename(D,DId).
@@ -605,9 +600,9 @@ nth_syntactic_penalty(Id,N,D,r2(Id,N,DId)) :-
 nth_syntactic_penalty(Id,N,D,r2l(Id,N,DId)) :-
     rulename_lex(D,DId).
 
-nth_syntactic_penalty(Id,N,tree(Sign,_,_,_),r_stem(Id,N,Hstem)):-
-    alpino_data:hstem(Sign,Hstem),
-    nonvar(Hstem).    
+%% nth_syntactic_penalty(Id,N,tree(Sign,_,_,_),r_stem(Id,N,Hstem)):-
+%%    alpino_data:hstem(Sign,Hstem),
+%%    nonvar(Hstem).    
 
 num(Agr,sg) :-
     \+ alpino_data:pl(Agr).
@@ -644,13 +639,14 @@ det_conj_n_no_agr(Det,Conj) :-
 
 %rulename_lex_postag(tree(_,_,lex(ref(Tag,_,Root,_,_,_,_,_,_,_,_)),_),Root,Tag).
 
-rulename_lex(tree(_,_,lex(ref(_,_,Root,_,_,_,_,_,_,_,_)),_),Root).
+rulename_lex(tree(_,_,lex(ref(_,_,Root0,_,_,_,_,_,_,_,_)),_),Root) :-
+    (   Root0 = v_root(Root1,_)
+    ->  Root1 = Root
+    ;   Root0 = Root
+    ).
+    
 rulename_lex(tree(_,_,[D],_),RuleName) :-
     rulename_lex(D,RuleName).
-
-rulename_surf(tree(_,_,lex(ref(_,_,_,Root,_,_,_,_,_,_,_)),_),Root).
-rulename_surf(tree(_,_,[D],_),RuleName) :-
-    rulename_surf(D,RuleName).
 
 rulename(tree(_,Name,Ds,_),RuleName) :-
     rulename(Ds,Name,RuleName).
