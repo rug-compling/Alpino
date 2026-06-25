@@ -6,42 +6,55 @@ include $(ALPINO_HOME)/Makefile.include
 endif
 endif
 
-sents = $(wildcard [CDPIWXU]/*.sents)
+sents = $(wildcard [CDEILPUWX]/*.sents)
 pls = $(sents:%.sents=%.pl)
 
-sents: C D P I W X U
+sents: C D E I L P U W X
 
 pl: $(pls)
 
 
 
 C_treebank = ../Treebank/cdb
-D_treebank = ../Treebank/dpc
-P_treebank = ../Treebank/PPH
-I_treebank = ../Treebank/PPI
-W_treebank = ../Treebank/WIKI
+C_pattern = 
+D_treebank = ../Treebank/LassySmall
+D_pattern = dpc
+E_treebank = ../Treebank/LassySmall
+E_pattern = WR-P-E
+I_treebank = ../Treebank/LassySmall
+I_pattern = WR-P-P-I
+L_treebank = ../Treebank/LassySmall
+L_pattern = WR-P-P-L
+P_treebank = ../Treebank/LassySmall
+P_pattern = WR-P-P-H
+U_treebank = ../Treebank/LassySmall
+U_pattern = WS-U-E-A
+W_treebank = ../Treebank/LassySmall
+W_pattern = wiki
 X_treebank = ../Treebank/extra
-U_treebank = ../Treebank/WSU
+X_pattern = 
 
 C_name = c
 D_name = d
-P_name = p
+E_name = d
 I_name = i
+L_name = l
+P_name = p
+U_name = u
 W_name = w
 X_name = x
-U_name = u
 
-C D P I W X U: 
+C D E I L P U W X: 
 	mkdir -p ${@}
 	( cd ${${@}_treebank}; \
-          ls -v *.xml |\
+          ls -v ${${@}_pattern}*.xml |\
           xargs dtxslt -s\
           ${ALPINO_HOME}/TreebankTools/stylesheets/dt2sent_with_key.xsl |\
           sed -e 's/\[/\\\[/g' \
               -e 's/\]/\\\]/g' \
         ) |\
 	( cd ${@} ; \
-          ../split_in_parts -o ${${@}_name} -p 100 -z \
+          ../split_in_parts -o ${${@}_name} -p 99 -z \
         )
 
 %.pl : %.sents
