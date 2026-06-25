@@ -15,14 +15,14 @@ all:
 	$(MAKE) -j prepare_enhanced_all
 	$(MAKE) -j enhanced_all 
 	$(MAKE) -j poslemma
-	$(MAKE) -j 30 sentspl freq trees_doc conllu pair installsents alpino.dact
+	$(MAKE) -j 30 freq trees_doc conllu pair alpino.dact
 
 freqs:
 	$(MAKE) -j dtchecks novel
 	$(MAKE) -j prepare_enhanced_all
 	$(MAKE) -j enhanced_all 
 	$(MAKE) -j poslemma
-	$(MAKE) -j 30 sentspl freq trees_doc conllu pair installsents
+	$(MAKE) -j 30 freq trees_doc conllu pair
 
 novel:
 	( cd fast; make -j alpino )
@@ -184,8 +184,6 @@ sents: $(DIRECTORIES:%=../SENTS/%.sents)
              $(XSL)/dt2sent_with_sentid.xsl |\
              sed -e 's/\[/\\\[/g' \
                  -e 's/\]/\\\]/g') > $@
-sentspl: sents
-	(  cd ../SENTS ; make )
 
 conllu: $(DIRECTORIES:%=../CONLLU/%.conllu)
 
@@ -200,7 +198,7 @@ update:
 	$(MAKE) novel
 	$(MAKE) sql/$(suite).sqlite corpus=$(suite)
 	$(MAKE) $(suite).enhanced
-	$(MAKE) ../SENTS/$(suite).sents sentspl installsents
+	$(MAKE) ../SENTS/$(suite).sents
 	$(MAKE) POSLEMMA/$(suite).poslemma
 	$(MAKE) MWU/$(suite).mwu FREQ/mwu-tagged.freq
 	(  cd Enhanced/$(suite); $(MAKE) -s --no-print-directory -j 30 index.html )
@@ -296,14 +294,3 @@ Suites/%.sents: Enhanced/%/*.xml
              sed -e 's/\[/\\\[/g' \
                  -e 's/\]/\\\]/g') > $@
 
-installsents: $(DIRECTORIES:%=Suites/Machine/%_part00001.sents.gz)
-	@for file in $(wildcard Suites/Machine/*.sents.gz);\
-        do if cmp -s $$file $(ALPINO_HOME)/$$file;\
-           then true;\
-           else echo cp -f $$file $(ALPINO_HOME)/Suites/Machine/ ;\
-                cp -f $$file $(ALPINO_HOME)/Suites/Machine/ ;\
-           fi;\
-        done
-
-Suites/Machine/%_part00001.sents.gz: Suites/%.sents
-	cat $< | (cd Suites/Machine ; $(ALPINO_HOME)/Suites/split_in_parts -o $* -p 20 )
