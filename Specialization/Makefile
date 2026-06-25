@@ -215,6 +215,3 @@ wpspel:
         extra="$(ANNOTATED_OPTIONS) -flag treebank $(ALPINO_HOME)/Treebank/wpspel"
 
 
-#### random subset of SoNaR:
-#### find -name '*.sents.gz' | xargs zcat | $A/Suites/random_lines -p 0.01 | ( cd /dev/shm ; $A/Suites/split_in_parts -p 5000 -o ll )
-
