@@ -1495,6 +1495,7 @@ check_adj_subject_pred_sbar(P0,P) :-
     ;   check_tag(post_adjective(_,so_pp_subject_sbar(_)),P0,P)
     ;   check_tag(post_adjective(_,so_pp_subject_sbar_no_het(_)),P0,P)
     ;   check_tag(post_adjective(_,so_np_subject_sbar),P0,P)
+    ;   check_tag(wh_adjective,P0,P)  % "hoe" only
     ;	check_tag(subject_sbar_pred_np_adjective,P0,P)
     ;	check_tag(subject_sbar_pred_np_me_adjective,P0,P)
     ).
@@ -1511,6 +1512,7 @@ check_adj_subject_pred_vp(P0,P) :-
     ;	check_tag(post_adjective(_,subject_vp_sbar_no_het),P0,P)
     ;   check_tag(post_adjective(_,so_np_subject_vp),P0,P)
     ;   check_tag(subject_vp_pred_np_adjective,P0,P)
+    ;   check_tag(wh_adjective,P0,P)  % "hoe" only
     ),
     check_vform(te,P0,P).
 

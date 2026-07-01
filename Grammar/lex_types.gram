@@ -839,14 +839,25 @@ wh_adjective(A) :-
     A0:exs => [],
     A0:avform => avform_ap,
     adjective(A0),
-    unify_except_l(A0,A,[wh,wh_reltmploc]),
-    A:wh => ywh,
-    A:avform => avform_ap,
-    A:cform => base,
-    A:adv => yadv,
-    A:aform => nattr,
-    A:tmploc => ntmploc,
-    A:tmploc <=> A:wh_reltmploc.
+    unify_except_l(A0,A1,[wh,wh_reltmploc]),
+    A1:wh => ywh,
+    A1:avform => avform_ap,
+    A1:cform => base,
+    A1:adv => yadv,
+    A1:aform => nattr,
+    A1:tmploc => ntmploc,
+    A1:tmploc <=> A1:wh_reltmploc,
+    hoe_edeps(A1,A).
+
+hoe_edeps(A,A).
+hoe_edeps(A0,A) :-
+    A0:hstem ==> hoe,
+    subject_sbar_adjective(A0,A,Sbar),
+    Sbar:subj_nform => obl_het.
+hoe_edeps(A0,A) :-
+    A0:hstem ==> hoe,
+    vp_adj_e_deps(A0,A,_Sbar).
+
 
 als_adjective(A) :-
     A0 => a,
