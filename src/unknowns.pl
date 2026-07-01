@@ -4842,8 +4842,10 @@ subsumed_by_dict(P0,P,_,_) :-
 
 %% forbid (van) Onderwijs/Justitie Frank ...
 subsumed_by_dict(P1,_,[Onderwijs,_|_],_) :-
-    tag(_,P1,_,_,van,van,_,_),
-    lists:member(Onderwijs,['Defensie','Justitie','Onderwijs','Wonen']).
+    (  tag(_,P1,_,_,van,van,_,_)
+    ;  tag(_,P1,_,_,voor,voor,_,_)
+    ),
+    lists:member(Onderwijs,['Defensie','Handel','Justitie','Onderwijs','Wonen']).
 
 %% forbid: Name1 ( Name2 ) where Name1 is known person, and Name2 is known org
 subsumed_by_dict(P0,P,_,_) :-
