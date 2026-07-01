@@ -9,10 +9,15 @@ endif
 sentsfiles=g_suite.sents h_suite.sents m_suite.sents\
            leuven_yellow_pages.sents \
            lot_test_suite1.sents ovis.sents\
-           i_suite.sents extra.sents
+           i_suite.sents extra.sents wpspel.sents
 namedsentsfiles=cgn_exs.named_sents lassy-doc.named_sents qa.named_sents j_suite.named_sents\
                 mwu_alt.named_sents novelsample_corrected.named_sents\
                 Titaantjes.named_sents
+
+qa_application_type_text=":- hdrug_util:set_flag(application_type,qa)."
+wpspel_application_type_text=":- hdrug_util:set_flag(application_type,qa)."
+ovis_application_type_text=":- hdrug_util:set_flag(application_type,ovis)."
+
 
 suites=$(sentsfiles:%.sents=%) $(namedsentsfiles:%.named_sents=%)
 
