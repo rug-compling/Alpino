@@ -99,9 +99,14 @@ grule(clause(grammar_rule(Label,M,Ds),[]),[Label|L],L):-
 
 plex(clause(lex(Cat,Tag,Label,His),Constraints),Words,[]):-
     lex_lexicon(Tag,Label,Words,[],His),
+    (   Label=v_root(Stem,Lemma)
+    ->  true
+    ;   Label=Stem,
+	Label=Lemma
+    ),
     length(Words,Len),
     hdrug_util:concat_all(Words,Surf,' '),
-    alpino_data:lexical(Word,Label,lemma,Surf,0,Len,His,_),
+    alpino_data:lexical(Word,Stem,_Lemma,Surf,0,Len,His,_),
     alpino_lex_types:lex(Cat0,Tag,Word,_),
     copy_term(Cat0,Cat,Constraints).
 
@@ -823,32 +828,6 @@ show_lf([Ns0|Ns],Type,Output) :-
                  lf(N,Adt)
                 ), Values),
     hdrug_show:show(Type,Output,Values).
-
-
-%% for Kostadin
-
-:- public paradigm/1.
-hdrug_command(paradigm,paradigm(Form),[Form]).
-
-paradigm(Form,Sg1,Sg3,Pl,PastSg,PastPl,Psp) :-
-    lex_lexicon(verb(_,_,Sc),Root,[Form],[],_),
-    functor(Sc,Fun,_),\+ atom_concat(part_,_,Fun),
-    (   alpino_genlex:dict_entry(Root,verb(_,sg1,Sc),Sg1)
-    ;   alpino_genlex:dict_entry(Root,verb(_,sg,Sc),Sg1)
-    ),
-    (   alpino_genlex:dict_entry(Root,verb(_,sg3,Sc),Sg3)
-    ;   alpino_genlex:dict_entry(Root,verb(_,sg,Sc),Sg3)
-    ),
-    alpino_genlex:dict_entry(Root,verb(_,pl,Sc),Pl),
-    alpino_genlex:dict_entry(Root,verb(_,past(sg),Sc),PastSg),
-    alpino_genlex:dict_entry(Root,verb(_,past(pl),Sc),PastPl),
-    alpino_genlex:dict_entry(Root,verb(_,psp,Sc),Psp),
-    !.
-
-paradigm(Form) :-
-    paradigm(Form,Sg1,Sg3,Pl,PastSg,PastPl,Psp),
-    format("paradigm|~p|~p|~p|~p|~p|~p|~p~n",
-           [Form,Sg1,Sg3,Pl,PastSg,PastPl,Psp]).
 
 simplify_cat(Cat,Term) :-
     nonvar(Cat),
