@@ -84,7 +84,7 @@ echo:
 	echo $(DATA:%.log.gz=%.ps)
 
 guides.t: $(DATA:%.log.gz=%.ps) make_guide_vector
-	sort -u $(DATA:%.log.gz=%.ps) > guides.t
+	sort -u $(DATA:%.log.gz=%.ps) | grep -F -f gone -v > guides.t
 
 guides.txt: guides.t ../src/guides.pl
 	cat guides.t |\
