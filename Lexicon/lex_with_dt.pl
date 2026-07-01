@@ -1503,6 +1503,7 @@ with_dt_all(eens,[temeer]).
 with_dt_all(eens,['te veel']).
 with_dt_all(eens,[zo]).
 with_dt_all(eens,[zoveel]).
+with_dt_all(een,[tweetal]).
 with_dt_all(een,[welk]).
 with_dt_all(eerder,[en]).
 with_dt_all(eerder,[gisteravond]).
@@ -2161,6 +2162,7 @@ with_dt_all('\'n',[reeks]).
 with_dt_all('\'n',[soort]).
 with_dt_all('\'n',[stel]).
 with_dt_all('\'n',[stelletje]).
+with_dt_all('\'n',[tweetal]).
 with_dt_all(nu,[waarom,weer]).
 with_dt_all(of,[omgekeerd]).
 with_dt_all(of,[oud]).
@@ -3059,6 +3061,7 @@ with_dt_root(twee).
 with_dt_root(twee_DIM).
 with_dt_root(tweeduizend).
 with_dt_root(tweehonderd).
+with_dt_root(tweetal).
 with_dt_root(twintig).
 with_dt_root(type).
 with_dt_root(u).

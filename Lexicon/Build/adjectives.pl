@@ -9853,7 +9853,7 @@ a([no_e(fair),
   [subject_sbar,
    subject_vp],[]).
 
-a([pred(fake)],nonadv,[],[]).
+a([both(fake)],nonadv,[],[]).
 
 a([e(faliekante),
    no_e(faliekant),
@@ -20562,8 +20562,8 @@ a([e(klimatologische),
 a([e(klinische),
    no_e(klinisch)],adv,[],[]).
 
-a([pred([klip,en,klaar]),
-   pred('klip-en-klaar')],adv,[subject_sbar],[]).
+a([both([klip,en,klaar]),
+   both('klip-en-klaar')],adv,[subject_sbar],[]).
 
 a([e(kloeke),
    er(kloeker),
@@ -25669,7 +25669,7 @@ a([e(ongestelde),
    ere(ongesteldere),
    no_e(ongesteld),
    st(ongesteldst),
-   ste(ongesteldste)],nonadv,[],[]).
+   ste(ongesteldste)],padv,[],[]).
 
 a([e(ongevaarlijke),
    er(ongevaarlijker),
@@ -26060,7 +26060,9 @@ a([e(onoverkomelijke),
    ere(onoverkomelijkere),
    no_e(onoverkomelijk),
    st(onoverkomelijkst),
-   ste(onoverkomelijkste)],nonadv,[],[]).
+   ste(onoverkomelijkste)],nonadv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([both(onovertroffen)],nonadv,[],[]).
 
@@ -33673,6 +33675,9 @@ a([e(tochtige),
    no_e(tochtig),
    st(tochtigst),
    ste(tochtigste)],nonadv,[],[]).
+
+%% VL De boeken kunnen toe (dicht)
+a([pred(toe)],nonadv,[],[]).
 
 a([ge_e(toebedachte),
    ge_no_e(toebedacht)],nonadv,

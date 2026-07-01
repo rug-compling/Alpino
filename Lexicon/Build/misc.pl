@@ -1917,6 +1917,7 @@ een_aantal_detp(Een,reeks,pl_num) :- een(Een).
 een_aantal_detp(Een,soort,pron) :- een(Een).
 een_aantal_detp(Een,stel,pl_num) :- een(Een).
 een_aantal_detp(Een,stelletje,pl_num) :- een(Een).
+een_aantal_detp(Een,tweetal,pl_num) :- een(Een).
 
 een_aantal_detp_pos(die,paar,pl_num,determiner(de,nwh,nmod,pro,nparg)).  % wat maakt die paar minuten nou uit.
 een_aantal_detp_pos(elke,paar,pl_num,determiner(elke,nwh,mod)).

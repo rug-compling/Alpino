@@ -903,6 +903,8 @@ n([mass('Maleisisch')],het,[],[]).
 
 n([mass('Maltees')],het,[],[]).
 
+n([sg('Malinees'),pl('Malinezen')],het,[],[]).
+
 n([sg('Maltezer'),pl('Maltezers')],de,[],[]).
 
 n([mass('Markens')],het,[],[]).
@@ -1223,6 +1225,8 @@ n([mass('Utrechts')],het,[],[]).
 n([mass('Vaticaan')],het,[],[]).
 
 n([mass('Venetiaans')],het,[],[]).
+
+n([sg('Venezolaan'),pl('Venezolanen')],de,[],[]).
 
 n([mass('Venloos')],het,[],[]).
 
@@ -9140,7 +9144,9 @@ n([pl(debuten),sg(debuut)],het,
    regie,
    i(speel_film,speelfilm),
    thriller,
-   toneel]).
+   toneel,
+   h('WK')
+  ]).
 
 n([stem(debacle),
    pl(debâcles),sg(debâcle),pl(debacles),sg(debacle)],both,[],[]).
@@ -9534,6 +9540,8 @@ n([pl(diameters),sg(diameter)],de,[],[]).
 
 n([mass(diarree)],de,[],[]).
 
+n([sg(diaspora),pl('diaspora\'s')],de,[],[]).
+
 n([pl(dichters),sg(dichter)],de,[],[]).
 
 n([sg(['Dichter',des,'Vaderlands']),pl(['Dichters',des,'Vaderlands'])],de,[],[]).
@@ -9622,7 +9630,9 @@ n([pl(diensten),sg(dienst)],de,[],
    veer,
    s(veiligheid),
    s(voorlichting),
-   i(vreemdeling,vreemdelingen)]).
+   i(vreemdeling,vreemdelingen),
+   weer
+  ]).
 
 n([pl(diensten),sg(dienst)],de,[],
   [ere,
@@ -10015,7 +10025,9 @@ n([pl(doellieden),pl(doelmannen),sg(doelman)],de,[],
 
 n([mass(doelmatigheid)],de,[],[]).
 
-n([pl(doelpunten),sg(doelpunt)],het,[measure,meas_mod],[]).
+n([pl(doelpunten),sg(doelpunt)],het,[measure,meas_mod],
+  [h('WK')
+  ]).
 
 n([pl(doelstellingen),sg(doelstelling)],de,
   [sbar,
@@ -21193,6 +21205,7 @@ n([pl(leden),sg(lid)],het,[],
    'Lagerhuis',
    h('LPF'),
    militie,
+   h('OMT'),
    oog,
    orkest,
    s(parlement),
@@ -23414,7 +23427,9 @@ n([pl(ministers),sg(minister)],de,[],
    h('SP'),
    top,
    s(verkeer),
-   h('VVD')]).
+   h('VVD'),
+   zorg
+  ]).
 
 n([sg(ministerschap),pl(ministerschappen)],het,[],[]).
 
@@ -24905,7 +24920,7 @@ n([sg('NRA'),pl('NRA\'s')],de,[],[]).
 
 n([sg('NRI'),pl('NRI\'s')],de,[],[]).
 
-n([pl(nuancen),pl(nuances),sg(nuance)],de,[sbar,vp],[]).
+n([pl(nuancen),pl(nuances),sg(nuance)],de,[subject_sbar,sbar,vp],[]).
 
 n([pl(nuanceringen),sg(nuancering)],de,[sbar,vp],[]).
 
@@ -28204,6 +28219,7 @@ n([pl(plannen),sg(plan)],both,
    grond,
    herstel,
    s(hervorming),
+   hitte,
    s(kabinet),
    leer,
    h('Marshall'),'Marshall',
@@ -28218,6 +28234,7 @@ n([pl(plannen),sg(plan)],both,
    s(redding),
    reorganisatie,
    s(sanering),
+   stikstof,
    streek,
    structuur,
    i(tien_punt,tienpunten),
@@ -28371,6 +28388,7 @@ n([pl(plekken),sg(plek)],de,[],
    opvang,
    parkeer,
    ramp,
+   schaduw,
    slaap,
    zwem,
    dim(plekje)]).
@@ -29624,7 +29642,9 @@ n([mass(protestantisme)],het,[],[]).
 
 n([pl(prothesen),pl(protheses),sg(prothese)],de,[],[]).
 
-n([pl(protocollen),sg(protocol)],het,[],[h('Kyoto')]).
+n([pl(protocollen),sg(protocol)],het,[],
+  [hitte,
+   h('Kyoto')]).
 
 n([pl(protonen),sg(proton)],het,[],[]).
 
@@ -32877,7 +32897,7 @@ n([pl(sekten),pl(sektes),sg(sekte)],de,[],[]).
 n([mass(selderij)],de,[],[]).
 
 n([pl(selecties),sg(selectie),
-   pl(selekties),sg(selektie)],de,[],
+   pl(selekties),sg(selektie)],de,[measure],
   [h('A'),
    h('B'),
    markt,
@@ -33515,6 +33535,7 @@ n([pl(sloten),sg(slot)],het,[],
    cilinder,
    hang,
    nacht,
+   stikstof,
    dim(slotje)]).
 
 n([pl(slotsommen),sg(slotsom)],de,[sbar],[]).
@@ -36287,6 +36308,7 @@ n([pl(teams),sg(team)],het,[],
    prof,
    project,
    recherche,
+   s(redding),
    trauma,
    voetbal,
    volleybal,
@@ -37374,7 +37396,10 @@ n([pl(topmannen),sg(topman),pl(toplui)],de,[],[]).
 
 n([pl(toppers),sg(topper)],de,[],[sub]).
 
-n([pl(topscorers),sg(topscorer)],de,[],[club]).
+n([pl(topscorers),sg(topscorer)],de,[],
+  [club,
+   h('WK')
+  ]).
 
 n([pl(topscoorsters),sg(topscoorster)],de,[],[club]).
 
@@ -38288,7 +38313,9 @@ n([pl(uitstekken),sg(uitstek)],het,[],[]).
 n([mass(uitstel)],both,[],[]).
 
 n([pl(uitstoten),sg(uitstoot)],de,[],
-  [h('CO2')]).
+  [h('CO2'),
+   stikstof
+  ]).
 
 n([pl(uitstralingen),sg(uitstraling)],de,[van_sbar],[]).
 
@@ -39448,6 +39475,7 @@ n([sg(verlening),pl(verleningen)],de,[],
    i(jeugd_hulp,jeugdhulp),
    krediet,
    steun,
+   s(vergunning),
    zorg]).
 
 n([sg(verlichter),pl(verlichters)],de,[],[]).
@@ -42015,6 +42043,7 @@ n([sg(wedstrijd),pl(wedstrijden)],de,
    kwalificatie,
    i('EK_kwalificatie','EK-kwalificatie'),
    i('WK_kwalificatie','WK-kwalificatie'),
+   sport,
    terug,
    thuis,
    uit,
@@ -43863,6 +43892,8 @@ n([pl(zones),sg(zone)],de,[],
 n([pl(zonnebaden),sg(zonnebad)],het,[],[]).
 
 n([pl(zonnebloemen),sg(zonnebloem)],de,[],[]).
+
+n([mass(zonnebrand)],de,[],[]).
 
 n([pl(zonnebrillen),sg(zonnebril)],de,[],[]).
 
