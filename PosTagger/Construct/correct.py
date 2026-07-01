@@ -148,6 +148,8 @@ def main():
             t = "adjective(both(adv))"
         if r == "voorlangs" and t == "particle(voorlangs)":
             t = "loc_adverb"
+        if r == "fake" and t == "adjective(pred(nonadv))":
+            t = "adjective(both(nonadv))"
         print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(w,t,k,i,j,h,p,r,c,s))
 
 

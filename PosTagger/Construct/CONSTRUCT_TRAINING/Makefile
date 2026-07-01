@@ -49,6 +49,7 @@ install_test:
 	cp $(suite).la $(suite).log.gz ..
 
 include $(ALPINO_HOME)/Makefile.errormining
+LOGS=*.log.gz ../TRAINING/*.log.gz
 
 PS=p_part00001 p_part00002 p_part00003 p_part00004 p_part00005 p_part00006 p_part00007 p_part00008 p_part00009 p_part00010 p_part00011 p_part00012 p_part00013 p_part00014 p_part00015 p_part00016 p_part00017 p_part00018 p_part00019 p_part00020
 

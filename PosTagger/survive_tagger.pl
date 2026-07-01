@@ -30,6 +30,8 @@ survives(tag(_,_,_,_,W,_,_,T)) :-
     surviving_root_tag(W,T).
 survives(tag(_,_,_,_,_,W,_,T)) :-
     surviving_word_tag(W,T).
+survives(tag(_,_,_,_,_,_,His,_)) :-
+    surviving_his_tag(His).
 
 survives(tag(_,_,R1,R2,_,Word,_,Tag)) :-
     survives_context(Word,Tag,Left,Right),
@@ -101,6 +103,8 @@ survives_trigram(_,zou,verb(hebben,past(sg),aux(inf)),_,ik,pronoun(nwh,fir,sg,de
 %% because alles of niets is also adjective
 survives_trigram(alles,_,noun(het,mass,sg),of,_,conj(of),niets,_,meas_mod_noun(het,mass,sg)).
 
+%% het beste is mwu too
+survives_trigram(het,_,determiner(het,nwh,nmod,pro,nparg,wkpro),goed,beste,adjective(ste),van,van,preposition(van,_)).
 
 
 surviving_word('collega \' s').
@@ -223,3 +227,5 @@ finite(past(_)).
 finite(subjunctive).
 
 survives_context(haar,pronoun(nwh,thi,sg,de,dat_acc,def),bij,borstkanker).
+
+surviving_his_tag(quoted_name(„,”)).
