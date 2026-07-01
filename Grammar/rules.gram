@@ -3658,10 +3658,10 @@ grammar_rule(dip_scope_root_q,ROOT,[QL,NUCL,QR]) :-
 %% really, if embbeded?
 %%EX%% Hij keek me aan alsof hij wilde zeggen : flauwekul !
 %%EX%% We vertrekken , al moeten we , denk ik , uitkijken !
-%%% always with dip_scope_vp ? No.
-grammar_rule(dip_scope_sbar,ROOT,[NUCL]) :-
-    ROOT => sbar,
-    dip_scope_structure(NUCL,ROOT).
+%%% always with dip_scope_vp ? No. No? None found in Specialization ...
+%% grammar_rule(dip_scope_sbar,ROOT,[NUCL]) :-
+%%     ROOT => sbar,
+%%     dip_scope_structure(NUCL,ROOT).
 
 %%EX%% Waarop de jongens zeiden : " Je hebt wel geld "
 %%EX%% Hij wijst samenwerking af , omdat , aldus De Jong , " zoiets niet meer van deze tijd is . "
@@ -4382,6 +4382,7 @@ grammar_rule(mod7, Mod, [ SV1 ]) :-
 modifier_p_start_structure(Mod,Mod1,P1,P2) :-
     Mod1 => modifier,
     Mod1:eps => no,
+    Mod1:cj => ncj,
     Mod => start,
     Mod1:mcat => mcat_bracket,
     P1 => punct,
@@ -8701,6 +8702,20 @@ grammar_rule(predm_adv_post_pp_dp,MAX,[ADV,XP]) :-
     max_post_pp(XP),
     dp_dp_structure(ADV,XP,MAX).
 
+%%EX%% even de grens over
+grammar_rule(adv_post_pp_dp,MAX,[ADV,COMMA,XP]) :-
+    optcomma(COMMA),
+    MAX => max,
+    MAX:max_type => t_dp,
+    max_advp_np(ADV),
+    ADV:wk => no,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	ADV:redrel => no
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
+    max_post_pp(XP),
+    dp_dp_structure(ADV,XP,MAX).
+
 %%EX%% leuk voor later , allemaal
 grammar_rule(predm_ap_adv_dp,MAX,[XP,COMMA,ADV]) :-
     MAX => max,
@@ -9565,10 +9580,6 @@ grammar_rule(adv_pp_dp,MAX,[ADV,COMMA,XP]) :-
     max_advp_np(ADV),  % per Jan 25 2024
     ADV:wk => no,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
-	%%  ADV:tmploc => ~loc & ~tmp,  25/1/2024
-	%%    ADV:subadv => ~subadv_adj,         % cf a_a_pps...
-	%%    vaak onder de allerarmsten
-	%%    dikwijls zonder jas
 	ADV:redrel => no
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
     ),
