@@ -8066,8 +8066,8 @@ opt_add_compar_to_obj_if_cform(A) :-
 %% there are several problems with this code...
 
 construct_dt(Deriv,Sign,Word,F,Dt0) :-
-    if(construct_dt_(Deriv,Sign,Word,F,Dt0),
-       true,
+    if(construct_dt_(Deriv,Sign0,Word,F,Dt0),
+       Sign0 = Sign,
        format(user_error,"error: cannot construct ~w~n",[Deriv])
       ).
 
