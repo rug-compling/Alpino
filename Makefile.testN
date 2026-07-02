@@ -135,7 +135,7 @@ testN: $(suite).testN
 %.dir:
 	mkdir -p $*
 
-%.testN:%
+%.testN:%.dir
 	mkdir -p $*/$(job)
 	echo "extra=$(extra)" >> $*/bests
 	-$(MAKE) trees dir=$*/$(job) suite=$*
