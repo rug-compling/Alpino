@@ -1,18 +1,12 @@
 :- module(extra, []).
 
-with_dt(['een','stuk','of','tien'],number(hoofd(pl_num)),dt(detp,[hd=l(tien,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['twee','na'],num_na,dt(pp,[hd=l(na,particle(na),1,2),obj1=l(twee,number(hoofd(pl_num)),detp,0,1)])).
 with_dt(['tussen','de','450','en','500'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('450',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('500',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','0,5','en','1'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('0,5',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('1',number(hoofd(pl_num)),4,5)])])])).
-with_dt(['een','stuk','of','wat'],number(hoofd(pl_num)),dt(detp,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
-with_dt(['een','stuk','of','vijf'],number(hoofd(pl_num)),dt(detp,[hd=l(vijf,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['een','na'],num_na,dt(pp,[hd=l(na,particle(na),1,2),obj1=l(een,number(hoofd(pl_num)),detp,0,1)])).
-with_dt(['een','stuk','of','twintig'],number(hoofd(pl_num)),dt(detp,[hd=l(twintig,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['twee','bij','twee'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(twee,number(hoofd(pl_num)),detp,0,1),cnj=l(twee,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['2002','-','2003'],np(year),dt(conj,[cnj=l('2002',np(year),np,0,1),cnj=l('2003',np(year),np,2,3)])).
-with_dt(['een','stuk','of','drie'],number(hoofd(pl_num)),dt(detp,[hd=l(drie,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['tussen','de','14','en','16'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('14',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('16',number(hoofd(pl_num)),4,5)])])])).
-with_dt(['een','stuk','of','zes'],number(hoofd(pl_num)),dt(detp,[hd=l(zes,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['twee','bij','drie'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(twee,number(hoofd(pl_num)),detp,0,1),cnj=l(drie,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['tussen','de','25','en','30'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('25',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('30',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','20','en','30'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('20',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('30',number(hoofd(pl_num)),4,5)])])])).
@@ -22,14 +16,11 @@ with_dt(['tussen','0','en','1'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposi
 with_dt(['vijf','bij','vijf'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(vijf,number(hoofd(pl_num)),detp,0,1),cnj=l(vijf,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['tussen','de','20','en','25'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('20',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('25',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','10','en','15'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('10',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('15',number(hoofd(pl_num)),4,5)])])])).
-with_dt(['een','stuk','of','dertig'],number(hoofd(pl_num)),dt(detp,[hd=l(dertig,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['tussen','de','15','en','18'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('15',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('18',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','14','en','17'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('14',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('17',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['drie','bij','drie'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(drie,number(hoofd(pl_num)),detp,0,1),cnj=l(drie,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['tussen','de','twintig','en','dertig'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l(twintig,number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l(dertig,number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','15','en','20'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('15',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('20',number(hoofd(pl_num)),4,5)])])])).
-with_dt(['een','stuk','of','vier'],number(hoofd(pl_num)),dt(detp,[hd=l(vier,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
-with_dt(['een','stuk','of','acht'],number(hoofd(pl_num)),dt(detp,[hd=l(acht,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['2008','-','2009'],np(year),dt(conj,[cnj=l('2008',np(year),np,0,1),cnj=l('2009',np(year),np,2,3)])).
 with_dt(['tussen','de','vijf','en','tien'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l(vijf,number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l(tien,number(hoofd(pl_num)),4,5)])])])).
 with_dt(['vier','bij','vier'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(vier,number(hoofd(pl_num)),detp,0,1),cnj=l(vier,number(hoofd(pl_num)),detp,2,3)])).
@@ -41,7 +32,6 @@ with_dt(['tussen','de','100','en','200'],number(hoofd(pl_num)),dt(pp,[hd=l(tusse
 with_dt(['tussen','25','en','30'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('25',number(hoofd(pl_num)),detp,1,2),cnj=l('30',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['drie','bij','vier'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(drie,number(hoofd(pl_num)),detp,0,1),cnj=l(vier,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['tussen','de','14','en','18'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('14',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('18',number(hoofd(pl_num)),4,5)])])])).
-with_dt(['een','stuk','of','vijftien'],number(hoofd(pl_num)),dt(detp,[hd=l(vijftien,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['tussen','de','tien','en','twintig'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l(tien,number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l(twintig,number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','dertig','en','veertig'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l(dertig,number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l(veertig,number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','16','en','19'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('16',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('19',number(hoofd(pl_num)),4,5)])])])).
@@ -66,7 +56,6 @@ with_dt(['2010','-','2011'],np(year),dt(conj,[cnj=l('2010',np(year),np,0,1),cnj=
 with_dt(['2007','-','2008'],np(year),dt(conj,[cnj=l('2007',np(year),np,0,1),cnj=l('2008',np(year),np,2,3)])).
 with_dt(['2005','-','2008'],np(year),dt(conj,[cnj=l('2005',np(year),np,0,1),cnj=l('2008',np(year),np,2,3)])).
 with_dt(['tussen','de','16','en','20'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('16',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('20',number(hoofd(pl_num)),4,5)])])])).
-with_dt(['een','stuk','of','vijftig'],number(hoofd(pl_num)),dt(detp,[hd=l(vijftig,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['2003','-','2004'],np(year),dt(conj,[cnj=l('2003',np(year),np,0,1),cnj=l('2004',np(year),np,2,3)])).
 with_dt(['tussen','de','60','en','70'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('60',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('70',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','50','en','60'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('50',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('60',number(hoofd(pl_num)),4,5)])])])).
@@ -80,7 +69,6 @@ with_dt(['tussen','de','200','en','300'],number(hoofd(pl_num)),dt(pp,[hd=l(tusse
 with_dt(['tussen','de','18','en','23'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('18',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('23',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','18','en','22'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('18',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('22',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','14','en','19'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('14',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('19',number(hoofd(pl_num)),4,5)])])])).
-with_dt(['een','stuk','of','honderd'],number(hoofd(pl_num)),dt(detp,[hd=l(honderd,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['800','bij','600'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('800',number(hoofd(pl_num)),detp,0,1),cnj=l('600',number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['2000','-','2001'],np(year),dt(conj,[cnj=l('2000',np(year),np,0,1),cnj=l('2001',np(year),np,2,3)])).
 with_dt(['10','bij','10'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('10',number(hoofd(pl_num)),detp,0,1),cnj=l('10',number(hoofd(pl_num)),detp,2,3)])).
@@ -89,7 +77,6 @@ with_dt(['tussen','de','18','en','24'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,
 with_dt(['tussen','de','15','en','25'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('15',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('25',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','15','en','19'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('15',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('19',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','20','en','30'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('20',number(hoofd(pl_num)),detp,1,2),cnj=l('30',number(hoofd(pl_num)),detp,3,4)])])).
-with_dt(['een','stuk','of','20'],number(hoofd(pl_num)),dt(detp,[hd=l('20',number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['2','bij','2'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('2',number(hoofd(pl_num)),detp,0,1),cnj=l('2',number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['1914','-','1918'],np(year),dt(conj,[cnj=l('1914',np(year),np,0,1),cnj=l('1918',np(year),np,2,3)])).
 with_dt(['vier','na'],num_na,dt(pp,[hd=l(na,particle(na),1,2),obj1=l(vier,number(hoofd(pl_num)),detp,0,1)])).
@@ -98,7 +85,6 @@ with_dt(['tussen','de','drie','en','vier'],number(hoofd(pl_num)),dt(pp,[hd=l(tus
 with_dt(['tussen','de','13','en','17'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('13',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('17',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','1000','en','2000'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('1000',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('2000',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','5','en','10'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('5',number(hoofd(pl_num)),detp,1,2),cnj=l('10',number(hoofd(pl_num)),detp,3,4)])])).
-with_dt(['een','stuk','of','twaalf'],number(hoofd(pl_num)),dt(detp,[hd=l(twaalf,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['480','bij','800'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('480',number(hoofd(pl_num)),detp,0,1),cnj=l('800',number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['2009','-','2010'],np(year),dt(conj,[cnj=l('2009',np(year),np,0,1),cnj=l('2010',np(year),np,2,3)])).
 with_dt(['tussen','de','drie','en','vijf'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l(drie,number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l(vijf,number(hoofd(pl_num)),4,5)])])])).
@@ -108,7 +94,6 @@ with_dt(['tussen','de','16','en','18'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,
 with_dt(['tussen','de','100','en','150'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('100',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('150',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','25','en','35'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('25',number(hoofd(pl_num)),detp,1,2),cnj=l('35',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tussen','20','en','25'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('20',number(hoofd(pl_num)),detp,1,2),cnj=l('25',number(hoofd(pl_num)),detp,3,4)])])).
-with_dt(['een','stuk','of','veertig'],number(hoofd(pl_num)),dt(detp,[hd=l(veertig,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['3','bij','3'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('3',number(hoofd(pl_num)),detp,0,1),cnj=l('3',number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['tussen','zes','en','zeven'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l(zes,number(hoofd(pl_num)),detp,1,2),cnj=l(zeven,number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tussen','de','veertig','en','vijftig'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l(veertig,number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l(vijftig,number(hoofd(pl_num)),4,5)])])])).
@@ -124,7 +109,6 @@ with_dt(['tussen','de','20','en','24'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,
 with_dt(['tussen','de','200','en','250'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('200',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('250',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','18','en','21'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('18',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('21',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','de','12','en','20'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('12',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('20',number(hoofd(pl_num)),4,5)])])])).
-with_dt(['een','stuk','of','zestig'],number(hoofd(pl_num)),dt(detp,[hd=l(zestig,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['20','bij','20'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('20',number(hoofd(pl_num)),detp,0,1),cnj=l('20',number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['1998','-','2002'],np(year),dt(conj,[cnj=l('1998',np(year),np,0,1),cnj=l('2002',np(year),np,2,3)])).
 with_dt(['1994','-','1995'],np(year),dt(conj,[cnj=l('1994',np(year),np,0,1),cnj=l('1995',np(year),np,2,3)])).
@@ -139,7 +123,6 @@ with_dt(['tussen','de','2','en','2,5'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,
 with_dt(['tussen','de','250','en','300'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l('250',number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l('300',number(hoofd(pl_num)),4,5)])])])).
 with_dt(['tussen','37','en','38,8'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('37',number(hoofd(pl_num)),detp,1,2),cnj=l('38,8',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tien','bij','tien'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(tien,number(hoofd(pl_num)),detp,0,1),cnj=l(tien,number(hoofd(pl_num)),detp,2,3)])).
-with_dt(['een','stuk','of','zeven'],number(hoofd(pl_num)),dt(detp,[hd=l(zeven,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['8','bij','8'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('8',number(hoofd(pl_num)),detp,0,1),cnj=l('8',number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['50','bij','50'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('50',number(hoofd(pl_num)),detp,0,1),cnj=l('50',number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['tussen','de','zestig','en','tachtig'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,3,4),cnj=dt(np,[det=ix(A,l(de,determiner(de),detp,1,2)),hd=l(zestig,number(hoofd(pl_num)),2,3)]),cnj=dt(np,[det=ix(A),hd=l(tachtig,number(hoofd(pl_num)),4,5)])])])).
@@ -184,9 +167,6 @@ with_dt(['tussen','200','en','300'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,pre
 with_dt(['tussen','18','en','25'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('18',number(hoofd(pl_num)),detp,1,2),cnj=l('25',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tussen','12','en','15'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('12',number(hoofd(pl_num)),detp,1,2),cnj=l('15',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tussen','10','en','20'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('10',number(hoofd(pl_num)),detp,1,2),cnj=l('20',number(hoofd(pl_num)),detp,3,4)])])).
-with_dt(['een','stuk','of','40'],number(hoofd(pl_num)),dt(detp,[hd=l('40',number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
-with_dt(['een','stuk','of','30'],number(hoofd(pl_num)),dt(detp,[hd=l('30',number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
-with_dt(['een','stuk','of','25'],number(hoofd(pl_num)),dt(detp,[hd=l('25',number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['drie','bij','vijf'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(drie,number(hoofd(pl_num)),detp,0,1),cnj=l(vijf,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['\'97','-','\'98'],np(year),dt(conj,[cnj=l('\'97',np(year),np,0,1),cnj=l('\'98',np(year),np,2,3)])).
 with_dt(['\'90','-','\'99'],np(year),dt(conj,[cnj=l('\'90',np(year),np,0,1),cnj=l('\'99',np(year),np,2,3)])).
@@ -275,7 +255,6 @@ with_dt(['tussen','1','en','5'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposi
 with_dt(['tussen','19','en','23'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('19',number(hoofd(pl_num)),detp,1,2),cnj=l('23',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tussen','18','en','35'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('18',number(hoofd(pl_num)),detp,1,2),cnj=l('35',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tussen','13','en','18'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('13',number(hoofd(pl_num)),detp,1,2),cnj=l('18',number(hoofd(pl_num)),detp,3,4)])])).
-with_dt(['een','stuk','of','zeventig'],number(hoofd(pl_num)),dt(detp,[hd=l(zeventig,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['drie','bij','zes'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(drie,number(hoofd(pl_num)),detp,0,1),cnj=l(zes,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['\'96','-','\'97'],np(year),dt(conj,[cnj=l('\'96',np(year),np,0,1),cnj=l('\'97',np(year),np,2,3)])).
 with_dt(['4','bij','5'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('4',number(hoofd(pl_num)),detp,0,1),cnj=l('5',number(hoofd(pl_num)),detp,2,3)])).
@@ -357,9 +336,6 @@ with_dt(['tussen','10','en','15'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,prepo
 with_dt(['tussen','10','en','12'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('10',number(hoofd(pl_num)),detp,1,2),cnj=l('12',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tussen','0','en','5'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('0',number(hoofd(pl_num)),detp,1,2),cnj=l('5',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tussen','0,5','en','1'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('0,5',number(hoofd(pl_num)),detp,1,2),cnj=l('1',number(hoofd(pl_num)),detp,3,4)])])).
-with_dt(['een','stuk','of','negen'],number(hoofd(pl_num)),dt(detp,[hd=l(negen,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
-with_dt(['een','stuk','of','50'],number(hoofd(pl_num)),dt(detp,[hd=l('50',number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
-with_dt(['een','stuk','of','12'],number(hoofd(pl_num)),dt(detp,[hd=l('12',number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['\'92','-','\'93'],np(year),dt(conj,[cnj=l('\'92',np(year),np,0,1),cnj=l('\'93',np(year),np,2,3)])).
 with_dt(['5','bij','5'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('5',number(hoofd(pl_num)),detp,0,1),cnj=l('5',number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['2008','-','2012'],np(year),dt(conj,[cnj=l('2008',np(year),np,0,1),cnj=l('2012',np(year),np,2,3)])).
@@ -465,7 +441,6 @@ with_dt(['tussen','10','en','13'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,prepo
 with_dt(['tussen','100.000','en','500.000'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('100.000',number(hoofd(pl_num)),detp,1,2),cnj=l('500.000',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tussen','100.000','en','200.000'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('100.000',number(hoofd(pl_num)),detp,1,2),cnj=l('200.000',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tien','bij','vier'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(tien,number(hoofd(pl_num)),detp,0,1),cnj=l(vier,number(hoofd(pl_num)),detp,2,3)])).
-with_dt(['een','stuk','of','duizend'],number(hoofd(pl_num)),dt(detp,[hd=l(duizend,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['\'98','-','\'99'],np(year),dt(conj,[cnj=l('\'98',np(year),np,0,1),cnj=l('\'99',np(year),np,2,3)])).
 with_dt(['\'94','-','\'95'],np(year),dt(conj,[cnj=l('\'94',np(year),np,0,1),cnj=l('\'95',np(year),np,2,3)])).
 with_dt(['7','bij','7'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('7',number(hoofd(pl_num)),detp,0,1),cnj=l('7',number(hoofd(pl_num)),detp,2,3)])).
@@ -624,8 +599,6 @@ with_dt(['tussen','0','en','15'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,prepos
 with_dt(['tien','bij','vijf'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(tien,number(hoofd(pl_num)),detp,0,1),cnj=l(vijf,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['tien','bij','twintig'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(tien,number(hoofd(pl_num)),detp,0,1),cnj=l(twintig,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['negen','bij','negen'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(negen,number(hoofd(pl_num)),detp,0,1),cnj=l(negen,number(hoofd(pl_num)),detp,2,3)])).
-with_dt(['een','stuk','of','twee'],number(hoofd(pl_num)),dt(detp,[hd=l(twee,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
-with_dt(['een','stuk','of','tachtig'],number(hoofd(pl_num)),dt(detp,[hd=l(tachtig,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['dertig','bij','veertig'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(dertig,number(hoofd(pl_num)),detp,0,1),cnj=l(veertig,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['dertig','bij','dertig'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(dertig,number(hoofd(pl_num)),detp,0,1),cnj=l(dertig,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['90','bij','90'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('90',number(hoofd(pl_num)),detp,0,1),cnj=l('90',number(hoofd(pl_num)),detp,2,3)])).
@@ -681,7 +654,6 @@ with_dt(['1957','-','1968'],np(year),dt(conj,[cnj=l('1957',np(year),np,0,1),cnj=
 with_dt(['1948','-','1952'],np(year),dt(conj,[cnj=l('1948',np(year),np,0,1),cnj=l('1952',np(year),np,2,3)])).
 with_dt(['1944','-','1945'],np(year),dt(conj,[cnj=l('1944',np(year),np,0,1),cnj=l('1945',np(year),np,2,3)])).
 with_dt(['1000','bij','500'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l('1000',number(hoofd(pl_num)),detp,0,1),cnj=l('500',number(hoofd(pl_num)),detp,2,3)])).
-with_dt(['zo\'n','stuk','of','twintig'],number(hoofd(pl_num)),dt(detp,[hd=l(twintig,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['zeven','bij','vier'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(zeven,number(hoofd(pl_num)),detp,0,1),cnj=l(vier,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['zeven','bij','dertien'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(zeven,number(hoofd(pl_num)),detp,0,1),cnj=l(dertien,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['vijftien','bij','vijftien'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(vijftien,number(hoofd(pl_num)),detp,0,1),cnj=l(vijftien,number(hoofd(pl_num)),detp,2,3)])).
@@ -925,11 +897,6 @@ with_dt(['tussen','10','en','40'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,prepo
 with_dt(['tussen','100','en','150'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('100',number(hoofd(pl_num)),detp,1,2),cnj=l('150',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tussen','10.000','en','15.000'],number(hoofd(pl_num)),dt(pp,[hd=l(tussen,preposition(tussen,[]),0,1),obj1=dt(conj,[crd=l(en,conj(en),vg,2,3),cnj=l('10.000',number(hoofd(pl_num)),detp,1,2),cnj=l('15.000',number(hoofd(pl_num)),detp,3,4)])])).
 with_dt(['tien','bij','vijftien'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(tien,number(hoofd(pl_num)),detp,0,1),cnj=l(vijftien,number(hoofd(pl_num)),detp,2,3)])).
-with_dt(['een','stuk','of','vijfentwintig'],number(hoofd(pl_num)),dt(detp,[hd=l(vijfentwintig,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
-with_dt(['een','stuk','of','driehonderd'],number(hoofd(pl_num)),dt(detp,[hd=l(driehonderd,number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
-with_dt(['een','stuk','of','15'],number(hoofd(pl_num)),dt(detp,[hd=l('15',number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
-with_dt(['een','stuk','of','10'],number(hoofd(pl_num)),dt(detp,[hd=l('10',number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
-with_dt(['een','stuk','of','100'],number(hoofd(pl_num)),dt(detp,[hd=l('100',number(hoofd(pl_num)),3,4),mod=l('een','stuk','of',adverb,advp,0,3)])).
 with_dt(['drie','bij','zeven'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(drie,number(hoofd(pl_num)),detp,0,1),cnj=l(zeven,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['drie','bij','acht'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(drie,number(hoofd(pl_num)),detp,0,1),cnj=l(acht,number(hoofd(pl_num)),detp,2,3)])).
 with_dt(['dertig','bij','vijftig'],number(hoofd(pl_num)),dt(conj,[crd=l(bij,conj(en),vg,1,2),cnj=l(dertig,number(hoofd(pl_num)),detp,0,1),cnj=l(vijftig,number(hoofd(pl_num)),detp,2,3)])).
