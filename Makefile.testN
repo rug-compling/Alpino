@@ -348,15 +348,15 @@ cerr: c_errors c.timeout
 
 c.timeout: cdb_part0*/job*/log
 	cat cdb_part0*/job*/log |\
-        grep BEST_SCORE | grep -v success |\
-        awk '{ printf("%s\t%s)\n",$$11,$$17) }' |\
+        grep '^BEST SCORE' | grep -v -e failure -e success |\
+        awk '{ printf("%s\t%s)\n",$$11,$$18) }' |\
         tr -d '()' > c.timeout
 
 
 l.timeout: lassysmall_part0*/job*/log
 	cat lassysmall_part0*/job*/log |\
-        grep BEST_SCORE | grep -v success |\
-        awk '{ printf("%s\t%s)\n",$$11,$$17) }' |\
+        grep '^BEST SCORE' | grep -v -e failure -e success |\
+        awk '{ printf("%s\t%s)\n",$$11,$$18) }' |\
         tr -d '()' > l.timeout
 
 
