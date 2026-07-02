@@ -63,6 +63,47 @@ lassysmall_part00022_testN_options=$(lassysmall_options)
 lassysmall_part00023_testN_options=$(lassysmall_options)
 lassysmall_part00024_testN_options=$(lassysmall_options)
 lassysmall_part00025_testN_options=$(lassysmall_options)
+lassysmall_part00026_testN_options=$(lassysmall_options)
+lassysmall_part00027_testN_options=$(lassysmall_options)
+lassysmall_part00028_testN_options=$(lassysmall_options)
+lassysmall_part00029_testN_options=$(lassysmall_options)
+lassysmall_part00030_testN_options=$(lassysmall_options)
+lassysmall_part00031_testN_options=$(lassysmall_options)
+lassysmall_part00032_testN_options=$(lassysmall_options)
+lassysmall_part00033_testN_options=$(lassysmall_options)
+lassysmall_part00034_testN_options=$(lassysmall_options)
+lassysmall_part00035_testN_options=$(lassysmall_options)
+lassysmall_part00036_testN_options=$(lassysmall_options)
+lassysmall_part00037_testN_options=$(lassysmall_options)
+lassysmall_part00038_testN_options=$(lassysmall_options)
+lassysmall_part00039_testN_options=$(lassysmall_options)
+lassysmall_part00040_testN_options=$(lassysmall_options)
+lassysmall_part00041_testN_options=$(lassysmall_options)
+lassysmall_part00042_testN_options=$(lassysmall_options)
+lassysmall_part00043_testN_options=$(lassysmall_options)
+lassysmall_part00044_testN_options=$(lassysmall_options)
+lassysmall_part00045_testN_options=$(lassysmall_options)
+lassysmall_part00046_testN_options=$(lassysmall_options)
+lassysmall_part00047_testN_options=$(lassysmall_options)
+lassysmall_part00048_testN_options=$(lassysmall_options)
+lassysmall_part00049_testN_options=$(lassysmall_options)
+lassysmall_part00050_testN_options=$(lassysmall_options)
+lassysmall_part00051_testN_options=$(lassysmall_options)
+lassysmall_part00052_testN_options=$(lassysmall_options)
+lassysmall_part00053_testN_options=$(lassysmall_options)
+lassysmall_part00054_testN_options=$(lassysmall_options)
+lassysmall_part00055_testN_options=$(lassysmall_options)
+lassysmall_part00056_testN_options=$(lassysmall_options)
+lassysmall_part00057_testN_options=$(lassysmall_options)
+lassysmall_part00058_testN_options=$(lassysmall_options)
+lassysmall_part00059_testN_options=$(lassysmall_options)
+lassysmall_part00060_testN_options=$(lassysmall_options)
+lassysmall_part00061_testN_options=$(lassysmall_options)
+lassysmall_part00062_testN_options=$(lassysmall_options)
+lassysmall_part00063_testN_options=$(lassysmall_options)
+lassysmall_part00064_testN_options=$(lassysmall_options)
+lassysmall_part00065_testN_options=$(lassysmall_options)
+lassysmall_part00066_testN_options=$(lassysmall_options)
 
 cdb_options=suite_shortest_first=on -flag treebank $(ALPINO_HOME)/Treebank/cdb stop_if_optimal=on max_sentence_length=30
 
@@ -76,6 +117,16 @@ cdb_part00007_testN_options=$(cdb_options)
 cdb_part00008_testN_options=$(cdb_options)
 cdb_part00009_testN_options=$(cdb_options)
 cdb_part00010_testN_options=$(cdb_options)
+cdb_part00011_testN_options=$(cdb_options)
+cdb_part00012_testN_options=$(cdb_options)
+cdb_part00013_testN_options=$(cdb_options)
+cdb_part00014_testN_options=$(cdb_options)
+cdb_part00015_testN_options=$(cdb_options)
+cdb_part00016_testN_options=$(cdb_options)
+cdb_part00017_testN_options=$(cdb_options)
+cdb_part00018_testN_options=$(cdb_options)
+cdb_part00019_testN_options=$(cdb_options)
+cdb_part00020_testN_options=$(cdb_options)
 
 job := job${shell echo $$$$}
 
@@ -189,14 +240,13 @@ shorts: j_suite.testN i_suite.testN h_suite.testN g_suite.testN leuven_yellow_pa
        cgn_exs.testN qa.testN extra.testN wpspel.testN lassy-doc.testN\
        novelsample_corrected.testN eans.testN Titaantjes.testN ovistrain.testN
 
-
 longs: cdb lassy
 
-lassy=lassysmall_part00001 lassysmall_part00002 lassysmall_part00003 lassysmall_part00004 lassysmall_part00005 lassysmall_part00006 lassysmall_part00007 lassysmall_part00008 lassysmall_part00009 lassysmall_part00010 lassysmall_part00011 lassysmall_part00012 lassysmall_part00013 lassysmall_part00014 lassysmall_part00015 lassysmall_part00016 lassysmall_part00017 lassysmall_part00018 lassysmall_part00019 lassysmall_part00020 lassysmall_part00021 lassysmall_part00022 lassysmall_part00023 lassysmall_part00024 lassysmall_part00025
+lassy=$(notdir $(basename $(wildcard ../Suites/lassysmall_part0*.pl)))
 
 lassy:$(lassy:%=%.testN)
 
-cdb=cdb_part00001 cdb_part00002 cdb_part00003 cdb_part00004 cdb_part00005 cdb_part00006 cdb_part00007 cdb_part00008 cdb_part00009 cdb_part00010 
+cdb=$(notdir $(basename $(wildcard ../Suites/cdb_part0*.pl)))
 
 cdb:$(cdb:%=%.testN)
 
@@ -222,8 +272,8 @@ c_errors: $(cdb:%=%.c_errors)
 %.c_errors:K/%.keys cdb.errors
 	@python3 K/errors.py cdb.errors < $< >$*.errors
 
-K/%.keys: ../Suites/%.named_sents
-	@awk -F\| '{ print $$1 }' $< >$@
+K/%.keys: ../Suites/%.pl
+	$(ALPINO) -notk -s $< -cmd "list_keys, halt" > $@
 
 %.err: %.errors
 	@for file in $*/job*/log;\
@@ -293,19 +343,17 @@ cerr: c_errors c.timeout
 	cat c.timeout cdb.errors.new | sort -n |uniq > cdb.errors
 	wc -l c.keys cdb.errors*
 
-c.timeout: cdb_part*/job*/log
-	cat cdb_part*/job*/log |\
-        grep -e time_out -e '^out of memory' -e '^Lexical analysis'  |\
-        awk '/^Lexical analysis/{ P=$$20}\
-             /time_out/{printf("%s\ttime-out\n", P)}\
-             /out of memory/{printf("%s\tout of memory\n", P)}' |\
-        tr -d ')'  > c.timeout
+c.timeout: cdb_part0*/job*/log
+	cat cdb_part0*/job*/log |\
+        grep BEST_SCORE | grep -v success |\
+        awk '{ printf("%s\t%s)\n",$$11,$$17) }' |\
+        tr -d '()' > c.timeout
 
-l.timeout: lassysmall_part*/job*/log
-	cat lassysmall_part*/job*/log |\
-        grep -e time_out -e '^out of memory' -e '^Lexical analysis'  |\
-        awk '/^Lexical analysis/{ P=$$20}\
-             /time_out/{printf("%s\ttime-out\n", P)}\
-             /out of memory/{printf("%s\tout of memory\n", P)}' |\
-        tr -d ')'  > l.timeout
+
+l.timeout: lassysmall_part0*/job*/log
+	cat lassysmall_part0*/job*/log |\
+        grep BEST_SCORE | grep -v success |\
+        awk '{ printf("%s\t%s)\n",$$11,$$17) }' |\
+        tr -d '()' > l.timeout
+
 

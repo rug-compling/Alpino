@@ -3264,3 +3264,9 @@ show_defaults(Format,Output) :-
 	   ( Format=UserType,
 	       Output=user
 	   )).
+
+list_keys :-
+    a_sentence(Key,_),
+    format("~w~n",[Key]),
+    fail.
+list_keys.
