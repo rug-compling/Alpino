@@ -209,7 +209,7 @@ translate(ParGen,Obj,Total,X,Max,Status):-
 	catch(translate_result_hook_loop(Mod:Call,Max,Status,
 					 ParGen,Obj,Start,CNo,UserOpt),
 	      enough,
-	      true
+	      set_flag(hdrug_status,enough)
 	     )
     ;   Status = start_hook(Status0),
 	set_flag(hdrug_status,Status)
