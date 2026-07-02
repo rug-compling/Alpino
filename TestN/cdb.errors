@@ -33,15 +33,16 @@
 366	time-out
 374 	extraposed als-phrase from NP   "ongelukken ... (zo)als :"
 466	grammatical error "en" must be removed, or unlike category coordination   'kantfluweel en in combinatie met x'
-500	time-out
 509	gapping
 543     "- 2" not analysed as number
 543	out of memory
 567	coordination "dat slijmverhaal en of we het niet konden regelen.."
 572	time-out
+577	DONE
 580	ungrammatical (?) 'het was helemaal geevacueerd en ... bezet geworden
 593	dp/dip with max not root
 610	appositie modifiers without punctuation
+625	time-out
 638	quotes around partial np (without the relative clause)
 654     rel modifier < pp modifier
 662	dp "priesters terug in het ambt"
@@ -117,6 +118,7 @@
 1297	om-VP modifier before attributive adjective "een morbide , om niet te zeggen , hypocriete belangstelling"
 1302	dp [ pp pp advp ]
 1306	quantitative er 'ik heb er twee'
+1324	time-out
 1361	spelling "extra-tijd" should allow vp complement
 1362	spelling spoken language spelling 'effe' and 'omrijje'
 1376	obj1 np? "beneden zo'n vierhonderd mark"
@@ -157,7 +159,6 @@
 1676	recursive coordination
 1677	out of memory
 1682	dp
-1689	timeout
 1695	time-out
 1712	gapping
 1715	time-out
@@ -210,7 +211,6 @@
 2197	time-out
 2199	extraposition of zoals-clause of NP over PP
 2224	time-out
-2225	time-out
 2228	'de boeken overigens met geringe waarde van Robbins'
 2230	time-out
 2239	time-out
@@ -223,7 +223,7 @@
 2329	dp
 2358	obj1 < su 'kent hem iedereen'
 2366	extraposition of PP over predc "steun nodig hebben van"
-2391	timeout, ook spelling/grammatical error in the input
+2391	time-out, ook spelling/grammatical error in the input
 2421	time-out
 2430	misplaced comma;	vp conj root
 2442	extraposed conjunct without CRD
@@ -255,7 +255,7 @@
 2727	time-out
 2741	gapping
 2752	time-out
-2857	timeout, also "drie jaar geleden DATE"
+2857	time-out, also "drie jaar geleden DATE"
 2858	time-out
 2868	'maatregelen voor de bespreking waarvan'
 2876	out of memory
@@ -279,12 +279,13 @@
 3002	time-out
 3005	grammatical error "de kader"
 3007	out of memory
-3010	timeout, also np explanation within commas for verb meaning
+3010	time-out, also np explanation within commas for verb meaning
 3015	gapping
 3021	XP en XP en XP ==> treebank: '[[XP en XP] en XP]'
 3028	spelling error "of" -> "op"
 3029	coordination of PPs without crd
 3032	dp
+3038	time-out
 3046	time-out
 3079    sentential modifier between PC of adj and adj 'hiermee vermoedelijk bezig zijn'
 3083	[PP,PP] coordination without coordinator
@@ -298,13 +299,14 @@
 3169	two PC arguments 'NP van-PP voor-PP krijgen'
 3170	time-out
 3173	out of memory
-3178	timeout, right node raising
+3178	time-out, right node raising
 3181	dp/dp vs sat/nucl
 3182	time-out
 3193	adj,adj in prenominal position should be treated as conj (+comp)
 3197	dp PP PP
 3210	conjunction in conjunct
 3210	time-out
+3217	time-out
 3247	time-out
 3251	grammatical error "piloten die werd* gevlogen"
 3257	out of memory
@@ -334,10 +336,11 @@
 3430	mistokenized
 3454	pp modifier after rel: 'de fragmenten die ik zag van'
 3455	'alleen ROOT'
-3457	out of memory
 3474	out of memory
+3474	time-out
 3477	coord 'het is 1881 en 13 jaar geleden dat ...'
 3484	modified second conjunct 'kon (en volgens haarzelf moest)'
+3488	time-out
 3506	gapping
 3508	double topic
 3526	time-out
@@ -509,13 +512,13 @@
 4881	extraposition pp from np [np inbetween]
 4886	'hoe Adj-er, des te ADJ-er' ?? predc<su
 4888	out of memory
+4888	time-out
 4892	dp nucl/sat vs dp/dp
 4907	unknown modal adverb "[nog het meest] in de oude geest V2..."
 4911	etc coord with PP "bij de aanleg van wegen en dergelijke"
 4947	coordination with modifier in front of second conjunct without conj
 4950    dp?
 4967	out of memory
-4967	time-out
 4970	time-out
 4983	modified second conjunct  (2 modifiers)
 5009	extraposed subject
@@ -529,7 +532,7 @@
 5064	aldus-dip without punctuation
 5076	apposition without comma
 5081	ungrammatical? "men slaagt hem uit te graven"
-5084	time-out
+5084	out of memory
 5111	NEW
 5123	flo 23,38 ( v.j. 19.00 ) miljoen
 5124	dp
@@ -544,8 +547,8 @@
 5195	difficult name
 5201	quantitative er
 5206	"liefhebbers , en dat zijn er velen , vertrekken"
-5211	out of memory
 5213	out of memory
+5213	time-out
 5216	ungrammatical (subject-verb agreement)
 5217	time-out
 5221	coord op PP without coordinator
@@ -568,13 +571,13 @@
 5370	bracketed modifier of weak pronoun "nu je (Goedhart) uit de ..."
 5378	modifier in front of first conjnct 'niet in uniform en zonder raadsman'
 5383	dp
-5393	time-out
+5393	out of memory
 5396	dp 'de cupwinnaars zelf trouwens ook'
 5400	dip without missing sbar arg
 5412	"Nereus lichte elite-acht" PN < ADJ
 5417	out of memory
 5427	dp NUCL[root] SAT[pp]
-5433	out of memory
+5433	time-out
 5435	dp
 5438	quantitative er; also "daar .. uitgekozen" stranded prep with verb
 5441	two extraposed pp's
@@ -620,18 +623,18 @@
 5803	agreement error "bijna de helft van de mijnen zijn .."
 5807    agreement error "de .. groothandelsbedrijf"
 5810	out of memory
+5810	time-out
 5817	quoted bracketed modifier...
 5826	nonadv adjective as modifier 'confessioneel'
 5828	time-out
-5836	time-out
 5837	missing "om"? "bij iemand aankloppen [om] iets te doen" (used as vp compl)
 5860	dp "het vervolg erop is verschenen ' De vrouwenarbeid in onze tijd ' ..
 5862	time-out
 5885	time-out
 5908	name not recognized 'MEESTERS van het orgel'
 5911	time-out
-5913	timeout; quantitative er
-5926	out of memory
+5913	time-out; quantitative er
+5926	time-out
 5937	out of memory
 5947	time-out
 5964	out of memory
@@ -641,7 +644,7 @@
 5998	grammatical error "een roman dat"
 6013	Topic , MOD , SV1
 6037	extraposed SU
-6038	out of memory
+6038	time-out
 6066	apposition without comma
 6071	"project" with sbar complement?
 6080	gapping
@@ -671,7 +674,7 @@
 6270	obj1: 'voor ME aan NP'
 6301	time-out
 6306	quantitative er
-6307	timeout; quantitative er
+6307	time-out; quantitative er
 6326	time-out
 6327	time-out
 6339	time-out
@@ -716,7 +719,6 @@
 6579	ADJ[+part] after verb in verb-cluster "omdat we er op zijn gebrand ..."
 6590	various problems "zonder er wat aan"
 6591	mis-tokenization ?
-6592	time-out
 6593	root , bij alles trouwens
 6598	out of memory
 6650	time-out
