@@ -432,6 +432,8 @@ punct('&gt;',haak_sluit).
 punct('&lt;',haak_open).
 punct(['&',gt,';'],haak_sluit).
 punct(['&',lt,';'],haak_open).
+punct([«,'('],haak_open).  % )
+punct([')',»],haak_sluit).  
 
 punct(..,hellip).
 punct(...,hellip).
