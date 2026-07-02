@@ -1695,12 +1695,13 @@ best_score_end_parse(No) :-
     ),
     hdrug_flag(current_ref,Item),
     hdrug_flag(found_solutions,Sols),
+    hdrug_flag(hdrug_status,Status),
     format(user_error,
-    "BEST SCORE: ~2f ov: ~w corr: ~w sys: ~w item ~w solution ~w of ~w ~w msec~n",
-	   [ScoreB,Ov,Corr,Sys,Item,No,Sols,Runtime]),
+    "BEST SCORE: ~2f ov: ~w corr: ~w sys: ~w item ~w solution ~w of ~w ~w msec (~w)~n",
+	   [ScoreB,Ov,Corr,Sys,Item,No,Sols,Runtime,Status]),
     format(user_error,
-   "WORST SCORE: ~2f ov: ~w corr: ~w sys: ~w item ~w solution ~w of ~w ~w msec~n",
-	   [ScoreW,Ov1,Corr1,Sys1,Item,No1,Sols,Runtime]),
+   "WORST SCORE: ~2f ov: ~w corr: ~w sys: ~w item ~w solution ~w of ~w ~w msec (~w)~n",
+	   [ScoreW,Ov1,Corr1,Sys1,Item,No1,Sols,Runtime,Status]),
     bb_get(best_score_message,Message),
     format(user_error,"~s",[Message]).
 
