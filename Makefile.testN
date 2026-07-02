@@ -247,11 +247,11 @@ longs: cdb lassy
 
 lassy=$(notdir $(basename $(wildcard ../Suites/lassysmall_part0*.pl)))
 
-lassy:$(lassy:%=%.dir) $(lassy:%=%.testN)
+lassy: $(lassy:%=%.testN)
 
 cdb=$(notdir $(basename $(wildcard ../Suites/cdb_part0*.pl)))
 
-cdb:$(cdb:%=%.dir) $(cdb:%=%.testN)
+cdb: $(cdb:%=%.testN)
 
 diffs: errors c_diffs l_diffs
 
