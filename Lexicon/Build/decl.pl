@@ -35,7 +35,10 @@ create_entries :-
 	;   WordOrWords=[Word|Rest]
 	),
 	(   Cat = with_dt(_,_)
-	->  generate_with_dt_stem(Cat,Stam)
+	->  if(generate_with_dt_stem(Cat,Stam),
+	       true,
+	       format(user_error,"cannot parse with_dt ~w~n",[Cat])
+	      )
 	;   Stam0 = Stam
 	),
 	assertz(entry(Word,Cat,Stam,Rest)),

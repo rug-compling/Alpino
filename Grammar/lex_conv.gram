@@ -24,6 +24,22 @@ lex(Sign,Tag,Word,Constraints) :-
 %% this is for (multi-word)-units with a complex dependency structure:
 call_lex(with_dt(TagCopy,_),Sign,with_dt(Tag,Deriv),Word,Constraints) :-
     !,
+    if(call_with_dt(TagCopy,Sign,Tag,Deriv,Word,Constraints),
+       true,
+       format(user_error,"error: cannot construct ~w ~w~n",[Tag,Deriv])
+      ).
+
+%% default case
+call_lex(TagCopy,Sign,Tag,Word,Constraints) :-
+    Dt => dt,
+    Dt:hwrd ==> Word,
+    Dt:fwrd <=> Dt:hwrd,
+    Dt:frame ==> TagCopy,
+    a_lex(Tag,Sign,Word,Constraints),
+    Sign:niet =?> no,
+    Sign:dt <?=?> Dt.
+
+call_with_dt(TagCopy,Sign,Tag,Deriv,Word,Constraints) :-
     a_lex(Tag,Sign0,Word,Constraints),
     unify_except(Sign0,Sign,dt),
     Sign0:dt <=> Dt0,
@@ -35,16 +51,6 @@ call_lex(with_dt(TagCopy,_),Sign,with_dt(Tag,Deriv),Word,Constraints) :-
     Dt0:hwrd <=> Dt:hwrd,
     Sign:niet =?> no,
     construct_dt(Deriv,Sign,Word,TagCopy,Dt0).
-
-%% default case
-call_lex(TagCopy,Sign,Tag,Word,Constraints) :-
-    Dt => dt,
-    Dt:hwrd ==> Word,
-    Dt:fwrd <=> Dt:hwrd,
-    Dt:frame ==> TagCopy,
-    a_lex(Tag,Sign,Word,Constraints),
-    Sign:niet =?> no,
-    Sign:dt <?=?> Dt.
 
 a_lex(Tag,Sign,_,[]) :-
     a_lex(Tag,Sign).
