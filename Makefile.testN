@@ -266,8 +266,8 @@ l_diffs:
 
 errors:l_errors c_errors
 
-l_errors: $(lassy:%=%.l_errors)
-c_errors: $(cdb:%=%.c_errors) 
+l_errors: $(lassy:%=K/%.keys) $(lassy:%=%.l_errors)
+c_errors: $(cdb:%=K/%.keys) $(cdb:%=%.c_errors) 
 
 %.l_errors:K/%.keys LassySmall.errors
 	@python3 K/errors.py LassySmall.errors < $< >$*.errors
