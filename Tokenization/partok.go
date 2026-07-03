@@ -309,7 +309,7 @@ func main() {
 				inline = true
 			} else if *opt_n {
 				fmt.Fprintln(inp, line)
-				inline = false
+				inline = true
 			} else {
 				fmt.Fprint(inp, line, " ")
 				inline = true
