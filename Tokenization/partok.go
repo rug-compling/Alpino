@@ -42,6 +42,7 @@ var (
 	opt_j = flag.Bool("j", false, "strip item regexp")
 	opt_l = flag.Bool("l", false, "don't recognise labels")
 	opt_m = flag.Bool("m", false, "don't recognise metadata")
+	opt_n = flag.Bool("n", false, "a newline and a sentence")
 	opt_t = flag.String("t", labelTemplate, "label template")
 	opt_v = flag.Bool("v", false, "verbose")
 
@@ -86,6 +87,7 @@ Opties:
   -j        : verwijder de markering van item in een lijst (zie: -i)
   -l        : behandel labels als gewone tekst
   -m        : behandel metadata als gewone tekst
+  -n        : een newline is het einde van een zin
   -t string : template voor label,
                 default: %s
   -v        : verbose: print waarschuwingen
@@ -103,8 +105,8 @@ Waardes in de template:
 
     De volgende waardes gaan over het invoerbestand.
     Bytepositie en kolomnummer zijn afhankelijk van
-    de optie -b. Zonder die optie worden alle tekens 
-    uit UTF-8 en de combinaties CR+LF en LF+CR als 
+    de optie -b. Zonder die optie worden alle tekens
+    uit UTF-8 en de combinaties CR+LF en LF+CR als
     één teken geteld. Met de optie -b worden rauwe bytes
     geteld.
 
@@ -304,6 +306,9 @@ func main() {
 					line = strings.TrimSpace(line[len(s):])
 				}
 				fmt.Fprint(inp, "\n", line, " ")
+				inline = true
+			} else if *opt_n {
+				fmt.Fprintln(inp, line)
 				inline = true
 			} else {
 				fmt.Fprint(inp, line, " ")
