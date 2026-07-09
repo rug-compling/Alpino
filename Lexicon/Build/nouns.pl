@@ -1505,7 +1505,7 @@ n([pl(aanknopingspunten),sg(aanknopingspunt)],het,
 
 n([mass(aankomst),pl(aankomsten),sg(aankomst)],de,[],[]).
 
-n([pl(aankondigingen),sg(aankondiging)],de,[sbar,vp],[]).
+n([pl(aankondigingen),sg(aankondiging)],de,[sbar,vp],[voor]).
 
 n([pl(aankopen),sg(aankoop)],de,[],[steun]).
 
@@ -5186,7 +5186,8 @@ n([mass(bewapening)],de,[],[]).
 
 n([mass(bewapeningswedloop)],de,[],[]).
 
-n([mass(bewaring)],de,[pred_pp(in)],[]).
+n([mass(bewaring)],de,[pred_pp(in)],
+  [i(vreemdeling,vreemdelingen)]).
 
 n([mass(beweeglijkheid)],de,[],[]).
 
@@ -6030,7 +6031,10 @@ n([sg(boeroe),pl(boeroes)],de,[],[]).
 
 n([sg(boet)],de,[],[]).  % schuur voor hooi? ouderwets? meervoud?
 
-n([pl(boeten),pl(boetes),sg(boete)],de,[],[geld]).
+n([pl(boeten),pl(boetes),sg(boete)],de,[],
+  [geld,
+   s(verkeer)
+  ]).
 
 n([pl(boetedoeningen),sg(boetedoening)],de,[],[]).
 
@@ -9124,6 +9128,7 @@ n([sg([dealing,room]),pl([dealing,rooms])],de,[],[]).
 
 n([pl(debatten),sg(debat)],het,[],
   [i(actualiteit,actualiteiten),
+   commissie,
    integratie,
    h('IRT'),
    kamer,
@@ -11512,7 +11517,7 @@ n([sg(evacué),
    pl('evacu\'s'),
    pl(evacuées)],de,[],[]).
 
-n([pl(evaluaties),sg(evaluatie)],de,[],[]).
+n([pl(evaluaties),sg(evaluatie)],de,[],[s(wet)]).
 
 n([pl(evangelies),pl(evangeliën),sg(evangelie)],het,[sbar],[]).
 
@@ -21428,6 +21433,7 @@ n([pl(lijsten),sg(lijst)],de,[],
    i(gast,gasten),
    hit,
    loon,
+   i(naam,namen),
    prijs,
    sanctie,
    i(tarief,tarieven),
@@ -29554,7 +29560,9 @@ n([pl(projecten),sg(project),
    s(ontwikkeling),
    proef,
    s(samenwerking),
-   web,f([web])]).
+   web,f([web]),
+   woningbouw
+  ]).
 
 n([pl(projecties),sg(projectie)],de,[],[]).
 
@@ -35973,7 +35981,7 @@ n([pl(synthesen),pl(syntheses),sg(synthese)],de,[],[foto]).
 n([pl(systemen),sg(systeem)],het,[],
   [aandrijf,
    afweer,
-   i(lucht_afweer,luchtafweer),
+   h('AI'),
    belasting,
    s(besturing),
    computer,
@@ -35987,6 +35995,7 @@ n([pl(systemen),sg(systeem)],het,[],
    informatie,f([informatie]),
    kaart,
    koel,
+   i(lucht_afweer,luchtafweer),
    meet,
    navigatie,
    onderwijs,
@@ -39656,7 +39665,10 @@ n([pl(veroordelingen),sg(veroordeling)],de,[sbar,vp],[]).
 
 n([pl(veroorzakers),sg(veroorzaker)],de,[],[]).
 
-n([pl(verordeningen),sg(verordening)],de,[sbar,vp],[]).
+n([pl(verordeningen),sg(verordening)],de,
+  [sbar,
+   vp],
+  [h('AI')]).
 
 n([mass(veroudering)],de,[],[]).
 
@@ -40151,6 +40163,7 @@ n([pl(verzoeken),sg(verzoek)],het,
 n([pl(verzoeken),sg(verzoek)],het,[],
   [asiel,
    gratie,
+   informatie,
    terugbel,
    s(uitlevering)]).
 
