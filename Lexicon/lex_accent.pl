@@ -1089,6 +1089,7 @@ accent(patientjaartjes,patiëntjaartjes).
 accent(patientjaren,patiëntjaren).
 accent(patient,patiënt).
 accent(peeen,peeën).
+accent(penaltyserien,penaltyseriën).
 accent(pere,père).
 accent(periferieen,periferieën).
 accent(persfotografieen,persfotografieën).
@@ -1318,6 +1319,7 @@ accent(subsidiering,subsidiëring).
 accent(substantiele,substantiële).
 accent(substitutietherapieen,substitutietherapieën).
 accent(suede,suède).
+accent(suicide,suïcide).
 accent(surseance,surséance).
 accent(symfonieen,symfonieën).
 accent(sympathieen,sympathieën).

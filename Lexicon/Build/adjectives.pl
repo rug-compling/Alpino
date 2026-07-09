@@ -2051,6 +2051,9 @@ a([e(absurde),
   [subject_vp,
    subject_sbar],[]).
 
+a([e(absurdistische),
+   no_e(absurdistisch)],adv,[],[]).
+
 a([e(abusievelijke),
    no_e(abusievelijk)],adv,[],[]).
 

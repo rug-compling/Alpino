@@ -4568,6 +4568,7 @@ n([mass(beleid)],het,
    rook,
    s(speler),
    s(spreiding),
+   stikstof,
    structuur,
    taal,
    terugkeer,
@@ -8737,6 +8738,7 @@ n([pl(crises),pl(crisissen),sg(crisis)],de,[],
    h(mkz),h('MKZ'),
    olie,
    i(schuld,schulden),
+   stikstof,
    'Suez',h('Suez'),
    valuta,
    s(vertrouwen),
@@ -10709,8 +10711,9 @@ n([sg(dutyfree),
    sg('duty-free'),
    sg([duty,free])],de,[],[]).
 
-n([mass(duur)],de,[],
-  []).
+n([mass(duur)],de,[sbar],
+  [maximum,
+   minimu]).
 
 n([mass(duur)],de,[pred_pp(van)],
   [accu,
@@ -11916,6 +11919,8 @@ n([pl(feitelijkheden),sg(feitelijkheid)],de,[sbar],[]).
 n([mass(felheid)],de,[],[]).
 
 n([pl(felicitaties),sg(felicitatie)],de,[],[]).
+
+n([sg(femicide)],de,[],[]).
 
 n([mass(feminisme)],het,[],[]).
 
@@ -13679,7 +13684,9 @@ n([pl(geschiedenissen),sg(geschiedenis)],de,[],
    s(ontwikkeling),
    voetbal,
    voor,
-   wereld]).
+   wereld,
+   h('WK')
+  ]).
 
 n([pl(geschiedschrijvers),sg(geschiedschrijver)],de,[],[]).
 
@@ -13813,7 +13820,9 @@ n([pl(gevaren),sg(gevaar)],het,
 n([pl(gevaren),sg(gevaar)],het,
   [],
   [brand,
-   inflatie]).
+   inflatie,
+   s(instorting)
+  ]).
 
 n([pl(gevaarten),pl(gevaartes),sg(gevaarte)],het,[],[]).
 
@@ -14338,7 +14347,7 @@ n([sg(gooi)],de,[],[]).
 
 n([mass(['gooi-',en,smijtwerk])],het,[],[]).
 
-n([pl(goten),sg(goot)],de,[],[]).
+n([pl(goten),sg(goot)],de,[],[kabel]).
 
 n([pl(gootstenen),sg(gootsteen)],de,[],[]).
 
@@ -20379,6 +20388,7 @@ n([pl(landen),sg(land)],het,[],
    remigratie,h(remigratie),
    h('Schengen'),'Schengen',
    thuis,
+   top,
    tussen,
    wintersport,
    dim(landje)]).
@@ -22048,6 +22058,7 @@ n([pl(maatregelen),pl(maatregels),sg(maatregel)],de,[sbar,vp],
    s(bezuiniging),
    corona,
    energie,
+   stikstof,
    steun,
    straf,
    tegen,
@@ -27070,6 +27081,7 @@ n([pl(pakketten),sg(pakket)],het,
    steun,  % voor Griekenland
    i(taak,taken),
    i(basis_taak,basistaken),
+   stikstof,
    ziekenfonds,
    dim(pakketje)]).
 
@@ -28519,7 +28531,10 @@ n([sg(podcast),pl(podcasts)],de,[],
   [h('Afspelen'),
    voetbal]).
 
-n([pl(podia),pl(podiums),sg(podium)],het,[],[ere]).
+n([pl(podia),pl(podiums),sg(podium)],het,[],
+  [ere,
+   hoofd
+  ]).
 
 n([pl(poedels),sg(poedel)],de,[],[dim(poedeltje)]).
 
@@ -29042,6 +29057,7 @@ n([pl(presidenten),sg(president)],de,[],
   [bank,
    s(bond),
    h(ex),
+   h(interim),
    minister,h(minister),i(minister,'ministers-'),s(minister),f([minister]),
    h(oud),oud,
    rechtbank,
@@ -29785,6 +29801,7 @@ n([sg(punt),pl(punten),
   ],
   [diepte,
    hoogte,
+   kantel,
    omslag,
    top
   ]
@@ -32970,6 +32987,7 @@ n([pl(series),pl(seriën),sg(serie)],de,[],
    hit,
    mini,
    h('Netflix'),
+   penalty,
    politie,
    reality,
    soap,
@@ -35496,7 +35514,7 @@ n([pl(strengen),sg(streng)],de,[measure],[dim(strengetje)]).
 
 n([pl(strengheden),sg(strengheid)],de,[vp],[]).
 
-n([mass(stress)],de,[],[]).
+n([mass(stress)],de,[],[hitte]).
 
 n([mass(streven)],het,[sbar,subject_sbar,subject_vp,vp],[]).
 
@@ -35792,6 +35810,8 @@ n([sg(suffix),pl(suffixen)],both,[],[]).
 n([pl(suggesties),sg(suggestie)],de,[sbar,vp],[]).
 
 n([pl(suggesties),sg(suggestie)],de,[],[menu]).
+
+n([sg(suïcide)],de,[],[]).
 
 n([pl(suikers),sg(suiker)],de,[app_measure],[]).
 
