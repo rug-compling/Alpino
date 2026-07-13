@@ -1272,8 +1272,7 @@ n([pl('WK'),pl('WK\'s'),sg('WK'),
    pl('W.K.'),pl('W.K.\'s'),sg('W.K.'),
    pl(wk),pl('wk\'s'),sg(wk)],
   both,
-  [temp_mod,
-   app_measure],[]).
+  [app_measure],[]).
 
 n([stem('WK_afstand'),
    sg('WK-afstanden')],both,[],[]).
@@ -1290,7 +1289,7 @@ n([stem('WK_jeugd'),
 n([stem('WK_junior'),
    sg('WK-junioren')],both,[app_measure],[]).
 
-n([stem('WK_spring'),
+n([stem('WK_sprint'),
    sg('WK-sprint')],both,[],[]).
 
 n([stem('WK_Superbike'),
