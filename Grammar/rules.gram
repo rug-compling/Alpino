@@ -5775,6 +5775,7 @@ grammar_rule(q_pred,M,[QL,PRED,QR]) :-
     PRED:pcat => ~np_pred.
 
 %%EX%% Ik dacht dat hij toen erg " ziek " was
+%%%%% todo: spurious ambiguities for adjectives that are modifiers 
 grammar_rule(q_adj,M,[QL,PRED,QR]) :-
     quoted_structure(M,PRED,QL,QR),
     PRED => a.
