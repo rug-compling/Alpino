@@ -1695,7 +1695,7 @@ best_score_end_parse(No) :-
     ),
     hdrug_flag(current_ref,Item),
     hdrug_flag(found_solutions,Sols),
-    hdrug_flag(hdrug_status,Status),
+    get_status(Status),
     format(user_error,
     "BEST SCORE: ~2f ov: ~w corr: ~w sys: ~w item ~w solution ~w of ~w ~w msec (~w)~n",
 	   [ScoreB,Ov,Corr,Sys,Item,No,Sols,Runtime,Status]),
@@ -2416,3 +2416,10 @@ attribute(Path,N0,Att,PathNext) :-
 
 %Atts1 = [his-His|Atts]
 
+get_status(Status) :-
+    hdrug_flag(hdrug_status,Status0),
+    hdrug_flag(last_one_timeout,TimeOut),
+    (   TimeOut == on
+    ->  Status = time_out/Status0
+    ;   Status = Status0
+    ).
