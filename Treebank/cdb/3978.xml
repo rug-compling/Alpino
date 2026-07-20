@@ -35,30 +35,30 @@
       <node begin="13" cat="cp" end="27" id="25" rel="mod">
         <node begin="13" conjtype="onder" end="14" id="26" lemma="doordat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="doordat" word="doordat"/>
         <node begin="14" cat="ssub" end="27" id="27" rel="body">
-          <node begin="19" cat="np" end="25" id="28" index="2" rel="su">
+          <node begin="19" cat="np" end="23" id="28" index="2" rel="su">
             <node begin="19" cat="conj" end="22" id="29" rel="det">
               <node begin="19" end="20" id="30" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="cnj" root="twee" word="twee"/>
               <node begin="20" conjtype="neven" end="21" id="31" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
               <node begin="21" end="22" id="32" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="cnj" root="drie" word="drie"/>
             </node>
             <node begin="22" end="23" getal="mv" graad="basis" id="33" lemma="kampioenschap" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kampioenschap" word="kampioenschappen"/>
-            <node begin="23" cat="pp" end="25" id="34" rel="mod">
-              <node begin="23" end="24" id="35" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
-              <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="36" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="jaar" word="jaar"/>
-            </node>
           </node>
-          <node begin="25" end="26" id="37" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
-          <node begin="14" cat="ppart" end="27" id="38" rel="vc">
-            <node begin="14" cat="pp" end="18" id="39" rel="mod">
-              <node begin="14" end="15" id="40" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-              <node begin="15" cat="np" end="18" id="41" rel="obj1">
-                <node begin="15" end="16" id="42" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="16" buiging="met-e" end="17" graad="basis" id="43" lemma="verschillend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verschillend" word="verschillende"/>
-                <node begin="17" end="18" getal="mv" graad="basis" id="44" lemma="spel_soort" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="soort" word="spelsoorten"/>
+          <node begin="25" end="26" id="34" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+          <node begin="14" cat="ppart" end="27" id="35" rel="vc">
+            <node begin="14" cat="pp" end="18" id="36" rel="mod">
+              <node begin="14" end="15" id="37" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="15" cat="np" end="18" id="38" rel="obj1">
+                <node begin="15" end="16" id="39" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="16" buiging="met-e" end="17" graad="basis" id="40" lemma="verschillend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verschillend" word="verschillende"/>
+                <node begin="17" end="18" getal="mv" graad="basis" id="41" lemma="spel_soort" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="soort" word="spelsoorten"/>
               </node>
             </node>
-            <node begin="18" end="19" id="45" lemma="soms" pos="adv" postag="BW()" pt="bw" rel="mod" root="soms" word="soms"/>
-            <node begin="19" end="25" id="46" index="2" rel="obj1"/>
+            <node begin="18" end="19" id="42" lemma="soms" pos="adv" postag="BW()" pt="bw" rel="mod" root="soms" word="soms"/>
+            <node begin="19" end="23" id="43" index="2" rel="obj1"/>
+            <node begin="23" cat="pp" end="25" id="44" rel="mod">
+              <node begin="23" end="24" id="45" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+              <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="46" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="jaar" word="jaar"/>
+            </node>
             <node begin="26" buiging="zonder" end="27" id="47" lemma="houden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="gehouden" wvorm="vd"/>
           </node>
         </node>
