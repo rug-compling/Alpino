@@ -38,6 +38,10 @@ postag_of_frame(Var,_,_,_,_) :-
     fail.
 postag_of_frame(none,none,none,[],_):-
     !.
+%%% new, motivated by undone mwu where cgntag is only the tag of first word
+postag_of_frame(read_from_treebank(_,Frame0,_Lemma,_cgntag),Frame,PosTag,Atts,Rest) :-
+    !,
+    postag_of_frame(Frame0,Frame,PosTag,Atts,Rest).
 postag_of_frame(read_from_treebank(PosTag0),none,PosTag,[],_) :-
     !,
     functor(PosTag0,PosTag,_).
