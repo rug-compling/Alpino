@@ -21287,7 +21287,9 @@ a([e(langgerekte),
 
 a([stem(lang_lopen),
    ende(langlopende),
-   end(langlopend)],padv,[],[]).
+   end(langlopend),
+   st(langstlopend),
+   ste(langstlopende)],padv,[],[]).
 
 a([ge_both(langsgekomen)],adv,[],[]).
 

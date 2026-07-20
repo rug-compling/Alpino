@@ -571,19 +571,21 @@ n([sg('Eindhovenaar'),pl('Eindhovenaren')],de,[],[]).
 
 n([pl('EK'),pl('EK\'s'),sg('EK'),
    pl(ek),pl('ek\'s'),sg(ek)],both,
-  [app_measure],[]).
+  [temp_mod,
+   app_measure],
+  []).
 
-n([sg('EK-dressuur')],both,[],[]).
+n([sg('EK-dressuur')],both,[temp_mod],[]).
 
-n([sg('EK-honkbal')],both,[],[]).
+n([sg('EK-honkbal')],both,[temp_mod],[]).
 
-n([sg('EK-hockey')],both,[],[]).
+n([sg('EK-hockey')],both,[temp_mod],[]).
 
-n([sg('EK-paren')],both,[],[]).
+n([sg('EK-paren')],both,[temp_mod],[]).
 
-n([sg('EK-schaatsen')],both,[],[]).
+n([sg('EK-schaatsen')],both,[temp_mod],[]).
 
-n([sg('EK-voetbal')],both,[],[]).
+n([sg('EK-voetbal')],both,[temp_mod],[]).
 
 n([sg('Emmenaar'),pl('Emmenaren')],de,[],[]).
 
@@ -1272,16 +1274,17 @@ n([pl('WK'),pl('WK\'s'),sg('WK'),
    pl('W.K.'),pl('W.K.\'s'),sg('W.K.'),
    pl(wk),pl('wk\'s'),sg(wk)],
   both,
-  [app_measure],[]).
+  [temp_mod,
+   app_measure],[]).
 
 n([stem('WK_afstand'),
-   sg('WK-afstanden')],both,[],[]).
+   sg('WK-afstanden')],both,[temp_mod],[]).
 
 n([stem('WK_allround'),
-   sg('WK-allround')],both,[],[]).
+   sg('WK-allround')],both,[temp_mod],[]).
 
 n([stem('WK_atletiek'),
-   sg('WK-atletiek')],both,[],[]).
+   sg('WK-atletiek')],both,[temp_mod],[]).
 
 n([stem('WK_jeugd'),
    sg('WK-jeugd')],both,[app_measure],[]).
@@ -1290,16 +1293,16 @@ n([stem('WK_junior'),
    sg('WK-junioren')],both,[app_measure],[]).
 
 n([stem('WK_sprint'),
-   sg('WK-sprint')],both,[],[]).
+   sg('WK-sprint')],both,[temp_mod],[]).
 
 n([stem('WK_Superbike'),
-   sg('WK-Superbike')],both,[],[]).
+   sg('WK-Superbike')],both,[temp_mod],[]).
 
 n([stem('WK_veldrijden'),
-   sg('WK-veldrijden')],both,[],[]).
+   sg('WK-veldrijden')],both,[temp_mod],[]).
 
 n([stem('WK_voetbal'),
-   sg('WK-voetbal')],both,[],[]).
+   sg('WK-voetbal')],both,[temp_mod],[]).
 
 n([mass('Zaans')],het,[],[]).
 
@@ -4488,6 +4491,7 @@ n([mass(belangstelling)],de,
 n([pl(belastingen),sg(belasting)],de,[],
   [bron,
    dividend,
+   erf,
    i(inkomst,inkomsten),
    loon,
    luchthaven,
@@ -4700,7 +4704,8 @@ n([pl(bepalingen),sg(bepaling)],de,
 n([pl(beperkingen),sg(beperking)],de,[vp,sbar],[]).
 
 n([pl(beperkingen),sg(beperking)],de,[],
-  [geboorte,
+  [export,
+   geboorte,
    s(snelheid)]).
 
 n([mass(beperktheid),pl(beperktheden),sg(beperktheid)],de,[],[]).
@@ -5235,6 +5240,7 @@ n([pl(bewijzen),sg(bewijs)],het,[],
    start,
    steun,
    s(toegang),
+   i(corona_toegang,coronatoegangs),
    vaar,
    s(vervoer)
   ]).
@@ -10032,7 +10038,8 @@ n([pl(doellieden),pl(doelmannen),sg(doelman)],de,[],
 n([mass(doelmatigheid)],de,[],[]).
 
 n([pl(doelpunten),sg(doelpunt)],het,[measure,meas_mod],
-  [h('WK')
+  [tegen,
+   h('WK')
   ]).
 
 n([pl(doelstellingen),sg(doelstelling)],de,
@@ -14223,7 +14230,10 @@ n([mass(gnosis)],de,[],[]).
 
 n([mass(go)],both,[],[]).
 
-n([pl(goals),sg(goal)],de,[measure],[dim(goaltje)]).
+n([pl(goals),sg(goal)],de,
+  [measure],
+  [tegen,
+   dim(goaltje)]).
 
 n([sg(goalgetter),pl(goalgetters)],de,[],[]).
 
@@ -14432,7 +14442,8 @@ n([sg(graad),pl(graden),
    breedte,
    s(dekking),
    dim(graadje),
-   isolatie]).
+   isolatie,
+   vaccinatie]).
 
 n([pl(graadmeters),sg(graadmeter)],de,[vp],[]).
 
@@ -17941,6 +17952,7 @@ n([pl(kabinetten),sg(kabinet)],het,[],
    post_wh(['Lubbers','I']),post_wh(['Lubbers','II']),post_wh(['Lubbers','III']),
    post_wh(['Lubbers','1']),post_wh(['Lubbers','2']),post_wh(['Lubbers','3']),
    post_h('Marijnen'),
+   port_h('Rutte'),
    post_h('Schoof'),
    post_h('Thorbecke'),
    post_wh(['Van','Agt']), post_wh([van,'Agt']),post_wh([van,'Agt/Den','Uyl']),
@@ -18134,11 +18146,12 @@ n([pl(kampioenes),sg(kampioene)],de,
    wereld
   ]).
 
-n([pl(kampioenschappen),sg(kampioenschap)],het,[app_measure],
+n([pl(kampioenschappen),sg(kampioenschap)],het,[temp_mod,
+						app_measure],
   [s(land),
    wereld]).
 
-n([pl(kampioenschappen),sg(kampioenschap)],het,[],
+n([pl(kampioenschappen),sg(kampioenschap)],het,[temp_mod],
   [dam,
    tennis,
    voetbal
@@ -21403,6 +21416,7 @@ n([pl(lijnen),sg(lijn)],de,[],
    spoor,
    stroom,
    telefoon,
+   tijd,
    tram,
    verhaal,
    was,
@@ -26725,6 +26739,7 @@ n([pl(overeenkomsten),sg(overeenkomst)],de,
    s(handel),
    huur,
    partnerschap,
+   raam,
    s(samenwerking),
    visserij,
    s(vrijhandel)
@@ -29294,6 +29309,7 @@ n([pl(problemen),sg(probleem)],het,[],
    millennium,f([millennium]),
    s(personeel),
    relatie,
+   stikstof,
    taal,
    s(veiligheid),
    s(verkeer)]).
@@ -30648,6 +30664,7 @@ n([pl(regelen),pl(regels),sg(regel)],de,
    s(begroting),
    beurs,
    boekhoud,
+   h('EU'),
    s(gebruik),
    hoofd,
    huis,
@@ -33580,7 +33597,9 @@ n([pl(sluizen),sg(sluis)],de,[],
    schut,
    zee]).
 
-n([pl(sluitingen),pl(sluitings),sg(sluiting)],de,[],[]).
+n([pl(sluitingen),pl(sluitings),sg(sluiting)],de,
+  [],
+  [school]).
 
 n([pl(sluitstukken),sg(sluitstuk)],het,[],[]).
 
@@ -36730,6 +36749,7 @@ n([pl(terreinen),sg(terrein)],het,[],
    oefen,
    parkeer,
    werk,
+   voor,
    s(voorlichting),
    dim(terreintje)]).
 
@@ -37109,6 +37129,7 @@ n([pl(titels),sg(titel)],de,
    app_measure,
    np_app_measure],
   [ere,
+   grandslam,
    indoor,
    periode,
    wereld,
@@ -38294,7 +38315,7 @@ n([pl(uitrustingen),sg(uitrusting)],de,[],
    sport,
    standaard]).
 
-n([mass(uitschakeling)],de,[],[]).
+n([mass(uitschakeling)],de,[],[h('WK')]).
 
 n([pl(uitschieters),sg(uitschieter)],de,[sbar,vp],[]).
 
@@ -42551,7 +42572,7 @@ n([pl(werkweken),sg(werkweek)],de,[],[]).
 
 n([pl(werkwijzen),sg(werkwijze)],de,[sbar,vp],[]).
 
-n([pl(werkzaamheden),sg(werkzaamheid)],de,[sbar,vp],[]).
+n([pl(werkzaamheden),sg(werkzaamheid)],de,[sbar,vp],[herstel]).
 
 n([pl(werkzaamheden),sg(werkzaamheid)],de,[],[weg]).
 
