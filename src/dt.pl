@@ -1338,7 +1338,8 @@ somewhat_simplify_frame(Frame0,Frame) :-
 somewhat_simplify_frame(Frame0,Frame,RelFeats) :-
     alpino_postags:postag_of_frame(Frame0,PosTag,List0),
     findall(F,lexical_feature(List0,F,RelFeats),List),
-    Frame =.. [PosTag|List].
+    Frame1 =.. [PosTag|List],
+    further_simplify(Frame1,Frame).
 
 lexical_feature(List,Val,RelFeats) :-
     member(Att,RelFeats),
@@ -1638,3 +1639,8 @@ simple_pos1_cat(i(_,Cat),Ds,Pos):-
 simple_pos1_cat(p(_),Ds,Pos):-
     lists:member(D,Ds),
     simple_pos1(D,Pos).
+
+further_simplify(noun(tmp), L) :-
+    !,
+    L = noun.
+further_simplify(N,N).

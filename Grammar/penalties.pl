@@ -425,6 +425,8 @@ get_feature_weight(Feature,Weight) :-
 try_penalty_weight(P,S1) :-
     (   alpino_disambiguation_weights:feature_weight(P,S)
     ->  S=S1
+%    ;   extra(P,S)
+%    ->  S=S1
     ;   S1=0.0
     ).
 
