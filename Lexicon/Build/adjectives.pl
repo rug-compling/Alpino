@@ -17273,7 +17273,7 @@ a([e(grappige),
    subject_vp],[]).
 
 a([both(gratis)],adv,
-  [pp(voor)],[]).
+  [],[]).
 
 a([e(gratuite),
    no_e(gratuit)],adv,
