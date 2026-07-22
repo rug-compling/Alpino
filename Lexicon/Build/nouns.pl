@@ -3509,6 +3509,7 @@ n([pl(baarzen),sg(baars)],de,[],
 
 n([pl(bazen),sg(baas)],de,[],
   [café,
+   h('FIFA'),
    kroeg,
    maffia,
    i(plaat,platen),
@@ -9980,6 +9981,7 @@ n([pl(documenten),sg(document),
 n([pl(documenten),sg(document),
    pl(dokumenten),sg(dokument)],het,[],
   [h('Epstein'),
+   rechtbank,
    reis,
    slot,
    tekst,
@@ -10380,7 +10382,9 @@ n([mass(draf)],de,[],
 
 n([pl(dragers),sg(drager)],de,[],
   [s(gegeven),
-   s(gezag)]).
+   s(gezag),
+   i(geel_trui,geletrui)
+  ]).
 
 n([pl(draagsters),sg(draagster)],de,[],
   [s(gezag)]).
@@ -10984,6 +10988,7 @@ n([mass(efedrine)],de,[],[]).
 n([pl(effecten),sg(effect),
    pl(effekten),sg(effekt)],het,[sbar,subject_sbar],
   [broeikas,
+   s(gezondheid),
    i(wissel_koers,wisselkoers)]).
 
 n([mass(effectbejag)],het,[],[]).
@@ -12092,6 +12097,7 @@ n([pl(finales),sg(finale)],de,
    i('KNVB_beker','KNVB-beker'),
    kwart,
    h('NBA'),
+   troost,
    i(wereld_beker,wereldbeker),
    h('WK')]).
 
@@ -14329,6 +14335,7 @@ n([pl(golven),sg(golf)],de,[measure],[]).
 
 n([pl(golven),sg(golf)],de,[],
   [hitte,
+   i(super_hitte,superhitte),
    migratie]).
 
 n([mass(golf)],het,[],[]).
@@ -15510,7 +15517,8 @@ n([sg(helft),pl(helften)],de,[temp_mod,sbar,measure],
 n([stem(helikopter),
    pl(helicopters),sg(helikopter),
    pl(helikopters),sg(helicopter)],de,[],
-  [s(gevecht),
+  [blus,
+   s(gevecht),
    trauma]).
 
 n([mass(heling)],de,[],[]).
@@ -20294,7 +20302,8 @@ n([pl(laatstejaars),sg(laatstejaars)],de,[measure],[]).
 
 n([pl(laatstgenoemden),sg(laatstgenoemde)],de,[measure],[]).
 
-n([pl(labs),sg(lab)],het,[],[]).
+n([pl(labs),sg(lab)],het,[],
+  [drugs]).
 
 n([pl(labels),sg(label)],both,[],
   [bagage,
@@ -22367,6 +22376,7 @@ n([sg(man),pl(mannen),ignore(m(man,noun(de,count,sg),man))],de,[],
    kies,
    i(klus_DIM,klusjes),
    kop,
+   stunt,
    s(vakbond),
    s(verzet),
    vuilnis,
@@ -27862,7 +27872,9 @@ n([mass(personeel)],het,[],
    horeca,
    h('NS'),
    s(overheid),
-   winkel]).
+   winkel,
+   zorg
+  ]).
 
 n([pl(personificaties),sg(personificatie)],de,[],[]).
 
@@ -32182,7 +32194,8 @@ n([stem(schaatsster),
 n([pl(schachten),sg(schacht)],de,[],[]).
 
 n([pl(schaden),pl(schades),sg(schade)],de,[],
-  [plan,
+  [s(gezondheid),
+   plan,
    reputatie,
    rook,
    water]).
@@ -35745,6 +35758,7 @@ n([pl(stukken),sg(stuk),
   [],
   [bewijs,
    hamer,
+   opinie,
    post,
    puzzel,
    meester,
@@ -36524,7 +36538,9 @@ n([pl(tekorten),sg(tekort)],het,[],
    s(overheid),
    s(personeel),
    slaap,
-   vocht
+   vocht,
+   water,
+   woning
   ]).
 
 n([pl(tekortkomingen),sg(tekortkoming)],de,[],[]).
@@ -39225,6 +39241,8 @@ n([pl(vergrijpen),sg(vergrijp)],het,[sbar,vp],[]).
 
 n([mass(vergrijzing)],de,[],[]).
 
+n([mass(vergroening)],de,[],[]).
+
 n([pl(vergrootglazen),sg(vergrootglas)],het,[],[]).
 
 n([pl(vergrotingen),sg(vergroting)],de,[],
@@ -40529,7 +40547,8 @@ n([pl(vliegers),sg(vlieger)],de,[],[]).
 n([sg(vliegeraar),pl(vliegeraars)],de,[],[]).
 
 n([pl(vliegtuigen),sg(vliegtuig)],het,[],
-  [s(gevecht),
+  [blus,
+   s(gevecht),
    h('NAVO'),h('Navo'),'NAVO','Navo',
    s(passagier),
    patrouille,
@@ -41597,7 +41616,9 @@ n([pl(vrouwen),sg(vrouw)],de,[],
    s(zeg),
    dim(vrouwtje)]).
 
-n([sg(vrouwe)],de,[],[s(raad)]).
+n([sg(vrouwe)],de,[],
+  [bescherm,
+   s(raad)]).
 
 n([mass(vrouwelijkheid)],de,[],[]).
 
@@ -42572,7 +42593,11 @@ n([pl(werkweken),sg(werkweek)],de,[],[]).
 
 n([pl(werkwijzen),sg(werkwijze)],de,[sbar,vp],[]).
 
-n([pl(werkzaamheden),sg(werkzaamheid)],de,[sbar,vp],[herstel]).
+n([pl(werkzaamheden),sg(werkzaamheid)],de,
+  [sbar,
+   vp],
+  [blus,
+   herstel]).
 
 n([pl(werkzaamheden),sg(werkzaamheid)],de,[],[weg]).
 

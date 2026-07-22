@@ -31679,6 +31679,9 @@ a([e(secure),
 a([e(segmentale),
    no_e(segmentaal)],nonadv,[],[]).
 
+a([e(seksistische),
+   no_e(seksistisch)],adv,[],[]).
+
 a([e(seksuele),
    e(sexuele),
    no_e(seksueel),
