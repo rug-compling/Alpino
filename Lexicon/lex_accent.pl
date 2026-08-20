@@ -146,6 +146,7 @@ accent('Bosnier','Bosniër').
 accent('Bosniers','Bosniërs').
 accent('Brentolien','Brentoliën').
 accent(buhne,bühne).
+accent(buitencategorieen,buitencategorieën).
 accent('Burundier','Burundiër').
 accent('Burundiers','Burundiërs').
 accent(buurtcomite,buurtcomité).

@@ -2814,6 +2814,7 @@ spelling_variant('`a',       à).
 
 spelling_variant('\'t',    het).
 spelling_variant('`t',     het).
+spelling_variant('’t',     het).
 spelling_variant(t,        het).
 
 
