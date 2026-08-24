@@ -16999,6 +16999,9 @@ a([ge_both(gladgestreken)],adv,[],[]).
 
 a([pred(gladjes)],adv,[],[]).
 
+a([e(glamoureuze),
+   no_e(glamoureus)],adv,[],[]).
+
 a([e(glansrijke),
    no_e(glansrijk)],adv,[],[]).
 
@@ -17561,6 +17564,9 @@ a([both(halal)],adv,[],[]).
 
 a([e(hallucinogene),
    no_e(hallucinogeen)],nonadv,[],[]).
+
+a([e(hallucinante),
+   no_e(hallucinant)],adv,[],[]).
 
 a([e(halve),
    no_e(half)],adv,[],[]).
@@ -32867,6 +32873,13 @@ a([e(strijdlustige),
    st(strijdlustigst),
    ste(strijdlustigste)],padv,[],[]).
 
+a([e(strijdvaardige),
+   no_e(strijdvaardig),
+   ere(strijdvaardigere),
+   er(strijdvaardiger),
+   st(strijdvaardigst),
+   ste(strijdvaardigste)],adv,[],[]).
+
 a([e(strikte),
    er(strikter),
    ere(striktere),
@@ -34028,6 +34041,9 @@ a([e(totalitaire),
    no_e(totalitair),
    st(totalitairst),
    ste(totalitairste)],adv,[],[]).
+
+a([e(toxicologische),
+   no_e(toxicologisch)],adv,[],[]).
 
 a([e(trage),
    er(trager),

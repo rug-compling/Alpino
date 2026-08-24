@@ -8274,7 +8274,7 @@ nominalized_adjective(gestoord,gestoorden).
 nominalized_adjective(getrouw,getrouwen).
 nominalized_adjective(geweldig,geweldigen).
 nominalized_adjective(gewetensbezwaard,gewetensbezwaarden).
-nominalized_adjective(gewond,gewonden).
+%nominalized_adjective(gewond,gewonden).
 nominalized_adjective(gezond,gezonden).
 nominalized_adjective(goed,besten).
 nominalized_adjective(goed,beteren).
