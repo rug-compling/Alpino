@@ -1304,8 +1304,8 @@ exceptional_stem_tag(aan,adjective(_),                        'VZ(fin)',aan).
 exceptional_stem_tag(apart,postn_adverb,                      'ADJ(postnom,basis,zonder)',apart).
 exceptional_stem_tag(betreffen,preposition(betreffende,[]),   'WW(od,vrij,zonder)',betreffen).
 exceptional_stem_tag(derden,noun(both,count,pl),              'TW(rang,nom,mv-n)',drie).
-exceptional_stem_tag(dode,noun(de,count,pl),                  'ADJ(nom,basis,met-e,mv-n)',dood).
-exceptional_stem_tag(dode,noun(de,count,sg),                  'ADJ(nom,basis,met-e,zonder-n,stan)',dood).
+exceptional_stem_tag(dood,nominalized_adjective_sg,           'ADJ(nom,basis,met-e,zonder-n,stan)',dood).
+exceptional_stem_tag(dood,ge_nominalized_adjective,           'ADJ(nom,basis,met-e,mv-n)',dood).
 exceptional_stem_tag(detineren,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',detineren).
 exceptional_stem_tag(detineren,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',detineren).
 exceptional_stem_tag(diens,determiner(pron),                  'VNW(aanw,pron,gen,vol,3m,ev)',die).
