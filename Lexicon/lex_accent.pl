@@ -1138,6 +1138,8 @@ accent(principieler,principiëler).
 accent(privebezit,privébezit).
 accent(privedetective,privédetective).
 accent(privedetectives,privédetectives).
+accent(privejet,privéjet).
+accent(privejets,privéjets).
 accent('prive-klinieken','privé-klinieken').
 accent(priveklinieken,privéklinieken).
 accent('prive-kliniek','privé-kliniek').
@@ -1403,6 +1405,7 @@ accent(verifieren,verifiëren).
 accent(verkeerssituatien,verkeerssituatiën).
 accent(vetoen,vetoën).
 accent('Videoland-serien','Videoland-seriën').
+accent(vlammenzeeen,vlammenzeeën).
 accent(vliegtuigindustrieen,vliegtuigindustrieën).
 accent(voedingsindustrieen,voedingsindustrieën).
 accent(voetbalcarrieres,voetbalcarrières).
