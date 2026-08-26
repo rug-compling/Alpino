@@ -22736,6 +22736,9 @@ a([e(metamorfe),no_e(metamorf)],adv,[],[]).
 
 a([stof(metalen)],nonadv,[],[licht]).
 
+a([e(meteorologische),
+   no_e(meteorologisch)],adv,[],[]).
+
 a([e(methodische),
    e(metodische),
    no_e(methodisch),
@@ -25086,7 +25089,10 @@ a([e(ondemocratische),
    no_e(ondemocratisch),
    no_e(ondemokratisch)],adv,
   [subject_sbar,
-   subject_vp],[]).
+   subject_vp
+  ],
+  [sociaal,h(sociaal)
+  ]).
 
 a([e(ondenkbare),
    er(ondenkbaarder),
@@ -28299,7 +28305,7 @@ a([e(opzettelijke),
    ere(opzettelijkere),
    no_e(opzettelijk),
    st(opzettelijkst),
-   ste(opzettelijkste)],adv,[],[]).
+   ste(opzettelijkste)],adv,[],[on]).
 
 a([e(opzichtige),
    er(opzichtiger),
