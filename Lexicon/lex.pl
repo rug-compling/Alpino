@@ -118,7 +118,7 @@ lexicon_fallback_(Word,end_nominalized_adjective,Label,Ws,Ws,'part-V-den',_) :-
 
 lexicon_fallback_(Word,ge_nominalized_adjective,Label,Ws,Ws,'A-n',_) :-
     atom(Word),
-    \+ member(Word,[gewonden]),
+    \+ lists:member(Word,[gewonden]),
     atom_concat(Adj,n,Word),
     xl(Adj,adjective(ge_e),Label,[],[]).
 
