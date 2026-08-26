@@ -1144,6 +1144,7 @@ inf_only(baanwielrennen,baan_wielrennen).
 inf_only(backpacken).
 inf_only(ballonvaren,ballon_varen).
 inf_only(beeldbellen).
+inf_only(bergbeklimmen).
 inf_only(berglopen).
 inf_only(bloemlezen).
 inf_only(boekhouden).
@@ -7793,6 +7794,9 @@ v(fotografeer,fotografeert,fotograferen,gefotografeerd,fotografeerde,fotografeer
 v(fouilleer,fouilleert,fouilleren,gefouilleerd,fouilleerde,fouilleerden,
     [h([intransitive,
 	transitive])]).
+
+v(fourageer,fourageert,fourageren,gefourageerd,fourageerde,fourageerden,
+    [h([intransitive])]).
 
 v(fourneer,fourneert,fourneren,gefourneerd,fourneerde,fourneerden,
     [h([transitive])]).

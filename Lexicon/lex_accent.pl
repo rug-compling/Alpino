@@ -141,6 +141,7 @@ accent(blerde,blèrde).
 accent(blerden,blèrden).
 accent(bleren,blèren).
 accent(blert,blèrt).
+accent(bloemenzeeen,bloemenzeeën).
 accent(bobsleeen,bobsleeën).
 accent('Bosnier','Bosniër').
 accent('Bosniers','Bosniërs').

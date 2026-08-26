@@ -5649,6 +5649,7 @@ a([ge_e(bewolkte),
    st(bewolktst),
    ste(bewolktste)],adv,[],[half,
 			    licht,
+			    on,
 			    zwaar]).
 
 a([ge_e(bewonderde),
@@ -10258,6 +10259,9 @@ a([e(fortuinlijke),
 
 a([e(fossiele),
    no_e(fossiel)],nonadv,[],[]).
+
+a([e(fotogenieke),
+   no_e(fotogeniek)],nonadv,[],[]).
 
 a([e(fotografische),
    no_e(fotografisch)],adv,[],[]).
@@ -19864,6 +19868,9 @@ a([e(intuïtieve),
 
 a([both(invalide)],nonadv,[],[]).
 
+a([e(invasieve),
+   no_e(invasief)],adv,[],[]).
+
 a([e(inventieve),
    er(inventiever),
    ere(inventievere),
@@ -23554,7 +23561,7 @@ a([e(natte),
    ere(nattere),
    no_e(nat),
    st(natst),
-   ste(natste)],adv,[],[]).
+   ste(natste)],adv,[],[kledder]).
 
 a([ge_e(natgemaakte),
    ge_no_e(natgemaakt)],adv,[],[]).
@@ -30893,6 +30900,7 @@ a([e(rode),
    ste(roodste)],adv,[],
   [bloed,
    donker,
+   fel,
    knal,
    licht,
    vuur,
