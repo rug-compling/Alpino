@@ -484,6 +484,7 @@ postposition(door).
 postposition(in).
 postposition(langs).
 postposition(om).
+postposition(onderdoor).    % in de Looblog: ik ga de Betuwelijn onderdoor
 postposition(op).
 postposition(over).
 postposition(rond).

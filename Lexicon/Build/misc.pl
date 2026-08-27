@@ -2743,6 +2743,7 @@ preposition(nopens).  % ouderwets
 preposition(omstreeks).
 preposition(omtrent).
 preposition(ondanks).
+preposition(onderlangs).  % Looblog!
 preposition(ongeacht).
 % preposition(overeenkomstig).
 preposition('o.w.').  % onder wie...
@@ -3800,6 +3801,7 @@ m(omheen,           preposition(om,[],extracted_np),omheen).
 m(omheen,           preposition(omheen,[],extracted_np),omheen).
 m(omtrent,          preposition(omtrent,[],extracted_np),omtrent).  % VL?
 m(onderdoor,        preposition(onder,[],extracted_np),onderdoor).
+m(onderlangs,       preposition(onder,[],extracted_np),onderlangs).
 m(overheen,         preposition(over,[],extracted_np),overheen).
 m(overheen,         preposition(overheen,[],extracted_np),overheen).
 m(tegenaan,         preposition(tegen,[],extracted_np),tegenaan).
@@ -6345,6 +6347,7 @@ dir_adverb(omhoog).
 dir_adverb(ophoog).  %VL
 dir_adverb(omlaag).
 dir_adverb(omver).
+dir_adverb(onderlangs).
 dir_adverb(onderuit).
 dir_adverb([op,en,af]).
 dir_adverb(opzij).

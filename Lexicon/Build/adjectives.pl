@@ -13054,7 +13054,10 @@ a([ge_both(gelegen),
    ere(gelegenere),
    st(gelegenst),
    ste(gelegenste)],adv,
-  [ld_pp],[naast]).
+  [ld_pp],
+  [hoog,
+   laag,
+   naast]).
 
 a([ge_e(gelegerde),
    ge_no_e(gelegerd)],adv,[],[]).
@@ -14618,6 +14621,9 @@ a([e(geringe),
    no_e(gering),
    st(geringst),
    ste(geringste)],adv,[],[]).
+
+a([ge_e(geringde),
+   ge_no_e(geringd)],adv,[],[]).
 
 a([ge_e(geripte),
    ge_no_e(geript)],padv,[],[]).

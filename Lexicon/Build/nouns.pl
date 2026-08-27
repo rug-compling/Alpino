@@ -14834,6 +14834,7 @@ n([mass(groei)],de,[],
   [i(baan,banen),
    s(bevolking),
    geld,
+   i(plant,planten),
    s(welvaart),
    wild]).
 
@@ -15579,7 +15580,7 @@ n([mass(hegemonie)],de,[],[]).
 
 n([mass(heibel)],de,[],[]).
 
-n([pl(heiden),sg(hei),sg(heide)],de,[],[]).
+n([pl(heiden),sg(hei),sg(heide)],de,[],[struik]).
 
 n([pl(heidenen),sg(heiden)],de,[],[]).
 

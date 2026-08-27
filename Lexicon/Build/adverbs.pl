@@ -366,6 +366,7 @@ adverb([om,en,rond]).	        %VL "ongeveer"
 adverb([om,en,rond,de]).        %VL "ongeveer"
 adverb(omstreeks).	      % pre-num "ongeveer" pre-year pre-amount
 adverb([onder,anderen]).
+adverb(onderlangs).		% ?
 adverb(onderuit).  % loc? dir? pred?
 adverb(ondermeer).
 adverb([onder,meer]).

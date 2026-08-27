@@ -14141,6 +14141,7 @@ v(loop,loopt,lopen,gelopen,liep,liepen,
 	part_intransitive(heen),
 	part_intransitive(in),
 	part_ld_pp(in),
+	part_ld_transitive(in),  % want inlopen is ook een transitive
 	part_pc_pp(in,op),  % we lopen in op de koploper
 	part_intransitive(langs),
 	part_ld_pp(langs),
