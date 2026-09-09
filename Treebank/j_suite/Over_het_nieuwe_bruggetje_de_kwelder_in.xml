@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" cat="pp" end="4" id="2" rel="dp">
+        <node begin="0" end="1" id="3" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="Over"/>
+        <node begin="1" cat="np" end="4" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+          <node aform="base" begin="2" buiging="met-e" end="3" graad="basis" id="6" infl="e" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" vform="adj" word="nieuwe"/>
+          <node begin="3" end="4" gen="het" genus="onz" getal="ev" graad="dim" id="7" lemma="brug" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="brug_DIM" word="bruggetje"/>
+        </node>
+      </node>
+      <node begin="4" cat="pp" end="7" id="8" rel="dp">
+        <node begin="4" cat="np" end="6" id="9" rel="obj1">
+          <node begin="4" end="5" id="10" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="kwelder" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kwelder" word="kwelder"/>
+        </node>
+        <node begin="6" end="7" id="12" lemma="in" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="in" special="post" vztype="fin" word="in"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Over het nieuwe bruggetje de kwelder in</sentence>
+</alpino_ds>
