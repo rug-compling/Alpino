@@ -915,6 +915,7 @@ accent(linkerknieen,linkerknieën).
 accent(litanieen,litanieën).
 accent(liturgieen,liturgieën).
 accent(lobbieen,lobbieën).
+accent(loge,logé).
 accent(loss,löss).
 accent(luchtactien,luchtactiën).
 accent(luchtaktien,luchtaktiën).
@@ -1418,6 +1419,7 @@ accent(voor,vóór).
 accent(vredesmissien,vredesmissiën).
 accent(vreeen,vreeën).
 accent(vuurzeeen,vuurzeeën).
+accent(waddenzeeen,waddenzeeën).
 accent(wapeninspectien,wapeninspectiën).
 accent(waterlelien,waterleliën).
 accent(waterpoloers,waterpoloërs).

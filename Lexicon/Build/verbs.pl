@@ -1756,6 +1756,9 @@ v(balsem,balsemt,balsemen,gebalsemd,balsemde,balsemden,
     [h([intransitive,
 	transitive])]).  
 
+v(balts,batst,baltsen,gebaltst,baltste,baltsten,
+    [h([intransitive])]).  
+
 v(ban,bant,bannen,gebannen,bande,banden,
     [h([transitive,
 	np_ld_pp,
@@ -5133,6 +5136,7 @@ v(circuleer,circuleert,circuleren,gecirculeerd,circuleerde,circuleerden,
 
 v(cirkel,cirkelt,cirkelen,gecirkeld,cirkelde,cirkelden,
     [h([intransitive,
+	part_intransitive(rond),
 	ld_pp,
 	ld_adv])]).
 
@@ -7795,7 +7799,7 @@ v(fouilleer,fouilleert,fouilleren,gefouilleerd,fouilleerde,fouilleerden,
     [h([intransitive,
 	transitive])]).
 
-v(fourageer,fourageert,fourageren,gefourageerd,fourageerde,fourageerden,
+v(foerageer,foerageert,foerageren,gefoerageerd,foerageerde,foerageerden,
     [h([intransitive])]).
 
 v(fourneer,fourneert,fourneren,gefourneerd,fourneerde,fourneerden,
@@ -15191,6 +15195,7 @@ v(moet,moet,moeten,gemoeten,moest,moesten,
       fixed([vc(zeg,psp,intransitive),sbar_subj_opt_het],no_passive),
                                 % je moet zien (om) de aandacht vast te houden
       fixed([vc(zie,inf,intransitive),vp],no_passive),
+      pc_pp(met),               % daar moet wel iets mee
       np_pc_pp(met),            % wat moeten wij daar mee?
       part_transitive(aan),     % wat moet ik aan?
       part_np_pc_pp(aan,met)    % wat moeten wij daar mee aan?
@@ -16304,6 +16309,10 @@ v(ontplof,ontploft,ontploffen,ontploft,ontplofte,ontploften,
 v(ontplooi,ontplooit,ontplooien,ontplooid,ontplooide,ontplooiden,
     [h([refl,
 	transitive])]).
+
+v(ontpolder,ontpoldert,ontpolderen,ontpolderd,ontpolderde,ontpolderden,
+  [h([transitive,
+      intransitive])]).
 
 v(ontpop,ontpopt,ontpoppen,ontpopt,ontpopte,ontpopten,
   [h([refl,
@@ -28102,7 +28111,8 @@ v(waai,waait,waaien,gewaaid,[waaide,woei],[waaiden,woeien],
 	  part_ld_pp(over)]),
    b([part_intransitive(uit),
       fixed([[met,alle,winden,mee]],imp_passive)]),
-   h([intransitive,
+   h([intransitive,   % de wint waait
+      het_subj,       % het waait hard en miezert zachtjes
       part_np_np(toe),		% iemand koelte toe waaien
       part_transitive(op)])]).
 

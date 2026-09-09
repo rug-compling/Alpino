@@ -35,6 +35,7 @@ m(anders,  adjective(anders),  anders).
 
 m(extra,   post_adjective(no_e), 'extra\'s').
 
+m(op_vallen,post_adjective(no_e),opvallends).
 m(verdacht,post_adjective(no_e),verdachts).
 
 %% obl. complement
@@ -3717,6 +3718,10 @@ a([e(barbaarse),
    st(barbaarst),
    ste(barbaarste)],adv,[],[]).
 
+a([ende(barende),
+   end(barend)],padv,[],
+  [i(leven,levend)]).
+
 a([e(barmhartige),
    er(barmhartiger),
    ere(barmhartigere),
@@ -6004,6 +6009,9 @@ a([ende(bindende),
    st(bindendst),
    ste(bindendste)],adv,[],[]).
 
+a([e(binnendijkse),
+   no_e(binnendijks)],adv,[],[]).
+
 a([ge_e(binnengebrachte),
    ge_no_e(binnengebracht)],adv,[],[]).
 
@@ -6125,7 +6133,10 @@ a([e(blauwe),
    ste(blauwste)],nonadv,[],
   [donker,
    grijs,h(grijs),
-   licht]).
+   licht,
+   strak,
+   zwart
+  ]).
 
 a([e(blauwachtige),
    er(blauwachtiger),
@@ -6165,8 +6176,9 @@ a([e(blijde),
    st(blijdst),
    ste(blijdste)],adv,[],[]).
 
-a([e(blijkbare),
-   no_e(blijkbaar)],adv,[],[]).
+%% "blijkbaar is een sentence_adverb blijkbaar."
+a([stem(blijkbaar),
+   e(blijkbare)],adv,[],[]).
 
 a([e(blijmoedige),
    er(blijmoediger),
@@ -8144,7 +8156,7 @@ a([e(donkere),
    st(donkerst),
    ste(donkerste)],nonadv,[],
   [aarde,
-   pik,
+   pik,pikke,
    stik]).
 
 a([stof(donzen)],nonadv,[],[]).
@@ -9620,6 +9632,9 @@ a([no_e(esthetisch),
 a([e(estuariene),
    no_e(estuarien)],nonadv,[],[]).
 
+a([ende(etende),
+   end(etend)],padv,[],[vlees]).
+
 a([e(eterische),
    e(etherische),
    no_e(eterisch),
@@ -10261,7 +10276,12 @@ a([e(fossiele),
    no_e(fossiel)],nonadv,[],[]).
 
 a([e(fotogenieke),
-   no_e(fotogeniek)],nonadv,[],[]).
+   no_e(fotogeniek),
+   er(fotogenieker),
+   ere(fotogeniekere),
+   st(fotogeniekst),
+   ste(fotogeniekste)
+  ],nonadv,[],[]).
 
 a([e(fotografische),
    no_e(fotografisch)],adv,[],[]).
@@ -11790,7 +11810,8 @@ a([e(gele),
    no_e(geel),
    st(geelst),
    ste(geelste)],nonadv,[],
-  [knal,
+  [fel,
+   knal,
    licht,
    donker,
    goud,
@@ -12791,6 +12812,9 @@ a([ge_e(gekotste),
    ge_no_e(gekotst)],adv,[],[]).
 
 a([ge_both(gekozen)],adv,[],[]).
+
+a([e(gekraagde),
+   no_e(gekraagd)],adv,[],[]).
 
 a([ge_e(gekraaide),
    ge_no_e(gekraaid)],adv,[],[]).
@@ -18017,6 +18041,8 @@ a([e(hemelsbrede),
    st(hemelsbreedst),
    ste(hemelsbreedste)],adv,[],[]).
 
+a([e(hemolytische),no_e(hemolytisch)],nonadv,[],[]).
+
 a([e(hemelwaartse),
    postn_no_e(hemelwaarts)],diradv,[],[]).
 
@@ -21522,7 +21548,7 @@ a([e(lelijke),
    ere(lelijkere),
    no_e(lelijk),
    st(lelijkst),
-   ste(lelijkste)],adv,[],[]).
+   ste(lelijkste)],adv,[],[foei]).
 
 a([both(lemen)],nonadv,[],[]).
 
@@ -21933,7 +21959,7 @@ a([e(loze),
    ere(lozere),
    no_e(loos),
    st(loost),
-   ste(looste)],nonadv,[],[]).
+   ste(looste)],nonadv,[],[stengel]).
 
 a([e(losse),
    er(losser),
@@ -22844,6 +22870,9 @@ a([e(minne),
   [subject_sbar,
    subject_vp],[]).
 
+a([ende(minnende),
+   end(minnend)],padv,[],[zout]).
+
 a([stem(weinig),
    ere(mindere),
    st(minst),
@@ -23567,7 +23596,10 @@ a([e(natte),
    ere(nattere),
    no_e(nat),
    st(natst),
-   ste(natste)],adv,[],[kledder]).
+   ste(natste)],adv,[],
+  [kledder,
+   klets
+  ]).
 
 a([ge_e(natgemaakte),
    ge_no_e(natgemaakt)],adv,[],[]).
@@ -23855,7 +23887,7 @@ a([e(nieuwe),
    no_e(nieuw),
    st(nieuwst),
    ste(nieuwste)],both,
-  [subject_sbar],[]).
+  [subject_sbar],[spiksplinter]).
 
 a([both(nieuwbakken)],nonadv,[],[]).
 
@@ -24336,6 +24368,9 @@ a([ge_both(omgeven)],adv,[],[]).
 
 a([ge_e(omgevormde),
    ge_no_e(omgevormd)],adv,[],[]).
+
+a([ge_e(omgewaaide),
+   ge_no_e(omgewaaid)],adv,[],[]).
 
 a([ge_e(omgewoelde),
    ge_no_e(omgewoeld)],adv,[],[]).
@@ -26588,6 +26623,9 @@ a([ge_e(ontplofte),
 a([ge_e(ontplooide),
    ge_no_e(ontplooid)],adv,[],[]).
 
+a([ge_e(ontpolderde),
+   ge_no_e(ontpolderd)],adv,[],[]).
+
 a([ge_e(ontpopte),
    ge_no_e(ontpopt)],adv,[],[]).
 
@@ -28342,7 +28380,7 @@ a([ge_e(opzijgezette),
 a([e(orale),
    no_e(oraal)],adv,[],[]).
 
-a([both(oranje)],nonadv,[],[]).
+a([both(oranje)],nonadv,[],[fel]).
 
 a([e(ordelijke),
    er(ordelijker),
@@ -30685,7 +30723,8 @@ a([e(rijke),
    st(rijkst),
    ste(rijkste)],adv,
   [pp(aan)],
-  [olie]).
+  [kalk,
+   olie]).
 
 a([e(rijke),
    er(rijker),
@@ -32928,6 +32967,9 @@ a([e(stroeve),
    no_e(stroef),
    st(stroefst),
    ste(stroefste)],adv,[],[]).
+
+a([ende(stromende),
+   end(stromend)],padv,[],[snel]).
 
 a([stof(strooien)],nonadv,[],[]).
 
@@ -37911,6 +37953,9 @@ a([e(vlezige),
 
 a([e(vliesvleugelige),
    no_e(vliesvleugelig)],nonadv,[],[]).
+
+a([ende(vliegende),
+   end(vliegend)],padv,[],[voorbij]).
 
 a([e(vliegensvlugge),
    no_e(vliegensvlug)],adv,[],[]).
@@ -43502,6 +43547,7 @@ stem(omgetrokken,v_root(trek_om,om_trekken)).
 stem(omgevallen,v_root(val_om,om_vallen)).
 stem(omgeven,v_root(omgeef,omgeven)).
 stem(omgevormd,v_root(vorm_om,om_vormen)).
+stem(omgewaaid,v_root(waai_om,om_waaien)).
 stem(omgewoeld,v_root(woel_om,om_woelen)).
 stem(omgezet,v_root(zet_om,om_zetten)).
 stem(omheind,v_root(omhein,omheinen)).

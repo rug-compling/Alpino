@@ -8717,6 +8717,16 @@ grammar_rule(adv_post_pp_dp,MAX,[ADV,COMMA,XP]) :-
     max_post_pp(XP),
     dp_dp_structure(ADV,XP,MAX).
 
+%%EX%% Over het nieuwe bruggetje de kwelder in
+%%EX%% Via een nieuw wandelpad het bos uit
+grammar_rule(adv_post_pp_dp,MAX,[PP,COMMA,XP]) :-
+    optcomma(COMMA),
+    MAX => max,
+    MAX:max_type => t_dp,
+    ind_max_pp(PP),
+    max_post_pp(XP),
+    dp_dp_structure(PP,XP,MAX).
+
 %%EX%% leuk voor later , allemaal
 grammar_rule(predm_ap_adv_dp,MAX,[XP,COMMA,ADV]) :-
     MAX => max,
@@ -9208,6 +9218,18 @@ grammar_rule(start_mod_mod_post_pp,M,[MOD1,MOD2,PP]) :-
     max_dp_modifier_rr(MOD2),
     max_post_pp(PP),
     dp_dp_structure(MOD1,MOD2,PP,M).
+
+%%EX%% Daarom terug omhoog
+%%EX%% Vervolgens binnendoor terug
+grammar_rule(start_mod_mod_dir,M,[MOD1,MOD2,ADV]) :-
+    M => max,
+    M:max_type => t_dp,
+    M:mod_np => yes,
+    max_dp_modifier(MOD1),
+    max_dp_modifier_rr(MOD2),
+    max_advp(ADV),
+    ADV:tmploc => ld_dir,
+    dp_dp_structure(MOD1,MOD2,ADV,M).
 
 %%EX%% Toch niet om een krant te kopen ?
 grammar_rule(start_mod_mod_oti,M,[MOD1,MOD2,OTI]) :-

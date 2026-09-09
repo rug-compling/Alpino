@@ -32,14 +32,30 @@ normal_capitalized_word(P,Word,Rest,Rest,DecapWord) :-
     decap_first(Word,DecapWord),
     (   is_start_sentence(P)
     ->  true
-    ;   is_decap_only(Word,DecapWord)
     ;   decap_only_one(Word)
     ).
 
+normal_capitalized_word(_,'\'s',[Morgens|Rest],[Morgens2|Rest],'\'s') :-
+    morgens(Morgens,Morgens2).
 normal_capitalized_word(P,Word,[Word1|Rest],[Word2|Rest],Word) :-
     is_start_sentence(P),
     starts_with_quote(Word),
     decap_first(Word1,Word2).
+
+morgens('Ochtends',ochtends).
+morgens('Middags',middags).
+morgens('Morgens',morgens).
+morgens('Avonds',avonds).
+morgens('Nachts',nachts).
+
+ends_morgens(Och,P1) :-
+    morgens(Och,_),
+    P0 is P1 - 1, 
+    P is P1 + 1,  
+    tag(P0,P,_,_,_,_,_,tmp_adverb).
+
+starts_morgens('\'s',[Och|_]):-
+    morgens(Och,_).
 
 starts_with_quote('\'n').
 starts_with_quote('\'s').
@@ -309,6 +325,8 @@ longest_match_([Len0-El|T],Len,Result) :-
     ).
 
 name_heuristic(P1,R1,W,Ws,Words,Len,Msg,MsgArgs,Tag) :-
+    \+ starts_morgens(W,Ws),
+    \+ ends_morgens(W,P1),
     (   is_decap_only(W)
     ->  tag(P1,_,R1,_,W,_,normal(names_dictionary),_)
     ;   true
@@ -2372,8 +2390,12 @@ decap_only_one('Rechtstreeks').
 %% hack to rule out very frequent beginning of sentence words,
 %% which are very unlikely *first parts* of names
 
+
 is_decap_only(Word) :-
     decap_first(Word,Decap),
+    is_decap_only(Word,Decap).
+
+is_decap_only(Word,Decap,_):-
     is_decap_only(Word,Decap).
 
 is_decap_only(Word,Decap) :-
@@ -2443,6 +2465,7 @@ decap_only('Ja').
 decap_only('Jazeker').
 decap_only('Je').
 decap_only('Kan').
+decap_only('Langs').
 decap_only('Maar').
 decap_only('Mama').
 decap_only('Me').
@@ -6425,6 +6448,10 @@ potential_name_fsa(33,_,Ws,Ws,[],[]).
 
 %% just seen capitalized normal word; we want another capital first to be convinced this
 %% could be a name...
+potential_name_fsa(8,_,['\'s',Morgens|_],_,_,_) :-
+    morgens(_,Morgens),
+    !,
+    fail.
 potential_name_fsa(8,P0,[Word|Words],Ws,[Word|Prefix],[capital|His]) :-
     name_unknown(Word,P0),
     name_capital(Word,P0),
@@ -6729,11 +6756,13 @@ common_dutch_word(het).
 common_dutch_word(in).
 common_dutch_word(is).
 common_dutch_word(je).
+common_dutch_word(loop).
 common_dutch_word(man).
 common_dutch_word(me).
 common_dutch_word(men).
 common_dutch_word(of).
 common_dutch_word(over).
+common_dutch_word(pas).
 common_dutch_word(want).
 common_dutch_word(was).
 common_dutch_word(we).
@@ -6910,13 +6939,8 @@ name_vanhet_maybe_start(X1,W2) :-
 name_vanhet_start(W) :-
     W \= van,
     W \= de,
-    W \= het,
+    W \= het, W\= '\'t',
     W \= der,
-    name_vanhet(W).
-
-name_vanhet_start(W0) :-
-    W0 \= 'Ben',
-    decap_some(W0,W),
     name_vanhet(W).
 
 name_vanhet_start(W1,W2) :-

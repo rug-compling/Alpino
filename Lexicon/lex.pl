@@ -3112,6 +3112,7 @@ spelling_variant(failliette,  failliete).
 spelling_variant(fronzen,     fronsen).
 spelling_variant(gefronsd,    gefronst).
 spelling_variant(gene,        gêne).
+spelling_variant(feburari,    februari).
 spelling_variant(formateer,   formatteer).
 spelling_variant(formateert,  formatteert).
 spelling_variant(formateren,  formatteren).
@@ -3280,6 +3281,8 @@ spelling_variant(onsymphathiek,onsympathiek).
 spelling_variant(onsymphathieke,onsympathieke).
 spelling_variant(tegehouden,  tegenhouden).
 spelling_variant(tegenoverstelde,tegenovergestelde).
+spelling_variant(temparatuur, temperatuur).
+spelling_variant(temparaturen,temperaturen).
 spelling_variant(tjdens,      tijdens).
 spelling_variant(todat,       totdat).
 spelling_variant(toekomt,     toekomst).

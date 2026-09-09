@@ -4908,7 +4908,8 @@ m(mogelijk,         zo_mogelijk_mogelijk(no_e),mogelijk).
 m(mogelijk,         zo_mogelijk_mogelijk(e),mogelijke).
 
 m(allerlei,         postn_adverb,allerlei). % Vlaams
-m(allerhande,       postn_adverb,allerhande). 
+m(allerhande,       postn_adverb,allerhande).
+m(allertijden,      postn_adverb,allertijden).
 m(apart,            postn_adverb,apart).  % verhaal, vak, paar, geval, klasse
 m('avant la lettre',postn_adverb,[avant,la,lettre]).
 m(brut,             postn_adverb,brut).   % Kaapse Pracht brut etc.
@@ -5991,7 +5992,8 @@ sentence_adverb([alles,met,elkaar]).
 sentence_adverb([alles,met,mekaar]).
 sentence_adverb(altijd).
 sentence_adverb(bijna). 
-sentence_adverb(bijvoorbeeld). 
+sentence_adverb(bijvoorbeeld).
+sentence_adverb(blijkbaar).
 sentence_adverb(bovendien).
 sentence_adverb([cum,grano,salis]).
 sentence_adverb(derhalve). 
@@ -6233,10 +6235,13 @@ loc_adverb(buitenom).
 loc_adverb(buitengaats).
 loc_adverb(daarginds).
 loc_adverb(daarginder).
+loc_adverb(door).   % daarna door naar Assen (frequent in looblog)
 loc_adverb([down,under]).
 loc_adverb(ginder).
 loc_adverb(halfweg).
 loc_adverb(halverwege).
+loc_adverb(heen).    % we rijden heen via Assen en terug via Lelystad
+loc_adverb(linksaf).
 loc_adverb(linksboven).
 loc_adverb(linksonder).
 loc_adverb(midden).
@@ -6254,6 +6259,7 @@ loc_adverb([op,zij]).
 loc_adverb(rechtdoor).
 loc_adverb(rechtuit).
 loc_adverb(rechtsboven).
+loc_adverb(rechtsaf).
 loc_adverb(rechtsonder).
 loc_adverb(retour).
 loc_adverb([te,bestemder,plaatse]).
