@@ -9633,7 +9633,7 @@ a([e(estuariene),
    no_e(estuarien)],nonadv,[],[]).
 
 a([ende(etende),
-   end(etend)],padv,[],[vlees]).
+   end(etend)],padv,[transitive],[vlees]).
 
 a([e(eterische),
    e(etherische),
