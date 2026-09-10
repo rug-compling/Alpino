@@ -32,11 +32,10 @@ normal_capitalized_word(P,Word,Rest,Rest,DecapWord) :-
     decap_first(Word,DecapWord),
     (   is_start_sentence(P)
     ->  true
+    ;   is_decap_only(Word,DecapWord)
     ;   decap_only_one(Word)
     ).
 
-normal_capitalized_word(_,'\'s',[Morgens|Rest],[Morgens2|Rest],'\'s') :-
-    morgens(Morgens,Morgens2).
 normal_capitalized_word(P,Word,[Word1|Rest],[Word2|Rest],Word) :-
     is_start_sentence(P),
     starts_with_quote(Word),
@@ -6756,6 +6755,8 @@ common_dutch_word(het).
 common_dutch_word(in).
 common_dutch_word(is).
 common_dutch_word(je).
+common_dutch_word(kilometer).
+common_dutch_word(kilometers).
 common_dutch_word(loop).
 common_dutch_word(man).
 common_dutch_word(me).
