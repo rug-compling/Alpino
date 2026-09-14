@@ -18500,12 +18500,16 @@ n([pl(kampioenes),sg(kampioene)],de,
    wereld
   ]).
 
-n([pl(kampioenschappen),sg(kampioenschap)],het,[temp_mod,
-						app_measure],
-  [s(land),
+n([pl(kampioenschappen),sg(kampioenschap)],het,
+  [temp_mod,
+   app_measure],
+  [s(district),
+   jeugd,
+   s(land),
    wereld]).
 
-n([pl(kampioenschappen),sg(kampioenschap)],het,[temp_mod],
+n([pl(kampioenschappen),sg(kampioenschap)],het,
+  [temp_mod],
   [dam,
    tennis,
    voetbal
@@ -32934,7 +32938,7 @@ n([mass(schaft)],de,[],[]).
 
 n([pl(schakels),sg(schakel)],de,[],[dim(schakeltje)]).
 
-n([mass(schaken)],het,[],[]).  % het schaakspel; ik leer hem schaken =/= ik leer hem_i schaken(su=i)  ?
+% n([mass(schaken)],het,[],[]).  % het schaakspel; ik leer hem schaken =/= ik leer hem_i schaken(su=i)  ?
 
 n([pl(schakelaars),sg(schakelaar)],de,[],
   [licht,
