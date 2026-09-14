@@ -8719,7 +8719,7 @@ grammar_rule(adv_post_pp_dp,MAX,[ADV,COMMA,XP]) :-
 
 %%EX%% Over het nieuwe bruggetje de kwelder in
 %%EX%% Via een nieuw wandelpad het bos uit
-grammar_rule(adv_post_pp_dp,MAX,[PP,COMMA,XP]) :-
+grammar_rule(pp_post_pp_dp,MAX,[PP,COMMA,XP]) :-
     optcomma(COMMA),
     MAX => max,
     MAX:max_type => t_dp,
