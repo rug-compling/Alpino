@@ -1300,6 +1300,7 @@ check_predict(off,F,PREV) :-
     \+ fail_predict(F,PREV).
 check_predict(undefined,F,PREV) :-
     \+ fail_predict(F,PREV).
+check_predict(none,_,_).
 check_predict(on,F,PREV) :-
     alpino_guides:check_predict(F,PREV).
 
@@ -1309,6 +1310,7 @@ check_connect(off,F,[R|PREV]) :-
 check_connect(undefined,F,[R|PREV]) :-
     \+ fail_connect(F,[R|PREV]),
     \+ fail_connect_rule(R).
+check_connect(none,_,_).
 check_connect(on,F,[R|PREV]) :-
     alpino_guides:check_connect(F,[R|PREV]),
     \+ fail_connect_rule(R).
