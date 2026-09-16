@@ -6940,7 +6940,7 @@ name_vanhet_maybe_start(X1,W2) :-
 name_vanhet_start(W) :-
     W \= van,
     W \= de,
-    W \= het, W\= '\'t',
+    W \= het, 
     W \= der,
     name_vanhet(W).
 
