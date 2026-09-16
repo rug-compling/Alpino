@@ -8104,6 +8104,7 @@ m(achter,nominalized_super_adjective,achtersten).
 m(beroemd,nominalized_super_adjective,beroemdsten).
 m(laat,  nominalized_super_adjective,laatsten).
 m(lief,  nominalized_super_adjective,liefsten).
+m(aller_rijk,  nominalized_super_adjective,allerrijksten).
 
 %% plural only, because singular is an adjective, and hence can be
 %% treated in syntax:

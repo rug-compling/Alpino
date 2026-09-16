@@ -1261,6 +1261,8 @@ accent(ruine,ruïne).
 accent(ruines,ruïnes).
 accent(ruzieen,ruzieën).
 accent(ruzien,ruziën).
+accent(sabotageactien,sabotageactiën).
+accent(sabotageaktien,sabotageaktiën).
 accent(sacristieen,sacristieën).
 accent(sakristieen,sakristieën).
 accent(salariering,salariëring).

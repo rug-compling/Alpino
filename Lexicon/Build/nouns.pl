@@ -1944,6 +1944,7 @@ n([pl(acties),pl(actiën),sg(actie),
    politie,
    protest,
    s(redding),
+   sabotage,
    televisie,h(tv),tv,i(tv,'TV-'),f([tv]),
    s(vergelding),
    wraak,
@@ -4330,7 +4331,8 @@ n([pl(beginselverklaringen),sg(beginselverklaring)],de,[],[]).
 
 n([pl('begonia\'s'),sg(begonia)],de,[],[]).
 
-n([pl(begrafenissen),sg(begrafenis)],de,[],[]).
+n([pl(begrafenissen),sg(begrafenis)],de,[],
+  [s(staat)]).
 
 n([sg(begrenzer),pl(begrenzers)],de,[],[s(snelheid)]).
 
@@ -9749,7 +9751,8 @@ n([pl(diensten),sg(dienst)],de,
   ]).
 
 n([pl(diensten),sg(dienst)],de,[],
-  [arbo,
+  [s(afscheid),
+   arbo,
    belasting,
    s(bereikbaarheid),
    s(gezondheid),
@@ -10531,7 +10534,8 @@ n([mass(draf)],de,[],
 n([pl(dragers),sg(drager)],de,[],
   [s(gegeven),
    s(gezag),
-   i(geel_trui,geletrui)
+   i(geel_trui,geletrui),
+   i(rood_trui,rodetrui)
   ]).
 
 n([pl(draagsters),sg(draagster)],de,[],
@@ -13739,7 +13743,11 @@ n([pl(geneeswijzen),sg(geneeswijze)],de,[],[]).
 
 n([pl(genegenheden),sg(genegenheid)],de,[sbar,vp],[]).
 
-n([pl(generaals),sg(generaal)],de,[],[brigade]).
+n([pl(generaals),sg(generaal)],de,[],
+  [brigade,
+   h(ex),
+   h(oud)
+  ]).
 
 n([pl('generaal-majoors'),sg('generaal-majoor')],de,[],[]).
 
@@ -21202,9 +21210,11 @@ n([pl(leiders),sg(leider)],de,[],
    i(wereld_markt,wereldmarkt),
    militie,
    oppositie,
+   h(ov),
    partij,
    h('PKK'),
    h('PLO'),
+   h('PRO'),
    ploeg,
    project,
    h('Pro'),
@@ -23979,6 +23989,7 @@ n([pl(ministers),sg(minister)],de,[],
    justitie,
    landbouw,
    h('LPF'),
+   media,
    milieu,
    onder,
    onderwijs,
@@ -25780,9 +25791,12 @@ n([pl(ommezwaaien),sg(ommezwaai)],de,[],[]).
 
 n([sg(omnivoor),pl(omnivoren)],de,[],[]).
 
-n([pl(omroepen),sg(omroep)],de,[],[s(staat),
-				   s(stad),
-				   wijk]).
+n([pl(omroepen),sg(omroep)],de,[],
+  [h(aspirant),
+   i(lid,leden),
+   s(staat),
+   s(stad),
+   wijk]).
 
 n([mass(omroepbestel)],het,[],[]).
 
@@ -32009,6 +32023,7 @@ n([pl(rijen),sg(rij)],de,
 
 n([pl(rijen),sg(rij)],de,[],
   [i(duin,duinen),
+   start,
    wacht,
    zit,
    dim(rijtje)]).
@@ -32961,7 +32976,9 @@ n([pl(schandalen),sg(schandaal)],het,[],
    diesel,
    doping,
    'Enron',
-   omkoop]).
+   omkoop,
+   i(toeslag,toeslagen)
+  ]).
 
 n([mass(schande)],de,[subject_sbar,subject_vp],[]).
 
@@ -36724,7 +36741,10 @@ n([pl(suppoosten),sg(suppoost)],de,[],[]).
 n([sg(support)],de,[],[]).
 
 n([pl(supporters),sg(supporter)],de,[],
-  [thuis,
+  [h('Ajax'),
+   h('Feyenoord'),
+   h('PSV'),
+   thuis,
    uit]).
 
 n([mass(suprematie)],de,[],[]).
@@ -39426,6 +39446,7 @@ n([pl(vaardigheden),sg(vaardigheid)],de,[vp],[]).
 
 n([pl(vaardigheden),sg(vaardigheid)],de,[],
   [deel,
+   lees,
    rij,
    spreek,
    taal]).
@@ -39565,7 +39586,7 @@ n([mass([valsheid,in,geschrifte])],de,[],[]).
 
 n([pl(valstrikken),sg(valstrik)],de,[sbar,vp],[]).
 
-n([pl('valuta\'s'),sg(valuta),pl(valuta)],de,[],[]).
+n([pl('valuta\'s'),sg(valuta),pl(valuta)],de,[],[crypto]).
 
 n([pl(vampiers),sg(vampier),pl(vampieren)],de,[],[]).
 
@@ -40269,7 +40290,8 @@ n([pl(verkiezingen),sg(verkiezing)],de,
 
 n([pl(verkiezingen),sg(verkiezing)],de,
   [temp_mod],
-  [i(gemeente_raad,gemeenteraads),
+  [deelstaat,
+   i(gemeente_raad,gemeenteraads),
    her,
    kamer,i(kamer,'Kamer'),
    s(parlement),
@@ -44564,6 +44586,7 @@ n([pl(zeges),sg(zege)],de,[sbar,vp],[]).
 n([pl(zeges),sg(zege)],de,[],
   [eind,
    etappe,
+   monster,
    oefen,
    rit,
    toernooi,
