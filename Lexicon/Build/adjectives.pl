@@ -7600,7 +7600,7 @@ a([e(democratische),
    ste(demokratischte)],adv,
   [subject_vp,
    subject_sbar],
-  [h(christen), f([christen]),
+  [christen, h(christen), f([christen]),
    h(sociaal)]).
 
 a([e(demografische),
@@ -23685,6 +23685,7 @@ a([e(navrante),
 a([e(nazistische),
    no_e(nazistisch)],nonadv,[],
   [h(anti),
+   neo,
    h(pro)]).
 
 a([e(naïeve),

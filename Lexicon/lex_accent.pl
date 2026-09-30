@@ -223,6 +223,7 @@ accent(coefficienten,coëfficiënten).
 accent(coitus,coïtus).
 accent(comedienne,comédienne).
 accent(comediennes,comédiennes).
+accent(comedyserien,comedyseriën).
 accent(comite,comité).
 accent('comite\'s','comité\'s').
 accent(comites,comités).

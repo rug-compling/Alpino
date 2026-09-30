@@ -8619,6 +8619,7 @@ postposition(door).
 postposition(in).
 postposition(langs).
 postposition(om).
+postposition(onderdoor).
 postposition(op).
 postposition(over).
 postposition(rond).

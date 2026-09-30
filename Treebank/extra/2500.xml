@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="du" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="daarna" pos="pp" postag="BW()" pt="bw" rel="dp" root="daarna" special="er" word="Daarna"/>
+      <node begin="1" end="2" id="3" lemma="door" pos="adv" postag="BW()" pt="bw" rel="dp" root="door" special="loc" word="door"/>
+      <node begin="2" cat="pp" end="8" id="4" rel="dp">
+        <node begin="2" end="3" id="5" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="3" cat="np" end="8" id="6" rel="obj1">
+          <node begin="3" buiging="zonder" end="4" getal="mv" id="7" infl="het" lemma="ons" naamval="stan" npagr="evon" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="ons"/>
+          <node begin="4" end="5" gen="het" genus="onz" getal="ev" graad="basis" id="8" lemma="onderkomen" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="onderkomen" word="onderkomen"/>
+          <node begin="5" cat="pp" end="8" id="9" rel="mod">
+            <node begin="5" end="6" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="6" cat="mwu" end="8" id="11" rel="obj1">
+              <node begin="6" end="7" id="12" lemma="La" neclass="LOC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="La" spectype="deeleigen" word="La"/>
+              <node begin="7" end="8" id="13" lemma="Grave" neclass="LOC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Grave" spectype="deeleigen" word="Grave"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Daarna door naar ons onderkomen in La Grave .</sentence>
+</alpino_ds>

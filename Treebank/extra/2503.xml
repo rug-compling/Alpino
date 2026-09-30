@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="du" end="8" id="1" rel="--">
+      <node begin="0" cat="pp" end="4" id="2" rel="dp">
+        <node begin="0" end="1" id="3" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="Bij"/>
+        <node begin="1" cat="np" end="4" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+          <node aform="base" begin="2" buiging="met-e" end="3" graad="basis" id="6" infl="e" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="oud" vform="adj" word="oude"/>
+          <node begin="3" end="4" gen="het" genus="onz" getal="ev" graad="dim" id="7" lemma="gras_dijk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="gras_dijk_DIM" word="grasdijkje"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="rechtsaf" pos="adv" postag="BW()" pt="bw" rel="dp" root="rechtsaf" special="loc" word="rechtsaf"/>
+      <node begin="5" cat="pp" end="8" id="9" rel="dp">
+        <node begin="5" end="6" id="10" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="6" cat="np" end="8" id="11" rel="obj1">
+          <node begin="6" end="7" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lemma="zee_dijk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zee_dijk" word="zeedijk"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Bij het oude grasdijkje rechtsaf naar de zeedijk .</sentence>
+</alpino_ds>

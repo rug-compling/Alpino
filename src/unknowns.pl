@@ -2434,6 +2434,7 @@ decap_only('Daarom').
 decap_only('Dáárom').
 decap_only('Dankzij').
 decap_only('Denk').
+decap_only('Door').
 decap_only('Edoch').
 decap_only('Een').
 decap_only('Eigenlijk').
