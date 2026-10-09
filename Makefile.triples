@@ -15,3 +15,16 @@ combine-sorted: *.sorted
         > combine-sorted
 
 
+%.deps: %
+	dtlist --recursive $< \
+             | Alpino -notk batch_command=treebank_dep_features_stdin 2> $*.tripleslog \
+             |  grep dep35 \
+             |  LANG=POSIX LC_ALL=POSIX sort \
+             |  uniq-c.py > $*.deps
+
+%.deps: %.data.dz
+	dtlist --recursive $< \
+             | Alpino -notk batch_command=treebank_dep_features_stdin 2> $*.tripleslog \
+             |  grep dep35 \
+             |  LANG=POSIX LC_ALL=POSIX sort \
+             |  uniq-c.py > $*.deps
