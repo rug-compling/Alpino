@@ -686,6 +686,9 @@ a([e('Friese'),
    hh('Oost'),
    hh('West')]).
 
+a([e('Gazaanse'),
+   no_e('Gazaans')],nonadv,[],[]).
+
 a([e('Germaanse'),
    er('Germaanser'),
    ere('Germaansere'),
@@ -4176,7 +4179,7 @@ a([e(behandelbare),
    no_e(behandelbaar)],adv,[],[on]).
 
 a([ge_e(behandelde),
-   ge_no_e(behandeld)],adv,[],[]).
+   ge_no_e(behandeld)],adv,[],[on]).
 
 a([ge_both(behangen)],adv,[],[]).
 
@@ -24277,6 +24280,9 @@ a([stem('Olympisch'),
    no_e(olympisch),
    e('Olympische'),
    no_e('Olympisch')],adv,[],[]).  %adv: het olympisch zeilen
+
+a([e('Omaanse'),
+   no_e('Omaans')],nonadv,[],[]).
 
 a([pred(om)],nonadv,[],[]).
 

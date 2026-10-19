@@ -153,6 +153,8 @@ accent('Burundiers','Burundiërs').
 accent(buurtcomite,buurtcomité).
 accent('buurtcomite\'s','buurtcomité\'s').
 accent(buurtcomites,buurtcomités).
+accent(cabaretiere,cabaretière).
+accent(cabaretieres,cabaretières).
 accent(ca,ça).
 accent(cafebaas,cafébaas).
 accent(cafebaasje,cafébaasje).

@@ -1797,6 +1797,8 @@ n([sg([accent,grave]),
 
 n([pl(acceptaties),sg(acceptatie)],de,[sbar],[]).
 
+n([pl(acceptaties),sg(acceptatie)],de,[],[homo]).
+
 n([sg(accessoire),pl(accessoires)],both,[],[]).
 
 n([pl(accijnzen),sg(accijns)],de,[],[]).
@@ -2351,6 +2353,7 @@ n([mass(aftrek)],de,[],
    hypotheekrente,
    interest,
    intrest,
+   i(punt,punten),
    rente,h(rente),
    i(oud,ouderen),
    i(zelfstandig,zelfstandigen)]).
@@ -2472,6 +2475,8 @@ n([sg(agrariër),pl(agrariërs)],de,[],[]).
 n([pl(agressies),sg(agressie)],de,[],[s(verkeer)]).
 
 n([mass(agressiviteit)],de,[],[]).
+
+n([sg(agressor),pl(agressoren)],de,[],[]).
 
 n([mass(aids),mass('Aids')],de,[],[]).
 
@@ -5272,6 +5277,7 @@ n([pl(bewegingen),sg(beweging)],de,[],
    kraak,
    s(lichaam),
    milieu,
+   protest,
    i(rebel,rebellen),
    terreur,
    vak,
@@ -6650,7 +6656,9 @@ n([mass(bravoure)],de,[],[]).
 
 %% twee breaks voorsprong
 n([pl(breaks),sg(break),
-   pl(breeks),sg(breek)],de,[measure,meas_mod],[]).
+   pl(breeks),sg(breek)],de,
+  [measure,meas_mod],
+  [interland]).
 
 n([sg(breedbeeld)],both,[],[]).
 
@@ -6733,7 +6741,8 @@ n([sg([bright,spot]),pl([bright,spots])],de,[],[]).
 n([pl(brijen),sg(brij)],de,[],[]).
 
 n([pl(brillen),sg(bril)],de,[],
-  [eclips,			% alleen in augustus 1999
+  [camera,
+   eclips,			% alleen in augustus 1999
    lees,
    ski,
    wh([virtual,reality]),
@@ -7157,6 +7166,8 @@ n([pl('c\'s'),sg(c)],de,[],[dim('c\'tje')]).
 n([pl(cabarets),sg(cabaret)],het,[],[]).
 
 n([pl(cabaretiers),sg(cabaretier)],de,[],[]).
+
+n([pl(cabaretières),sg(cabaretière)],de,[],[]).
 
 n([sg(cabernet),pl(cabernet)],de,[],[]).
 
@@ -8877,7 +8888,9 @@ n([pl(crises),pl(crisissen),sg(crisis)],de,[],
    valuta,
    s(vertrouwen),
    i(vluchteling,vluchtelingen),
-   vorm
+   vorm,
+   woning,
+   woon
   ]).
 
 n([mass('crisis-interventie')],de,[],[]).
@@ -9267,7 +9280,9 @@ n([pl(deadlines),sg(deadline)],de,[],[]).
 n([pl(deals),sg(deal)],de,[sbar,subject_sbar],[]).
 
 n([pl(deals),sg(deal)],de,[],
-  [s(handel),
+  [diesel,
+   s(handel),
+   totaal,
    s(vrede)]).
 
 n([pl(dealers),sg(dealer)],de,[],
@@ -9296,7 +9311,8 @@ n([pl(debuten),sg(debuut)],het,
   [start_app_measure,
    np_app_measure
   ],
-  [film,
+  [basis,
+   film,
    regie,
    i(speel_film,speelfilm),
    thriller,
@@ -14351,6 +14367,7 @@ n([pl(gezelschappen),sg(gezelschap)],het,[measure],[]).
 
 n([pl(gezelschappen),sg(gezelschap)],het,[],
   [drink,
+   reis,
    toneel]).
 
 n([pl(gezichten),sg(gezicht)],het,[sbar,van_sbar],[]).
@@ -17639,6 +17656,7 @@ n([pl(internationals),sg(international)],de,[],
    jeugd,
    h('Oranje'),
    h(oud),oud,
+   record,
    voetbal]).
 
 n([sg([international,matchpoint]),pl([international,matchpoints]),
@@ -24033,6 +24051,7 @@ n([pl(ministers),sg(minister)],de,[],
    top,
    s(verkeer),
    h('VVD'),
+   woon,
    zorg
   ]).
 
@@ -27762,6 +27781,7 @@ n([pl(pakketten),sg(pakket)],het,
    i(taak,taken),
    i(basis_taak,basistaken),
    stikstof,
+   update,
    ziekenfonds,
    dim(pakketje)]).
 
@@ -30267,6 +30287,7 @@ n([pl('programma\'s'),sg(programma)],het,
    s(beleid),
    i(boek,boeken),
    computer,
+   i(consument,consumenten),
    kader,
    kernwapen,
    i(kind,kinder),
@@ -30404,7 +30425,8 @@ n([sg(protegé),pl(protegés)],de,[],[]).
 n([pl(protesten),sg(protest)],het,[],
   [i(anti_azc,'anti-azc-'),
    asiel,
-   i(boer,boeren)
+   i(boer,boeren),
+   i(scholier,scholieren)
   ]).
 
 n([pl(protestanten),sg(protestant)],de,[],[]).
@@ -30679,7 +30701,8 @@ n([pl(quinten),sg(quint)],de,[],[]).
 n([bare_meas(quintiljoen),pl(quintiljoenen)],both,[meas_mod,measure],[]).
 
 n([sg(quiz),pl(quizzen)],de,[],  % niet quiz_zen
-  [televisie]).
+  [kennis,
+   televisie]).
 
 n([pl(quota),sg(quotum)],het,[],
   [kabeljauw,
@@ -32176,6 +32199,7 @@ n([pl(ritten),sg(rit)],de,[temp_mod],
    slot,
    test,
    veld,
+   weg,
    dim(ritje)]).
 
 n([pl(riten),pl(rites),sg(rite)],de,[sbar,vp],[]).
@@ -32973,6 +32997,7 @@ n([pl(schachten),sg(schacht)],de,[],[]).
 n([pl(schaden),pl(schades),sg(schade)],de,[],
   [gehoor,
    s(gezondheid),
+   neven,
    plan,
    reputatie,
    rook,
@@ -33877,6 +33902,7 @@ n([pl(sferen),sg(sfeer)],de,[van_sbar,sbar],[dim(sfeertje)]).
 n([pl(sferen),sg(sfeer)],de,[],
   [invloed,s(invloed),
    s(leven),
+   mano,
    werk,
    s(werking)]).
 
@@ -33984,7 +34010,8 @@ n([pl(signalen),sg(signaal)],het,[sbar,vp],[]).
 n([pl(signalen),sg(signaal)],het,[],
   [alarm,
    eind,
-   fluit]).
+   fluit,
+   nood]).
 
 n([pl(signalementen),sg(signalement)],het,[sbar],[]).
 
@@ -35982,7 +36009,8 @@ n([pl(stetoskopen),sg(stetoscoop)],de,[],[]).
 n([pl(stetoscopen),sg(stetoskoop)],de,[],[]).
 
 n([pl(steunen),sg(steun)],de,[],
-  [h('EU'),
+  [s(begroting),
+   h('EU'),
    export,
    hoofd,
    s(inkomen),
@@ -36341,6 +36369,7 @@ n([pl(straffen),sg(straf)],de,[],
    dood,
    s(dood),
    gevangenis,
+   grid,
    maximum,
    minimum,
    taak,
@@ -39158,6 +39187,8 @@ n([pl(uithoeken),sg(uithoek)],de,[],[]).
 
 n([pl(uithollingen),sg(uitholling)],de,[],[]).
 
+n([sg(uithuiszetting),pl(uithuiszettingen)],de,[],[]).
+
 n([pl(uitingen),sg(uiting)],de,[sbar],[]).
 
 n([pl(uitjes),sg(uitje)],het,[],
@@ -41436,7 +41467,8 @@ n([pl('vj\'s'),sg(vj)],de,[],[]).
 n([pl(vlagen),sg(vlaag)],de,[measure],[]).
 
 n([pl(vlaggen),sg(vlag)],de,[],
-  [dim(vlaggetje),
+  [regenboog,
+   dim(vlaggetje),
    dim(vlagje)]).
 
 n([pl(vlakken),sg(vlak)],het,[],
